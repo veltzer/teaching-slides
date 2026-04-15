@@ -101,43 +101,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="77.5" y="56.1111" width="693.75" height="467.2223" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="96.25" y="80.2777" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--text-faint)">B — Built-in</text>
-  <text x="96.25" y="98" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">len, print, range, type, open, …</text>
-  <rect x="115" y="112.5" width="618.75" height="370.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="133.75" y="136.6667" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)">G — Global (module level)</text>
-  <text x="133.75" y="154.3889" font-family="monospace" font-size="12.1663" fill="var(--primary-accent)">x = 10   # module variable</text>
-  <rect x="152.5" y="168.8889" width="543.75" height="281.9444" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.3333" />
-  <text x="171.25" y="193.0556" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)">E — Enclosing (outer function)</text>
-  <text x="171.25" y="210.7777" font-family="monospace" font-size="12.1663" fill="var(--text-muted)">def outer():</text>
-  <text x="190" y="226.8889" font-family="monospace" font-size="12.1663" fill="var(--text-muted)">    y = 20   # enclosing var</text>
-  <rect x="190" y="239.7777" width="468.7499" height="185.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="208.75" y="263.9444" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--bg)">L — Local (innermost function)</text>
-  <text x="208.75" y="283.2777" font-family="monospace" font-size="12.1663" fill="var(--primary-accent)">    def inner():</text>
-  <text x="227.5" y="299.3889" font-family="monospace" font-size="12.1663" fill="var(--bg)">        z = 30   # local var</text>
-  <text x="227.5" y="318.7223" font-family="monospace" font-size="12.1663" fill="var(--bg)">        print(z)  # local   ✓</text>
-  <text x="227.5" y="336.4444" font-family="monospace" font-size="12.1663" fill="var(--bg)">        print(y)  # enclosing ✓</text>
-  <text x="227.5" y="354.1667" font-family="monospace" font-size="12.1663" fill="var(--bg)">        print(x)  # global  ✓</text>
-  <text x="227.5" y="371.8889" font-family="monospace" font-size="12.1663" fill="var(--bg)">        print(len) # built-in ✓</text>
-  <text x="208.75" y="412.1667" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)" font-style="italic">Python searches L → E → G → B</text>
-  <text x="836.875" y="80.2777" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Name lookup order</text>
-  <rect x="827.5" y="94.7777" width="375" height="45.1111" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1014.9999" y="122.1667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)">1. Local</text>
-  <line x1="1014.9999" y1="141.5" x2="1014.9999" y2="165.6667" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="827.5" y="167.2777" width="375" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1014.9999" y="194.6667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--text)">2. Enclosing</text>
-  <line x1="1014.9999" y1="214" x2="1014.9999" y2="238.1667" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="827.5" y="239.7777" width="375" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1014.9999" y="267.1667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--text)">3. Global</text>
-  <line x1="1014.9999" y1="286.5" x2="1014.9999" y2="310.6667" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="827.5" y="312.2777" width="375" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1014.9999" y="339.6667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--text-faint)">4. Built-in</text>
-  <line x1="1014.9999" y1="359" x2="1014.9999" y2="383.1667" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="827.5" y="384.7777" width="375" height="45.1111" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1014.9999" y="412.1667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--danger-accent)">NameError</text>
-  <rect x="827.5" y="450.8333" width="375" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1014.9999" y="471.7777" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--primary-accent)">Override scope for assignment:</text>
-  <text x="846.2499" y="491.1111" font-family="monospace" font-size="12.1663" fill="var(--text)">global x      # write to global x</text>
-  <text x="846.2499" y="508.8333" font-family="monospace" font-size="12.1663" fill="var(--text)">nonlocal y    # write to enclosing y</text>
+  <rect x="40" y="40" width="740" height="580" rx="6.904271" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="60" y="69.999912" font-family="sans-serif" font-size="20.000062" font-weight="bold" fill="var(--text-faint)">B — Built-in</text>
+  <text x="60" y="92.000005" font-family="sans-serif" font-size="13.999905" fill="var(--text-faint)">len, print, range, type, open, …</text>
+  <rect x="80" y="110.000002" width="660" height="459.999979" rx="6.904271" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="100" y="140.000039" font-family="sans-serif" font-size="20.000062" font-weight="bold" fill="var(--primary-accent)">G — Global (module level)</text>
+  <text x="100" y="162.000007" font-family="monospace" font-size="13.999905" fill="var(--primary-accent)">x = 10   # module variable</text>
+  <rect x="120" y="180.000004" width="580" height="349.999887" rx="6.904271" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.3333" />
+  <text x="140" y="210.000041" font-family="sans-serif" font-size="20.000062" font-weight="bold" fill="var(--primary-accent)">E — Enclosing (outer function)</text>
+  <text x="140" y="231.999885" font-family="monospace" font-size="13.999905" fill="var(--text-muted)">def outer():</text>
+  <text x="160" y="251.999992" font-family="monospace" font-size="13.999905" fill="var(--text-muted)">    y = 20   # enclosing var</text>
+  <rect x="160" y="267.999879" width="499.999893" height="229.999865" rx="6.904271" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="297.999916" font-family="sans-serif" font-size="20.000062" font-weight="bold" fill="var(--bg)">L — Local (innermost function)</text>
+  <text x="180" y="321.99987" font-family="monospace" font-size="13.999905" fill="var(--primary-accent)">    def inner():</text>
+  <text x="200" y="341.999977" font-family="monospace" font-size="13.999905" fill="var(--bg)">        z = 30   # local var</text>
+  <text x="200" y="366.000056" font-family="monospace" font-size="13.999905" fill="var(--bg)">        print(z)  # local   ✓</text>
+  <text x="200" y="387.999901" font-family="monospace" font-size="13.999905" fill="var(--bg)">        print(y)  # enclosing ✓</text>
+  <text x="200" y="409.999994" font-family="monospace" font-size="13.999905" fill="var(--bg)">        print(x)  # global  ✓</text>
+  <text x="200" y="431.999962" font-family="monospace" font-size="13.999905" fill="var(--bg)">        print(len) # built-in ✓</text>
+  <text x="180" y="481.999982" font-family="sans-serif" font-size="13.999905" fill="var(--primary-accent)" font-style="italic">Python searches L → E → G → B</text>
+  <text x="850" y="69.999912" font-family="sans-serif" font-size="18.00001" font-weight="bold" fill="var(--text)">Name lookup order</text>
+  <rect x="840" y="87.999909" width="400" height="55.999977" rx="6.904271" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1039.999893" y="122.000042" text-anchor="middle" font-family="sans-serif" font-size="18.00001" font-weight="bold" fill="var(--bg)">1. Local</text>
+  <line x1="1039.999893" y1="145.999996" x2="1039.999893" y2="176.000033" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="840" y="177.999894" width="400" height="55.999977" rx="6.904271" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1039.999893" y="212.000027" text-anchor="middle" font-family="sans-serif" font-size="18.00001" fill="var(--text)">2. Enclosing</text>
+  <line x1="1039.999893" y1="235.999981" x2="1039.999893" y2="266.000018" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="840" y="267.999879" width="400" height="55.999977" rx="6.904271" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1039.999893" y="302.000012" text-anchor="middle" font-family="sans-serif" font-size="18.00001" fill="var(--text)">3. Global</text>
+  <line x1="1039.999893" y1="325.999966" x2="1039.999893" y2="356.000003" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="840" y="357.999864" width="400" height="55.999977" rx="6.904271" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1039.999893" y="391.999997" text-anchor="middle" font-family="sans-serif" font-size="18.00001" fill="var(--text-faint)">4. Built-in</text>
+  <line x1="1039.999893" y1="415.999951" x2="1039.999893" y2="445.999988" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="840" y="447.999849" width="400" height="55.999977" rx="6.904271" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1039.999893" y="481.999982" text-anchor="middle" font-family="sans-serif" font-size="18.00001" fill="var(--danger-accent)">NameError</text>
+  <rect x="840" y="529.999891" width="400" height="89.999985" rx="6.904271" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="1039.999893" y="555.999831" text-anchor="middle" font-family="sans-serif" font-size="14.999989" font-weight="bold" fill="var(--primary-accent)">Override scope for assignment:</text>
+  <text x="859.999893" y="579.99991" font-family="monospace" font-size="13.999905" fill="var(--text)">global x      # write to global x</text>
+  <text x="859.999893" y="601.999879" font-family="monospace" font-size="13.999905" fill="var(--text)">nonlocal y    # write to enclosing y</text>
 </svg>

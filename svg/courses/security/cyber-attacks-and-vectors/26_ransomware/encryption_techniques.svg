@@ -97,26 +97,25 @@
       <polygon points="0,20.6897 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--bg)" stroke="var(--text)" stroke-width="2.5933" />
-  <rect x="40" y="40" width="1200" height="56.9942" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="76.8786" font-size="25.3923" font-weight="bold" fill="var(--text)" text-anchor="middle">Ransomware Encryption Architecture</text>
-  <text x="63.7081" y="128.8439" font-size="22.0066" font-weight="bold" fill="var(--danger-accent)">Attacker has:</text>
-  <text x="63.7081" y="159.0173" font-size="22.0066" fill="var(--text)">• Master RSA key pair — private key kept by attacker only</text>
-  <text x="63.7081" y="202.6011" font-size="22.0066" font-weight="bold" fill="var(--primary-accent)">Per-victim:</text>
-  <text x="63.7081" y="232.7745" font-size="22.0066" fill="var(--text)">1. Generate unique RSA key pair for this victim</text>
-  <text x="63.7081" y="262.948" font-size="22.0066" fill="var(--text)">2. Encrypt victim RSA private key with master public key (stored in ransom note)</text>
-  <text x="63.7081" y="306.5318" font-size="22.0066" font-weight="bold" fill="var(--warn-accent)">Per-file:</text>
-  <text x="63.7081" y="336.7052" font-size="22.0066" fill="var(--text)">3. Generate random AES-256 key</text>
-  <text x="63.7081" y="366.8786" font-size="22.0066" fill="var(--text)">4. Encrypt file contents with AES-256 (fast)</text>
-  <text x="63.7081" y="397.052" font-size="22.0066" fill="var(--text)">5. Encrypt AES key with victim RSA public key</text>
-  <text x="63.7081" y="427.2254" font-size="22.0066" fill="var(--text)">6. Append encrypted AES key to encrypted file</text>
-  <rect x="92.8875" y="460.7514" width="218.8451" height="87.1677" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="202.3101" y="497.63" font-size="20.3138" font-weight="bold" fill="var(--text)" text-anchor="middle">Original</text>
-  <text x="202.3101" y="527.8034" font-size="20.3138" fill="var(--text)" text-anchor="middle">File</text>
-  <line x1="311.7325" y1="504.3352" x2="457.6291" y2="504.3352" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arw3)" />
-  <text x="384.6807" y="490.9248" font-size="18.621" fill="var(--text-muted)" text-anchor="middle">AES-256</text>
-  <rect x="457.6291" y="460.7514" width="328.2674" height="87.1677" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="621.763" y="497.63" font-size="20.3138" font-weight="bold" fill="var(--text)" text-anchor="middle">Encrypted File</text>
-  <text x="621.763" y="527.8034" font-size="18.621" fill="var(--text-muted)" text-anchor="middle">+ Encrypted AES key (RSA)</text>
-  <text x="63.7081" y="598.208" font-size="22.0066" fill="var(--text-muted)" font-style="italic">Only the attacker's master private key can start the decryption chain</text>
+  <rect x="40" y="40" width="1200" height="59.219209" rx="6.115996" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="78.318311" font-size="25.883202" font-weight="bold" fill="var(--text)" text-anchor="middle">Ransomware Encryption Architecture</text>
+  <text x="63.7081" y="132.312296" font-size="22.432048" font-weight="bold" fill="var(--danger-accent)">Attacker has:</text>
+  <text x="63.7081" y="163.663642" font-size="22.432048" fill="var(--text)">• Master RSA key pair — private key kept by attacker only</text>
+  <text x="63.7081" y="208.948919" font-size="22.432048" font-weight="bold" fill="var(--primary-accent)">Per-victim:</text>
+  <text x="63.7081" y="240.300264" font-size="22.432048" fill="var(--text)">1. Generate unique RSA key pair for this victim</text>
+  <text x="63.7081" y="271.651714" font-size="22.432048" fill="var(--text)">2. Encrypt victim RSA private key with master public key (stored in ransom note)</text>
+  <text x="63.7081" y="316.936991" font-size="22.432048" font-weight="bold" fill="var(--warn-accent)">Per-file:</text>
+  <text x="63.7081" y="348.288337" font-size="22.432048" fill="var(--text)">3. Generate random AES-256 key</text>
+  <text x="63.7081" y="379.639683" font-size="22.432048" fill="var(--text)">4. Encrypt file contents with AES-256 (fast)</text>
+  <text x="63.7081" y="410.991028" font-size="22.432048" fill="var(--text)">5. Encrypt AES key with victim RSA public key</text>
+  <text x="63.7081" y="442.342374" font-size="22.432048" fill="var(--text)">6. Append encrypted AES key to encrypted file</text>
+  <rect x="92.8875" y="477.177203" width="218.8451" height="90.570658" rx="6.115996" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="202.3101" y="515.495514" font-size="20.706521" font-weight="bold" fill="var(--text)" text-anchor="middle">Original</text>
+  <text x="202.3101" y="546.84686" font-size="20.706521" fill="var(--text)" text-anchor="middle">File</text>
+  <line x1="311.7325" y1="522.46248" x2="457.6291" y2="522.46248" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arw3)" />
+  <text x="384.6807" y="508.528548" font-size="18.980995" fill="var(--text-muted)" text-anchor="middle">AES-256</text>
+  <rect x="457.6291" y="477.177203" width="328.2674" height="90.570658" rx="6.115996" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="621.763" y="515.495514" font-size="20.706521" font-weight="bold" fill="var(--text)" text-anchor="middle">Encrypted File</text>
+  <text x="621.763" y="546.84686" font-size="18.980995" fill="var(--text-muted)" text-anchor="middle">+ Encrypted AES key (RSA)</text>
+  <text x="63.7081" y="620" font-size="22.432048" fill="var(--text-muted)" font-style="italic">Only the attacker's master private key can start the decryption chain</text>
 </svg>

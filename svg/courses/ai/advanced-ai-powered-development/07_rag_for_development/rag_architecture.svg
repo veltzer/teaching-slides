@@ -101,73 +101,72 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="59.3333" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text-muted)">Indexing (offline / build time)</text>
-  <rect x="68.125" y="72.2223" width="168.75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="152.5" y="101.2223" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Source docs</text>
-  <text x="152.5" y="115.7223" text-anchor="middle" font-family="monospace" font-size="11.2974" fill="var(--text-faint)">.py .md .txt</text>
-  <line x1="238.7499" y1="96.3889" x2="281.875" y2="96.3889" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="283.75" y="72.2223" width="168.75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="368.125" y="98" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Chunking</text>
-  <text x="368.125" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">split into ~500 token chunks</text>
-  <line x1="454.375" y1="96.3889" x2="497.5" y2="96.3889" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="499.375" y="72.2223" width="187.5" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="593.1249" y="98" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Embed model</text>
-  <text x="593.1249" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">chunk → vector [0.2, -0.8, ...]</text>
-  <line x1="688.75" y1="96.3889" x2="731.875" y2="96.3889" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="733.75" y="56.1111" width="187.5" height="88.6111" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="827.5" y="88.3333" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">Vector DB</text>
-  <text x="827.5" y="107.6667" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--primary-accent)">Chroma / Pinecone</text>
-  <text x="827.5" y="123.7777" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--primary-accent)">FAISS / pgvector</text>
-  <text x="827.5" y="138.2777" text-anchor="middle" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">stores vectors + metadata</text>
-  <line x1="640" y1="151.1667" x2="640" y2="199.5" stroke="var(--border)" stroke-width="0.8889" stroke-dasharray="3.5556 2.6667" />
-  <text x="640" y="197.8889" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text-muted)">Query (real-time)</text>
-  <rect x="68.125" y="209.1667" width="168.75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="152.5" y="238.1667" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">User query</text>
-  <text x="152.5" y="252.6667" text-anchor="middle" font-family="monospace" font-size="11.2974" fill="var(--text-faint)">"how does X work?"</text>
-  <line x1="238.7499" y1="233.3333" x2="281.875" y2="233.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="283.75" y="209.1667" width="187.5" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="377.5" y="234.9444" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Embed query</text>
-  <text x="377.5" y="249.4444" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">same embed model</text>
-  <line x1="473.125" y1="233.3333" x2="516.25" y2="233.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="518.125" y="209.1667" width="206.25" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="621.25" y="234.9444" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Similarity search</text>
-  <text x="621.25" y="249.4444" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">cosine / dot product</text>
-  <line x1="827.5" y1="146.3333" x2="827.5" y2="209.1667" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-primary)" />
-  <line x1="726.25" y1="233.3333" x2="780.625" y2="233.3333" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <line x1="780.625" y1="170.5" x2="780.625" y2="233.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="733.75" y="209.1667" width="187.5" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="827.5" y="234.9444" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text)">Top-k chunks</text>
-  <text x="827.5" y="249.4444" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">most similar returned</text>
-  <line x1="923.1249" y1="233.3333" x2="966.25" y2="233.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="968.125" y="185" width="234.375" height="104.7223" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1085.3125" y="217.2223" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">LLM</text>
-  <text x="1085.3125" y="236.5556" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">Prompt =</text>
-  <text x="986.875" y="254.2777" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">  context (chunks)</text>
-  <text x="986.875" y="270.3889" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">+ user query</text>
-  <text x="986.875" y="286.5" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">→ grounded answer</text>
-  <line x1="1085.3125" y1="291.3333" x2="1085.3125" y2="338.0556" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="968.125" y="339.6667" width="234.375" height="48.3333" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1085.3125" y="365.4444" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--ok-accent)">Grounded answer</text>
-  <text x="1085.3125" y="381.5556" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--ok-accent)">cites retrieved context</text>
-  <rect x="68.125" y="410.5556" width="862.5" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="485.3125" y="434.7223" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">Why RAG for development?</text>
-  <rect x="86.875" y="447.6111" width="243.75" height="104.7223" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="208.75" y="466.9444" text-anchor="middle" font-family="sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)">Codebase context</text>
-  <text x="105.625" y="486.2777" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Index your own repo</text>
-  <text x="105.625" y="502.3889" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">AI knows your APIs,</text>
-  <text x="105.625" y="518.5" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">patterns, conventions</text>
-  <text x="105.625" y="537.8333" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">No fine-tuning needed</text>
-  <rect x="358.75" y="447.6111" width="243.75" height="104.7223" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480.625" y="466.9444" text-anchor="middle" font-family="sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)">Up-to-date docs</text>
-  <text x="377.5" y="486.2777" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Index latest library docs</text>
-  <text x="377.5" y="502.3889" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">AI uses v3.x API, not v2.x</text>
-  <text x="377.5" y="518.5" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">from training data</text>
-  <text x="377.5" y="537.8333" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Reduces hallucination</text>
-  <rect x="630.625" y="447.6111" width="271.875" height="104.7223" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="766.5625" y="466.9444" text-anchor="middle" font-family="sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)">Private knowledge</text>
-  <text x="649.375" y="486.2777" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Internal wikis, runbooks</text>
-  <text x="649.375" y="502.3889" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Architecture decisions</text>
-  <text x="649.375" y="518.5" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Stays private (local embed)</text>
-  <text x="649.375" y="537.8333" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Never sent to model provider</text>
+  <text x="644.958678" y="43.624975" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--text-muted)">Indexing (offline / build time)</text>
+  <rect x="40" y="58.125098" width="178.512397" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="129.256198" y="90.750096" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Source docs</text>
+  <text x="129.256198" y="107.062594" text-anchor="middle" font-family="monospace" font-size="12.324436" fill="var(--text-faint)">.py .md .txt</text>
+  <line x1="220.495762" y1="85.312521" x2="266.115702" y2="85.312521" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="268.099174" y="58.125098" width="178.512397" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="357.355372" y="87.125008" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Chunking</text>
+  <text x="357.355372" y="103.437507" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">split into ~500 token chunks</text>
+  <line x1="448.595041" y1="85.312521" x2="494.214876" y2="85.312521" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="496.198347" y="58.125098" width="198.347107" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="595.371795" y="87.125008" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Embed model</text>
+  <text x="595.371795" y="103.437507" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">chunk → vector [0.2, -0.8, ...]</text>
+  <line x1="696.528926" y1="85.312521" x2="742.14876" y2="85.312521" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="744.132231" y="40" width="198.347107" height="99.687479" rx="6.545454" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="843.305785" y="76.249972" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--bg)">Vector DB</text>
+  <text x="843.305785" y="98.000045" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--primary-accent)">Chroma / Pinecone</text>
+  <text x="843.305785" y="116.124918" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--primary-accent)">FAISS / pgvector</text>
+  <text x="843.305785" y="132.437417" text-anchor="middle" font-family="monospace" font-size="11.376436" fill="var(--primary-accent)">stores vectors + metadata</text>
+  <line x1="644.958678" y1="146.937541" x2="644.958678" y2="201.312499" stroke="var(--border)" stroke-width="0.8889" stroke-dasharray="3.5556 2.6667" />
+  <text x="644.958678" y="199.500011" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--text-muted)">Query (real-time)</text>
+  <rect x="40" y="212.187535" width="178.512397" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="129.256198" y="244.812532" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">User query</text>
+  <text x="129.256198" y="261.125031" text-anchor="middle" font-family="monospace" font-size="12.324436" fill="var(--text-faint)">"how does X work?"</text>
+  <line x1="220.495762" y1="239.374958" x2="266.115702" y2="239.374958" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="268.099174" y="212.187535" width="198.347107" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="367.272727" y="241.187445" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Embed query</text>
+  <text x="367.272727" y="257.499944" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">same embed model</text>
+  <line x1="468.429752" y1="239.374958" x2="514.049587" y2="239.374958" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="516.033058" y="212.187535" width="218.181818" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="625.123967" y="241.187445" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Similarity search</text>
+  <text x="625.123967" y="257.499944" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">cosine / dot product</text>
+  <line x1="843.305785" y1="141.499966" x2="843.305785" y2="212.187535" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-primary)" />
+  <line x1="736.198347" y1="239.374958" x2="793.719008" y2="239.374958" stroke="var(--primary-border)" stroke-width="1.7778" />
+  <line x1="793.719008" y1="168.687501" x2="793.719008" y2="239.374958" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="744.132231" y="212.187535" width="198.347107" height="54.374958" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="843.305785" y="241.187445" text-anchor="middle" font-family="sans-serif" font-size="14.220436" fill="var(--text)">Top-k chunks</text>
+  <text x="843.305785" y="257.499944" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">most similar returned</text>
+  <line x1="944.462704" y1="239.374958" x2="990.082645" y2="239.374958" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="992.066116" y="185" width="247.933884" height="117.812577" rx="6.545454" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1116.033058" y="221.250084" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--bg)">LLM</text>
+  <text x="1116.033058" y="243.000045" text-anchor="middle" font-family="sans-serif" font-size="13.272327" fill="var(--primary-accent)">Prompt =</text>
+  <text x="1011.900826" y="262.937406" font-family="monospace" font-size="12.324436" fill="var(--primary-accent)">  context (chunks)</text>
+  <text x="1011.900826" y="281.062504" font-family="monospace" font-size="12.324436" fill="var(--primary-accent)">+ user query</text>
+  <text x="1011.900826" y="299.18749" font-family="monospace" font-size="12.324436" fill="var(--primary-accent)">→ grounded answer</text>
+  <line x1="1116.033058" y1="304.624952" x2="1116.033058" y2="357.187535" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="992.066116" y="359.000022" width="247.933884" height="54.374958" rx="6.545454" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1116.033058" y="387.999933" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--ok-accent)">Grounded answer</text>
+  <text x="1116.033058" y="406.125031" text-anchor="middle" font-family="sans-serif" font-size="12.324436" fill="var(--ok-accent)">cites retrieved context</text>
+  <rect x="40" y="438.750028" width="912.396694" height="181.249972" rx="6.545454" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="481.322314" y="465.937563" text-anchor="middle" font-family="sans-serif" font-size="15.168436" font-weight="bold" fill="var(--text)">Why RAG for development?</text>
+  <rect x="59.834711" y="480.437462" width="257.85124" height="117.812577" rx="6.545454" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="188.760331" y="502.187423" text-anchor="middle" font-family="sans-serif" font-size="13.272327" font-weight="bold" fill="var(--primary-accent)">Codebase context</text>
+  <text x="79.669421" y="523.937383" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Index your own repo</text>
+  <text x="79.669421" y="542.062482" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">AI knows your APIs,</text>
+  <text x="79.669421" y="560.187468" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">patterns, conventions</text>
+  <text x="79.669421" y="581.937428" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">No fine-tuning needed</text>
+  <rect x="347.438017" y="480.437462" width="257.85124" height="117.812577" rx="6.545454" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="476.363636" y="502.187423" text-anchor="middle" font-family="sans-serif" font-size="13.272327" font-weight="bold" fill="var(--primary-accent)">Up-to-date docs</text>
+  <text x="367.272727" y="523.937383" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Index latest library docs</text>
+  <text x="367.272727" y="542.062482" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">AI uses v3.x API, not v2.x</text>
+  <text x="367.272727" y="560.187468" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">from training data</text>
+  <text x="367.272727" y="581.937428" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Reduces hallucination</text>
+  <rect x="635.041322" y="480.437462" width="287.603306" height="117.812577" rx="6.545454" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="778.842975" y="502.187423" text-anchor="middle" font-family="sans-serif" font-size="13.272327" font-weight="bold" fill="var(--primary-accent)">Private knowledge</text>
+  <text x="654.876033" y="523.937383" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Internal wikis, runbooks</text>
+  <text x="654.876033" y="542.062482" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Architecture decisions</text>
+  <text x="654.876033" y="560.187468" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Stays private (local embed)</text>
+  <text x="654.876033" y="581.937428" font-family="sans-serif" font-size="12.324436" fill="var(--text-muted)">Never sent to model provider</text>
 </svg>

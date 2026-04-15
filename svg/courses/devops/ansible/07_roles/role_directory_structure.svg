@@ -98,54 +98,53 @@
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.1249" y="56.111" width="431.25" height="467.2223" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="283.75" y="81.8889" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Role Directory Layout</text>
-  <text x="91.5624" y="106.0556" font-family="monospace" font-size="13.9043" fill="var(--primary-accent)" font-weight="bold">roles/</text>
-  <text x="91.5624" y="127" font-family="monospace" font-size="13.9043" fill="var(--primary-accent)" font-weight="bold">└── my_role/</text>
-  <text x="110.3124" y="147.9443" font-family="monospace" font-size="13.0355" fill="var(--text)">├── tasks/</text>
-  <text x="147.8124" y="165.6666" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── main.yml</text>
-  <text x="110.3124" y="186.6111" font-family="monospace" font-size="13.0355" fill="var(--text)">├── handlers/</text>
-  <text x="147.8124" y="204.3332" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── main.yml</text>
-  <text x="110.3124" y="225.2777" font-family="monospace" font-size="13.0355" fill="var(--text)">├── defaults/</text>
-  <text x="147.8124" y="243" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── main.yml</text>
-  <text x="110.3124" y="263.9443" font-family="monospace" font-size="13.0355" fill="var(--text)">├── vars/</text>
-  <text x="147.8124" y="281.6667" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── main.yml</text>
-  <text x="110.3124" y="302.6111" font-family="monospace" font-size="13.0355" fill="var(--text)">├── templates/</text>
-  <text x="147.8124" y="320.3332" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── nginx.conf.j2</text>
-  <text x="110.3124" y="341.2777" font-family="monospace" font-size="13.0355" fill="var(--text)">├── files/</text>
-  <text x="147.8124" y="359" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── my_script.sh</text>
-  <text x="110.3124" y="379.9444" font-family="monospace" font-size="13.0355" fill="var(--text)">├── meta/</text>
-  <text x="147.8124" y="397.6667" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── main.yml</text>
-  <text x="110.3124" y="418.611" font-family="monospace" font-size="13.0355" fill="var(--text)">├── library/</text>
-  <text x="147.8124" y="436.3333" font-family="monospace" font-size="12.1662" fill="var(--text-muted)">└── custom_module.py</text>
-  <text x="110.3124" y="457.2777" font-family="monospace" font-size="13.0355" fill="var(--text)">└── README.md</text>
-  <rect x="518.125" y="56.111" width="693.7501" height="467.2223" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="865" y="81.8889" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">What each directory does</text>
-  <rect x="536.875" y="93.1666" width="656.25" height="45.1111" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="686.875" y="112.5" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--bg)">tasks/main.yml</text>
-  <text x="686.875" y="130.2223" font-family="sans-serif" font-size="12.1662" fill="var(--primary-accent)">The main list of tasks the role executes — entry point</text>
-  <rect x="536.875" y="144.7223" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="164.0556" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">handlers/main.yml</text>
-  <text x="686.875" y="181.7776" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Handlers triggered by <tspan font-family="monospace">notify:</tspan> — e.g. restart nginx</text>
-  <rect x="536.875" y="196.2777" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="215.6111" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">defaults/main.yml</text>
-  <text x="686.875" y="233.3332" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Lowest-priority variables — easily overridden by users</text>
-  <rect x="536.875" y="247.8333" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="267.1666" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">vars/main.yml</text>
-  <text x="686.875" y="284.8889" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Higher-priority variables — internal role constants</text>
-  <rect x="536.875" y="299.3889" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="318.7223" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">templates/</text>
-  <text x="686.875" y="336.4444" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Jinja2 templates (<tspan font-family="monospace">.j2</tspan>) deployed with the <tspan font-family="monospace">template:</tspan> module</text>
-  <rect x="536.875" y="350.9443" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="370.2776" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">files/</text>
-  <text x="686.875" y="387.9999" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Static files deployed with the <tspan font-family="monospace">copy:</tspan> module</text>
-  <rect x="536.875" y="402.5" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="421.8332" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">meta/main.yml</text>
-  <text x="686.875" y="439.5556" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Role metadata: author, Galaxy tags, role dependencies</text>
-  <rect x="536.875" y="454.0556" width="656.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="686.875" y="473.3889" font-family="monospace" font-size="13.9043" font-weight="bold" fill="var(--text)">library/</text>
-  <text x="686.875" y="491.1111" font-family="sans-serif" font-size="12.1662" fill="var(--text-muted)">Custom modules used only by this role</text>
-  <rect x="68.1249" y="537.8333" width="1143.75" height="33.8333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="639.9999" y="558.7777" text-anchor="middle" font-family="sans-serif" font-size="13.9043" fill="var(--primary-accent)">Create with: <tspan font-family="monospace">ansible-galaxy role init my_role</tspan> — all directories are optional, only <tspan font-family="monospace">tasks/</tspan> is needed</text>
+  <rect x="40" y="40" width="452.458937" height="525.625042" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="266.229574" y="69.000135" text-anchor="middle" font-family="sans-serif" font-size="16.994463" font-weight="bold" fill="var(--text)">Role Directory Layout</text>
+  <text x="64.59016" y="96.18767" font-family="monospace" font-size="15.106032" fill="var(--primary-accent)" font-weight="bold">roles/</text>
+  <text x="64.59016" y="119.750118" font-family="monospace" font-size="15.106032" fill="var(--primary-accent)" font-weight="bold">└── my_role/</text>
+  <text x="84.262287" y="143.312454" font-family="monospace" font-size="14.162143" fill="var(--text)">├── tasks/</text>
+  <text x="123.606543" y="163.250039" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── main.yml</text>
+  <text x="84.262287" y="186.8126" font-family="monospace" font-size="14.162143" fill="var(--text)">├── handlers/</text>
+  <text x="123.606543" y="206.749961" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── main.yml</text>
+  <text x="84.262287" y="230.312521" font-family="monospace" font-size="14.162143" fill="var(--text)">├── defaults/</text>
+  <text x="123.606543" y="250.250107" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── main.yml</text>
+  <text x="84.262287" y="273.812442" font-family="monospace" font-size="14.162143" fill="var(--text)">├── vars/</text>
+  <text x="123.606543" y="293.750141" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── main.yml</text>
+  <text x="84.262287" y="317.312589" font-family="monospace" font-size="14.162143" fill="var(--text)">├── templates/</text>
+  <text x="123.606543" y="337.249949" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── nginx.conf.j2</text>
+  <text x="84.262287" y="360.81251" font-family="monospace" font-size="14.162143" fill="var(--text)">├── files/</text>
+  <text x="123.606543" y="380.750096" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── my_script.sh</text>
+  <text x="84.262287" y="404.312544" font-family="monospace" font-size="14.162143" fill="var(--text)">├── meta/</text>
+  <text x="123.606543" y="424.250129" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── main.yml</text>
+  <text x="84.262287" y="447.812465" font-family="monospace" font-size="14.162143" fill="var(--text)">├── library/</text>
+  <text x="123.606543" y="467.750051" font-family="monospace" font-size="13.21771" fill="var(--text-muted)">└── custom_module.py</text>
+  <text x="84.262287" y="491.312499" font-family="monospace" font-size="14.162143" fill="var(--text)">└── README.md</text>
+  <rect x="512.13117" y="40" width="727.86883" height="525.625042" rx="6.518573" fill="var(--bg)" stroke="var(--border)" stroke-width="1.3333" />
+  <text x="876.065532" y="69.000135" text-anchor="middle" font-family="sans-serif" font-size="16.994463" font-weight="bold" fill="var(--text)">What each directory does</text>
+  <rect x="531.803298" y="81.687546" width="688.52447" height="50.749983" rx="6.518573" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="689.180319" y="103.43762" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--bg)">tasks/main.yml</text>
+  <text x="689.180319" y="123.375205" font-family="sans-serif" font-size="13.21771" fill="var(--primary-accent)">The main list of tasks the role executes — entry point</text>
+  <rect x="531.803298" y="139.687704" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="161.437665" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">handlers/main.yml</text>
+  <text x="689.180319" y="181.374913" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Handlers triggered by <tspan font-family="monospace">notify:</tspan> — e.g. restart nginx</text>
+  <rect x="531.803298" y="197.687524" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="219.437597" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">defaults/main.yml</text>
+  <text x="689.180319" y="239.374958" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Lowest-priority variables — easily overridden by users</text>
+  <rect x="531.803298" y="255.687569" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="277.43753" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">vars/main.yml</text>
+  <text x="689.180319" y="297.375115" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Higher-priority variables — internal role constants</text>
+  <rect x="531.803298" y="313.687614" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="335.437687" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">templates/</text>
+  <text x="689.180319" y="355.375048" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Jinja2 templates (<tspan font-family="monospace">.j2</tspan>) deployed with the <tspan font-family="monospace">template:</tspan> module</text>
+  <rect x="531.803298" y="371.687434" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="393.437395" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">files/</text>
+  <text x="689.180319" y="413.37498" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Static files deployed with the <tspan font-family="monospace">copy:</tspan> module</text>
+  <rect x="531.803298" y="429.687591" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="451.43744" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">meta/main.yml</text>
+  <text x="689.180319" y="471.375138" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Role metadata: author, Galaxy tags, role dependencies</text>
+  <rect x="531.803298" y="487.687636" width="688.52447" height="50.749983" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="689.180319" y="509.437597" font-family="monospace" font-size="15.106032" font-weight="bold" fill="var(--text)">library/</text>
+  <text x="689.180319" y="529.37507" font-family="sans-serif" font-size="13.21771" fill="var(--text-muted)">Custom modules used only by this role</text>
+  <rect x="40" y="581.937541" width="1199.99979" height="38.062459" rx="6.518573" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.999895" y="605.499989" text-anchor="middle" font-family="sans-serif" font-size="15.106032" fill="var(--primary-accent)">Create with: <tspan font-family="monospace">ansible-galaxy role init my_role</tspan> — all directories are optional, only <tspan font-family="monospace">tasks/</tspan> is needed</text>
 </svg>

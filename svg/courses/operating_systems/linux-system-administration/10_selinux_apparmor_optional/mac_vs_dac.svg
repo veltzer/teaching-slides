@@ -98,121 +98,119 @@
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- == TOP: DAC vs MAC COMPARISON == -->
   <!-- DAC Column Header -->
-  <rect x="96.25" y="67.1875" width="328.125" height="39.875" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="260.3125" y="92.5625" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">DAC - Discretionary Access Control</text>
+  <rect x="40" y="40" width="353.535354" height="43.848797" rx="6.530952" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="216.767677" y="67.90378" font-family="Arial, sans-serif" font-size="17.056235" font-weight="bold" fill="var(--bg)" text-anchor="middle">DAC - Discretionary Access Control</text>
 
   <!-- MAC Column Header -->
-  <rect x="471.25" y="67.1875" width="328.125" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="635.3125" y="92.5625" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">MAC - Mandatory Access Control</text>
+  <rect x="444.040404" y="40" width="353.535354" height="43.848797" rx="6.530952" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="620.808081" y="67.90378" font-family="Arial, sans-serif" font-size="17.056235" font-weight="bold" fill="var(--bg)" text-anchor="middle">MAC - Mandatory Access Control</text>
 
   <!-- DAC content -->
-  <rect x="96.25" y="116.125" width="328.125" height="181.25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="115" y="137.875" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Access decisions by file owner</text>
-  <text x="115" y="156" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; chmod/chown/chgrp set permissions</text>
-  <text x="115" y="172.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Owner can grant any permission</text>
-  <text x="115" y="188.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; root can override everything</text>
-  <text x="115" y="204.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Simple rwxrwxrwx + ACLs</text>
-  <text x="115" y="221.25" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Compromised process = full owner rights</text>
-  <text x="115" y="243" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">Risk: compromised nginx can read /etc/shadow</text>
-  <text x="115" y="261.125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">if running as root or with broad permissions</text>
-  <text x="115" y="282.875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Used by: all standard Linux systems</text>
+  <rect x="40" y="93.814433" width="353.535354" height="199.312715" rx="6.530952" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60.20202" y="117.731959" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--warn-accent)">Access decisions by file owner</text>
+  <text x="60.20202" y="137.66323" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; chmod/chown/chgrp set permissions</text>
+  <text x="60.20202" y="155.601375" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Owner can grant any permission</text>
+  <text x="60.20202" y="173.539519" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; root can override everything</text>
+  <text x="60.20202" y="191.477663" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Simple rwxrwxrwx + ACLs</text>
+  <text x="60.20202" y="209.415808" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Compromised process = full owner rights</text>
+  <text x="60.20202" y="233.333333" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--danger-accent)">Risk: compromised nginx can read /etc/shadow</text>
+  <text x="60.20202" y="253.264605" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--danger-accent)">if running as root or with broad permissions</text>
+  <text x="60.20202" y="277.182131" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Used by: all standard Linux systems</text>
 
   <!-- MAC content -->
-  <rect x="471.25" y="116.125" width="328.125" height="181.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="490" y="137.875" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Access decisions by system policy</text>
-  <text x="490" y="156" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Kernel enforces policy regardless of owner</text>
-  <text x="490" y="172.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Policy set by security admin</text>
-  <text x="490" y="188.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; root is restricted by policy</text>
-  <text x="490" y="204.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Each process has a security label/context</text>
-  <text x="490" y="221.25" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; Principle of least privilege enforced</text>
-  <text x="490" y="243" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Protection: compromised nginx confined to</text>
-  <text x="490" y="261.125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">its SELinux/AppArmor policy domain only</text>
-  <text x="490" y="282.875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Used by: RHEL/Ubuntu in production environments</text>
+  <rect x="444.040404" y="93.814433" width="353.535354" height="199.312715" rx="6.530952" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="464.242424" y="117.731959" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--primary-accent)">Access decisions by system policy</text>
+  <text x="464.242424" y="137.66323" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Kernel enforces policy regardless of owner</text>
+  <text x="464.242424" y="155.601375" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Policy set by security admin</text>
+  <text x="464.242424" y="173.539519" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; root is restricted by policy</text>
+  <text x="464.242424" y="191.477663" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Each process has a security label/context</text>
+  <text x="464.242424" y="209.415808" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; Principle of least privilege enforced</text>
+  <text x="464.242424" y="233.333333" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--ok-accent)">Protection: compromised nginx confined to</text>
+  <text x="464.242424" y="253.264605" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--ok-accent)">its SELinux/AppArmor policy domain only</text>
+  <text x="464.242424" y="277.182131" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Used by: RHEL/Ubuntu in production environments</text>
 
   <!-- == SELINUX SECTION == -->
-  <rect x="96.25" y="311.875" width="468.75" height="280.9375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="96.25" y="311.875" width="468.75" height="32.625" rx="6" fill="var(--danger-accent)"/>
-  <rect x="96.25" y="328.1875" width="468.75" height="16.3125" fill="var(--danger-accent)" rx="6"/>
-  <text x="330.625" y="333.625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">SELinux (RHEL / Fedora / CentOS)</text>
+  <rect x="40" y="309.072165" width="505.050505" height="308.934708" rx="6.530952" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="309.072165" width="505.050505" height="35.876289" rx="6.530952" fill="var(--danger-accent)"/>
+  <rect x="40" y="327.010309" width="505.050505" height="17.938144" fill="var(--danger-accent)" rx="6.530952"/>
+  <text x="292.525253" y="332.989691" font-family="Arial, sans-serif" font-size="15.0496" font-weight="bold" fill="var(--bg)" text-anchor="middle">SELinux (RHEL / Fedora / CentOS)</text>
 
-  <text x="115" y="360.8125" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Security Context Format:</text>
-  <rect x="115" y="368.0625" width="431.25" height="29" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
-  <text x="321.25" y="387.0938" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">user:role:type:level</text>
+  <text x="60.20202" y="362.886598" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--danger-accent)">Security Context Format:</text>
+  <rect x="60.20202" y="370.859107" width="464.646465" height="31.890034" rx="6.530952" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="282.424242" y="391.786997" font-family="monospace" font-size="14.046337" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">user:role:type:level</text>
 
-  <text x="115" y="413.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Example: system_u:system_r:httpd_t:s0</text>
-  <text x="115" y="429.6875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; user: SELinux user identity (system_u, unconfined_u)</text>
-  <text x="115" y="446" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; role: what roles that user can assume (system_r)</text>
-  <text x="115" y="462.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; type: domain of process or label of file (httpd_t)</text>
-  <text x="115" y="478.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">&#x2022; level: MLS sensitivity (s0 = unclassified)</text>
+  <text x="60.20202" y="420.687285" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">Example: system_u:system_r:httpd_t:s0</text>
+  <text x="60.20202" y="438.62543" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; user: SELinux user identity (system_u, unconfined_u)</text>
+  <text x="60.20202" y="456.563574" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; role: what roles that user can assume (system_r)</text>
+  <text x="60.20202" y="474.501718" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; type: domain of process or label of file (httpd_t)</text>
+  <text x="60.20202" y="492.439863" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">&#x2022; level: MLS sensitivity (s0 = unclassified)</text>
 
-  <text x="115" y="498.5625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Enforcement Modes:</text>
-  <text x="115" y="514.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Enforcing - denies and logs; Permissive - logs only; Disabled - off</text>
+  <text x="60.20202" y="514.364261" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--danger-accent)">Enforcement Modes:</text>
+  <text x="60.20202" y="532.302405" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">Enforcing - denies and logs; Permissive - logs only; Disabled - off</text>
 
-  <text x="115" y="533" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Key Tools:</text>
-  <text x="115" y="549.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">getenforce / setenforce 1</text>
-  <text x="302.5" y="549.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">ls -Z  # show context</text>
-  <text x="115" y="563.8125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">chcon -t httpd_t /var/www/html/file</text>
-  <text x="115" y="578.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">ausearch -m avc  # audit denials</text>
-  <text x="115" y="592.8125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">audit2allow -a  # generate policy</text>
+  <text x="60.20202" y="552.233677" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--danger-accent)">Key Tools:</text>
+  <text x="60.20202" y="570.171821" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">getenforce / setenforce 1</text>
+  <text x="262.222222" y="570.171821" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">ls -Z  # show context</text>
+  <text x="60.20202" y="586.116838" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">chcon -t httpd_t /var/www/html/file</text>
+  <text x="60.20202" y="602.061856" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">ausearch -m avc  # audit denials</text>
+  <text x="60.20202" y="618.006873" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">audit2allow -a  # generate policy</text>
 
   <!-- == APPARMOR SECTION == -->
-  <rect x="593.125" y="311.875" width="468.75" height="280.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="593.125" y="311.875" width="468.75" height="32.625" rx="6" fill="var(--ok-accent)"/>
-  <rect x="593.125" y="328.1875" width="468.75" height="16.3125" fill="var(--ok-accent)" rx="6"/>
-  <text x="827.5" y="333.625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">AppArmor (Ubuntu / SUSE)</text>
+  <rect x="575.353535" y="309.072165" width="505.050505" height="308.934708" rx="6.530952" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="575.353535" y="309.072165" width="505.050505" height="35.876289" rx="6.530952" fill="var(--ok-accent)"/>
+  <rect x="575.353535" y="327.010309" width="505.050505" height="17.938144" fill="var(--ok-accent)" rx="6.530952"/>
+  <text x="827.878788" y="332.989691" font-family="Arial, sans-serif" font-size="15.0496" font-weight="bold" fill="var(--bg)" text-anchor="middle">AppArmor (Ubuntu / SUSE)</text>
 
-  <text x="611.875" y="360.8125" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Profile-Based (path-based):</text>
-  <rect x="611.875" y="368.0625" width="431.25" height="29" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
-  <text x="827.5" y="387.0938" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">/etc/apparmor.d/usr.sbin.nginx</text>
+  <text x="595.555556" y="362.886598" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--ok-accent)">Profile-Based (path-based):</text>
+  <rect x="595.555556" y="370.859107" width="464.646465" height="31.890034" rx="6.530952" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="827.878788" y="391.786997" font-family="monospace" font-size="13.043074" fill="var(--ok-accent)" text-anchor="middle">/etc/apparmor.d/usr.sbin.nginx</text>
 
-  <text x="611.875" y="413.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Profiles define allowed paths, capabilities, network:</text>
-  <text x="611.875" y="429.6875" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">/usr/sbin/nginx {</text>
-  <text x="611.875" y="446" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  /var/www/html/** r,</text>
-  <text x="611.875" y="462.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  /var/log/nginx/*.log w,</text>
-  <text x="611.875" y="478.625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  network tcp,</text>
-  <text x="611.875" y="494.9375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">}</text>
+  <text x="595.555556" y="420.687285" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">Profiles define allowed paths, capabilities, network:</text>
+  <text x="595.555556" y="438.62543" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">/usr/sbin/nginx {</text>
+  <text x="595.555556" y="456.563574" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">  /var/www/html/** r,</text>
+  <text x="595.555556" y="474.501718" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">  /var/log/nginx/*.log w,</text>
+  <text x="595.555556" y="492.439863" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">  network tcp,</text>
+  <text x="595.555556" y="510.378007" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">}</text>
 
-  <text x="611.875" y="514.875" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Enforcement Modes:</text>
-  <text x="611.875" y="531.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">enforce - deny violations; complain - log only; disabled - off</text>
+  <text x="595.555556" y="532.302405" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--ok-accent)">Enforcement Modes:</text>
+  <text x="595.555556" y="550.24055" font-family="Arial, sans-serif" font-size="12.039702" fill="var(--text)">enforce - deny violations; complain - log only; disabled - off</text>
 
-  <text x="611.875" y="549.3125" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Key Tools:</text>
-  <text x="611.875" y="565.625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">aa-status  # show profiles</text>
-  <text x="808.75" y="565.625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">aa-enforce /path/to/profile</text>
-  <text x="611.875" y="580.125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">aa-complain nginx  # switch to log</text>
-  <text x="611.875" y="594.625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">aa-genprof /usr/sbin/nginx</text>
+  <text x="595.555556" y="570.171821" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--ok-accent)">Key Tools:</text>
+  <text x="595.555556" y="588.109966" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">aa-status  # show profiles</text>
+  <text x="807.676768" y="588.109966" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">aa-enforce /path/to/profile</text>
+  <text x="595.555556" y="604.054983" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">aa-complain nginx  # switch to log</text>
+  <text x="595.555556" y="620" font-family="monospace" font-size="11.036439" fill="var(--text-muted)">aa-genprof /usr/sbin/nginx</text>
 
   <!-- Right column: summary -->
-  <rect x="1080.625" y="67.1875" width="129.375" height="525.625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1145.3125" y="89.8438" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Quick Ref</text>
-  <text x="1090" y="110.6875" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--danger-accent)">SELinux</text>
-  <text x="1090" y="127" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">RHEL/Fedora</text>
-  <text x="1090" y="141.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Label-based</text>
-  <text x="1090" y="156" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">user:role:type</text>
-  <text x="1090" y="170.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Powerful</text>
-  <text x="1090" y="185" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Complex</text>
-  <text x="1090" y="199.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">NSA origin</text>
+  <rect x="1100.606061" y="40" width="139.393939" height="578.006873" rx="6.530952" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1170.30303" y="64.914144" font-family="Arial, sans-serif" font-size="13.043074" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Quick Ref</text>
+  <text x="1110.707071" y="87.835052" font-family="Arial, sans-serif" font-size="12.039702" font-weight="bold" fill="var(--danger-accent)">SELinux</text>
+  <text x="1110.707071" y="105.773196" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">RHEL/Fedora</text>
+  <text x="1110.707071" y="121.718213" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Label-based</text>
+  <text x="1110.707071" y="137.66323" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">user:role:type</text>
+  <text x="1110.707071" y="153.608247" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Powerful</text>
+  <text x="1110.707071" y="169.553265" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Complex</text>
+  <text x="1110.707071" y="185.498282" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">NSA origin</text>
 
-  <line x1="1090" y1="208.5625" x2="1200.625" y2="208.5625" stroke="var(--border)" stroke-width="1"/>
+  <line x1="1110.707071" y1="195.463918" x2="1229.89899" y2="195.463918" stroke="var(--border)" stroke-width="1"/>
 
-  <text x="1090" y="224.875" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)">AppArmor</text>
-  <text x="1090" y="241.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Ubuntu/SUSE</text>
-  <text x="1090" y="255.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Path-based</text>
-  <text x="1090" y="270.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Profiles</text>
-  <text x="1090" y="284.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Simpler</text>
-  <text x="1090" y="299.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Easier audit</text>
-  <text x="1090" y="313.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Novell origin</text>
+  <text x="1110.707071" y="213.402062" font-family="Arial, sans-serif" font-size="12.039702" font-weight="bold" fill="var(--ok-accent)">AppArmor</text>
+  <text x="1110.707071" y="231.340206" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Ubuntu/SUSE</text>
+  <text x="1110.707071" y="247.285223" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Path-based</text>
+  <text x="1110.707071" y="263.230241" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Profiles</text>
+  <text x="1110.707071" y="279.175258" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Simpler</text>
+  <text x="1110.707071" y="295.120275" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Easier audit</text>
+  <text x="1110.707071" y="311.065292" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Novell origin</text>
 
-  <line x1="1090" y1="322.75" x2="1200.625" y2="322.75" stroke="var(--border)" stroke-width="1"/>
+  <line x1="1110.707071" y1="321.030928" x2="1229.89899" y2="321.030928" stroke="var(--border)" stroke-width="1"/>
 
-  <text x="1090" y="340.875" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Shared</text>
-  <text x="1090" y="357.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Kernel LSM</text>
-  <text x="1090" y="371.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">enforce mode</text>
-  <text x="1090" y="386.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">audit logs</text>
-  <text x="1090" y="400.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">complain/log</text>
-  <text x="1090" y="415.1875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">defense-in-</text>
-  <text x="1090" y="429.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">depth layer</text>
+  <text x="1110.707071" y="340.962199" font-family="Arial, sans-serif" font-size="12.039702" font-weight="bold" fill="var(--primary-accent)">Shared</text>
+  <text x="1110.707071" y="358.900344" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">Kernel LSM</text>
+  <text x="1110.707071" y="374.845361" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">enforce mode</text>
+  <text x="1110.707071" y="390.790378" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">audit logs</text>
+  <text x="1110.707071" y="406.735395" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">complain/log</text>
+  <text x="1110.707071" y="422.680412" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">defense-in-</text>
+  <text x="1110.707071" y="438.62543" font-family="Arial, sans-serif" font-size="11.036439" fill="var(--text-muted)">depth layer</text>
 </svg>

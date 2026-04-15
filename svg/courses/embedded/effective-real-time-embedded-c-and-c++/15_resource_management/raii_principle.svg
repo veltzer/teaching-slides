@@ -101,31 +101,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="396.25" y="48.0556" width="487.5" height="80.5556" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="86.7223" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Constructor</text>
-  <text x="640" y="110.8889" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--primary-accent)">Acquires the resource</text>
-  <line x1="640" y1="130.2223" x2="640" y2="167.2777" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="396.25" y="168.8889" width="487.5" height="80.5556" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="207.5556" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">Object Lifetime</text>
-  <text x="640" y="231.7223" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--text-muted)">Resource is valid and usable</text>
-  <line x1="640" y1="251.0556" x2="640" y2="288.1111" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="396.25" y="289.7223" width="487.5" height="80.5556" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="328.3889" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Destructor</text>
-  <text x="640" y="352.5556" text-anchor="middle" font-family="sans-serif" font-size="15.6425" fill="var(--primary-accent)">Releases the resource — always, even on exception</text>
-  <rect x="115" y="394.4444" width="487.5" height="140.9723" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="133.75" y="418.6111" font-family="monospace" font-size="14.7735" fill="var(--text)">class MutexGuard {</text>
-  <text x="152.5" y="439.5556" font-family="monospace" font-size="14.7735" fill="var(--primary-accent)">  MutexGuard(Mutex&amp; m) {</text>
-  <text x="171.25" y="458.8889" font-family="monospace" font-size="14.7735" fill="var(--text-muted)">    m.lock();   // acquire</text>
-  <text x="152.5" y="478.2223" font-family="monospace" font-size="14.7735" fill="var(--text-muted)">  }</text>
-  <text x="152.5" y="497.5556" font-family="monospace" font-size="14.7735" fill="var(--primary-accent)">  ~MutexGuard() {</text>
-  <text x="171.25" y="516.8889" font-family="monospace" font-size="14.7735" fill="var(--text-muted)">    m.unlock(); // release</text>
-  <text x="133.75" y="529.7777" font-family="monospace" font-size="14.7735" fill="var(--text)">};</text>
-  <rect x="677.4999" y="394.4444" width="487.5" height="140.9723" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="921.25" y="425.0556" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)">Why it matters in embedded:</text>
-  <text x="696.25" y="450.8333" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">• Mutex always unlocked on scope exit</text>
-  <text x="696.25" y="471.7777" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">• DMA buffer always returned to pool</text>
-  <text x="696.25" y="492.7223" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">• GPIO always restored to safe state</text>
-  <text x="696.25" y="513.6667" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">• No resource leak on error paths</text>
-  <text x="696.25" y="529.7777" font-family="sans-serif" font-size="13.0354" fill="var(--text-faint)">  even without exceptions</text>
+  <rect x="361.428602" y="40" width="557.14291" height="95.867824" rx="6.997386" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640.000057" y="86.01657" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--bg)">Constructor</text>
+  <text x="640.000057" y="114.776822" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--primary-accent)">Acquires the resource</text>
+  <line x1="640.000057" y1="137.785166" x2="640.000057" y2="181.884155" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <rect x="361.428602" y="183.801617" width="557.14291" height="95.867824" rx="6.997386" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640.000057" y="229.818186" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--text)">Object Lifetime</text>
+  <text x="640.000057" y="258.578557" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--text-muted)">Resource is valid and usable</text>
+  <line x1="640.000057" y1="281.586782" x2="640.000057" y2="325.685891" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <rect x="361.428602" y="327.603352" width="557.14291" height="95.867824" rx="6.997386" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640.000057" y="373.619803" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--bg)">Destructor</text>
+  <text x="640.000057" y="402.380174" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--primary-accent)">Releases the resource — always, even on exception</text>
+  <rect x="40" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="61.428573" y="480.991679" font-family="monospace" font-size="17.229313" fill="var(--text)">class MutexGuard {</text>
+  <text x="82.857147" y="505.917366" font-family="monospace" font-size="17.229313" fill="var(--primary-accent)">  MutexGuard(Mutex&amp; m) {</text>
+  <text x="104.28572" y="528.925591" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">    m.lock();   // acquire</text>
+  <text x="82.857147" y="551.933936" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">  }</text>
+  <text x="82.857147" y="574.942161" font-family="monospace" font-size="17.229313" fill="var(--primary-accent)">  ~MutexGuard() {</text>
+  <text x="104.28572" y="597.950386" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">    m.unlock(); // release</text>
+  <text x="61.428573" y="613.289124" font-family="monospace" font-size="17.229313" fill="var(--text)">};</text>
+  <rect x="682.85709" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="961.428659" y="488.661167" text-anchor="middle" font-family="sans-serif" font-size="20.269794" font-weight="bold" fill="var(--primary-accent)">Why it matters in embedded:</text>
+  <text x="704.285778" y="519.338761" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• Mutex always unlocked on scope exit</text>
+  <text x="704.285778" y="544.264329" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• DMA buffer always returned to pool</text>
+  <text x="704.285778" y="569.190134" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• GPIO always restored to safe state</text>
+  <text x="704.285778" y="594.115702" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• No resource leak on error paths</text>
+  <text x="704.285778" y="613.289124" font-family="sans-serif" font-size="15.202287" fill="var(--text-faint)">  even without exceptions</text>
 </svg>

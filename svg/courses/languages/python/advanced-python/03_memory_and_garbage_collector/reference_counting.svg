@@ -112,73 +112,72 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#e53935" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="246.25" y="87.125" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 1: Two References</text>
-  <rect x="171.25" y="103.4375" width="159.375" height="108.75" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="250.9375" y="130.625" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
-  <line x1="171.25" y1="139.6875" x2="330.625" y2="139.6875" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="250.9375" y="159.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
-  <rect x="185.3125" y="171.4063" width="121.875" height="27.1875" rx="6" fill="var(--primary-accent)" />
-  <text x="246.25" y="189.5313" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 2</text>
-  <rect x="68.125" y="157.8125" width="75" height="36.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="105.625" y="180.4688" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)" text-anchor="middle">x</text>
-  <line x1="143.125" y1="175.9375" x2="171.25" y2="171.4063" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="68.125" y="216.7187" width="75" height="36.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="105.625" y="239.375" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)" text-anchor="middle">y</text>
-  <line x1="143.125" y1="234.8437" x2="171.25" y2="198.5938" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="250.9375" y="230.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = [1,2,3]</text>
-  <text x="250.9375" y="246.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">y = x</text>
-  <text x="640" y="87.125" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 2: One Reference</text>
-  <rect x="560.3125" y="103.4375" width="159.375" height="108.75" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="130.625" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
-  <line x1="560.3125" y1="139.6875" x2="719.6874" y2="139.6875" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="640" y="159.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
-  <rect x="574.375" y="171.4063" width="121.875" height="27.1875" rx="6" fill="var(--primary-accent)" />
-  <text x="635.3124" y="189.5313" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 1</text>
-  <rect x="457.1875" y="157.8125" width="75" height="36.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="494.6875" y="180.4688" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)" text-anchor="middle">x</text>
-  <line x1="532.1875" y1="175.9375" x2="560.3125" y2="171.4063" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="457.1875" y="216.7187" width="75" height="36.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="3.5556 2.6667" filter="url(#shadow)" />
-  <text x="494.6875" y="239.375" font-family="monospace" font-size="12.9043" fill="var(--text-faint)" text-anchor="middle">y=None</text>
-  <text x="640" y="230.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">del y  (or y = None)</text>
-  <text x="640" y="246.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">refcount decremented</text>
-  <text x="1033.75" y="87.125" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Step 3: Freed!</text>
-  <rect x="954.0625" y="103.4375" width="159.375" height="108.75" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1033.75" y="130.625" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
-  <line x1="954.0625" y1="139.6875" x2="1113.4375" y2="139.6875" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="1033.75" y="159.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--danger-accent)" text-anchor="middle">type: list</text>
-  <rect x="968.125" y="171.4063" width="121.875" height="27.1875" rx="6" fill="var(--danger-accent)" />
-  <text x="1029.0625" y="189.5313" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 0</text>
-  <text x="1033.75" y="234.8437" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Memory Deallocated</text>
-  <text x="1033.75" y="254.7813" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">Immediately freed — no GC needed</text>
-  <line x1="339.9999" y1="157.8125" x2="443.125" y2="157.8125" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="391.5625" y="150.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">del y</text>
-  <line x1="733.75" y1="157.8125" x2="935.3125" y2="157.8125" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="835" y="150.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">del x</text>
-  <line x1="115" y1="293.75" x2="1165" y2="293.75" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="640" y="325.4687" font-family="Arial, sans-serif" font-size="17.5131" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Tracking Reference Counts with sys.getrefcount()</text>
-  <rect x="133.75" y="343.5938" width="450" height="145" rx="6" fill="var(--code-bg)" filter="url(#shadow)" />
-  <text x="358.75" y="368.0625" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)">import sys</text>
-  <text x="358.75" y="388" font-family="monospace" font-size="12.9043" fill="var(--bg)">x = [1, 2, 3]</text>
-  <text x="358.75" y="407.9375" font-family="monospace" font-size="12.9043" fill="var(--ok-accent)">print(sys.getrefcount(x) - 1)  </text>
-  <text x="358.75" y="427.8749" font-family="monospace" font-size="12.9043" fill="var(--bg)">y = x</text>
-  <text x="358.75" y="447.8125" font-family="monospace" font-size="12.9043" fill="var(--ok-accent)">print(sys.getrefcount(x) - 1)  </text>
-  <text x="358.75" y="467.75" font-family="monospace" font-size="12.9043" fill="var(--ok-accent)"># -1 because getrefcount itself adds 1</text>
-  <rect x="640" y="343.5938" width="506.25" height="145" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="893.125" y="370.7812" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Properties</text>
-  <text x="668.125" y="395.2499" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--text)">•  Refcount stored in PyObject header (ob_refcnt)</text>
-  <text x="668.125" y="416.0938" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--text)">•  Incremented: assignment, function args, containers</text>
-  <text x="668.125" y="436.9375" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--text)">•  Decremented: del, reassignment, scope exit</text>
-  <text x="668.125" y="457.7813" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--text)">•  At 0: __del__ called, memory returned to allocator</text>
-  <text x="668.125" y="478.625" font-family="Arial, sans-serif" font-size="12.9043" fill="var(--danger-accent)">•  Cannot detect cycles — that needs the cyclic GC</text>
-  <text x="640" y="520.3125" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">The Cycle Problem — Refcounting Alone is Not Enough</text>
-  <rect x="443.125" y="534.8125" width="121.875" height="54.375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="504.0625" y="556.5625" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)" text-anchor="middle">dict A</text>
-  <text x="504.0625" y="572.875" font-family="monospace" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">refcount=1</text>
-  <rect x="715" y="534.8125" width="121.875" height="54.375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="775.9375" y="556.5625" font-family="monospace" font-size="12.9043" fill="var(--primary-accent)" text-anchor="middle">dict B</text>
-  <text x="775.9375" y="572.875" font-family="monospace" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">refcount=1</text>
-  <path d="M 565 554.75 Q 640 520.3125 715 554.75" fill="none" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <path d="M 715 574.6874 Q 640 606.4063 565 574.6874" fill="none" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="640" y="605.5" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">After del a, del b: both still refcount=1 — cyclic GC needed</text>
+  <text x="234.871795" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 1: Two References</text>
+  <rect x="152.820513" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="240" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
+  <line x1="152.820513" y1="98.708546" x2="327.179487" y2="98.708546" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="240" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
+  <rect x="168.205128" y="134.136172" width="133.333333" height="30.366489" rx="6.63248" fill="var(--primary-accent)" />
+  <text x="234.871795" y="154.380499" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 2</text>
+  <rect x="40" y="118.952872" width="82.051282" height="40.488652" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="81.025641" y="144.258336" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)" text-anchor="middle">x</text>
+  <line x1="122.051282" y1="139.197198" x2="152.820513" y2="134.136172" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="40" y="184.746876" width="82.051282" height="40.488652" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="81.025641" y="210.05234" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)" text-anchor="middle">y</text>
+  <line x1="122.051282" y1="204.991202" x2="152.820513" y2="164.502662" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <text x="240" y="199.930177" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">x = [1,2,3]</text>
+  <text x="240" y="218.15007" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">y = x</text>
+  <text x="665.641026" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Step 2: One Reference</text>
+  <rect x="578.461538" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="665.641026" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
+  <line x1="578.461538" y1="98.708546" x2="752.820403" y2="98.708546" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="665.641026" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--primary-accent)" text-anchor="middle">type: list</text>
+  <rect x="593.846154" y="134.136172" width="133.333333" height="30.366489" rx="6.63248" fill="var(--primary-accent)" />
+  <text x="660.512711" y="154.380499" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 1</text>
+  <rect x="465.641026" y="118.952872" width="82.051282" height="40.488652" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="506.666667" y="144.258336" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)" text-anchor="middle">x</text>
+  <line x1="547.692308" y1="139.197198" x2="578.461538" y2="134.136172" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="465.641026" y="184.746876" width="82.051282" height="40.488652" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="3.5556 2.6667" filter="url(#shadow)" />
+  <text x="506.666667" y="210.05234" font-family="monospace" font-size="14.264586" fill="var(--text-faint)" text-anchor="middle">y=None</text>
+  <text x="665.641026" y="199.930177" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">del y  (or y = None)</text>
+  <text x="665.641026" y="218.15007" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">refcount decremented</text>
+  <text x="1096.410256" y="40" font-family="Arial, sans-serif" font-size="18.340355" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Step 3: Freed!</text>
+  <rect x="1009.230769" y="58.219894" width="174.358974" height="121.465957" rx="6.63248" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1096.410256" y="88.586383" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">PyObject</text>
+  <line x1="1009.230769" y1="98.708546" x2="1183.589744" y2="98.708546" stroke="var(--warn-border)" stroke-width="0.8889" />
+  <text x="1096.410256" y="120.977305" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--danger-accent)" text-anchor="middle">type: list</text>
+  <rect x="1024.615385" y="134.136172" width="133.333333" height="30.366489" rx="6.63248" fill="var(--danger-accent)" />
+  <text x="1091.282051" y="154.380499" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--bg)" text-anchor="middle" font-weight="bold">refcount = 0</text>
+  <text x="1096.410256" y="204.991202" font-family="Arial, sans-serif" font-size="15.283556" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Memory Deallocated</text>
+  <text x="1096.410256" y="227.260073" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">Immediately freed — no GC needed</text>
+  <line x1="337.435788" y1="118.952872" x2="450.25641" y2="118.952872" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="393.846154" y="110.855142" font-family="Arial, sans-serif" font-size="12.226867" fill="var(--text-muted)" text-anchor="middle">del y</text>
+  <line x1="768.205128" y1="118.952872" x2="988.717949" y2="118.952872" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="878.974359" y="110.855142" font-family="Arial, sans-serif" font-size="12.226867" fill="var(--text-muted)" text-anchor="middle">del x</text>
+  <line x1="91.282051" y1="270.785318" x2="1240" y2="270.785318" stroke="var(--border)" stroke-width="1.3333" />
+  <text x="665.641026" y="306.212833" font-family="Arial, sans-serif" font-size="19.359215" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Tracking Reference Counts with sys.getrefcount()</text>
+  <rect x="111.794872" y="326.457271" width="492.307692" height="161.954609" rx="6.63248" fill="var(--code-bg)" filter="url(#shadow)" />
+  <text x="357.948718" y="353.787055" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)">import sys</text>
+  <text x="357.948718" y="376.055814" font-family="monospace" font-size="14.264586" fill="var(--bg)">x = [1, 2, 3]</text>
+  <text x="357.948718" y="398.324573" font-family="monospace" font-size="14.264586" fill="var(--ok-accent)">print(sys.getrefcount(x) - 1)  </text>
+  <text x="357.948718" y="420.59322" font-family="monospace" font-size="14.264586" fill="var(--bg)">y = x</text>
+  <text x="357.948718" y="442.86209" font-family="monospace" font-size="14.264586" fill="var(--ok-accent)">print(sys.getrefcount(x) - 1)  </text>
+  <text x="357.948718" y="465.130849" font-family="monospace" font-size="14.264586" fill="var(--ok-accent)"># -1 because getrefcount itself adds 1</text>
+  <rect x="665.641026" y="326.457271" width="553.846154" height="161.954609" rx="6.63248" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="942.564103" y="356.823648" font-family="Arial, sans-serif" font-size="16.302526" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Properties</text>
+  <text x="696.410256" y="384.153433" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  Refcount stored in PyObject header (ob_refcnt)</text>
+  <text x="696.410256" y="407.434575" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  Incremented: assignment, function args, containers</text>
+  <text x="696.410256" y="430.715495" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  Decremented: del, reassignment, scope exit</text>
+  <text x="696.410256" y="453.996526" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--text)">•  At 0: __del__ called, memory returned to allocator</text>
+  <text x="696.410256" y="477.277445" font-family="Arial, sans-serif" font-size="14.264586" fill="var(--danger-accent)">•  Cannot detect cycles — that needs the cyclic GC</text>
+  <text x="665.641026" y="523.839395" font-family="Arial, sans-serif" font-size="16.302526" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">The Cycle Problem — Refcounting Alone is Not Enough</text>
+  <rect x="450.25641" y="540.034856" width="133.333333" height="60.732978" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="516.923077" y="564.328047" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)" text-anchor="middle">dict A</text>
+  <text x="516.923077" y="582.547941" font-family="monospace" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">refcount=1</text>
+  <rect x="747.692308" y="540.034856" width="133.333333" height="60.732978" rx="6.63248" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="814.358974" y="564.328047" font-family="monospace" font-size="14.264586" fill="var(--primary-accent)" text-anchor="middle">dict B</text>
+  <text x="814.358974" y="582.547941" font-family="monospace" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">refcount=1</text>
+  <path d="M 583.589744 562.303615 Q 665.641026 523.839395 747.692308 562.303615" fill="none" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <path d="M 747.692308 584.572262 Q 665.641026 620 583.589744 584.572262" fill="none" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="665.641026" y="618.987728" font-family="Arial, sans-serif" font-size="13.245837" fill="var(--text-muted)" text-anchor="middle">After del a, del b: both still refcount=1 — cyclic GC needed</text>
 </svg>

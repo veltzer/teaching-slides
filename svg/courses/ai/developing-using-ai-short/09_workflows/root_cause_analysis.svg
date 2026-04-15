@@ -101,27 +101,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="115" y="80.2777" width="1050" height="44.3056" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="110.0833" text-anchor="middle" fill="var(--bg)" font-size="20.8566" font-weight="bold" font-family="Arial, sans-serif">Bug Investigation Process</text>
-  <rect x="115" y="152.7777" width="1050" height="84.5833" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="115" y="152.7777" width="52.5" height="84.5833" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="141.25" y="201.1111" text-anchor="middle" fill="var(--bg)" font-size="24.3328" font-weight="bold" font-family="Arial, sans-serif">1</text>
-  <text x="190" y="186.6111" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Symptom</text>
-  <text x="190" y="215.6111" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Notifications fail silently — users report no emails received</text>
-  <rect x="115" y="251.8611" width="1050" height="84.5833" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="115" y="251.8611" width="52.5" height="84.5833" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="141.25" y="300.1944" text-anchor="middle" fill="var(--bg)" font-size="24.3328" font-weight="bold" font-family="Arial, sans-serif">2</text>
-  <text x="190" y="285.6944" font-size="17.3806" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Investigation</text>
-  <text x="190" y="314.6944" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Queue logs show "rate limit exceeded" — 429 errors in provider API</text>
-  <rect x="115" y="350.9444" width="1050" height="84.5833" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="115" y="350.9444" width="52.5" height="84.5833" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="141.25" y="399.2777" text-anchor="middle" fill="var(--bg)" font-size="24.3328" font-weight="bold" font-family="Arial, sans-serif">3</text>
-  <text x="190" y="384.7777" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Root Cause</text>
-  <text x="190" y="413.7777" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Email provider rate limiting — burst of 1000/hr, limit is 500/hr</text>
-  <rect x="115" y="450.0277" width="1050" height="84.5833" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="115" y="450.0277" width="52.5" height="84.5833" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="141.25" y="498.3611" text-anchor="middle" fill="var(--bg)" font-size="24.3328" font-weight="bold" font-family="Arial, sans-serif">4</text>
-  <text x="190" y="483.8611" font-size="17.3806" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Solution</text>
-  <text x="190" y="512.8611" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Implement exponential backoff + queue batching with jitter</text>
+  <rect x="40" y="40" width="1200" height="56.560345" rx="7.247262" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="78.049705" text-anchor="middle" fill="var(--bg)" font-size="25.192206" font-weight="bold" font-family="Arial, sans-serif">Bug Investigation Process</text>
+  <rect x="40" y="132.553198" width="1200" height="107.978689" rx="7.247262" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="132.553198" width="60" height="107.978689" rx="7.247262" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="70" y="194.255416" text-anchor="middle" fill="var(--bg)" font-size="29.391028" font-weight="bold" font-family="Arial, sans-serif">1</text>
+  <text x="125.714286" y="175.744776" font-size="20.993626" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Symptom</text>
+  <text x="125.714286" y="212.766055" font-size="17.84457" fill="var(--text)" font-family="Arial, sans-serif">Notifications fail silently — users report no emails received</text>
+  <rect x="40" y="259.042654" width="1200" height="107.978689" rx="7.247262" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="259.042654" width="60" height="107.978689" rx="7.247262" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="70" y="320.744744" text-anchor="middle" fill="var(--bg)" font-size="29.391028" font-weight="bold" font-family="Arial, sans-serif">2</text>
+  <text x="125.714286" y="302.234104" font-size="20.993626" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Investigation</text>
+  <text x="125.714286" y="339.255384" font-size="17.84457" fill="var(--text)" font-family="Arial, sans-serif">Queue logs show "rate limit exceeded" — 429 errors in provider API</text>
+  <rect x="40" y="385.531983" width="1200" height="107.978689" rx="7.247262" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="385.531983" width="60" height="107.978689" rx="7.247262" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="70" y="447.234072" text-anchor="middle" fill="var(--bg)" font-size="29.391028" font-weight="bold" font-family="Arial, sans-serif">3</text>
+  <text x="125.714286" y="428.723433" font-size="20.993626" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Root Cause</text>
+  <text x="125.714286" y="465.744712" font-size="17.84457" fill="var(--text)" font-family="Arial, sans-serif">Email provider rate limiting — burst of 1000/hr, limit is 500/hr</text>
+  <rect x="40" y="512.021311" width="1200" height="107.978689" rx="7.247262" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="512.021311" width="60" height="107.978689" rx="7.247262" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="70" y="573.723529" text-anchor="middle" fill="var(--bg)" font-size="29.391028" font-weight="bold" font-family="Arial, sans-serif">4</text>
+  <text x="125.714286" y="555.212889" font-size="20.993626" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Solution</text>
+  <text x="125.714286" y="592.234168" font-size="17.84457" fill="var(--text)" font-family="Arial, sans-serif">Implement exponential backoff + queue batching with jitter</text>
 </svg>

@@ -15,6 +15,7 @@ Checks:
   --words       Flag SVGs whose <text>/<tspan> content exceeds MAX_WORD_COUNT
   --fill        Flag SVGs whose bbox fills < MIN_FILL_PCT of the usable area
   --fit         Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]
+  --no-circles  Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)
 
 Usage:
     check_svg.py file1.svg file2.svg ...
@@ -343,6 +344,24 @@ def _check_fit(path: Path) -> list[str]:
     return []
 
 
+def _check_no_circles(tree: ET.ElementTree, path: Path) -> list[str]:
+    """Flag SVGs that contain <circle> elements.
+
+    Circles are locked to a 1:1 aspect ratio and don't stretch correctly
+    under the fit-to-slide pass. Use <rect> (with rx for rounded corners)
+    or <ellipse> instead. Title slides (title.svg) are exempt — they are
+    decorative and often use circles intentionally."""
+    if path.name == 'title.svg':
+        return []
+    count = 0
+    for elem in tree.iter():
+        if elem.tag.split('}')[-1] == 'circle':
+            count += 1
+    if count:
+        return [f"contains {count} <circle> element(s) — use <rect> or <ellipse> instead"]
+    return []
+
+
 def _check_title(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
@@ -383,6 +402,8 @@ def main() -> None:
                         help=f'Flag SVGs whose content bbox fills less than {MIN_FILL_PCT:.0f}% of the 1200x580 usable area')
     parser.add_argument('--fit', action='store_true',
                         help='Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]')
+    parser.add_argument('--no-circles', action='store_true', dest='no_circles',
+                        help='Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)')
     args = parser.parse_args()
 
     if not args.paths:
@@ -390,7 +411,8 @@ def main() -> None:
 
     # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
-            args.bounds, args.title, args.colors, args.words, args.fill, args.fit]
+            args.bounds, args.title, args.colors, args.words, args.fill, args.fit,
+            args.no_circles]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -405,6 +427,9 @@ def main() -> None:
     do_words = args.words
     do_fill = args.fill or not explicit
     do_fit = args.fit or not explicit
+    # no-circles check is opt-in only — existing SVGs still contain circles.
+    # Flip to `args.no_circles or not explicit` once the backlog is clean.
+    do_no_circles = args.no_circles
 
     failures = 0
     for path_str in args.paths:
@@ -425,7 +450,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors or do_no_circles:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -443,6 +468,8 @@ def main() -> None:
                 errors.extend(_check_title(tree))
             if do_colors:
                 errors.extend(_check_colors(tree, svg_path=path))
+            if do_no_circles:
+                errors.extend(_check_no_circles(tree, path))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

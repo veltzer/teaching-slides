@@ -98,166 +98,164 @@
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--surface)" rx="6" x="40" y="40"/>
-
   <!-- Top syntax banner -->
-  <rect x="77.5" y="58.125" width="1125" height="63.4375" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="227.5" y="80.7812" font-family="monospace" font-size="20.2783" font-weight="bold" fill="var(--bg)">$(( expression ))</text>
-  <text x="227.5" y="105.25" font-family="sans-serif" font-size="13.8261" fill="var(--primary-accent)">evaluates expression, substitutes result (use in assignments and echo)</text>
-  <text x="743.125" y="80.7812" font-family="monospace" font-size="20.2783" font-weight="bold" fill="var(--bg)">(( expression ))</text>
-  <text x="743.125" y="105.25" font-family="sans-serif" font-size="13.8261" fill="var(--primary-accent)">evaluates expression, returns exit code (use in if/while)</text>
-  <line x1="640" y1="62.6562" x2="640" y2="117.0312" stroke="var(--bg)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <rect x="40" y="40" width="1200" height="72.5" rx="6.624629" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="200" y="65.8928" font-family="monospace" font-size="22.38937" font-weight="bold" fill="var(--bg)">$(( expression ))</text>
+  <text x="200" y="93.857143" font-family="sans-serif" font-size="15.265465" fill="var(--primary-accent)">evaluates expression, substitutes result (use in assignments and echo)</text>
+  <text x="750" y="65.8928" font-family="monospace" font-size="22.38937" font-weight="bold" fill="var(--bg)">(( expression ))</text>
+  <text x="750" y="93.857143" font-family="sans-serif" font-size="15.265465" fill="var(--primary-accent)">evaluates expression, returns exit code (use in if/while)</text>
+  <line x1="640" y1="45.178514" x2="640" y2="107.321371" stroke="var(--bg)" stroke-width="1.5" stroke-dasharray="4,4"/>
 
   <!-- Section 1: Basic Operators -->
-  <rect x="77.5" y="139.6875" width="337.5" height="262.8125" rx="6" fill="var(--bg)" filter="url(#shadow)"/>
-  <rect x="77.5" y="139.6875" width="337.5" height="38.0625" rx="6" fill="var(--primary-accent)"/>
-  <rect x="77.5" y="165.0625" width="337.5" height="12.6875" fill="var(--primary-accent)" rx="6"/>
-  <text x="246.25" y="165.0625" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">Basic Operators</text>
+  <rect x="40" y="133.214286" width="360" height="300.357143" rx="6.624629" fill="var(--bg)" filter="url(#shadow)"/>
+  <rect x="40" y="133.214286" width="360" height="43.5" rx="6.624629" fill="var(--primary-accent)"/>
+  <rect x="40" y="162.214286" width="360" height="14.5" fill="var(--primary-accent)" rx="6.624629"/>
+  <text x="220" y="162.214286" font-family="sans-serif" font-size="17.300882" font-weight="bold" fill="var(--bg)" text-anchor="middle">Basic Operators</text>
   <!-- table header -->
-  <rect x="86.875" y="185" width="318.75" height="25.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="152.5" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Operator</text>
-  <text x="283.75" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Meaning</text>
-  <text x="377.5" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Example</text>
+  <rect x="50" y="185" width="340" height="29" rx="6.624629" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="120" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Operator</text>
+  <text x="260" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Meaning</text>
+  <text x="360" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Example</text>
   <!-- rows -->
-  <line x1="86.875" y1="210.375" x2="405.625" y2="210.375" stroke="var(--border)" stroke-width="1"/>
-  <text x="152.5" y="226.6875" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">+</text>
-  <text x="265" y="226.6875" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Addition</text>
-  <text x="377.5" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((5+3))→8</text>
-  <line x1="86.875" y1="233.9375" x2="405.625" y2="233.9375" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="250.25" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">-</text>
-  <text x="265" y="250.25" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Subtraction</text>
-  <text x="377.5" y="250.25" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((10-4))→6</text>
-  <line x1="86.875" y1="257.5" x2="405.625" y2="257.5" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="273.8125" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">*</text>
-  <text x="265" y="273.8125" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Multiplication</text>
-  <text x="377.5" y="273.8125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((3*7))→21</text>
-  <line x1="86.875" y1="281.0625" x2="405.625" y2="281.0625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="297.375" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">/</text>
-  <text x="265" y="297.375" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Integer division</text>
-  <text x="377.5" y="297.375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((7/2))→3</text>
-  <line x1="86.875" y1="304.625" x2="405.625" y2="304.625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="320.9375" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">%</text>
-  <text x="265" y="320.9375" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Modulo (remainder)</text>
-  <text x="377.5" y="320.9375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((7%2))→1</text>
-  <line x1="86.875" y1="328.1875" x2="405.625" y2="328.1875" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="344.5" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">**</text>
-  <text x="265" y="344.5" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Exponentiation</text>
-  <text x="377.5" y="344.5" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((2**8))→256</text>
-  <line x1="86.875" y1="351.75" x2="405.625" y2="351.75" stroke="var(--surface)" stroke-width="1"/>
-  <text x="152.5" y="368.0625" font-family="monospace" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle">-x</text>
-  <text x="265" y="368.0625" font-family="sans-serif" font-size="11.9827" fill="var(--text)">Unary negation</text>
-  <text x="377.5" y="368.0625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">$((-x))</text>
+  <line x1="50" y1="214" x2="390" y2="214" stroke="var(--border)" stroke-width="1"/>
+  <text x="120" y="232.642857" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">+</text>
+  <text x="240" y="232.642857" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Addition</text>
+  <text x="360" y="232.642857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((5+3))→8</text>
+  <line x1="50" y1="240.928571" x2="390" y2="240.928571" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="259.571429" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">-</text>
+  <text x="240" y="259.571429" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Subtraction</text>
+  <text x="360" y="259.571429" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((10-4))→6</text>
+  <line x1="50" y1="267.857143" x2="390" y2="267.857143" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="286.5" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">*</text>
+  <text x="240" y="286.5" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Multiplication</text>
+  <text x="360" y="286.5" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((3*7))→21</text>
+  <line x1="50" y1="294.785714" x2="390" y2="294.785714" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="313.428571" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">/</text>
+  <text x="240" y="313.428571" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Integer division</text>
+  <text x="360" y="313.428571" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((7/2))→3</text>
+  <line x1="50" y1="321.714286" x2="390" y2="321.714286" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="340.357143" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">%</text>
+  <text x="240" y="340.357143" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Modulo (remainder)</text>
+  <text x="360" y="340.357143" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((7%2))→1</text>
+  <line x1="50" y1="348.642857" x2="390" y2="348.642857" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="367.285714" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">**</text>
+  <text x="240" y="367.285714" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Exponentiation</text>
+  <text x="360" y="367.285714" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((2**8))→256</text>
+  <line x1="50" y1="375.571429" x2="390" y2="375.571429" stroke="var(--surface)" stroke-width="1"/>
+  <text x="120" y="394.214286" font-family="monospace" font-size="15.265465" fill="var(--primary-accent)" text-anchor="middle">-x</text>
+  <text x="240" y="394.214286" font-family="sans-serif" font-size="13.230158" fill="var(--text)">Unary negation</text>
+  <text x="360" y="394.214286" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">$((-x))</text>
 
   <!-- Section 2: Assignment Operators -->
-  <rect x="433.75" y="139.6875" width="337.5" height="262.8125" rx="6" fill="var(--bg)" filter="url(#shadow)"/>
-  <rect x="433.75" y="139.6875" width="337.5" height="38.0625" rx="6" fill="var(--ok-accent)"/>
-  <rect x="433.75" y="165.0625" width="337.5" height="12.6875" fill="var(--ok-accent)" rx="6"/>
-  <text x="602.5" y="165.0625" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">Assignment Operators</text>
-  <rect x="443.125" y="185" width="318.75" height="25.375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="527.5" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Operator</text>
-  <text x="658.75" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Equivalent to</text>
-  <text x="752.5" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Result</text>
-  <line x1="443.125" y1="210.375" x2="761.875" y2="210.375" stroke="var(--border)" stroke-width="1"/>
-  <text x="527.5" y="226.6875" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">x=10</text>
-  <text x="658.75" y="226.6875" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">assign</text>
-  <text x="752.5" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=10</text>
-  <line x1="443.125" y1="233.9375" x2="761.875" y2="233.9375" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="250.25" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x+=5))</text>
-  <text x="658.75" y="250.25" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = x + 5</text>
-  <text x="752.5" y="250.25" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=15</text>
-  <line x1="443.125" y1="257.5" x2="761.875" y2="257.5" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="273.8125" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x-=3))</text>
-  <text x="658.75" y="273.8125" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = x - 3</text>
-  <text x="752.5" y="273.8125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=12</text>
-  <line x1="443.125" y1="281.0625" x2="761.875" y2="281.0625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="297.375" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x*=2))</text>
-  <text x="658.75" y="297.375" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = x * 2</text>
-  <text x="752.5" y="297.375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=24</text>
-  <line x1="443.125" y1="304.625" x2="761.875" y2="304.625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="320.9375" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x/=4))</text>
-  <text x="658.75" y="320.9375" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = x / 4</text>
-  <text x="752.5" y="320.9375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=6</text>
-  <line x1="443.125" y1="328.1875" x2="761.875" y2="328.1875" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="344.5" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x%=4))</text>
-  <text x="658.75" y="344.5" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">x = x % 4</text>
-  <text x="752.5" y="344.5" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=2</text>
-  <line x1="443.125" y1="351.75" x2="761.875" y2="351.75" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="368.0625" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x++))</text>
-  <text x="658.75" y="368.0625" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">post-increment</text>
-  <text x="752.5" y="368.0625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=3</text>
-  <line x1="443.125" y1="375.3125" x2="761.875" y2="375.3125" stroke="var(--surface)" stroke-width="1"/>
-  <text x="527.5" y="391.625" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">((x--))</text>
-  <text x="658.75" y="391.625" font-family="sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">post-decrement</text>
-  <text x="752.5" y="391.625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">x=2</text>
+  <rect x="420" y="133.214286" width="360" height="300.357143" rx="6.624629" fill="var(--bg)" filter="url(#shadow)"/>
+  <rect x="420" y="133.214286" width="360" height="43.5" rx="6.624629" fill="var(--ok-accent)"/>
+  <rect x="420" y="162.214286" width="360" height="14.5" fill="var(--ok-accent)" rx="6.624629"/>
+  <text x="600" y="162.214286" font-family="sans-serif" font-size="17.300882" font-weight="bold" fill="var(--bg)" text-anchor="middle">Assignment Operators</text>
+  <rect x="430" y="185" width="340" height="29" rx="6.624629" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="520" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Operator</text>
+  <text x="660" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Equivalent to</text>
+  <text x="760" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--ok-accent)">Result</text>
+  <line x1="430" y1="214" x2="770" y2="214" stroke="var(--border)" stroke-width="1"/>
+  <text x="520" y="232.642857" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">x=10</text>
+  <text x="660" y="232.642857" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">assign</text>
+  <text x="760" y="232.642857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=10</text>
+  <line x1="430" y1="240.928571" x2="770" y2="240.928571" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="259.571429" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x+=5))</text>
+  <text x="660" y="259.571429" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">x = x + 5</text>
+  <text x="760" y="259.571429" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=15</text>
+  <line x1="430" y1="267.857143" x2="770" y2="267.857143" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="286.5" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x-=3))</text>
+  <text x="660" y="286.5" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">x = x - 3</text>
+  <text x="760" y="286.5" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=12</text>
+  <line x1="430" y1="294.785714" x2="770" y2="294.785714" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="313.428571" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x*=2))</text>
+  <text x="660" y="313.428571" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">x = x * 2</text>
+  <text x="760" y="313.428571" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=24</text>
+  <line x1="430" y1="321.714286" x2="770" y2="321.714286" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="340.357143" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x/=4))</text>
+  <text x="660" y="340.357143" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">x = x / 4</text>
+  <text x="760" y="340.357143" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=6</text>
+  <line x1="430" y1="348.642857" x2="770" y2="348.642857" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="367.285714" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x%=4))</text>
+  <text x="660" y="367.285714" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">x = x % 4</text>
+  <text x="760" y="367.285714" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=2</text>
+  <line x1="430" y1="375.571429" x2="770" y2="375.571429" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="394.214286" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x++))</text>
+  <text x="660" y="394.214286" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">post-increment</text>
+  <text x="760" y="394.214286" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=3</text>
+  <line x1="430" y1="402.5" x2="770" y2="402.5" stroke="var(--surface)" stroke-width="1"/>
+  <text x="520" y="421.142857" font-family="monospace" font-size="14.247811" fill="var(--ok-accent)" text-anchor="middle">((x--))</text>
+  <text x="660" y="421.142857" font-family="sans-serif" font-size="13.230158" fill="var(--text-muted)" text-anchor="middle">post-decrement</text>
+  <text x="760" y="421.142857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">x=2</text>
 
   <!-- Section 3: Comparison Operators -->
-  <rect x="790" y="139.6875" width="412.5" height="262.8125" rx="6" fill="var(--bg)" filter="url(#shadow)"/>
-  <rect x="790" y="139.6875" width="412.5" height="38.0625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="790" y="165.0625" width="412.5" height="12.6875" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="996.25" y="165.0625" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comparison Operators  (( ))</text>
-  <rect x="799.375" y="185" width="393.75" height="25.375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="883.75" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Operator</text>
-  <text x="996.25" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Meaning</text>
-  <text x="1127.5" y="202.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Usage</text>
-  <line x1="799.375" y1="210.375" x2="1193.125" y2="210.375" stroke="var(--border)" stroke-width="1"/>
-  <text x="883.75" y="226.6875" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">==</text>
-  <text x="996.25" y="226.6875" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Equal</text>
-  <text x="1108.75" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a == b ))</text>
-  <line x1="799.375" y1="233.9375" x2="1193.125" y2="233.9375" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="250.25" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">!=</text>
-  <text x="996.25" y="250.25" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Not equal</text>
-  <text x="1108.75" y="250.25" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a != b ))</text>
-  <line x1="799.375" y1="257.5" x2="1193.125" y2="257.5" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="273.8125" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">&gt;</text>
-  <text x="996.25" y="273.8125" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Greater than</text>
-  <text x="1108.75" y="273.8125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a &gt; b ))</text>
-  <line x1="799.375" y1="281.0625" x2="1193.125" y2="281.0625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="297.375" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">&lt;</text>
-  <text x="996.25" y="297.375" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Less than</text>
-  <text x="1108.75" y="297.375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a &lt; b ))</text>
-  <line x1="799.375" y1="304.625" x2="1193.125" y2="304.625" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="320.9375" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">&gt;=</text>
-  <text x="996.25" y="320.9375" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Greater or equal</text>
-  <text x="1108.75" y="320.9375" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a &gt;= b ))</text>
-  <line x1="799.375" y1="328.1875" x2="1193.125" y2="328.1875" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="344.5" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">&lt;=</text>
-  <text x="996.25" y="344.5" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Less or equal</text>
-  <text x="1108.75" y="344.5" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">if (( a &lt;= b ))</text>
-  <line x1="799.375" y1="351.75" x2="1193.125" y2="351.75" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="368.0625" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">&amp;&amp;</text>
-  <text x="996.25" y="368.0625" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Logical AND</text>
-  <text x="1108.75" y="368.0625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">(( a&gt;0 &amp;&amp; a&lt;10 ))</text>
-  <line x1="799.375" y1="375.3125" x2="1193.125" y2="375.3125" stroke="var(--surface)" stroke-width="1"/>
-  <text x="883.75" y="391.625" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)" text-anchor="middle">||</text>
-  <text x="996.25" y="391.625" font-family="sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle">Logical OR</text>
-  <text x="1108.75" y="391.625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">(( a==0 || b==0 ))</text>
+  <rect x="800" y="133.214286" width="440" height="300.357143" rx="6.624629" fill="var(--bg)" filter="url(#shadow)"/>
+  <rect x="800" y="133.214286" width="440" height="43.5" rx="6.624629" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="800" y="162.214286" width="440" height="14.5" fill="var(--warn-fill)" rx="6.624629" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1020" y="162.214286" font-family="sans-serif" font-size="17.300882" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comparison Operators  (( ))</text>
+  <rect x="810" y="185" width="420" height="29" rx="6.624629" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="900" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Operator</text>
+  <text x="1020" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Meaning</text>
+  <text x="1160" y="204.678629" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Usage</text>
+  <line x1="810" y1="214" x2="1230" y2="214" stroke="var(--border)" stroke-width="1"/>
+  <text x="900" y="232.642857" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">==</text>
+  <text x="1020" y="232.642857" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Equal</text>
+  <text x="1140" y="232.642857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a == b ))</text>
+  <line x1="810" y1="240.928571" x2="1230" y2="240.928571" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="259.571429" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">!=</text>
+  <text x="1020" y="259.571429" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Not equal</text>
+  <text x="1140" y="259.571429" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a != b ))</text>
+  <line x1="810" y1="267.857143" x2="1230" y2="267.857143" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="286.5" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">&gt;</text>
+  <text x="1020" y="286.5" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Greater than</text>
+  <text x="1140" y="286.5" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a &gt; b ))</text>
+  <line x1="810" y1="294.785714" x2="1230" y2="294.785714" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="313.428571" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">&lt;</text>
+  <text x="1020" y="313.428571" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Less than</text>
+  <text x="1140" y="313.428571" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a &lt; b ))</text>
+  <line x1="810" y1="321.714286" x2="1230" y2="321.714286" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="340.357143" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">&gt;=</text>
+  <text x="1020" y="340.357143" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Greater or equal</text>
+  <text x="1140" y="340.357143" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a &gt;= b ))</text>
+  <line x1="810" y1="348.642857" x2="1230" y2="348.642857" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="367.285714" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">&lt;=</text>
+  <text x="1020" y="367.285714" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Less or equal</text>
+  <text x="1140" y="367.285714" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">if (( a &lt;= b ))</text>
+  <line x1="810" y1="375.571429" x2="1230" y2="375.571429" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="394.214286" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">&amp;&amp;</text>
+  <text x="1020" y="394.214286" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Logical AND</text>
+  <text x="1140" y="394.214286" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">(( a&gt;0 &amp;&amp; a&lt;10 ))</text>
+  <line x1="810" y1="402.5" x2="1230" y2="402.5" stroke="var(--surface)" stroke-width="1"/>
+  <text x="900" y="421.142857" font-family="monospace" font-size="14.247811" fill="var(--warn-accent)" text-anchor="middle">||</text>
+  <text x="1020" y="421.142857" font-family="sans-serif" font-size="13.230158" fill="var(--text)" text-anchor="middle">Logical OR</text>
+  <text x="1140" y="421.142857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)">(( a==0 || b==0 ))</text>
 
   <!-- Bottom row: syntax comparison -->
-  <rect x="77.5" y="420.625" width="543.75" height="145" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <rect x="77.5" y="420.625" width="543.75" height="32.625" rx="6" fill="var(--primary-accent)"/>
-  <rect x="77.5" y="442.375" width="543.75" height="10.875" fill="var(--primary-accent)" rx="6"/>
-  <text x="349.375" y="442.375" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">$(( )) — substitution (value)</text>
-  <text x="105.625" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">result</text>
-  <text x="147.8125" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">=$((10 + 5))</text>
-  <text x="105.625" y="488.5938" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># result=15</text>
-  <text x="105.625" y="505.8125" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">echo</text>
-  <text x="142.1875" y="505.8125" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> "sum=$((x + y))"</text>
-  <text x="105.625" y="523.0312" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># use anywhere you need a value</text>
-  <text x="105.625" y="540.25" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">arr[$((i+1))]="next"</text>
-  <text x="105.625" y="557.4688" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># works as index too</text>
+  <rect x="40" y="454.285714" width="580" height="165.714286" rx="6.624629" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <rect x="40" y="454.285714" width="580" height="37.285714" rx="6.624629" fill="var(--primary-accent)"/>
+  <rect x="40" y="479.142857" width="580" height="12.428571" fill="var(--primary-accent)" rx="6.624629"/>
+  <text x="330" y="479.142857" font-family="sans-serif" font-size="15.265465" font-weight="bold" fill="var(--bg)" text-anchor="middle">$(( )) — substitution (value)</text>
+  <text x="70" y="512.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">result</text>
+  <text x="115" y="512.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">=$((10 + 5))</text>
+  <text x="70" y="531.964343" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># result=15</text>
+  <text x="70" y="551.642857" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">echo</text>
+  <text x="109" y="551.642857" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> "sum=$((x + y))"</text>
+  <text x="70" y="571.321371" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># use anywhere you need a value</text>
+  <text x="70" y="591" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">arr[$((i+1))]="next"</text>
+  <text x="70" y="610.678629" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># works as index too</text>
 
-  <rect x="640" y="420.625" width="562.5" height="145" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <rect x="640" y="420.625" width="562.5" height="32.625" rx="6" fill="var(--ok-accent)"/>
-  <rect x="640" y="442.375" width="562.5" height="10.875" fill="var(--ok-accent)" rx="6"/>
-  <text x="921.25" y="442.375" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">(( )) — command (exit code)</text>
-  <text x="663.4375" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">if</text>
-  <text x="685" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> (( x &gt; 0 )); </text>
-  <text x="761.875" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">then</text>
-  <text x="663.4375" y="488.5938" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    echo "positive"</text>
-  <text x="663.4375" y="505.8125" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">fi</text>
-  <text x="663.4375" y="523.0312" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">while</text>
-  <text x="709.375" y="523.0312" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> (( i &lt; 10 )); </text>
-  <text x="783.4375" y="523.0312" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">do</text>
-  <text x="663.4375" y="540.25" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    ((i++))</text>
-  <text x="663.4375" y="557.4688" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">done</text>
+  <rect x="640" y="454.285714" width="600" height="165.714286" rx="6.624629" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <rect x="640" y="454.285714" width="600" height="37.285714" rx="6.624629" fill="var(--ok-accent)"/>
+  <rect x="640" y="479.142857" width="600" height="12.428571" fill="var(--ok-accent)" rx="6.624629"/>
+  <text x="940" y="479.142857" font-family="sans-serif" font-size="15.265465" font-weight="bold" fill="var(--bg)" text-anchor="middle">(( )) — command (exit code)</text>
+  <text x="665" y="512.285714" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">if</text>
+  <text x="688" y="512.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> (( x &gt; 0 )); </text>
+  <text x="770" y="512.285714" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">then</text>
+  <text x="665" y="531.964343" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">    echo "positive"</text>
+  <text x="665" y="551.642857" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">fi</text>
+  <text x="665" y="571.321371" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">while</text>
+  <text x="714" y="571.321371" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> (( i &lt; 10 )); </text>
+  <text x="793" y="571.321371" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">do</text>
+  <text x="665" y="591" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">    ((i++))</text>
+  <text x="665" y="610.678629" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">done</text>
 </svg>

@@ -95,92 +95,90 @@
 </defs>
 
   <!-- Background -->
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Pipeline stages as chevrons -->
   <!-- Stage 1: Code Commit (primary) -->
   <g filter="url(#shadow)">
-    <polygon points="77.5,185 199.375,185 227.5,248.4375 199.375,311.875 77.5,311.875" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.5"/>
-    <text x="145" y="243.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)">Code</text>
-    <text x="145" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)">Commit</text>
+    <polygon points="40,118.202257 180.540541,118.202257 212.972973,209.438223 180.540541,300.67419 40,300.67419" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.5"/>
+    <text x="117.837838" y="202.921297" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" font-weight="bold" fill="var(--bg)">Code</text>
+    <text x="117.837838" y="232.8989" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" font-weight="bold" fill="var(--bg)">Commit</text>
   </g>
 
   <!-- Connector arrow -->
-  <line x1="229.375" y1="248.4375" x2="253.75" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="215.135135" y1="209.438223" x2="243.243243" y2="209.438223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 2: Build (warn) -->
   <g filter="url(#shadow)">
-    <polygon points="255.625,185 377.5,185 405.625,248.4375 377.5,311.875 255.625,311.875 283.75,248.4375" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5"/>
-    <text x="332.5" y="254.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">Build</text>
+    <polygon points="245.405405,118.202257 385.945946,118.202257 418.378378,209.438223 385.945946,300.67419 245.405405,300.67419 277.837838,209.438223" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5"/>
+    <text x="334.054054" y="218.561748" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.992568" font-weight="bold" fill="var(--bg)">Build</text>
   </g>
 
-  <line x1="407.5" y1="248.4375" x2="431.875" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420.540541" y1="209.438223" x2="448.648649" y2="209.438223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 3: Test (info) -->
   <g filter="url(#shadow)">
-    <polygon points="433.75,185 555.625,185 583.75,248.4375 555.625,311.875 433.75,311.875 461.875,248.4375" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="1.5"/>
-    <text x="510.625" y="254.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">Test</text>
+    <polygon points="450.810811,118.202257 591.351351,118.202257 623.783784,209.438223 591.351351,300.67419 450.810811,300.67419 483.243243,209.438223" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="1.5"/>
+    <text x="539.459459" y="218.561748" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.992568" font-weight="bold" fill="var(--bg)">Test</text>
   </g>
 
-  <line x1="585.625" y1="248.4375" x2="610" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="625.945946" y1="209.438223" x2="654.054054" y2="209.438223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 4: Stage (ok) -->
   <g filter="url(#shadow)">
-    <polygon points="611.875,185 733.75,185 761.875,248.4375 733.75,311.875 611.875,311.875 640,248.4375" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5"/>
-    <text x="688.75" y="254.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">Stage</text>
+    <polygon points="656.216216,118.202257 796.756757,118.202257 829.189189,209.438223 796.756757,300.67419 656.216216,300.67419 688.648649,209.438223" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5"/>
+    <text x="744.864865" y="218.561748" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.992568" font-weight="bold" fill="var(--bg)">Stage</text>
   </g>
 
-  <line x1="763.75" y1="248.4375" x2="788.125" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="831.351351" y1="209.438223" x2="859.459459" y2="209.438223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 5: Approve (warn) -->
   <g filter="url(#shadow)">
-    <polygon points="790,185 911.875,185 940,248.4375 911.875,311.875 790,311.875 818.125,248.4375" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-    <text x="866.875" y="254.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)">Approve</text>
+    <polygon points="861.621622,118.202257 1002.162162,118.202257 1034.594595,209.438223 1002.162162,300.67419 861.621622,300.67419 894.054054,209.438223" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+    <text x="950.27027" y="218.561748" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.992568" font-weight="bold" fill="var(--warn-accent)">Approve</text>
   </g>
 
-  <line x1="941.875" y1="248.4375" x2="966.25" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1036.756757" y1="209.438223" x2="1064.864865" y2="209.438223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 6: Production (ok-dk) -->
   <g filter="url(#shadow)">
-    <polygon points="968.125,185 1090,185 1118.125,248.4375 1090,311.875 968.125,311.875 996.25,248.4375" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1.5"/>
-    <text x="1045" y="243.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)">Production</text>
-    <text x="1045" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)">Deploy</text>
+    <polygon points="1067.027027,118.202257 1207.567568,118.202257 1240,209.438223 1207.567568,300.67419 1067.027027,300.67419 1099.459459,209.438223" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1.5"/>
+    <text x="1155.675676" y="202.921297" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" font-weight="bold" fill="var(--bg)">Production</text>
+    <text x="1155.675676" y="232.8989" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" font-weight="bold" fill="var(--bg)">Deploy</text>
   </g>
 
   <!-- Labels: CI and CD -->
-  <rect x="77.5" y="130.625" width="506.25" height="32.625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="330.625" y="152.375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)">Continuous Integration (CI)</text>
+  <rect x="40" y="40" width="583.783784" height="46.921354" rx="7.72689" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="331.891892" y="71.280903" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.366655" font-weight="bold" fill="var(--primary-accent)">Continuous Integration (CI)</text>
 
-  <rect x="611.875" y="130.625" width="506.25" height="32.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="865" y="152.375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--ok-accent)">Continuous Delivery / Deployment (CD)</text>
+  <rect x="656.216216" y="40" width="583.783784" height="46.921354" rx="7.72689" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="948.108108" y="71.280903" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.366655" font-weight="bold" fill="var(--ok-accent)">Continuous Delivery / Deployment (CD)</text>
 
   <!-- Cloud managed services below -->
-  <text x="640" y="375.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--text)">Cloud-Managed CI/CD Services</text>
+  <text x="688.648649" y="391.910156" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.740742" font-weight="bold" fill="var(--text)">Cloud-Managed CI/CD Services</text>
 
   <!-- Service boxes -->
   <g filter="url(#shadow)">
-    <rect x="115" y="402.5" width="281.25" height="81.5625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-    <text x="255.625" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)">AWS CodePipeline</text>
-    <text x="255.625" y="465.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">CodeBuild, CodeDeploy</text>
+    <rect x="83.243243" y="431.011284" width="324.324324" height="117.303385" rx="7.72689" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+    <text x="245.405405" y="483.146122" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.366655" font-weight="bold" fill="var(--primary-accent)">AWS CodePipeline</text>
+    <text x="245.405405" y="522.247251" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" fill="var(--text-muted)">CodeBuild, CodeDeploy</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="443.125" y="402.5" width="281.25" height="81.5625" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-    <text x="583.75" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--info-accent)">Azure DevOps</text>
-    <text x="583.75" y="465.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Pipelines, Repos, Artifacts</text>
+    <rect x="461.621622" y="431.011284" width="324.324324" height="117.303385" rx="7.72689" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+    <text x="623.783784" y="483.146122" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.366655" font-weight="bold" fill="var(--info-accent)">Azure DevOps</text>
+    <text x="623.783784" y="522.247251" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" fill="var(--text-muted)">Pipelines, Repos, Artifacts</text>
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="771.25" y="402.5" width="281.25" height="81.5625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-    <text x="911.875" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--ok-accent)">Cloud Build</text>
-    <text x="911.875" y="465.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Google Cloud Deploy</text>
+    <rect x="840" y="431.011284" width="324.324324" height="117.303385" rx="7.72689" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="1002.162162" y="483.146122" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.366655" font-weight="bold" fill="var(--ok-accent)">Cloud Build</text>
+    <text x="1002.162162" y="522.247251" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.618481" fill="var(--text-muted)">Google Cloud Deploy</text>
   </g>
 
   <!-- Connecting lines from pipeline to services -->
-  <line x1="255.625" y1="313.6875" x2="255.625" y2="400.6875" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <line x1="583.75" y1="313.6875" x2="583.75" y2="400.6875" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <line x1="911.875" y1="313.6875" x2="911.875" y2="400.6875" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="245.405405" y1="303.280932" x2="245.405405" y2="428.404543" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="623.783784" y1="303.280932" x2="623.783784" y2="428.404543" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="1002.162162" y1="303.280932" x2="1002.162162" y2="428.404543" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5,4"/>
 
   <!-- Third-party options -->
-  <text x="640" y="533.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--text-muted)">Also: GitHub Actions, GitLab CI, Jenkins, CircleCI -- works across all clouds</text>
+  <text x="688.648649" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.992568" fill="var(--text-muted)">Also: GitHub Actions, GitLab CI, Jenkins, CircleCI -- works across all clouds</text>
 </svg>

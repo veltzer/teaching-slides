@@ -101,25 +101,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="73.75" y="83.5" text-anchor="start" font-size="17.3806" fill="var(--text)" font-weight="bold">Phase 1: Build new AMI</text>
-  <text x="91.5625" y="107.6667" text-anchor="start" font-size="15.6425" fill="var(--text)">Packer build → AMI v2</text>
-  <text x="73.75" y="136.6667" text-anchor="start" font-size="17.3806" fill="var(--text)" font-weight="bold">Phase 2: Deploy alongside old</text>
-  <text x="91.5625" y="160.8333" text-anchor="start" font-size="15.6425" fill="var(--text)">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
-  <text x="73.75" y="189.8333" text-anchor="start" font-size="17.3806" fill="var(--text)" font-weight="bold">Phase 3: Switch traffic</text>
-  <text x="91.5625" y="214" text-anchor="start" font-size="15.6425" fill="var(--text)">Update ALB target group to new ASG</text>
-  <text x="73.75" y="243" text-anchor="start" font-size="17.3806" fill="var(--text)" font-weight="bold">Phase 4: Cleanup</text>
-  <text x="91.5625" y="267.1667" text-anchor="start" font-size="15.6425" fill="var(--text)">Terminate old ASG</text>
-  <text x="314.6874" y="346.1111" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">Before</text>
-  <rect x="177.8125" y="371.8889" width="273.75" height="64.4444" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)" />
-  <text x="314.6874" y="408.9444" text-anchor="middle" font-size="17.3806" fill="var(--primary-accent)" font-weight="bold">ALB</text>
-  <line x1="314.6874" y1="436.3333" x2="314.6874" y2="491.1111" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="177.8125" y="491.1111" width="273.75" height="64.4444" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)" />
-  <text x="314.6874" y="528.1667" text-anchor="middle" font-size="17.3806" fill="var(--warn-accent)" font-weight="bold">ASG v1</text>
-  <text x="828.4375" y="346.1111" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">After</text>
-  <rect x="691.5625" y="371.8889" width="273.75" height="64.4444" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)" />
-  <text x="828.4375" y="408.9444" text-anchor="middle" font-size="17.3806" fill="var(--primary-accent)" font-weight="bold">ALB</text>
-  <line x1="828.4375" y1="436.3333" x2="828.4375" y2="491.1111" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="691.5625" y="491.1111" width="273.75" height="64.4444" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)" />
-  <text x="828.4375" y="528.1667" text-anchor="middle" font-size="17.3806" fill="var(--ok-accent)" font-weight="bold">ASG v2</text>
+  <text x="40" y="40" text-anchor="start" font-size="22.351" fill="var(--text)" font-weight="bold">Phase 1: Build new AMI</text>
+  <text x="63.974763" y="69.692877" text-anchor="start" font-size="20.115848" fill="var(--text)">Packer build → AMI v2</text>
+  <text x="40" y="105.324281" text-anchor="start" font-size="22.351" fill="var(--text)" font-weight="bold">Phase 2: Deploy alongside old</text>
+  <text x="63.974763" y="135.017035" text-anchor="start" font-size="20.115848" fill="var(--text)">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
+  <text x="40" y="170.648439" text-anchor="start" font-size="22.351" fill="var(--text)" font-weight="bold">Phase 3: Switch traffic</text>
+  <text x="63.974763" y="200.341316" text-anchor="start" font-size="20.115848" fill="var(--text)">Update ALB target group to new ASG</text>
+  <text x="40" y="235.972719" text-anchor="start" font-size="22.351" fill="var(--text)" font-weight="bold">Phase 4: Cleanup</text>
+  <text x="63.974763" y="265.665597" text-anchor="start" font-size="20.115848" fill="var(--text)">Terminate old ASG</text>
+  <text x="364.290086" y="362.66214" text-anchor="middle" font-size="22.351" fill="var(--text)" font-weight="bold">Before</text>
+  <rect x="180.063091" y="394.334526" width="368.454259" height="79.180842" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.715844" filter="url(#shadow)" />
+  <text x="364.290086" y="439.863474" text-anchor="middle" font-size="22.351" fill="var(--primary-accent)" font-weight="bold">ALB</text>
+  <line x1="364.290086" y1="473.515368" x2="364.290086" y2="540.819158" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="180.063091" y="540.819158" width="368.454259" height="79.180842" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.715844" filter="url(#shadow)" />
+  <text x="364.290086" y="586.348228" text-anchor="middle" font-size="22.351" fill="var(--warn-accent)" font-weight="bold">ASG v1</text>
+  <text x="1055.772871" y="362.66214" text-anchor="middle" font-size="22.351" fill="var(--text)" font-weight="bold">After</text>
+  <rect x="871.545741" y="394.334526" width="368.454259" height="79.180842" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.715844" filter="url(#shadow)" />
+  <text x="1055.772871" y="439.863474" text-anchor="middle" font-size="22.351" fill="var(--primary-accent)" font-weight="bold">ALB</text>
+  <line x1="1055.772871" y1="473.515368" x2="1055.772871" y2="540.819158" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="871.545741" y="540.819158" width="368.454259" height="79.180842" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.715844" filter="url(#shadow)" />
+  <text x="1055.772871" y="586.348228" text-anchor="middle" font-size="22.351" fill="var(--ok-accent)" font-weight="bold">ASG v2</text>
 </svg>

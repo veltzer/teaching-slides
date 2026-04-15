@@ -95,78 +95,76 @@
 </defs>
 
   <!-- Background -->
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)"/>
-
   <!-- Step 1: API Request -->
-  <rect x="115" y="266.5625" width="168.75" height="72.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="199.375" y="298.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)">API Request</text>
-  <text x="199.375" y="320.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">s3:GetObject</text>
+  <rect x="40" y="243.508772" width="191.150442" height="81.403509" rx="6.766585" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="135.575221" y="279.122751" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.592581" font-weight="bold" fill="var(--bg)">API Request</text>
+  <text x="135.575221" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--primary-accent)">s3:GetObject</text>
 
   <!-- Arrow to first diamond -->
-  <line x1="283.75" y1="302.8125" x2="358.75" y2="302.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="231.150442" y1="284.210526" x2="316.106195" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Decision Diamond 1: Explicit Deny -->
-  <polygon points="471.25,230.3125 574.375,302.8125 471.25,375.3125 368.125,302.8125" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.5"/>
-  <text x="471.25" y="289.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Explicit</text>
-  <text x="471.25" y="307.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Deny?</text>
+  <polygon points="443.539823,202.807018 560.353982,284.210526 443.539823,365.614035 326.725664,284.210526" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.5"/>
+  <text x="443.539823" y="268.947425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--primary-accent)">Explicit</text>
+  <text x="443.539823" y="289.298302" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--primary-accent)">Deny?</text>
 
   <!-- Yes from Diamond 1 -> DENIED -->
-  <line x1="471.25" y1="375.3125" x2="471.25" y2="456.875" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="490" y="420.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">YES</text>
+  <line x1="443.539823" y1="365.614035" x2="443.539823" y2="457.192982" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="464.778761" y="416.491228" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--danger-accent)">YES</text>
 
-  <rect x="386.875" y="465.9375" width="168.75" height="63.4375" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="471.25" y="497.6562" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">DENIED</text>
-  <text x="471.25" y="515.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">Explicit Deny</text>
+  <rect x="347.964602" y="467.368421" width="191.150442" height="71.22807" rx="6.766585" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="443.539823" y="502.9824" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.711188" font-weight="bold" fill="var(--bg)">DENIED</text>
+  <text x="443.539823" y="523.333277" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--danger-accent)">Explicit Deny</text>
 
   <!-- No from Diamond 1 -> Diamond 2 -->
-  <line x1="574.375" y1="302.8125" x2="649.375" y2="302.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="611.875" y="291.9375" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">NO</text>
+  <line x1="560.353982" y1="284.210526" x2="645.309735" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="602.831858" y="272" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--ok-accent)">NO</text>
 
   <!-- Decision Diamond 2: SCP Deny -->
-  <polygon points="761.875,230.3125 865,302.8125 761.875,375.3125 658.75,302.8125" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2.5"/>
-  <text x="761.875" y="289.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">SCP</text>
-  <text x="761.875" y="307.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Allow?</text>
+  <polygon points="772.743363,202.807018 889.557522,284.210526 772.743363,365.614035 655.929204,284.210526" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2.5"/>
+  <text x="772.743363" y="268.947425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--warn-accent)">SCP</text>
+  <text x="772.743363" y="289.298302" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--warn-accent)">Allow?</text>
 
   <!-- No from Diamond 2 -> DENIED -->
-  <line x1="761.875" y1="375.3125" x2="761.875" y2="456.875" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="780.625" y="420.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">NO</text>
+  <line x1="772.743363" y1="365.614035" x2="772.743363" y2="457.192982" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="793.982301" y="416.491228" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--danger-accent)">NO</text>
 
-  <rect x="677.5" y="465.9375" width="168.75" height="63.4375" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="761.875" y="497.6562" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">DENIED</text>
-  <text x="761.875" y="515.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">SCP Deny</text>
+  <rect x="677.168142" y="467.368421" width="191.150442" height="71.22807" rx="6.766585" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="772.743363" y="502.9824" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.711188" font-weight="bold" fill="var(--bg)">DENIED</text>
+  <text x="772.743363" y="523.333277" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--danger-accent)">SCP Deny</text>
 
   <!-- Yes from Diamond 2 -> Diamond 3 -->
-  <line x1="865" y1="302.8125" x2="930.625" y2="302.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="897.8125" y="291.9375" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">YES</text>
+  <line x1="889.557522" y1="284.210526" x2="963.893805" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="926.725664" y="272" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--ok-accent)">YES</text>
 
   <!-- Decision Diamond 3: Any Allow -->
-  <polygon points="1043.125,230.3125 1146.25,302.8125 1043.125,375.3125 940,302.8125" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2.5"/>
-  <text x="1043.125" y="289.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Any</text>
-  <text x="1043.125" y="307.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Allow?</text>
+  <polygon points="1091.327434,202.807018 1208.141593,284.210526 1091.327434,365.614035 974.513274,284.210526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2.5"/>
+  <text x="1091.327434" y="268.947425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--ok-accent)">Any</text>
+  <text x="1091.327434" y="289.298302" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--ok-accent)">Allow?</text>
 
   <!-- Yes from Diamond 3 -> ALLOWED -->
-  <line x1="1043.125" y1="230.3125" x2="1043.125" y2="157.8125" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1061.875" y="198.5938" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">YES</text>
+  <line x1="1091.327434" y1="202.807018" x2="1091.327434" y2="121.403509" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1112.566372" y="167.193039" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--ok-accent)">YES</text>
 
-  <rect x="958.75" y="85.3125" width="168.75" height="63.4375" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1043.125" y="117.0312" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">ALLOWED</text>
-  <text x="1043.125" y="135.1562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Access Granted</text>
+  <rect x="995.752212" y="40" width="191.150442" height="71.22807" rx="6.766585" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1091.327434" y="75.613979" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.711188" font-weight="bold" fill="var(--bg)">ALLOWED</text>
+  <text x="1091.327434" y="95.964856" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--ok-accent)">Access Granted</text>
 
   <!-- No from Diamond 3 -> Implicit Deny -->
-  <line x1="1043.125" y1="375.3125" x2="1043.125" y2="456.875" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1061.875" y="420.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">NO</text>
+  <line x1="1091.327434" y1="365.614035" x2="1091.327434" y2="457.192982" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1112.566372" y="416.491228" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--danger-accent)">NO</text>
 
-  <rect x="958.75" y="465.9375" width="168.75" height="63.4375" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1043.125" y="497.6562" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">DENIED</text>
-  <text x="1043.125" y="515.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">Implicit Deny</text>
+  <rect x="995.752212" y="467.368421" width="191.150442" height="71.22807" rx="6.766585" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1091.327434" y="502.9824" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.711188" font-weight="bold" fill="var(--bg)">DENIED</text>
+  <text x="1091.327434" y="523.333277" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--danger-accent)">Implicit Deny</text>
 
   <!-- Key principle note -->
-  <rect x="115" y="547.5" width="468.75" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="349.375" y="571.9688" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">Key: Explicit Deny always wins over any Allow</text>
-  <text x="349.375" y="590.0938" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Default is implicit deny - must be explicitly allowed</text>
+  <rect x="40" y="558.947368" width="530.973451" height="61.052632" rx="6.766585" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="305.486726" y="586.421109" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--danger-accent)">Key: Explicit Deny always wins over any Allow</text>
+  <text x="305.486726" y="606.771986" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--text-muted)">Default is implicit deny - must be explicitly allowed</text>
 
   <!-- Policy sources note -->
-  <rect x="649.375" y="547.5" width="525" height="54.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="911.875" y="567.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Policies evaluated: Identity + Resource + SCP + Session + Permissions Boundary</text>
-  <text x="911.875" y="585.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">All applicable policies are merged and evaluated together</text>
+  <rect x="645.309735" y="558.947368" width="594.690265" height="61.052632" rx="6.766585" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="942.654867" y="581.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.513661" font-weight="bold" fill="var(--primary-accent)">Policies evaluated: Identity + Resource + SCP + Session + Permissions Boundary</text>
+  <text x="942.654867" y="601.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--text-muted)">All applicable policies are merged and evaluated together</text>
 </svg>

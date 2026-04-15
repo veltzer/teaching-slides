@@ -104,53 +104,52 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="56.1111" width="543.75" height="241.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="339.9999" y="81.8889" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)">Ownership</text>
-  <rect x="86.875" y="96.3889" width="506.25" height="80.5556" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="339.9999" y="117.3333" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">Move semantics</text>
-  <text x="105.625" y="135.0556" font-family="monospace" font-size="13.0354" fill="var(--text)">let s1 = String::from("hello");</text>
-  <text x="105.625" y="152.7777" font-family="monospace" font-size="13.0354" fill="var(--text)">let s2 = s1;  // s1 moved to s2</text>
-  <text x="105.625" y="168.8889" font-family="monospace" font-size="13.0354" fill="var(--danger-accent)">// s1 is no longer valid here!</text>
-  <rect x="86.875" y="188.2223" width="225" height="93.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="199.375" y="205.9444" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Stack: s1 (ptr/len/cap)</text>
-  <text x="199.375" y="223.6667" text-anchor="middle" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)">→ INVALID after move</text>
-  <rect x="330.625" y="188.2223" width="225" height="93.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="443.125" y="205.9444" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">Stack: s2 (ptr/len/cap)</text>
-  <text x="443.125" y="223.6667" text-anchor="middle" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">→ owns heap data</text>
-  <text x="443.125" y="249.4444" text-anchor="middle" font-family="sans-serif" font-size="10.4284" fill="var(--text-muted)">Heap: "hello"</text>
-  <text x="443.125" y="267.1667" text-anchor="middle" font-family="sans-serif" font-size="10.4284" fill="var(--text-faint)">freed when s2 drops</text>
-  <line x1="199.375" y1="223.6667" x2="330.625" y2="223.6667" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)" />
-  <rect x="658.75" y="56.1111" width="553.1249" height="241.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="935.3125" y="81.8889" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--ok-accent)">Borrowing (&amp;)</text>
-  <rect x="677.4999" y="96.3889" width="515.625" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="935.3125" y="117.3333" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--ok-accent)">Immutable borrow — many readers OK</text>
-  <text x="696.25" y="136.6667" font-family="monospace" font-size="12.1663" fill="var(--text)">let s1 = String::from("hello");</text>
-  <text x="696.25" y="154.3889" font-family="monospace" font-size="12.1663" fill="var(--ok-accent)">let r1 = &amp;s1;  let r2 = &amp;s1;  // OK</text>
-  <rect x="677.4999" y="180.1667" width="515.625" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="935.3125" y="201.1111" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--warn-accent)">Mutable borrow — exactly one writer</text>
-  <text x="696.25" y="220.4444" font-family="monospace" font-size="12.1663" fill="var(--text)">let mut s = String::from("hello");</text>
-  <text x="696.25" y="238.1667" font-family="monospace" font-size="12.1663" fill="var(--warn-accent)">let r = &amp;mut s;  // only one &amp;mut allowed</text>
-  <rect x="68.125" y="315.5" width="1143.7499" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="339.6667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Borrow Checker Rules</text>
-  <rect x="86.875" y="350.9444" width="318.75" height="104.7223" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="246.25" y="371.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)">Rule 1: Single owner</text>
-  <text x="105.625" y="391.2223" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">Each value has exactly</text>
-  <text x="105.625" y="408.9444" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">one owner at a time.</text>
-  <text x="105.625" y="426.6667" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">When owner drops → value freed.</text>
-  <text x="105.625" y="444.3889" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">No double-free, no leaks.</text>
-  <rect x="443.125" y="350.9444" width="318.75" height="104.7223" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="602.5" y="371.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--text)">Rule 2: Borrows</text>
-  <text x="461.875" y="391.2223" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">Either many &amp;T (read-only),</text>
-  <text x="461.875" y="408.9444" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">OR exactly one &amp;mut T,</text>
-  <text x="461.875" y="426.6667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">never both at the same time.</text>
-  <text x="461.875" y="444.3889" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">No data races — enforced at compile time.</text>
-  <rect x="799.375" y="350.9444" width="393.75" height="104.7223" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="996.25" y="371.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--text)">Rule 3: Lifetimes</text>
-  <text x="818.125" y="391.2223" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">References must not outlive the</text>
-  <text x="818.125" y="408.9444" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">data they point to.</text>
-  <text x="818.125" y="426.6667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">No dangling pointers.</text>
-  <text x="818.125" y="444.3889" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">Compiler tracks &amp; rejects violations.</text>
-  <rect x="68.125" y="491.1111" width="1143.7499" height="33.8333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="512.0556" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--primary-accent)">These three rules eliminate entire classes of bugs: use-after-free, double-free, data races — at zero runtime cost</text>
+  <rect x="40" y="40" width="570.491853" height="298.969135" rx="6.83567" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="325.245822" y="71.890064" text-anchor="middle" font-family="sans-serif" font-size="19.801342" font-weight="bold" fill="var(--primary-accent)">Ownership</text>
+  <rect x="59.672133" y="89.82821" width="531.147587" height="99.656419" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="325.245822" y="115.73881" text-anchor="middle" font-family="sans-serif" font-size="15.840982" font-weight="bold" fill="var(--text)">Move semantics</text>
+  <text x="79.344266" y="137.663306" font-family="monospace" font-size="14.85095" fill="var(--text)">let s1 = String::from("hello");</text>
+  <text x="79.344266" y="159.587555" font-family="monospace" font-size="14.85095" fill="var(--text)">let s2 = s1;  // s1 moved to s2</text>
+  <text x="79.344266" y="179.518938" font-family="monospace" font-size="14.85095" fill="var(--danger-accent)">// s1 is no longer valid here!</text>
+  <rect x="59.672133" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="177.70493" y="225.360797" text-anchor="middle" font-family="sans-serif" font-size="12.870884" fill="var(--text-muted)">Stack: s1 (ptr/len/cap)</text>
+  <text x="177.70493" y="247.285293" text-anchor="middle" font-family="monospace" font-size="12.870884" fill="var(--danger-accent)">→ INVALID after move</text>
+  <rect x="315.40986" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="433.442657" y="225.360797" text-anchor="middle" font-family="sans-serif" font-size="12.870884" fill="var(--text-muted)">Stack: s2 (ptr/len/cap)</text>
+  <text x="433.442657" y="247.285293" text-anchor="middle" font-family="monospace" font-size="12.870884" fill="var(--primary-accent)">→ owns heap data</text>
+  <text x="433.442657" y="279.175233" text-anchor="middle" font-family="sans-serif" font-size="11.880851" fill="var(--text-muted)">Heap: "hello"</text>
+  <text x="433.442657" y="301.09973" text-anchor="middle" font-family="sans-serif" font-size="11.880851" fill="var(--text-faint)">freed when s2 drops</text>
+  <line x1="177.70493" y1="247.285293" x2="315.40986" y2="247.285293" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)" />
+  <rect x="659.672185" y="40" width="580.327815" height="298.969135" rx="6.83567" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="949.836145" y="71.890064" text-anchor="middle" font-family="sans-serif" font-size="19.801342" font-weight="bold" fill="var(--ok-accent)">Borrowing (&amp;)</text>
+  <rect x="679.344213" y="89.82821" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="949.836145" y="115.73881" text-anchor="middle" font-family="sans-serif" font-size="14.85095" font-weight="bold" fill="var(--ok-accent)">Immutable borrow — many readers OK</text>
+  <text x="699.016451" y="139.656419" font-family="monospace" font-size="13.860803" fill="var(--text)">let s1 = String::from("hello");</text>
+  <text x="699.016451" y="161.580792" font-family="monospace" font-size="13.860803" fill="var(--ok-accent)">let r1 = &amp;s1;  let r2 = &amp;s1;  // OK</text>
+  <rect x="679.344213" y="193.470856" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="949.836145" y="219.381456" text-anchor="middle" font-family="sans-serif" font-size="14.85095" font-weight="bold" fill="var(--warn-accent)">Mutable borrow — exactly one writer</text>
+  <text x="699.016451" y="243.298942" font-family="monospace" font-size="13.860803" fill="var(--text)">let mut s = String::from("hello");</text>
+  <text x="699.016451" y="265.223439" font-family="monospace" font-size="13.860803" fill="var(--warn-accent)">let r = &amp;mut s;  // only one &amp;mut allowed</text>
+  <rect x="40" y="360.893507" width="1200" height="199.312715" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640.000052" y="390.790458" text-anchor="middle" font-family="sans-serif" font-size="17.821162" font-weight="bold" fill="var(--text)">Borrow Checker Rules</text>
+  <rect x="59.672133" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="226.885262" y="430.652976" text-anchor="middle" font-family="sans-serif" font-size="14.85095" font-weight="bold" fill="var(--bg)">Rule 1: Single owner</text>
+  <text x="79.344266" y="454.570586" font-family="sans-serif" font-size="13.860803" fill="var(--primary-accent)">Each value has exactly</text>
+  <text x="79.344266" y="476.494835" font-family="sans-serif" font-size="13.860803" fill="var(--primary-accent)">one owner at a time.</text>
+  <text x="79.344266" y="498.419332" font-family="sans-serif" font-size="13.860803" fill="var(--primary-accent)">When owner drops → value freed.</text>
+  <text x="79.344266" y="520.343704" font-family="sans-serif" font-size="13.860803" fill="var(--primary-accent)">No double-free, no leaks.</text>
+  <rect x="433.442657" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="600.655787" y="430.652976" text-anchor="middle" font-family="sans-serif" font-size="14.85095" font-weight="bold" fill="var(--text)">Rule 2: Borrows</text>
+  <text x="453.11479" y="454.570586" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">Either many &amp;T (read-only),</text>
+  <text x="453.11479" y="476.494835" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">OR exactly one &amp;mut T,</text>
+  <text x="453.11479" y="498.419332" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">never both at the same time.</text>
+  <text x="453.11479" y="520.343704" font-family="sans-serif" font-size="13.860803" fill="var(--text-faint)">No data races — enforced at compile time.</text>
+  <rect x="807.213182" y="404.742253" width="413.11479" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1013.770577" y="430.652976" text-anchor="middle" font-family="sans-serif" font-size="14.85095" font-weight="bold" fill="var(--text)">Rule 3: Lifetimes</text>
+  <text x="826.885315" y="454.570586" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">References must not outlive the</text>
+  <text x="826.885315" y="476.494835" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">data they point to.</text>
+  <text x="826.885315" y="498.419332" font-family="sans-serif" font-size="13.860803" fill="var(--text-muted)">No dangling pointers.</text>
+  <text x="826.885315" y="520.343704" font-family="sans-serif" font-size="13.860803" fill="var(--text-faint)">Compiler tracks &amp; rejects violations.</text>
+  <rect x="40" y="578.144368" width="1200" height="41.855632" rx="6.83567" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640.000052" y="604.055092" text-anchor="middle" font-family="sans-serif" font-size="15.840982" fill="var(--primary-accent)">These three rules eliminate entire classes of bugs: use-after-free, double-free, data races — at zero runtime cost</text>
 </svg>

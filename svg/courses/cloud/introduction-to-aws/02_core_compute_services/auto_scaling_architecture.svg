@@ -95,88 +95,86 @@
 </defs>
 
   <!-- Background -->
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--bg)"/>
-
   <!-- Users -->
-  <rect x="68.125" y="221.25" width="93.75" height="90.625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="115" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.8088" fill="var(--text-muted)">&#128100;</text>
-  <text x="115" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)">Users</text>
+  <rect x="40" y="210" width="113.207547" height="100" rx="6.925949" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="96.603774" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.791739" fill="var(--text-muted)">&#128100;</text>
+  <text x="96.603774" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" font-weight="bold" fill="var(--text)">Users</text>
 
   <!-- Arrow: Users -> ALB -->
-  <line x1="161.875" y1="266.5625" x2="227.5" y2="266.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="194.6875" y="255.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">HTTPS</text>
+  <line x1="153.207547" y1="260" x2="232.45283" y2="260" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="192.830189" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">HTTPS</text>
 
   <!-- Application Load Balancer -->
-  <rect x="236.875" y="212.1875" width="168.75" height="108.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.25" y="252.9688" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)">Application</text>
-  <text x="321.25" y="271.0938" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)">Load Balancer</text>
-  <text x="321.25" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">(ALB)</text>
+  <rect x="243.773585" y="200" width="203.773585" height="120" rx="6.925949" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="345.660377" y="245.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.959811" font-weight="bold" fill="var(--bg)">Application</text>
+  <text x="345.660377" y="265.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.959811" font-weight="bold" fill="var(--bg)">Load Balancer</text>
+  <text x="345.660377" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--primary-accent)">(ALB)</text>
 
   <!-- Arrows: ALB -> AZ1 instances -->
-  <line x1="405.625" y1="248.4375" x2="499.375" y2="185" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <line x1="405.625" y1="284.6875" x2="499.375" y2="375.3125" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="447.54717" y1="240" x2="560.754717" y2="170" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="447.54717" y1="280" x2="560.754717" y2="380" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
   <!-- Auto Scaling Group box -->
-  <rect x="480.625" y="67.1875" width="581.25" height="525.625" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2.5" stroke-dasharray="10,5"/>
-  <text x="771.25" y="96.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--warn-accent)">Auto Scaling Group</text>
+  <rect x="538.113208" y="40" width="701.886792" height="580" rx="6.925949" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2.5" stroke-dasharray="10,5"/>
+  <text x="889.056604" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.151865" font-weight="bold" fill="var(--warn-accent)">Auto Scaling Group</text>
 
   <!-- AZ 1 -->
-  <rect x="508.75" y="117.0312" width="253.125" height="208.4375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="635.3125" y="141.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--text-muted)">Availability Zone 1</text>
+  <rect x="572.075472" y="94.999945" width="305.660377" height="230" rx="6.925949" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="724.90566" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.959811" font-weight="bold" fill="var(--text-muted)">Availability Zone 1</text>
 
   <!-- EC2 instances in AZ1 -->
-  <rect x="532.1875" y="157.8125" width="93.75" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="579.0625" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">EC2</text>
-  <text x="579.0625" y="203.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Instance 1</text>
+  <rect x="600.377358" y="140" width="113.207547" height="70" rx="6.925949" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="656.981132" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" font-weight="bold" fill="var(--ok-accent)">EC2</text>
+  <text x="656.981132" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Instance 1</text>
 
-  <rect x="644.6875" y="157.8125" width="93.75" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="691.5625" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">EC2</text>
-  <text x="691.5625" y="203.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Instance 2</text>
+  <rect x="736.226415" y="140" width="113.207547" height="70" rx="6.925949" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="792.830189" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" font-weight="bold" fill="var(--ok-accent)">EC2</text>
+  <text x="792.830189" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Instance 2</text>
 
   <!-- Scaling indicator in AZ1 -->
-  <rect x="532.1875" y="239.375" width="206.25" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="635.3125" y="266.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">EC2 (scales up)</text>
-  <text x="635.3125" y="284.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Added when demand increases</text>
+  <rect x="600.377358" y="230" width="249.056604" height="70" rx="6.925949" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="724.90566" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--warn-accent)">EC2 (scales up)</text>
+  <text x="724.90566" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Added when demand increases</text>
 
   <!-- AZ 2 -->
-  <rect x="508.75" y="348.125" width="253.125" height="208.4375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="635.3125" y="372.5938" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
+  <rect x="572.075472" y="350" width="305.660377" height="230" rx="6.925949" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="724.90566" y="377.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.959811" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
 
   <!-- EC2 instances in AZ2 -->
-  <rect x="532.1875" y="388.9062" width="93.75" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="579.0625" y="416.0938" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">EC2</text>
-  <text x="579.0625" y="434.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Instance 3</text>
+  <rect x="600.377358" y="394.999945" width="113.207547" height="70" rx="6.925949" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="656.981132" y="425.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" font-weight="bold" fill="var(--ok-accent)">EC2</text>
+  <text x="656.981132" y="445.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Instance 3</text>
 
-  <rect x="644.6875" y="388.9062" width="93.75" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="691.5625" y="416.0938" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">EC2</text>
-  <text x="691.5625" y="434.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Instance 4</text>
+  <rect x="736.226415" y="394.999945" width="113.207547" height="70" rx="6.925949" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="792.830189" y="425.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" font-weight="bold" fill="var(--ok-accent)">EC2</text>
+  <text x="792.830189" y="445.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Instance 4</text>
 
   <!-- Scaling indicator in AZ2 -->
-  <rect x="532.1875" y="470.4688" width="206.25" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="635.3125" y="497.6562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">EC2 (scales up)</text>
-  <text x="635.3125" y="515.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Added when demand increases</text>
+  <rect x="600.377358" y="485.000055" width="249.056604" height="70" rx="6.925949" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="724.90566" y="514.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--warn-accent)">EC2 (scales up)</text>
+  <text x="724.90566" y="534.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--text-muted)">Added when demand increases</text>
 
   <!-- CloudWatch -->
-  <rect x="818.125" y="166.875" width="206.25" height="108.75" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="921.25" y="207.6562" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--info-accent)">CloudWatch</text>
-  <text x="921.25" y="230.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">CPU &gt; 70%: Scale Out</text>
-  <text x="921.25" y="248.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">CPU &lt; 30%: Scale In</text>
+  <rect x="945.660377" y="150" width="249.056604" height="120" rx="6.925949" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070.188679" y="194.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.023867" font-weight="bold" fill="var(--info-accent)">CloudWatch</text>
+  <text x="1070.188679" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" fill="var(--text-muted)">CPU &gt; 70%: Scale Out</text>
+  <text x="1070.188679" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.831928" fill="var(--text-muted)">CPU &lt; 30%: Scale In</text>
 
   <!-- Arrow: CloudWatch -> ASG -->
-  <line x1="921.25" y1="275.625" x2="921.25" y2="339.0625" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="940" y="311.875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--info-accent)">Alarm</text>
+  <line x1="1070.188679" y1="270" x2="1070.188679" y2="340" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1092.830189" y="310" font-family="Arial, sans-serif" font-size="11.70393" fill="var(--info-accent)">Alarm</text>
 
   <!-- Scaling Policy box -->
-  <rect x="818.125" y="348.125" width="206.25" height="81.5625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="921.25" y="379.8438" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)">Scaling Policy</text>
-  <text x="921.25" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Min: 2 | Desired: 4 | Max: 8</text>
+  <rect x="945.660377" y="350" width="249.056604" height="90" rx="6.925949" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070.188679" y="385.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.959811" font-weight="bold" fill="var(--warn-accent)">Scaling Policy</text>
+  <text x="1070.188679" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--text-muted)">Min: 2 | Desired: 4 | Max: 8</text>
 
   <!-- Arrow: Scaling Policy -> AZ instances -->
-  <line x1="818.125" y1="411.5625" x2="761.875" y2="429.6875" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="945.660377" y1="420" x2="877.735849" y2="440" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Health check note -->
-  <rect x="818.125" y="465.9375" width="206.25" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="921.25" y="493.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">Health Checks</text>
-  <text x="921.25" y="513.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">EC2 + ELB health checks</text>
-  <text x="921.25" y="529.375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Replace unhealthy instances</text>
+  <rect x="945.660377" y="480" width="249.056604" height="80" rx="6.925949" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1070.188679" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89587" font-weight="bold" fill="var(--ok-accent)">Health Checks</text>
+  <text x="1070.188679" y="532" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--text-muted)">EC2 + ELB health checks</text>
+  <text x="1070.188679" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.767872" fill="var(--text-muted)">Replace unhealthy instances</text>
 </svg>

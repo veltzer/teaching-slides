@@ -101,135 +101,134 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="72.2223" width="271.875" height="273.8889" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="68.125" y="72.2223" width="271.875" height="35.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="68.125" y="98" width="271.875" height="9.6667" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="204.0625" y="98" font-family="Arial,sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)" text-anchor="middle">BLEU</text>
-  <text x="204.0625" y="123.7777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Bilingual Evaluation Understudy</text>
-  <line x1="86.875" y1="130.2223" x2="321.25" y2="130.2223" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="86.875" y="146.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Measures: precision</text>
-  <text x="86.875" y="162.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">How many output n-grams</text>
-  <text x="86.875" y="176.9444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">appear in the reference?</text>
-  <line x1="86.875" y1="186.6111" x2="321.25" y2="186.6111" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="86.875" y="202.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Formula:</text>
-  <rect x="86.875" y="209.1667" width="234.375" height="24.1667" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="204.0625" y="225.2777" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)" text-anchor="middle">BP × exp(Σ wₙ log pₙ)</text>
-  <text x="86.875" y="251.0556" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Range: 0–1 (higher = better)</text>
-  <line x1="86.875" y1="259.1111" x2="321.25" y2="259.1111" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="86.875" y="275.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Best for:</text>
-  <text x="86.875" y="291.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Machine translation</text>
-  <text x="86.875" y="305.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Text generation tasks with</text>
-  <text x="86.875" y="320.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">  fixed expected output</text>
-  <line x1="86.875" y1="328.3889" x2="321.25" y2="328.3889" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="86.875" y="341.2777" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">Limitation: ignores recall,</text>
-  <text x="86.875" y="354.1667" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">penalises valid synonyms</text>
-  <rect x="358.75" y="72.2223" width="271.875" height="273.8889" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
-  <rect x="358.75" y="72.2223" width="271.875" height="35.4444" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="358.75" y="98" width="271.875" height="9.6667" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="494.6875" y="98" font-family="Arial,sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)" text-anchor="middle">ROUGE</text>
-  <text x="494.6875" y="123.7777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Recall-Oriented Understudy</text>
-  <line x1="377.5" y1="130.2223" x2="611.875" y2="130.2223" stroke="var(--info-border)" stroke-width="0.8889" />
-  <text x="377.5" y="146.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Measures: recall</text>
-  <text x="377.5" y="162.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">How many reference n-grams</text>
-  <text x="377.5" y="176.9444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">appear in the output?</text>
-  <line x1="377.5" y1="186.6111" x2="611.875" y2="186.6111" stroke="var(--info-border)" stroke-width="0.8889" />
-  <text x="377.5" y="202.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Variants:</text>
-  <text x="377.5" y="218.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• ROUGE-1  (unigram overlap)</text>
-  <text x="377.5" y="233.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• ROUGE-2  (bigram overlap)</text>
-  <text x="377.5" y="247.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• ROUGE-L  (longest common subsequence)</text>
-  <line x1="377.5" y1="257.5" x2="611.875" y2="257.5" stroke="var(--info-border)" stroke-width="0.8889" />
-  <text x="377.5" y="273.6111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Best for:</text>
-  <text x="377.5" y="289.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Summarisation</text>
-  <text x="377.5" y="304.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• News headline generation</text>
-  <text x="377.5" y="318.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Document Q&amp;A</text>
-  <line x1="377.5" y1="328.3889" x2="611.875" y2="328.3889" stroke="var(--info-border)" stroke-width="0.8889" />
-  <text x="377.5" y="341.2777" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">Limitation: surface overlap only,</text>
-  <text x="377.5" y="354.1667" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">ignores meaning</text>
-  <rect x="649.375" y="72.2223" width="271.875" height="273.8889" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <rect x="649.375" y="72.2223" width="271.875" height="35.4444" rx="6" fill="var(--ok-accent)" />
-  <rect x="649.375" y="98" width="271.875" height="9.6667" fill="var(--ok-accent)" rx="6"/>
-  <text x="785.3125" y="98" font-family="Arial,sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)" text-anchor="middle">BERTScore</text>
-  <text x="785.3125" y="123.7777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Semantic Similarity</text>
-  <line x1="668.125" y1="130.2223" x2="902.5" y2="130.2223" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="668.125" y="146.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Measures: semantic similarity</text>
-  <text x="668.125" y="162.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Compares contextual embeddings</text>
-  <text x="668.125" y="176.9444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">from BERT — captures meaning</text>
-  <line x1="668.125" y1="186.6111" x2="902.5" y2="186.6111" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="668.125" y="202.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Outputs:</text>
-  <text x="668.125" y="218.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Precision (P)</text>
-  <text x="668.125" y="233.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Recall (R)</text>
-  <text x="668.125" y="247.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• F1 (harmonic mean of P, R)</text>
-  <line x1="668.125" y1="257.5" x2="902.5" y2="257.5" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="668.125" y="273.6111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Best for:</text>
-  <text x="668.125" y="289.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Open-ended generation</text>
-  <text x="668.125" y="304.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Tasks where synonyms are valid</text>
-  <text x="668.125" y="318.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Dialogue, creative writing</text>
-  <line x1="668.125" y1="328.3889" x2="902.5" y2="328.3889" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="668.125" y="341.2777" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">Limitation: requires BERT model,</text>
-  <text x="668.125" y="354.1667" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">slower, needs GPU for large scale</text>
-  <rect x="939.9999" y="72.2223" width="271.875" height="273.8889" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="939.9999" y="72.2223" width="271.875" height="35.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="939.9999" y="98" width="271.875" height="9.6667" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1075.9375" y="98" font-family="Arial,sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)" text-anchor="middle">Human Evaluation</text>
-  <text x="1075.9375" y="123.7777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Gold Standard</text>
-  <line x1="958.75" y1="130.2223" x2="1193.1249" y2="130.2223" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="958.75" y="146.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Measures: everything</text>
-  <text x="958.75" y="162.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Fluency, factuality, coherence,</text>
-  <text x="958.75" y="176.9444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">tone, helpfulness</text>
-  <line x1="958.75" y1="186.6111" x2="1193.1249" y2="186.6111" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="958.75" y="202.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Dimensions rated:</text>
-  <text x="958.75" y="218.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Relevance (1–5)</text>
-  <text x="958.75" y="233.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Fluency (1–5)</text>
-  <text x="958.75" y="247.8333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Faithfulness (0 or 1)</text>
-  <text x="958.75" y="262.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Overall preference (A/B)</text>
-  <line x1="958.75" y1="272" x2="1193.1249" y2="272" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="958.75" y="288.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" font-weight="bold">Best for:</text>
-  <text x="958.75" y="304.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Final model comparison</text>
-  <text x="958.75" y="318.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Safety/alignment checks</text>
-  <line x1="958.75" y1="328.3889" x2="1193.1249" y2="328.3889" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="958.75" y="341.2777" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">Limitation: expensive, slow,</text>
-  <text x="958.75" y="354.1667" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">annotator disagreement</text>
-  <rect x="68.125" y="374.3056" width="1143.7499" height="217.5" rx="6" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="396.0556" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)" text-anchor="middle">Choosing the Right Metric</text>
-  <rect x="86.875" y="406.5277" width="206.25" height="22.5556" rx="6" fill="var(--text-muted)" />
-  <text x="190" y="421.8333" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Metric</text>
-  <rect x="302.5" y="406.5277" width="225" height="22.5556" rx="6" fill="var(--text-muted)" />
-  <text x="415" y="421.8333" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Use case</text>
-  <rect x="536.875" y="406.5277" width="187.5" height="22.5556" rx="6" fill="var(--text-muted)" />
-  <text x="630.625" y="421.8333" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cost</text>
-  <rect x="733.75" y="406.5277" width="187.5" height="22.5556" rx="6" fill="var(--text-muted)" />
-  <text x="827.5" y="421.8333" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Catches semantics</text>
-  <rect x="930.6249" y="406.5277" width="290.625" height="22.5556" rx="6" fill="var(--text-muted)" />
-  <text x="1075.9375" y="421.8333" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Notes</text>
-  <rect x="86.875" y="433.1111" width="1125" height="29" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="190" y="451.6389" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">BLEU</text>
-  <text x="415" y="451.6389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Translation, code gen</text>
-  <text x="630.625" y="451.6389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)" text-anchor="middle">Very low (CPU)</text>
-  <text x="827.5" y="451.6389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)" text-anchor="middle">No</text>
-  <text x="1075.9375" y="451.6389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Multiple references recommended</text>
-  <rect x="86.875" y="465.3333" width="1125" height="29" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="190" y="483.8611" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">ROUGE</text>
-  <text x="415" y="483.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Summarisation, Q&amp;A</text>
-  <text x="630.625" y="483.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)" text-anchor="middle">Very low (CPU)</text>
-  <text x="827.5" y="483.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)" text-anchor="middle">No</text>
-  <text x="1075.9375" y="483.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Use ROUGE-L for longer text</text>
-  <rect x="86.875" y="497.5556" width="1125" height="29" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="190" y="516.0833" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">BERTScore</text>
-  <text x="415" y="516.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Open-ended generation</text>
-  <text x="630.625" y="516.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--warn-accent)" text-anchor="middle">Medium (GPU helps)</text>
-  <text x="827.5" y="516.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
-  <text x="1075.9375" y="516.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Best automatic semantic metric</text>
-  <rect x="86.875" y="529.7777" width="1125" height="29" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="190" y="548.3056" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Human Eval</text>
-  <text x="415" y="548.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Final model selection</text>
-  <text x="630.625" y="548.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)" text-anchor="middle">High ($$$)</text>
-  <text x="827.5" y="548.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
-  <text x="1075.9375" y="548.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Use as final arbiter, not daily CI</text>
-  <rect x="86.875" y="562" width="1125" height="29" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="190" y="580.5277" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">LLM-as-Judge</text>
-  <text x="415" y="580.5277" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Scalable quality check</text>
-  <text x="630.625" y="580.5277" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--warn-accent)" text-anchor="middle">Medium (API tokens)</text>
-  <text x="827.5" y="580.5277" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
-  <text x="1075.9375" y="580.5277" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">GPT-4 judges output vs criteria</text>
+  <rect x="40" y="40" width="282.926854" height="305.736466" rx="6.46681" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="40" width="282.926854" height="39.565844" rx="6.46681" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="68.775109" width="282.926854" height="10.790736" fill="var(--primary-fill)" rx="6.46681" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="181.463427" y="68.775109" font-family="Arial,sans-serif" font-size="16.859513" font-weight="bold" fill="var(--bg)" text-anchor="middle">BLEU</text>
+  <text x="181.463427" y="97.550218" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Bilingual Evaluation Understudy</text>
+  <line x1="59.512197" y1="104.74419" x2="303.414657" y2="104.74419" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="59.512197" y="122.728563" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Measures: precision</text>
+  <text x="59.512197" y="140.713048" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">How many output n-grams</text>
+  <text x="59.512197" y="156.899096" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">appear in the reference?</text>
+  <line x1="59.512197" y1="167.689831" x2="303.414657" y2="167.689831" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="59.512197" y="185.674428" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Formula:</text>
+  <rect x="59.512197" y="192.868177" width="243.90246" height="26.976783" rx="6.46681" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="181.463427" y="210.85255" font-family="monospace" font-size="11.239747" fill="var(--primary-accent)" text-anchor="middle">BP × exp(Σ wₙ log pₙ)</text>
+  <text x="59.512197" y="239.627883" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Range: 0–1 (higher = better)</text>
+  <line x1="59.512197" y1="248.620069" x2="303.414657" y2="248.620069" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="59.512197" y="266.604666" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Best for:</text>
+  <text x="59.512197" y="284.589039" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Machine translation</text>
+  <text x="59.512197" y="300.775086" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Text generation tasks with</text>
+  <text x="59.512197" y="316.961134" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">  fixed expected output</text>
+  <line x1="59.512197" y1="325.953432" x2="303.414657" y2="325.953432" stroke="var(--primary-border)" stroke-width="0.8889" />
+  <text x="59.512197" y="340.340931" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">Limitation: ignores recall,</text>
+  <text x="59.512197" y="354.728653" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">penalises valid synonyms</text>
+  <rect x="342.439051" y="40" width="282.926854" height="305.736466" rx="6.46681" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
+  <rect x="342.439051" y="40" width="282.926854" height="39.565844" rx="6.46681" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="342.439051" y="68.775109" width="282.926854" height="10.790736" fill="var(--info-fill)" rx="6.46681" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="483.902478" y="68.775109" font-family="Arial,sans-serif" font-size="16.859513" font-weight="bold" fill="var(--bg)" text-anchor="middle">ROUGE</text>
+  <text x="483.902478" y="97.550218" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Recall-Oriented Understudy</text>
+  <line x1="361.951247" y1="104.74419" x2="605.853708" y2="104.74419" stroke="var(--info-border)" stroke-width="0.8889" />
+  <text x="361.951247" y="122.728563" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Measures: recall</text>
+  <text x="361.951247" y="140.713048" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">How many reference n-grams</text>
+  <text x="361.951247" y="156.899096" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">appear in the output?</text>
+  <line x1="361.951247" y1="167.689831" x2="605.853708" y2="167.689831" stroke="var(--info-border)" stroke-width="0.8889" />
+  <text x="361.951247" y="185.674428" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Variants:</text>
+  <text x="361.951247" y="203.658801" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• ROUGE-1  (unigram overlap)</text>
+  <text x="361.951247" y="219.844849" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• ROUGE-2  (bigram overlap)</text>
+  <text x="361.951247" y="236.030896" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• ROUGE-L  (longest common subsequence)</text>
+  <line x1="361.951247" y1="246.821632" x2="605.853708" y2="246.821632" stroke="var(--info-border)" stroke-width="0.8889" />
+  <text x="361.951247" y="264.806117" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Best for:</text>
+  <text x="361.951247" y="282.790713" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Summarisation</text>
+  <text x="361.951247" y="298.976761" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• News headline generation</text>
+  <text x="361.951247" y="315.162808" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Document Q&amp;A</text>
+  <line x1="361.951247" y1="325.953432" x2="605.853708" y2="325.953432" stroke="var(--info-border)" stroke-width="0.8889" />
+  <text x="361.951247" y="340.340931" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">Limitation: surface overlap only,</text>
+  <text x="361.951247" y="354.728653" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">ignores meaning</text>
+  <rect x="644.878101" y="40" width="282.926854" height="305.736466" rx="6.46681" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="644.878101" y="40" width="282.926854" height="39.565844" rx="6.46681" fill="var(--ok-accent)" />
+  <rect x="644.878101" y="68.775109" width="282.926854" height="10.790736" fill="var(--ok-accent)" rx="6.46681"/>
+  <text x="786.341528" y="68.775109" font-family="Arial,sans-serif" font-size="16.859513" font-weight="bold" fill="var(--bg)" text-anchor="middle">BERTScore</text>
+  <text x="786.341528" y="97.550218" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Semantic Similarity</text>
+  <line x1="664.390298" y1="104.74419" x2="908.292758" y2="104.74419" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="664.390298" y="122.728563" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Measures: semantic similarity</text>
+  <text x="664.390298" y="140.713048" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">Compares contextual embeddings</text>
+  <text x="664.390298" y="156.899096" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">from BERT — captures meaning</text>
+  <line x1="664.390298" y1="167.689831" x2="908.292758" y2="167.689831" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="664.390298" y="185.674428" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Outputs:</text>
+  <text x="664.390298" y="203.658801" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Precision (P)</text>
+  <text x="664.390298" y="219.844849" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Recall (R)</text>
+  <text x="664.390298" y="236.030896" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• F1 (harmonic mean of P, R)</text>
+  <line x1="664.390298" y1="246.821632" x2="908.292758" y2="246.821632" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="664.390298" y="264.806117" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Best for:</text>
+  <text x="664.390298" y="282.790713" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Open-ended generation</text>
+  <text x="664.390298" y="298.976761" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Tasks where synonyms are valid</text>
+  <text x="664.390298" y="315.162808" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Dialogue, creative writing</text>
+  <line x1="664.390298" y1="325.953432" x2="908.292758" y2="325.953432" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="664.390298" y="340.340931" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">Limitation: requires BERT model,</text>
+  <text x="664.390298" y="354.728653" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">slower, needs GPU for large scale</text>
+  <rect x="947.317048" y="40" width="282.926854" height="305.736466" rx="6.46681" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="947.317048" y="40" width="282.926854" height="39.565844" rx="6.46681" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="947.317048" y="68.775109" width="282.926854" height="10.790736" fill="var(--warn-fill)" rx="6.46681" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1088.780579" y="68.775109" font-family="Arial,sans-serif" font-size="16.859513" font-weight="bold" fill="var(--bg)" text-anchor="middle">Human Evaluation</text>
+  <text x="1088.780579" y="97.550218" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Gold Standard</text>
+  <line x1="966.829349" y1="104.74419" x2="1210.731705" y2="104.74419" stroke="var(--warn-border)" stroke-width="0.8889" />
+  <text x="966.829349" y="122.728563" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Measures: everything</text>
+  <text x="966.829349" y="140.713048" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">Fluency, factuality, coherence,</text>
+  <text x="966.829349" y="156.899096" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">tone, helpfulness</text>
+  <line x1="966.829349" y1="167.689831" x2="1210.731705" y2="167.689831" stroke="var(--warn-border)" stroke-width="0.8889" />
+  <text x="966.829349" y="185.674428" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Dimensions rated:</text>
+  <text x="966.829349" y="203.658801" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Relevance (1–5)</text>
+  <text x="966.829349" y="219.844849" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Fluency (1–5)</text>
+  <text x="966.829349" y="236.030896" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Faithfulness (0 or 1)</text>
+  <text x="966.829349" y="252.216944" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Overall preference (A/B)</text>
+  <line x1="966.829349" y1="263.007679" x2="1210.731705" y2="263.007679" stroke="var(--warn-border)" stroke-width="0.8889" />
+  <text x="966.829349" y="280.992164" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" font-weight="bold">Best for:</text>
+  <text x="966.829349" y="298.976761" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Final model comparison</text>
+  <text x="966.829349" y="315.162808" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)">• Safety/alignment checks</text>
+  <line x1="966.829349" y1="325.953432" x2="1210.731705" y2="325.953432" stroke="var(--warn-border)" stroke-width="0.8889" />
+  <text x="966.829349" y="340.340931" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">Limitation: expensive, slow,</text>
+  <text x="966.829349" y="354.728653" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)">annotator disagreement</text>
+  <rect x="40" y="377.209287" width="1190.243902" height="242.790713" rx="6.46681" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
+  <text x="635.122003" y="401.488358" font-family="Arial,sans-serif" font-size="14.986186" font-weight="bold" fill="var(--text)" text-anchor="middle">Choosing the Right Metric</text>
+  <rect x="59.512197" y="413.178145" width="214.634165" height="25.178346" rx="6.46681" fill="var(--text-muted)" />
+  <text x="166.829279" y="430.263467" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--bg)" text-anchor="middle">Metric</text>
+  <rect x="283.90246" y="413.178145" width="234.146362" height="25.178346" rx="6.46681" fill="var(--text-muted)" />
+  <text x="400.975641" y="430.263467" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--bg)" text-anchor="middle">Use case</text>
+  <rect x="527.80492" y="413.178145" width="195.121968" height="25.178346" rx="6.46681" fill="var(--text-muted)" />
+  <text x="625.365904" y="430.263467" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cost</text>
+  <rect x="732.682987" y="413.178145" width="195.121968" height="25.178346" rx="6.46681" fill="var(--text-muted)" />
+  <text x="830.243971" y="430.263467" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--bg)" text-anchor="middle">Catches semantics</text>
+  <rect x="937.560949" y="413.178145" width="302.439051" height="25.178346" rx="6.46681" fill="var(--text-muted)" />
+  <text x="1088.780579" y="430.263467" font-family="Arial,sans-serif" font-size="12.176357" font-weight="bold" fill="var(--bg)" text-anchor="middle">Notes</text>
+  <rect x="59.512197" y="442.85264" width="1170.731809" height="32.372095" rx="6.46681" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="166.829279" y="463.534836" font-family="Arial,sans-serif" font-size="12.176357" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">BLEU</text>
+  <text x="400.975641" y="463.534836" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" text-anchor="middle">Translation, code gen</text>
+  <text x="625.365904" y="463.534836" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--ok-accent)" text-anchor="middle">Very low (CPU)</text>
+  <text x="830.243971" y="463.534836" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)" text-anchor="middle">No</text>
+  <text x="1088.780579" y="463.534836" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)" text-anchor="middle">Multiple references recommended</text>
+  <rect x="59.512197" y="478.82161" width="1170.731809" height="32.372095" rx="6.46681" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="166.829279" y="499.503806" font-family="Arial,sans-serif" font-size="12.176357" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">ROUGE</text>
+  <text x="400.975641" y="499.503806" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" text-anchor="middle">Summarisation, Q&amp;A</text>
+  <text x="625.365904" y="499.503806" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--ok-accent)" text-anchor="middle">Very low (CPU)</text>
+  <text x="830.243971" y="499.503806" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)" text-anchor="middle">No</text>
+  <text x="1088.780579" y="499.503806" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)" text-anchor="middle">Use ROUGE-L for longer text</text>
+  <rect x="59.512197" y="514.790691" width="1170.731809" height="32.372095" rx="6.46681" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="166.829279" y="535.472776" font-family="Arial,sans-serif" font-size="12.176357" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">BERTScore</text>
+  <text x="400.975641" y="535.472776" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" text-anchor="middle">Open-ended generation</text>
+  <text x="625.365904" y="535.472776" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--warn-accent)" text-anchor="middle">Medium (GPU helps)</text>
+  <text x="830.243971" y="535.472776" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
+  <text x="1088.780579" y="535.472776" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)" text-anchor="middle">Best automatic semantic metric</text>
+  <rect x="59.512197" y="550.759549" width="1170.731809" height="32.372095" rx="6.46681" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="166.829279" y="571.441857" font-family="Arial,sans-serif" font-size="12.176357" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Human Eval</text>
+  <text x="400.975641" y="571.441857" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" text-anchor="middle">Final model selection</text>
+  <text x="625.365904" y="571.441857" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--danger-accent)" text-anchor="middle">High ($$$)</text>
+  <text x="830.243971" y="571.441857" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
+  <text x="1088.780579" y="571.441857" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)" text-anchor="middle">Use as final arbiter, not daily CI</text>
+  <rect x="59.512197" y="586.72863" width="1170.731809" height="32.372095" rx="6.46681" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="166.829279" y="607.410715" font-family="Arial,sans-serif" font-size="12.176357" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">LLM-as-Judge</text>
+  <text x="400.975641" y="607.410715" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text)" text-anchor="middle">Scalable quality check</text>
+  <text x="625.365904" y="607.410715" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--warn-accent)" text-anchor="middle">Medium (API tokens)</text>
+  <text x="830.243971" y="607.410715" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--ok-accent)" text-anchor="middle">Yes</text>
+  <text x="1088.780579" y="607.410715" font-family="Arial,sans-serif" font-size="11.239747" fill="var(--text-muted)" text-anchor="middle">GPT-4 judges output vs criteria</text>
 </svg>

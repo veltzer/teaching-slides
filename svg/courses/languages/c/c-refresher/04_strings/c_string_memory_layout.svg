@@ -101,50 +101,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="105.625" y="81.8889" font-size="19.1186" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
-  <rect x="77.5" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="115" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--text)">'H'</text>
-  <text x="115" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x48</text>
-  <rect x="156.25" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="193.75" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--text)">'e'</text>
-  <text x="193.75" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x65</text>
-  <rect x="235" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="272.4999" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--text)">'l'</text>
-  <text x="272.4999" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x6C</text>
-  <rect x="313.75" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="351.25" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--text)">'l'</text>
-  <text x="351.25" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x6C</text>
-  <rect x="392.5" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="430" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--text)">'o'</text>
-  <text x="430" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x6F</text>
-  <rect x="471.25" y="96.3889" width="75" height="48.3333" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="508.7499" y="118.1389" text-anchor="middle" font-size="17.3806" fill="var(--danger-accent)">'\0'</text>
-  <text x="508.7499" y="135.0556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">0x00</text>
-  <text x="686.875" y="128.6111" font-size="14.7735" fill="var(--danger-accent)" font-weight="bold">Null terminator</text>
-  <line x1="685" y1="123.7777" x2="553.75" y2="123.7777" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="761.8749" y="96.3889" width="375" height="64.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="949.375" y="123.7777" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--text)">str (pointer)</text>
-  <text x="949.375" y="146.3333" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">stores address: 0x1000</text>
-  <line x1="761.8749" y1="128.6111" x2="560.3125" y2="128.6111" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" marker-end="url(#arrow-primary)" />
-  <rect x="105.625" y="201.1111" width="496.875" height="169.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="354.0625" y="231.7223" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)" font-family="monospace">char str[] = "Hello";</text>
-  <text x="133.75" y="261.5277" font-size="13.9044" fill="var(--text-muted)">- Array on stack (6 bytes)</text>
-  <text x="133.75" y="285.6944" font-size="13.9044" fill="var(--text-muted)">- Modifiable contents</text>
-  <text x="133.75" y="309.8611" font-size="13.9044" fill="var(--text-muted)">- sizeof(str) == 6</text>
-  <text x="133.75" y="334.0277" font-size="13.9044" fill="var(--primary-accent)">- str[0] = 'h'; // OK</text>
-  <rect x="649.375" y="201.1111" width="525" height="169.1667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="911.875" y="231.7223" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
-  <text x="677.4999" y="261.5277" font-size="13.9044" fill="var(--text-muted)">- Pointer to read-only data</text>
-  <text x="677.4999" y="285.6944" font-size="13.9044" fill="var(--text-muted)">- String in .rodata section</text>
-  <text x="677.4999" y="309.8611" font-size="13.9044" fill="var(--text-muted)">- sizeof(str) == 8 (pointer)</text>
-  <text x="677.4999" y="334.0277" font-size="13.9044" fill="var(--danger-accent)">- str[0] = 'h'; // SEGFAULT!</text>
-  <rect x="105.625" y="402.5" width="1068.7499" height="136.9444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="434.7223" text-anchor="middle" font-size="19.1186" font-weight="bold" fill="var(--text)">strlen() vs sizeof()</text>
-  <text x="358.75" y="470.9723" text-anchor="middle" font-size="15.6425" fill="var(--text)">strlen("Hello") = 5</text>
-  <text x="358.75" y="497.5556" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Counts chars until '\0'</text>
-  <text x="358.75" y="520.1111" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Runtime function, O(n)</text>
-  <text x="846.2499" y="470.9723" text-anchor="middle" font-size="15.6425" fill="var(--text)">sizeof("Hello") = 6</text>
-  <text x="846.2499" y="497.5556" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Includes null terminator</text>
-  <text x="846.2499" y="520.1111" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Compile-time operator</text>
+  <text x="70.769231" y="40" font-size="22.514393" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
+  <rect x="40" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="81.025641" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'H'</text>
+  <text x="81.025641" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x48</text>
+  <rect x="126.153846" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="167.179487" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'e'</text>
+  <text x="167.179487" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x65</text>
+  <rect x="212.307692" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="253.333224" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'l'</text>
+  <text x="253.333224" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6C</text>
+  <rect x="298.461538" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="339.487179" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'l'</text>
+  <text x="339.487179" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6C</text>
+  <rect x="384.615385" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="425.641026" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'o'</text>
+  <text x="425.641026" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6F</text>
+  <rect x="470.769231" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="511.794762" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--danger-accent)">'\0'</text>
+  <text x="511.794762" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x00</text>
+  <text x="706.666667" y="99.225331" font-size="17.397529" fill="var(--danger-accent)" font-weight="bold">Null terminator</text>
+  <line x1="704.615385" y1="93.098485" x2="561.025641" y2="93.098485" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="788.717839" y="58.380284" width="410.25641" height="81.690094" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="993.846154" y="93.098485" text-anchor="middle" font-size="18.420878" font-weight="bold" fill="var(--text)">str (pointer)</text>
+  <text x="993.846154" y="121.690094" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">stores address: 0x1000</text>
+  <line x1="788.717839" y1="99.225331" x2="568.205128" y2="99.225331" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" marker-end="url(#arrow-primary)" />
+  <rect x="70.769231" y="191.126751" width="543.589744" height="214.436688" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="342.564103" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="monospace">char str[] = "Hello";</text>
+  <text x="101.538462" y="267.711183" font-size="16.374061" fill="var(--text-muted)">- Array on stack (6 bytes)</text>
+  <text x="101.538462" y="298.345031" font-size="16.374061" fill="var(--text-muted)">- Modifiable contents</text>
+  <text x="101.538462" y="328.97888" font-size="16.374061" fill="var(--text-muted)">- sizeof(str) == 6</text>
+  <text x="101.538462" y="359.612602" font-size="16.374061" fill="var(--primary-accent)">- str[0] = 'h'; // OK</text>
+  <rect x="665.641026" y="191.126751" width="574.358974" height="214.436688" rx="7.065704" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="952.820513" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
+  <text x="696.410147" y="267.711183" font-size="16.374061" fill="var(--text-muted)">- Pointer to read-only data</text>
+  <text x="696.410147" y="298.345031" font-size="16.374061" fill="var(--text-muted)">- String in .rodata section</text>
+  <text x="696.410147" y="328.97888" font-size="16.374061" fill="var(--text-muted)">- sizeof(str) == 8 (pointer)</text>
+  <text x="696.410147" y="359.612602" font-size="16.374061" fill="var(--danger-accent)">- str[0] = 'h'; // SEGFAULT!</text>
+  <rect x="70.769231" y="446.408486" width="1169.23066" height="173.591514" rx="7.065704" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="655.384615" y="487.25366" text-anchor="middle" font-size="22.514393" font-weight="bold" fill="var(--text)">strlen() vs sizeof()</text>
+  <text x="347.692308" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)">strlen("Hello") = 5</text>
+  <text x="347.692308" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Counts chars until '\0'</text>
+  <text x="347.692308" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Runtime function, O(n)</text>
+  <text x="881.025532" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)">sizeof("Hello") = 6</text>
+  <text x="881.025532" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Includes null terminator</text>
+  <text x="881.025532" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Compile-time operator</text>
 </svg>

@@ -1,25 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="106.9231" text-anchor="middle" font-size="26.7702" font-weight="bold" fill="var(--text)">False Sharing - Cache Line Contention</text>
-  <text x="640" y="162.6923" text-anchor="middle" font-size="20.0777" fill="var(--text-muted)">Cache line (64 bytes)</text>
-  <rect x="128.2353" y="196.1538" width="1023.5294" height="133.8461" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <line x1="384.1176" y1="196.1538" x2="384.1176" y2="330" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <line x1="640" y1="196.1538" x2="640" y2="330" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <line x1="895.8823" y1="196.1538" x2="895.8823" y2="330" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <text x="255.294" y="256.3847" text-anchor="middle" font-size="20.0777" font-weight="bold" fill="var(--danger-accent)">counter_core0</text>
-  <text x="255.294" y="296.5385" text-anchor="middle" font-size="16.7314" fill="var(--text-muted)">(8 bytes)</text>
-  <text x="512.9411" y="274.2308" text-anchor="middle" font-size="18.4046" fill="var(--text-faint)">padding...</text>
-  <text x="767.0588" y="256.3847" text-anchor="middle" font-size="20.0777" font-weight="bold" fill="var(--danger-accent)">counter_core1</text>
-  <text x="767.0588" y="296.5385" text-anchor="middle" font-size="16.7314" fill="var(--text-muted)">(8 bytes)</text>
-  <text x="1022.9412" y="274.2308" text-anchor="middle" font-size="18.4046" fill="var(--text-faint)">padding</text>
-  <line x1="255.294" y1="341.1538" x2="255.294" y2="396.9231" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowGreen)" />
-  <line x1="767.0588" y1="341.1538" x2="767.0588" y2="396.9231" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrowBlue)" />
-  <text x="255.294" y="430.3846" text-anchor="middle" font-size="18.4046" fill="var(--ok-accent)" font-weight="bold">Core 0 writes here</text>
-  <text x="767.0588" y="430.3846" text-anchor="middle" font-size="18.4046" fill="var(--primary-accent)" font-weight="bold">Core 1 writes here</text>
-  <rect x="163.5293" y="475.0001" width="952.9412" height="111.5384" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="640" y="519.6154" text-anchor="middle" font-size="20.0777" font-weight="bold" fill="var(--danger-accent)">Both in the SAME cache line!</text>
-  <text x="640" y="559.7692" text-anchor="middle" font-size="18.4046" fill="var(--text-muted)">Every write by one core invalidates the line in the other core's cache.</text>
+  <text x="640" y="40" text-anchor="middle" font-size="31.875684" font-weight="bold" fill="var(--text)">False Sharing - Cache Line Contention</text>
+  <text x="640" y="107.441821" text-anchor="middle" font-size="23.906823" fill="var(--text-muted)">Cache line (64 bytes)</text>
+  <rect x="40" y="147.90689" width="1200" height="161.860395" rx="7.144291" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <line x1="339.999941" y1="147.90689" x2="339.999941" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <line x1="640" y1="147.90689" x2="640" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <line x1="939.999941" y1="147.90689" x2="939.999941" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <text x="188.965374" y="220.744255" text-anchor="middle" font-size="23.906823" font-weight="bold" fill="var(--danger-accent)">counter_core0</text>
+  <text x="188.965374" y="269.302337" text-anchor="middle" font-size="19.922332" fill="var(--text-muted)">(8 bytes)</text>
+  <text x="491.034391" y="242.325584" text-anchor="middle" font-size="21.914637" fill="var(--text-faint)">padding...</text>
+  <text x="788.965491" y="220.744255" text-anchor="middle" font-size="23.906823" font-weight="bold" fill="var(--danger-accent)">counter_core1</text>
+  <text x="788.965491" y="269.302337" text-anchor="middle" font-size="19.922332" fill="var(--text-muted)">(8 bytes)</text>
+  <text x="1088.96555" y="242.325584" text-anchor="middle" font-size="21.914637" fill="var(--text-faint)">padding</text>
+  <line x1="188.965374" y1="323.255721" x2="188.965374" y2="390.697663" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowGreen)" />
+  <line x1="788.965491" y1="323.255721" x2="788.965491" y2="390.697663" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrowBlue)" />
+  <text x="188.965374" y="431.162732" text-anchor="middle" font-size="21.914637" fill="var(--ok-accent)" font-weight="bold">Core 0 writes here</text>
+  <text x="788.965491" y="431.162732" text-anchor="middle" font-size="21.914637" fill="var(--primary-accent)" font-weight="bold">Core 1 writes here</text>
+  <rect x="81.379173" y="485.116358" width="1117.24142" height="134.883642" rx="7.144291" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="640" y="539.069742" text-anchor="middle" font-size="23.906823" font-weight="bold" fill="var(--danger-accent)">Both in the SAME cache line!</text>
+  <text x="640" y="587.627824" text-anchor="middle" font-size="21.914637" fill="var(--text-muted)">Every write by one core invalidates the line in the other core's cache.</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

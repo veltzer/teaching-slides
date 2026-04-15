@@ -104,33 +104,32 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#e53935" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="96.25" y="88.3333" width="496.875" height="201.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="344.6875" y="118.9444" text-anchor="middle" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Before free(p):</text>
-  <rect x="133.75" y="132.6389" width="140.625" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="204.0625" y="164.8611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)">p</text>
-  <line x1="274.375" y1="159.2223" x2="386.875" y2="159.2223" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="390.6249" y="132.6389" width="140.625" height="53.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="460.9375" y="164.8611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)">42</text>
-  <text x="546.25" y="164.8611" font-size="14.7735" fill="var(--text-faint)">(heap)</text>
-  <rect x="133.75" y="205.1389" width="140.625" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="204.0625" y="237.3611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)">alias</text>
-  <line x1="274.375" y1="231.7223" x2="452.5" y2="193.0556" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
-  <rect x="649.375" y="88.3333" width="534.375" height="201.3889" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="916.5625" y="118.9444" text-anchor="middle" font-size="19.1186" font-weight="bold" fill="var(--danger-accent)">After free(p); p = NULL;</text>
-  <rect x="686.875" y="132.6389" width="140.625" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="757.1875" y="164.8611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--text)">NULL</text>
-  <rect x="968.125" y="132.6389" width="140.625" height="53.1667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1038.4375" y="164.8611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)">???</text>
-  <text x="1122.8125" y="164.8611" font-size="14.7735" fill="var(--text-faint)">(freed)</text>
-  <rect x="686.875" y="205.1389" width="140.625" height="53.1667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="757.1875" y="237.3611" text-anchor="middle" font-size="17.3806" font-weight="bold" fill="var(--warn-accent)">alias</text>
-  <line x1="827.5" y1="231.7223" x2="1029.0625" y2="193.0556" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
-  <text x="968.125" y="283.2777" font-size="15.6425" fill="var(--danger-accent)" font-weight="bold">DANGLING!</text>
-  <rect x="152.5" y="330" width="974.9999" height="201.3889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="363.8333" text-anchor="middle" font-size="19.1186" font-weight="bold" fill="var(--danger-accent)">Why is this dangerous?</text>
-  <text x="190" y="397.6667" font-size="17.3806" fill="var(--text)">1. alias still points to freed memory (dangling pointer)</text>
-  <text x="190" y="429.8889" font-size="17.3806" fill="var(--text)">2. Using alias leads to undefined behavior</text>
-  <text x="190" y="462.1111" font-size="17.3806" fill="var(--text)">3. Memory may be reused for other allocations</text>
-  <text x="190" y="500.7777" font-size="17.3806" fill="var(--primary-accent)" font-weight="bold">Fix: Set ALL pointers to NULL after freeing, or use ownership patterns</text>
+  <rect x="40" y="40" width="548.275862" height="263.636352" rx="7.211276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="314.137931" y="80.072709" text-anchor="middle" font-size="22.97825" font-weight="bold" fill="var(--primary-accent)">Before free(p):</text>
+  <rect x="81.37931" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="158.965517" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)">p</text>
+  <line x1="236.551724" y1="132.800136" x2="360.689655" y2="132.800136" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <rect x="364.827476" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="442.413793" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)">42</text>
+  <text x="536.551724" y="140.181837" font-size="17.755965" fill="var(--text-faint)">(heap)</text>
+  <rect x="81.37931" y="192.909134" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="158.965517" y="235.090919" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)">alias</text>
+  <line x1="236.551724" y1="227.709218" x2="433.103448" y2="177.090997" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
+  <rect x="650.344828" y="40" width="589.655172" height="263.636352" rx="7.211276" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="945.172414" y="80.072709" text-anchor="middle" font-size="22.97825" font-weight="bold" fill="var(--danger-accent)">After free(p); p = NULL;</text>
+  <rect x="691.724138" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="769.310345" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--text)">NULL</text>
+  <rect x="1002.068966" y="98.000052" width="155.172414" height="69.600037" rx="7.211276" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1079.655172" y="140.181837" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--danger-accent)">???</text>
+  <text x="1172.758621" y="140.181837" font-size="17.755965" fill="var(--text-faint)">(freed)</text>
+  <rect x="691.724138" y="192.909134" width="155.172414" height="69.600037" rx="7.211276" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="769.310345" y="235.090919" text-anchor="middle" font-size="20.889384" font-weight="bold" fill="var(--warn-accent)">alias</text>
+  <line x1="846.896552" y1="227.709218" x2="1069.310345" y2="177.090997" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
+  <text x="1002.068966" y="295.199916" font-size="18.800398" fill="var(--danger-accent)" font-weight="bold">DANGLING!</text>
+  <rect x="102.068966" y="356.363648" width="1075.861959" height="263.636352" rx="7.211276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="400.654509" text-anchor="middle" font-size="22.97825" font-weight="bold" fill="var(--danger-accent)">Why is this dangerous?</text>
+  <text x="143.448276" y="444.945501" font-size="20.889384" fill="var(--text)">1. alias still points to freed memory (dangling pointer)</text>
+  <text x="143.448276" y="487.127286" font-size="20.889384" fill="var(--text)">2. Using alias leads to undefined behavior</text>
+  <text x="143.448276" y="529.309071" font-size="20.889384" fill="var(--text)">3. Memory may be reused for other allocations</text>
+  <text x="143.448276" y="579.92716" font-size="20.889384" fill="var(--primary-accent)" font-weight="bold">Fix: Set ALL pointers to NULL after freeing, or use ownership patterns</text>
 </svg>

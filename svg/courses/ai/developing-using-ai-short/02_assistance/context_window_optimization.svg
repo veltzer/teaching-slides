@@ -101,53 +101,52 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="56.1111" width="1143.7499" height="64.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="80.2777" text-anchor="middle" font-family="sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">AI Context Window  (e.g. 200 000 tokens)</text>
-  <rect x="77.5" y="88.3333" width="281.25" height="22.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="218.125" y="103.6389" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--bg)">System prompt / instructions</text>
-  <rect x="366.25" y="88.3333" width="225" height="22.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="478.75" y="103.6389" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--bg)">Open files (editor)</text>
-  <rect x="598.75" y="88.3333" width="187.5" height="22.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="692.5" y="103.6389" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--bg)">Conversation history</text>
-  <rect x="793.75" y="88.3333" width="168.75" height="22.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="878.125" y="103.6389" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text)">Recent edits</text>
-  <rect x="970" y="88.3333" width="112.5" height="22.5556" rx="6" fill="var(--border)" stroke-dasharray="3.5556 2.6667" />
-  <text x="1026.25" y="103.6389" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-faint)">available</text>
-  <rect x="68.125" y="152.7777" width="543.75" height="370.5556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="339.9999" y="180.1667" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)">Poor Context → Weak Suggestions</text>
-  <rect x="86.875" y="197.8889" width="506.25" height="80.5556" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="86.875" y="214" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">  You type: "add error handling"</text>
-  <text x="86.875" y="233.3333" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">  AI sees: only the current function</text>
-  <text x="86.875" y="252.6667" font-family="sans-serif" font-size="12.1663" fill="var(--text-faint)">  AI response: generic try/except</text>
-  <text x="86.875" y="268.7777" font-family="sans-serif" font-size="12.1663" fill="var(--danger-accent)">  ✗ Ignores existing error classes</text>
-  <text x="339.9999" y="312.2777" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--danger-accent)">What's missing from context:</text>
-  <rect x="86.875" y="321.9444" width="506.25" height="177.2223" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="105.625" y="344.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ Related modules not open</text>
-  <text x="105.625" y="363.8333" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ No docstrings / unclear variable names</text>
-  <text x="105.625" y="383.1667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ Custom exceptions defined elsewhere</text>
-  <text x="105.625" y="402.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ No type hints — AI guesses types</text>
-  <text x="105.625" y="421.8333" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ Vague prompt: "fix this"</text>
-  <text x="105.625" y="441.1667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ No tests — AI can't infer intent</text>
-  <text x="105.625" y="460.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✗ Giant single file — irrelevant code fills context</text>
-  <text x="105.625" y="487.8889" font-family="sans-serif" font-size="12.1663" fill="var(--danger-accent)">Result: hallucinated APIs, wrong patterns</text>
-  <rect x="668.125" y="152.7777" width="543.75" height="370.5556" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="939.9999" y="180.1667" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--ok-accent)">Rich Context → Accurate Suggestions</text>
-  <rect x="686.875" y="197.8889" width="506.25" height="80.5556" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="686.875" y="214" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">  You type: "add error handling using</text>
-  <text x="686.875" y="230.1111" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">  DatabaseError from exceptions.py"</text>
-  <text x="686.875" y="249.4444" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">  AI sees: function + exceptions.py + tests</text>
-  <text x="686.875" y="268.7777" font-family="sans-serif" font-size="12.1663" fill="var(--ok-accent)">  ✓ Uses correct existing exception class</text>
-  <text x="939.9999" y="312.2777" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--ok-accent)">What helps the AI:</text>
-  <rect x="686.875" y="321.9444" width="506.25" height="177.2223" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="705.625" y="344.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Open related files in editor tabs</text>
-  <text x="705.625" y="363.8333" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Descriptive names: get_user_by_email()</text>
-  <text x="705.625" y="383.1667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Type hints everywhere</text>
-  <text x="705.625" y="402.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Docstrings explaining intent</text>
-  <text x="705.625" y="421.8333" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Tests that show expected behaviour</text>
-  <text x="705.625" y="441.1667" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Specific prompt with existing patterns</text>
-  <text x="705.625" y="460.5" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">✓ Small, focused files (&lt;300 lines)</text>
-  <text x="705.625" y="487.8889" font-family="sans-serif" font-size="12.1663" fill="var(--ok-accent)">Result: correct, idiomatic, project-aware code</text>
-  <rect x="68.125" y="537.8333" width="1143.7499" height="33.8333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="558.7777" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--primary-accent)">The AI is only as good as the context you give it — treat the context window as a shared working memory</text>
+  <rect x="40" y="40" width="1199.999895" height="72.499958" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640" y="67.187428" text-anchor="middle" font-family="sans-serif" font-size="15.106144" font-weight="bold" fill="var(--text)">AI Context Window  (e.g. 200 000 tokens)</text>
+  <rect x="49.836066" y="76.249979" width="295.081967" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="197.377049" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">System prompt / instructions</text>
+  <rect x="352.786885" y="76.249979" width="236.065574" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="470.819672" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">Open files (editor)</text>
+  <rect x="596.721311" y="76.249979" width="196.721311" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="695.081967" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">Conversation history</text>
+  <rect x="801.311475" y="76.249979" width="177.04918" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="889.836066" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--text)">Recent edits</text>
+  <rect x="986.229508" y="76.249979" width="118.032787" height="25.375053" rx="6.518574" fill="var(--border)" stroke-dasharray="3.5556 2.6667" />
+  <text x="1045.245902" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--text-faint)">available</text>
+  <rect x="40" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="325.245797" y="179.562565" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--danger-accent)">Poor Context → Weak Suggestions</text>
+  <rect x="59.672131" y="199.500042" width="531.147541" height="90.62506" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="59.672131" y="217.625032" font-family="sans-serif" font-size="13.217821" fill="var(--text-faint)">  You type: "add error handling"</text>
+  <text x="59.672131" y="239.374996" font-family="sans-serif" font-size="13.217821" fill="var(--text-faint)">  AI sees: only the current function</text>
+  <text x="59.672131" y="261.125074" font-family="sans-serif" font-size="13.217821" fill="var(--text-faint)">  AI response: generic try/except</text>
+  <text x="59.672131" y="279.249951" font-family="sans-serif" font-size="13.217821" fill="var(--danger-accent)">  ✗ Ignores existing error classes</text>
+  <text x="325.245797" y="328.187456" text-anchor="middle" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--danger-accent)">What's missing from context:</text>
+  <rect x="59.672131" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="79.344262" y="364.437547" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Related modules not open</text>
+  <text x="79.344262" y="386.187512" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ No docstrings / unclear variable names</text>
+  <text x="79.344262" y="407.93759" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Custom exceptions defined elsewhere</text>
+  <text x="79.344262" y="429.687554" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ No type hints — AI guesses types</text>
+  <text x="79.344262" y="451.437519" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Vague prompt: "fix this"</text>
+  <text x="79.344262" y="473.187597" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ No tests — AI can't infer intent</text>
+  <text x="79.344262" y="494.937562" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Giant single file — irrelevant code fills context</text>
+  <text x="79.344262" y="525.750077" font-family="sans-serif" font-size="13.217821" fill="var(--danger-accent)">Result: hallucinated APIs, wrong patterns</text>
+  <rect x="669.508197" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="954.753993" y="179.562565" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--ok-accent)">Rich Context → Accurate Suggestions</text>
+  <rect x="689.180328" y="199.500042" width="531.147541" height="90.62506" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="689.180328" y="217.625032" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">  You type: "add error handling using</text>
+  <text x="689.180328" y="235.750021" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">  DatabaseError from exceptions.py"</text>
+  <text x="689.180328" y="257.499986" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">  AI sees: function + exceptions.py + tests</text>
+  <text x="689.180328" y="279.249951" font-family="sans-serif" font-size="13.217821" fill="var(--ok-accent)">  ✓ Uses correct existing exception class</text>
+  <text x="954.753993" y="328.187456" text-anchor="middle" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--ok-accent)">What helps the AI:</text>
+  <rect x="689.180328" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="708.852459" y="364.437547" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Open related files in editor tabs</text>
+  <text x="708.852459" y="386.187512" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Descriptive names: get_user_by_email()</text>
+  <text x="708.852459" y="407.93759" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Type hints everywhere</text>
+  <text x="708.852459" y="429.687554" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Docstrings explaining intent</text>
+  <text x="708.852459" y="451.437519" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Tests that show expected behaviour</text>
+  <text x="708.852459" y="473.187597" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Specific prompt with existing patterns</text>
+  <text x="708.852459" y="494.937562" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Small, focused files (&lt;300 lines)</text>
+  <text x="708.852459" y="525.750077" font-family="sans-serif" font-size="13.217821" fill="var(--ok-accent)">Result: correct, idiomatic, project-aware code</text>
+  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="605.499986" text-anchor="middle" font-family="sans-serif" font-size="15.106144" fill="var(--primary-accent)">The AI is only as good as the context you give it — treat the context window as a shared working memory</text>
 </svg>

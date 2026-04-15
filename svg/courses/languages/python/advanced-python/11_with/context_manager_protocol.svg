@@ -116,123 +116,121 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#e53935"/>
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Title bar -->
-  <rect x="40" y="40" width="1200" height="47.125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="70.8125" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Context Manager Protocol</text>
+  <rect x="40" y="40" width="1200" height="48.645161" fill="var(--primary-fill)" rx="6.096006" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="71.806452" font-family="sans-serif" font-size="20.602773" font-weight="bold" fill="var(--bg)" text-anchor="middle">Context Manager Protocol</text>
 
   <!-- Column headers -->
-  <text x="340" y="114.3125" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Normal Execution Path</text>
-  <text x="808.75" y="114.3125" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Exception Path</text>
+  <text x="340" y="116.709677" font-family="sans-serif" font-size="14.983881" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Normal Execution Path</text>
+  <text x="808.75" y="116.709677" font-family="sans-serif" font-size="14.983881" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Exception Path</text>
 
   <!-- Divider line -->
-  <line x1="602.5" y1="94.375" x2="602.5" y2="601.875" stroke="var(--border)" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="602.5" y1="96.129032" x2="602.5" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6,4"/>
 
   <!-- === NORMAL PATH (left side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="115" y="128.8125" width="206.25" height="41.6875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="218.125" y="148.75" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">with CM() as obj:</text>
-  <text x="218.125" y="164.1562" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">evaluate expression</text>
+  <rect x="115" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="218.125" y="152.258065" font-family="monospace" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle">with CM() as obj:</text>
+  <text x="218.125" y="168.161239" font-family="sans-serif" font-size="10.301438" fill="var(--primary-accent)" text-anchor="middle">evaluate expression</text>
 
   <!-- Arrow down -->
-  <line x1="218.125" y1="170.5" x2="218.125" y2="197.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="218.125" y1="174.709677" x2="218.125" y2="202.774194" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: __enter__ -->
-  <rect x="115" y="197.6875" width="206.25" height="41.6875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="218.125" y="217.625" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">__enter__(self)</text>
-  <text x="218.125" y="233.0312" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">returns value bound to 'as'</text>
+  <rect x="115" y="202.774194" width="206.25" height="43.032258" rx="6.096006" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="218.125" y="223.354839" font-family="monospace" font-size="13.110884" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">__enter__(self)</text>
+  <text x="218.125" y="239.258013" font-family="sans-serif" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle">returns value bound to 'as'</text>
 
   <!-- Arrow down -->
-  <line x1="218.125" y1="239.375" x2="218.125" y2="266.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="218.125" y1="245.806452" x2="218.125" y2="273.870968" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: body executes -->
-  <rect x="115" y="266.5625" width="206.25" height="41.6875" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="218.125" y="286.5" font-family="monospace" font-size="12.9044" fill="var(--primary-accent)" text-anchor="middle">body executes</text>
-  <text x="218.125" y="301.9062" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">with obj as ctx: ...</text>
+  <rect x="115" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="218.125" y="294.451613" font-family="monospace" font-size="13.110884" fill="var(--primary-accent)" text-anchor="middle">body executes</text>
+  <text x="218.125" y="310.354787" font-family="sans-serif" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle">with obj as ctx: ...</text>
 
   <!-- Arrow down -->
-  <line x1="218.125" y1="308.25" x2="218.125" y2="335.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="218.125" y1="316.903226" x2="218.125" y2="344.967742" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 4: __exit__ normal -->
-  <rect x="115" y="335.4375" width="206.25" height="48.9375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="218.125" y="355.375" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">__exit__(self,</text>
-  <text x="218.125" y="369.875" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">  None, None, None)</text>
-  <text x="218.125" y="379.8438" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">exc_type=None → no exception</text>
+  <rect x="115" y="344.967742" width="206.25" height="50.516129" rx="6.096006" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="218.125" y="365.548387" font-family="monospace" font-size="12.174435" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">__exit__(self,</text>
+  <text x="218.125" y="380.516129" font-family="monospace" font-size="12.174435" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">  None, None, None)</text>
+  <text x="218.125" y="390.806503" font-family="sans-serif" font-size="10.16001" fill="var(--text-muted)" text-anchor="middle">exc_type=None → no exception</text>
 
   <!-- Arrow down -->
-  <line x1="218.125" y1="384.375" x2="218.125" y2="411.5625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="218.125" y1="395.483871" x2="218.125" y2="423.548387" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Step 5: Done -->
-  <rect x="133.75" y="411.5625" width="168.75" height="36.25" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="218.125" y="434.2188" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Execution continues</text>
+  <rect x="133.75" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="218.125" y="446.935535" font-family="sans-serif" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle">Execution continues</text>
 
   <!-- === EXCEPTION PATH (right side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="658.75" y="128.8125" width="206.25" height="41.6875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="761.875" y="148.75" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">with CM() as obj:</text>
-  <text x="761.875" y="164.1562" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">evaluate expression</text>
+  <rect x="658.75" y="131.677419" width="206.25" height="43.032258" rx="6.096006" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="761.875" y="152.258065" font-family="monospace" font-size="13.110884" font-weight="bold" fill="var(--bg)" text-anchor="middle">with CM() as obj:</text>
+  <text x="761.875" y="168.161239" font-family="sans-serif" font-size="10.301438" fill="var(--primary-accent)" text-anchor="middle">evaluate expression</text>
 
   <!-- Arrow down -->
-  <line x1="761.875" y1="170.5" x2="761.875" y2="197.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="761.875" y1="174.709677" x2="761.875" y2="202.774194" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: __enter__ -->
-  <rect x="658.75" y="197.6875" width="206.25" height="41.6875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="761.875" y="217.625" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">__enter__(self)</text>
-  <text x="761.875" y="233.0312" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">returns value bound to 'as'</text>
+  <rect x="658.75" y="202.774194" width="206.25" height="43.032258" rx="6.096006" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="761.875" y="223.354839" font-family="monospace" font-size="13.110884" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">__enter__(self)</text>
+  <text x="761.875" y="239.258013" font-family="sans-serif" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle">returns value bound to 'as'</text>
 
   <!-- Arrow down -->
-  <line x1="761.875" y1="239.375" x2="761.875" y2="266.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="761.875" y1="245.806452" x2="761.875" y2="273.870968" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: body raises -->
-  <rect x="658.75" y="266.5625" width="206.25" height="41.6875" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="761.875" y="286.5" font-family="monospace" font-size="12.9044" fill="var(--danger-accent)" text-anchor="middle">body raises Exception</text>
-  <text x="761.875" y="301.9062" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">exception propagates up</text>
+  <rect x="658.75" y="273.870968" width="206.25" height="43.032258" rx="6.096006" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="761.875" y="294.451613" font-family="monospace" font-size="13.110884" fill="var(--danger-accent)" text-anchor="middle">body raises Exception</text>
+  <text x="761.875" y="310.354787" font-family="sans-serif" font-size="10.301438" fill="var(--text-muted)" text-anchor="middle">exception propagates up</text>
 
   <!-- Arrow down -->
-  <line x1="761.875" y1="308.25" x2="761.875" y2="335.4375" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <line x1="761.875" y1="316.903226" x2="761.875" y2="344.967742" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
 
   <!-- Step 4: __exit__ with exc info -->
-  <rect x="640" y="335.4375" width="243.75" height="48.9375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="761.875" y="355.375" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">__exit__(self,</text>
-  <text x="761.875" y="369.875" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">  type, value, traceback)</text>
-  <text x="761.875" y="379.8438" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">exc_type set → exception occurred</text>
+  <rect x="640" y="344.967742" width="243.75" height="50.516129" rx="6.096006" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="761.875" y="365.548387" font-family="monospace" font-size="12.174435" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">__exit__(self,</text>
+  <text x="761.875" y="380.516129" font-family="monospace" font-size="11.237886" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">  type, value, traceback)</text>
+  <text x="761.875" y="390.806503" font-family="sans-serif" font-size="10.16001" fill="var(--text-muted)" text-anchor="middle">exc_type set → exception occurred</text>
 
   <!-- Decision diamond -->
-  <polygon points="761.875,402.5 818.125,429.6875 761.875,456.875 705.625,429.6875" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="761.875" y="426.0625" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">return</text>
-  <text x="761.875" y="440.5625" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">True?</text>
+  <polygon points="761.875,414.193548 818.125,442.258065 761.875,470.322581 705.625,442.258065" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="761.875" y="438.516129" font-family="sans-serif" font-size="11.237886" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">return</text>
+  <text x="761.875" y="453.483871" font-family="sans-serif" font-size="11.237886" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">True?</text>
 
   <!-- Arrow: True → suppress -->
-  <line x1="818.125" y1="429.6875" x2="986.875" y2="429.6875" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="902.5" y="422.4375" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">True</text>
-  <rect x="986.875" y="411.5625" width="168.75" height="36.25" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1071.25" y="434.2188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Exception suppressed</text>
+  <line x1="818.125" y1="442.258065" x2="986.875" y2="442.258065" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="902.5" y="434.774194" font-family="sans-serif" font-size="10.301438" fill="var(--ok-accent)" text-anchor="middle">True</text>
+  <rect x="986.875" y="423.548387" width="168.75" height="37.419355" rx="6.096006" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1071.25" y="446.935535" font-family="sans-serif" font-size="12.174435" font-weight="bold" fill="var(--bg)" text-anchor="middle">Exception suppressed</text>
 
   <!-- Arrow: False → re-raise -->
-  <line x1="761.875" y1="456.875" x2="761.875" y2="484.0625" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
-  <text x="780.625" y="475" font-family="sans-serif" font-size="10.1392" fill="var(--danger-accent)">False</text>
-  <rect x="668.125" y="484.0625" width="187.5" height="36.25" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="761.875" y="506.7188" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Exception re-raised</text>
+  <line x1="761.875" y1="470.322581" x2="761.875" y2="498.387097" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <text x="780.625" y="489.032258" font-family="sans-serif" font-size="10.301438" fill="var(--danger-accent)">False</text>
+  <rect x="668.125" y="498.387097" width="187.5" height="37.419355" rx="6.096006" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="761.875" y="521.774245" font-family="sans-serif" font-size="12.174435" font-weight="bold" fill="var(--bg)" text-anchor="middle">Exception re-raised</text>
 
   <!-- Bottom info box: __enter__ note -->
-  <rect x="96.25" y="465.9375" width="487.5" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="115" y="484.0625" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)">__enter__ return value → bound to 'as' variable</text>
-  <text x="115" y="502.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">with open('f.txt') as f:   # f = file.__enter__()</text>
+  <rect x="96.25" y="479.677419" width="487.5" height="46.774194" rx="6.096006" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="115" y="498.387097" font-family="monospace" font-size="11.237886" font-weight="bold" fill="var(--ok-accent)">__enter__ return value → bound to 'as' variable</text>
+  <text x="115" y="517.096774" font-family="monospace" font-size="11.237886" fill="var(--text)">with open('f.txt') as f:   # f = file.__enter__()</text>
 
   <!-- Method signatures box -->
-  <rect x="96.25" y="525.75" width="487.5" height="61.625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="115" y="543.875" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Protocol Methods:</text>
-  <text x="115" y="560.1875" font-family="monospace" font-size="10.1392" fill="var(--text)">__enter__(self)  →  returns context value</text>
-  <text x="115" y="576.5" font-family="monospace" font-size="10.1392" fill="var(--text)">__exit__(self, exc_type, exc_val, exc_tb)  →  bool</text>
-  <text x="115" y="592.8125" font-family="monospace" font-size="10.1392" fill="var(--text)">contextlib.contextmanager: yield splits enter/exit</text>
+  <rect x="96.25" y="541.419355" width="487.5" height="63.612903" rx="6.096006" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="115" y="560.129032" font-family="sans-serif" font-size="11.237886" font-weight="bold" fill="var(--primary-accent)">Protocol Methods:</text>
+  <text x="115" y="576.967742" font-family="monospace" font-size="10.301438" fill="var(--text)">__enter__(self)  →  returns context value</text>
+  <text x="115" y="593.806452" font-family="monospace" font-size="10.301438" fill="var(--text)">__exit__(self, exc_type, exc_val, exc_tb)  →  bool</text>
+  <text x="115" y="610.645161" font-family="monospace" font-size="10.301438" fill="var(--text)">contextlib.contextmanager: yield splits enter/exit</text>
 
   <!-- Legend box -->
-  <rect x="621.25" y="533" width="562.5" height="61.625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="551.125" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Custom context manager example:</text>
-  <text x="640" y="567.4375" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">class Timer:</text>
-  <text x="640" y="581.9375" font-family="monospace" font-size="10.1392" fill="var(--text)">    def __enter__(self): self.start=time.time(); return self</text>
-  <text x="640" y="596.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">    def __exit__(self, *exc): print(time.time()-self.start)</text>
+  <rect x="621.25" y="548.903226" width="562.5" height="63.612903" rx="6.096006" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="567.612903" font-family="sans-serif" font-size="11.237886" font-weight="bold" fill="var(--text)">Custom context manager example:</text>
+  <text x="640" y="584.451613" font-family="monospace" font-size="10.301438" fill="var(--primary-accent)">class Timer:</text>
+  <text x="640" y="599.419355" font-family="monospace" font-size="10.301438" fill="var(--text)">    def __enter__(self): self.start=time.time(); return self</text>
+  <text x="640" y="614.387097" font-family="monospace" font-size="10.301438" fill="var(--text)">    def __exit__(self, *exc): print(time.time()-self.start)</text>
 </svg>

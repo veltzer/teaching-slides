@@ -93,105 +93,103 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- == WHY PYTHON FOR SPARK == -->
-  <rect x="96.25" y="67.1875" width="1087.5" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="92.5625" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)" text-anchor="middle">Why Python for Spark: readable syntax, rich ecosystem, PySpark native API, data science libs (pandas/numpy/scikit-learn)</text>
+  <rect x="40" y="40" width="1183.673469" height="43.401361" rx="6.530612" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="631.836735" y="67.619048" font-family="Arial, sans-serif" font-size="17.055347" font-weight="bold" fill="var(--bg)" text-anchor="middle">Why Python for Spark: readable syntax, rich ecosystem, PySpark native API, data science libs (pandas/numpy/scikit-learn)</text>
 
   <!-- == DATA TYPES SECTION == -->
-  <text x="96.25" y="130.625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)">Key Data Types</text>
+  <text x="40" y="109.047619" font-family="Arial, sans-serif" font-size="15.048816" font-weight="bold" fill="var(--primary-accent)">Key Data Types</text>
 
   <!-- List -->
-  <rect x="96.25" y="143.3125" width="253.125" height="163.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="222.8125" y="163.25" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">list  [ ]</text>
-  <text x="115" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">nums = [1, 2, 3, 4, 5]</text>
-  <text x="115" y="199.5" font-family="monospace" font-size="11.0609" fill="var(--text)">nums.append(6)</text>
-  <text x="115" y="215.8125" font-family="monospace" font-size="11.0609" fill="var(--text)">nums[0]  # -&gt; 1</text>
-  <text x="115" y="232.125" font-family="monospace" font-size="11.0609" fill="var(--text)">nums[1:3]  # -&gt; [2,3]</text>
-  <text x="115" y="252.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">Spark: RDD is like a</text>
-  <text x="115" y="266.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">distributed list</text>
-  <text x="115" y="282.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Ordered, mutable, allows dupes</text>
-  <text x="115" y="297.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">O(1) append, O(n) search</text>
+  <rect x="40" y="122.857143" width="275.510204" height="177.55102" rx="6.530612" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="177.755102" y="144.557823" font-family="Arial, sans-serif" font-size="14.045605" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">list  [ ]</text>
+  <text x="60.408163" y="166.258503" font-family="monospace" font-size="12.039075" fill="var(--text)">nums = [1, 2, 3, 4, 5]</text>
+  <text x="60.408163" y="184.013605" font-family="monospace" font-size="12.039075" fill="var(--text)">nums.append(6)</text>
+  <text x="60.408163" y="201.768707" font-family="monospace" font-size="12.039075" fill="var(--text)">nums[0]  # -&gt; 1</text>
+  <text x="60.408163" y="219.52381" font-family="monospace" font-size="12.039075" fill="var(--text)">nums[1:3]  # -&gt; [2,3]</text>
+  <text x="60.408163" y="241.22449" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--primary-accent)">Spark: RDD is like a</text>
+  <text x="60.408163" y="257.006803" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--primary-accent)">distributed list</text>
+  <text x="60.408163" y="274.761905" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Ordered, mutable, allows dupes</text>
+  <text x="60.408163" y="290.544218" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">O(1) append, O(n) search</text>
 
   <!-- Dict -->
-  <rect x="368.125" y="143.3125" width="253.125" height="163.125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="494.6875" y="163.25" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">dict  &#x7b; &#x7d;</text>
-  <text x="386.875" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">d = {"name": "Alice"}</text>
-  <text x="386.875" y="199.5" font-family="monospace" font-size="11.0609" fill="var(--text)">d["age"] = 30</text>
-  <text x="386.875" y="215.8125" font-family="monospace" font-size="11.0609" fill="var(--text)">d.get("age", 0)</text>
-  <text x="386.875" y="232.125" font-family="monospace" font-size="11.0609" fill="var(--text)">d.keys() / d.values()</text>
-  <text x="386.875" y="252.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Spark: Row objects are</text>
-  <text x="386.875" y="266.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">dict-like in DataFrames</text>
-  <text x="386.875" y="282.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Key-value, O(1) lookup</text>
-  <text x="386.875" y="297.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">JSON-like, flexible schema</text>
+  <rect x="335.918367" y="122.857143" width="275.510204" height="177.55102" rx="6.530612" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="473.673469" y="144.557823" font-family="Arial, sans-serif" font-size="14.045605" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">dict  &#x7b; &#x7d;</text>
+  <text x="356.326531" y="166.258503" font-family="monospace" font-size="12.039075" fill="var(--text)">d = {"name": "Alice"}</text>
+  <text x="356.326531" y="184.013605" font-family="monospace" font-size="12.039075" fill="var(--text)">d["age"] = 30</text>
+  <text x="356.326531" y="201.768707" font-family="monospace" font-size="12.039075" fill="var(--text)">d.get("age", 0)</text>
+  <text x="356.326531" y="219.52381" font-family="monospace" font-size="12.039075" fill="var(--text)">d.keys() / d.values()</text>
+  <text x="356.326531" y="241.22449" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--ok-accent)">Spark: Row objects are</text>
+  <text x="356.326531" y="257.006803" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--ok-accent)">dict-like in DataFrames</text>
+  <text x="356.326531" y="274.761905" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Key-value, O(1) lookup</text>
+  <text x="356.326531" y="290.544218" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">JSON-like, flexible schema</text>
 
   <!-- Tuple -->
-  <rect x="640" y="143.3125" width="253.125" height="163.125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="766.5625" y="163.25" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">tuple  ( )</text>
-  <text x="658.75" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">t = (1, "hello", 3.14)</text>
-  <text x="658.75" y="199.5" font-family="monospace" font-size="11.0609" fill="var(--text)">x, y, z = t  # unpack</text>
-  <text x="658.75" y="215.8125" font-family="monospace" font-size="11.0609" fill="var(--text)">t[0]  # -&gt; 1</text>
-  <text x="658.75" y="232.125" font-family="monospace" font-size="11.0609" fill="var(--text)">t + (4,)  # concatenate</text>
-  <text x="658.75" y="252.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Spark: key-value pairs</text>
-  <text x="658.75" y="266.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">in PairRDDs are tuples</text>
-  <text x="658.75" y="282.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Immutable, hashable</text>
-  <text x="658.75" y="297.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Lighter than list</text>
+  <rect x="631.836735" y="122.857143" width="275.510204" height="177.55102" rx="6.530612" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="769.591837" y="144.557823" font-family="Arial, sans-serif" font-size="14.045605" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">tuple  ( )</text>
+  <text x="652.244898" y="166.258503" font-family="monospace" font-size="12.039075" fill="var(--text)">t = (1, "hello", 3.14)</text>
+  <text x="652.244898" y="184.013605" font-family="monospace" font-size="12.039075" fill="var(--text)">x, y, z = t  # unpack</text>
+  <text x="652.244898" y="201.768707" font-family="monospace" font-size="12.039075" fill="var(--text)">t[0]  # -&gt; 1</text>
+  <text x="652.244898" y="219.52381" font-family="monospace" font-size="12.039075" fill="var(--text)">t + (4,)  # concatenate</text>
+  <text x="652.244898" y="241.22449" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--warn-accent)">Spark: key-value pairs</text>
+  <text x="652.244898" y="257.006803" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--warn-accent)">in PairRDDs are tuples</text>
+  <text x="652.244898" y="274.761905" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Immutable, hashable</text>
+  <text x="652.244898" y="290.544218" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Lighter than list</text>
 
   <!-- Set -->
-  <rect x="911.875" y="143.3125" width="286.875" height="163.125" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055.3125" y="163.25" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">set  &#x7b; &#x7d;</text>
-  <text x="930.625" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">s = {1, 2, 3, 2}  # -&gt; {1,2,3}</text>
-  <text x="930.625" y="199.5" font-family="monospace" font-size="11.0609" fill="var(--text)">s.add(4)</text>
-  <text x="930.625" y="215.8125" font-family="monospace" font-size="11.0609" fill="var(--text)">s1 &amp; s2  # intersection</text>
-  <text x="930.625" y="232.125" font-family="monospace" font-size="11.0609" fill="var(--text)">s1 | s2  # union</text>
-  <text x="930.625" y="252.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">Spark: distinct() is a</text>
-  <text x="930.625" y="266.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">distributed set operation</text>
-  <text x="930.625" y="282.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Unordered, unique elements</text>
-  <text x="930.625" y="297.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">O(1) membership test</text>
+  <rect x="927.755102" y="122.857143" width="312.244898" height="177.55102" rx="6.530612" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1083.877551" y="144.557823" font-family="Arial, sans-serif" font-size="14.045605" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">set  &#x7b; &#x7d;</text>
+  <text x="948.163265" y="166.258503" font-family="monospace" font-size="12.039075" fill="var(--text)">s = {1, 2, 3, 2}  # -&gt; {1,2,3}</text>
+  <text x="948.163265" y="184.013605" font-family="monospace" font-size="12.039075" fill="var(--text)">s.add(4)</text>
+  <text x="948.163265" y="201.768707" font-family="monospace" font-size="12.039075" fill="var(--text)">s1 &amp; s2  # intersection</text>
+  <text x="948.163265" y="219.52381" font-family="monospace" font-size="12.039075" fill="var(--text)">s1 | s2  # union</text>
+  <text x="948.163265" y="241.22449" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--info-accent)">Spark: distinct() is a</text>
+  <text x="948.163265" y="257.006803" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--info-accent)">distributed set operation</text>
+  <text x="948.163265" y="274.761905" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Unordered, unique elements</text>
+  <text x="948.163265" y="290.544218" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">O(1) membership test</text>
 
   <!-- == LIST COMPREHENSIONS + LAMBDA == -->
-  <text x="96.25" y="331.8125" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--text-muted)">List Comprehensions, Lambda, map/filter</text>
+  <text x="40" y="328.027211" font-family="Arial, sans-serif" font-size="15.048816" font-weight="bold" fill="var(--text-muted)">List Comprehensions, Lambda, map/filter</text>
 
-  <rect x="96.25" y="346.3125" width="525" height="253.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="40" y="343.809524" width="571.428571" height="276.190476" rx="6.530612" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
-  <text x="115" y="368.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">List Comprehensions</text>
-  <text x="115" y="386.1875" font-family="monospace" font-size="11.0609" fill="var(--text)"># Traditional loop</text>
-  <text x="115" y="400.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">squares = []</text>
-  <text x="115" y="415.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">for x in range(10):</text>
-  <text x="115" y="429.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">    squares.append(x**2)</text>
+  <text x="60.408163" y="367.482993" font-family="Arial, sans-serif" font-size="13.042395" font-weight="bold" fill="var(--primary-accent)">List Comprehensions</text>
+  <text x="60.408163" y="387.210884" font-family="monospace" font-size="12.039075" fill="var(--text)"># Traditional loop</text>
+  <text x="60.408163" y="402.993197" font-family="monospace" font-size="12.039075" fill="var(--text)">squares = []</text>
+  <text x="60.408163" y="418.77551" font-family="monospace" font-size="12.039075" fill="var(--text)">for x in range(10):</text>
+  <text x="60.408163" y="434.557823" font-family="monospace" font-size="12.039075" fill="var(--text)">    squares.append(x**2)</text>
 
-  <text x="115" y="451.4375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)"># List comprehension (Pythonic)</text>
-  <text x="115" y="465.9375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">squares = [x**2 for x in range(10)]</text>
+  <text x="60.408163" y="458.231293" font-family="monospace" font-size="12.039075" fill="var(--ok-accent)"># List comprehension (Pythonic)</text>
+  <text x="60.408163" y="474.013605" font-family="monospace" font-size="12.039075" fill="var(--ok-accent)">squares = [x**2 for x in range(10)]</text>
 
-  <text x="115" y="485.875" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)"># With condition</text>
-  <text x="115" y="500.375" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)">evens = [x for x in range(10) if x%2==0]</text>
+  <text x="60.408163" y="495.714286" font-family="monospace" font-size="12.039075" fill="var(--warn-accent)"># With condition</text>
+  <text x="60.408163" y="511.496599" font-family="monospace" font-size="12.039075" fill="var(--warn-accent)">evens = [x for x in range(10) if x%2==0]</text>
 
-  <text x="115" y="520.3125" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Lambda + map/filter (Spark transformations!)</text>
-  <text x="115" y="536.625" font-family="monospace" font-size="11.0609" fill="var(--text)">double = lambda x: x * 2</text>
-  <text x="115" y="551.125" font-family="monospace" font-size="11.0609" fill="var(--text)">list(map(double, [1,2,3]))   # -&gt; [2,4,6]</text>
-  <text x="115" y="565.625" font-family="monospace" font-size="11.0609" fill="var(--text)">list(filter(lambda x: x&gt;2, [1,2,3,4])) # -&gt; [3,4]</text>
-  <text x="115" y="581.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">In Spark: rdd.map(lambda x: x*2)  rdd.filter(lambda x: x&gt;0)</text>
-  <text x="115" y="596.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Lambdas are serialized and sent to Spark executors!</text>
+  <text x="60.408163" y="533.197279" font-family="Arial, sans-serif" font-size="12.039075" font-weight="bold" fill="var(--primary-accent)">Lambda + map/filter (Spark transformations!)</text>
+  <text x="60.408163" y="550.952381" font-family="monospace" font-size="12.039075" fill="var(--text)">double = lambda x: x * 2</text>
+  <text x="60.408163" y="566.734694" font-family="monospace" font-size="12.039075" fill="var(--text)">list(map(double, [1,2,3]))   # -&gt; [2,4,6]</text>
+  <text x="60.408163" y="582.517007" font-family="monospace" font-size="12.039075" fill="var(--text)">list(filter(lambda x: x&gt;2, [1,2,3,4])) # -&gt; [3,4]</text>
+  <text x="60.408163" y="600.272109" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--primary-accent)">In Spark: rdd.map(lambda x: x*2)  rdd.filter(lambda x: x&gt;0)</text>
+  <text x="60.408163" y="616.054422" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text-muted)">Lambdas are serialized and sent to Spark executors!</text>
 
   <!-- Right: Function definitions + Spark connection -->
-  <rect x="649.375" y="346.3125" width="549.375" height="253.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="642.040816" y="343.809524" width="597.959184" height="276.190476" rx="6.530612" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
-  <text x="668.125" y="368.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Function Definitions</text>
-  <text x="668.125" y="386.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">def greet(name: str, greeting: str = "Hello") -&gt; str:</text>
-  <text x="668.125" y="400.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">    """Docstring: return a greeting."""</text>
-  <text x="668.125" y="415.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">    return f"{greeting}, {name}!"</text>
+  <text x="662.44898" y="367.482993" font-family="Arial, sans-serif" font-size="13.042395" font-weight="bold" fill="var(--ok-accent)">Function Definitions</text>
+  <text x="662.44898" y="387.210884" font-family="monospace" font-size="12.039075" fill="var(--text)">def greet(name: str, greeting: str = "Hello") -&gt; str:</text>
+  <text x="662.44898" y="402.993197" font-family="monospace" font-size="12.039075" fill="var(--text)">    """Docstring: return a greeting."""</text>
+  <text x="662.44898" y="418.77551" font-family="monospace" font-size="12.039075" fill="var(--text)">    return f"{greeting}, {name}!"</text>
 
-  <text x="668.125" y="435.125" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Type Hints (important for PySpark)</text>
-  <text x="668.125" y="453.25" font-family="monospace" font-size="11.0609" fill="var(--text)">from typing import List, Dict, Optional</text>
-  <text x="668.125" y="467.75" font-family="monospace" font-size="11.0609" fill="var(--text)">def process(rows: List[Dict]) -&gt; List[int]:</text>
-  <text x="668.125" y="482.25" font-family="monospace" font-size="11.0609" fill="var(--text)">    return [r["age"] for r in rows]</text>
+  <text x="662.44898" y="440.47619" font-family="Arial, sans-serif" font-size="13.042395" font-weight="bold" fill="var(--warn-accent)">Type Hints (important for PySpark)</text>
+  <text x="662.44898" y="460.204082" font-family="monospace" font-size="12.039075" fill="var(--text)">from typing import List, Dict, Optional</text>
+  <text x="662.44898" y="475.986395" font-family="monospace" font-size="12.039075" fill="var(--text)">def process(rows: List[Dict]) -&gt; List[int]:</text>
+  <text x="662.44898" y="491.768707" font-family="monospace" font-size="12.039075" fill="var(--text)">    return [r["age"] for r in rows]</text>
 
-  <text x="668.125" y="502.1875" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Python -&gt; Spark Mapping</text>
-  <text x="668.125" y="520.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">list            -&gt;  RDD / Column values</text>
-  <text x="668.125" y="536.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">dict            -&gt;  DataFrame Row / schema</text>
-  <text x="668.125" y="552.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">lambda/function -&gt;  UDF, map(), flatMap()</text>
-  <text x="668.125" y="569.25" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">list comprehension -&gt; DataFrame select/transform</text>
-  <text x="668.125" y="585.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">filter()        -&gt;  rdd.filter() / df.filter()</text>
-  <text x="668.125" y="600.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">map()           -&gt;  rdd.map() / df.withColumn()</text>
+  <text x="662.44898" y="513.469388" font-family="Arial, sans-serif" font-size="13.042395" font-weight="bold" fill="var(--primary-accent)">Python -&gt; Spark Mapping</text>
+  <text x="662.44898" y="533.197279" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">list            -&gt;  RDD / Column values</text>
+  <text x="662.44898" y="550.952381" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">dict            -&gt;  DataFrame Row / schema</text>
+  <text x="662.44898" y="568.707483" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">lambda/function -&gt;  UDF, map(), flatMap()</text>
+  <text x="662.44898" y="586.462585" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">list comprehension -&gt; DataFrame select/transform</text>
+  <text x="662.44898" y="604.217687" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">filter()        -&gt;  rdd.filter() / df.filter()</text>
+  <text x="662.44898" y="620" font-family="Arial, sans-serif" font-size="12.039075" fill="var(--text)">map()           -&gt;  rdd.map() / df.withColumn()</text>
 </svg>

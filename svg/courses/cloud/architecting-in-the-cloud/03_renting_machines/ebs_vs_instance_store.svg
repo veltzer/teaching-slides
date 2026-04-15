@@ -93,67 +93,64 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- EC2 Instance (center) -->
-  <rect x="452.5" y="76.25" width="375" height="163.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="107.9688" font-family="Arial, sans-serif" font-size="18.4349" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2 Instance</text>
-  <text x="640" y="130.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)" text-anchor="middle">Running application with two storage options</text>
+  <rect x="440" y="40" width="400" height="180" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="75.000055" font-family="Arial, sans-serif" font-size="20.000053" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2 Instance</text>
+  <text x="640" y="100" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)" text-anchor="middle">Running application with two storage options</text>
 
   <!-- CPU/RAM boxes inside instance -->
-  <rect x="480.625" y="144.2188" width="103.125" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="532.1875" y="166.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">vCPUs</text>
-  <rect x="602.5" y="144.2188" width="103.125" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="654.0625" y="166.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">RAM</text>
-  <rect x="724.375" y="144.2188" width="84.375" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="766.5625" y="166.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">NIC</text>
+  <rect x="470" y="115.000055" width="110" height="40" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="525" y="140" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" text-anchor="middle">vCPUs</text>
+  <rect x="600" y="115.000055" width="110" height="40" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="655" y="140" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" text-anchor="middle">RAM</text>
+  <rect x="730" y="115.000055" width="90" height="40" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="775" y="140" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" text-anchor="middle">NIC</text>
 
   <!-- Left: Instance Store -->
-  <line x1="546.25" y1="239.375" x2="274.375" y2="302.8125" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="377.5" y="266.5625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--warn-accent)" font-weight="bold">Local NVMe</text>
+  <line x1="540" y1="220" x2="250" y2="290" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="360" y="250" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--warn-accent)" font-weight="bold">Local NVMe</text>
 
-  <rect x="77.5" y="302.8125" width="393.75" height="299.0625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="274.375" y="330" font-family="Arial, sans-serif" font-size="16.5914" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Instance Store (NVMe)</text>
-  <text x="274.375" y="349.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">Physically attached to host</text>
+  <rect x="40" y="290" width="420" height="330" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="250" y="320" font-family="Arial, sans-serif" font-size="18.000037" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Instance Store (NVMe)</text>
+  <text x="250" y="342" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)" text-anchor="middle">Physically attached to host</text>
 
   <!-- Instance store properties -->
-  <rect x="96.25" y="366.25" width="356.25" height="31.7188" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="274.375" y="387.0938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Ephemeral - Data lost on stop/terminate</text>
+  <rect x="60" y="360" width="380" height="35.000055" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="250" y="383.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Ephemeral - Data lost on stop/terminate</text>
 
-  <text x="105.625" y="420.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Speed: Extremely fast (local NVMe)</text>
-  <text x="105.625" y="443.2812" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">IOPS: Up to 3.3M random read</text>
-  <text x="105.625" y="465.9375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Cost: Included in instance price</text>
-  <text x="105.625" y="488.5938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Persistence: None (ephemeral)</text>
-  <text x="105.625" y="511.25" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Snapshots: Not supported</text>
+  <text x="70" y="420" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Speed: Extremely fast (local NVMe)</text>
+  <text x="70" y="444.999945" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">IOPS: Up to 3.3M random read</text>
+  <text x="70" y="470" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Cost: Included in instance price</text>
+  <text x="70" y="495.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Persistence: None (ephemeral)</text>
+  <text x="70" y="520" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Snapshots: Not supported</text>
 
-  <text x="105.625" y="542.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" font-weight="bold">Use for: caches, temp files, scratch data</text>
-  <text x="105.625" y="561.0938" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)" font-weight="bold">Not for: anything you need to keep!</text>
+  <text x="70" y="555.000055" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--ok-accent)" font-weight="bold">Use for: caches, temp files, scratch data</text>
+  <text x="70" y="575.000055" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--danger-accent)" font-weight="bold">Not for: anything you need to keep!</text>
 
   <!-- Right: EBS -->
-  <line x1="733.75" y1="239.375" x2="1005.625" y2="302.8125" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="902.5" y="266.5625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--primary-accent)" font-weight="bold">Network (EBS)</text>
+  <line x1="740" y1="220" x2="1030" y2="290" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="920" y="250" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--primary-accent)" font-weight="bold">Network (EBS)</text>
 
-  <rect x="808.75" y="302.8125" width="393.75" height="299.0625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1005.625" y="330" font-family="Arial, sans-serif" font-size="16.5914" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EBS (Elastic Block Store)</text>
-  <text x="1005.625" y="349.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">Network-attached storage</text>
+  <rect x="820" y="290" width="420" height="330" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1030" y="320" font-family="Arial, sans-serif" font-size="18.000037" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EBS (Elastic Block Store)</text>
+  <text x="1030" y="342" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)" text-anchor="middle">Network-attached storage</text>
 
-  <rect x="827.5" y="366.25" width="356.25" height="31.7188" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="387.0938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Persistent - Survives stop/terminate</text>
+  <rect x="840" y="360" width="380" height="35.000055" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1030" y="383.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Persistent - Survives stop/terminate</text>
 
-  <text x="836.875" y="420.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Speed: Fast (gp3: 3K-16K IOPS)</text>
-  <text x="836.875" y="443.2812" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">IOPS: Up to 256K (io2 Block Express)</text>
-  <text x="836.875" y="465.9375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Cost: $0.08/GB-month (gp3)</text>
-  <text x="836.875" y="488.5938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Persistence: Independent lifecycle</text>
-  <text x="836.875" y="511.25" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Snapshots: To S3 (incremental)</text>
+  <text x="850" y="420" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Speed: Fast (gp3: 3K-16K IOPS)</text>
+  <text x="850" y="444.999945" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">IOPS: Up to 256K (io2 Block Express)</text>
+  <text x="850" y="470" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Cost: $0.08/GB-month (gp3)</text>
+  <text x="850" y="495.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Persistence: Independent lifecycle</text>
+  <text x="850" y="520" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text)">Snapshots: To S3 (incremental)</text>
 
-  <text x="836.875" y="542.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" font-weight="bold">Use for: boot volumes, databases, app data</text>
-  <text x="836.875" y="561.0938" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" font-weight="bold">Can detach and attach to another instance</text>
+  <text x="850" y="555.000055" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--ok-accent)" font-weight="bold">Use for: boot volumes, databases, app data</text>
+  <text x="850" y="575.000055" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" font-weight="bold">Can detach and attach to another instance</text>
 
   <!-- S3 snapshot arrow -->
-  <rect x="1071.25" y="194.0625" width="131.25" height="49.8438" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136.875" y="216.7188" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">S3</text>
-  <text x="1136.875" y="232.125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Snapshots stored</text>
-  <line x1="1136.875" y1="243.9062" x2="1136.875" y2="301" stroke="var(--ok-border)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
-  <text x="1150.9375" y="275.625" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Snapshot</text>
+  <rect x="1100" y="170" width="140" height="55.000055" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1170" y="195.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">S3</text>
+  <text x="1170" y="212" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)" text-anchor="middle">Snapshots stored</text>
+  <line x1="1170" y1="224.999945" x2="1170" y2="288" stroke="var(--ok-border)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <text x="1185" y="260" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--ok-accent)">Snapshot</text>
 </svg>

@@ -93,25 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="74.8" text-anchor="middle" font-size="19.9938" font-weight="bold" fill="var(--primary-accent)">Schema Evolution Decision Tree</text>
-  <text x="84.4445" y="107.2799" font-size="17.4946" font-weight="bold" fill="var(--text)">Is the change backward-compatible?</text>
-  <rect x="84.4445" y="121.1999" width="1111.1111" height="63.8" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="117.7777" y="144.3999" font-size="16.245" font-weight="bold" fill="var(--ok-accent)">Adding a new column?</text>
-  <text x="117.7777" y="167.5999" font-size="14.9954" fill="var(--text)">Yes → Use mergeSchema (safe)</text>
-  <rect x="84.4445" y="196.5999" width="1111.1111" height="75.4" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="117.7777" y="219.7999" font-size="16.245" font-weight="bold" fill="var(--danger-accent)">Renaming a column?</text>
-  <text x="117.7777" y="242.9999" font-size="14.9954" fill="var(--text)">Yes → Add new column + backfill + drop old</text>
-  <text x="117.7777" y="260.4" font-size="13.7457" fill="var(--text)">(never rename in-place)</text>
-  <rect x="84.4445" y="283.5999" width="1111.1111" height="75.4" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="117.7777" y="306.8" font-size="16.245" font-weight="bold" fill="var(--primary-accent)">Changing column type?</text>
-  <text x="117.7777" y="330" font-size="14.9954" fill="var(--text)">Widening (int→long): mergeSchema</text>
-  <text x="117.7777" y="350.8799" font-size="14.9954" fill="var(--text)">Narrowing (long→int): overwrite</text>
-  <rect x="84.4445" y="370.5999" width="1111.1111" height="75.4" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="117.7777" y="393.7999" font-size="16.245" font-weight="bold" fill="var(--danger-accent)">Removing a column?</text>
-  <text x="117.7777" y="417" font-size="14.9954" fill="var(--text)">Yes → Drop column + rewrite</text>
-  <text x="117.7777" y="434.4" font-size="13.7457" fill="var(--text)">(consumers may break)</text>
-  <rect x="84.4445" y="469.1999" width="1111.1111" height="58" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="498.1999" text-anchor="middle" font-size="16.245" font-weight="bold" fill="var(--ok-accent)">Best practice: version your schemas</text>
-  <text x="640" y="517.92" text-anchor="middle" font-size="14.9954" fill="var(--text)">and validate before processing.</text>
+  <text x="639.999946" y="40" text-anchor="middle" font-size="23.526643" font-weight="bold" fill="var(--primary-accent)">Schema Evolution Decision Tree</text>
+  <text x="40" y="81.640907" font-size="20.585842" font-weight="bold" fill="var(--text)">Is the change backward-compatible?</text>
+  <rect x="40" y="99.487064" width="1200" height="81.79489" rx="7.060182" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.999856" y="129.230661" font-size="19.115442" font-weight="bold" fill="var(--ok-accent)">Adding a new column?</text>
+  <text x="75.999856" y="158.974257" font-size="17.645041" fill="var(--text)">Yes → Use mergeSchema (safe)</text>
+  <rect x="40" y="196.153752" width="1200" height="96.666688" rx="7.060182" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="75.999856" y="225.897349" font-size="19.115442" font-weight="bold" fill="var(--danger-accent)">Renaming a column?</text>
+  <text x="75.999856" y="255.640945" font-size="17.645041" fill="var(--text)">Yes → Add new column + backfill + drop old</text>
+  <text x="75.999856" y="277.948771" font-size="16.174523" fill="var(--text)">(never rename in-place)</text>
+  <rect x="40" y="307.692239" width="1200" height="96.666688" rx="7.060182" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.999856" y="337.435963" font-size="19.115442" font-weight="bold" fill="var(--primary-accent)">Changing column type?</text>
+  <text x="75.999856" y="367.17956" font-size="17.645041" fill="var(--text)">Widening (int→long): mergeSchema</text>
+  <text x="75.999856" y="393.948668" font-size="17.645041" fill="var(--text)">Narrowing (long→int): overwrite</text>
+  <rect x="40" y="419.230725" width="1200" height="96.666688" rx="7.060182" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="75.999856" y="448.974321" font-size="19.115442" font-weight="bold" fill="var(--danger-accent)">Removing a column?</text>
+  <text x="75.999856" y="478.718046" font-size="17.645041" fill="var(--text)">Yes → Drop column + rewrite</text>
+  <text x="75.999856" y="501.025743" font-size="16.174523" fill="var(--text)">(consumers may break)</text>
+  <rect x="40" y="545.641009" width="1200" height="74.358991" rx="7.060182" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="639.999946" y="582.820505" text-anchor="middle" font-size="19.115442" font-weight="bold" fill="var(--ok-accent)">Best practice: version your schemas</text>
+  <text x="639.999946" y="608.10269" text-anchor="middle" font-size="17.645041" fill="var(--text)">and validate before processing.</text>
 </svg>

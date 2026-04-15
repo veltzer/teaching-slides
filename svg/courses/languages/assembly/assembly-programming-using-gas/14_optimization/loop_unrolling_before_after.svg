@@ -106,114 +106,112 @@
       <stop offset="100%" stop-color="#c8e6c9"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Header bar -->
-  <rect x="58.75" y="50.875" width="1162.5" height="38.0625" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="76.25" text-anchor="middle" font-family="sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">Loop Unrolling: Before vs After</text>
+  <rect x="40" y="40" width="1200" height="39.674267" rx="6.223736" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="66.449511" text-anchor="middle" font-family="sans-serif" font-size="17.210084" font-weight="bold" fill="var(--bg)">Loop Unrolling: Before vs After</text>
 
   <!-- BEFORE panel -->
-  <rect x="58.75" y="101.625" width="539.0625" height="471.25" rx="6" fill="url(#grad-before)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="58.75" y="101.625" width="539.0625" height="36.25" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="58.75" y="125.1875" width="539.0625" height="12.6875" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="327.8125" y="127" text-anchor="middle" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">BEFORE  (original loop)</text>
+  <rect x="40" y="92.899023" width="556.451613" height="491.205212" rx="6.223736" fill="url(#grad-before)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="92.899023" width="556.451613" height="37.785016" rx="6.223736" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="117.459283" width="556.451613" height="13.224756" fill="var(--danger-fill)" rx="6.223736" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="317.741935" y="119.348534" text-anchor="middle" font-family="sans-serif" font-size="15.29784" font-weight="bold" fill="var(--bg)">BEFORE  (original loop)</text>
 
   <!-- before code box -->
-  <rect x="77.5" y="148.75" width="501.5625" height="240.1562" rx="6" fill="var(--text)" filter="url(#shadow)"/>
-  <text x="96.25" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--text-faint)">; Copy 100 integers: src → dst</text>
-  <text x="96.25" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">    mov  $100, %ecx    </text>
-  <text x="96.25" y="206.75" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    lea  src, %esi</text>
-  <text x="96.25" y="223.0625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    lea  dst, %edi</text>
-  <text x="96.25" y="241.1875" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">.loop:</text>
-  <text x="96.25" y="257.5" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  (%esi), %eax</text>
-  <text x="96.25" y="273.8125" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  %eax, (%edi)</text>
-  <text x="96.25" y="290.125" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">    add  $4, %esi</text>
-  <text x="96.25" y="306.4375" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">    add  $4, %edi</text>
-  <text x="96.25" y="322.75" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">    dec  %ecx</text>
-  <text x="96.25" y="339.0625" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">    jnz  .loop</text>
-  <text x="96.25" y="361.7188" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">; ↑ jumps back 100 times</text>
-  <text x="96.25" y="378.0312" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">; ↑ 6 instructions per iteration</text>
+  <rect x="59.354839" y="142.019544" width="517.741935" height="250.325681" rx="6.223736" fill="var(--text)" filter="url(#shadow)"/>
+  <text x="78.709677" y="166.579805" font-family="monospace" font-size="12.429528" fill="var(--text-faint)">; Copy 100 integers: src → dst</text>
+  <text x="78.709677" y="185.472313" font-family="monospace" font-size="12.429528" fill="var(--warn-accent)">    mov  $100, %ecx    </text>
+  <text x="78.709677" y="202.47557" font-family="monospace" font-size="12.429528" fill="var(--primary-accent)">    lea  src, %esi</text>
+  <text x="78.709677" y="219.478827" font-family="monospace" font-size="12.429528" fill="var(--primary-accent)">    lea  dst, %edi</text>
+  <text x="78.709677" y="238.371336" font-family="monospace" font-size="13.385597" font-weight="bold" fill="var(--warn-accent)">.loop:</text>
+  <text x="78.709677" y="255.374593" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  (%esi), %eax</text>
+  <text x="78.709677" y="272.37785" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  %eax, (%edi)</text>
+  <text x="78.709677" y="289.381107" font-family="monospace" font-size="12.429528" fill="var(--info-accent)">    add  $4, %esi</text>
+  <text x="78.709677" y="306.384365" font-family="monospace" font-size="12.429528" fill="var(--info-accent)">    add  $4, %edi</text>
+  <text x="78.709677" y="323.387622" font-family="monospace" font-size="12.429528" fill="var(--warn-accent)">    dec  %ecx</text>
+  <text x="78.709677" y="340.390879" font-family="monospace" font-size="12.429528" fill="var(--warn-accent)">    jnz  .loop</text>
+  <text x="78.709677" y="364.006567" font-family="monospace" font-size="10.517285" fill="var(--text-muted)">; ↑ jumps back 100 times</text>
+  <text x="78.709677" y="381.00972" font-family="monospace" font-size="10.517285" fill="var(--text-muted)">; ↑ 6 instructions per iteration</text>
 
   <!-- before stats -->
-  <rect x="77.5" y="400.6875" width="501.5625" height="154.0625" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5"/>
-  <text x="327.8125" y="420.625" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Performance Analysis</text>
-  <line x1="77.5" y1="426.0625" x2="579.0625" y2="426.0625" stroke="var(--danger-border)" stroke-width="1"/>
+  <rect x="59.354839" y="404.625407" width="517.741935" height="160.586319" rx="6.223736" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5"/>
+  <text x="317.741935" y="425.407166" text-anchor="middle" font-family="sans-serif" font-size="12.429528" font-weight="bold" fill="var(--danger-accent)">Performance Analysis</text>
+  <line x1="59.354839" y1="431.074919" x2="577.096774" y2="431.074919" stroke="var(--danger-border)" stroke-width="1"/>
 
-  <text x="96.25" y="446" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Iterations:</text>
-  <rect x="227.5" y="431.5" width="75" height="21.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="265" y="446.9062" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">100</text>
+  <text x="78.709677" y="451.856678" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Iterations:</text>
+  <rect x="214.193548" y="436.742671" width="77.419355" height="22.67101" rx="6.223736" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="252.903226" y="452.801251" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">100</text>
 
-  <text x="96.25" y="467.75" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Instructions/iter:</text>
-  <rect x="227.5" y="454.1562" width="75" height="21.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="265" y="469.5625" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">6</text>
+  <text x="78.709677" y="474.527687" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Instructions/iter:</text>
+  <rect x="214.193548" y="460.358254" width="77.419355" height="22.67101" rx="6.223736" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="252.903226" y="476.416938" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">6</text>
 
-  <text x="96.25" y="489.5" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Total instructions:</text>
-  <rect x="227.5" y="475.9062" width="75" height="21.75" rx="6" fill="var(--danger-accent)"/>
-  <text x="265" y="491.3125" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">600</text>
+  <text x="78.709677" y="497.198697" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Total instructions:</text>
+  <rect x="214.193548" y="483.029264" width="77.419355" height="22.67101" rx="6.223736" fill="var(--danger-accent)"/>
+  <text x="252.903226" y="499.087948" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">600</text>
 
-  <text x="96.25" y="511.25" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Branch mispredictions:</text>
-  <rect x="265" y="497.6562" width="112.5" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="321.25" y="513.0625" text-anchor="middle" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--bg)">up to 100</text>
+  <text x="78.709677" y="519.869707" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Branch mispredictions:</text>
+  <rect x="252.903226" y="505.700274" width="116.129032" height="22.67101" rx="6.223736" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="310.967742" y="521.758958" text-anchor="middle" font-family="monospace" font-size="11.473354" font-weight="bold" fill="var(--bg)">up to 100</text>
 
-  <text x="96.25" y="533" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Code size:</text>
-  <rect x="227.5" y="519.4062" width="112.5" height="21.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="283.75" y="534.8125" text-anchor="middle" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--bg)">compact ✓</text>
+  <text x="78.709677" y="542.540717" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Code size:</text>
+  <rect x="214.193548" y="528.371283" width="116.129032" height="22.67101" rx="6.223736" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="272.258065" y="544.429967" text-anchor="middle" font-family="monospace" font-size="11.473354" font-weight="bold" fill="var(--bg)">compact ✓</text>
 
   <!-- AFTER panel -->
-  <rect x="616.5625" y="101.625" width="604.6875" height="471.25" rx="6" fill="url(#grad-after)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="616.5625" y="101.625" width="604.6875" height="36.25" rx="6" fill="var(--ok-accent)"/>
-  <rect x="616.5625" y="125.1875" width="604.6875" height="12.6875" fill="var(--ok-accent)" rx="6"/>
-  <text x="918.4375" y="127" text-anchor="middle" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">AFTER  (4x unrolled)</text>
+  <rect x="615.806452" y="92.899023" width="624.193548" height="491.205212" rx="6.223736" fill="url(#grad-after)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="615.806452" y="92.899023" width="624.193548" height="37.785016" rx="6.223736" fill="var(--ok-accent)"/>
+  <rect x="615.806452" y="117.459283" width="624.193548" height="13.224756" fill="var(--ok-accent)" rx="6.223736"/>
+  <text x="927.419355" y="119.348534" text-anchor="middle" font-family="sans-serif" font-size="15.29784" font-weight="bold" fill="var(--bg)">AFTER  (4x unrolled)</text>
 
   <!-- after code box -->
-  <rect x="633.4375" y="148.75" width="571.875" height="240.1562" rx="6" fill="var(--text)" filter="url(#shadow)"/>
-  <text x="652.1875" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--text-faint)">; Same copy, 4 operations per iteration</text>
-  <text x="652.1875" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">    mov  $25, %ecx    </text>
-  <text x="652.1875" y="206.75" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    lea  src, %esi</text>
-  <text x="652.1875" y="223.0625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">    lea  dst, %edi</text>
-  <text x="652.1875" y="241.1875" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">.loop:</text>
-  <text x="652.1875" y="257.5" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  (%esi),   %eax   </text>
-  <text x="652.1875" y="270.1875" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  %eax,    (%edi)</text>
-  <text x="652.1875" y="282.875" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  4(%esi),  %eax</text>
-  <text x="652.1875" y="295.5625" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  %eax,   4(%edi)</text>
-  <text x="652.1875" y="308.25" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  8(%esi),  %eax</text>
-  <text x="652.1875" y="320.9375" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  %eax,   8(%edi)</text>
-  <text x="652.1875" y="333.625" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  12(%esi), %eax</text>
-  <text x="652.1875" y="346.3125" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">    mov  %eax,  12(%edi)</text>
-  <text x="652.1875" y="361.7188" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">    add  $16, %esi</text>
-  <text x="652.1875" y="375.3125" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">    add  $16, %edi</text>
-  <text x="652.1875" y="388" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">    dec  %ecx</text>
+  <rect x="633.225806" y="142.019544" width="590.322581" height="250.325681" rx="6.223736" fill="var(--text)" filter="url(#shadow)"/>
+  <text x="652.580645" y="166.579805" font-family="monospace" font-size="12.429528" fill="var(--text-faint)">; Same copy, 4 operations per iteration</text>
+  <text x="652.580645" y="185.472313" font-family="monospace" font-size="12.429528" fill="var(--warn-accent)">    mov  $25, %ecx    </text>
+  <text x="652.580645" y="202.47557" font-family="monospace" font-size="12.429528" fill="var(--primary-accent)">    lea  src, %esi</text>
+  <text x="652.580645" y="219.478827" font-family="monospace" font-size="12.429528" fill="var(--primary-accent)">    lea  dst, %edi</text>
+  <text x="652.580645" y="238.371336" font-family="monospace" font-size="13.385597" font-weight="bold" fill="var(--warn-accent)">.loop:</text>
+  <text x="652.580645" y="255.374593" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  (%esi),   %eax   </text>
+  <text x="652.580645" y="268.599349" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  %eax,    (%edi)</text>
+  <text x="652.580645" y="281.824104" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  4(%esi),  %eax</text>
+  <text x="652.580645" y="295.04886" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  %eax,   4(%edi)</text>
+  <text x="652.580645" y="308.273616" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  8(%esi),  %eax</text>
+  <text x="652.580645" y="321.498371" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  %eax,   8(%edi)</text>
+  <text x="652.580645" y="334.723127" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  12(%esi), %eax</text>
+  <text x="652.580645" y="347.947883" font-family="monospace" font-size="12.429528" fill="var(--ok-accent)">    mov  %eax,  12(%edi)</text>
+  <text x="652.580645" y="364.006567" font-family="monospace" font-size="12.429528" fill="var(--info-accent)">    add  $16, %esi</text>
+  <text x="652.580645" y="378.175896" font-family="monospace" font-size="12.429528" fill="var(--info-accent)">    add  $16, %edi</text>
+  <text x="652.580645" y="391.400651" font-family="monospace" font-size="12.429528" fill="var(--warn-accent)">    dec  %ecx</text>
 
   <!-- after stats -->
-  <rect x="633.4375" y="400.6875" width="571.875" height="154.0625" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="918.4375" y="420.625" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Performance Analysis</text>
-  <line x1="633.4375" y1="426.0625" x2="1205.3125" y2="426.0625" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="633.225806" y="404.625407" width="590.322581" height="160.586319" rx="6.223736" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.5"/>
+  <text x="927.419355" y="425.407166" text-anchor="middle" font-family="sans-serif" font-size="12.429528" font-weight="bold" fill="var(--ok-accent)">Performance Analysis</text>
+  <line x1="633.225806" y1="431.074919" x2="1223.548387" y2="431.074919" stroke="var(--ok-border)" stroke-width="1"/>
 
-  <text x="652.1875" y="446" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Iterations:</text>
-  <rect x="783.4375" y="431.5" width="75" height="21.75" rx="6" fill="var(--ok-accent)"/>
-  <text x="820.9375" y="446.9062" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">25</text>
-  <text x="866.875" y="446.9062" font-family="sans-serif" font-size="11.0609" fill="var(--ok-accent)" font-weight="bold">↓ 75% fewer</text>
+  <text x="652.580645" y="451.856678" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Iterations:</text>
+  <rect x="788.064516" y="436.742671" width="77.419355" height="22.67101" rx="6.223736" fill="var(--ok-accent)"/>
+  <text x="826.774194" y="452.801251" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">25</text>
+  <text x="874.193548" y="452.801251" font-family="sans-serif" font-size="11.473354" fill="var(--ok-accent)" font-weight="bold">↓ 75% fewer</text>
 
-  <text x="652.1875" y="467.75" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Instructions/iter:</text>
-  <rect x="783.4375" y="454.1562" width="75" height="21.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="820.9375" y="469.5625" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">11</text>
-  <text x="866.875" y="469.5625" font-family="sans-serif" font-size="11.0609" fill="var(--text-muted)">4× work per loop</text>
+  <text x="652.580645" y="474.527687" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Instructions/iter:</text>
+  <rect x="788.064516" y="460.358254" width="77.419355" height="22.67101" rx="6.223736" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="826.774194" y="476.416938" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">11</text>
+  <text x="874.193548" y="476.416938" font-family="sans-serif" font-size="11.473354" fill="var(--text-muted)">4× work per loop</text>
 
-  <text x="652.1875" y="489.5" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Total instructions:</text>
-  <rect x="783.4375" y="475.9062" width="75" height="21.75" rx="6" fill="var(--ok-accent)"/>
-  <text x="820.9375" y="491.3125" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">275</text>
-  <text x="866.875" y="491.3125" font-family="sans-serif" font-size="11.0609" fill="var(--ok-accent)" font-weight="bold">↓ 54% fewer</text>
+  <text x="652.580645" y="497.198697" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Total instructions:</text>
+  <rect x="788.064516" y="483.029264" width="77.419355" height="22.67101" rx="6.223736" fill="var(--ok-accent)"/>
+  <text x="826.774194" y="499.087948" text-anchor="middle" font-family="monospace" font-size="12.429528" font-weight="bold" fill="var(--bg)">275</text>
+  <text x="874.193548" y="499.087948" font-family="sans-serif" font-size="11.473354" fill="var(--ok-accent)" font-weight="bold">↓ 54% fewer</text>
 
-  <text x="652.1875" y="511.25" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Branch mispredictions:</text>
-  <rect x="783.4375" y="497.6562" width="112.5" height="21.75" rx="6" fill="var(--ok-accent)"/>
-  <text x="839.6875" y="513.0625" text-anchor="middle" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--bg)">only 25 ✓</text>
+  <text x="652.580645" y="519.869707" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Branch mispredictions:</text>
+  <rect x="788.064516" y="505.700274" width="116.129032" height="22.67101" rx="6.223736" fill="var(--ok-accent)"/>
+  <text x="846.129032" y="521.758958" text-anchor="middle" font-family="monospace" font-size="11.473354" font-weight="bold" fill="var(--bg)">only 25 ✓</text>
 
-  <text x="652.1875" y="533" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Code size:</text>
-  <rect x="783.4375" y="519.4062" width="112.5" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="839.6875" y="534.8125" text-anchor="middle" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--bg)">4× larger !</text>
+  <text x="652.580645" y="542.540717" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Code size:</text>
+  <rect x="788.064516" y="528.371283" width="116.129032" height="22.67101" rx="6.223736" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="846.129032" y="544.429967" text-anchor="middle" font-family="monospace" font-size="11.473354" font-weight="bold" fill="var(--bg)">4× larger !</text>
 
   <!-- Trade-off summary bar at bottom -->
-  <rect x="58.75" y="580.125" width="1162.5" height="27.1875" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="68.125" y="596.4375" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Trade-off: </text>
-  <text x="147.8125" y="596.4375" font-family="sans-serif" font-size="11.0609" fill="var(--text)">Fewer jumps &amp; branch penalties → faster execution    |    Larger code footprint → more I-cache pressure    |    Best for inner hot loops</text>
+  <rect x="40" y="591.661238" width="1200" height="28.338762" rx="6.223736" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="49.677419" y="608.664495" font-family="sans-serif" font-size="11.473354" font-weight="bold" fill="var(--primary-accent)">Trade-off: </text>
+  <text x="131.935484" y="608.664495" font-family="sans-serif" font-size="11.473354" fill="var(--text)">Fewer jumps &amp; branch penalties → faster execution    |    Larger code footprint → more I-cache pressure    |    Best for inner hot loops</text>
 </svg>

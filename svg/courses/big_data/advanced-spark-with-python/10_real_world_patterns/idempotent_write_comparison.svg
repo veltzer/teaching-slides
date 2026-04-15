@@ -93,25 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="74.8" text-anchor="middle" font-size="19.9938" font-weight="bold" fill="var(--text)">Idempotent Write Comparison</text>
-  <rect x="84.4445" y="92.1999" width="1111.1111" height="139.2" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="117.7777" y="121.1999" font-size="17.4946" font-weight="bold" fill="var(--danger-accent)">Dynamic Partition Overwrite (Parquet)</text>
-  <text x="140" y="144.3999" font-size="14.9954" fill="var(--ok-accent)">+ Works with plain Parquet</text>
-  <text x="140" y="165.2799" font-size="14.9954" fill="var(--ok-accent)">+ Simple configuration</text>
-  <text x="140" y="186.16" font-size="14.9954" fill="var(--danger-accent)">- Not atomic (partial writes possible)</text>
-  <text x="140" y="207.0399" font-size="14.9954" fill="var(--danger-accent)">- No concurrent write safety</text>
-  <rect x="84.4445" y="242.9999" width="1111.1111" height="139.2" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="117.7777" y="271.9999" font-size="17.4946" font-weight="bold" fill="var(--ok-accent)">replaceWhere (Delta Lake)</text>
-  <text x="140" y="295.1999" font-size="14.9954" fill="var(--ok-accent)">+ Atomic (all or nothing)</text>
-  <text x="140" y="316.0799" font-size="14.9954" fill="var(--ok-accent)">+ Concurrent-safe (optimistic locking)</text>
-  <text x="140" y="336.9599" font-size="14.9954" fill="var(--ok-accent)">+ Predicate validated at write time</text>
-  <text x="140" y="357.84" font-size="14.9954" fill="var(--danger-accent)">- Requires Delta Lake</text>
-  <rect x="84.4445" y="393.7999" width="1111.1111" height="127.6" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="117.7777" y="422.7999" font-size="17.4946" font-weight="bold" fill="var(--primary-accent)">DELETE + INSERT (Delta Lake)</text>
-  <text x="140" y="445.9999" font-size="14.9954" fill="var(--ok-accent)">+ Explicit, easy to understand</text>
-  <text x="140" y="466.8799" font-size="14.9954" fill="var(--danger-accent)">- Two operations (not atomic together)</text>
-  <text x="140" y="487.7599" font-size="14.9954" fill="var(--danger-accent)">- Slightly slower (two transactions)</text>
-  <rect x="84.4445" y="538.7999" width="1111.1111" height="52.2" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="571.28" text-anchor="middle" font-size="16.245" font-weight="bold" fill="var(--ok-accent)">Recommendation: Use replaceWhere with Delta</text>
+  <text x="639.999946" y="40" text-anchor="middle" font-size="22.024815" font-weight="bold" fill="var(--text)">Idempotent Write Comparison</text>
+  <rect x="40" y="59.550453" width="1200" height="156.404525" rx="6.609493" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="75.999856" y="92.134729" font-size="19.27174" font-weight="bold" fill="var(--danger-accent)">Dynamic Partition Overwrite (Parquet)</text>
+  <text x="99.999941" y="118.20215" font-size="16.518666" fill="var(--ok-accent)">+ Works with plain Parquet</text>
+  <text x="99.999941" y="141.662829" font-size="16.518666" fill="var(--ok-accent)">+ Simple configuration</text>
+  <text x="99.999941" y="165.12362" font-size="16.518666" fill="var(--danger-accent)">- Not atomic (partial writes possible)</text>
+  <text x="99.999941" y="188.584186" font-size="16.518666" fill="var(--danger-accent)">- No concurrent write safety</text>
+  <rect x="40" y="228.988688" width="1200" height="156.404525" rx="6.609493" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.999856" y="261.572964" font-size="19.27174" font-weight="bold" fill="var(--ok-accent)">replaceWhere (Delta Lake)</text>
+  <text x="99.999941" y="287.640385" font-size="16.518666" fill="var(--ok-accent)">+ Atomic (all or nothing)</text>
+  <text x="99.999941" y="311.101064" font-size="16.518666" fill="var(--ok-accent)">+ Concurrent-safe (optimistic locking)</text>
+  <text x="99.999941" y="334.561742" font-size="16.518666" fill="var(--ok-accent)">+ Predicate validated at write time</text>
+  <text x="99.999941" y="358.022534" font-size="16.518666" fill="var(--danger-accent)">- Requires Delta Lake</text>
+  <rect x="40" y="398.426923" width="1200" height="143.370814" rx="6.609493" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.999856" y="431.011199" font-size="19.27174" font-weight="bold" fill="var(--primary-accent)">DELETE + INSERT (Delta Lake)</text>
+  <text x="99.999941" y="457.07862" font-size="16.518666" fill="var(--ok-accent)">+ Explicit, easy to understand</text>
+  <text x="99.999941" y="480.539299" font-size="16.518666" fill="var(--danger-accent)">- Two operations (not atomic together)</text>
+  <text x="99.999941" y="503.999978" font-size="16.518666" fill="var(--danger-accent)">- Slightly slower (two transactions)</text>
+  <rect x="40" y="561.348303" width="1200" height="58.651697" rx="6.609493" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="639.999946" y="597.842805" text-anchor="middle" font-size="17.895203" font-weight="bold" fill="var(--ok-accent)">Recommendation: Use replaceWhere with Delta</text>
 </svg>

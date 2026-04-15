@@ -93,60 +93,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
   <!-- Root Decision: Data Model? -->
-  <polygon points="640,67.1875 752.5,112.5 640,157.8125 527.5,112.5" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="108.875" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text)">Data Model?</text>
-  <text x="640" y="125.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">What type?</text>
+  <polygon points="640,40 760,95.769231 640,151.538462 520,95.769231" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="91.307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785652" font-weight="bold" fill="var(--text)">Data Model?</text>
+  <text x="640" y="111.384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">What type?</text>
   <!-- Branch: Relational -->
-  <line x1="527.5" y1="112.5" x2="321.25" y2="212.1875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="396.25" y="157.8125" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Relational</text>
+  <line x1="520" y1="95.769231" x2="300" y2="218.461538" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="380" y="151.538462" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--primary-accent)">Relational</text>
   <!-- Decision: Complex queries? -->
-  <polygon points="321.25,212.1875 415,252.9688 321.25,293.75 227.5,252.9688" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="321.25" y="250.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)">Complex</text>
-  <text x="321.25" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)">queries?</text>
+  <polygon points="300,218.461538 400,268.653908 300,318.846154 200,268.653908" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="300" y="265.307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729584" font-weight="bold" fill="var(--text)">Complex</text>
+  <text x="300" y="283.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729584" font-weight="bold" fill="var(--text)">queries?</text>
   <!-- Yes -> Aurora/RDS -->
-  <line x1="227.5" y1="252.9688" x2="143.125" y2="339.0625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="161.875" y="293.75" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)">Yes</text>
-  <rect x="77.5" y="339.0625" width="150" height="54.375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="152.5" y="364.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">Aurora / RDS</text>
-  <text x="152.5" y="382.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">SQL, joins, ACID</text>
+  <line x1="200" y1="268.653908" x2="110" y2="374.615385" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="130" y="318.846154" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--ok-accent)">Yes</text>
+  <rect x="40" y="374.615385" width="160" height="66.923077" rx="6.874703" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="405.846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841721" font-weight="bold" fill="var(--ok-accent)">Aurora / RDS</text>
+  <text x="120" y="428.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617331" fill="var(--text-muted)">SQL, joins, ACID</text>
   <!-- No -> Redshift -->
-  <line x1="321.25" y1="293.75" x2="321.25" y2="337.25" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="340" y="316.4062" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)">Analytics</text>
-  <rect x="246.25" y="339.0625" width="150" height="54.375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.25" y="364.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)">Redshift</text>
-  <text x="321.25" y="382.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Data warehouse</text>
+  <line x1="300" y1="318.846154" x2="300" y2="372.384615" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="320" y="346.730708" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--warn-accent)">Analytics</text>
+  <rect x="220" y="374.615385" width="160" height="66.923077" rx="6.874703" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="405.846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841721" font-weight="bold" fill="var(--warn-accent)">Redshift</text>
+  <text x="300" y="428.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617331" fill="var(--text-muted)">Data warehouse</text>
   <!-- Branch: Key-Value -->
-  <line x1="640" y1="157.8125" x2="640" y2="239.375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="658.75" y="198.5938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Key-Value / Document</text>
-  <rect x="555.625" y="239.375" width="168.75" height="54.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)">DynamoDB</text>
-  <text x="640" y="282.875" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">NoSQL, any scale</text>
+  <line x1="640" y1="151.538462" x2="640" y2="251.923077" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="201.730831" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--primary-accent)">Key-Value / Document</text>
+  <rect x="550" y="251.923077" width="180" height="66.923077" rx="6.874703" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="283.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841721" font-weight="bold" fill="var(--primary-accent)">DynamoDB</text>
+  <text x="640" y="305.461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617331" fill="var(--text-muted)">NoSQL, any scale</text>
   <!-- Branch: Graph -->
-  <line x1="752.5" y1="112.5" x2="940" y2="157.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="865" y="126.0938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Graph?</text>
+  <line x1="760" y1="95.769231" x2="960" y2="151.538462" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="880" y="112.500062" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--primary-accent)">Graph?</text>
   <!-- Decision: Need graph? -->
-  <polygon points="940,157.8125 1033.75,198.5938 940,239.375 846.25,198.5938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="940" y="195.875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)">Need</text>
-  <text x="940" y="210.375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)">graph?</text>
+  <polygon points="960,151.538462 1060,201.730831 960,251.923077 860,201.730831" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="960" y="198.384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729584" font-weight="bold" fill="var(--text)">Need</text>
+  <text x="960" y="216.230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729584" font-weight="bold" fill="var(--text)">graph?</text>
   <!-- Yes -> Neptune -->
-  <line x1="940" y1="239.375" x2="940" y2="337.25" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="958.75" y="284.6875" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--info-accent)">Yes</text>
-  <rect x="865" y="339.0625" width="150" height="54.375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="364.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--info-accent)">Neptune</text>
-  <text x="940" y="382.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Graph relationships</text>
+  <line x1="960" y1="251.923077" x2="960" y2="372.384615" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="980" y="307.692308" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--info-accent)">Yes</text>
+  <rect x="880" y="374.615385" width="160" height="66.923077" rx="6.874703" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="405.846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841721" font-weight="bold" fill="var(--info-accent)">Neptune</text>
+  <text x="960" y="428.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617331" fill="var(--text-muted)">Graph relationships</text>
   <!-- Branch: Time series -->
-  <line x1="1033.75" y1="198.5938" x2="1127.5" y2="239.375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1099.375" y="216.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--danger-accent)">Time series?</text>
-  <rect x="1052.5" y="239.375" width="150" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1127.5" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--danger-accent)">Timestream</text>
-  <text x="1127.5" y="282.875" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">IoT, metrics</text>
+  <line x1="1060" y1="201.730831" x2="1160" y2="251.923077" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1130" y="224.038523" font-family="Arial, sans-serif" font-size="12.6734" font-weight="bold" fill="var(--danger-accent)">Time series?</text>
+  <rect x="1080" y="251.923077" width="160" height="66.923077" rx="6.874703" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1160" y="283.153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841721" font-weight="bold" fill="var(--danger-accent)">Timestream</text>
+  <text x="1160" y="305.461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617331" fill="var(--text-muted)">IoT, metrics</text>
   <!-- Legend -->
-  <rect x="115" y="475" width="187.5" height="27.1875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <polygon points="133.75,484.0625 148.75,488.5938 133.75,493.125 118.75,488.5938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="171.25" y="493.125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">= Decision point</text>
-  <rect x="115" y="511.25" width="187.5" height="27.1875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="118.75" y="518.5" width="26.25" height="12.6875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="171.25" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">= Service choice</text>
+  <rect x="80" y="541.923077" width="200" height="33.461538" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <polygon points="100,553.076923 116,558.653908 100,564.230769 84,558.653908" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="140" y="564.230769" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">= Decision point</text>
+  <rect x="80" y="586.538462" width="200" height="33.461538" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="84" y="595.461538" width="28" height="15.615385" rx="6.874703" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="140" y="608.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">= Service choice</text>
 </svg>

@@ -101,49 +101,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="499.375" y="51.2777" width="281.25" height="43.5" rx="6" fill="var(--text)" filter="url(#shadow)" />
-  <text x="640" y="77.8611" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--bg)">Power On / Reset</text>
-  <line x1="640" y1="96.3889" x2="640" y2="123.7777" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="125.3889" width="468.7499" height="53.1667" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="147.9444" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)">1. CPU Initialisation</text>
-  <text x="640" y="167.2777" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">Exception vectors · cache disable · privileged mode</text>
-  <line x1="640" y1="180.1667" x2="640" y2="204.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="205.9444" width="468.7499" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="228.5" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">2. Memory Controller</text>
-  <text x="640" y="247.8333" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">DRAM init · timing calibration · ECC setup</text>
-  <line x1="640" y1="260.7223" x2="640" y2="284.8889" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="286.5" width="468.7499" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="309.0556" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">3. Clock &amp; PLL Configuration</text>
-  <text x="640" y="328.3889" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">CPU freq · bus freq · peripheral clocks</text>
-  <line x1="640" y1="341.2777" x2="640" y2="365.4444" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="367.0556" width="468.7499" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="389.6111" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">4. Pin Mux (IOMUX)</text>
-  <text x="640" y="408.9444" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">Assign GPIO pins to UART / SPI / I²C / etc.</text>
-  <line x1="640" y1="421.8333" x2="640" y2="446" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="447.6111" width="468.7499" height="53.1667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="470.1667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">5. Interrupt Controller (GIC/NVIC)</text>
-  <text x="640" y="489.5" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">Enable IRQs · set priorities · map vectors</text>
-  <line x1="640" y1="502.3889" x2="640" y2="526.5556" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="405.625" y="528.1667" width="468.7499" height="53.1667" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="550.7223" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)">6. Hand off to Kernel</text>
-  <text x="640" y="570.0556" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--primary-accent)">Jump to kernel entry · pass device tree blob</text>
-  <rect x="930.6249" y="125.3889" width="271.875" height="225.5556" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1066.5624" y="147.9444" text-anchor="middle" font-family="sans-serif" font-size="13.0354" font-weight="bold" fill="var(--text)">Who does this?</text>
-  <text x="949.375" y="168.8889" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">Bootloader (U-Boot / SPL)</text>
-  <text x="949.375" y="186.6111" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">board_init_f()</text>
-  <text x="949.375" y="202.7223" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">board_init_r()</text>
-  <line x1="930.6249" y1="215.6111" x2="1202.5" y2="215.6111" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="949.375" y="234.9444" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">Device Tree specifies:</text>
-  <text x="949.375" y="252.6667" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">• compatible strings</text>
-  <text x="949.375" y="268.7777" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">• reg addresses</text>
-  <text x="949.375" y="284.8889" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">• clock frequencies</text>
-  <text x="949.375" y="301" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">• pinmux config</text>
-  <text x="949.375" y="326.7777" font-family="sans-serif" font-size="11.2974" fill="var(--text-faint)">Order matters — clocks before</text>
-  <text x="949.375" y="341.2777" font-family="sans-serif" font-size="11.2974" fill="var(--text-faint)">peripherals that depend on them</text>
-  <rect x="77.5" y="125.3889" width="281.25" height="80.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="218.125" y="147.9444" text-anchor="middle" font-family="sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)">BSP components</text>
-  <text x="96.25" y="167.2777" font-family="monospace" font-size="11.2974" fill="var(--text)">board/vendor/board.c</text>
-  <text x="96.25" y="183.3889" font-family="monospace" font-size="11.2974" fill="var(--text)">arch/arm/mach-xxx/</text>
-  <text x="96.25" y="199.5" font-family="monospace" font-size="11.2974" fill="var(--text)">arch/xxx/board/dts/</text>
+  <rect x="490" y="40" width="300" height="47.598771" rx="6.482147" fill="var(--text)" filter="url(#shadow)" />
+  <text x="640" y="69.088211" text-anchor="middle" font-family="sans-serif" font-size="18.777266" font-weight="bold" fill="var(--bg)">Power On / Reset</text>
+  <line x1="640" y1="89.361786" x2="640" y2="119.331285" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="121.0943" width="499.999893" height="58.176312" rx="6.482147" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--bg)">1. CPU Initialisation</text>
+  <text x="640" y="166.930057" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--primary-accent)">Exception vectors · cache disable · privileged mode</text>
+  <line x1="640" y1="181.033518" x2="640" y2="207.477207" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="209.240112" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="233.921005" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">2. Memory Controller</text>
+  <text x="640" y="255.075978" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">DRAM init · timing calibration · ECC setup</text>
+  <line x1="640" y1="269.179439" x2="640" y2="295.623128" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="297.386033" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="322.066926" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">3. Clock &amp; PLL Configuration</text>
+  <text x="640" y="343.221899" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">CPU freq · bus freq · peripheral clocks</text>
+  <line x1="640" y1="357.325141" x2="640" y2="383.76894" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="385.531954" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="410.212738" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">4. Pin Mux (IOMUX)</text>
+  <text x="640" y="431.367711" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Assign GPIO pins to UART / SPI / I²C / etc.</text>
+  <line x1="640" y1="445.471063" x2="640" y2="471.914861" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="473.677766" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="498.358659" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">5. Interrupt Controller (GIC/NVIC)</text>
+  <text x="640" y="519.513632" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Enable IRQs · set priorities · map vectors</text>
+  <line x1="640" y1="533.616984" x2="640" y2="560.060782" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="390" y="561.823688" width="499.999893" height="58.176312" rx="6.482147" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="586.504581" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--bg)">6. Hand off to Kernel</text>
+  <text x="640" y="607.659554" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--primary-accent)">Jump to kernel entry · pass device tree blob</text>
+  <rect x="949.999893" y="121.0943" width="290" height="246.808492" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="1094.999893" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="14.082896" font-weight="bold" fill="var(--text)">Who does this?</text>
+  <text x="970" y="168.693071" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Bootloader (U-Boot / SPL)</text>
+  <text x="970" y="188.085139" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">board_init_f()</text>
+  <text x="970" y="205.714411" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">board_init_r()</text>
+  <line x1="949.999893" y1="219.817653" x2="1240" y2="219.817653" stroke="var(--border)" stroke-width="0.8889" />
+  <text x="970" y="240.972626" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Device Tree specifies:</text>
+  <text x="970" y="260.364803" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• compatible strings</text>
+  <text x="970" y="277.993856" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• reg addresses</text>
+  <text x="970" y="295.623128" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• clock frequencies</text>
+  <text x="970" y="313.25229" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• pinmux config</text>
+  <text x="970" y="341.458884" font-family="sans-serif" font-size="12.205234" fill="var(--text-faint)">Order matters — clocks before</text>
+  <text x="970" y="357.325141" font-family="sans-serif" font-size="12.205234" fill="var(--text-faint)">peripherals that depend on them</text>
+  <rect x="40" y="121.0943" width="300" height="88.145921" rx="6.482147" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="190" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="13.143957" font-weight="bold" fill="var(--primary-accent)">BSP components</text>
+  <text x="60" y="166.930057" font-family="monospace" font-size="12.205234" fill="var(--text)">board/vendor/board.c</text>
+  <text x="60" y="184.559328" font-family="monospace" font-size="12.205234" fill="var(--text)">arch/arm/mach-xxx/</text>
+  <text x="60" y="202.188491" font-family="monospace" font-size="12.205234" fill="var(--text)">arch/xxx/board/dts/</text>
 </svg>

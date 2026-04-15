@@ -101,40 +101,39 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <line x1="640" y1="64.1667" x2="640" y2="595.8333" stroke="var(--border)" stroke-width="1.7778" stroke-dasharray="7.1111 4.4444" />
-  <rect x="58.75" y="56.1111" width="562.5" height="531.6667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <rect x="58.75" y="56.1111" width="562.5" height="41.8889" rx="6" fill="var(--warn-accent)" />
-  <rect x="58.75" y="81.8889" width="562.5" height="16.1111" rx="6" fill="var(--warn-accent)" />
-  <text x="339.9999" y="84.3056" text-anchor="middle" font-size="19.1186" fill="var(--bg)" font-weight="bold">Agent-Based (Puppet / Chef)</text>
-  <rect x="161.875" y="128.6111" width="346.875" height="88.6111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="335.3125" y="168.8889" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">Control Node</text>
-  <text x="335.3125" y="197.0833" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Puppet Master / Chef Server</text>
-  <line x1="335.3125" y1="218.8333" x2="335.3125" y2="281.6667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="358.75" y="257.5" font-size="13.0354" fill="var(--text-muted)">(Agent polls)</text>
-  <rect x="161.875" y="288.1111" width="346.875" height="120.8333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="335.3125" y="328.3889" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">Managed Node</text>
-  <text x="335.3125" y="358.1944" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)" font-weight="600">[Agent] running 24/7</text>
-  <text x="335.3125" y="386.3889" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">Requires installation + maintenance</text>
-  <text x="86.875" y="449.2223" font-size="13.9044" fill="var(--text-muted)">- Agent must be installed on every node</text>
-  <text x="86.875" y="475" font-size="13.9044" fill="var(--text-muted)">- Agent process consumes resources 24/7</text>
-  <text x="86.875" y="500.7777" font-size="13.9044" fill="var(--text-muted)">- Agent version must be managed</text>
-  <text x="86.875" y="526.5556" font-size="13.9044" fill="var(--text-muted)">- Bootstrapping new nodes is complex</text>
-  <rect x="658.75" y="56.1111" width="562.5" height="531.6667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <rect x="658.75" y="56.1111" width="562.5" height="41.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="658.75" y="81.8889" width="562.5" height="16.1111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="939.9999" y="84.3056" text-anchor="middle" font-size="19.1186" fill="var(--bg)" font-weight="bold">Agentless (Ansible)</text>
-  <rect x="761.8749" y="128.6111" width="346.875" height="88.6111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="935.3125" y="168.8889" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">Control Node</text>
-  <text x="935.3125" y="197.0833" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Ansible CLI / AWX</text>
-  <line x1="935.3125" y1="218.8333" x2="935.3125" y2="281.6667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="958.75" y="257.5" font-size="13.0354" fill="var(--primary-accent)">(SSH push)</text>
-  <rect x="761.8749" y="288.1111" width="346.875" height="120.8333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="935.3125" y="328.3889" text-anchor="middle" font-size="17.3806" fill="var(--text)" font-weight="bold">Managed Node</text>
-  <text x="935.3125" y="358.1944" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)" font-weight="600">[Python] via SSH only</text>
-  <text x="935.3125" y="386.3889" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">No persistent agent required</text>
-  <text x="686.875" y="449.2223" font-size="13.9044" fill="var(--text-muted)">+ No agent installation needed</text>
-  <text x="686.875" y="475" font-size="13.9044" fill="var(--text-muted)">+ Uses standard SSH (already open)</text>
-  <text x="686.875" y="500.7777" font-size="13.9044" fill="var(--text-muted)">+ Zero footprint on managed nodes</text>
-  <text x="686.875" y="526.5556" font-size="13.9044" fill="var(--text-muted)">+ Works with minimal Python only</text>
+  <line x1="640" y1="48.656765" x2="640" y2="620" stroke="var(--border)" stroke-width="1.7778" stroke-dasharray="7.1111 4.4444" />
+  <rect x="40" y="40" width="580.645161" height="571.343343" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="40" y="40" width="580.645161" height="45.014939" rx="6.319377" fill="var(--warn-accent)" />
+  <rect x="40" y="67.701518" width="580.645161" height="17.313422" rx="6.319377" fill="var(--warn-accent)" />
+  <text x="330.322477" y="70.298568" text-anchor="middle" font-size="20.136273" fill="var(--bg)" font-weight="bold">Agent-Based (Puppet / Chef)</text>
+  <rect x="146.451613" y="117.910451" width="358.064516" height="95.223873" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="325.483871" y="161.194059" text-anchor="middle" font-size="18.30576" fill="var(--text)" font-weight="bold">Control Node</text>
+  <text x="325.483871" y="191.49252" text-anchor="middle" font-size="14.644524" fill="var(--text-muted)">Puppet Master / Chef Server</text>
+  <line x1="325.483871" y1="214.865655" x2="325.483871" y2="282.388117" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="349.677419" y="256.417931" font-size="13.729267" fill="var(--text-muted)">(Agent polls)</text>
+  <rect x="146.451613" y="289.313443" width="358.064516" height="129.850716" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="325.483871" y="332.597051" text-anchor="middle" font-size="18.30576" fill="var(--text)" font-weight="bold">Managed Node</text>
+  <text x="325.483871" y="364.626843" text-anchor="middle" font-size="14.644524" fill="var(--danger-accent)" font-weight="600">[Agent] running 24/7</text>
+  <text x="325.483871" y="394.925412" text-anchor="middle" font-size="12.813906" fill="var(--text-muted)">Requires installation + maintenance</text>
+  <text x="69.032258" y="462.447874" font-size="14.644524" fill="var(--text-muted)">- Agent must be installed on every node</text>
+  <text x="69.032258" y="490.149284" font-size="14.644524" fill="var(--text-muted)">- Agent process consumes resources 24/7</text>
+  <text x="69.032258" y="517.850694" font-size="14.644524" fill="var(--text-muted)">- Agent version must be managed</text>
+  <text x="69.032258" y="545.552319" font-size="14.644524" fill="var(--text-muted)">- Bootstrapping new nodes is complex</text>
+  <rect x="659.354839" y="40" width="580.645161" height="571.343343" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="659.354839" y="40" width="580.645161" height="45.014939" rx="6.319377" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="659.354839" y="67.701518" width="580.645161" height="17.313422" rx="6.319377" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="949.677316" y="70.298568" text-anchor="middle" font-size="20.136273" fill="var(--bg)" font-weight="bold">Agentless (Ansible)</text>
+  <rect x="765.806348" y="117.910451" width="358.064516" height="95.223873" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="944.83871" y="161.194059" text-anchor="middle" font-size="18.30576" fill="var(--text)" font-weight="bold">Control Node</text>
+  <text x="944.83871" y="191.49252" text-anchor="middle" font-size="14.644524" fill="var(--text-muted)">Ansible CLI / AWX</text>
+  <line x1="944.83871" y1="214.865655" x2="944.83871" y2="282.388117" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="969.032258" y="256.417931" font-size="13.729267" fill="var(--primary-accent)">(SSH push)</text>
+  <rect x="765.806348" y="289.313443" width="358.064516" height="129.850716" rx="6.319377" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="944.83871" y="332.597051" text-anchor="middle" font-size="18.30576" fill="var(--text)" font-weight="bold">Managed Node</text>
+  <text x="944.83871" y="364.626843" text-anchor="middle" font-size="14.644524" fill="var(--ok-accent)" font-weight="600">[Python] via SSH only</text>
+  <text x="944.83871" y="394.925412" text-anchor="middle" font-size="12.813906" fill="var(--text-muted)">No persistent agent required</text>
+  <text x="688.387097" y="462.447874" font-size="14.644524" fill="var(--text-muted)">+ No agent installation needed</text>
+  <text x="688.387097" y="490.149284" font-size="14.644524" fill="var(--text-muted)">+ Uses standard SSH (already open)</text>
+  <text x="688.387097" y="517.850694" font-size="14.644524" fill="var(--text-muted)">+ Zero footprint on managed nodes</text>
+  <text x="688.387097" y="545.552319" font-size="14.644524" fill="var(--text-muted)">+ Works with minimal Python only</text>
 </svg>

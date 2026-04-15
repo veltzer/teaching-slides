@@ -31,7 +31,13 @@ used in our Marp-rendered slides.
   heading at the top of the page, pushing the image down; the bottom ~80px
   becomes a buffer. Keep the viewBox at 1280x720 but treat y=630 as the
   effective bottom boundary.
-- Background rects should use `height=640` (not 720) for the same reason.
+- **Do not use background rects.** SVGs should have no full-slide
+  background rectangle — the slide itself provides the background. A
+  background rect adds visual weight (a framed card inside the slide),
+  wastes edge pixels, and duplicates what Marp already draws. Content
+  should sit directly on the transparent canvas.
+- *(Out of date — superseded by the rule above.)* ~~Background rects
+  should use `height=640` (not 720) for the same reason.~~
 - Do NOT put a title element inside the SVG. The slide's `##` heading IS the
   title. Duplicating it wastes vertical space.
 
@@ -148,6 +154,21 @@ normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
 - All palette markers are 10x10. No oversized arrowheads — don't define
   per-file `<marker>` elements with larger dimensions.
   `scripts/fix_svg_markers.py` caps any stray custom markers.
+
+## Do not use circles in drawings
+
+Circles are locked to a 1:1 aspect ratio — a `<circle>` has only `r`, so it
+cannot stretch independently on x and y. Rectangles have `width` and
+`height` and scale freely on each axis. This makes circles brittle under
+the fit-to-slide pass (see below) and awkward to compose into layouts.
+
+**Rule:** do not introduce `<circle>` elements in new SVGs. Use `<rect>`
+(with `rx` for rounded corners) or `<ellipse>` if a round shape is truly
+necessary. Existing circles may remain until rewritten.
+
+**Exception:** title slides (`title.svg`) are decorative rather than
+informational and may use circles freely. `check_svg.py --no-circles`
+skips files named `title.svg`.
 
 ## Why circles don't stretch like rects
 

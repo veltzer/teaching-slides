@@ -101,46 +101,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="85" y="72.2223" width="525" height="112.7777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="347.5" y="98" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--danger-accent)">Memory Leak</text>
-  <text x="107.5" y="118.9444" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">void leak() {</text>
-  <text x="122.5" y="133.4444" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">  int *p = malloc(sizeof(int));</text>
-  <text x="122.5" y="147.9444" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">  return; // forgot free(p)!</text>
-  <text x="107.5" y="162.4444" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">}</text>
-  <text x="107.5" y="176.9444" font-size="10.4284" fill="var(--danger-accent)">Memory never reclaimed until process exits</text>
-  <rect x="655" y="72.2223" width="540" height="112.7777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="925" y="98" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--danger-accent)">Use After Free</text>
-  <text x="677.4999" y="118.9444" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
-  <text x="677.4999" y="133.4444" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">free(p);</text>
-  <text x="677.4999" y="147.9444" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">*p = 42; // UNDEFINED BEHAVIOR!</text>
-  <text x="677.4999" y="170.5" font-size="11.2974" fill="var(--text-muted)">Fix: set p = NULL after free</text>
-  <rect x="85" y="199.5" width="525" height="112.7777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="347.5" y="225.2777" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--danger-accent)">Double Free</text>
-  <text x="107.5" y="246.2223" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
-  <text x="107.5" y="260.7223" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">free(p);</text>
-  <text x="107.5" y="275.2223" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">free(p); // CRASH or heap corruption!</text>
-  <text x="107.5" y="302.6111" font-size="11.2974" fill="var(--text-muted)">Heap metadata corrupted, exploitable</text>
-  <rect x="655" y="199.5" width="540" height="112.7777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="925" y="225.2777" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--danger-accent)">Buffer Overflow</text>
-  <text x="677.4999" y="246.2223" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">int *arr = malloc(5 * sizeof(int));</text>
-  <text x="677.4999" y="260.7223" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">arr[5] = 99; // out of bounds!</text>
-  <text x="677.4999" y="275.2223" font-size="11.2974" fill="var(--text-muted)">Writes to adjacent memory</text>
-  <text x="677.4999" y="294.5556" font-size="11.2974" fill="var(--text-muted)">May corrupt other allocations</text>
-  <rect x="85" y="326.7777" width="525" height="104.7223" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="347.5" y="352.5556" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--text)">Uninitialized Memory</text>
-  <text x="107.5" y="373.5" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
-  <text x="107.5" y="388" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">printf("%d", *p); // garbage value!</text>
-  <text x="107.5" y="421.8333" font-size="11.2974" fill="var(--text-muted)">Fix: use calloc() or memset()</text>
-  <rect x="655" y="326.7777" width="540" height="104.7223" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="925" y="352.5556" text-anchor="middle" font-size="15.6425" font-weight="bold" fill="var(--text)">NULL Dereference</text>
-  <text x="677.4999" y="373.5" font-size="11.2974" fill="var(--text-muted)" font-family="monospace">int *p = malloc(huge_size);</text>
-  <text x="677.4999" y="388" font-size="11.2974" fill="var(--danger-accent)" font-family="monospace">*p = 1; // SEGFAULT if malloc failed!</text>
-  <text x="677.4999" y="421.8333" font-size="11.2974" fill="var(--text-muted)">Always check malloc return value</text>
-  <rect x="190" y="450.8333" width="899.9999" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="475" text-anchor="middle" font-size="14.7735" font-weight="bold" fill="var(--text)">Detection Tools</text>
-  <text x="321.25" y="497.5556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">Valgrind</text>
-  <text x="508.7499" y="497.5556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">AddressSanitizer</text>
-  <text x="715" y="497.5556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">LeakSanitizer</text>
-  <text x="939.9999" y="497.5556" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)">Electric Fence</text>
+  <rect x="40" y="40" width="567.567568" height="150.370301" rx="7.203604" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="323.783784" y="74.370275" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--danger-accent)">Memory Leak</text>
+  <text x="64.324324" y="102.296148" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">void leak() {</text>
+  <text x="80.540541" y="121.629485" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">  int *p = malloc(sizeof(int));</text>
+  <text x="80.540541" y="140.962823" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">  return; // forgot free(p)!</text>
+  <text x="64.324324" y="160.296161" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">}</text>
+  <text x="64.324324" y="179.629499" font-size="12.520343" fill="var(--danger-accent)">Memory never reclaimed until process exits</text>
+  <rect x="656.216216" y="40" width="583.783784" height="150.370301" rx="7.203604" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="948.108108" y="74.370275" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--danger-accent)">Use After Free</text>
+  <text x="680.540432" y="102.296148" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
+  <text x="680.540432" y="121.629485" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">free(p);</text>
+  <text x="680.540432" y="140.962823" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">*p = 42; // UNDEFINED BEHAVIOR!</text>
+  <text x="680.540432" y="171.036963" font-size="13.563665" fill="var(--text-muted)">Fix: set p = NULL after free</text>
+  <rect x="40" y="209.703639" width="567.567568" height="150.370301" rx="7.203604" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="323.783784" y="244.073914" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--danger-accent)">Double Free</text>
+  <text x="64.324324" y="272.000053" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
+  <text x="64.324324" y="291.333391" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">free(p);</text>
+  <text x="64.324324" y="310.666729" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">free(p); // CRASH or heap corruption!</text>
+  <text x="64.324324" y="347.185137" font-size="13.563665" fill="var(--text-muted)">Heap metadata corrupted, exploitable</text>
+  <rect x="656.216216" y="209.703639" width="583.783784" height="150.370301" rx="7.203604" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="948.108108" y="244.073914" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--danger-accent)">Buffer Overflow</text>
+  <text x="680.540432" y="272.000053" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">int *arr = malloc(5 * sizeof(int));</text>
+  <text x="680.540432" y="291.333391" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">arr[5] = 99; // out of bounds!</text>
+  <text x="680.540432" y="310.666729" font-size="13.563665" fill="var(--text-muted)">Writes to adjacent memory</text>
+  <text x="680.540432" y="336.444468" font-size="13.563665" fill="var(--text-muted)">May corrupt other allocations</text>
+  <rect x="40" y="379.407278" width="567.567568" height="139.629765" rx="7.203604" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="323.783784" y="413.777819" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--text)">Uninitialized Memory</text>
+  <text x="64.324324" y="441.703692" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">int *p = malloc(sizeof(int));</text>
+  <text x="64.324324" y="461.03703" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">printf("%d", *p); // garbage value!</text>
+  <text x="64.324324" y="506.148107" font-size="13.563665" fill="var(--text-muted)">Fix: use calloc() or memset()</text>
+  <rect x="656.216216" y="379.407278" width="583.783784" height="139.629765" rx="7.203604" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="948.108108" y="413.777819" text-anchor="middle" font-size="18.780395" font-weight="bold" fill="var(--text)">NULL Dereference</text>
+  <text x="680.540432" y="441.703692" font-size="13.563665" fill="var(--text-muted)" font-family="monospace">int *p = malloc(huge_size);</text>
+  <text x="680.540432" y="461.03703" font-size="13.563665" fill="var(--danger-accent)" font-family="monospace">*p = 1; // SEGFAULT if malloc failed!</text>
+  <text x="680.540432" y="506.148107" font-size="13.563665" fill="var(--text-muted)">Always check malloc return value</text>
+  <rect x="153.513514" y="544.814783" width="972.972865" height="75.185217" rx="7.203604" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="640" y="577.037057" text-anchor="middle" font-size="17.737073" font-weight="bold" fill="var(--text)">Detection Tools</text>
+  <text x="295.405405" y="607.111197" text-anchor="middle" font-size="14.606867" fill="var(--text-muted)">Valgrind</text>
+  <text x="498.108" y="607.111197" text-anchor="middle" font-size="14.606867" fill="var(--text-muted)">AddressSanitizer</text>
+  <text x="721.081081" y="607.111197" text-anchor="middle" font-size="14.606867" fill="var(--text-muted)">LeakSanitizer</text>
+  <text x="964.324216" y="607.111197" text-anchor="middle" font-size="14.606867" fill="var(--text-muted)">Electric Fence</text>
 </svg>

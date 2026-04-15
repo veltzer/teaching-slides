@@ -102,88 +102,86 @@
       <stop offset="100%" stop-color="#f57c00"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Left: syntax diagram -->
-  <rect x="68.125" y="58.125" width="656.25" height="534.6875" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="688.52459" height="580" rx="6.400889" fill="var(--surface)" filter="url(#shadow)"/>
 
   <!-- Header -->
-  <rect x="68.125" y="58.125" width="656.25" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="396.25" y="83.5" font-family="Arial, sans-serif" font-size="17.5131" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCC Inline Assembly Syntax</text>
+  <rect x="40" y="40" width="688.52459" height="43.254237" rx="6.400889" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="384.262295" y="67.525424" font-family="Arial, sans-serif" font-size="18.683235" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCC Inline Assembly Syntax</text>
 
   <!-- Full syntax template -->
-  <rect x="86.875" y="108.875" width="618.75" height="199.375" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <text x="100.9375" y="132.4375" font-family="monospace" font-size="12.9044" fill="var(--info-accent)">__asm__ volatile</text>
-  <text x="100.9375" y="150.5625" font-family="monospace" font-size="12.9044" fill="var(--primary-accent)">(</text>
-  <text x="115" y="168.6875" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">"assembly template"</text>
-  <text x="100.9375" y="186.8125" font-family="monospace" font-size="12.9044" fill="var(--primary-accent)">: output operands</text>
-  <text x="100.9375" y="204.9375" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)">: input operands</text>
-  <text x="100.9375" y="223.0625" font-family="monospace" font-size="12.9044" fill="var(--info-accent)">: clobbers</text>
-  <text x="100.9375" y="241.1875" font-family="monospace" font-size="12.9044" fill="var(--primary-accent)">);</text>
-  <text x="100.9375" y="272" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">/* Each section separated by colons */</text>
-  <text x="100.9375" y="290.125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">/* volatile = prevent reordering/removal */</text>
+  <rect x="59.672131" y="95.050847" width="649.180328" height="216.271186" rx="6.400889" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="74.42623" y="120.610169" font-family="monospace" font-size="13.766605" fill="var(--info-accent)">__asm__ volatile</text>
+  <text x="74.42623" y="140.271186" font-family="monospace" font-size="13.766605" fill="var(--primary-accent)">(</text>
+  <text x="89.180328" y="159.932203" font-family="monospace" font-size="13.766605" fill="var(--ok-accent)">"assembly template"</text>
+  <text x="74.42623" y="179.59322" font-family="monospace" font-size="13.766605" fill="var(--primary-accent)">: output operands</text>
+  <text x="74.42623" y="199.254237" font-family="monospace" font-size="13.766605" fill="var(--warn-accent)">: input operands</text>
+  <text x="74.42623" y="218.915254" font-family="monospace" font-size="13.766605" fill="var(--info-accent)">: clobbers</text>
+  <text x="74.42623" y="238.576271" font-family="monospace" font-size="13.766605" fill="var(--primary-accent)">);</text>
+  <text x="74.42623" y="272" font-family="monospace" font-size="12.783322" fill="var(--text-muted)">/* Each section separated by colons */</text>
+  <text x="74.42623" y="291.661017" font-family="monospace" font-size="12.783322" fill="var(--text-muted)">/* volatile = prevent reordering/removal */</text>
 
   <!-- Annotated real example -->
-  <rect x="86.875" y="320.9375" width="618.75" height="235.625" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <text x="396.25" y="343.5938" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Example: add two integers</text>
-  <text x="100.9375" y="368.0625" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">__asm__ volatile</text>
-  <text x="100.9375" y="386.1875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">(</text>
-  <text x="115" y="404.3125" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">"addl %2, %0\n\t"</text>
-  <text x="555.625" y="404.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">template</text>
-  <text x="100.9375" y="426.0625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">: "=r"(result)</text>
-  <text x="555.625" y="426.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">output</text>
-  <text x="100.9375" y="447.8125" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">: "0"(a), "r"(b)</text>
-  <text x="555.625" y="447.8125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">inputs</text>
-  <text x="100.9375" y="469.5625" font-family="monospace" font-size="11.9827" fill="var(--info-accent)">: "cc"</text>
-  <text x="555.625" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">clobbers</text>
-  <text x="100.9375" y="487.6875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">);</text>
-  <text x="100.9375" y="514.875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">/* %0=result, %1=a (same reg as result), %2=b */</text>
-  <text x="100.9375" y="531.1875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">/* "=r" write-only reg; "0" tied to operand 0 */</text>
+  <rect x="59.672131" y="325.084746" width="649.180328" height="255.59322" rx="6.400889" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="384.262295" y="349.661071" font-family="Arial, sans-serif" font-size="13.766605" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Example: add two integers</text>
+  <text x="74.42623" y="376.20339" font-family="monospace" font-size="12.783322" fill="var(--info-accent)">__asm__ volatile</text>
+  <text x="74.42623" y="395.864407" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">(</text>
+  <text x="89.180328" y="415.525424" font-family="monospace" font-size="12.783322" fill="var(--ok-accent)">"addl %2, %0\n\t"</text>
+  <text x="551.47541" y="415.525424" font-family="Arial, sans-serif" font-size="11.799932" fill="var(--text-muted)">template</text>
+  <text x="74.42623" y="439.118644" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">: "=r"(result)</text>
+  <text x="551.47541" y="439.118644" font-family="Arial, sans-serif" font-size="11.799932" fill="var(--primary-accent)">output</text>
+  <text x="74.42623" y="462.711864" font-family="monospace" font-size="12.783322" fill="var(--warn-accent)">: "0"(a), "r"(b)</text>
+  <text x="551.47541" y="462.711864" font-family="Arial, sans-serif" font-size="11.799932" fill="var(--warn-accent)">inputs</text>
+  <text x="74.42623" y="486.305085" font-family="monospace" font-size="12.783322" fill="var(--info-accent)">: "cc"</text>
+  <text x="551.47541" y="486.305085" font-family="Arial, sans-serif" font-size="11.799932" fill="var(--info-accent)">clobbers</text>
+  <text x="74.42623" y="505.966102" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">);</text>
+  <text x="74.42623" y="535.457627" font-family="monospace" font-size="11.799932" fill="var(--text-muted)">/* %0=result, %1=a (same reg as result), %2=b */</text>
+  <text x="74.42623" y="553.152542" font-family="monospace" font-size="11.799932" fill="var(--text-muted)">/* "=r" write-only reg; "0" tied to operand 0 */</text>
 
   <!-- Right panel: constraints and clobbers -->
-  <rect x="743.125" y="58.125" width="468.75" height="534.6875" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <rect x="743.125" y="58.125" width="468.75" height="39.875" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="977.5" y="83.5" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Constraints and Clobbers</text>
+  <rect x="748.196721" y="40" width="491.803279" height="580" rx="6.400889" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="748.196721" y="40" width="491.803279" height="43.254237" rx="6.400889" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="994.098361" y="67.525424" font-family="Arial, sans-serif" font-size="17.699952" font-weight="bold" fill="var(--bg)" text-anchor="middle">Constraints and Clobbers</text>
 
   <!-- Output constraints -->
-  <rect x="761.875" y="108.875" width="431.25" height="135.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="780.625" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Output Constraint Modifiers</text>
-  <text x="780.625" y="152.375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">=</text>
-  <text x="808.75" y="152.375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">write-only (output)</text>
-  <text x="780.625" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">+</text>
-  <text x="808.75" y="172.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">read-write (in and out)</text>
-  <text x="780.625" y="192.25" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">&amp;</text>
-  <text x="808.75" y="192.25" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">earlyclobber (written before inputs read)</text>
-  <text x="780.625" y="212.1875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">r</text>
-  <text x="808.75" y="212.1875" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">any general-purpose register</text>
-  <text x="780.625" y="232.125" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">m</text>
-  <text x="808.75" y="232.125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">memory operand</text>
+  <rect x="767.868852" y="95.050847" width="452.459016" height="147.457627" rx="6.400889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="787.540984" y="118.644068" font-family="Arial, sans-serif" font-size="13.766605" font-weight="bold" fill="var(--primary-accent)">Output Constraint Modifiers</text>
+  <text x="787.540984" y="142.237288" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">=</text>
+  <text x="817.04918" y="142.237288" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">write-only (output)</text>
+  <text x="787.540984" y="163.864407" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">+</text>
+  <text x="817.04918" y="163.864407" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">read-write (in and out)</text>
+  <text x="787.540984" y="185.491525" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">&amp;</text>
+  <text x="817.04918" y="185.491525" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">earlyclobber (written before inputs read)</text>
+  <text x="787.540984" y="207.118644" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">r</text>
+  <text x="817.04918" y="207.118644" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">any general-purpose register</text>
+  <text x="787.540984" y="228.745763" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">m</text>
+  <text x="817.04918" y="228.745763" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">memory operand</text>
 
   <!-- Input constraints -->
-  <rect x="761.875" y="257.5" width="431.25" height="117.8125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="780.625" y="279.25" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">Input Constraints</text>
-  <text x="780.625" y="301" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">r</text>
-  <text x="808.75" y="301" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">any register</text>
-  <text x="780.625" y="320.9375" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">i</text>
-  <text x="808.75" y="320.9375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">immediate integer constant</text>
-  <text x="780.625" y="340.875" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">0,1,2...</text>
-  <text x="836.875" y="340.875" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">tied to matching output operand</text>
-  <text x="780.625" y="360.8125" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">g</text>
-  <text x="808.75" y="360.8125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">register, memory, or immediate</text>
+  <rect x="767.868852" y="256.271186" width="452.459016" height="127.79661" rx="6.400889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="787.540984" y="279.864407" font-family="Arial, sans-serif" font-size="13.766605" font-weight="bold" fill="var(--warn-accent)">Input Constraints</text>
+  <text x="787.540984" y="303.457627" font-family="monospace" font-size="12.783322" fill="var(--warn-accent)">r</text>
+  <text x="817.04918" y="303.457627" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">any register</text>
+  <text x="787.540984" y="325.084746" font-family="monospace" font-size="12.783322" fill="var(--warn-accent)">i</text>
+  <text x="817.04918" y="325.084746" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">immediate integer constant</text>
+  <text x="787.540984" y="346.711864" font-family="monospace" font-size="12.783322" fill="var(--warn-accent)">0,1,2...</text>
+  <text x="846.557377" y="346.711864" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">tied to matching output operand</text>
+  <text x="787.540984" y="368.338983" font-family="monospace" font-size="12.783322" fill="var(--warn-accent)">g</text>
+  <text x="817.04918" y="368.338983" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">register, memory, or immediate</text>
 
   <!-- Clobbers -->
-  <rect x="761.875" y="388" width="431.25" height="117.8125" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="780.625" y="409.75" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">Common Clobbers</text>
-  <text x="780.625" y="431.5" font-family="monospace" font-size="11.9827" fill="var(--danger-accent)">"cc"</text>
-  <text x="827.5" y="431.5" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">modifies condition codes (flags)</text>
-  <text x="780.625" y="451.4375" font-family="monospace" font-size="11.9827" fill="var(--danger-accent)">"memory"</text>
-  <text x="855.625" y="451.4375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">reads/writes arbitrary memory</text>
-  <text x="780.625" y="471.375" font-family="monospace" font-size="11.9827" fill="var(--danger-accent)">"%eax"</text>
-  <text x="836.875" y="471.375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">specific register clobbered</text>
-  <text x="780.625" y="491.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Tells GCC which resources are overwritten</text>
+  <rect x="767.868852" y="397.830508" width="452.459016" height="127.79661" rx="6.400889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="787.540984" y="421.423729" font-family="Arial, sans-serif" font-size="13.766605" font-weight="bold" fill="var(--danger-accent)">Common Clobbers</text>
+  <text x="787.540984" y="445.016949" font-family="monospace" font-size="12.783322" fill="var(--danger-accent)">"cc"</text>
+  <text x="836.721311" y="445.016949" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">modifies condition codes (flags)</text>
+  <text x="787.540984" y="466.644068" font-family="monospace" font-size="12.783322" fill="var(--danger-accent)">"memory"</text>
+  <text x="866.229508" y="466.644068" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">reads/writes arbitrary memory</text>
+  <text x="787.540984" y="488.271186" font-family="monospace" font-size="12.783322" fill="var(--danger-accent)">"%eax"</text>
+  <text x="846.557377" y="488.271186" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">specific register clobbered</text>
+  <text x="787.540984" y="509.898305" font-family="Arial, sans-serif" font-size="11.799932" fill="var(--text-faint)">Tells GCC which resources are overwritten</text>
 
   <!-- volatile note -->
-  <rect x="761.875" y="518.5" width="431.25" height="54.375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="780.625" y="539.3438" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--info-accent)">volatile keyword</text>
-  <text x="780.625" y="559.2812" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Prevents compiler from moving, duplicating, or removing the asm block</text>
+  <rect x="767.868852" y="539.389831" width="452.459016" height="58.983051" rx="6.400889" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="787.540984" y="562.000054" font-family="Arial, sans-serif" font-size="12.783322" font-weight="bold" fill="var(--info-accent)">volatile keyword</text>
+  <text x="787.540984" y="583.627064" font-family="Arial, sans-serif" font-size="12.783322" fill="var(--text)">Prevents compiler from moving, duplicating, or removing the asm block</text>
 </svg>

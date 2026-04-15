@@ -101,26 +101,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="227.5" y="64.1667" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">High address (RAM)</text>
-  <rect x="339.9999" y="72.2223" width="600" height="70.8889" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="565" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Stack  ↓  (grows down)</text>
-  <text x="902.5" y="108.4723" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--primary-accent)">local vars, return addr</text>
-  <rect x="339.9999" y="147.9444" width="600" height="85.3889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" />
-  <text x="640" y="193.0556" text-anchor="middle" font-family="sans-serif" font-size="19.1186" fill="var(--text-faint)">Free Space</text>
-  <line x1="640" y1="156.8056" x2="640" y2="176.9444" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <line x1="640" y1="224.4723" x2="640" y2="204.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="339.9999" y="238.1667" width="600" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="565" y="278.4444" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">Heap  ↑  (grows up)</text>
-  <text x="902.5" y="274.4167" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-muted)">malloc / new</text>
-  <rect x="339.9999" y="313.8889" width="600" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="565" y="354.1667" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">.bss</text>
-  <text x="902.5" y="350.1389" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-muted)">uninitialized globals (zeroed)</text>
-  <rect x="339.9999" y="389.6111" width="600" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="565" y="429.8889" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">.data</text>
-  <text x="902.5" y="425.8611" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-muted)">initialized globals</text>
-  <text x="227.5" y="473.3889" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">Low address (RAM)</text>
-  <rect x="227.5" y="491.1111" width="825" height="45.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="513.6667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--primary-accent)">Stack overflow: stack grows into heap — silent data corruption in embedded systems</text>
-  <text x="640" y="529.7777" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">Use MPU stack guard regions or canary values to detect overflow early</text>
+  <text x="40" y="40" font-family="monospace" font-size="18.58803" fill="var(--text-faint)">High address (RAM)</text>
+  <rect x="203.636218" y="49.897667" width="872.727273" height="87.099" rx="8.021071" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="530.909091" y="99.385632" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--bg)">Stack  ↓  (grows down)</text>
+  <text x="1021.818182" y="94.436921" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--primary-accent)">local vars, return addr</text>
+  <rect x="203.636218" y="142.93507" width="872.727273" height="104.914702" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" />
+  <text x="640" y="198.361807" text-anchor="middle" font-family="sans-serif" font-size="25.558608" fill="var(--text-faint)">Free Space</text>
+  <line x1="640" y1="153.822553" x2="640" y2="178.566474" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <line x1="640" y1="236.962535" x2="640" y2="212.218368" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="203.636218" y="253.788421" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="530.909091" y="303.276386" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">Heap  ↑  (grows up)</text>
+  <text x="1021.818182" y="298.327675" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">malloc / new</text>
+  <rect x="203.636218" y="346.825947" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="530.909091" y="396.314035" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">.bss</text>
+  <text x="1021.818182" y="391.365202" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">uninitialized globals (zeroed)</text>
+  <rect x="203.636218" y="439.863474" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="530.909091" y="489.351561" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">.data</text>
+  <text x="1021.818182" y="484.402728" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">initialized globals</text>
+  <text x="40" y="542.798667" font-family="monospace" font-size="18.58803" fill="var(--text-faint)">Low address (RAM)</text>
+  <rect x="40" y="564.573386" width="1200" height="55.426614" rx="8.021071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="592.286754" text-anchor="middle" font-family="sans-serif" font-size="20.911601" font-weight="bold" fill="var(--primary-accent)">Stack overflow: stack grows into heap — silent data corruption in embedded systems</text>
+  <text x="640" y="612.081842" text-anchor="middle" font-family="sans-serif" font-size="17.426312" fill="var(--text-muted)">Use MPU stack guard regions or canary values to detect overflow early</text>
 </svg>

@@ -101,27 +101,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="58.75" y="56.1111" width="1162.5" height="58" rx="6" fill="var(--code-bg)" filter="url(#shadow)" />
-  <text x="77.5" y="91.5556" font-family="monospace" font-size="19.1186" fill="var(--ok-accent)">Input:  echo "hello world" &gt; output.txt</text>
-  <rect x="58.75" y="128.6111" width="1162.5" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="77.5" y="164.8611" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Step 1: Tokenize</text>
-  <text x="330.625" y="164.8611" font-family="monospace" font-size="18.2496" fill="var(--text)">→  [echo]  ["hello world"]  [&gt;]  [output.txt]</text>
-  <text x="77.5" y="189.8333" font-family="monospace" font-size="13.9044" fill="var(--text-muted)">Split input into tokens by whitespace and operators</text>
-  <rect x="58.75" y="210.7777" width="1162.5" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="77.5" y="247.0277" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Step 2: Alias expansion</text>
-  <text x="330.625" y="247.0277" font-family="monospace" font-size="18.2496" fill="var(--text)">→  echo is not an alias — no change</text>
-  <text x="77.5" y="272" font-family="monospace" font-size="13.9044" fill="var(--text-muted)">Replace alias names with their definition text</text>
-  <rect x="58.75" y="292.9444" width="1162.5" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="77.5" y="329.1944" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Step 3: Parameter expansion</text>
-  <text x="330.625" y="329.1944" font-family="monospace" font-size="18.2496" fill="var(--text)">→  expand $VAR, $(cmd), $((math))</text>
-  <text x="77.5" y="354.1667" font-family="monospace" font-size="13.9044" fill="var(--text-muted)">Substitute variable values and command substitutions</text>
-  <rect x="58.75" y="375.1111" width="1162.5" height="70.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="77.5" y="411.3611" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Step 4: Glob expansion</text>
-  <text x="330.625" y="411.3611" font-family="monospace" font-size="18.2496" fill="var(--text)">→  *.txt expanded to matching filenames</text>
-  <text x="77.5" y="436.3333" font-family="monospace" font-size="13.9044" fill="var(--text-muted)">Match patterns like *, ?, [...] against the filesystem</text>
-  <rect x="58.75" y="457.2777" width="1162.5" height="70.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="77.5" y="493.5277" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Step 5: Execute</text>
-  <text x="330.625" y="493.5277" font-family="monospace" font-size="18.2496" fill="var(--text)">→  run /usr/bin/echo with "hello world",  redirect stdout → output.txt</text>
-  <text x="77.5" y="518.5" font-family="monospace" font-size="13.9044" fill="var(--text-muted)">Set up redirections, fork + exec, or invoke built-in</text>
+  <rect x="40" y="40" width="1200" height="71.262807" rx="6.757139" fill="var(--code-bg)" filter="url(#shadow)" />
+  <text x="59.354839" y="83.549561" font-family="monospace" font-size="21.531173" fill="var(--ok-accent)">Input:  echo "hello world" &gt; output.txt</text>
+  <rect x="40" y="129.078509" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="59.354839" y="173.617763" font-family="monospace" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)">Step 1: Tokenize</text>
+  <text x="320.645161" y="173.617763" font-family="monospace" font-size="20.552514" fill="var(--text)">→  [echo]  ["hello world"]  [&gt;]  [output.txt]</text>
+  <text x="59.354839" y="204.300333" font-family="monospace" font-size="15.658994" fill="var(--text-muted)">Split input into tokens by whitespace and operators</text>
+  <rect x="40" y="230.03407" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="59.354839" y="274.573325" font-family="monospace" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)">Step 2: Alias expansion</text>
+  <text x="320.645161" y="274.573325" font-family="monospace" font-size="20.552514" fill="var(--text)">→  echo is not an alias — no change</text>
+  <text x="59.354839" y="305.256018" font-family="monospace" font-size="15.658994" fill="var(--text-muted)">Replace alias names with their definition text</text>
+  <rect x="40" y="330.989754" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="59.354839" y="375.529009" font-family="monospace" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)">Step 3: Parameter expansion</text>
+  <text x="320.645161" y="375.529009" font-family="monospace" font-size="20.552514" fill="var(--text)">→  expand $VAR, $(cmd), $((math))</text>
+  <text x="59.354839" y="406.211702" font-family="monospace" font-size="15.658994" fill="var(--text-muted)">Substitute variable values and command substitutions</text>
+  <rect x="40" y="431.945439" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="59.354839" y="476.484693" font-family="monospace" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)">Step 4: Glob expansion</text>
+  <text x="320.645161" y="476.484693" font-family="monospace" font-size="20.552514" fill="var(--text)">→  *.txt expanded to matching filenames</text>
+  <text x="59.354839" y="507.167263" font-family="monospace" font-size="15.658994" fill="var(--text-muted)">Match patterns like *, ?, [...] against the filesystem</text>
+  <rect x="40" y="532.901" width="1200" height="87.099" rx="6.757139" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="59.354839" y="577.440254" font-family="monospace" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)">Step 5: Execute</text>
+  <text x="320.645161" y="577.440254" font-family="monospace" font-size="20.552514" fill="var(--text)">→  run /usr/bin/echo with "hello world",  redirect stdout → output.txt</text>
+  <text x="59.354839" y="608.122947" font-family="monospace" font-size="15.658994" fill="var(--text-muted)">Set up redirections, fork + exec, or invoke built-in</text>
 </svg>

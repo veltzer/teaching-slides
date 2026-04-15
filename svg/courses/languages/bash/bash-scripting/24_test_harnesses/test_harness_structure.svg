@@ -102,79 +102,77 @@
       <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Flow: top to bottom in left column -->
 
   <!-- 1. Setup -->
-  <rect x="77.5" y="67.1875" width="525" height="72.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="340" y="92.5625" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--bg)" text-anchor="middle" font-weight="bold">1. Setup / Fixtures</text>
-  <text x="96.25" y="114.3125" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">setup() { mkdir -p /tmp/test_dir; TEST_FILE=/tmp/test_dir/f.txt; }</text>
-  <text x="96.25" y="130.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">create temp dirs, files, env vars needed by tests</text>
-  <line x1="340" y1="139.6875" x2="340" y2="166.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="40" width="560" height="77.983186" rx="6.426834" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="320" y="67.294115" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--bg)" text-anchor="middle" font-weight="bold">1. Setup / Fixtures</text>
+  <text x="60" y="90.689071" font-family="monospace" font-size="12.835138" fill="var(--primary-accent)">setup() { mkdir -p /tmp/test_dir; TEST_FILE=/tmp/test_dir/f.txt; }</text>
+  <text x="60" y="108.235288" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--primary-accent)">create temp dirs, files, env vars needed by tests</text>
+  <line x1="320" y1="117.983186" x2="320" y2="147.226881" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- 2. Test functions -->
-  <rect x="77.5" y="166.875" width="525" height="117.8125" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="340" y="192.25" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">2. Test Functions</text>
-  <text x="96.25" y="214.9062" font-family="monospace" font-size="11.9827" fill="var(--text)">test_success() {</text>
-  <text x="96.25" y="233.0312" font-family="monospace" font-size="11.9827" fill="var(--text)">  result=$(my_function "valid_input")</text>
-  <text x="96.25" y="251.1562" font-family="monospace" font-size="11.9827" fill="var(--text)">  assert_equals "$result" "expected"</text>
-  <text x="96.25" y="269.2812" font-family="monospace" font-size="11.9827" fill="var(--text)">}</text>
-  <line x1="340" y1="284.6875" x2="340" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="147.226881" width="560" height="126.722677" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="320" y="174.520996" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">2. Test Functions</text>
+  <text x="60" y="198.890688" font-family="monospace" font-size="12.835138" fill="var(--text)">test_success() {</text>
+  <text x="60" y="218.386484" font-family="monospace" font-size="12.835138" fill="var(--text)">  result=$(my_function "valid_input")</text>
+  <text x="60" y="237.882281" font-family="monospace" font-size="12.835138" fill="var(--text)">  assert_equals "$result" "expected"</text>
+  <text x="60" y="257.378077" font-family="monospace" font-size="12.835138" fill="var(--text)">}</text>
+  <line x1="320" y1="273.949558" x2="320" y2="303.193253" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- 3. Assertions -->
-  <rect x="77.5" y="311.875" width="525" height="117.8125" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="340" y="337.25" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">3. Assertions</text>
-  <text x="96.25" y="359.9062" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_equals() {</text>
-  <text x="96.25" y="378.0312" font-family="monospace" font-size="11.9827" fill="var(--text)">  [[ "$1" == "$2" ]] &amp;&amp; return 0</text>
-  <text x="96.25" y="396.1562" font-family="monospace" font-size="11.9827" fill="var(--text)">  echo "FAIL: '$1' != '$2'" &gt;&amp;2</text>
-  <text x="96.25" y="414.2812" font-family="monospace" font-size="11.9827" fill="var(--text)">  return 1</text>
-  <text x="96.25" y="429.6875" font-family="monospace" font-size="11.9827" fill="var(--text)">}</text>
-  <line x1="340" y1="429.6875" x2="340" y2="456.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="303.193253" width="560" height="126.722677" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="320" y="330.487368" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">3. Assertions</text>
+  <text x="60" y="354.85706" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_equals() {</text>
+  <text x="60" y="374.352856" font-family="monospace" font-size="12.835138" fill="var(--text)">  [[ "$1" == "$2" ]] &amp;&amp; return 0</text>
+  <text x="60" y="393.848653" font-family="monospace" font-size="12.835138" fill="var(--text)">  echo "FAIL: '$1' != '$2'" &gt;&amp;2</text>
+  <text x="60" y="413.344449" font-family="monospace" font-size="12.835138" fill="var(--text)">  return 1</text>
+  <text x="60" y="429.91593" font-family="monospace" font-size="12.835138" fill="var(--text)">}</text>
+  <line x1="320" y1="429.91593" x2="320" y2="459.159625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- 4. Teardown -->
-  <rect x="77.5" y="456.875" width="525" height="72.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="482.25" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">4. Teardown / Cleanup</text>
-  <text x="96.25" y="504" font-family="monospace" font-size="11.9827" fill="var(--text)">teardown() { rm -rf /tmp/test_dir; }</text>
-  <text x="96.25" y="520.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">always runs even if tests fail (use trap)</text>
-  <line x1="340" y1="529.375" x2="340" y2="556.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="459.159625" width="560" height="77.983186" rx="6.426834" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="486.45374" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">4. Teardown / Cleanup</text>
+  <text x="60" y="509.848696" font-family="monospace" font-size="12.835138" fill="var(--text)">teardown() { rm -rf /tmp/test_dir; }</text>
+  <text x="60" y="527.394913" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)">always runs even if tests fail (use trap)</text>
+  <line x1="320" y1="537.142811" x2="320" y2="566.386506" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- 5. Reporting -->
-  <rect x="77.5" y="556.5625" width="525" height="49.8438" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="340" y="581.9375" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--bg)" text-anchor="middle" font-weight="bold">5. Reporting</text>
-  <text x="96.25" y="595.5312" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">echo "Passed: $pass | Failed: $fail"; exit $fail</text>
+  <rect x="40" y="566.386506" width="560" height="53.613494" rx="6.426834" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="320" y="593.680621" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--bg)" text-anchor="middle" font-weight="bold">5. Reporting</text>
+  <text x="60" y="608.302415" font-family="monospace" font-size="12.835138" fill="var(--ok-accent)">echo "Passed: $pass | Failed: $fail"; exit $fail</text>
 
   <!-- Right column: runner and frameworks -->
-  <rect x="658.75" y="67.1875" width="543.75" height="181.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="930.625" y="92.5625" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Test Runner Pattern</text>
-  <text x="677.5" y="117.0312" font-family="monospace" font-size="11.9827" fill="var(--text)">PASS=0; FAIL=0</text>
-  <text x="677.5" y="135.1562" font-family="monospace" font-size="11.9827" fill="var(--text)">run_test() {</text>
-  <text x="677.5" y="153.2812" font-family="monospace" font-size="11.9827" fill="var(--text)">  setup</text>
-  <text x="677.5" y="171.4062" font-family="monospace" font-size="11.9827" fill="var(--text)">  if "$1"; then</text>
-  <text x="677.5" y="189.5312" font-family="monospace" font-size="11.9827" fill="var(--text)">    echo "PASS: $1"; (( PASS++ ))</text>
-  <text x="677.5" y="207.6562" font-family="monospace" font-size="11.9827" fill="var(--text)">  else</text>
-  <text x="677.5" y="225.7812" font-family="monospace" font-size="11.9827" fill="var(--text)">    echo "FAIL: $1"; (( FAIL++ ))</text>
-  <text x="677.5" y="239.375" font-family="monospace" font-size="11.9827" fill="var(--text)">  fi; teardown</text>
+  <rect x="660" y="40" width="580" height="194.957965" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="950" y="67.294115" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Test Runner Pattern</text>
+  <text x="680" y="93.613387" font-family="monospace" font-size="12.835138" fill="var(--text)">PASS=0; FAIL=0</text>
+  <text x="680" y="113.109183" font-family="monospace" font-size="12.835138" fill="var(--text)">run_test() {</text>
+  <text x="680" y="132.60498" font-family="monospace" font-size="12.835138" fill="var(--text)">  setup</text>
+  <text x="680" y="152.100776" font-family="monospace" font-size="12.835138" fill="var(--text)">  if "$1"; then</text>
+  <text x="680" y="171.596573" font-family="monospace" font-size="12.835138" fill="var(--text)">    echo "PASS: $1"; (( PASS++ ))</text>
+  <text x="680" y="191.092369" font-family="monospace" font-size="12.835138" fill="var(--text)">  else</text>
+  <text x="680" y="210.588166" font-family="monospace" font-size="12.835138" fill="var(--text)">    echo "FAIL: $1"; (( FAIL++ ))</text>
+  <text x="680" y="225.210067" font-family="monospace" font-size="12.835138" fill="var(--text)">  fi; teardown</text>
 
   <!-- Available assertion types -->
-  <rect x="658.75" y="266.5625" width="543.75" height="176.7188" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="930.625" y="291.9375" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Common Assertions</text>
-  <text x="677.5" y="316.4062" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_equals val1 val2</text>
-  <text x="677.5" y="334.5312" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_not_equals val1 val2</text>
-  <text x="677.5" y="352.6562" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_zero $?      # exit code is 0</text>
-  <text x="677.5" y="370.7812" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_contains "substr" "$str"</text>
-  <text x="677.5" y="388.9062" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_file_exists "$path"</text>
-  <text x="677.5" y="407.0312" font-family="monospace" font-size="11.9827" fill="var(--text)">assert_file_not_exists "$path"</text>
-  <text x="677.5" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">implement as functions that return 0 or 1</text>
-  <text x="677.5" y="438.75" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">print failure message to stderr</text>
+  <rect x="660" y="254.453762" width="580" height="190.08407" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="950" y="281.747877" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Common Assertions</text>
+  <text x="680" y="308.067148" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_equals val1 val2</text>
+  <text x="680" y="327.562945" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_not_equals val1 val2</text>
+  <text x="680" y="347.058741" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_zero $?      # exit code is 0</text>
+  <text x="680" y="366.554538" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_contains "substr" "$str"</text>
+  <text x="680" y="386.050334" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_file_exists "$path"</text>
+  <text x="680" y="405.546131" font-family="monospace" font-size="12.835138" fill="var(--text)">assert_file_not_exists "$path"</text>
+  <text x="680" y="425.041927" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)">implement as functions that return 0 or 1</text>
+  <text x="680" y="439.663828" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)">print failure message to stderr</text>
 
   <!-- Frameworks -->
-  <rect x="658.75" y="461.4062" width="543.75" height="145" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="930.625" y="486.7812" font-family="Arial, sans-serif" font-size="15.6696" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Existing Bash Test Frameworks</text>
-  <text x="677.5" y="511.25" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)" font-weight="bold">bats-core</text>
-  <text x="677.5" y="529.375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">Bash Automated Testing System - TAP output</text>
-  <text x="677.5" y="550.2188" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)" font-weight="bold">shunit2</text>
-  <text x="677.5" y="568.3438" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">xUnit-style framework for shell scripts</text>
-  <text x="677.5" y="589.1875" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)" font-weight="bold">shellspec</text>
-  <text x="677.5" y="600.0625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">BDD-style testing with describe/it syntax</text>
+  <rect x="660" y="464.03352" width="580" height="155.966372" rx="6.426834" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="491.327635" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Existing Bash Test Frameworks</text>
+  <text x="680" y="517.647015" font-family="Arial, sans-serif" font-size="13.822407" fill="var(--text)" font-weight="bold">bats-core</text>
+  <text x="680" y="537.142811" font-family="Arial, sans-serif" font-size="12.835138" fill="var(--text-muted)">Bash Automated Testing System - TAP output</text>
+  <text x="680" y="559.563031" font-family="Arial, sans-serif" font-size="13.822407" fill="var(--text)" font-weight="bold">shunit2</text>
+  <text x="680" y="579.058827" font-family="Arial, sans-serif" font-size="12.835138" fill="var(--text-muted)">xUnit-style framework for shell scripts</text>
+  <text x="680" y="601.47894" font-family="Arial, sans-serif" font-size="13.822407" fill="var(--text)" font-weight="bold">shellspec</text>
+  <text x="680" y="613.176417" font-family="Arial, sans-serif" font-size="12.835138" fill="var(--text-muted)">BDD-style testing with describe/it syntax</text>
 </svg>

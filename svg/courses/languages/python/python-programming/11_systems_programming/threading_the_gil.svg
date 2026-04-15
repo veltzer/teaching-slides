@@ -101,25 +101,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="75.4444" text-anchor="middle" font-size="22.5947" font-weight="bold" fill="var(--primary-accent)">Threading and the GIL</text>
-  <rect x="68.125" y="104.4444" width="318.75" height="169.1667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="227.5" y="201.1111" font-size="24.3328" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">CPU-bound task</text>
-  <text x="227.5" y="233.3333" font-size="15.6425" fill="var(--text-muted)" text-anchor="middle">Heavy computation</text>
-  <text x="227.5" y="255.8889" font-size="15.6425" fill="var(--text-muted)" text-anchor="middle">Number crunching</text>
-  <line x1="386.875" y1="189.0277" x2="433.75" y2="189.0277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="437.5" y="104.4444" width="375" height="169.1667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="625" y="189.0277" font-size="22.5947" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">multiprocessing</text>
-  <text x="625" y="217.2223" font-size="14.7735" fill="var(--text-muted)" text-anchor="middle">Bypasses GIL entirely</text>
-  <text x="625" y="241.3889" font-size="14.7735" fill="var(--text-muted)" text-anchor="middle">True parallelism</text>
-  <rect x="68.125" y="313.8889" width="318.75" height="169.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="227.5" y="406.5277" font-size="24.3328" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">I/O-bound task</text>
-  <text x="227.5" y="438.75" font-size="15.6425" fill="var(--text-muted)" text-anchor="middle">Network, disk, DB</text>
-  <line x1="386.875" y1="398.4723" x2="433.75" y2="398.4723" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="437.5" y="313.8889" width="543.75" height="169.1667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="709.375" y="398.4723" font-size="22.5947" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">threading  or  asyncio</text>
-  <text x="709.375" y="426.6667" font-size="14.7735" fill="var(--text-muted)" text-anchor="middle">GIL released during I/O waits</text>
-  <rect x="68.125" y="515.2777" width="1143.7499" height="64.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="541.0556" text-anchor="middle" font-size="15.6425" fill="var(--primary-accent)" font-weight="bold">GIL: Global Interpreter Lock</text>
-  <text x="640" y="566.8333" text-anchor="middle" font-size="13.9044" fill="var(--text-muted)">Allows only one thread to execute Python bytecode at a time. Released during I/O system calls.</text>
+  <text x="640.000052" y="40" text-anchor="middle" font-size="24.820515" font-weight="bold" fill="var(--primary-accent)">Threading and the GIL</text>
+  <rect x="40" y="73.354638" width="334.426259" height="194.568758" rx="6.591063" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="207.213129" y="184.536802" font-size="26.729836" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">CPU-bound task</text>
+  <text x="207.213129" y="221.597485" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle">Heavy computation</text>
+  <text x="207.213129" y="247.540032" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle">Number crunching</text>
+  <line x1="374.426259" y1="170.638959" x2="423.606591" y2="170.638959" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="427.541017" y="73.354638" width="393.442657" height="194.568758" rx="6.591063" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="624.262346" y="170.638959" font-size="24.820515" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">multiprocessing</text>
+  <text x="624.262346" y="203.067258" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle">Bypasses GIL entirely</text>
+  <text x="624.262346" y="230.862713" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle">True parallelism</text>
+  <rect x="40" y="314.249307" width="334.426259" height="194.568758" rx="6.591063" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="207.213129" y="420.798742" font-size="26.729836" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">I/O-bound task</text>
+  <text x="207.213129" y="457.85954" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle">Network, disk, DB</text>
+  <line x1="374.426259" y1="411.533744" x2="423.606591" y2="411.533744" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="427.541017" y="314.249307" width="570.491853" height="194.568758" rx="6.591063" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="712.786944" y="411.533744" font-size="24.820515" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">threading  or  asyncio</text>
+  <text x="712.786944" y="443.961813" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle">GIL released during I/O waits</text>
+  <rect x="40" y="545.878634" width="1200" height="74.121366" rx="6.591063" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640.000052" y="575.527341" text-anchor="middle" font-size="17.18345" fill="var(--primary-accent)" font-weight="bold">GIL: Global Interpreter Lock</text>
+  <text x="640.000052" y="605.175819" text-anchor="middle" font-size="15.274129" fill="var(--text-muted)">Allows only one thread to execute Python bytecode at a time. Released during I/O system calls.</text>
 </svg>

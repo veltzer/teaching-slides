@@ -101,82 +101,81 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="56.1111" width="1143.7499" height="40.2777" rx="6" fill="var(--text-muted)" />
-  <text x="640" y="81.8889" font-family="Arial,sans-serif" font-size="15.6425" font-weight="bold" fill="var(--bg)" text-anchor="middle">POSIX IPC vs System V IPC — Comparison</text>
-  <rect x="68.125" y="110.8889" width="187.5" height="33.8333" rx="6" fill="var(--text-muted)" />
-  <text x="161.875" y="131.8333" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">Feature</text>
-  <rect x="265" y="110.8889" width="459.375" height="33.8333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="494.6875" y="131.8333" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">POSIX IPC</text>
-  <rect x="733.75" y="110.8889" width="478.125" height="33.8333" rx="6" fill="var(--text-muted)" />
-  <text x="972.8124" y="131.8333" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">System V IPC</text>
-  <rect x="68.125" y="151.1667" width="187.5" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="176.1389" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Naming</text>
-  <rect x="265" y="151.1667" width="459.375" height="41.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="494.6875" y="168.0833" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)" text-anchor="middle">/name  (e.g., /myqueue)</text>
-  <text x="494.6875" y="185" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Filesystem-like path in /dev/shm or mqueue</text>
-  <rect x="733.75" y="151.1667" width="478.125" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="972.8124" y="168.0833" font-family="monospace" font-size="11.2974" fill="var(--text-muted)" text-anchor="middle">Integer key (ftok() or IPC_PRIVATE)</text>
-  <text x="972.8124" y="185" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Opaque numeric ID, not human-readable</text>
-  <rect x="68.125" y="197.8889" width="187.5" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="222.8611" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Access model</text>
-  <rect x="265" y="197.8889" width="459.375" height="41.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="494.6875" y="214.8056" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--ok-accent)" text-anchor="middle">File descriptor (fd-based)</text>
-  <text x="494.6875" y="231.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Works with select(), poll(), epoll()</text>
-  <rect x="733.75" y="197.8889" width="478.125" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="972.8124" y="214.8056" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)" text-anchor="middle">Integer IPC identifier</text>
-  <text x="972.8124" y="231.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Cannot use with select/poll/epoll</text>
-  <rect x="68.125" y="244.6111" width="187.5" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="265.5556" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Message</text>
-  <text x="161.875" y="280.0556" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Queue API</text>
-  <rect x="265" y="244.6111" width="459.375" height="54.7777" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="283.75" y="263.1389" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">mq_open("/q", O_RDWR|O_CREAT, 0666, &amp;attr)</text>
-  <text x="283.75" y="279.25" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">mq_send(fd, buf, len, prio)</text>
-  <text x="283.75" y="293.75" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">mq_receive(fd, buf, maxlen, &amp;prio)</text>
-  <rect x="733.75" y="244.6111" width="478.125" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="752.5" y="263.1389" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">msgget(key, IPC_CREAT|0666)</text>
-  <text x="752.5" y="279.25" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">msgsnd(id, &amp;msg, size, flags)</text>
-  <text x="752.5" y="293.75" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">msgrcv(id, &amp;msg, size, type, flags)</text>
-  <rect x="68.125" y="304.2223" width="187.5" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="325.1667" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Semaphore</text>
-  <text x="161.875" y="339.6667" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">API</text>
-  <rect x="265" y="304.2223" width="459.375" height="54.7777" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="283.75" y="321.9444" font-family="monospace" font-size="10.4284" fill="var(--ok-accent)">sem_open("/sem", O_CREAT, 0666, 1)</text>
-  <text x="283.75" y="338.0556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">sem_wait(sem)  /  sem_post(sem)</text>
-  <text x="283.75" y="352.5556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">sem_init(&amp;sem, shared, value)  (unnamed)</text>
-  <rect x="733.75" y="304.2223" width="478.125" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="752.5" y="321.9444" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">semget(key, nsems, IPC_CREAT|0666)</text>
-  <text x="752.5" y="338.0556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">semop(id, &amp;sops, nsops)</text>
-  <text x="752.5" y="352.5556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">semctl(id, num, SETVAL, 1)</text>
-  <rect x="68.125" y="363.8333" width="187.5" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="384.7777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Shared</text>
-  <text x="161.875" y="399.2777" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Memory API</text>
-  <rect x="265" y="363.8333" width="459.375" height="54.7777" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="283.75" y="381.5556" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">shm_open("/shm", O_RDWR|O_CREAT, 0666)</text>
-  <text x="283.75" y="397.6667" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">ftruncate(fd, size)</text>
-  <text x="283.75" y="413.7777" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">mmap(NULL, size, PROT_RW, MAP_SHARED, fd, 0)</text>
-  <rect x="733.75" y="363.8333" width="478.125" height="54.7777" rx="6" fill="var(--surface)" />
-  <text x="752.5" y="381.5556" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">shmget(key, size, IPC_CREAT|0666)</text>
-  <text x="752.5" y="397.6667" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">shmat(id, NULL, 0)  →  ptr</text>
-  <text x="752.5" y="413.7777" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">shmdt(ptr)</text>
-  <rect x="68.125" y="423.4444" width="187.5" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="448.4167" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Cleanup</text>
-  <rect x="265" y="423.4444" width="459.375" height="41.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="283.75" y="441.1667" font-family="monospace" font-size="10.4284" fill="var(--ok-accent)">mq_unlink("/q")   sem_unlink("/sem")</text>
-  <text x="283.75" y="457.2777" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">shm_unlink("/shm")   munmap(ptr, size)</text>
-  <rect x="733.75" y="423.4444" width="478.125" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="752.5" y="441.1667" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">msgctl / semctl / shmctl with IPC_RMID</text>
-  <text x="752.5" y="457.2777" font-family="monospace" font-size="10.4284" fill="var(--text-muted)">ipcrm -q / -s / -m  or  ipcrm --all</text>
-  <rect x="68.125" y="470.1667" width="187.5" height="41.8889" rx="6" fill="var(--surface)" />
-  <text x="161.875" y="495.1389" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Verdict</text>
-  <rect x="265" y="470.1667" width="459.375" height="41.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="494.6875" y="487.0833" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Preferred for new code</text>
-  <text x="494.6875" y="503.1944" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">POSIX.1-2001 standard, cleaner API, fd-based</text>
-  <rect x="733.75" y="470.1667" width="478.125" height="41.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="972.8124" y="487.0833" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Legacy (pre-POSIX)</text>
-  <text x="972.8124" y="503.1944" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Still widely used, complex semaphore API</text>
-  <rect x="68.125" y="529.7777" width="1143.7499" height="54.7777" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="547.5" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Practical notes for Linux systems programming:</text>
-  <text x="640" y="565.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">Link with -lrt for POSIX IPC (mq_*, shm_*) and -lpthread for sem_*  •  POSIX named objects appear under /dev/shm  •  mq_notify() enables async notification</text>
-  <text x="640" y="579.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">Both survive process death until explicitly deleted — always clean up in signal handlers and at-exit</text>
+  <rect x="40" y="40" width="1199.999895" height="44.207244" rx="6.438589" fill="var(--text-muted)" />
+  <text x="640" y="68.292715" font-family="Arial,sans-serif" font-size="16.785938" font-weight="bold" fill="var(--bg)" text-anchor="middle">POSIX IPC vs System V IPC — Comparison</text>
+  <rect x="40" y="100.121992" width="196.721311" height="37.13412" rx="6.438589" fill="var(--text-muted)" />
+  <text x="138.360656" y="123.109754" font-family="Arial,sans-serif" font-size="13.055634" font-weight="bold" fill="var(--bg)" text-anchor="middle">Feature</text>
+  <rect x="246.557377" y="100.121992" width="481.967213" height="37.13412" rx="6.438589" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="487.540984" y="123.109754" font-family="Arial,sans-serif" font-size="13.055634" font-weight="bold" fill="var(--bg)" text-anchor="middle">POSIX IPC</text>
+  <rect x="738.360656" y="100.121992" width="501.639344" height="37.13412" rx="6.438589" fill="var(--text-muted)" />
+  <text x="989.180223" y="123.109754" font-family="Arial,sans-serif" font-size="13.055634" font-weight="bold" fill="var(--bg)" text-anchor="middle">System V IPC</text>
+  <rect x="40" y="144.329346" width="196.721311" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="171.737865" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Naming</text>
+  <rect x="246.557377" y="144.329346" width="481.967213" height="45.975635" rx="6.438589" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="487.540984" y="162.896351" font-family="monospace" font-size="12.123219" fill="var(--primary-accent)" text-anchor="middle">/name  (e.g., /myqueue)</text>
+  <text x="487.540984" y="181.463465" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text-muted)" text-anchor="middle">Filesystem-like path in /dev/shm or mqueue</text>
+  <rect x="738.360656" y="144.329346" width="501.639344" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="989.180223" y="162.896351" font-family="monospace" font-size="12.123219" fill="var(--text-muted)" text-anchor="middle">Integer key (ftok() or IPC_PRIVATE)</text>
+  <text x="989.180223" y="181.463465" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text-muted)" text-anchor="middle">Opaque numeric ID, not human-readable</text>
+  <rect x="40" y="195.609823" width="196.721311" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="223.018343" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Access model</text>
+  <rect x="246.557377" y="195.609823" width="481.967213" height="45.975635" rx="6.438589" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="487.540984" y="214.176938" font-family="Arial,sans-serif" font-size="12.123219" fill="var(--ok-accent)" text-anchor="middle">File descriptor (fd-based)</text>
+  <text x="487.540984" y="232.744053" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text-muted)" text-anchor="middle">Works with select(), poll(), epoll()</text>
+  <rect x="738.360656" y="195.609823" width="501.639344" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="989.180223" y="214.176938" font-family="Arial,sans-serif" font-size="12.123219" fill="var(--text-muted)" text-anchor="middle">Integer IPC identifier</text>
+  <text x="989.180223" y="232.744053" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text-muted)" text-anchor="middle">Cannot use with select/poll/epoll</text>
+  <rect x="40" y="246.8903" width="196.721311" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="269.878173" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Message</text>
+  <text x="138.360656" y="285.792811" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Queue API</text>
+  <rect x="246.557377" y="246.8903" width="481.967213" height="60.121882" rx="6.438589" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="266.229508" y="267.225696" font-family="monospace" font-size="11.190697" fill="var(--primary-accent)">mq_open("/q", O_RDWR|O_CREAT, 0666, &amp;attr)</text>
+  <text x="266.229508" y="284.908616" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">mq_send(fd, buf, len, prio)</text>
+  <text x="266.229508" y="300.823254" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">mq_receive(fd, buf, maxlen, &amp;prio)</text>
+  <rect x="738.360656" y="246.8903" width="501.639344" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="758.032787" y="267.225696" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">msgget(key, IPC_CREAT|0666)</text>
+  <text x="758.032787" y="284.908616" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">msgsnd(id, &amp;msg, size, flags)</text>
+  <text x="758.032787" y="300.823254" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">msgrcv(id, &amp;msg, size, type, flags)</text>
+  <rect x="40" y="312.317245" width="196.721311" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="335.305008" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Semaphore</text>
+  <text x="138.360656" y="351.219646" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">API</text>
+  <rect x="246.557377" y="312.317245" width="481.967213" height="60.121882" rx="6.438589" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="266.229508" y="331.768336" font-family="monospace" font-size="11.190697" fill="var(--ok-accent)">sem_open("/sem", O_CREAT, 0666, 1)</text>
+  <text x="266.229508" y="349.451365" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">sem_wait(sem)  /  sem_post(sem)</text>
+  <text x="266.229508" y="365.366004" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">sem_init(&amp;sem, shared, value)  (unnamed)</text>
+  <rect x="738.360656" y="312.317245" width="501.639344" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="758.032787" y="331.768336" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">semget(key, nsems, IPC_CREAT|0666)</text>
+  <text x="758.032787" y="349.451365" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">semop(id, &amp;sops, nsops)</text>
+  <text x="758.032787" y="365.366004" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">semctl(id, num, SETVAL, 1)</text>
+  <rect x="40" y="377.74397" width="196.721311" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="400.731733" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Shared</text>
+  <text x="138.360656" y="416.646371" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Memory API</text>
+  <rect x="246.557377" y="377.74397" width="481.967213" height="60.121882" rx="6.438589" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="266.229508" y="397.195281" font-family="monospace" font-size="11.190697" fill="var(--primary-accent)">shm_open("/shm", O_RDWR|O_CREAT, 0666)</text>
+  <text x="266.229508" y="414.8782" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">ftruncate(fd, size)</text>
+  <text x="266.229508" y="432.56101" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">mmap(NULL, size, PROT_RW, MAP_SHARED, fd, 0)</text>
+  <rect x="738.360656" y="377.74397" width="501.639344" height="60.121882" rx="6.438589" fill="var(--surface)" />
+  <text x="758.032787" y="397.195281" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">shmget(key, size, IPC_CREAT|0666)</text>
+  <text x="758.032787" y="414.8782" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">shmat(id, NULL, 0)  →  ptr</text>
+  <text x="758.032787" y="432.56101" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">shmdt(ptr)</text>
+  <rect x="40" y="443.170805" width="196.721311" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="470.579435" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Cleanup</text>
+  <rect x="246.557377" y="443.170805" width="481.967213" height="45.975635" rx="6.438589" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="266.229508" y="462.622116" font-family="monospace" font-size="11.190697" fill="var(--ok-accent)">mq_unlink("/q")   sem_unlink("/sem")</text>
+  <text x="266.229508" y="480.304925" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">shm_unlink("/shm")   munmap(ptr, size)</text>
+  <rect x="738.360656" y="443.170805" width="501.639344" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="758.032787" y="462.622116" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">msgctl / semctl / shmctl with IPC_RMID</text>
+  <text x="758.032787" y="480.304925" font-family="monospace" font-size="11.190697" fill="var(--text-muted)">ipcrm -q / -s / -m  or  ipcrm --all</text>
+  <rect x="40" y="494.451393" width="196.721311" height="45.975635" rx="6.438589" fill="var(--surface)" />
+  <text x="138.360656" y="521.859912" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Verdict</text>
+  <rect x="246.557377" y="494.451393" width="481.967213" height="45.975635" rx="6.438589" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="487.540984" y="513.018398" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Preferred for new code</text>
+  <text x="487.540984" y="530.701317" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text)" text-anchor="middle">POSIX.1-2001 standard, cleaner API, fd-based</text>
+  <rect x="738.360656" y="494.451393" width="501.639344" height="45.975635" rx="6.438589" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="989.180223" y="513.018398" font-family="Arial,sans-serif" font-size="12.123219" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Legacy (pre-POSIX)</text>
+  <text x="989.180223" y="530.701317" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text)" text-anchor="middle">Still widely used, complex semaphore API</text>
+  <rect x="40" y="559.878118" width="1199.999895" height="60.121882" rx="6.438589" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="640" y="579.329428" font-family="Arial,sans-serif" font-size="13.055634" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Practical notes for Linux systems programming:</text>
+  <text x="640" y="598.780738" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text)" text-anchor="middle">Link with -lrt for POSIX IPC (mq_*, shm_*) and -lpthread for sem_*  •  POSIX named objects appear under /dev/shm  •  mq_notify() enables async notification</text>
+  <text x="640" y="614.695377" font-family="Arial,sans-serif" font-size="11.190697" fill="var(--text-muted)" text-anchor="middle">Both survive process death until explicitly deleted — always clean up in signal handlers and at-exit</text>
 </svg>

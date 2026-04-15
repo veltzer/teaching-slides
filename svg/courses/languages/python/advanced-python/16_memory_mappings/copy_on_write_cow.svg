@@ -101,22 +101,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="72.2223" text-anchor="middle" font-size="22.5947" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (COW)</text>
-  <rect x="171.25" y="112.5" width="337.5" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="339.9999" y="155.1944" text-anchor="middle" font-size="19.1186" fill="var(--text)" font-weight="bold">Process A</text>
-  <rect x="771.25" y="112.5" width="337.5" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="939.9999" y="155.1944" text-anchor="middle" font-size="19.1186" fill="var(--text)" font-weight="bold">Process B</text>
-  <rect x="471.25" y="273.6111" width="337.5" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="316.3056" text-anchor="middle" font-size="19.1186" fill="var(--text)" font-weight="bold">Shared Page</text>
-  <rect x="171.25" y="458.8889" width="337.5" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="339.9999" y="501.5833" text-anchor="middle" font-size="19.1186" fill="var(--text)">Private Copy</text>
-  <rect x="771.25" y="458.8889" width="337.5" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="939.9999" y="501.5833" text-anchor="middle" font-size="19.1186" fill="var(--text)">Original Page</text>
-  <line x1="339.9999" y1="185" x2="546.25" y2="273.6111" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="939.9999" y1="185" x2="733.75" y2="273.6111" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="339.9999" y1="346.1111" x2="339.9999" y2="458.8889" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8.8889 7.1111" marker-end="url(#arrow)" />
-  <text x="283.75" y="410.5556" text-anchor="middle" font-size="17.3806" fill="var(--text-muted)">Write</text>
-  <line x1="939.9999" y1="346.1111" x2="939.9999" y2="458.8889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="571.6667" text-anchor="middle" font-size="15.6425" fill="var(--text-muted)">On write: kernel allocates a private copy for the writing process only</text>
+  <text x="640" y="40" text-anchor="middle" font-size="27.547487" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (COW)</text>
+  <rect x="40" y="86.774107" width="432" height="84.193556" rx="7.315208" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="255.999872" y="136.354705" text-anchor="middle" font-size="23.309421" fill="var(--text)" font-weight="bold">Process A</text>
+  <rect x="808" y="86.774107" width="432" height="84.193556" rx="7.315208" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1023.999872" y="136.354705" text-anchor="middle" font-size="23.309421" fill="var(--text)" font-weight="bold">Process B</text>
+  <rect x="424" y="273.870885" width="432" height="84.193556" rx="7.315208" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="640" y="323.451599" text-anchor="middle" font-size="23.309421" fill="var(--text)" font-weight="bold">Shared Page</text>
+  <rect x="40" y="489.032221" width="432" height="84.193556" rx="7.315208" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="255.999872" y="538.612819" text-anchor="middle" font-size="23.309421" fill="var(--text)">Private Copy</text>
+  <rect x="808" y="489.032221" width="432" height="84.193556" rx="7.315208" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1023.999872" y="538.612819" text-anchor="middle" font-size="23.309421" fill="var(--text)">Original Page</text>
+  <line x1="255.999872" y1="170.967663" x2="520" y2="273.870885" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="1023.999872" y1="170.967663" x2="760" y2="273.870885" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="255.999872" y1="358.064441" x2="255.999872" y2="489.032221" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="8.8889 7.1111" marker-end="url(#arrow)" />
+  <text x="184" y="432.903222" text-anchor="middle" font-size="21.19045" fill="var(--text-muted)">Write</text>
+  <line x1="1023.999872" y1="358.064441" x2="1023.999872" y2="489.032221" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="620" text-anchor="middle" font-size="19.071356" fill="var(--text-muted)">On write: kernel allocates a private copy for the writing process only</text>
 </svg>

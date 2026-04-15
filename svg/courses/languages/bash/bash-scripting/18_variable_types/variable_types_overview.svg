@@ -98,143 +98,141 @@
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Card 1: String (default) -->
-  <rect x="77.5" y="67.1875" width="262.5" height="507.5" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <rect x="77.5" y="67.1875" width="262.5" height="50.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="77.5" y="107.0625" width="262.5" height="10.875" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="208.75" y="99.8125" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">String</text>
+  <rect x="40" y="40" width="280" height="580" rx="6.624629" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="280" height="58" rx="6.624629" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="85.571429" width="280" height="12.428571" fill="var(--primary-fill)" rx="6.624629" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="77.285714" font-family="sans-serif" font-size="20.354063" font-weight="bold" fill="var(--bg)" text-anchor="middle">String</text>
 
-  <text x="208.75" y="137.875" font-family="monospace" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">declare (default)</text>
+  <text x="180" y="120.785714" font-family="monospace" font-size="14.247811" fill="var(--text-muted)" text-anchor="middle">declare (default)</text>
 
-  <rect x="91.5625" y="150.5625" width="234.375" height="99.6875" rx="6" fill="var(--code-bg)"/>
-  <text x="105.625" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># default assignment</text>
-  <text x="105.625" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">x="hello"</text>
-  <text x="105.625" y="208.5625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">name=Alice</text>
-  <text x="105.625" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">count=42</text>
-  <text x="105.625" y="239.375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)"># (stored as string)</text>
+  <rect x="55" y="135.285714" width="250" height="113.928571" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="70" y="160.142857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># default assignment</text>
+  <text x="70" y="180.857143" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">x="hello"</text>
+  <text x="70" y="201.571429" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">name=Alice</text>
+  <text x="70" y="222.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">count=42</text>
+  <text x="70" y="236.785714" font-family="monospace" font-size="11.19474" fill="var(--text-muted)"># (stored as string)</text>
 
-  <text x="91.5625" y="273.8125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Behavior:</text>
-  <text x="91.5625" y="291.9375" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• All values are strings</text>
-  <text x="91.5625" y="310.0625" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Can hold any text</text>
-  <text x="91.5625" y="328.1875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Arithmetic needs $(( ))</text>
-  <text x="91.5625" y="346.3125" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Length: ${#x}</text>
+  <text x="55" y="276.142857" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--primary-accent)">Behavior:</text>
+  <text x="55" y="296.857143" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• All values are strings</text>
+  <text x="55" y="317.571429" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Can hold any text</text>
+  <text x="55" y="338.285714" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Arithmetic needs $(( ))</text>
+  <text x="55" y="359" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Length: ${#x}</text>
 
-  <rect x="91.5625" y="361.7188" width="234.375" height="90.625" rx="6" fill="var(--code-bg)"/>
-  <text x="105.625" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># string operations</text>
-  <text x="105.625" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">echo</text>
-  <text x="138.4375" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> "${x^^}"</text>
-  <text x="105.625" y="412.4688" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># HELLO</text>
-  <text x="105.625" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">echo</text>
-  <text x="138.4375" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> "${x:0:3}"</text>
-  <text x="105.625" y="445.0938" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># hel</text>
+  <rect x="55" y="376.6072" width="250" height="103.571429" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="70" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># string operations</text>
+  <text x="70" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">echo</text>
+  <text x="105" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> "${x^^}"</text>
+  <text x="70" y="434.6072" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># HELLO</text>
+  <text x="70" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">echo</text>
+  <text x="105" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> "${x:0:3}"</text>
+  <text x="70" y="471.892914" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># hel</text>
 
-  <rect x="91.5625" y="465.9375" width="234.375" height="32.625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="208.75" y="486.7812" font-family="sans-serif" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">Default for all variables</text>
+  <rect x="55" y="495.714286" width="250" height="37.285714" rx="6.624629" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="519.535657" font-family="sans-serif" font-size="13.230158" fill="var(--primary-accent)" text-anchor="middle">Default for all variables</text>
 
   <!-- Card 2: Integer -->
-  <rect x="363.4375" y="67.1875" width="262.5" height="507.5" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <rect x="363.4375" y="67.1875" width="262.5" height="50.75" rx="6" fill="var(--ok-accent)"/>
-  <rect x="363.4375" y="107.0625" width="262.5" height="10.875" fill="var(--ok-accent)" rx="6"/>
-  <text x="494.6875" y="99.8125" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Integer</text>
+  <rect x="345" y="40" width="280" height="580" rx="6.624629" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="345" y="40" width="280" height="58" rx="6.624629" fill="var(--ok-accent)"/>
+  <rect x="345" y="85.571429" width="280" height="12.428571" fill="var(--ok-accent)" rx="6.624629"/>
+  <text x="485" y="77.285714" font-family="sans-serif" font-size="20.354063" font-weight="bold" fill="var(--bg)" text-anchor="middle">Integer</text>
 
-  <text x="494.6875" y="137.875" font-family="monospace" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">declare -i</text>
+  <text x="485" y="120.785714" font-family="monospace" font-size="14.247811" fill="var(--text-muted)" text-anchor="middle">declare -i</text>
 
-  <rect x="377.5" y="150.5625" width="234.375" height="99.6875" rx="6" fill="var(--code-bg)"/>
-  <text x="391.5625" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># integer declaration</text>
-  <text x="391.5625" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">declare</text>
-  <text x="446.875" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> -i num</text>
-  <text x="391.5625" y="208.5625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">num=5+3</text>
-  <text x="391.5625" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">echo</text>
-  <text x="428.125" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> $num</text>
-  <text x="391.5625" y="239.375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)"># 8  (auto arithmetic)</text>
+  <rect x="360" y="135.285714" width="250" height="113.928571" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="375" y="160.142857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># integer declaration</text>
+  <text x="375" y="180.857143" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">declare</text>
+  <text x="434" y="180.857143" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> -i num</text>
+  <text x="375" y="201.571429" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)">num=5+3</text>
+  <text x="375" y="222.285714" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">echo</text>
+  <text x="414" y="222.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> $num</text>
+  <text x="375" y="236.785714" font-family="monospace" font-size="11.19474" fill="var(--text-muted)"># 8  (auto arithmetic)</text>
 
-  <text x="377.5" y="273.8125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Behavior:</text>
-  <text x="377.5" y="291.9375" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Assignments evaluated as math</text>
-  <text x="377.5" y="310.0625" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Strings become 0</text>
-  <text x="377.5" y="328.1875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Integer division truncates</text>
-  <text x="377.5" y="346.3125" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Stored as string internally</text>
+  <text x="360" y="276.142857" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--ok-accent)">Behavior:</text>
+  <text x="360" y="296.857143" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Assignments evaluated as math</text>
+  <text x="360" y="317.571429" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Strings become 0</text>
+  <text x="360" y="338.285714" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Integer division truncates</text>
+  <text x="360" y="359" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Stored as string internally</text>
 
-  <rect x="377.5" y="361.7188" width="234.375" height="90.625" rx="6" fill="var(--code-bg)"/>
-  <text x="391.5625" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">declare</text>
-  <text x="446.875" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> -i a=5 b=3 c</text>
-  <text x="391.5625" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">c=a+b</text>
-  <text x="391.5625" y="412.4688" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">echo</text>
-  <text x="428.125" y="412.4688" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> $c</text>
-  <text x="391.5625" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># 8</text>
-  <text x="391.5625" y="445.0938" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">num="hello"</text>
-  <text x="391.5625" y="445.0938" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"> → 0</text>
+  <rect x="360" y="376.6072" width="250" height="103.571429" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="375" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">declare</text>
+  <text x="434" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> -i a=5 b=3 c</text>
+  <text x="375" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">c=a+b</text>
+  <text x="375" y="434.6072" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">echo</text>
+  <text x="414" y="434.6072" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> $c</text>
+  <text x="375" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># 8</text>
+  <text x="375" y="471.892914" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">num="hello"</text>
+  <text x="375" y="471.892914" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"> → 0</text>
 
-  <rect x="377.5" y="465.9375" width="234.375" height="32.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="494.6875" y="486.7812" font-family="sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">For counters and math vars</text>
+  <rect x="360" y="495.714286" width="250" height="37.285714" rx="6.624629" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="485" y="519.535657" font-family="sans-serif" font-size="13.230158" fill="var(--ok-accent)" text-anchor="middle">For counters and math vars</text>
 
   <!-- Card 3: Readonly -->
-  <rect x="649.375" y="67.1875" width="262.5" height="507.5" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <rect x="649.375" y="67.1875" width="262.5" height="50.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="649.375" y="107.0625" width="262.5" height="10.875" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="780.625" y="99.8125" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Readonly</text>
+  <rect x="650" y="40" width="280" height="580" rx="6.624629" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="650" y="40" width="280" height="58" rx="6.624629" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="85.571429" width="280" height="12.428571" fill="var(--danger-fill)" rx="6.624629" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="790" y="77.285714" font-family="sans-serif" font-size="20.354063" font-weight="bold" fill="var(--bg)" text-anchor="middle">Readonly</text>
 
-  <text x="780.625" y="137.875" font-family="monospace" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">declare -r</text>
+  <text x="790" y="120.785714" font-family="monospace" font-size="14.247811" fill="var(--text-muted)" text-anchor="middle">declare -r</text>
 
-  <rect x="663.4375" y="150.5625" width="234.375" height="99.6875" rx="6" fill="var(--code-bg)"/>
-  <text x="677.5" y="172.3125" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># readonly constant</text>
-  <text x="677.5" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">declare</text>
-  <text x="732.8125" y="190.4375" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> -r MAX=100</text>
-  <text x="677.5" y="208.5625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)"># or:</text>
-  <text x="677.5" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">readonly</text>
-  <text x="739.375" y="226.6875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)"> PI=3.14159</text>
-  <text x="677.5" y="241.1875" font-family="monospace" font-size="10.1392" fill="var(--info-accent)">MAX=200  # error!</text>
+  <rect x="665" y="135.285714" width="250" height="113.928571" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="680" y="160.142857" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># readonly constant</text>
+  <text x="680" y="180.857143" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">declare</text>
+  <text x="739" y="180.857143" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> -r MAX=100</text>
+  <text x="680" y="201.571429" font-family="monospace" font-size="13.230158" fill="var(--text-muted)"># or:</text>
+  <text x="680" y="222.285714" font-family="monospace" font-size="13.230158" fill="var(--ok-accent)">readonly</text>
+  <text x="746" y="222.285714" font-family="monospace" font-size="13.230158" fill="var(--primary-accent)"> PI=3.14159</text>
+  <text x="680" y="238.857143" font-family="monospace" font-size="11.19474" fill="var(--info-accent)">MAX=200  # error!</text>
 
-  <text x="663.4375" y="273.8125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Behavior:</text>
-  <text x="663.4375" y="291.9375" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Cannot be reassigned</text>
-  <text x="663.4375" y="310.0625" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Cannot be unset</text>
-  <text x="663.4375" y="328.1875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Error if modified</text>
-  <text x="663.4375" y="346.3125" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Persists for shell lifetime</text>
+  <text x="665" y="276.142857" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--danger-accent)">Behavior:</text>
+  <text x="665" y="296.857143" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Cannot be reassigned</text>
+  <text x="665" y="317.571429" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Cannot be unset</text>
+  <text x="665" y="338.285714" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Error if modified</text>
+  <text x="665" y="359" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Persists for shell lifetime</text>
 
-  <rect x="663.4375" y="361.7188" width="234.375" height="90.625" rx="6" fill="var(--code-bg)"/>
-  <text x="677.5" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">readonly</text>
-  <text x="739.375" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> CONFIG="/etc/app"</text>
-  <text x="677.5" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">readonly</text>
-  <text x="739.375" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> VERSION="1.0"</text>
-  <text x="677.5" y="412.4688" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># attempt to change:</text>
-  <text x="677.5" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">VERSION="2.0"</text>
-  <text x="677.5" y="445.0938" font-family="monospace" font-size="11.0609" fill="var(--info-accent)"># readonly variable</text>
+  <rect x="665" y="376.6072" width="250" height="103.571429" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="680" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">readonly</text>
+  <text x="746" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> CONFIG="/etc/app"</text>
+  <text x="680" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">readonly</text>
+  <text x="746" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> VERSION="1.0"</text>
+  <text x="680" y="434.6072" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># attempt to change:</text>
+  <text x="680" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">VERSION="2.0"</text>
+  <text x="680" y="471.892914" font-family="monospace" font-size="12.212394" fill="var(--info-accent)"># readonly variable</text>
 
-  <rect x="663.4375" y="465.9375" width="234.375" height="32.625" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="780.625" y="486.7812" font-family="sans-serif" font-size="11.9827" fill="var(--danger-accent)" text-anchor="middle">For constants and config</text>
+  <rect x="665" y="495.714286" width="250" height="37.285714" rx="6.624629" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="790" y="519.535657" font-family="sans-serif" font-size="13.230158" fill="var(--danger-accent)" text-anchor="middle">For constants and config</text>
 
   <!-- Card 4: Array -->
-  <rect x="935.3125" y="67.1875" width="267.1875" height="507.5" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <rect x="935.3125" y="67.1875" width="267.1875" height="50.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="935.3125" y="107.0625" width="267.1875" height="10.875" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1068.4375" y="99.8125" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Array</text>
+  <rect x="955" y="40" width="285" height="580" rx="6.624629" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="955" y="40" width="285" height="58" rx="6.624629" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="955" y="85.571429" width="285" height="12.428571" fill="var(--warn-fill)" rx="6.624629" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1097" y="77.285714" font-family="sans-serif" font-size="20.354063" font-weight="bold" fill="var(--bg)" text-anchor="middle">Array</text>
 
-  <text x="1068.4375" y="137.875" font-family="monospace" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">declare -a / declare -A</text>
+  <text x="1097" y="120.785714" font-family="monospace" font-size="14.247811" fill="var(--text-muted)" text-anchor="middle">declare -a / declare -A</text>
 
-  <rect x="949.375" y="150.5625" width="239.0625" height="99.6875" rx="6" fill="var(--code-bg)"/>
-  <text x="963.4375" y="172.3125" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># indexed array</text>
-  <text x="963.4375" y="188.625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">arr=(a b c d)</text>
-  <text x="963.4375" y="204.9375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">echo</text>
-  <text x="1000" y="204.9375" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> "${arr[0]}"</text>
-  <text x="963.4375" y="221.25" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># a</text>
-  <text x="963.4375" y="237.5625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># assoc: declare -A map</text>
+  <rect x="970" y="135.285714" width="255" height="113.928571" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="985" y="160.142857" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># indexed array</text>
+  <text x="985" y="178.785714" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">arr=(a b c d)</text>
+  <text x="985" y="197.428571" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">echo</text>
+  <text x="1024" y="197.428571" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> "${arr[0]}"</text>
+  <text x="985" y="216.071429" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># a</text>
+  <text x="985" y="234.714286" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># assoc: declare -A map</text>
 
-  <text x="949.375" y="273.8125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Two types:</text>
-  <text x="949.375" y="291.9375" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Indexed (-a): numbered keys</text>
-  <text x="949.375" y="310.0625" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Associative (-A): string keys</text>
-  <text x="949.375" y="328.1875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• ${arr[@]} = all elements</text>
-  <text x="949.375" y="346.3125" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• ${#arr[@]} = count</text>
+  <text x="970" y="276.142857" font-family="sans-serif" font-size="13.230158" font-weight="bold" fill="var(--warn-accent)">Two types:</text>
+  <text x="970" y="296.857143" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Indexed (-a): numbered keys</text>
+  <text x="970" y="317.571429" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• Associative (-A): string keys</text>
+  <text x="970" y="338.285714" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• ${arr[@]} = all elements</text>
+  <text x="970" y="359" font-family="sans-serif" font-size="12.212394" fill="var(--text)">• ${#arr[@]} = count</text>
 
-  <rect x="949.375" y="361.7188" width="239.0625" height="90.625" rx="6" fill="var(--code-bg)"/>
-  <text x="963.4375" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">declare</text>
-  <text x="1018.75" y="379.8438" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> -A user</text>
-  <text x="963.4375" y="396.1562" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">user[name]="Alice"</text>
-  <text x="963.4375" y="412.4688" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">user[age]=30</text>
-  <text x="963.4375" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">echo</text>
-  <text x="1000" y="428.7812" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)"> "${user[name]}"</text>
-  <text x="963.4375" y="445.0938" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Alice</text>
+  <rect x="970" y="376.6072" width="255" height="103.571429" rx="6.624629" fill="var(--code-bg)"/>
+  <text x="985" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">declare</text>
+  <text x="1044" y="397.321486" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> -A user</text>
+  <text x="985" y="415.964229" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">user[name]="Alice"</text>
+  <text x="985" y="434.6072" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)">user[age]=30</text>
+  <text x="985" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--ok-accent)">echo</text>
+  <text x="1024" y="453.249943" font-family="monospace" font-size="12.212394" fill="var(--primary-accent)"> "${user[name]}"</text>
+  <text x="985" y="471.892914" font-family="monospace" font-size="12.212394" fill="var(--text-muted)"># Alice</text>
 
-  <rect x="949.375" y="465.9375" width="239.0625" height="32.625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1068.4375" y="486.7812" font-family="sans-serif" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">For collections of values</text>
+  <rect x="970" y="495.714286" width="255" height="37.285714" rx="6.624629" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1097" y="519.535657" font-family="sans-serif" font-size="13.230158" fill="var(--warn-accent)" text-anchor="middle">For collections of values</text>
 </svg>

@@ -101,74 +101,73 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="68.125" y="241.3889" width="178.125" height="96.6667" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="68.125" y="241.3889" width="178.125" height="29" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="68.125" y="260.7223" width="178.125" height="9.6667" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="157.1875" y="259.9167" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">LLM / ChatModel</text>
-  <text x="157.1875" y="289.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">ChatOpenAI</text>
-  <text x="157.1875" y="304.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">ChatAnthropic</text>
-  <text x="157.1875" y="318.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">HuggingFaceHub</text>
-  <line x1="246.25" y1="289.7223" x2="293.125" y2="289.7223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="293.125" y="241.3889" width="187.5" height="96.6667" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
-  <rect x="293.125" y="241.3889" width="187.5" height="29" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="293.125" y="260.7223" width="187.5" height="9.6667" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="386.875" y="259.9167" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">PromptTemplate</text>
-  <text x="386.875" y="288.1111" font-family="monospace" font-size="10" fill="var(--text)" text-anchor="middle">ChatPromptTemplate</text>
-  <text x="386.875" y="302.6111" font-family="monospace" font-size="10" fill="var(--text)" text-anchor="middle">FewShotPromptTemplate</text>
-  <text x="386.875" y="317.1111" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">variable injection</text>
-  <line x1="480.625" y1="289.7223" x2="527.5" y2="289.7223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="527.5" y="241.3889" width="187.5" height="96.6667" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="527.5" y="241.3889" width="187.5" height="29" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="527.5" y="260.7223" width="187.5" height="9.6667" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="621.25" y="259.9167" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">Chain (LCEL)</text>
-  <text x="621.25" y="288.1111" font-family="monospace" font-size="10.4284" fill="var(--text)" text-anchor="middle">prompt | llm | parser</text>
-  <text x="621.25" y="302.6111" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">SequentialChain</text>
-  <text x="621.25" y="317.1111" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">RouterChain</text>
-  <line x1="715" y1="289.7223" x2="761.8749" y2="289.7223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="761.8749" y="241.3889" width="187.5" height="96.6667" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <rect x="761.8749" y="241.3889" width="187.5" height="29" rx="6" fill="var(--ok-accent)" />
-  <rect x="761.8749" y="260.7223" width="187.5" height="9.6667" fill="var(--ok-accent)" rx="6"/>
-  <text x="855.6249" y="259.9167" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)" text-anchor="middle">OutputParser</text>
-  <text x="855.6249" y="288.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">StrOutputParser</text>
-  <text x="855.6249" y="302.6111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">JsonOutputParser</text>
-  <text x="855.6249" y="317.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">PydanticOutputParser</text>
-  <line x1="949.375" y1="289.7223" x2="996.25" y2="289.7223" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="996.25" y="253.4723" width="159.375" height="72.5" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1075.9375" y="283.2777" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Structured</text>
-  <text x="1075.9375" y="297.7777" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Output</text>
-  <text x="1075.9375" y="315.5" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)" text-anchor="middle">dict / Pydantic</text>
-  <rect x="68.125" y="394.4444" width="187.5" height="88.6111" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <rect x="68.125" y="394.4444" width="187.5" height="27.3889" rx="6" fill="var(--danger-accent)" />
-  <rect x="68.125" y="412.1667" width="187.5" height="9.6667" fill="var(--danger-accent)" rx="6"/>
-  <text x="161.875" y="412.1667" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">Memory</text>
-  <text x="161.875" y="437.1389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">ConversationBuffer</text>
-  <text x="161.875" y="451.6389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">ConversationSummary</text>
-  <text x="161.875" y="466.1389" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)" text-anchor="middle">VectorStoreRetriever</text>
-  <line x1="161.875" y1="394.4444" x2="161.875" y2="338.0556" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="173.125" y="371.8889" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">history</text>
-  <rect x="499.375" y="394.4444" width="243.75" height="104.7223" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="499.375" y="394.4444" width="243.75" height="27.3889" rx="6" fill="var(--primary-accent)" />
-  <rect x="499.375" y="412.1667" width="243.75" height="9.6667" fill="var(--primary-accent)" rx="6"/>
-  <text x="621.25" y="412.1667" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">Tools / Agents</text>
-  <text x="518.125" y="438.75" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Search (DuckDuckGo, Tavily)</text>
-  <text x="518.125" y="453.25" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Python REPL</text>
-  <text x="518.125" y="467.75" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• SQL Database</text>
-  <text x="518.125" y="482.25" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Custom @tool functions</text>
-  <line x1="621.25" y1="394.4444" x2="621.25" y2="338.0556" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="632.5" y="370.2777" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">tool results</text>
-  <rect x="780.625" y="394.4444" width="225" height="104.7223" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="780.625" y="394.4444" width="225" height="27.3889" rx="6" fill="var(--text-muted)" />
-  <rect x="780.625" y="412.1667" width="225" height="9.6667" fill="var(--text-muted)" rx="6"/>
-  <text x="893.125" y="412.1667" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--bg)" text-anchor="middle">Vector Store / RAG</text>
-  <text x="799.375" y="438.75" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Chroma / FAISS / Pinecone</text>
-  <text x="799.375" y="453.25" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Document loaders</text>
-  <text x="799.375" y="467.75" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Text splitters</text>
-  <text x="799.375" y="482.25" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">• Embeddings retrieval</text>
-  <line x1="855.6249" y1="394.4444" x2="743.125" y2="338.0556" stroke="var(--text-muted)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="788.125" y="376.7223" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">context docs</text>
-  <rect x="68.125" y="529.7777" width="1143.7499" height="54.7777" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="545.8889" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text)" text-anchor="middle">LCEL (LangChain Expression Language) — pipe everything together:</text>
-  <text x="640" y="563.6111" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)" text-anchor="middle">chain = prompt | llm | output_parser    response = chain.invoke({"question": "..."})</text>
-  <text x="640" y="578.1111" font-family="Arial,sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Supports streaming, async, batch, and parallel execution out of the box</text>
+  <rect x="40" y="40" width="186.885262" height="163.380418" rx="7.989837" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="40" width="186.885262" height="49.014108" rx="7.989837" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="72.676184" width="186.885262" height="16.338092" fill="var(--primary-fill)" rx="7.989837" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="133.442631" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">LLM / ChatModel</text>
+  <text x="133.442631" y="121.690293" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ChatOpenAI</text>
+  <text x="133.442631" y="146.197348" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ChatAnthropic</text>
+  <text x="133.442631" y="170.704402" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">HuggingFaceHub</text>
+  <line x1="226.885262" y1="121.690293" x2="276.065594" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="276.065594" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
+  <rect x="276.065594" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="276.065594" y="72.676184" width="196.721329" height="16.338092" fill="var(--info-fill)" rx="7.989837" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="374.426259" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">PromptTemplate</text>
+  <text x="374.426259" y="118.967136" font-family="monospace" font-size="13.316394" fill="var(--text)" text-anchor="middle">ChatPromptTemplate</text>
+  <text x="374.426259" y="143.47419" font-family="monospace" font-size="13.316394" fill="var(--text)" text-anchor="middle">FewShotPromptTemplate</text>
+  <text x="374.426259" y="167.981245" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">variable injection</text>
+  <line x1="472.786923" y1="121.690293" x2="521.967255" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="521.967255" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="521.967255" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="521.967255" y="72.676184" width="196.721329" height="16.338092" fill="var(--warn-fill)" rx="7.989837" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="620.32792" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">Chain (LCEL)</text>
+  <text x="620.32792" y="118.967136" font-family="monospace" font-size="13.886868" fill="var(--text)" text-anchor="middle">prompt | llm | parser</text>
+  <text x="620.32792" y="143.47419" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">SequentialChain</text>
+  <text x="620.32792" y="167.981245" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">RouterChain</text>
+  <line x1="718.688584" y1="121.690293" x2="767.868811" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="767.868811" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="767.868811" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--ok-accent)" />
+  <rect x="767.868811" y="72.676184" width="196.721329" height="16.338092" fill="var(--ok-accent)" rx="7.989837"/>
+  <text x="866.229476" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">OutputParser</text>
+  <text x="866.229476" y="118.967136" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">StrOutputParser</text>
+  <text x="866.229476" y="143.47419" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">JsonOutputParser</text>
+  <text x="866.229476" y="167.981245" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">PydanticOutputParser</text>
+  <line x1="964.590245" y1="121.690293" x2="1013.770577" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="1013.770577" y="60.422657" width="167.213129" height="122.53527" rx="7.989837" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1097.377142" y="110.798007" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Structured</text>
+  <text x="1097.377142" y="135.305061" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Output</text>
+  <text x="1097.377142" y="165.258258" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text-muted)" text-anchor="middle">dict / Pydantic</text>
+  <rect x="40" y="298.685477" width="196.721329" height="149.765312" rx="7.989837" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="298.685477" width="196.721329" height="46.291122" rx="7.989837" fill="var(--danger-accent)" />
+  <rect x="40" y="328.638676" width="196.721329" height="16.338092" fill="var(--danger-accent)" rx="7.989837"/>
+  <text x="138.360664" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Memory</text>
+  <text x="138.360664" y="370.845231" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ConversationBuffer</text>
+  <text x="138.360664" y="395.352285" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ConversationSummary</text>
+  <text x="138.360664" y="419.859339" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">VectorStoreRetriever</text>
+  <line x1="138.360664" y1="298.685477" x2="138.360664" y2="203.380418" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <text x="150.163944" y="260.563488" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--danger-accent)">history</text>
+  <rect x="492.459056" y="298.685477" width="255.737727" height="176.995523" rx="7.989837" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="492.459056" y="298.685477" width="255.737727" height="46.291122" rx="7.989837" fill="var(--primary-accent)" />
+  <rect x="492.459056" y="328.638676" width="255.737727" height="16.338092" fill="var(--primary-accent)" rx="7.989837"/>
+  <text x="620.32792" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Tools / Agents</text>
+  <text x="512.131189" y="373.568218" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Search (DuckDuckGo, Tavily)</text>
+  <text x="512.131189" y="398.075273" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Python REPL</text>
+  <text x="512.131189" y="422.582327" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• SQL Database</text>
+  <text x="512.131189" y="447.089381" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Custom @tool functions</text>
+  <line x1="620.32792" y1="298.685477" x2="620.32792" y2="203.380418" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <text x="632.131199" y="257.840331" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--primary-accent)">tool results</text>
+  <rect x="787.541049" y="298.685477" width="236.065594" height="176.995523" rx="7.989837" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="787.541049" y="298.685477" width="236.065594" height="46.291122" rx="7.989837" fill="var(--text-muted)" />
+  <rect x="787.541049" y="328.638676" width="236.065594" height="16.338092" fill="var(--text-muted)" rx="7.989837"/>
+  <text x="905.573846" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Vector Store / RAG</text>
+  <text x="807.213182" y="373.568218" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Chroma / FAISS / Pinecone</text>
+  <text x="807.213182" y="398.075273" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Document loaders</text>
+  <text x="807.213182" y="422.582327" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Text splitters</text>
+  <text x="807.213182" y="447.089381" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Embeddings retrieval</text>
+  <line x1="866.229476" y1="298.685477" x2="748.196783" y2="203.380418" stroke="var(--text-muted)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <text x="795.409902" y="268.732618" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)">context docs</text>
+  <rect x="40" y="527.417927" width="1200" height="92.582073" rx="7.989837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640.000052" y="554.648138" font-family="Arial,sans-serif" font-size="15.044063" font-weight="bold" fill="var(--text)" text-anchor="middle">LCEL (LangChain Expression Language) — pipe everything together:</text>
+  <text x="640.000052" y="584.601167" font-family="monospace" font-size="15.044063" fill="var(--primary-accent)" text-anchor="middle">chain = prompt | llm | output_parser    response = chain.invoke({"question": "..."})</text>
+  <text x="640.000052" y="609.108221" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-faint)" text-anchor="middle">Supports streaming, async, batch, and parallel execution out of the box</text>
 </svg>

@@ -110,38 +110,36 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Level 4: OS -->
-  <rect x="115" y="94.375" width="1050" height="117.8125" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="640" y="141.5" font-family="Arial, sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 1: Operating System</text>
-  <text x="640" y="174.125" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--info-accent)" text-anchor="middle">Raw virtual memory pages allocated to the Python process via malloc/free system calls</text>
-  <text x="190" y="194.0625" font-family="monospace" font-size="12.9044" fill="var(--info-accent)">mmap, VirtualAlloc, brk</text>
+  <rect x="40" y="40" width="1200" height="132.280702" rx="6.796726" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="92.912281" font-family="Arial, sans-serif" font-size="22.971009" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 1: Operating System</text>
+  <text x="640" y="129.54386" font-family="Arial, sans-serif" font-size="16.70624" fill="var(--info-accent)" text-anchor="middle">Raw virtual memory pages allocated to the Python process via malloc/free system calls</text>
+  <text x="125.714286" y="151.929825" font-family="monospace" font-size="14.617946" fill="var(--info-accent)">mmap, VirtualAlloc, brk</text>
 
   <!-- Arrow down -->
-  <line x1="640" y1="212.1875" x2="640" y2="239.375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="172.280702" x2="640" y2="202.807018" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Level 3: Python Memory Manager -->
-  <rect x="171.25" y="239.375" width="937.5" height="117.8125" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="286.5" font-family="Arial, sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 2: Python Memory Manager</text>
-  <text x="640" y="319.125" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--primary-accent)" text-anchor="middle">Manages large memory pools (arenas) obtained from the OS — allocates and frees 256KB arenas</text>
-  <text x="246.25" y="339.0625" font-family="monospace" font-size="12.9044" fill="var(--primary-accent)">pymalloc, arenas (256KB), pools (4KB)</text>
+  <rect x="104.285714" y="202.807018" width="1071.428571" height="132.280702" rx="6.796726" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="255.719298" font-family="Arial, sans-serif" font-size="22.971009" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 2: Python Memory Manager</text>
+  <text x="640" y="292.350877" font-family="Arial, sans-serif" font-size="16.70624" fill="var(--primary-accent)" text-anchor="middle">Manages large memory pools (arenas) obtained from the OS — allocates and frees 256KB arenas</text>
+  <text x="190" y="314.736842" font-family="monospace" font-size="14.617946" fill="var(--primary-accent)">pymalloc, arenas (256KB), pools (4KB)</text>
 
   <!-- Arrow down -->
-  <line x1="640" y1="357.1875" x2="640" y2="384.375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="335.087719" x2="640" y2="365.614035" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Level 2: Object Allocator -->
-  <rect x="227.5" y="384.375" width="825" height="117.8125" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="431.5" font-family="Arial, sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 3: Object-Specific Allocator</text>
-  <text x="640" y="464.125" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--warn-accent)" text-anchor="middle">Handles allocation of specific Python types: integers, strings, lists, dicts, tuples</text>
-  <text x="302.5" y="484.0625" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)">PyObject_New, PyMem_Malloc, type-specific free lists</text>
+  <rect x="168.571429" y="365.614035" width="942.857143" height="132.280702" rx="6.796726" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="418.526316" font-family="Arial, sans-serif" font-size="22.971009" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 3: Object-Specific Allocator</text>
+  <text x="640" y="455.157895" font-family="Arial, sans-serif" font-size="16.70624" fill="var(--warn-accent)" text-anchor="middle">Handles allocation of specific Python types: integers, strings, lists, dicts, tuples</text>
+  <text x="254.285714" y="477.54386" font-family="monospace" font-size="14.617946" fill="var(--warn-accent)">PyObject_New, PyMem_Malloc, type-specific free lists</text>
 
   <!-- Arrow down -->
-  <line x1="640" y1="502.1875" x2="640" y2="529.375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="497.894737" x2="640" y2="528.421053" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Level 1: Garbage Collector -->
-  <rect x="283.75" y="529.375" width="712.5" height="81.5625" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="567.4375" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 4: Garbage Collector (GC)</text>
-  <text x="640" y="591" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">Cyclic GC — detects unreachable reference cycles</text>
-  <text x="640" y="605.5" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">gc module, generational collection (3 generations)</text>
+  <rect x="232.857143" y="528.421053" width="814.285714" height="91.578947" rx="6.796726" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="571.157895" font-family="Arial, sans-serif" font-size="20.882828" font-weight="bold" fill="var(--bg)" text-anchor="middle">Level 4: Garbage Collector (GC)</text>
+  <text x="640" y="597.614035" font-family="Arial, sans-serif" font-size="14.617946" fill="var(--ok-accent)" text-anchor="middle">Cyclic GC — detects unreachable reference cycles</text>
+  <text x="640" y="613.894737" font-family="monospace" font-size="13.573855" fill="var(--ok-accent)" text-anchor="middle">gc module, generational collection (3 generations)</text>
 </svg>

@@ -101,36 +101,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="70.6111" text-anchor="middle" font-size="17.3806" fill="var(--text-muted)">Method 1: Job Outputs (for small data)</text>
-  <rect x="96.25" y="84.3056" width="412.5" height="201.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="302.5" y="120.5556" font-size="26.0708" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
-  <text x="302.5" y="151.1667" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">steps:</text>
-  <text x="302.5" y="178.5556" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">- name: set output</text>
-  <text x="302.5" y="205.9444" font-family="monospace" font-size="13.9044" fill="var(--primary-accent)" text-anchor="middle">echo "result=42" &gt;&gt; $GITHUB_OUTPUT</text>
-  <text x="302.5" y="233.3333" font-size="13.9044" fill="var(--text-muted)" text-anchor="middle">outputs: result: ${{ steps.x.outputs.result }}</text>
-  <line x1="508.7499" y1="185" x2="733.75" y2="185" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="621.25" y="172.9167" font-size="15.6425" fill="var(--primary-accent)" text-anchor="middle">outputs</text>
-  <text x="621.25" y="201.1111" font-size="12.1663" fill="var(--text-muted)" text-anchor="middle">(small values)</text>
-  <rect x="733.75" y="84.3056" width="450" height="201.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="958.75" y="120.5556" font-size="26.0708" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
-  <text x="958.75" y="151.1667" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">needs: [job_a]</text>
-  <text x="958.75" y="178.5556" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">steps:</text>
-  <text x="958.75" y="205.9444" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">- name: use output</text>
-  <text x="958.75" y="233.3333" font-family="monospace" font-size="13.9044" fill="var(--primary-accent)" text-anchor="middle">${{ needs.job_a.outputs.result }}</text>
-  <line x1="96.25" y1="312.2777" x2="1183.7499" y2="312.2777" stroke="var(--surface)" stroke-width="1.7778" stroke-dasharray="8.8889 5.3333" />
-  <text x="640" y="338.0556" text-anchor="middle" font-size="17.3806" fill="var(--text-muted)">Method 2: Artifacts (for large files / binaries)</text>
-  <rect x="96.25" y="354.1667" width="412.5" height="153.0556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="302.5" y="390.4167" font-size="26.0708" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
-  <text x="302.5" y="422.6389" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">- uses: actions/upload-artifact</text>
-  <text x="302.5" y="450.8333" font-family="monospace" font-size="13.9044" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
-  <text x="302.5" y="479.0277" font-family="monospace" font-size="13.9044" fill="var(--primary-accent)" text-anchor="middle">path: ./dist/</text>
-  <line x1="508.7499" y1="430.6944" x2="733.75" y2="430.6944" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="621.25" y="418.6111" font-size="15.6425" fill="var(--text-muted)" text-anchor="middle">artifact</text>
-  <text x="621.25" y="446.8056" font-size="12.1663" fill="var(--text-muted)" text-anchor="middle">(files/binaries)</text>
-  <rect x="733.75" y="354.1667" width="450" height="153.0556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="958.75" y="390.4167" font-size="26.0708" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
-  <text x="958.75" y="422.6389" font-size="17.3806" fill="var(--text-muted)" text-anchor="middle">- uses: actions/download-artifact</text>
-  <text x="958.75" y="450.8333" font-family="monospace" font-size="13.9044" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
-  <text x="958.75" y="479.0277" font-size="13.9044" fill="var(--text-muted)" text-anchor="middle">files available in workspace</text>
+  <text x="640" y="40" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)">Method 1: Job Outputs (for small data)</text>
+  <rect x="40" y="58.191952" width="455.172414" height="267.527636" rx="7.264301" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="267.586207" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
+  <text x="267.586207" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">steps:</text>
+  <text x="267.586207" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- name: set output</text>
+  <text x="267.586207" y="219.778517" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">echo "result=42" &gt;&gt; $GITHUB_OUTPUT</text>
+  <text x="267.586207" y="256.162288" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle">outputs: result: ${{ steps.x.outputs.result }}</text>
+  <line x1="495.172303" y1="191.955703" x2="743.448276" y2="191.955703" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="619.310345" y="175.90409" font-size="18.938637" fill="var(--primary-accent)" text-anchor="middle">outputs</text>
+  <text x="619.310345" y="213.357898" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle">(small values)</text>
+  <rect x="743.448276" y="58.191952" width="496.551724" height="267.527636" rx="7.264301" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="991.724138" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
+  <text x="991.724138" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">needs: [job_a]</text>
+  <text x="991.724138" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">steps:</text>
+  <text x="991.724138" y="219.778517" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- name: use output</text>
+  <text x="991.724138" y="256.162288" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">${{ needs.job_a.outputs.result }}</text>
+  <line x1="40" y1="361.033056" x2="1239.99989" y2="361.033056" stroke="var(--surface)" stroke-width="1.7778" stroke-dasharray="8.8889 5.3333" />
+  <text x="640" y="395.276754" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)">Method 2: Artifacts (for large files / binaries)</text>
+  <rect x="40" y="416.678949" width="455.172414" height="203.321051" rx="7.264301" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="267.586207" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
+  <text x="267.586207" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- uses: actions/upload-artifact</text>
+  <text x="267.586207" y="545.092119" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
+  <text x="267.586207" y="582.545926" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">path: ./dist/</text>
+  <line x1="495.172303" y1="518.339342" x2="743.448276" y2="518.339342" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="619.310345" y="502.287729" font-size="18.938637" fill="var(--text-muted)" text-anchor="middle">artifact</text>
+  <text x="619.310345" y="539.741669" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle">(files/binaries)</text>
+  <rect x="743.448276" y="416.678949" width="496.551724" height="203.321051" rx="7.264301" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="991.724138" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
+  <text x="991.724138" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- uses: actions/download-artifact</text>
+  <text x="991.724138" y="545.092119" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
+  <text x="991.724138" y="582.545926" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle">files available in workspace</text>
 </svg>

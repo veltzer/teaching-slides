@@ -93,37 +93,36 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="64.8571" text-anchor="middle" font-size="14.3809" font-weight="bold" fill="var(--text)">Pipeline Optimization Checklist</text>
-  <line x1="88.0001" y1="73.1428" x2="1191.9999" y2="73.1428" stroke="var(--primary-border)" stroke-width="1.8028" />
-  <rect x="88.0001" y="85.5714" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="103.8" font-size="11.6845" font-weight="bold" fill="var(--text)">1. Schema Definition</text>
-  <text x="136" y="120.3714" font-size="10" fill="var(--text-muted)">☐ Explicit schema (no inference)</text>
-  <text x="136" y="134.4571" font-size="10" fill="var(--text-muted)">☐ Appropriate data types</text>
-  <text x="136" y="148.5429" font-size="10" fill="var(--text-muted)">☐ Nullable flags set correctly</text>
-  <rect x="88.0001" y="168.4286" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="186.6572" font-size="11.6845" font-weight="bold" fill="var(--text)">2. Predicate Pushdown</text>
-  <text x="136" y="203.2285" font-size="10" fill="var(--text-muted)">☐ Filter as early as possible</text>
-  <text x="136" y="217.3143" font-size="10" fill="var(--text-muted)">☐ Use partition columns in filters</text>
-  <text x="136" y="231.4" font-size="10" fill="var(--text-muted)">☐ Avoid UDFs in filter conditions</text>
-  <rect x="88.0001" y="251.2857" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="269.5143" font-size="11.6845" font-weight="bold" fill="var(--text)">3. Column Pruning</text>
-  <text x="136" y="286.0857" font-size="10" fill="var(--text-muted)">☐ Select only needed columns</text>
-  <text x="136" y="300.1714" font-size="10" fill="var(--text-muted)">☐ Drop columns before joins</text>
-  <text x="136" y="314.2572" font-size="10" fill="var(--text-muted)">☐ Avoid SELECT *</text>
-  <rect x="88.0001" y="334.1429" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="352.3714" font-size="11.6845" font-weight="bold" fill="var(--text)">4. Join Optimization</text>
-  <text x="136" y="368.9428" font-size="10" fill="var(--text-muted)">☐ Broadcast small tables</text>
-  <text x="136" y="383.0286" font-size="10" fill="var(--text-muted)">☐ Filter before joining</text>
-  <text x="136" y="397.1143" font-size="10" fill="var(--text-muted)">☐ Avoid cartesian products</text>
-  <rect x="88.0001" y="417" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="435.2286" font-size="11.6845" font-weight="bold" fill="var(--text)">5. Caching</text>
-  <text x="136" y="451.8" font-size="10" fill="var(--text-muted)">☐ Cache reused DataFrames</text>
-  <text x="136" y="465.8857" font-size="10" fill="var(--text-muted)">☐ Unpersist when done</text>
-  <text x="136" y="479.9715" font-size="10" fill="var(--text-muted)">☐ Choose appropriate storage level</text>
-  <rect x="88.0001" y="499.8572" width="1104" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136" y="518.0857" font-size="11.6845" font-weight="bold" fill="var(--text)">6. Shuffle Management</text>
-  <text x="136" y="534.6571" font-size="10" fill="var(--text-muted)">☐ Tune shuffle partitions</text>
-  <text x="136" y="548.7429" font-size="10" fill="var(--text-muted)">☐ Coalesce before writing</text>
-  <text x="136" y="562.8286" font-size="10" fill="var(--text-muted)">☐ Enable AQE</text>
+  <text x="639.999891" y="40" text-anchor="middle" font-size="15.995711" font-weight="bold" fill="var(--text)">Pipeline Optimization Checklist</text>
+  <line x1="40" y1="49.430875" x2="1239.999783" y2="49.430875" stroke="var(--primary-border)" stroke-width="1.8028" />
+  <rect x="40" y="63.577244" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="84.325237" font-size="12.996536" font-weight="bold" fill="var(--text)">1. Schema Definition</text>
+  <text x="92.173804" y="103.186987" font-size="11.122886" fill="var(--text-muted)">☐ Explicit schema (no inference)</text>
+  <text x="92.173804" y="119.219486" font-size="11.122886" fill="var(--text-muted)">☐ Appropriate data types</text>
+  <text x="92.173804" y="135.252098" font-size="11.122886" fill="var(--text-muted)">☐ Nullable flags set correctly</text>
+  <rect x="40" y="157.886221" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="178.634214" font-size="12.996536" font-weight="bold" fill="var(--text)">2. Predicate Pushdown</text>
+  <text x="92.173804" y="197.495849" font-size="11.122886" fill="var(--text-muted)">☐ Filter as early as possible</text>
+  <text x="92.173804" y="213.528462" font-size="11.122886" fill="var(--text-muted)">☐ Use partition columns in filters</text>
+  <text x="92.173804" y="229.560961" font-size="11.122886" fill="var(--text-muted)">☐ Avoid UDFs in filter conditions</text>
+  <rect x="40" y="252.195083" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="272.943076" font-size="12.996536" font-weight="bold" fill="var(--text)">3. Column Pruning</text>
+  <text x="92.173804" y="291.804826" font-size="11.122886" fill="var(--text-muted)">☐ Select only needed columns</text>
+  <text x="92.173804" y="307.837325" font-size="11.122886" fill="var(--text-muted)">☐ Drop columns before joins</text>
+  <text x="92.173804" y="323.869937" font-size="11.122886" fill="var(--text-muted)">☐ Avoid SELECT *</text>
+  <rect x="40" y="346.504059" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="367.251939" font-size="12.996536" font-weight="bold" fill="var(--text)">4. Join Optimization</text>
+  <text x="92.173804" y="386.113688" font-size="11.122886" fill="var(--text-muted)">☐ Broadcast small tables</text>
+  <text x="92.173804" y="402.146301" font-size="11.122886" fill="var(--text-muted)">☐ Filter before joining</text>
+  <text x="92.173804" y="418.1788" font-size="11.122886" fill="var(--text-muted)">☐ Avoid cartesian products</text>
+  <rect x="40" y="440.812922" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="461.560915" font-size="12.996536" font-weight="bold" fill="var(--text)">5. Caching</text>
+  <text x="92.173804" y="480.422665" font-size="11.122886" fill="var(--text-muted)">☐ Cache reused DataFrames</text>
+  <text x="92.173804" y="496.455164" font-size="11.122886" fill="var(--text-muted)">☐ Unpersist when done</text>
+  <text x="92.173804" y="512.487776" font-size="11.122886" fill="var(--text-muted)">☐ Choose appropriate storage level</text>
+  <rect x="40" y="535.121898" width="1200" height="84.878102" rx="6.673731" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="92.173804" y="555.869778" font-size="12.996536" font-weight="bold" fill="var(--text)">6. Shuffle Management</text>
+  <text x="92.173804" y="574.731527" font-size="11.122886" fill="var(--text-muted)">☐ Tune shuffle partitions</text>
+  <text x="92.173804" y="590.76414" font-size="11.122886" fill="var(--text-muted)">☐ Coalesce before writing</text>
+  <text x="92.173804" y="606.796639" font-size="11.122886" fill="var(--text-muted)">☐ Enable AQE</text>
 </svg>

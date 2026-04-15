@@ -104,34 +104,33 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="115" y="48.0556" width="356.25" height="46.7223" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="293.125" y="77.8611" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Task A  (+5)</text>
-  <rect x="808.75" y="48.0556" width="356.25" height="46.7223" rx="6" fill="var(--text)" filter="url(#shadow)" />
-  <text x="986.875" y="77.8611" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Task B  (+3)</text>
-  <rect x="508.7499" y="48.0556" width="262.5" height="46.7223" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640" y="74.6389" text-anchor="middle" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">X = 10  (shared)</text>
-  <rect x="115" y="136.6667" width="356.25" height="45.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="293.125" y="164.0556" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">1.  read X → 10</text>
-  <line x1="508.7499" y1="159.2223" x2="473.125" y2="159.2223" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="808.75" y="193.0556" width="356.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="986.875" y="220.4444" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--text-muted)">2.  read X → 10</text>
-  <line x1="754.375" y1="215.6111" x2="806.875" y2="215.6111" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="115" y="257.5" width="356.25" height="45.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="293.125" y="284.8889" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">3.  10 + 5 = 15</text>
-  <rect x="808.75" y="257.5" width="356.25" height="45.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="986.875" y="284.8889" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--text-muted)">4.  10 + 3 = 13</text>
-  <rect x="115" y="321.9444" width="356.25" height="45.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="293.125" y="349.3333" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">5.  write X ← 15</text>
-  <line x1="473.125" y1="344.5" x2="508.7499" y2="344.5" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="508.7499" y="323.5556" width="262.5" height="43.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="349.3333" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">X = 15</text>
-  <rect x="808.75" y="386.3889" width="356.25" height="45.1111" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="986.875" y="413.7777" text-anchor="middle" font-family="monospace" font-size="17.3806" fill="var(--danger-accent)">6.  write X ← 13  ⚠</text>
-  <line x1="806.875" y1="408.9444" x2="773.125" y2="408.9444" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow-bad)" />
-  <rect x="508.7499" y="388" width="262.5" height="43.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="640" y="413.7777" text-anchor="middle" font-family="monospace" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)">X = 13  ✗</text>
-  <rect x="227.5" y="462.1111" width="825" height="54.7777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="640" y="487.0833" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)">Result: X = 13 — Task B silently discarded Task A's update!</text>
-  <text x="640" y="507.2223" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--text-muted)">Fix: protect read–modify–write with mutex, atomic operation, or interrupt disable</text>
+  <rect x="40" y="40" width="407.142857" height="57.8008" rx="7.134311" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="243.571429" y="76.872794" text-anchor="middle" font-family="sans-serif" font-size="26.86627" font-weight="bold" fill="var(--bg)">Task A  (+5)</text>
+  <rect x="832.857143" y="40" width="407.142857" height="57.8008" rx="7.134311" fill="var(--text)" filter="url(#shadow)" />
+  <text x="1036.428571" y="76.872794" text-anchor="middle" font-family="sans-serif" font-size="26.86627" font-weight="bold" fill="var(--bg)">Task B  (+3)</text>
+  <rect x="489.999886" y="40" width="300" height="57.8008" rx="7.134311" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="72.886566" text-anchor="middle" font-family="monospace" font-size="22.733007" font-weight="bold" fill="var(--primary-accent)">X = 10  (shared)</text>
+  <rect x="40" y="149.622011" width="407.142857" height="55.807562" rx="7.134311" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="243.571429" y="183.505195" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--primary-accent)">1.  read X → 10</text>
+  <line x1="489.999886" y1="177.525854" x2="449.285714" y2="177.525854" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="832.857143" y="219.381494" width="407.142857" height="55.807562" rx="7.134311" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="1036.428571" y="253.264555" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--text-muted)">2.  read X → 10</text>
+  <line x1="770.714286" y1="247.285214" x2="830.714286" y2="247.285214" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="40" y="299.106548" width="407.142857" height="55.807562" rx="7.134311" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="243.571429" y="332.989733" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--primary-accent)">3.  10 + 5 = 15</text>
+  <rect x="832.857143" y="299.106548" width="407.142857" height="55.807562" rx="7.134311" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="1036.428571" y="332.989733" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--text-muted)">4.  10 + 3 = 13</text>
+  <rect x="40" y="378.831602" width="407.142857" height="55.807562" rx="7.134311" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="243.571429" y="412.714786" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--primary-accent)">5.  write X ← 15</text>
+  <line x1="449.285714" y1="406.735445" x2="489.999886" y2="406.735445" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="489.999886" y="380.824839" width="300" height="53.814448" rx="7.134311" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="412.714786" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--primary-accent)">X = 15</text>
+  <rect x="832.857143" y="458.556779" width="407.142857" height="55.807562" rx="7.134311" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1036.428571" y="492.43984" text-anchor="middle" font-family="monospace" font-size="20.666434" fill="var(--danger-accent)">6.  write X ← 13  ⚠</text>
+  <line x1="830.714286" y1="486.460498" x2="792.142857" y2="486.460498" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow-bad)" />
+  <rect x="489.999886" y="460.549893" width="300" height="53.814448" rx="7.134311" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="640" y="492.43984" text-anchor="middle" font-family="monospace" font-size="20.666434" font-weight="bold" fill="var(--danger-accent)">X = 13  ✗</text>
+  <rect x="168.571429" y="552.233754" width="942.857143" height="67.766246" rx="7.134311" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="640" y="583.127206" text-anchor="middle" font-family="sans-serif" font-size="20.666434" font-weight="bold" fill="var(--danger-accent)">Result: X = 13 — Task B silently discarded Task A's update!</text>
+  <text x="640" y="608.04144" text-anchor="middle" font-family="sans-serif" font-size="16.533052" fill="var(--text-muted)">Fix: protect read–modify–write with mutex, atomic operation, or interrupt disable</text>
 </svg>

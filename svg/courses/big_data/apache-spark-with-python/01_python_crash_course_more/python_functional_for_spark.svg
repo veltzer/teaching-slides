@@ -93,131 +93,129 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- == HEADER == -->
-  <rect x="96.25" y="58.125" width="1087.5" height="36.25" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="81.6875" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Functional Programming -&gt; Spark Transformations</text>
+  <rect x="40" y="40" width="1183.673469" height="38.032787" rx="6.411766" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="631.836735" y="64.721311" font-family="Arial, sans-serif" font-size="15.760013" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Functional Programming -&gt; Spark Transformations</text>
 
   <!-- == FOUR CONCEPT CARDS == -->
   <!-- Higher-Order Functions -->
-  <rect x="96.25" y="108.875" width="262.5" height="217.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="96.25" y="108.875" width="262.5" height="30.8125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="96.25" y="126.0938" width="262.5" height="13.5938" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="227.5" y="130.625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Higher-Order Functions</text>
-  <text x="115" y="154.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">Functions that take/return functions</text>
-  <text x="115" y="174.125" font-family="monospace" font-size="10.1392" fill="var(--text)">def apply(func, data):</text>
-  <text x="115" y="188.625" font-family="monospace" font-size="10.1392" fill="var(--text)">    return [func(x) for x in data]</text>
-  <text x="115" y="206.75" font-family="monospace" font-size="10.1392" fill="var(--text)">apply(str.upper, ["a","b"])</text>
-  <text x="115" y="224.875" font-family="monospace" font-size="10.1392" fill="var(--text)"># -&gt; ["A", "B"]</text>
-  <text x="115" y="244.8125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">Spark equivalent:</text>
-  <text x="115" y="261.125" font-family="monospace" font-size="10.1392" fill="var(--text)">rdd.map(str.upper)</text>
-  <text x="115" y="277.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">df.withColumn("u", upper(col("c")))</text>
-  <text x="115" y="293.75" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">map/reduce/filter are HOFs.</text>
-  <text x="115" y="310.0625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Spark is built around them.</text>
-  <text x="115" y="319.125" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Pass any function to any transform.</text>
+  <rect x="40" y="93.245902" width="285.714286" height="228.196721" rx="6.411766" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="93.245902" width="285.714286" height="32.327869" rx="6.411766" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="111.311528" width="285.714286" height="14.262348" fill="var(--primary-fill)" rx="6.411766" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="182.857143" y="116.065574" font-family="Arial, sans-serif" font-size="12.805044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Higher-Order Functions</text>
+  <text x="60.408163" y="140.786885" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--primary-accent)">Functions that take/return functions</text>
+  <text x="60.408163" y="161.704918" font-family="monospace" font-size="10.835029" fill="var(--text)">def apply(func, data):</text>
+  <text x="60.408163" y="176.918033" font-family="monospace" font-size="10.835029" fill="var(--text)">    return [func(x) for x in data]</text>
+  <text x="60.408163" y="195.934426" font-family="monospace" font-size="10.835029" fill="var(--text)">apply(str.upper, ["a","b"])</text>
+  <text x="60.408163" y="214.95082" font-family="monospace" font-size="10.835029" fill="var(--text)"># -&gt; ["A", "B"]</text>
+  <text x="60.408163" y="235.868852" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--primary-accent)">Spark equivalent:</text>
+  <text x="60.408163" y="252.983607" font-family="monospace" font-size="10.835029" fill="var(--text)">rdd.map(str.upper)</text>
+  <text x="60.408163" y="270.098361" font-family="monospace" font-size="10.835029" fill="var(--text)">df.withColumn("u", upper(col("c")))</text>
+  <text x="60.408163" y="287.213115" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">map/reduce/filter are HOFs.</text>
+  <text x="60.408163" y="304.327869" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">Spark is built around them.</text>
+  <text x="60.408163" y="313.836066" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">Pass any function to any transform.</text>
 
   <!-- Closures -->
-  <rect x="377.5" y="108.875" width="262.5" height="217.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="377.5" y="108.875" width="262.5" height="30.8125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="377.5" y="126.0938" width="262.5" height="13.5938" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="508.75" y="130.625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Closures</text>
-  <text x="396.25" y="154.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Inner function captures outer scope</text>
-  <text x="396.25" y="174.125" font-family="monospace" font-size="10.1392" fill="var(--text)">def multiplier(n):</text>
-  <text x="396.25" y="188.625" font-family="monospace" font-size="10.1392" fill="var(--text)">    def inner(x):</text>
-  <text x="396.25" y="203.125" font-family="monospace" font-size="10.1392" fill="var(--text)">        return x * n  # n captured</text>
-  <text x="396.25" y="217.625" font-family="monospace" font-size="10.1392" fill="var(--text)">    return inner</text>
-  <text x="396.25" y="232.125" font-family="monospace" font-size="10.1392" fill="var(--text)">triple = multiplier(3)</text>
-  <text x="396.25" y="246.625" font-family="monospace" font-size="10.1392" fill="var(--text)">triple(5)  # -&gt; 15</text>
-  <text x="396.25" y="264.75" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Spark use: factory functions</text>
-  <text x="396.25" y="281.0625" font-family="monospace" font-size="10.1392" fill="var(--text)">threshold = 100</text>
-  <text x="396.25" y="295.5625" font-family="monospace" font-size="10.1392" fill="var(--text)">rdd.filter(lambda x: x &gt; threshold)</text>
-  <text x="396.25" y="313.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Caution: large closed-over objects</text>
-  <text x="396.25" y="326.375" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">are serialized to every executor!</text>
+  <rect x="346.122449" y="93.245902" width="285.714286" height="228.196721" rx="6.411766" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="346.122449" y="93.245902" width="285.714286" height="32.327869" rx="6.411766" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="346.122449" y="111.311528" width="285.714286" height="14.262348" fill="var(--ok-fill)" rx="6.411766" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="488.979592" y="116.065574" font-family="Arial, sans-serif" font-size="12.805044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Closures</text>
+  <text x="366.530612" y="140.786885" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--ok-accent)">Inner function captures outer scope</text>
+  <text x="366.530612" y="161.704918" font-family="monospace" font-size="10.835029" fill="var(--text)">def multiplier(n):</text>
+  <text x="366.530612" y="176.918033" font-family="monospace" font-size="10.835029" fill="var(--text)">    def inner(x):</text>
+  <text x="366.530612" y="192.131148" font-family="monospace" font-size="10.835029" fill="var(--text)">        return x * n  # n captured</text>
+  <text x="366.530612" y="207.344262" font-family="monospace" font-size="10.835029" fill="var(--text)">    return inner</text>
+  <text x="366.530612" y="222.557377" font-family="monospace" font-size="10.835029" fill="var(--text)">triple = multiplier(3)</text>
+  <text x="366.530612" y="237.770492" font-family="monospace" font-size="10.835029" fill="var(--text)">triple(5)  # -&gt; 15</text>
+  <text x="366.530612" y="256.786885" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--ok-accent)">Spark use: factory functions</text>
+  <text x="366.530612" y="273.901639" font-family="monospace" font-size="10.835029" fill="var(--text)">threshold = 100</text>
+  <text x="366.530612" y="289.114754" font-family="monospace" font-size="10.835029" fill="var(--text)">rdd.filter(lambda x: x &gt; threshold)</text>
+  <text x="366.530612" y="308.131148" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">Caution: large closed-over objects</text>
+  <text x="366.530612" y="321.442623" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">are serialized to every executor!</text>
 
   <!-- Iterators/Generators -->
-  <rect x="658.75" y="108.875" width="262.5" height="217.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="658.75" y="108.875" width="262.5" height="30.8125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="658.75" y="126.0938" width="262.5" height="13.5938" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="790" y="130.625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Iterators / Generators</text>
-  <text x="677.5" y="154.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Lazy evaluation - compute on demand</text>
-  <text x="677.5" y="174.125" font-family="monospace" font-size="10.1392" fill="var(--text)">def squares_gen(n):</text>
-  <text x="677.5" y="188.625" font-family="monospace" font-size="10.1392" fill="var(--text)">    for i in range(n):</text>
-  <text x="677.5" y="203.125" font-family="monospace" font-size="10.1392" fill="var(--text)">        yield i ** 2  # lazy!</text>
-  <text x="677.5" y="221.25" font-family="monospace" font-size="10.1392" fill="var(--text)">gen = squares_gen(1000000)</text>
-  <text x="677.5" y="235.75" font-family="monospace" font-size="10.1392" fill="var(--text)">next(gen)  # 0, then 1, then 4...</text>
-  <text x="677.5" y="253.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Spark connection:</text>
-  <text x="677.5" y="270.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Spark RDDs are lazy! Nothing</text>
-  <text x="677.5" y="284.6875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">executes until action called.</text>
-  <text x="677.5" y="302.8125" font-family="monospace" font-size="10.1392" fill="var(--text)">rdd = sc.parallelize(range(10**9))</text>
-  <text x="677.5" y="317.3125" font-family="monospace" font-size="10.1392" fill="var(--text)"># nothing runs yet!</text>
-  <text x="677.5" y="326.375" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">rdd.count() triggers execution.</text>
+  <rect x="652.244898" y="93.245902" width="285.714286" height="228.196721" rx="6.411766" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="652.244898" y="93.245902" width="285.714286" height="32.327869" rx="6.411766" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="652.244898" y="111.311528" width="285.714286" height="14.262348" fill="var(--warn-fill)" rx="6.411766" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="795.102041" y="116.065574" font-family="Arial, sans-serif" font-size="12.805044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Iterators / Generators</text>
+  <text x="672.653061" y="140.786885" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--warn-accent)">Lazy evaluation - compute on demand</text>
+  <text x="672.653061" y="161.704918" font-family="monospace" font-size="10.835029" fill="var(--text)">def squares_gen(n):</text>
+  <text x="672.653061" y="176.918033" font-family="monospace" font-size="10.835029" fill="var(--text)">    for i in range(n):</text>
+  <text x="672.653061" y="192.131148" font-family="monospace" font-size="10.835029" fill="var(--text)">        yield i ** 2  # lazy!</text>
+  <text x="672.653061" y="211.147541" font-family="monospace" font-size="10.835029" fill="var(--text)">gen = squares_gen(1000000)</text>
+  <text x="672.653061" y="226.360656" font-family="monospace" font-size="10.835029" fill="var(--text)">next(gen)  # 0, then 1, then 4...</text>
+  <text x="672.653061" y="245.377049" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--warn-accent)">Spark connection:</text>
+  <text x="672.653061" y="262.491803" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--text)">Spark RDDs are lazy! Nothing</text>
+  <text x="672.653061" y="277.704918" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--text)">executes until action called.</text>
+  <text x="672.653061" y="296.721311" font-family="monospace" font-size="10.835029" fill="var(--text)">rdd = sc.parallelize(range(10**9))</text>
+  <text x="672.653061" y="311.934426" font-family="monospace" font-size="10.835029" fill="var(--text)"># nothing runs yet!</text>
+  <text x="672.653061" y="321.442623" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)">rdd.count() triggers execution.</text>
 
   <!-- Decorators -->
-  <rect x="940" y="108.875" width="258.75" height="217.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="940" y="108.875" width="258.75" height="30.8125" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="940" y="126.0938" width="258.75" height="13.5938" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1069.375" y="130.625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">Decorators</text>
-  <text x="958.75" y="154.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">Wrap functions, add behavior</text>
-  <text x="958.75" y="174.125" font-family="monospace" font-size="10.1392" fill="var(--text)">def log(func):</text>
-  <text x="958.75" y="188.625" font-family="monospace" font-size="10.1392" fill="var(--text)">    def wrapper(*args):</text>
-  <text x="958.75" y="203.125" font-family="monospace" font-size="10.1392" fill="var(--text)">        print(f"calling {func.__name__}")</text>
-  <text x="958.75" y="217.625" font-family="monospace" font-size="10.1392" fill="var(--text)">        return func(*args)</text>
-  <text x="958.75" y="232.125" font-family="monospace" font-size="10.1392" fill="var(--text)">    return wrapper</text>
-  <text x="958.75" y="246.625" font-family="monospace" font-size="10.1392" fill="var(--text)">@log</text>
-  <text x="958.75" y="261.125" font-family="monospace" font-size="10.1392" fill="var(--text)">def compute(x): return x * 2</text>
-  <text x="958.75" y="279.25" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">Spark: @udf decorator</text>
-  <text x="958.75" y="295.5625" font-family="monospace" font-size="10.1392" fill="var(--text)">from pyspark.sql.functions import udf</text>
-  <text x="958.75" y="310.0625" font-family="monospace" font-size="10.1392" fill="var(--text)">@udf(returnType=IntegerType())</text>
-  <text x="958.75" y="324.5625" font-family="monospace" font-size="10.1392" fill="var(--text)">def square(x): return x * x</text>
+  <rect x="958.367347" y="93.245902" width="281.632653" height="228.196721" rx="6.411766" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="958.367347" y="93.245902" width="281.632653" height="32.327869" rx="6.411766" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="958.367347" y="111.311528" width="281.632653" height="14.262348" fill="var(--info-fill)" rx="6.411766" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1099.183673" y="116.065574" font-family="Arial, sans-serif" font-size="12.805044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Decorators</text>
+  <text x="978.77551" y="140.786885" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--info-accent)">Wrap functions, add behavior</text>
+  <text x="978.77551" y="161.704918" font-family="monospace" font-size="10.835029" fill="var(--text)">def log(func):</text>
+  <text x="978.77551" y="176.918033" font-family="monospace" font-size="10.835029" fill="var(--text)">    def wrapper(*args):</text>
+  <text x="978.77551" y="192.131148" font-family="monospace" font-size="10.835029" fill="var(--text)">        print(f"calling {func.__name__}")</text>
+  <text x="978.77551" y="207.344262" font-family="monospace" font-size="10.835029" fill="var(--text)">        return func(*args)</text>
+  <text x="978.77551" y="222.557377" font-family="monospace" font-size="10.835029" fill="var(--text)">    return wrapper</text>
+  <text x="978.77551" y="237.770492" font-family="monospace" font-size="10.835029" fill="var(--text)">@log</text>
+  <text x="978.77551" y="252.983607" font-family="monospace" font-size="10.835029" fill="var(--text)">def compute(x): return x * 2</text>
+  <text x="978.77551" y="272" font-family="Arial, sans-serif" font-size="11.819983" fill="var(--info-accent)">Spark: @udf decorator</text>
+  <text x="978.77551" y="289.114754" font-family="monospace" font-size="10.835029" fill="var(--text)">from pyspark.sql.functions import udf</text>
+  <text x="978.77551" y="304.327869" font-family="monospace" font-size="10.835029" fill="var(--text)">@udf(returnType=IntegerType())</text>
+  <text x="978.77551" y="319.540984" font-family="monospace" font-size="10.835029" fill="var(--text)">def square(x): return x * x</text>
 
   <!-- == FUNCTIONAL SPARK MAPPING TABLE == -->
-  <text x="96.25" y="351.75" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--text-muted)">Functional Concepts -&gt; Spark Transformations</text>
+  <text x="40" y="348.065574" font-family="Arial, sans-serif" font-size="14.774952" font-weight="bold" fill="var(--text-muted)">Functional Concepts -&gt; Spark Transformations</text>
 
   <!-- Table -->
-  <rect x="96.25" y="366.25" width="1087.5" height="32.625" rx="6" fill="var(--primary-accent)"/>
-  <text x="208.75" y="387.0938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Concept</text>
-  <text x="461.875" y="387.0938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Spark Transformation</text>
-  <text x="743.125" y="387.0938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Example</text>
-  <text x="1033.75" y="387.0938" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Notes</text>
+  <rect x="40" y="363.278689" width="1183.673469" height="34.229508" rx="6.411766" fill="var(--primary-accent)"/>
+  <text x="162.44898" y="385.147593" font-family="Arial, sans-serif" font-size="11.819983" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Concept</text>
+  <text x="437.959184" y="385.147593" font-family="Arial, sans-serif" font-size="11.819983" font-weight="bold" fill="var(--bg)" text-anchor="middle">Spark Transformation</text>
+  <text x="744.081633" y="385.147593" font-family="Arial, sans-serif" font-size="11.819983" font-weight="bold" fill="var(--bg)" text-anchor="middle">Example</text>
+  <text x="1060.408163" y="385.147593" font-family="Arial, sans-serif" font-size="11.819983" font-weight="bold" fill="var(--bg)" text-anchor="middle">Notes</text>
 
-  <rect x="96.25" y="398.875" width="1087.5" height="29" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="208.75" y="417" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">map()</text>
-  <text x="461.875" y="417" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.map() / df.withColumn()</text>
-  <text x="743.125" y="417" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.map(lambda x: x*2)</text>
-  <text x="1033.75" y="417" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">1-to-1 element transform</text>
+  <rect x="40" y="397.508197" width="1183.673469" height="30.42623" fill="var(--primary-fill)" rx="6.411766" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="162.44898" y="416.52459" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">map()</text>
+  <text x="437.959184" y="416.52459" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.map() / df.withColumn()</text>
+  <text x="744.081633" y="416.52459" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.map(lambda x: x*2)</text>
+  <text x="1060.408163" y="416.52459" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">1-to-1 element transform</text>
 
-  <rect x="96.25" y="427.875" width="1087.5" height="29" fill="var(--bg)" rx="6"/>
-  <text x="208.75" y="446" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">filter()</text>
-  <text x="461.875" y="446" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.filter() / df.filter()</text>
-  <text x="743.125" y="446" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.filter(lambda x: x &gt; 0)</text>
-  <text x="1033.75" y="446" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Keep matching elements</text>
+  <rect x="40" y="427.934426" width="1183.673469" height="30.42623" fill="var(--bg)" rx="6.411766"/>
+  <text x="162.44898" y="446.95082" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">filter()</text>
+  <text x="437.959184" y="446.95082" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.filter() / df.filter()</text>
+  <text x="744.081633" y="446.95082" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.filter(lambda x: x &gt; 0)</text>
+  <text x="1060.408163" y="446.95082" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">Keep matching elements</text>
 
-  <rect x="96.25" y="456.875" width="1087.5" height="29" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="208.75" y="475" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">reduce()</text>
-  <text x="461.875" y="475" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.reduce() / df.agg()</text>
-  <text x="743.125" y="475" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.reduce(lambda a,b: a+b)</text>
-  <text x="1033.75" y="475" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Aggregate to single value</text>
+  <rect x="40" y="458.360656" width="1183.673469" height="30.42623" fill="var(--ok-fill)" rx="6.411766" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="162.44898" y="477.377049" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">reduce()</text>
+  <text x="437.959184" y="477.377049" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.reduce() / df.agg()</text>
+  <text x="744.081633" y="477.377049" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.reduce(lambda a,b: a+b)</text>
+  <text x="1060.408163" y="477.377049" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">Aggregate to single value</text>
 
-  <rect x="96.25" y="485.875" width="1087.5" height="29" fill="var(--bg)" rx="6"/>
-  <text x="208.75" y="504" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">flatMap()</text>
-  <text x="461.875" y="504" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.flatMap()</text>
-  <text x="743.125" y="504" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.flatMap(lambda x: x.split())</text>
-  <text x="1033.75" y="504" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">1-to-many, then flatten</text>
+  <rect x="40" y="488.786885" width="1183.673469" height="30.42623" fill="var(--bg)" rx="6.411766"/>
+  <text x="162.44898" y="507.803279" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">flatMap()</text>
+  <text x="437.959184" y="507.803279" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.flatMap()</text>
+  <text x="744.081633" y="507.803279" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.flatMap(lambda x: x.split())</text>
+  <text x="1060.408163" y="507.803279" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">1-to-many, then flatten</text>
 
-  <rect x="96.25" y="514.875" width="1087.5" height="29" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="208.75" y="533" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">generator / yield</text>
-  <text x="461.875" y="533" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">RDD lazy evaluation</text>
-  <text x="743.125" y="533" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">rdd.map(f).filter(g).count()</text>
-  <text x="1033.75" y="533" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Nothing runs until action</text>
+  <rect x="40" y="519.213115" width="1183.673469" height="30.42623" fill="var(--warn-fill)" rx="6.411766" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="162.44898" y="538.229508" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">generator / yield</text>
+  <text x="437.959184" y="538.229508" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">RDD lazy evaluation</text>
+  <text x="744.081633" y="538.229508" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">rdd.map(f).filter(g).count()</text>
+  <text x="1060.408163" y="538.229508" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">Nothing runs until action</text>
 
-  <rect x="96.25" y="543.875" width="1087.5" height="29" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="208.75" y="562" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">@udf decorator</text>
-  <text x="461.875" y="562" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">PySpark UDF</text>
-  <text x="743.125" y="562" font-family="monospace" font-size="11.0609" fill="var(--text)" text-anchor="middle">@udf(StringType()) def parse(x): ...</text>
-  <text x="1033.75" y="562" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Slower than built-in funcs</text>
+  <rect x="40" y="549.639344" width="1183.673469" height="30.42623" fill="var(--info-fill)" rx="6.411766" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="162.44898" y="568.655738" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">@udf decorator</text>
+  <text x="437.959184" y="568.655738" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">PySpark UDF</text>
+  <text x="744.081633" y="568.655738" font-family="monospace" font-size="11.819983" fill="var(--text)" text-anchor="middle">@udf(StringType()) def parse(x): ...</text>
+  <text x="1060.408163" y="568.655738" font-family="Arial, sans-serif" font-size="10.835029" fill="var(--text-muted)" text-anchor="middle">Slower than built-in funcs</text>
 
   <!-- == CAUTION BANNER == -->
-  <rect x="96.25" y="581.9375" width="1087.5" height="29" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="600.0625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">Key Spark rule: prefer built-in Spark SQL functions over Python UDFs -- UDFs cross JVM boundary and are 10-100x slower. Use pandas UDFs (vectorized) when Python logic is required.</text>
+  <rect x="40" y="589.57377" width="1183.673469" height="30.42623" rx="6.411766" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="631.836735" y="608.590164" font-family="Arial, sans-serif" font-size="12.805044" fill="var(--warn-accent)" text-anchor="middle">Key Spark rule: prefer built-in Spark SQL functions over Python UDFs -- UDFs cross JVM boundary and are 10-100x slower. Use pandas UDFs (vectorized) when Python logic is required.</text>
 </svg>

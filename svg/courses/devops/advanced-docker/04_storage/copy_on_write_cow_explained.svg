@@ -101,27 +101,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="75.4444" text-anchor="middle" font-size="24.3328" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (CoW) Explained</text>
-  <text x="103.75" y="112.5" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Read operation:</text>
-  <rect x="103.75" y="123.7777" width="478.125" height="48.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="342.8125" y="152.7777" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
-  <text x="625.9375" y="152.7777" font-size="13.9044" fill="var(--text-muted)">file not found - look in lower</text>
-  <rect x="103.75" y="176.9444" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="342.8125" y="205.9444" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
-  <text x="625.9375" y="205.9444" font-size="13.9044" fill="var(--primary-accent)">file found here, read directly</text>
-  <text x="103.75" y="255.8889" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Write operation (existing file):</text>
-  <rect x="103.75" y="267.1667" width="478.125" height="48.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="342.8125" y="296.1667" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
-  <text x="625.9375" y="296.1667" font-size="13.9044" fill="var(--primary-accent)">file copied here, then modified</text>
-  <rect x="103.75" y="320.3333" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="342.8125" y="349.3333" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
-  <text x="625.9375" y="349.3333" font-size="13.9044" fill="var(--text-muted)">original unchanged</text>
-  <text x="103.75" y="402.5" font-size="19.1186" font-weight="bold" fill="var(--danger-accent)">Delete operation:</text>
-  <rect x="103.75" y="413.7777" width="478.125" height="48.3333" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="342.8125" y="442.7777" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
-  <text x="625.9375" y="442.7777" font-size="13.9044" fill="var(--danger-accent)">whiteout file created</text>
-  <rect x="103.75" y="466.9444" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="342.8125" y="495.9444" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
-  <text x="625.9375" y="495.9444" font-size="13.9044" fill="var(--text-muted)">original still exists but hidden</text>
+  <text x="1240" y="40" text-anchor="middle" font-size="41.799299" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (CoW) Explained</text>
+  <text x="40" y="88.864531" font-size="32.842258" font-weight="bold" fill="var(--primary-accent)">Read operation:</text>
+  <rect x="40" y="103.736225" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="574.965034" y="141.977986" text-anchor="middle" font-size="29.856691" fill="var(--text)">Upper (R/W)</text>
+  <text x="1208.531469" y="141.977986" font-size="23.885216" fill="var(--text-muted)">file not found - look in lower</text>
+  <rect x="40" y="173.846164" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="574.965034" y="212.087925" text-anchor="middle" font-size="29.856691" fill="var(--text)">Lower (RO)</text>
+  <text x="1208.531469" y="212.087925" font-size="23.885216" fill="var(--primary-accent)">file found here, read directly</text>
+  <text x="40" y="277.948809" font-size="32.842258" font-weight="bold" fill="var(--primary-accent)">Write operation (existing file):</text>
+  <rect x="40" y="292.820635" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="574.965034" y="331.062396" text-anchor="middle" font-size="29.856691" fill="var(--text)">Upper (R/W)</text>
+  <text x="1208.531469" y="331.062396" font-size="23.885216" fill="var(--primary-accent)">file copied here, then modified</text>
+  <rect x="40" y="362.930442" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="574.965034" y="401.172203" text-anchor="middle" font-size="29.856691" fill="var(--text)">Lower (RO)</text>
+  <text x="1208.531469" y="401.172203" font-size="23.885216" fill="var(--text-muted)">original unchanged</text>
+  <text x="40" y="471.282143" font-size="32.842258" font-weight="bold" fill="var(--danger-accent)">Delete operation:</text>
+  <rect x="40" y="486.153836" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="574.965034" y="524.395597" text-anchor="middle" font-size="29.856691" fill="var(--text)">Upper (R/W)</text>
+  <text x="1208.531469" y="524.395597" font-size="23.885216" fill="var(--danger-accent)">whiteout file created</text>
+  <rect x="40" y="556.263775" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="574.965034" y="594.505537" text-anchor="middle" font-size="29.856691" fill="var(--text)">Lower (RO)</text>
+  <text x="1208.531469" y="594.505537" font-size="23.885216" fill="var(--text-muted)">original still exists but hidden</text>
 </svg>

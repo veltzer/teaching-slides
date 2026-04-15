@@ -101,68 +101,67 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="77.5" y="281.6667" width="150" height="48.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="152.5" y="302.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--warn-accent)">Browser</text>
-  <text x="152.5" y="318.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">app.example.com</text>
-  <line x1="227.5" y1="305.8333" x2="293.125" y2="305.8333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="260.3125" y="297.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">HTTPS :443</text>
-  <rect x="293.125" y="233.3333" width="206.25" height="145" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="396.25" y="257.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">Ingress Controller</text>
-  <text x="396.25" y="275.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">(nginx / traefik)</text>
-  <text x="396.25" y="294.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">TLS termination</text>
-  <text x="396.25" y="310.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">Host matching</text>
-  <text x="396.25" y="326.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">Path matching</text>
-  <text x="396.25" y="342.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">Header rewriting</text>
-  <text x="396.25" y="362.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">LoadBalancer svc in front</text>
-  <rect x="565" y="80.2777" width="318.75" height="209.4444" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="565" y="80.2777" width="318.75" height="35.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="565" y="106.0556" width="318.75" height="9.6667" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="724.375" y="104.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">Ingress Rules</text>
-  <text x="579.0625" y="131.8333" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">host: app.example.com</text>
-  <text x="579.0625" y="147.9444" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">  /          → web-svc:80</text>
-  <text x="579.0625" y="164.0556" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">  /api       → api-svc:8080</text>
-  <text x="579.0625" y="180.1667" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">  /static    → cdn-svc:80</text>
-  <line x1="579.0625" y1="188.2223" x2="869.6875" y2="188.2223" stroke="var(--border)" stroke-width="0.8889" stroke-dasharray="3.5556 2.6667" />
-  <text x="579.0625" y="204.3333" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">host: admin.example.com</text>
-  <text x="579.0625" y="220.4444" font-family="monospace" font-size="10.4284" fill="var(--primary-accent)">  /          → admin-svc:3000</text>
-  <text x="724.375" y="265.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--info-accent)">TLS: secretName: tls-cert</text>
-  <line x1="499.375" y1="265.5556" x2="565" y2="201.1111" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
-  <text x="532.1875" y="221.25" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">reads rules</text>
-  <rect x="958.75" y="88.3333" width="187.5" height="58" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1052.5" y="110.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--primary-accent)">web-svc</text>
-  <text x="1052.5" y="127" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">ClusterIP :80</text>
-  <rect x="977.5" y="154.3889" width="65.625" height="29" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1010.3125" y="172.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod</text>
-  <rect x="1061.875" y="154.3889" width="65.625" height="29" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1094.6875" y="172.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod</text>
-  <line x1="1052.5" y1="146.3333" x2="1052.5" y2="154.3889" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="958.75" y="217.2223" width="187.5" height="58" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1052.5" y="239.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--ok-accent)">api-svc</text>
-  <text x="1052.5" y="255.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">ClusterIP :8080</text>
-  <rect x="977.5" y="283.2777" width="65.625" height="29" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1010.3125" y="301" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod</text>
-  <rect x="1061.875" y="283.2777" width="65.625" height="29" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1094.6875" y="301" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod</text>
-  <line x1="1052.5" y1="275.2223" x2="1052.5" y2="283.2777" stroke="var(--ok-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="958.75" y="346.1111" width="187.5" height="58" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1052.5" y="368.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--warn-accent)">cdn-svc</text>
-  <text x="1052.5" y="384.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">ClusterIP :80</text>
-  <rect x="977.5" y="412.1667" width="150" height="29" rx="6" fill="var(--warn-accent)" />
-  <text x="1052.5" y="429.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod (CDN/static)</text>
-  <line x1="1052.5" y1="404.1111" x2="1052.5" y2="412.1667" stroke="var(--warn-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="958.75" y="450.8333" width="187.5" height="51.5556" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1052.5" y="471.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--info-accent)">admin-svc</text>
-  <text x="1052.5" y="487.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">ClusterIP :3000</text>
-  <rect x="977.5" y="510.4444" width="150" height="29" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1052.5" y="528.1667" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Pod (admin UI)</text>
-  <line x1="1052.5" y1="502.3889" x2="1052.5" y2="510.4444" stroke="var(--info-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <line x1="499.375" y1="281.6667" x2="958.75" y2="117.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <line x1="499.375" y1="297.7777" x2="958.75" y2="246.2223" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <line x1="499.375" y1="313.8889" x2="958.75" y2="375.1111" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <line x1="499.375" y1="330" x2="958.75" y2="476.6111" stroke="var(--info-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="677.4999" y="165.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">/</text>
-  <text x="677.4999" y="236.5556" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">/api</text>
-  <text x="677.4999" y="354.1667" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-accent)">/static</text>
-  <text x="602.5" y="422.6389" font-family="Arial,sans-serif" font-size="10" fill="var(--info-accent)">admin.example.com/</text>
+  <rect x="40" y="294.386087" width="168.421053" height="61.052585" rx="7.1455" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="124.210526" y="320.842169" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.524075" font-weight="bold" fill="var(--warn-accent)">Browser</text>
+  <text x="124.210526" y="341.193157" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--danger-accent)">app.example.com</text>
+  <line x1="208.421053" y1="324.912316" x2="282.105263" y2="324.912316" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="245.263158" y="314.736822" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--text-muted)">HTTPS :443</text>
+  <rect x="282.105263" y="233.333375" width="231.578947" height="183.157881" rx="7.1455" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="397.894737" y="263.859731" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.558981" font-weight="bold" fill="var(--bg)">Ingress Controller</text>
+  <text x="397.894737" y="286.245793" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.419355" fill="var(--primary-accent)">(nginx / traefik)</text>
+  <text x="397.894737" y="310.666801" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.419355" fill="var(--primary-accent)">TLS termination</text>
+  <text x="397.894737" y="331.017663" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.419355" fill="var(--primary-accent)">Host matching</text>
+  <text x="397.894737" y="351.368398" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.419355" fill="var(--primary-accent)">Path matching</text>
+  <text x="397.894737" y="371.719386" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.419355" fill="var(--primary-accent)">Header rewriting</text>
+  <text x="397.894737" y="396.140522" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--primary-accent)">LoadBalancer svc in front</text>
+  <rect x="587.368421" y="40" width="357.894737" height="264.561328" rx="7.1455" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="587.368421" y="40" width="357.894737" height="44.77187" rx="7.1455" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="587.368421" y="72.561556" width="357.894737" height="12.210568" fill="var(--primary-fill)" rx="7.1455" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="766.315789" y="70.526356" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.558981" font-weight="bold" fill="var(--bg)">Ingress Rules</text>
+  <text x="603.157895" y="105.122858" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">host: app.example.com</text>
+  <text x="603.157895" y="125.47372" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">  /          → web-svc:80</text>
+  <text x="603.157895" y="145.824708" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">  /api       → api-svc:8080</text>
+  <text x="603.157895" y="166.17557" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">  /static    → cdn-svc:80</text>
+  <line x1="603.157895" y1="176.351064" x2="929.473684" y2="176.351064" stroke="var(--border)" stroke-width="0.8889" stroke-dasharray="3.5556 2.6667" />
+  <text x="603.157895" y="196.701799" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">host: admin.example.com</text>
+  <text x="603.157895" y="217.052661" font-family="monospace" font-size="12.419355" fill="var(--primary-accent)">  /          → admin-svc:3000</text>
+  <text x="766.315789" y="274.035225" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--info-accent)">TLS: secretName: tls-cert</text>
+  <line x1="513.684211" y1="274.035225" x2="587.368421" y2="192.631652" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
+  <text x="550.526316" y="218.070261" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--primary-accent)">reads rules</text>
+  <rect x="1029.473684" y="50.175494" width="210.526316" height="73.263153" rx="7.1455" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1134.736842" y="78.666776" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.489049" font-weight="bold" fill="var(--primary-accent)">web-svc</text>
+  <text x="1134.736842" y="99.017638" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--text-muted)">ClusterIP :80</text>
+  <rect x="1050.526316" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1087.368421" y="156.000076" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod</text>
+  <rect x="1145.263158" y="133.614141" width="73.684211" height="36.631576" rx="7.1455" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1182.105263" y="156.000076" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod</text>
+  <line x1="1134.736842" y1="123.438647" x2="1134.736842" y2="133.614141" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="1029.473684" y="212.98264" width="210.526316" height="73.263153" rx="7.1455" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1134.736842" y="241.47367" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.489049" font-weight="bold" fill="var(--ok-accent)">api-svc</text>
+  <text x="1134.736842" y="261.824658" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--text-muted)">ClusterIP :8080</text>
+  <rect x="1050.526316" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1087.368421" y="318.807096" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod</text>
+  <rect x="1145.263158" y="296.421034" width="73.684211" height="36.631576" rx="7.1455" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1182.105263" y="318.807096" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod</text>
+  <line x1="1134.736842" y1="286.245793" x2="1134.736842" y2="296.421034" stroke="var(--ok-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="1029.473684" y="375.789534" width="210.526316" height="73.263153" rx="7.1455" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1134.736842" y="404.280816" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.489049" font-weight="bold" fill="var(--warn-accent)">cdn-svc</text>
+  <text x="1134.736842" y="424.631551" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--text-muted)">ClusterIP :80</text>
+  <rect x="1050.526316" y="459.22818" width="168.421053" height="36.631576" rx="7.1455" fill="var(--warn-accent)" />
+  <text x="1134.736842" y="481.614115" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod (CDN/static)</text>
+  <line x1="1134.736842" y1="449.052686" x2="1134.736842" y2="459.22818" stroke="var(--warn-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="1029.473684" y="508.070198" width="210.526316" height="65.122858" rx="7.1455" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1134.736842" y="534.52628" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.489049" font-weight="bold" fill="var(--info-accent)">admin-svc</text>
+  <text x="1134.736842" y="554.877268" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--text-muted)">ClusterIP :3000</text>
+  <rect x="1050.526316" y="583.368424" width="168.421053" height="36.631576" rx="7.1455" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1134.736842" y="605.754485" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.909166" font-weight="bold" fill="var(--bg)">Pod (admin UI)</text>
+  <line x1="1134.736842" y1="573.193056" x2="1134.736842" y2="583.368424" stroke="var(--info-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="513.684211" y1="294.386087" x2="1029.473684" y2="86.80707" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <line x1="513.684211" y1="314.736822" x2="1029.473684" y2="249.614216" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <line x1="513.684211" y1="335.08781" x2="1029.473684" y2="412.42111" stroke="var(--warn-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <line x1="513.684211" y1="355.438672" x2="1029.473684" y2="540.631627" stroke="var(--info-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="713.684098" y="147.859782" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--primary-accent)">/</text>
+  <text x="713.684098" y="237.403649" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--ok-accent)">/api</text>
+  <text x="713.684098" y="385.965028" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--warn-accent)">/static</text>
+  <text x="629.473684" y="472.456221" font-family="Arial,sans-serif" font-size="11.909166" fill="var(--info-accent)">admin.example.com/</text>
 </svg>

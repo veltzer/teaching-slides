@@ -446,7 +446,10 @@ def fit_svg(content: str) -> tuple[str, dict]:
     sx_ideal = USABLE_W / bbox_w
     sy_ideal = USABLE_H / bbox_h
     ratio = max(sx_ideal, sy_ideal) / min(sx_ideal, sy_ideal) if min(sx_ideal, sy_ideal) > 0 else 1
-    uniform = ratio > 1.5
+    # Uniform-scale fallback is only needed to keep circles circular. If the
+    # SVG contains no <circle> elements, non-uniform stretch is always safe.
+    has_circles = '<circle' in outside_full
+    uniform = ratio > 1.5 and has_circles
     if uniform:
         # Pick a single scale so circles stay circular.
         s = min(sx_ideal, sy_ideal)

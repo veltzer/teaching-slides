@@ -93,80 +93,79 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
   <!-- Global DNS at top -->
-  <rect x="433.75" y="67.1875" width="412.5" height="81.5625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="640" y="103.4375" font-family="Arial, sans-serif" font-size="22.1218" font-weight="bold" fill="var(--text)" text-anchor="middle">Global DNS</text>
-  <text x="640" y="130.625" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--text-muted)" text-anchor="middle">Route 53 / Traffic Manager / Cloud DNS</text>
+  <rect x="412.413793" y="40" width="455.172414" height="87" rx="6.50941" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="640" y="78.666667" font-family="Arial, sans-serif" font-size="23.999976" font-weight="bold" fill="var(--text)" text-anchor="middle">Global DNS</text>
+  <text x="640" y="107.666667" font-family="Arial, sans-serif" font-size="14.999958" fill="var(--text-muted)" text-anchor="middle">Route 53 / Traffic Manager / Cloud DNS</text>
   <!-- Routing policies -->
-  <rect x="227.5" y="166.875" width="187.5" height="31.7188" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="321.25" y="187.7188" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Latency-based</text>
-  <rect x="452.5" y="166.875" width="187.5" height="31.7188" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="546.25" y="187.7188" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Failover</text>
-  <rect x="677.5" y="166.875" width="187.5" height="31.7188" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="771.25" y="187.7188" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Weighted</text>
-  <rect x="902.5" y="166.875" width="187.5" height="31.7188" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="996.25" y="187.7188" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Geolocation</text>
+  <rect x="184.827586" y="146.333333" width="206.896552" height="33.833387" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="288.275862" y="168.56672" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Latency-based</text>
+  <rect x="433.103448" y="146.333333" width="206.896552" height="33.833387" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="536.551724" y="168.56672" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Failover</text>
+  <rect x="681.37931" y="146.333333" width="206.896552" height="33.833387" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="784.827586" y="168.56672" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Weighted</text>
+  <rect x="929.655172" y="146.333333" width="206.896552" height="33.833387" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1033.103448" y="168.56672" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Geolocation</text>
   <!-- Arrows from DNS to regions -->
-  <line x1="527.5" y1="148.75" x2="227.5" y2="284.6875" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="148.75" x2="640" y2="284.6875" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="752.5" y1="148.75" x2="1052.5" y2="284.6875" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="515.862069" y1="127" x2="184.827586" y2="272" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="127" x2="640" y2="272" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="764.137931" y1="127" x2="1095.172414" y2="272" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- Health check arrows (dashed, from DNS back up) -->
-  <line x1="199.375" y1="284.6875" x2="508.75" y2="148.75" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="611.875" y1="284.6875" x2="621.25" y2="148.75" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="1024.375" y1="284.6875" x2="771.25" y2="148.75" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="153.793103" y1="272" x2="495.172414" y2="127" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="608.965517" y1="272" x2="619.310345" y2="127" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="1064.137931" y1="272" x2="784.827586" y2="127" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="4,3"/>
   <text x="368.125" y="230.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)" transform="rotate(-30,350,210)">health check</text>
-  <text x="621.25" y="230.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)">health check</text>
+  <text x="619.310345" y="214" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--danger-accent)">health check</text>
   <text x="883.75" y="230.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)" transform="rotate(30,900,210)">health check</text>
   <!-- AWS Region -->
-  <rect x="96.25" y="284.6875" width="262.5" height="280.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="96.25" y="284.6875" width="262.5" height="45.3125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="96.25" y="317.3125" width="262.5" height="12.6875" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="227.5" y="314.5938" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">AWS Region</text>
-  <rect x="124.375" y="348.125" width="206.25" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="227.5" y="371.6875" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--primary-accent)" text-anchor="middle">Load Balancer (ALB)</text>
-  <rect x="124.375" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="171.25" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">App Server</text>
-  <text x="171.25" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">x3</text>
-  <rect x="236.875" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="283.75" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">Database</text>
-  <text x="283.75" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">RDS</text>
-  <rect x="124.375" y="465.9375" width="206.25" height="27.1875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="227.5" y="484.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
-  <text x="227.5" y="529.375" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">Primary (weight: 70%)</text>
+  <rect x="40" y="272" width="289.655172" height="299.666667" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="272" width="289.655172" height="48.333333" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="306.8" width="289.655172" height="13.533333" fill="var(--primary-fill)" rx="6.50941" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="184.827586" y="303.900053" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)" text-anchor="middle">AWS Region</text>
+  <rect x="71.034483" y="339.666667" width="227.586207" height="38.666667" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="184.827586" y="364.8" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--primary-accent)" text-anchor="middle">Load Balancer (ALB)</text>
+  <rect x="71.034483" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="122.758621" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" text-anchor="middle">App Server</text>
+  <text x="122.758621" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">x3</text>
+  <rect x="195.172414" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="246.896552" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)" text-anchor="middle">Database</text>
+  <text x="246.896552" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">RDS</text>
+  <rect x="71.034483" y="465.333333" width="227.586207" height="29" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="184.827586" y="484.666667" font-family="Arial, sans-serif" font-size="13.00005" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
+  <text x="184.827586" y="533" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--text-muted)" text-anchor="middle">Primary (weight: 70%)</text>
   <!-- Azure Region -->
-  <rect x="508.75" y="284.6875" width="262.5" height="280.9375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="508.75" y="284.6875" width="262.5" height="45.3125" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="508.75" y="317.3125" width="262.5" height="12.6875" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="640" y="314.5938" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Azure Region</text>
-  <rect x="536.875" y="348.125" width="206.25" height="36.25" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="640" y="371.6875" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--info-accent)" text-anchor="middle">Load Balancer (ALB)</text>
-  <rect x="536.875" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="583.75" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)" text-anchor="middle">App Server</text>
-  <text x="583.75" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">x2</text>
-  <rect x="649.375" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="696.25" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)" text-anchor="middle">Database</text>
-  <text x="696.25" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">Azure SQL</text>
-  <rect x="536.875" y="465.9375" width="206.25" height="27.1875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="484.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
-  <text x="640" y="529.375" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">Secondary (weight: 20%)</text>
+  <rect x="495.172414" y="272" width="289.655172" height="299.666667" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="495.172414" y="272" width="289.655172" height="48.333333" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="495.172414" y="306.8" width="289.655172" height="13.533333" fill="var(--info-fill)" rx="6.50941" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="303.900053" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)" text-anchor="middle">Azure Region</text>
+  <rect x="526.206897" y="339.666667" width="227.586207" height="38.666667" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="364.8" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--info-accent)" text-anchor="middle">Load Balancer (ALB)</text>
+  <rect x="526.206897" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="577.931034" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--info-accent)" text-anchor="middle">App Server</text>
+  <text x="577.931034" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">x2</text>
+  <rect x="650.344828" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="702.068966" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--info-accent)" text-anchor="middle">Database</text>
+  <text x="702.068966" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">Azure SQL</text>
+  <rect x="526.206897" y="465.333333" width="227.586207" height="29" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="484.666667" font-family="Arial, sans-serif" font-size="13.00005" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
+  <text x="640" y="533" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--text-muted)" text-anchor="middle">Secondary (weight: 20%)</text>
   <!-- GCP Region -->
-  <rect x="921.25" y="284.6875" width="262.5" height="280.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="921.25" y="284.6875" width="262.5" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="921.25" y="317.3125" width="262.5" height="12.6875" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1052.5" y="314.5938" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCP Region</text>
-  <rect x="949.375" y="348.125" width="206.25" height="36.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1052.5" y="371.6875" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--ok-accent)" text-anchor="middle">Load Balancer (GLB)</text>
-  <rect x="949.375" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
-  <text x="996.25" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle">App Server</text>
-  <text x="996.25" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">x2</text>
-  <rect x="1061.875" y="397.9688" width="93.75" height="54.375" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
-  <text x="1108.75" y="425.1562" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle">Database</text>
-  <text x="1108.75" y="443.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">Cloud SQL</text>
-  <rect x="949.375" y="465.9375" width="206.25" height="27.1875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1052.5" y="484.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
-  <text x="1052.5" y="529.375" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">Standby (weight: 10%)</text>
+  <rect x="950.344828" y="272" width="289.655172" height="299.666667" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950.344828" y="272" width="289.655172" height="48.333333" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="950.344828" y="306.8" width="289.655172" height="13.533333" fill="var(--ok-fill)" rx="6.50941" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1095.172414" y="303.900053" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCP Region</text>
+  <rect x="981.37931" y="339.666667" width="227.586207" height="38.666667" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1095.172414" y="364.8" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--ok-accent)" text-anchor="middle">Load Balancer (GLB)</text>
+  <rect x="981.37931" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="1033.103448" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--ok-accent)" text-anchor="middle">App Server</text>
+  <text x="1033.103448" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">x2</text>
+  <rect x="1105.517241" y="392.833387" width="103.448276" height="58" rx="6.50941" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="1157.241379" y="421.83328" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--ok-accent)" text-anchor="middle">Database</text>
+  <text x="1157.241379" y="441.166613" font-family="Arial, sans-serif" font-size="11.000034" fill="var(--text-faint)" text-anchor="middle">Cloud SQL</text>
+  <rect x="981.37931" y="465.333333" width="227.586207" height="29" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1095.172414" y="484.666667" font-family="Arial, sans-serif" font-size="13.00005" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HEALTHY</text>
+  <text x="1095.172414" y="533" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--text-muted)" text-anchor="middle">Standby (weight: 10%)</text>
   <!-- Bottom legend -->
-  <rect x="321.25" y="583.75" width="637.5" height="27.1875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="602.7812" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)" text-anchor="middle">DNS TTL: 60s | Health check interval: 30s | Failover time: ~90s</text>
+  <rect x="288.275862" y="591" width="703.448276" height="29" rx="6.50941" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="611.299947" font-family="Arial, sans-serif" font-size="14.000004" fill="var(--text-muted)" text-anchor="middle">DNS TTL: 60s | Health check interval: 30s | Failover time: ~90s</text>
 </svg>

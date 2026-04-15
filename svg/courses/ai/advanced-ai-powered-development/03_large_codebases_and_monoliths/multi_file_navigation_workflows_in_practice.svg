@@ -33,42 +33,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
     </marker>
   </defs>
+  <text x="650.714286" y="40" text-anchor="middle" font-size="28.560469" font-weight="bold" fill="var(--primary-accent)">Multi-File Navigation Workflow</text>
+  <text x="650.714286" y="73.786408" text-anchor="middle" font-size="17.575674" fill="var(--text-muted)">Locate definition → call sites → tests before making changes</text>
 
-  <rect x="40" y="40" width="1200" height="580" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <text x="640" y="85" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-accent)">Multi-File Navigation Workflow</text>
-  <text x="640" y="115" text-anchor="middle" font-size="16" fill="var(--text-muted)">Locate definition → call sites → tests before making changes</text>
+  <rect x="40" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="173.928571" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--primary-text)">1. Definition</text>
+  <text x="173.928571" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)">OrderService</text>
+  <text x="173.928571" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)">.submitOrder()</text>
 
-  <rect x="70" y="150" width="250" height="170" rx="8" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="195" y="195" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-text)">1. Definition</text>
-  <text x="195" y="240" text-anchor="middle" font-size="15" fill="var(--primary-text)">OrderService</text>
-  <text x="195" y="268" text-anchor="middle" font-size="15" fill="var(--primary-text)">.submitOrder()</text>
+  <line x1="307.857143" y1="208.932039" x2="345.357143" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="320" y1="235" x2="355" y2="235" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="350.714286" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="484.642857" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--ok-text)">2. Call Sites</text>
+  <text x="484.642857" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)">all usages of</text>
+  <text x="484.642857" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)">submitOrder()</text>
 
-  <rect x="360" y="150" width="250" height="170" rx="8" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="485" y="195" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)">2. Call Sites</text>
-  <text x="485" y="240" text-anchor="middle" font-size="15" fill="var(--ok-text)">all usages of</text>
-  <text x="485" y="268" text-anchor="middle" font-size="15" fill="var(--ok-text)">submitOrder()</text>
+  <line x1="618.571429" y1="208.932039" x2="656.071429" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="610" y1="235" x2="645" y2="235" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="661.428571" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="795.357143" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--info-text)">3. Unit Tests</text>
+  <text x="795.357143" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--info-text)">test_order.py</text>
+  <text x="795.357143" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--info-text)">coverage check</text>
 
-  <rect x="650" y="150" width="250" height="170" rx="8" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="775" y="195" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--info-text)">3. Unit Tests</text>
-  <text x="775" y="240" text-anchor="middle" font-size="15" fill="var(--info-text)">test_order.py</text>
-  <text x="775" y="268" text-anchor="middle" font-size="15" fill="var(--info-text)">coverage check</text>
+  <line x1="929.285714" y1="208.932039" x2="966.785714" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="900" y1="235" x2="935" y2="235" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="972.142857" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1106.071429" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)">4. Integration</text>
+  <text x="1106.071429" y="193.165049" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)">Tests</text>
+  <text x="1106.071429" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--warn-text)">end-to-end flows</text>
 
-  <rect x="940" y="150" width="250" height="170" rx="8" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1065" y="195" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--warn-text)">4. Integration</text>
-  <text x="1065" y="221" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--warn-text)">Tests</text>
-  <text x="1065" y="268" text-anchor="middle" font-size="15" fill="var(--warn-text)">end-to-end flows</text>
-
-  <rect x="70" y="360" width="1120" height="240" rx="8" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="630" y="395" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Navigation Prompt Pattern</text>
-  <text x="100" y="435" font-size="16" fill="var(--info-text)">1. "Find the definition of OrderService.submitOrder()"</text>
-  <text x="100" y="465" font-size="16" fill="var(--info-text)">2. "Show all call sites of submitOrder() across the codebase"</text>
-  <text x="100" y="495" font-size="16" fill="var(--info-text)">3. "Find test files that exercise submitOrder()"</text>
-  <text x="100" y="525" font-size="16" fill="var(--info-text)">4. "Are there integration tests covering the full order flow?"</text>
-  <text x="100" y="555" font-size="16" fill="var(--info-text)">5. "Show the database migration for the orders table"</text>
+  <rect x="40" y="349.708738" width="1200" height="270.291262" rx="8.787837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="389.126214" text-anchor="middle" font-size="24.166551" font-weight="bold" fill="var(--info-text)">Navigation Prompt Pattern</text>
+  <text x="72.142857" y="434.174757" font-size="17.575674" fill="var(--info-text)">1. "Find the definition of OrderService.submitOrder()"</text>
+  <text x="72.142857" y="467.961165" font-size="17.575674" fill="var(--info-text)">2. "Show all call sites of submitOrder() across the codebase"</text>
+  <text x="72.142857" y="501.747573" font-size="17.575674" fill="var(--info-text)">3. "Find test files that exercise submitOrder()"</text>
+  <text x="72.142857" y="535.533981" font-size="17.575674" fill="var(--info-text)">4. "Are there integration tests covering the full order flow?"</text>
+  <text x="72.142857" y="569.320388" font-size="17.575674" fill="var(--info-text)">5. "Show the database migration for the orders table"</text>
 </svg>

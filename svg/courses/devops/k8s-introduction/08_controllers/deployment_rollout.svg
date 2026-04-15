@@ -101,86 +101,85 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <text x="640" y="75.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">Rolling Update: image v1 → v2  (maxSurge=1, maxUnavailable=0)</text>
-  <text x="190" y="101.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text-muted)">Step 0 — Before</text>
-  <text x="461.875" y="101.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text-muted)">Step 1 — +1 new pod</text>
-  <text x="733.75" y="101.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text-muted)">Step 2 — -1 old pod</text>
-  <text x="1014.9999" y="101.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text-muted)">Step 3 — Complete</text>
-  <line x1="321.25" y1="86.7223" x2="321.25" y2="507.2223" stroke="var(--border)" stroke-width="1.3333" />
-  <line x1="593.1249" y1="86.7223" x2="593.1249" y2="507.2223" stroke="var(--border)" stroke-width="1.3333" />
-  <line x1="865" y1="86.7223" x2="865" y2="507.2223" stroke="var(--border)" stroke-width="1.3333" />
-  <rect x="96.25" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="133.75" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="133.75" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="190" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="227.5" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="227.5" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="96.25" y="185" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="133.75" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="133.75" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <text x="190" y="249.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Old RS: 3/3</text>
-  <text x="190" y="263.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">New RS: 0/0</text>
-  <rect x="349.375" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="386.875" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="386.875" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="443.125" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="480.625" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="480.625" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="349.375" y="185" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="386.875" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="386.875" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="443.125" y="185" width="75" height="40.2777" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="480.625" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="480.625" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">v2 NEW</text>
-  <text x="461.875" y="249.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Old RS: 3/3</text>
-  <text x="461.875" y="263.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)">New RS: 1/1 (surge)</text>
-  <line x1="283.75" y1="172.9167" x2="339.9999" y2="172.9167" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="621.25" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="658.75" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="658.75" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="715" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="752.5" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="752.5" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">v1</text>
-  <rect x="621.25" y="185" width="75" height="40.2777" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="658.75" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">Terminating</text>
-  <text x="658.75" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">v1</text>
-  <rect x="715" y="185" width="75" height="40.2777" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="752.5" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="752.5" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">v2</text>
-  <text x="733.75" y="249.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Old RS: 2/3 (terminating)</text>
-  <text x="733.75" y="263.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)">New RS: 1/1</text>
-  <line x1="553.75" y1="172.9167" x2="609.9999" y2="172.9167" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="893.125" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="930.6249" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="930.6249" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">v2</text>
-  <rect x="986.875" y="128.6111" width="75" height="40.2777" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1024.3749" y="144.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="1024.3749" y="159.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">v2</text>
-  <rect x="893.125" y="185" width="75" height="40.2777" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="930.6249" y="201.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="930.6249" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">v2</text>
-  <text x="1014.9999" y="249.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Old RS: 0/0</text>
-  <text x="1014.9999" y="263.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)">New RS: 3/3  Done!</text>
-  <line x1="825.625" y1="172.9167" x2="881.875" y2="172.9167" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="77.5" y="294.5556" width="1125" height="48.3333" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="315.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.7735" font-weight="bold" fill="var(--bg)">Deployment  (spec.strategy.type: RollingUpdate)</text>
-  <text x="640" y="333.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--primary-accent)">owns Old ReplicaSet (rs-abc) AND New ReplicaSet (rs-def) simultaneously during rollout</text>
-  <rect x="77.5" y="359" width="543.75" height="80.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="86.875" y="378.3333" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--warn-accent)">Rollback</text>
-  <text x="96.25" y="397.6667" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">kubectl rollout undo deployment/my-app</text>
-  <text x="96.25" y="413.7777" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">kubectl rollout undo deployment/my-app --to-revision=2</text>
-  <text x="96.25" y="429.8889" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Old RS is kept (scaled to 0) enabling instant rollback</text>
-  <rect x="640" y="359" width="562.5" height="80.5556" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="649.375" y="378.3333" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--ok-accent)">Monitor Rollout</text>
-  <text x="658.75" y="397.6667" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">kubectl rollout status deployment/my-app</text>
-  <text x="658.75" y="413.7777" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">kubectl rollout history deployment/my-app</text>
-  <text x="658.75" y="429.8889" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">kubectl get rs  (see old and new ReplicaSets)</text>
-  <rect x="77.5" y="455.6667" width="18.75" height="16.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="105.625" y="467.75" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">Old version (v1)</text>
-  <rect x="246.25" y="455.6667" width="18.75" height="16.1111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="274.375" y="467.75" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">New version (v2)</text>
-  <rect x="415" y="455.6667" width="18.75" height="16.1111" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="443.125" y="467.75" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">Terminating</text>
-  <text x="640" y="507.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text-muted)">Rolling update ensures zero downtime — always ≥ (desired - maxUnavailable) pods running during update</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.64372" font-weight="bold" fill="var(--text)">Rolling Update: image v1 → v2  (maxSurge=1, maxUnavailable=0)</text>
+  <text x="160" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 0 — Before</text>
+  <text x="450" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 1 — +1 new pod</text>
+  <text x="740" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 2 — -1 old pod</text>
+  <text x="1039.999893" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 3 — Complete</text>
+  <line x1="300" y1="55.149414" x2="300" y2="620" stroke="var(--border)" stroke-width="1.3333" />
+  <line x1="589.999893" y1="55.149414" x2="589.999893" y2="620" stroke="var(--border)" stroke-width="1.3333" />
+  <line x1="880" y1="55.149414" x2="880" y2="620" stroke="var(--border)" stroke-width="1.3333" />
+  <rect x="60" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="100" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="100" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="160" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="200" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="200" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="60" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="100" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="100" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <text x="160" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 3/3</text>
+  <text x="160" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">New RS: 0/0</text>
+  <rect x="330" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="370" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="370" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="430" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="470" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="470" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="330" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="370" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="370" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="430" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="470" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="470" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2 NEW</text>
+  <text x="450" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 3/3</text>
+  <text x="450" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 1/1 (surge)</text>
+  <line x1="260" y1="170.932903" x2="319.999893" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="620" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="660" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="660" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="720" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="760" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="760" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="620" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
+  <text x="660" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--text-muted)">Terminating</text>
+  <text x="660" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--text-muted)">v1</text>
+  <rect x="720" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="760" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="760" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
+  <text x="740" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 2/3 (terminating)</text>
+  <text x="740" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 1/1</text>
+  <line x1="548" y1="170.932903" x2="607.999893" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="910" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="949.999893" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="949.999893" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
+  <rect x="1010" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1049.999893" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="1049.999893" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
+  <rect x="910" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="949.999893" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
+  <text x="949.999893" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
+  <text x="1039.999893" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 0/0</text>
+  <text x="1039.999893" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 3/3  Done!</text>
+  <line x1="838" y1="170.932903" x2="898" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="40" y="334.328394" width="1200" height="64.92531" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="362.462655" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.684043" font-weight="bold" fill="var(--bg)">Deployment  (spec.strategy.type: RollingUpdate)</text>
+  <text x="640" y="386.268723" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--primary-accent)">owns Old ReplicaSet (rs-abc) AND New ReplicaSet (rs-def) simultaneously during rollout</text>
+  <rect x="40" y="420.895474" width="580" height="108.208984" rx="7.182066" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="50" y="446.865571" font-family="Arial,sans-serif" font-size="15.603518" font-weight="bold" fill="var(--warn-accent)">Rollback</text>
+  <text x="60" y="472.835803" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout undo deployment/my-app</text>
+  <text x="60" y="494.477439" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout undo deployment/my-app --to-revision=2</text>
+  <text x="60" y="516.119343" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS is kept (scaled to 0) enabling instant rollback</text>
+  <rect x="640" y="420.895474" width="600" height="108.208984" rx="7.182066" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="650" y="446.865571" font-family="Arial,sans-serif" font-size="15.603518" font-weight="bold" fill="var(--ok-accent)">Monitor Rollout</text>
+  <text x="660" y="472.835803" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout status deployment/my-app</text>
+  <text x="660" y="494.477439" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout history deployment/my-app</text>
+  <text x="660" y="516.119343" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">kubectl get rs  (see old and new ReplicaSets)</text>
+  <rect x="40" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="70" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">Old version (v1)</text>
+  <rect x="220" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="250" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">New version (v2)</text>
+  <rect x="400" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
+  <text x="430" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">Terminating</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text-muted)">Rolling update ensures zero downtime — always ≥ (desired - maxUnavailable) pods running during update</text>
 </svg>

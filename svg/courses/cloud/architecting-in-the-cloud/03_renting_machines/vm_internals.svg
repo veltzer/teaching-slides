@@ -93,103 +93,100 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-
   <!-- Physical Host -->
-  <rect x="77.5" y="67.1875" width="1125" height="534.6875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="94.375" font-family="Arial, sans-serif" font-size="18.4349" fill="var(--text)" text-anchor="middle" font-weight="bold">Physical Host Server</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6.454009" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="69.491525" font-family="Arial, sans-serif" font-size="19.829836" fill="var(--text)" text-anchor="middle" font-weight="bold">Physical Host Server</text>
 
   <!-- Hardware layer -->
-  <rect x="96.25" y="520.3125" width="1087.5" height="63.4375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="542.9688" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--text)" text-anchor="middle" font-weight="bold">Physical Hardware</text>
+  <rect x="60" y="531.525424" width="1160" height="68.813559" rx="6.454009" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="556.101749" font-family="Arial, sans-serif" font-size="14.872297" fill="var(--text)" text-anchor="middle" font-weight="bold">Physical Hardware</text>
 
   <!-- CPU slices -->
-  <rect x="115" y="556.5625" width="131.25" height="18.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="180.625" y="569.25" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">96 CPU Cores</text>
+  <rect x="80" y="570.847458" width="140" height="19.661017" rx="6.454009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="584.610169" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--primary-accent)" text-anchor="middle">96 CPU Cores</text>
 
   <!-- RAM slices -->
-  <rect x="265" y="556.5625" width="131.25" height="18.125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="330.625" y="569.25" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">768 GB RAM</text>
+  <rect x="240" y="570.847458" width="140" height="19.661017" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="310" y="584.610169" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--ok-accent)" text-anchor="middle">768 GB RAM</text>
 
   <!-- Network -->
-  <rect x="415" y="556.5625" width="131.25" height="18.125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="480.625" y="569.25" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">100 Gbps NIC</text>
+  <rect x="400" y="570.847458" width="140" height="19.661017" rx="6.454009" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="470" y="584.610169" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--warn-accent)" text-anchor="middle">100 Gbps NIC</text>
 
   <!-- Storage -->
-  <rect x="565" y="556.5625" width="131.25" height="18.125" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="630.625" y="569.25" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)" text-anchor="middle">NVMe SSDs</text>
+  <rect x="560" y="570.847458" width="140" height="19.661017" rx="6.454009" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="630" y="584.610169" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--info-accent)" text-anchor="middle">NVMe SSDs</text>
 
   <!-- Hypervisor layer -->
-  <rect x="96.25" y="456.875" width="1087.5" height="54.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="488.5938" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Hypervisor (e.g., Nitro / KVM / Xen)</text>
-  <text x="640" y="504" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Manages resource allocation, isolation, and scheduling</text>
+  <rect x="60" y="462.711864" width="1160" height="58.983051" rx="6.454009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="497.118698" font-family="Arial, sans-serif" font-size="15.863848" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Hypervisor (e.g., Nitro / KVM / Xen)</text>
+  <text x="640" y="513.830508" font-family="Arial, sans-serif" font-size="10.906415" fill="var(--text-muted)" text-anchor="middle">Manages resource allocation, isolation, and scheduling</text>
 
   <!-- VM 1 (ok) -->
-  <rect x="115" y="117.0312" width="318.75" height="326.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="274.375" y="141.5" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">VM 1 (m5.xlarge)</text>
+  <rect x="80" y="94.067742" width="340" height="353.898305" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="120.610169" font-family="Arial, sans-serif" font-size="14.872297" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">VM 1 (m5.xlarge)</text>
 
-  <rect x="133.75" y="153.2812" width="281.25" height="40.7812" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="274.375" y="174.125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Application: Web Server</text>
-  <text x="274.375" y="187.7188" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">nginx + Node.js</text>
+  <rect x="100" y="133.389776" width="300" height="44.237234" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="250" y="156" font-family="Arial, sans-serif" font-size="12.88941" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Application: Web Server</text>
+  <text x="250" y="170.745817" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">nginx + Node.js</text>
 
-  <rect x="133.75" y="203.125" width="281.25" height="31.7188" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="274.375" y="223.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)" text-anchor="middle">Guest OS: Ubuntu 22.04</text>
+  <rect x="100" y="187.457627" width="300" height="34.406834" rx="6.454009" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="210.067851" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--text)" text-anchor="middle">Guest OS: Ubuntu 22.04</text>
 
   <!-- CPU/RAM allocation for VM1 -->
-  <rect x="133.75" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="199.375" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">4 vCPUs</text>
-  <text x="199.375" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
+  <rect x="100" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="170" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">4 vCPUs</text>
+  <text x="170" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
 
-  <rect x="283.75" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="349.375" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">16 GB RAM</text>
-  <text x="349.375" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
+  <rect x="260" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">16 GB RAM</text>
+  <text x="330" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
 
   <!-- VM 2 (warn) -->
-  <rect x="480.625" y="117.0312" width="318.75" height="326.25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="141.5" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">VM 2 (r5.2xlarge)</text>
+  <rect x="470" y="94.067742" width="340" height="353.898305" rx="6.454009" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="120.610169" font-family="Arial, sans-serif" font-size="14.872297" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">VM 2 (r5.2xlarge)</text>
 
-  <rect x="499.375" y="153.2812" width="281.25" height="40.7812" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="174.125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Application: Database</text>
-  <text x="640" y="187.7188" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">PostgreSQL</text>
+  <rect x="490" y="133.389776" width="300" height="44.237234" rx="6.454009" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="156" font-family="Arial, sans-serif" font-size="12.88941" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Application: Database</text>
+  <text x="640" y="170.745817" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">PostgreSQL</text>
 
-  <rect x="499.375" y="203.125" width="281.25" height="31.7188" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="223.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)" text-anchor="middle">Guest OS: Amazon Linux 2</text>
+  <rect x="490" y="187.457627" width="300" height="34.406834" rx="6.454009" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="210.067851" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--text)" text-anchor="middle">Guest OS: Amazon Linux 2</text>
 
-  <rect x="499.375" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="565" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">8 vCPUs</text>
-  <text x="565" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
+  <rect x="490" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="560" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">8 vCPUs</text>
+  <text x="560" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
 
-  <rect x="649.375" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="715" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">64 GB RAM</text>
-  <text x="715" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
+  <rect x="650" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="720" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">64 GB RAM</text>
+  <text x="720" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
 
   <!-- VM 3 (info) -->
-  <rect x="846.25" y="117.0312" width="318.75" height="326.25" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1005.625" y="141.5" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">VM 3 (c5.xlarge)</text>
+  <rect x="860" y="94.067742" width="340" height="353.898305" rx="6.454009" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1030" y="120.610169" font-family="Arial, sans-serif" font-size="14.872297" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">VM 3 (c5.xlarge)</text>
 
-  <rect x="865" y="153.2812" width="281.25" height="40.7812" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1005.625" y="174.125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Application: ML Worker</text>
-  <text x="1005.625" y="187.7188" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">TensorFlow batch jobs</text>
+  <rect x="880" y="133.389776" width="300" height="44.237234" rx="6.454009" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1030" y="156" font-family="Arial, sans-serif" font-size="12.88941" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Application: ML Worker</text>
+  <text x="1030" y="170.745817" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">TensorFlow batch jobs</text>
 
-  <rect x="865" y="203.125" width="281.25" height="31.7188" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1005.625" y="223.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)" text-anchor="middle">Guest OS: CentOS 9</text>
+  <rect x="880" y="187.457627" width="300" height="34.406834" rx="6.454009" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1030" y="210.067851" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--text)" text-anchor="middle">Guest OS: CentOS 9</text>
 
-  <rect x="865" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="930.625" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">4 vCPUs</text>
-  <text x="930.625" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
+  <rect x="880" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="950" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">4 vCPUs</text>
+  <text x="950" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated cores</text>
 
-  <rect x="1015" y="248.4375" width="131.25" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1080.625" y="268.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">8 GB RAM</text>
-  <text x="1080.625" y="284.6875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
+  <rect x="1040" y="236.610169" width="140" height="49.152542" rx="6.454009" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1110" y="258.237288" font-family="Arial, sans-serif" font-size="11.897859" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">8 GB RAM</text>
+  <text x="1110" y="275.932203" font-family="Arial, sans-serif" font-size="10.756682" fill="var(--text-muted)" text-anchor="middle">Allocated memory</text>
 
   <!-- Isolation note -->
-  <text x="274.375" y="420.625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
-  <text x="640" y="420.625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
-  <text x="1005.625" y="420.625" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
+  <text x="250" y="423.389831" font-family="Arial, sans-serif" font-size="10.906415" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
+  <text x="640" y="423.389831" font-family="Arial, sans-serif" font-size="10.906415" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
+  <text x="1030" y="423.389831" font-family="Arial, sans-serif" font-size="10.906415" fill="var(--text-faint)" text-anchor="middle">Fully isolated</text>
 
   <!-- Arrows from VMs to Hypervisor -->
-  <line x1="274.375" y1="443.2812" x2="274.375" y2="455.0625" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="443.2812" x2="640" y2="455.0625" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1005.625" y1="443.2812" x2="1005.625" y2="455.0625" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="250" y1="447.966047" x2="250" y2="460.745763" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="447.966047" x2="640" y2="460.745763" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1030" y1="447.966047" x2="1030" y2="460.745763" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

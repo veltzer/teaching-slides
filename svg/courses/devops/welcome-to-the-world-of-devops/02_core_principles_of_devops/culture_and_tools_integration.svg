@@ -34,76 +34,45 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow-down" markerWidth="12" markerHeight="12" refX="6" refY="10" orient="auto">
+      <path d="M2,2 L6,10 L10,2 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="321.485743" cy="338.514257" r="281.485743" fill="var(--primary-fill)" stroke="var(--text)" stroke-width="4.2667" opacity="0.7" />
-  <text x="194.079839" y="189.257229" text-anchor="middle" font-size="41.284606" font-weight="bold">Culture</text>
-  <text x="178.154302" y="301.199897" text-anchor="middle" font-size="37.531406">Collaboration</text>
-  <text x="178.154302" y="413.14297" text-anchor="middle" font-size="37.531406">Trust</text>
-  <circle cx="640" cy="338.514257" r="281.485743" fill="var(--info-fill)" stroke="var(--text)" stroke-width="4.2667" opacity="0.7" />
-  <text x="640" y="40" text-anchor="middle" font-size="41.284606" font-weight="bold">Process</text>
-  <text x="640" y="151.942971" text-anchor="middle" font-size="37.531406">CI/CD</text>
-  <text x="640" y="263.885641" text-anchor="middle" font-size="37.531406">Agile</text>
-  <circle cx="958.514257" cy="338.514257" r="281.485743" fill="var(--ok-fill)" stroke="var(--text)" stroke-width="4.2667" opacity="0.7" />
-  <text x="1085.920161" y="189.257229" text-anchor="middle" font-size="41.284606" font-weight="bold">Tools</text>
-  <text x="1101.845698" y="301.199897" text-anchor="middle" font-size="37.531406">Automation</text>
-  <text x="1101.845698" y="413.14297" text-anchor="middle" font-size="37.531406">Platforms</text>
-  <text x="640" y="487.771284" text-anchor="middle" font-size="37.531406" fill="var(--info-accent)" font-weight="bold">DevOps</text>
+  </defs>
+
+  <!-- Three pillars: Culture, Process, Tools -->
+  <rect x="40" y="40" width="370.909091" height="401.538462" rx="13.236948" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="4" opacity="0.85"/>
+  <text x="225.454545" y="118.076923" text-anchor="middle" font-size="46.329317" font-weight="bold" fill="var(--primary-text)">Culture</text>
+  <rect x="72.727273" y="162.692308" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="225.454545" y="212.884615" text-anchor="middle" font-size="30.886211" fill="var(--text)">Collaboration</text>
+  <rect x="72.727273" y="274.230769" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="225.454545" y="324.423077" text-anchor="middle" font-size="30.886211" fill="var(--text)">Trust</text>
+  <rect x="72.727273" y="363.461538" width="305.454545" height="66.923077" rx="8.824632" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="225.454545" y="408.076923" text-anchor="middle" font-size="26.473895" fill="var(--text-muted)">Shared ownership</text>
+
+  <rect x="454.545455" y="40" width="370.909091" height="401.538462" rx="13.236948" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="4" opacity="0.85"/>
+  <text x="640" y="118.076923" text-anchor="middle" font-size="46.329317" font-weight="bold" fill="var(--info-text)">Process</text>
+  <rect x="487.272727" y="162.692308" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="212.884615" text-anchor="middle" font-size="30.886211" fill="var(--text)">CI / CD</text>
+  <rect x="487.272727" y="274.230769" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="324.423077" text-anchor="middle" font-size="30.886211" fill="var(--text)">Agile</text>
+  <rect x="487.272727" y="363.461538" width="305.454545" height="66.923077" rx="8.824632" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="408.076923" text-anchor="middle" font-size="26.473895" fill="var(--text-muted)">Feedback loops</text>
+
+  <rect x="869.090909" y="40" width="370.909091" height="401.538462" rx="13.236948" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="4" opacity="0.85"/>
+  <text x="1054.545455" y="118.076923" text-anchor="middle" font-size="46.329317" font-weight="bold" fill="var(--ok-text)">Tools</text>
+  <rect x="901.818182" y="162.692308" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1054.545455" y="212.884615" text-anchor="middle" font-size="30.886211" fill="var(--text)">Automation</text>
+  <rect x="901.818182" y="274.230769" width="305.454545" height="78.076923" rx="8.824632" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1054.545455" y="324.423077" text-anchor="middle" font-size="30.886211" fill="var(--text)">Platforms</text>
+  <rect x="901.818182" y="363.461538" width="305.454545" height="66.923077" rx="8.824632" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1054.545455" y="408.076923" text-anchor="middle" font-size="26.473895" fill="var(--text-muted)">Monitoring</text>
+
+  <!-- Converging arrows -->
+  <line x1="225.454545" y1="452.692308" x2="530.909091" y2="530.769231" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="640" y1="452.692308" x2="640" y2="530.769231" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="1054.545455" y1="452.692308" x2="749.090909" y2="530.769231" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- DevOps synthesis box -->
+  <rect x="400" y="541.923077" width="480" height="78.076923" rx="13.236948" fill="var(--info-accent)" stroke="var(--black)" stroke-width="3"/>
+  <text x="640" y="597.692308" text-anchor="middle" font-size="41.917001" font-weight="bold" fill="var(--bg)">DevOps</text>
 </svg>

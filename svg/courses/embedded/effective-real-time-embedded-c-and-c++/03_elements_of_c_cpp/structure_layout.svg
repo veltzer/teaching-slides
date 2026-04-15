@@ -101,32 +101,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="115" y="56.1111" width="375" height="128.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="133.75" y="80.2777" font-family="monospace" font-size="17.3806" fill="var(--text)">struct S {</text>
-  <text x="152.5" y="102.8333" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">  char  c;   // 1 byte</text>
-  <text x="152.5" y="125.3889" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">  int   i;   // 4 bytes</text>
-  <text x="152.5" y="147.9444" font-family="monospace" font-size="17.3806" fill="var(--primary-accent)">  double d;  // 8 bytes</text>
-  <text x="133.75" y="170.5" font-family="monospace" font-size="17.3806" fill="var(--text)">};</text>
-  <text x="640" y="233.3333" text-anchor="middle" font-family="sans-serif" font-size="19.1186" fill="var(--text-muted)">Memory layout (16 bytes total due to alignment)</text>
-  <rect x="115" y="249.4444" width="75" height="96.6667" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="152.5" y="301.8056" text-anchor="middle" font-family="monospace" font-size="22.5947" font-weight="bold" fill="var(--bg)">c</text>
-  <text x="152.5" y="325.9723" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--primary-accent)">1B</text>
-  <rect x="190" y="249.4444" width="225" height="96.6667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" filter="url(#shadow)" />
-  <text x="302.5" y="301.8056" text-anchor="middle" font-family="sans-serif" font-size="19.1186" fill="var(--text-faint)">padding</text>
-  <text x="302.5" y="325.9723" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-faint)">3B</text>
-  <rect x="415" y="249.4444" width="299.9999" height="96.6667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="565" y="301.8056" text-anchor="middle" font-family="monospace" font-size="22.5947" font-weight="bold" fill="var(--text)">i</text>
-  <text x="565" y="325.9723" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">4B</text>
-  <rect x="715" y="249.4444" width="450" height="96.6667" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="939.9999" y="301.8056" text-anchor="middle" font-family="monospace" font-size="22.5947" font-weight="bold" fill="var(--text)">d</text>
-  <text x="939.9999" y="325.9723" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">8B</text>
-  <text x="152.5" y="370.2777" text-anchor="middle" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">+0</text>
-  <text x="415" y="370.2777" text-anchor="middle" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">+4</text>
-  <text x="715" y="370.2777" text-anchor="middle" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">+8</text>
-  <text x="1165" y="370.2777" text-anchor="middle" font-family="monospace" font-size="13.9044" fill="var(--text-faint)">+16</text>
-  <rect x="227.5" y="402.5" width="825" height="64.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="428.2777" text-anchor="middle" font-family="sans-serif" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)">Alignment rule: each field starts at a multiple of its size</text>
-  <text x="640" y="452.4444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Use __attribute__((packed)) to remove padding — at a performance cost</text>
-  <text x="640" y="515.2777" text-anchor="middle" font-family="monospace" font-size="19.1186" fill="var(--text)">sizeof(S) = 16  (not 1+4+8=13)</text>
+  <rect x="40" y="40" width="428.571429" height="162.807055" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="61.428571" y="70.526236" font-family="monospace" font-size="20.882841" fill="var(--text)">struct S {</text>
+  <text x="82.857143" y="99.017524" font-family="monospace" font-size="20.882841" fill="var(--primary-accent)">  char  c;   // 1 byte</text>
+  <text x="82.857143" y="127.508813" font-family="monospace" font-size="20.882841" fill="var(--primary-accent)">  int   i;   // 4 bytes</text>
+  <text x="82.857143" y="155.999975" font-family="monospace" font-size="20.882841" fill="var(--primary-accent)">  double d;  // 8 bytes</text>
+  <text x="61.428571" y="184.491263" font-family="monospace" font-size="20.882841" fill="var(--text)">};</text>
+  <text x="640" y="263.859654" text-anchor="middle" font-family="sans-serif" font-size="22.971053" fill="var(--text-muted)">Memory layout (16 bytes total due to alignment)</text>
+  <rect x="40" y="284.21052" width="85.714286" height="122.105323" rx="7.209017" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="82.857143" y="350.350992" text-anchor="middle" font-family="monospace" font-size="27.147598" font-weight="bold" fill="var(--bg)">c</text>
+  <text x="82.857143" y="380.877355" text-anchor="middle" font-family="sans-serif" font-size="15.662071" fill="var(--primary-accent)">1B</text>
+  <rect x="125.714286" y="284.21052" width="257.142857" height="122.105323" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" filter="url(#shadow)" />
+  <text x="254.285714" y="350.350992" text-anchor="middle" font-family="sans-serif" font-size="22.971053" fill="var(--text-faint)">padding</text>
+  <text x="254.285714" y="380.877355" text-anchor="middle" font-family="sans-serif" font-size="15.662071" fill="var(--text-faint)">3B</text>
+  <rect x="382.857143" y="284.21052" width="342.857029" height="122.105323" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="554.285714" y="350.350992" text-anchor="middle" font-family="monospace" font-size="27.147598" font-weight="bold" fill="var(--text)">i</text>
+  <text x="554.285714" y="380.877355" text-anchor="middle" font-family="sans-serif" font-size="15.662071" fill="var(--text-muted)">4B</text>
+  <rect x="725.714286" y="284.21052" width="514.285714" height="122.105323" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="982.857029" y="350.350992" text-anchor="middle" font-family="monospace" font-size="27.147598" font-weight="bold" fill="var(--text)">d</text>
+  <text x="982.857029" y="380.877355" text-anchor="middle" font-family="sans-serif" font-size="15.662071" fill="var(--text-muted)">8B</text>
+  <text x="82.857143" y="436.842079" text-anchor="middle" font-family="monospace" font-size="16.706177" fill="var(--text-faint)">+0</text>
+  <text x="382.857143" y="436.842079" text-anchor="middle" font-family="monospace" font-size="16.706177" fill="var(--text-faint)">+4</text>
+  <text x="725.714286" y="436.842079" text-anchor="middle" font-family="monospace" font-size="16.706177" fill="var(--text-faint)">+8</text>
+  <text x="1240" y="436.842079" text-anchor="middle" font-family="monospace" font-size="16.706177" fill="var(--text-faint)">+16</text>
+  <rect x="168.571429" y="477.543937" width="942.857143" height="81.403464" rx="7.209017" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="510.105247" text-anchor="middle" font-family="sans-serif" font-size="20.882841" font-weight="bold" fill="var(--primary-accent)">Alignment rule: each field starts at a multiple of its size</text>
+  <text x="640" y="540.63161" text-anchor="middle" font-family="sans-serif" font-size="17.750403" fill="var(--text-muted)">Use __attribute__((packed)) to remove padding — at a performance cost</text>
+  <text x="640" y="620" text-anchor="middle" font-family="monospace" font-size="22.971053" fill="var(--text)">sizeof(S) = 16  (not 1+4+8=13)</text>
 </svg>

@@ -97,23 +97,22 @@
       <polygon points="0,21.8182 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect width="1200" height="580" fill="var(--surface)" rx="6" stroke="var(--border)" stroke-width="1" x="40" y="40"/>
-  <text x="640" y="85.697" font-family="sans-serif" font-size="25.2808" font-weight="bold" fill="var(--text)" text-anchor="middle">Dependency Confusion Attack</text>
-  <text x="640" y="127.8788" font-family="sans-serif" font-size="20.2246" fill="var(--text-muted)" text-anchor="middle">Company uses internal package: @company/auth-utils (private registry)</text>
-  <text x="640" y="159.5152" font-family="sans-serif" font-size="20.2246" fill="var(--text-muted)" text-anchor="middle">Build system resolves: 1. Private registry, 2. Public registry (fallback)</text>
-  <rect x="112.7273" y="198.1818" width="327.2727" height="123.0303" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="276.3636" y="236.8485" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Private Registry</text>
-  <text x="276.3636" y="268.4848" font-family="sans-serif" font-size="20.2246" fill="var(--text)" text-anchor="middle">auth-utils v1.2.3</text>
-  <text x="276.3636" y="300.1212" font-family="sans-serif" font-size="18.5392" fill="var(--text-muted)" text-anchor="middle">(legitimate)</text>
-  <rect x="840" y="198.1818" width="327.2727" height="123.0303" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1003.6363" y="236.8485" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Public Registry</text>
-  <text x="1003.6363" y="268.4848" font-family="sans-serif" font-size="20.2246" fill="var(--text)" text-anchor="middle">auth-utils v99.0.0</text>
-  <text x="1003.6363" y="300.1212" font-family="sans-serif" font-size="18.5392" fill="var(--danger-accent)" text-anchor="middle">← MALICIOUS</text>
-  <line x1="276.3636" y1="321.2121" x2="549.0909" y2="417.8788" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="1003.6363" y1="321.2121" x2="730.9091" y2="417.8788" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="403.6364" y="417.8788" width="472.7273" height="87.8788" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="454.7879" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Build System: v99 &gt; v1.2.3</text>
-  <text x="640" y="486.4242" font-family="sans-serif" font-size="20.2246" fill="var(--danger-accent)" text-anchor="middle">Installs PUBLIC package! ← WRONG</text>
-  <text x="640" y="558.4848" font-family="sans-serif" font-size="20.2246" fill="var(--text-muted)" text-anchor="middle">Alex Birsan (2021): Compromised Apple, Microsoft, PayPal, Netflix, Uber</text>
-  <text x="640" y="590.1212" font-family="sans-serif" font-size="20.2246" fill="var(--text-muted)" text-anchor="middle">with this technique</text>
+  <text x="640" y="40" font-family="sans-serif" font-size="28.917772" font-weight="bold" fill="var(--text)" text-anchor="middle">Dependency Confusion Attack</text>
+  <text x="640" y="88.501725" font-family="sans-serif" font-size="23.134172" fill="var(--text-muted)" text-anchor="middle">Company uses internal package: @company/auth-utils (private registry)</text>
+  <text x="640" y="124.878077" font-family="sans-serif" font-size="23.134172" fill="var(--text-muted)" text-anchor="middle">Build system resolves: 1. Private registry, 2. Public registry (fallback)</text>
+  <rect x="40" y="169.337934" width="372.413781" height="141.463423" fill="var(--ok-fill)" rx="6.863178" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="226.206834" y="213.797907" font-family="sans-serif" font-size="25.062039" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Private Registry</text>
+  <text x="226.206834" y="250.174143" font-family="sans-serif" font-size="23.134172" fill="var(--text)" text-anchor="middle">auth-utils v1.2.3</text>
+  <text x="226.206834" y="286.550495" font-family="sans-serif" font-size="21.206305" fill="var(--text-muted)" text-anchor="middle">(legitimate)</text>
+  <rect x="867.586219" y="169.337934" width="372.413781" height="141.463423" fill="var(--danger-fill)" rx="6.863178" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1053.793052" y="213.797907" font-family="sans-serif" font-size="25.062039" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Public Registry</text>
+  <text x="1053.793052" y="250.174143" font-family="sans-serif" font-size="23.134172" fill="var(--text)" text-anchor="middle">auth-utils v99.0.0</text>
+  <text x="1053.793052" y="286.550495" font-family="sans-serif" font-size="21.206305" fill="var(--danger-accent)" text-anchor="middle">← MALICIOUS</text>
+  <line x1="226.206834" y1="310.801357" x2="536.551708" y2="421.951231" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
+  <line x1="1053.793052" y1="310.801357" x2="743.448292" y2="421.951231" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arr)" />
+  <rect x="371.03451" y="421.951231" width="537.931093" height="101.045319" fill="var(--warn-fill)" rx="6.863178" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="640" y="464.390269" font-family="sans-serif" font-size="25.062039" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Build System: v99 &gt; v1.2.3</text>
+  <text x="640" y="500.766506" font-family="sans-serif" font-size="23.134172" fill="var(--danger-accent)" text-anchor="middle">Installs PUBLIC package! ← WRONG</text>
+  <text x="640" y="583.623649" font-family="sans-serif" font-size="23.134172" fill="var(--text-muted)" text-anchor="middle">Alex Birsan (2021): Compromised Apple, Microsoft, PayPal, Netflix, Uber</text>
+  <text x="640" y="620" font-family="sans-serif" font-size="23.134172" fill="var(--text-muted)" text-anchor="middle">with this technique</text>
 </svg>

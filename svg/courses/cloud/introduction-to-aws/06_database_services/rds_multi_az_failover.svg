@@ -95,80 +95,78 @@
 </defs>
 
   <!-- Background -->
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)"/>
-
   <!-- DNS Endpoint at top -->
-  <rect x="452.5" y="53.5938" width="375" height="49.8438" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="640" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)">RDS DNS Endpoint</text>
-  <text x="640" y="94.375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">mydb.abc123.us-east-1.rds.amazonaws.com</text>
+  <rect x="433.103448" y="40" width="413.793103" height="52.72733" rx="6.482456" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="63.966891" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.937847" font-weight="bold" fill="var(--bg)">RDS DNS Endpoint</text>
+  <text x="640" y="83.140447" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--info-accent)">mydb.abc123.us-east-1.rds.amazonaws.com</text>
 
   <!-- Application -->
-  <rect x="490" y="117.0312" width="300" height="36.25" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="139.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)">Application connects via DNS endpoint</text>
+  <rect x="474.482759" y="107.107338" width="331.034483" height="38.347111" rx="6.482456" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="131.074336" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" fill="var(--text)">Application connects via DNS endpoint</text>
 
   <!-- Arrow from DNS to AZ-1 primary (normal state) -->
-  <line x1="546.25" y1="153.2812" x2="340" y2="221.25" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <text x="410.3125" y="185" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">Active</text>
+  <line x1="536.551724" y1="145.454449" x2="308.965517" y2="217.355335" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="386.551724" y="179.008224" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--primary-accent)">Active</text>
 
   <!-- AZ-1 -->
-  <rect x="96.25" y="221.25" width="468.75" height="253.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="330.625" y="246.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)">Availability Zone 1</text>
+  <rect x="40" y="217.355335" width="517.241379" height="268.429777" rx="6.482456" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="298.62069" y="244.198313" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.933768" font-weight="bold" fill="var(--primary-accent)">Availability Zone 1</text>
 
   <!-- Primary DB -->
-  <rect x="171.25" y="266.5625" width="318.75" height="90.625" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="330.625" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">Primary DB Instance</text>
-  <text x="330.625" y="328.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--primary-accent)">Read + Write operations</text>
+  <rect x="122.758621" y="265.289224" width="351.724138" height="95.867777" rx="6.482456" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="298.62069" y="303.636335" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.925503" font-weight="bold" fill="var(--bg)">Primary DB Instance</text>
+  <text x="298.62069" y="330.479312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" fill="var(--primary-accent)">Read + Write operations</text>
 
   <!-- EBS volume -->
-  <rect x="208.75" y="375.3125" width="243.75" height="40.7812" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="330.625" y="400.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--primary-accent)">EBS Volume (Primary)</text>
+  <rect x="164.137931" y="380.330557" width="268.965517" height="43.140447" rx="6.482456" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
+  <text x="298.62069" y="407.173534" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" fill="var(--primary-accent)">EBS Volume (Primary)</text>
 
   <!-- Failover dashed arrow -->
-  <line x1="733.75" y1="153.2812" x2="902.5" y2="221.25" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8,5"/>
-  <text x="865" y="185" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--danger-accent)">Failover</text>
+  <line x1="743.448276" y1="145.454449" x2="929.655172" y2="217.355335" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="888.275862" y="179.008224" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--danger-accent)">Failover</text>
 
   <!-- AZ-2 -->
-  <rect x="715" y="221.25" width="468.75" height="253.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="949.375" y="246.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
+  <rect x="722.758621" y="217.355335" width="517.241379" height="268.429777" rx="6.482456" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="981.37931" y="244.198313" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.933768" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
 
   <!-- Standby DB -->
-  <rect x="790" y="266.5625" width="318.75" height="90.625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="949.375" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--text-muted)">Standby DB Instance</text>
-  <text x="949.375" y="328.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">No read/write (hot standby)</text>
+  <rect x="805.517241" y="265.289224" width="351.724138" height="95.867777" rx="6.482456" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="981.37931" y="303.636335" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.925503" font-weight="bold" fill="var(--text-muted)">Standby DB Instance</text>
+  <text x="981.37931" y="330.479312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" fill="var(--text-muted)">No read/write (hot standby)</text>
 
   <!-- EBS volume standby -->
-  <rect x="827.5" y="375.3125" width="243.75" height="40.7812" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="949.375" y="400.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">EBS Volume (Standby)</text>
+  <rect x="846.896552" y="380.330557" width="268.965517" height="43.140447" rx="6.482456" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="981.37931" y="407.173534" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" fill="var(--text-muted)">EBS Volume (Standby)</text>
 
   <!-- Synchronous replication arrow -->
-  <line x1="490" y1="311.875" x2="790" y2="311.875" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="565" y="289.2188" width="187.5" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="658.75" y="304.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)">Synchronous Replication</text>
+  <line x1="474.482759" y1="313.223113" x2="805.517241" y2="313.223113" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="557.241379" y="289.256221" width="206.896552" height="23.008267" rx="6.482456" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="660.689655" y="305.55369" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--warn-accent)">Synchronous Replication</text>
 
   <!-- After failover section -->
-  <rect x="96.25" y="493.125" width="1087.5" height="108.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="520.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)">After Failover (Automatic)</text>
+  <rect x="40" y="504.958667" width="1200" height="115.041333" rx="6.482456" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="533.719" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.933768" font-weight="bold" fill="var(--ok-accent)">After Failover (Automatic)</text>
 
-  <rect x="133.75" y="533.9062" width="187.5" height="45.3125" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="227.5" y="552.0312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--danger-accent)">Old Primary (AZ-1)</text>
-  <text x="227.5" y="568.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--danger-accent)">Failed / Demoted</text>
+  <rect x="81.37931" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="184.827586" y="567.27267" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--danger-accent)">Old Primary (AZ-1)</text>
+  <text x="184.827586" y="584.528975" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--danger-accent)">Failed / Demoted</text>
 
-  <line x1="321.25" y1="556.5625" x2="471.25" y2="556.5625" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="396.25" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--danger-accent)">DNS update</text>
+  <line x1="288.275862" y1="572.066111" x2="453.793103" y2="572.066111" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="371.034483" y="562.479334" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--danger-accent)">DNS update</text>
 
-  <rect x="471.25" y="533.9062" width="187.5" height="45.3125" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="565" y="554.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">DNS Endpoint</text>
-  <text x="565" y="570.1562" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--info-accent)">Points to new primary</text>
+  <rect x="453.793103" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="557.241379" y="570.148756" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" font-weight="bold" fill="var(--bg)">DNS Endpoint</text>
+  <text x="557.241379" y="586.446225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--info-accent)">Points to new primary</text>
 
-  <line x1="658.75" y1="556.5625" x2="808.75" y2="556.5625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="733.75" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" font-weight="bold" fill="var(--ok-accent)">Now active</text>
+  <line x1="660.689655" y1="572.066111" x2="826.206897" y2="572.066111" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="743.448276" y="562.479334" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" font-weight="bold" fill="var(--ok-accent)">Now active</text>
 
-  <rect x="808.75" y="533.9062" width="187.5" height="45.3125" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="902.5" y="552.0312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)">New Primary (AZ-2)</text>
-  <text x="902.5" y="568.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)">Promoted automatically</text>
+  <rect x="826.206897" y="548.099114" width="206.896552" height="47.933889" rx="6.482456" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="929.655172" y="567.27267" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">New Primary (AZ-2)</text>
+  <text x="929.655172" y="584.528975" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--ok-accent)">Promoted automatically</text>
 
   <!-- Failover time -->
-  <rect x="1033.75" y="533.9062" width="131.25" height="45.3125" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
-  <text x="1099.375" y="552.0312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)">Failover time:</text>
-  <text x="1099.375" y="570.1562" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">60-120 sec</text>
+  <rect x="1074.482759" y="548.099114" width="144.827586" height="47.933889" rx="6.482456" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <text x="1146.896552" y="567.27267" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--warn-accent)">Failover time:</text>
+  <text x="1146.896552" y="586.446225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--warn-accent)">60-120 sec</text>
 </svg>
