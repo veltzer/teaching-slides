@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --surface: #f5f5f5;
@@ -25,7 +26,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">PageRank</text>
   <rect x="85.6233" y="141.623" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
   <rect x="162.408" y="112.317" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>
@@ -39,7 +40,7 @@
   <text x="185" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--primary-text)">rank by inbound influence</text>
   <text x="185" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--primary-text)">g.pageRank(0.0001)</text>
 
-  <rect x="350" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="350" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Triangle Count</text>
   <polygon points="495,134.909091 430,229.818182 560,229.818182" fill="none" stroke="var(--bg)" stroke-width="2.5"/>
   <rect x="482.677" y="122.586" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
@@ -48,7 +49,7 @@
   <text x="495" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--ok-text)">count closed triads per vertex</text>
   <text x="495" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">g.triangleCount()</text>
 
-  <rect x="660" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="660" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="82.181818" text-anchor="middle" font-family="Arial" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Connected Components</text>
   <rect x="707.677" y="143.677" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
   <rect x="757.677" y="175.313" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
@@ -63,7 +64,7 @@
   <text x="805" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--warn-text)">label propagation to min id</text>
   <text x="805" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--warn-text)">g.connectedComponents()</text>
 
-  <rect x="970" y="40" width="270" height="284.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="40" width="270" height="284.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--info-text)">SSSP</text>
   <rect x="1005.62" y="173.26" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
   <text x="1020" y="192.909091" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--info-border)">0</text>

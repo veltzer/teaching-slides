@@ -94,22 +94,22 @@
     </marker>
 </defs>
   <text x="640" y="40" text-anchor="middle" font-size="25.5866" font-weight="bold">Debugging Best Practices</text>
-  <rect x="40" y="82.963" width="374.9999" height="232.716" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="82.963" width="374.9999" height="232.716" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="226.4285" y="147.4074" text-anchor="middle" font-size="21.3221" font-weight="bold">1. Reproduce</text>
   <text x="226.4285" y="208.2716" text-anchor="middle" font-size="21.3221">Same image tag</text>
   <text x="226.4285" y="261.9753" text-anchor="middle" font-size="21.3221">Same env vars</text>
-  <rect x="453.5714" y="82.963" width="374.9999" height="232.716" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="453.5714" y="82.963" width="374.9999" height="232.716" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="147.4074" text-anchor="middle" font-size="21.3221" font-weight="bold">2. Isolate</text>
   <text x="640" y="208.2716" text-anchor="middle" font-size="21.3221">Minimal compose</text>
   <text x="640" y="261.9753" text-anchor="middle" font-size="21.3221">One service at a time</text>
-  <rect x="864.9999" y="82.963" width="374.9999" height="232.716" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="864.9999" y="82.963" width="374.9999" height="232.716" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1051.4286" y="147.4074" text-anchor="middle" font-size="21.3221" font-weight="bold">3. Verify Fix</text>
   <text x="1051.4286" y="208.2716" text-anchor="middle" font-size="21.3221">Clean rebuild</text>
   <text x="1051.4286" y="261.9753" text-anchor="middle" font-size="21.3221">Test in CI</text>
-  <rect x="40" y="369.3827" width="578.5715" height="143.2099" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="369.3827" width="578.5715" height="143.2099" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="329.2857" y="433.8271" text-anchor="middle" font-size="21.3221" font-weight="bold">Do: version pin, health checks, logs</text>
   <text x="329.2857" y="487.5308" text-anchor="middle" font-size="21.3221">Structured JSON logging</text>
-  <rect x="661.4285" y="369.3827" width="578.5715" height="143.2099" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="661.4285" y="369.3827" width="578.5715" height="143.2099" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="950.7142" y="433.8271" text-anchor="middle" font-size="21.3221" font-weight="bold" fill="var(--danger-accent)">Avoid: latest tag, no limits, silent fails</text>
   <text x="950.7142" y="487.5308" text-anchor="middle" font-size="21.3221" fill="var(--danger-accent)">Ignoring exit codes</text>
   <text x="640" y="620" text-anchor="middle" font-size="21.3221" fill="var(--text-muted)">docker inspect -f '{{.State.ExitCode}}' container -- always check exit codes</text>

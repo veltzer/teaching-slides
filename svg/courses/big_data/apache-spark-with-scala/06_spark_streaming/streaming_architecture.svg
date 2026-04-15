@@ -97,7 +97,7 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8141" font-weight="bold" fill="var(--text)">Structured Streaming Architecture</text>
 
   <!-- Sources -->
-  <rect x="40" y="92.7273" width="220" height="527.2727" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="92.7273" width="220" height="527.2727" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--primary-text)">Sources</text>
   <text x="150" y="180.6061" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Kafka</text>
   <text x="150" y="215.7576" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Kinesis</text>
@@ -112,31 +112,31 @@
   <line x1="260" y1="338.7879" x2="298" y2="338.7879" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Engine -->
-  <rect x="300" y="92.7273" width="680" height="527.2727" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="300" y="92.7273" width="680" height="527.2727" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--ok-text)">Structured Streaming Engine</text>
 
-  <rect x="330" y="163.0303" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="330" y="163.0303" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="470" y="198.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Trigger policy</text>
   <text x="470" y="227.4747" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">ProcessingTime(1s)</text>
   <text x="470" y="248.5657" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">Once() (batch)</text>
   <text x="470" y="269.6566" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">AvailableNow</text>
   <text x="470" y="294.2626" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">Continuous (low-latency)</text>
 
-  <rect x="670" y="163.0303" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="670" y="163.0303" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="810" y="198.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Micro-batch loop</text>
   <text x="810" y="227.4747" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">each tick:</text>
   <text x="810" y="250.9091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">read new offsets → batch DF</text>
   <text x="810" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">run Catalyst → execute stages</text>
   <text x="810" y="293.0909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">commit state + offsets</text>
 
-  <rect x="330" y="338.7879" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="330" y="338.7879" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="470" y="373.9394" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Stateful operations</text>
   <text x="470" y="406.7475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">aggregations, joins, windows</text>
   <text x="470" y="430.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">state stored per executor</text>
   <text x="470" y="453.6162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">HDFS / S3 checkpoint backing</text>
   <text x="470" y="477.0505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">watermarks cap memory growth</text>
 
-  <rect x="670" y="338.7879" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="670" y="338.7879" width="280" height="152.3232" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="810" y="373.9394" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Checkpoint directory</text>
   <text x="810" y="406.7475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">offsets, commits, state</text>
   <text x="810" y="430.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">survives restarts</text>
@@ -149,7 +149,7 @@
   <line x1="980" y1="338.7879" x2="1018" y2="338.7879" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Sinks -->
-  <rect x="1020" y="92.7273" width="220" height="527.2727" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1020" y="92.7273" width="220" height="527.2727" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1130" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--warn-text)">Sinks</text>
   <text x="1130" y="180.6061" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Kafka</text>
   <text x="1130" y="215.7576" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">File (Parquet/ORC)</text>

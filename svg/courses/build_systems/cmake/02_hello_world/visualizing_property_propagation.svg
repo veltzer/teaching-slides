@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
   <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">CMake PUBLIC Property Propagation</text>
 
-  <rect x="340" y="140" width="600" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="340" y="140" width="600" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">mylib (library)</text>
   <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">PUBLIC include/</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">PUBLIC -DUSE_MYLIB</text>
@@ -49,7 +50,7 @@
   <line x1="640" y1="270" x2="640" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="660" y="315" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">target_link_libraries(app PUBLIC mylib)</text>
 
-  <rect x="340" y="360" width="600" height="130" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="360" width="600" height="130" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">app (executable)</text>
   <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">inherits include/ path</text>
   <text x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">inherits -DUSE_MYLIB</text>
@@ -57,6 +58,6 @@
   <line x1="640" y1="490" x2="640" y2="570" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="660" y="535" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">target_link_libraries(test_app PUBLIC app)</text>
 
-  <rect x="40" y="580" width="1200" height="40" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="580" width="1200" height="40" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">PUBLIC propagates transitively. PRIVATE does not. INTERFACE propagates but does not apply locally.</text>
 </svg>

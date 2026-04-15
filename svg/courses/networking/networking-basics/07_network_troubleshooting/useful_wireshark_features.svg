@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,61 +37,61 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753498" font-weight="bold" fill="var(--text)">Useful Wireshark Features</text>
 
-  <rect x="40" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="108.545455" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">1. Capture Filters</text>
   <text x="60" y="140.181818" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Decide which packets hit disk</text>
   <text x="60" y="166.545455" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">BPF syntax, applied by kernel</text>
   <text x="60" y="198.181818" font-family="monospace" font-size="13.349838" fill="var(--primary-text)">host 10.0.0.5 and port 80</text>
   <text x="60" y="229.818182" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Lower CPU, smaller pcap files</text>
 
-  <rect x="445" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="465" y="108.545455" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">2. Display Filters</text>
   <text x="465" y="140.181818" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Narrow the view post-capture</text>
   <text x="465" y="166.545455" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Field-based, dissector aware</text>
   <text x="465" y="198.181818" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">http.request.method == "POST"</text>
   <text x="465" y="229.818182" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Chain with &amp;&amp;, ||, !</text>
 
-  <rect x="850" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="71.636364" width="390" height="179.272727" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="108.545455" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">3. Conversations</text>
   <text x="870" y="140.181818" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Statistics → Conversations</text>
   <text x="870" y="166.545455" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">All connections at a glance</text>
   <text x="870" y="198.181818" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Byte and packet counts by pair</text>
   <text x="870" y="229.818182" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Click a row to filter to that flow</text>
 
-  <rect x="40" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="303.636364" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">4. Protocol Hierarchy</text>
   <text x="60" y="335.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Statistics → Protocol Hierarchy</text>
   <text x="60" y="361.636364" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Tree of protocols seen</text>
   <text x="60" y="393.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Shows bytes per protocol</text>
   <text x="60" y="424.909091" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Spots unexpected traffic quickly</text>
 
-  <rect x="445" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="445" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="465" y="303.636364" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">5. Follow Stream</text>
   <text x="465" y="335.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Reassemble TCP, UDP, HTTP, TLS</text>
   <text x="465" y="361.636364" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Read both sides as plain text</text>
   <text x="465" y="393.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Great for debugging protocols</text>
   <text x="465" y="424.909091" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Right-click a packet → Follow</text>
 
-  <rect x="850" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="850" y="266.727273" width="390" height="179.272727" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="303.636364" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">6. Expert Info</text>
   <text x="870" y="335.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Analyze → Expert Information</text>
   <text x="870" y="361.636364" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Flags retransmits, resets, dupes</text>
   <text x="870" y="393.272727" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Severity-graded, jump-to-packet</text>
   <text x="870" y="424.909091" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">First place to look for anomalies</text>
 
-  <rect x="40" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="498.727273" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">7. IO Graphs</text>
   <text x="60" y="530.363636" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Plot traffic over time</text>
   <text x="60" y="556.727273" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Overlay filters on one chart</text>
   <text x="60" y="588.363636" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Spot bursts, silences, retries</text>
 
-  <rect x="445" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="445" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="465" y="498.727273" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">8. Export Objects</text>
   <text x="465" y="530.363636" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">File → Export Objects → HTTP</text>
   <text x="465" y="556.727273" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Pull files out of captures</text>
   <text x="465" y="588.363636" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Also works for SMB, DICOM, TFTP</text>
 
-  <rect x="850" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="850" y="461.818182" width="390" height="158.181818" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="498.727273" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--danger-text)">9. Coloring Rules</text>
   <text x="870" y="530.363636" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">View → Coloring Rules</text>
   <text x="870" y="556.727273" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Highlight errors, your flow</text>

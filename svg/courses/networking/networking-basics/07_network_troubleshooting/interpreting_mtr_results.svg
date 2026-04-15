@@ -94,26 +94,26 @@
     </marker>
 </defs>
   <text x="640" y="40" text-anchor="middle" font-size="23.3382" font-weight="bold" fill="var(--text)">Interpreting MTR Results</text>
-  <rect x="40" y="58.3158" width="1200" height="116.0001" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="58.3158" width="1200" height="116.0001" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="88.8421" font-size="18.1519" font-weight="bold" fill="var(--ok-accent)">Case 1: Loss at one hop but not later</text>
   <text x="76.3637" y="113.2632" font-size="15.5588" fill="var(--text)">Hop 3: 30% loss | Hop 4: 0% loss | Hop 5: 0% loss</text>
   <text x="76.3637" y="137.6843" font-size="15.5588" fill="var(--text-muted)">Router at hop 3 is rate-limiting ICMP responses - NOT an actual problem</text>
   <text x="76.3637" y="162.1053" font-size="14.2622" fill="var(--ok-accent)" font-weight="bold">Verdict: False alarm (ICMP deprioritized)</text>
-  <rect x="40" y="186.5263" width="1200" height="116.0001" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="186.5263" width="1200" height="116.0001" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="217.0527" font-size="18.1519" font-weight="bold" fill="var(--danger-accent)">Case 2: Loss starts at one hop and continues</text>
   <text x="76.3637" y="241.4737" font-size="15.5588" fill="var(--text)">Hop 3: 0% loss | Hop 4: 20% loss | Hop 5: 20% loss | Hop 6: 20% loss</text>
   <text x="76.3637" y="265.8948" font-size="15.5588" fill="var(--text-muted)">Real packet loss starting at hop 4</text>
   <text x="76.3637" y="290.3158" font-size="14.2622" fill="var(--danger-accent)" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</text>
-  <rect x="40" y="314.7368" width="1200" height="116.0001" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="314.7368" width="1200" height="116.0001" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="345.2632" font-size="18.1519" font-weight="bold" fill="var(--danger-accent)">Case 3: Latency spike at one hop</text>
   <text x="76.3637" y="369.6842" font-size="15.5588" fill="var(--text)">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</text>
   <text x="76.3637" y="394.1053" font-size="15.5588" fill="var(--text-muted)">Link between hop 3 and 4 has high latency</text>
   <text x="76.3637" y="418.5263" font-size="14.2622" fill="var(--danger-accent)" font-weight="bold">Verdict: Congestion, distance, or poor peering</text>
-  <rect x="40" y="442.9473" width="1200" height="116.0001" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="442.9473" width="1200" height="116.0001" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="473.4737" font-size="18.1519" font-weight="bold" fill="var(--primary-accent)">Case 4: High jitter (StDev)</text>
   <text x="76.3637" y="497.8947" font-size="15.5588" fill="var(--text)">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</text>
   <text x="76.3637" y="522.3158" font-size="15.5588" fill="var(--text-muted)">Inconsistent performance</text>
   <text x="76.3637" y="546.7368" font-size="14.2622" fill="var(--primary-accent)" font-weight="bold">Verdict: Possible congestion, bufferbloat, or wireless issues</text>
-  <rect x="185.4546" y="577.2632" width="909.0909" height="42.7368" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="185.4546" y="577.2632" width="909.0909" height="42.7368" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="604.1264" text-anchor="middle" font-size="15.5588" fill="var(--text)" font-weight="bold">Key: Look for patterns that persist across subsequent hops</text>
 </svg>

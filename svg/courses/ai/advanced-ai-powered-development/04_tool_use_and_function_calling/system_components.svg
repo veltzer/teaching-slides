@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,14 +39,14 @@
   </defs>
   <text x="656.216216" y="40" text-anchor="middle" font-size="28.550572" font-weight="bold" fill="var(--primary-accent)">Production Architecture for Tool-Use Systems</text>
 
-  <rect x="40" y="212.884615" width="172.972973" height="156.153846" rx="8.784791" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="212.884615" width="172.972973" height="156.153846" rx="8.784791" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="126.486486" y="268.653846" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--primary-text)">Client</text>
   <text x="126.486486" y="307.692308" text-anchor="middle" font-size="15.373385" fill="var(--primary-text)">API caller</text>
   <text x="126.486486" y="335.576923" text-anchor="middle" font-size="15.373385" fill="var(--primary-text)">agent / user</text>
 
   <line x1="212.972973" y1="290.961538" x2="250.810811" y2="290.961538" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="256.216216" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="256.216216" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="348.108108" y="263.076923" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--warn-text)">API Gateway</text>
   <text x="348.108108" y="296.538462" text-anchor="middle" font-size="14.275286" fill="var(--warn-text)">rate limiting</text>
   <text x="348.108108" y="322.192308" text-anchor="middle" font-size="14.275286" fill="var(--warn-text)">validation</text>
@@ -53,7 +54,7 @@
 
   <line x1="440" y1="290.961538" x2="477.837838" y2="290.961538" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="483.243243" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="483.243243" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="575.135135" y="263.076923" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--ok-text)">LLM</text>
   <text x="575.135135" y="296.538462" text-anchor="middle" font-size="14.275286" fill="var(--ok-text)">Claude / GPT</text>
   <text x="575.135135" y="322.192308" text-anchor="middle" font-size="14.275286" fill="var(--ok-text)">reasoning</text>
@@ -61,23 +62,23 @@
 
   <line x1="667.027027" y1="290.961538" x2="704.864865" y2="290.961538" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="710.27027" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="710.27027" y="212.884615" width="183.783784" height="156.153846" rx="8.784791" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="802.162162" y="263.076923" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--danger-text)">Tools</text>
   <text x="802.162162" y="296.538462" text-anchor="middle" font-size="14.275286" fill="var(--danger-text)">file, shell</text>
   <text x="802.162162" y="322.192308" text-anchor="middle" font-size="14.275286" fill="var(--danger-text)">web, LSP</text>
   <text x="802.162162" y="347.846154" text-anchor="middle" font-size="14.275286" fill="var(--danger-text)">custom APIs</text>
 
-  <rect x="937.297297" y="56.730769" width="302.702703" height="122.692308" rx="8.784791" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="937.297297" y="56.730769" width="302.702703" height="122.692308" rx="8.784791" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1088.648649" y="101.346154" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--info-text)">Registry</text>
   <text x="1088.648649" y="134.807692" text-anchor="middle" font-size="14.275286" fill="var(--info-text)">tool catalog</text>
   <text x="1088.648649" y="160.461538" text-anchor="middle" font-size="14.275286" fill="var(--info-text)">schemas + versions</text>
 
-  <rect x="937.297297" y="229.615385" width="302.702703" height="122.692308" rx="8.784791" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="937.297297" y="229.615385" width="302.702703" height="122.692308" rx="8.784791" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1088.648649" y="274.230769" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--primary-text)">Auth</text>
   <text x="1088.648649" y="307.692308" text-anchor="middle" font-size="14.275286" fill="var(--primary-text)">permission checks</text>
   <text x="1088.648649" y="333.346154" text-anchor="middle" font-size="14.275286" fill="var(--primary-text)">token management</text>
 
-  <rect x="937.297297" y="402.5" width="302.702703" height="122.692308" rx="8.784791" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="937.297297" y="402.5" width="302.702703" height="122.692308" rx="8.784791" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1088.648649" y="447.115385" text-anchor="middle" font-size="19.76578" font-weight="bold" fill="var(--warn-text)">Logger</text>
   <text x="1088.648649" y="480.576923" text-anchor="middle" font-size="14.275286" fill="var(--warn-text)">audit trail</text>
   <text x="1088.648649" y="506.230769" text-anchor="middle" font-size="14.275286" fill="var(--warn-text)">every invocation</text>

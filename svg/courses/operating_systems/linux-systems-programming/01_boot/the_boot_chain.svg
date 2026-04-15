@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,27 +42,27 @@
   <text x="640" y="40" text-anchor="middle" font-size="29.514591" font-weight="bold" fill="var(--text)">The Linux Boot Chain</text>
 
   <!-- Stage boxes -->
-  <rect x="40" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="143.448276" y="244.074074" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--primary-text)">Hardware</text>
   <text x="143.448276" y="287.037037" text-anchor="middle" font-size="14.757296" fill="var(--primary-text)">Power on, POST</text>
   <text x="143.448276" y="310.666667" text-anchor="middle" font-size="14.757296" fill="var(--primary-text)">CPU reset vector</text>
 
-  <rect x="288.275862" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="288.275862" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="391.724138" y="244.074074" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--info-text)">Firmware</text>
   <text x="391.724138" y="287.037037" text-anchor="middle" font-size="14.757296" fill="var(--info-text)">BIOS or UEFI</text>
   <text x="391.724138" y="310.666667" text-anchor="middle" font-size="14.757296" fill="var(--info-text)">Device init</text>
 
-  <rect x="536.551724" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="536.551724" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="244.074074" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--warn-text)">Bootloader</text>
   <text x="640" y="287.037037" text-anchor="middle" font-size="14.757296" fill="var(--warn-text)">GRUB, systemd-boot</text>
   <text x="640" y="310.666667" text-anchor="middle" font-size="14.757296" fill="var(--warn-text)">Loads kernel + initrd</text>
 
-  <rect x="784.827586" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="784.827586" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="888.275862" y="244.074074" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--danger-text)">Kernel</text>
   <text x="888.275862" y="287.037037" text-anchor="middle" font-size="14.757296" fill="var(--danger-text)">Decompress, init HW</text>
   <text x="888.275862" y="310.666667" text-anchor="middle" font-size="14.757296" fill="var(--danger-text)">Mount rootfs</text>
 
-  <rect x="1033.103448" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1033.103448" y="179.62963" width="206.896552" height="150.37037" rx="8.43274" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1136.551724" y="244.074074" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--ok-text)">Init / systemd</text>
   <text x="1136.551724" y="287.037037" text-anchor="middle" font-size="14.757296" fill="var(--ok-text)">PID 1 starts</text>
   <text x="1136.551724" y="310.666667" text-anchor="middle" font-size="14.757296" fill="var(--ok-text)">Services, login</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,22 +40,22 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Spark Troubleshooting Guide</text>
 
   <!-- Workflow -->
-  <rect x="40" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="177" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Issue</text>
   <text x="177" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">OOM, slow stage,</text>
   <text x="177" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">task failure, skew</text>
 
-  <rect x="340" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="340" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="477" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Analyze</text>
   <text x="477" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Spark UI, logs,</text>
   <text x="477" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">event timeline, plan</text>
 
-  <rect x="640" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="640" y="82.181818" width="275" height="126.545455" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="777" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Resolve</text>
   <text x="777" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">repartition, broadcast,</text>
   <text x="777" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">bump memory, cache</text>
 
-  <rect x="940" y="82.181818" width="300" height="126.545455" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="940" y="82.181818" width="300" height="126.545455" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Prevent</text>
   <text x="1090" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">alerts, tests,</text>
   <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">data-quality checks</text>
@@ -68,9 +69,9 @@
   <text x="640" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--text)">Common symptoms and first fixes</text>
 
   <!-- headers -->
-  <rect x="60" y="308.909091" width="380" height="35.854545" fill="var(--primary-fill)"/>
-  <rect x="440" y="308.909091" width="380" height="35.854545" fill="var(--primary-fill)"/>
-  <rect x="820" y="308.909091" width="400" height="35.854545" fill="var(--primary-fill)"/>
+  <rect x="60" y="308.909091" width="380" height="35.854545" fill="var(--primary-fill)" filter="url(#shadow)"/>
+  <rect x="440" y="308.909091" width="380" height="35.854545" fill="var(--primary-fill)" filter="url(#shadow)"/>
+  <rect x="820" y="308.909091" width="400" height="35.854545" fill="var(--primary-fill)" filter="url(#shadow)"/>
   <text x="250" y="333.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--primary-text)">Symptom</text>
   <text x="630" y="333.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--primary-text)">Likely cause</text>
   <text x="1020" y="333.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--primary-text)">First fix</text>

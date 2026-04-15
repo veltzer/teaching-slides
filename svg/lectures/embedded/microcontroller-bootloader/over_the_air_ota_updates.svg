@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="320" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="320" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Update Server</text>
   <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Signed firmware</text>
   <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Version metadata</text>
@@ -47,26 +48,26 @@
   <text x="200" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">WiFi / Cellular</text>
   <text x="200" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">HTTPS delivery</text>
 
-  <rect x="410" y="40" width="280" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="410" y="40" width="280" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="550" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">IoT Device</text>
   <text x="550" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Dual-bank flash</text>
   <text x="550" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">A/B slots</text>
   <text x="550" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Bootloader</text>
   <text x="550" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Rollback on fail</text>
 
-  <rect x="740" y="40" width="500" height="108" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="740" y="40" width="500" height="108" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">1. Check for updates</text>
 
-  <rect x="740" y="160" width="500" height="108" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="740" y="160" width="500" height="108" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">2. Download firmware</text>
 
-  <rect x="740" y="280" width="500" height="108" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="740" y="280" width="500" height="108" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">3. Verify signature</text>
 
-  <rect x="740" y="400" width="500" height="108" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="740" y="400" width="500" height="108" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="463" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">4. Install and reboot</text>
 
-  <rect x="740" y="520" width="500" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="740" y="520" width="500" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">5. Confirm success</text>
 
   <line x1="360" y1="330" x2="410" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

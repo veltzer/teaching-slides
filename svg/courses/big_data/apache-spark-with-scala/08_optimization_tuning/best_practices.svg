@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,7 +36,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="590" height="284.912281" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="590" height="284.912281" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">Do</text>
   <text x="335" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Prefer DataFrame / Dataset API</text>
   <text x="335" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Cache reused datasets once</text>
@@ -44,7 +45,7 @@
   <text x="335" y="263.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Filter and project early</text>
   <text x="335" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Partition output by hot columns</text>
 
-  <rect x="650" y="40" width="590" height="284.912281" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="40" width="590" height="284.912281" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">Avoid</text>
   <text x="945" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">collect() on large datasets</text>
   <text x="945" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">UDFs where built-ins exist</text>

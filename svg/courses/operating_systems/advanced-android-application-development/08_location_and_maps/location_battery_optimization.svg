@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,19 +39,19 @@
   <rect x="40" y="81.801802" width="595" height="271.711712" rx="8.178196" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="337" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--text)">Priority vs battery cost</text>
 
-  <rect x="70" y="144.504505" width="535" height="35.531532" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1"/>
+  <rect x="70" y="144.504505" width="535" height="35.531532" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="85" y="168.540541" font-family="Arial, sans-serif" font-size="14.311842" font-weight="bold" fill="var(--danger-text)">HIGH_ACCURACY</text>
   <text x="595" y="168.540541" text-anchor="end" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">GPS + WiFi + cell — highest drain</text>
 
-  <rect x="70" y="190.486486" width="420" height="35.531532" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1"/>
+  <rect x="70" y="190.486486" width="420" height="35.531532" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="85" y="214.522523" font-family="Arial, sans-serif" font-size="14.311842" font-weight="bold" fill="var(--warn-text)">BALANCED_POWER</text>
   <text x="480" y="214.522523" text-anchor="end" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">~100 m, WiFi + cell</text>
 
-  <rect x="70" y="236.468468" width="280" height="35.531532" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="70" y="236.468468" width="280" height="35.531532" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="85" y="260.504505" font-family="Arial, sans-serif" font-size="14.311842" font-weight="bold" fill="var(--primary-text)">LOW_POWER</text>
   <text x="340" y="260.504505" text-anchor="end" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">~10 km, cell only</text>
 
-  <rect x="70" y="282.45045" width="160" height="35.531532" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="70" y="282.45045" width="160" height="35.531532" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="85" y="306.486486" font-family="Arial, sans-serif" font-size="14.311842" font-weight="bold" fill="var(--ok-text)">PASSIVE</text>
   <text x="220" y="306.486486" text-anchor="end" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">piggyback</text>
 
@@ -67,25 +68,25 @@
   <text x="680" y="311.711712" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--text)">• Cache last-known location for instant UI</text>
 
   <!-- APIs row -->
-  <rect x="40" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="421.441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391" font-weight="bold" fill="var(--ok-text)">FusedLocationProvider</text>
   <text x="235" y="452.792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">System fuses GPS/WiFi/cell</text>
   <text x="235" y="478.918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Respects Doze and battery</text>
   <text x="235" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Default for most apps</text>
 
-  <rect x="445" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="445" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="421.441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391" font-weight="bold" fill="var(--info-text)">Geofence API</text>
   <text x="640" y="452.792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Callback only on enter/exit</text>
   <text x="640" y="478.918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">No polling needed</text>
   <text x="640" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Great for zone triggers</text>
 
-  <rect x="850" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="384.864865" width="390" height="156.756757" rx="8.178196" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="421.441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391" font-weight="bold" fill="var(--warn-text)">Activity Recognition</text>
   <text x="1045" y="452.792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Still, walk, drive</text>
   <text x="1045" y="478.918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Skip GPS while stationary</text>
   <text x="1045" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Adapt interval to motion</text>
 
   <!-- Rule of thumb -->
-  <rect x="40" y="572.972973" width="1200" height="47.027027" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="572.972973" width="1200" height="47.027027" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="604.324324" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--primary-text)">Rule: every location fix is battery — ask for the least you can, as rarely as you can.</text>
 </svg>

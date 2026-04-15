@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,13 +43,13 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="340" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="340" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="210" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--primary-text)">Producer</text>
   <text x="210" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Generates events</text>
   <text x="210" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Fast sender</text>
   <text x="210" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Must honor signal</text>
 
-  <rect x="470" y="40" width="340" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="470" y="40" width="340" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--danger-text)">Queue Full</text>
   <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Buffer saturated</text>
   <text x="640" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Memory pressure</text>
@@ -56,7 +57,7 @@
   <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Emits back signal</text>
   <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Slow down!</text>
 
-  <rect x="900" y="40" width="340" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="900" y="40" width="340" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1070" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--info-text)">Consumer</text>
   <text x="1070" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">Processes events</text>
   <text x="1070" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">Slower receiver</text>

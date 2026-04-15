@@ -98,7 +98,7 @@
 
   <text x="640" y="75.9292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" fill="var(--text-muted)">Compute per-row values using a window of related rows, without collapsing the row itself.</text>
 
-  <rect x="40" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--primary-text)">Ranking</text>
   <text x="235" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">row_number()</text>
   <text x="235" y="186.7965" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">1, 2, 3, 4 — unique per partition</text>
@@ -111,7 +111,7 @@
   <text x="235" y="353.0973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">ntile(4)</text>
   <text x="235" y="371.5752" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">bucket into quartiles</text>
 
-  <rect x="445" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--ok-text)">Aggregate (over window)</text>
   <text x="640" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">sum, avg, min, max, count</text>
   <text x="640" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">computed over the frame but kept per row</text>
@@ -121,7 +121,7 @@
   <text x="640" y="299.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">   .rowsBetween(-6, 0)</text>
   <text x="640" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">df.withColumn("sales7d", sum("amount").over(w))</text>
 
-  <rect x="850" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="101.5929" width="390" height="287.4336" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--warn-text)">Analytic / Offset</text>
   <text x="1045" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">lag(col, n)</text>
   <text x="1045" y="186.7965" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">value n rows before current (history)</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,13 +40,13 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="90" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)">Deployment Strategies</text>
   <text x="640" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)">Trade downtime, risk, and cost</text>
 
   <line x1="640" y1="160" x2="640" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="220" width="230" height="400" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="220" width="230" height="400" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="155" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Recreate</text>
   <text x="155" y="350" text-anchor="middle" font-size="16" fill="var(--danger-text)">Stop old</text>
   <text x="155" y="380" text-anchor="middle" font-size="16" fill="var(--danger-text)">Start new</text>
@@ -53,7 +54,7 @@
   <text x="155" y="500" text-anchor="middle" font-size="16" fill="var(--danger-text)">Simplest</text>
   <text x="155" y="560" text-anchor="middle" font-size="16" fill="var(--danger-text)">Batch jobs</text>
 
-  <rect x="280" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="280" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="395" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Rolling</text>
   <text x="395" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Update</text>
   <text x="395" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">pods in waves</text>
@@ -61,7 +62,7 @@
   <text x="395" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">Mixed versions</text>
   <text x="395" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">K8s default</text>
 
-  <rect x="520" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="520" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="635" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Blue/Green</text>
   <text x="635" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Two stacks</text>
   <text x="635" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">switch router</text>
@@ -69,7 +70,7 @@
   <text x="635" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">2x capacity</text>
   <text x="635" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">Easy rollback</text>
 
-  <rect x="760" y="220" width="230" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="760" y="220" width="230" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="875" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Canary</text>
   <text x="875" y="350" text-anchor="middle" font-size="16" fill="var(--warn-text)">1% → 10%</text>
   <text x="875" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)">→ 50% → 100%</text>
@@ -77,7 +78,7 @@
   <text x="875" y="500" text-anchor="middle" font-size="16" fill="var(--warn-text)">Watch metrics</text>
   <text x="875" y="560" text-anchor="middle" font-size="16" fill="var(--warn-text)">Auto-rollback</text>
 
-  <rect x="1000" y="220" width="240" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1000" y="220" width="240" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">A/B Test</text>
   <text x="1120" y="350" text-anchor="middle" font-size="16" fill="var(--info-text)">Route by user</text>
   <text x="1120" y="380" text-anchor="middle" font-size="16" fill="var(--info-text)">compare KPI</text>

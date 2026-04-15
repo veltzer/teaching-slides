@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,31 +42,31 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Data Flow in Spark</text>
 
-  <rect x="40" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--primary-text)">1. Source</text>
   <text x="150" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">HDFS, S3, Kafka,</text>
   <text x="150" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">JDBC, Delta, files</text>
   <text x="150" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">spark.read.format()</text>
 
-  <rect x="290" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="290" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="400" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--info-text)">2. Partitions</text>
   <text x="400" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">Split into chunks</text>
   <text x="400" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">Distributed to executors</text>
   <text x="400" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">unit of parallelism</text>
 
-  <rect x="540" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="540" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="650" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--warn-text)">3. Transforms</text>
   <text x="650" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">map, filter, join,</text>
   <text x="650" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">groupBy, agg</text>
   <text x="650" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">lazy, build DAG</text>
 
-  <rect x="790" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="790" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="900" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--ok-text)">4. Action</text>
   <text x="900" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">count, collect,</text>
   <text x="900" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">show, save</text>
   <text x="900" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">triggers execution</text>
 
-  <rect x="1040" y="82.962963" width="200" height="161.111111" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1040" y="82.962963" width="200" height="161.111111" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1140" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--danger-text)">5. Sink</text>
   <text x="1140" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">Parquet, Delta,</text>
   <text x="1140" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">Kafka, JDBC</text>

@@ -93,28 +93,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="639.9999" y="74.8" text-anchor="middle" font-size="22.4357" font-weight="bold" fill="var(--text)">Chaining Vulnerabilities</text>
   <text x="639.9999" y="97.9999" text-anchor="middle" font-size="14.9571" fill="var(--text-muted)">Multiple low-severity vulns chain into critical attacks</text>
-  <rect x="68.5715" y="115.4" width="1142.8571" height="104.4" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="68.5715" y="115.4" width="1142.8571" height="104.4" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="106.6666" y="138.6" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)">Chain 1: Information Disclosure -&gt; Account Takeover</text>
   <text x="106.6666" y="161.7999" font-size="13.7106" fill="var(--text)">1. Directory listing reveals backup.sql</text>
   <text x="630.4761" y="161.7999" font-size="13.7106" fill="var(--text)">2. backup.sql contains password hashes</text>
   <text x="106.6666" y="185" font-size="13.7106" fill="var(--text)">3. Crack hashes -&gt; admin credentials</text>
   <text x="630.4761" y="185" font-size="13.7106" fill="var(--text)">4. Login as admin</text>
-  <rect x="68.5715" y="231.3999" width="1142.8571" height="104.4" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="68.5715" y="231.3999" width="1142.8571" height="104.4" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="106.6666" y="254.6" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)">Chain 2: XSS -&gt; Session Hijack -&gt; Admin Access</text>
   <text x="106.6666" y="277.7999" font-size="13.7106" fill="var(--text)">1. Stored XSS in user profile</text>
   <text x="630.4761" y="277.7999" font-size="13.7106" fill="var(--text)">2. Admin views profile, cookie stolen</text>
   <text x="106.6666" y="300.9999" font-size="13.7106" fill="var(--text)">3. Use admin cookie for admin panel</text>
   <text x="630.4761" y="300.9999" font-size="13.7106" fill="var(--text)">4. Upload malicious plugin for RCE</text>
-  <rect x="68.5715" y="347.3999" width="1142.8571" height="104.4" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="68.5715" y="347.3999" width="1142.8571" height="104.4" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="106.6666" y="370.5999" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)">Chain 3: SSRF -&gt; Cloud Metadata -&gt; Full Compromise</text>
   <text x="106.6666" y="393.7999" font-size="13.7106" fill="var(--text)">1. SSRF in image fetcher</text>
   <text x="630.4761" y="393.7999" font-size="13.7106" fill="var(--text)">2. Access AWS metadata endpoint</text>
   <text x="106.6666" y="417" font-size="13.7106" fill="var(--text)">3. Steal IAM credentials</text>
   <text x="630.4761" y="417" font-size="13.7106" fill="var(--text)">4. Access S3 buckets, EC2 instances</text>
-  <rect x="68.5715" y="463.3999" width="1142.8571" height="127.6" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="68.5715" y="463.3999" width="1142.8571" height="127.6" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="106.6666" y="486.6" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)">Chain 4: SQL Injection -&gt; File Read -&gt; RCE</text>
   <text x="106.6666" y="509.8" font-size="13.7106" fill="var(--text)">1. SQLi to read /etc/passwd (LOAD_FILE)</text>
   <text x="630.4761" y="509.8" font-size="13.7106" fill="var(--text)">2. Identify web root from configuration</text>

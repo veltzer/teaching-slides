@@ -110,8 +110,8 @@
   <line x1="246.557377" y1="107.968768" x2="315.409836" y2="107.968768" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="280.983502" y="98.906333" font-family="Arial,sans-serif" font-size="10.864288" fill="var(--danger-accent)" text-anchor="middle">HTTP GET/POST</text>
   <rect x="315.409836" y="40" width="265.57377" height="154.062407" rx="6.518573" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="315.409836" y="40" width="265.57377" height="32.624991" rx="6.518573" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="315.409836" y="61.750069" width="265.57377" height="10.875034" fill="var(--warn-fill)" rx="6.518573" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="315.409836" y="40" width="265.57377" height="32.624991" rx="6.518573" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="315.409836" y="61.750069" width="265.57377" height="10.875034" fill="var(--warn-fill)" rx="6.518573" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="448.196721" y="60.843882" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Application</text>
   <text x="335.081967" y="90.750086" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">$host = $_GET['host'];</text>
   <text x="335.081967" y="107.062581" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">$cmd = "ping -c 1 " . $host;</text>
@@ -136,33 +136,33 @@
   <text x="1136.721311" y="117.031316" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" text-anchor="middle">www-data</text>
   <text x="1136.721311" y="136.968898" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle">output returned</text>
   <text x="1136.721311" y="153.281393" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle">to attacker</text>
-  <rect x="40" y="221.250049" width="580.327764" height="181.249937" rx="6.518573" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="221.250049" width="580.327764" height="181.249937" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="330.163934" y="246.62498" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Shell Metacharacters Used in Injection</text>
   <rect x="59.672131" y="257.500014" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
   <text x="89.180328" y="274.718809" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">;</text>
   <text x="123.606557" y="274.718809" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Command separator — always runs next command</text>
-  <rect x="59.672131" y="286.500031" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="59.672131" y="286.500031" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.180328" y="303.718714" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">|</text>
   <text x="123.606557" y="303.718714" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Pipe — stdout of cmd1 becomes stdin of cmd2</text>
   <rect x="59.672131" y="315.500048" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
   <text x="89.180328" y="332.718843" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">&amp;&amp;</text>
   <text x="123.606557" y="332.718843" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">AND — cmd2 only if cmd1 succeeds (exit 0)</text>
-  <rect x="59.672131" y="344.499952" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="59.672131" y="344.499952" width="545.901639" height="25.375043" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.180328" y="361.718747" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">||</text>
   <text x="123.606557" y="361.718747" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">OR — cmd2 only if cmd1 fails</text>
   <rect x="59.672131" y="373.500082" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
   <text x="89.180328" y="390.718652" font-family="monospace" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold">` `  or $( )</text>
   <text x="172.786885" y="390.718652" font-family="Arial,sans-serif" font-size="12.273821" fill="var(--text)">Backticks / subshell — command substitution</text>
-  <rect x="649.836066" y="221.250049" width="590.163934" height="181.249937" rx="6.518573" fill="var(--surface)" filter="url(#shadow)" stroke="var(--border)" stroke-width="1" />
+  <rect x="649.836066" y="221.250049" width="590.163934" height="181.249937" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="944.917928" y="246.62498" font-family="Arial,sans-serif" font-size="14.162034" font-weight="bold" fill="var(--text)" text-anchor="middle">Blind vs Visible Injection</text>
-  <rect x="669.508197" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="669.508197" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="797.377049" y="278.343783" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Visible (In-Band)</text>
   <text x="689.180328" y="298.281253" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">Output appears in response</text>
   <text x="689.180328" y="316.406348" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">; cat /etc/passwd</text>
   <text x="689.180328" y="334.531217" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Response contains file content</text>
   <text x="689.180328" y="352.6562" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Easiest to exploit</text>
   <text x="689.180328" y="370.781295" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text-muted)">Confirm with: echo 1234567890</text>
-  <rect x="964.590164" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="964.590164" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1092.459016" y="278.343783" font-family="Arial,sans-serif" font-size="12.273821" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Blind (Out-of-Band)</text>
   <text x="984.262295" y="298.281253" font-family="Arial,sans-serif" font-size="11.329714" fill="var(--text)">No output in response</text>
   <text x="984.262295" y="316.406348" font-family="monospace" font-size="10.864288" fill="var(--text-muted)">; sleep 5</text>

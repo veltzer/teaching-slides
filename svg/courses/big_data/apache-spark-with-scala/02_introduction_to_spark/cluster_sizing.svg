@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,7 +37,7 @@
   </defs>
   <!-- palette: resources/palette_diagram.yaml -->
 
-  <rect x="40" y="40" width="290" height="450" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="290" height="450" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Cores</text>
   <text x="185" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">1 core per task</text>
   <text x="185" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">4-5 cores per</text>
@@ -46,7 +47,7 @@
   <text x="185" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Leave 1 for OS</text>
   <text x="185" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">per worker node</text>
 
-  <rect x="340" y="40" width="290" height="450" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="40" width="290" height="450" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Memory</text>
   <text x="485" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Budget for cache</text>
   <text x="485" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">and shuffle both</text>
@@ -56,7 +57,7 @@
   <text x="485" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">overhead ~10%</text>
   <text x="485" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Avoid 50+ GB heaps</text>
 
-  <rect x="640" y="40" width="290" height="450" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="40" width="290" height="450" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Executors</text>
   <text x="785" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Aim for 2-5 per</text>
   <text x="785" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">node, not one giant</text>
@@ -66,7 +67,7 @@
   <text x="785" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">adjusts at runtime</text>
   <text x="785" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Match to workload</text>
 
-  <rect x="940" y="40" width="300" height="450" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="40" width="300" height="450" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Storage</text>
   <text x="1090" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Plan shuffle spill</text>
   <text x="1090" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">disk capacity</text>

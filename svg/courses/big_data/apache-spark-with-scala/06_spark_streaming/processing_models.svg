@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   </defs>
   <!-- palette: resources/palette_diagram.yaml -->
 
-  <rect x="40" y="40" width="585" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="585" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="332" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">DStream (Micro-batch)</text>
   <text x="332" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Batches every N seconds</text>
   <text x="332" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Each batch is an RDD</text>
@@ -47,7 +48,7 @@
   <text x="332" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Legacy API</text>
   <text x="332" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">at-least-once by default</text>
 
-  <rect x="655" y="40" width="585" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="655" y="40" width="585" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="947" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Structured Streaming</text>
   <text x="947" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Unbounded DataFrame model</text>
   <text x="947" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Continuous or micro-batch</text>

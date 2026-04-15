@@ -98,15 +98,15 @@
     </marker>
   </defs>
   <text x="639.9999" y="40" text-anchor="middle" font-size="24.6179" font-weight="bold">Channel Types: Message Passing</text>
-  <rect x="40" y="89.7143" width="257.1429" height="182.2858" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="89.7143" width="257.1429" height="182.2858" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="168.5713" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Producer (tx)</text>
   <text x="168.5713" y="199.0857" text-anchor="middle" font-size="20.5149">tx.send(msg)</text>
   <text x="168.5713" y="242.1714" text-anchor="middle" font-size="20.5149">can clone tx</text>
-  <rect x="511.4285" y="89.7143" width="257.1429" height="182.2858" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="511.4285" y="89.7143" width="257.1429" height="182.2858" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Channel</text>
   <text x="639.9999" y="199.0857" text-anchor="middle" font-size="20.5149">FIFO queue</text>
   <text x="639.9999" y="242.1714" text-anchor="middle" font-size="20.5149">buffered/unbuffered</text>
-  <rect x="982.8571" y="89.7143" width="257.1429" height="182.2858" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="982.8571" y="89.7143" width="257.1429" height="182.2858" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1111.4285" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Consumer (rx)</text>
   <text x="1111.4285" y="199.0857" text-anchor="middle" font-size="20.5149">rx.recv()</text>
   <text x="1111.4285" y="242.1714" text-anchor="middle" font-size="20.5149">blocks until msg</text>
@@ -114,13 +114,13 @@
   <text x="404.2856" y="156.0001" text-anchor="middle" font-size="20.5149">send</text>
   <line x1="768.5714" y1="179.2" x2="982.8571" y2="179.2" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_chan)" />
   <text x="875.7143" y="156.0001" text-anchor="middle" font-size="20.5149">recv</text>
-  <rect x="40" y="321.7143" width="578.5715" height="132.5714" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="321.7143" width="578.5715" height="132.5714" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="329.2856" y="374.7428" text-anchor="middle" font-size="20.5149" font-weight="bold">mpsc (multi-producer, single-consumer)</text>
   <text x="329.2856" y="427.7715" text-anchor="middle" font-size="20.5149">Multiple tx clones, one rx. Ownership transferred on send.</text>
-  <rect x="661.4285" y="321.7143" width="578.5715" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="661.4285" y="321.7143" width="578.5715" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="950.7143" y="374.7428" text-anchor="middle" font-size="20.5149" font-weight="bold">sync_channel (bounded)</text>
   <text x="950.7143" y="427.7715" text-anchor="middle" font-size="20.5149">Fixed buffer size. send() blocks when full.</text>
-  <rect x="211.4285" y="504" width="857.1429" height="116" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="211.4285" y="504" width="857.1429" height="116" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="553.7143" text-anchor="middle" font-size="20.5149">Message ownership is moved through the channel</text>
   <text x="639.9999" y="600.1143" text-anchor="middle" font-size="20.5149">Sender cannot use value after send -- compiler enforced</text>
 </svg>

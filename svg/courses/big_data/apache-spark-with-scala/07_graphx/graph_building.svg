@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --surface: #f5f5f5;
@@ -24,7 +25,7 @@
   </defs>
 
   <rect x="40" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--primary-fill)"/>
+  <rect x="40" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--primary-fill)" filter="url(#shadow)"/>
   <text x="235" y="82.962963" text-anchor="middle" font-family="monospace" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">Graph(vertices, edges)</text>
 
   <text x="235" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">when you have typed attrs</text>
@@ -47,7 +48,7 @@
   <text x="235" y="544.814815" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">most common choice</text>
 
   <rect x="450" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="450" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--ok-fill)"/>
+  <rect x="450" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--ok-fill)" filter="url(#shadow)"/>
   <text x="645" y="82.962963" text-anchor="middle" font-family="monospace" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Graph.fromEdges</text>
 
   <text x="645" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">edges only, default vtx attr</text>
@@ -69,7 +70,7 @@
   <text x="645" y="544.814815" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">loading from edge file</text>
 
   <rect x="860" y="40" width="380" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="860" y="40" width="380" height="64.444444" rx="6.218253" fill="var(--warn-fill)"/>
+  <rect x="860" y="40" width="380" height="64.444444" rx="6.218253" fill="var(--warn-fill)" filter="url(#shadow)"/>
   <text x="1050" y="82.962963" text-anchor="middle" font-family="monospace" font-size="18.654758" font-weight="bold" fill="var(--warn-text)">fromEdgeTuples</text>
 
   <text x="1050" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">src/dst pairs, no attrs</text>

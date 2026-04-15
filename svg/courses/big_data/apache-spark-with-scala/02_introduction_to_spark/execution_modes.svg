@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Execution Modes</text>
 
-  <rect x="40" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Local Mode</text>
   <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">Single JVM, multi-thread</text>
   <text x="235" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">local[*] uses all cores</text>
@@ -50,7 +51,7 @@
   <text x="235" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">dev, unit tests, IDE debug</text>
   <text x="235" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">small datasets only</text>
 
-  <rect x="445" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Client Mode</text>
   <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--ok-text)">Driver runs on submit host</text>
   <text x="640" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--ok-text)">Executors on cluster nodes</text>
@@ -59,7 +60,7 @@
   <text x="640" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">interactive shells</text>
   <text x="640" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">notebooks, ad-hoc queries</text>
 
-  <rect x="850" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">Cluster Mode</text>
   <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--info-text)">Driver launched inside cluster</text>
   <text x="1045" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--info-text)">Submitter can disconnect</text>

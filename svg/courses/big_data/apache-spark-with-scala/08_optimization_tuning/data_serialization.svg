@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,7 +39,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Data Serialization</text>
 
-  <rect x="40" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Java Serialization</text>
   <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Default fallback</text>
   <text x="235" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Works for any Serializable</text>
@@ -48,7 +49,7 @@
   <text x="235" y="289.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Only for rare classes</text>
   <text x="235" y="325.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">spark.serializer=Java (default)</text>
 
-  <rect x="445" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Kryo Serialization</text>
   <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Recommended for RDDs</text>
   <text x="640" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">10x faster, 2-5x smaller</text>
@@ -58,7 +59,7 @@
   <text x="640" y="289.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">requireRegistration = true</text>
   <text x="640" y="325.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">spark.serializer=KryoSerializer</text>
 
-  <rect x="850" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">Tungsten / Encoders</text>
   <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">DataFrame / Dataset default</text>
   <text x="1045" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Binary UnsafeRow format</text>

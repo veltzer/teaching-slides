@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
@@ -22,19 +23,19 @@
   <text x="155" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--text)">SQL / DataFrame</text>
   <text x="155" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" fill="var(--text-muted)">user query</text>
 
-  <rect x="290" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="290" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="405" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--primary-text)">Analyzer</text>
   <text x="405" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" fill="var(--primary-text)">resolve columns</text>
 
-  <rect x="540" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="540" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="655" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--ok-text)">Logical opt</text>
   <text x="655" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" fill="var(--ok-text)">rule rewrites</text>
 
-  <rect x="790" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="790" y="40" width="230" height="113.928571" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="905" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--warn-text)">Physical plans</text>
   <text x="905" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" fill="var(--warn-text)">cost-based pick</text>
 
-  <rect x="1040" y="40" width="200" height="113.928571" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1040" y="40" width="200" height="113.928571" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1140" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--info-text)">Codegen</text>
   <text x="1140" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" fill="var(--info-text)">RDDs / JVM</text>
 
@@ -43,21 +44,21 @@
   <line x1="770" y1="96.964286" x2="790" y2="96.964286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="1020" y1="96.964286" x2="1040" y2="96.964286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="195.357143" width="590" height="201.964286" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="195.357143" width="590" height="201.964286" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="236.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--ok-text)">Logical rules</text>
   <text x="335" y="278.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--ok-text)">Predicate pushdown</text>
   <text x="335" y="309.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--ok-text)">Column pruning</text>
   <text x="335" y="340.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--ok-text)">Constant folding</text>
   <text x="335" y="376.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-style="italic" fill="var(--ok-text)">pattern matching</text>
 
-  <rect x="650" y="195.357143" width="590" height="201.964286" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="195.357143" width="590" height="201.964286" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="236.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--warn-text)">Physical choices</text>
   <text x="945" y="278.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--warn-text)">Broadcast vs shuffle join</text>
   <text x="945" y="309.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--warn-text)">Sort-merge vs hash</text>
   <text x="945" y="340.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" fill="var(--warn-text)">Partition and bucket use</text>
   <text x="945" y="376.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-style="italic" fill="var(--warn-text)">stats-driven</text>
 
-  <rect x="40" y="423.214286" width="1200" height="196.785714" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="423.214286" width="1200" height="196.785714" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.424812" font-weight="bold" fill="var(--info-text)">AQE at runtime</text>
   <text x="640" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" fill="var(--info-text)">Re-plans using actual stage stats</text>
   <text x="640" y="563.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" fill="var(--info-text)">Coalesces partitions, handles skew</text>

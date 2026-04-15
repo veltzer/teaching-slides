@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -57,17 +58,17 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)">Optimization Trade-offs: Pick Two</text>
-  <rect x="40" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="232" y="145.454545" text-anchor="middle" font-size="32.86114" font-weight="bold" fill="var(--danger-text)">Speed</text>
   <text x="232" y="219.272727" text-anchor="middle" font-size="20.538213" fill="var(--danger-text)">Fast hot paths</text>
   <text x="232" y="282.545455" text-anchor="middle" font-size="18.484391" fill="var(--danger-text)">low latency</text>
   <text x="232" y="388" text-anchor="middle" font-size="16.43057" fill="var(--danger-text)">inline, prefetch, cache</text>
-  <rect x="445" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="637" y="145.454545" text-anchor="middle" font-size="32.86114" font-weight="bold" fill="var(--ok-text)">Size</text>
   <text x="637" y="219.272727" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Small footprint</text>
   <text x="637" y="282.545455" text-anchor="middle" font-size="18.484391" fill="var(--ok-text)">fits in cache or ROM</text>
   <text x="637" y="388" text-anchor="middle" font-size="16.43057" fill="var(--ok-text)">tight loops, shared code</text>
-  <rect x="850" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="71.636364" width="385" height="442.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1042" y="145.454545" text-anchor="middle" font-size="32.86114" font-weight="bold" fill="var(--primary-text)">Features</text>
   <text x="1042" y="219.272727" text-anchor="middle" font-size="20.538213" fill="var(--primary-text)">Rich capability</text>
   <text x="1042" y="282.545455" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)">many knobs, options</text>

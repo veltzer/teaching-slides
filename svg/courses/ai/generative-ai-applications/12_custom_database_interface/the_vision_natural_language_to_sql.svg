@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,19 +40,19 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="85" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">User asks in English</text>
   <text x="640" y="125" text-anchor="middle" font-size="18" fill="var(--primary-text)">"Show me the top 5 customers by revenue this quarter"</text>
 
   <line x1="640" y1="160" x2="640" y2="195" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="200" width="1200" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="200" width="1200" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="245" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">LLM-Powered Database Interface</text>
   <text x="640" y="285" text-anchor="middle" font-size="18" fill="var(--info-text)">NL → SQL → Execute → NL (schema-aware prompting)</text>
 
   <line x1="640" y1="320" x2="640" y2="355" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="360" width="1200" height="170" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="360" width="1200" height="170" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="395" font-family="monospace" font-size="17" font-weight="bold" fill="var(--warn-text)">Generated SQL:</text>
   <text x="60" y="425" font-family="monospace" font-size="16" fill="var(--warn-text)">SELECT c.name, SUM(o.amount) AS revenue</text>
   <text x="60" y="452" font-family="monospace" font-size="16" fill="var(--warn-text)">FROM customers c JOIN orders o ON c.id = o.customer_id</text>
@@ -60,6 +61,6 @@
 
   <line x1="640" y1="530" x2="640" y2="565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="570" width="1200" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="570" width="1200" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="603" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)">Reply: "Acme $245K, TechStart $198K, …"</text>
 </svg>

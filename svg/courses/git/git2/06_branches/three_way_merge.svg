@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,22 +42,22 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Three-Way Merge Process</text>
 
-  <rect x="40" y="198.181818" width="300" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="198.181818" width="300" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="190" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.86114" font-weight="bold" fill="var(--ok-text)">Base</text>
   <text x="190" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">Common ancestor</text>
   <text x="190" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">git merge-base</text>
 
-  <rect x="460" y="71.636364" width="300" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="460" y="71.636364" width="300" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="610" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.86114" font-weight="bold" fill="var(--primary-text)">Ours</text>
   <text x="610" y="203.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--primary-text)">main branch tip</text>
   <text x="610" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--primary-text)">your changes</text>
 
-  <rect x="460" y="324.727273" width="300" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="460" y="324.727273" width="300" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="610" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.86114" font-weight="bold" fill="var(--warn-text)">Theirs</text>
   <text x="610" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--warn-text)">feature branch tip</text>
   <text x="610" y="493.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--warn-text)">their changes</text>
 
-  <rect x="880" y="198.181818" width="360" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="880" y="198.181818" width="360" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1060" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.86114" font-weight="bold" fill="var(--info-text)">Merge</text>
   <text x="1060" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--info-text)">Combined result</text>
   <text x="1060" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--info-text)">two-parent commit</text>

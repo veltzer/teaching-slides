@@ -96,52 +96,52 @@
 
   <text x="630.1639" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3049" font-weight="bold" fill="var(--text)">RDD Transformations</text>
 
-  <rect x="40" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335.082" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2495" font-weight="bold" fill="var(--ok-text)">Narrow (no shuffle)</text>
   <text x="335.082" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Each output partition depends on at most one input partition</text>
   <text x="335.082" y="165.4054" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Pipelined inside a single stage</text>
 
-  <rect x="69.5082" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="69.5082" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="148.1967" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">map</text>
 
-  <rect x="246.5574" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="246.5574" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="325.2459" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">filter</text>
 
-  <rect x="423.6066" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="423.6066" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="502.2951" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">flatMap</text>
 
-  <rect x="69.5082" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="69.5082" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="148.1967" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">mapPartitions</text>
 
-  <rect x="246.5574" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="246.5574" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="325.2459" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">sample</text>
 
-  <rect x="423.6066" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="423.6066" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="502.2951" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">union</text>
 
   <text x="335.082" y="348.2883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Cheap: stays on the same executor</text>
 
-  <rect x="649.8361" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="649.8361" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="944.918" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2495" font-weight="bold" fill="var(--warn-text)">Wide (shuffle)</text>
   <text x="944.918" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Output partition depends on many input partitions</text>
   <text x="944.918" y="165.4054" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Starts a new stage — data moves across the network</text>
 
-  <rect x="679.3443" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="679.3443" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="758.0328" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">groupByKey</text>
 
-  <rect x="856.3934" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="856.3934" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="935.082" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">reduceByKey</text>
 
-  <rect x="1033.4426" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1033.4426" y="191.5315" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1112.1311" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">aggregateByKey</text>
 
-  <rect x="679.3443" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="679.3443" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="758.0328" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">join / cogroup</text>
 
-  <rect x="856.3934" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="856.3934" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="935.082" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">distinct</text>
 
-  <rect x="1033.4426" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1033.4426" y="264.6847" width="157.377" height="52.2523" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1112.1311" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">repartition</text>
 
   <text x="944.918" y="348.2883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Expensive: disk write, network transfer, disk read</text>

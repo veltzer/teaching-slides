@@ -94,17 +94,17 @@
     </marker>
 </defs>
   <text x="640.0001" y="40" text-anchor="middle" font-size="23.3144" fill="var(--text)" font-weight="bold">I/O Multiplexing: select / poll / epoll</text>
-  <rect x="40" y="70.8876" width="1200" height="130.4142" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="70.8876" width="1200" height="130.4142" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="176.3637" y="108.639" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">select()</text>
   <line x1="312.7273" y1="77.7516" x2="312.7273" y2="194.4379" stroke="var(--text-faint)" stroke-width="1.5803" />
   <text x="330.9092" y="108.639" text-anchor="start" font-size="19.9838" fill="var(--text)">Pass ALL fds every time → kernel scans all → returns ready ones</text>
   <text x="330.9092" y="139.5267" text-anchor="start" font-size="18.3185" fill="var(--text-muted)">Works on ~1024 fds max. O(n) scan per call.</text>
-  <rect x="40" y="208.1657" width="1200" height="130.4142" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="208.1657" width="1200" height="130.4142" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="176.3637" y="245.9172" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">poll()</text>
   <line x1="312.7273" y1="215.0296" x2="312.7273" y2="331.7159" stroke="var(--text-faint)" stroke-width="1.5803" />
   <text x="330.9092" y="245.9172" text-anchor="start" font-size="19.9838" fill="var(--text)">Similar to select() but no fd limit.</text>
   <text x="330.9092" y="276.8047" text-anchor="start" font-size="18.3185" fill="var(--text-muted)">Still O(n) — kernel scans the whole list each call.</text>
-  <rect x="40" y="345.4438" width="1200" height="130.4142" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="345.4438" width="1200" height="130.4142" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="176.3637" y="383.1952" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">epoll()</text>
   <line x1="312.7273" y1="352.3077" x2="312.7273" y2="468.9941" stroke="var(--text-faint)" stroke-width="1.5803" />
   <text x="330.9092" y="383.1952" text-anchor="start" font-size="19.9838" fill="var(--text)">Register fds once; kernel notifies only about ready fds.</text>

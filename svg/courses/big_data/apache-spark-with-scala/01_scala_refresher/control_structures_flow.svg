@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,10 +37,10 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Control Structures Are Expressions</text>
 
-  <rect x="40" y="130" width="390" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="130" width="390" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">if / else</text>
   <text x="235" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">val x = if (c) a else b</text>
   <text x="235" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">returns a value</text>
@@ -47,7 +48,7 @@
   <text x="235" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">type is lub of branches</text>
   <text x="235" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">omitting else gives Unit</text>
 
-  <rect x="445" y="130" width="390" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="130" width="390" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">for-comprehension</text>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">for (x &lt;- xs if p) yield f(x)</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">desugars to flatMap / map</text>
@@ -55,7 +56,7 @@
   <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">guards filter results</text>
   <text x="640" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">no yield returns Unit</text>
 
-  <rect x="850" y="130" width="390" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="130" width="390" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">match</text>
   <text x="1045" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">x match { case p =&gt; ... }</text>
   <text x="1045" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">exhaustiveness checked</text>
@@ -63,7 +64,7 @@
   <text x="1045" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">guards via if</text>
   <text x="1045" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">replaces switch</text>
 
-  <rect x="40" y="380" width="590" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="380" width="590" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">while / do-while</text>
   <text x="335" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">returns Unit (side effects)</text>
   <text x="335" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">needs var for counters</text>
@@ -71,7 +72,7 @@
   <text x="335" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">idiomatic Scala avoids them</text>
   <text x="335" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">use when JVM performance demands it</text>
 
-  <rect x="650" y="380" width="590" height="240" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="650" y="380" width="590" height="240" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">try / catch / finally</text>
   <text x="945" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">expression: returns a value</text>
   <text x="945" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">catch is a pattern match</text>

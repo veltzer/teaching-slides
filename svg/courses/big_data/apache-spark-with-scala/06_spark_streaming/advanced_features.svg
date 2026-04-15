@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,35 +40,35 @@
   </defs>
   <!-- palette: resources/palette_diagram.yaml -->
 
-  <rect x="40" y="40" width="390" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="390" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Watermarks</text>
   <text x="235" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bound event-time lag</text>
   <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">drop late arrivals</text>
   <text x="235" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">cap state size</text>
   <text x="235" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">enables aggregations</text>
 
-  <rect x="445" y="40" width="390" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="40" width="390" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Stream-Stream Joins</text>
   <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">join two live streams</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">time constraint needed</text>
   <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">inner, left, outer</text>
   <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">buffered in state store</text>
 
-  <rect x="850" y="40" width="390" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="40" width="390" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Continuous Mode</text>
   <text x="1045" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">millisecond latency</text>
   <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">long-running tasks</text>
   <text x="1045" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">map-like ops only</text>
   <text x="1045" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">at-least-once</text>
 
-  <rect x="40" y="340" width="390" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="340" width="390" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">State Store</text>
   <text x="235" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">RocksDB backend</text>
   <text x="235" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">off-heap, scalable</text>
   <text x="235" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">incremental checkpoints</text>
   <text x="235" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">TTL for cleanup</text>
 
-  <rect x="445" y="340" width="390" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="445" y="340" width="390" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Exactly-once</text>
   <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">checkpointed offsets</text>
   <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">idempotent sink writes</text>

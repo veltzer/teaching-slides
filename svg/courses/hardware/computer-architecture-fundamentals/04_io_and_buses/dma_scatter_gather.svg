@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <text x="640" y="40" text-anchor="middle" font-size="28.4035" font-weight="bold" fill="var(--text)">DMA Scatter-Gather</text>
-  <rect x="40" y="65.5883" width="1200" height="153.5294" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="65.5883" width="1200" height="153.5294" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="88" y="104.8235" font-size="23.0778" font-weight="bold" fill="var(--danger-accent)">Without scatter-gather:</text>
   <text x="88" y="133.8235" font-size="19.5274" fill="var(--text-muted)">Data must be in one contiguous buffer</text>
-  <rect x="112" y="150.8823" width="1055.9999" height="42.647" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="112" y="150.8823" width="1055.9999" height="42.647" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="179.8823" text-anchor="middle" font-size="19.5274" fill="var(--text)">One big buffer (must copy data here first)</text>
-  <rect x="40" y="244.7059" width="1200" height="375.2941" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="244.7059" width="1200" height="375.2941" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="88" y="283.9412" font-size="23.0778" font-weight="bold" fill="var(--ok-accent)">With scatter-gather:</text>
   <text x="88" y="312.9412" font-size="19.5274" fill="var(--text-muted)">DMA reads a list of (address, length) pairs</text>
-  <rect x="112" y="338.5295" width="192" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="112" y="338.5295" width="192" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="208.0001" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf A</text>
   <text x="208.0001" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">512B</text>
-  <rect x="400.0001" y="338.5295" width="239.9999" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="400.0001" y="338.5295" width="239.9999" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="520.0001" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf B</text>
   <text x="520.0001" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">1024B</text>
-  <rect x="736" y="338.5295" width="360.0001" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="736" y="338.5295" width="360.0001" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="916" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf C</text>
   <text x="916" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">2048B</text>
   <line x1="208.0001" y1="406.7647" x2="208.0001" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
   <line x1="520.0001" y1="406.7647" x2="520.0001" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
   <line x1="916" y1="406.7647" x2="916" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
-  <rect x="112" y="466.4706" width="1008" height="127.9412" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="112" y="466.4706" width="1008" height="127.9412" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="616" y="500.5883" text-anchor="middle" font-size="21.3026" font-weight="bold" fill="var(--text)">Scatter-Gather List</text>
   <text x="208.0001" y="534.7059" font-size="17.7522" fill="var(--text-muted)">Entry 0: addr=A, len=512</text>
   <text x="208.0001" y="560.2942" font-size="17.7522" fill="var(--text-muted)">Entry 1: addr=B, len=1024</text>

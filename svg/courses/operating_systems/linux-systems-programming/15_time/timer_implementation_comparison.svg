@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">alarm()</text>
   <text x="185" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">SVR4 / classic Unix</text>
   <text x="185" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• one timer per process</text>
@@ -55,7 +56,7 @@
   <text x="185" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">legacy — avoid in</text>
   <text x="185" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">new code</text>
 
-  <rect x="350" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="350" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">setitimer()</text>
   <text x="495" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">BSD 4.2 interval timer</text>
   <text x="495" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• three timers</text>
@@ -71,7 +72,7 @@
   <text x="495" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">ok for simple cases,</text>
   <text x="495" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">limited semantics</text>
 
-  <rect x="660" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="660" y="40" width="290" height="549.473684" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">timer_create()</text>
   <text x="805" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">POSIX.1-2001</text>
   <text x="805" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• many per-process timers</text>
@@ -87,7 +88,7 @@
   <text x="805" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">precise, flexible —</text>
   <text x="805" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">but still signal-heavy</text>
 
-  <rect x="970" y="40" width="270" height="549.473684" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="970" y="40" width="270" height="549.473684" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">timerfd_create()</text>
   <text x="1105" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Linux 2.6.25+</text>
   <text x="1105" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• timer as a file</text>

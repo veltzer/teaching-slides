@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,11 +39,11 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="81.403509" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="81.403509" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="75.614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">Partitioning Strategies</text>
   <text x="640" y="103.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">Right partitioning minimises shuffle and balances work across executors</text>
 
-  <rect x="40" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="232" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Hash Partitioning</text>
   <text x="232" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Default for joins and groupBy</text>
   <text x="232" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">hash(key) mod numPartitions</text>
@@ -50,7 +51,7 @@
   <text x="232" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">are not skewed</text>
   <text x="232" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--ok-text)">repartition(n, col)</text>
 
-  <rect x="447" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="447" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Range Partitioning</text>
   <text x="640" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">Ordered keys, used by sort</text>
   <text x="640" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">Samples data to pick bounds</text>
@@ -58,7 +59,7 @@
   <text x="640" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">range queries</text>
   <text x="640" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">repartitionByRange</text>
 
-  <rect x="855" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="855" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1047" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Custom Partitioner</text>
   <text x="1047" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Co-locate related records</text>
   <text x="1047" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Avoid shuffles between jobs</text>

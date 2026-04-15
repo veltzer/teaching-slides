@@ -101,7 +101,7 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect x="40" y="40" width="491.803174" height="522.000036" rx="6.732354" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="40" width="491.803174" height="522.000036" rx="6.732354" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="285.901639" y="72.866682" text-anchor="middle" font-family="sans-serif" font-size="19.502059" font-weight="bold" fill="var(--danger-accent)">Before: One big class</text>
   <rect x="69.508197" y="90.266683" width="432.786885" height="444.666751" rx="6.732354" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
   <text x="285.901639" y="123.133366" text-anchor="middle" font-family="monospace" font-size="17.551808" font-weight="bold" fill="var(--danger-accent)">UserManager</text>
@@ -124,7 +124,7 @@
   <text x="285.901639" y="519.466753" text-anchor="middle" font-family="sans-serif" font-size="13.651307" fill="var(--danger-accent)">⚠ Hard to test · changes break everything</text>
   <line x1="535.737705" y1="291.333417" x2="594.754098" y2="291.333417" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
   <text x="565.245902" y="279.733377" text-anchor="middle" font-family="sans-serif" font-size="13.651307" fill="var(--primary-accent)">SRP</text>
-  <rect x="600.655738" y="40" width="639.344262" height="522.000036" rx="6.732354" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="600.655738" y="40" width="639.344262" height="522.000036" rx="6.732354" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="920.327869" y="72.866682" text-anchor="middle" font-family="sans-serif" font-size="19.502059" font-weight="bold" fill="var(--ok-accent)">After: One responsibility each</text>
   <rect x="620.327869" y="90.266683" width="275.409836" height="135.333249" rx="6.732354" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="758.032787" y="117.333405" text-anchor="middle" font-family="monospace" font-size="15.601558" font-weight="bold" fill="var(--bg)">User</text>
@@ -133,32 +133,32 @@
   <text x="636.065574" y="165.666649" font-family="monospace" font-size="12.67635" fill="var(--primary-accent)">string id;</text>
   <text x="636.065574" y="188.86673" font-family="sans-serif" font-size="12.67635" fill="var(--primary-accent)">data only — no logic</text>
   <text x="636.065574" y="210.133372" font-family="sans-serif" font-size="12.67635" fill="var(--primary-accent)">trivially testable</text>
-  <rect x="915.409836" y="90.266683" width="295.081967" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="915.409836" y="90.266683" width="295.081967" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="1062.95082" y="117.333405" text-anchor="middle" font-family="monospace" font-size="15.601558" font-weight="bold" fill="var(--text)">UserAuthenticator</text>
   <line x1="915.409836" y1="127.000006" x2="1210.491698" y2="127.000006" stroke="var(--border)" stroke-width="0.8889" />
   <text x="931.147541" y="146.333447" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">bool login(User&amp;, string);</text>
   <text x="931.147541" y="165.666649" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">void logout(User&amp;);</text>
   <text x="931.147541" y="188.86673" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">auth logic only</text>
   <text x="931.147541" y="210.133372" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">mock easily in tests</text>
-  <rect x="620.327869" y="246.866694" width="275.409836" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="620.327869" y="246.866694" width="275.409836" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="758.032787" y="273.933416" text-anchor="middle" font-family="monospace" font-size="15.601558" font-weight="bold" fill="var(--text)">UserRepository</text>
   <line x1="620.327869" y1="283.600017" x2="895.737705" y2="283.600017" stroke="var(--border)" stroke-width="0.8889" />
   <text x="636.065574" y="302.933458" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">void save(User&amp;);</text>
   <text x="636.065574" y="322.266659" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">User load(string id);</text>
   <text x="636.065574" y="345.466741" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">DB logic only</text>
   <text x="636.065574" y="364.799942" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">swap DB without touching auth</text>
-  <rect x="915.409836" y="246.866694" width="295.081967" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="915.409836" y="246.866694" width="295.081967" height="135.333249" rx="6.732354" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="1062.95082" y="273.933416" text-anchor="middle" font-family="monospace" font-size="15.601558" font-weight="bold" fill="var(--text)">EmailService</text>
   <line x1="915.409836" y1="283.600017" x2="1210.491698" y2="283.600017" stroke="var(--border)" stroke-width="0.8889" />
   <text x="931.147541" y="302.933458" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">void welcome(User&amp;);</text>
   <text x="931.147541" y="322.266659" font-family="monospace" font-size="12.67635" fill="var(--text-muted)">void reset(User&amp;);</text>
   <text x="931.147541" y="345.466741" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">email logic only</text>
   <text x="931.147541" y="364.799942" font-family="sans-serif" font-size="12.67635" fill="var(--text-faint)">change provider without risk</text>
-  <rect x="620.327869" y="409.266665" width="590.163934" height="116.000048" rx="6.732354" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="620.327869" y="409.266665" width="590.163934" height="116.000048" rx="6.732354" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="915.409836" y="438.266707" text-anchor="middle" font-family="sans-serif" font-size="15.601558" font-weight="bold" fill="var(--ok-accent)">Benefits</text>
   <text x="640" y="463.399989" font-family="sans-serif" font-size="13.651307" fill="var(--text-muted)">✓ Each class has one reason to change</text>
   <text x="640" y="484.666751" font-family="sans-serif" font-size="13.651307" fill="var(--text-muted)">✓ Unit test each class independently with mocks</text>
   <text x="640" y="505.933392" font-family="sans-serif" font-size="13.651307" fill="var(--text-muted)">✓ Replace implementations without touching callers</text>
-  <rect x="40" y="579.400037" width="1199.999895" height="40.599963" rx="6.732354" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="579.400037" width="1199.999895" height="40.599963" rx="6.732354" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="604.533439" text-anchor="middle" font-family="sans-serif" font-size="15.601558" fill="var(--primary-accent)">SRP: A class should have only one reason to change</text>
 </svg>

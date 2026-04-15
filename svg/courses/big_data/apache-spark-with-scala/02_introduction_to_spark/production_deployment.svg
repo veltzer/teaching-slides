@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,7 +37,7 @@
   </defs>
   <!-- palette: resources/palette_diagram.yaml -->
 
-  <rect x="40" y="40" width="290" height="450" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="290" height="450" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Packaging</text>
   <text x="185" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Fat jar via</text>
   <text x="185" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">sbt-assembly</text>
@@ -46,7 +47,7 @@
   <text x="185" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">for Kubernetes</text>
   <text x="185" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">spark-submit</text>
 
-  <rect x="340" y="40" width="290" height="450" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="40" width="290" height="450" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Orchestration</text>
   <text x="485" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Airflow, Dagster,</text>
   <text x="485" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">or Argo schedule</text>
@@ -56,7 +57,7 @@
   <text x="485" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">with write-once</text>
   <text x="485" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">output paths</text>
 
-  <rect x="640" y="40" width="290" height="450" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="40" width="290" height="450" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Security</text>
   <text x="785" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Kerberos on YARN</text>
   <text x="785" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">RBAC on K8s</text>
@@ -66,7 +67,7 @@
   <text x="785" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">IAM for cloud</text>
   <text x="785" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">object storage</text>
 
-  <rect x="940" y="40" width="300" height="450" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="40" width="300" height="450" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Observability</text>
   <text x="1090" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">History server</text>
   <text x="1090" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">always on</text>

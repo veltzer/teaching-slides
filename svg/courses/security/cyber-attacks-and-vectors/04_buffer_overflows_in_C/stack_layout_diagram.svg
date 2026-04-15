@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -58,20 +59,20 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="27.763276" font-weight="bold" fill="var(--text)">Stack Memory Layout (grows downward)</text>
   <text x="40" y="87.889908" text-anchor="middle" font-size="14.949456" fill="var(--text-faint)">High addr</text>
-  <rect x="136.428571" y="82.568807" width="814.285714" height="85.137615" rx="6.40691" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="136.428571" y="82.568807" width="814.285714" height="85.137615" rx="6.40691" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="133.651376" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--primary-text)">Function Arguments</text>
-  <rect x="136.428571" y="173.027523" width="814.285714" height="85.137615" rx="6.40691" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="136.428571" y="173.027523" width="814.285714" height="85.137615" rx="6.40691" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="224.110092" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--danger-text)">Return Address</text>
   <text x="972.142857" y="224.110092" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Attacker's target</text>
-  <rect x="136.428571" y="263.486239" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="136.428571" y="263.486239" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="314.568807" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--warn-text)">Saved Frame Pointer</text>
   <text x="972.142857" y="314.568807" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Can be overwritten</text>
-  <rect x="136.428571" y="353.944954" width="814.285714" height="85.137615" rx="6.40691" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="136.428571" y="353.944954" width="814.285714" height="85.137615" rx="6.40691" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="405.027523" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--ok-text)">Stack Canary</text>
   <text x="972.142857" y="405.027523" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Protection mechanism</text>
   <rect x="136.428571" y="444.40367" width="814.285714" height="85.137615" rx="6.40691" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="543.571429" y="495.486239" text-anchor="middle" font-size="23.492002" fill="var(--text)">Local Variables</text>
-  <rect x="136.428571" y="534.862385" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="136.428571" y="534.862385" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="585.944954" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--warn-text)">Buffer[64]</text>
   <text x="972.142857" y="585.944954" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Overflow starts here</text>
   <line x1="40" y1="114.495413" x2="40" y2="582.752294" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

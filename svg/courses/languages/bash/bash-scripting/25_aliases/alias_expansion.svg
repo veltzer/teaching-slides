@@ -106,7 +106,7 @@
   </defs>
   <!-- Top flow: alias expansion pipeline -->
   <!-- Step 1: User types command -->
-  <rect x="40" y="40" width="210" height="80" rx="6.50941" fill="var(--primary-accent)" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="210" height="80" rx="6.50941" fill="var(--primary-accent)"/>
   <text x="145" y="72" font-family="sans-serif" font-size="14.000004" font-weight="bold" fill="var(--bg)" text-anchor="middle">User Types</text>
   <text x="145" y="92" font-family="monospace" font-size="18.000037" fill="var(--warn-accent)" text-anchor="middle">ll</text>
   <text x="145" y="110" font-family="sans-serif" font-size="11.000034" fill="var(--primary-accent)" text-anchor="middle">interactive shell</text>
@@ -115,7 +115,7 @@
   <line x1="250" y1="80" x2="310" y2="80" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: Alias table lookup -->
-  <rect x="310" y="40" width="240" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="310" y="40" width="240" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="430" y="62" font-family="sans-serif" font-size="13.00005" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Alias Table Lookup</text>
   <text x="430" y="82" font-family="monospace" font-size="11.999988" fill="var(--text)" text-anchor="middle">ll → ls -la</text>
   <text x="430" y="100" font-family="monospace" font-size="11.999988" fill="var(--text)" text-anchor="middle">gs → git status</text>
@@ -135,7 +135,7 @@
   <line x1="830" y1="80" x2="900" y2="80" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Step 4: Parsed and executed -->
-  <rect x="900" y="40" width="210" height="80" rx="6.50941" fill="var(--ok-accent)" filter="url(#shadow)"/>
+  <rect x="900" y="40" width="210" height="80" rx="6.50941" fill="var(--ok-accent)"/>
   <text x="1005" y="65.000055" font-family="sans-serif" font-size="13.00005" font-weight="bold" fill="var(--bg)" text-anchor="middle">Parsed and</text>
   <text x="1005" y="82.999945" font-family="sans-serif" font-size="13.00005" font-weight="bold" fill="var(--bg)" text-anchor="middle">Executed</text>
   <text x="1005" y="110" font-family="monospace" font-size="11.000034" fill="var(--ok-accent)" text-anchor="middle">runs /bin/ls -la .</text>
@@ -143,18 +143,18 @@
   <!-- NOT FOUND path from alias table -->
   <line x1="430" y1="120" x2="430" y2="150" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3"/>
   <text x="460" y="140" font-family="sans-serif" font-size="11.000034" fill="var(--danger-accent)">not found</text>
-  <rect x="350" y="150" width="160" height="36" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="350" y="150" width="160" height="36" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="430" y="173.000055" font-family="sans-serif" font-size="11.999988" fill="var(--danger-accent)" text-anchor="middle">use as-is (no expansion)</text>
 
   <!-- Middle section: alias table visual -->
-  <rect x="40" y="210" width="480" height="280" rx="6.50941" fill="var(--bg)" filter="url(#shadow)"/>
-  <rect x="40" y="210" width="480" height="44" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="210" width="480" height="280" rx="6.50941" fill="var(--bg)"/>
+  <rect x="40" y="210" width="480" height="44" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="242" width="480" height="12" fill="var(--primary-accent)" rx="6.50941"/>
   <text x="280" y="240" font-family="sans-serif" font-size="16.999974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Alias Table (in shell memory)</text>
 
   <!-- Table header -->
-  <rect x="55" y="266" width="200" height="28" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="275" y="266" width="230" height="28" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="55" y="266" width="200" height="28" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="275" y="266" width="230" height="28" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="155" y="285.000055" font-family="sans-serif" font-size="13.00005" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Alias Name</text>
   <text x="390" y="285.000055" font-family="sans-serif" font-size="13.00005" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Expanded Value</text>
 
@@ -181,31 +181,31 @@
   <text x="55" y="482" font-family="sans-serif" font-size="11.000034" fill="var(--text-faint)">Defined with:  alias name='value'    Removed with:  unalias name</text>
 
   <!-- Right side: important behaviors -->
-  <rect x="560" y="210" width="680" height="280" rx="6.50941" fill="var(--bg)" filter="url(#shadow)"/>
-  <rect x="560" y="210" width="680" height="44" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="560" y="242" width="680" height="12" fill="var(--warn-fill)" rx="6.50941" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="560" y="210" width="680" height="280" rx="6.50941" fill="var(--bg)"/>
+  <rect x="560" y="210" width="680" height="44" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="242" width="680" height="12" fill="var(--warn-fill)" rx="6.50941" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="900" y="240" font-family="sans-serif" font-size="16.999974" font-weight="bold" fill="var(--bg)" text-anchor="middle">Important Behaviors</text>
 
   <!-- Behavior 1: Interactive only -->
-  <rect x="575" y="266" width="650" height="68" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="575" y="266" width="650" height="68" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="595" y="288" font-family="sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Interactive shells only (by default)</text>
   <text x="595" y="308" font-family="sans-serif" font-size="13.00005" fill="var(--text-muted)">Aliases are NOT expanded in scripts — use functions instead.</text>
   <text x="595" y="325.000055" font-family="monospace" font-size="11.999988" fill="var(--text-muted)">shopt -s expand_aliases  ← force in script (not recommended)</text>
 
   <!-- Behavior 2: Text substitution -->
-  <rect x="575" y="344" width="650" height="68" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="575" y="344" width="650" height="68" rx="6.50941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="595" y="366" font-family="sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Pure text substitution — happens before parsing</text>
   <text x="595" y="386" font-family="sans-serif" font-size="13.00005" fill="var(--text-muted)">ll -h /tmp   →   ls -la -h /tmp   (args appended after expansion)</text>
   <text x="595" y="406" font-family="sans-serif" font-size="13.00005" fill="var(--text-muted)">Cannot inject args in the middle — use a function for that.</text>
 
   <!-- Behavior 3: Cannot take args in middle -->
-  <rect x="575" y="422" width="650" height="60" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="575" y="422" width="650" height="60" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="595" y="444" font-family="sans-serif" font-size="14.000004" font-weight="bold" fill="var(--danger-accent)">No $1, $2 inside alias definitions</text>
   <text x="595" y="464" font-family="monospace" font-size="11.999988" fill="var(--text-muted)">alias backup='cp $1 $1.bak'   ← WRONG ($1 is not alias param)</text>
   <text x="595" y="478" font-family="monospace" font-size="11.999988" fill="var(--ok-accent)">backup() { cp "$1" "$1.bak"; }  ← RIGHT (use a function)</text>
 
   <!-- Bottom: persistent aliases -->
-  <rect x="40" y="510" width="1200" height="110" rx="6.50941" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <rect x="40" y="510" width="1200" height="110" rx="6.50941" fill="var(--code-bg)"/>
   <rect x="40" y="510" width="1200" height="38" rx="6.50941" fill="var(--ok-accent)"/>
   <rect x="40" y="536" width="1200" height="12" fill="var(--ok-accent)" rx="6.50941"/>
   <text x="640" y="534.999945" font-family="sans-serif" font-size="16.00002" font-weight="bold" fill="var(--bg)" text-anchor="middle">Making Aliases Permanent — add to ~/.bashrc or ~/.bash_aliases</text>

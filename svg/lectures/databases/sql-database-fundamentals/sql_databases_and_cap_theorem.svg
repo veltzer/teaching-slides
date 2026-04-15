@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,21 +37,21 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="4"/>
+  <rect x="40" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="4" filter="url(#shadow)"/>
   <text x="235" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--danger-text)">C</text>
   <text x="235" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--danger-text)">Consistency</text>
   <text x="235" y="302.26087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" fill="var(--danger-text)">ACID transactions</text>
   <text x="235" y="352.695652" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" fill="var(--danger-text)">strong guarantees</text>
   <text x="235" y="443.478261" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" font-weight="bold" fill="var(--danger-text)">SQL picks this</text>
 
-  <rect x="445" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="4"/>
+  <rect x="445" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="4" filter="url(#shadow)"/>
   <text x="640" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--ok-text)">A</text>
   <text x="640" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--ok-text)">Availability</text>
   <text x="640" y="302.26087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" fill="var(--ok-text)">Replicas serve reads</text>
   <text x="640" y="352.695652" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" fill="var(--ok-text)">primary handles writes</text>
   <text x="640" y="443.478261" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" font-weight="bold" fill="var(--ok-text)">Degrades on partition</text>
 
-  <rect x="850" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="8,6"/>
+  <rect x="850" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="8,6" filter="url(#shadow)"/>
   <text x="1045" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--primary-text)">P</text>
   <text x="1045" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--primary-text)">Partition tolerance</text>
   <text x="1045" y="302.26087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" fill="var(--primary-text)">Traditional SQL</text>

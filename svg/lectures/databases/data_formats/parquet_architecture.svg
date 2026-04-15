@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,14 +39,14 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)">Row-Oriented vs Column-Oriented</text>
 
-  <rect x="40" y="71.636364" width="590" height="94.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="590" height="94.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="129.636364" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--primary-text)">Row Storage (CSV, JSON)</text>
 
-  <rect x="40" y="177.090909" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="177.090909" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="224.545455" text-anchor="middle" font-size="20.538213" fill="var(--primary-text)">Alice | 30 | New York</text>
-  <rect x="40" y="261.454545" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="261.454545" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="308.909091" text-anchor="middle" font-size="20.538213" fill="var(--primary-text)">Bob | 25 | San Francisco</text>
-  <rect x="40" y="345.818182" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="345.818182" width="590" height="73.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="393.272727" text-anchor="middle" font-size="20.538213" fill="var(--primary-text)">Carol | 35 | Chicago</text>
 
   <rect x="40" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -54,14 +55,14 @@
   <text x="335" y="551.454545" text-anchor="middle" font-size="17.457481" fill="var(--text-muted)">Bad for analytics: reads unused fields</text>
   <text x="335" y="588.363636" text-anchor="middle" font-size="17.457481" fill="var(--text-muted)">Poor compression: mixed types per page</text>
 
-  <rect x="650" y="71.636364" width="590" height="94.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="71.636364" width="590" height="94.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="129.636364" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--danger-text)">Column Storage (Parquet)</text>
 
-  <rect x="650" y="177.090909" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="177.090909" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="224.545455" text-anchor="middle" font-size="20.538213" fill="var(--danger-text)">name: Alice | Bob | Carol</text>
-  <rect x="650" y="261.454545" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="261.454545" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="308.909091" text-anchor="middle" font-size="20.538213" fill="var(--danger-text)">age: 30 | 25 | 35</text>
-  <rect x="650" y="345.818182" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="345.818182" width="590" height="73.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="393.272727" text-anchor="middle" font-size="20.538213" fill="var(--danger-text)">city: NY | SF | Chicago</text>
 
   <rect x="650" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

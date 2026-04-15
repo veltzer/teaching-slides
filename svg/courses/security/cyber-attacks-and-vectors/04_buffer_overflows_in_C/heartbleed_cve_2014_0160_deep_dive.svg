@@ -113,13 +113,13 @@
   <text x="40" y="253.7629" text-anchor="start" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold">Attack:</text>
   <line x1="291.6129" y1="298.6082" x2="988.3871" y2="298.6082" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
   <text x="640" y="286.6495" text-anchor="middle" font-size="17.3854" fill="var(--text)" font-style="italic">"bird" (claimed length=65535)</text>
-  <rect x="78.7097" y="343.4536" width="1122.5807" height="119.5877" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="78.7097" y="343.4536" width="1122.5807" height="119.5877" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="377.8351" text-anchor="middle" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold">Server responds with:</text>
   <text x="640" y="407.732" text-anchor="middle" font-size="18.9659" fill="var(--text)">"bird" + up to 65,531 bytes of server memory</text>
   <text x="640" y="437.6289" text-anchor="middle" font-size="18.9659" fill="var(--danger-accent)" font-weight="bold">(private keys, passwords, session tokens!)</text>
   <line x1="988.3871" y1="482.4742" x2="291.6129" y2="482.4742" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
   <text x="640" y="473.5052" text-anchor="middle" font-size="17.3854" fill="var(--danger-accent)" font-style="italic">memory leak response</text>
-  <rect x="40" y="515.3608" width="1200" height="89.6907" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="515.3608" width="1200" height="89.6907" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="548.2474" text-anchor="middle" font-size="18.9659" fill="var(--warn-accent)" font-weight="bold">Root Cause: Server trusts client-supplied length field</text>
   <text x="640" y="575.1547" text-anchor="middle" font-size="17.3854" fill="var(--text-muted)">No bounds check → reads beyond the heartbeat payload buffer</text>
 </svg>

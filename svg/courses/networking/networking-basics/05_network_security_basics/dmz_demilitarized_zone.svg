@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -57,7 +58,7 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)">DMZ: Demilitarized Zone</text>
-  <rect x="40" y="71.636364" width="300" height="548.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="300" height="548.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="190" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--danger-text)">Internet</text>
   <text x="190" y="177.090909" text-anchor="middle" font-size="16.43057" fill="var(--danger-text)">Untrusted</text>
   <text x="190" y="219.272727" text-anchor="middle" font-size="16.43057" fill="var(--danger-text)">public traffic</text>
@@ -66,7 +67,7 @@
   <text x="190" y="409.090909" text-anchor="middle" font-size="16.43057" fill="var(--danger-text)">scanners</text>
   <line x1="340" y1="345.818182" x2="400" y2="345.818182" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="370" y="330" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)">FW1</text>
-  <rect x="400" y="71.636364" width="480" height="548.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="400" y="71.636364" width="480" height="548.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--warn-text)">DMZ</text>
   <text x="640" y="156" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)">public-facing hosts</text>
   <rect x="440" y="198.181818" width="400" height="105.454545" rx="6.161464" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
@@ -80,7 +81,7 @@
   <text x="640" y="572.545455" text-anchor="middle" font-size="14.376749" fill="var(--text-muted)">exposed, hardened</text>
   <line x1="880" y1="345.818182" x2="940" y2="345.818182" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="910" y="330" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)">FW2</text>
-  <rect x="940" y="71.636364" width="300" height="548.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="940" y="71.636364" width="300" height="548.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--ok-text)">Internal</text>
   <text x="1090" y="156" text-anchor="middle" font-size="16.43057" fill="var(--ok-text)">Trusted LAN</text>
   <text x="1090" y="240.363636" text-anchor="middle" font-size="16.43057" fill="var(--ok-text)">Databases</text>

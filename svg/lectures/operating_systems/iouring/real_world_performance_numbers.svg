@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,15 +39,15 @@
 
   <text x="585.454545" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.272282" font-weight="bold" fill="var(--text)">Relative throughput (higher is better)</text>
 
-  <rect x="40" y="477.959184" width="240" height="142.040816" rx="6.818071" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="477.959184" width="240" height="142.040816" rx="6.818071" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="160" y="566.734694" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.544972" font-weight="bold" fill="var(--ok-text)">epoll</text>
   <text x="160" y="454.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.999592" font-weight="bold" fill="var(--ok-accent)">1.0x</text>
 
-  <rect x="356.363636" y="335.918367" width="240" height="284.081633" rx="6.818071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="356.363636" y="335.918367" width="240" height="284.081633" rx="6.818071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="476.363636" y="495.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.544972" font-weight="bold" fill="var(--primary-text)">aio</text>
   <text x="476.363636" y="312.244898" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.999592" font-weight="bold" fill="var(--primary-accent)">1.5x</text>
 
-  <rect x="672.727273" y="99.183673" width="240" height="520.816327" rx="6.818071" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="672.727273" y="99.183673" width="240" height="520.816327" rx="6.818071" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="792.727273" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.544972" font-weight="bold" fill="var(--warn-text)">io_uring</text>
   <text x="792.727273" y="75.510204" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.999592" font-weight="bold" fill="var(--warn-accent)">2.8x</text>
 

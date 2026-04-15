@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -48,9 +49,9 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="26.342872" font-weight="bold" fill="var(--text)">How Idempotency Keys Work</text>
-  <rect x="40" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="160" y="127.256637" text-anchor="middle" font-size="28.369247" font-weight="bold" fill="var(--primary-text)">Client</text>
-  <rect x="1000" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1000" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="127.256637" text-anchor="middle" font-size="28.369247" font-weight="bold" fill="var(--info-text)">Server</text>
   <line x1="160" y1="147.787611" x2="160" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
   <line x1="1120" y1="147.787611" x2="1120" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>

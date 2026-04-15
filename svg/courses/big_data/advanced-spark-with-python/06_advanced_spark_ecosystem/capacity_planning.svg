@@ -94,7 +94,7 @@
     </marker>
 </defs>
   <text x="628.0795" y="40" text-anchor="middle" font-family="Arial" font-size="26.9701" font-weight="bold" fill="var(--primary-accent)">Spark Capacity Planning</text>
-  <rect x="40" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="175.0993" y="119.4521" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--primary-accent)">Workload Analysis</text>
   <text x="175.0993" y="156" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Data volume (TB)</text>
   <text x="175.0993" y="184.6027" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Query complexity</text>
@@ -102,7 +102,7 @@
   <text x="175.0993" y="241.8082" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">SLA requirements</text>
   <text x="175.0993" y="270.411" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Peak vs average</text>
   <line x1="310.1986" y1="183.0137" x2="357.8808" y2="183.0137" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="365.8278" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="365.8278" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="500.9271" y="119.4521" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--ok-accent)">Resource Sizing</text>
   <text x="500.9271" y="156" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Executor count</text>
   <text x="500.9271" y="184.6027" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Cores per executor</text>
@@ -110,7 +110,7 @@
   <text x="500.9271" y="241.8082" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Driver resources</text>
   <text x="500.9271" y="270.411" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Overhead (10%)</text>
   <line x1="636.0264" y1="183.0137" x2="683.7086" y2="183.0137" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="691.6556" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="691.6556" y="79.726" width="270.1987" height="206.5753" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="826.7549" y="119.4521" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--danger-accent)">Cost Strategy</text>
   <text x="826.7549" y="156" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">On-demand baseline</text>
   <text x="826.7549" y="184.6027" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Spot instances (70%)</text>
@@ -118,7 +118,7 @@
   <text x="826.7549" y="241.8082" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Auto-scaling rules</text>
   <text x="826.7549" y="270.411" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Storage tiering</text>
   <line x1="961.8544" y1="183.0137" x2="1009.5364" y2="183.0137" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1017.4834" y="79.726" width="222.5166" height="206.5753" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <rect x="1017.4834" y="79.726" width="222.5166" height="206.5753" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1128.7418" y="119.4521" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--info-accent)">Monitor</text>
   <text x="1128.7418" y="156" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Utilization %</text>
   <text x="1128.7418" y="184.6027" text-anchor="middle" font-family="Arial" font-size="16.4817" fill="var(--text)">Cost per job</text>
@@ -128,10 +128,10 @@
   <rect x="71.7881" y="341.9178" width="1112.5829" height="111.2329" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="628.0795" y="381.6438" text-anchor="middle" font-family="Arial" font-size="20.9767" font-weight="bold" fill="var(--text)">Sizing Guidelines</text>
   <text x="628.0795" y="429.315" text-anchor="middle" font-family="Arial" font-size="17.98" fill="var(--text)">Executors = DataSize / (PartitionSize x CoresPerExecutor) | Memory = 3-5x shuffle data | Cores: 4-5 per executor</text>
-  <rect x="71.7881" y="484.9315" width="524.5034" height="95.3425" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <rect x="71.7881" y="484.9315" width="524.5034" height="95.3425" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="334.0397" y="524.6575" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--primary-accent)">Short-term (3-6 months)</text>
   <text x="334.0397" y="561.2054" text-anchor="middle" font-family="Arial" font-size="17.98" fill="var(--text)">Current load + 20% buffer</text>
-  <rect x="643.9736" y="484.9315" width="540.3974" height="95.3425" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="643.9736" y="484.9315" width="540.3974" height="95.3425" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="914.1722" y="524.6575" text-anchor="middle" font-family="Arial" font-size="19.4783" font-weight="bold" fill="var(--danger-accent)">Long-term (1-2 years)</text>
   <text x="914.1722" y="561.2054" text-anchor="middle" font-family="Arial" font-size="17.98" fill="var(--text)">Projected growth + auto-scaling strategy</text>
   <text x="628.0795" y="620" text-anchor="middle" font-family="Arial" font-size="17.98" fill="var(--text-muted)">Iterative capacity planning: measure, adjust, optimize</text>

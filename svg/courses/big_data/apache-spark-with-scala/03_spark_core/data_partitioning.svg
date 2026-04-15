@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -26,7 +27,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="73.153153" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="73.153153" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="73.441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--primary-text)">RDD split into partitions — one task per partition runs in parallel on executors</text>
   <text x="640" y="98.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Default: spark.default.parallelism (cluster cores) or HDFS block count</text>
 
@@ -45,7 +46,7 @@
   <text x="1050" y="191.531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rows 2N/3..N  →  Task on executor C</text>
   <text x="1050" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">repartition / coalesce to resize</text>
 
-  <rect x="40" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="299.171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490038" font-weight="bold" fill="var(--ok-text)">HashPartitioner</text>
   <text x="335" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">default for pair RDDs after shuffle</text>
   <text x="335" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">partition = (key.hashCode mod numPartitions)</text>
@@ -63,7 +64,7 @@
   <text x="335" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" font-style="italic" fill="var(--ok-text)">rdd.partitionBy(new HashPartitioner(100))</text>
   <text x="335" y="593.873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">Use when you care about co-location, not ordering</text>
 
-  <rect x="650" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="299.171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490038" font-weight="bold" fill="var(--info-text)">RangePartitioner</text>
   <text x="945" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">used by sortByKey, orderBy</text>
   <text x="945" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">samples keys, picks split points for roughly equal ranges</text>

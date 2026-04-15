@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -43,7 +44,7 @@
   <text x="640" y="91.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460213" font-weight="bold" fill="var(--text)">Request passes along the chain until one handler accepts it</text>
   <text x="640" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" fill="var(--text-muted)">Sender is decoupled from the receiver</text>
 
-  <rect x="40" y="185" width="290" height="435" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="185" width="290" height="435" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--primary-text)">Handler A</text>
   <text x="185" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">handle(req)</text>
   <text x="185" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">setNext(next)</text>
@@ -51,20 +52,20 @@
   <text x="185" y="557.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">return result</text>
   <text x="185" y="599.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">else forward</text>
 
-  <rect x="360" y="185" width="290" height="435" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="360" y="185" width="290" height="435" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="505" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--ok-text)">Handler B</text>
   <text x="505" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">handle(req)</text>
   <text x="505" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">setNext(next)</text>
   <text x="505" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">Inherits same</text>
   <text x="505" y="557.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">interface</text>
 
-  <rect x="680" y="185" width="290" height="435" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="680" y="185" width="290" height="435" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="825" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--warn-text)">Handler C</text>
   <text x="825" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">handle(req)</text>
   <text x="825" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">setNext(next)</text>
   <text x="825" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">Order matters</text>
 
-  <rect x="1000" y="185" width="240" height="435" rx="6.106203" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1000" y="185" width="240" height="435" rx="6.106203" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--danger-text)">Default</text>
   <text x="1120" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--danger-text)">Catch-all</text>
   <text x="1120" y="433.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--danger-text)">Ends chain</text>

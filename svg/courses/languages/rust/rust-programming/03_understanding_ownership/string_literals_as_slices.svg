@@ -98,28 +98,28 @@
     </marker>
   </defs>
   <text x="629.4736" y="40" text-anchor="middle" font-size="24.401" font-weight="bold">String Literal &amp;str vs String Memory Layout</text>
-  <rect x="40" y="89.7143" width="252.6316" height="165.7143" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="89.7143" width="252.6316" height="165.7143" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="166.3157" y="149.3714" text-anchor="middle" font-size="20.3341" font-weight="bold">s: &amp;str</text>
   <text x="166.3157" y="195.7714" text-anchor="middle" font-size="20.3341">ptr | len: 13</text>
   <text x="166.3157" y="235.5429" text-anchor="middle" font-size="20.3341">(fat pointer)</text>
-  <rect x="418.9473" y="89.7143" width="421.0527" height="132.5714" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="418.9473" y="89.7143" width="421.0527" height="132.5714" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="629.4736" y="149.3714" text-anchor="middle" font-size="20.3341" font-weight="bold">Static / Read-Only Memory</text>
   <text x="629.4736" y="199.0857" text-anchor="middle" font-size="20.3341">"Hello, world!"</text>
   <line x1="292.6315" y1="172.5715" x2="418.9473" y2="172.5715" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_slice)" />
-  <rect x="40" y="321.7143" width="252.6316" height="165.7143" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="321.7143" width="252.6316" height="165.7143" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="166.3157" y="381.3715" text-anchor="middle" font-size="20.3341" font-weight="bold">s: String</text>
   <text x="166.3157" y="427.7715" text-anchor="middle" font-size="20.3341">ptr | len | cap</text>
   <text x="166.3157" y="467.5428" text-anchor="middle" font-size="20.3341">(owned, growable)</text>
-  <rect x="418.9473" y="321.7143" width="421.0527" height="132.5714" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="418.9473" y="321.7143" width="421.0527" height="132.5714" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="629.4736" y="381.3715" text-anchor="middle" font-size="20.3341" font-weight="bold">Heap-allocated buffer</text>
   <text x="629.4736" y="431.0857" text-anchor="middle" font-size="20.3341">[ H | e | l | l | o | ... ]</text>
   <line x1="292.6315" y1="404.5714" x2="418.9473" y2="404.5714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_slice)" />
-  <rect x="903.1579" y="89.7143" width="336.8421" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="903.1579" y="89.7143" width="336.8421" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1071.5789" y="149.3714" text-anchor="middle" font-size="20.3341">&amp;str: borrowed, no Drop</text>
   <text x="1071.5789" y="195.7714" text-anchor="middle" font-size="20.3341">compiled into binary</text>
-  <rect x="903.1579" y="321.7143" width="336.8421" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="903.1579" y="321.7143" width="336.8421" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1071.5789" y="381.3715" text-anchor="middle" font-size="20.3341">String: owned, Drop frees</text>
   <text x="1071.5789" y="427.7715" text-anchor="middle" font-size="20.3341">heap memory on scope exit</text>
-  <rect x="208.4209" y="537.1429" width="842.1053" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="208.4209" y="537.1429" width="842.1053" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="629.4736" y="593.4857" text-anchor="middle" font-size="20.3341">Prefer &amp;str for function params; use String when you need ownership</text>
 </svg>

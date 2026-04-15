@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--text)">Container Troubleshooting Flow</text>
 
-  <rect x="40" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="155" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--danger-text)">1. Identify</text>
   <text x="155" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">docker ps -a</text>
   <text x="155" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">docker logs</text>
@@ -48,7 +49,7 @@
   <text x="155" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">last output lines</text>
   <text x="155" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" font-style="italic" fill="var(--danger-text)">What failed?</text>
 
-  <rect x="310" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="310" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="425" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">2. Inspect</text>
   <text x="425" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">docker inspect</text>
   <text x="425" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">docker stats</text>
@@ -56,7 +57,7 @@
   <text x="425" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">env, ports, limits</text>
   <text x="425" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" font-style="italic" fill="var(--warn-text)">What is the state?</text>
 
-  <rect x="580" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="580" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="695" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">3. Reproduce</text>
   <text x="695" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">docker exec -it</text>
   <text x="695" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">docker run --rm</text>
@@ -64,7 +65,7 @@
   <text x="695" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">the failing command</text>
   <text x="695" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" font-style="italic" fill="var(--info-text)">Can you trigger it?</text>
 
-  <rect x="850" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="93.703704" width="230" height="247.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="965" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">4. Fix</text>
   <text x="965" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Update Dockerfile</text>
   <text x="965" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">or compose config</text>
@@ -72,7 +73,7 @@
   <text x="965" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">with fresh tag</text>
   <text x="965" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" font-style="italic" fill="var(--primary-text)">Patch the recipe</text>
 
-  <rect x="1120" y="93.703704" width="120" height="247.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1120" y="93.703704" width="120" height="247.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1180" y="152.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">5. Verify</text>
   <text x="1180" y="195.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">docker run</text>
   <text x="1180" y="227.962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">healthcheck</text>

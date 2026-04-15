@@ -16,6 +16,7 @@ Checks:
   --fill        Flag SVGs whose bbox fills < MIN_FILL_PCT of the usable area
   --fit         Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]
   --no-circles  Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)
+  --shadows     Validate <rect> shadow filter usage against palette effects.rect-shadow
 
 Usage:
     check_svg.py file1.svg file2.svg ...
@@ -344,6 +345,62 @@ def _check_fit(path: Path) -> list[str]:
     return []
 
 
+_SHADOW_POLICY: tuple[bool, str, set[str]] | None = None
+
+
+def _shadow_policy() -> tuple[bool, str, set[str]]:
+    global _SHADOW_POLICY
+    if _SHADOW_POLICY is not None:
+        return _SHADOW_POLICY
+    palette_path = _DEFAULT_PALETTE
+    if not palette_path.exists():
+        _SHADOW_POLICY = (False, "none", set())
+        return _SHADOW_POLICY
+    data = yaml.safe_load(palette_path.read_text(encoding="utf-8"))
+    eff = data.get("effects", {}).get("rect-shadow", {})
+    enabled = bool(eff.get("enabled", False))
+    apply_to = eff.get("apply-to", "none") if enabled else "none"
+    family_fills: set[str] = set()
+    for group_name, group in data.get("colors", {}).items():
+        if group_name == "neutrals":
+            continue
+        for name in group:
+            if name.endswith("-fill"):
+                family_fills.add(f"var(--{name})")
+    _SHADOW_POLICY = (enabled, apply_to, family_fills)
+    return _SHADOW_POLICY
+
+
+def _check_shadows(tree: ET.ElementTree) -> list[str]:
+    """Validate <rect> shadow usage against palette effects.rect-shadow."""
+    enabled, apply_to, family_fills = _shadow_policy()
+    errors: list[str] = []
+    defs_children: set[ET.Element] = set()
+    root = tree.getroot()
+    for elem in root.iter():
+        if elem.tag.split('}')[-1] == 'defs':
+            for child in elem.iter():
+                defs_children.add(child)
+    for elem in tree.iter():
+        if elem in defs_children:
+            continue
+        if elem.tag.split('}')[-1] != 'rect':
+            continue
+        fill = (elem.get('fill') or '').strip()
+        has = 'url(#shadow)' in (elem.get('filter') or '')
+        if apply_to == 'none':
+            want = False
+        elif apply_to == 'all':
+            want = True
+        else:  # family-only
+            want = fill in family_fills
+        if want and not has:
+            errors.append(f"<rect fill={fill!r}> missing filter=\"url(#shadow)\"")
+        elif has and not want:
+            errors.append(f"<rect fill={fill!r}> has filter=\"url(#shadow)\" but policy forbids it")
+    return errors
+
+
 def _check_no_circles(tree: ET.ElementTree, path: Path) -> list[str]:
     """Flag SVGs that contain <circle> elements.
 
@@ -404,6 +461,8 @@ def main() -> None:
                         help='Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]')
     parser.add_argument('--no-circles', action='store_true', dest='no_circles',
                         help='Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)')
+    parser.add_argument('--shadows', action='store_true',
+                        help='Validate <rect> shadow filter usage against palette effects.rect-shadow')
     args = parser.parse_args()
 
     if not args.paths:
@@ -412,7 +471,7 @@ def main() -> None:
     # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
             args.bounds, args.title, args.colors, args.words, args.fill, args.fit,
-            args.no_circles]
+            args.no_circles, args.shadows]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -430,6 +489,7 @@ def main() -> None:
     # no-circles check is opt-in only — existing SVGs still contain circles.
     # Flip to `args.no_circles or not explicit` once the backlog is clean.
     do_no_circles = args.no_circles
+    do_shadows = args.shadows or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -450,7 +510,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors or do_no_circles:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors or do_no_circles or do_shadows:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -470,6 +530,8 @@ def main() -> None:
                 errors.extend(_check_colors(tree, svg_path=path))
             if do_no_circles:
                 errors.extend(_check_no_circles(tree, path))
+            if do_shadows:
+                errors.extend(_check_shadows(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

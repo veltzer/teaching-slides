@@ -97,15 +97,15 @@
       <polygon points="0,21.1765 7.2258,0" fill="#333" />
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="253.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="40" width="1200" height="253.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="76.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.8566" font-weight="bold" fill="var(--danger-accent)">Without AQE (static planning)</text>
   <text x="640.0001" y="112.5001" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0325" fill="var(--text-muted)">shuffle.partitions = 200 (fixed), Join strategy decided upfront</text>
   <text x="640.0001" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0325" fill="var(--text-faint)">Result: 200 partitions, many empty/tiny</text>
-  <rect x="81.3793" y="166.875" width="113.7931" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="81.3793" y="166.875" width="113.7931" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="139.3104" y="201.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--text)">5</text>
   <rect x="205.5173" y="166.875" width="62.069" height="54.375" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.9198" />
   <rect x="277.9311" y="166.875" width="62.069" height="54.375" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.9198" />
-  <rect x="350.3449" y="166.875" width="165.5173" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="350.3449" y="166.875" width="165.5173" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.1036" y="201.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--danger-accent)">9M skew!</text>
   <rect x="526.2069" y="166.875" width="62.069" height="54.375" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.9198" />
   <rect x="598.6207" y="166.875" width="62.069" height="54.375" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.9198" />
@@ -115,23 +115,23 @@
   <text x="640.0001" y="257.5001" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--danger-accent)">many empty partitions + skewed data</text>
   <line x1="640.0001" y1="299.1876" x2="640.0001" y2="348.1249" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-aqe7)" />
   <text x="712.4139" y="333.6251" font-family="Arial, sans-serif" font-size="22.9445" fill="var(--text)" font-weight="bold">AQE optimizes</text>
-  <rect x="40" y="357.1876" width="1200" height="262.8124" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="357.1876" width="1200" height="262.8124" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="393.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.8566" font-weight="bold" fill="var(--ok-accent)">With AQE (runtime optimization)</text>
   <text x="640.0001" y="429.6875" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--text-muted)">Step 1: Run map stages, collect statistics | Step 2: Re-optimize | Step 3: Coalesce | Step 4: Split skew</text>
   <text x="640.0001" y="465.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0325" fill="var(--text-faint)">Result: balanced partitions</text>
-  <rect x="102.0691" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="102.0691" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="226.207" y="511.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--text)">3M (sk1)</text>
   <text x="226.207" y="534.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--ok-accent)">split skew</text>
-  <rect x="371.0345" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="371.0345" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495.1725" y="511.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--text)">3M (sk2)</text>
   <text x="495.1725" y="534.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--ok-accent)">split skew</text>
-  <rect x="640.0001" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="640.0001" y="484.0625" width="248.2758" height="63.4374" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="764.138" y="511.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--text)">3M (sk3)</text>
   <text x="764.138" y="534.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--ok-accent)">split skew</text>
-  <rect x="908.9656" y="484.0625" width="144.8275" height="63.4374" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="908.9656" y="484.0625" width="144.8275" height="63.4374" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="981.3794" y="511.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--text)">1M</text>
   <text x="981.3794" y="534.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--primary-accent)">coalesced</text>
-  <rect x="1064.1379" y="484.0625" width="144.8275" height="63.4374" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="1064.1379" y="484.0625" width="144.8275" height="63.4374" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1136.5518" y="511.2501" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" font-weight="bold" fill="var(--text)">1M</text>
   <text x="1136.5518" y="534.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1205" fill="var(--primary-accent)">coalesced</text>
 </svg>

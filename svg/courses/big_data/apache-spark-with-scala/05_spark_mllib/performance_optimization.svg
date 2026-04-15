@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
@@ -20,31 +21,31 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">MLlib Performance Optimization</text>
 
-  <rect x="40" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Cache Smartly</text>
   <text x="230" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">Persist training set</text>
   <text x="230" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">MEMORY_AND_DISK</text>
   <text x="230" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">Unpersist after fit</text>
 
-  <rect x="450" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="450" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Tune Partitions</text>
   <text x="640" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">2-4x cores</text>
   <text x="640" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Repartition skewed data</text>
   <text x="640" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Avoid tiny tasks</text>
 
-  <rect x="860" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="860" y="82.962963" width="380" height="257.777778" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">Feature Size</text>
   <text x="1050" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">Drop low variance</text>
   <text x="1050" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">PCA or hashing</text>
   <text x="1050" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">Sparse vectors</text>
 
-  <rect x="40" y="372.962963" width="590" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="372.962963" width="590" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">Parallel CV</text>
   <text x="335" y="480.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">parallelism param</text>
   <text x="335" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">Train folds concurrently</text>
   <text x="335" y="566.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">Balance memory</text>
 
-  <rect x="650" y="372.962963" width="590" height="247.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="372.962963" width="590" height="247.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--danger-text)">Tree Depth</text>
   <text x="945" y="480.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--danger-text)">maxDepth limits</text>
   <text x="945" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--danger-text)">maxBins trade-off</text>

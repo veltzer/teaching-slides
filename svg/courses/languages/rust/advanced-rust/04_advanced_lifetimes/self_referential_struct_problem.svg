@@ -98,39 +98,39 @@
     </marker>
   </defs>
   <text x="640.0001" y="40" text-anchor="middle" font-size="27.4305" font-weight="bold" fill="var(--text)">Self-Referential Struct Problem</text>
-  <rect x="40" y="72.2222" width="486.4864" height="154.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="72.2222" width="486.4864" height="154.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="283.2433" y="104.4445" text-anchor="middle" font-size="17.8298" font-weight="bold" fill="var(--text)">struct SelfRef {</text>
   <text x="72.4325" y="136.6667" font-size="15.0868" fill="var(--text-muted)">  data: String,</text>
   <text x="72.4325" y="162.4445" font-size="15.0868" fill="var(--danger-accent)">  slice: &amp;str, // points into data!</text>
   <text x="72.4325" y="188.2222" font-size="15.0868" fill="var(--text-muted)">}</text>
   <text x="72.4325" y="214" font-size="13.7152" fill="var(--danger-accent)">Cannot express this lifetime in Rust!</text>
-  <rect x="640.0001" y="72.2222" width="599.9999" height="154.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="640.0001" y="72.2222" width="599.9999" height="154.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="940.0001" y="104.4445" text-anchor="middle" font-size="17.8298" font-weight="bold" fill="var(--ok-accent)">Before Move (valid)</text>
-  <rect x="672.4325" y="123.7778" width="243.2432" height="38.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="672.4325" y="123.7778" width="243.2432" height="38.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="794.0541" y="149.5555" text-anchor="middle" font-size="13.7152" fill="var(--text)">data: "Hello" @ 0x100</text>
-  <rect x="672.4325" y="168.8889" width="243.2432" height="38.6667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="672.4325" y="168.8889" width="243.2432" height="38.6667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="794.0541" y="194.6667" text-anchor="middle" font-size="13.7152" fill="var(--text)">slice: ptr to 0x100</text>
   <line x1="915.6757" y1="188.2222" x2="964.3244" y2="188.2222" stroke="var(--ok-border)" stroke-width="2" />
   <line x1="964.3244" y1="188.2222" x2="964.3244" y2="143.1111" stroke="var(--ok-border)" stroke-width="2" />
   <line x1="964.3244" y1="143.1111" x2="915.6757" y2="143.1111" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="996.7568" y="168.8889" font-size="13.7152" fill="var(--ok-accent)">OK!</text>
-  <rect x="40" y="272" width="599.9999" height="180.4445" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="272" width="599.9999" height="180.4445" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="340" y="304.2222" text-anchor="middle" font-size="17.8298" font-weight="bold" fill="var(--danger-accent)">After Move (DANGLING!)</text>
-  <rect x="72.4325" y="330" width="243.2432" height="38.6667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5.3333 2.6667" />
+  <rect x="72.4325" y="330" width="243.2432" height="38.6667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5.3333 2.6667" filter="url(#shadow)"/>
   <text x="194.0541" y="355.7778" text-anchor="middle" font-size="13.7152" fill="var(--text-faint)">old data (freed)</text>
   <text x="331.8919" y="355.7778" font-size="13.7152" fill="var(--text-faint)">@ 0x100</text>
-  <rect x="72.4325" y="381.5555" width="243.2432" height="38.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="72.4325" y="381.5555" width="243.2432" height="38.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="194.0541" y="407.3333" text-anchor="middle" font-size="13.7152" fill="var(--text)">data: "Hello" @ 0x200</text>
-  <rect x="72.4325" y="426.6667" width="243.2432" height="38.6667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="72.4325" y="426.6667" width="243.2432" height="38.6667" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="194.0541" y="452.4445" text-anchor="middle" font-size="13.7152" fill="var(--danger-accent)">slice: still 0x100!</text>
   <text x="348.1081" y="439.5555" font-size="13.7152" fill="var(--danger-accent)" font-weight="bold">DANGLING POINTER!</text>
-  <rect x="688.6487" y="272" width="551.3513" height="180.4445" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="688.6487" y="272" width="551.3513" height="180.4445" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="964.3244" y="304.2222" text-anchor="middle" font-size="19.2014" font-weight="bold" fill="var(--text)">Solutions</text>
   <text x="712.9731" y="336.4445" font-size="15.0868" fill="var(--text-muted)">1. Use indices instead of references</text>
   <text x="712.9731" y="364.8" font-size="15.0868" fill="var(--text-muted)">2. Pin&lt;Box&lt;T&gt;&gt; - prevent moves</text>
   <text x="712.9731" y="393.1555" font-size="15.0868" fill="var(--text-muted)">3. ouroboros / self_cell crates</text>
   <text x="712.9731" y="421.5111" font-size="15.0868" fill="var(--text-muted)">4. Rc&lt;str&gt; / Arc&lt;str&gt; shared ownership</text>
-  <rect x="40" y="491.1111" width="1200" height="128.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="491.1111" width="1200" height="128.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="523.3333" text-anchor="middle" font-size="19.2014" font-weight="bold" fill="var(--text)">Pin&lt;P&gt; - The Standard Library Solution</text>
   <text x="72.4325" y="555.5555" font-size="15.0868" fill="var(--text-muted)">Pin guarantees that the pointed-to value will not be moved in memory.</text>
   <text x="72.4325" y="581.3333" font-size="15.0868" fill="var(--text-muted)">Used extensively in async/await: Futures are self-referential (they capture references across .await points).</text>

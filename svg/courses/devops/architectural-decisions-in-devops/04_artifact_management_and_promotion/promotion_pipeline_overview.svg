@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,7 +43,7 @@
   <text x="640" y="40" text-anchor="middle" font-size="29.290993" font-weight="bold" fill="var(--text)">Artifact Promotion Pipeline</text>
   <text x="640" y="83.773585" text-anchor="middle" font-size="18.829924" fill="var(--text-muted)">Build once, promote through environments — never rebuild</text>
 
-  <rect x="40" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="209.622642" text-anchor="middle" fill="var(--primary-text)" font-size="27.198779" font-weight="bold">Build</text>
   <text x="180" y="275.283019" text-anchor="middle" fill="var(--primary-text)" font-size="18.829924">Compile</text>
   <text x="180" y="313.584906" text-anchor="middle" fill="var(--primary-text)" font-size="18.829924">Unit tests</text>
@@ -50,7 +51,7 @@
   <text x="180" y="428.490566" text-anchor="middle" fill="var(--primary-text)" font-size="16.73771">Output: artifact</text>
   <text x="180" y="461.320755" text-anchor="middle" fill="var(--primary-text)" font-size="16.73771">with SHA + tag</text>
 
-  <rect x="340" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="340" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="209.622642" text-anchor="middle" fill="var(--warn-text)" font-size="27.198779" font-weight="bold">Dev Repo</text>
   <text x="480" y="275.283019" text-anchor="middle" fill="var(--warn-text)" font-size="18.829924">Snapshot</text>
   <text x="480" y="313.584906" text-anchor="middle" fill="var(--warn-text)" font-size="18.829924">Smoke tests</text>
@@ -58,7 +59,7 @@
   <text x="480" y="428.490566" text-anchor="middle" fill="var(--warn-text)" font-size="16.73771">Gate: tests pass</text>
   <text x="480" y="461.320755" text-anchor="middle" fill="var(--warn-text)" font-size="16.73771">no manual step</text>
 
-  <rect x="640" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="640" y="133.018868" width="280" height="393.962264" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="780" y="209.622642" text-anchor="middle" fill="var(--danger-text)" font-size="27.198779" font-weight="bold">Staging</text>
   <text x="780" y="275.283019" text-anchor="middle" fill="var(--danger-text)" font-size="18.829924">Integration</text>
   <text x="780" y="313.584906" text-anchor="middle" fill="var(--danger-text)" font-size="18.829924">Perf + security</text>
@@ -66,7 +67,7 @@
   <text x="780" y="428.490566" text-anchor="middle" fill="var(--danger-text)" font-size="16.73771">Gate: approval</text>
   <text x="780" y="461.320755" text-anchor="middle" fill="var(--danger-text)" font-size="16.73771">change ticket</text>
 
-  <rect x="940" y="133.018868" width="300" height="393.962264" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="940" y="133.018868" width="300" height="393.962264" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="209.622642" text-anchor="middle" fill="var(--ok-text)" font-size="27.198779" font-weight="bold">Prod Repo</text>
   <text x="1090" y="275.283019" text-anchor="middle" fill="var(--ok-text)" font-size="18.829924">Immutable</text>
   <text x="1090" y="313.584906" text-anchor="middle" fill="var(--ok-text)" font-size="18.829924">Release</text>

@@ -86,7 +86,7 @@
     </marker>
   </defs>
   <text x="640.0001" y="40" text-anchor="middle" font-size="29.415" font-weight="bold" fill="var(--text)">RLHF PPO Optimization Loop</text>
-  <rect x="203.6364" y="72.6761" width="872.7274" height="310.4225" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="203.6364" y="72.6761" width="872.7274" height="310.4225" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="118.4227" text-anchor="middle" font-size="23.8997" font-weight="bold" fill="var(--primary-accent)">PPO (Proximal Policy Optimization)</text>
   <text x="640.0001" y="162.5352" text-anchor="middle" font-size="22.061" fill="var(--text)">1. Sample prompt from dataset</text>
   <text x="640.0001" y="200.1126" text-anchor="middle" font-size="22.061" fill="var(--text)">2. Generate response with policy</text>
@@ -95,10 +95,10 @@
   <text x="640.0001" y="312.8451" text-anchor="middle" font-size="22.061" fill="var(--text)">5. Update policy (with KL penalty)</text>
   <path d="M 1076.3636 187.0423 Q 1174.5454 187.0423 1174.5454 252.3945 Q 1174.5454 317.7465 1076.3636 317.7465" fill="none" stroke="var(--primary-border)" stroke-width="0.904" stroke-dasharray="2.26 1.356" />
   <text x="1218.1819" y="260.5635" text-anchor="middle" font-size="20.8044" fill="var(--primary-accent)">repeat</text>
-  <rect x="40" y="432.1127" width="1200" height="81.6903" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="432.1127" width="1200" height="81.6903" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="468.0565" text-anchor="middle" font-size="22.061" font-weight="bold" fill="var(--danger-accent)">Objective: maximize E[reward(prompt, response)]</text>
   <text x="640.0001" y="497.4648" text-anchor="middle" font-size="22.061" fill="var(--danger-accent)">subject to KL(policy || sft_model) &lt; delta</text>
-  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="579.155" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
   <text x="640.0001" y="605.2959" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)">that score high on reward model but are actually low quality</text>
 </svg>

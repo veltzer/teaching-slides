@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -49,7 +50,7 @@
   </defs>
 
   <!-- Input x on left -->
-  <rect x="40" y="280" width="200" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="280" width="200" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="325" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Input x</text>
   <text x="140" y="355" text-anchor="middle" font-size="14" fill="var(--primary-text)">hidden state</text>
 
@@ -61,7 +62,7 @@
   <line x1="280" y1="490" x2="340" y2="490" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Frozen weight W (top) -->
-  <rect x="350" y="40" width="500" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="350" y="40" width="500" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="600" y="90" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--danger-text)">Original Weight W</text>
   <text x="600" y="125" text-anchor="middle" font-size="16" fill="var(--danger-text)">(frozen — no gradients)</text>
   <rect x="380" y="155" width="440" height="120" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
@@ -69,7 +70,7 @@
   <text x="600" y="250" text-anchor="middle" font-size="16" fill="var(--text-muted)">full-size matrix, untouched</text>
 
   <!-- LoRA path (bottom) -->
-  <rect x="350" y="360" width="500" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="350" y="360" width="500" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="600" y="410" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)">LoRA Path (trainable)</text>
   <rect x="380" y="440" width="180" height="120" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="470" y="485" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)">A</text>
@@ -89,12 +90,12 @@
   <line x1="990" y1="490" x2="990" y2="350" stroke="var(--ok-border)" stroke-width="2"/>
 
   <!-- Sum node -->
-  <rect x="954" y="294" width="72" height="72" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="954" y="294" width="72" height="72" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="342" text-anchor="middle" font-size="40" font-weight="bold" fill="var(--warn-text)">+</text>
 
   <!-- Output -->
   <line x1="1026" y1="330" x2="1080" y2="330" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="1080" y="260" width="160" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1080" y="260" width="160" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1160" y="310" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">Output</text>
   <text x="1160" y="345" text-anchor="middle" font-size="16" fill="var(--primary-text)">W·x + BA·x</text>
   <text x="1160" y="375" text-anchor="middle" font-size="14" fill="var(--primary-text)">= (W + BA)·x</text>

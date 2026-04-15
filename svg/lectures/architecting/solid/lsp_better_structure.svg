@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,13 +43,13 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="380" height="160" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="380" height="160" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="80" text-anchor="middle" font-size="16" font-style="italic" fill="var(--primary-text)">«interface»</text>
   <text x="230" y="115" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Bird</text>
   <line x1="40" y1="135" x2="420" y2="135" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="230" y="170" text-anchor="middle" font-size="18" fill="var(--primary-text)">+ move()</text>
 
-  <rect x="860" y="40" width="380" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="860" y="40" width="380" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="80" text-anchor="middle" font-size="16" font-style="italic" fill="var(--info-text)">«interface»</text>
   <text x="1050" y="115" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--info-text)">FlyingBird extends Bird</text>
   <line x1="860" y1="135" x2="1240" y2="135" stroke="var(--info-border)" stroke-width="2"/>
@@ -57,14 +58,14 @@
   <line x1="860" y1="120" x2="420" y2="120" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="640" y="112" text-anchor="middle" font-size="14" fill="var(--text-muted)">extends</text>
 
-  <rect x="40" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="300" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)">Penguin implements Bird</text>
   <line x1="40" y1="320" x2="620" y2="320" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="330" y="360" text-anchor="middle" font-size="18" fill="var(--ok-text)">+ move() — waddle, swim</text>
   <text x="330" y="395" text-anchor="middle" font-size="15" fill="var(--ok-text)">Flightless; never promised fly()</text>
   <text x="330" y="425" text-anchor="middle" font-size="15" fill="var(--ok-text)">Safe substitution for any Bird</text>
 
-  <rect x="660" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="300" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)">Sparrow implements FlyingBird</text>
   <line x1="660" y1="320" x2="1240" y2="320" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="360" text-anchor="middle" font-size="18" fill="var(--ok-text)">+ move(), + fly()</text>

@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,37 +36,37 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036" font-weight="bold" fill="var(--text)">Integration best practices — adopting ML, AR, notifications, deep links</text>
 
   <!-- 2x3 grid of practice cards -->
-  <rect x="40" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="236.551724" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--primary-text)">Fail gracefully</text>
   <text x="236.551724" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Check feature availability before use</text>
   <text x="236.551724" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">(Play Services, ARCore, ML Kit)</text>
   <text x="236.551724" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Always provide a fallback path</text>
 
-  <rect x="443.448276" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="443.448276" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--ok-text)">Ask permissions in context</text>
   <text x="640" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Request runtime permissions just-in-time</text>
   <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Explain why before the system dialog</text>
   <text x="640" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Handle deny &amp; permanent-deny states</text>
 
-  <rect x="846.896552" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="846.896552" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1043.448276" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--warn-text)">Keep work off the main thread</text>
   <text x="1043.448276" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">ML inference, image decoding, AR tracking</text>
   <text x="1043.448276" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">— all on coroutines / WorkManager</text>
   <text x="1043.448276" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">Never block UI rendering</text>
 
-  <rect x="40" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="236.551724" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--info-text)">Secure deep links</text>
   <text x="236.551724" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Use App Links with verified domains</text>
   <text x="236.551724" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Validate every parameter</text>
   <text x="236.551724" y="410.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Never trust intent data blindly</text>
 
-  <rect x="443.448276" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="443.448276" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--danger-text)">Respect privacy &amp; battery</text>
   <text x="640" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">On-device ML when possible</text>
   <text x="640" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">Disclose data collection up front</text>
   <text x="640" y="410.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">Stop sensors, cameras, AR when hidden</text>
 
-  <rect x="846.896552" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="846.896552" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1043.448276" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--primary-text)">Test on real devices</text>
   <text x="1043.448276" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Camera, AR, notifications behave</text>
   <text x="1043.448276" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">differently across OEMs + API levels</text>

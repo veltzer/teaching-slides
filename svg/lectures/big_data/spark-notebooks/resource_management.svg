@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093" font-weight="bold" fill="var(--text)">Notebook Resource Management</text>
 
-  <rect x="40" y="77.247706" width="340" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="77.247706" width="340" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="210" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--ok-text)">Spark Session</text>
   <text x="210" y="157.06422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Single entry point per kernel</text>
   <text x="210" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Holds driver + executors</text>
@@ -59,28 +60,28 @@
   <line x1="380" y1="348.623853" x2="420" y2="348.623853" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="380" y1="518.899083" x2="420" y2="518.899083" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="430" y="77.247706" width="400" height="170.275229" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="430" y="77.247706" width="400" height="170.275229" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="114.495413" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Memory</text>
   <text x="630" y="151.743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Driver heap — collected results</text>
   <text x="630" y="178.348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Executor heap — shuffled data</text>
   <text x="630" y="210.275229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Watch collect() and toPandas()</text>
   <text x="630" y="236.880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Unpersist when done with a cache</text>
 
-  <rect x="430" y="258.165138" width="400" height="170.275229" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="430" y="258.165138" width="400" height="170.275229" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="295.412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--danger-text)">CPU</text>
   <text x="630" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Executors run tasks in parallel</text>
   <text x="630" y="359.266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Cores per executor tune throughput</text>
   <text x="630" y="391.192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Match partitions to cores</text>
   <text x="630" y="417.798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Notebooks share the cluster fairly</text>
 
-  <rect x="430" y="439.082569" width="400" height="180.917431" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="430" y="439.082569" width="400" height="180.917431" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="476.330275" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Storage</text>
   <text x="630" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Cache hot DataFrames, not all</text>
   <text x="630" y="540.183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Disk spill when memory runs out</text>
   <text x="630" y="572.110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Checkpoint long lineages</text>
   <text x="630" y="598.715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Clear caches between experiments</text>
 
-  <rect x="850" y="77.247706" width="390" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="77.247706" width="390" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--info-text)">Habits</text>
   <text x="1045" y="162.385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Run the SparkUI during work</text>
   <text x="1045" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Port 4040 — jobs, stages, storage</text>

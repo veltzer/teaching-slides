@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,7 +43,7 @@
   <rect x="40" y="40" width="1200" height="71.22807" rx="6.052403" fill="var(--code-bg)"/>
   <text x="640" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--bg)">The Agent Loop</text>
 
-  <rect x="40" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">1. Receive</text>
   <text x="180" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">user prompt or</text>
   <text x="180" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">issue description</text>
@@ -52,7 +53,7 @@
   <text x="180" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">CLAUDE.md, files</text>
   <text x="180" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">loop counter = 0</text>
 
-  <rect x="340" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--ok-text)">2. Reason</text>
   <text x="480" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">model plans the</text>
   <text x="480" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">next concrete step</text>
@@ -62,7 +63,7 @@
   <text x="480" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">answer and stops</text>
   <text x="480" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">chain-of-thought internal</text>
 
-  <rect x="640" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="780" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--warn-text)">3. Act</text>
   <text x="780" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">harness runs the</text>
   <text x="780" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">chosen tool call</text>
@@ -72,7 +73,7 @@
   <text x="780" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">in the real world</text>
   <text x="780" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">permission prompts here</text>
 
-  <rect x="940" y="141.754386" width="300" height="325.614035" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="141.754386" width="300" height="325.614035" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--info-text)">4. Observe</text>
   <text x="1090" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">tool output feeds</text>
   <text x="1090" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">back into context</text>

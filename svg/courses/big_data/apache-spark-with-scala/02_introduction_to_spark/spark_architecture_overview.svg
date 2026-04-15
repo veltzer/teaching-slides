@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,17 +40,17 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="110.956522" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="110.956522" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="95.478261" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.104122" font-weight="bold" fill="var(--primary-text)">Driver Program</text>
   <text x="640" y="125.73913" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.065076" fill="var(--primary-text)">SparkContext builds DAG and schedules stages</text>
 
-  <rect x="40" y="191.304348" width="1200" height="100.869565" rx="6.02603" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="191.304348" width="1200" height="100.869565" rx="6.02603" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="231.652174" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445" font-weight="bold" fill="var(--info-text)">Cluster Manager</text>
   <text x="640" y="263.930435" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.065076" fill="var(--info-text)">YARN / Kubernetes / Standalone</text>
 
   <line x1="640" y1="150.956522" x2="640" y2="189.286957" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="372.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" font-weight="bold" fill="var(--ok-text)">Worker 1</text>
   <rect x="70" y="393.043478" width="320" height="80.695652" rx="6.02603" fill="var(--ok-accent)"/>
   <text x="230" y="428.347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--ok-text)">Executor</text>
@@ -59,7 +60,7 @@
   <rect x="240" y="493.913043" width="150" height="70.608696" rx="6.02603" fill="var(--ok-accent)"/>
   <text x="315" y="534.26087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060738" fill="var(--ok-text)">Task</text>
 
-  <rect x="450" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="450" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="372.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" font-weight="bold" fill="var(--ok-text)">Worker 2</text>
   <rect x="480" y="393.043478" width="320" height="80.695652" rx="6.02603" fill="var(--ok-accent)"/>
   <text x="640" y="428.347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--ok-text)">Executor</text>
@@ -68,7 +69,7 @@
   <rect x="650" y="493.913043" width="150" height="70.608696" rx="6.02603" fill="var(--ok-accent)"/>
   <text x="725" y="534.26087" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.060738" fill="var(--ok-text)">Task</text>
 
-  <rect x="860" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="860" y="332.521739" width="380" height="262.26087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="372.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.086768" font-weight="bold" fill="var(--ok-text)">Worker 3</text>
   <rect x="890" y="393.043478" width="320" height="80.695652" rx="6.02603" fill="var(--ok-accent)"/>
   <text x="1050" y="428.347826" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--ok-text)">Executor</text>

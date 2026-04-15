@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,17 +43,17 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Recipe A (target)</text>
   <text x="640" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">bitbake resolves dependencies before running tasks</text>
 
-  <rect x="40" y="180" width="580" height="170" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="180" width="580" height="170" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">DEPENDS (build-time)</text>
   <text x="330" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Recipe B: headers, libraries, toolchain</text>
   <text x="330" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Recipe C: native build tools</text>
   <text x="330" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">must be present during do_compile</text>
 
-  <rect x="660" y="180" width="580" height="170" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="660" y="180" width="580" height="170" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">RDEPENDS (runtime)</text>
   <text x="950" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Recipe D: shared libs, interpreters</text>
   <text x="950" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Recipe E: required at boot</text>

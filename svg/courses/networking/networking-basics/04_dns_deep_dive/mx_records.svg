@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
   <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">MX Records: Where Email for a Domain Goes</text>
 
-  <rect x="40" y="150" width="320" height="180" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="150" width="320" height="180" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Sending MTA</text>
   <text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Needs to deliver mail</text>
   <text x="200" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">to user@example.com</text>
@@ -49,7 +50,7 @@
   <line x1="360" y1="240" x2="480" y2="240" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="420" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">MX query</text>
 
-  <rect x="480" y="150" width="320" height="180" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="480" y="150" width="320" height="180" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">DNS Resolver</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Looks up MX records</text>
   <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">for example.com zone</text>
@@ -57,7 +58,7 @@
   <line x1="800" y1="240" x2="920" y2="240" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="860" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">sorted list</text>
 
-  <rect x="920" y="150" width="320" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="920" y="150" width="320" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1080" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Receiving MTA</text>
   <text x="1080" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Lowest priority picked</text>
   <text x="1080" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">SMTP connection opens</text>
@@ -65,17 +66,17 @@
   <rect x="40" y="360" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">MX Record Priorities for example.com</text>
 
-  <rect x="80" y="440" width="360" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="80" y="440" width="360" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="260" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Priority 10</text>
   <text x="260" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">mail1.example.com</text>
   <text x="260" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">tried first</text>
 
-  <rect x="460" y="440" width="360" height="150" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="460" y="440" width="360" height="150" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Priority 20</text>
   <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">mail2.example.com</text>
   <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">fallback</text>
 
-  <rect x="840" y="440" width="360" height="150" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="840" y="440" width="360" height="150" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1020" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Priority 30</text>
   <text x="1020" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">mail3.example.com</text>
   <text x="1020" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">last resort</text>

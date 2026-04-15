@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,10 +37,10 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Scala String Operations</text>
 
-  <rect x="40" y="130" width="390" height="210" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="130" width="390" height="210" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Interpolators</text>
   <text x="235" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">s"hi $name"</text>
   <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">f"$x%.2f" printf-style</text>
@@ -47,7 +48,7 @@
   <text x="235" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">custom StringContext impls</text>
   <text x="235" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">compiled to concat</text>
 
-  <rect x="445" y="130" width="390" height="210" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="130" width="390" height="210" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Core methods</text>
   <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">length, charAt, substring</text>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">toUpperCase, trim, replace</text>
@@ -55,7 +56,7 @@
   <text x="640" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">mkString from collections</text>
   <text x="640" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">java.lang.String under the hood</text>
 
-  <rect x="850" y="130" width="390" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="130" width="390" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">StringOps</text>
   <text x="1045" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">string behaves as Seq[Char]</text>
   <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">map, filter, reverse</text>
@@ -63,12 +64,12 @@
   <text x="1045" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">lines, grouped, sliding</text>
   <text x="1045" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">implicit conversion</text>
 
-  <rect x="40" y="360" width="590" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="360" width="590" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Regex: "pat".r</text>
   <text x="335" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">findAllIn, findFirstMatchIn</text>
   <text x="335" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">regex unapply in match blocks</text>
 
-  <rect x="650" y="360" width="590" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="650" y="360" width="590" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Multi-line / triple-quoted</text>
   <text x="945" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">""" ... """ spans lines</text>
   <text x="945" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">combine with stripMargin('|')</text>

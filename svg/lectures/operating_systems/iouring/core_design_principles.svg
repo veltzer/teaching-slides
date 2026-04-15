@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -8,7 +9,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Core Design Principles</text>
 
-  <rect x="40" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Shared Rings</text>
   <text x="185" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Submission ring</text>
   <text x="185" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Completion ring</text>
@@ -21,7 +22,7 @@
   <text x="185" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Cache-friendly</text>
   <text x="185" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">memory layout</text>
 
-  <rect x="350" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="350" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)">Batched SQEs</text>
   <text x="495" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Queue many ops</text>
   <text x="495" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">One io_uring_enter</text>
@@ -34,7 +35,7 @@
   <text x="495" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Huge throughput</text>
   <text x="495" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">on modern SSDs</text>
 
-  <rect x="660" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="660" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Polled Mode</text>
   <text x="805" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">SQPOLL thread</text>
   <text x="805" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Kernel spins</text>
@@ -47,7 +48,7 @@
   <text x="805" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Idle thread parks</text>
   <text x="805" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">automatically</text>
 
-  <rect x="970" y="77.247706" width="270" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="77.247706" width="270" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--info-text)">Unified API</text>
   <text x="1105" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Files and sockets</text>
   <text x="1105" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Same opcodes</text>

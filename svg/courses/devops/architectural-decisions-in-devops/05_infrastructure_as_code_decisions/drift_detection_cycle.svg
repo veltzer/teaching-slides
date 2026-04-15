@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -60,7 +61,7 @@
   <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">IaC Drift Detection Cycle</text>
 
-  <rect x="40" y="150" width="220" height="330" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="150" width="220" height="330" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">1. Scan</text>
   <text x="150" y="270" text-anchor="middle" font-size="18" fill="var(--primary-text)">read live</text>
   <text x="150" y="295" text-anchor="middle" font-size="18" fill="var(--primary-text)">infrastructure</text>
@@ -71,7 +72,7 @@
 
   <line x1="270" y1="315" x2="330" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="340" y="150" width="220" height="330" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="340" y="150" width="220" height="330" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="450" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">2. Compare</text>
   <text x="450" y="270" text-anchor="middle" font-size="18" fill="var(--warn-text)">declared vs</text>
   <text x="450" y="295" text-anchor="middle" font-size="18" fill="var(--warn-text)">actual state</text>
@@ -82,7 +83,7 @@
 
   <line x1="570" y1="315" x2="630" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="640" y="150" width="220" height="330" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="640" y="150" width="220" height="330" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="750" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">3. Detect</text>
   <text x="750" y="270" text-anchor="middle" font-size="18" fill="var(--danger-text)">drift found?</text>
   <text x="750" y="345" text-anchor="middle" font-size="16" fill="var(--danger-text)">alert on-call,</text>
@@ -92,7 +93,7 @@
 
   <line x1="870" y1="315" x2="930" y2="315" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="940" y="150" width="300" height="330" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="940" y="150" width="300" height="330" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="220" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">4. Reconcile</text>
   <text x="1090" y="270" text-anchor="middle" font-size="18" fill="var(--ok-text)">bring back into alignment</text>
   <text x="1090" y="345" text-anchor="middle" font-size="16" fill="var(--ok-text)">update IaC to match reality, OR</text>

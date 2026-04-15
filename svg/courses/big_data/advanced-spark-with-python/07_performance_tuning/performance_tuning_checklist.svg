@@ -95,33 +95,33 @@
 </defs>
   <text x="639.999892" y="40" text-anchor="middle" font-size="15.087827" font-weight="bold" fill="var(--text)">Performance Tuning Checklist</text>
   <line x1="40" y1="49.133765" x2="1239.999783" y2="49.133765" stroke="var(--primary-border)" stroke-width="1.6624" />
-  <rect x="40" y="62.834592" width="1200" height="109.606257" rx="6.832069" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="62.834592" width="1200" height="109.606257" rx="6.832069" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.999838" y="82.929114" font-size="12.258895" font-weight="bold" fill="var(--text)">Before Running</text>
   <text x="89.999838" y="101.196644" font-size="11.386782" fill="var(--text-muted)">☐ Set appropriate executor memory</text>
   <text x="89.999838" y="116.724344" font-size="11.386782" fill="var(--text-muted)">☐ Set executor cores (2-5 per executor)</text>
   <text x="89.999838" y="132.251924" font-size="11.386782" fill="var(--text-muted)">☐ Enable AQE</text>
   <text x="89.999838" y="147.779504" font-size="11.386782" fill="var(--text-muted)">☐ Set shuffle partitions</text>
   <text x="89.999838" y="163.307084" font-size="11.386782" fill="var(--text-muted)">☐ Enable Kryo serialization</text>
-  <rect x="40" y="181.574733" width="1200" height="100.472492" rx="6.832069" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="181.574733" width="1200" height="100.472492" rx="6.832069" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.999838" y="201.669136" font-size="12.258895" font-weight="bold" fill="var(--text)">Data Reading</text>
   <text x="89.999838" y="219.936905" font-size="11.386782" fill="var(--text-muted)">☐ Use columnar formats (Parquet)</text>
   <text x="89.999838" y="235.464366" font-size="11.386782" fill="var(--text-muted)">☐ Define schema explicitly</text>
   <text x="89.999838" y="250.992065" font-size="11.386782" fill="var(--text-muted)">☐ Use partition pruning</text>
   <text x="89.999838" y="266.519645" font-size="11.386782" fill="var(--text-muted)">☐ Push predicates to source</text>
-  <rect x="40" y="291.18099" width="1200" height="109.606257" rx="6.832069" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="291.18099" width="1200" height="109.606257" rx="6.832069" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.999838" y="311.275393" font-size="12.258895" font-weight="bold" fill="var(--text)">Transformations</text>
   <text x="89.999838" y="329.543282" font-size="11.386782" fill="var(--text-muted)">☐ Filter early, select early</text>
   <text x="89.999838" y="345.070742" font-size="11.386782" fill="var(--text-muted)">☐ Avoid UDFs (use built-in functions)</text>
   <text x="89.999838" y="360.598322" font-size="11.386782" fill="var(--text-muted)">☐ Broadcast small tables in joins</text>
   <text x="89.999838" y="376.126022" font-size="11.386782" fill="var(--text-muted)">☐ Handle data skew</text>
   <text x="89.999838" y="391.653482" font-size="11.386782" fill="var(--text-muted)">☐ Cache reused DataFrames</text>
-  <rect x="40" y="409.921251" width="1200" height="100.472492" rx="6.832069" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="409.921251" width="1200" height="100.472492" rx="6.832069" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.999838" y="430.015654" font-size="12.258895" font-weight="bold" fill="var(--text)">Writing</text>
   <text x="89.999838" y="448.283423" font-size="11.386782" fill="var(--text-muted)">☐ Coalesce before writing</text>
   <text x="89.999838" y="463.811003" font-size="11.386782" fill="var(--text-muted)">☐ Partition output by query pattern</text>
   <text x="89.999838" y="479.338464" font-size="11.386782" fill="var(--text-muted)">☐ Use dynamic partition overwrite</text>
   <text x="89.999838" y="494.866044" font-size="11.386782" fill="var(--text-muted)">☐ Choose appropriate compression</text>
-  <rect x="40" y="519.527508" width="1200" height="100.472492" rx="6.832069" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="519.527508" width="1200" height="100.472492" rx="6.832069" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="89.999838" y="539.62203" font-size="12.258895" font-weight="bold" fill="var(--text)">Monitoring</text>
   <text x="89.999838" y="557.88968" font-size="11.386782" fill="var(--text-muted)">☐ Check Spark UI for skew</text>
   <text x="89.999838" y="573.41726" font-size="11.386782" fill="var(--text-muted)">☐ Check GC time per executor</text>

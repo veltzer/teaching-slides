@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,25 +39,25 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="290" height="270" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="290" height="270" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">map</text>
   <text x="185" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">transform 1-to-1</text>
   <text x="185" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">xs.map(_ * 2)</text>
   <text x="185" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">A =&gt; B</text>
 
-  <rect x="350" y="40" width="290" height="270" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="350" y="40" width="290" height="270" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">filter</text>
   <text x="495" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">keep by predicate</text>
   <text x="495" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">xs.filter(_ &gt; 0)</text>
   <text x="495" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">A =&gt; Boolean</text>
 
-  <rect x="660" y="40" width="290" height="270" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="660" y="40" width="290" height="270" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">flatMap</text>
   <text x="805" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">one-to-many</text>
   <text x="805" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">xs.flatMap(...)</text>
   <text x="805" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">A =&gt; Seq[B]</text>
 
-  <rect x="970" y="40" width="270" height="270" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="40" width="270" height="270" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">reduce</text>
   <text x="1105" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">combine pairs</text>
   <text x="1105" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">xs.reduce(_+_)</text>

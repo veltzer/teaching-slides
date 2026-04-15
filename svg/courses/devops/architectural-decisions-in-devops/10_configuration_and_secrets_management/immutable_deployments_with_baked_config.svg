@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--text)">Immutable Deployments with Baked Config</text>
 
-  <rect x="40" y="82.962963" width="580" height="257.777778" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="580" height="257.777778" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="131.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--danger-text)">Mutable Config at Runtime</text>
   <text x="330" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--danger-text)">Env vars change without a new deploy</text>
   <text x="330" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--danger-text)">Config drift between instances</text>
@@ -48,7 +49,7 @@
   <text x="330" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--danger-text)">Debugging crosses many dashboards</text>
   <text x="330" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" font-style="italic" fill="var(--danger-text)">Hard to reproduce incidents</text>
 
-  <rect x="660" y="82.962963" width="580" height="257.777778" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="82.962963" width="580" height="257.777778" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="131.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Baked Into the Artifact</text>
   <text x="950" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Config rendered at build time</text>
   <text x="950" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Image plus config is one unit</text>
@@ -59,22 +60,22 @@
   <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--text)">Build-Time Pipeline</text>
 
-  <rect x="80" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="80" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200" y="491.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--primary-text)">Values File</text>
   <text x="200" y="528.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Per-env YAML</text>
   <text x="200" y="560.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">checked into git</text>
 
-  <rect x="360" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="360" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="491.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--warn-text)">Render</text>
   <text x="480" y="528.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Template + values,</text>
   <text x="480" y="560.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">secrets referenced</text>
 
-  <rect x="640" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="640" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="760" y="491.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--info-text)">Bundle</text>
   <text x="760" y="528.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Image + manifests</text>
   <text x="760" y="560.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">published together</text>
 
-  <rect x="920" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="920" y="448.148148" width="240" height="150.37037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1040" y="491.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--ok-text)">Deploy</text>
   <text x="1040" y="528.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Apply the bundle,</text>
   <text x="1040" y="560.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">no runtime edits</text>

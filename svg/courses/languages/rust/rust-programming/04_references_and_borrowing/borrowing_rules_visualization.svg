@@ -94,25 +94,25 @@
     </marker>
 </defs>
   <text x="639.9999" y="40" text-anchor="middle" font-size="24.4784" font-weight="bold">Borrow Checker Rules at a Glance</text>
-  <rect x="40" y="89.1525" width="557.1429" height="245.7627" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="89.1525" width="557.1429" height="245.7627" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="318.5714" y="154.6893" text-anchor="middle" font-size="22.4386" font-weight="bold" fill="var(--ok-accent)">ALLOWED</text>
   <text x="318.5714" y="210.3954" text-anchor="middle" font-size="20.3987">&amp;T + &amp;T + &amp;T (many immutable)</text>
   <text x="318.5714" y="259.548" text-anchor="middle" font-size="20.3987">&amp;mut T (one mutable, alone)</text>
   <text x="318.5714" y="308.7005" text-anchor="middle" font-size="20.3987">Non-overlapping scopes: &amp;T then &amp;mut T</text>
-  <rect x="682.8571" y="89.1525" width="557.1429" height="245.7627" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="682.8571" y="89.1525" width="557.1429" height="245.7627" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="961.4285" y="154.6893" text-anchor="middle" font-size="22.4386" font-weight="bold" fill="var(--danger-accent)">REJECTED</text>
   <text x="961.4285" y="210.3954" text-anchor="middle" font-size="20.3987">&amp;T + &amp;mut T (simultaneous)</text>
   <text x="961.4285" y="259.548" text-anchor="middle" font-size="20.3987">&amp;mut T + &amp;mut T (two writers)</text>
   <text x="961.4285" y="308.7005" text-anchor="middle" font-size="20.3987">Dangling ref (owner dropped)</text>
-  <rect x="125.7142" y="384.0678" width="300" height="114.6893" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="125.7142" y="384.0678" width="300" height="114.6893" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="275.7142" y="433.2203" text-anchor="middle" font-size="20.3987" font-weight="bold">Compile Time</text>
   <text x="275.7142" y="479.0961" text-anchor="middle" font-size="20.3987">Zero runtime cost</text>
-  <rect x="490" y="384.0678" width="300" height="114.6893" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="490" y="384.0678" width="300" height="114.6893" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="433.2203" text-anchor="middle" font-size="20.3987" font-weight="bold">NLL (Non-Lexical)</text>
   <text x="639.9999" y="479.0961" text-anchor="middle" font-size="20.3987">Ref ends at last use</text>
-  <rect x="854.2856" y="384.0678" width="300" height="114.6893" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="854.2856" y="384.0678" width="300" height="114.6893" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1004.2857" y="433.2203" text-anchor="middle" font-size="20.3987" font-weight="bold">Data Race Free</text>
   <text x="1004.2857" y="479.0961" text-anchor="middle" font-size="20.3987">Prevents UB at compile</text>
-  <rect x="211.4285" y="547.9096" width="857.1427" height="72.0904" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="211.4285" y="547.9096" width="857.1427" height="72.0904" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="597.0622" text-anchor="middle" font-size="20.3987">Key insight: aliasing XOR mutation (but never both)</text>
 </svg>

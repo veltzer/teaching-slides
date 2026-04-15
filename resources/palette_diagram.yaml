@@ -110,6 +110,17 @@ filters:
     stdDeviation: 3
     flood-color: "#00000022"      # shadow
 
+# Visual effects applied uniformly across all SVGs. Enforced by
+# check_svg.py --shadows; fix_svg_shadows.py rewrites files to comply.
+effects:
+  rect-shadow:
+    enabled: true                 # whether shadow filter is used at all
+    apply-to: family-only         # family-only | all | none
+    # family-only: rects with fill=var(--{family}-fill) MUST have
+    #              filter="url(#shadow)"; other rects MUST NOT.
+    # all:         every <rect> outside <defs> MUST have the shadow filter.
+    # none:        equivalent to enabled: false — no rect may have it.
+
 markers:
   arrow:
     fill: "#555555"               # text-muted

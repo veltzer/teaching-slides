@@ -98,7 +98,7 @@
 
   <text x="640" y="75.9292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" fill="var(--text-muted)">Each iteration, every vertex sends its rank/out-degree to neighbours, then updates itself.</text>
 
-  <rect x="40" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--primary-text)">Step 1 — send</text>
   <text x="230" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">Every vertex v splits its current rank</text>
   <text x="230" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">equally among its outgoing edges:</text>
@@ -108,7 +108,7 @@
   <text x="230" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">dangling nodes (no out-edges)</text>
   <text x="230" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">lose their rank unless teleported.</text>
 
-  <rect x="450" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="450" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--ok-text)">Step 2 — aggregate</text>
   <text x="640" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">At each destination vertex u,</text>
   <text x="640" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">sum all incoming rank fragments:</text>
@@ -118,7 +118,7 @@
   <text x="640" y="317.1681" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">mergeMsg: (a, b) =&gt; a + b</text>
   <text x="640" y="358.2301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">one shuffle per iteration</text>
 
-  <rect x="860" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="860" y="101.5929" width="380" height="287.4336" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--warn-text)">Step 3 — update</text>
   <text x="1050" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">Mix teleport and neighbour mass:</text>
   <text x="1050" y="204.2478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">rank'(u) = (1 - d)/N + d · inbox(u)</text>

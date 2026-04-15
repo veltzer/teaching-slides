@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,10 +42,10 @@
   <!-- widths: 150, 660, 90, 300 -->
   <rect x="40" y="82.568807" width="1200" height="127.706422" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
-  <rect x="40" y="82.568807" width="150" height="127.706422" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="190" y="82.568807" width="660" height="127.706422" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="850" y="82.568807" width="90" height="127.706422" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="940" y="82.568807" width="300" height="127.706422" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="82.568807" width="150" height="127.706422" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="190" y="82.568807" width="660" height="127.706422" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="82.568807" width="90" height="127.706422" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="82.568807" width="300" height="127.706422" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
 
   <text x="115" y="130.458716" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)">System</text>
   <text x="115" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">prompt</text>

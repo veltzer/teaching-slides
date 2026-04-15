@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,42 +39,42 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.668233" font-weight="bold" fill="var(--text)">Android Performance Areas</text>
 
   <!-- Six areas in a grid 3x2 -->
-  <rect x="40" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-text)">Startup &amp; launch</text>
   <text x="235" y="149.72973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Cold / warm / hot starts</text>
   <text x="235" y="173.765766" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Baseline Profiles</text>
   <text x="235" y="197.801802" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Defer work off the main thread</text>
   <text x="235" y="221.837838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Splash API, App Startup lib</text>
 
-  <rect x="445" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--ok-text)">Rendering (UI)</text>
   <text x="640" y="149.72973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Target 60 / 90 / 120 fps</text>
   <text x="640" y="173.765766" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Avoid overdraw, deep layouts</text>
   <text x="640" y="197.801802" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Compose: stable params, keys</text>
   <text x="640" y="221.837838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Use Choreographer and JankStats</text>
 
-  <rect x="850" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="81.801802" width="390" height="161.981982" rx="8.178196" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--warn-text)">Memory</text>
   <text x="1045" y="149.72973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Watch leaks (LeakCanary)</text>
   <text x="1045" y="173.765766" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Right-size bitmaps</text>
   <text x="1045" y="197.801802" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Release in onStop / onCleared</text>
   <text x="1045" y="221.837838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Avoid static Context refs</text>
 
-  <rect x="40" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--danger-text)">Battery</text>
   <text x="235" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">Doze, App Standby buckets</text>
   <text x="235" y="356.648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">Batch work with WorkManager</text>
   <text x="235" y="380.684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">Coalesce wakelocks and syncs</text>
   <text x="235" y="404.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">Minimise location fixes</text>
 
-  <rect x="445" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="445" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--info-text)">Network &amp; I/O</text>
   <text x="640" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Cache, compress, paginate</text>
   <text x="640" y="356.648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">HTTP/2 or gRPC multiplexing</text>
   <text x="640" y="380.684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Room, coroutines off main</text>
   <text x="640" y="404.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Retry with backoff &amp; jitter</text>
 
-  <rect x="850" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="264.684685" width="390" height="161.981982" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-text)">App size</text>
   <text x="1045" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">App Bundles, dynamic features</text>
   <text x="1045" y="356.648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">R8 shrinking, resource strip</text>
@@ -84,16 +85,16 @@
   <rect x="40" y="452.792793" width="1200" height="167.207207" rx="8.178196" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="489.369369" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--text)">Workflow: measure → analyze → optimize → verify</text>
 
-  <rect x="70" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="70" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="195" y="559.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--ok-text)">Measure</text>
 
-  <rect x="360" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="360" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="559.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--primary-text)">Analyze</text>
 
-  <rect x="650" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="510.27027" width="250" height="83.603604" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="775" y="559.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--warn-text)">Optimize</text>
 
-  <rect x="940" y="510.27027" width="265" height="83.603604" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="510.27027" width="265" height="83.603604" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1072" y="559.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--info-text)">Verify</text>
 
   <line x1="320" y1="552.072072" x2="360" y2="552.072072" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

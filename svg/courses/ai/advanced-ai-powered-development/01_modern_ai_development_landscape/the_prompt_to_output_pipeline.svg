@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,31 +41,31 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Every prompt becomes output through these stages</text>
 
-  <rect x="40" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">System Prompt</text>
   <text x="150" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">persona +</text>
   <text x="150" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">constraints</text>
   <line x1="270" y1="187.636364" x2="290" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="300" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="300" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="410" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">User Message</text>
   <text x="410" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">task or</text>
   <text x="410" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">question</text>
   <line x1="530" y1="187.636364" x2="550" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="560" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="560" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="670" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Context (RAG)</text>
   <text x="670" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">retrieved files</text>
   <text x="670" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">+ docs</text>
   <line x1="790" y1="187.636364" x2="810" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="820" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="820" y="82.181818" width="220" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="930" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Tool Calls</text>
   <text x="930" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">shell, files,</text>
   <text x="930" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">web search</text>
   <line x1="1050" y1="187.636364" x2="1070" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1080" y="82.181818" width="160" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1080" y="82.181818" width="160" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1160" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Response</text>
   <text x="1160" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">token by token</text>
   <text x="1160" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">autoregressive</text>

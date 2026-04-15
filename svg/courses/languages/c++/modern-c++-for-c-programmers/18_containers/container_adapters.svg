@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,7 +37,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="390" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="390" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="130" text-anchor="middle" font-size="36" font-weight="bold" fill="var(--info-text)">stack</text>
   <text x="235" y="180" text-anchor="middle" font-size="24" fill="var(--info-text)">(LIFO)</text>
   <text x="235" y="260" text-anchor="middle" font-size="18" fill="var(--info-text)">push / pop / top</text>
@@ -45,7 +46,7 @@
   <text x="235" y="470" text-anchor="middle" font-size="18" fill="var(--info-text)">no iteration</text>
   <text x="235" y="540" text-anchor="middle" font-size="18" fill="var(--info-text)">undo, parsers</text>
 
-  <rect x="445" y="40" width="390" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="445" y="40" width="390" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="130" text-anchor="middle" font-size="36" font-weight="bold" fill="var(--primary-text)">queue</text>
   <text x="640" y="180" text-anchor="middle" font-size="24" fill="var(--primary-text)">(FIFO)</text>
   <text x="640" y="260" text-anchor="middle" font-size="18" fill="var(--primary-text)">push / pop / front</text>
@@ -54,7 +55,7 @@
   <text x="640" y="470" text-anchor="middle" font-size="18" fill="var(--primary-text)">no iteration</text>
   <text x="640" y="540" text-anchor="middle" font-size="18" fill="var(--primary-text)">BFS, buffering</text>
 
-  <rect x="850" y="40" width="390" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="850" y="40" width="390" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="130" text-anchor="middle" font-size="34" font-weight="bold" fill="var(--ok-text)">priority_queue</text>
   <text x="1045" y="180" text-anchor="middle" font-size="24" fill="var(--ok-text)">(Heap)</text>
   <text x="1045" y="260" text-anchor="middle" font-size="18" fill="var(--ok-text)">push / pop / top</text>

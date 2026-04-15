@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,24 +39,24 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="220" height="147.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="220" height="147.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="92.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="150" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">textFile, parallelize</text>
   <text x="150" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">HDFS, S3, Kafka</text>
 
-  <rect x="300" y="40" width="280" height="147.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="300" y="40" width="280" height="147.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="440" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Narrow Transforms</text>
   <text x="440" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">map, filter, flatMap</text>
   <text x="440" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">mapPartitions, union</text>
   <text x="440" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">No shuffle, pipelined</text>
 
-  <rect x="620" y="40" width="280" height="147.636364" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="620" y="40" width="280" height="147.636364" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="760" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Wide Transforms</text>
   <text x="760" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">groupByKey, reduceByKey</text>
   <text x="760" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">join, sortBy, distinct</text>
   <text x="760" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Triggers shuffle stage</text>
 
-  <rect x="940" y="40" width="300" height="147.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="40" width="300" height="147.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">Action</text>
   <text x="1090" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">count, collect, take</text>
   <text x="1090" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">saveAsTextFile, foreach</text>
@@ -71,14 +72,14 @@
   <text x="640" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Narrow ops pipeline within a stage; wide ops cut a new stage</text>
   <text x="640" y="375.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Catalyst and the scheduler then optimise and submit tasks</text>
 
-  <rect x="40" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="459.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Lineage benefits</text>
   <text x="335" y="496.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Recomputes lost partitions</text>
   <text x="335" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Fault tolerance without replication</text>
   <text x="335" y="553.563636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Checkpoint to truncate long chains</text>
   <text x="335" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">toDebugString inspects the DAG</text>
 
-  <rect x="650" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="459.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">Caching tips</text>
   <text x="945" y="496.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">cache() or persist() reused RDDs</text>
   <text x="945" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Choose storage level by budget</text>

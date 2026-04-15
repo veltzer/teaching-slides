@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,35 +40,35 @@
   </defs>
   <!-- palette: resources/palette_diagram.yaml -->
 
-  <rect x="40" y="40" width="390" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="390" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Batch Interval</text>
   <text x="235" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">size to processing time</text>
   <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">keep delay near zero</text>
   <text x="235" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">too small: overhead</text>
   <text x="235" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">too big: latency spikes</text>
 
-  <rect x="445" y="40" width="390" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="40" width="390" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Parallelism</text>
   <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">match Kafka partitions</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">cores == partitions</text>
   <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">repartition skewed keys</text>
   <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">tune shuffle partitions</text>
 
-  <rect x="850" y="40" width="390" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="40" width="390" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Memory and GC</text>
   <text x="1045" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Kryo serializer</text>
   <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">G1GC, size old gen</text>
   <text x="1045" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">cache only hot RDDs</text>
   <text x="1045" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">off-heap for state</text>
 
-  <rect x="40" y="340" width="390" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="340" width="390" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Backpressure</text>
   <text x="235" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">enable PID rate control</text>
   <text x="235" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">cap maxRatePerPartition</text>
   <text x="235" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">absorb traffic bursts</text>
   <text x="235" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">without OOM</text>
 
-  <rect x="445" y="340" width="390" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="445" y="340" width="390" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Shuffle Costs</text>
   <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">avoid groupByKey</text>
   <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">prefer reduceByKey</text>

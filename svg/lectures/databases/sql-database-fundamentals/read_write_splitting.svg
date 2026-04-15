@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -44,21 +45,21 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Read / Write Splitting</text>
 
-  <rect x="40" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="220" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--danger-text)">Write Path</text>
   <text x="220" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--danger-text)">INSERT / UPDATE / DELETE</text>
   <text x="220" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--danger-text)">Master only</text>
   <text x="220" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--danger-text)">Strongly consistent</text>
   <text x="220" y="308.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--danger-text)">Single point of truth</text>
 
-  <rect x="460" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="460" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--primary-text)">Master DB</text>
   <text x="640" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--primary-text)">Accepts all writes</text>
   <text x="640" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--primary-text)">Streams replication log</text>
   <text x="640" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--primary-text)">May also serve reads</text>
   <text x="640" y="308.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--primary-text)">Failover target</text>
 
-  <rect x="880" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="880" y="71.636364" width="360" height="263.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1060" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--ok-text)">Read Path</text>
   <text x="1060" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--ok-text)">SELECT queries</text>
   <text x="1060" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--ok-text)">Any replica serves</text>

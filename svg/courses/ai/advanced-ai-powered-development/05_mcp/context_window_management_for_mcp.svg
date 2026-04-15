@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,9 +43,9 @@
 
   <rect x="40" y="106.923077" width="1200" height="122.692308" rx="6.336706" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <!-- Segment widths: schemas 150px, conversation 900px, response 150px -->
-  <rect x="40" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="190" y="106.923077" width="900" height="122.692308" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="1090" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="190" y="106.923077" width="900" height="122.692308" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1090" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
 
   <text x="115" y="151.538462" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--danger-text)">Tool Schemas</text>
   <text x="115" y="177.192308" text-anchor="middle" font-size="12.673413" fill="var(--danger-text)">20 tools × 100</text>
@@ -61,28 +62,28 @@
   <!-- Strategies section -->
   <text x="640" y="285.384615" text-anchor="middle" font-size="23.23459" font-weight="bold" fill="var(--info-accent)">Strategies to Manage Tool Schema Cost</text>
 
-  <rect x="40" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Dynamic Registration</text>
   <text x="185" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Register only tools</text>
   <text x="185" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">needed for the</text>
   <text x="185" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">current task</text>
   <text x="185" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">swap tool sets per phase</text>
 
-  <rect x="350" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="350" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Tool Grouping</text>
   <text x="495" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Combine fine-grained</text>
   <text x="495" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">tools into a single</text>
   <text x="495" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">higher-level tool</text>
   <text x="495" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">fewer schemas, more power</text>
 
-  <rect x="660" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="660" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Minimal Descriptions</text>
   <text x="805" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Keep tool names,</text>
   <text x="805" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">descriptions, and</text>
   <text x="805" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">params concise</text>
   <text x="805" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">every word is a token</text>
 
-  <rect x="970" y="307.692308" width="270" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="970" y="307.692308" width="270" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Lazy Loading</text>
   <text x="1105" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Connect MCP servers</text>
   <text x="1105" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">on demand, not all</text>

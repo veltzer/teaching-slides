@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,22 +39,22 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="106.140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">Call site</text>
   <text x="180" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--primary-text)">missing parameter</text>
   <text x="180" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">foo(x)(implicit e)</text>
 
-  <rect x="370" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="370" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="510" y="106.140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">Compiler search</text>
   <text x="510" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--warn-text)">scans imports,</text>
   <text x="510" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--warn-text)">companions</text>
 
-  <rect x="700" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="700" y="40" width="280" height="203.508772" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="840" y="106.140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">Injection</text>
   <text x="840" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">compiler inserts</text>
   <text x="840" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">resolved value</text>
 
-  <rect x="1000" y="40" width="240" height="203.508772" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1000" y="40" width="240" height="203.508772" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="106.140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--info-text)">Runtime</text>
   <text x="1120" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--info-text)">executes with</text>
   <text x="1120" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--info-text)">injected arg</text>
@@ -69,7 +70,7 @@
   <text x="335" y="492.807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" fill="var(--text-muted)">Spark Encoders</text>
   <text x="335" y="564.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Scala 3: given/using.</text>
 
-  <rect x="650" y="274.035088" width="590" height="345.964912" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="274.035088" width="590" height="345.964912" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--danger-text)">Pitfalls</text>
   <text x="945" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" fill="var(--danger-text)">Ambiguous instances</text>
   <text x="945" y="447.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" fill="var(--danger-text)">Hidden control flow</text>

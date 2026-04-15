@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
   <rect x="40" y="82.962963" width="580" height="537.037037" rx="8.291004" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="125.925926" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--danger-accent)">Synchronous</text>
 
-  <rect x="80" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="80" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="206.481481" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--danger-text)">read(fd, buf, n)</text>
 
   <rect x="80" y="254.814815" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -53,14 +54,14 @@
   <rect x="80" y="448.148148" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="330" y="494.333333" text-anchor="middle" font-size="18.654758" fill="var(--text)">Simple control flow, linear code</text>
 
-  <rect x="80" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="80" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="583.481481" text-anchor="middle" font-size="18.654758" font-weight="bold" fill="var(--danger-text)">Poor concurrency scaling</text>
 
   <!-- Asynchronous panel -->
   <rect x="660" y="82.962963" width="580" height="537.037037" rx="8.291004" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="950" y="125.925926" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--ok-accent)">Asynchronous</text>
 
-  <rect x="700" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="700" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="206.481481" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">aio_read / io_uring_submit</text>
 
   <rect x="700" y="254.814815" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -72,6 +73,6 @@
   <rect x="700" y="448.148148" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="950" y="494.333333" text-anchor="middle" font-size="18.654758" fill="var(--text)">Completion via callback, signal, or poll</text>
 
-  <rect x="700" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="700" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="583.481481" text-anchor="middle" font-size="18.654758" font-weight="bold" fill="var(--ok-text)">Scales to many in-flight operations</text>
 </svg>

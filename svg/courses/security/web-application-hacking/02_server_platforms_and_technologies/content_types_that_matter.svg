@@ -95,25 +95,25 @@
 </defs>
   <rect x="40" y="40" width="1200" height="60" rx="6" fill="var(--text)" />
   <text x="640" y="80" text-anchor="middle" font-size="24.8566" fill="var(--bg)" font-weight="bold">Content Types — Security Implications</text>
-  <rect x="40" y="100" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <rect x="40" y="100" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="134" font-size="22.9445" fill="var(--text)" font-weight="bold">text/html</text>
   <text x="446.4516" y="134" font-size="22.9445" fill="var(--text)">→  Rendered as HTML (XSS risk)</text>
   <rect x="40" y="152" width="1200" height="52" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="6"/>
   <text x="59.3548" y="186" font-size="22.9445" fill="var(--text)" font-weight="bold">application/json</text>
   <text x="446.4516" y="186" font-size="22.9445" fill="var(--text)">→  Parsed as JSON (safer)</text>
-  <rect x="40" y="204" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <rect x="40" y="204" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="238" font-size="22.9445" fill="var(--text)" font-weight="bold">text/plain</text>
   <text x="446.4516" y="238" font-size="22.9445" fill="var(--text)">→  Displayed as text (safer)</text>
   <rect x="40" y="256" width="1200" height="52" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="6"/>
   <text x="59.3548" y="290" font-size="22.9445" fill="var(--text)" font-weight="bold">application/xml</text>
   <text x="446.4516" y="290" font-size="22.9445" fill="var(--text)">→  Parsed as XML (XXE risk)</text>
-  <rect x="40" y="308" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <rect x="40" y="308" width="1200" height="52" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="342" font-size="22.9445" fill="var(--text)" font-weight="bold">multipart/form-data</text>
   <text x="446.4516" y="342" font-size="22.9445" fill="var(--text)">→  File uploads (shell risk)</text>
   <rect x="40" y="360" width="1200" height="52" fill="var(--bg)" stroke="var(--border)" stroke-width="2" rx="6"/>
   <text x="59.3548" y="394" font-size="22.9445" fill="var(--text)" font-weight="bold">application/x-www-form-urlencoded</text>
   <text x="640" y="394" font-size="22.9445" fill="var(--text)">→  Form data</text>
-  <rect x="40" y="440" width="1200" height="180" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="440" width="1200" height="180" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.0323" y="484" font-size="24.8566" fill="var(--text-muted)" font-weight="bold">Mismatched Content-Type can lead to:</text>
   <text x="69.0323" y="524" font-size="22.9445" fill="var(--text)">• Browser MIME sniffing (XSS)</text>
   <text x="69.0323" y="560" font-size="22.9445" fill="var(--text)">• Parser confusion attacks</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,14 +40,14 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="595" height="220" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="595" height="220" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Process A (PID 100)</text>
   <text x="337" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Virtual address space 0x0 – 0x7fff...</text>
   <text x="337" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Own heap, stack, code segments</text>
   <text x="337" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Own file descriptor table</text>
   <text x="337" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Own signal handlers, credentials</text>
 
-  <rect x="645" y="40" width="595" height="220" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="645" y="40" width="595" height="220" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="942" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Process B (PID 200)</text>
   <text x="942" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Virtual address space 0x0 – 0x7fff...</text>
   <text x="942" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Same addresses, different memory</text>
@@ -56,14 +57,14 @@
   <line x1="337" y1="270" x2="337" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="942" y1="270" x2="942" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="320" width="1200" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="320" width="1200" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Kernel enforces isolation</text>
   <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Page tables per process, syscalls gate every resource access</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">MMU traps invalid addresses into SIGSEGV</text>
 
   <line x1="640" y1="470" x2="640" y2="510" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="520" width="1200" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="520" width="1200" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Physical RAM</text>
   <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Shared hardware; kernel maps pages so processes never see each other directly</text>
 </svg>

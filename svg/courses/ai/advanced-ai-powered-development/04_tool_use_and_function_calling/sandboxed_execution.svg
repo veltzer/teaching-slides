@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
   <text x="640" y="75.614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--danger-accent)">Sandbox Boundary</text>
 
   <!-- Four pillars inside -->
-  <rect x="80" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="80" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="210" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">Allowed Tools</text>
   <text x="210" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--ok-text)">read_file</text>
   <text x="210" y="248.596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--ok-text)">write_file</text>
@@ -48,7 +49,7 @@
   <text x="210" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--ok-text)">grep</text>
   <text x="210" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">explicitly permitted</text>
 
-  <rect x="360" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="360" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">Scoped FS</text>
   <text x="490" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--warn-text)">/project ok</text>
   <text x="490" y="248.596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--warn-text)">/tmp ok</text>
@@ -56,7 +57,7 @@
   <text x="490" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--warn-text)">/home blocked</text>
   <text x="490" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--warn-text)">path restrictions</text>
 
-  <rect x="640" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="640" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="770" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">Net Policy</text>
   <text x="770" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--primary-text)">npm registry ok</text>
   <text x="770" y="248.596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--primary-text)">GitHub API ok</text>
@@ -64,7 +65,7 @@
   <text x="770" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--primary-text)">secrets blocked</text>
   <text x="770" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--primary-text)">egress controls</text>
 
-  <rect x="920" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="920" y="111.22807" width="260" height="325.614035" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--info-text)">Audit Log</text>
   <text x="1050" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--info-text)">tool name</text>
   <text x="1050" y="248.596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" fill="var(--info-text)">arguments</text>

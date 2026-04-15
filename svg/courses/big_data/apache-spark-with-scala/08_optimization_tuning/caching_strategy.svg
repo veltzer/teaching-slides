@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   <text x="950" y="117.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">unpersist() to release; lazy until action runs</text>
 
   <!-- Storage levels -->
-  <rect x="40" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--primary-text)">MEMORY_ONLY</text>
   <text x="185" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">deserialized JVM objects</text>
   <text x="185" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">fastest read path</text>
@@ -48,7 +49,7 @@
   <text x="185" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">small hot datasets,</text>
   <text x="185" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">cheap recompute</text>
 
-  <rect x="340" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--ok-text)">MEMORY_AND_DISK</text>
   <text x="485" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">RAM first, spill to disk</text>
   <text x="485" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">DataFrame default</text>
@@ -57,7 +58,7 @@
   <text x="485" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--ok-text)">expensive lineage,</text>
   <text x="485" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--ok-text)">safe default</text>
 
-  <rect x="640" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--warn-text)">MEMORY_ONLY_SER</text>
   <text x="785" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">serialized bytes (Kryo)</text>
   <text x="785" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">2-5x less heap usage</text>
@@ -66,7 +67,7 @@
   <text x="785" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--warn-text)">large data, tight heap,</text>
   <text x="785" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--warn-text)">GC pauses hurt</text>
 
-  <rect x="940" y="151.929825" width="300" height="234.035088" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="151.929825" width="300" height="234.035088" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--info-text)">DISK_ONLY / _2</text>
   <text x="1090" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">persisted only to disk</text>
   <text x="1090" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">_2 suffix = 2x replicas</text>

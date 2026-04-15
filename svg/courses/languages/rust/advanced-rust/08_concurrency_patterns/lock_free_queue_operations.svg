@@ -94,7 +94,7 @@
     </marker>
 </defs>
   <text x="640" y="40" text-anchor="middle" font-size="29.7798" font-weight="bold" fill="var(--text)">Lock-Free Queue Operations</text>
-  <rect x="40" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="323.7838" y="109.8796" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--text)">Compare-And-Swap (CAS) Loop</text>
   <text x="64.3243" y="144.8193" font-size="14.8899" fill="var(--text-muted)">loop {</text>
   <text x="80.5405" y="169.976" font-size="14.8899" fill="var(--text-muted)">  let old = tail.load(Ordering::Acquire);</text>
@@ -103,33 +103,33 @@
   <text x="96.7568" y="245.4458" font-size="14.8899" fill="var(--text-muted)">    old, new_node, ...)</text>
   <text x="80.5405" y="270.6025" font-size="14.8899" fill="var(--ok-accent)">  { Ok(_) =&gt; break,  // success!</text>
   <text x="80.5405" y="295.7591" font-size="14.8899" fill="var(--danger-accent)">    Err(_) =&gt; continue } // retry</text>
-  <rect x="672.4324" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="672.4324" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="956.2161" y="109.8796" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--ok-accent)">Enqueue Operation</text>
-  <rect x="704.8648" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="704.8648" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="753.5134" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)">A</text>
   <line x1="802.1621" y1="161.5904" x2="850.8108" y2="161.5904" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="867.027" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="867.027" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="915.6757" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)">B</text>
   <line x1="964.3242" y1="161.5904" x2="1012.9729" y2="161.5904" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1029.1891" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="1029.1891" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1077.8378" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)">C</text>
   <text x="1077.8378" y="207.7109" font-size="14.8899" fill="var(--warn-accent)">tail</text>
-  <rect x="1029.1891" y="221.6868" width="97.2972" height="48.9157" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5.7528 2.8764" />
+  <rect x="1029.1891" y="221.6868" width="97.2972" height="48.9157" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5.7528 2.8764" filter="url(#shadow)"/>
   <text x="1077.8378" y="252.4339" text-anchor="middle" font-size="14.8899" fill="var(--ok-accent)">D</text>
   <line x1="1077.8378" y1="186.747" x2="1077.8378" y2="221.6868" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="1110.2702" y="214.6989" font-size="14.8899" fill="var(--ok-accent)">CAS</text>
   <text x="704.8648" y="298.5543" font-size="14.8899" fill="var(--text-muted)">1. Read tail  2. Create node  3. CAS tail.next  4. Update tail</text>
-  <rect x="40" y="347.4699" width="567.5675" height="139.759" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="347.4699" width="567.5675" height="139.759" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="323.7838" y="382.4097" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--danger-accent)">ABA Problem</text>
   <text x="64.3243" y="414.5543" font-size="14.8899" fill="var(--text-muted)">Thread 1 reads A, pauses</text>
   <text x="64.3243" y="439.7109" font-size="14.8899" fill="var(--text-muted)">Thread 2: A -&gt; B -&gt; A (same pointer!)</text>
   <text x="64.3243" y="464.8675" font-size="14.8899" fill="var(--danger-accent)">Thread 1 CAS succeeds but state changed!</text>
-  <rect x="672.4324" y="347.4699" width="567.5675" height="139.759" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="672.4324" y="347.4699" width="567.5675" height="139.759" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="956.2161" y="382.4097" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)">ABA Solutions</text>
   <text x="696.7567" y="414.5543" font-size="14.8899" fill="var(--text-muted)">- Tagged pointers (generation counter)</text>
   <text x="696.7567" y="439.7109" font-size="14.8899" fill="var(--text-muted)">- Epoch-based reclamation (crossbeam)</text>
   <text x="696.7567" y="464.8675" font-size="14.8899" fill="var(--text-muted)">- Hazard pointers</text>
-  <rect x="40" y="515.1807" width="1200" height="104.8193" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="515.1807" width="1200" height="104.8193" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="550.1205" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)">Memory Ordering for Lock-Free Code</text>
   <text x="185.9459" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)">Relaxed: counters</text>
   <text x="445.4054" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)">Acquire/Release: locks</text>

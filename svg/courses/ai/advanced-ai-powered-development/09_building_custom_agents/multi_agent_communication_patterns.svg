@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,10 +42,10 @@
 
   <rect x="40" y="81.010101" width="400" height="538.989899" rx="8.884635" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="240" y="127.878788" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.211587" font-weight="bold" fill="var(--primary-accent)">Peer-to-Peer (handoffs)</text>
-  <rect x="63.128662" y="265.988843" width="122.163728" height="122.163728" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="63.128662" y="265.988843" width="122.163728" height="122.163728" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="124.210526" y="321.212121" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--primary-text)">Agent A</text>
   <text x="124.210526" y="350.505051" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548111" fill="var(--primary-text)">security</text>
-  <rect x="294.707610" y="265.988843" width="122.163728" height="122.163728" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="294.707610" y="265.988843" width="122.163728" height="122.163728" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="355.789474" y="321.212121" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--ok-text)">Agent B</text>
   <text x="355.789474" y="350.505051" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548111" fill="var(--ok-text)">style</text>
   <line x1="187.368421" y1="303.636364" x2="292.631579" y2="303.636364" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arr)"/>
@@ -56,13 +57,13 @@
 
   <rect x="461.052632" y="81.010101" width="400" height="538.989899" rx="8.884635" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="661.052632" y="127.878788" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.211587" font-weight="bold" fill="var(--info-accent)">Shared Blackboard</text>
-  <rect x="488.092509" y="198.406172" width="93.288666" height="93.288666" rx="12" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="488.092509" y="198.406172" width="93.288666" height="93.288666" rx="12" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="534.736842" y="242.707071" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548111" font-weight="bold" fill="var(--primary-text)">Agent A</text>
   <text x="534.736842" y="266.141414" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.326952" fill="var(--primary-text)">reader</text>
-  <rect x="488.092509" y="409.315263" width="93.288666" height="93.288666" rx="12" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="488.092509" y="409.315263" width="93.288666" height="93.288666" rx="12" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="534.736842" y="453.616162" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548111" font-weight="bold" fill="var(--ok-text)">Agent B</text>
   <text x="534.736842" y="477.050505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.326952" fill="var(--ok-text)">writer</text>
-  <rect x="703.157895" y="198.181818" width="126.315789" height="304.646465" rx="8.884635" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="703.157895" y="198.181818" width="126.315789" height="304.646465" rx="8.884635" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="766.315789" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--info-text)">Blackboard</text>
   <text x="766.315789" y="350.505051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437532" fill="var(--info-text)">shared state</text>
   <text x="766.315789" y="385.656566" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437532" fill="var(--info-text)">all agents</text>
@@ -74,13 +75,13 @@
 
   <rect x="882.105263" y="81.010101" width="357.894737" height="538.989899" rx="8.884635" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1061.052632" y="127.878788" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.211587" font-weight="bold" fill="var(--warn-accent)">Agent Debate</text>
-  <rect x="908.421053" y="168.888889" width="305.263158" height="93.737374" rx="6.663476" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="908.421053" y="168.888889" width="305.263158" height="93.737374" rx="6.663476" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1061.052632" y="209.89899" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--primary-text)">Defender</text>
   <text x="1061.052632" y="239.191919" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437532" fill="var(--primary-text)">argues for the change</text>
-  <rect x="908.421053" y="286.060606" width="305.263158" height="93.737374" rx="6.663476" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="908.421053" y="286.060606" width="305.263158" height="93.737374" rx="6.663476" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1061.052632" y="327.070707" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--danger-text)">Critic</text>
   <text x="1061.052632" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437532" fill="var(--danger-text)">finds flaws, counters</text>
-  <rect x="908.421053" y="403.232323" width="305.263158" height="93.737374" rx="6.663476" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="908.421053" y="403.232323" width="305.263158" height="93.737374" rx="6.663476" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1061.052632" y="444.242424" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.76927" font-weight="bold" fill="var(--ok-text)">Judge</text>
   <text x="1061.052632" y="473.535354" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437532" fill="var(--ok-text)">weighs both, decides</text>
   <text x="1061.052632" y="573.131313" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.548111" fill="var(--text)">Adversarial pattern</text>

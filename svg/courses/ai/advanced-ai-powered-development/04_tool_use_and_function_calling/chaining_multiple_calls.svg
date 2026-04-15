@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,39 +37,39 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">User: "Refactor the auth module and run the tests"</text>
   <text x="640" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Model plans a sequence of tool calls, each informed by the previous result.</text>
 
-  <rect x="40" y="130" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="130" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="162" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">→ tool_use (1):</text>
   <text x="220" y="162" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">read_file("src/auth.ts")</text>
   <text x="60" y="187" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Model needs to see current code before proposing a rewrite.</text>
 
-  <rect x="40" y="210" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="210" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="242" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">← tool_result:</text>
   <text x="200" y="242" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">240 lines of TypeScript returned</text>
   <text x="60" y="267" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Result becomes part of the next prompt — now the model can reason concretely.</text>
 
-  <rect x="40" y="290" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="290" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">→ tool_use (2):</text>
   <text x="220" y="322" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">edit_file("src/auth.ts", old, new)</text>
   <text x="60" y="347" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Model proposes a structured edit — harness applies it and returns status.</text>
 
-  <rect x="40" y="370" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="370" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="402" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">← tool_result:</text>
   <text x="200" y="402" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">success — 3 replacements made</text>
   <text x="60" y="427" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">On failure the model would revise the pattern and retry.</text>
 
-  <rect x="40" y="450" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="450" width="1200" height="68" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="482" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">→ tool_use (3):</text>
   <text x="220" y="482" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">shell("npm test")</text>
   <text x="60" y="507" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Verification step — the plan is not "done" until tests pass.</text>
 
-  <rect x="40" y="530" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="530" width="1200" height="68" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="60" y="562" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">← tool_result:</text>
   <text x="200" y="562" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">all 42 tests passed</text>
   <text x="60" y="587" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Model now has evidence the change is safe to report back.</text>
 
-  <rect x="40" y="608" width="1200" height="12" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="608" width="1200" height="12" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
 </svg>

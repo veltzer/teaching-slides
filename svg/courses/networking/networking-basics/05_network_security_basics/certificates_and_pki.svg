@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -57,19 +58,19 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Certificates and the PKI Chain of Trust</text>
-  <rect x="40" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="232" y="135.779817" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--warn-text)">Root CA</text>
   <text x="232" y="210.275229" text-anchor="middle" font-size="18.568989" fill="var(--warn-text)">Self-signed</text>
   <text x="232" y="258.165138" text-anchor="middle" font-size="18.568989" fill="var(--warn-text)">Embedded in OS</text>
   <text x="232" y="306.055046" text-anchor="middle" font-size="18.568989" fill="var(--warn-text)">and browser stores</text>
   <text x="232" y="391.192661" text-anchor="middle" font-size="16.505768" fill="var(--warn-text)">e.g., DigiCert</text>
-  <rect x="445" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="445" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="637" y="135.779817" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--primary-text)">Intermediate CA</text>
   <text x="637" y="210.275229" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">Signed by Root</text>
   <text x="637" y="258.165138" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">Issues end-entity</text>
   <text x="637" y="306.055046" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">certificates</text>
   <text x="637" y="391.192661" text-anchor="middle" font-size="16.505768" fill="var(--primary-text)">e.g., Let's Encrypt</text>
-  <rect x="850" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="850" y="71.926606" width="385" height="404.40367" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1042" y="135.779817" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--ok-text)">Server Cert</text>
   <text x="1042" y="210.275229" text-anchor="middle" font-size="18.568989" fill="var(--ok-text)">Signed by</text>
   <text x="1042" y="258.165138" text-anchor="middle" font-size="18.568989" fill="var(--ok-text)">Intermediate CA</text>

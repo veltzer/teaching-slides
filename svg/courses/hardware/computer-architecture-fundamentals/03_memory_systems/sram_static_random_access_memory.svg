@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="30.807319" font-weight="bold" fill="var(--text)">6-Transistor SRAM Cell</text>
 
-  <rect x="40" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--primary-text)">Pull-up (PMOS)</text>
   <rect x="80" y="156" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="150" y="206.618182" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">P1</text>
@@ -57,7 +58,7 @@
   <text x="310" y="522.981818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">N4</text>
   <text x="230" y="598.909091" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)">Access transistors</text>
 
-  <rect x="440" y="71.636364" width="400" height="548.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="440" y="71.636364" width="400" height="548.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--ok-text)">Cross-Coupled Latch</text>
   <text x="640" y="187.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Two inverters back-to-back</text>
   <text x="640" y="229.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Holds one bit as long as</text>
@@ -69,7 +70,7 @@
   <text x="640" y="535.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Used for L1, L2, L3 caches</text>
   <text x="640" y="577.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">and CPU register files</text>
 
-  <rect x="860" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="860" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--warn-text)">Tradeoffs</text>
   <text x="1050" y="198.181818" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">Fast: sub-nanosecond</text>
   <text x="1050" y="235.090909" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">access latency</text>

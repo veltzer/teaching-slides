@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -43,7 +44,7 @@
   <text x="640" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--bg)">GRUB — GRand Unified Bootloader</text>
   <text x="640" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--bg)">multi-stage boot from firmware to kernel</text>
 
-  <rect x="40" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="182" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Stage 1</text>
   <text x="182" y="245.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">boot.img in MBR</text>
   <text x="182" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">or GPT protective MBR</text>
@@ -55,7 +56,7 @@
   <text x="182" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">no filesystem support</text>
   <text x="182" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--primary-text)">UEFI skips this stage</text>
 
-  <rect x="345" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="345" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Stage 1.5</text>
   <text x="487" y="245.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">core.img in MBR gap</text>
   <text x="487" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">or EFI partition</text>
@@ -67,7 +68,7 @@
   <text x="487" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">decompresses modules</text>
   <text x="487" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--info-text)">hands off to Stage 2</text>
 
-  <rect x="650" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="792" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Stage 2</text>
   <text x="792" y="245.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">/boot/grub/grub.cfg</text>
   <text x="792" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">menu and modules</text>
@@ -79,7 +80,7 @@
   <text x="792" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">scripting via BASH-like</text>
   <text x="792" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--danger-text)">chain-loads other OSes</text>
 
-  <rect x="955" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="955" y="166.545455" width="285" height="400.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1097" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Kernel Handoff</text>
   <text x="1097" y="245.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">vmlinuz + initramfs</text>
   <text x="1097" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">into memory</text>

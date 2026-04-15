@@ -94,19 +94,19 @@
     </marker>
 </defs>
   <text x="840" y="40" text-anchor="middle" font-size="28.2652" font-weight="bold">Dockerfile Layer Order for Caching</text>
-  <rect x="40" y="79.322" width="742.8571" height="98.305" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="79.322" width="742.8571" height="98.305" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="411.4286" y="144.8588" text-anchor="middle" font-size="23.5544">FROM node:18-alpine</text>
   <text x="1240" y="144.8588" font-size="23.5544" fill="var(--ok-accent)">Cached (rarely changes)</text>
-  <rect x="40" y="194.0113" width="742.8571" height="98.305" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="194.0113" width="742.8571" height="98.305" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="411.4286" y="259.5481" text-anchor="middle" font-size="23.5544">COPY package*.json ./</text>
   <text x="1240" y="259.5481" font-size="23.5544" fill="var(--ok-accent)">Cached (deps stable)</text>
-  <rect x="40" y="308.7005" width="742.8571" height="98.305" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="308.7005" width="742.8571" height="98.305" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="411.4286" y="374.2373" text-anchor="middle" font-size="23.5544">RUN npm install</text>
   <text x="1240" y="374.2373" font-size="23.5544" fill="var(--primary-accent)">Cached if deps unchanged</text>
-  <rect x="40" y="423.3898" width="742.8571" height="98.305" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="423.3898" width="742.8571" height="98.305" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="411.4286" y="488.9265" text-anchor="middle" font-size="23.5544">COPY . .</text>
   <text x="1240" y="488.9265" font-size="23.5544" fill="var(--warn-accent)">Invalidated on code change</text>
-  <rect x="40" y="538.0791" width="742.8571" height="81.9209" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="538.0791" width="742.8571" height="81.9209" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="411.4286" y="593.7853" text-anchor="middle" font-size="23.5544">RUN npm run build</text>
   <text x="1240" y="593.7853" font-size="23.5544" fill="var(--danger-accent)">Rebuilds every time</text>
   <line x1="868.5713" y1="112.0905" x2="868.5713" y2="587.2317" stroke="var(--text)" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899" />

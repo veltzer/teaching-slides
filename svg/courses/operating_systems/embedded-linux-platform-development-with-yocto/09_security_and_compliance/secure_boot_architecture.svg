@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,28 +43,28 @@
   <text x="640" y="40" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--text)">Secure Boot: an unbroken chain of trust</text>
 
   <!-- Top row: boot chain -->
-  <rect x="40" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">ROM Code</text>
   <text x="170" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)">Immutable in silicon</text>
   <text x="170" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)">Holds root public key</text>
   <text x="170" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)">Verifies SPL / U-Boot</text>
   <text x="170" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--danger-text)">Hardware root of trust</text>
 
-  <rect x="350" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="350" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">U-Boot (signed)</text>
   <text x="480" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">FIT image, x509 keys</text>
   <text x="480" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">Verifies kernel + DTB</text>
   <text x="480" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">Halts on bad signature</text>
   <text x="480" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Second stage</text>
 
-  <rect x="660" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="660" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="790" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Linux Kernel</text>
   <text x="790" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">zImage / Image signed</text>
   <text x="790" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">Checks initramfs hash</text>
   <text x="790" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)">Enables IMA at runtime</text>
   <text x="790" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Third stage</text>
 
-  <rect x="970" y="82.181818" width="270" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="82.181818" width="270" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Secure Runtime</text>
   <text x="1105" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--info-text)">TPM / OP-TEE / fTPM</text>
   <text x="1105" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--info-text)">Seals keys to PCR state</text>
@@ -76,21 +77,21 @@
   <line x1="920" y1="177.090909" x2="970" y2="177.090909" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Bottom row: what kernel protects -->
-  <rect x="40" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">RootFS (dm-verity)</text>
   <text x="235" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)">Merkle tree of block hashes</text>
   <text x="235" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)">Root hash signed in FIT</text>
   <text x="235" y="472.363636" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)">Read-only, tamper-evident</text>
   <text x="235" y="498.727273" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--warn-text)">Kernel rejects bad blocks</text>
 
-  <rect x="445" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="445" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Applications</text>
   <text x="640" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--info-text)">IMA / EVM measures each file</text>
   <text x="640" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--info-text)">Signed packages via OSTree</text>
   <text x="640" y="472.363636" text-anchor="middle" font-size="14.376749" fill="var(--info-text)">Confined by SELinux / AppArmor</text>
   <text x="640" y="498.727273" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--info-text)">User space stays accountable</text>
 
-  <rect x="850" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="850" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Update &amp; Recovery</text>
   <text x="1045" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)">A/B slots with rollback counter</text>
   <text x="1045" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)">Fuses burn anti-rollback version</text>

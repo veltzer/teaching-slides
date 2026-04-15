@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -57,22 +58,22 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="27.198779" font-weight="bold" fill="var(--text)">The Configuration Spectrum</text>
-  <rect x="40" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="182" y="154.90566" text-anchor="middle" font-size="25.106565" font-weight="bold" fill="var(--primary-text)">Hardcoded</text>
   <text x="182" y="242.45283" text-anchor="middle" font-size="17.783817" fill="var(--primary-text)">Literal values</text>
   <text x="182" y="286.226415" text-anchor="middle" font-size="17.783817" fill="var(--primary-text)">in source code</text>
   <text x="182" y="395.660377" text-anchor="middle" font-size="16.73771" fill="var(--primary-text)">Rebuild to change</text>
-  <rect x="345" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="345" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487" y="154.90566" text-anchor="middle" font-size="25.106565" font-weight="bold" fill="var(--ok-text)">Baked-in</text>
   <text x="487" y="242.45283" text-anchor="middle" font-size="17.783817" fill="var(--ok-text)">Config file</text>
   <text x="487" y="286.226415" text-anchor="middle" font-size="17.783817" fill="var(--ok-text)">bundled in image</text>
   <text x="487" y="395.660377" text-anchor="middle" font-size="16.73771" fill="var(--ok-text)">Rebuild image</text>
-  <rect x="650" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="792" y="154.90566" text-anchor="middle" font-size="25.106565" font-weight="bold" fill="var(--warn-text)">Env Vars</text>
   <text x="792" y="242.45283" text-anchor="middle" font-size="17.783817" fill="var(--warn-text)">Injected at</text>
   <text x="792" y="286.226415" text-anchor="middle" font-size="17.783817" fill="var(--warn-text)">container start</text>
   <text x="792" y="395.660377" text-anchor="middle" font-size="16.73771" fill="var(--warn-text)">Restart to change</text>
-  <rect x="955" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="955" y="83.773585" width="285" height="437.735849" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1097" y="154.90566" text-anchor="middle" font-size="25.106565" font-weight="bold" fill="var(--danger-text)">Config Service</text>
   <text x="1097" y="242.45283" text-anchor="middle" font-size="17.783817" fill="var(--danger-text)">Vault, Consul,</text>
   <text x="1097" y="286.226415" text-anchor="middle" font-size="17.783817" fill="var(--danger-text)">Parameter Store</text>

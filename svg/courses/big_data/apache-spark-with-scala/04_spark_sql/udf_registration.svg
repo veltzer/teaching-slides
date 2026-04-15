@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">UDF Registration</text>
 
-  <rect x="40" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">Scala Function</text>
   <text x="180" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Plain (String =&gt; String)</text>
   <text x="180" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Serializable closure</text>
@@ -49,7 +50,7 @@
 
   <line x1="320" y1="164.890511" x2="360" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="370" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="370" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="510" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">spark.udf.register</text>
   <text x="510" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Name + function</text>
   <text x="510" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Available in SQL strings</text>
@@ -58,7 +59,7 @@
 
   <line x1="650" y1="164.890511" x2="690" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="700" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="700" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="840" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">udf(...) wrapper</text>
   <text x="840" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">val f = udf(func)</text>
   <text x="840" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Use in DataFrame API</text>
@@ -67,7 +68,7 @@
 
   <line x1="980" y1="164.890511" x2="1020" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1030" y="69.635036" width="210" height="190.510949" rx="6.172697" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1030" y="69.635036" width="210" height="190.510949" rx="6.172697" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1135" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--info-text)">Executor</text>
   <text x="1135" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Runs per row</text>
   <text x="1135" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">JVM, not Catalyst</text>

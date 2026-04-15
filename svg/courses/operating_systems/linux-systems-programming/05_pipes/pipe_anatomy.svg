@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -60,7 +61,7 @@
   <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">Anatomy of a Pipe</text>
 
-  <rect x="40" y="150" width="320" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="150" width="320" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200" y="210" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Writer Process</text>
   <text x="200" y="300" text-anchor="middle" font-size="20" fill="var(--primary-text)">write(fd[1], buf, n)</text>
   <text x="200" y="370" text-anchor="middle" font-size="17" fill="var(--primary-text)">blocks if buffer full</text>
@@ -74,11 +75,11 @@
   <rect x="460" y="150" width="360" height="400" rx="6" fill="var(--surface)" stroke="var(--text)" stroke-width="2"/>
   <text x="640" y="195" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)">Kernel Buffer</text>
   <text x="640" y="225" text-anchor="middle" font-size="16" fill="var(--text-muted)">64 KB circular ring</text>
-  <rect x="500" y="250" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="500" y="250" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="283" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
-  <rect x="500" y="305" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="500" y="305" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="338" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
-  <rect x="500" y="360" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="500" y="360" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="393" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
   <rect x="500" y="415" width="280" height="100" rx="6" fill="var(--border)"/>
   <text x="640" y="470" text-anchor="middle" font-size="18" fill="var(--text-muted)">empty</text>
@@ -86,7 +87,7 @@
   <line x1="830" y1="350" x2="910" y2="350" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
   <text x="870" y="335" text-anchor="middle" font-size="17" fill="var(--text-muted)">fd[0]</text>
 
-  <rect x="920" y="150" width="320" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="920" y="150" width="320" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1080" y="210" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--ok-text)">Reader Process</text>
   <text x="1080" y="300" text-anchor="middle" font-size="20" fill="var(--ok-text)">read(fd[0], buf, n)</text>
   <text x="1080" y="370" text-anchor="middle" font-size="17" fill="var(--ok-text)">blocks if buffer empty</text>

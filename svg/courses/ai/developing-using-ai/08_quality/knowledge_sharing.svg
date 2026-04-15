@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
@@ -18,25 +19,25 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="585" height="270" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="585" height="270" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="332" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Code review</text>
   <text x="332" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">AI explains diffs, suggests tests</text>
   <text x="332" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Humans still approve</text>
   <text x="332" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--primary-text)">Faster feedback</text>
 
-  <rect x="655" y="40" width="585" height="270" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="655" y="40" width="585" height="270" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="947" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Pair programming</text>
   <text x="947" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Model drafts, you steer</text>
   <text x="947" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Great for onboarding</text>
   <text x="947" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--ok-text)">Human in the loop</text>
 
-  <rect x="40" y="340" width="585" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="340" width="585" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="332" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">Docs and ADRs</text>
   <text x="332" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Generate first drafts</text>
   <text x="332" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Link decisions to code</text>
   <text x="332" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--warn-text)">Team memory</text>
 
-  <rect x="655" y="340" width="585" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="655" y="340" width="585" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="947" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">Shared prompts</text>
   <text x="947" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Check prompts into repo</text>
   <text x="947" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Version playbooks</text>

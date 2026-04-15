@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,31 +43,31 @@
   <text x="640" y="40" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--text)">Time</text>
   <line x1="40" y1="72.830189" x2="1240" y2="72.830189" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="155" y="182.264151" text-anchor="middle" font-size="20.922138" font-weight="bold" fill="var(--danger-text)">t0 Write</text>
   <text x="155" y="379.245283" text-anchor="middle" font-size="18.829924" fill="var(--danger-text)">Node A: new</text>
   <text x="155" y="423.018868" text-anchor="middle" font-size="18.829924" fill="var(--danger-text)">Node B: stale</text>
   <text x="155" y="466.792453" text-anchor="middle" font-size="18.829924" fill="var(--danger-text)">Node C: stale</text>
 
-  <rect x="290" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="290" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="405" y="182.264151" text-anchor="middle" font-size="20.922138" font-weight="bold" fill="var(--warn-text)">t1 Propagate</text>
   <text x="405" y="379.245283" text-anchor="middle" font-size="18.829924" fill="var(--warn-text)">Node A: new</text>
   <text x="405" y="423.018868" text-anchor="middle" font-size="18.829924" fill="var(--warn-text)">Node B: new</text>
   <text x="405" y="466.792453" text-anchor="middle" font-size="18.829924" fill="var(--warn-text)">Node C: stale</text>
 
-  <rect x="540" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="540" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="655" y="182.264151" text-anchor="middle" font-size="20.922138" font-weight="bold" fill="var(--ok-text)">t2 Catching up</text>
   <text x="655" y="379.245283" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">Node A: new</text>
   <text x="655" y="423.018868" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">Node B: new</text>
   <text x="655" y="466.792453" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">Node C: syncing</text>
 
-  <rect x="790" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="790" y="116.603774" width="230" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="905" y="182.264151" text-anchor="middle" font-size="20.922138" font-weight="bold" fill="var(--ok-text)">t3 Converged</text>
   <text x="905" y="379.245283" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">All nodes</text>
   <text x="905" y="423.018868" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">agree on</text>
   <text x="905" y="466.792453" text-anchor="middle" font-size="18.829924" fill="var(--ok-text)">latest value</text>
 
-  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1140" y="182.264151" text-anchor="middle" font-size="20.922138" font-weight="bold" fill="var(--primary-text)">Steady State</text>
   <text x="1140" y="379.245283" text-anchor="middle" font-size="18.829924" fill="var(--primary-text)">reads safe</text>
   <text x="1140" y="423.018868" text-anchor="middle" font-size="18.829924" fill="var(--primary-text)">from any</text>

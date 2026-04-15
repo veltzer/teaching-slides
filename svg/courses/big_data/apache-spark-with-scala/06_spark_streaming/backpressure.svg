@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --surface: #f5f5f5;
@@ -32,21 +33,21 @@
   <text x="640" y="71.351351" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378666" font-weight="bold" fill="var(--text)">spark.streaming.backpressure.enabled = true</text>
   <text x="640" y="95.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text-muted)">Spark adjusts receiver ingest rate so batch processing keeps up — prevents unbounded queue growth</text>
 
-  <rect x="40" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="220" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="220" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Kafka / socket / receiver</text>
   <text x="220" y="228.108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">produces at variable rate</text>
   <text x="220" y="264.684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">maxRatePerPartition caps absolute ceiling</text>
   <text x="220" y="290.810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">initialRate sets startup rate</text>
 
-  <rect x="460" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="460" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--warn-text)">Receiver (rate limited)</text>
   <text x="640" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">blocks the producer when</text>
   <text x="640" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">ingest rate exceeds target</text>
   <text x="640" y="262.594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">RateEstimator sets records/sec</text>
   <text x="640" y="288.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">updated every batch</text>
 
-  <rect x="880" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="880" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1060" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--ok-text)">Processing</text>
   <text x="1060" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">batch interval = 2s</text>
   <text x="1060" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">goal: process time ≤ interval</text>
@@ -56,7 +57,7 @@
   <line x1="400" y1="228.108108" x2="455" y2="228.108108" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="820" y1="228.108108" x2="875" y2="228.108108" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="358.738739" width="1200" height="261.261261" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="358.738739" width="1200" height="261.261261" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="395.315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--info-text)">PID Rate Estimator (default)</text>
   <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">spark.streaming.backpressure.pid.{proportional, integral, derived, minRate}</text>
 

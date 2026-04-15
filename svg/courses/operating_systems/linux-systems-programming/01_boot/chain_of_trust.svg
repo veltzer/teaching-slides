@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -47,25 +48,25 @@
   <text x="150" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">Immutable key</text>
   <text x="150" y="394.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">fused in silicon</text>
 
-  <rect x="290" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="290" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="400" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--bg)">Firmware</text>
   <text x="400" y="287.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">Verified by HW</text>
   <text x="400" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">UEFI / BL1</text>
   <text x="400" y="394.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">loads next stage</text>
 
-  <rect x="540" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="540" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="650" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--bg)">Bootloader</text>
   <text x="650" y="287.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">Signed binary</text>
   <text x="650" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">GRUB / U-Boot</text>
   <text x="650" y="394.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">verifies kernel</text>
 
-  <rect x="790" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="790" y="158.148148" width="220" height="279.259259" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="900" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--bg)">Kernel</text>
   <text x="900" y="287.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">Signed image</text>
   <text x="900" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">+ initramfs</text>
   <text x="900" y="394.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">checks userspace</text>
 
-  <rect x="1040" y="158.148148" width="200" height="279.259259" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1040" y="158.148148" width="200" height="279.259259" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1140" y="211.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--bg)">Userspace</text>
   <text x="1140" y="287.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">IMA / dm-verity</text>
   <text x="1140" y="319.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--bg)">measures files</text>

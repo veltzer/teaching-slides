@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,13 +41,13 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">SQL Database Architecture</text>
 
-  <rect x="40" y="71.636364" width="1200" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="1200" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="108.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Client / Application</text>
   <text x="640" y="137.018182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Sends SQL over TCP (libpq, JDBC, ODBC) — authenticates, multiplexes connections</text>
 
   <line x1="640" y1="156" x2="640" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Query Processor</text>
   <text x="335" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Parser: SQL text to AST</text>
   <text x="335" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Planner: choose join order, indexes</text>
@@ -54,7 +55,7 @@
   <text x="335" y="338.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Executor: walks plan, calls access methods</text>
   <text x="335" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">EXPLAIN exposes the chosen plan</text>
 
-  <rect x="650" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">Transaction Manager</text>
   <text x="945" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">ACID guarantees</text>
   <text x="945" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Lock manager / MVCC snapshots</text>
@@ -65,7 +66,7 @@
   <line x1="335" y1="377.454545" x2="335" y2="409.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="945" y1="377.454545" x2="945" y2="409.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--info-text)">Storage Engine</text>
   <text x="335" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Buffer pool caches pages in RAM</text>
   <text x="335" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">B-tree indexes for point / range lookup</text>
@@ -73,7 +74,7 @@
   <text x="335" y="559.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Pages written back on checkpoint</text>
   <text x="335" y="591.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Sequential disk I/O for logs</text>
 
-  <rect x="650" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="650" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--danger-text)">Persistent Storage</text>
   <text x="945" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Data files: tables, indexes</text>
   <text x="945" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Write-ahead log (WAL/redo)</text>

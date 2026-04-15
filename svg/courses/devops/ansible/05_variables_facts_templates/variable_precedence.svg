@@ -114,7 +114,7 @@
     </marker>
   </defs>
   <!-- Header -->
-  <rect x="40" y="40" width="1200" height="47.873016" fill="var(--primary-fill)" rx="6.047432" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="47.873016" fill="var(--primary-fill)" rx="6.047432" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="71.301587" font-family="Arial, sans-serif" font-size="20.438605" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Variable Precedence</text>
 
   <!-- Pyramid - drawn as trapezoids stacked, lowest at bottom -->
@@ -163,9 +163,9 @@
   <text x="569.6875" y="334.603175" font-family="Arial, sans-serif" font-size="11.148339" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Role defaults (roles/x/defaults/main.yml)</text>
 
   <!-- Magic Variables panel -->
-  <rect x="1015" y="97.079365" width="210.9375" height="193.333333" rx="6.047432" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="1015" y="97.079365" width="210.9375" height="27.619048" rx="6.047432" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="1015" y="113.650794" width="210.9375" height="11.047619" fill="var(--info-fill)" rx="6.047432" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1015" y="97.079365" width="210.9375" height="193.333333" rx="6.047432" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="1015" y="97.079365" width="210.9375" height="27.619048" rx="6.047432" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1015" y="113.650794" width="210.9375" height="11.047619" fill="var(--info-fill)" rx="6.047432" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="115.492063" font-family="Arial, sans-serif" font-size="12.077426" font-weight="bold" fill="var(--bg)" text-anchor="middle">Magic Variables</text>
   <text x="1029.0625" y="144.031695" font-family="monospace" font-size="11.148339" fill="var(--info-accent)">inventory_hostname</text>
   <text x="1029.0625" y="160.603225" font-family="monospace" font-size="11.148339" fill="var(--info-accent)">group_names</text>
@@ -178,9 +178,9 @@
   <text x="1029.0625" y="276.603124" font-family="monospace" font-size="11.148339" fill="var(--info-accent)">ansible_check_mode</text>
 
   <!-- Jinja2 Filters panel -->
-  <rect x="1015" y="302.380902" width="210.9375" height="211.746032" rx="6.047432" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="1015" y="302.380902" width="210.9375" height="27.619048" rx="6.047432" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="1015" y="318.952432" width="210.9375" height="11.047619" fill="var(--ok-fill)" rx="6.047432" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1015" y="302.380902" width="210.9375" height="211.746032" rx="6.047432" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="1015" y="302.380902" width="210.9375" height="27.619048" rx="6.047432" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1015" y="318.952432" width="210.9375" height="11.047619" fill="var(--ok-fill)" rx="6.047432" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="320.7936" font-family="Arial, sans-serif" font-size="12.077426" font-weight="bold" fill="var(--bg)" text-anchor="middle">Jinja2 Filters</text>
   <text x="1029.0625" y="348.412749" font-family="monospace" font-size="10.219353" fill="var(--ok-accent)">| default('val')</text>
   <text x="1029.0625" y="364.984076" font-family="monospace" font-size="10.219353" fill="var(--ok-accent)">| upper / lower</text>
@@ -195,6 +195,6 @@
   <text x="1029.0625" y="514.127035" font-family="monospace" font-size="10.219353" fill="var(--ok-accent)">| combine({})</text>
 
   <!-- Bottom note -->
-  <rect x="124.375" y="592.380952" width="871.875" height="27.619048" rx="6.047432" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="124.375" y="592.380952" width="871.875" height="27.619048" rx="6.047432" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="560.3125" y="609.873067" font-family="Arial, sans-serif" font-size="11.148339" fill="var(--text-muted)" text-anchor="middle">Higher precedence WINS. Use role defaults for overridable values; use extra-vars for one-time overrides. Avoid abusing set_fact for simple variable declarations.</text>
 </svg>

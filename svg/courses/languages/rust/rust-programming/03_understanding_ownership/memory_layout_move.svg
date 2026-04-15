@@ -99,27 +99,27 @@
   </defs>
   <text x="688" y="40" text-anchor="middle" font-size="26.0531" font-weight="bold">Move Semantics: let s2 = s1;</text>
   <text x="280" y="106.2857" text-anchor="middle" font-size="23.882" font-weight="bold">Before Move</text>
-  <rect x="40" y="139.4285" width="216" height="149.1428" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="139.4285" width="216" height="149.1428" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="148" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold">s1 (stack)</text>
   <text x="148" y="248.8" text-anchor="middle" font-size="21.7109">ptr | len:5 | cap:5</text>
-  <rect x="304.0001" y="139.4285" width="192" height="149.1428" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="304.0001" y="139.4285" width="192" height="149.1428" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="400" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold">Heap</text>
   <text x="400" y="248.8" text-anchor="middle" font-size="21.7109">"hello"</text>
   <line x1="256.0001" y1="212.3429" x2="304.0001" y2="212.3429" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_move)" />
   <text x="1096.0001" y="106.2857" text-anchor="middle" font-size="23.882" font-weight="bold">After Move</text>
-  <rect x="760.0001" y="139.4285" width="216" height="149.1428" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" stroke-dasharray="7.9844 5.9883" />
+  <rect x="760.0001" y="139.4285" width="216" height="149.1428" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" stroke-dasharray="7.9844 5.9883" filter="url(#shadow)"/>
   <text x="868" y="195.7714" text-anchor="middle" font-size="21.7109" fill="var(--text-faint)">s1 (invalid)</text>
   <text x="868" y="248.8" text-anchor="middle" font-size="21.7109" fill="var(--text-faint)">-- moved --</text>
-  <rect x="1024" y="139.4285" width="216" height="149.1428" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="1024" y="139.4285" width="216" height="149.1428" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1132.0001" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold">s2 (stack)</text>
   <text x="1132.0001" y="248.8" text-anchor="middle" font-size="21.7109">ptr | len:5 | cap:5</text>
-  <rect x="1024" y="338.2857" width="216" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="1024" y="338.2857" width="216" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1132.0001" y="388" text-anchor="middle" font-size="21.7109" font-weight="bold">Heap</text>
   <text x="1132.0001" y="431.0857" text-anchor="middle" font-size="21.7109">"hello"</text>
   <line x1="1132.0001" y1="288.5714" x2="1132.0001" y2="338.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_move)" />
   <line x1="556.0001" y1="212.3429" x2="736.0001" y2="212.3429" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_move)" stroke-dasharray="11.9766 5.9883" />
   <text x="647.2001" y="189.1429" text-anchor="middle" font-size="21.7109">move</text>
-  <rect x="208" y="504" width="959.9999" height="116" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="208" y="504" width="959.9999" height="116" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="688" y="560.3428" text-anchor="middle" font-size="21.7109">Ownership transfers from s1 to s2. s1 is invalidated (no double free).</text>
   <text x="688" y="606.7428" text-anchor="middle" font-size="21.7109">Only one owner at a time -- no shallow copy like C++</text>
 </svg>

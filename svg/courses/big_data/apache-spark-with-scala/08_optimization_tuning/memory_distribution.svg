@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,11 +36,11 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="71.22807" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="71.22807" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">Executor JVM Heap</text>
   <text x="640" y="96.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">spark.executor.memory - unified memory split into regions</text>
 
-  <rect x="40" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="220" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Execution (~30%)</text>
   <text x="220" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Shuffle buffers</text>
   <text x="220" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Joins and aggregations</text>
@@ -47,7 +48,7 @@
   <text x="220" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Spills to disk if tight</text>
   <text x="220" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Borrows from Storage</text>
 
-  <rect x="420" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="420" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="600" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Storage (~30%)</text>
   <text x="600" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Cached DataFrames</text>
   <text x="600" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Broadcast variables</text>
@@ -55,7 +56,7 @@
   <text x="600" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">LRU eviction</text>
   <text x="600" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Spills to disk tier</text>
 
-  <rect x="800" y="131.578947" width="440" height="223.859649" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="800" y="131.578947" width="440" height="223.859649" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1020" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">User + Reserved (~40%)</text>
   <text x="1020" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">User data structures, UDFs</text>
   <text x="1020" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">RDD metadata</text>

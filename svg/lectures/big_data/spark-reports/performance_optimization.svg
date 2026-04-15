@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,27 +43,27 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Spark Performance Optimization</text>
 
   <!-- Row 1: pipeline -->
-  <rect x="40" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Input</text>
   <text x="150" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Parquet, ORC</text>
   <text x="150" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">predicate pushdown</text>
 
-  <rect x="285" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="285" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="395" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Cache</text>
   <text x="395" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">persist reused RDDs</text>
   <text x="395" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">MEMORY_AND_DISK</text>
 
-  <rect x="530" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="530" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Process</text>
   <text x="640" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">avoid wide shuffles</text>
   <text x="640" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">broadcast small joins</text>
 
-  <rect x="775" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="775" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="885" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Tune</text>
   <text x="885" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">partitions, executors</text>
   <text x="885" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">AQE enabled</text>
 
-  <rect x="1020" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1020" y="82.181818" width="220" height="116" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1130" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Output</text>
   <text x="1130" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">coalesce, partition</text>
   <text x="1130" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">avoid small files</text>

@@ -97,7 +97,7 @@
       <path d="M 0 0 L 0 10.0465 L 15.5152 5.0233 z" fill="#555" />
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="171.9598" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="40" width="1200" height="171.9598" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="66.2311" font-family="sans-serif" font-size="20.2866" fill="var(--primary-accent)" text-anchor="start" font-weight="bold">1. Range Partitioning (most common)</text>
   <text x="59.3548" y="86.6332" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">PARTITIONED BY (event_date)</text>
   <text x="59.3548" y="107.0351" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/event_date=2024-01-01/</text>
@@ -105,14 +105,14 @@
   <text x="59.3548" y="147.8392" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/event_date=2024-01-03/</text>
   <text x="59.3548" y="168.2412" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">...</text>
   <text x="59.3548" y="188.6432" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">Best for: time-series, date-based queries</text>
-  <rect x="40" y="251.3066" width="1200" height="151.5577" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="251.3066" width="1200" height="151.5577" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="277.5376" font-family="sans-serif" font-size="20.2866" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">2. List Partitioning</text>
   <text x="59.3548" y="297.9397" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">PARTITIONED BY (region)</text>
   <text x="59.3548" y="318.3417" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/region=us-east/</text>
   <text x="59.3548" y="338.7437" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/region=us-west/</text>
   <text x="59.3548" y="359.1457" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/region=eu-west/</text>
   <text x="59.3548" y="379.5477" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">Best for: categorical, low-cardinality</text>
-  <rect x="40" y="448.0402" width="1200" height="171.9598" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="448.0402" width="1200" height="171.9598" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="59.3548" y="474.2713" font-family="sans-serif" font-size="20.2866" fill="var(--warn-accent)" text-anchor="start" font-weight="bold">3. Hash Partitioning</text>
   <text x="59.3548" y="494.6733" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">PARTITIONED BY (hash(user_id, 32))</text>
   <text x="59.3548" y="515.0754" font-family="sans-serif" font-size="17.1656" fill="var(--text)" text-anchor="start">/data/events/user_hash=0/</text>

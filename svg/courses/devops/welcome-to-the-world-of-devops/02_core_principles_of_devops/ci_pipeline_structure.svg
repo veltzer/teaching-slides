@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,35 +40,35 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="152" y="134.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579136" font-weight="bold" fill="var(--primary-text)">Commit</text>
   <text x="152" y="217.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">Developer</text>
   <text x="152" y="249.009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">pushes to git</text>
   <text x="152" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">Webhook fires</text>
   <text x="152" y="416.216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">seconds</text>
 
-  <rect x="295" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="295" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="407" y="134.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579136" font-weight="bold" fill="var(--primary-text)">Build</text>
   <text x="407" y="217.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">Compile code</text>
   <text x="407" y="249.009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">resolve deps</text>
   <text x="407" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">Lint, typecheck</text>
   <text x="407" y="416.216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--primary-text)">~1-3 min</text>
 
-  <rect x="550" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="550" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="662" y="134.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579136" font-weight="bold" fill="var(--info-text)">Unit Test</text>
   <text x="662" y="217.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">Fast, isolated</text>
   <text x="662" y="249.009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">per-function</text>
   <text x="662" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">Mock externals</text>
   <text x="662" y="416.216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">Coverage gate</text>
 
-  <rect x="805" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="805" y="40" width="225" height="459.81982" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="917" y="134.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579136" font-weight="bold" fill="var(--info-text)">Integration</text>
   <text x="917" y="217.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">Real services</text>
   <text x="917" y="249.009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">DB, queues</text>
   <text x="917" y="332.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">Docker compose</text>
   <text x="917" y="416.216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--info-text)">~5-10 min</text>
 
-  <rect x="1060" y="40" width="180" height="459.81982" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1060" y="40" width="180" height="459.81982" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1150" y="134.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579136" font-weight="bold" fill="var(--ok-text)">Artifact</text>
   <text x="1150" y="217.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--ok-text)">Image, jar</text>
   <text x="1150" y="249.009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" fill="var(--ok-text)">binary</text>

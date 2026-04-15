@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -57,19 +58,19 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="29.153798" font-weight="bold" fill="var(--text)">Continuous Improvement Loop</text>
-  <rect x="40" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="182" y="191.775701" text-anchor="middle" font-size="29.153798" font-weight="bold" fill="var(--primary-text)">Measure</text>
   <text x="182" y="278.504673" text-anchor="middle" font-size="18.741727" fill="var(--primary-text)">Collect logs,</text>
   <text x="182" y="316.448598" text-anchor="middle" font-size="18.741727" fill="var(--primary-text)">metrics, traces</text>
-  <rect x="345" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="345" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487" y="191.775701" text-anchor="middle" font-size="29.153798" font-weight="bold" fill="var(--warn-text)">Analyze</text>
   <text x="487" y="278.504673" text-anchor="middle" font-size="18.741727" fill="var(--warn-text)">Find slow queries,</text>
   <text x="487" y="316.448598" text-anchor="middle" font-size="18.741727" fill="var(--warn-text)">hot shards, errors</text>
-  <rect x="650" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="650" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="792" y="191.775701" text-anchor="middle" font-size="29.153798" font-weight="bold" fill="var(--ok-text)">Improve</text>
   <text x="792" y="278.504673" text-anchor="middle" font-size="18.741727" fill="var(--ok-text)">Tune mappings,</text>
   <text x="792" y="316.448598" text-anchor="middle" font-size="18.741727" fill="var(--ok-text)">queries, hardware</text>
-  <rect x="955" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="955" y="105.046729" width="285" height="411.962617" rx="6.247242" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1097" y="191.775701" text-anchor="middle" font-size="29.153798" font-weight="bold" fill="var(--info-text)">Deploy</text>
   <text x="1097" y="278.504673" text-anchor="middle" font-size="18.741727" fill="var(--info-text)">Roll out changes,</text>
   <text x="1097" y="316.448598" text-anchor="middle" font-size="18.741727" fill="var(--info-text)">update dashboards</text>

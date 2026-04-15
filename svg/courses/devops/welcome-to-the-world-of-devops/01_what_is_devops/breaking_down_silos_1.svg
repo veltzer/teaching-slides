@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">Development</text>
   <text x="230" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">writes features</text>
   <text x="230" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">measured on velocity</text>
@@ -48,7 +49,7 @@
   <text x="230" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">"works on my machine"</text>
   <text x="230" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger-text)">blames ops when down</text>
 
-  <rect x="450" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="450" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">QA / Testing</text>
   <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">separate sign-off gate</text>
   <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">manual regression runs</text>
@@ -57,7 +58,7 @@
   <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">weeks of re-verification</text>
   <text x="640" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger-text)">bottleneck on release</text>
 
-  <rect x="860" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="860" y="40" width="380" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">Operations</text>
   <text x="1050" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">runs production</text>
   <text x="1050" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">measured on uptime</text>

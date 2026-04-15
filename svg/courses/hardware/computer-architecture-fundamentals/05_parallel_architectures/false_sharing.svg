@@ -2,7 +2,7 @@
   <!-- palette: resources/palette_diagram.yaml -->
   <text x="640" y="40" text-anchor="middle" font-size="31.875684" font-weight="bold" fill="var(--text)">False Sharing - Cache Line Contention</text>
   <text x="640" y="107.441821" text-anchor="middle" font-size="23.906823" fill="var(--text-muted)">Cache line (64 bytes)</text>
-  <rect x="40" y="147.90689" width="1200" height="161.860395" rx="7.144291" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="147.90689" width="1200" height="161.860395" rx="7.144291" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="339.999941" y1="147.90689" x2="339.999941" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
   <line x1="640" y1="147.90689" x2="640" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
   <line x1="939.999941" y1="147.90689" x2="939.999941" y2="309.767405" stroke="var(--primary-border)" stroke-width="1.6856" stroke-dasharray="6.7424" />
@@ -16,7 +16,7 @@
   <line x1="788.965491" y1="323.255721" x2="788.965491" y2="390.697663" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrowBlue)" />
   <text x="188.965374" y="431.162732" text-anchor="middle" font-size="21.914637" fill="var(--ok-accent)" font-weight="bold">Core 0 writes here</text>
   <text x="788.965491" y="431.162732" text-anchor="middle" font-size="21.914637" fill="var(--primary-accent)" font-weight="bold">Core 1 writes here</text>
-  <rect x="81.379173" y="485.116358" width="1117.24142" height="134.883642" rx="7.144291" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="81.379173" y="485.116358" width="1117.24142" height="134.883642" rx="7.144291" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="539.069742" text-anchor="middle" font-size="23.906823" font-weight="bold" fill="var(--danger-accent)">Both in the SAME cache line!</text>
   <text x="640" y="587.627824" text-anchor="middle" font-size="21.914637" fill="var(--text-muted)">Every write by one core invalidates the line in the other core's cache.</text>
   <defs>

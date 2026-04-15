@@ -129,7 +129,7 @@
   <line x1="550" y1="257.5" x2="405" y2="345.5357" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="450" y="319.6429" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--text-muted)">mentors</text>
 
-  <rect x="660" y="102.1429" width="580" height="310.7143" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="102.1429" width="580" height="310.7143" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="138.3929" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--ok-text)">Data model</text>
   <text x="950" y="169.4643" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">Vertex — VertexRDD[(VertexId, VD)]</text>
   <text x="950" y="190.1786" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">id is a Long; VD is the user's type</text>
@@ -141,7 +141,7 @@
   <text x="950" y="345.5357" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">(srcId, srcAttr, dstId, dstAttr, attr)</text>
   <text x="950" y="376.6071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">join of vertex + edge RDDs for algorithms</text>
 
-  <rect x="40" y="433.5714" width="1200" height="186.4286" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="433.5714" width="1200" height="186.4286" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="469.8214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--warn-text)">Building a Graph</text>
   <text x="80" y="506.0714" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">val users: RDD[(Long, (String, Int))] = sc.parallelize(Seq((1L, ("Alice", 29)), (2L, ("Bob", 35)), ...))</text>
   <text x="80" y="531.9643" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">val edges: RDD[Edge[String]] = sc.parallelize(Seq(Edge(1L, 2L, "follows"), Edge(2L, 3L, "follows"), ...))</text>

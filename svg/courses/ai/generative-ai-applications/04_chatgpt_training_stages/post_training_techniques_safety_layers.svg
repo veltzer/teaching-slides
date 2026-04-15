@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,21 +43,21 @@
   <rect x="40" y="40" width="370" height="580" rx="6" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="225" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)">INPUT LAYER</text>
 
-  <rect x="60" y="100" width="330" height="55" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="60" y="100" width="330" height="55" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">User message</text>
   <text x="225" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">raw prompt enters pipeline</text>
 
-  <rect x="60" y="175" width="330" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="60" y="175" width="330" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Moderation API</text>
   <text x="225" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">blocks CSAM, violence, self-harm</text>
   <text x="225" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">hard-stop before the model sees it</text>
 
-  <rect x="60" y="275" width="330" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="60" y="275" width="330" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Prompt injection filter</text>
   <text x="225" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">regex + classifier for jailbreaks</text>
   <text x="225" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">untrusted tool output sanitized</text>
 
-  <rect x="60" y="375" width="330" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="60" y="375" width="330" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">System prompt inject</text>
   <text x="225" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">product persona + guardrails</text>
   <text x="225" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">usage policy reminder</text>
@@ -67,7 +68,7 @@
   <text x="225" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Model stays on policy.</text>
   <text x="225" y="574" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Attack surface shrinks.</text>
 
-  <rect x="440" y="40" width="400" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="440" y="40" width="400" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">MODEL</text>
   <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">LLM Generation</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">safety-trained weights</text>
@@ -89,27 +90,27 @@
   <rect x="870" y="40" width="370" height="580" rx="6" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1055" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-accent)">OUTPUT LAYER</text>
 
-  <rect x="890" y="100" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="890" y="100" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Output moderation</text>
   <text x="1055" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">classifier over generated tokens</text>
   <text x="1055" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">streams — cuts on violation</text>
 
-  <rect x="890" y="200" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="890" y="200" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">PII redaction</text>
   <text x="1055" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">emails, phones, SSNs masked</text>
   <text x="1055" y="267" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">named-entity recognizer</text>
 
-  <rect x="890" y="300" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="890" y="300" width="330" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Factuality check (optional)</text>
   <text x="1055" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">claims verified vs. sources</text>
   <text x="1055" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">disclaimers on uncertainty</text>
 
-  <rect x="890" y="400" width="330" height="75" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="890" y="400" width="330" height="75" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Audit and telemetry</text>
   <text x="1055" y="447" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">every decision logged</text>
   <text x="1055" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">feeds back into training</text>
 
-  <rect x="890" y="495" width="330" height="105" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="890" y="495" width="330" height="105" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Response to user</text>
   <text x="1055" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">only after every layer signs off</text>
   <text x="1055" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">refusal message if blocked</text>

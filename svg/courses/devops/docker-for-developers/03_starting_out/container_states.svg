@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -18,7 +19,7 @@
   <text x="180" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">is allocated</text>
   <text x="180" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Awaiting start</text>
 
-  <rect x="340" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Running</text>
   <text x="480" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">docker start</text>
   <text x="480" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">PID 1 executing</text>
@@ -28,7 +29,7 @@
   <text x="480" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Can exec into it</text>
   <text x="480" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Healthy state</text>
 
-  <rect x="640" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="780" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Paused</text>
   <text x="780" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">docker pause</text>
   <text x="780" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">SIGSTOP via cgroup</text>
@@ -38,7 +39,7 @@
   <text x="780" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Resume via unpause</text>
   <text x="780" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Good for debugging</text>
 
-  <rect x="940" y="82.962963" width="300" height="537.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="940" y="82.962963" width="300" height="537.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Exited</text>
   <text x="1090" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">PID 1 terminated</text>
   <text x="1090" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">docker stop or crash</text>

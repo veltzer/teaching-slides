@@ -93,24 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="81.4285" text-anchor="middle" font-size="26.647" font-weight="bold" fill="var(--text)">Defense Layers Against SQL Injection</text>
-  <rect x="81.3794" y="102.1429" width="1117.2413" height="69.0476" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="81.3794" y="102.1429" width="1117.2413" height="69.0476" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="129.7619" font-size="19.245" font-weight="bold" fill="var(--ok-accent)">Layer 1: Parameterized Queries / Prepared Statements</text>
   <text x="122.7587" y="154.6191" font-size="16.2843" fill="var(--text-muted)">Separates code from data (PRIMARY DEFENSE)</text>
-  <rect x="81.3794" y="185" width="1117.2413" height="69.0476" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="81.3794" y="185" width="1117.2413" height="69.0476" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="212.6191" font-size="19.245" font-weight="bold" fill="var(--primary-accent)">Layer 2: Input Validation</text>
   <text x="122.7587" y="237.4762" font-size="16.2843" fill="var(--text-muted)">Whitelist allowed characters/patterns, reject unexpected input</text>
-  <rect x="81.3794" y="267.8571" width="1117.2413" height="69.0476" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="81.3794" y="267.8571" width="1117.2413" height="69.0476" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="295.4762" font-size="19.245" font-weight="bold" fill="var(--ok-accent)">Layer 3: Stored Procedures</text>
   <text x="122.7587" y="320.3334" font-size="16.2843" fill="var(--text-muted)">Encapsulate SQL logic, reduce direct query construction</text>
-  <rect x="81.3794" y="350.7143" width="1117.2413" height="69.0476" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="81.3794" y="350.7143" width="1117.2413" height="69.0476" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="378.3334" font-size="19.245" font-weight="bold" fill="var(--danger-accent)">Layer 4: Least Privilege</text>
   <text x="122.7587" y="403.1905" font-size="16.2843" fill="var(--text-muted)">DB user has minimal permissions - no FILE, no PROCESS, no SUPER</text>
-  <rect x="81.3794" y="433.5715" width="1117.2413" height="69.0476" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="81.3794" y="433.5715" width="1117.2413" height="69.0476" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="461.1905" font-size="19.245" font-weight="bold" fill="var(--primary-accent)">Layer 5: WAF (Web Application Firewall)</text>
   <text x="122.7587" y="486.0477" font-size="16.2843" fill="var(--text-muted)">Detect and block common SQLi patterns - last resort, not primary</text>
-  <rect x="81.3794" y="516.4286" width="1117.2413" height="69.0476" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="81.3794" y="516.4286" width="1117.2413" height="69.0476" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="122.7587" y="544.0477" font-size="19.245" font-weight="bold" fill="var(--danger-accent)">Layer 6: Error Handling</text>
   <text x="122.7587" y="568.9048" font-size="16.2843" fill="var(--text-muted)">Never expose database errors to users, log server-side only</text>
 </svg>

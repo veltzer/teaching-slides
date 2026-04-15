@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,7 +39,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Performance Factors</text>
 
-  <rect x="40" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Shuffle</text>
   <text x="185" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Largest single cost</text>
   <text x="185" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Disk + network + serde</text>
@@ -47,7 +48,7 @@
   <text x="185" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Tune shuffle.partitions</text>
   <text x="185" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">AQE coalesces at runtime</text>
 
-  <rect x="340" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="340" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
   <text x="485" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">One task dominates</text>
   <text x="485" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Hot keys in joins / groupBy</text>
@@ -56,7 +57,7 @@
   <text x="485" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Pre-aggregate when possible</text>
   <text x="485" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">check task time distribution</text>
 
-  <rect x="640" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="640" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Partitioning</text>
   <text x="785" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Too few: no parallelism</text>
   <text x="785" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Too many: scheduler overhead</text>
@@ -65,7 +66,7 @@
   <text x="785" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">coalesce to shrink output</text>
   <text x="785" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">2-4x cores rule of thumb</text>
 
-  <rect x="940" y="72.222222" width="300" height="268.518519" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="940" y="72.222222" width="300" height="268.518519" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">I/O and Formats</text>
   <text x="1090" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Parquet / ORC columnar</text>
   <text x="1090" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Predicate pushdown</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,7 +37,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--danger-text)">C</text>
   <text x="235" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--danger-text)">Consistency</text>
   <text x="235" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--danger-text)">Every read sees the</text>
@@ -44,7 +45,7 @@
   <text x="235" y="393.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--danger-text)">or an error</text>
   <text x="235" y="453.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" fill="var(--danger-text)">CP: MongoDB, HBase</text>
 
-  <rect x="445" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--ok-text)">A</text>
   <text x="640" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--ok-text)">Availability</text>
   <text x="640" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--ok-text)">Every request gets</text>
@@ -52,7 +53,7 @@
   <text x="640" y="393.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--ok-text)">maybe stale</text>
   <text x="640" y="453.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" fill="var(--ok-text)">AP: Cassandra, Dynamo</text>
 
-  <rect x="850" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--primary-text)">P</text>
   <text x="1045" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--primary-text)">Partition tolerance</text>
   <text x="1045" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--primary-text)">System keeps running</text>

@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,32 +39,32 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Context Window Budget</text>
   <text x="640" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Instructions, code, history, and output all share the same limit</text>
 
-  <rect x="40" y="170" width="290" height="210" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="170" width="290" height="210" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Keep In</text>
   <text x="185" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Task and clear goal</text>
   <text x="185" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Relevant code only</text>
   <text x="185" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Types and signatures</text>
   <text x="185" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">One or two examples</text>
 
-  <rect x="350" y="170" width="290" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="350" y="170" width="290" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Summarize</text>
   <text x="495" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Long chat history</text>
   <text x="495" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Old tool outputs</text>
   <text x="495" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Verbose logs</text>
   <text x="495" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Bulky documentation</text>
 
-  <rect x="660" y="170" width="290" height="210" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="660" y="170" width="290" height="210" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Drop</text>
   <text x="805" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Unrelated files</text>
   <text x="805" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Stale context</text>
   <text x="805" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Boilerplate noise</text>
   <text x="805" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Dead code paths</text>
 
-  <rect x="970" y="170" width="270" height="210" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="170" width="270" height="210" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Offload</text>
   <text x="1105" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Retrieval or RAG</text>
   <text x="1105" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">External memory</text>

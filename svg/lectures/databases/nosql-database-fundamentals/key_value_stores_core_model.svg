@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,12 +39,12 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Key-Value Stores: Core Model</text>
 
   <!-- Key -> Value arrow -->
-  <rect x="60" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="60" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="290" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Key</text>
   <text x="290" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--warn-text)">"user:123"</text>
   <text x="290" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">string, opaque to DB</text>
 
-  <rect x="760" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="760" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="990" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Value</text>
   <text x="990" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">{ name, email, age, ... }</text>
   <text x="990" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">blob, JSON, or number</text>
@@ -52,25 +53,25 @@
   <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--text-muted)">hash(key)</text>
 
   <!-- Operations row -->
-  <rect x="40" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">PUT(k, v)</text>
   <text x="185" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Store or overwrite</text>
   <text x="185" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">O(1) average</text>
   <text x="185" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">atomic per key</text>
 
-  <rect x="350" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="350" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">GET(k)</text>
   <text x="495" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Fetch by exact key</text>
   <text x="495" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">O(1) average</text>
   <text x="495" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">no scan, no query</text>
 
-  <rect x="660" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="660" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--danger-text)">DELETE(k)</text>
   <text x="805" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Remove entry</text>
   <text x="805" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">idempotent</text>
   <text x="805" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">often tombstoned</text>
 
-  <rect x="970" y="324.727273" width="270" height="158.181818" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="970" y="324.727273" width="270" height="158.181818" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">TTL / Expiry</text>
   <text x="1105" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Auto-delete after</text>
   <text x="1105" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">N seconds</text>

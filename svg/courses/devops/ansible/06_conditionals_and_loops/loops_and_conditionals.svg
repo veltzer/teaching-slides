@@ -111,13 +111,13 @@
     </linearGradient>
   </defs>
   <!-- Header -->
-  <rect x="40" y="40" width="1200" height="57.777778" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="57.777778" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="77.777778" font-family="Arial, sans-serif" font-size="22.453615" font-weight="bold" fill="var(--bg)" text-anchor="middle">Loops and Conditionals in Ansible</text>
 
   <!-- === COLUMN 1: when clause === -->
-  <rect x="58.75" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="58.75" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="58.75" y="128.888889" width="276.5625" height="13.333333" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="58.75" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="58.75" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="128.888889" width="276.5625" height="13.333333" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="196.5625" y="131.111111" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">when Clause</text>
   <text x="72.8125" y="164.444444" font-family="monospace" font-size="11.226863" fill="var(--text)">- name: Install on Debian</text>
   <text x="72.8125" y="183.333272" font-family="monospace" font-size="11.226863" fill="var(--text)">  apt:</text>
@@ -134,9 +134,9 @@
   <text x="72.8125" y="387.777716" font-family="monospace" font-size="11.226863" fill="var(--text-muted)">  # 'or' for OR logic</text>
 
   <!-- === COLUMN 2: loop / with_items === -->
-  <rect x="349.375" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="349.375" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="349.375" y="128.888889" width="276.5625" height="13.333333" fill="var(--ok-fill)" rx="6.643638" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="349.375" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="349.375" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="349.375" y="128.888889" width="276.5625" height="13.333333" fill="var(--ok-fill)" rx="6.643638" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487.1875" y="131.111111" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">loop / with_items</text>
   <text x="363.4375" y="164.444444" font-family="monospace" font-size="11.226863" fill="var(--text)">- name: Install packages</text>
   <text x="363.4375" y="183.333272" font-family="monospace" font-size="11.226863" fill="var(--text)">  apt:</text>
@@ -153,9 +153,9 @@
   <text x="363.4375" y="387.777716" font-family="monospace" font-size="11.226863" fill="var(--text-muted)">  # access: item.name, item.uid</text>
 
   <!-- === COLUMN 3: loop_control === -->
-  <rect x="640" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="640" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="640" y="128.888889" width="276.5625" height="13.333333" fill="var(--warn-fill)" rx="6.643638" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="108.888889" width="276.5625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="640" y="108.888889" width="276.5625" height="33.333333" rx="6.643638" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="128.888889" width="276.5625" height="13.333333" fill="var(--warn-fill)" rx="6.643638" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="777.8125" y="131.111111" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">loop_control</text>
   <text x="654.0625" y="164.444444" font-family="monospace" font-size="11.226863" fill="var(--text)">- name: Process users</text>
   <text x="654.0625" y="183.333272" font-family="monospace" font-size="11.226863" fill="var(--text)">  user:</text>
@@ -172,9 +172,9 @@
   <text x="654.0625" y="387.777716" font-family="monospace" font-size="11.226863" fill="var(--text-muted)">  # 5 second pause/iteration</text>
 
   <!-- === COLUMN 4: register + when === -->
-  <rect x="930.625" y="108.888889" width="290.625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="930.625" y="108.888889" width="290.625" height="33.333333" rx="6.643638" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="930.625" y="128.888889" width="290.625" height="13.333333" fill="var(--info-fill)" rx="6.643638" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="930.625" y="108.888889" width="290.625" height="288.888889" rx="6.643638" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="930.625" y="108.888889" width="290.625" height="33.333333" rx="6.643638" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="930.625" y="128.888889" width="290.625" height="13.333333" fill="var(--info-fill)" rx="6.643638" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1075.9375" y="131.111111" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">register + when Pattern</text>
   <text x="944.6875" y="164.444444" font-family="monospace" font-size="11.226863" fill="var(--text)">- name: Check if file exists</text>
   <text x="944.6875" y="183.333272" font-family="monospace" font-size="11.226863" fill="var(--text)">  stat:</text>
@@ -192,8 +192,8 @@
 
   <!-- Bottom section: when+loop combined -->
   <rect x="58.75" y="412.222284" width="567.1875" height="138.888828" rx="6.643638" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="58.75" y="412.222284" width="567.1875" height="33.333333" rx="6.643638" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="58.75" y="432.222161" width="567.1875" height="13.333333" fill="var(--ok-fill)" rx="6.643638" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="58.75" y="412.222284" width="567.1875" height="33.333333" rx="6.643638" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="432.222161" width="567.1875" height="13.333333" fill="var(--ok-fill)" rx="6.643638" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="341.875" y="434.444506" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">Combining when + loop</text>
   <text x="72.8125" y="470.000061" font-family="monospace" font-size="12.247437" fill="var(--text)">- name: Create dirs for enabled services</text>
   <text x="72.8125" y="489.999939" font-family="monospace" font-size="12.247437" fill="var(--text)">  file: path=/var/{{ item.name }} state=directory</text>
@@ -206,8 +206,8 @@
 
   <!-- Bottom right: useful loop keywords -->
   <rect x="640" y="412.222284" width="581.25" height="138.888828" rx="6.643638" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="640" y="412.222284" width="581.25" height="33.333333" rx="6.643638" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="640" y="432.222161" width="581.25" height="13.333333" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="640" y="412.222284" width="581.25" height="33.333333" rx="6.643638" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="432.222161" width="581.25" height="13.333333" fill="var(--primary-fill)" rx="6.643638" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="930.625" y="434.444506" font-family="Arial, sans-serif" font-size="14.288695" font-weight="bold" fill="var(--bg)" text-anchor="middle">Useful Loop Patterns</text>
   <text x="654.0625" y="467.777716" font-family="monospace" font-size="12.247437" fill="var(--primary-accent)">loop: "{{ range(1,6) | list }}"</text>
   <text x="654.0625" y="487.777839" font-family="monospace" font-size="12.247437" fill="var(--primary-accent)">loop: "{{ dict | dict2items }}"</text>
@@ -219,7 +219,7 @@
   <text x="902.5" y="541.111172" font-family="Arial, sans-serif" font-size="11.226863" fill="var(--text-muted)">Cartesian product (legacy)</text>
 
   <!-- Quick tips bar -->
-  <rect x="58.75" y="564.444444" width="1162.5" height="55.555556" rx="6.643638" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="58.75" y="564.444444" width="1162.5" height="55.555556" rx="6.643638" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="72.8125" y="584.444444" font-family="Arial, sans-serif" font-size="12.247437" font-weight="bold" fill="var(--warn-accent)">Tips:</text>
   <text x="115" y="584.444444" font-family="Arial, sans-serif" font-size="12.247437" fill="var(--text-muted)">Use loop: over with_items: (modern).</text>
   <text x="377.5" y="584.444444" font-family="Arial, sans-serif" font-size="12.247437" fill="var(--text-muted)">Avoid deeply nested loops - extract to roles.</text>

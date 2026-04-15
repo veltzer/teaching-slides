@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -45,32 +46,32 @@
   <text x="1050" y="40" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-accent)">CD</text>
   <line x1="850" y1="61.886792" x2="1240" y2="61.886792" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6"/>
 
-  <rect x="40" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="130" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--primary-text)">Code Push</text>
   <text x="130" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)">git commit</text>
   <text x="130" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)">triggers pipeline</text>
 
-  <rect x="240" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="240" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--primary-text)">Build Image</text>
   <text x="330" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)">docker build</text>
   <text x="330" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--primary-text)">tag with SHA</text>
 
-  <rect x="440" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="440" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="530" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--warn-text)">Run Tests</text>
   <text x="530" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--warn-text)">unit and integration</text>
   <text x="530" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--warn-text)">in container</text>
 
-  <rect x="640" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="640" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="730" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--danger-text)">Security Scan</text>
   <text x="730" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--danger-text)">CVE scan layers</text>
   <text x="730" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--danger-text)">block on critical</text>
 
-  <rect x="840" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="840" y="116.603774" width="180" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="930" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-text)">Push Registry</text>
   <text x="930" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)">sign image</text>
   <text x="930" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)">push to registry</text>
 
-  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1040" y="116.603774" width="200" height="503.396226" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1140" y="357.358491" text-anchor="middle" font-size="23.014352" font-weight="bold" fill="var(--ok-text)">Deploy</text>
   <text x="1140" y="412.075472" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)">rollout to k8s</text>
   <text x="1140" y="444.90566" text-anchor="middle" font-size="14.645496" fill="var(--ok-text)">canary, then full</text>

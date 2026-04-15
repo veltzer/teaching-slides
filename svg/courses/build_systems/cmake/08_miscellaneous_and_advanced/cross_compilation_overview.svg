@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -8,7 +9,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)">Cross-Compilation Overview</text>
 
-  <rect x="40" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Host</text>
   <text x="225" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Machine that runs CMake</text>
   <text x="225" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">x86_64 Linux laptop</text>
@@ -19,7 +20,7 @@
   <text x="225" y="491.111111" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">-DCMAKE_TOOLCHAIN_FILE</text>
   <text x="225" y="555.555556" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">points at sysroot</text>
 
-  <rect x="455" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="455" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">Toolchain</text>
   <text x="640" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Cross compiler + sysroot</text>
   <text x="640" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">aarch64-linux-gnu-gcc</text>
@@ -30,7 +31,7 @@
   <text x="640" y="480.37037" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">find_root rules</text>
   <text x="640" y="555.555556" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Reproducible builds</text>
 
-  <rect x="870" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="870" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Target</text>
   <text x="1055" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Device that runs output</text>
   <text x="1055" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">ARM board, MCU</text>

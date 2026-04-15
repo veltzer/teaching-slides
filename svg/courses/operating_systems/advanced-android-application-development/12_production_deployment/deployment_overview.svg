@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -37,35 +38,35 @@
   <text x="634.871795" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.30754" font-weight="bold" fill="var(--text)">Deployment overview — from source commit to Play Store release</text>
 
   <!-- Horizontal pipeline: 5 stages across the middle -->
-  <rect x="40" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="142.564103" y="264.339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188673" font-weight="bold" fill="var(--ok-text)">Build</text>
   <text x="142.564103" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--ok-text)">Gradle + R8 shrink</text>
   <text x="142.564103" y="319.056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--ok-text)">generate AAB</text>
 
   <line x1="245.128205" y1="275.283019" x2="278.974359" y2="275.283019" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="286.153846" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="286.153846" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="388.717949" y="264.339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188673" font-weight="bold" fill="var(--primary-text)">Test</text>
   <text x="388.717949" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--primary-text)">unit + instrumentation</text>
   <text x="388.717949" y="319.056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--primary-text)">Firebase Test Lab</text>
 
   <line x1="491.282051" y1="275.283019" x2="525.128205" y2="275.283019" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="532.307692" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="532.307692" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="634.871795" y="264.339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188673" font-weight="bold" fill="var(--warn-text)">Sign</text>
   <text x="634.871795" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--warn-text)">release keystore</text>
   <text x="634.871795" y="319.056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--warn-text)">Play App Signing</text>
 
   <line x1="737.435897" y1="275.283019" x2="771.282051" y2="275.283019" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="778.461538" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="778.461538" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="881.025641" y="264.339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188673" font-weight="bold" fill="var(--info-text)">Upload</text>
   <text x="881.025641" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--info-text)">Play Console API</text>
   <text x="881.025641" y="319.056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--info-text)">internal / closed track</text>
 
   <line x1="983.589744" y1="275.283019" x2="1017.435897" y2="275.283019" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1024.615385" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1024.615385" y="215.09434" width="205.128205" height="120.377358" rx="8.475469" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1127.179487" y="264.339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188673" font-weight="bold" fill="var(--danger-text)">Release</text>
   <text x="1127.179487" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--danger-text)">staged rollout</text>
   <text x="1127.179487" y="319.056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.772637" fill="var(--danger-text)">monitor crashes</text>

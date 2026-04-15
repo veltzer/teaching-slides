@@ -98,23 +98,23 @@
     </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="25.5866" font-weight="bold">Multi-stage Build Flow</text>
-  <rect x="40" y="82.963" width="364.2857" height="250.6173" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="82.963" width="364.2857" height="250.6173" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="222.1428" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold" fill="var(--warn-accent)">Stage 1: Build</text>
   <text x="222.1428" y="219.0124" text-anchor="middle" font-size="21.3221">FROM node:18 AS build</text>
   <text x="222.1428" y="272.716" text-anchor="middle" font-size="21.3221">npm install + compile</text>
   <line x1="404.2856" y1="208.2716" x2="468.5714" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd2_10_workflow)" />
-  <rect x="468.5714" y="82.963" width="342.8571" height="250.6173" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="468.5714" y="82.963" width="342.8571" height="250.6173" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold">COPY --from=build</text>
   <text x="640" y="219.0124" text-anchor="middle" font-size="21.3221">Only artifacts</text>
   <text x="640" y="272.716" text-anchor="middle" font-size="21.3221">No dev dependencies</text>
   <line x1="811.4286" y1="208.2716" x2="875.7143" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd2_10_workflow)" />
-  <rect x="875.7143" y="82.963" width="364.2857" height="250.6173" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="875.7143" y="82.963" width="364.2857" height="250.6173" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1057.8572" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold" fill="var(--ok-accent)">Stage 2: Runtime</text>
   <text x="1057.8572" y="219.0124" text-anchor="middle" font-size="21.3221">FROM node:18-alpine</text>
   <text x="1057.8572" y="272.716" text-anchor="middle" font-size="21.3221">Minimal final image</text>
-  <rect x="40" y="405.1852" width="364.2857" height="107.4074" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="405.1852" width="364.2857" height="107.4074" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="222.1428" y="476.7901" text-anchor="middle" font-size="21.3221" fill="var(--danger-accent)">~900MB with build tools</text>
-  <rect x="875.7143" y="405.1852" width="364.2857" height="107.4074" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="875.7143" y="405.1852" width="364.2857" height="107.4074" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1057.8572" y="476.7901" text-anchor="middle" font-size="21.3221" fill="var(--ok-accent)">~150MB production</text>
   <text x="640" y="620" text-anchor="middle" font-size="21.3221" fill="var(--text-muted)">Build tools discarded, only runtime artifacts remain</text>
 </svg>

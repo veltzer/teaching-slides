@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -52,25 +53,25 @@
   <text x="330" y="96.460177" text-anchor="middle" font-size="20.263748" font-weight="bold" fill="var(--text)">Shared (process-wide)</text>
   <rect x="60" y="116.99115" width="540" height="112.920354" rx="6.079124" fill="var(--text-muted)" stroke="var(--text)" stroke-width="2"/>
   <text x="330" y="183.716814" text-anchor="middle" font-size="22.290122" font-weight="bold" fill="var(--bg)">Code Segment</text>
-  <rect x="60" y="240.176991" width="540" height="112.920354" rx="6.079124" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="60" y="240.176991" width="540" height="112.920354" rx="6.079124" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="306.902655" text-anchor="middle" font-size="22.290122" font-weight="bold" fill="var(--bg)">Data / BSS</text>
-  <rect x="60" y="363.362832" width="540" height="112.920354" rx="6.079124" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="60" y="363.362832" width="540" height="112.920354" rx="6.079124" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="430.088496" text-anchor="middle" font-size="22.290122" font-weight="bold" fill="var(--bg)">Heap</text>
-  <rect x="60" y="486.548673" width="540" height="112.920354" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="60" y="486.548673" width="540" height="112.920354" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="553.274336" text-anchor="middle" font-size="22.290122" font-weight="bold" fill="var(--bg)">File Descriptors</text>
   <rect x="640" y="65.663717" width="600" height="554.336283" rx="6.079124" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="940" y="96.460177" text-anchor="middle" font-size="20.263748" font-weight="bold" fill="var(--text)">Per-Thread (private)</text>
-  <rect x="660" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="660" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="750" y="158.053097" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--bg)">Thread 1</text>
   <text x="750" y="332.566372" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Stack</text>
   <text x="750" y="373.628319" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Registers</text>
   <text x="750" y="414.690265" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Signal mask</text>
-  <rect x="860" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="860" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="158.053097" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--bg)">Thread 2</text>
   <text x="950" y="332.566372" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Stack</text>
   <text x="950" y="373.628319" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Registers</text>
   <text x="950" y="414.690265" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Signal mask</text>
-  <rect x="1060" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1060" y="116.99115" width="180" height="472.212389" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1150" y="158.053097" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--bg)">Thread 3</text>
   <text x="1150" y="332.566372" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Stack</text>
   <text x="1150" y="373.628319" text-anchor="middle" font-size="16.210998" fill="var(--bg)">Registers</text>

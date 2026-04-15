@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
@@ -18,23 +19,23 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="108" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="108" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="70" y="90" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--danger-text)">1979 - chroot</text>
   <text x="70" y="128" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Unix V7: filesystem isolation. No limits, escapable.</text>
 
-  <rect x="40" y="156" width="1200" height="108" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="156" width="1200" height="108" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="70" y="206" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">2000-2008 - Jails, Zones, OpenVZ, LXC</text>
   <text x="70" y="244" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Per-OS PIDs and networks. Linux adds cgroups, namespaces.</text>
 
-  <rect x="40" y="272" width="1200" height="108" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="272" width="1200" height="108" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="70" y="322" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">2013 - Docker</text>
   <text x="70" y="360" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Layered images, registry, one-command run. UX pushes containers mainstream.</text>
 
-  <rect x="40" y="388" width="1200" height="108" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="388" width="1200" height="108" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="70" y="438" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">2015-2016 - OCI and Kubernetes</text>
   <text x="70" y="476" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Standard image and runtime. containerd plus runc under everything.</text>
 
-  <rect x="40" y="504" width="1200" height="116" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="504" width="1200" height="116" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="70" y="556" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--info-text)">2018+ - Rootless and microVMs</text>
   <text x="70" y="596" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Podman, gVisor, Firecracker. Stronger isolation.</text>
 </svg>

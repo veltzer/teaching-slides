@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,10 +37,10 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Function Types in Scala</text>
 
-  <rect x="40" y="130" width="390" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="130" width="390" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">def method</text>
   <text x="235" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">def add(a: Int, b: Int): Int</text>
   <text x="235" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">lives on a class or object</text>
@@ -47,7 +48,7 @@
   <text x="235" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">can be generic, curried</text>
   <text x="235" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">eta-expanded to a function</text>
 
-  <rect x="445" y="130" width="390" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="130" width="390" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Function value</text>
   <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">(a: Int, b: Int) =&gt; a + b</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">instance of FunctionN</text>
@@ -55,7 +56,7 @@
   <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">SAM-friendly lambda</text>
   <text x="640" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">closes over its lexical scope</text>
 
-  <rect x="850" y="130" width="390" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="130" width="390" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">PartialFunction</text>
   <text x="1045" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">defined only for some inputs</text>
   <text x="1045" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">isDefinedAt / apply</text>
@@ -63,7 +64,7 @@
   <text x="1045" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">chainable with orElse</text>
   <text x="1045" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">used in Akka receive</text>
 
-  <rect x="40" y="380" width="590" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="380" width="590" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Curried / higher-order</text>
   <text x="335" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">def f(a: Int)(b: Int) = ...</text>
   <text x="335" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">returns a function of remaining args</text>
@@ -71,7 +72,7 @@
   <text x="335" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">higher-order: Int =&gt; Int =&gt; Int</text>
   <text x="335" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">clean DSLs, fluent APIs</text>
 
-  <rect x="650" y="380" width="590" height="240" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="650" y="380" width="590" height="240" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">By-name / call-by-need</text>
   <text x="945" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">def when(p: =&gt; Boolean)(b: =&gt; Unit)</text>
   <text x="945" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">argument evaluated on each use</text>

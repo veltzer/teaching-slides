@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,14 +36,14 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="580" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="580" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-text)">Without Tools</text>
   <text x="330" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Generates text only</text>
   <text x="330" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Cannot read files or run code</text>
   <text x="330" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">No access to live data</text>
   <text x="330" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Stateless, no external actions</text>
 
-  <rect x="660" y="40" width="580" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="40" width="580" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">With Tools</text>
   <text x="950" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Reads and edits files</text>
   <text x="950" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Executes shell commands</text>
@@ -52,23 +53,23 @@
   <rect x="40" y="360" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Tool-Use Round-Trip</text>
 
-  <rect x="80" y="440" width="200" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="80" y="440" width="200" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">User Prompt</text>
   <text x="180" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">task + context</text>
 
-  <rect x="320" y="440" width="200" height="140" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="320" y="440" width="200" height="140" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="420" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">LLM Decides</text>
   <text x="420" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">tool + arguments</text>
 
-  <rect x="560" y="440" width="200" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="560" y="440" width="200" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="660" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Execute Tool</text>
   <text x="660" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">your code runs</text>
 
-  <rect x="800" y="440" width="200" height="140" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="800" y="440" width="200" height="140" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="900" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Return Result</text>
   <text x="900" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">structured data</text>
 
-  <rect x="1040" y="440" width="160" height="140" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1040" y="440" width="160" height="140" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Reason</text>
   <text x="1120" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">next step</text>
 </svg>

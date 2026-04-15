@@ -95,12 +95,12 @@
 </defs>
   <text x="640.0001" y="40" text-anchor="middle" font-size="24.1853" font-weight="bold" fill="var(--text)">Wireshark Basics</text>
   <rect x="40" y="52.6087" width="1200" height="567.3913" rx="6" fill="var(--text-muted)" stroke="var(--primary-border)" stroke-width="2.6392" />
-  <rect x="40" y="52.6087" width="1200" height="37.8261" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="40" y="71.5217" width="1200" height="18.913" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="52.6087" width="1200" height="37.8261" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="71.5217" width="1200" height="18.913" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="77.8261" text-anchor="middle" font-size="17.4671" font-weight="bold" fill="var(--text)">Wireshark</text>
-  <rect x="58.1819" y="96.7391" width="1163.6364" height="37.8261" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="58.1819" y="96.7391" width="1163.6364" height="37.8261" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="121.9565" font-size="14.7799" fill="var(--text-muted)">Filter: tcp.port == 80 &amp;&amp; ip.addr == 10.0.0.5</text>
-  <rect x="58.1819" y="140.8696" width="1163.6364" height="31.5217" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="58.1819" y="140.8696" width="1163.6364" height="31.5217" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="162.3043" font-size="13.4363" font-weight="bold" fill="var(--text)">No.  Time     Source          Dest            Protocol  Info</text>
   <rect x="58.1819" y="172.3913" width="1163.6364" height="25.2174" rx="6" fill="var(--text-muted)" stroke="var(--border)" stroke-width="0.6598" />
   <text x="76.3637" y="190.0435" font-size="13.4363" fill="var(--text)">1    0.000    10.0.0.5        93.184.216.34   TCP       SYN</text>
@@ -108,11 +108,11 @@
   <text x="76.3637" y="215.2609" font-size="13.4363" fill="var(--text)">2    0.022    93.184.216.34   10.0.0.5        TCP       SYN,ACK</text>
   <rect x="58.1819" y="222.8261" width="1163.6364" height="25.2174" rx="6" fill="var(--text-muted)" stroke="var(--border)" stroke-width="0.6598" />
   <text x="76.3637" y="240.4782" font-size="13.4363" fill="var(--text)">3    0.022    10.0.0.5        93.184.216.34   TCP       ACK</text>
-  <rect x="58.1819" y="248.0434" width="1163.6364" height="25.2174" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="58.1819" y="248.0434" width="1163.6364" height="25.2174" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="265.6957" font-size="13.4363" fill="var(--text)">4    0.023    10.0.0.5        93.184.216.34   HTTP      GET /</text>
-  <rect x="58.1819" y="273.2609" width="1163.6364" height="25.2174" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="58.1819" y="273.2609" width="1163.6364" height="25.2174" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="290.913" font-size="13.4363" fill="var(--text)">5    0.045    93.184.216.34   10.0.0.5        HTTP      200 OK</text>
-  <rect x="58.1819" y="311.0869" width="1163.6364" height="151.3043" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="58.1819" y="311.0869" width="1163.6364" height="151.3043" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="76.3637" y="333.7826" font-size="14.7799" font-weight="bold" fill="var(--danger-accent)">Frame 4: 214 bytes on wire</text>
   <text x="76.3637" y="356.4783" font-size="13.4363" fill="var(--text)">Ethernet II: src=52:54:00:12:34:56, dst=52:54:00:ab:cd:ef</text>
   <text x="76.3637" y="376.6522" font-size="13.4363" fill="var(--text)">Internet Protocol: src=10.0.0.5, dst=93.184.216.34</text>
@@ -122,9 +122,9 @@
   <rect x="58.1819" y="468.6957" width="1163.6364" height="63.0435" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="76.3637" y="491.3913" font-size="13.4363" font-family="monospace" fill="var(--text-muted)">0000  52 54 00 ab cd ef 52 54  00 12 34 56 08 00 45 00</text>
   <text x="76.3637" y="512.8261" font-size="13.4363" font-family="monospace" fill="var(--text-muted)">0010  00 c8 12 34 40 00 40 06  ...</text>
-  <rect x="58.1819" y="544.3478" width="363.6364" height="31.5217" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="58.1819" y="544.3478" width="363.6364" height="31.5217" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240.0001" y="565.7826" text-anchor="middle" font-size="13.4363" fill="var(--primary-accent)" font-weight="bold">Packet List Pane</text>
-  <rect x="458.1819" y="544.3478" width="363.6364" height="31.5217" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="458.1819" y="544.3478" width="363.6364" height="31.5217" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="565.7826" text-anchor="middle" font-size="13.4363" fill="var(--danger-accent)" font-weight="bold">Protocol Details Pane</text>
   <rect x="858.1819" y="544.3478" width="363.6364" height="31.5217" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="1040.0001" y="565.7826" text-anchor="middle" font-size="13.4363" fill="var(--text-muted)" font-weight="bold">Hex Dump Pane</text>

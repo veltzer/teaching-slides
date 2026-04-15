@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">Hive Integration</text>
 
-  <rect x="40" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="220" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">SparkSession</text>
   <text x="220" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">.enableHiveSupport()</text>
   <text x="220" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Loads hive-site.xml</text>
@@ -51,7 +52,7 @@
 
   <line x1="400" y1="196.642336" x2="440" y2="196.642336" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="450" y="69.635036" width="380" height="254.014599" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="450" y="69.635036" width="380" height="254.014599" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">Hive Metastore</text>
   <text x="640" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Database and table catalog</text>
   <text x="640" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Schema definitions</text>
@@ -62,7 +63,7 @@
 
   <line x1="830" y1="196.642336" x2="870" y2="196.642336" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="880" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="880" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1060" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">Data on HDFS/S3</text>
   <text x="1060" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Parquet, ORC, Avro</text>
   <text x="1060" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Managed or external</text>

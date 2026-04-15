@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,19 +40,19 @@
     <rect x="51.1389" y="107.627" width="470.873" height="470.873" rx="14" fill="none" stroke="var(--text)" stroke-width="3"/>
 
     <!-- Nodes on ring -->
-    <rect x="269.453" y="96.0305" width="34.2453" height="34.2453" rx="14" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+    <rect x="269.453" y="96.0305" width="34.2453" height="34.2453" rx="14" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="286.575342" y="87.027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node A</text>
 
-    <rect x="477.672" y="210.985" width="34.2453" height="34.2453" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <rect x="477.672" y="210.985" width="34.2453" height="34.2453" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="533.150685" y="226.018018" text-anchor="start" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node B</text>
 
-    <rect x="411.918" y="482.697" width="34.2453" height="34.2453" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+    <rect x="411.918" y="482.697" width="34.2453" height="34.2453" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="450.958904" y="531.171171" text-anchor="start" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node C</text>
 
-    <rect x="126.987" y="482.697" width="34.2453" height="34.2453" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+    <rect x="126.987" y="482.697" width="34.2453" height="34.2453" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="122.191781" y="531.171171" text-anchor="end" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node D</text>
 
-    <rect x="61.2335" y="210.985" width="34.2453" height="34.2453" rx="14" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+    <rect x="61.2335" y="210.985" width="34.2453" height="34.2453" rx="14" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="40" y="226.018018" text-anchor="end" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node E</text>
 
     <!-- Keys on ring -->
@@ -85,20 +86,20 @@
   <text x="626.30137" y="296.036036" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   each physical node owns many ring positions.</text>
 
   <!-- Benefits -->
-  <rect x="604.383562" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="604.383562" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="757.808219" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--ok-text)">Benefits</text>
   <text x="757.808219" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Minimal reshuffling</text>
   <text x="757.808219" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Horizontal scaling</text>
   <text x="757.808219" y="448.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Fault tolerance</text>
 
-  <rect x="933.150685" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="933.150685" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.575342" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--warn-text)">Watch out</text>
   <text x="1086.575342" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Hot keys on one node</text>
   <text x="1086.575342" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Uneven token spread</text>
   <text x="1086.575342" y="448.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Rebalance cost</text>
 
   <!-- Used by -->
-  <rect x="604.383562" y="489.369369" width="635.616438" height="125.405405" rx="8.561326" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="604.383562" y="489.369369" width="635.616438" height="125.405405" rx="8.561326" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="922.191781" y="525.945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--info-text)">Used by</text>
   <text x="922.191781" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Cassandra, DynamoDB, Riak, Redis Cluster, Memcached clients.</text>
   <text x="922.191781" y="583.423423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Also at the CDN edge — object-to-origin routing.</text>

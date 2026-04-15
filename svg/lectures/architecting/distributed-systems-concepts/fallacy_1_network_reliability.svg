@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -45,7 +46,7 @@
   <text x="640" y="40" text-anchor="middle" font-size="30.948314" font-weight="bold" fill="var(--text)">Fallacy #1: The Network is Reliable</text>
 
   <!-- Sender box -->
-  <rect x="40" y="119.816514" width="300" height="361.834862" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="119.816514" width="300" height="361.834862" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="190" y="226.238532" text-anchor="middle" font-size="30.948314" font-weight="bold" fill="var(--primary-text)">Sender</text>
   <text x="190" y="300.733945" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">calls send(msg)</text>
   <text x="190" y="343.302752" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">no crash locally</text>
@@ -53,7 +54,7 @@
   <text x="190" y="439.082569" text-anchor="middle" font-size="16.505768" fill="var(--primary-text)">but cannot verify</text>
 
   <!-- Receiver box -->
-  <rect x="940" y="119.816514" width="300" height="361.834862" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="940" y="119.816514" width="300" height="361.834862" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="226.238532" text-anchor="middle" font-size="30.948314" font-weight="bold" fill="var(--primary-text)">Receiver</text>
   <text x="1090" y="300.733945" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">may be down</text>
   <text x="1090" y="343.302752" text-anchor="middle" font-size="18.568989" fill="var(--primary-text)">partitioned</text>
@@ -62,13 +63,13 @@
 
   <!-- Successful message -->
   <line x1="340" y1="215.59633" x2="940" y2="215.59633" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
-  <rect x="530" y="173.027523" width="220" height="34.055046" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="530" y="173.027523" width="220" height="34.055046" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="640" y="198.568807" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--ok-text)">delivered — ack</text>
 
   <!-- Lost message -->
   <line x1="340" y1="396.513761" x2="700" y2="396.513761" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10,6"/>
   <text x="740" y="405.027523" font-size="41.264419" font-weight="bold" fill="var(--danger-border)">✗</text>
-  <rect x="530" y="353.944954" width="220" height="34.055046" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1"/>
+  <rect x="530" y="353.944954" width="220" height="34.055046" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="640" y="379.486239" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)">dropped — no ack</text>
 
   <!-- Bottom guidance -->

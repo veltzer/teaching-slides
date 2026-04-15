@@ -96,7 +96,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1066" font-weight="bold" fill="var(--text)">Linux I/O Models</text>
 
-  <rect x="40" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--primary-text)">Blocking</text>
   <text x="185" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">read() waits until</text>
   <text x="185" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">data is ready</text>
@@ -105,7 +105,7 @@
   <text x="185" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">scales poorly</text>
   <text x="185" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">beyond ~1k connections</text>
 
-  <rect x="340" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--ok-text)">Non-blocking</text>
   <text x="485" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">read() returns</text>
   <text x="485" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">EAGAIN if not ready</text>
@@ -114,7 +114,7 @@
   <text x="485" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">busy-poll wastes CPU</text>
   <text x="485" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">rarely used alone</text>
 
-  <rect x="640" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--warn-text)">Multiplexing</text>
   <text x="785" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">select / poll / epoll</text>
   <text x="785" y="187.7358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">kernel tells you</text>
@@ -123,7 +123,7 @@
   <text x="785" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">scales to 10k+</text>
   <text x="785" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">used by nginx, Redis</text>
 
-  <rect x="940" y="72.8302" width="300" height="284.5283" rx="6.2766" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="940" y="72.8302" width="300" height="284.5283" rx="6.2766" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--info-text)">Async (io_uring)</text>
   <text x="1090" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">submit a request,</text>
   <text x="1090" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">get a completion</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -11,7 +12,7 @@
   <rect x="40" y="77.247706" width="1200" height="63.853211" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="117.688073" text-anchor="middle" font-size="16.505768" fill="var(--text-muted)">eMMC or SD card: sector 0 holds the partition table (GPT or MBR).</text>
 
-  <rect x="40" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Boot</text>
   <text x="150" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">FAT32, 64 MB</text>
   <text x="150" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">U-Boot, MLO</text>
@@ -21,7 +22,7 @@
   <text x="150" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Read by ROM</text>
   <text x="150" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Rarely modified</text>
 
-  <rect x="280" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="280" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="390" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Rootfs A</text>
   <text x="390" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">ext4, ~1 GB</text>
   <text x="390" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Kernel modules</text>
@@ -31,7 +32,7 @@
   <text x="390" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Active slot</text>
   <text x="390" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Current release</text>
 
-  <rect x="520" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="520" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)">Rootfs B</text>
   <text x="630" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">ext4, ~1 GB</text>
   <text x="630" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Standby slot</text>
@@ -41,7 +42,7 @@
   <text x="630" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Rollback on failure</text>
   <text x="630" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">mender, swupdate</text>
 
-  <rect x="760" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="760" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)">Data</text>
   <text x="870" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">ext4, variable</text>
   <text x="870" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">/var, /home</text>
@@ -51,7 +52,7 @@
   <text x="870" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Encrypted if needed</text>
   <text x="870" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Growth planned</text>
 
-  <rect x="1000" y="162.385321" width="240" height="457.614679" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1000" y="162.385321" width="240" height="457.614679" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">Recovery</text>
   <text x="1120" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">squashfs, 128 MB</text>
   <text x="1120" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Minimal rootfs</text>

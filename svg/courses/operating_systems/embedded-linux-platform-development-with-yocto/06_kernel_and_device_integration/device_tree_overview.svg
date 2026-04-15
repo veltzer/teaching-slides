@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -33,7 +34,7 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.747727" font-weight="bold" fill="var(--primary-accent)">Device Tree: From Source to Kernel</text>
 
   <!-- DTS -->
-  <rect x="40" y="92.727273" width="552" height="179.272727" rx="8.999394" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3"/>
+  <rect x="40" y="92.727273" width="552" height="179.272727" rx="8.999394" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3" filter="url(#shadow)"/>
   <text x="316" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.24803" font-weight="bold" fill="var(--warn-text)">Device Tree Source</text>
   <text x="316" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.373561" fill="var(--warn-text)">.dts, .dtsi (human-readable)</text>
   <text x="316" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.123712" fill="var(--warn-text)">Describes CPUs, memory, buses,</text>
@@ -44,7 +45,7 @@
   <text x="640" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.748939" fill="var(--text-muted)">compile</text>
 
   <!-- DTC -->
-  <rect x="688" y="92.727273" width="552" height="179.272727" rx="8.999394" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="3"/>
+  <rect x="688" y="92.727273" width="552" height="179.272727" rx="8.999394" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
   <text x="964" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.24803" font-weight="bold" fill="var(--primary-text)">Device Tree Compiler</text>
   <text x="964" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.373561" fill="var(--primary-text)">dtc (build tool)</text>
   <text x="964" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.123712" fill="var(--primary-text)">Validates syntax, resolves</text>
@@ -55,7 +56,7 @@
   <text x="988" y="314.181818" text-anchor="start" font-family="Arial, sans-serif" font-size="15.748939" fill="var(--text-muted)">emit</text>
 
   <!-- DTB -->
-  <rect x="688" y="356.363636" width="552" height="179.272727" rx="8.999394" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="3"/>
+  <rect x="688" y="356.363636" width="552" height="179.272727" rx="8.999394" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="3" filter="url(#shadow)"/>
   <text x="964" y="403.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.24803" font-weight="bold" fill="var(--info-text)">Device Tree Blob</text>
   <text x="964" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.373561" fill="var(--info-text)">.dtb (binary, compact)</text>
   <text x="964" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.123712" fill="var(--info-text)">Shipped in boot image,</text>
@@ -66,7 +67,7 @@
   <text x="640" y="435.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.748939" fill="var(--text-muted)">pass</text>
 
   <!-- Bootloader / Kernel -->
-  <rect x="40" y="356.363636" width="552" height="179.272727" rx="8.999394" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="3"/>
+  <rect x="40" y="356.363636" width="552" height="179.272727" rx="8.999394" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="3" filter="url(#shadow)"/>
   <text x="316" y="403.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.24803" font-weight="bold" fill="var(--ok-text)">Bootloader / Kernel</text>
   <text x="316" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.373561" fill="var(--ok-text)">U-Boot hands DTB to Linux</text>
   <text x="316" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.123712" fill="var(--ok-text)">Kernel probes drivers based on</text>

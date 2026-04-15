@@ -98,7 +98,7 @@
 
   <text x="640" y="76.5766" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">Transformations are lazy. An action triggers the DAG and returns a value (or writes to storage).</text>
 
-  <rect x="40" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="190" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Materialize</text>
   <text x="190" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">collect()  → Array[T]</text>
   <text x="190" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">pulls every row to the driver</text>
@@ -107,7 +107,7 @@
   <text x="190" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">first()   → T</text>
   <text x="190" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">takeSample(withReplace, n)</text>
 
-  <rect x="360" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="360" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="510" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Count / Reduce</text>
   <text x="510" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">count()        → Long</text>
   <text x="510" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">total rows across partitions</text>
@@ -116,7 +116,7 @@
   <text x="510" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">f must be associative and commutative</text>
   <text x="510" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">fold(zero)(f), aggregate(...)</text>
 
-  <rect x="680" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="680" y="107.9279" width="300" height="240.3604" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="830" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Iterate</text>
   <text x="830" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">foreach(f)</text>
   <text x="830" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">f runs once per row on executors</text>
@@ -125,7 +125,7 @@
   <text x="830" y="275.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">good for setting up a connection once</text>
   <text x="830" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">side effects only — no return value</text>
 
-  <rect x="1000" y="107.9279" width="240" height="240.3604" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1000" y="107.9279" width="240" height="240.3604" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--info-text)">Save</text>
   <text x="1120" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsTextFile(path)</text>
   <text x="1120" y="212.4324" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsSequenceFile</text>

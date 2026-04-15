@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,42 +40,42 @@
   <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)">Branches in Git: cheap, named pointers</text>
 
   <!-- Shared trunk C1-C2-C3 -->
-  <rect x="80" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="80" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="135" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C1</text>
-  <rect x="260" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="260" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="315" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C2</text>
-  <rect x="440" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="440" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="495" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C3</text>
 
   <line x1="190" y1="324.727273" x2="260" y2="324.727273" stroke="var(--text)" stroke-width="2"/>
   <line x1="370" y1="324.727273" x2="440" y2="324.727273" stroke="var(--text)" stroke-width="2"/>
 
   <!-- feature branch up -->
-  <rect x="620" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="620" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="675" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">C4</text>
-  <rect x="800" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="800" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="855" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">C5</text>
   <line x1="550" y1="303.636364" x2="620" y2="219.272727" stroke="var(--text)" stroke-width="2"/>
   <line x1="730" y1="177.090909" x2="800" y2="177.090909" stroke="var(--text)" stroke-width="2"/>
 
   <!-- hotfix branch down -->
-  <rect x="620" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="620" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="675" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">C6</text>
-  <rect x="800" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="800" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="855" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">C7</text>
   <line x1="550" y1="345.818182" x2="620" y2="430.181818" stroke="var(--text)" stroke-width="2"/>
   <line x1="730" y1="472.363636" x2="800" y2="472.363636" stroke="var(--text)" stroke-width="2"/>
 
   <!-- branch labels pointing at tips -->
-  <rect x="1000" y="134.909091" width="240" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1000" y="134.909091" width="240" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">feature</text>
   <line x1="910" y1="177.090909" x2="1000" y2="177.090909" stroke="var(--primary-border)" stroke-width="2"/>
 
-  <rect x="1000" y="282.545455" width="240" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1000" y="282.545455" width="240" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">main → C3</text>
   <line x1="550" y1="324.727273" x2="1000" y2="324.727273" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="4 4"/>
 
-  <rect x="1000" y="430.181818" width="240" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1000" y="430.181818" width="240" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1120" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">hotfix</text>
   <line x1="910" y1="472.363636" x2="1000" y2="472.363636" stroke="var(--warn-border)" stroke-width="2"/>
 

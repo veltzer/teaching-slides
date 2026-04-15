@@ -94,43 +94,43 @@
     </marker>
 </defs>
   <text x="640" y="40" text-anchor="middle" font-size="29.7798" font-weight="bold" fill="var(--text)">Concurrent Data Structures</text>
-  <rect x="40" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="226.4864" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--primary-accent)">Mutex&lt;T&gt;</text>
   <text x="64.3243" y="137.8314" font-size="14.8899" fill="var(--text-muted)">Exclusive access</text>
   <text x="64.3243" y="162.988" font-size="14.8899" fill="var(--text-muted)">lock() -&gt; MutexGuard&lt;T&gt;</text>
   <text x="64.3243" y="188.1446" font-size="14.8899" fill="var(--text-muted)">RAII: auto-unlock on drop</text>
   <text x="64.3243" y="213.3013" font-size="14.8899" fill="var(--danger-accent)">Can deadlock if nested!</text>
   <text x="64.3243" y="241.2531" font-size="14.8899" fill="var(--text-muted)">Use when: writes common</text>
-  <rect x="453.5135" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="453.5135" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)">RwLock&lt;T&gt;</text>
   <text x="477.8378" y="137.8314" font-size="14.8899" fill="var(--text-muted)">Multiple readers OR one writer</text>
   <text x="477.8378" y="162.988" font-size="14.8899" fill="var(--text-muted)">read() -&gt; RwLockReadGuard</text>
   <text x="477.8378" y="188.1446" font-size="14.8899" fill="var(--text-muted)">write() -&gt; RwLockWriteGuard</text>
   <text x="477.8378" y="213.3013" font-size="14.8899" fill="var(--text-muted)">More overhead than Mutex</text>
   <text x="477.8378" y="241.2531" font-size="14.8899" fill="var(--text-muted)">Use when: reads &gt;&gt; writes</text>
-  <rect x="867.027" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="867.027" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1053.5135" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)">Atomics</text>
   <text x="891.3513" y="137.8314" font-size="14.8899" fill="var(--text-muted)">AtomicBool, AtomicUsize, ...</text>
   <text x="891.3513" y="162.988" font-size="14.8899" fill="var(--text-muted)">Lock-free operations</text>
   <text x="891.3513" y="188.1446" font-size="14.8899" fill="var(--text-muted)">load, store, CAS</text>
   <text x="891.3513" y="213.3013" font-size="14.8899" fill="var(--text-muted)">Ordering: Relaxed..SeqCst</text>
   <text x="891.3513" y="241.2531" font-size="14.8899" fill="var(--text-muted)">Use when: simple counters/flags</text>
-  <rect x="40" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="226.4864" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)">Arc&lt;T&gt;</text>
   <text x="64.3243" y="358.6507" font-size="14.8899" fill="var(--text-muted)">Atomic Reference Counting</text>
   <text x="64.3243" y="383.8072" font-size="14.8899" fill="var(--text-muted)">Shared ownership across threads</text>
   <text x="64.3243" y="408.9639" font-size="14.8899" fill="var(--text-muted)">Arc&lt;Mutex&lt;T&gt;&gt; = shared mutable</text>
-  <rect x="453.5135" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="453.5135" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--primary-accent)">DashMap&lt;K, V&gt;</text>
   <text x="477.8378" y="358.6507" font-size="14.8899" fill="var(--text-muted)">Concurrent HashMap</text>
   <text x="477.8378" y="383.8072" font-size="14.8899" fill="var(--text-muted)">Sharded internally</text>
   <text x="477.8378" y="408.9639" font-size="14.8899" fill="var(--text-muted)">Much faster than Mutex&lt;HashMap&gt;</text>
-  <rect x="867.027" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="867.027" y="291.5663" width="372.9729" height="139.759" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1053.5135" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)">crossbeam</text>
   <text x="891.3513" y="358.6507" font-size="14.8899" fill="var(--text-muted)">SegQueue - lock-free queue</text>
   <text x="891.3513" y="383.8072" font-size="14.8899" fill="var(--text-muted)">ArrayQueue - bounded</text>
   <text x="891.3513" y="408.9639" font-size="14.8899" fill="var(--text-muted)">Epoch-based GC for safety</text>
-  <rect x="40" y="466.2651" width="1200" height="153.7349" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="466.2651" width="1200" height="153.7349" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="501.2049" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--text)">Selection Guide</text>
   <text x="64.3243" y="536.1446" font-size="14.8899" fill="var(--text-muted)">Simple counter/flag -&gt; AtomicUsize / AtomicBool</text>
   <text x="64.3243" y="561.3012" font-size="14.8899" fill="var(--text-muted)">Shared complex state -&gt; Arc&lt;Mutex&lt;T&gt;&gt; (or Arc&lt;RwLock&lt;T&gt;&gt; for read-heavy)</text>

@@ -99,22 +99,22 @@
   </defs>
   <text x="673.9622" y="40" text-anchor="middle" font-size="25.305" font-weight="bold">Memory Layout: &amp;s1 borrows String s1</text>
   <text x="175.849" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold">Stack</text>
-  <rect x="40" y="139.4285" width="271.6982" height="99.4285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
+  <rect x="40" y="139.4285" width="271.6982" height="99.4285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="175.849" y="202.4" text-anchor="middle" font-size="21.0875">s1: { ptr, len, cap }</text>
-  <rect x="40" y="238.8572" width="271.6982" height="82.8571" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
+  <rect x="40" y="238.8572" width="271.6982" height="82.8571" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="175.849" y="295.2" text-anchor="middle" font-size="21.0875">&amp;s1: ptr to s1</text>
   <text x="787.1698" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold">Heap</text>
-  <rect x="606.0378" y="139.4285" width="362.2642" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="606.0378" y="139.4285" width="362.2642" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="787.1698" y="189.1429" text-anchor="middle" font-size="21.0875">"hello" (5 bytes)</text>
   <text x="787.1698" y="232.2285" text-anchor="middle" font-size="21.0875">heap-allocated buffer</text>
   <line x1="311.6981" y1="189.1429" x2="606.0378" y2="189.1429" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_ref1)" stroke-dasharray="9.9805 5.9883" />
   <text x="458.8678" y="165.9429" text-anchor="middle" font-size="21.0875">s1.ptr</text>
   <line x1="175.849" y1="238.8572" x2="175.849" y2="189.1429" stroke="var(--text)" stroke-width="1.9961" marker-end="url(#arr_ref1)" stroke-dasharray="5.9883 3.9922" />
   <text x="221.132" y="222.2858" font-size="21.0875">&amp;s1 points to s1</text>
-  <rect x="40" y="388" width="566.0378" height="99.4285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="388" width="566.0378" height="99.4285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="323.0188" y="447.6571" text-anchor="middle" font-size="21.0875">Reference = pointer to the stack variable</text>
-  <rect x="673.9622" y="388" width="566.0378" height="99.4285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="673.9622" y="388" width="566.0378" height="99.4285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="956.9812" y="447.6571" text-anchor="middle" font-size="21.0875">No heap copy, no ownership transfer</text>
-  <rect x="221.132" y="537.1429" width="905.6604" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="221.132" y="537.1429" width="905.6604" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="673.9622" y="593.4857" text-anchor="middle" font-size="21.0875">Reference is an extra level of indirection: &amp;s1 -&gt; s1 -&gt; heap</text>
 </svg>

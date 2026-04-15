@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -8,11 +9,11 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Column-Family Stores: Structure</text>
 
-  <rect x="40" y="77.247706" width="1200" height="85.137615" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="77.247706" width="1200" height="85.137615" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="114.495413" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Keyspace</text>
   <text x="640" y="146.422018" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Top-level namespace, holds replication settings</text>
 
-  <rect x="40" y="183.669725" width="380" height="436.330275" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="183.669725" width="380" height="436.330275" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="224.110092" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--info-text)">Row Key</text>
   <text x="230" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">user:42</text>
   <text x="230" y="322.018349" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Partitions data</text>
@@ -22,7 +23,7 @@
   <text x="230" y="524.220183" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Range scans possible</text>
   <text x="230" y="577.431193" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Wide rows common</text>
 
-  <rect x="440" y="183.669725" width="380" height="436.330275" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="440" y="183.669725" width="380" height="436.330275" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="224.110092" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)">Column Family</text>
   <text x="630" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">profile / posts / likes</text>
   <text x="630" y="322.018349" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Logical grouping</text>
@@ -32,7 +33,7 @@
   <text x="630" y="524.220183" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Add columns anytime</text>
   <text x="630" y="577.431193" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Akin to a table</text>
 
-  <rect x="840" y="183.669725" width="400" height="436.330275" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="840" y="183.669725" width="400" height="436.330275" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1040" y="224.110092" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Column / Cell</text>
   <text x="1040" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">name : value : timestamp</text>
   <text x="1040" y="322.018349" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Triple stored together</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,17 +37,17 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="900" height="110" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="900" height="110" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="105" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--danger-text)">Container Layer (R/W)</text>
   <rect x="960" y="40" width="280" height="110" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1100" y="90" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-accent)">Writable</text>
   <text x="1100" y="120" text-anchor="middle" font-size="16" fill="var(--text-muted)">per container</text>
 
-  <rect x="40" y="165" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="165" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="230" text-anchor="middle" font-size="22" fill="var(--primary-text)">COPY app.py /app (Layer 4)</text>
-  <rect x="40" y="290" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="290" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="355" text-anchor="middle" font-size="22" fill="var(--primary-text)">RUN pip install (Layer 3)</text>
-  <rect x="40" y="415" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="415" width="900" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="480" text-anchor="middle" font-size="22" fill="var(--primary-text)">RUN apt-get install (Layer 2)</text>
 
   <rect x="960" y="165" width="280" height="360" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -54,7 +55,7 @@
   <text x="1100" y="360" text-anchor="middle" font-size="16" fill="var(--text-muted)">cached by Docker</text>
   <text x="1100" y="390" text-anchor="middle" font-size="16" fill="var(--text-muted)">content-addressed</text>
 
-  <rect x="40" y="540" width="900" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="540" width="900" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="490" y="588" text-anchor="middle" font-size="22" fill="var(--ok-text)">FROM ubuntu:22.04 (Base Layer)</text>
   <rect x="960" y="540" width="280" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1100" y="578" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-accent)">Shared</text>

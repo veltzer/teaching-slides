@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -27,7 +28,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="590" height="279.642857" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="590" height="279.642857" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="73.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--primary-text)">RPC Timeouts &amp; Heartbeats</text>
   <text x="60" y="107.321429" font-family="monospace" font-size="13.230106" fill="var(--primary-text)">spark.network.timeout = 120s</text>
   <text x="60" y="128.035714" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">umbrella default for all network ops</text>
@@ -39,7 +40,7 @@
   <text x="60" y="283.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">raise in flaky clouds; watch for duplicate work</text>
   <text x="60" y="307.214286" font-family="Arial, sans-serif" font-size="11.194705" font-style="italic" fill="var(--primary-text)">Symptom: ExecutorLost during long GC pauses</text>
 
-  <rect x="650" y="40" width="590" height="279.642857" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="650" y="40" width="590" height="279.642857" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="73.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--ok-text)">External Shuffle Service</text>
   <text x="670" y="107.321429" font-family="monospace" font-size="13.230106" fill="var(--ok-text)">spark.shuffle.service.enabled = true</text>
   <text x="670" y="128.035714" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">shuffle survives executor death / dynamic alloc</text>
@@ -51,7 +52,7 @@
   <text x="670" y="283.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">bump + retryWait on lossy networks</text>
   <text x="670" y="307.214286" font-family="Arial, sans-serif" font-size="11.194705" font-style="italic" fill="var(--ok-text)">FetchFailedException triggers stage retry</text>
 
-  <rect x="40" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--warn-text)">Locality Wait</text>
   <text x="60" y="407.678571" font-family="monospace" font-size="13.230106" fill="var(--warn-text)">spark.locality.wait = 3s</text>
   <text x="60" y="428.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">how long to wait for data-local slot before</text>
@@ -63,7 +64,7 @@
   <text x="60" y="571.321429" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">- heterogeneous cluster, many stragglers</text>
   <text x="60" y="594.107143" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">Raise (10s+) on HDFS with tight data affinity</text>
 
-  <rect x="650" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--info-text)">Compression &amp; Encryption</text>
   <text x="670" y="407.678571" font-family="monospace" font-size="13.230106" fill="var(--info-text)">spark.io.compression.codec = lz4</text>
   <text x="670" y="428.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--info-text)">shuffle + broadcast blocks; zstd for higher ratio</text>

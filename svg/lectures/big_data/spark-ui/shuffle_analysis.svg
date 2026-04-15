@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Shuffle Analysis in Spark UI</text>
 
-  <rect x="40" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Map Stage (Write)</text>
   <text x="230" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Each task partitions output</text>
   <text x="230" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Spills to local disk</text>
@@ -51,7 +52,7 @@
   <line x1="420" y1="198.181818" x2="500" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="460" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">network</text>
 
-  <rect x="500" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="500" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="690" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Shuffle Service</text>
   <text x="690" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">External shuffle serves files</text>
   <text x="690" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Executors fetch by partition</text>
@@ -62,7 +63,7 @@
   <line x1="880" y1="198.181818" x2="960" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="920" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">fetch</text>
 
-  <rect x="960" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="960" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1100" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Reduce Stage</text>
   <text x="1100" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Reads assigned partitions</text>
   <text x="1100" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Shuffle Read Bytes</text>

@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -37,7 +38,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Class Template Argument Deduction (CTAD)</text>
 
-  <rect x="40" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Before C++17</text>
   <text x="335" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Function templates deduced args</text>
   <text x="335" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Class templates did not</text>
@@ -46,7 +47,7 @@
   <text x="335" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Helpers needed: make_tuple,</text>
   <text x="335" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">make_shared, make_unique</text>
 
-  <rect x="650" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="650" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">C++17 CTAD</text>
   <text x="945" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Compiler deduces class template args</text>
   <text x="945" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">from the constructor call</text>

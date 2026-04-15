@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,10 +42,10 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">TCP Socket Lifecycle</text>
 
-  <rect x="60" y="61.284404" width="220" height="63.853211" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="60" y="61.284404" width="220" height="63.853211" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="101.724771" text-anchor="middle" font-size="22.695431" font-weight="bold" fill="var(--primary-text)">Server</text>
 
-  <rect x="1000" y="61.284404" width="220" height="63.853211" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1000" y="61.284404" width="220" height="63.853211" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="101.724771" text-anchor="middle" font-size="22.695431" font-weight="bold" fill="var(--info-text)">Client</text>
 
   <line x1="170" y1="135.779817" x2="170" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
@@ -57,14 +58,14 @@
   <rect x="40" y="210.275229" width="260" height="46.825688" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="170" y="241.137615" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--text)">listen()</text>
 
-  <rect x="40" y="268.807339" width="260" height="46.825688" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="268.807339" width="260" height="46.825688" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="299.669725" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">accept()</text>
 
   <!-- client steps -->
   <rect x="980" y="151.743119" width="260" height="46.825688" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
   <text x="1110" y="182.605505" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--text)">socket()</text>
 
-  <rect x="980" y="268.807339" width="260" height="46.825688" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="980" y="268.807339" width="260" height="46.825688" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="299.669725" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">connect()</text>
 
   <!-- 3-way handshake -->
@@ -76,9 +77,9 @@
   <text x="640" y="399.706422" text-anchor="middle" font-size="16.505768" font-style="italic" fill="var(--text-muted)">ACK — connection established</text>
 
   <!-- data exchange -->
-  <rect x="40" y="433.761468" width="260" height="46.825688" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="433.761468" width="260" height="46.825688" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="464.623853" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">recv() / send()</text>
-  <rect x="980" y="433.761468" width="260" height="46.825688" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="980" y="433.761468" width="260" height="46.825688" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="464.623853" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">send() / recv()</text>
 
   <line x1="980" y1="502.93578" x2="300" y2="502.93578" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -88,9 +89,9 @@
   <text x="640" y="532.733945" text-anchor="middle" font-size="16.505768" font-style="italic" fill="var(--text-muted)">response bytes</text>
 
   <!-- close -->
-  <rect x="40" y="561.46789" width="260" height="46.825688" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="561.46789" width="260" height="46.825688" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="592.330275" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">close()</text>
-  <rect x="980" y="561.46789" width="260" height="46.825688" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="980" y="561.46789" width="260" height="46.825688" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="592.330275" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">close()</text>
 
   <line x1="300" y1="620" x2="980" y2="620" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

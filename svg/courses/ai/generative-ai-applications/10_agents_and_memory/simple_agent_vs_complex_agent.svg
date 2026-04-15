@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,17 +43,17 @@
   <rect x="40" y="40" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="70" y="80" font-size="22" font-weight="bold" fill="var(--text)">Simple Chatbot</text>
 
-  <rect x="70" y="130" width="200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="70" y="130" width="200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="200" text-anchor="middle" font-size="22" fill="var(--primary-text)">User</text>
 
   <line x1="270" y1="190" x2="450" y2="190" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="460" y="130" width="200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="460" y="130" width="200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="560" y="200" text-anchor="middle" font-size="22" fill="var(--primary-text)">LLM</text>
 
   <line x1="660" y1="190" x2="840" y2="190" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="850" y="130" width="360" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="850" y="130" width="360" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1030" y="200" text-anchor="middle" font-size="22" fill="var(--primary-text)">Response</text>
 
   <text x="70" y="285" font-size="13" fill="var(--text-muted)">single turn - no tools - no memory</text>
@@ -60,25 +61,25 @@
   <rect x="40" y="320" width="1200" height="300" rx="6" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="70" y="360" font-size="22" font-weight="bold" fill="var(--text)">Agent</text>
 
-  <rect x="70" y="395" width="180" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="70" y="395" width="180" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="160" y="505" text-anchor="middle" font-size="22" fill="var(--ok-text)">User</text>
 
   <line x1="250" y1="495" x2="340" y2="495" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="350" y="395" width="180" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="350" y="395" width="180" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="440" y="505" text-anchor="middle" font-size="22" fill="var(--ok-text)">LLM Loop</text>
 
   <line x1="530" y1="495" x2="620" y2="495" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="630" y="395" width="280" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="630" y="395" width="280" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="770" y="445" text-anchor="middle" font-size="18" fill="var(--warn-text)">Search Tool</text>
 
-  <rect x="630" y="505" width="280" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="630" y="505" width="280" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="770" y="555" text-anchor="middle" font-size="18" fill="var(--warn-text)">API Tool</text>
 
   <line x1="910" y1="495" x2="1000" y2="495" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1010" y="395" width="200" height="200" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1010" y="395" width="200" height="200" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="485" text-anchor="middle" font-size="18" fill="var(--info-text)">Memory</text>
   <text x="1110" y="515" text-anchor="middle" font-size="18" fill="var(--info-text)">and</text>
   <text x="1110" y="545" text-anchor="middle" font-size="18" fill="var(--info-text)">Answer</text>

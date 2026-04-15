@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
@@ -18,24 +19,24 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="135" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="135" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="90" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--danger-text)">Ring 0</text>
   <text x="80" y="130" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Kernel</text>
   <text x="80" y="160" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">All instructions; full hardware access</text>
   <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">cli, hlt, lgdt, mov cr3, wrmsr</text>
   <text x="1100" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">highest privilege</text>
 
-  <rect x="40" y="185" width="1200" height="130" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="185" width="1200" height="130" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="235" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">Ring 1</text>
   <text x="80" y="275" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Drivers (historical)</text>
   <text x="80" y="305" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">OS/2 used it; Linux and Windows do not</text>
 
-  <rect x="40" y="325" width="1200" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="325" width="1200" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="375" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Ring 2</text>
   <text x="80" y="415" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Services (unused)</text>
   <text x="80" y="445" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">x86 defines it; modern kernels skip it</text>
 
-  <rect x="40" y="465" width="1200" height="155" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="465" width="1200" height="155" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="515" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-text)">Ring 3</text>
   <text x="80" y="555" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">User apps</text>
   <text x="80" y="585" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Syscall or int to cross</text>

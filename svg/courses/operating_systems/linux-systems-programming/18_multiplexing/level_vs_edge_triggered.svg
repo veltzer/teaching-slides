@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -42,7 +43,7 @@
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.091264" font-weight="bold" fill="var(--text)">Level Triggered vs Edge Triggered</text>
 
   <rect x="40" y="82.962963" width="580" height="537.037037" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="82.962963" width="580" height="64.444444" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.962963" width="580" height="64.444444" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="125.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Level Triggered (default)</text>
 
   <text x="70" y="190.37037" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">Semantics</text>
@@ -60,7 +61,7 @@
   <text x="70" y="544.814815" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Can thundering-herd on accept.</text>
 
   <rect x="660" y="82.962963" width="580" height="537.037037" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="660" y="82.962963" width="580" height="64.444444" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="82.962963" width="580" height="64.444444" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="125.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Edge Triggered (EPOLLET)</text>
 
   <text x="690" y="190.37037" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">Semantics</text>

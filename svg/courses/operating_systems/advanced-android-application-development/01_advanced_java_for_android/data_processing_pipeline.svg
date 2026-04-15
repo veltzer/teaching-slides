@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="260" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="260" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="170" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="170" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">list.stream()</text>
   <text x="170" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Collection</text>
@@ -51,7 +52,7 @@
 
   <line x1="305" y1="330" x2="365" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="370" y="40" width="300" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="370" y="40" width="300" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="520" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Intermediate</text>
   <text x="520" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">filter()</text>
   <text x="520" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">map()</text>
@@ -65,7 +66,7 @@
 
   <line x1="675" y1="330" x2="735" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="740" y="40" width="260" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="740" y="40" width="260" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="870" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Terminal</text>
   <text x="870" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">collect()</text>
   <text x="870" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">reduce()</text>
@@ -78,7 +79,7 @@
 
   <line x1="1005" y1="330" x2="1065" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1070" y="40" width="170" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1070" y="40" width="170" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1155" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Result</text>
   <text x="1155" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">List</text>
   <text x="1155" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Map</text>

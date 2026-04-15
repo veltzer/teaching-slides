@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -38,7 +39,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="590" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="590" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Implicit Conventions</text>
   <text x="335" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Patterns the team follows but never wrote down</text>
   <text x="335" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Naming schemes and folder layouts</text>
@@ -46,7 +47,7 @@
   <text x="335" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Preferred libraries and helpers</text>
   <text x="335" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">AI sees code, not the rules behind it</text>
 
-  <rect x="650" y="40" width="590" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="40" width="590" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Cross-Module Dependencies</text>
   <text x="945" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Changes here break things over there</text>
   <text x="945" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Shared types and schemas</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,11 +37,11 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">SELECT ... FROM orders JOIN customers ON ...</text>
   <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Planner considers candidate join algorithms and picks the cheapest</text>
 
-  <rect x="40" y="160" width="390" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="160" width="390" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Plan A: Nested Loop</text>
   <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">For each outer row,</text>
   <text x="235" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">scan inner table</text>
@@ -48,7 +49,7 @@
   <text x="235" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">and indexed inner</text>
   <text x="235" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Cost: 1000</text>
 
-  <rect x="445" y="160" width="390" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="160" width="390" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Plan B: Hash Join</text>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Build hash on smaller</text>
   <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">table, probe with other</text>
@@ -56,7 +57,7 @@
   <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">on large unsorted data</text>
   <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Cost: 100  chosen</text>
 
-  <rect x="850" y="160" width="390" height="260" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="160" width="390" height="260" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Plan C: Merge Join</text>
   <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sort both inputs,</text>
   <text x="1045" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">then walk in lockstep</text>

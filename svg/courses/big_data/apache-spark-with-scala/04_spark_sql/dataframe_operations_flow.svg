@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -40,7 +41,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">DataFrame Operations Flow</text>
 
-  <rect x="40" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="120.437956" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--primary-text)">Source</text>
   <text x="150" y="154.306569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">read.csv / json</text>
   <text x="150" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">read.parquet</text>
@@ -49,7 +50,7 @@
 
   <line x1="260" y1="175.474453" x2="300" y2="175.474453" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="310" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="310" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="420" y="120.437956" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--ok-text)">Transforms</text>
   <text x="420" y="154.306569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">select, filter</text>
   <text x="420" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">withColumn</text>
@@ -58,7 +59,7 @@
 
   <line x1="530" y1="175.474453" x2="570" y2="175.474453" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="580" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="580" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="690" y="120.437956" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--warn-text)">Aggregations</text>
   <text x="690" y="154.306569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">groupBy + agg</text>
   <text x="690" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">sum, avg, count</text>
@@ -67,7 +68,7 @@
 
   <line x1="800" y1="175.474453" x2="840" y2="175.474453" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="850" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="850" y="80.218978" width="220" height="190.510949" rx="6.172697" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="960" y="120.437956" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--info-text)">Catalyst</text>
   <text x="960" y="154.306569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Logical plan</text>
   <text x="960" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Optimized plan</text>
@@ -76,7 +77,7 @@
 
   <line x1="1070" y1="175.474453" x2="1110" y2="175.474453" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1120" y="80.218978" width="120" height="190.510949" rx="6.172697" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1120" y="80.218978" width="120" height="190.510949" rx="6.172697" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1180" y="120.437956" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--danger-text)">Action</text>
   <text x="1180" y="154.306569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">show</text>
   <text x="1180" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">collect</text>

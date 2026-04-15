@@ -103,17 +103,17 @@
   </defs>
   <rect x="40" y="40" width="1199.999895" height="72.499958" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="640" y="67.187428" text-anchor="middle" font-family="sans-serif" font-size="15.106144" font-weight="bold" fill="var(--text)">AI Context Window  (e.g. 200 000 tokens)</text>
-  <rect x="49.836066" y="76.249979" width="295.081967" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="49.836066" y="76.249979" width="295.081967" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="197.377049" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">System prompt / instructions</text>
-  <rect x="352.786885" y="76.249979" width="236.065574" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="352.786885" y="76.249979" width="236.065574" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="470.819672" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">Open files (editor)</text>
-  <rect x="596.721311" y="76.249979" width="196.721311" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="596.721311" y="76.249979" width="196.721311" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="695.081967" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--bg)">Conversation history</text>
-  <rect x="801.311475" y="76.249979" width="177.04918" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="801.311475" y="76.249979" width="177.04918" height="25.375053" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="889.836066" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--text)">Recent edits</text>
   <rect x="986.229508" y="76.249979" width="118.032787" height="25.375053" rx="6.518574" fill="var(--border)" stroke-dasharray="3.5556 2.6667" />
   <text x="1045.245902" y="93.468781" text-anchor="middle" font-family="sans-serif" font-size="12.273823" fill="var(--text-faint)">available</text>
-  <rect x="40" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="325.245797" y="179.562565" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--danger-accent)">Poor Context → Weak Suggestions</text>
   <rect x="59.672131" y="199.500042" width="531.147541" height="90.62506" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="59.672131" y="217.625032" font-family="sans-serif" font-size="13.217821" fill="var(--text-faint)">  You type: "add error handling"</text>
@@ -121,7 +121,7 @@
   <text x="59.672131" y="261.125074" font-family="sans-serif" font-size="13.217821" fill="var(--text-faint)">  AI response: generic try/except</text>
   <text x="59.672131" y="279.249951" font-family="sans-serif" font-size="13.217821" fill="var(--danger-accent)">  ✗ Ignores existing error classes</text>
   <text x="325.245797" y="328.187456" text-anchor="middle" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--danger-accent)">What's missing from context:</text>
-  <rect x="59.672131" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="59.672131" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="79.344262" y="364.437547" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Related modules not open</text>
   <text x="79.344262" y="386.187512" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ No docstrings / unclear variable names</text>
   <text x="79.344262" y="407.93759" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Custom exceptions defined elsewhere</text>
@@ -130,7 +130,7 @@
   <text x="79.344262" y="473.187597" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ No tests — AI can't infer intent</text>
   <text x="79.344262" y="494.937562" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✗ Giant single file — irrelevant code fills context</text>
   <text x="79.344262" y="525.750077" font-family="sans-serif" font-size="13.217821" fill="var(--danger-accent)">Result: hallucinated APIs, wrong patterns</text>
-  <rect x="669.508197" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="669.508197" y="148.749937" width="570.491803" height="416.875095" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="954.753993" y="179.562565" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--ok-accent)">Rich Context → Accurate Suggestions</text>
   <rect x="689.180328" y="199.500042" width="531.147541" height="90.62506" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="689.180328" y="217.625032" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">  You type: "add error handling using</text>
@@ -138,7 +138,7 @@
   <text x="689.180328" y="257.499986" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">  AI sees: function + exceptions.py + tests</text>
   <text x="689.180328" y="279.249951" font-family="sans-serif" font-size="13.217821" fill="var(--ok-accent)">  ✓ Uses correct existing exception class</text>
   <text x="954.753993" y="328.187456" text-anchor="middle" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--ok-accent)">What helps the AI:</text>
-  <rect x="689.180328" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="689.180328" y="339.062495" width="531.147541" height="199.375109" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="708.852459" y="364.437547" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Open related files in editor tabs</text>
   <text x="708.852459" y="386.187512" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Descriptive names: get_user_by_email()</text>
   <text x="708.852459" y="407.93759" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Type hints everywhere</text>
@@ -147,6 +147,6 @@
   <text x="708.852459" y="473.187597" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Specific prompt with existing patterns</text>
   <text x="708.852459" y="494.937562" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">✓ Small, focused files (&lt;300 lines)</text>
   <text x="708.852459" y="525.750077" font-family="sans-serif" font-size="13.217821" fill="var(--ok-accent)">Result: correct, idiomatic, project-aware code</text>
-  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="605.499986" text-anchor="middle" font-family="sans-serif" font-size="15.106144" fill="var(--primary-accent)">The AI is only as good as the context you give it — treat the context window as a shared working memory</text>
 </svg>

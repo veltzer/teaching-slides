@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">The Compute Spectrum</text>
 
-  <rect x="40" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">VMs / Bare Metal</text>
   <text x="185" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">Full OS control</text>
   <text x="185" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">Any workload</text>
@@ -50,7 +51,7 @@
   <text x="185" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">Slow to scale</text>
   <text x="185" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-style="italic" fill="var(--primary-text)">EC2, GCE, on-prem</text>
 
-  <rect x="340" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="340" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Self-Managed K8s</text>
   <text x="485" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">You run control plane</text>
   <text x="485" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">Full tunability</text>
@@ -59,7 +60,7 @@
   <text x="485" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">Need platform team</text>
   <text x="485" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-style="italic" fill="var(--info-text)">kubeadm, rke2</text>
 
-  <rect x="640" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="640" y="71.636364" width="290" height="379.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Managed K8s</text>
   <text x="785" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Cloud runs masters</text>
   <text x="785" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Standard Kubernetes</text>
@@ -68,7 +69,7 @@
   <text x="785" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Sane default today</text>
   <text x="785" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-style="italic" fill="var(--ok-text)">EKS, GKE, AKS</text>
 
-  <rect x="940" y="71.636364" width="300" height="379.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="940" y="71.636364" width="300" height="379.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Serverless</text>
   <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">No servers to manage</text>
   <text x="1090" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Scale to zero</text>

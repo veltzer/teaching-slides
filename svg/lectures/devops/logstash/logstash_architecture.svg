@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -50,10 +51,10 @@
 
   <line x1="240" y1="282.545455" x2="280" y2="282.545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="280" y="156" width="720" height="274.181818" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="280" y="156" width="720" height="274.181818" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Logstash Pipeline</text>
 
-  <rect x="300" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="300" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="400" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--ok-text)">Input</text>
   <text x="400" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Read events</text>
   <text x="400" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Plugin per source</text>
@@ -61,7 +62,7 @@
   <text x="400" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Queued events</text>
   <text x="400" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Back-pressure aware</text>
 
-  <rect x="540" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="540" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--warn-text)">Filter</text>
   <text x="640" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Grok / dissect</text>
   <text x="640" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Mutate fields</text>
@@ -69,7 +70,7 @@
   <text x="640" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Date, JSON, KV</text>
   <text x="640" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Drop unwanted events</text>
 
-  <rect x="780" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="780" y="219.272727" width="200" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="880" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--info-text)">Output</text>
   <text x="880" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Send events</text>
   <text x="880" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Batch + retry</text>

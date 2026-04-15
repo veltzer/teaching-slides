@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -47,27 +48,27 @@
   <path d="M 900 366.909091 Q 900 103.272727 380 103.272727 Q 380 103.272727 380 261.454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="640" y="87.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">restart</text>
 
-  <rect x="50" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="50" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="160" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--primary-text)">Created</text>
   <text x="160" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">docker create</text>
   <text x="160" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">config ready</text>
 
-  <rect x="310" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="310" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="420" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--ok-text)">Running</text>
   <text x="420" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">docker start</text>
   <text x="420" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">process active</text>
 
-  <rect x="570" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="570" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="680" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--warn-text)">Paused</text>
   <text x="680" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">docker pause</text>
   <text x="680" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">frozen in memory</text>
 
-  <rect x="830" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="830" y="261.454545" width="220" height="210.909091" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="940" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--info-text)">Stopped</text>
   <text x="940" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">docker stop</text>
   <text x="940" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">writable layer kept</text>
 
-  <rect x="1090" y="261.454545" width="150" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1090" y="261.454545" width="150" height="210.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1165" y="356.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Removed</text>
   <text x="1165" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">docker rm</text>
   <text x="1165" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">gone</text>

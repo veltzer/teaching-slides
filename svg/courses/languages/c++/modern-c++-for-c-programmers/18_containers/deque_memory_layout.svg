@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753498" font-weight="bold" fill="var(--text)">deque Memory Layout</text>
 
-  <rect x="40" y="71.636364" width="1200" height="126.545455" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="71.636364" width="1200" height="126.545455" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Map of pointers to fixed-size blocks</text>
   <rect x="240" y="134.909091" width="100" height="42.181818" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="290" y="162.327273" text-anchor="middle" font-family="monospace" font-size="14.376749" fill="var(--text)">ptr 0</text>
@@ -61,24 +62,24 @@
   <line x1="770" y1="198.181818" x2="940" y2="293.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="890" y1="198.181818" x2="1140" y2="293.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--ok-text)">Block 0</text>
   <text x="140" y="366.909091" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">[ _ _ a b c d ]</text>
   <text x="140" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--ok-text)">front slack</text>
 
-  <rect x="260" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="260" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--ok-text)">Block 1</text>
   <text x="360" y="366.909091" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">[ e f g h i j ]</text>
 
-  <rect x="480" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="480" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="580" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--ok-text)">Block 2</text>
   <text x="580" y="366.909091" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">[ k l m n o p ]</text>
 
-  <rect x="700" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="700" y="303.636364" width="200" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="800" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--ok-text)">Block 3</text>
   <text x="800" y="366.909091" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">[ q r s t u v ]</text>
 
-  <rect x="920" y="303.636364" width="150" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="920" y="303.636364" width="150" height="105.454545" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="995" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--ok-text)">Block 4</text>
   <text x="995" y="366.909091" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">[ w x y z _ _ ]</text>
   <text x="995" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--ok-text)">back slack</text>
@@ -88,14 +89,14 @@
   <text x="1165" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">reserved</text>
   <text x="1165" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">for growth</text>
 
-  <rect x="40" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="467.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Why this layout?</text>
   <text x="335" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Blocks are fixed-size, separately allocated chunks</text>
   <text x="335" y="535.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">The map grows at either end without moving data</text>
   <text x="335" y="567.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Existing element addresses stay stable on push</text>
   <text x="335" y="598.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Random access is two indirections — still O(1)</text>
 
-  <rect x="650" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="430.181818" width="590" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="467.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">Consequences</text>
   <text x="945" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">push_front and push_back are amortized O(1)</text>
   <text x="945" y="535.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Not contiguous — no raw pointer to whole range</text>

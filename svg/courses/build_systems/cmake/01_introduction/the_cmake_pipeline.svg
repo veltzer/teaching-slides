@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -66,7 +67,7 @@
 
   <line x1="270" y1="330" x2="330" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="340" y="40" width="220" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="340" y="40" width="220" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="450" y="100" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--primary-text)">cmake</text>
   <text x="450" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)">configure + generate</text>
   <text x="450" y="280" text-anchor="middle" font-size="16" fill="var(--primary-text)">detect compiler</text>
@@ -86,7 +87,7 @@
 
   <line x1="870" y1="330" x2="930" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="940" y="40" width="160" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="940" y="40" width="160" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1020" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Build Tool</text>
   <text x="1020" y="310" text-anchor="middle" font-size="18" fill="var(--warn-text)">make</text>
   <text x="1020" y="340" text-anchor="middle" font-size="18" fill="var(--warn-text)">ninja</text>
@@ -95,7 +96,7 @@
 
   <line x1="1110" y1="330" x2="1160" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1170" y="40" width="70" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1170" y="40" width="70" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1205" y="320" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--ok-text)" transform="rotate(-90 1205 320)">Binaries</text>
 
 </svg>

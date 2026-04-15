@@ -111,28 +111,28 @@
     </linearGradient>
   </defs>
   <!-- Header -->
-  <rect x="40" y="40" width="1200" height="59.722766" fill="var(--primary-fill)" rx="6.754536" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="59.722766" fill="var(--primary-fill)" rx="6.754536" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="79.049501" font-family="Arial, sans-serif" font-size="22.828418" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Error Handling Flow</text>
 
   <!-- LEFT: Block/Rescue/Always -->
-  <rect x="58.75" y="111.207913" width="346.875" height="430.693086" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="58.75" y="111.207913" width="346.875" height="34.455442" rx="6.754536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="58.75" y="131.881178" width="346.875" height="13.782177" fill="var(--primary-fill)" rx="6.754536" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="58.75" y="111.207913" width="346.875" height="430.693086" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="58.75" y="111.207913" width="346.875" height="34.455442" rx="6.754536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="131.881178" width="346.875" height="13.782177" fill="var(--primary-fill)" rx="6.754536" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="232.1875" y="134.178208" font-family="Arial, sans-serif" font-size="14.527206" font-weight="bold" fill="var(--bg)" text-anchor="middle">block / rescue / always</text>
 
-  <rect x="72.8125" y="154.851473" width="318.75" height="91.881178" rx="6.754536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="72.8125" y="154.851473" width="318.75" height="91.881178" rx="6.754536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="86.875" y="175.524738" font-family="monospace" font-size="11.414265" font-weight="bold" fill="var(--primary-accent)">block:                  # try</text>
   <text x="86.875" y="196.198003" font-family="monospace" font-size="11.414265" fill="var(--text)">  - name: Risky deploy</text>
   <text x="86.875" y="215.72269" font-family="monospace" font-size="11.414265" fill="var(--text)">    command: /opt/deploy.sh</text>
   <text x="86.875" y="235.247503" font-family="monospace" font-size="11.414265" fill="var(--text)">  - name: Configure app</text>
 
-  <rect x="72.8125" y="253.623739" width="318.75" height="91.881178" rx="6.754536" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="72.8125" y="253.623739" width="318.75" height="91.881178" rx="6.754536" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="86.875" y="274.297004" font-family="monospace" font-size="11.414265" font-weight="bold" fill="var(--danger-accent)">rescue:                 # catch</text>
   <text x="86.875" y="293.821691" font-family="monospace" font-size="11.414265" fill="var(--text)">  - name: Alert on failure</text>
   <text x="86.875" y="313.346505" font-family="monospace" font-size="11.414265" fill="var(--text)">    slack: msg="Deploy failed"</text>
   <text x="86.875" y="332.871318" font-family="monospace" font-size="11.414265" fill="var(--text)">  - name: Rollback changes</text>
 
-  <rect x="72.8125" y="352.396005" width="318.75" height="91.881178" rx="6.754536" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="72.8125" y="352.396005" width="318.75" height="91.881178" rx="6.754536" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="86.875" y="373.069271" font-family="monospace" font-size="11.414265" font-weight="bold" fill="var(--ok-accent)">always:                 # finally</text>
   <text x="86.875" y="392.594084" font-family="monospace" font-size="11.414265" fill="var(--text)">  - name: Cleanup temp files</text>
   <text x="86.875" y="412.118771" font-family="monospace" font-size="11.414265" fill="var(--text)">    file: path=/tmp/work state=absent</text>
@@ -144,9 +144,9 @@
   <text x="232.1875" y="528.118695" font-family="Arial, sans-serif" font-size="11.414265" fill="var(--text-faint)" text-anchor="middle">in rescue scope</text>
 
   <!-- CENTER TOP: ignore_errors and failed_when -->
-  <rect x="419.6875" y="111.207913" width="318.75" height="212.475161" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="419.6875" y="111.207913" width="318.75" height="34.455442" rx="6.754536" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="419.6875" y="131.881178" width="318.75" height="13.782177" fill="var(--warn-fill)" rx="6.754536" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="419.6875" y="111.207913" width="318.75" height="212.475161" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="419.6875" y="111.207913" width="318.75" height="34.455442" rx="6.754536" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="419.6875" y="131.881178" width="318.75" height="13.782177" fill="var(--warn-fill)" rx="6.754536" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="579.0625" y="134.178208" font-family="Arial, sans-serif" font-size="14.527206" font-weight="bold" fill="var(--bg)" text-anchor="middle">ignore_errors / failed_when</text>
   <text x="433.75" y="168.633649" font-family="monospace" font-size="11.414265" fill="var(--text)">- name: Check service (may fail)</text>
   <text x="433.75" y="188.158336" font-family="monospace" font-size="11.414265" fill="var(--text)">  command: systemctl status nginx</text>
@@ -159,9 +159,9 @@
   <text x="433.75" y="319.089142" font-family="monospace" font-size="11.414265" fill="var(--warn-accent)">    - result.rc not in [0, 2]</text>
 
   <!-- CENTER MID: changed_when -->
-  <rect x="419.6875" y="338.613829" width="318.75" height="120.593983" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="419.6875" y="338.613829" width="318.75" height="34.455442" rx="6.754536" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="419.6875" y="359.287094" width="318.75" height="13.782177" fill="var(--info-fill)" rx="6.754536" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="419.6875" y="338.613829" width="318.75" height="120.593983" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="419.6875" y="338.613829" width="318.75" height="34.455442" rx="6.754536" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="419.6875" y="359.287094" width="318.75" height="13.782177" fill="var(--info-fill)" rx="6.754536" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="579.0625" y="361.584123" font-family="Arial, sans-serif" font-size="14.527206" font-weight="bold" fill="var(--bg)" text-anchor="middle">changed_when</text>
   <text x="433.75" y="396.039565" font-family="monospace" font-size="11.414265" fill="var(--text)">- shell: ./check_and_update.sh</text>
   <text x="433.75" y="415.564379" font-family="monospace" font-size="11.414265" fill="var(--info-accent)">  register: upd</text>
@@ -169,15 +169,15 @@
   <text x="433.75" y="454.613753" font-family="monospace" font-size="11.414265" fill="var(--info-accent)">  changed_when: false   # never changed</text>
 
   <!-- CENTER BOT: any_errors_fatal -->
-  <rect x="419.6875" y="474.138566" width="318.75" height="68.910884" rx="6.754536" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="419.6875" y="474.138566" width="318.75" height="68.910884" rx="6.754536" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.75" y="499.40589" font-family="monospace" font-size="12.451875" font-weight="bold" fill="var(--warn-accent)">any_errors_fatal: true</text>
   <text x="433.75" y="522.376185" font-family="Arial, sans-serif" font-size="11.414265" fill="var(--text-muted)">Halt ALL hosts if ANY host fails this play</text>
   <text x="433.75" y="536.158362" font-family="Arial, sans-serif" font-size="11.414265" fill="var(--text-muted)">max_fail_percentage: 20  # allow 20%</text>
 
   <!-- RIGHT: Debugging -->
-  <rect x="752.5" y="111.207913" width="468.75" height="430.693086" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="752.5" y="111.207913" width="468.75" height="34.455442" rx="6.754536" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="752.5" y="131.881178" width="468.75" height="13.782177" fill="var(--ok-fill)" rx="6.754536" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="752.5" y="111.207913" width="468.75" height="430.693086" rx="6.754536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="752.5" y="111.207913" width="468.75" height="34.455442" rx="6.754536" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="752.5" y="131.881178" width="468.75" height="13.782177" fill="var(--ok-fill)" rx="6.754536" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="986.875" y="134.178208" font-family="Arial, sans-serif" font-size="14.527206" font-weight="bold" fill="var(--bg)" text-anchor="middle">Debugging Techniques</text>
 
   <text x="766.5625" y="168.633649" font-family="Arial, sans-serif" font-size="12.451875" font-weight="bold" fill="var(--ok-accent)">debug module:</text>

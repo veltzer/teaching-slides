@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,14 +40,14 @@
   </defs>
 
   <!-- Four-stage pipeline -->
-  <rect x="40" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="175" y="93.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">1. User Query</text>
   <text x="175" y="147.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618383" fill="var(--primary-text)">"Add retry logic"</text>
   <text x="175" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">intent + files mentioned</text>
 
   <line x1="320" y1="136.666667" x2="370" y2="136.666667" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="380" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="380" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="515" y="93.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">2. Index</text>
   <text x="515" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">embeddings</text>
   <text x="515" y="168.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">symbol graph</text>
@@ -54,7 +55,7 @@
 
   <line x1="660" y1="136.666667" x2="710" y2="136.666667" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="720" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="720" y="40" width="270" height="193.333333" rx="8.291004" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="855" y="93.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">3. Retrieve</text>
   <text x="855" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">semantic search</text>
   <text x="855" y="168.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">keyword match</text>
@@ -62,14 +63,14 @@
 
   <line x1="1000" y1="136.666667" x2="1050" y2="136.666667" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1060" y="40" width="180" height="193.333333" rx="8.291004" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="1060" y="40" width="180" height="193.333333" rx="8.291004" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1150" y="93.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--danger-text)">4. Pack</text>
   <text x="1150" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--danger-text)">re-rank chunks</text>
   <text x="1150" y="168.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--danger-text)">token budget</text>
   <text x="1150" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--danger-text)">assemble context</text>
 
   <!-- Codebase vs Context Window -->
-  <rect x="160" y="287.037037" width="450" height="332.962963" rx="8.291004" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="160" y="287.037037" width="450" height="332.962963" rx="8.291004" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="385" y="335.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">Codebase (2M tokens)</text>
   <rect x="200" y="372.962963" width="110" height="139.62963" rx="6.218253" fill="var(--info-border)" stroke="var(--bg)" stroke-width="2"/>
   <text x="255" y="453.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">auth/</text>
@@ -82,7 +83,7 @@
 
   <line x1="610" y1="448.148148" x2="680" y2="448.148148" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="690" y="287.037037" width="430" height="332.962963" rx="8.291004" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="690" y="287.037037" width="430" height="332.962963" rx="8.291004" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="905" y="335.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Context Window</text>
   <text x="905" y="394.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--primary-text)">system prompt</text>
   <text x="905" y="437.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--primary-text)">selected files</text>

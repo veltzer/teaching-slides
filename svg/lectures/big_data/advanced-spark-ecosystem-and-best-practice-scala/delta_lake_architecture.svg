@@ -96,20 +96,20 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873" font-weight="bold" fill="var(--text)">Delta Lake Architecture</text>
 
-  <rect x="40" y="82.963" width="1200" height="96.6667" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="82.963" width="1200" height="96.6667" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="120.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6548" font-weight="bold" fill="var(--primary-text)">Spark DataFrame API</text>
   <text x="640" y="152.7778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--primary-text)">df.write.format("delta").save(path)</text>
 
   <line x1="640" y1="179.6296" x2="640" y2="217.2222" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="222.5926" width="1200" height="118.1481" rx="6.2183" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="222.5926" width="1200" height="118.1481" rx="6.2183" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="260.1852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6548" font-weight="bold" fill="var(--ok-text)">Transaction Log (_delta_log/)</text>
   <text x="640" y="292.4074" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--ok-text)">ordered JSON commits: adds, removes, schema, stats</text>
   <text x="640" y="319.2593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--ok-text)">readers see a consistent snapshot at commit N</text>
 
   <line x1="640" y1="340.7407" x2="640" y2="378.3333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="383.7037" width="1200" height="118.1481" rx="6.2183" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="383.7037" width="1200" height="118.1481" rx="6.2183" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="421.2963" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6548" font-weight="bold" fill="var(--warn-text)">Parquet Data Files</text>
   <text x="640" y="453.5185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--warn-text)">immutable, column-chunked, stats-indexed</text>
   <text x="640" y="480.3704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--warn-text)">writes create new files; old files stay until VACUUM</text>

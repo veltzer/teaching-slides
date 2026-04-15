@@ -94,25 +94,25 @@
     </marker>
 </defs>
   <text x="639.9999" y="40" text-anchor="middle" font-size="24.6179" font-weight="bold">Send and Sync: Thread Safety Markers</text>
-  <rect x="40" y="89.7143" width="578.5715" height="232" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="89.7143" width="578.5715" height="232" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="329.2856" y="149.3714" text-anchor="middle" font-size="22.5664" font-weight="bold">Send</text>
   <text x="329.2856" y="199.0857" text-anchor="middle" font-size="20.5149">Ownership can transfer between threads</text>
   <text x="329.2856" y="248.8" text-anchor="middle" font-size="20.5149">Most types are Send (i32, String, Vec...)</text>
   <text x="329.2856" y="295.2" text-anchor="middle" font-size="20.5149" fill="var(--danger-accent)">NOT Send: Rc&lt;T&gt;, raw pointers</text>
-  <rect x="661.4285" y="89.7143" width="578.5715" height="232" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="661.4285" y="89.7143" width="578.5715" height="232" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="950.7143" y="149.3714" text-anchor="middle" font-size="22.5664" font-weight="bold">Sync</text>
   <text x="950.7143" y="199.0857" text-anchor="middle" font-size="20.5149">&amp;T can be shared between threads</text>
   <text x="950.7143" y="248.8" text-anchor="middle" font-size="20.5149">T is Sync if &amp;T is Send</text>
   <text x="950.7143" y="295.2" text-anchor="middle" font-size="20.5149" fill="var(--danger-accent)">NOT Sync: Cell&lt;T&gt;, RefCell&lt;T&gt;</text>
-  <rect x="40" y="371.4286" width="385.7143" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="371.4286" width="385.7143" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="232.8571" y="421.1428" text-anchor="middle" font-size="20.5149" font-weight="bold">Arc&lt;T&gt;</text>
   <text x="232.8571" y="467.5428" text-anchor="middle" font-size="20.5149">Send + Sync ref counting</text>
-  <rect x="447.1428" y="371.4286" width="385.7143" height="116" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="447.1428" y="371.4286" width="385.7143" height="116" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="421.1428" text-anchor="middle" font-size="20.5149" font-weight="bold">Mutex&lt;T&gt;</text>
   <text x="639.9999" y="467.5428" text-anchor="middle" font-size="20.5149">Makes T Sync via locking</text>
-  <rect x="854.2856" y="371.4286" width="385.7143" height="116" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="854.2856" y="371.4286" width="385.7143" height="116" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1047.1428" y="421.1428" text-anchor="middle" font-size="20.5149" font-weight="bold">RwLock&lt;T&gt;</text>
   <text x="1047.1428" y="467.5428" text-anchor="middle" font-size="20.5149">Many readers OR one writer</text>
-  <rect x="168.5713" y="537.1429" width="942.8572" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="168.5713" y="537.1429" width="942.8572" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="639.9999" y="593.4857" text-anchor="middle" font-size="20.5149">Auto-traits: compiler derives Send/Sync if all fields are Send/Sync</text>
 </svg>

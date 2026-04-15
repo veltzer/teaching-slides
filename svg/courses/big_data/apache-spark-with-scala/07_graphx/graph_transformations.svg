@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --surface: #f5f5f5;
@@ -25,7 +26,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">mapVertices</text>
   <text x="230" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--primary-text)">transform every vertex attribute</text>
   <text x="230" y="156" text-anchor="middle" font-family="monospace" font-size="14.376749" fill="var(--primary-text)">(id, attr) =&gt; newAttr</text>
@@ -34,7 +35,7 @@
   <text x="230" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  a.age * 2)</text>
   <text x="230" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--primary-text)">edges unchanged, vertex type may change</text>
 
-  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">mapEdges</text>
   <text x="630" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--ok-text)">transform every edge attribute</text>
   <text x="630" y="156" text-anchor="middle" font-family="monospace" font-size="14.376749" fill="var(--ok-text)">edge =&gt; newAttr</text>
@@ -43,7 +44,7 @@
   <text x="630" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  e.attr.length.toDouble)</text>
   <text x="630" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--ok-text)">sees only the edge, not its endpoints</text>
 
-  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1040" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">mapTriplets</text>
   <text x="1040" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--warn-text)">edge + both vertex attrs</text>
   <text x="1040" y="156" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--warn-text)">(srcAttr, edge, dstAttr) =&gt; newAttr</text>
@@ -52,7 +53,7 @@
   <text x="1040" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  t.srcAttr.age - t.dstAttr.age)</text>
   <text x="1040" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--warn-text)">richest edge-level rewrite</text>
 
-  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="393.272727" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">reverse</text>
   <text x="335" y="419.636364" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--danger-text)">flip every edge direction; structure preserved</text>
   <rect x="133.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
@@ -70,7 +71,7 @@
   <polygon points="516,504 528,497.672727 528,510.327273" fill="var(--bg)"/>
   <text x="335" y="588.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--danger-text)">graph.reverse - no data shuffled</text>
 
-  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="393.272727" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--info-text)">subgraph</text>
   <text x="945" y="419.636364" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--info-text)">filter with epred and vpred</text>
   <rect x="697.408" y="470.863" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>

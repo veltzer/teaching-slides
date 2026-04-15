@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -8,7 +9,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Process Memory Layout</text>
 
-  <rect x="40" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">Kernel</text>
   <text x="160" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">High addresses</text>
   <text x="160" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Protected ring 0</text>
@@ -19,7 +20,7 @@
   <text x="160" y="492.293578" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Page tables</text>
   <text x="160" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">isolate per task</text>
 
-  <rect x="300" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="300" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="420" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)">Stack</text>
   <text x="420" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Grows downward</text>
   <text x="420" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Local variables</text>
@@ -30,7 +31,7 @@
   <text x="420" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Guard page catches</text>
   <text x="420" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">overflow</text>
 
-  <rect x="560" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="560" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="680" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)">Mmap / Libs</text>
   <text x="680" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Middle region</text>
   <text x="680" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Shared libraries</text>
@@ -41,7 +42,7 @@
   <text x="680" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">ASLR randomizes</text>
   <text x="680" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">base address</text>
 
-  <rect x="820" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="820" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="940" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Heap</text>
   <text x="940" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Grows upward</text>
   <text x="940" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">malloc / new</text>
@@ -52,7 +53,7 @@
   <text x="940" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Leaks if orphaned</text>
   <text x="940" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Fragments over time</text>
 
-  <rect x="1080" y="77.247706" width="160" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1080" y="77.247706" width="160" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">BSS</text>
   <text x="1160" y="162.385321" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">zero init</text>
   <text x="1160" y="204.954128" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">globals</text>

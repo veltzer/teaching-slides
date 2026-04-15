@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --surface: #f5f5f5;
@@ -25,7 +26,7 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="590" height="279.642857" rx="8.141604" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="590" height="279.642857" rx="8.141604" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--primary-text)">Partition Strategy</text>
   <text x="335" y="103.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">graph.partitionBy(PartitionStrategy.X)</text>
   <text x="70" y="138.392857" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--primary-text)">EdgePartition2D</text>
@@ -36,7 +37,7 @@
   <text x="70" y="264.75" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">co-locates both edge directions</text>
   <text x="335" y="302.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--primary-text)">pick by graph skew — 2D wins for most web/social</text>
 
-  <rect x="650" y="40" width="590" height="279.642857" rx="8.141604" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="650" y="40" width="590" height="279.642857" rx="8.141604" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--ok-text)">Cache / Persist</text>
   <text x="945" y="103.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">iterative algorithms reuse vertex + edge RDDs</text>
   <text x="680" y="138.392857" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">graph.cache()</text>
@@ -47,7 +48,7 @@
   <text x="680" y="264.75" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">drop stale versions after each iteration</text>
   <text x="945" y="302.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--ok-text)">checkpoint every N iters to cap lineage</text>
 
-  <rect x="40" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--info-text)">Pregel Convergence</text>
   <text x="335" y="403.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">stop supersteps before maxIter when possible</text>
   <text x="70" y="438.75" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--info-text)">activeDirection = EdgeDirection.Out</text>
@@ -58,7 +59,7 @@
   <text x="70" y="565.107143" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">PageRank Δ &lt; ε → skip update/send</text>
   <text x="335" y="602.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--info-text)">maxIterations is a safety cap, not the goal</text>
 
-  <rect x="650" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--warn-text)">VertexRDD Indexing</text>
   <text x="945" y="403.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">specialized RDD — hash index per partition</text>
   <text x="680" y="438.75" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--warn-text)">O(1) lookup by VertexId</text>

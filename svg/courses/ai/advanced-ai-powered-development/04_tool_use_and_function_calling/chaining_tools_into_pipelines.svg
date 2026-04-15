@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,7 +36,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="26.131228" font-weight="bold" fill="var(--primary-accent)">Tool Pipeline: Find and Fix All Deprecated API Calls</text>
 
-  <rect x="40" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="176.842105" y="135.728155" text-anchor="middle" font-size="21.776023" font-weight="bold" fill="var(--primary-text)">Step 1</text>
   <text x="176.842105" y="180.776699" text-anchor="middle" font-size="17.420819" fill="var(--primary-text)">grep("deprecated")</text>
   <text x="176.842105" y="220.194175" text-anchor="middle" font-size="15.243216" fill="var(--primary-text)">→ list of files</text>
@@ -43,7 +44,7 @@
 
   <line x1="318.947368" y1="192.038835" x2="350.526316" y2="192.038835" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="355.789474" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="355.789474" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="492.631579" y="135.728155" text-anchor="middle" font-size="21.776023" font-weight="bold" fill="var(--ok-text)">Step 2</text>
   <text x="492.631579" y="180.776699" text-anchor="middle" font-size="17.420819" fill="var(--ok-text)">read_file(f)</text>
   <text x="492.631579" y="220.194175" text-anchor="middle" font-size="15.243216" fill="var(--ok-text)">→ source code</text>
@@ -51,7 +52,7 @@
 
   <line x1="634.736842" y1="192.038835" x2="666.315789" y2="192.038835" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="671.578947" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="671.578947" y="90.679612" width="273.684211" height="202.718447" rx="8.710409" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="808.421053" y="135.728155" text-anchor="middle" font-size="21.776023" font-weight="bold" fill="var(--warn-text)">Step 3</text>
   <text x="808.421053" y="180.776699" text-anchor="middle" font-size="17.420819" fill="var(--warn-text)">edit_file(f)</text>
   <text x="808.421053" y="220.194175" text-anchor="middle" font-size="15.243216" fill="var(--warn-text)">→ patched file</text>
@@ -59,13 +60,13 @@
 
   <line x1="950.526316" y1="192.038835" x2="982.105263" y2="192.038835" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="987.368421" y="90.679612" width="252.631579" height="202.718447" rx="8.710409" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="987.368421" y="90.679612" width="252.631579" height="202.718447" rx="8.710409" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1113.684211" y="135.728155" text-anchor="middle" font-size="21.776023" font-weight="bold" fill="var(--danger-text)">Step 4</text>
   <text x="1113.684211" y="180.776699" text-anchor="middle" font-size="17.420819" fill="var(--danger-text)">shell("npm test")</text>
   <text x="1113.684211" y="220.194175" text-anchor="middle" font-size="15.243216" fill="var(--danger-text)">→ validation</text>
   <text x="1113.684211" y="259.61165" text-anchor="middle" font-size="15.243216" fill="var(--danger-text)">all tests green</text>
 
-  <rect x="40" y="338.446602" width="1200" height="281.553398" rx="8.710409" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="338.446602" width="1200" height="281.553398" rx="8.710409" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="383.495146" text-anchor="middle" font-size="23.953626" font-weight="bold" fill="var(--info-text)">Orchestration Strategies</text>
 
   <rect x="82.105263" y="417.281553" width="357.894737" height="180.194175" rx="6.532807" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -8,7 +9,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Exception Flow Control</text>
 
-  <rect x="40" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">try</text>
   <text x="180" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Guarded region</text>
   <text x="180" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Code runs normally</text>
@@ -18,7 +19,7 @@
   <text x="180" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">on the happy path</text>
   <text x="180" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Zero-cost model</text>
 
-  <rect x="340" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="340" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="480" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--danger-text)">throw</text>
   <text x="480" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Allocate exception</text>
   <text x="480" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Copy into slot</text>
@@ -28,7 +29,7 @@
   <text x="480" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Match by type</text>
   <text x="480" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">terminate if none</text>
 
-  <rect x="640" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="780" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Unwind</text>
   <text x="780" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Walk the stack</text>
   <text x="780" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Pop each frame</text>
@@ -38,7 +39,7 @@
   <text x="780" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">No leaks if disciplined</text>
   <text x="780" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Stops at catch</text>
 
-  <rect x="940" y="77.247706" width="300" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="940" y="77.247706" width="300" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)">catch</text>
   <text x="1090" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Handler executes</text>
   <text x="1090" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Exception bound</text>

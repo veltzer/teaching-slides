@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -41,7 +42,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.236212" font-weight="bold" fill="var(--text)">Yocto Build Flow Phases</text>
 
-  <rect x="40" y="94.205607" width="400" height="119.252336" rx="6.247242" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="94.205607" width="400" height="119.252336" rx="6.247242" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240" y="142.990654" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555" font-weight="bold" fill="var(--bg)">Configuration</text>
   <text x="240" y="180.934579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.618106" fill="var(--bg)">local.conf, bblayers.conf</text>
   <rect x="480" y="94.205607" width="760" height="119.252336" rx="6.247242" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -49,7 +50,7 @@
   <text x="510" y="170.093458" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">BitBake reads conf files and resolves variable overrides.</text>
   <text x="510" y="197.196262" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">Output: a fully expanded datastore for the build.</text>
 
-  <rect x="40" y="229.719626" width="400" height="119.252336" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="229.719626" width="400" height="119.252336" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555" font-weight="bold" fill="var(--bg)">Parsing</text>
   <text x="240" y="316.448598" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.618106" fill="var(--bg)">recipes and classes</text>
   <rect x="480" y="229.719626" width="760" height="119.252336" rx="6.247242" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -57,7 +58,7 @@
   <text x="510" y="305.607477" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">All .bb / .bbappend / .bbclass files are parsed once.</text>
   <text x="510" y="332.71028" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">Output: task list ordered by DEPENDS and RDEPENDS.</text>
 
-  <rect x="40" y="365.233645" width="400" height="119.252336" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="365.233645" width="400" height="119.252336" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240" y="414.018692" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555" font-weight="bold" fill="var(--bg)">Task Execution</text>
   <text x="240" y="451.962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.618106" fill="var(--bg)">fetch, configure, compile, install</text>
   <rect x="480" y="365.233645" width="760" height="119.252336" rx="6.247242" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -65,7 +66,7 @@
   <text x="510" y="441.121495" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">Sstate cache skips tasks whose inputs have not changed.</text>
   <text x="510" y="468.224299" font-family="Arial, sans-serif" font-size="14.576899" fill="var(--text-muted)">Output: per-package binaries staged into sysroots.</text>
 
-  <rect x="40" y="500.747664" width="400" height="119.252336" rx="6.247242" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="40" y="500.747664" width="400" height="119.252336" rx="6.247242" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240" y="549.53271" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555" font-weight="bold" fill="var(--bg)">Image Creation</text>
   <text x="240" y="587.476636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.618106" fill="var(--bg)">rootfs and bootable media</text>
   <rect x="480" y="500.747664" width="760" height="119.252336" rx="6.247242" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

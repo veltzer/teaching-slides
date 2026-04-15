@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -36,10 +37,10 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Object-Oriented Building Blocks</text>
 
-  <rect x="40" y="130" width="290" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="130" width="290" height="230" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">class</text>
   <text x="185" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">constructor args</text>
   <text x="185" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">mutable state</text>
@@ -47,7 +48,7 @@
   <text x="185" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">override members</text>
   <text x="185" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">visibility modifiers</text>
 
-  <rect x="340" y="130" width="290" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="130" width="290" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">case class</text>
   <text x="485" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">immutable fields</text>
   <text x="485" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">auto equals hash copy</text>
@@ -55,7 +56,7 @@
   <text x="485" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">no new keyword</text>
   <text x="485" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">data containers</text>
 
-  <rect x="640" y="130" width="290" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="130" width="290" height="230" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">trait</text>
   <text x="785" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">interface + mixin</text>
   <text x="785" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">concrete + abstract members</text>
@@ -63,7 +64,7 @@
   <text x="785" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">linearized at mixin</text>
   <text x="785" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">replaces multiple inheritance</text>
 
-  <rect x="940" y="130" width="300" height="230" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="940" y="130" width="300" height="230" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">object</text>
   <text x="1090" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">singleton instance</text>
   <text x="1090" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">companion for factories</text>
@@ -71,12 +72,12 @@
   <text x="1090" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">holds main entry point</text>
   <text x="1090" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">replaces Java static</text>
 
-  <rect x="40" y="380" width="590" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="380" width="590" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">sealed / abstract</text>
   <text x="335" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">sealed: subclasses in same file, exhaustive match</text>
   <text x="335" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">abstract class: like trait, takes constructor args</text>
 
-  <rect x="650" y="380" width="590" height="110" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="650" y="380" width="590" height="110" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">enum (Scala 3)</text>
   <text x="945" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">enum Color { case Red, Green, Blue }</text>
   <text x="945" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">ADT shorthand replacing sealed hierarchies</text>

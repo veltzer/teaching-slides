@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -35,28 +36,28 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="590" height="183.157895" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="590" height="183.157895" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--danger-text)">OutOfMemoryError</text>
   <text x="335" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Driver: too much collect or broadcast</text>
   <text x="335" y="141.754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Executor: skewed keys, huge shuffle</text>
   <text x="335" y="172.280702" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Fix: bump memory, reduce collect,</text>
   <text x="335" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">salt skewed joins, raise overhead</text>
 
-  <rect x="650" y="40" width="590" height="183.157895" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650" y="40" width="590" height="183.157895" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
   <text x="945" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">One task runs for minutes while</text>
   <text x="945" y="141.754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">others finish in seconds</text>
   <text x="945" y="172.280702" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Fix: enable AQE skew join,</text>
   <text x="945" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">salt hot keys, pre-aggregate</text>
 
-  <rect x="40" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="284.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Shuffle Bottleneck</text>
   <text x="335" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Huge shuffle read or disk spill</text>
   <text x="335" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Network saturated</text>
   <text x="335" y="375.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Fix: filter early, broadcast small,</text>
   <text x="335" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">tune shuffle.partitions, enable AQE</text>
 
-  <rect x="650" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="650" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="284.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--primary-text)">Slow Stage</text>
   <text x="945" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Low CPU utilisation</text>
   <text x="945" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Or GC dominates task time</text>

@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="280" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="280" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Your Repo</text>
   <text x="180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Source files</text>
   <text x="180" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Docs and configs</text>
@@ -50,7 +51,7 @@
 
   <line x1="325" y1="330" x2="395" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="400" y="40" width="480" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="400" y="40" width="480" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Indexing and Retrieval</text>
 
   <rect x="430" y="110" width="420" height="110" rx="6" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
@@ -74,7 +75,7 @@
 
   <line x1="885" y1="330" x2="955" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="960" y="40" width="280" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="960" y="40" width="280" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1100" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Grounded Answer</text>
   <text x="1100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Cites real files</text>
   <text x="1100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Matches your style</text>

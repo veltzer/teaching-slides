@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -39,7 +40,7 @@
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753498" font-weight="bold" fill="var(--text)">Big Data Evolution</text>
 
-  <rect x="40" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="182.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Traditional</text>
   <text x="182.5" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">~2000s</text>
   <text x="182.5" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">RDBMS + warehouses</text>
@@ -51,7 +52,7 @@
 
   <line x1="325" y1="235.090909" x2="347" y2="235.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="350" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="350" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="492.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Hadoop</text>
   <text x="492.5" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">~2006</text>
   <text x="492.5" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">MapReduce + HDFS</text>
@@ -63,7 +64,7 @@
 
   <line x1="635" y1="235.090909" x2="657" y2="235.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="660" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="660" y="76.909091" width="285" height="316.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="802.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Spark</text>
   <text x="802.5" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">~2014</text>
   <text x="802.5" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">In-memory DAG engine</text>
@@ -75,7 +76,7 @@
 
   <line x1="945" y1="235.090909" x2="967" y2="235.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="970" y="76.909091" width="270" height="316.363636" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="970" y="76.909091" width="270" height="316.363636" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1105" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Lakehouse</text>
   <text x="1105" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">~2020+</text>
   <text x="1105" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Delta / Iceberg / Hudi</text>
@@ -88,13 +89,13 @@
   <rect x="40" y="414.363636" width="1200" height="52.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="449.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Each step cut latency by an order of magnitude</text>
 
-  <rect x="40" y="482.909091" width="590" height="137.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="482.909091" width="590" height="137.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">What drove the changes</text>
   <text x="335" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Commodity hardware made scale-out cheaper than scale-up</text>
   <text x="335" y="583.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Memory prices dropped; in-memory compute became viable</text>
   <text x="335" y="609.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Cloud object storage decoupled compute from data</text>
 
-  <rect x="650" y="482.909091" width="590" height="137.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="650" y="482.909091" width="590" height="137.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Why Spark stuck</text>
   <text x="945" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">One engine for SQL, streaming, ML, and graphs</text>
   <text x="945" y="583.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Runs on Kubernetes, YARN, and standalone clusters</text>

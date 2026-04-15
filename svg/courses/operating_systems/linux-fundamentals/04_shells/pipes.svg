@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <text x="651.3207" y="40" text-anchor="middle" font-size="23.3977" font-weight="bold">Pipeline: stdout of one -&gt; stdin of next</text>
-  <rect x="40" y="80.4651" width="249.0566" height="151.7441" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <rect x="40" y="80.4651" width="249.0566" height="151.7441" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="164.5283" y="141.1628" text-anchor="middle" font-size="21.2706" font-weight="bold">ps aux</text>
   <text x="164.5283" y="198.4884" text-anchor="middle" font-size="21.2706" fill="var(--text-muted)">stdout</text>
-  <rect x="368.3019" y="107.4418" width="67.9245" height="94.4186" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="368.3019" y="107.4418" width="67.9245" height="94.4186" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="402.2641" y="171.5116" text-anchor="middle" font-size="27.6518" font-weight="bold">|</text>
-  <rect x="515.4717" y="80.4651" width="249.0566" height="151.7441" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <rect x="515.4717" y="80.4651" width="249.0566" height="151.7441" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="141.1628" text-anchor="middle" font-size="21.2706" font-weight="bold">grep nginx</text>
   <text x="640" y="198.4884" text-anchor="middle" font-size="21.2706" fill="var(--text-muted)">filter</text>
-  <rect x="843.7735" y="107.4418" width="67.9245" height="94.4186" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="843.7735" y="107.4418" width="67.9245" height="94.4186" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="877.7358" y="171.5116" text-anchor="middle" font-size="27.6518" font-weight="bold">|</text>
-  <rect x="990.9434" y="80.4651" width="249.0566" height="151.7441" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <rect x="990.9434" y="80.4651" width="249.0566" height="151.7441" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1115.4717" y="141.1628" text-anchor="middle" font-size="21.2706" font-weight="bold">wc -l</text>
   <text x="1115.4717" y="198.4884" text-anchor="middle" font-size="21.2706" fill="var(--text-muted)">count</text>
   <line x1="289.0566" y1="154.6512" x2="368.3019" y2="154.6512" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_pipe)" />
   <line x1="764.5283" y1="154.6512" x2="843.7735" y2="154.6512" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_pipe)" />
-  <rect x="85.2831" y="282.7907" width="1132.0754" height="151.7441" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <rect x="85.2831" y="282.7907" width="1132.0754" height="151.7441" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="651.3207" y="340.1163" text-anchor="middle" font-size="21.2706" font-weight="bold">All processes in pipeline run concurrently</text>
   <text x="651.3207" y="400.8139" text-anchor="middle" font-size="21.2706">Kernel buffers data between them (4KB pipe buffer)</text>
-  <rect x="85.2831" y="468.2559" width="1132.0754" height="151.7441" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <rect x="85.2831" y="468.2559" width="1132.0754" height="151.7441" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="651.3207" y="525.5814" text-anchor="middle" font-size="21.2706">tee: split output    |   xargs: build command from stdin</text>
   <text x="651.3207" y="586.2791" text-anchor="middle" font-family="monospace" font-size="21.2706">cmd | tee log.txt | next_cmd    find . | xargs grep pat</text>
   <defs>

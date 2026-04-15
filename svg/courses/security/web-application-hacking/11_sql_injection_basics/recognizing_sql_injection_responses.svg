@@ -94,18 +94,18 @@
     </marker>
 </defs>
   <text x="640.000053" y="40" font-family="sans-serif" font-size="28.459502" font-weight="bold" fill="var(--text)" text-anchor="middle">SQL Injection — Positive Indicators</text>
-  <rect x="40" y="76.825357" width="1200" height="110.47619" fill="var(--danger-fill)" rx="6.754415" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="40" y="76.825357" width="1200" height="110.47619" fill="var(--danger-fill)" rx="6.754415" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.032336" y="122.857143" font-family="sans-serif" font-size="24.664872" font-weight="bold" fill="var(--danger-accent)">1. Database error messages</text>
   <text x="69.032336" y="164.285714" font-family="monospace" font-size="20.870242" fill="var(--text-muted)">"You have an error in your SQL syntax..." / "ORA-01756: quoted string not properly terminated"</text>
-  <rect x="40" y="205.714286" width="1200" height="82.857143" fill="var(--warn-fill)" rx="6.754415" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="40" y="205.714286" width="1200" height="82.857143" fill="var(--warn-fill)" rx="6.754415" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.032336" y="251.746071" font-family="sans-serif" font-size="24.664872" font-weight="bold" fill="var(--warn-accent)">2. Behavior differs: single quote (') causes error, two singles ('') do not</text>
-  <rect x="40" y="306.984167" width="1200" height="110.47619" fill="var(--ok-fill)" rx="6.754415" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="306.984167" width="1200" height="110.47619" fill="var(--ok-fill)" rx="6.754415" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.032336" y="353.015833" font-family="sans-serif" font-size="24.664872" font-weight="bold" fill="var(--ok-accent)">3. Boolean differences</text>
   <text x="69.032336" y="394.444405" font-family="monospace" font-size="20.870242" fill="var(--text-muted)">id=1 AND 1=1 → normal   |   id=1 AND 1=2 → different/empty response</text>
-  <rect x="40" y="435.872976" width="1200" height="82.857143" fill="var(--primary-fill)" rx="6.754415" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="40" y="435.872976" width="1200" height="82.857143" fill="var(--primary-fill)" rx="6.754415" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.032336" y="477.301548" font-family="sans-serif" font-size="24.664872" font-weight="bold" fill="var(--primary-accent)">4. Time delays</text>
   <text x="69.032336" y="511.825357" font-family="monospace" font-size="20.870242" fill="var(--text-muted)">  id=1; WAITFOR DELAY '0:0:5'--  →  5 second delay</text>
-  <rect x="40" y="537.142857" width="1200" height="82.857143" fill="var(--info-fill)" rx="6.754415" stroke="var(--info-border)" stroke-width="2" />
+  <rect x="40" y="537.142857" width="1200" height="82.857143" fill="var(--info-fill)" rx="6.754415" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="69.032336" y="578.571429" font-family="sans-serif" font-size="24.664872" font-weight="bold" fill="var(--info-accent)">5. Arithmetic evaluation</text>
   <text x="69.032336" y="613.095238" font-family="monospace" font-size="20.870242" fill="var(--text-muted)">  id=2-1  →  same as id=1  (input is being evaluated as SQL)</text>
 </svg>
