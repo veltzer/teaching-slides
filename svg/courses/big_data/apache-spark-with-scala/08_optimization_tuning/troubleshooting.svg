@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,40 +82,37 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="590" height="183.157895" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--danger-text)">OutOfMemoryError</text>
-  <text x="335" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Driver: too much collect or broadcast</text>
-  <text x="335" y="141.754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Executor: skewed keys, huge shuffle</text>
-  <text x="335" y="172.280702" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">Fix: bump memory, reduce collect,</text>
-  <text x="335" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">salt skewed joins, raise overhead</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--text)">Troubleshooting Spark Jobs</text>
 
-  <rect x="650" y="40" width="590" height="183.157895" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
-  <text x="945" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">One task runs for minutes while</text>
-  <text x="945" y="141.754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">others finish in seconds</text>
-  <text x="945" y="172.280702" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Fix: enable AQE skew join,</text>
-  <text x="945" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">salt hot keys, pre-aggregate</text>
+  <rect x="40" y="65.663716814159" width="590" height="184.778761061947" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="101.592920353982" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--danger-text)">OutOfMemoryError</text>
+  <text x="335" y="137.522123893805" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">Driver: large collect / broadcast</text>
+  <text x="335" y="163.185840707965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--danger-text)">Executor: skew, huge shuffle</text>
+  <text x="335" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">Fix: bump memory, salt, raise overhead</text>
 
-  <rect x="40" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="284.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Shuffle Bottleneck</text>
-  <text x="335" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Huge shuffle read or disk spill</text>
-  <text x="335" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Network saturated</text>
-  <text x="335" y="375.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Fix: filter early, broadcast small,</text>
-  <text x="335" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">tune shuffle.partitions, enable AQE</text>
+  <rect x="650" y="65.663716814159" width="590" height="184.778761061947" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="101.592920353982" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
+  <text x="945" y="137.522123893805" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">One task runs minutes</text>
+  <text x="945" y="163.185840707965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">Others finish in seconds</text>
+  <text x="945" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">Fix: AQE skew join, salt hot keys</text>
 
-  <rect x="650" y="243.508772" width="590" height="183.157895" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="284.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--primary-text)">Slow Stage</text>
-  <text x="945" y="319.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Low CPU utilisation</text>
-  <text x="945" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Or GC dominates task time</text>
-  <text x="945" y="375.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Fix: repartition up, cache reused,</text>
-  <text x="945" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">swap UDF for built-in function</text>
+  <rect x="40" y="270.973451327434" width="590" height="184.778761061947" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Shuffle Bottleneck</text>
+  <text x="335" y="342.83185840708" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">Huge read or spill</text>
+  <text x="335" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">Network saturated</text>
+  <text x="335" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">Fix: filter early, broadcast small</text>
 
-  <rect x="40" y="447.017544" width="1200" height="172.982456" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="485.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">Debugging Playbook</text>
-  <text x="640" y="521.298246" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">1. Open Spark UI and sort stages by duration</text>
-  <text x="640" y="551.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">2. Inspect task summary - median vs max reveals skew</text>
-  <text x="640" y="582.350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">3. Check stderr for the driver stack, then executor logs</text>
-  <text x="640" y="609.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Reproduce locally with a representative sample before tuning at scale</text>
+  <rect x="650" y="270.973451327434" width="590" height="184.778761061947" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Slow Stage</text>
+  <text x="945" y="342.83185840708" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">Low CPU use</text>
+  <text x="945" y="368.495575221239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--primary-text)">GC dominates</text>
+  <text x="945" y="409.557522123894" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Fix: repartition, cache, built-ins</text>
+
+  <rect x="40" y="476.283185840708" width="1200" height="143.716814159292" rx="6.079124296508" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="512.212389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--text)">Playbook</text>
+  <text x="640" y="543.008849557522" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">1. Spark UI &#8594; slowest stage</text>
+  <text x="640" y="568.672566371681" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">2. Task summary: median vs max</text>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">3. Driver stack, then executor logs</text>
 </svg>

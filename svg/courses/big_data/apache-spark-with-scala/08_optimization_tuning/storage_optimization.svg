@@ -34,132 +34,67 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Storage Optimization</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="590" height="253.090909090909" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--primary-text)">Columnar Formats</text>
+  <text x="335" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">Read only projected columns</text>
+  <rect x="70" y="177.090909090909" width="260" height="126.545454545455" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)"/>
+  <text x="200" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Parquet</text>
+  <text x="200" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Spark default</text>
+  <text x="200" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Min/max stats</text>
+  <text x="200" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Pushdown, dict/RLE</text>
+  <rect x="340" y="177.090909090909" width="260" height="126.545454545455" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)"/>
+  <text x="470" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">ORC</text>
+  <text x="470" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Hive-native</text>
+  <text x="470" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Stripes + bloom</text>
+  <text x="470" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">ACID, vectorized</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="650" y="71.636363636364" width="590" height="253.090909090909" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--ok-text)">Compression</text>
+  <text x="945" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Trade CPU for I/O</text>
+  <rect x="670" y="177.090909090909" width="175" height="126.545454545455" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="757" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--text)">snappy</text>
+  <text x="757" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Default, fast</text>
+  <text x="757" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Splittable</text>
+  <rect x="855" y="177.090909090909" width="175" height="126.545454545455" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="942" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--text)">zstd</text>
+  <text x="942" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Best ratio+speed</text>
+  <text x="942" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">For cold data</text>
+  <rect x="1040" y="177.090909090909" width="180" height="126.545454545455" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="1130" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--text)">gzip</text>
+  <text x="1130" y="235.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Slower</text>
+  <text x="1130" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Not splittable</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="40" y="356.363636363636" width="590" height="263.636363636364" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--warn-text)">Partitioning</text>
+  <text x="335" y="435.454545454545" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--warn-text)">partitionBy("dt","country")</text>
+  <text x="335" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Engine skips dirs</text>
+  <text x="335" y="509.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Low-cardinality keys</text>
+  <text x="335" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">128 MB - 1 GB files</text>
+  <text x="335" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-style="italic" fill="var(--warn-text)">Coalesce before write</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="590" height="279.642857" rx="8.141604" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--primary-text)">Columnar Formats</text>
-  <text x="335" y="102.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">read only projected columns — skip the rest</text>
-
-  <rect x="70" y="122.857143" width="255" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--primary-border)"/>
-  <text x="197" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Parquet</text>
-  <text x="197" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">default Spark format</text>
-  <text x="197" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">row-group min/max stats</text>
-  <text x="197" y="218.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">predicate pushdown</text>
-  <text x="197" y="240.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">dict + RLE encoding</text>
-  <text x="197" y="263.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">schema evolution</text>
-  <text x="197" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">nested via Dremel</text>
-
-  <rect x="345" y="122.857143" width="255" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--primary-border)"/>
-  <text x="472" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">ORC</text>
-  <text x="472" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Hive-native</text>
-  <text x="472" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">stripe + index + bloom</text>
-  <text x="472" y="218.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">finer skip granularity</text>
-  <text x="472" y="240.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">ACID transactions</text>
-  <text x="472" y="263.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">smaller than Parquet often</text>
-  <text x="472" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">vectorized reader</text>
-
-  <rect x="650" y="40" width="590" height="279.642857" rx="8.141604" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--ok-text)">Compression Codecs</text>
-  <text x="945" y="102.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">trade CPU for I/O — pick by hot path</text>
-
-  <rect x="680" y="122.857143" width="180" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="770" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">snappy</text>
-  <text x="770" y="174.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Spark default</text>
-  <text x="770" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">splittable, fast</text>
-  <text x="770" y="220.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">~2x compression</text>
-
-  <rect x="870" y="122.857143" width="180" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="960" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">zstd</text>
-  <text x="960" y="174.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">best ratio + speed</text>
-  <text x="960" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">tunable level 1-22</text>
-  <text x="960" y="220.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">use for cold/archive</text>
-
-  <rect x="1060" y="122.857143" width="155" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="1137" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">gzip</text>
-  <text x="1137" y="174.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">good ratio</text>
-  <text x="1137" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">slower</text>
-  <text x="1137" y="220.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">not splittable</text>
-  <text x="1137" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">avoid for large files</text>
-
-  <rect x="40" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--warn-text)">Partitioning on Disk</text>
-  <text x="335" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">df.write.partitionBy("dt", "country")</text>
-  <text x="335" y="428.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">directory layout: /dt=2024-01-01/country=US/</text>
-
-  <text x="335" y="461.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">partition pruning: engine skips unmatched dirs</text>
-  <text x="335" y="487.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">pick low-cardinality filter columns</text>
-  <text x="335" y="513.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">aim for 128MB-1GB files per partition</text>
-  <text x="335" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">too many small files → namenode overhead</text>
-  <text x="335" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--warn-text)">coalesce/repartition before write</text>
-  <text x="335" y="602.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">dynamicPartitionOverwrite for incremental loads</text>
-
-  <rect x="650" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--info-text)">Bucketing</text>
-  <text x="945" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">.bucketBy(N, "user_id").sortBy("ts").saveAsTable</text>
-  <text x="945" y="428.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">hash(col) mod N → fixed file buckets</text>
-
-  <text x="945" y="461.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">pre-shuffled: join two bucketed tables without exchange</text>
-  <text x="945" y="487.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">pre-sorted: SortMergeJoin skips the sort stage</text>
-  <text x="945" y="513.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">requires Hive metastore table</text>
-  <text x="945" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">both tables must use same N and column</text>
-  <text x="945" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--info-text)">great for repeated joins on stable keys</text>
-  <text x="945" y="602.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">partitioning ≠ bucketing: combine both</text>
+  <rect x="650" y="356.363636363636" width="590" height="263.636363636364" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--info-text)">Bucketing</text>
+  <text x="945" y="435.454545454545" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--info-text)">bucketBy(N, key).sortBy(ts)</text>
+  <text x="945" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Joins skip shuffle</text>
+  <text x="945" y="509.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">SortMergeJoin: no sort</text>
+  <text x="945" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Needs Hive metastore</text>
+  <text x="945" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-style="italic" fill="var(--info-text)">Stable repeated joins</text>
 </svg>

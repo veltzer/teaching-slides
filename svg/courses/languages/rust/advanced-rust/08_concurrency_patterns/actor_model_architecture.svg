@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,113 +34,60 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.198779106895" font-weight="bold" fill="var(--primary-accent)">Actor Model Architecture</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="83.77358490566" width="380" height="240.754716981132" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--primary-text)">UserService</text>
+  <rect x="60" y="143.962264150943" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="171.320754716981" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Private State</text>
+  <rect x="60" y="198.679245283019" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Mailbox</text>
+  <text x="230" y="286.22641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">One msg at a time</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="450" y="83.77358490566" width="380" height="240.754716981132" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--primary-text)">OrderService</text>
+  <rect x="470" y="143.962264150943" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="171.320754716981" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Private State</text>
+  <rect x="470" y="198.679245283019" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Mailbox</text>
+  <text x="640" y="286.22641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">One msg at a time</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="860" y="83.77358490566" width="380" height="240.754716981132" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--primary-text)">EmailService</text>
+  <rect x="880" y="143.962264150943" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="171.320754716981" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Private State</text>
+  <rect x="880" y="198.679245283019" width="340" height="43.77358490566" rx="6.27664133236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--warn-text)">Mailbox</text>
+  <text x="1050" y="286.22641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-text)">One msg at a time</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="420" y1="204.150943396226" x2="450" y2="204.150943396226" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <line x1="830" y1="204.150943396226" x2="860" y2="204.150943396226" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="357.358490566038" width="595" height="262.641509433962" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="401.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--ok-text)">Key Principles</text>
+  <text x="335" y="450.377358490566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--ok-text)">No shared mutable state</text>
+  <text x="335" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--ok-text)">Communicate via messages</text>
+  <text x="335" y="537.924528301887" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--ok-text)">Exclusive state ownership</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="28.4748" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Actor Model Architecture</text>
-  <rect x="40" y="80" width="324.3243" height="213.3334" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.1621" y="113.3333" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Actor: UserService</text>
-  <rect x="64.3243" y="126.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.1621" y="149.3333" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Private State</text>
-  <rect x="64.3243" y="166.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.1621" y="189.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Mailbox (channel rx)</text>
-  <rect x="64.3243" y="206.6666" width="275.6757" height="33.3333" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.1621" y="229.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Message Handler</text>
-  <text x="202.1621" y="273.3333" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Processes one msg at a time</text>
-  <rect x="477.8378" y="80" width="324.3243" height="213.3334" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="113.3333" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Actor: OrderService</text>
-  <rect x="502.1621" y="126.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="149.3333" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Private State</text>
-  <rect x="502.1621" y="166.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="189.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Mailbox (channel rx)</text>
-  <rect x="502.1621" y="206.6666" width="275.6757" height="33.3333" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="229.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Message Handler</text>
-  <text x="639.9999" y="273.3333" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Processes one msg at a time</text>
-  <rect x="915.6757" y="80" width="324.3243" height="213.3334" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8378" y="113.3333" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Actor: EmailService</text>
-  <rect x="940" y="126.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8378" y="149.3333" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Private State</text>
-  <rect x="940" y="166.6667" width="275.6757" height="33.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8378" y="189.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Mailbox (channel rx)</text>
-  <rect x="940" y="206.6666" width="275.6757" height="33.3333" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8378" y="229.3334" text-anchor="middle" font-size="14.2373" fill="var(--text)" font-family="Arial, sans-serif">Message Handler</text>
-  <line x1="364.3243" y1="173.3333" x2="477.8378" y2="173.3333" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="421.0811" y="162.6667" font-size="14.2373" fill="var(--warn-accent)" font-family="Arial, sans-serif">CreateOrder</text>
-  <line x1="802.1622" y1="173.3333" x2="915.6757" y2="173.3333" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="858.9189" y="162.6667" font-size="14.2373" fill="var(--warn-accent)" font-family="Arial, sans-serif">SendEmail</text>
-  <line x1="639.9999" y1="293.3333" x2="202.1621" y2="293.3333" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6.8817 4.129" marker-end="url(#arrow)" />
-  <text x="421.0811" y="313.3334" font-size="14.2373" fill="var(--ok-accent)" font-family="Arial, sans-serif">UserFound(response)</text>
-  <rect x="40" y="346.6667" width="567.5675" height="133.3333" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="380" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Principles</text>
-  <text x="64.3243" y="410.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- No shared mutable state</text>
-  <text x="64.3243" y="434.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- Communication only via messages</text>
-  <text x="64.3243" y="458.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- Each actor has exclusive state ownership</text>
-  <rect x="656.2162" y="346.6667" width="583.7837" height="133.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="948.1081" y="380" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rust Implementation</text>
-  <text x="680.5406" y="410.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- tokio::sync::mpsc channels</text>
-  <text x="680.5406" y="434.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- Each actor is a tokio::spawn task</text>
-  <text x="680.5406" y="458.6667" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">- Crates: actix, xactor, ractor</text>
-  <rect x="40" y="506.6667" width="1200" height="113.3333" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="540" text-anchor="middle" font-size="18.5086" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Benefits of Actor Model in Rust</text>
-  <text x="218.3784" y="573.3334" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">No locks needed</text>
-  <text x="477.8378" y="573.3334" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Natural backpressure</text>
-  <text x="753.5135" y="573.3334" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Fault isolation</text>
-  <text x="1029.1891" y="573.3334" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Scalable</text>
-  <text x="639.9999" y="606.6667" text-anchor="middle" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">Rust's ownership model aligns perfectly: messages are moved (Send), not shared</text>
+  <rect x="655" y="357.358490566038" width="585" height="262.641509433962" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="401.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--warn-text)">Rust Implementation</text>
+  <text x="947" y="450.377358490566" text-anchor="middle" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--warn-text)">tokio::sync::mpsc</text>
+  <text x="947" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--warn-text)">Each actor: tokio::spawn</text>
+  <text x="947" y="537.924528301887" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" fill="var(--warn-text)">Crates: actix, ractor</text>
 </svg>

@@ -1,142 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.048221421587" font-weight="bold" fill="var(--text)">Integration Best Practices</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.926605504587" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235.254237288136" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--primary-text)">Fail Gracefully</text>
+  <text x="235.254237288136" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">Check feature availability</text>
+  <text x="235.254237288136" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">Provide fallback path</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="443.728813559322" y="71.926605504587" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--ok-text)">Permissions in Context</text>
+  <text x="640" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Request just-in-time</text>
+  <text x="640" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Handle deny states</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="848.474576271186" y="71.926605504587" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1044.745762711864" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--warn-text)">Off Main Thread</text>
+  <text x="1044.745762711864" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Coroutines / WorkManager</text>
+  <text x="1044.745762711864" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Never block UI</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="258.165137614679" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235.254237288136" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--info-text)">Secure Deep Links</text>
+  <text x="235.254237288136" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Verified App Links</text>
+  <text x="235.254237288136" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Validate parameters</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="443.728813559322" y="258.165137614679" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--danger-text)">Privacy + Battery</text>
+  <text x="640" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--danger-text)">On-device ML</text>
+  <text x="640" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--danger-text)">Stop sensors when hidden</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="848.474576271186" y="258.165137614679" width="391.525423728814" height="164.954128440367" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1044.745762711864" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.766007961929" font-weight="bold" fill="var(--primary-text)">Test Real Devices</text>
+  <text x="1044.745762711864" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">OEM variations</text>
+  <text x="1044.745762711864" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">Emulators miss cases</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036" font-weight="bold" fill="var(--text)">Integration best practices — adopting ML, AR, notifications, deep links</text>
-
-  <!-- 2x3 grid of practice cards -->
-  <rect x="40" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="236.551724" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--primary-text)">Fail gracefully</text>
-  <text x="236.551724" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Check feature availability before use</text>
-  <text x="236.551724" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">(Play Services, ARCore, ML Kit)</text>
-  <text x="236.551724" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Always provide a fallback path</text>
-
-  <rect x="443.448276" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--ok-text)">Ask permissions in context</text>
-  <text x="640" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Request runtime permissions just-in-time</text>
-  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Explain why before the system dialog</text>
-  <text x="640" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Handle deny &amp; permanent-deny states</text>
-
-  <rect x="846.896552" y="82.962963" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1043.448276" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--warn-text)">Keep work off the main thread</text>
-  <text x="1043.448276" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">ML inference, image decoding, AR tracking</text>
-  <text x="1043.448276" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">— all on coroutines / WorkManager</text>
-  <text x="1043.448276" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">Never block UI rendering</text>
-
-  <rect x="40" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="236.551724" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--info-text)">Secure deep links</text>
-  <text x="236.551724" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Use App Links with verified domains</text>
-  <text x="236.551724" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Validate every parameter</text>
-  <text x="236.551724" y="410.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">Never trust intent data blindly</text>
-
-  <rect x="443.448276" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--danger-text)">Respect privacy &amp; battery</text>
-  <text x="640" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">On-device ML when possible</text>
-  <text x="640" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">Disclose data collection up front</text>
-  <text x="640" y="410.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--danger-text)">Stop sensors, cameras, AR when hidden</text>
-
-  <rect x="846.896552" y="276.296296" width="393.103448" height="161.111111" rx="8.43274" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1043.448276" y="313.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--primary-text)">Test on real devices</text>
-  <text x="1043.448276" y="351.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Camera, AR, notifications behave</text>
-  <text x="1043.448276" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">differently across OEMs + API levels</text>
-  <text x="1043.448276" y="410.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Emulators miss edge cases</text>
-
-  <!-- Bottom summary strip -->
-  <rect x="40" y="469.62963" width="1200" height="150.37037" rx="8.43274" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="507.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865481" font-weight="bold" fill="var(--text)">Guiding principle</text>
-  <text x="640" y="544.814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757296" fill="var(--text-muted)">Advanced features should feel invisible when they work</text>
-  <text x="640" y="571.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757296" fill="var(--text-muted)">and degrade cleanly when they don't.</text>
-  <text x="640" y="603.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--text-faint)">Integrate behind an abstraction so you can swap providers without a UI rewrite.</text>
+  <rect x="40" y="455.045871559633" width="1200" height="164.954128440367" rx="8.322529668181" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--text)">Guiding Principle</text>
+  <text x="640" y="540.183486238532" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Features invisible when they work</text>
+  <text x="640" y="572.110091743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Degrade cleanly when they don't</text>
 </svg>

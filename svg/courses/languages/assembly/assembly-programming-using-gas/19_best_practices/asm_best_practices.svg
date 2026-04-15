@@ -34,43 +34,24 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,103 +73,48 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
-      <stop offset="100%" stop-color="#f57c00"/>
-    </linearGradient>
   </defs>
-  <!-- Title -->
-  <rect x="40" y="40" width="1200" height="42.890776" rx="6.373939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.999948" y="67.294023" font-family="Arial, sans-serif" font-size="19.583928" font-weight="bold" fill="var(--bg)" text-anchor="middle">Assembly Best Practices</text>
 
-  <!-- Column 1: Documentation -->
-  <rect x="40" y="98.487422" width="363.934394" height="263.193399" rx="6.373939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="98.487422" width="363.934394" height="38.991615" rx="6.373939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="221.967302" y="123.831757" font-family="Arial, sans-serif" font-size="14.687786" font-weight="bold" fill="var(--bg)" text-anchor="middle">Documentation</text>
-  <text x="59.672129" y="152.100731" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">Comment every instruction:</text>
-  <rect x="49.836065" y="161.848635" width="334.426095" height="77.983229" rx="6.373939" fill="var(--code-bg)"/>
-  <text x="64.590162" y="183.29413" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">movl $4, %eax   <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># sys_write</tspan></text>
-  <text x="64.590162" y="202.78983" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">movl $1, %ebx   <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># fd=stdout</tspan></text>
-  <text x="64.590162" y="222.285745" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">int  $0x80      <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># kernel call</tspan></text>
-  <text x="59.672129" y="259.327779" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Document register usage at function start</text>
-  <text x="59.672129" y="278.823479" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Describe ABI: caller/callee saved regs</text>
-  <text x="59.672129" y="298.319394" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Note side effects and clobbered flags</text>
-  <text x="59.672129" y="317.815094" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Use .section and label names descriptively</text>
-  <text x="59.672129" y="337.311008" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Keep a header comment with stack frame layout</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Assembly Best Practices</text>
 
-  <!-- Column 2: ABI Compliance -->
-  <rect x="423.606629" y="98.487422" width="413.114718" height="263.193399" rx="6.373939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="423.606629" y="98.487422" width="413.114718" height="38.991615" rx="6.373939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="630.163988" y="123.831757" font-family="Arial, sans-serif" font-size="14.687786" font-weight="bold" fill="var(--bg)" text-anchor="middle">ABI Compliance</text>
-  <!-- x86-64 mini table -->
-  <text x="443.278653" y="152.100731" font-family="Arial, sans-serif" font-size="12.729606" font-weight="bold" fill="var(--ok-accent)">x86-64 System V ABI (Linux/macOS):</text>
-  <rect x="433.442589" y="157.949473" width="393.442589" height="27.294023" rx="6.373939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="443.278653" y="176.470652" font-family="Arial, sans-serif" font-size="12.332828" font-weight="bold" fill="var(--ok-accent)">Role</text>
-  <text x="571.147495" y="176.470652" font-family="Arial, sans-serif" font-size="12.332828" font-weight="bold" fill="var(--ok-accent)">Registers</text>
-  <text x="748.196659" y="176.470652" font-family="Arial, sans-serif" font-size="12.332828" font-weight="bold" fill="var(--ok-accent)">Preserved by</text>
-  <text x="443.278653" y="198.890776" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">Arguments</text>
-  <text x="571.147495" y="198.890776" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">rdi, rsi, rdx, rcx, r8, r9</text>
-  <text x="748.196659" y="198.890776" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">caller</text>
-  <text x="443.278653" y="218.386584" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">Return value</text>
-  <text x="571.147495" y="218.386584" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">rax (rdx for 128-bit)</text>
-  <text x="748.196659" y="218.386584" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">caller</text>
-  <text x="443.278653" y="237.882391" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">Caller-saved</text>
-  <text x="571.147495" y="237.882391" font-size="12.332828" fill="var(--warn-accent)" font-family="Courier New, monospace">rax, rcx, rdx, r8-r11</text>
-  <text x="748.196659" y="237.882391" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">caller</text>
-  <text x="443.278653" y="257.378091" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">Callee-saved</text>
-  <text x="571.147495" y="257.378091" font-size="12.332828" fill="var(--danger-accent)" font-family="Courier New, monospace">rbx, rbp, r12-r15</text>
-  <text x="748.196659" y="257.378091" font-family="Arial, sans-serif" font-size="12.332828" fill="var(--text)">callee</text>
-  <text x="443.278653" y="278.823479" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Stack must be 16-byte aligned at call</text>
-  <text x="443.278653" y="298.319394" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Red zone: 128 bytes below RSP (no signal)</text>
-  <text x="443.278653" y="317.815094" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Push/pop callee-saved regs in prologue/epilogue</text>
-  <text x="443.278653" y="337.311008" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Never return with mismatched stack pointer</text>
+  <rect x="40" y="82.181818181818" width="385" height="237.272727272727" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">Documentation</text>
+  <text x="60" y="156" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Comment each instruction</text>
+  <text x="60" y="187.636363636364" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Note register usage</text>
+  <text x="60" y="219.272727272727" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Document ABI clobbers</text>
+  <text x="60" y="250.909090909091" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Describe stack layout</text>
+  <text x="60" y="282.545454545455" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Descriptive labels</text>
 
-  <!-- Column 3: Testing -->
-  <rect x="856.393476" y="98.487422" width="383.606524" height="263.193399" rx="6.373939" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="856.393476" y="98.487422" width="383.606524" height="38.991615" rx="6.373939" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1048.196633" y="123.831757" font-family="Arial, sans-serif" font-size="14.687786" font-weight="bold" fill="var(--bg)" text-anchor="middle">Testing Assembly Code</text>
-  <text x="876.065606" y="152.100731" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">Test from C harness:</text>
-  <rect x="866.229436" y="159.899161" width="354.098435" height="77.983229" rx="6.373939" fill="var(--code-bg)"/>
-  <text x="880.983638" y="181.344442" font-size="12.332828" fill="var(--info-accent)" font-family="Courier New, monospace">// C test harness</text>
-  <text x="880.983638" y="198.890776" font-size="12.332828" fill="var(--primary-accent)" font-family="Courier New, monospace">extern int asm_add(int a, int b);</text>
-  <text x="880.983638" y="216.43711" font-size="12.332828" fill="var(--ok-accent)" font-family="Courier New, monospace">assert(asm_add(2,3) == 5);</text>
-  <text x="876.065606" y="257.378091" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Use gdb / rr to step through instructions</text>
-  <text x="876.065606" y="276.873898" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Valgrind for memory errors</text>
-  <text x="876.065606" y="296.369705" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Perf / VTune for cycle-level profiling</text>
-  <text x="876.065606" y="315.86562" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Verify with objdump -d output</text>
-  <text x="876.065606" y="335.36132" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Test edge cases: 0, negatives, overflow</text>
+  <rect x="447" y="82.181818181818" width="385" height="237.272727272727" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">ABI (x86-64)</text>
+  <text x="467" y="156" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">args: rdi rsi rdx rcx r8 r9</text>
+  <text x="467" y="187.636363636364" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">return: rax</text>
+  <text x="467" y="219.272727272727" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">caller-save: rax rcx r8-r11</text>
+  <text x="467" y="250.909090909091" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">callee-save: rbx rbp r12-r15</text>
+  <text x="467" y="282.545454545455" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">stack: 16-byte aligned</text>
 
-  <!-- Bottom row: when to use assembly -->
-  <rect x="40" y="381.176414" width="1200" height="238.823586" rx="6.373939" fill="var(--surface)"/>
-  <rect x="40" y="381.176414" width="1200" height="38.991615" rx="6.373939" fill="var(--text-muted)"/>
-  <text x="639.999948" y="406.521178" font-family="Arial, sans-serif" font-size="15.667036" font-weight="bold" fill="var(--bg)" text-anchor="middle">When to Use Assembly vs. C -- Decision Framework</text>
+  <rect x="854" y="82.181818181818" width="386" height="237.272727272727" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Testing</text>
+  <text x="874" y="156" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">C harness + assert</text>
+  <text x="874" y="187.636363636364" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">gdb step-through</text>
+  <text x="874" y="219.272727272727" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Valgrind memory</text>
+  <text x="874" y="250.909090909091" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">perf cycle profile</text>
+  <text x="874" y="282.545454545455" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">objdump -d verify</text>
 
-  <!-- Prefer C -->
-  <rect x="59.672129" y="429.91604" width="550.819624" height="175.462374" rx="6.373939" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.081941" y="452.336272" font-family="Arial, sans-serif" font-size="13.708537" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Prefer C (or intrinsics)</text>
-  <text x="79.344154" y="475.731241" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- General application logic</text>
-  <text x="79.344154" y="497.176629" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- When -O2 / -O3 compiler output is good enough</text>
-  <text x="79.344154" y="518.622017" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Cross-platform portability required</text>
-  <text x="79.344154" y="540.067405" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Large codebases (maintainability cost too high)</text>
-  <text x="79.344154" y="561.512793" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Team lacks assembly expertise</text>
-  <text x="79.344154" y="582.958074" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text-faint)">Tip: check compiler output with -S flag first</text>
+  <!-- Decision framework -->
+  <rect x="40" y="351.090909090909" width="590" height="268.909090909091" rx="10.269106361049" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Prefer C</text>
+  <text x="60" y="424.909090909091" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">General application logic</text>
+  <text x="60" y="461.818181818182" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">-O2 output fast enough</text>
+  <text x="60" y="498.727272727273" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">Cross-platform needs</text>
+  <text x="60" y="535.636363636364" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">Large maintained codebase</text>
+  <text x="60" y="577.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" font-style="italic" fill="var(--danger-text)">Check -S output first</text>
 
-  <!-- Prefer assembly -->
-  <rect x="639.999948" y="429.91604" width="570.491858" height="175.462374" rx="6.373939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="925.245824" y="452.336272" font-family="Arial, sans-serif" font-size="13.708537" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Prefer Assembly</text>
-  <text x="659.672182" y="475.731241" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- No C runtime available (bootloaders, firmware)</text>
-  <text x="659.672182" y="497.176629" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Hardware instructions not exposed via C (CPUID, AES-NI)</text>
-  <text x="659.672182" y="518.622017" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Exact cycle timing required (real-time control loops)</text>
-  <text x="659.672182" y="540.067405" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Profiling confirms the hot loop is the bottleneck</text>
-  <text x="659.672182" y="561.512793" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text)">- Side-channel resistance needs constant-time code</text>
-  <text x="659.672182" y="582.958074" font-family="Arial, sans-serif" font-size="12.729606" fill="var(--text-faint)">Tip: isolate into a separate .s file, expose via C header</text>
+  <rect x="650" y="351.090909090909" width="590" height="268.909090909091" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Prefer Assembly</text>
+  <text x="670" y="424.909090909091" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">No C runtime (bootloader)</text>
+  <text x="670" y="461.818181818182" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Special instructions (AES-NI)</text>
+  <text x="670" y="498.727272727273" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Exact cycle timing</text>
+  <text x="670" y="535.636363636364" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Constant-time crypto</text>
+  <text x="670" y="577.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" font-style="italic" fill="var(--ok-text)">Isolate in .s file</text>
 </svg>

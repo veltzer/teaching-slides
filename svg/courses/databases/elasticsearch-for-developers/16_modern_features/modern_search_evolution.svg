@@ -34,113 +34,64 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="285" height="234.035087719298" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="182" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--primary-text)">Keyword Search</text>
+  <text x="182" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Inverted index</text>
+  <text x="182" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">TF/IDF, BM25</text>
+  <text x="182" y="182.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Exact-term match</text>
+  <text x="182" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">Misses synonyms</text>
+  <text x="182" y="253.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--primary-text)">Elasticsearch classic</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="335" y="40" width="285" height="234.035087719298" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="477" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--ok-text)">Vector Search</text>
+  <text x="477" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Dense embeddings</text>
+  <text x="477" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">kNN over HNSW</text>
+  <text x="477" y="182.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Semantic similarity</text>
+  <text x="477" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">Paraphrase, crosslingual</text>
+  <text x="477" y="253.684210526316" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">dense_vector 8.0+</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="630" y="40" width="285" height="234.035087719298" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="772" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--warn-text)">Hybrid Search</text>
+  <text x="772" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">BM25 + vector</text>
+  <text x="772" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Rank Fusion (RRF)</text>
+  <text x="772" y="182.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Best of both</text>
+  <text x="772" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">Rare terms + meaning</text>
+  <text x="772" y="253.684210526316" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--warn-text)">rank: rrf (8.9+)</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="925" y="40" width="315" height="234.035087719298" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1082" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--info-text)">RAG + LLM</text>
+  <text x="1082" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Retrieve top passages</text>
+  <text x="1082" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Feed LLM context</text>
+  <text x="1082" y="182.456140350877" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Grounded answers</text>
+  <text x="1082" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--info-text)">ELSER + Inference API</text>
+  <text x="1082" y="253.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">Search AI Platform</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="325" y1="157.017543859649" x2="335" y2="157.017543859649" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="157.017543859649" x2="630" y2="157.017543859649" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="915" y1="157.017543859649" x2="925" y2="157.017543859649" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="285" height="232" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="182" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Keyword Search</text>
-  <text x="182" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Inverted index</text>
-  <text x="182" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">TF/IDF, BM25</text>
-  <text x="182" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Fast exact-term match</text>
-  <text x="182" y="203.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--primary-text)">Misses synonyms,</text>
-  <text x="182" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--primary-text)">typos and intent</text>
-  <text x="182" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.296017" fill="var(--primary-text)">Elasticsearch classic</text>
-
-  <rect x="335" y="40" width="285" height="232" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="477" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Vector Search</text>
-  <text x="477" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Dense embeddings</text>
-  <text x="477" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">kNN over HNSW graph</text>
-  <text x="477" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Semantic similarity</text>
-  <text x="477" y="203.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--ok-text)">Handles paraphrase</text>
-  <text x="477" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--ok-text)">and crosslingual queries</text>
-  <text x="477" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.296017" fill="var(--ok-text)">dense_vector since 8.0</text>
-
-  <rect x="630" y="40" width="285" height="232" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="772" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Hybrid Search</text>
-  <text x="772" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">BM25 + vector fusion</text>
-  <text x="772" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Reciprocal Rank Fusion</text>
-  <text x="772" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Best of both signals</text>
-  <text x="772" y="203.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--warn-text)">Handles rare terms</text>
-  <text x="772" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--warn-text)">and fuzzy meaning</text>
-  <text x="772" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.296017" fill="var(--warn-text)">rank: rrf in 8.9+</text>
-
-  <rect x="925" y="40" width="315" height="232" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1082" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">RAG and LLM</text>
-  <text x="1082" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Retrieve top passages</text>
-  <text x="1082" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Feed as context to LLM</text>
-  <text x="1082" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Grounded answers</text>
-  <text x="1082" y="203.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--info-text)">ELSER sparse encoders</text>
-  <text x="1082" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--info-text)">Inference API built in</text>
-  <text x="1082" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.296017" fill="var(--info-text)">Search AI Platform</text>
-
-  <line x1="325" y1="156" x2="335" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="620" y1="156" x2="630" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="915" y1="156" x2="925" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="303.636364" width="1200" height="316.363636" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="343.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--text)">What Changed in Elasticsearch</text>
-  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">dense_vector field with HNSW indexing for approximate kNN</text>
-  <text x="640" y="414.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">text_expansion query backed by ELSER for sparse semantic retrieval</text>
-  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Retrievers and RRF blend multiple strategies in one request</text>
-  <text x="640" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Inference API hosts third-party embedding models out of the box</text>
-  <text x="640" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">semantic_text mapping auto-chunks and embeds documents on ingest</text>
-  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-faint)">Same cluster now powers keyword, vector and RAG workloads</text>
-  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-faint)">Design for hybrid from day one to future-proof relevance</text>
+  <rect x="40" y="304.561403508772" width="1200" height="315.438596491228" rx="6.052402741669" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="350.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--text)">What Changed</text>
+  <text x="640" y="391.052631578947" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">dense_vector with HNSW kNN</text>
+  <text x="640" y="426.666666666667" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">text_expansion + ELSER</text>
+  <text x="640" y="462.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Retrievers blend strategies via RRF</text>
+  <text x="640" y="497.894736842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Inference API hosts embedding models</text>
+  <text x="640" y="533.508771929825" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">semantic_text auto-embeds</text>
+  <text x="640" y="574.21052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-faint)">One cluster: keyword, vector, RAG</text>
 </svg>

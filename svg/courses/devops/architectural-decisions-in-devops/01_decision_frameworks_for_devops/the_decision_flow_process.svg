@@ -34,124 +34,72 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--text)">The Decision Flow</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="80.701754385965" width="185" height="264.561403508772" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="132" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">1. Frame</text>
+  <text x="132" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">State problem</text>
+  <text x="132" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Stakeholders</text>
+  <text x="132" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Success criteria</text>
+  <text x="132" y="263.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Constraints</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="249" y="80.701754385965" width="185" height="264.561403508772" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="341" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">2. Explore</text>
+  <text x="341" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">List options</text>
+  <text x="341" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Prior art</text>
+  <text x="341" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Spike unknowns</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="458" y="80.701754385965" width="185" height="264.561403508772" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="550" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">3. Evaluate</text>
+  <text x="550" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Trade-offs</text>
+  <text x="550" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Cost / benefit</text>
+  <text x="550" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Risk</text>
+  <text x="550" y="263.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Reversibility</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="667" y="80.701754385965" width="185" height="264.561403508772" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="759" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">4. Decide</text>
+  <text x="759" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Pick option</text>
+  <text x="759" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Record ADR</text>
+  <text x="759" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Assign owner</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="876" y="80.701754385965" width="185" height="264.561403508772" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="968" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--danger-text)">5. Execute</text>
+  <text x="968" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Roll out slices</text>
+  <text x="968" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Feature flags</text>
+  <text x="968" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Communicate</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="1085" y="80.701754385965" width="155" height="264.561403508772" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1162" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">6. Learn</text>
+  <text x="1162" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Measure</text>
+  <text x="1162" y="202.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Compare goals</text>
+  <text x="1162" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Revisit</text>
+  <text x="1162" y="263.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Adjust</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.714499" font-weight="bold" fill="var(--text)">The Decision Flow Process</text>
+  <line x1="225" y1="212.982456140351" x2="249" y2="212.982456140351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="434" y1="212.982456140351" x2="458" y2="212.982456140351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="643" y1="212.982456140351" x2="667" y2="212.982456140351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="852" y1="212.982456140351" x2="876" y2="212.982456140351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1061" y1="212.982456140351" x2="1085" y2="212.982456140351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="85.048544" width="185" height="259.029126" rx="6.367393" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="132" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--primary-text)">1. Frame</text>
-  <text x="132" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">State the problem</text>
-  <text x="132" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Who is affected</text>
-  <text x="132" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Success criteria</text>
-  <text x="132" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Constraints</text>
-  <text x="132" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--primary-text)">What are we solving?</text>
+  <path d="M 1162 345.263157894737 L 1162 569.122807017544 L 132 569.122807017544 L 132 345.263157894737" stroke="var(--text-muted)" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
 
-  <rect x="249" y="85.048544" width="185" height="259.029126" rx="6.367393" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="341" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--warn-text)">2. Explore</text>
-  <text x="341" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--warn-text)">List options</text>
-  <text x="341" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--warn-text)">Gather prior art</text>
-  <text x="341" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--warn-text)">Spike unknowns</text>
-  <text x="341" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--warn-text)">Widen the funnel</text>
-  <text x="341" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--warn-text)">What is possible?</text>
-
-  <rect x="458" y="85.048544" width="185" height="259.029126" rx="6.367393" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="550" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--info-text)">3. Evaluate</text>
-  <text x="550" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--info-text)">Score trade-offs</text>
-  <text x="550" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--info-text)">Cost vs benefit</text>
-  <text x="550" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--info-text)">Risk and blast radius</text>
-  <text x="550" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--info-text)">Reversibility</text>
-  <text x="550" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--info-text)">What matters most?</text>
-
-  <rect x="667" y="85.048544" width="185" height="259.029126" rx="6.367393" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="759" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--ok-text)">4. Decide</text>
-  <text x="759" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--ok-text)">Pick an option</text>
-  <text x="759" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--ok-text)">Record an ADR</text>
-  <text x="759" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--ok-text)">Assign an owner</text>
-  <text x="759" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--ok-text)">Commit the team</text>
-  <text x="759" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--ok-text)">What will we do?</text>
-
-  <rect x="876" y="85.048544" width="185" height="259.029126" rx="6.367393" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="968" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--danger-text)">5. Execute</text>
-  <text x="968" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--danger-text)">Roll out in slices</text>
-  <text x="968" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--danger-text)">Ship behind flags</text>
-  <text x="968" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--danger-text)">Communicate widely</text>
-  <text x="968" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--danger-text)">Track progress</text>
-  <text x="968" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--danger-text)">How do we ship it?</text>
-
-  <rect x="1085" y="85.048544" width="155" height="259.029126" rx="6.367393" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1162" y="135.728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.224642" font-weight="bold" fill="var(--primary-text)">6. Learn</text>
-  <text x="1162" y="186.407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Measure outcomes</text>
-  <text x="1162" y="220.194175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Compare to goals</text>
-  <text x="1162" y="253.980583" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Revisit the ADR</text>
-  <text x="1162" y="287.76699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--primary-text)">Adjust or retire</text>
-  <text x="1162" y="321.553398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017" font-style="italic" fill="var(--primary-text)">Did it work?</text>
-
-  <line x1="225" y1="214.563107" x2="249" y2="214.563107" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="434" y1="214.563107" x2="458" y2="214.563107" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="643" y1="214.563107" x2="667" y2="214.563107" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="852" y1="214.563107" x2="876" y2="214.563107" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1061" y1="214.563107" x2="1085" y2="214.563107" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <path d="M 1162 344.07767 L 1162 580.582524 L 132 580.582524 L 132 344.07767" stroke="var(--text-muted)" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
-  <rect x="440" y="541.165049" width="400" height="78.834951" rx="6.367393" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="574.951456" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.979714" font-weight="bold" fill="var(--text)">Feedback loop</text>
-  <text x="640" y="603.106796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.85725" fill="var(--text-muted)">New data reframes the next decision</text>
+  <rect x="440" y="538.59649122807" width="400" height="81.40350877193" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="574.21052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.14847443473" font-weight="bold" fill="var(--text)">Feedback loop</text>
+  <text x="640" y="601.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">New data reframes the next decision</text>
 </svg>

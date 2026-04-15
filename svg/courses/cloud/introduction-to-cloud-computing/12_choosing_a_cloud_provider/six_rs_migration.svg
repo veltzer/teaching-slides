@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,96 +81,51 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <!-- Background -->
   <!-- Row 1 -->
-  <!-- Box 1: Rehost -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="40" width="378.378378" height="236.734694" rx="6.721962" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="40" y="40" width="378.378378" height="49.319728" rx="6.721962" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="40" y="69.591837" width="378.378378" height="19.727891" fill="url(#grad-primary)" rx="6.721962" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="229.189189" y="72.550966" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--bg)">Rehost</text>
-    <text x="229.189189" y="123.843483" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Lift and Shift"</text>
-    <text x="229.189189" y="158.367347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Move as-is to cloud VMs.</text>
-    <text x="229.189189" y="183.027156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">No code changes.</text>
-    <text x="229.189189" y="207.687075" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Fastest migration path.</text>
-    <rect x="61.621622" y="235.306122" width="86.486486" height="25.646259" rx="6.721962" fill="url(#grad-primary)" opacity="0.2" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="104.864865" y="253.061224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--primary-accent)">Low Effort</text>
-  </g>
+  <rect x="40" y="40" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="92.252252252252" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--primary-text)">Rehost</text>
+  <text x="233.220338983051" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--primary-text)">"Lift and Shift"</text>
+  <text x="233.220338983051" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Move as-is to VMs</text>
+  <text x="233.220338983051" y="215.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">No code changes</text>
+  <text x="233.220338983051" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--primary-text)">Low effort</text>
 
-  <!-- Box 2: Replatform -->
-  <g filter="url(#shadow)">
-    <rect x="450.810811" y="40" width="378.378378" height="236.734694" rx="6.721962" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="450.810811" y="40" width="378.378378" height="49.319728" rx="6.721962" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="450.810811" y="69.591837" width="378.378378" height="19.727891" fill="url(#grad-primary)" rx="6.721962" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="640" y="72.550966" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--primary-accent)">Replatform</text>
-    <text x="640" y="123.843483" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Lift, Tinker, and Shift"</text>
-    <text x="640" y="158.367347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Minor optimizations for cloud.</text>
-    <text x="640" y="183.027156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">E.g., use managed DB</text>
-    <text x="640" y="207.687075" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">instead of self-hosted.</text>
-    <rect x="472.432432" y="235.306122" width="118.918919" height="25.646259" rx="6.721962" fill="url(#grad-primary)" opacity="0.15" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="531.891892" y="253.061224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--primary-accent)">Low-Med Effort</text>
-  </g>
+  <rect x="446.779661016949" y="40" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="92.252252252252" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--info-text)">Replatform</text>
+  <text x="640" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--info-text)">"Lift, Tinker, Shift"</text>
+  <text x="640" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Use managed DB</text>
+  <text x="640" y="215.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Minor tweaks</text>
+  <text x="640" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--info-text)">Low-med effort</text>
 
-  <!-- Box 3: Repurchase -->
-  <g filter="url(#shadow)">
-    <rect x="861.621622" y="40" width="378.378378" height="236.734694" rx="6.721962" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="861.621622" y="40" width="378.378378" height="49.319728" rx="6.721962" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="861.621622" y="69.591837" width="378.378378" height="19.727891" fill="url(#grad-ok)" rx="6.721962" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="1050.810811" y="72.550966" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--bg)">Repurchase</text>
-    <text x="1050.810811" y="123.843483" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Drop and Shop"</text>
-    <text x="1050.810811" y="158.367347" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Switch to a SaaS product.</text>
-    <text x="1050.810811" y="183.027156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">E.g., CRM to Salesforce,</text>
-    <text x="1050.810811" y="207.687075" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">email to O365.</text>
-    <rect x="883.243243" y="235.306122" width="118.918919" height="25.646259" rx="6.721962" fill="url(#grad-ok)" opacity="0.2" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="942.702703" y="253.061224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--ok-accent)">Medium Effort</text>
-  </g>
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="92.252252252252" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--ok-text)">Repurchase</text>
+  <text x="1046.779661016949" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--ok-text)">"Drop and Shop"</text>
+  <text x="1046.779661016949" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Switch to SaaS</text>
+  <text x="1046.779661016949" y="215.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">CRM, email</text>
+  <text x="1046.779661016949" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--ok-text)">Medium effort</text>
 
   <!-- Row 2 -->
-  <!-- Box 4: Refactor -->
-  <g filter="url(#shadow)">
-    <rect x="40" y="326.054422" width="378.378378" height="236.734694" rx="6.721962" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="40" y="326.054422" width="378.378378" height="49.319728" rx="6.721962" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="40" y="355.646259" width="378.378378" height="19.727891" fill="url(#grad-warn)" rx="6.721962" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="229.189189" y="358.605497" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--bg)">Refactor</text>
-    <text x="229.189189" y="409.898014" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Re-architect"</text>
-    <text x="229.189189" y="444.421769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Redesign for cloud-native.</text>
-    <text x="229.189189" y="469.081687" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Microservices, serverless.</text>
-    <text x="229.189189" y="493.741497" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Maximum cloud benefits.</text>
-    <rect x="61.621622" y="521.360544" width="108.108108" height="25.646259" rx="6.721962" fill="url(#grad-warn)" opacity="0.2" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="115.675676" y="539.115646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--warn-accent)">High Effort</text>
-  </g>
+  <rect x="40" y="332.612612612613" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--warn-text)">Refactor</text>
+  <text x="233.220338983051" y="431.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--warn-text)">"Re-architect"</text>
+  <text x="233.220338983051" y="478.918918918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Cloud-native redesign</text>
+  <text x="233.220338983051" y="508.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Microservices</text>
+  <text x="233.220338983051" y="557.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--warn-text)">High effort</text>
 
-  <!-- Box 5: Retain -->
-  <g filter="url(#shadow)">
-    <rect x="450.810811" y="326.054422" width="378.378378" height="236.734694" rx="6.721962" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-    <rect x="450.810811" y="326.054422" width="378.378378" height="49.319728" rx="6.721962" fill="var(--surface)"/>
-    <rect x="450.810811" y="355.646259" width="378.378378" height="19.727891" fill="var(--surface)" rx="6.721962"/>
-    <text x="640" y="358.605497" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--text)">Retain</text>
-    <text x="640" y="409.898014" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Keep As-Is"</text>
-    <text x="640" y="444.421769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Not ready to migrate yet.</text>
-    <text x="640" y="469.081687" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Compliance, legacy deps,</text>
-    <text x="640" y="493.741497" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">or recent investment.</text>
-    <rect x="472.432432" y="521.360544" width="86.486486" height="25.646259" rx="6.721962" fill="var(--surface)"/>
-    <text x="515.675676" y="539.115646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--text-muted)">No Effort</text>
-  </g>
+  <rect x="446.779661016949" y="332.612612612613" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--text)">Retain</text>
+  <text x="640" y="431.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--text)">"Keep As-Is"</text>
+  <text x="640" y="478.918918918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text-muted)">Not ready</text>
+  <text x="640" y="508.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text-muted)">Compliance / legacy</text>
+  <text x="640" y="557.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--text-muted)">No effort</text>
 
-  <!-- Box 6: Retire -->
-  <g filter="url(#shadow)">
-    <rect x="861.621622" y="326.054422" width="378.378378" height="236.734694" rx="6.721962" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="861.621622" y="326.054422" width="378.378378" height="49.319728" rx="6.721962" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="861.621622" y="355.646259" width="378.378378" height="19.727891" fill="url(#grad-danger)" rx="6.721962" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="1050.810811" y="358.605497" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.783651" font-weight="bold" fill="var(--danger-accent)">Retire</text>
-    <text x="1050.810811" y="409.898014" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.522471" fill="var(--text)">"Decommission"</text>
-    <text x="1050.810811" y="444.421769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Turn off unused apps.</text>
-    <text x="1050.810811" y="469.081687" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">Reduce portfolio before</text>
-    <text x="1050.810811" y="493.741497" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.457148" fill="var(--text-muted)">migrating the rest.</text>
-    <rect x="883.243243" y="521.360544" width="86.486486" height="25.646259" rx="6.721962" fill="url(#grad-danger)" opacity="0.5" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="926.486486" y="539.115646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.391825" font-weight="bold" fill="var(--danger-accent)">No Effort</text>
-  </g>
+  <rect x="853.559322033898" y="332.612612612613" width="386.440677966102" height="250.810810810811" rx="8.24721110845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--danger-text)">Retire</text>
+  <text x="1046.779661016949" y="431.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.525323605456" fill="var(--danger-text)">"Decommission"</text>
+  <text x="1046.779661016949" y="478.918918918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Turn off unused</text>
+  <text x="1046.779661016949" y="508.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Reduce portfolio</text>
+  <text x="1046.779661016949" y="557.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" font-weight="bold" fill="var(--danger-text)">No effort</text>
 
-  <!-- Effort arrow along bottom -->
-  <line x1="104.864865" y1="602.244898" x2="1164.324324" y2="602.244898" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="634.594595" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.489754" fill="var(--text-muted)">Increasing transformation effort and cloud optimization</text>
+  <line x1="90.847457627119" y1="620" x2="1189.152542372881" y2="620" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

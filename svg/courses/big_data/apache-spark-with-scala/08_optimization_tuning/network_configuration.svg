@@ -1,144 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="590" height="270" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">RPC Timeouts</text>
+  <text x="60" y="115" font-size="15" fill="var(--primary-text)" font-family="Courier New, monospace">spark.network.timeout = 120s</text>
+  <text x="60" y="150" font-size="15" fill="var(--primary-text)" font-family="Courier New, monospace">spark.rpc.askTimeout = 120s</text>
+  <text x="60" y="185" font-size="15" fill="var(--primary-text)" font-family="Courier New, monospace">spark.executor.heartbeatInterval</text>
+  <text x="60" y="220" font-size="15" fill="var(--primary-text)" font-family="Courier New, monospace">spark.rpc.numRetries = 3</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Heartbeat must &lt; network.timeout</text>
+  <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">ExecutorLost on GC pauses</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="650" y="40" width="590" height="270" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">External Shuffle Service</text>
+  <text x="670" y="115" font-size="15" fill="var(--ok-text)" font-family="Courier New, monospace">shuffle.service.enabled = true</text>
+  <text x="670" y="150" font-size="15" fill="var(--ok-text)" font-family="Courier New, monospace">shuffle.service.port = 7337</text>
+  <text x="670" y="185" font-size="15" fill="var(--ok-text)" font-family="Courier New, monospace">io.numConnectionsPerPeer</text>
+  <text x="670" y="220" font-size="15" fill="var(--ok-text)" font-family="Courier New, monospace">io.maxRetries = 3</text>
+  <text x="670" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Survives executor death</text>
+  <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--ok-text)">FetchFailed triggers retry</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="40" y="330" width="590" height="290" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Locality Wait</text>
+  <text x="60" y="405" font-size="15" fill="var(--warn-text)" font-family="Courier New, monospace">spark.locality.wait = 3s</text>
+  <text x="60" y="440" font-size="15" fill="var(--warn-text)" font-family="Courier New, monospace">.process / .node / .rack</text>
+  <text x="60" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Lower (0-1s): cloud storage</text>
+  <text x="60" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Lower: heterogeneous cluster</text>
+  <text x="60" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Raise (10s+): HDFS affinity</text>
+  <text x="60" y="590" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--warn-text)">Falls back to RACK/ANY</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="590" height="279.642857" rx="6.106203" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="73.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--primary-text)">RPC Timeouts &amp; Heartbeats</text>
-  <text x="60" y="107.321429" font-size="13.230106" fill="var(--primary-text)" font-family="Courier New, monospace">spark.network.timeout = 120s</text>
-  <text x="60" y="128.035714" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">umbrella default for all network ops</text>
-  <text x="60" y="159.107143" font-size="13.230106" fill="var(--primary-text)" font-family="Courier New, monospace">spark.rpc.askTimeout = 120s</text>
-  <text x="60" y="179.821429" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">per-call RPC ask timeout</text>
-  <text x="60" y="210.892857" font-size="13.230106" fill="var(--primary-text)" font-family="Courier New, monospace">spark.executor.heartbeatInterval = 10s</text>
-  <text x="60" y="231.607143" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">executor to driver; must &lt; network.timeout</text>
-  <text x="60" y="262.678571" font-size="13.230106" fill="var(--primary-text)" font-family="Courier New, monospace">spark.rpc.numRetries = 3</text>
-  <text x="60" y="283.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--primary-text)">raise in flaky clouds; watch for duplicate work</text>
-  <text x="60" y="307.214286" font-family="Arial, sans-serif" font-size="11.194705" font-style="italic" fill="var(--primary-text)">Symptom: ExecutorLost during long GC pauses</text>
-
-  <rect x="650" y="40" width="590" height="279.642857" rx="6.106203" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="73.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--ok-text)">External Shuffle Service</text>
-  <text x="670" y="107.321429" font-size="13.230106" fill="var(--ok-text)" font-family="Courier New, monospace">spark.shuffle.service.enabled = true</text>
-  <text x="670" y="128.035714" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">shuffle survives executor death / dynamic alloc</text>
-  <text x="670" y="159.107143" font-size="13.230106" fill="var(--ok-text)" font-family="Courier New, monospace">spark.shuffle.service.port = 7337</text>
-  <text x="670" y="179.821429" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">NodeManager/K8s aux service port</text>
-  <text x="670" y="210.892857" font-size="13.230106" fill="var(--ok-text)" font-family="Courier New, monospace">spark.shuffle.io.numConnectionsPerPeer = 1</text>
-  <text x="670" y="231.607143" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">raise to 3-5 on 10GbE+ fabrics</text>
-  <text x="670" y="262.678571" font-size="13.230106" fill="var(--ok-text)" font-family="Courier New, monospace">spark.shuffle.io.maxRetries = 3</text>
-  <text x="670" y="283.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--ok-text)">bump + retryWait on lossy networks</text>
-  <text x="670" y="307.214286" font-family="Arial, sans-serif" font-size="11.194705" font-style="italic" fill="var(--ok-text)">FetchFailedException triggers stage retry</text>
-
-  <rect x="40" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--warn-text)">Locality Wait</text>
-  <text x="60" y="407.678571" font-size="13.230106" fill="var(--warn-text)" font-family="Courier New, monospace">spark.locality.wait = 3s</text>
-  <text x="60" y="428.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">how long to wait for data-local slot before</text>
-  <text x="60" y="447.035714" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">falling back to RACK_LOCAL / ANY</text>
-  <text x="60" y="480.178571" font-size="13.230106" fill="var(--warn-text)" font-family="Courier New, monospace">spark.locality.wait.process / .node / .rack</text>
-  <text x="60" y="500.892857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">per-level overrides</text>
-  <text x="60" y="531.964286" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">Lower (0-1s) when:</text>
-  <text x="60" y="552.678571" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">- reads from S3/cloud storage (no data locality)</text>
-  <text x="60" y="571.321429" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--warn-text)">- heterogeneous cluster, many stragglers</text>
-  <text x="60" y="594.107143" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">Raise (10s+) on HDFS with tight data affinity</text>
-
-  <rect x="650" y="340.357143" width="590" height="279.642857" rx="6.106203" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--info-text)">Compression &amp; Encryption</text>
-  <text x="670" y="407.678571" font-size="13.230106" fill="var(--info-text)" font-family="Courier New, monospace">spark.io.compression.codec = lz4</text>
-  <text x="670" y="428.392857" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--info-text)">shuffle + broadcast blocks; zstd for higher ratio</text>
-  <text x="670" y="459.464286" font-size="13.230106" fill="var(--info-text)" font-family="Courier New, monospace">spark.shuffle.compress = true</text>
-  <text x="670" y="480.178571" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--info-text)">compress map outputs before network send</text>
-  <text x="670" y="511.25" font-size="13.230106" fill="var(--info-text)" font-family="Courier New, monospace">spark.network.crypto.enabled = true</text>
-  <text x="670" y="531.964286" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--info-text)">AES-GCM over RPC + shuffle; ~10% CPU tax</text>
-  <text x="670" y="563.035714" font-size="13.230106" fill="var(--info-text)" font-family="Courier New, monospace">spark.authenticate = true</text>
-  <text x="670" y="583.75" font-family="Arial, sans-serif" font-size="11.194705" fill="var(--info-text)">shared secret required for all inter-process RPC</text>
-  <text x="670" y="609.642857" font-family="Arial, sans-serif" font-size="11.194705" font-style="italic" fill="var(--info-text)">Profile before enabling: CPU-bound jobs pay the bill</text>
+  <rect x="650" y="330" width="590" height="290" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Compression + Crypto</text>
+  <text x="670" y="405" font-size="15" fill="var(--info-text)" font-family="Courier New, monospace">io.compression.codec = lz4</text>
+  <text x="670" y="440" font-size="15" fill="var(--info-text)" font-family="Courier New, monospace">shuffle.compress = true</text>
+  <text x="670" y="475" font-size="15" fill="var(--info-text)" font-family="Courier New, monospace">network.crypto.enabled</text>
+  <text x="670" y="510" font-size="15" fill="var(--info-text)" font-family="Courier New, monospace">spark.authenticate = true</text>
+  <text x="670" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">AES-GCM ~10% CPU cost</text>
+  <text x="670" y="590" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">Profile CPU-bound jobs</text>
 </svg>

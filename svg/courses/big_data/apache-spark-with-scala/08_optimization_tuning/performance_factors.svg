@@ -2,164 +2,89 @@
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="642.553191489362" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.325595368811" font-weight="bold" fill="var(--text)">Performance Factors</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="72.222222222222" width="291.063829787234" height="268.518518518519" rx="8.378741533946" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185.021276595745" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.946853834865" font-weight="bold" fill="var(--danger-text)">Shuffle</text>
+  <text x="185.021276595745" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--danger-text)">Largest cost</text>
+  <text x="185.021276595745" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--danger-text)">Avoid wide transforms</text>
+  <text x="185.021276595745" y="222.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--danger-text)">Broadcast small tables</text>
+  <text x="185.021276595745" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--danger-text)">Tune partitions</text>
+  <text x="185.021276595745" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--danger-text)">AQE coalesces</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="341.276595744681" y="72.222222222222" width="291.063829787234" height="268.518518518519" rx="8.378741533946" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="486.297872340425" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.946853834865" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
+  <text x="486.297872340425" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--warn-text)">One task dominates</text>
+  <text x="486.297872340425" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--warn-text)">Hot keys in joins</text>
+  <text x="486.297872340425" y="222.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--warn-text)">Salt to spread load</text>
+  <text x="486.297872340425" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--warn-text)">AQE skew handling</text>
+  <text x="486.297872340425" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--warn-text)">Pre-aggregate</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="642.553191489362" y="72.222222222222" width="291.063829787234" height="268.518518518519" rx="8.378741533946" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="787.574468085106" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.946853834865" font-weight="bold" fill="var(--ok-text)">Partitioning</text>
+  <text x="787.574468085106" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--ok-text)">Few: no parallelism</text>
+  <text x="787.574468085106" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--ok-text)">Many: overhead</text>
+  <text x="787.574468085106" y="222.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--ok-text)">Target 128-256 MB</text>
+  <text x="787.574468085106" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--ok-text)">2-4x cores</text>
+  <text x="787.574468085106" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--ok-text)">repartition / coalesce</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="943.829787234043" y="72.222222222222" width="296.170212765957" height="268.518518518519" rx="8.378741533946" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1091.914893617021" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.946853834865" font-weight="bold" fill="var(--primary-text)">I/O + Formats</text>
+  <text x="1091.914893617021" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--primary-text)">Parquet / ORC</text>
+  <text x="1091.914893617021" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--primary-text)">Predicate pushdown</text>
+  <text x="1091.914893617021" y="222.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--primary-text)">Column pruning</text>
+  <text x="1091.914893617021" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--primary-text)">Avoid small files</text>
+  <text x="1091.914893617021" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--primary-text)">Compact + OPTIMIZE</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="367.592592592593" width="1200" height="252.407407407407" rx="8.378741533946" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="642.553191489362" y="410.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.946853834865" font-weight="bold" fill="var(--text)">Secondary Factors</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  <rect x="70.63829787234" y="432.037037037037" width="270.63829787234" height="171.851851851852" rx="6.284056150459" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="205.446808510638" y="469.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.804825759635" font-weight="bold" fill="var(--info-accent)">Caching</text>
+  <text x="205.446808510638" y="507.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Reuse across actions</text>
+  <text x="205.446808510638" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">MEMORY_AND_DISK_SER</text>
+  <text x="205.446808510638" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">unpersist when done</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Performance Factors</text>
+  <rect x="366.808510638298" y="432.037037037037" width="270.63829787234" height="171.851851851852" rx="6.284056150459" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="501.617021276596" y="469.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.804825759635" font-weight="bold" fill="var(--warn-accent)">GC Pressure</text>
+  <text x="501.617021276596" y="507.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Use G1GC</text>
+  <text x="501.617021276596" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Off-heap Tungsten</text>
+  <text x="501.617021276596" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Keep under 10%</text>
 
-  <rect x="40" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Shuffle</text>
-  <text x="185" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Largest single cost</text>
-  <text x="185" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Disk + network + serde</text>
-  <text x="185" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Avoid wide transforms</text>
-  <text x="185" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Broadcast small tables</text>
-  <text x="185" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Tune shuffle.partitions</text>
-  <text x="185" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">AQE coalesces at runtime</text>
+  <rect x="662.978723404255" y="432.037037037037" width="270.63829787234" height="171.851851851852" rx="6.284056150459" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="797.787234042553" y="469.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.804825759635" font-weight="bold" fill="var(--ok-accent)">Query Plan</text>
+  <text x="797.787234042553" y="507.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">explain(true)</text>
+  <text x="797.787234042553" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Look for Exchange</text>
+  <text x="797.787234042553" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Use DataFrame API</text>
 
-  <rect x="340" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Data Skew</text>
-  <text x="485" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">One task dominates</text>
-  <text x="485" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Hot keys in joins / groupBy</text>
-  <text x="485" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Salt keys to spread load</text>
-  <text x="485" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">AQE skew join handling</text>
-  <text x="485" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Pre-aggregate when possible</text>
-  <text x="485" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">check task time distribution</text>
-
-  <rect x="640" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Partitioning</text>
-  <text x="785" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Too few: no parallelism</text>
-  <text x="785" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Too many: scheduler overhead</text>
-  <text x="785" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Target 128-256 MB each</text>
-  <text x="785" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">repartition for shuffles</text>
-  <text x="785" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">coalesce to shrink output</text>
-  <text x="785" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">2-4x cores rule of thumb</text>
-
-  <rect x="940" y="72.222222" width="300" height="268.518519" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">I/O and Formats</text>
-  <text x="1090" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Parquet / ORC columnar</text>
-  <text x="1090" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Predicate pushdown</text>
-  <text x="1090" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Column pruning</text>
-  <text x="1090" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Avoid many small files</text>
-  <text x="1090" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Compact with OPTIMIZE</text>
-  <text x="1090" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">partition by low-card column</text>
-
-  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="413.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Secondary Factors</text>
-
-  <rect x="80" y="437.407407" width="270" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="215" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--info-accent)">Caching</text>
-  <text x="215" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Reuse across actions</text>
-  <text x="215" y="527.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">MEMORY_AND_DISK_SER</text>
-  <text x="215" y="557.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">unpersist when done</text>
-  <text x="215" y="581.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">avoid premature caching</text>
-
-  <rect x="370" y="437.407407" width="270" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="505" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--warn-accent)">GC Pressure</text>
-  <text x="505" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Use G1GC, tune heap</text>
-  <text x="505" y="527.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Off-heap Tungsten helps</text>
-  <text x="505" y="557.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Watch GC time in UI</text>
-  <text x="505" y="581.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">keep under 10% of task</text>
-
-  <rect x="660" y="437.407407" width="270" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="795" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--ok-accent)">Query Plan</text>
-  <text x="795" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">explain(true) everything</text>
-  <text x="795" y="527.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Look for Exchange stages</text>
-  <text x="795" y="557.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Use DataFrame API</text>
-  <text x="795" y="581.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Catalyst optimizes it</text>
-
-  <rect x="950" y="437.407407" width="250" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1075" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--danger-accent)">UDFs</text>
-  <text x="1075" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Break Catalyst</text>
-  <text x="1075" y="527.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Prefer built-ins</text>
-  <text x="1075" y="557.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Pandas UDFs vectorize</text>
-  <text x="1075" y="581.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Scala UDFs faster than Py</text>
+  <rect x="959.148936170213" y="432.037037037037" width="270.63829787234" height="171.851851851852" rx="6.284056150459" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1093.957446808511" y="469.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.804825759635" font-weight="bold" fill="var(--danger-accent)">UDFs</text>
+  <text x="1093.957446808511" y="507.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Break Catalyst</text>
+  <text x="1093.957446808511" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Prefer built-ins</text>
+  <text x="1093.957446808511" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.662797684405" fill="var(--text-muted)">Pandas UDFs vectorize</text>
 </svg>

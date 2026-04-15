@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,64 +81,45 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="590" height="325.614035" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--primary-text)">YARN Deployment</text>
+  <rect x="40" y="40" width="590" height="290" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">YARN Deployment</text>
+  <text x="60" y="125" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">--master yarn --deploy-mode cluster</text>
+  <text x="60" y="155" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">--queue prod --principal --keytab</text>
+  <text x="60" y="185" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">spark.yarn.executor.memoryOverhead</text>
+  <text x="60" y="215" font-family="Courier New, monospace" font-size="14" fill="var(--primary-text)">spark.yarn.archive = hdfs://...</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">AM restart on failure</text>
+  <text x="60" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">log aggregation to HDFS</text>
+  <text x="60" y="320" font-family="Courier New, monospace" font-size="13" fill="var(--primary-text)">yarn logs -applicationId &lt;id&gt;</text>
 
-  <text x="60" y="106.140351" font-size="13.113539" fill="var(--primary-text)" font-family="Courier New, monospace">--master yarn --deploy-mode cluster</text>
-  <text x="60" y="126.491228" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--primary-text)">ApplicationMaster runs the driver inside cluster</text>
+  <rect x="650" y="40" width="590" height="290" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Kubernetes Deployment</text>
+  <text x="670" y="125" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">--master k8s://https://&lt;api&gt;</text>
+  <text x="670" y="155" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">spark.kubernetes.container.image</text>
+  <text x="670" y="185" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">spark.kubernetes.namespace</text>
+  <text x="670" y="215" font-family="Courier New, monospace" font-size="14" fill="var(--info-text)">Spark Operator CRDs</text>
+  <text x="670" y="260" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">PVC for shuffle (3.2+)</text>
+  <text x="670" y="290" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">graceful decommissioning</text>
+  <text x="670" y="320" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">migrates shuffle blocks</text>
 
-  <text x="60" y="157.017544" font-size="13.113539" fill="var(--primary-text)" font-family="Courier New, monospace">--queue prod --principal / --keytab</text>
-  <text x="60" y="177.368421" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--primary-text)">scheduler queue + Kerberos for long-running apps</text>
+  <rect x="40" y="350" width="590" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Dynamic Allocation</text>
+  <text x="60" y="430" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">dynamicAllocation.enabled = true</text>
+  <text x="60" y="458" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">minExecutors = 2</text>
+  <text x="60" y="486" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">maxExecutors = 200</text>
+  <text x="60" y="514" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">executorIdleTimeout = 60s</text>
+  <text x="60" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">scales with backlog</text>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">needs shuffle service</text>
+  <text x="60" y="605" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">or K8s shuffle tracking</text>
 
-  <text x="60" y="207.894737" font-size="13.113539" fill="var(--primary-text)" font-family="Courier New, monospace">spark.yarn.executor.memoryOverhead</text>
-  <text x="60" y="228.245614" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--primary-text)">off-heap budget; breach = container kill</text>
-
-  <text x="60" y="258.77193" font-size="13.113539" fill="var(--primary-text)" font-family="Courier New, monospace">spark.yarn.archive = hdfs://path/spark.zip</text>
-  <text x="60" y="279.122807" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--primary-text)">avoid uploading jars per submit</text>
-
-  <text x="60" y="314.736842" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">AM restart on failure; log aggregation to HDFS</text>
-  <text x="60" y="340.175439" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">yarn logs -applicationId &lt;id&gt; for retrieval</text>
-
-  <rect x="650" y="40" width="590" height="325.614035" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--info-text)">Kubernetes Deployment</text>
-
-  <text x="670" y="106.140351" font-size="13.113539" fill="var(--info-text)" font-family="Courier New, monospace">--master k8s://https://&lt;api-server&gt;</text>
-  <text x="670" y="126.491228" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--info-text)">native K8s scheduler since Spark 3.1 GA</text>
-
-  <text x="670" y="157.017544" font-size="13.113539" fill="var(--info-text)" font-family="Courier New, monospace">spark.kubernetes.container.image</text>
-  <text x="670" y="177.368421" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--info-text)">same image for driver + executors</text>
-
-  <text x="670" y="207.894737" font-size="13.113539" fill="var(--info-text)" font-family="Courier New, monospace">spark.kubernetes.namespace = spark</text>
-  <text x="670" y="228.245614" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--info-text)">per-team isolation + ResourceQuotas</text>
-
-  <text x="670" y="258.77193" font-size="13.113539" fill="var(--info-text)" font-family="Courier New, monospace">Spark Operator CRDs</text>
-  <text x="670" y="279.122807" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--info-text)">SparkApplication / ScheduledSparkApplication</text>
-
-  <text x="670" y="314.736842" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--info-text)">PersistentVolumeClaim for shuffle (3.2+)</text>
-  <text x="670" y="340.175439" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--info-text)">graceful decommissioning migrates shuffle blocks</text>
-
-  <rect x="40" y="385.964912" width="590" height="234.035088" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="418.526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--ok-text)">Dynamic Allocation</text>
-
-  <text x="60" y="452.105263" font-size="12.104805" fill="var(--ok-text)" font-family="Courier New, monospace">spark.dynamicAllocation.enabled = true</text>
-  <text x="60" y="477.54386" font-size="12.104805" fill="var(--ok-text)" font-family="Courier New, monospace">spark.dynamicAllocation.minExecutors = 2</text>
-  <text x="60" y="502.982456" font-size="12.104805" fill="var(--ok-text)" font-family="Courier New, monospace">spark.dynamicAllocation.maxExecutors = 200</text>
-  <text x="60" y="528.421053" font-size="12.104805" fill="var(--ok-text)" font-family="Courier New, monospace">spark.dynamicAllocation.executorIdleTimeout = 60s</text>
-
-  <text x="60" y="558.947368" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--ok-text)">Scales with backlog. Needs external shuffle service</text>
-  <text x="60" y="577.263158" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--ok-text)">or K8s shuffle tracking so removed executors do</text>
-  <text x="60" y="595.578947" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--ok-text)">not lose shuffle data still needed downstream.</text>
-
-  <rect x="650" y="385.964912" width="590" height="234.035088" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="418.526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--warn-text)">Resource Sizing Checklist</text>
-
-  <text x="670" y="452.105263" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- 5 cores per executor (HDFS throughput sweet spot)</text>
-  <text x="670" y="475.508772" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- executor.memory 4-16 GB + 10% overhead</text>
-  <text x="670" y="498.912281" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- driver: 2-8 GB; more if many broadcasts / collect</text>
-  <text x="670" y="522.315789" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- target 2-3x cores as partitions (parallelism)</text>
-  <text x="670" y="545.719298" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- speculation for straggler mitigation</text>
-  <text x="670" y="569.122807" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- log aggregation, event log, metrics sink enabled</text>
-  <text x="670" y="592.526316" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">- spark-submit from CI; no ad-hoc edits in prod</text>
+  <rect x="650" y="350" width="590" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Sizing Checklist</text>
+  <text x="670" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">5 cores per executor</text>
+  <text x="670" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">executor.memory 4-16 GB</text>
+  <text x="670" y="475" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">driver 2-8 GB</text>
+  <text x="670" y="500" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">2-3x cores as partitions</text>
+  <text x="670" y="525" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">enable speculation</text>
+  <text x="670" y="555" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">log + event + metrics sink</text>
+  <text x="670" y="585" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">submit from CI only</text>
 </svg>

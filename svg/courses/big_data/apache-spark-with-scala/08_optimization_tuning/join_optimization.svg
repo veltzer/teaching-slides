@@ -1,166 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.048221421587" font-weight="bold" fill="var(--text)">Join Optimization</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.926605504587" width="589.830508474576" height="425.688073394495" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="334.915254237288" y="109.174311926606" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--ok-text)">Broadcast Hash Join</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="70.508474576271" y="130.45871559633" width="142.372881355932" height="53.211009174312" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="141.694915254237" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Driver (small)</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="243.389830508475" y="130.45871559633" width="111.864406779661" height="53.211009174312" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="299.322033898305" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text)">Executor 1</text>
+  <rect x="370.508474576271" y="130.45871559633" width="111.864406779661" height="53.211009174312" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="426.440677966102" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text)">Executor 2</text>
+  <rect x="497.627118644068" y="130.45871559633" width="111.864406779661" height="53.211009174312" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="553.559322033898" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text)">Executor 3</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="212.881355932203" y1="157.064220183486" x2="241.35593220339" y2="157.064220183486" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="212.881355932203" y1="157.064220183486" x2="368.474576271186" y2="157.064220183486" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="212.881355932203" y1="157.064220183486" x2="495.593220338983" y2="157.064220183486" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <text x="334.915254237288" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Small side sent to every executor</text>
+  <text x="334.915254237288" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Large side stays local, no shuffle</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <text x="65.423728813559" y="295.412844036697" font-family="Arial, sans-serif" font-size="15.604743127839" font-weight="bold" fill="var(--ok-text)">When:</text>
+  <text x="65.423728813559" y="327.339449541284" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Side &lt; autoBroadcast threshold</text>
+  <text x="65.423728813559" y="353.94495412844" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Default 10 MB</text>
+  <text x="65.423728813559" y="380.550458715596" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Hint: broadcast(df)</text>
 
-  <rect x="40" y="40" width="590" height="437.54386" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Broadcast Hash Join</text>
+  <text x="65.423728813559" y="423.119266055046" font-family="Arial, sans-serif" font-size="15.604743127839" font-weight="bold" fill="var(--ok-text)">Cost:</text>
+  <text x="65.423728813559" y="455.045871559633" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">O(N) network</text>
+  <text x="65.423728813559" y="481.651376146789" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Too large → driver OOM</text>
 
-  <rect x="70" y="95.964912" width="150" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="145" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--text)">Driver</text>
-  <text x="145" y="139.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--text-muted)">small table</text>
+  <rect x="650.169491525424" y="71.926605504587" width="589.830508474576" height="425.688073394495" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945.084745762712" y="109.174311926606" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--warn-text)">Sort-Merge Join</text>
 
-  <rect x="260" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="315" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 1</text>
-  <rect x="385" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="440" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 2</text>
-  <rect x="510" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="565" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 3</text>
+  <rect x="680.677966101695" y="130.45871559633" width="111.864406779661" height="47.889908256881" rx="5.201581042613" fill="var(--bg)" stroke="var(--warn-border)"/>
+  <text x="736.610169491525" y="159.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--text)">Part A1</text>
+  <rect x="802.71186440678" y="130.45871559633" width="111.864406779661" height="47.889908256881" rx="5.201581042613" fill="var(--bg)" stroke="var(--warn-border)"/>
+  <text x="858.64406779661" y="159.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--text)">Part A2</text>
+  <rect x="924.745762711864" y="130.45871559633" width="111.864406779661" height="47.889908256881" rx="5.201581042613" fill="var(--bg)" stroke="var(--warn-border)"/>
+  <text x="980.677966101695" y="159.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--text)">Part B1</text>
+  <rect x="1046.779661016949" y="130.45871559633" width="111.864406779661" height="47.889908256881" rx="5.201581042613" fill="var(--bg)" stroke="var(--warn-border)"/>
+  <text x="1102.71186440678" y="159.192660550459" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.483794502271" fill="var(--text)">Part B2</text>
 
-  <line x1="220" y1="123.438596" x2="258" y2="123.438596" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <line x1="220" y1="123.438596" x2="383" y2="123.438596" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <line x1="220" y1="123.438596" x2="508" y2="123.438596" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="736.610169491525" y1="179.412844036697" x2="914.576271186441" y2="210.275229357798" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <line x1="858.64406779661" y1="179.412844036697" x2="914.576271186441" y2="210.275229357798" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <line x1="980.677966101695" y1="179.412844036697" x2="914.576271186441" y2="210.275229357798" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <line x1="1102.71186440678" y1="179.412844036697" x2="914.576271186441" y2="210.275229357798" stroke="var(--warn-border)" stroke-width="1.5"/>
 
-  <text x="335" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Small side sent to every executor</text>
-  <text x="335" y="210.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Large side stays local — no shuffle</text>
+  <rect x="772.203389830509" y="213.467889908257" width="345.762711864407" height="42.56880733945" rx="5.201581042613" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="945.084745762712" y="241.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" font-weight="bold" fill="var(--text)">Shuffle: hash(key) → partition</text>
 
-  <text x="70" y="253.684211" font-family="Arial, sans-serif" font-size="14.122273" font-weight="bold" fill="var(--ok-text)">When chosen:</text>
-  <text x="70" y="279.122807" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- smaller side &lt; autoBroadcastJoinThreshold</text>
-  <text x="70" y="302.526316" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- default 10 MB (spark.sql.autoBroadcast...)</text>
-  <text x="70" y="325.929825" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- statistics available in catalog</text>
-  <text x="70" y="349.333333" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- force with broadcast(df) hint</text>
+  <text x="945.084745762712" y="284.770642201835" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Both sides repartitioned</text>
 
-  <text x="70" y="391.052632" font-family="Arial, sans-serif" font-size="14.122273" font-weight="bold" fill="var(--ok-text)">Cost:</text>
-  <text x="70" y="416.491228" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- O(N) network: driver to N executors</text>
-  <text x="70" y="439.894737" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- broadcast held in each executor heap</text>
-  <text x="70" y="463.298246" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">- too large -> driver OOM</text>
+  <text x="685.762711864407" y="316.697247706422" font-family="Arial, sans-serif" font-size="15.604743127839" font-weight="bold" fill="var(--warn-text)">When:</text>
+  <text x="685.762711864407" y="348.623853211009" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Both too large</text>
+  <text x="685.762711864407" y="375.229357798165" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Default for big joins</text>
 
-  <rect x="650" y="40" width="590" height="437.54386" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Shuffle Sort-Merge Join</text>
+  <text x="685.762711864407" y="417.798165137615" font-family="Arial, sans-serif" font-size="15.604743127839" font-weight="bold" fill="var(--warn-text)">Cost:</text>
+  <text x="685.762711864407" y="449.724770642202" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">O(M+N) network + sort</text>
+  <text x="685.762711864407" y="476.330275229358" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">AQE helps skew</text>
 
-  <rect x="680" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
-  <text x="735" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition A1</text>
-  <rect x="800" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
-  <text x="855" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition A2</text>
-  <rect x="920" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
-  <text x="975" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition B1</text>
-  <rect x="1040" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
-  <text x="1095" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition B2</text>
-
-  <line x1="735" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
-  <line x1="855" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
-  <line x1="975" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
-  <line x1="1095" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
-
-  <rect x="800" y="182.45614" width="290" height="40.701754" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="945" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--text)">Shuffle: hash(key) -> partition</text>
-
-  <text x="945" y="253.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Both sides re-partitioned on join key</text>
-
-  <text x="680" y="289.298246" font-family="Arial, sans-serif" font-size="14.122273" font-weight="bold" fill="var(--warn-text)">When chosen:</text>
-  <text x="680" y="314.736842" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- both sides too large to broadcast</text>
-  <text x="680" y="338.140351" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- sort-merge default; shuffle-hash rare</text>
-  <text x="680" y="361.54386" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- AQE can coalesce + skew-split at runtime</text>
-
-  <text x="680" y="396.140351" font-family="Arial, sans-serif" font-size="14.122273" font-weight="bold" fill="var(--warn-text)">Cost:</text>
-  <text x="680" y="421.578947" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- O(M+N) network across all executors</text>
-  <text x="680" y="444.982456" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- sort step: spill to disk if &gt; memory</text>
-  <text x="680" y="468.385965" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">- skewed keys -> stragglers (enable AQE)</text>
-
-  <rect x="40" y="497.894737" width="1200" height="122.105263" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="528.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" font-weight="bold" fill="var(--text)">Tuning knobs</text>
-  <text x="640" y="556.912281" text-anchor="middle" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">spark.sql.autoBroadcastJoinThreshold=10MB   spark.sql.adaptive.enabled=true</text>
-  <text x="640" y="584.385965" text-anchor="middle" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">spark.sql.adaptive.skewJoin.enabled=true   ANALYZE TABLE COMPUTE STATISTICS</text>
-  <text x="640" y="609.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--text-muted)">Raise threshold cautiously — driver memory and serialization time rise with it.</text>
+  <rect x="40" y="518.899082568807" width="1200" height="101.100917431193" rx="8.322529668181" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="550.825688073395" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--text)">Tuning knobs</text>
+  <text x="640" y="582.752293577982" text-anchor="middle" font-family="Courier New, monospace" font-size="13.524110710794" fill="var(--text)">autoBroadcastJoinThreshold, adaptive.enabled, skewJoin.enabled</text>
+  <text x="640" y="609.357798165138" text-anchor="middle" font-family="Courier New, monospace" font-size="13.524110710794" fill="var(--text)">ANALYZE TABLE COMPUTE STATISTICS</text>
 </svg>

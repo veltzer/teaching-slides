@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,73 +81,67 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="40" width="390" height="64.444444" rx="6.218253" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="235" y="82.962963" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--primary-text)" font-family="Courier New, monospace">Graph(vertices, edges)</text>
+  <!-- Panel 1: Graph(v, e) -->
+  <rect x="40" y="40" width="396.610169491525" height="580" rx="8.360971118323" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="396.610169491525" height="64.444444444444" rx="8.360971118323" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="238.305084745763" y="80.814814814815" text-anchor="middle" font-size="22.992670575388" font-weight="bold" fill="var(--primary-text)" font-family="Courier New, monospace">Graph(vertices, edges)</text>
 
-  <text x="235" y="136.666667" text-anchor="middle" font-size="14.509256" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">when you have typed attrs</text>
+  <rect x="60.338983050847" y="125.925925925926" width="355.93220338983" height="182.592592592593" rx="4.180485559161" fill="var(--code-bg)"/>
+  <text x="75.593220338983" y="156" font-size="13.586578067275" fill="var(--primary-fill)" font-family="Courier New, monospace">val v = sc.parallelize(Seq(</text>
+  <text x="75.593220338983" y="179.62962962963" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  (1L, ("Alice", 28)),</text>
+  <text x="75.593220338983" y="203.259259259259" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  (2L, ("Bob", 27))))</text>
+  <text x="75.593220338983" y="233.333333333333" font-size="13.586578067275" fill="var(--primary-fill)" font-family="Courier New, monospace">val e = sc.parallelize(Seq(</text>
+  <text x="75.593220338983" y="256.962962962963" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  Edge(1L, 2L, "friend")))</text>
+  <text x="75.593220338983" y="291.333333333333" font-size="13.586578067275" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph(v, e)</text>
 
-  <rect x="60" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="75" y="190.37037" font-size="12.436505" fill="var(--primary-fill)" font-family="Courier New, monospace">val v = sc.parallelize(Seq(</text>
-  <text x="75" y="211.851852" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  (1L, ("Alice", 28)),</text>
-  <text x="75" y="233.333333" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  (2L, ("Bob", 27))))</text>
-  <text x="75" y="256.962963" font-size="12.436505" fill="var(--primary-fill)" font-family="Courier New, monospace">val e = sc.parallelize(Seq(</text>
-  <text x="75" y="278.444444" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  Edge(1L, 2L, "friend")))</text>
-  <text x="75" y="297.777778" font-size="12.436505" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph(v, e)</text>
+  <text x="238.305084745763" y="362.222222222222" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--primary-border)" font-family="Arial, sans-serif">inputs</text>
+  <text x="238.305084745763" y="392.296296296296" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">RDD[(VertexId, VD)]</text>
+  <text x="238.305084745763" y="415.925925925926" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">RDD[Edge[ED]]</text>
 
-  <text x="235" y="346.111111" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--primary-border)" font-family="Arial, sans-serif">inputs</text>
-  <text x="235" y="378.333333" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">RDD[(VertexId, VD)]</text>
-  <text x="235" y="405.185185" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">RDD[Edge[ED]]</text>
+  <text x="238.305084745763" y="469.62962962963" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--primary-border)" font-family="Arial, sans-serif">use when</text>
+  <text x="238.305084745763" y="499.703703703704" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">typed attrs matter</text>
+  <text x="238.305084745763" y="523.333333333333" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">most common</text>
 
-  <text x="235" y="458.888889" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--primary-border)" font-family="Arial, sans-serif">use when</text>
-  <text x="235" y="491.111111" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">vertex attrs matter</text>
-  <text x="235" y="517.962963" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">edge attrs matter</text>
-  <text x="235" y="544.814815" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">most common choice</text>
+  <!-- Panel 2: fromEdges -->
+  <rect x="456.949152542373" y="40" width="376.271186440678" height="580" rx="8.360971118323" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="456.949152542373" y="40" width="376.271186440678" height="64.444444444444" rx="8.360971118323" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="645.084745762712" y="80.814814814815" text-anchor="middle" font-size="22.992670575388" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">Graph.fromEdges</text>
 
-  <rect x="450" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="450" y="40" width="390" height="64.444444" rx="6.218253" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="645" y="82.962963" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">Graph.fromEdges</text>
+  <rect x="477.28813559322" y="125.925925925926" width="335.593220338983" height="182.592592592593" rx="4.180485559161" fill="var(--code-bg)"/>
+  <text x="492.542372881356" y="156" font-size="13.586578067275" fill="var(--primary-fill)" font-family="Courier New, monospace">val e = sc.parallelize(Seq(</text>
+  <text x="492.542372881356" y="179.62962962963" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  Edge(1L, 2L, 0.5),</text>
+  <text x="492.542372881356" y="203.259259259259" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  Edge(2L, 3L, 0.8)))</text>
+  <text x="492.542372881356" y="244.074074074074" font-size="13.586578067275" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph.fromEdges(e,</text>
+  <text x="492.542372881356" y="267.703703703704" font-size="13.586578067275" fill="var(--ok-fill)" font-family="Courier New, monospace">  defaultValue = 1)</text>
 
-  <text x="645" y="136.666667" text-anchor="middle" font-size="14.509256" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">edges only, default vtx attr</text>
+  <text x="645.084745762712" y="362.222222222222" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--ok-border)" font-family="Arial, sans-serif">inputs</text>
+  <text x="645.084745762712" y="392.296296296296" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">RDD[Edge[ED]]</text>
+  <text x="645.084745762712" y="415.925925925926" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">defaultValue: VD</text>
 
-  <rect x="470" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="485" y="190.37037" font-size="12.436505" fill="var(--primary-fill)" font-family="Courier New, monospace">val e = sc.parallelize(Seq(</text>
-  <text x="485" y="211.851852" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  Edge(1L, 2L, 0.5),</text>
-  <text x="485" y="233.333333" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  Edge(2L, 3L, 0.8)))</text>
-  <text x="485" y="270.925926" font-size="12.436505" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph.fromEdges(e,</text>
-  <text x="485" y="292.407407" font-size="12.436505" fill="var(--ok-fill)" font-family="Courier New, monospace">  defaultValue = 1)</text>
+  <text x="645.084745762712" y="469.62962962963" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--ok-border)" font-family="Arial, sans-serif">use when</text>
+  <text x="645.084745762712" y="499.703703703704" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">edges only</text>
+  <text x="645.084745762712" y="523.333333333333" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">vertices inferred</text>
 
-  <text x="645" y="346.111111" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--ok-border)" font-family="Arial, sans-serif">inputs</text>
-  <text x="645" y="378.333333" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">RDD[Edge[ED]]</text>
-  <text x="645" y="405.185185" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">defaultValue: VD</text>
+  <!-- Panel 3: fromEdgeTuples -->
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="580" rx="8.360971118323" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="64.444444444444" rx="8.360971118323" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="80.814814814815" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">fromEdgeTuples</text>
 
-  <text x="645" y="458.888889" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--ok-border)" font-family="Arial, sans-serif">use when</text>
-  <text x="645" y="491.111111" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">vertices inferred from edges</text>
-  <text x="645" y="517.962963" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">edge-only datasets</text>
-  <text x="645" y="544.814815" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">loading from edge file</text>
+  <rect x="873.898305084746" y="125.925925925926" width="345.762711864407" height="182.592592592593" rx="4.180485559161" fill="var(--code-bg)"/>
+  <text x="889.152542372881" y="156" font-size="13.586578067275" fill="var(--primary-fill)" font-family="Courier New, monospace">val pairs =</text>
+  <text x="889.152542372881" y="179.62962962963" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">  sc.parallelize(Seq(</text>
+  <text x="889.152542372881" y="203.259259259259" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">    (1L, 2L),</text>
+  <text x="889.152542372881" y="226.888888888889" font-size="13.586578067275" fill="var(--bg)" font-family="Courier New, monospace">    (2L, 3L)))</text>
+  <text x="889.152542372881" y="261.259259259259" font-size="13.586578067275" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph.fromEdgeTuples(</text>
+  <text x="889.152542372881" y="284.888888888889" font-size="13.586578067275" fill="var(--ok-fill)" font-family="Courier New, monospace">  pairs, defaultValue=1)</text>
 
-  <rect x="860" y="40" width="380" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="860" y="40" width="380" height="64.444444" rx="6.218253" fill="url(#grad-warn)" filter="url(#shadow)"/>
-  <text x="1050" y="82.962963" text-anchor="middle" font-size="18.654758" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">fromEdgeTuples</text>
+  <text x="1046.779661016949" y="362.222222222222" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--warn-border)" font-family="Arial, sans-serif">inputs</text>
+  <text x="1046.779661016949" y="392.296296296296" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">RDD[(VertexId, VertexId)]</text>
+  <text x="1046.779661016949" y="415.925925925926" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Courier New, monospace">default VD</text>
 
-  <text x="1050" y="136.666667" text-anchor="middle" font-size="14.509256" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">src/dst pairs, no attrs</text>
-
-  <rect x="880" y="163.518519" width="340" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="895" y="190.37037" font-size="12.436505" fill="var(--primary-fill)" font-family="Courier New, monospace">val pairs =</text>
-  <text x="895" y="211.851852" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">  sc.parallelize(Seq(</text>
-  <text x="895" y="233.333333" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">    (1L, 2L),</text>
-  <text x="895" y="254.814815" font-size="12.436505" fill="var(--bg)" font-family="Courier New, monospace">    (2L, 3L)))</text>
-  <text x="895" y="287.037037" font-size="12.436505" fill="var(--ok-fill)" font-family="Courier New, monospace">Graph.fromEdgeTuples(</text>
-  <text x="895" y="303.148148" font-size="12.436505" fill="var(--ok-fill)" font-family="Courier New, monospace">  pairs, defaultValue=1)</text>
-
-  <text x="1050" y="346.111111" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--warn-border)" font-family="Arial, sans-serif">inputs</text>
-  <text x="1050" y="378.333333" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">RDD[(VertexId, VertexId)]</text>
-  <text x="1050" y="405.185185" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">default VD</text>
-
-  <text x="1050" y="458.888889" text-anchor="middle" font-size="14.509256" font-weight="bold" fill="var(--warn-border)" font-family="Arial, sans-serif">use when</text>
-  <text x="1050" y="491.111111" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">unweighted graph</text>
-  <text x="1050" y="517.962963" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">edges count as weight 1</text>
-  <text x="1050" y="544.814815" text-anchor="middle" font-size="13.472881" fill="var(--text-muted)" font-family="Arial, sans-serif">adj-list style input</text>
+  <text x="1046.779661016949" y="469.62962962963" text-anchor="middle" font-size="15.676820846856" font-weight="bold" fill="var(--warn-border)" font-family="Arial, sans-serif">use when</text>
+  <text x="1046.779661016949" y="499.703703703704" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">unweighted graph</text>
+  <text x="1046.779661016949" y="523.333333333333" text-anchor="middle" font-size="13.586578067275" fill="var(--text-muted)" font-family="Arial, sans-serif">adj-list input</text>
 </svg>

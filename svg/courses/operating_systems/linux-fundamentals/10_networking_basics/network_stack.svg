@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,78 +81,60 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="40" width="742.857143" height="82.857143" rx="7.082027" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="411.428571" y="69.460229" text-anchor="middle" font-size="20.514979" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Socket API (Application Layer)</text>
-  <text x="411.428571" y="90.634971" text-anchor="middle" font-size="15.386175" fill="var(--text-muted)" font-family="Courier New, monospace">socket()  bind()  connect()  send()  recv()  close()</text>
-  <text x="411.428571" y="111.809486" text-anchor="middle" font-size="13.334748" fill="var(--text-faint)" font-family="Arial, sans-serif">User-space boundary — programs call these to use the network</text>
-  <line x1="411.428571" y1="122.857143" x2="411.428571" y2="155.079314" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <line x1="411.428571" y1="122.857143" x2="411.428571" y2="155.079314" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="0" marker-end="url(#arrow)" transform="translate(30,0)" />
-  <text x="371.428571" y="143.111086" font-size="11.803378" fill="var(--text-faint)" font-family="Arial, sans-serif">syscall</text>
-  <rect x="40" y="157.841143" width="742.857143" height="82.857143" rx="7.082027" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="411.428571" y="187.3016" text-anchor="middle" font-size="20.514979" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Transport Layer — TCP / UDP</text>
-  <text x="245.714286" y="208.476114" text-anchor="middle" font-size="14.360344" fill="var(--ok-accent)" font-family="Courier New, monospace">TCP: reliable, ordered, connection</text>
-  <text x="588.571307" y="208.476114" text-anchor="middle" font-size="14.360344" fill="var(--ok-accent)" font-family="Courier New, monospace">UDP: fast, stateless, datagram</text>
-  <text x="411.428571" y="228.730171" text-anchor="middle" font-size="13.334748" fill="var(--text-faint)" font-family="Arial, sans-serif">Port numbers (0–65535) · Segments/Datagrams</text>
-  <line x1="411.428571" y1="240.698286" x2="411.428571" y2="272.920686" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <line x1="445.714286" y1="272.920686" x2="445.714286" y2="240.698286" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="40" y="275.682514" width="742.857143" height="82.857143" rx="7.082027" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="411.428571" y="305.142857" text-anchor="middle" font-size="20.514979" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Network Layer — IP</text>
-  <text x="411.428571" y="326.317371" text-anchor="middle" font-size="14.360344" fill="var(--danger-accent)" font-family="Courier New, monospace">IPv4 (32-bit addr)  ·  IPv6 (128-bit addr)</text>
-  <text x="411.428571" y="345.650743" text-anchor="middle" font-size="13.334748" fill="var(--text-faint)" font-family="Arial, sans-serif">Routing · Packets · TTL · Source/Dest IP addresses</text>
-  <line x1="411.428571" y1="358.539657" x2="411.428571" y2="390.761829" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <line x1="445.714286" y1="390.761829" x2="445.714286" y2="358.539657" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="40" y="393.523771" width="742.857143" height="82.857143" rx="7.082027" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="411.428571" y="422.984" text-anchor="middle" font-size="20.514979" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Data Link Layer — Ethernet</text>
-  <text x="411.428571" y="444.158743" text-anchor="middle" font-size="14.360344" fill="var(--info-accent)" font-family="Courier New, monospace">MAC addresses (48-bit)  ·  Frames  ·  ARP</text>
-  <text x="411.428571" y="463.492114" text-anchor="middle" font-size="13.334748" fill="var(--text-faint)" font-family="Arial, sans-serif">eth0 / ens3 / wlan0 — Linux network interface names</text>
-  <line x1="411.428571" y1="476.380914" x2="411.428571" y2="508.603086" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <line x1="445.714286" y1="508.603086" x2="445.714286" y2="476.380914" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="40" y="511.365029" width="742.857143" height="82.857143" rx="7.082027" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="411.428571" y="540.825371" text-anchor="middle" font-size="20.514979" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Physical Layer — NIC / Driver</text>
-  <text x="411.428571" y="562" text-anchor="middle" font-size="14.360344" fill="var(--text)" font-family="Courier New, monospace">Bits on wire (electrical / optical / radio)</text>
-  <text x="411.428571" y="581.333257" text-anchor="middle" font-size="13.334748" fill="var(--text-faint)" font-family="Arial, sans-serif">Network card driver · sk_buff kernel structure · IRQ</text>
-  <rect x="817.142857" y="40" width="422.857143" height="554.222171" rx="7.082027" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="817.142857" y="40" width="422.857143" height="38.666629" rx="7.082027" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="817.142857" y="63.015886" width="422.857143" height="15.650743" fill="url(#grad-primary)" rx="7.082027" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1028.571429" y="65.777829" text-anchor="middle" font-size="16.411889" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Linux Tools per Layer</text>
-  <text x="840" y="97.079314" font-size="14.360344" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Application / Socket</text>
-  <text x="840" y="113.650743" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">nc  curl  wget  ssh  ping</text>
-  <text x="840" y="130.222171" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">ss -tlnp   netstat -an</text>
-  <line x1="840" y1="141.269714" x2="1217.142735" y2="141.269714" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="161.523771" font-size="14.360344" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Transport — TCP/UDP</text>
-  <text x="840" y="178.0952" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">ss -s   netstat -s</text>
-  <text x="840" y="194.666629" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">iptables  nftables  ufw</text>
-  <line x1="840" y1="205.714286" x2="1217.142735" y2="205.714286" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="225.968229" font-size="14.360344" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Network — IP</text>
-  <text x="840" y="242.539657" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">ip addr   ip route   ping</text>
-  <text x="840" y="259.111086" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">traceroute  dig  nslookup</text>
-  <line x1="840" y1="270.158743" x2="1217.142735" y2="270.158743" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="290.412571" font-size="14.360344" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Data Link — Ethernet</text>
-  <text x="840" y="306.984" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">ip link   arp   arping</text>
-  <text x="840" y="323.555429" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">bridge   ethtool</text>
-  <line x1="840" y1="334.603086" x2="1217.142735" y2="334.603086" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="354.857143" font-size="14.360344" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Physical / Driver</text>
-  <text x="840" y="371.428571" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">ethtool -i eth0</text>
-  <text x="840" y="388" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">lspci | grep -i net</text>
-  <text x="840" y="404.571429" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">dmesg | grep eth</text>
-  <line x1="840" y1="417.460229" x2="1217.142735" y2="417.460229" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="437.714286" font-size="14.360344" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Capture (any layer)</text>
-  <text x="840" y="454.285714" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">tcpdump -i eth0</text>
-  <text x="840" y="470.857143" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">wireshark</text>
-  <text x="840" y="487.428571" font-size="13.334748" fill="var(--text)" font-family="Courier New, monospace">tshark -i eth0 -f "tcp"</text>
-  <line x1="840" y1="500.317371" x2="1217.142735" y2="500.317371" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="840" y="520.571429" font-size="14.360344" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Configuration files</text>
-  <text x="840" y="537.142857" font-size="12.309035" fill="var(--text)" font-family="Courier New, monospace">/etc/network/interfaces</text>
-  <text x="840" y="553.714286" font-size="12.309035" fill="var(--text)" font-family="Courier New, monospace">/etc/netplan/*.yaml</text>
-  <text x="840" y="570.285714" font-size="12.309035" fill="var(--text)" font-family="Courier New, monospace">/etc/resolv.conf  (DNS)</text>
-  <text x="840" y="586.857143" font-size="12.309035" fill="var(--text)" font-family="Courier New, monospace">/etc/hosts  (static names)</text>
-  <text x="119.6875" y="92.3611" font-size="11.2974" fill="var(--text-muted)" transform="rotate(-90,85,65)" font-family="Arial, sans-serif">— User space —</text>
-  <text x="119.6875" y="346.1111" font-size="11.2974" fill="var(--text-muted)" transform="rotate(-90,85,380)" font-family="Arial, sans-serif">— Kernel space —</text>
-  <text x="542.857143" y="620" text-anchor="middle" font-size="14.360344" fill="var(--text-muted)" font-family="Arial, sans-serif">Data travels DOWN the stack when sending (encapsulation) and UP when receiving (decapsulation).</text>
+
+  <!-- Layer stack (left column) -->
+  <rect x="40" y="40" width="732.203389830508" height="107.407407407407" rx="8.360971118323" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="406.101694915254" y="77.592592592593" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Socket API</text>
+  <text x="406.101694915254" y="109.814814814815" text-anchor="middle" font-size="14.631699457065" fill="var(--primary-text)" font-family="Courier New, monospace">socket bind connect send recv</text>
+  <text x="406.101694915254" y="134.518518518519" text-anchor="middle" font-size="12.541456677484" fill="var(--primary-text)" font-family="Arial, sans-serif">User space</text>
+
+  <rect x="40" y="158.148148148148" width="732.203389830508" height="107.407407407407" rx="8.360971118323" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="406.101694915254" y="195.740740740741" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Transport: TCP / UDP</text>
+  <text x="406.101694915254" y="227.962962962963" text-anchor="middle" font-size="13.586578067275" fill="var(--ok-text)" font-family="Arial, sans-serif">TCP reliable | UDP datagram</text>
+  <text x="406.101694915254" y="252.666666666667" text-anchor="middle" font-size="12.541456677484" fill="var(--ok-text)" font-family="Arial, sans-serif">Ports 0-65535</text>
+
+  <rect x="40" y="276.296296296296" width="732.203389830508" height="107.407407407407" rx="8.360971118323" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="406.101694915254" y="313.888888888889" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Network: IP</text>
+  <text x="406.101694915254" y="346.111111111111" text-anchor="middle" font-size="13.586578067275" fill="var(--warn-text)" font-family="Arial, sans-serif">IPv4 / IPv6</text>
+  <text x="406.101694915254" y="370.814814814815" text-anchor="middle" font-size="12.541456677484" fill="var(--warn-text)" font-family="Arial, sans-serif">Routing, TTL</text>
+
+  <rect x="40" y="394.444444444444" width="732.203389830508" height="107.407407407407" rx="8.360971118323" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="406.101694915254" y="432.037037037037" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Data Link: Ethernet</text>
+  <text x="406.101694915254" y="464.259259259259" text-anchor="middle" font-size="13.586578067275" fill="var(--info-text)" font-family="Arial, sans-serif">MAC, ARP, frames</text>
+  <text x="406.101694915254" y="488.962962962963" text-anchor="middle" font-size="12.541456677484" fill="var(--info-text)" font-family="Arial, sans-serif">eth0 / wlan0</text>
+
+  <rect x="40" y="512.592592592593" width="732.203389830508" height="107.407407407407" rx="8.360971118323" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="406.101694915254" y="550.185185185185" text-anchor="middle" font-size="20.902427795807" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Physical: NIC / Driver</text>
+  <text x="406.101694915254" y="582.407407407408" text-anchor="middle" font-size="13.586578067275" fill="var(--danger-text)" font-family="Arial, sans-serif">Bits on wire</text>
+  <text x="406.101694915254" y="607.111111111111" text-anchor="middle" font-size="12.541456677484" fill="var(--danger-text)" font-family="Arial, sans-serif">sk_buff, IRQ</text>
+
+  <!-- Tools column -->
+  <rect x="792.542372881356" y="40" width="447.457627118644" height="580" rx="8.360971118323" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1016.271186440678" y="77.592592592593" text-anchor="middle" font-size="18.812185016227" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Linux Tools</text>
+
+  <text x="812.881355932203" y="115.185185185185" font-size="13.586578067275" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Application</text>
+  <text x="812.881355932203" y="136.666666666667" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">nc curl ssh ping</text>
+  <text x="812.881355932203" y="158.148148148148" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">ss netstat</text>
+
+  <text x="812.881355932203" y="190.37037037037" font-size="13.586578067275" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Transport</text>
+  <text x="812.881355932203" y="211.851851851852" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">iptables nftables</text>
+
+  <text x="812.881355932203" y="244.074074074074" font-size="13.586578067275" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Network</text>
+  <text x="812.881355932203" y="265.555555555556" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">ip addr  ip route</text>
+  <text x="812.881355932203" y="287.037037037037" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">traceroute dig</text>
+
+  <text x="812.881355932203" y="319.259259259259" font-size="13.586578067275" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Data Link</text>
+  <text x="812.881355932203" y="340.740740740741" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">ip link  arp  ethtool</text>
+
+  <text x="812.881355932203" y="372.962962962963" font-size="13.586578067275" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Physical</text>
+  <text x="812.881355932203" y="394.444444444444" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">lspci  dmesg</text>
+
+  <text x="812.881355932203" y="426.666666666667" font-size="13.586578067275" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Capture</text>
+  <text x="812.881355932203" y="448.148148148148" font-size="12.541456677484" fill="var(--text)" font-family="Courier New, monospace">tcpdump wireshark</text>
+
+  <text x="812.881355932203" y="480.37037037037" font-size="13.586578067275" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Config</text>
+  <text x="812.881355932203" y="501.851851851852" font-size="11.496335287694" fill="var(--text)" font-family="Courier New, monospace">/etc/netplan/*.yaml</text>
+  <text x="812.881355932203" y="523.333333333333" font-size="11.496335287694" fill="var(--text)" font-family="Courier New, monospace">/etc/resolv.conf</text>
+  <text x="812.881355932203" y="544.814814814815" font-size="11.496335287694" fill="var(--text)" font-family="Courier New, monospace">/etc/hosts</text>
 </svg>

@@ -1,156 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.424811740757" font-weight="bold" fill="var(--text)">RDD Transformations</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="60.714285714286" width="590" height="300.357142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="102.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">Narrow (no shuffle)</text>
+  <text x="335" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">One input -&gt; one output partition</text>
+  <text x="335" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Pipelined in one stage</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="70" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)">map</text>
+  <rect x="245" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="322" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)">filter</text>
+  <rect x="420" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)">flatMap</text>
+  <rect x="70" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">mapPartitions</text>
+  <rect x="245" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="322" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)">sample</text>
+  <rect x="420" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)">union</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <text x="335" y="340.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Cheap: same executor</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="650" y="60.714285714286" width="590" height="300.357142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="102.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">Wide (shuffle)</text>
+  <text x="945" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Many inputs per output</text>
+  <text x="945" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">New stage, data moves</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="680" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="757" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">groupByKey</text>
+  <rect x="855" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="932" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">reduceByKey</text>
+  <rect x="1030" y="179.821428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1107" y="212.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" font-weight="bold" fill="var(--warn-text)">aggregateByKey</text>
+  <rect x="680" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="757" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">join</text>
+  <rect x="855" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="932" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">distinct</text>
+  <rect x="1030" y="252.321428571429" width="155" height="51.785714285714" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1107" y="285.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">repartition</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <text x="945" y="340.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Expensive: disk + network</text>
 
-  <text x="630.1639" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3049" font-weight="bold" fill="var(--text)">RDD Transformations</text>
-
-  <rect x="40" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.082" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2495" font-weight="bold" fill="var(--ok-text)">Narrow (no shuffle)</text>
-  <text x="335.082" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Each output partition depends on at most one input partition</text>
-  <text x="335.082" y="165.4054" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Pipelined inside a single stage</text>
-
-  <rect x="69.5082" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="148.1967" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">map</text>
-
-  <rect x="246.5574" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.2459" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">filter</text>
-
-  <rect x="423.6066" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.2951" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">flatMap</text>
-
-  <rect x="69.5082" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="148.1967" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">mapPartitions</text>
-
-  <rect x="246.5574" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.2459" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">sample</text>
-
-  <rect x="423.6066" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.2951" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.194" font-weight="bold" fill="var(--ok-text)">union</text>
-
-  <text x="335.082" y="348.2883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--ok-text)">Cheap: stays on the same executor</text>
-
-  <rect x="649.8361" y="81.8018" width="590.1639" height="287.3874" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="944.918" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2495" font-weight="bold" fill="var(--warn-text)">Wide (shuffle)</text>
-  <text x="944.918" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Output partition depends on many input partitions</text>
-  <text x="944.918" y="165.4054" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Starts a new stage — data moves across the network</text>
-
-  <rect x="679.3443" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="758.0328" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">groupByKey</text>
-
-  <rect x="856.3934" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.082" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">reduceByKey</text>
-
-  <rect x="1033.4426" y="191.5315" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1112.1311" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">aggregateByKey</text>
-
-  <rect x="679.3443" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="758.0328" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">join / cogroup</text>
-
-  <rect x="856.3934" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.082" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">distinct</text>
-
-  <rect x="1033.4426" y="264.6847" width="157.377" height="52.2523" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1112.1311" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" font-weight="bold" fill="var(--warn-text)">repartition</text>
-
-  <text x="944.918" y="348.2883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1802" fill="var(--warn-text)">Expensive: disk write, network transfer, disk read</text>
-
-  <rect x="40" y="400.5405" width="1200" height="219.4595" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="437.1171" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2495" font-weight="bold" fill="var(--text)">Rules of thumb</text>
-  <text x="79.3443" y="473.6937" font-family="Arial, sans-serif" font-size="14.194" fill="var(--text-muted)">• Prefer reduceByKey over groupByKey — it combines on the map side before shuffling.</text>
-  <text x="79.3443" y="502.955" font-family="Arial, sans-serif" font-size="14.194" fill="var(--text-muted)">• Use mapPartitions when you need to set up per-partition state (connection, buffer).</text>
-  <text x="79.3443" y="532.2162" font-family="Arial, sans-serif" font-size="14.194" fill="var(--text-muted)">• coalesce shrinks partitions without a shuffle; repartition forces a full shuffle.</text>
-  <text x="79.3443" y="561.4775" font-family="Arial, sans-serif" font-size="14.194" fill="var(--text-muted)">• broadcast a small lookup table instead of joining when one side fits in memory.</text>
-  <text x="79.3443" y="590.7387" font-family="Arial, sans-serif" font-size="14.194" fill="var(--text-muted)">• Fewer wide transformations = fewer stages = faster job.</text>
+  <rect x="40" y="392.142857142857" width="1200" height="227.857142857143" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="433.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--text)">Rules of thumb</text>
+  <text x="80" y="475" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-muted)">- reduceByKey beats groupByKey (map-side combine)</text>
+  <text x="80" y="506.071428571429" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-muted)">- mapPartitions: per-partition setup</text>
+  <text x="80" y="537.142857142857" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-muted)">- coalesce shrinks without shuffle</text>
+  <text x="80" y="568.214285714286" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-muted)">- Broadcast small lookup tables</text>
+  <text x="80" y="599.285714285714" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-muted)">- Fewer wide ops = faster</text>
 </svg>

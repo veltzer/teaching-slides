@@ -1,176 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.342871951533" font-weight="bold" fill="var(--text)">Query Optimization (Catalyst)</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="65.663716814159" width="220" height="184.778761061947" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">SQL / DataFrame</text>
+  <text x="150" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">User query</text>
+  <text x="150" y="178.58407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Parser builds AST</text>
+  <text x="150" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Unresolved plan</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <line x1="260" y1="158.053097345133" x2="300" y2="158.053097345133" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="310" y="65.663716814159" width="220" height="184.778761061947" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="420" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Analyzer</text>
+  <text x="420" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Resolve columns</text>
+  <text x="420" y="178.58407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Type checking</text>
+  <text x="420" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Logical plan</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="530" y1="158.053097345133" x2="570" y2="158.053097345133" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="580" y="65.663716814159" width="220" height="184.778761061947" rx="8.10549906201" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="690" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--warn-text)">Optimizer</text>
+  <text x="690" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Predicate pushdown</text>
+  <text x="690" y="178.58407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Column pruning</text>
+  <text x="690" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Join reorder</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <line x1="800" y1="158.053097345133" x2="840" y2="158.053097345133" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">Query Optimization (Catalyst)</text>
+  <rect x="850" y="65.663716814159" width="220" height="184.778761061947" rx="8.10549906201" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Physical Plan</text>
+  <text x="960" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Join strategy</text>
+  <text x="960" y="178.58407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Broadcast vs shuffle</text>
+  <text x="960" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Cost-based</text>
 
-  <rect x="40" y="80.218978" width="220" height="179.927007" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="122.554745" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--primary-text)">SQL / DataFrame</text>
-  <text x="150" y="159.59854" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">User query</text>
-  <text x="150" y="188.175182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Parser builds</text>
-  <text x="150" y="214.635036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">unresolved plan</text>
-  <text x="150" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">AST of ops</text>
+  <line x1="1070" y1="158.053097345133" x2="1110" y2="158.053097345133" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="260" y1="170.182482" x2="300" y2="170.182482" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1120" y="65.663716814159" width="120" height="184.778761061947" rx="8.10549906201" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1180" y="106.725663716814" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--danger-text)">RDD</text>
+  <text x="1180" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Codegen</text>
+  <text x="1180" y="178.58407079646" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Executors</text>
+  <text x="1180" y="209.380530973451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Tasks</text>
 
-  <rect x="310" y="80.218978" width="220" height="179.927007" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="420" y="122.554745" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--ok-text)">Analyzer</text>
-  <text x="420" y="159.59854" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Resolve columns</text>
-  <text x="420" y="188.175182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Resolve tables</text>
-  <text x="420" y="214.635036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Type checking</text>
-  <text x="420" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Logical plan</text>
+  <rect x="40" y="281.238938053097" width="390" height="338.761061946903" rx="8.10549906201" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--primary-text)">Rule-Based Rewrites</text>
+  <text x="235" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Push filters down</text>
+  <text x="235" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Project used cols</text>
+  <text x="235" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Combine filters</text>
+  <text x="235" y="466.017699115044" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Fold constants</text>
+  <text x="235" y="501.946902654867" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Null propagation</text>
+  <text x="235" y="537.87610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Simplify expressions</text>
+  <text x="235" y="578.938053097345" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--primary-text)">Iterative rules</text>
 
-  <line x1="530" y1="170.182482" x2="570" y2="170.182482" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="450" y="281.238938053097" width="390" height="338.761061946903" rx="8.10549906201" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="645" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--ok-text)">Adaptive Query Exec</text>
+  <text x="645" y="358.230088495575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Runtime statistics</text>
+  <text x="645" y="394.159292035398" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Coalesce shuffles</text>
+  <text x="645" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Switch to broadcast</text>
+  <text x="645" y="466.017699115044" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Handle skew</text>
+  <text x="645" y="501.946902654867" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Default Spark 3.2+</text>
+  <text x="645" y="537.87610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--ok-text)">Dynamic pruning</text>
 
-  <rect x="580" y="80.218978" width="220" height="179.927007" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="690" y="122.554745" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--warn-text)">Optimizer</text>
-  <text x="690" y="159.59854" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Predicate pushdown</text>
-  <text x="690" y="188.175182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Column pruning</text>
-  <text x="690" y="214.635036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Constant folding</text>
-  <text x="690" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Join reorder</text>
-
-  <line x1="800" y1="170.182482" x2="840" y2="170.182482" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="850" y="80.218978" width="220" height="179.927007" rx="6.172697" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="960" y="122.554745" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--info-text)">Physical Plan</text>
-  <text x="960" y="159.59854" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Pick join strategy</text>
-  <text x="960" y="188.175182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Broadcast vs shuffle</text>
-  <text x="960" y="214.635036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Cost-based choice</text>
-  <text x="960" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Exchange ops</text>
-
-  <line x1="1070" y1="170.182482" x2="1110" y2="170.182482" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="1120" y="80.218978" width="120" height="179.927007" rx="6.172697" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1180" y="122.554745" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--danger-text)">RDD</text>
-  <text x="1180" y="159.59854" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Whole-stage</text>
-  <text x="1180" y="188.175182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Codegen</text>
-  <text x="1180" y="214.635036" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Executors run</text>
-  <text x="1180" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">tasks</text>
-
-  <rect x="40" y="291.89781" width="390" height="328.10219" rx="6.172697" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="235" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--primary-text)">Rule-Based Rewrites</text>
-  <text x="235" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Push filters to source</text>
-  <text x="235" y="392.445255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Project only used cols</text>
-  <text x="235" y="418.905109" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Combine adjacent filters</text>
-  <text x="235" y="445.364964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Fold constants</text>
-  <text x="235" y="471.824818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Eliminate subqueries</text>
-  <text x="235" y="498.284672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Null propagation</text>
-  <text x="235" y="530.036496" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Decorrelate subqueries</text>
-  <text x="235" y="561.788321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Simplify expressions</text>
-  <text x="235" y="593.540146" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Apply rules iteratively</text>
-
-  <rect x="450" y="291.89781" width="390" height="328.10219" rx="6.172697" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="645" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--ok-text)">Adaptive Query Exec</text>
-  <text x="645" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Runtime statistics</text>
-  <text x="645" y="392.445255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Coalesce shuffle partitions</text>
-  <text x="645" y="418.905109" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Switch join to broadcast</text>
-  <text x="645" y="445.364964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Handle skewed joins</text>
-  <text x="645" y="477.116788" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Enabled in Spark 3+</text>
-  <text x="645" y="508.868613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">spark.sql.adaptive.enabled</text>
-  <text x="645" y="540.620438" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Default true since 3.2</text>
-  <text x="645" y="572.372263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Dynamic partition pruning</text>
-  <text x="645" y="598.832117" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Huge wins on big joins</text>
-
-  <rect x="860" y="291.89781" width="380" height="328.10219" rx="6.172697" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1050" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--info-text)">Inspect Plans</text>
-  <text x="1050" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">df.explain() compact view</text>
-  <text x="1050" y="397.737226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">explain(true) all stages</text>
-  <text x="1050" y="429.489051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">explain("cost") stats</text>
-  <text x="1050" y="461.240876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Spark UI SQL tab</text>
-  <text x="1050" y="492.992701" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">DAG visual per query</text>
-  <text x="1050" y="524.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Check shuffle sizes</text>
-  <text x="1050" y="556.49635" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Look for broadcast joins</text>
-  <text x="1050" y="588.248175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Collect column stats</text>
+  <rect x="860" y="281.238938053097" width="380" height="338.761061946903" rx="8.10549906201" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1050" y="317.16814159292" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.237372889523" font-weight="bold" fill="var(--info-text)">Inspect Plans</text>
+  <text x="1050" y="358.230088495575" text-anchor="middle" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--info-text)">df.explain()</text>
+  <text x="1050" y="394.159292035398" text-anchor="middle" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--info-text)">explain(true)</text>
+  <text x="1050" y="430.088495575221" text-anchor="middle" font-family="Courier New, monospace" font-size="15.197810741269" fill="var(--info-text)">explain("cost")</text>
+  <text x="1050" y="466.017699115044" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">Spark UI SQL tab</text>
+  <text x="1050" y="501.946902654867" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">DAG per query</text>
+  <text x="1050" y="537.87610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" fill="var(--info-text)">Check shuffle size</text>
 </svg>

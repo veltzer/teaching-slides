@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,109 +34,57 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Cluster Sizing</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="290" height="421.818181818182" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--primary-text)">Cores</text>
+  <text x="185" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">1 core per task</text>
+  <text x="185" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">4-5 per executor</text>
+  <text x="185" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">More: HDFS I/O cap</text>
+  <text x="185" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">Fewer: JVM waste</text>
+  <text x="185" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--primary-text)">Leave 1 for OS</text>
+  <text x="185" y="451.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-style="italic" fill="var(--primary-text)">per worker node</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="71.636363636364" width="290" height="421.818181818182" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--ok-text)">Memory</text>
+  <text x="485" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Cache + shuffle</text>
+  <text x="485" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">8-32 GB executor</text>
+  <text x="485" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">YARN overhead ~10%</text>
+  <text x="485" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Avoid 50+ GB heaps</text>
+  <text x="485" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">GC pauses hurt</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="71.636363636364" width="290" height="421.818181818182" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--warn-text)">Executors</text>
+  <text x="785" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--warn-text)">2-5 per node</text>
+  <text x="785" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--warn-text)">Not one giant</text>
+  <text x="785" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--warn-text)">Scales parallelism</text>
+  <text x="785" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--warn-text)">Dynamic allocation</text>
+  <text x="785" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--warn-text)">Match workload</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="71.636363636364" width="300" height="421.818181818182" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--info-text)">Storage</text>
+  <text x="1090" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--info-text)">Shuffle spill disk</text>
+  <text x="1090" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--info-text)">SSD for shuffle</text>
+  <text x="1090" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--info-text)">Data locality: HDFS</text>
+  <text x="1090" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--info-text)">Right-size nodes</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
-
-  <rect x="40" y="40" width="290" height="450" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Cores</text>
-  <text x="185" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">1 core per task</text>
-  <text x="185" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">4-5 cores per</text>
-  <text x="185" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">executor is ideal</text>
-  <text x="185" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">More saturates HDFS</text>
-  <text x="185" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Fewer wastes JVM</text>
-  <text x="185" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Leave 1 for OS</text>
-  <text x="185" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">per worker node</text>
-
-  <rect x="340" y="40" width="290" height="450" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Memory</text>
-  <text x="485" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Budget for cache</text>
-  <text x="485" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">and shuffle both</text>
-  <text x="485" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">8-32 GB executor</text>
-  <text x="485" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">sweet spot</text>
-  <text x="485" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Reserve YARN</text>
-  <text x="485" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">overhead ~10%</text>
-  <text x="485" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Avoid 50+ GB heaps</text>
-
-  <rect x="640" y="40" width="290" height="450" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Executors</text>
-  <text x="785" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Aim for 2-5 per</text>
-  <text x="785" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">node, not one giant</text>
-  <text x="785" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Parallelism scales</text>
-  <text x="785" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">with count</text>
-  <text x="785" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Dynamic alloc</text>
-  <text x="785" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">adjusts at runtime</text>
-  <text x="785" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Match to workload</text>
-
-  <rect x="940" y="40" width="300" height="450" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Storage</text>
-  <text x="1090" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Plan shuffle spill</text>
-  <text x="1090" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">disk capacity</text>
-  <text x="1090" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">SSDs help shuffle</text>
-  <text x="1090" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">heavy jobs</text>
-  <text x="1090" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Data locality</text>
-  <text x="1090" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">matters for HDFS</text>
-  <text x="1090" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Right-size nodes</text>
-
-  <rect x="40" y="510" width="1200" height="110" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Sizing rule of thumb</text>
-  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Start small, measure, then scale. Benchmark representative jobs first.</text>
-  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Cost follows executors x memory x time — tune all three together.</text>
+  <rect x="40" y="514.545454545455" width="1200" height="105.454545454545" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="551.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Rule of thumb</text>
+  <text x="640" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Start small, measure, scale. Cost = executors × memory × time.</text>
 </svg>

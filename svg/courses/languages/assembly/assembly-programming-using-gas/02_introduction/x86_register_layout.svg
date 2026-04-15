@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,76 +82,82 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <text x="629.473684" y="40" text-anchor="middle" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Register widths — each layer is an alias of the same hardware register</text>
-  <text x="103.157895" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">63</text>
-  <text x="440" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">32</text>
-  <text x="608.421053" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">31</text>
-  <text x="776.842105" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">16</text>
-  <text x="861.052519" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">15</text>
-  <text x="987.368421" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">8</text>
-  <text x="1071.578947" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">7</text>
-  <text x="1197.894737" y="64.023714" text-anchor="middle" font-size="12.354465" fill="var(--text-faint)" font-family="Courier New, monospace">0</text>
-  <rect x="40" y="70.887571" width="1199.999888" height="44.615393" rx="6.561403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="271.578947" y="97.485285" text-anchor="middle" font-size="20.907472" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">RAX</text>
-  <text x="755.789474" y="97.485285" text-anchor="middle" font-size="14.255085" fill="var(--primary-accent)" font-family="Arial, sans-serif">64 bits</text>
-  <rect x="608.421053" y="129.230892" width="631.578947" height="44.615393" rx="6.561403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="924.210526" y="155.828393" text-anchor="middle" font-size="20.907472" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">EAX</text>
-  <text x="755.789474" y="155.828393" text-anchor="middle" font-size="14.255085" fill="var(--primary-accent)" font-family="Arial, sans-serif">32 bits</text>
-  <rect x="40" y="129.230892" width="566.315789" height="44.615393" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="323.157895" y="155.828393" text-anchor="middle" font-size="13.304666" fill="var(--text-faint)" font-family="Arial, sans-serif">(upper 32 bits — zeroed on write in 64-bit mode)</text>
-  <rect x="861.052519" y="187.574" width="378.947368" height="44.615393" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1050.526204" y="214.171714" text-anchor="middle" font-size="20.907472" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">AX</text>
-  <text x="966.315677" y="214.171714" text-anchor="middle" font-size="14.255085" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bits</text>
-  <rect x="40" y="187.574" width="818.947368" height="44.615393" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="449.473684" y="214.171714" text-anchor="middle" font-size="13.304666" fill="var(--text-faint)" font-family="Arial, sans-serif">(upper 48 bits — not directly accessible via AX)</text>
-  <rect x="861.052519" y="245.917107" width="168.421053" height="44.615393" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="945.263158" y="272.514821" text-anchor="middle" font-size="20.907472" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">AH</text>
-  <text x="903.157895" y="286.242643" text-anchor="middle" font-size="11.404155" fill="var(--text-faint)" font-family="Arial, sans-serif">bits 15–8</text>
-  <rect x="1071.578947" y="245.917107" width="168.421053" height="44.615393" rx="6.561403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1155.789361" y="272.514821" text-anchor="middle" font-size="20.907472" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">AL</text>
-  <text x="1113.684211" y="286.242643" text-anchor="middle" font-size="11.404155" fill="var(--primary-accent)" font-family="Arial, sans-serif">bits 7–0</text>
-  <rect x="40" y="245.917107" width="818.947368" height="44.615393" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="629.473684" y="343.727821" text-anchor="middle" font-size="16.155814" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">General Purpose Registers — Roles</text>
-  <rect x="40" y="357.455643" width="557.894737" height="39.4675" rx="6.561403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="103.157895" y="381.479357" font-size="17.106124" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">RAX / EAX</text>
-  <text x="313.684211" y="381.479357" font-size="15.205395" fill="var(--primary-accent)" font-family="Arial, sans-serif">Accumulator · return value</text>
-  <rect x="40" y="402.071036" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="103.157895" y="426.094643" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RBX / EBX</text>
-  <text x="313.684211" y="426.094643" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Base · callee-saved</text>
-  <rect x="40" y="446.686322" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="103.157895" y="470.710036" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RCX / ECX</text>
-  <text x="313.684211" y="470.710036" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Counter · loop / 4th arg</text>
-  <rect x="40" y="491.301821" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="103.157895" y="515.325535" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RDX / EDX</text>
-  <text x="313.684211" y="515.325535" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Data · 3rd arg · mul/div</text>
-  <rect x="40" y="535.917214" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="103.157895" y="559.940821" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RSP / ESP</text>
-  <text x="313.684211" y="559.940821" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Stack pointer</text>
-  <rect x="40" y="580.5325" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="103.157895" y="604.556214" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RBP / EBP</text>
-  <text x="313.684211" y="604.556214" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Base pointer · frame</text>
-  <rect x="661.052632" y="357.455643" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="381.479357" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RSI / ESI</text>
-  <text x="934.736842" y="381.479357" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Source index · 2nd arg</text>
-  <rect x="661.052632" y="402.071036" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="426.094643" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RDI / EDI</text>
-  <text x="934.736842" y="426.094643" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Dest index · 1st arg</text>
-  <rect x="661.052632" y="446.686322" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="470.710036" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">R8–R15</text>
-  <text x="934.736842" y="470.710036" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">64-bit only · args 5–6</text>
-  <rect x="661.052632" y="491.301821" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="515.325535" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RIP / EIP</text>
-  <text x="934.736842" y="515.325535" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Instruction pointer</text>
-  <rect x="661.052632" y="535.917214" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="559.940821" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">RFLAGS</text>
-  <text x="934.736842" y="559.940821" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">Status flags · ZF CF SF OF</text>
-  <rect x="661.052632" y="580.5325" width="557.894737" height="39.4675" rx="6.561403" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="724.210526" y="604.556214" font-size="17.106124" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">XMM0–15</text>
-  <text x="934.736842" y="604.556214" font-size="15.205395" fill="var(--text-muted)" font-family="Arial, sans-serif">128-bit · SSE / float</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.299708193792" font-weight="bold" fill="var(--text)">x86 Register Layout</text>
+
+  <text x="103" y="70.905861456483" text-anchor="middle" font-family="Courier New, monospace" font-size="12.179824916275" fill="var(--text-faint)">63</text>
+  <text x="608" y="70.905861456483" text-anchor="middle" font-family="Courier New, monospace" font-size="12.179824916275" fill="var(--text-faint)">31</text>
+  <text x="861" y="70.905861456483" text-anchor="middle" font-family="Courier New, monospace" font-size="12.179824916275" fill="var(--text-faint)">15</text>
+  <text x="1071" y="70.905861456483" text-anchor="middle" font-family="Courier New, monospace" font-size="12.179824916275" fill="var(--text-faint)">7</text>
+  <text x="1197" y="70.905861456483" text-anchor="middle" font-family="Courier New, monospace" font-size="12.179824916275" fill="var(--text-faint)">0</text>
+
+  <rect x="40" y="81.207815275311" width="1200" height="46.358792184725" rx="8.119883277517" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="271" y="110.053285968028" text-anchor="middle" font-family="Courier New, monospace" font-size="20.299708193792" font-weight="bold" fill="var(--primary-text)">RAX</text>
+  <text x="755" y="110.053285968028" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--primary-text)">64 bits</text>
+
+  <rect x="40" y="137.868561278863" width="568" height="46.358792184725" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <rect x="608" y="137.868561278863" width="632" height="46.358792184725" rx="8.119883277517" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="924" y="166.714031971581" text-anchor="middle" font-family="Courier New, monospace" font-size="20.299708193792" font-weight="bold" fill="var(--primary-text)">EAX</text>
+  <text x="755" y="166.714031971581" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--primary-text)">32 bits</text>
+
+  <rect x="40" y="194.529307282416" width="820" height="46.358792184725" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <rect x="861" y="194.529307282416" width="379" height="46.358792184725" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1050" y="223.374777975133" text-anchor="middle" font-family="Courier New, monospace" font-size="20.299708193792" font-weight="bold" fill="var(--text)">AX</text>
+
+  <rect x="40" y="251.190053285968" width="820" height="46.358792184725" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <rect x="861" y="251.190053285968" width="169" height="46.358792184725" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="945" y="280.035523978686" text-anchor="middle" font-family="Courier New, monospace" font-size="20.299708193792" font-weight="bold" fill="var(--text)">AH</text>
+  <rect x="1071" y="251.190053285968" width="169" height="46.358792184725" rx="8.119883277517" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1155" y="280.035523978686" text-anchor="middle" font-family="Courier New, monospace" font-size="20.299708193792" font-weight="bold" fill="var(--primary-text)">AL</text>
+
+  <text x="640" y="333.60568383659" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.239766555034" font-weight="bold" fill="var(--text)">General Purpose</text>
+
+  <rect x="40" y="349.058614564831" width="560" height="39.147424511545" rx="8.119883277517" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="374.813499111901" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--primary-text)">RAX</text>
+  <text x="200" y="374.813499111901" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--primary-text)">accumulator, return</text>
+
+  <rect x="40" y="395.417406749556" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="100" y="421.172291296625" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RBX</text>
+  <text x="200" y="421.172291296625" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">callee-saved</text>
+
+  <rect x="40" y="441.776198934281" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="100" y="467.53108348135" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RCX</text>
+  <text x="200" y="467.53108348135" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">counter</text>
+
+  <rect x="40" y="488.134991119005" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="100" y="513.889875666075" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RDX</text>
+  <text x="200" y="513.889875666075" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">data, mul/div</text>
+
+  <rect x="40" y="534.49378330373" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="100" y="560.248667850799" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RSP</text>
+  <text x="200" y="560.248667850799" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">stack pointer</text>
+
+  <rect x="40" y="580.852575488455" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="100" y="606.607460035524" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RBP</text>
+  <text x="200" y="606.607460035524" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">frame pointer</text>
+
+  <rect x="680" y="349.058614564831" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="374.813499111901" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RSI</text>
+  <text x="840" y="374.813499111901" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">source, arg2</text>
+
+  <rect x="680" y="395.417406749556" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="421.172291296625" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RDI</text>
+  <text x="840" y="421.172291296625" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">dest, arg1</text>
+
+  <rect x="680" y="441.776198934281" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="467.53108348135" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">R8-R15</text>
+  <text x="840" y="467.53108348135" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">64-bit only</text>
+
+  <rect x="680" y="488.134991119005" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="513.889875666075" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RIP</text>
+  <text x="840" y="513.889875666075" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">instruction pointer</text>
+
+  <rect x="680" y="534.49378330373" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="560.248667850799" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">RFLAGS</text>
+  <text x="840" y="560.248667850799" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">ZF CF SF OF</text>
+
+  <rect x="680" y="580.852575488455" width="560" height="39.147424511545" rx="8.119883277517" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="740" y="606.607460035524" font-family="Courier New, monospace" font-size="14.209795735654" font-weight="bold" fill="var(--text)">XMM0-15</text>
+  <text x="840" y="606.607460035524" font-family="Arial, sans-serif" font-size="13.194810325965" fill="var(--text-muted)">128-bit SSE</text>
 </svg>

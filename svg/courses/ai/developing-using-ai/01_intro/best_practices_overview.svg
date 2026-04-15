@@ -34,107 +34,59 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">AI Coding Best Practices</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="230" height="253.090909090909" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="155" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--primary-text)">1. Context</text>
+  <text x="155" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Set the stage</text>
+  <text x="155" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Share constraints</text>
+  <text x="155" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Name files</text>
+  <text x="155" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">State goal</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="285" y="71.636363636364" width="230" height="253.090909090909" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--ok-text)">2. Iterate</text>
+  <text x="400" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Short loops</text>
+  <text x="400" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Refine prompts</text>
+  <text x="400" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Adjust context</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="530" y="71.636363636364" width="230" height="253.090909090909" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="645" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--warn-text)">3. Verify</text>
+  <text x="645" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Run tests</text>
+  <text x="645" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Check outputs</text>
+  <text x="645" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Spot hallucinations</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="775" y="71.636363636364" width="230" height="253.090909090909" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="890" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--info-text)">4. Review</text>
+  <text x="890" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--info-text)">Read every line</text>
+  <text x="890" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--info-text)">Challenge choices</text>
+  <text x="890" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--info-text)">Own the code</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="1020" y="71.636363636364" width="220" height="253.090909090909" rx="8.21528508884" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--danger-text)">5. Learn</text>
+  <text x="1130" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Study diffs</text>
+  <text x="1130" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Fundamentals</text>
+  <text x="1130" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Build intuition</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="240" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Clear Context</text>
-  <text x="160" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Set the stage</text>
-  <text x="160" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Share constraints</text>
-  <text x="160" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Name the files</text>
-  <text x="160" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">State the goal</text>
-  <text x="160" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="var(--primary-text)">1</text>
-
-  <rect x="300" y="40" width="220" height="280" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="410" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Iterate</text>
-  <text x="410" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Short loops</text>
-  <text x="410" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Refine prompts</text>
-  <text x="410" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Adjust context</text>
-  <text x="410" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--ok-text)">2</text>
-
-  <rect x="540" y="40" width="220" height="280" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Verify</text>
-  <text x="650" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Run the tests</text>
-  <text x="650" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Check outputs</text>
-  <text x="650" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Spot hallucinations</text>
-  <text x="650" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--warn-text)">3</text>
-
-  <rect x="780" y="40" width="220" height="280" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="890" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Review</text>
-  <text x="890" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Read every line</text>
-  <text x="890" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Challenge choices</text>
-  <text x="890" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Own the code</text>
-  <text x="890" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--info-text)">4</text>
-
-  <rect x="1020" y="40" width="220" height="280" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1130" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Learn</text>
-  <text x="1130" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Study diffs</text>
-  <text x="1130" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Keep fundamentals</text>
-  <text x="1130" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Build intuition</text>
-  <text x="1130" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--danger-text)">5</text>
-
-  <rect x="300" y="340" width="940" height="280" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <text x="770" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">The AI Coding Habit Loop</text>
-  <text x="770" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Feed the model enough context, then steer it one step at a time.</text>
-  <text x="770" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Run and verify every suggestion before accepting it.</text>
-  <text x="770" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Review changes like a senior teammate, not a rubber stamp.</text>
-  <text x="770" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Treat every session as a chance to sharpen your own skills.</text>
-  <text x="770" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--text-faint)">Context, iteration, verification, review, and learning compound.</text>
+  <rect x="200" y="366.909090909091" width="880" height="253.090909090909" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--text)">The Habit Loop</text>
+  <text x="640" y="467.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Feed enough context, then steer step-by-step</text>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Verify every suggestion before accepting</text>
+  <text x="640" y="540.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Review like a senior teammate</text>
+  <text x="640" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-style="italic" fill="var(--text-faint)">Context + iteration compound</text>
 </svg>

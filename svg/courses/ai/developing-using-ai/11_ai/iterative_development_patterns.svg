@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,76 +82,65 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753498" font-weight="bold" fill="var(--text)">AI-Driven Iterative Development</text>
+  </defs>
 
-  <rect x="40" y="82.181818" width="225" height="189.818182" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="152.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">1. Prompt</text>
-  <text x="152.5" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Describe intent,</text>
-  <text x="152.5" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">constraints, examples</text>
-  <text x="152.5" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Share failing tests</text>
-  <text x="152.5" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">and relevant files</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--text)">AI-Driven Iteration</text>
 
-  <line x1="265" y1="177.090909" x2="285" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="82.181818181818" width="225" height="189.818181818182" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">1. Prompt</text>
+  <text x="152" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">describe intent</text>
+  <text x="152" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">share failing tests</text>
+  <text x="152" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">point at files</text>
+  <line x1="265" y1="177.090909090909" x2="290" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="290" y="82.181818" width="225" height="189.818182" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="402.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">2. Generate</text>
-  <text x="402.5" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Model drafts code,</text>
-  <text x="402.5" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">tests, or a plan</text>
-  <text x="402.5" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Prefer small diffs</text>
-  <text x="402.5" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">over full rewrites</text>
+  <rect x="290" y="82.181818181818" width="225" height="189.818181818182" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="402" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">2. Generate</text>
+  <text x="402" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">draft code or plan</text>
+  <text x="402" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">small diffs</text>
+  <text x="402" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">avoid rewrites</text>
+  <line x1="515" y1="177.090909090909" x2="540" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="515" y1="177.090909" x2="535" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="540" y="82.181818181818" width="225" height="189.818181818182" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="652" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">3. Run</text>
+  <text x="652" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">tests, linters</text>
+  <text x="652" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">type checks</text>
+  <text x="652" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">capture output</text>
+  <line x1="765" y1="177.090909090909" x2="790" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="540" y="82.181818" width="225" height="189.818182" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="652.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">3. Run</text>
-  <text x="652.5" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Execute tests,</text>
-  <text x="652.5" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">linters, type checks</text>
-  <text x="652.5" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Capture exact</text>
-  <text x="652.5" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">error output</text>
+  <rect x="790" y="82.181818181818" width="225" height="189.818181818182" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">4. Review</text>
+  <text x="902" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">read diff</text>
+  <text x="902" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">understand lines</text>
+  <text x="902" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">reject scope creep</text>
+  <line x1="1015" y1="177.090909090909" x2="1040" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="765" y1="177.090909" x2="785" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1040" y="82.181818181818" width="200" height="189.818181818182" rx="8.21528508884" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--danger-text)">5. Refine</text>
+  <text x="1140" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">feed errors back</text>
+  <text x="1140" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">narrow scope</text>
+  <text x="1140" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">commit green</text>
 
-  <rect x="790" y="82.181818" width="225" height="189.818182" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="902.5" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">4. Review</text>
-  <text x="902.5" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Read the diff —</text>
-  <text x="902.5" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">understand each line</text>
-  <text x="902.5" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Reject silent</text>
-  <text x="902.5" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">scope creep</text>
+  <path d="M 1140 272 Q 1140 345.818181818182 640 345.818181818182 Q 140 345.818181818182 140 272" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+  <text x="640" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">loop</text>
 
-  <line x1="1015" y1="177.090909" x2="1035" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="377.454545454545" width="395" height="242.545454545455" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="237" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Short Cycles</text>
+  <text x="237" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">tiny changes verify fast</text>
+  <text x="237" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">long prompts drift</text>
+  <text x="237" y="530.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">commit each green</text>
+  <text x="237" y="567.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">reset noisy context</text>
 
-  <rect x="1040" y="82.181818" width="200" height="189.818182" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1140" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--danger-text)">5. Refine</text>
-  <text x="1140" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Feed errors back,</text>
-  <text x="1140" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">narrow the scope</text>
-  <text x="1140" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Commit when</text>
-  <text x="1140" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">green and readable</text>
+  <rect x="445" y="377.454545454545" width="395" height="242.545454545455" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="642" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Verify, Don't Trust</text>
+  <text x="642" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">run the code</text>
+  <text x="642" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">tests are the contract</text>
+  <text x="642" y="530.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">read diff line by line</text>
+  <text x="642" y="567.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">delete what's unclear</text>
 
-  <path d="M 1140 272 Q 1140 356.363636 640 356.363636 Q 140 356.363636 140 272" stroke="var(--text-muted)" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
-  <text x="640" y="345.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">loop until tests pass and design fits</text>
-
-  <rect x="40" y="382.727273" width="395" height="237.272727" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="237.5" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Keep cycles short</text>
-  <text x="237.5" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Tiny changes are easy to verify</text>
-  <text x="237.5" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Long prompts drift and hallucinate</text>
-  <text x="237.5" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Commit at each green state</text>
-  <text x="237.5" y="556.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Rollback is free; regret is not</text>
-  <text x="237.5" y="593.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Reset context when it gets noisy</text>
-
-  <rect x="445" y="382.727273" width="395" height="237.272727" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="642.5" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Verify, don't trust</text>
-  <text x="642.5" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Run the code yourself — every time</text>
-  <text x="642.5" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Tests are the contract, not the prose</text>
-  <text x="642.5" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Read the diff line by line</text>
-  <text x="642.5" y="556.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Ask for rationale when unsure</text>
-  <text x="642.5" y="593.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Delete code you don't understand</text>
-
-  <rect x="850" y="382.727273" width="390" height="237.272727" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1045" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Feed the loop context</text>
-  <text x="1045" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Paste failing test output verbatim</text>
-  <text x="1045" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Point at files, don't describe them</text>
-  <text x="1045" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Name conventions and constraints</text>
-  <text x="1045" y="556.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Share the runtime and version</text>
-  <text x="1045" y="593.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-muted)">Reject guesses; ask for reading first</text>
+  <rect x="850" y="377.454545454545" width="390" height="242.545454545455" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1045" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Feed Context</text>
+  <text x="1045" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">paste verbatim output</text>
+  <text x="1045" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">point to files</text>
+  <text x="1045" y="530.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">name constraints</text>
+  <text x="1045" y="567.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">reject guesses</text>
 </svg>

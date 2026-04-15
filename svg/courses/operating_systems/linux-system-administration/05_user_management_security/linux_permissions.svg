@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,67 +82,58 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <text x="624.87395" y="45.878336" text-anchor="middle" font-size="39.758648" fill="var(--text)" font-family="Courier New, monospace">-rwxr-xr--</text>
-  <rect x="80.336134" y="59.59482" width="60.504202" height="48.986259" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="110.588235" y="88.986624" text-anchor="middle" font-size="27.831122" fill="var(--text-muted)" font-family="Courier New, monospace">-</text>
-  <line x1="110.588235" y1="110.540646" x2="110.588235" y2="147.770475" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="110.588235" y="165.405606" text-anchor="middle" font-size="13.915275" fill="var(--text-faint)" font-family="Arial, sans-serif">type</text>
-  <text x="110.588235" y="185.000061" text-anchor="middle" font-size="13.278312" fill="var(--text-faint)" font-family="Arial, sans-serif">- file  d dir</text>
-  <text x="110.588235" y="202.635192" text-anchor="middle" font-size="13.278312" fill="var(--text-faint)" font-family="Arial, sans-serif">l link</text>
-  <rect x="181.176471" y="59.59482" width="181.512605" height="48.986259" rx="6.862591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="271.932773" y="88.986624" text-anchor="middle" font-size="27.831122" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">rwx</text>
-  <line x1="271.932773" y1="110.540646" x2="271.932773" y2="147.770475" stroke="var(--primary-border)" stroke-width="1.3333" />
-  <text x="271.932773" y="165.405606" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Owner</text>
-  <text x="271.932773" y="186.959385" text-anchor="middle" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">read+write+exec</text>
-  <rect x="403.025318" y="59.59482" width="181.512605" height="48.986259" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="493.78162" y="88.986624" text-anchor="middle" font-size="27.831122" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">r-x</text>
-  <line x1="493.78162" y1="110.540646" x2="493.78162" y2="147.770475" stroke="var(--text-muted)" stroke-width="1.3333" />
-  <text x="493.78162" y="165.405606" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Group</text>
-  <text x="493.78162" y="186.959385" text-anchor="middle" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">read+exec (no write)</text>
-  <rect x="624.87395" y="59.59482" width="181.512605" height="48.986259" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="715.63036" y="88.986624" text-anchor="middle" font-size="27.831122" font-weight="bold" fill="var(--text-faint)" font-family="Courier New, monospace">r--</text>
-  <line x1="715.63036" y1="110.540646" x2="715.63036" y2="147.770475" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="715.63036" y="165.405606" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--text-faint)" font-family="Arial, sans-serif">Other</text>
-  <text x="715.63036" y="186.959385" text-anchor="middle" font-size="13.278312" fill="var(--text-faint)" font-family="Arial, sans-serif">read only</text>
-  <rect x="907.226891" y="40" width="332.773109" height="195.945887" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1073.613445" y="69.391804" text-anchor="middle" font-size="15.903253" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Octal values</text>
-  <text x="947.562918" y="98.783851" font-size="15.903253" fill="var(--primary-accent)" font-family="Courier New, monospace">r = 4</text>
-  <text x="947.562918" y="124.256886" font-size="15.903253" fill="var(--primary-accent)" font-family="Courier New, monospace">w = 2</text>
-  <text x="947.562918" y="149.729677" font-size="15.903253" fill="var(--primary-accent)" font-family="Courier New, monospace">x = 1</text>
-  <text x="947.562918" y="175.202712" font-size="15.903253" fill="var(--text-muted)" font-family="Courier New, monospace">- = 0</text>
-  <text x="947.562918" y="208.51365" font-size="13.915275" fill="var(--text-muted)" font-family="Arial, sans-serif">rwx = 4+2+1 = 7</text>
-  <text x="947.562918" y="228.107983" font-size="13.915275" fill="var(--text-muted)" font-family="Arial, sans-serif">r-x = 4+0+1 = 5</text>
-  <rect x="40" y="235.94613" width="847.058931" height="215.540585" rx="6.862591" fill="var(--bg)" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="463.529412" y="265.337812" text-anchor="middle" font-size="15.903253" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">chmod — changing permissions</text>
-  <rect x="60.168175" y="279.054052" width="383.193385" height="146.959385" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="251.764813" y="304.527087" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Octal (absolute)</text>
-  <text x="80.336134" y="330.000122" font-size="14.90955" fill="var(--primary-accent)" font-family="Courier New, monospace">chmod 755 file</text>
-  <text x="80.336134" y="351.554022" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">owner=rwx(7), group=r-x(5), other=r-x(5)</text>
-  <text x="80.336134" y="375.067489" font-size="14.90955" fill="var(--primary-accent)" font-family="Courier New, monospace">chmod 644 file</text>
-  <text x="80.336134" y="396.621633" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">owner=rw-(6), group=r--(4), other=r--(4)</text>
-  <text x="80.336134" y="418.175777" font-size="13.278312" fill="var(--text-faint)" font-family="Arial, sans-serif">typical file        typical config</text>
-  <rect x="463.529412" y="279.054052" width="403.361345" height="146.959385" rx="6.862591" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="665.210084" y="304.527087" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Symbolic (relative)</text>
-  <text x="483.697371" y="330.000122" font-size="14.90955" fill="var(--primary-accent)" font-family="Courier New, monospace">chmod u+x file</text>
-  <text x="483.697371" y="351.554022" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">add execute for user (owner)</text>
-  <text x="483.697371" y="375.067489" font-size="14.90955" fill="var(--primary-accent)" font-family="Courier New, monospace">chmod go-w file</text>
-  <text x="483.697371" y="396.621633" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">remove write from group and other</text>
-  <text x="483.697371" y="418.175777" font-size="14.90955" fill="var(--primary-accent)" font-family="Courier New, monospace">chmod a+r file</text>
-  <rect x="40" y="473.040615" width="847.058931" height="78.378306" rx="6.862591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="463.529412" y="500.473095" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">chown — changing ownership</text>
-  <text x="60.168175" y="525.945887" font-size="14.90955" fill="var(--text)" font-family="Courier New, monospace">chown alice file        chown alice:devs file        chown -R alice dir/</text>
-  <rect x="907.226891" y="255.540463" width="332.773109" height="97.973126" rx="6.862591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1073.613445" y="281.013498" text-anchor="middle" font-size="14.90955" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">umask</text>
-  <text x="927.395173" y="304.527087" font-size="13.915275" fill="var(--text-muted)" font-family="Courier New, monospace">umask 022</text>
-  <text x="927.395173" y="326.081109" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">new files: 644</text>
-  <text x="927.395173" y="343.716362" font-size="13.278312" fill="var(--text-muted)" font-family="Arial, sans-serif">new dirs:  755</text>
-  <rect x="40" y="578.851401" width="1200" height="41.148599" rx="6.862591" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="604.324193" text-anchor="middle" font-size="15.903253" fill="var(--primary-accent)" font-family="Arial, sans-serif">Check permissions: <tspan font-family="Courier New, monospace" fill="var(--text)">ls -la</tspan> · Check owner: <tspan font-family="Courier New, monospace" fill="var(--text)">stat file</tspan> · Find world-writable: <tspan font-family="Courier New, monospace" fill="var(--text)">find / -perm -002</tspan>
-  </text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="36.968782899778" fill="var(--text)">-rwxr-xr--</text>
+
+  <rect x="80" y="61.090909090909" width="60" height="52.727272727273" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="110" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="24.645855266519" fill="var(--text-muted)">-</text>
+  <text x="110" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">type</text>
+  <text x="110" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">- file, d dir, l link</text>
+
+  <rect x="180" y="61.090909090909" width="180" height="52.727272727273" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="270" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="24.645855266519" font-weight="bold" fill="var(--primary-text)">rwx</text>
+  <text x="270" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-weight="bold" fill="var(--text)">Owner</text>
+  <text x="270" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">read+write+exec</text>
+
+  <rect x="400" y="61.090909090909" width="180" height="52.727272727273" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="490" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="24.645855266519" font-weight="bold" fill="var(--text)">r-x</text>
+  <text x="490" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-weight="bold" fill="var(--text)">Group</text>
+  <text x="490" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">read+exec</text>
+
+  <rect x="620" y="61.090909090909" width="180" height="52.727272727273" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="710" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="24.645855266519" font-weight="bold" fill="var(--text-muted)">r--</text>
+  <text x="710" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-weight="bold" fill="var(--text)">Other</text>
+  <text x="710" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">read only</text>
+
+  <rect x="900" y="61.090909090909" width="340" height="147.636363636364" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1070" y="92.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--text)">Octal values</text>
+  <text x="940" y="124.363636363636" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">r=4  w=2  x=1</text>
+  <text x="940" y="156" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">rwx = 7</text>
+  <text x="940" y="187.636363636364" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">r-x = 5</text>
+
+  <rect x="40" y="208.727272727273" width="400" height="232" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="240" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--text)">chmod octal</text>
+  <text x="60" y="277.272727272727" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">chmod 755 file</text>
+  <text x="60" y="303.636363636364" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">rwx r-x r-x</text>
+  <text x="60" y="345.818181818182" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">chmod 644 file</text>
+  <text x="60" y="372.181818181818" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">rw- r-- r--</text>
+
+  <rect x="460" y="208.727272727273" width="420" height="232" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="670" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--text)">chmod symbolic</text>
+  <text x="480" y="277.272727272727" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">chmod u+x file</text>
+  <text x="480" y="314.181818181818" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">chmod go-w file</text>
+  <text x="480" y="351.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">chmod a+r file</text>
+
+  <rect x="900" y="229.818181818182" width="340" height="137.090909090909" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-text)">umask 022</text>
+  <text x="920" y="293.090909090909" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">new files 644</text>
+  <text x="920" y="324.727272727273" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">new dirs 755</text>
+
+  <rect x="40" y="472.363636363636" width="1200" height="84.363636363636" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--primary-text)">chown</text>
+  <text x="640" y="535.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">chown alice:devs -R dir</text>
+
+  <rect x="40" y="577.818181818182" width="1200" height="42.181818181818" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="606.290909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text)">ls -la   stat file   find / -perm -002</text>
 </svg>

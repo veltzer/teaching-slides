@@ -34,43 +34,24 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,64 +73,60 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.1921" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Catalyst Optimizer Pipeline</text>
 
   <!-- Four stages -->
-  <rect x="40" y="85.7895" width="290" height="111.9298" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="121.4035" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131" font-weight="bold" fill="var(--primary-text)">1. Unresolved</text>
-  <text x="185" y="143.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--primary-text)">Logical Plan</text>
-  <text x="185" y="172.2807" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">Parser builds a tree of ops;</text>
-  <text x="185" y="187.5439" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">columns/tables unknown yet.</text>
+  <rect x="40" y="82.181818181818" width="280" height="116" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-text)">1. Unresolved</text>
+  <text x="180" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Parse tree</text>
+  <text x="180" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">refs unknown</text>
 
-  <rect x="355" y="85.7895" width="290" height="111.9298" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="500" y="121.4035" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131" font-weight="bold" fill="var(--primary-text)">2. Analyzed</text>
-  <text x="500" y="143.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--primary-text)">Logical Plan</text>
-  <text x="500" y="172.2807" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">Analyzer resolves references</text>
-  <text x="500" y="187.5439" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">via the Catalog; checks types.</text>
+  <line x1="320" y1="140.181818181818" x2="345" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="670" y="85.7895" width="290" height="111.9298" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="815" y="121.4035" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131" font-weight="bold" fill="var(--primary-text)">3. Optimized</text>
-  <text x="815" y="143.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--primary-text)">Logical Plan</text>
-  <text x="815" y="172.2807" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">Rule-based rewriting:</text>
-  <text x="815" y="187.5439" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">pushdown, pruning, constant fold</text>
+  <rect x="345" y="82.181818181818" width="280" height="116" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-text)">2. Analyzed</text>
+  <text x="485" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Catalog resolve</text>
+  <text x="485" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">type check</text>
 
-  <rect x="985" y="85.7895" width="255" height="111.9298" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1115" y="121.4035" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131" font-weight="bold" fill="var(--primary-text)">4. Physical</text>
-  <text x="1115" y="143.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--primary-text)">Plan</text>
-  <text x="1115" y="172.2807" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">Cost model picks the physical</text>
-  <text x="1115" y="187.5439" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0961" fill="var(--primary-text)">operator (broadcast vs SMJ ...)</text>
+  <line x1="625" y1="140.181818181818" x2="650" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="330" y1="141.7544" x2="353" y2="141.7544" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="645" y1="141.7544" x2="668" y2="141.7544" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="960" y1="141.7544" x2="983" y2="141.7544" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="650" y="82.181818181818" width="280" height="116" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-text)">3. Optimized</text>
+  <text x="790" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Rule rewrite</text>
+  <text x="790" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">pushdown, prune</text>
 
-  <!-- Rule examples -->
-  <rect x="40" y="228.2456" width="600" height="203.5088" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="260.807" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1397" font-weight="bold" fill="var(--ok-text)">Logical rewrite rules (examples)</text>
-  <text x="70" y="294.386" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Predicate pushdown — push WHERE down to the scan</text>
-  <text x="70" y="319.8246" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Column pruning — read only the columns the query uses</text>
-  <text x="70" y="345.2632" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Constant folding — 2 * 3 becomes 6 at plan time</text>
-  <text x="70" y="370.7018" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Boolean simplification — collapse x AND true to x</text>
-  <text x="70" y="396.1404" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Join reordering — place selective joins first</text>
-  <text x="70" y="421.5789" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--ok-text)">Subquery elimination — rewrite correlated subqueries as joins</text>
+  <line x1="930" y1="140.181818181818" x2="955" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="955" y="82.181818181818" width="285" height="116" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-text)">4. Physical</text>
+  <text x="1097" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Cost model</text>
+  <text x="1097" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">pick operator</text>
+
+  <!-- Logical rewrite rules -->
+  <rect x="40" y="224.545454545455" width="600" height="189.818181818182" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="259.345454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">Logical Rules</text>
+  <text x="60" y="293.090909090909" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Predicate pushdown</text>
+  <text x="60" y="319.454545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Column pruning</text>
+  <text x="60" y="345.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Constant folding</text>
+  <text x="60" y="372.181818181818" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Boolean simplify</text>
+  <text x="60" y="398.545454545455" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Join reordering</text>
 
   <!-- Physical operators -->
-  <rect x="660" y="228.2456" width="580" height="203.5088" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="260.807" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1397" font-weight="bold" fill="var(--warn-text)">Physical operator choices</text>
-  <text x="685" y="294.386" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Join: broadcast / sort-merge / shuffle-hash</text>
-  <text x="685" y="319.8246" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Aggregate: hash-based or sort-based</text>
-  <text x="685" y="345.2632" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Sort: radix / tim-sort variants</text>
-  <text x="685" y="370.7018" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Exchange (shuffle): hash / range / broadcast partitioning</text>
-  <text x="685" y="396.1404" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Scan: file-format specific (Parquet column chunks ...)</text>
-  <text x="685" y="421.5789" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--warn-text)">Codegen: fuse operators into a single compiled loop</text>
+  <rect x="660" y="224.545454545455" width="580" height="189.818181818182" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="259.345454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">Physical Operators</text>
+  <text x="680" y="293.090909090909" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Join: broadcast / SMJ / shuffle</text>
+  <text x="680" y="319.454545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Aggregate: hash or sort</text>
+  <text x="680" y="345.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Exchange: hash / range</text>
+  <text x="680" y="372.181818181818" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Scan: Parquet chunks</text>
+  <text x="680" y="398.545454545455" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Codegen: fused loops</text>
 
   <!-- AQE -->
-  <rect x="40" y="457.193" width="1200" height="162.807" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="489.7544" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1397" font-weight="bold" fill="var(--info-text)">Adaptive Query Execution (AQE) — runtime re-planning</text>
-  <text x="80" y="523.3333" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--info-text)">After each stage, AQE looks at the real statistics (row count, partition sizes) and may:</text>
-  <text x="80" y="551.8246" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--info-text)">• coalesce many small shuffle partitions into fewer tasks (faster scheduling)</text>
-  <text x="80" y="577.2632" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--info-text)">• convert a sort-merge join to a broadcast join if one side turned out small</text>
-  <text x="80" y="602.7018" font-family="Arial, sans-serif" font-size="13.1135" fill="var(--info-text)">• split skewed partitions so one hot key does not block the whole stage</text>
+  <rect x="40" y="440.727272727273" width="1200" height="179.272727272727" rx="10.269106361049" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">Adaptive Query Execution (AQE)</text>
+  <text x="60" y="514.545454545455" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Re-plans using runtime stats after each stage</text>
+  <text x="60" y="551.454545454545" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Coalesce small shuffle partitions</text>
+  <text x="60" y="583.090909090909" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Switch SMJ to broadcast join</text>
+  <text x="60" y="614.727272727273" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Split skewed partitions</text>
 </svg>

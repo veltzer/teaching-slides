@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,107 +82,73 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- Model 1: Centralized -->
-  <rect x="40" y="40" width="373.770492" height="580" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="373.770492" height="55.000055" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="81.000055" width="373.770492" height="14" fill="url(#grad-primary)" rx="6.455833" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.885246" y="76" font-family="Arial, sans-serif" font-size="21.818888" font-weight="bold" fill="var(--bg)" text-anchor="middle">Centralized</text>
-  <!-- Central cloud team -->
-  <rect x="108.852459" y="110" width="216.393443" height="60" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="217.04918" y="140" font-family="Arial, sans-serif" font-size="15.868331" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Cloud Team</text>
-  <text x="217.04918" y="160" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-faint)" text-anchor="middle">Manages all clouds</text>
-  <!-- Arrows down to clouds -->
-  <line x1="167.868852" y1="170" x2="118.688525" y2="210" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="217.04918" y1="170" x2="217.04918" y2="210" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="266.229508" y1="170" x2="315.409836" y2="210" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Three clouds -->
-  <rect x="69.508197" y="210" width="98.360656" height="40" rx="6.455833" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="118.688525" y="234.999945" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--primary-accent)" text-anchor="middle">AWS</text>
-  <rect x="177.704918" y="210" width="98.360656" height="40" rx="6.455833" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="226.885246" y="234.999945" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--info-accent)" text-anchor="middle">Azure</text>
-  <rect x="285.901639" y="210" width="98.360656" height="40" rx="6.455833" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
-  <text x="335.081967" y="234.999945" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--ok-accent)" text-anchor="middle">GCP</text>
-  <!-- App teams request through cloud team -->
-  <rect x="102.82" y="294.132" width="31.7367" height="31.7367" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="148.196721" y="316" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-muted)">Team A</text>
-  <rect x="102.82" y="334.132" width="31.7367" height="31.7367" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="148.196721" y="356" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-muted)">Team B</text>
-  <rect x="102.82" y="374.132" width="31.7367" height="31.7367" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="148.196721" y="396" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-muted)">Team C</text>
-  <!-- Pros/Cons -->
-  <text x="69.508197" y="440" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Consistent standards</text>
-  <text x="69.508197" y="465.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Deep expertise</text>
-  <text x="69.508197" y="490" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Cost control</text>
-  <text x="69.508197" y="525.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Bottleneck</text>
-  <text x="69.508197" y="550" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Slow delivery</text>
-  <text x="69.508197" y="574.999945" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Single point of failure</text>
-  <!-- Model 2: Federated -->
-  <rect x="453.114754" y="40" width="373.770492" height="580" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="453.114754" y="40" width="373.770492" height="55.000055" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="453.114754" y="81.000055" width="373.770492" height="14" fill="url(#grad-warn)" rx="6.455833" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="76" font-family="Arial, sans-serif" font-size="21.818888" font-weight="bold" fill="var(--bg)" text-anchor="middle">Federated</text>
-  <!-- Teams each pick their cloud -->
-  <rect x="482.622951" y="110" width="147.540984" height="50" rx="6.455833" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
-  <text x="556.393443" y="132" font-family="Arial, sans-serif" font-size="13.884776" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Team A</text>
-  <text x="556.393443" y="150" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-faint)" text-anchor="middle">Picks own cloud</text>
-  <line x1="556.393443" y1="160" x2="531.803279" y2="210" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="482.622951" y="210" width="98.360656" height="35.000055" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="531.803279" y="233.000055" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--primary-accent)" text-anchor="middle">AWS</text>
-  <rect x="669.508197" y="110" width="147.540984" height="50" rx="6.455833" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
-  <text x="743.278689" y="132" font-family="Arial, sans-serif" font-size="13.884776" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Team B</text>
-  <text x="743.278689" y="150" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-faint)" text-anchor="middle">Picks own cloud</text>
-  <line x1="743.278689" y1="160" x2="743.278689" y2="210" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="694.098361" y="210" width="98.360656" height="35.000055" rx="6.455833" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="743.278689" y="233.000055" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--info-accent)" text-anchor="middle">Azure</text>
-  <rect x="580.983607" y="270" width="147.540984" height="50" rx="6.455833" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
-  <text x="654.754098" y="292" font-family="Arial, sans-serif" font-size="13.884776" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Team C</text>
-  <text x="654.754098" y="310" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-faint)" text-anchor="middle">Picks own cloud</text>
-  <line x1="654.754098" y1="320" x2="654.754098" y2="360" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="605.57377" y="360" width="98.360656" height="35.000055" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="654.754098" y="382.999945" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--ok-accent)" text-anchor="middle">GCP</text>
-  <!-- Pros/Cons -->
-  <text x="482.622951" y="440" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Team autonomy</text>
-  <text x="482.622951" y="465.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Fast delivery</text>
-  <text x="482.622951" y="490" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Best tool per job</text>
-  <text x="482.622951" y="525.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Inconsistency</text>
-  <text x="482.622951" y="550" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Skill fragmentation</text>
-  <text x="482.622951" y="574.999945" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Cost sprawl</text>
-  <!-- Model 3: Platform -->
-  <rect x="866.229508" y="40" width="373.770492" height="580" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="866.229508" y="40" width="373.770492" height="55.000055" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="866.229508" y="81.000055" width="373.770492" height="14" fill="url(#grad-ok)" rx="6.455833" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114754" y="76" font-family="Arial, sans-serif" font-size="21.818888" font-weight="bold" fill="var(--bg)" text-anchor="middle">Platform</text>
-  <!-- Platform team provides abstraction -->
-  <rect x="935.081967" y="110" width="236.065574" height="60" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114754" y="134.999945" font-family="Arial, sans-serif" font-size="15.868331" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Platform Team</text>
-  <text x="1053.114754" y="158" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-faint)" text-anchor="middle">Builds abstraction layer</text>
-  <!-- Abstraction layer -->
-  <line x1="1053.114754" y1="170" x2="1053.114754" y2="200" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="905.57377" y="200" width="295.081967" height="44.999945" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114754" y="228" font-family="Arial, sans-serif" font-size="14.8765" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Internal Developer Platform</text>
-  <!-- Arrows down to clouds -->
-  <line x1="984.262295" y1="245.000055" x2="944.918033" y2="290" stroke="var(--primary-border)" stroke-width="1" marker-end="url(#arrow)"/>
-  <line x1="1053.114754" y1="245.000055" x2="1053.114754" y2="290" stroke="var(--info-border)" stroke-width="1" marker-end="url(#arrow)"/>
-  <line x1="1121.967213" y1="245.000055" x2="1161.311475" y2="290" stroke="var(--ok-border)" stroke-width="1" marker-end="url(#arrow)"/>
-  <rect x="895.737705" y="290" width="98.360656" height="30" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="944.918033" y="310" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--primary-accent)" text-anchor="middle">AWS</text>
-  <rect x="1003.934426" y="290" width="98.360656" height="30" rx="6.455833" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114754" y="310" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--info-accent)" text-anchor="middle">Azure</text>
-  <rect x="1112.131148" y="290" width="98.360656" height="30" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1161.311475" y="310" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--ok-accent)" text-anchor="middle">GCP</text>
-  <!-- Teams use platform -->
-  <rect x="940.869" y="351.115" width="27.7696" height="27.7696" rx="13.8848" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="979.344262" y="370" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-muted)">Team A</text>
-  <rect x="940.869" y="386.115" width="27.7696" height="27.7696" rx="13.8848" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="979.344262" y="405.000055" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-muted)">Team B</text>
-  <text x="1053.114754" y="370" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-faint)" text-anchor="middle">Self-service via</text>
-  <text x="1053.114754" y="388" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text-faint)" text-anchor="middle">platform API</text>
-  <!-- Pros/Cons -->
-  <text x="895.737705" y="440" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Best of both worlds</text>
-  <text x="895.737705" y="465.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Self-service + standards</text>
-  <text x="895.737705" y="490" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--ok-accent)">+ Scalable governance</text>
-  <text x="895.737705" y="525.000055" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- High initial investment</text>
-  <text x="895.737705" y="550" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Platform team dependency</text>
-  <text x="895.737705" y="574.999945" font-family="Arial, sans-serif" font-size="13.884776" fill="var(--danger-accent)">- Abstraction maintenance</text>
+  </defs>
+
+  <rect x="40" y="40" width="380" height="580" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">Centralized</text>
+
+  <rect x="110" y="111.228070175439" width="220" height="61.052631578947" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="220" y="141.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Cloud Team</text>
+  <text x="220" y="162.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096071693061" fill="var(--text-muted)">manages all clouds</text>
+
+  <line x1="170" y1="172.280701754386" x2="120" y2="207.894736842105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="220" y1="172.280701754386" x2="220" y2="207.894736842105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="270" y1="172.280701754386" x2="320" y2="207.894736842105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="212.982456140351" width="100" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="120" y="238.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">AWS</text>
+  <rect x="180" y="212.982456140351" width="100" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="230" y="238.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">Azure</text>
+  <rect x="290" y="212.982456140351" width="100" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="340" y="238.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">GCP</text>
+
+  <text x="70" y="335.087719298246" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">+ consistent standards</text>
+  <text x="70" y="365.614035087719" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">+ deep expertise</text>
+  <text x="70" y="396.140350877193" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">+ cost control</text>
+  <text x="70" y="457.19298245614" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- bottleneck</text>
+  <text x="70" y="487.719298245614" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- slow delivery</text>
+
+  <rect x="450" y="40" width="380" height="580" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">Federated</text>
+
+  <rect x="480" y="111.228070175439" width="150" height="50.877192982456" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="555" y="141.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">Team A</text>
+  <rect x="670" y="111.228070175439" width="150" height="50.877192982456" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="745" y="141.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">Team B</text>
+  <rect x="575" y="182.456140350877" width="150" height="50.877192982456" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="650" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">Team C</text>
+
+  <rect x="480" y="258.771929824561" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="282.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--primary-text)">AWS</text>
+  <rect x="690" y="258.771929824561" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="282.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">Azure</text>
+  <rect x="600" y="319.824561403509" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="343.228070175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--ok-text)">GCP</text>
+
+  <text x="480" y="416.491228070175" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">+ team autonomy</text>
+  <text x="480" y="447.017543859649" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">+ fast delivery</text>
+  <text x="480" y="508.070175438597" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">- inconsistency</text>
+  <text x="480" y="538.59649122807" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">- cost sprawl</text>
+
+  <rect x="860" y="40" width="380" height="580" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">Platform</text>
+
+  <rect x="930" y="111.228070175439" width="240" height="61.052631578947" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1050" y="141.754385964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Platform Team</text>
+  <text x="1050" y="162.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096071693061" fill="var(--text-muted)">builds abstraction</text>
+
+  <rect x="900" y="192.631578947368" width="300" height="45.789473684211" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1050" y="221.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Developer Platform</text>
+
+  <rect x="890" y="268.947368421053" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="292.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--primary-text)">AWS</text>
+  <rect x="1000" y="268.947368421053" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="292.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">Azure</text>
+  <rect x="1110" y="268.947368421053" width="100" height="35.614035087719" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1160" y="292.350877192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--warn-text)">GCP</text>
+
+  <text x="890" y="396.140350877193" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">+ self-service</text>
+  <text x="890" y="426.666666666667" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">+ scalable</text>
+  <text x="890" y="487.719298245614" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- initial investment</text>
+  <text x="890" y="518.245614035088" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- platform dependency</text>
 </svg>

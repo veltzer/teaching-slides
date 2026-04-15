@@ -34,113 +34,62 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753497810938" font-weight="bold" fill="var(--text)">MLlib Best Practices</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--primary-text)">Use Pipelines</text>
+  <text x="235" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Chain stages</text>
+  <text x="235" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Save / reload models</text>
+  <text x="235" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Consistent transforms</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="445" y="71.636363636364" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--ok-text)">Cross-Validate</text>
+  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">K-fold splits</text>
+  <text x="640" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Tune hyperparameters</text>
+  <text x="640" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Avoid overfitting</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="850" y="71.636363636364" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--warn-text)">Feature Scaling</text>
+  <text x="1045" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">StandardScaler</text>
+  <text x="1045" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Encode categoricals</text>
+  <text x="1045" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Assemble vector</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="272" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--info-text)">Cache Smartly</text>
+  <text x="235" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Persist training data</text>
+  <text x="235" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Unpersist when done</text>
+  <text x="235" y="419.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" fill="var(--info-text)">MEMORY_AND_DISK</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="445" y="272" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)">Evaluate Honestly</text>
+  <text x="640" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Hold-out test set</text>
+  <text x="640" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Pick right metric</text>
+  <text x="640" y="419.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Compare to baseline</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="850" y="272" width="390" height="179.272727272727" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--primary-text)">Monitor Production</text>
+  <text x="1045" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Log predictions</text>
+  <text x="1045" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Track data drift</text>
+  <text x="1045" y="419.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Version everything</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">MLlib Best Practices</text>
-
-  <rect x="40" y="69.635036" width="390" height="169.343066" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">Use Pipelines</text>
-  <text x="235" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Chain stages together</text>
-  <text x="235" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Reproducible workflows</text>
-  <text x="235" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Save and reload models</text>
-  <text x="235" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Consistent transforms</text>
-
-  <rect x="445" y="69.635036" width="390" height="169.343066" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">Cross-Validate</text>
-  <text x="640" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">K-fold splits</text>
-  <text x="640" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Tune hyperparameters</text>
-  <text x="640" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Avoid overfitting</text>
-  <text x="640" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Track metrics per fold</text>
-
-  <rect x="850" y="69.635036" width="390" height="169.343066" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">Feature Scaling</text>
-  <text x="1045" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">StandardScaler</text>
-  <text x="1045" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Handle missing values</text>
-  <text x="1045" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Encode categoricals</text>
-  <text x="1045" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Assemble feature vector</text>
-
-  <rect x="40" y="260.145985" width="390" height="169.343066" rx="6.172697" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="297.189781" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--info-text)">Cache Smartly</text>
-  <text x="235" y="334.233577" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Persist training data</text>
-  <text x="235" y="360.693431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Reuse across iterations</text>
-  <text x="235" y="387.153285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Unpersist when done</text>
-  <text x="235" y="413.613139" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Choose MEMORY_AND_DISK</text>
-
-  <rect x="445" y="260.145985" width="390" height="169.343066" rx="6.172697" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="297.189781" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--danger-text)">Evaluate Honestly</text>
-  <text x="640" y="334.233577" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Hold-out test set</text>
-  <text x="640" y="360.693431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Pick metric for task</text>
-  <text x="640" y="387.153285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Check class balance</text>
-  <text x="640" y="413.613139" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--danger-text)">Compare to baseline</text>
-
-  <rect x="850" y="260.145985" width="390" height="169.343066" rx="6.172697" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1045" y="297.189781" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">Monitor in Production</text>
-  <text x="1045" y="334.233577" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Log predictions</text>
-  <text x="1045" y="360.693431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Track data drift</text>
-  <text x="1045" y="387.153285" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Retrain on new data</text>
-  <text x="1045" y="413.613139" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Version everything</text>
-
-  <rect x="40" y="450.656934" width="1200" height="169.343066" rx="6.172697" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="487.70073" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--text)">Workflow</text>
-  <text x="640" y="524.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.431743" fill="var(--text-muted)">Explore data, clean it, engineer features, build a Pipeline, then tune.</text>
-  <text x="640" y="556.49635" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.431743" fill="var(--text-muted)">Validate on held-out data, save the fitted PipelineModel, deploy.</text>
-  <text x="640" y="593.540146" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.431743" fill="var(--text-muted)">Keep the training script deterministic: set seeds, version libraries and data.</text>
+  <rect x="40" y="472.363636363636" width="1200" height="147.636363636364" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.511302085994" font-weight="bold" fill="var(--text)">Workflow</text>
+  <text x="640" y="556.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">explore, clean, engineer, build Pipeline, tune, validate, deploy</text>
+  <text x="640" y="593.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">set seeds; version libraries and data</text>
 </svg>

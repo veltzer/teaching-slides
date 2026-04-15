@@ -1,151 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.048221421587" font-weight="bold" fill="var(--text)">Data Partitioning</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="66.605504587156" width="1200" height="63.853211009174" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="93.211009174312" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.685375544884" font-weight="bold" fill="var(--primary-text)">One task per partition, executed in parallel</text>
+  <text x="640" y="117.688073394495" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">Default: cluster cores or HDFS block count</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="40" y="151.743119266055" width="386.440677966102" height="85.137614678899" rx="6.241897251136" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="233.220338983051" y="181.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--text)">Partition 0</text>
+  <text x="233.220338983051" y="210.275229357798" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Executor A — data locality</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="446.779661016949" y="151.743119266055" width="386.440677966102" height="85.137614678899" rx="6.241897251136" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="181.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--text)">Partition 1</text>
+  <text x="640" y="210.275229357798" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Executor B</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="853.559322033898" y="151.743119266055" width="386.440677966102" height="85.137614678899" rx="6.241897251136" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1046.779661016949" y="181.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--text)">Partition 2</text>
+  <text x="1046.779661016949" y="210.275229357798" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--text-muted)">Executor C — repartition/coalesce</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="258.165137614679" width="589.830508474576" height="361.834862385321" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="334.915254237288" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.886956587497" font-weight="bold" fill="var(--ok-text)">HashPartitioner</text>
+  <text x="334.915254237288" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Default for pair RDDs</text>
+  <text x="334.915254237288" y="375.229357798165" text-anchor="middle" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--ok-text)">key.hashCode mod N</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="70.508474576271" y="401.834862385321" width="233.898305084746" height="58.532110091743" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="187.457627118644" y="436.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Even spread</text>
 
-  <rect x="40" y="40" width="1200" height="73.153153" rx="6.133647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="73.441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--primary-text)">RDD split into partitions — one task per partition runs in parallel on executors</text>
-  <text x="640" y="98.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Default: spark.default.parallelism (cluster cores) or HDFS block count</text>
+  <rect x="334.915254237288" y="401.834862385321" width="264.406779661017" height="58.532110091743" rx="5.201581042613" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <text x="467.118644067797" y="436.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Skew on hot keys</text>
 
-  <rect x="40" y="139.279279" width="380" height="94.054054" rx="6.133647" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="230" y="165.405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Partition 0</text>
-  <text x="230" y="191.531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rows 0..N/3  →  Task on executor A</text>
-  <text x="230" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">data locality honored</text>
+  <text x="334.915254237288" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Equal keys → same partition</text>
+  <text x="334.915254237288" y="534.862385321101" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Does not preserve order</text>
+  <text x="334.915254237288" y="577.431192660551" text-anchor="middle" font-family="Courier New, monospace" font-size="13.524110710794" fill="var(--ok-text)">partitionBy(new HashPartitioner(n))</text>
 
-  <rect x="450" y="139.279279" width="380" height="94.054054" rx="6.133647" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="640" y="165.405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Partition 1</text>
-  <text x="640" y="191.531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rows N/3..2N/3  →  Task on executor B</text>
-  <text x="640" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rdd.partitions.length</text>
+  <rect x="650.169491525424" y="258.165137614679" width="589.830508474576" height="361.834862385321" rx="8.322529668181" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945.084745762712" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.886956587497" font-weight="bold" fill="var(--info-text)">RangePartitioner</text>
+  <text x="945.084745762712" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--info-text)">Used by sortByKey / orderBy</text>
+  <text x="945.084745762712" y="375.229357798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Samples keys, picks splits</text>
 
-  <rect x="860" y="139.279279" width="380" height="94.054054" rx="6.133647" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="1050" y="165.405405" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Partition 2</text>
-  <text x="1050" y="191.531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rows 2N/3..N  →  Task on executor C</text>
-  <text x="1050" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">repartition / coalesce to resize</text>
+  <rect x="680.677966101695" y="401.834862385321" width="233.898305084746" height="58.532110091743" rx="5.201581042613" fill="var(--bg)" stroke="var(--info-border)"/>
+  <text x="797.627118644068" y="436.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">p0: &lt;a, p1: a..b, ...</text>
 
-  <rect x="40" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="299.171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490038" font-weight="bold" fill="var(--ok-text)">HashPartitioner</text>
-  <text x="335" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">default for pair RDDs after shuffle</text>
-  <text x="335" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">partition = (key.hashCode mod numPartitions)</text>
+  <rect x="945.084745762712" y="401.834862385321" width="264.406779661017" height="58.532110091743" rx="5.201581042613" fill="var(--bg)" stroke="var(--info-border)"/>
+  <text x="1077.28813559322" y="436.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text)">Preserves order</text>
 
-  <rect x="70" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="190" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">keys spread evenly</text>
-  <text x="190" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">good for groupByKey, join</text>
-
-  <rect x="330" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <text x="465" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">skew if keys cluster</text>
-  <text x="465" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">"hot key" → one straggler task</text>
-
-  <text x="335" y="484.144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">preserves equality: equal keys → same partition</text>
-  <text x="335" y="515.495495" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">does NOT preserve order</text>
-  <text x="335" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" font-style="italic" fill="var(--ok-text)">rdd.partitionBy(new HashPartitioner(100))</text>
-  <text x="335" y="593.873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">Use when you care about co-location, not ordering</text>
-
-  <rect x="650" y="264.684685" width="590" height="355.315315" rx="8.178196" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="299.171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490038" font-weight="bold" fill="var(--info-text)">RangePartitioner</text>
-  <text x="945" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">used by sortByKey, orderBy</text>
-  <text x="945" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">samples keys, picks split points for roughly equal ranges</text>
-
-  <rect x="680" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="800" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">p0: keys &lt; a</text>
-  <text x="800" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">p1: a..b, p2: b..c, ...</text>
-
-  <rect x="940" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="1075" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">preserves sort order</text>
-  <text x="1075" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">reservoir sampling at setup</text>
-
-  <text x="945" y="484.144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">balanced even with skew (sampled bounds)</text>
-  <text x="945" y="515.495495" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">requires keys to be Ordered</text>
-  <text x="945" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" font-style="italic" fill="var(--info-text)">rdd.partitionBy(new RangePartitioner(100, rdd))</text>
-  <text x="945" y="593.873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--info-text)">Use when downstream needs sorted input</text>
+  <text x="945.084745762712" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Balanced despite skew</text>
+  <text x="945.084745762712" y="534.862385321101" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Keys must be Ordered</text>
+  <text x="945.084745762712" y="577.431192660551" text-anchor="middle" font-family="Courier New, monospace" font-size="13.524110710794" fill="var(--info-text)">partitionBy(new RangePartitioner(...))</text>
 </svg>

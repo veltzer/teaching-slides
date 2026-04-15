@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,144 +34,88 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.244546127791" font-weight="bold" fill="var(--text)">Data Flow in Spark</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="80.701754385965" width="220" height="172.982456140351" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">1. Source</text>
+  <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">HDFS, S3, Kafka</text>
+  <text x="150" y="184.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">JDBC, Delta</text>
+  <text x="150" y="218.070175438596" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--primary-text)">spark.read</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="290" y="80.701754385965" width="220" height="172.982456140351" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">2. Partitions</text>
+  <text x="400" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Split into chunks</text>
+  <text x="400" y="184.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Spread to executors</text>
+  <text x="400" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Unit of parallelism</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="540" y="80.701754385965" width="220" height="172.982456140351" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">3. Transforms</text>
+  <text x="650" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">map, filter, join</text>
+  <text x="650" y="184.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">groupBy, agg</text>
+  <text x="650" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Lazy, build DAG</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="790" y="80.701754385965" width="220" height="172.982456140351" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">4. Action</text>
+  <text x="900" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">count, collect</text>
+  <text x="900" y="184.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">show, save</text>
+  <text x="900" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Triggers execution</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="1040" y="80.701754385965" width="200" height="172.982456140351" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="121.40350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--danger-text)">5. Sink</text>
+  <text x="1140" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Parquet, Delta</text>
+  <text x="1140" y="184.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Kafka, JDBC</text>
+  <text x="1140" y="218.070175438596" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--danger-text)">df.write</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  <line x1="260" y1="167.19298245614" x2="290" y2="167.19298245614" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="510" y1="167.19298245614" x2="540" y2="167.19298245614" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="760" y1="167.19298245614" x2="790" y2="167.19298245614" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1010" y1="167.19298245614" x2="1040" y2="167.19298245614" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Data Flow in Spark</text>
+  <text x="640" y="304.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.209610966678" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
 
-  <rect x="40" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--primary-text)">1. Source</text>
-  <text x="150" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">HDFS, S3, Kafka,</text>
-  <text x="150" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">JDBC, Delta, files</text>
-  <text x="150" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">spark.read.format()</text>
+  <rect x="40" y="330" width="220" height="290" rx="8.069870322226" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--primary-accent)">Unresolved</text>
+  <text x="150" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Parsed SQL / DSL</text>
+  <text x="150" y="434.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">No types yet</text>
+  <text x="150" y="463.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Resolve via Catalog</text>
 
-  <rect x="290" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--info-text)">2. Partitions</text>
-  <text x="400" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">Split into chunks</text>
-  <text x="400" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">Distributed to executors</text>
-  <text x="400" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">unit of parallelism</text>
+  <rect x="280" y="330" width="220" height="290" rx="8.069870322226" fill="var(--surface)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="390" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--info-accent)">Logical</text>
+  <text x="390" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Predicate pushdown</text>
+  <text x="390" y="434.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Constant folding</text>
+  <text x="390" y="463.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Column pruning</text>
 
-  <rect x="540" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--warn-text)">3. Transforms</text>
-  <text x="650" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">map, filter, join,</text>
-  <text x="650" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">groupBy, agg</text>
-  <text x="650" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">lazy, build DAG</text>
+  <rect x="520" y="330" width="220" height="290" rx="8.069870322226" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="630" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--warn-accent)">Physical</text>
+  <text x="630" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Cost-based</text>
+  <text x="630" y="434.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Broadcast vs SMJ</text>
+  <text x="630" y="463.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">HashAggregate</text>
 
-  <rect x="790" y="82.962963" width="220" height="161.111111" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="900" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--ok-text)">4. Action</text>
-  <text x="900" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">count, collect,</text>
-  <text x="900" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">show, save</text>
-  <text x="900" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">triggers execution</text>
+  <rect x="760" y="330" width="220" height="290" rx="8.069870322226" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="870" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-accent)">Codegen</text>
+  <text x="870" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Tungsten engine</text>
+  <text x="870" y="434.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Fused operators</text>
+  <text x="870" y="463.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Runtime bytecode</text>
 
-  <rect x="1040" y="82.962963" width="200" height="161.111111" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1140" y="123.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--danger-text)">5. Sink</text>
-  <text x="1140" y="158.148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">Parquet, Delta,</text>
-  <text x="1140" y="181.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">Kafka, JDBC</text>
-  <text x="1140" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">df.write.save()</text>
-
-  <line x1="260" y1="163.518519" x2="290" y2="163.518519" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <line x1="510" y1="163.518519" x2="540" y2="163.518519" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <line x1="760" y1="163.518519" x2="790" y2="163.518519" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <line x1="1010" y1="163.518519" x2="1040" y2="163.518519" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-
-  <rect x="40" y="276.296296" width="1200" height="343.703704" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="317.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
-
-  <rect x="80" y="351.481481" width="220" height="236.296296" rx="6.218253" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="190" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--primary-accent)">Unresolved Plan</text>
-  <text x="190" y="420.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Parsed SQL / DSL</text>
-  <text x="190" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Column names as strings</text>
-  <text x="190" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">No type info yet</text>
-  <text x="190" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Analyzer resolves against</text>
-  <text x="190" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">the Catalog</text>
-
-  <rect x="330" y="351.481481" width="220" height="236.296296" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="440" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--info-accent)">Logical Plan</text>
-  <text x="440" y="420.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Rule-based rewrites</text>
-  <text x="440" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Predicate pushdown</text>
-  <text x="440" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Constant folding</text>
-  <text x="440" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Column pruning</text>
-  <text x="440" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Join reordering</text>
-
-  <rect x="580" y="351.481481" width="220" height="236.296296" rx="6.218253" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="690" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--warn-accent)">Physical Plans</text>
-  <text x="690" y="420.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Cost-based selection</text>
-  <text x="690" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Broadcast vs Sort-Merge</text>
-  <text x="690" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">HashAggregate strategy</text>
-  <text x="690" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Stats drive choices</text>
-  <text x="690" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">explain() to inspect</text>
-
-  <rect x="830" y="351.481481" width="220" height="236.296296" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="940" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--ok-accent)">Whole-Stage Codegen</text>
-  <text x="940" y="420.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Tungsten engine</text>
-  <text x="940" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Fused operators</text>
-  <text x="940" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Java bytecode at runtime</text>
-  <text x="940" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Off-heap row format</text>
-  <text x="940" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Near hand-written speed</text>
-
-  <rect x="1080" y="351.481481" width="140" height="236.296296" rx="6.218253" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1150" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--danger-accent)">AQE</text>
-  <text x="1150" y="420.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Adaptive</text>
-  <text x="1150" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Query</text>
-  <text x="1150" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Execution</text>
-  <text x="1150" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Re-plans at</text>
-  <text x="1150" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">runtime (3.0+)</text>
+  <rect x="1000" y="330" width="240" height="290" rx="8.069870322226" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1120" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-accent)">AQE</text>
+  <text x="1120" y="406.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Adaptive Query</text>
+  <text x="1120" y="434.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Re-plans at runtime</text>
+  <text x="1120" y="463.298245614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text-muted)">Spark 3.0+</text>
 </svg>

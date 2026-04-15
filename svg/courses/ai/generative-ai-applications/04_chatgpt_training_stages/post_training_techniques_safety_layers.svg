@@ -34,141 +34,65 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Safety Layers</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="370" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="225" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-accent)">INPUT</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="60" y="134.909090909091" width="330" height="73.818181818182" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--danger-text)">Moderation API</text>
+  <text x="225" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">Block harmful content</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="60" y="229.818181818182" width="330" height="73.818181818182" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--danger-text)">Injection Filter</text>
+  <text x="225" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">Detect jailbreaks</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="60" y="324.727272727273" width="330" height="73.818181818182" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--info-text)">System Prompt</text>
+  <text x="225" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Persona + guardrails</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="430" y="71.636363636364" width="380" height="548.363636363636" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">MODEL</text>
+  <text x="620" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">LLM Generation</text>
+  <text x="620" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Safety-trained weights</text>
+  <text x="620" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">RLHF: helpful, harmless</text>
+  <text x="620" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Constitutional AI</text>
+  <text x="620" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Red-team evaluated</text>
+  <text x="620" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Tool-use policy</text>
+  <text x="620" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Defense in depth:</text>
+  <text x="620" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">training alone is not enough</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="830" y="71.636363636364" width="410" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1035" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-accent)">OUTPUT</text>
 
-  <rect x="40" y="40" width="370" height="580" rx="6" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="225" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)">INPUT LAYER</text>
+  <rect x="850" y="134.909090909091" width="370" height="73.818181818182" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-text)">Output Moderation</text>
+  <text x="1035" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">Stream classifier</text>
 
-  <rect x="60" y="100" width="330" height="55" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">User message</text>
-  <text x="225" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">raw prompt enters pipeline</text>
+  <rect x="850" y="229.818181818182" width="370" height="73.818181818182" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-text)">PII Redaction</text>
+  <text x="1035" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">Mask emails, SSNs</text>
 
-  <rect x="60" y="175" width="330" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Moderation API</text>
-  <text x="225" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">blocks CSAM, violence, self-harm</text>
-  <text x="225" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">hard-stop before the model sees it</text>
+  <rect x="850" y="324.727272727273" width="370" height="73.818181818182" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--info-text)">Audit + Telemetry</text>
+  <text x="1035" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Log every decision</text>
 
-  <rect x="60" y="275" width="330" height="80" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">Prompt injection filter</text>
-  <text x="225" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">regex + classifier for jailbreaks</text>
-  <text x="225" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">untrusted tool output sanitized</text>
-
-  <rect x="60" y="375" width="330" height="80" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">System prompt inject</text>
-  <text x="225" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">product persona + guardrails</text>
-  <text x="225" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">usage policy reminder</text>
-
-  <rect x="60" y="475" width="330" height="125" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
-  <text x="225" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Why pre-filter?</text>
-  <text x="225" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Cheaper to reject early.</text>
-  <text x="225" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Model stays on policy.</text>
-  <text x="225" y="574" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Attack surface shrinks.</text>
-
-  <rect x="440" y="40" width="400" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">MODEL</text>
-  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">LLM Generation</text>
-  <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">safety-trained weights</text>
-  <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">RLHF on helpfulness +</text>
-  <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">harmlessness + honesty</text>
-  <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">constitutional AI rules</text>
-  <text x="640" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">baked into preferences</text>
-  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">red-team adversarial</text>
-  <text x="640" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">evaluation before release</text>
-  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">tool-use policy enforced</text>
-  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">at decode time</text>
-  <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">token-by-token logit</text>
-  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">biases for refusal</text>
-  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Defense in depth:</text>
-  <text x="640" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">training alone is not enough —</text>
-  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">input filter + model + output filter</text>
-  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">each catches different failures.</text>
-
-  <rect x="870" y="40" width="370" height="580" rx="6" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1055" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-accent)">OUTPUT LAYER</text>
-
-  <rect x="890" y="100" width="330" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Output moderation</text>
-  <text x="1055" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">classifier over generated tokens</text>
-  <text x="1055" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">streams — cuts on violation</text>
-
-  <rect x="890" y="200" width="330" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">PII redaction</text>
-  <text x="1055" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">emails, phones, SSNs masked</text>
-  <text x="1055" y="267" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">named-entity recognizer</text>
-
-  <rect x="890" y="300" width="330" height="80" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Factuality check (optional)</text>
-  <text x="1055" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">claims verified vs. sources</text>
-  <text x="1055" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">disclaimers on uncertainty</text>
-
-  <rect x="890" y="400" width="330" height="75" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Audit and telemetry</text>
-  <text x="1055" y="447" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">every decision logged</text>
-  <text x="1055" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">feeds back into training</text>
-
-  <rect x="890" y="495" width="330" height="105" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Response to user</text>
-  <text x="1055" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">only after every layer signs off</text>
-  <text x="1055" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">refusal message if blocked</text>
-
-  <line x1="390" y1="320" x2="438" y2="320" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="840" y1="320" x2="888" y2="320" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="850" y="419.636363636364" width="370" height="73.818181818182" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--ok-text)">Response to User</text>
 </svg>

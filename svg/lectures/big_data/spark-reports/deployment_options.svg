@@ -34,122 +34,65 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.342871951533" font-weight="bold" fill="var(--text)">Deployment Options</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--ok-text)">Dev</text>
+  <text x="175" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Local shell</text>
+  <text x="175" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Samples</text>
+  <text x="175" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Unit tests</text>
+  <text x="175" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Notebooks</text>
+  <text x="175" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Open access</text>
+  <text x="175" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">Cheap, no SLA</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="475" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--primary-text)">Test</text>
+  <text x="475" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Integration suite</text>
+  <text x="475" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Anonymized data</text>
+  <text x="475" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Quality gates</text>
+  <text x="475" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Perf budgets</text>
+  <text x="475" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">CI automated</text>
+  <text x="475" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Fixtures seeded</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="775" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--warn-text)">Staging</text>
+  <text x="775" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Prod-shaped</text>
+  <text x="775" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Full volumes</text>
+  <text x="775" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Real schedulers</text>
+  <text x="775" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Shadow runs</text>
+  <text x="775" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Dry-run writes</text>
+  <text x="775" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--warn-text)">Last stop</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="70.796460176991" width="300" height="431.150442477876" rx="10.131873827513" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--danger-text)">Prod</text>
+  <text x="1090" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Change control</text>
+  <text x="1090" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">On-call</text>
+  <text x="1090" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Audit trail</text>
+  <text x="1090" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Backups / DR</text>
+  <text x="1090" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Rollback plan</text>
+  <text x="1090" y="430.088495575221" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">Only redeploys</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="312" y1="286.371681415929" x2="338" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="612" y1="286.371681415929" x2="638" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="912" y1="286.371681415929" x2="938" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--text)">Deployment Options</text>
-
-  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="175" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Dev</text>
-  <line x1="60" y1="145.454545" x2="290" y2="145.454545" stroke="var(--ok-text)" stroke-width="1" opacity="0.5"/>
-  <text x="175" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Iterate fast</text>
-  <text x="175" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Local Spark shell</text>
-  <text x="175" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Synthetic samples</text>
-  <text x="175" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Unit tests</text>
-  <text x="175" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Notebook exploration</text>
-  <text x="175" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Open access</text>
-  <text x="175" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">Cheap cluster,</text>
-  <text x="175" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">no SLA</text>
-
-  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="475" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Test</text>
-  <line x1="360" y1="145.454545" x2="590" y2="145.454545" stroke="var(--primary-text)" stroke-width="1" opacity="0.5"/>
-  <text x="475" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">Prove it works</text>
-  <text x="475" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Full integration suite</text>
-  <text x="475" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Anonymized prod data</text>
-  <text x="475" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Data quality gates</text>
-  <text x="475" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Performance budgets</text>
-  <text x="475" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">CI automation</text>
-  <text x="475" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Reset between runs,</text>
-  <text x="475" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">fixtures seeded</text>
-
-  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="775" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Staging</text>
-  <line x1="660" y1="145.454545" x2="890" y2="145.454545" stroke="var(--warn-text)" stroke-width="1" opacity="0.5"/>
-  <text x="775" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">Mirror production</text>
-  <text x="775" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Prod-shaped cluster</text>
-  <text x="775" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Full data volumes</text>
-  <text x="775" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Real schedulers</text>
-  <text x="775" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Shadow runs</text>
-  <text x="775" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Dry-run writes</text>
-  <text x="775" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--warn-text)">Last stop before</text>
-  <text x="775" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--warn-text)">customer impact</text>
-
-  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Prod</text>
-  <line x1="960" y1="145.454545" x2="1220" y2="145.454545" stroke="var(--danger-text)" stroke-width="1" opacity="0.5"/>
-  <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">Serve real users</text>
-  <text x="1090" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Strict change control</text>
-  <text x="1090" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">24/7 on-call</text>
-  <text x="1090" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Audit everything</text>
-  <text x="1090" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Backups and DR</text>
-  <text x="1090" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Rollback plan ready</text>
-  <text x="1090" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">No manual fixes,</text>
-  <text x="1090" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">only redeploys</text>
-
-  <line x1="312" y1="282.545455" x2="338" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="612" y1="282.545455" x2="638" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="912" y1="282.545455" x2="938" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="509.272727" width="1200" height="110.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Four environments, one artifact</text>
-  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">The same build moves right; only config, data, and access change.</text>
-  <text x="640" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Skipping a stage is how you ship outages.</text>
+  <rect x="40" y="517.345132743363" width="1200" height="102.654867256637" rx="8.10549906201" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--text)">One artifact, four environments</text>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">Only config, data, access change</text>
 </svg>

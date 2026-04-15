@@ -34,134 +34,67 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.424811740757" font-weight="bold" fill="var(--text)">Linux Timer APIs</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="65.892857142857" width="290" height="528.214285714286" rx="10.177004891982" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="107.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="22.389410762361" font-weight="bold" fill="var(--danger-text)">alarm()</text>
+  <text x="185" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">SVR4 Unix</text>
+  <text x="185" y="190.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">One timer</text>
+  <text x="185" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">Second precision</text>
+  <text x="185" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">Sends SIGALRM</text>
+  <text x="185" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">No repeat</text>
+  <text x="185" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">Process-wide</text>
+  <text x="185" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--danger-text)">Verdict</text>
+  <text x="185" y="443.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--danger-text)">Legacy</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="345" y="65.892857142857" width="290" height="528.214285714286" rx="10.177004891982" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="107.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="22.389410762361" font-weight="bold" fill="var(--warn-text)">setitimer()</text>
+  <text x="490" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">BSD 4.2</text>
+  <text x="490" y="190.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Three timers</text>
+  <text x="490" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">REAL, VIRTUAL, PROF</text>
+  <text x="490" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Microsecond</text>
+  <text x="490" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Periodic reload</text>
+  <text x="490" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Still signals</text>
+  <text x="490" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--warn-text)">Verdict</text>
+  <text x="490" y="443.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">Simple use only</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="650" y="65.892857142857" width="290" height="528.214285714286" rx="10.177004891982" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795" y="107.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="22.389410762361" font-weight="bold" fill="var(--primary-text)">timer_create()</text>
+  <text x="795" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">POSIX</text>
+  <text x="795" y="190.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Many timers</text>
+  <text x="795" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Nanosecond</text>
+  <text x="795" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Signal or thread</text>
+  <text x="795" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Per-thread clocks</text>
+  <text x="795" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Overrun counter</text>
+  <text x="795" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--primary-text)">Verdict</text>
+  <text x="795" y="443.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">Flexible callbacks</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="955" y="65.892857142857" width="285" height="528.214285714286" rx="10.177004891982" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="107.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">timerfd_create()</text>
+  <text x="1097" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">Linux 2.6.25+</text>
+  <text x="1097" y="190.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Timer as FD</text>
+  <text x="1097" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Read on expiry</text>
+  <text x="1097" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Works with epoll</text>
+  <text x="1097" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">No signals</text>
+  <text x="1097" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Nanosecond</text>
+  <text x="1097" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--ok-text)">Verdict</text>
+  <text x="1097" y="443.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">Modern default</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="290" height="549.473684" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">alarm()</text>
-  <text x="185" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">SVR4 / classic Unix</text>
-  <text x="185" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• one timer per process</text>
-  <text x="185" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• second precision</text>
-  <text x="185" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• delivers SIGALRM</text>
-  <text x="185" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• no repeat support</text>
-  <text x="185" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• no per-thread timers</text>
-  <text x="185" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">• racy with sleep()</text>
-  <text x="185" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">good for: one-shot</text>
-  <text x="185" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">timeout guard in a</text>
-  <text x="185" y="452.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">shell script helper</text>
-  <text x="185" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--danger-text)">Verdict:</text>
-  <text x="185" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">legacy — avoid in</text>
-  <text x="185" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">new code</text>
-
-  <rect x="350" y="40" width="290" height="549.473684" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">setitimer()</text>
-  <text x="495" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">BSD 4.2 interval timer</text>
-  <text x="495" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• three timers</text>
-  <text x="495" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• REAL, VIRTUAL, PROF</text>
-  <text x="495" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• microsecond precision</text>
-  <text x="495" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• periodic via reload</text>
-  <text x="495" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• still signal-based</text>
-  <text x="495" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">• process-wide only</text>
-  <text x="495" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">good for: profilers,</text>
-  <text x="495" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">periodic housekeeping</text>
-  <text x="495" y="452.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">in single-thread apps</text>
-  <text x="495" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--warn-text)">Verdict:</text>
-  <text x="495" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">ok for simple cases,</text>
-  <text x="495" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">limited semantics</text>
-
-  <rect x="660" y="40" width="290" height="549.473684" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">timer_create()</text>
-  <text x="805" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">POSIX.1-2001</text>
-  <text x="805" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• many per-process timers</text>
-  <text x="805" y="197.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• nanosecond precision</text>
-  <text x="805" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• signal OR thread notify</text>
-  <text x="805" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• per-CPU/thread clocks</text>
-  <text x="805" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• overrun counter</text>
-  <text x="805" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">• -lrt link</text>
-  <text x="805" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">good for: callback-style</text>
-  <text x="805" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">timers without tying up</text>
-  <text x="805" y="452.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">your event loop</text>
-  <text x="805" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--primary-text)">Verdict:</text>
-  <text x="805" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">precise, flexible —</text>
-  <text x="805" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">but still signal-heavy</text>
-
-  <rect x="970" y="40" width="270" height="549.473684" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">timerfd_create()</text>
-  <text x="1105" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Linux 2.6.25+</text>
-  <text x="1105" y="162.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• timer as a file</text>
-  <text x="1105" y="182.45614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">descriptor</text>
-  <text x="1105" y="218.070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• readable on expiry</text>
-  <text x="1105" y="253.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• polled with epoll</text>
-  <text x="1105" y="289.298246" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• no signal handler</text>
-  <text x="1105" y="324.912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• nanosecond precision</text>
-  <text x="1105" y="360.526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">• absolute or relative</text>
-  <text x="1105" y="401.22807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">good for: integrating</text>
-  <text x="1105" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">timers with a network</text>
-  <text x="1105" y="452.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">event loop</text>
-  <text x="1105" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--ok-text)">Verdict:</text>
-  <text x="1105" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">the modern default</text>
-  <text x="1105" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">for async servers</text>
-
-  <line x1="330" y1="314.736842" x2="348" y2="314.736842" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="314.736842" x2="658" y2="314.736842" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="950" y1="314.736842" x2="968" y2="314.736842" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--text)">Evolution: Simple → Precise → Flexible → Integrated</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--text)">Simple to Integrated</text>
 </svg>

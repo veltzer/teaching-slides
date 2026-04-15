@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,52 +82,42 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036" font-weight="bold" fill="var(--text)">Resource sharing strategy — commonMain vs platform source sets</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--text)">Resource Sharing: commonMain vs platform</text>
 
-  <!-- Central commonMain box -->
-  <rect x="433.103448" y="82.962963" width="413.793103" height="139.62963" rx="8.43274" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="120.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851" font-weight="bold" fill="var(--info-text)">commonMain</text>
-  <text x="640" y="152.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">domain models, use cases, networking</text>
-  <text x="640" y="176.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">serialization, view models, strings</text>
-  <text x="640" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--info-text)">declared via expect — shared once</text>
+  <rect x="440" y="82.181818181818" width="400" height="137.090909090909" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--info-text)">commonMain</text>
+  <text x="640" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">domain, use cases, networking</text>
+  <text x="640" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">view models, serialization</text>
+  <text x="640" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">expect declarations</text>
 
-  <!-- Arrows down to platform source sets -->
-  <line x1="236.551724" y1="265.555556" x2="236.551724" y2="306.37037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="222.592593" x2="640" y2="306.37037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1043.448276" y1="265.555556" x2="1043.448276" y2="306.37037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="250.909090909091" x2="240" y2="293.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="219.272727272727" x2="640" y2="293.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1040" y1="250.909090909091" x2="1040" y2="293.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="433.103448" y1="152.777778" x2="246.896552" y2="244.074074" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="846.896552" y1="152.777778" x2="1033.103448" y2="244.074074" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="80" y="298.363636363636" width="320" height="179.272727272727" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">androidMain</text>
+  <text x="240" y="372.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">res drawables, XML</text>
+  <text x="240" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Context, Jetpack</text>
+  <text x="240" y="424.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Android driver</text>
+  <text x="240" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" font-style="italic" fill="var(--ok-text)">actual impls</text>
 
-  <!-- Three platform source sets -->
-  <rect x="81.37931" y="308.518519" width="310.344828" height="171.851852" rx="8.43274" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="236.551724" y="346.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--ok-text)">androidMain</text>
-  <text x="236.551724" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">res/ drawables, strings XML</text>
-  <text x="236.551724" y="403.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">Context, Intent, Jetpack libs</text>
-  <text x="236.551724" y="427.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">SQLDelight Android driver</text>
-  <text x="236.551724" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--ok-text)">actual impl of expect APIs</text>
+  <rect x="480" y="298.363636363636" width="320" height="179.272727272727" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">iosMain</text>
+  <text x="640" y="372.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Assets.xcassets</text>
+  <text x="640" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Localizable.strings</text>
+  <text x="640" y="424.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">NSURLSession, Keychain</text>
+  <text x="640" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" font-style="italic" fill="var(--primary-text)">actual impls</text>
 
-  <rect x="484.827586" y="308.518519" width="310.344828" height="171.851852" rx="8.43274" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="346.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--primary-text)">iosMain</text>
-  <text x="640" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Assets.xcassets images</text>
-  <text x="640" y="403.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">Localizable.strings</text>
-  <text x="640" y="427.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">NSURLSession, Keychain</text>
-  <text x="640" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--primary-text)">actual impl of expect APIs</text>
+  <rect x="880" y="298.363636363636" width="320" height="179.272727272727" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">desktopMain / jsMain</text>
+  <text x="1040" y="372.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">JVM or Node resources</text>
+  <text x="1040" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">file IO or web APIs</text>
+  <text x="1040" y="424.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">JDBC, IndexedDB</text>
 
-  <rect x="888.275862" y="308.518519" width="310.344828" height="171.851852" rx="8.43274" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1043.448276" y="346.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.973666" font-weight="bold" fill="var(--warn-text)">desktopMain / jsMain</text>
-  <text x="1043.448276" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">JVM/Node resources</text>
-  <text x="1043.448276" y="403.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">File I/O or web APIs</text>
-  <text x="1043.448276" y="427.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">JDBC / IndexedDB drivers</text>
-  <text x="1043.448276" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--warn-text)">actual impl of expect APIs</text>
-
-  <!-- Bottom rules panel -->
-  <rect x="40" y="512.592593" width="1200" height="107.407407" rx="8.43274" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="544.814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865481" font-weight="bold" fill="var(--text)">Sharing rules</text>
-  <text x="236.551724" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--text-muted)">Share logic, keep UI-adjacent assets native</text>
-  <text x="640" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--text-muted)">Use Compose Multiplatform Resources for truly shared images/strings</text>
-  <text x="1043.448276" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--text-muted)">expect/actual bridges platform-only APIs</text>
-  <text x="640" y="607.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.703203" fill="var(--text-faint)">Rule of thumb: if it calls a platform SDK, put it under the matching sourceSet.</text>
+  <rect x="40" y="504" width="1200" height="116" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Sharing Rule</text>
+  <text x="640" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">if it calls a platform SDK, put it in that sourceSet</text>
+  <text x="640" y="604.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-faint)">expect/actual bridges platform APIs</text>
 </svg>

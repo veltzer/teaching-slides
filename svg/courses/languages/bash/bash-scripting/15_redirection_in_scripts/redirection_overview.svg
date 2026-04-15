@@ -34,43 +34,24 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,98 +73,68 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
   </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Bash Redirection Overview</text>
+
   <!-- Column headers -->
-  <rect x="40" y="40" width="370" height="58.585865" rx="7.046168" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="77.494954" font-family="Arial, sans-serif" font-size="19.4843" fill="var(--bg)" text-anchor="middle" font-weight="bold">Output Redirection</text>
+  <rect x="40" y="76.909090909091" width="390" height="47.454545454545" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">Output</text>
 
-  <rect x="455" y="40" width="370" height="58.585865" rx="7.046168" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="77.494954" font-family="Arial, sans-serif" font-size="19.4843" fill="var(--bg)" text-anchor="middle" font-weight="bold">Error Redirection</text>
+  <rect x="445" y="76.909090909091" width="390" height="47.454545454545" rx="8.21528508884" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Errors</text>
 
-  <rect x="870" y="40" width="370" height="58.585865" rx="7.046168" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="77.494954" font-family="Arial, sans-serif" font-size="19.4843" fill="var(--bg)" text-anchor="middle" font-weight="bold">Input Redirection</text>
+  <rect x="850" y="76.909090909091" width="390" height="47.454545454545" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Input</text>
 
-  <!-- Output redirection items -->
-  <rect x="40" y="122.020211" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="60" y="151.313208" font-size="17.319365" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">cmd &gt; file</text>
-  <text x="60" y="178.262642" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">write stdout to file (overwrite)</text>
-  <text x="60" y="195.838337" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">creates file if missing; truncates if exists</text>
+  <!-- Output column -->
+  <rect x="40" y="140.181818181818" width="390" height="479.818181818182" rx="10.269106361049" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="171.818181818182" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--primary-accent)">cmd &gt; file</text>
+  <text x="60" y="196.072727272727" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">overwrite stdout</text>
 
-  <rect x="40" y="221.616247" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="60" y="250.909114" font-size="17.319365" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">cmd &gt;&gt; file</text>
-  <text x="60" y="276.686895" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">append stdout to file</text>
-  <text x="60" y="295.434372" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">useful for log accumulation</text>
+  <text x="60" y="240.363636363636" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--primary-accent)">cmd &gt;&gt; file</text>
+  <text x="60" y="264.618181818182" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">append stdout</text>
 
-  <rect x="40" y="321.212153" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="60" y="350.50502" font-size="17.319365" fill="var(--info-accent)" font-weight="bold" font-family="Courier New, monospace">cmd &amp;&gt; file</text>
-  <text x="60" y="376.28293" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">redirect both stdout and stderr</text>
-  <text x="60" y="395.030407" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">bash shorthand for 2&gt;&amp;1</text>
+  <text x="60" y="308.909090909091" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--info-accent)">cmd &amp;&gt; file</text>
+  <text x="60" y="333.163636363636" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">both streams</text>
 
-  <rect x="40" y="420.808059" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="60" y="450.101056" font-size="16.236838" fill="var(--ok-accent)" font-weight="bold" font-family="Courier New, monospace">cmd | tee file</text>
-  <text x="60" y="477.050489" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">write to file AND show on terminal</text>
-  <text x="60" y="495.797966" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">tee -a file to append</text>
+  <text x="60" y="377.454545454545" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--ok-accent)">cmd | tee file</text>
+  <text x="60" y="401.709090909091" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">file + terminal</text>
 
-  <rect x="40" y="520.404094" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="60" y="549.697091" font-size="16.236838" fill="var(--text)" font-weight="bold" font-family="Courier New, monospace">cmd &gt; /dev/null</text>
-  <text x="60" y="575.474743" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">discard all stdout output</text>
-  <text x="60" y="594.222219" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">/dev/null is the "black hole"</text>
+  <text x="60" y="446" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--text)">cmd &gt; /dev/null</text>
+  <text x="60" y="470.254545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">discard output</text>
 
-  <!-- Error redirection items -->
-  <rect x="455" y="122.020211" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="475" y="151.313208" font-size="17.319365" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">cmd 2&gt; err.log</text>
-  <text x="475" y="177.09086" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">redirect stderr to a file</text>
-  <text x="475" y="195.838337" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">stdout still goes to terminal</text>
+  <!-- Errors column -->
+  <rect x="445" y="140.181818181818" width="390" height="479.818181818182" rx="10.269106361049" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="465" y="171.818181818182" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--danger-accent)">cmd 2&gt; err.log</text>
+  <text x="465" y="196.072727272727" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">stderr to file</text>
 
-  <rect x="455" y="221.616247" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="475" y="250.909114" font-size="17.319365" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">cmd 2&gt;&amp;1</text>
-  <text x="475" y="276.686895" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">redirect stderr to stdout</text>
-  <text x="475" y="295.434372" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">order matters: stdout must be set first</text>
+  <text x="465" y="240.363636363636" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--danger-accent)">cmd 2&gt;&amp;1</text>
+  <text x="465" y="264.618181818182" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">stderr to stdout</text>
 
-  <rect x="455" y="321.212153" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="475" y="350.50502" font-size="16.236838" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">cmd &gt; out 2&gt; err</text>
-  <text x="475" y="376.28293" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">split stdout and stderr</text>
-  <text x="475" y="395.030407" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">into separate files</text>
+  <text x="465" y="308.909090909091" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--danger-accent)">cmd &gt; out 2&gt; err</text>
+  <text x="465" y="333.163636363636" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">split streams</text>
 
-  <rect x="455" y="420.808059" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="475" y="450.101056" font-size="15.154429" fill="var(--text)" font-weight="bold" font-family="Courier New, monospace">cmd 2&gt; /dev/null</text>
-  <text x="475" y="475.878836" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">silence all error output</text>
-  <text x="475" y="494.626313" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">common for quiet scripts</text>
+  <text x="465" y="377.454545454545" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--text)">cmd 2&gt; /dev/null</text>
+  <text x="465" y="401.709090909091" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">silence errors</text>
 
-  <!-- exec redirection -->
-  <rect x="455" y="520.404094" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="475" y="549.697091" font-size="15.154429" fill="var(--info-accent)" font-weight="bold" font-family="Courier New, monospace">exec &gt; log 2&gt;&amp;1</text>
-  <text x="475" y="575.474743" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">redirect entire script output</text>
-  <text x="475" y="594.222219" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">all subsequent output goes to log</text>
+  <text x="465" y="446" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--info-accent)">exec &gt; log 2&gt;&amp;1</text>
+  <text x="465" y="470.254545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">script-wide</text>
 
-  <!-- Input redirection items -->
-  <rect x="870" y="122.020211" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="890" y="151.313208" font-size="17.319365" fill="var(--warn-accent)" font-weight="bold" font-family="Courier New, monospace">cmd &lt; file</text>
-  <text x="890" y="177.09086" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">use file as stdin</text>
-  <text x="890" y="195.838337" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">while read -r line; do ... done &lt; f</text>
+  <!-- Input column -->
+  <rect x="850" y="140.181818181818" width="390" height="479.818181818182" rx="10.269106361049" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="870" y="171.818181818182" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--warn-accent)">cmd &lt; file</text>
+  <text x="870" y="196.072727272727" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">file as stdin</text>
 
-  <rect x="870" y="221.616247" width="370" height="105.454557" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="890" y="250.909114" font-size="17.319365" fill="var(--warn-accent)" font-weight="bold" font-family="Courier New, monospace">here-doc  &lt;&lt;EOF</text>
-  <text x="890" y="274.34346" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">cat &lt;&lt;EOF</text>
-  <text x="890" y="295.434372" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">  multi-line text</text>
-  <text x="890" y="316.525283" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">EOF</text>
+  <text x="870" y="240.363636363636" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--warn-accent)">&lt;&lt;EOF</text>
+  <text x="870" y="264.618181818182" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">here-doc</text>
 
-  <rect x="870" y="344.646499" width="370" height="82.020211" rx="7.046168" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="890" y="373.939367" font-size="17.319365" fill="var(--warn-accent)" font-weight="bold" font-family="Courier New, monospace">here-string  &lt;&lt;&lt;</text>
-  <text x="890" y="399.717276" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">grep "x" &lt;&lt;&lt; "$var"</text>
-  <text x="890" y="418.464753" font-family="Arial, sans-serif" font-size="14.072021" fill="var(--text-muted)">feed single string as stdin</text>
+  <text x="870" y="308.909090909091" font-family="Courier New, monospace" font-size="17.457480813784" font-weight="bold" fill="var(--warn-accent)">cmd &lt;&lt;&lt; x</text>
+  <text x="870" y="333.163636363636" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">here-string</text>
 
-  <!-- File descriptors box -->
-  <rect x="870" y="450.101056" width="370" height="169.898944" rx="7.046168" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="482.90914" font-family="Arial, sans-serif" font-size="16.236838" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">File Descriptor Tricks</text>
-  <text x="890" y="511.030356" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">exec 3&gt; custom.log</text>
-  <text x="890" y="534.464702" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">echo "msg" &gt;&amp;3</text>
-  <text x="890" y="557.899048" font-size="14.072021" fill="var(--text)" font-family="Courier New, monospace">exec 3&gt;&amp;-  # close fd 3</text>
-  <text x="890" y="584.848481" font-family="Arial, sans-serif" font-size="12.989494" fill="var(--text-muted)">open custom fds for multi-stream</text>
-  <text x="890" y="605.939522" font-family="Arial, sans-serif" font-size="12.989494" fill="var(--text-muted)">logging in complex scripts</text>
+  <text x="870" y="377.454545454545" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--primary-accent)">exec 3&gt; log</text>
+  <text x="870" y="401.709090909091" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">open fd</text>
+
+  <text x="870" y="446" font-family="Courier New, monospace" font-size="16.430570177679" font-weight="bold" fill="var(--primary-accent)">echo &gt;&amp;3</text>
+  <text x="870" y="470.254545454545" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">write fd</text>
 </svg>

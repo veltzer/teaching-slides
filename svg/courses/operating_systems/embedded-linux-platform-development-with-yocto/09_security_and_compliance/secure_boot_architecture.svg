@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,125 +34,78 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.534586728656" font-weight="bold" fill="var(--text)">Secure Boot: Chain of Trust</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="66.126126126126" width="260" height="188.108108108108" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--danger-text)">ROM Code</text>
+  <text x="170" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--danger-text)">Immutable silicon</text>
+  <text x="170" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--danger-text)">Root public key</text>
+  <text x="170" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--danger-text)">Verifies SPL</text>
+  <text x="170" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--danger-text)">Root of trust</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="350" y="66.126126126126" width="260" height="188.108108108108" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--primary-text)">U-Boot</text>
+  <text x="480" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">FIT, x509 keys</text>
+  <text x="480" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Verifies kernel</text>
+  <text x="480" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Halts on bad sig</text>
+  <text x="480" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">Second stage</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="660" y="66.126126126126" width="260" height="188.108108108108" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--primary-text)">Linux Kernel</text>
+  <text x="790" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Signed Image</text>
+  <text x="790" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Checks initramfs</text>
+  <text x="790" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Enables IMA</text>
+  <text x="790" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">Third stage</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="970" y="66.126126126126" width="270" height="188.108108108108" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="107.927927927928" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--info-text)">Runtime</text>
+  <text x="1105" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">TPM / OP-TEE</text>
+  <text x="1105" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Seals to PCR</text>
+  <text x="1105" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Remote attest</text>
+  <text x="1105" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--info-text)">Post-boot</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="300" y1="160.18018018018" x2="350" y2="160.18018018018" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="610" y1="160.18018018018" x2="660" y2="160.18018018018" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="920" y1="160.18018018018" x2="970" y2="160.18018018018" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="40" y="306.486486486486" width="390" height="188.108108108108" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--warn-text)">RootFS (dm-verity)</text>
+  <text x="235" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Merkle tree of blocks</text>
+  <text x="235" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Root hash signed</text>
+  <text x="235" y="452.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Read-only</text>
+  <text x="235" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">Tamper-evident</text>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Secure Boot: an unbroken chain of trust</text>
+  <rect x="445" y="306.486486486486" width="390" height="188.108108108108" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--info-text)">Applications</text>
+  <text x="640" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">IMA measures files</text>
+  <text x="640" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Signed via OSTree</text>
+  <text x="640" y="452.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">SELinux / AppArmor</text>
+  <text x="640" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--info-text)">Accountable userspace</text>
 
-  <!-- Top row: boot chain -->
-  <rect x="40" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="170" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">ROM Code</text>
-  <text x="170" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)" font-family="Arial, sans-serif">Immutable in silicon</text>
-  <text x="170" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)" font-family="Arial, sans-serif">Holds root public key</text>
-  <text x="170" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--danger-text)" font-family="Arial, sans-serif">Verifies SPL / U-Boot</text>
-  <text x="170" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--danger-text)" font-family="Arial, sans-serif">Hardware root of trust</text>
+  <rect x="850" y="306.486486486486" width="390" height="188.108108108108" rx="6.133646682164" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--ok-text)">Update / Recovery</text>
+  <text x="1045" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">A/B slots</text>
+  <text x="1045" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Anti-rollback fuses</text>
+  <text x="1045" y="452.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Fail: boot old slot</text>
+  <text x="1045" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">Field-fixable</text>
 
-  <rect x="350" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">U-Boot (signed)</text>
-  <text x="480" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">FIT image, x509 keys</text>
-  <text x="480" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">Verifies kernel + DTB</text>
-  <text x="480" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">Halts on bad signature</text>
-  <text x="480" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">Second stage</text>
-
-  <rect x="660" y="82.181818" width="260" height="189.818182" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="790" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Linux Kernel</text>
-  <text x="790" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">zImage / Image signed</text>
-  <text x="790" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">Checks initramfs hash</text>
-  <text x="790" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Arial, sans-serif">Enables IMA at runtime</text>
-  <text x="790" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">Third stage</text>
-
-  <rect x="970" y="82.181818" width="270" height="189.818182" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="134.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Secure Runtime</text>
-  <text x="1105" y="171.818182" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">TPM / OP-TEE / fTPM</text>
-  <text x="1105" y="198.181818" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">Seals keys to PCR state</text>
-  <text x="1105" y="224.545455" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">Attests to server</text>
-  <text x="1105" y="256.181818" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--info-text)" font-family="Arial, sans-serif">Post-boot services</text>
-
-  <!-- Verify arrows -->
-  <line x1="300" y1="177.090909" x2="350" y2="177.090909" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <line x1="610" y1="177.090909" x2="660" y2="177.090909" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <line x1="920" y1="177.090909" x2="970" y2="177.090909" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-
-  <!-- Bottom row: what kernel protects -->
-  <rect x="40" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">RootFS (dm-verity)</text>
-  <text x="235" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)" font-family="Arial, sans-serif">Merkle tree of block hashes</text>
-  <text x="235" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)" font-family="Arial, sans-serif">Root hash signed in FIT</text>
-  <text x="235" y="472.363636" text-anchor="middle" font-size="14.376749" fill="var(--warn-text)" font-family="Arial, sans-serif">Read-only, tamper-evident</text>
-  <text x="235" y="498.727273" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--warn-text)" font-family="Arial, sans-serif">Kernel rejects bad blocks</text>
-
-  <rect x="445" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Applications</text>
-  <text x="640" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">IMA / EVM measures each file</text>
-  <text x="640" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">Signed packages via OSTree</text>
-  <text x="640" y="472.363636" text-anchor="middle" font-size="14.376749" fill="var(--info-text)" font-family="Arial, sans-serif">Confined by SELinux / AppArmor</text>
-  <text x="640" y="498.727273" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--info-text)" font-family="Arial, sans-serif">User space stays accountable</text>
-
-  <rect x="850" y="324.727273" width="390" height="189.818182" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="372.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Update &amp; Recovery</text>
-  <text x="1045" y="409.090909" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)" font-family="Arial, sans-serif">A/B slots with rollback counter</text>
-  <text x="1045" y="440.727273" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)" font-family="Arial, sans-serif">Fuses burn anti-rollback version</text>
-  <text x="1045" y="472.363636" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)" font-family="Arial, sans-serif">Failed verify → boot old slot</text>
-  <text x="1045" y="498.727273" text-anchor="middle" font-size="13.349838" font-style="italic" fill="var(--ok-text)" font-family="Arial, sans-serif">Field devices stay fixable</text>
-
-  <rect x="40" y="535.636364" width="1200" height="84.363636" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <text x="640" y="572.545455" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Every stage verifies the next before handing over control</text>
-  <text x="640" y="604.181818" text-anchor="middle" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">Break one link and the chain stops — that is the whole point of secure boot</text>
+  <rect x="40" y="536.396396396396" width="1200" height="83.603603603604" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="572.972972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378665599465" font-weight="bold" fill="var(--text)">Every stage verifies the next</text>
+  <text x="640" y="602.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Break one link, the chain stops</text>
 </svg>

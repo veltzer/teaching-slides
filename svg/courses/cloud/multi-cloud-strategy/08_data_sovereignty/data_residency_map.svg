@@ -34,131 +34,58 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Data Residency</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="380" height="442.909090909091" rx="10.269106361049" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--danger-text)">European Union</text>
+  <text x="230" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">GDPR</text>
+  <text x="230" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Right to erasure</text>
+  <text x="230" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">DPO required</text>
+  <text x="230" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--danger-text)">Regions:</text>
+  <text x="230" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">AWS eu-west-1</text>
+  <text x="230" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Azure West Europe</text>
+  <text x="230" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">GCP europe-west1</text>
+  <text x="230" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--danger-text)">Fine: 4% revenue</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="450" y="71.636363636364" width="380" height="442.909090909091" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--primary-text)">United States</text>
+  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">HIPAA · SOC 2</text>
+  <text x="640" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">FedRAMP (gov)</text>
+  <text x="640" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">State laws (CCPA)</text>
+  <text x="640" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--primary-text)">Regions:</text>
+  <text x="640" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">AWS us-east-1</text>
+  <text x="640" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Azure East US</text>
+  <text x="640" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">GCP us-central1</text>
+  <text x="640" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--primary-text)">GovCloud available</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="860" y="71.636363636364" width="380" height="442.909090909091" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--warn-text)">Asia-Pacific</text>
+  <text x="1050" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">Various</text>
+  <text x="1050" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">China: data local</text>
+  <text x="1050" y="229.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Japan: APPI</text>
+  <text x="1050" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-text)">Regions:</text>
+  <text x="1050" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">AWS ap-northeast-1</text>
+  <text x="1050" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Azure Japan</text>
+  <text x="1050" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">GCP asia-east1</text>
+  <text x="1050" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">China: separate cloud</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- EU Region -->
-  <rect x="40" y="40" width="360" height="472.592593" rx="6.746192" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="360" height="59.074133" rx="6.746192" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="82.962963" width="360" height="16.11117" fill="url(#grad-danger)" rx="6.746192" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="78.666667" font-family="Arial, sans-serif" font-size="24.872986" font-weight="bold" fill="var(--bg)" text-anchor="middle">European Union</text>
-  <!-- EU regulations -->
-  <rect x="70" y="120.555615" width="300" height="42.962963" rx="6.746192" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="148.481422" font-family="Arial, sans-serif" font-size="18.654796" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">GDPR</text>
-  <text x="220" y="190.37037" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">Strict data protection rules</text>
-  <text x="220" y="214" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">Right to erasure, portability</text>
-  <text x="220" y="237.62963" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">DPO required</text>
-  <!-- Data icon -->
-  <rect x="140" y="265.555556" width="160" height="75.185185" rx="6.746192" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="220" y="297.777778" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">EU Customer Data</text>
-  <text x="220" y="324.62957" font-family="Arial, sans-serif" font-size="12.436493" fill="var(--text-faint)" text-anchor="middle">Must stay in EU regions</text>
-  <!-- Cloud regions available -->
-  <text x="220" y="378.333393" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--text)" text-anchor="middle">Available Regions:</text>
-  <text x="220" y="405.185185" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">AWS eu-west-1, eu-central-1</text>
-  <text x="220" y="426.666667" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">Azure West Europe, North EU</text>
-  <text x="220" y="448.148148" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">GCP europe-west1, europe-west4</text>
-  <text x="220" y="491.111111" font-family="Arial, sans-serif" font-size="13.472933" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Max fine: 4% global revenue</text>
-  <!-- US Region -->
-  <rect x="460" y="40" width="360" height="472.592593" rx="6.746192" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="460" y="40" width="360" height="59.074133" rx="6.746192" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="460" y="82.962963" width="360" height="16.11117" fill="url(#grad-primary)" rx="6.746192" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="78.666667" font-family="Arial, sans-serif" font-size="24.872986" font-weight="bold" fill="var(--bg)" text-anchor="middle">United States</text>
-  <rect x="490" y="120.555615" width="140" height="42.962963" rx="6.746192" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="560" y="148.481422" font-family="Arial, sans-serif" font-size="16.582028" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">HIPAA</text>
-  <rect x="650" y="120.555615" width="140" height="42.962963" rx="6.746192" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="720" y="148.481422" font-family="Arial, sans-serif" font-size="16.582028" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">SOC 2</text>
-  <text x="640" y="190.37037" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">Industry-specific regulations</text>
-  <text x="640" y="214" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">FedRAMP for government</text>
-  <text x="640" y="237.62963" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">State-level laws (CCPA)</text>
-  <rect x="560" y="265.555556" width="160" height="75.185185" rx="6.746192" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="297.777778" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">US Health/Finance</text>
-  <text x="640" y="324.62957" font-family="Arial, sans-serif" font-size="12.436493" fill="var(--text-faint)" text-anchor="middle">Sector-specific rules</text>
-  <text x="640" y="378.333393" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--text)" text-anchor="middle">Available Regions:</text>
-  <text x="640" y="405.185185" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">AWS us-east-1, us-west-2</text>
-  <text x="640" y="426.666667" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">Azure East US, West US</text>
-  <text x="640" y="448.148148" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">GCP us-central1, us-east1</text>
-  <text x="640" y="491.111111" font-family="Arial, sans-serif" font-size="13.472933" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">GovCloud for sensitive workloads</text>
-  <!-- Asia Region -->
-  <rect x="880" y="40" width="360" height="472.592593" rx="6.746192" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="880" y="40" width="360" height="59.074133" rx="6.746192" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="880" y="82.962963" width="360" height="16.11117" fill="url(#grad-warn)" rx="6.746192" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="78.666667" font-family="Arial, sans-serif" font-size="24.872986" font-weight="bold" fill="var(--bg)" text-anchor="middle">Asia-Pacific</text>
-  <rect x="910" y="120.555615" width="300" height="42.962963" rx="6.746192" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="148.481422" font-family="Arial, sans-serif" font-size="16.582028" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Various Regulations</text>
-  <text x="1060" y="190.37037" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">China: data must stay local</text>
-  <text x="1060" y="214" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">Japan: APPI (privacy act)</text>
-  <text x="1060" y="237.62963" font-family="Arial, sans-serif" font-size="14.509261" fill="var(--text-muted)" text-anchor="middle">Australia: Privacy Act 1988</text>
-  <rect x="980" y="265.555556" width="160" height="75.185185" rx="6.746192" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1060" y="297.777778" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">APAC Data</text>
-  <text x="1060" y="324.62957" font-family="Arial, sans-serif" font-size="12.436493" fill="var(--text-faint)" text-anchor="middle">Country-specific rules</text>
-  <text x="1060" y="378.333393" font-family="Arial, sans-serif" font-size="14.509261" font-weight="bold" fill="var(--text)" text-anchor="middle">Available Regions:</text>
-  <text x="1060" y="405.185185" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">AWS ap-northeast-1, ap-southeast</text>
-  <text x="1060" y="426.666667" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">Azure Japan, Southeast Asia</text>
-  <text x="1060" y="448.148148" font-family="Arial, sans-serif" font-size="13.472933" fill="var(--text-faint)" text-anchor="middle">GCP asia-east1, asia-northeast1</text>
-  <text x="1060" y="491.111111" font-family="Arial, sans-serif" font-size="13.472933" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">China requires separate cloud</text>
-  <!-- Blocked arrows between regions -->
-  <line x1="400" y1="303.148089" x2="460" y2="303.148089" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="430" y="292.407467" font-family="Arial, sans-serif" font-size="20.727564" fill="var(--danger-accent)" text-anchor="middle">X</text>
-  <line x1="820" y1="303.148089" x2="880" y2="303.148089" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="850" y="292.407467" font-family="Arial, sans-serif" font-size="20.727564" fill="var(--danger-accent)" text-anchor="middle">X</text>
-  <!-- Bottom note -->
-  <rect x="200" y="544.814815" width="880" height="75.185185" rx="6.746192" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="577.037037" font-family="Arial, sans-serif" font-size="18.654796" font-weight="bold" fill="var(--text)" text-anchor="middle">Data cannot freely cross regulatory boundaries</text>
-  <text x="640" y="603.88883" font-family="Arial, sans-serif" font-size="15.545588" fill="var(--text-muted)" text-anchor="middle">Multi-cloud enables compliance by using the right provider per region</text>
+  <rect x="240" y="546.181818181818" width="800" height="73.818181818182" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="583.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Data cannot freely cross boundaries</text>
+  <text x="640" y="609.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Multi-cloud enables regional compliance</text>
 </svg>

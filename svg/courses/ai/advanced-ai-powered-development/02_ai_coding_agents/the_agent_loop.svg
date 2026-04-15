@@ -1,148 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.128853838633" font-weight="bold" fill="var(--text)">The Agent Loop</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="87.889908256881" width="284.745762711864" height="340.550458715596" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="182.372881355932" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--primary-text)">1. Receive</text>
+  <text x="182.372881355932" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">User prompt</text>
+  <text x="182.372881355932" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">System + tools load</text>
+  <text x="182.372881355932" y="263.48623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">Initial context from</text>
+  <text x="182.372881355932" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--primary-text)">CLAUDE.md, files</text>
+  <text x="182.372881355932" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--primary-text)">loop = 0</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="87.889908256881" width="284.745762711864" height="340.550458715596" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="482.372881355932" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--ok-text)">2. Reason</text>
+  <text x="482.372881355932" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Plan next step</text>
+  <text x="482.372881355932" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Pick tool + args</text>
+  <text x="482.372881355932" y="263.48623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">Or emit final</text>
+  <text x="482.372881355932" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--ok-text)">answer and stop</text>
+  <text x="482.372881355932" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--ok-text)">Internal CoT</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="87.889908256881" width="284.745762711864" height="340.550458715596" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="782.372881355932" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--warn-text)">3. Act</text>
+  <text x="782.372881355932" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Harness runs tool</text>
+  <text x="782.372881355932" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Shell, edit, search</text>
+  <text x="782.372881355932" y="263.48623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">Side effects in</text>
+  <text x="782.372881355932" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--warn-text)">the real world</text>
+  <text x="782.372881355932" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--warn-text)">Permission prompts</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="87.889908256881" width="300" height="340.550458715596" rx="8.322529668181" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1089.491525423729" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--info-text)">4. Observe</text>
+  <text x="1089.491525423729" y="183.669724770642" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Output → context</text>
+  <text x="1089.491525423729" y="220.917431192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Exit, stdout, diffs</text>
+  <text x="1089.491525423729" y="263.48623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Re-reason</text>
+  <text x="1089.491525423729" y="290.091743119266" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--info-text)">Loop to step 2</text>
+  <text x="1089.491525423729" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.524110710794" fill="var(--info-text)">Budget check</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="324.745762711864" y1="258.165137614679" x2="337.966101694915" y2="258.165137614679" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="624.745762711864" y1="258.165137614679" x2="637.966101694915" y2="258.165137614679" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="924.745762711864" y1="258.165137614679" x2="937.966101694915" y2="258.165137614679" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="1200" height="71.22807" rx="6.052403" fill="var(--code-bg)"/>
-  <text x="640" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--bg)">The Agent Loop</text>
-
-  <rect x="40" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">1. Receive</text>
-  <text x="180" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">user prompt or</text>
-  <text x="180" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">issue description</text>
-  <text x="180" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">system prompt +</text>
-  <text x="180" y="322.877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">tool schemas load</text>
-  <text x="180" y="370.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">initial context from</text>
-  <text x="180" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">CLAUDE.md, files</text>
-  <text x="180" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">loop counter = 0</text>
-
-  <rect x="340" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--ok-text)">2. Reason</text>
-  <text x="480" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">model plans the</text>
-  <text x="480" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">next concrete step</text>
-  <text x="480" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">picks a tool and</text>
-  <text x="480" y="322.877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">fills arguments</text>
-  <text x="480" y="370.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">or emits the final</text>
-  <text x="480" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">answer and stops</text>
-  <text x="480" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">chain-of-thought internal</text>
-
-  <rect x="640" y="141.754386" width="280" height="325.614035" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="780" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--warn-text)">3. Act</text>
-  <text x="780" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">harness runs the</text>
-  <text x="780" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">chosen tool call</text>
-  <text x="780" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">shell, file edit,</text>
-  <text x="780" y="322.877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">search, web fetch</text>
-  <text x="780" y="370.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">side effects happen</text>
-  <text x="780" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">in the real world</text>
-  <text x="780" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">permission prompts here</text>
-
-  <rect x="940" y="141.754386" width="300" height="325.614035" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="187.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--info-text)">4. Observe</text>
-  <text x="1090" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">tool output feeds</text>
-  <text x="1090" y="251.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">back into context</text>
-  <text x="1090" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">exit code, stdout,</text>
-  <text x="1090" y="322.877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">file diffs, errors</text>
-  <text x="1090" y="370.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">model re-reasons</text>
-  <text x="1090" y="394.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">loop to step 2</text>
-  <text x="1090" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">budget or done check</text>
-
-  <line x1="320" y1="304.561404" x2="340" y2="304.561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="620" y1="304.561404" x2="640" y2="304.561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="920" y1="304.561404" x2="940" y2="304.561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="487.719298" width="1200" height="132.280702" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="526.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--text)">Feedback loop: observation becomes new context; reason again</text>
-  <text x="640" y="564.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">Stops when the model emits a final answer or hits the max-iteration budget</text>
-  <text x="640" y="594.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">Quality depends on tool design, prompt, and how fresh the observations stay</text>
+  <rect x="40" y="460.366972477064" width="1200" height="159.633027522936" rx="8.322529668181" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.645059336361" font-weight="bold" fill="var(--text)">Observation becomes new context, then reason again</text>
+  <text x="640" y="540.183486238532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text-muted)">Stops on final answer or max iterations</text>
+  <text x="640" y="577.431192660551" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.564426919316" fill="var(--text-muted)">Quality = tool design + prompt + fresh observations</text>
 </svg>

@@ -34,143 +34,85 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Performance Profiling</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="360" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="220" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Profiler Tools</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="70" y="134.909090909091" width="300" height="63.272727272727" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--primary-text)">CPU</text>
+  <text x="220" y="185.527272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Flame charts</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="70" y="214" width="300" height="63.272727272727" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--info-text)">Memory</text>
+  <text x="220" y="264.618181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Heap, leaks</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="70" y="293.090909090909" width="300" height="63.272727272727" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--warn-text)">Network</text>
+  <text x="220" y="343.709090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">Timing, size</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="70" y="372.181818181818" width="300" height="63.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--danger-text)">Energy</text>
+  <text x="220" y="422.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">Battery, wakes</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="70" y="451.272727272727" width="300" height="63.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--ok-text)">Perfetto</text>
+  <text x="220" y="501.890909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Frame jank</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">Performance profiling — measure, find hotspots, fix, verify</text>
+  <rect x="430" y="134.909090909091" width="120" height="52.727272727273" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--primary-text)">Measure</text>
+  <line x1="490" y1="190.8" x2="490" y2="235.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Left column: profiler tools -->
-  <rect x="40" y="72.830189" width="360" height="547.169811" rx="8.368855" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="220" y="111.132075" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829924" font-weight="bold" fill="var(--text)">Profiler tools</text>
+  <rect x="430" y="240.363636363636" width="120" height="52.727272727273" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Identify</text>
+  <line x1="490" y1="296.254545454545" x2="490" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="70" y="138.490566" width="300" height="65.660377" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--primary-text)">CPU Profiler</text>
-  <text x="220" y="187.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.553283" fill="var(--primary-text)">method traces, flame charts</text>
+  <rect x="430" y="345.818181818182" width="120" height="52.727272727273" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--info-text)">Optimize</text>
+  <line x1="490" y1="401.709090909091" x2="490" y2="446" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="70" y="226.037736" width="300" height="65.660377" rx="6.276641" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="253.396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--info-text)">Memory Profiler</text>
-  <text x="220" y="275.283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.553283" fill="var(--info-text)">heap dumps, leak detection</text>
+  <rect x="430" y="451.272727272727" width="120" height="52.727272727273" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="482.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Verify</text>
 
-  <rect x="70" y="313.584906" width="300" height="65.660377" rx="6.276641" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="340.943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--warn-text)">Network Profiler</text>
-  <text x="220" y="362.830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.553283" fill="var(--warn-text)">request timing, payload size</text>
+  <rect x="600" y="71.636363636364" width="640" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="920" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Key Metrics</text>
 
-  <rect x="70" y="401.132075" width="300" height="65.660377" rx="6.276641" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="428.490566" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--danger-text)">Energy Profiler</text>
-  <text x="220" y="450.377358" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.553283" fill="var(--danger-text)">battery drain, wake locks</text>
+  <rect x="630" y="134.909090909091" width="280" height="94.909090909091" rx="6.16146381663" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="770" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--primary-accent)">Frame time</text>
+  <text x="770" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">&lt; 16 ms (60 fps)</text>
 
-  <rect x="70" y="488.679245" width="300" height="65.660377" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="516.037736" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--ok-text)">Systrace / Perfetto</text>
-  <text x="220" y="537.924528" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.553283" fill="var(--ok-text)">frame rendering, jank</text>
+  <rect x="930" y="134.909090909091" width="280" height="94.909090909091" rx="6.16146381663" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="1070" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--ok-accent)">Startup</text>
+  <text x="1070" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">cold &lt; 2s</text>
 
-  <!-- Middle column: workflow arrow -->
-  <text x="490" y="116.603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" font-weight="bold" fill="var(--text-muted)">Workflow</text>
+  <rect x="630" y="250.909090909091" width="280" height="94.909090909091" rx="6.16146381663" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="770" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--info-accent)">Memory</text>
+  <text x="770" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Watch GC, leaks</text>
 
-  <rect x="430" y="138.490566" width="120" height="54.716981" rx="6.276641" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="171.320755" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--primary-text)">Measure</text>
-  <line x1="490" y1="193.207547" x2="490" y2="234.792453" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="930" y="250.909090909091" width="280" height="94.909090909091" rx="6.16146381663" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="1070" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-accent)">Network</text>
+  <text x="1070" y="314.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Batch, compress</text>
 
-  <rect x="430" y="236.981132" width="120" height="54.716981" rx="6.276641" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="269.811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--warn-text)">Identify</text>
-  <line x1="490" y1="291.698113" x2="490" y2="333.283019" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="430" y="335.471698" width="120" height="54.716981" rx="6.276641" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="368.301887" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--info-text)">Optimise</text>
-  <line x1="490" y1="390.188679" x2="490" y2="431.773585" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="430" y="433.962264" width="120" height="54.716981" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="466.792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--ok-text)">Verify</text>
-  <line x1="490" y1="488.679245" x2="490" y2="530.264151" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="430" y="532.45283" width="120" height="54.716981" rx="6.276641" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="565.283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--danger-text)">Ship</text>
-
-  <!-- Right column: key metrics -->
-  <rect x="600" y="72.830189" width="640" height="547.169811" rx="8.368855" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="920" y="111.132075" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829924" font-weight="bold" fill="var(--text)">Key metrics &amp; targets</text>
-
-  <rect x="630" y="138.490566" width="280" height="98.490566" rx="6.276641" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="770" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--primary-accent)">Frame time</text>
-  <text x="770" y="193.207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">target &lt; 16 ms (60 fps)</text>
-  <text x="770" y="217.283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">watch jank &amp; dropped frames</text>
-
-  <rect x="930" y="138.490566" width="280" height="98.490566" rx="6.276641" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1070" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--ok-accent)">Startup time</text>
-  <text x="1070" y="193.207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">cold &lt; 2 s, warm &lt; 1 s</text>
-  <text x="1070" y="217.283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">defer non-critical work</text>
-
-  <rect x="630" y="258.867925" width="280" height="98.490566" rx="6.276641" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="770" y="286.226415" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--info-accent)">Memory</text>
-  <text x="770" y="313.584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">watch allocations &amp; GC pauses</text>
-  <text x="770" y="337.660377" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">check for leaks on screen exit</text>
-
-  <rect x="930" y="258.867925" width="280" height="98.490566" rx="6.276641" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1070" y="286.226415" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496" font-weight="bold" fill="var(--warn-accent)">Network</text>
-  <text x="1070" y="313.584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">batch requests, cache aggressively</text>
-  <text x="1070" y="337.660377" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">compress payloads</text>
-
-  <rect x="630" y="379.245283" width="580" height="218.867925" rx="6.276641" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="920" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" font-weight="bold" fill="var(--text)">Profiling rules of thumb</text>
-  <text x="920" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">Always profile release builds on real devices</text>
-  <text x="920" y="472.264151" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">Measure first — never optimise by guess</text>
-  <text x="920" y="499.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">Fix the biggest offender, then re-measure</text>
-  <text x="920" y="526.981132" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-muted)">Track regressions in CI with benchmark tests</text>
-  <text x="920" y="565.283019" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--text-faint)">Macrobenchmark + Baseline Profiles catch issues early</text>
+  <rect x="630" y="366.909090909091" width="580" height="232" rx="6.16146381663" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="920" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Rules</text>
+  <text x="920" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Profile release on real devices</text>
+  <text x="920" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Never optimize by guess</text>
+  <text x="920" y="530.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Fix biggest, re-measure</text>
+  <text x="920" y="567.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">CI benchmarks catch regressions</text>
 </svg>

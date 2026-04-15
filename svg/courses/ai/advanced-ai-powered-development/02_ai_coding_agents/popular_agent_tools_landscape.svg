@@ -34,113 +34,77 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.758651532102" font-weight="bold" fill="var(--text)">AI Coding Agent Tools</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.926605504587" width="395" height="521.467889908257" rx="10.316104805043" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--warn-text)">CLI / Terminal</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="60" y="135.779816513761" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--warn-accent)"/>
+  <text x="237" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--warn-text)">Claude Code</text>
+  <text x="237" y="201.761467889908" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Anthropic official</text>
+  <text x="237" y="229.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Shell + file tools</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="60" y="279.449541284404" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--warn-accent)"/>
+  <text x="237" y="316.697247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--warn-text)">Aider</text>
+  <text x="237" y="345.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Git-native pair</text>
+  <text x="237" y="373.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Commit per turn</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="60" y="423.119266055046" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--warn-accent)"/>
+  <text x="237" y="460.366972477064" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--warn-text)">Cline / OpenHands</text>
+  <text x="237" y="489.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Open source</text>
+  <text x="237" y="516.770642201835" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">Bring your key</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="445" y="71.926605504587" width="395" height="521.467889908257" rx="10.316104805043" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">IDE-Integrated</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="465" y="135.779816513761" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--primary-accent)"/>
+  <text x="642" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--primary-text)">Cursor</text>
+  <text x="642" y="201.761467889908" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">VS Code fork</text>
+  <text x="642" y="229.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">Inline + composer</text>
 
-  <rect x="40" y="40" width="1200" height="70.608696" rx="6.02603" fill="var(--code-bg)"/>
-  <text x="640" y="85.391304" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445" font-weight="bold" fill="var(--bg)">Popular AI Coding Agent Tools</text>
+  <rect x="465" y="279.449541284404" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--primary-accent)"/>
+  <text x="642" y="316.697247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--primary-text)">Windsurf</text>
+  <text x="642" y="345.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">Codeium Cascade</text>
+  <text x="642" y="373.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">Multi-file edits</text>
 
-  <rect x="40" y="130.782609" width="395" height="464" rx="6.02603" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="237" y="171.130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" font-weight="bold" fill="var(--warn-text)">CLI / Terminal</text>
-  <rect x="60" y="191.304348" width="355" height="116" rx="6.02603" fill="var(--warn-accent)"/>
-  <text x="237" y="226.608696" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--warn-text)">Claude Code</text>
-  <text x="237" y="251.826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">Anthropic official CLI</text>
-  <text x="237" y="277.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">shell + file + git tools</text>
-  <rect x="60" y="322.434783" width="355" height="116" rx="6.02603" fill="var(--warn-accent)"/>
-  <text x="237" y="357.73913" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--warn-text)">Aider</text>
-  <text x="237" y="382.956522" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">git-native pair programming</text>
-  <text x="237" y="408.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">each turn = one commit</text>
-  <rect x="60" y="453.565217" width="355" height="116" rx="6.02603" fill="var(--warn-accent)"/>
-  <text x="237" y="488.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--warn-text)">Cline / OpenHands</text>
-  <text x="237" y="514.086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">open source, bring-your-key</text>
-  <text x="237" y="539.304348" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--warn-text)">runs in VS Code or standalone</text>
+  <rect x="465" y="423.119266055046" width="355" height="127.706422018349" rx="6.189662883026" fill="var(--primary-accent)"/>
+  <text x="642" y="460.366972477064" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--primary-text)">Copilot + Chat</text>
+  <text x="642" y="489.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">GitHub / JetBrains</text>
+  <text x="642" y="516.770642201835" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">Agent mode</text>
 
-  <rect x="445" y="130.782609" width="395" height="464" rx="6.02603" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="642" y="171.130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" font-weight="bold" fill="var(--primary-text)">IDE-Integrated</text>
-  <rect x="465" y="191.304348" width="355" height="116" rx="6.02603" fill="var(--primary-accent)"/>
-  <text x="642" y="226.608696" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--primary-text)">Cursor</text>
-  <text x="642" y="251.826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">AI-native fork of VS Code</text>
-  <text x="642" y="277.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">inline edits, composer agent</text>
-  <rect x="465" y="322.434783" width="355" height="116" rx="6.02603" fill="var(--primary-accent)"/>
-  <text x="642" y="357.73913" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--primary-text)">Windsurf</text>
-  <text x="642" y="382.956522" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">Codeium Cascade engine</text>
-  <text x="642" y="408.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">flow-aware multi-file edits</text>
-  <rect x="465" y="453.565217" width="355" height="116" rx="6.02603" fill="var(--primary-accent)"/>
-  <text x="642" y="488.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--primary-text)">Copilot + Chat</text>
-  <text x="642" y="514.086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">GitHub, VS Code, JetBrains</text>
-  <text x="642" y="539.304348" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--primary-text)">agent mode added 2025</text>
+  <rect x="850" y="71.926605504587" width="390" height="521.467889908257" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">Autonomous</text>
 
-  <rect x="850" y="130.782609" width="390" height="464" rx="6.02603" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="171.130435" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" font-weight="bold" fill="var(--info-text)">Autonomous Platforms</text>
-  <rect x="870" y="191.304348" width="350" height="116" rx="6.02603" fill="var(--info-accent)"/>
-  <text x="1045" y="226.608696" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--info-text)">Devin</text>
-  <text x="1045" y="251.826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">Cognition AI, hosted VM</text>
-  <text x="1045" y="277.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">plans, browses, long-running</text>
-  <rect x="870" y="322.434783" width="350" height="116" rx="6.02603" fill="var(--info-accent)"/>
-  <text x="1045" y="357.73913" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--info-text)">Copilot Workspace</text>
-  <text x="1045" y="382.956522" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">GitHub, issue to PR</text>
-  <text x="1045" y="408.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">spec and plan before code</text>
-  <rect x="870" y="453.565217" width="350" height="116" rx="6.02603" fill="var(--info-accent)"/>
-  <text x="1045" y="488.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" font-weight="bold" fill="var(--info-text)">SWE-Agent</text>
-  <text x="1045" y="514.086957" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">Princeton research, open</text>
-  <text x="1045" y="539.304348" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--info-text)">SWE-bench reference agent</text>
+  <rect x="870" y="135.779816513761" width="350" height="127.706422018349" rx="6.189662883026" fill="var(--info-accent)"/>
+  <text x="1045" y="173.02752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--info-text)">Devin</text>
+  <text x="1045" y="201.761467889908" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">Hosted VM</text>
+  <text x="1045" y="229.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">Long-running</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.056399" fill="var(--text-muted)">Choose by autonomy level, IDE fit, tool access, and price</text>
+  <rect x="870" y="279.449541284404" width="350" height="127.706422018349" rx="6.189662883026" fill="var(--info-accent)"/>
+  <text x="1045" y="316.697247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--info-text)">Copilot Workspace</text>
+  <text x="1045" y="345.43119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">Issue to PR</text>
+  <text x="1045" y="373.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">Plan before code</text>
+
+  <rect x="870" y="423.119266055046" width="350" height="127.706422018349" rx="6.189662883026" fill="var(--info-accent)"/>
+  <text x="1045" y="460.366972477064" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--info-text)">SWE-Agent</text>
+  <text x="1045" y="489.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">Princeton research</text>
+  <text x="1045" y="516.770642201835" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--info-text)">SWE-bench</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text-muted)">Choose by autonomy, IDE fit, price</text>
 </svg>

@@ -34,119 +34,67 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.209610966678" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--primary-text)">Analysis</text>
+  <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Resolve columns</text>
+  <text x="150" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Bind relations</text>
+  <text x="150" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">Type-check</text>
+  <text x="150" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">Unresolved to resolved</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="280" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Logical Opt</text>
+  <text x="390" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Predicate pushdown</text>
+  <text x="390" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Column pruning</text>
+  <text x="390" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Constant folding</text>
+  <text x="390" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">Rule-based</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="520" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--warn-text)">Physical Plan</text>
+  <text x="630" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Strategies</text>
+  <text x="630" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Join algorithm</text>
+  <text x="630" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Broadcast vs sort</text>
+  <text x="630" y="268.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">Cost-based</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="760" y="75.614035087719" width="220" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="870" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--info-text)">Codegen</text>
+  <text x="870" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Whole-stage</text>
+  <text x="870" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Java bytecode</text>
+  <text x="870" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Tight loops</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="1000" y="75.614035087719" width="240" height="244.210526315789" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="116.315789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-text)">Execution</text>
+  <text x="1120" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">RDD DAG</text>
+  <text x="1120" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Tungsten memory</text>
+  <text x="1120" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">Off-heap</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <line x1="260" y1="197.719298245614" x2="280" y2="197.719298245614" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="500" y1="197.719298245614" x2="520" y2="197.719298245614" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="740" y1="197.719298245614" x2="760" y2="197.719298245614" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="197.719298245614" x2="1000" y2="197.719298245614" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Catalyst Optimizer Pipeline</text>
-
-  <rect x="40" y="82.181818" width="220" height="232" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--primary-text)">Analysis</text>
-  <text x="150" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Resolve columns</text>
-  <text x="150" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Bind relations</text>
-  <text x="150" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Type-check</text>
-  <text x="150" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--primary-text)">Unresolved LP</text>
-  <text x="150" y="263.563636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--primary-text)">to resolved LP</text>
-
-  <rect x="280" y="82.181818" width="220" height="232" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="390" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Logical Opt</text>
-  <text x="390" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Predicate pushdown</text>
-  <text x="390" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Column pruning</text>
-  <text x="390" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Constant folding</text>
-  <text x="390" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Rule-based</text>
-  <text x="390" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--ok-text)">Tree transforms</text>
-
-  <rect x="520" y="82.181818" width="220" height="232" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="630" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">Physical Plan</text>
-  <text x="630" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Strategies applied</text>
-  <text x="630" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Join algo choice</text>
-  <text x="630" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Broadcast vs sort</text>
-  <text x="630" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Cost-based</text>
-  <text x="630" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--warn-text)">Stats-driven</text>
-
-  <rect x="760" y="82.181818" width="220" height="232" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--info-text)">Codegen</text>
-  <text x="870" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Whole-stage</text>
-  <text x="870" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Java bytecode</text>
-  <text x="870" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">JIT-friendly</text>
-  <text x="870" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Tight loops</text>
-  <text x="870" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--info-text)">CPU-efficient</text>
-
-  <rect x="1000" y="82.181818" width="240" height="232" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--danger-text)">Execution</text>
-  <text x="1120" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">RDD DAG runs</text>
-  <text x="1120" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Tungsten memory</text>
-  <text x="1120" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Off-heap buffers</text>
-  <text x="1120" y="235.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Cache-aware</text>
-  <text x="1120" y="266.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--danger-text)">Results emitted</text>
-
-  <line x1="260" y1="198.181818" x2="280" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="500" y1="198.181818" x2="520" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="740" y1="198.181818" x2="760" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="980" y1="198.181818" x2="1000" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Why Catalyst matters for Datasets</text>
-  <text x="640" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">DataFrame/Dataset operations are declarative; Catalyst rewrites them into efficient plans</text>
-  <text x="640" y="451.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Raw RDD code bypasses the optimizer; Spark executes your logic as-written</text>
-  <text x="640" y="482.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Typed Datasets with lambdas lose some optimizations (opaque UDFs)</text>
-  <text x="640" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Column expressions and SQL strings give the optimizer full visibility</text>
-  <text x="640" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Inspect plans with df.explain(true) — analyzed, optimized, physical stages</text>
-  <text x="640" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Adaptive Query Execution (AQE) re-plans at runtime using actual statistics</text>
+  <rect x="40" y="340.175438596491" width="1200" height="279.824561403509" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="380.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--text)">Why it matters</text>
+  <text x="640" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">DataFrame ops are declarative</text>
+  <text x="640" y="457.19298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Raw RDD bypasses the optimizer</text>
+  <text x="640" y="492.80701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Typed lambdas lose visibility</text>
+  <text x="640" y="528.421052631579" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">df.explain(true)</text>
+  <text x="640" y="574.21052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-style="italic" fill="var(--text-faint)">AQE re-plans at runtime</text>
 </svg>

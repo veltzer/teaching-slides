@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,62 +82,61 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="1200" height="73.153153" rx="6.133647" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="640" y="71.351351" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378666" font-weight="bold" fill="var(--text)">spark.streaming.backpressure.enabled = true</text>
-  <text x="640" y="95.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text-muted)">Spark adjusts receiver ingest rate so batch processing keeps up — prevents unbounded queue growth</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--text)">Streaming Backpressure</text>
+  <text x="640" y="69.261261261261" text-anchor="middle" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--text-muted)">spark.streaming.backpressure.enabled = true</text>
 
-  <rect x="40" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-text)">Source</text>
-  <text x="220" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Kafka / socket / receiver</text>
-  <text x="220" y="228.108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">produces at variable rate</text>
-  <text x="220" y="264.684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">maxRatePerPartition caps absolute ceiling</text>
-  <text x="220" y="290.810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">initialRate sets startup rate</text>
+  <!-- Pipeline: source, receiver, processing -->
+  <rect x="40" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--primary-text)">Source</text>
+  <text x="220" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Kafka / socket</text>
+  <text x="220" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Variable rate</text>
+  <text x="220" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">maxRatePerPartition caps</text>
+  <text x="220" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">initialRate on start</text>
 
-  <rect x="460" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--warn-text)">Receiver (rate limited)</text>
-  <text x="640" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">blocks the producer when</text>
-  <text x="640" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">ingest rate exceeds target</text>
-  <text x="640" y="262.594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">RateEstimator sets records/sec</text>
-  <text x="640" y="288.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">updated every batch</text>
+  <rect x="460" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--warn-text)">Receiver</text>
+  <text x="640" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Rate limited</text>
+  <text x="640" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Blocks producer</text>
+  <text x="640" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">RateEstimator sets target</text>
+  <text x="640" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">Updated every batch</text>
 
-  <rect x="880" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--ok-text)">Processing</text>
-  <text x="1060" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">batch interval = 2s</text>
-  <text x="1060" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">goal: process time ≤ interval</text>
-  <text x="1060" y="262.594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">reports scheduling + process delay</text>
-  <text x="1060" y="288.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">StreamingListener feedback</text>
+  <rect x="880" y="102.702702702703" width="360" height="188.108108108108" rx="8.178195576219" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--ok-text)">Processing</text>
+  <text x="1060" y="175.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Batch interval 2s</text>
+  <text x="1060" y="207.207207207207" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Keep within interval</text>
+  <text x="1060" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">Reports delays</text>
+  <text x="1060" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">StreamingListener feedback</text>
 
-  <line x1="400" y1="228.108108" x2="455" y2="228.108108" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="820" y1="228.108108" x2="875" y2="228.108108" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="196.756756756757" x2="455" y2="196.756756756757" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="196.756756756757" x2="875" y2="196.756756756757" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="358.738739" width="1200" height="261.261261" rx="8.178196" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="395.315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--info-text)">PID Rate Estimator (default)</text>
-  <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">spark.streaming.backpressure.pid.{proportional, integral, derived, minRate}</text>
+  <!-- PID controller -->
+  <rect x="40" y="327.387387387387" width="1200" height="292.612612612613" rx="10.222744470273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="363.963963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--info-text)">PID Rate Estimator</text>
 
-  <rect x="70" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="205" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Proportional</text>
-  <text x="205" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">reacts to current error</text>
-  <text x="205" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">(processing - batch time)</text>
-  <text x="205" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">fast response</text>
-  <text x="205" y="585.513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">can overshoot</text>
+  <rect x="70" y="395.315315315315" width="270" height="182.882882882883" rx="6.133646682164" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="205" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378665599465" font-weight="bold" fill="var(--text)">Proportional</text>
+  <text x="205" y="463.243243243243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Current error</text>
+  <text x="205" y="494.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Fast response</text>
+  <text x="205" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Can overshoot</text>
 
-  <rect x="350" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="485" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Integral</text>
-  <text x="485" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">sum of past errors</text>
-  <text x="485" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">eliminates steady-state drift</text>
-  <text x="485" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">slow but stable</text>
+  <rect x="350" y="395.315315315315" width="270" height="182.882882882883" rx="6.133646682164" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="485" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378665599465" font-weight="bold" fill="var(--text)">Integral</text>
+  <text x="485" y="463.243243243243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Past errors</text>
+  <text x="485" y="494.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Removes drift</text>
+  <text x="485" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Slow but stable</text>
 
-  <rect x="630" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="765" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Derivative</text>
-  <text x="765" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rate of change of error</text>
-  <text x="765" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">damps oscillations</text>
-  <text x="765" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">noisy if batches jitter</text>
+  <rect x="630" y="395.315315315315" width="270" height="182.882882882883" rx="6.133646682164" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="765" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378665599465" font-weight="bold" fill="var(--text)">Derivative</text>
+  <text x="765" y="463.243243243243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Error rate</text>
+  <text x="765" y="494.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Damps oscillation</text>
+  <text x="765" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Noisy on jitter</text>
 
-  <rect x="910" y="452.792793" width="300" height="146.306306" rx="6.133647" fill="var(--bg)" stroke="var(--info-border)"/>
-  <text x="1060" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">newRate = lastRate - ΔP-ΔI-ΔD</text>
-  <text x="1060" y="515.495495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">clamped to [minRate, maxRate]</text>
-  <text x="1060" y="541.621622" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">published to receivers</text>
-  <text x="1060" y="576.108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">via RateController on driver</text>
+  <rect x="910" y="395.315315315315" width="300" height="182.882882882883" rx="6.133646682164" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="1060" y="428.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378665599465" font-weight="bold" fill="var(--text)">Output</text>
+  <text x="1060" y="463.243243243243" text-anchor="middle" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text-muted)">newRate = last - ΔP-ΔI-ΔD</text>
+  <text x="1060" y="494.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">Clamped [min, max]</text>
+  <text x="1060" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--text-muted)">RateController on driver</text>
 </svg>

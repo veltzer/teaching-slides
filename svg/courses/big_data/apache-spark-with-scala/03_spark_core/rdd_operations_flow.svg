@@ -34,110 +34,66 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="220" height="152.631578947368" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="90.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--primary-text)">Source</text>
+  <text x="150" y="126.491228070175" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">textFile, parallelize</text>
+  <text x="150" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">HDFS, S3, Kafka</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="300" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--ok-text)">Narrow Transforms</text>
+  <text x="440" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">map, filter, flatMap</text>
+  <text x="440" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">mapPartitions</text>
+  <text x="440" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">No shuffle</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="620" y="40" width="280" height="152.631578947368" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--warn-text)">Wide Transforms</text>
+  <text x="760" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">reduceByKey, join</text>
+  <text x="760" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">sortBy, distinct</text>
+  <text x="760" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--warn-text)">Triggers shuffle</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="940" y="40" width="300" height="152.631578947368" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--info-text)">Action</text>
+  <text x="1090" y="116.315789473684" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">count, collect, take</text>
+  <text x="1090" y="141.754385964912" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">saveAsTextFile</text>
+  <text x="1090" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--info-text)">Launches the job</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="260" y1="116.315789473684" x2="295" y2="116.315789473684" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="116.315789473684" x2="615" y2="116.315789473684" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="900" y1="116.315789473684" x2="935" y2="116.315789473684" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="223.157894736842" width="1200" height="162.80701754386" rx="6.052402741669" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="263.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.165942015287" font-weight="bold" fill="var(--text)">Lazy Evaluation</text>
+  <text x="640" y="304.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Transformations build a DAG; actions run it</text>
+  <text x="640" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Narrow ops pipeline; wide ops cut stages</text>
+  <text x="640" y="375.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--text-muted)">Scheduler optimises and submits tasks</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="40" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="457.19298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Lineage</text>
+  <text x="335" y="497.894736842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Recomputes lost partitions</text>
+  <text x="335" y="528.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Fault tolerant, no replicas</text>
+  <text x="335" y="558.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Checkpoint long chains</text>
+  <text x="335" y="594.561403508772" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">toDebugString</text>
 
-  <rect x="40" y="40" width="220" height="147.636364" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="92.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Source</text>
-  <text x="150" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">textFile, parallelize</text>
-  <text x="150" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">HDFS, S3, Kafka</text>
-
-  <rect x="300" y="40" width="280" height="147.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="440" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Narrow Transforms</text>
-  <text x="440" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">map, filter, flatMap</text>
-  <text x="440" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">mapPartitions, union</text>
-  <text x="440" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">No shuffle, pipelined</text>
-
-  <rect x="620" y="40" width="280" height="147.636364" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="760" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Wide Transforms</text>
-  <text x="760" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">groupByKey, reduceByKey</text>
-  <text x="760" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">join, sortBy, distinct</text>
-  <text x="760" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Triggers shuffle stage</text>
-
-  <rect x="940" y="40" width="300" height="147.636364" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">Action</text>
-  <text x="1090" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">count, collect, take</text>
-  <text x="1090" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">saveAsTextFile, foreach</text>
-  <text x="1090" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Launches the job</text>
-
-  <line x1="260" y1="113.818182" x2="295" y2="113.818182" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="580" y1="113.818182" x2="615" y2="113.818182" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="900" y1="113.818182" x2="935" y2="113.818182" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="229.818182" width="1200" height="168.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="269.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--text)">Lazy Evaluation</text>
-  <text x="640" y="306.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Transformations build a DAG of stages; nothing runs until an action</text>
-  <text x="640" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Narrow ops pipeline within a stage; wide ops cut a new stage</text>
-  <text x="640" y="375.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--text-muted)">Catalyst and the scheduler then optimise and submit tasks</text>
-
-  <rect x="40" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="459.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Lineage benefits</text>
-  <text x="335" y="496.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Recomputes lost partitions</text>
-  <text x="335" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Fault tolerance without replication</text>
-  <text x="335" y="553.563636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Checkpoint to truncate long chains</text>
-  <text x="335" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">toDebugString inspects the DAG</text>
-
-  <rect x="650" y="419.636364" width="590" height="200.363636" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="459.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">Caching tips</text>
-  <text x="945" y="496.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">cache() or persist() reused RDDs</text>
-  <text x="945" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Choose storage level by budget</text>
-  <text x="945" y="553.563636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">unpersist when no longer needed</text>
-  <text x="945" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">MEMORY_AND_DISK is a safe default</text>
+  <rect x="650" y="416.491228070175" width="590" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="457.19298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--warn-text)">Caching</text>
+  <text x="945" y="497.894736842105" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--warn-text)">cache() / persist()</text>
+  <text x="945" y="528.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">Pick storage level</text>
+  <text x="945" y="558.947368421053" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--warn-text)">unpersist()</text>
+  <text x="945" y="594.561403508772" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">MEMORY_AND_DISK default</text>
 </svg>

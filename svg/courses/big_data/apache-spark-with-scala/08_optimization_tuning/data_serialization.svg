@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,123 +34,68 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753497810938" font-weight="bold" fill="var(--text)">Spark Data Serialization</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)">Java Serialization</text>
+  <text x="235" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Default fallback</text>
+  <text x="235" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Reflection-based</text>
+  <text x="235" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Slow, bulky</text>
+  <text x="235" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Avoid in shuffles</text>
+  <text x="235" y="303.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">spark.serializer=Java</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="445" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--ok-text)">Kryo Serialization</text>
+  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">10x faster, 2-5x smaller</text>
+  <text x="640" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Register classes</text>
+  <text x="640" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Recommended for RDDs</text>
+  <text x="640" y="250.909090909091" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">requireRegistration=true</text>
+  <text x="640" y="303.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">spark.serializer=Kryo</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="850" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--primary-text)">Tungsten Encoders</text>
+  <text x="1045" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Dataset / DataFrame</text>
+  <text x="1045" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Binary UnsafeRow</text>
+  <text x="1045" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Off-heap, cache-friendly</text>
+  <text x="1045" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Prefer Dataset[T]</text>
+  <text x="1045" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">automatic</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="377.454545454545" width="1200" height="242.545454545455" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--text)">When Serialization Happens</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="80" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="220" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--warn-accent)">Shuffle Writes</text>
+  <text x="220" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">groupBy, join</text>
+  <text x="220" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">biggest cost</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  <rect x="380" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="520" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--info-accent)">Broadcasts</text>
+  <text x="520" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Once per executor</text>
+  <text x="520" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Small lookups</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Data Serialization</text>
+  <rect x="680" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="820" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--ok-accent)">Task Closures</text>
+  <text x="820" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Lambdas shipped</text>
+  <text x="820" y="546.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--text-muted)">NotSerializableException</text>
 
-  <rect x="40" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Java Serialization</text>
-  <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Default fallback</text>
-  <text x="235" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Works for any Serializable</text>
-  <text x="235" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Large payloads</text>
-  <text x="235" y="226.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Slow reflection-based</text>
-  <text x="235" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Avoid in hot shuffles</text>
-  <text x="235" y="289.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Only for rare classes</text>
-  <text x="235" y="325.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">spark.serializer=Java (default)</text>
-
-  <rect x="445" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Kryo Serialization</text>
-  <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Recommended for RDDs</text>
-  <text x="640" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">10x faster, 2-5x smaller</text>
-  <text x="640" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Register classes for speed</text>
-  <text x="640" y="226.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Does not require Serializable</text>
-  <text x="640" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Unregistered classes: slow</text>
-  <text x="640" y="289.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">requireRegistration = true</text>
-  <text x="640" y="325.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">spark.serializer=KryoSerializer</text>
-
-  <rect x="850" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">Tungsten / Encoders</text>
-  <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">DataFrame / Dataset default</text>
-  <text x="1045" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Binary UnsafeRow format</text>
-  <text x="1045" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Off-heap, cache-friendly</text>
-  <text x="1045" y="226.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">No per-row JVM objects</text>
-  <text x="1045" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Generated codecs at compile</text>
-  <text x="1045" y="289.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Prefer Dataset[T] over RDD</text>
-  <text x="1045" y="325.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">automatic, no config needed</text>
-
-  <rect x="40" y="383.703704" width="1200" height="236.296296" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="424.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">When Serialization Happens</text>
-
-  <rect x="80" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="220" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--warn-accent)">Shuffle Writes</text>
-  <text x="220" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">groupBy, join, repartition</text>
-  <text x="220" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Rows go to disk / network</text>
-  <text x="220" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Biggest cost driver</text>
-
-  <rect x="380" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="520" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--info-accent)">Broadcast Variables</text>
-  <text x="520" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Sent once per executor</text>
-  <text x="520" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Broadcast joins and lookups</text>
-  <text x="520" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Small tables only</text>
-
-  <rect x="680" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="820" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--ok-accent)">Task Closures</text>
-  <text x="820" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Lambdas shipped to workers</text>
-  <text x="820" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Watch for captured state</text>
-  <text x="820" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">NotSerializableException</text>
-
-  <rect x="980" y="448.148148" width="220" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1090" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--primary-accent)">Caching</text>
-  <text x="1090" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">MEMORY_ONLY_SER</text>
-  <text x="1090" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Trades CPU for RAM</text>
-  <text x="1090" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">use compressed format</text>
+  <rect x="980" y="440.727272727273" width="220" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1090" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-accent)">Caching</text>
+  <text x="1090" y="514.545454545455" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--text-muted)">MEMORY_ONLY_SER</text>
+  <text x="1090" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">CPU for RAM</text>
 </svg>

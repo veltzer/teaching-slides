@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,123 +82,60 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- Left Panel: Queue (SQS) -->
-  <rect x="40" y="40" width="580.645161" height="580" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.322581" y="73.833387" font-family="Arial, sans-serif" font-size="21.278453" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Queue (SQS)</text>
-  <text x="330.322581" y="96.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)" text-anchor="middle">Consume and delete model</text>
+  </defs>
 
-  <!-- Producer -->
-  <rect x="69.032258" y="127" width="96.774194" height="43.499947" rx="6.295928" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="117.419355" y="154.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Producer</text>
+  <rect x="40" y="40" width="580" height="580" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">Queue (SQS)</text>
+  <text x="330" y="101.052631578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--primary-text)">consume and delete</text>
 
-  <line x1="165.806452" y1="148.266667" x2="209.354839" y2="148.266667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="70" y="131.578947368421" width="100" height="40.701754385965" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--warn-text)">Producer</text>
+  <line x1="170" y1="151.929824561404" x2="210" y2="151.929824561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="215" y="131.578947368421" width="270" height="40.701754385965" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="350" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text)">M1  M2  M3  M4</text>
+  <line x1="485" y1="151.929824561404" x2="525" y2="151.929824561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="530" y="131.578947368421" width="80" height="40.701754385965" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--ok-text)">Consumer</text>
 
-  <!-- Queue visual - messages in line -->
-  <rect x="214.193548" y="122.166613" width="270.967742" height="53.16672" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <!-- Messages -->
-  <rect x="223.870968" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="243.225806" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--text-muted)" text-anchor="middle">M1</text>
-  <rect x="272.258065" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="291.612903" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--text-muted)" text-anchor="middle">M2</text>
-  <rect x="320.645161" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="340" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--text-muted)" text-anchor="middle">M3</text>
-  <rect x="369.032258" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="388.387097" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--primary-accent)" text-anchor="middle">M4</text>
-  <rect x="417.419355" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="436.774194" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--primary-accent)" text-anchor="middle">M5</text>
+  <rect x="70" y="212.982456140351" width="520" height="223.859649122807" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="330" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Characteristics</text>
+  <text x="90" y="279.122807017544" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">one consumer per message</text>
+  <text x="90" y="309.649122807018" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">deleted after processing</text>
+  <text x="90" y="340.175438596491" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">no replay</text>
+  <text x="90" y="370.701754385965" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">best effort order</text>
+  <text x="90" y="401.228070175439" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">competing consumers</text>
 
-  <!-- Ghost messages (deleted) -->
-  <text x="243.225806" y="189.833387" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--danger-accent)" text-anchor="middle">deleted</text>
-  <text x="291.612903" y="189.833387" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--danger-accent)" text-anchor="middle">deleted</text>
-  <text x="340" y="189.833387" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--danger-accent)" text-anchor="middle">deleted</text>
+  <rect x="70" y="457.19298245614" width="520" height="142.456140350877" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="487.719298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--primary-text)">Best For</text>
+  <text x="90" y="523.333333333333" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">task distribution</text>
+  <text x="90" y="553.859649122807" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">decoupling, background jobs</text>
+  <text x="90" y="584.385964912281" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">at-least-once delivery</text>
 
-  <!-- Single consumer -->
-  <line x1="485.16129" y1="148.266667" x2="523.870968" y2="148.266667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="660" y="40" width="580" height="580" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">Stream (Kinesis)</text>
+  <text x="950" y="101.052631578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--ok-text)">append-only log</text>
 
-  <rect x="528.709677" y="127" width="77.419355" height="43.499947" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="567.419355" y="154.066667" font-family="Arial, sans-serif" font-size="10.639279" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer</text>
+  <rect x="690" y="131.578947368421" width="100" height="40.701754385965" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--warn-text)">Producer</text>
+  <line x1="790" y1="151.929824561404" x2="825" y2="151.929824561404" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="830" y="131.578947368421" width="340" height="40.701754385965" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1000" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text)">M1  M2  M3  M4  M5 (retained)</text>
 
-  <!-- Properties -->
-  <rect x="69.032258" y="223.666667" width="522.580645" height="193.333333" rx="6.295928" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="330.322581" y="252.666667" font-family="Arial, sans-serif" font-size="13.540862" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Queue Characteristics</text>
+  <rect x="700" y="192.631578947368" width="200" height="40.701754385965" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--info-text)">Consumer Group A</text>
+  <rect x="1000" y="192.631578947368" width="200" height="40.701754385965" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--warn-text)">Consumer Group B</text>
 
-  <text x="88.387097" y="281.666667" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Delivery: Each message to one consumer</text>
-  <text x="88.387097" y="305.833387" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Retention: Deleted after processing</text>
-  <text x="88.387097" y="330" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Replay: Not possible (message gone)</text>
-  <text x="88.387097" y="354.166613" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Ordering: Best effort (FIFO optional)</text>
-  <text x="88.387097" y="378.333333" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Consumers: Competing (one wins)</text>
-  <text x="88.387097" y="402.500053" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Service: Amazon SQS</text>
+  <rect x="690" y="263.859649122807" width="520" height="183.157894736842" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="950" y="294.385964912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Characteristics</text>
+  <text x="710" y="330" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">delivered to all groups</text>
+  <text x="710" y="360.526315789474" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">retained 1-365 days</text>
+  <text x="710" y="391.052631578947" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">replay from any point</text>
+  <text x="710" y="421.578947368421" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">strict shard order</text>
 
-  <!-- Use cases -->
-  <rect x="69.032258" y="436.333333" width="522.580645" height="77.333333" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.322581" y="460.500053" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Best For</text>
-  <text x="88.387097" y="482.733333" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)">Task distribution, decoupling, background jobs</text>
-  <text x="88.387097" y="502.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)">Simple producer-consumer with at-least-once delivery</text>
-
-  <!-- VS divider -->
-  <rect x="612.918" y="283.585" width="54.1634" height="54.1634" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <text x="640" y="317.433387" font-family="Arial, sans-serif" font-size="15.475286" fill="var(--text)" text-anchor="middle" font-weight="bold">VS</text>
-
-  <!-- Right Panel: Stream (Kinesis) -->
-  <rect x="659.354839" y="40" width="580.645161" height="580" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.677419" y="73.833387" font-family="Arial, sans-serif" font-size="21.278453" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Stream (Kinesis)</text>
-  <text x="949.677419" y="96.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)" text-anchor="middle">Append-only log model</text>
-
-  <!-- Producer -->
-  <rect x="688.387097" y="127" width="96.774194" height="43.499947" rx="6.295928" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="736.774194" y="154.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Producer</text>
-
-  <line x1="785.16129" y1="148.266667" x2="823.870968" y2="148.266667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Stream visual - log with all messages retained -->
-  <rect x="828.709677" y="122.166613" width="338.709677" height="53.16672" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="838.387097" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="857.741935" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--ok-accent)" text-anchor="middle">M1</text>
-  <rect x="886.774194" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="906.129032" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--ok-accent)" text-anchor="middle">M2</text>
-  <rect x="935.16129" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="954.516129" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--ok-accent)" text-anchor="middle">M3</text>
-  <rect x="983.548387" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1002.903226" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--ok-accent)" text-anchor="middle">M4</text>
-  <rect x="1031.935484" y="131.833387" width="38.709677" height="33.833387" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1051.290323" y="153.099947" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--ok-accent)" text-anchor="middle">M5</text>
-  <text x="1133.548387" y="153.099947" font-family="Arial, sans-serif" font-size="10.639279" fill="var(--ok-accent)" text-anchor="middle">retained!</text>
-
-  <!-- Multiple consumer groups -->
-  <line x1="998.064516" y1="175.333333" x2="998.064516" y2="189.833387" stroke="var(--text-muted)" stroke-width="1.5"/>
-  <line x1="998.064516" y1="189.833387" x2="891.612903" y2="189.833387" stroke="var(--text-muted)" stroke-width="1.5"/>
-  <line x1="998.064516" y1="189.833387" x2="1104.516129" y2="189.833387" stroke="var(--text-muted)" stroke-width="1.5"/>
-  <line x1="891.612903" y1="189.833387" x2="891.612903" y2="199.499947" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="1104.516129" y1="189.833387" x2="1104.516129" y2="199.499947" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="833.548387" y="204.333333" width="116.129032" height="29" rx="6.295928" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="891.612903" y="223.666667" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Consumer Group A</text>
-
-  <rect x="1046.451613" y="204.333333" width="116.129032" height="29" rx="6.295928" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1104.516129" y="223.666667" font-family="Arial, sans-serif" font-size="10.493213" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Consumer Group B</text>
-
-  <!-- Properties -->
-  <rect x="688.387097" y="252.666667" width="522.580645" height="193.333333" rx="6.295928" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="949.677419" y="281.666667" font-family="Arial, sans-serif" font-size="13.540862" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Stream Characteristics</text>
-
-  <text x="707.741935" y="310.666667" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Delivery: Each message to all consumer groups</text>
-  <text x="707.741935" y="334.83328" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Retention: Messages retained (1-365 days)</text>
-  <text x="707.741935" y="359" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Replay: Full replay from any point in time</text>
-  <text x="707.741935" y="383.16672" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Ordering: Strict per shard/partition</text>
-  <text x="707.741935" y="407.333333" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Consumers: Independent groups, own offset</text>
-  <text x="707.741935" y="431.499947" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--text)">Service: Amazon Kinesis / Apache Kafka (MSK)</text>
-
-  <!-- Use cases -->
-  <rect x="688.387097" y="465.333333" width="522.580645" height="77.333333" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.677419" y="489.499947" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Best For</text>
-  <text x="707.741935" y="511.733333" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)">Event sourcing, real-time analytics, clickstream</text>
-  <text x="707.741935" y="531.066667" font-family="Arial, sans-serif" font-size="11.606438" fill="var(--text-muted)">Multiple consumers need same data, replay required</text>
-
-  <!-- Bottom comparison summary -->
-  <rect x="69.032258" y="562" width="522.580645" height="43.499947" rx="6.295928" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.322581" y="589.066667" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">SQS: Simpler, serverless, pay-per-message</text>
-
-  <rect x="688.387097" y="562" width="522.580645" height="43.499947" rx="6.295928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.677419" y="589.066667" font-family="Arial, sans-serif" font-size="12.573703" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Kinesis: More powerful, replay, multi-consumer</text>
+  <rect x="690" y="467.368421052632" width="520" height="132.280701754386" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="497.894736842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--ok-text)">Best For</text>
+  <text x="710" y="533.508771929825" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">event sourcing</text>
+  <text x="710" y="564.035087719298" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">real-time analytics</text>
+  <text x="710" y="589.473684210526" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">multi-consumer replay</text>
 </svg>

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -91,65 +82,53 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Partition Sizing</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">Spark Partition Sizing</text>
 
-  <rect x="40" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Too Few Partitions</text>
-  <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Idle cores</text>
-  <text x="235" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Giant tasks, OOM risk</text>
-  <text x="235" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Spill to disk everywhere</text>
-  <text x="235" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Long task tail</text>
-  <text x="235" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Slow recovery on failure</text>
-  <text x="235" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">symptom: cores &lt; 50% busy</text>
-  <text x="235" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">fix: repartition(N)</text>
+  <rect x="40" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Too Few</text>
+  <text x="235" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Idle cores</text>
+  <text x="235" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Giant tasks, OOM</text>
+  <text x="235" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Heavy spill</text>
+  <text x="235" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Slow recovery</text>
+  <text x="235" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--danger-text)">fix: repartition(N)</text>
 
-  <rect x="445" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Goldilocks Zone</text>
-  <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">128-256 MB per partition</text>
-  <text x="640" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Task runs 2-10 seconds</text>
-  <text x="640" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">2-4x total core count</text>
-  <text x="640" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Fits in executor memory</text>
-  <text x="640" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Recovers fast on failure</text>
-  <text x="640" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">balanced CPU + I/O</text>
-  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">AQE auto-coalesces to this</text>
+  <rect x="445" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Goldilocks</text>
+  <text x="640" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">128-256 MB each</text>
+  <text x="640" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">2-10 sec per task</text>
+  <text x="640" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">2-4x total cores</text>
+  <text x="640" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Fits in memory</text>
+  <text x="640" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--ok-text)">AQE targets this</text>
 
-  <rect x="850" y="72.222222" width="390" height="279.259259" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Too Many Partitions</text>
-  <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Scheduler overhead dominates</text>
-  <text x="1045" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Tiny tasks (&lt; 100 ms)</text>
-  <text x="1045" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Many small output files</text>
-  <text x="1045" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Namenode / listing pain</text>
-  <text x="1045" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Shuffle blocks explode</text>
-  <text x="1045" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">symptom: GC &gt; compute time</text>
-  <text x="1045" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">fix: coalesce(N)</text>
+  <rect x="850" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Too Many</text>
+  <text x="1045" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Scheduler overhead</text>
+  <text x="1045" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Tiny tasks</text>
+  <text x="1045" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Many small files</text>
+  <text x="1045" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Shuffle explosion</text>
+  <text x="1045" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--warn-text)">fix: coalesce(N)</text>
 
-  <rect x="40" y="383.703704" width="1200" height="236.296296" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="424.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Tuning Knobs</text>
+  <text x="640" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--text)">Tuning Knobs</text>
 
-  <rect x="80" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="220" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--primary-accent)">shuffle.partitions</text>
-  <text x="220" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Default 200</text>
-  <text x="220" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Set to 2-4x cores</text>
-  <text x="220" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">AQE adjusts dynamically</text>
+  <rect x="80" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--primary-accent)">shuffle.partitions</text>
+  <text x="220" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 200</text>
+  <text x="220" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">2-4x cores</text>
 
-  <rect x="380" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="520" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--info-accent)">maxPartitionBytes</text>
-  <text x="520" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Default 128 MB</text>
-  <text x="520" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Controls input split size</text>
-  <text x="520" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">for file-based sources</text>
+  <rect x="380" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="520" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--info-accent)">maxPartitionBytes</text>
+  <text x="520" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 128 MB</text>
+  <text x="520" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Input split size</text>
 
-  <rect x="680" y="448.148148" width="280" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="820" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--ok-accent)">repartition / coalesce</text>
-  <text x="820" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">repartition shuffles</text>
-  <text x="820" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">coalesce merges locally</text>
-  <text x="820" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">use coalesce before write</text>
+  <rect x="680" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="820" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--ok-accent)">repartition / coalesce</text>
+  <text x="820" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">repartition shuffles</text>
+  <text x="820" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">coalesce merges</text>
 
-  <rect x="980" y="448.148148" width="220" height="150.37037" rx="6.218253" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1090" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" font-weight="bold" fill="var(--warn-accent)">AQE</text>
-  <text x="1090" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Enabled by default 3.2+</text>
-  <text x="1090" y="538.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Coalesces small parts</text>
-  <text x="1090" y="574.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Splits skewed ones</text>
+  <rect x="980" y="430.181818181818" width="220" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1090" y="467.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-accent)">AQE</text>
+  <text x="1090" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 3.2+</text>
+  <text x="1090" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Auto coalesces</text>
 </svg>

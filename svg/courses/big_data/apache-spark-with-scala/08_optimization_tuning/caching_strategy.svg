@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,62 +82,48 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <!-- API row -->
-  <rect x="40" y="40" width="580" height="91.578947" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="330" y="68.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">cache()</text>
-  <text x="330" y="94.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">shortcut for persist(MEMORY_AND_DISK)</text>
-  <text x="330" y="117.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">default in Dataset API; no parameters</text>
+  <rect x="40" y="40" width="580" height="82.857142857143" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="330" y="71.071428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="18.318608805568" font-weight="bold" fill="var(--text)">cache()</text>
+  <text x="330" y="96.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">shortcut for MEMORY_AND_DISK</text>
 
-  <rect x="660" y="40" width="580" height="91.578947" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="950" y="68.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">persist(StorageLevel)</text>
-  <text x="950" y="94.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">explicit level; supports replication + off-heap</text>
-  <text x="950" y="117.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">unpersist() to release; lazy until action runs</text>
+  <rect x="660" y="40" width="580" height="82.857142857143" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="950" y="71.071428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="18.318608805568" font-weight="bold" fill="var(--text)">persist(level)</text>
+  <text x="950" y="96.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">explicit level, replication, off-heap</text>
 
-  <!-- Storage levels -->
-  <rect x="40" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--primary-text)">MEMORY_ONLY</text>
-  <text x="185" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">deserialized JVM objects</text>
-  <text x="185" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">fastest read path</text>
-  <text x="185" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">evicts if heap full</text>
-  <text x="185" y="294.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">recompute on miss</text>
-  <text x="185" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">small hot datasets,</text>
-  <text x="185" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--primary-text)">cheap recompute</text>
+  <rect x="40" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">MEMORY_ONLY</text>
+  <text x="185" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">deserialized</text>
+  <text x="185" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">fastest read</text>
+  <text x="185" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">recompute on miss</text>
+  <text x="185" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--primary-text)">small hot data</text>
 
-  <rect x="340" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--ok-text)">MEMORY_AND_DISK</text>
-  <text x="485" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">RAM first, spill to disk</text>
-  <text x="485" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">DataFrame default</text>
-  <text x="485" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">no recompute needed</text>
-  <text x="485" y="294.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">disk read on eviction</text>
-  <text x="485" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--ok-text)">expensive lineage,</text>
-  <text x="485" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--ok-text)">safe default</text>
+  <rect x="340" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">MEMORY_AND_DISK</text>
+  <text x="485" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">spill to disk</text>
+  <text x="485" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">DataFrame default</text>
+  <text x="485" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">no recompute</text>
+  <text x="485" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--ok-text)">safe default</text>
 
-  <rect x="640" y="151.929825" width="290" height="234.035088" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--warn-text)">MEMORY_ONLY_SER</text>
-  <text x="785" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">serialized bytes (Kryo)</text>
-  <text x="785" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">2-5x less heap usage</text>
-  <text x="785" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">CPU cost to deserialize</text>
-  <text x="785" y="294.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">reduces GC pressure</text>
-  <text x="785" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--warn-text)">large data, tight heap,</text>
-  <text x="785" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--warn-text)">GC pauses hurt</text>
+  <rect x="640" y="153.928571428571" width="290" height="227.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">MEMORY_ONLY_SER</text>
+  <text x="785" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">serialized bytes</text>
+  <text x="785" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">compact, CPU cost</text>
+  <text x="785" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">lower GC pressure</text>
+  <text x="785" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--warn-text)">tight heap</text>
 
-  <rect x="940" y="151.929825" width="300" height="234.035088" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="180.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--info-text)">DISK_ONLY / _2</text>
-  <text x="1090" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">persisted only to disk</text>
-  <text x="1090" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">_2 suffix = 2x replicas</text>
-  <text x="1090" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">survives executor loss</text>
-  <text x="1090" y="294.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">slowest read</text>
-  <text x="1090" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--info-text)">huge data, HA reuse,</text>
-  <text x="1090" y="355.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" font-style="italic" fill="var(--info-text)">long pipelines</text>
+  <rect x="940" y="153.928571428571" width="300" height="227.857142857143" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">DISK_ONLY / _2</text>
+  <text x="1090" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">disk only</text>
+  <text x="1090" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">_2 replicates</text>
+  <text x="1090" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">survives loss</text>
+  <text x="1090" y="324.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" font-style="italic" fill="var(--info-text)">huge data</text>
 
-  <!-- Decision panel -->
-  <rect x="40" y="406.315789" width="1200" height="213.684211" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--text)">When to cache</text>
-  <text x="640" y="467.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Only if a DataFrame is reused more than once and its lineage is non-trivial.</text>
-  <text x="640" y="492.807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Iterative ML, interactive notebooks, shared intermediate results after wide transforms.</text>
-  <text x="640" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Call an action (count, show) after cache() so it materializes before downstream jobs.</text>
-  <text x="640" y="553.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Monitor Storage tab in Spark UI: check cached size, fraction, evictions.</text>
-  <text x="640" y="589.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-style="italic" fill="var(--text-faint)">Always unpersist() when done — stale caches starve execution memory.</text>
+  <rect x="40" y="412.857142857143" width="1200" height="207.142857142857" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="449.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--text)">When to cache</text>
+  <text x="640" y="485.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">reuse more than once</text>
+  <text x="640" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">trigger with an action</text>
+  <text x="640" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)">check Storage tab in UI</text>
+  <text x="640" y="588.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--text-faint)">unpersist when done</text>
 </svg>

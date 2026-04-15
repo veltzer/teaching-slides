@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,150 +82,88 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
   </defs>
-  <!-- == HASH FUNCTION CONCEPT == -->
-  <text x="40" y="40" font-family="Arial, sans-serif" font-size="18.120405" font-weight="bold" fill="var(--primary-accent)">Cryptographic Hash Functions</text>
 
-  <!-- Input -->
-  <rect x="40" y="57.876712" width="173.469372" height="79.452055" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="126.734686" y="89.657534" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">INPUT</text>
-  <text x="126.734686" y="107.534137" font-size="12.679172" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">"Hello"</text>
-  <text x="126.734686" y="125.410959" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)" text-anchor="middle">any size data</text>
+  <!-- Flow: Input -> Hash -> Digest -->
+  <rect x="40" y="40" width="206.896551724138" height="98.490566037736" rx="10.639903531979" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="78.301886792453" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">INPUT</text>
+  <text x="143.448275862069" y="111.132075471698" font-family="Courier New, monospace" font-size="17.023845651166" fill="var(--bg)" text-anchor="middle">any size</text>
 
-  <!-- Arrow -->
-  <line x1="213.469263" y1="97.60274" x2="254.285804" y2="97.60274" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="252.068965517241" y1="89.245283018868" x2="308.965517241379" y2="89.245283018868" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <!-- Hash Function box -->
-  <rect x="254.285804" y="51.917808" width="183.673453" height="91.369863" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="346.122421" y="87.671233" font-family="Arial, sans-serif" font-size="15.100265" font-weight="bold" fill="var(--bg)" text-anchor="middle">Hash</text>
-  <text x="346.122421" y="107.534137" font-family="Arial, sans-serif" font-size="15.100265" font-weight="bold" fill="var(--bg)" text-anchor="middle">Function</text>
-  <text x="346.122421" y="127.397151" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--primary-accent)" text-anchor="middle">deterministic</text>
+  <rect x="314.137931034483" y="40" width="227.586206896552" height="98.490566037736" rx="10.639903531979" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="427.931034482759" y="78.301886792453" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">Hash Function</text>
+  <text x="427.931034482759" y="111.132075471698" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)" text-anchor="middle">deterministic, one-way</text>
 
-  <!-- Arrow -->
-  <line x1="437.959148" y1="97.60274" x2="478.775362" y2="97.60274" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="546.896551724138" y1="89.245283018868" x2="603.793103448276" y2="89.245283018868" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <!-- Digest -->
-  <rect x="478.775362" y="57.876712" width="275.510288" height="79.452055" rx="6.552939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="616.530669" y="83.698521" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">DIGEST (fixed size)</text>
-  <text x="616.530669" y="103.561644" font-size="12.679172" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">185f8db32921bd46d35...a5</text>
-  <text x="616.530669" y="121.438247" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)" text-anchor="middle">always same length regardless of input</text>
+  <rect x="608.965517241379" y="40" width="248.275862068966" height="98.490566037736" rx="10.639903531979" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="78.301886792453" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">DIGEST</text>
+  <text x="733.103448275862" y="111.132075471698" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)" text-anchor="middle">fixed size</text>
 
-  <!-- PROPERTIES -->
-  <text x="825.714323" y="65.821808" font-family="Arial, sans-serif" font-size="14.093515" font-weight="bold" fill="var(--primary-accent)">Five Core Properties</text>
-  <rect x="825.714323" y="73.767123" width="414.285677" height="154.931507" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="846.122376" y="95.616438" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">1. <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Deterministic</tspan>: same input -&gt; same hash always</text>
-  <text x="846.122376" y="115.479452" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">2. <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Fast</tspan>: quick to compute for any input size</text>
-  <text x="846.122376" y="135.342466" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">3. <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">One-way</tspan>: cannot reverse hash to input (pre-image)</text>
-  <text x="846.122376" y="155.205479" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">4. <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Avalanche</tspan>: 1-bit input change -&gt; ~50% output change</text>
-  <text x="846.122376" y="175.068493" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">5. <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Collision-resistant</tspan>: hard to find two inputs</text>
-  <text x="846.122376" y="190.958904" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">   with the same hash (second pre-image resistance)</text>
-  <text x="846.122376" y="216.780822" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Forensics: hash proves file integrity (tamper detection)</text>
+  <!-- Properties box -->
+  <rect x="888.275862068966" y="40" width="351.724137931035" height="251.698113207547" rx="10.639903531979" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1064.137931034483" y="72.830188679245" font-family="Arial, sans-serif" font-size="18.087836004364" font-weight="bold" fill="var(--bg)" text-anchor="middle">Core Properties</text>
+  <text x="908.965517241379" y="111.132075471698" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">deterministic</text>
+  <text x="908.965517241379" y="143.962264150943" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">fast to compute</text>
+  <text x="908.965517241379" y="176.792452830189" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">one-way (pre-image)</text>
+  <text x="908.965517241379" y="209.622641509434" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">avalanche effect</text>
+  <text x="908.965517241379" y="242.452830188679" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">collision-resistant</text>
+  <text x="908.965517241379" y="275.283018867925" font-family="Arial, sans-serif" font-size="13.831874591572" font-style="italic" fill="var(--bg)">proves file integrity</text>
 
-  <!-- == ALGORITHM COMPARISON TABLE == -->
-  <text x="40" y="167.123178" font-family="Arial, sans-serif" font-size="15.100265" font-weight="bold" fill="var(--text-muted)">Algorithm Comparison</text>
+  <!-- Algorithms -->
+  <rect x="40" y="182.264150943396" width="175.862068965517" height="98.490566037736" rx="10.639903531979" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="127.931034482759" y="215.094339622641" font-family="Courier New, monospace" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">MD5</text>
+  <text x="127.931034482759" y="242.452830188679" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">128-bit</text>
+  <text x="127.931034482759" y="264.339622641509" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">BROKEN</text>
 
-  <!-- Table header -->
-  <rect x="40" y="181.027507" width="765.306053" height="31.780822" rx="6.552939" fill="var(--primary-accent)"/>
-  <text x="101.224484" y="201.883616" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)">Algorithm</text>
-  <text x="233.877642" y="201.883616" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)">Output Size</text>
-  <text x="356.326611" y="201.883616" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)">Speed</text>
-  <text x="448.163228" y="201.883616" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)">Security Status</text>
-  <text x="611.42852" y="201.883616" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)">Use Case</text>
+  <rect x="231.379310344828" y="182.264150943396" width="175.862068965517" height="98.490566037736" rx="10.639903531979" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="319.310344827586" y="215.094339622641" font-family="Courier New, monospace" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">SHA-1</text>
+  <text x="319.310344827586" y="242.452830188679" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">160-bit</text>
+  <text x="319.310344827586" y="264.339622641509" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">DEPRECATED</text>
 
-  <!-- MD5 row -->
-  <rect x="40" y="212.80811" width="765.306053" height="35.753534" rx="6.552939" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="101.224484" y="235.650521" font-size="12.679172" fill="var(--danger-accent)" font-family="Courier New, monospace">MD5</text>
-  <text x="233.877642" y="235.650521" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">128-bit (32 hex)</text>
-  <text x="356.326611" y="235.650521" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Very fast</text>
-  <text x="448.163228" y="235.650521" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--danger-accent)">BROKEN (collisions)</text>
-  <text x="611.42852" y="235.650521" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Legacy/checksum only</text>
+  <rect x="422.758620689655" y="182.264150943396" width="175.862068965517" height="98.490566037736" rx="10.639903531979" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510.689655172414" y="215.094339622641" font-family="Courier New, monospace" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">SHA-256</text>
+  <text x="510.689655172414" y="242.452830188679" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">256-bit</text>
+  <text x="510.689655172414" y="264.339622641509" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">standard</text>
 
-  <!-- SHA1 row -->
-  <rect x="40" y="248.561644" width="765.306053" height="35.753534" rx="6.552939" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="101.224484" y="271.404055" font-size="12.679172" fill="var(--warn-accent)" font-family="Courier New, monospace">SHA-1</text>
-  <text x="233.877642" y="271.404055" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">160-bit (40 hex)</text>
-  <text x="356.326611" y="271.404055" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Fast</text>
-  <text x="448.163228" y="271.404055" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--warn-accent)">DEPRECATED (SHAttered)</text>
-  <text x="611.42852" y="271.404055" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Avoid new use</text>
+  <rect x="614.137931034483" y="182.264150943396" width="175.862068965517" height="98.490566037736" rx="10.639903531979" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="702.068965517241" y="215.094339622641" font-family="Courier New, monospace" font-size="19.151826357562" font-weight="bold" fill="var(--bg)" text-anchor="middle">SHA-512</text>
+  <text x="702.068965517241" y="242.452830188679" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">512-bit</text>
+  <text x="702.068965517241" y="264.339622641509" font-family="Arial, sans-serif" font-size="13.831874591572" fill="var(--bg)" text-anchor="middle">strong</text>
 
-  <!-- SHA256 row -->
-  <rect x="40" y="284.314959" width="765.306053" height="35.753534" rx="6.552939" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="101.224484" y="307.157479" font-size="12.679172" fill="var(--ok-accent)" font-family="Courier New, monospace">SHA-256</text>
-  <text x="233.877642" y="307.157479" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">256-bit (64 hex)</text>
-  <text x="356.326611" y="307.157479" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Good</text>
-  <text x="448.163228" y="307.157479" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--ok-accent)">SECURE (standard)</text>
-  <text x="611.42852" y="307.157479" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Files, TLS, Bitcoin</text>
+  <!-- Signature flow -->
+  <rect x="40" y="324.528301886792" width="837.931034482759" height="295.471698113208" rx="10.639903531979" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="458.965517241379" y="362.830188679245" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Digital Signatures</text>
 
-  <!-- SHA512 row -->
-  <rect x="40" y="320.068493" width="765.306053" height="35.753534" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="101.224484" y="342.910904" font-size="12.679172" fill="var(--primary-accent)" font-family="Courier New, monospace">SHA-512</text>
-  <text x="233.877642" y="342.910904" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">512-bit (128 hex)</text>
-  <text x="356.326611" y="342.910904" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Good (fast on 64-bit)</text>
-  <text x="448.163228" y="342.910904" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--ok-accent)">SECURE (strong)</text>
-  <text x="611.42852" y="342.910904" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Passwords, certs</text>
+  <rect x="71.034482758621" y="395.660377358491" width="155.172413793103" height="60.188679245283" rx="8.511922825583" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.620689655172" y="431.77358490566" font-family="Arial, sans-serif" font-size="15.959855297968" font-weight="bold" fill="var(--bg)" text-anchor="middle">Document</text>
+  <line x1="231.379310344828" y1="425.207547169811" x2="277.931034482759" y2="425.207547169811" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- SHA3 row -->
-  <rect x="40" y="355.821808" width="765.306053" height="35.753534" rx="6.552939" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="101.224484" y="378.664329" font-size="12.679172" fill="var(--info-accent)" font-family="Courier New, monospace">SHA-3</text>
-  <text x="233.877642" y="378.664329" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">224-512-bit var</text>
-  <text x="356.326611" y="378.664329" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Moderate</text>
-  <text x="448.163228" y="378.664329" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--ok-accent)">SECURE (Keccak)</text>
-  <text x="611.42852" y="378.664329" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text-muted)">Future-proof option</text>
+  <rect x="283.103448275862" y="395.660377358491" width="155.172413793103" height="60.188679245283" rx="8.511922825583" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.689655172414" y="431.77358490566" font-family="Arial, sans-serif" font-size="15.959855297968" font-weight="bold" fill="var(--bg)" text-anchor="middle">Hash</text>
+  <line x1="443.448275862069" y1="425.207547169811" x2="490" y2="425.207547169811" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- == AVALANCHE DEMO == -->
-  <rect x="825.714323" y="244.588932" width="414.285677" height="146.986301" rx="6.552939" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1032.857162" y="266.438247" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Avalanche Effect Demo</text>
-  <text x="846.122376" y="288.287562" font-size="12.679172" fill="var(--text)" font-family="Courier New, monospace">Input: "Hello"</text>
-  <text x="846.122376" y="306.164274" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">SHA256: 185f8db3292...1a95</text>
-  <text x="846.122376" y="328.013699" font-size="12.679172" fill="var(--text)" font-family="Courier New, monospace">Input: "hello"  (1 char changed)</text>
-  <text x="846.122376" y="345.890411" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">SHA256: 2cf24dba5fb0...e26</text>
-  <text x="846.122376" y="367.739726" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--warn-accent)">~50% of bits differ despite tiny input change.</text>
-  <text x="846.122376" y="383.630027" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--warn-accent)">Impossible to "nudge" a hash toward a target.</text>
+  <rect x="495.172413793103" y="395.660377358491" width="175.862068965517" height="60.188679245283" rx="8.511922825583" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="583.103448275862" y="423.018867924528" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--bg)" text-anchor="middle">Encrypt w/</text>
+  <text x="583.103448275862" y="442.716981132075" font-family="Arial, sans-serif" font-size="14.89586494477" font-weight="bold" fill="var(--bg)" text-anchor="middle">private key</text>
+  <line x1="676.206896551724" y1="425.207547169811" x2="722.758620689655" y2="425.207547169811" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- == DIGITAL SIGNATURES section == -->
-  <text x="40" y="415.410959" font-family="Arial, sans-serif" font-size="15.100265" font-weight="bold" fill="var(--primary-accent)">Digital Signatures (Hash + Asymmetric Crypto)</text>
-  <rect x="40" y="431.30137" width="755.102081" height="188.69863" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="727.931034482759" y="395.660377358491" width="139.655172413793" height="60.188679245283" rx="8.511922825583" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.172413793103" y="431.77358490566" font-family="Arial, sans-serif" font-size="15.959855297968" font-weight="bold" fill="var(--bg)" text-anchor="middle">Signature</text>
 
-  <!-- Sign flow -->
-  <text x="60.40827" y="455.136986" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--primary-accent)">Signing:</text>
-  <rect x="60.40827" y="463.082192" width="102.040916" height="31.780822" rx="6.552939" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="111.428565" y="483.938411" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)" text-anchor="middle">Document</text>
-  <line x1="162.44886" y1="478.972603" x2="193.061211" y2="478.972603" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="193.061211" y="463.082192" width="102.040916" height="31.780822" rx="6.552939" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="244.081723" y="483.938411" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)" text-anchor="middle">Hash(doc)</text>
-  <line x1="295.102018" y1="478.972603" x2="325.71426" y2="478.972603" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="325.71426" y="463.082192" width="132.653049" height="31.780822" rx="6.552939" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="392.040784" y="478.972603" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)" text-anchor="middle">Encrypt(hash,</text>
-  <text x="392.040784" y="489.897205" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)" text-anchor="middle">private key)</text>
-  <line x1="458.367418" y1="478.972603" x2="488.979551" y2="478.972603" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="488.979551" y="463.082192" width="102.040916" height="31.780822" rx="6.552939" fill="var(--danger-accent)"/>
-  <text x="540.000063" y="483.938411" font-family="Arial, sans-serif" font-size="12.679172" font-weight="bold" fill="var(--bg)" text-anchor="middle">Signature</text>
+  <text x="71.034482758621" y="505.094339622642" font-family="Arial, sans-serif" font-size="15.959855297968" font-weight="bold" fill="var(--ok-accent)">Verify</text>
+  <text x="71.034482758621" y="532.452830188679" font-family="Courier New, monospace" font-size="14.89586494477" fill="var(--text)">Hash(doc) == Decrypt(sig, public_key)</text>
+  <text x="71.034482758621" y="570.754716981132" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--text)">TLS, SSH, PGP, git, code signing</text>
+  <text x="71.034482758621" y="598.11320754717" font-family="Courier New, monospace" font-size="13.831874591572" fill="var(--text-muted)">sha256sum --check hashes.txt</text>
 
-  <!-- Verify flow -->
-  <text x="60.40827" y="514.726027" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--ok-accent)">Verifying:</text>
-  <text x="60.40827" y="536.575233" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">Receiver: Hash(received doc) == Decrypt(signature, public key) ?</text>
-  <text x="60.40827" y="556.438356" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--ok-accent)">YES -&gt; document is authentic and untampered</text>
-  <text x="60.40827" y="576.30126" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--danger-accent)">NO  -&gt; document modified in transit or wrong signer</text>
-
-  <text x="60.40827" y="600.136986" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--primary-accent)">Used in: code signing, SSL/TLS, SSH, PGP email, git commit signing</text>
-  <text x="60.40827" y="616.027507" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">sha256sum file.iso | sha256sum --check  # verify download integrity</text>
-
-  <!-- Forensics uses -->
-  <rect x="825.714323" y="407.465753" width="414.285677" height="212.534247" rx="6.552939" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1032.857162" y="429.314959" font-family="Arial, sans-serif" font-size="13.087093" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Forensics: Hash Usage</text>
-  <text x="846.122376" y="451.164384" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">&#x2022; Hash evidence files immediately on acquisition</text>
-  <text x="846.122376" y="469.041096" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">&#x2022; Record hash in chain of custody documentation</text>
-  <text x="846.122376" y="486.917808" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">&#x2022; Re-hash before analysis: proves no tampering</text>
-  <text x="846.122376" y="504.79463" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">&#x2022; NSRL database: match hashes to known malware</text>
-  <text x="846.122376" y="522.671342" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--text)">&#x2022; Hash matching: find identical files across drives</text>
-  <text x="846.122376" y="544.520658" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">sha256sum evidence.dd</text>
-  <text x="846.122376" y="562.39726" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">md5sum -c hashes.txt</text>
-  <text x="846.122376" y="580.273973" font-size="12.679172" fill="var(--text-muted)" font-family="Courier New, monospace">sha512sum /dev/sdb &gt; disk.sha512</text>
-  <text x="846.122376" y="598.150685" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--danger-accent)">Court-admissible only if hash recorded at acquisition.</text>
-  <text x="846.122376" y="614.041096" font-family="Arial, sans-serif" font-size="12.679172" fill="var(--danger-accent)">Use SHA-256 or better for new forensic work.</text>
+  <!-- Forensics box -->
+  <rect x="888.275862068966" y="324.528301886792" width="351.724137931035" height="295.471698113208" rx="10.639903531979" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1064.137931034483" y="362.830188679245" font-family="Arial, sans-serif" font-size="18.087836004364" font-weight="bold" fill="var(--bg)" text-anchor="middle">Forensic Use</text>
+  <text x="908.965517241379" y="401.132075471698" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">hash on acquisition</text>
+  <text x="908.965517241379" y="433.962264150943" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">chain of custody</text>
+  <text x="908.965517241379" y="466.792452830189" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">re-hash pre-analysis</text>
+  <text x="908.965517241379" y="499.622641509434" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">NSRL malware match</text>
+  <text x="908.965517241379" y="532.452830188679" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--bg)">cross-drive dedupe</text>
+  <text x="908.965517241379" y="576.22641509434" font-family="Courier New, monospace" font-size="13.831874591572" fill="var(--bg)">sha256sum evidence.dd</text>
 </svg>

@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,142 +82,63 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
   </defs>
-  <!-- Array declaration -->
-  <rect x="40" y="40" width="1200" height="53.475177" rx="6.601096" fill="var(--code-bg)"/>
-  <text x="70" y="72.907801" font-size="22.309834" fill="var(--ok-accent)" font-family="Courier New, monospace">fruits</text>
-  <text x="148" y="72.907801" font-size="22.309834" fill="var(--primary-accent)" font-family="Courier New, monospace">=(</text>
-  <text x="178" y="72.907801" font-size="22.309834" fill="var(--warn-accent)" font-family="Courier New, monospace">"apple"</text>
-  <text x="286" y="72.907801" font-size="22.309834" fill="var(--warn-accent)" font-family="Courier New, monospace"> "banana"</text>
-  <text x="434" y="72.907801" font-size="22.309834" fill="var(--warn-accent)" font-family="Courier New, monospace"> "cherry"</text>
-  <text x="584" y="72.907801" font-size="22.309834" fill="var(--warn-accent)" font-family="Courier New, monospace"> "date"</text>
-  <text x="680" y="72.907801" font-size="22.309834" fill="var(--warn-accent)" font-family="Courier New, monospace"> "elderberry"</text>
-  <text x="880" y="72.907801" font-size="22.309834" fill="var(--primary-accent)" font-family="Courier New, monospace">)</text>
 
-  <!-- Memory layout boxes -->
-  <!-- Index labels -->
-  <text x="130" y="127.411291" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[0]</text>
-  <text x="370" y="127.411291" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[1]</text>
-  <text x="610" y="127.411291" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[2]</text>
-  <text x="850" y="127.411291" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[3]</text>
-  <text x="1090" y="127.411291" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[4]</text>
+  <!-- declaration -->
+  <text x="640" y="40" font-size="26.031654938239" fill="var(--text)" font-family="Courier New, monospace" text-anchor="middle">fruits=("apple" "banana" "cherry" "date" "elderberry")</text>
 
-  <!-- Index boxes -->
-  <rect x="50" y="134.609929" width="160" height="82.269504" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="53" y="137.695092" width="154" height="76.099291" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="130" y="186.028369" font-size="20.281757" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"apple"</text>
+  <!-- Memory cells -->
+  <text x="122.758620689655" y="96.862745098039" font-size="17.354436625492" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[0]</text>
+  <text x="329.655172413793" y="96.862745098039" font-size="17.354436625492" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[1]</text>
+  <text x="536.551724137931" y="96.862745098039" font-size="17.354436625492" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[2]</text>
+  <text x="743.448275862069" y="96.862745098039" font-size="17.354436625492" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[3]</text>
+  <text x="971.034482758621" y="96.862745098039" font-size="17.354436625492" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[4]</text>
 
-  <rect x="290" y="134.609929" width="160" height="82.269504" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="293" y="137.695092" width="154" height="76.099291" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="370" y="186.028369" font-size="20.281757" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"banana"</text>
+  <rect x="40" y="113.921568627451" width="165.51724137931" height="79.607843137255" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="165.098039215686" font-size="17.354436625492" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">apple</text>
 
-  <rect x="530" y="134.609929" width="160" height="82.269504" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="533" y="137.695092" width="154" height="76.099291" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610" y="186.028369" font-size="20.281757" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"cherry"</text>
+  <rect x="246.896551724138" y="113.921568627451" width="165.51724137931" height="79.607843137255" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="165.098039215686" font-size="17.354436625492" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">banana</text>
 
-  <rect x="770" y="134.609929" width="160" height="82.269504" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="773" y="137.695092" width="154" height="76.099291" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="850" y="186.028369" font-size="20.281757" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"date"</text>
+  <rect x="453.793103448276" y="113.921568627451" width="165.51724137931" height="79.607843137255" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="536.551724137931" y="165.098039215686" font-size="17.354436625492" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">cherry</text>
 
-  <rect x="1010" y="134.609929" width="220" height="82.269504" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1013" y="137.695092" width="214" height="76.099291" rx="6.601096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="186.028369" font-size="18.253571" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"elderberry"</text>
+  <rect x="660.689655172414" y="113.921568627451" width="165.51724137931" height="79.607843137255" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="743.448275862069" y="165.098039215686" font-size="17.354436625492" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">date</text>
 
-  <!-- Separator line between boxes -->
-  <line x1="210" y1="134.609929" x2="210" y2="216.879433" stroke="var(--primary-border)" stroke-width="2"/>
-  <line x1="450" y1="134.609929" x2="450" y2="216.879433" stroke="var(--primary-border)" stroke-width="2"/>
-  <line x1="690" y1="134.609929" x2="690" y2="216.879433" stroke="var(--primary-border)" stroke-width="2"/>
-  <line x1="930" y1="134.609929" x2="930" y2="216.879433" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="867.586206896552" y="113.921568627451" width="206.896551724138" height="79.607843137255" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="971.034482758621" y="165.098039215686" font-size="17.354436625492" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">elderberry</text>
 
-  <!-- Negative index labels -->
-  <text x="130" y="240.531972" font-size="14.197197" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-5]</text>
-  <text x="370" y="240.531972" font-size="14.197197" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-4]</text>
-  <text x="610" y="240.531972" font-size="14.197197" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-3]</text>
-  <text x="850" y="240.531972" font-size="14.197197" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-2]</text>
-  <text x="1120" y="240.531972" font-size="14.197197" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-1]  (bash 4.3+)</text>
+  <text x="122.758620689655" y="221.960784313725" font-size="14.100479758213" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-5]</text>
+  <text x="329.655172413793" y="221.960784313725" font-size="14.100479758213" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-4]</text>
+  <text x="536.551724137931" y="221.960784313725" font-size="14.100479758213" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-3]</text>
+  <text x="743.448275862069" y="221.960784313725" font-size="14.100479758213" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-2]</text>
+  <text x="971.034482758621" y="221.960784313725" font-size="14.100479758213" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">[-1]</text>
 
-  <!-- Divider -->
-  <line x1="40" y1="255.957447" x2="1240" y2="255.957447" stroke="var(--border)" stroke-width="2"/>
+  <!-- Columns -->
+  <rect x="40" y="256.078431372549" width="393.103448275862" height="363.921568627451" rx="8.677218312746" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="295.882352941176" font-size="19.523741203679" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Access</text>
+  <text x="60.689655172414" y="341.372549019608" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[0]}</text>
+  <text x="60.689655172414" y="375.490196078431" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[-1]}</text>
+  <text x="60.689655172414" y="409.607843137255" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[@]}</text>
+  <text x="60.689655172414" y="443.725490196078" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${#fruits[@]}</text>
+  <text x="60.689655172414" y="477.843137254902" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${!fruits[@]}</text>
+  <text x="60.689655172414" y="529.019607843137" font-size="14.100479758213" fill="var(--bg)" font-family="Courier New, monospace">for f in "${fruits[@]}"</text>
 
-  <!-- Three columns of syntax examples -->
-  <!-- Column 1: Access -->
-  <rect x="40" y="270.35461" width="380" height="349.64539" rx="6.601096" fill="var(--bg)"/>
-  <rect x="40" y="270.35461" width="380" height="41.134752" rx="6.601096" fill="var(--primary-accent)"/>
-  <rect x="40" y="297.092199" width="380" height="14.397163" fill="var(--primary-accent)" rx="6.601096"/>
-  <text x="230" y="298.120624" font-size="16.225384" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Access Elements</text>
-  <rect x="55" y="321.77305" width="350" height="283.829787" rx="6.601096" fill="var(--code-bg)"/>
-  <text x="75" y="346.453901" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Single element</text>
-  <text x="75" y="365.992851" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="114" y="365.992851" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[0]}"</text>
-  <text x="75" y="381.41844" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># apple</text>
-  <text x="75" y="401.985816" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="114" y="401.985816" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[-1]}"</text>
-  <text x="75" y="417.411404" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># elderberry (last)</text>
-  <text x="75" y="437.97878" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># All elements</text>
-  <text x="75" y="457.51773" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="114" y="457.51773" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[@]}"</text>
-  <text x="75" y="478.085106" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Count</text>
-  <text x="75" y="497.624057" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="114" y="497.624057" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${#fruits[@]}"</text>
-  <text x="75" y="513.049645" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># 5</text>
-  <text x="75" y="533.617021" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># All indices</text>
-  <text x="75" y="553.156085" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="114" y="553.156085" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${!fruits[@]}"</text>
-  <text x="75" y="568.58156" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># 0 1 2 3 4</text>
-  <text x="75" y="591.205674" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Iterate</text>
-  <text x="75" y="591.205674" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Iterate</text>
-  <text x="75" y="591.205674" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">for</text>
-  <text x="100" y="591.205674" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"> f in "${fruits[@]}"; do echo $f; done</text>
+  <rect x="443.448275862069" y="256.078431372549" width="393.103448275862" height="363.921568627451" rx="8.677218312746" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="295.882352941176" font-size="19.523741203679" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Modify</text>
+  <text x="464.137931034483" y="341.372549019608" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">fruits+=("fig")</text>
+  <text x="464.137931034483" y="375.490196078431" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">fruits[2]="NEW"</text>
+  <text x="464.137931034483" y="409.607843137255" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">unset 'fruits[1]'</text>
+  <text x="464.137931034483" y="443.725490196078" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">unset fruits</text>
+  <text x="464.137931034483" y="489.21568627451" font-size="14.100479758213" fill="var(--bg)" font-family="Courier New, monospace">fruits=("avo" "${fruits[@]}")</text>
 
-  <!-- Column 2: Append/Modify -->
-  <rect x="450" y="270.35461" width="380" height="349.64539" rx="6.601096" fill="var(--bg)"/>
-  <rect x="450" y="270.35461" width="380" height="41.134752" rx="6.601096" fill="var(--ok-accent)"/>
-  <rect x="450" y="297.092199" width="380" height="14.397163" fill="var(--ok-accent)" rx="6.601096"/>
-  <text x="640" y="298.120624" font-size="16.225384" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Append and Modify</text>
-  <rect x="465" y="321.77305" width="350" height="283.829787" rx="6.601096" fill="var(--code-bg)"/>
-  <text x="485" y="346.453901" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Append one</text>
-  <text x="485" y="365.992851" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">fruits+=("fig")</text>
-  <text x="485" y="386.560227" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Append multiple</text>
-  <text x="485" y="406.099291" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">fruits+=("grape" "kiwi")</text>
-  <text x="485" y="426.666667" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Modify element</text>
-  <text x="485" y="446.20573" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">fruits[2]="CHERRY"</text>
-  <text x="485" y="466.773106" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Delete element (sparse)</text>
-  <text x="485" y="486.312057" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">unset</text>
-  <text x="530" y="486.312057" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> 'fruits[1]'</text>
-  <text x="485" y="506.879433" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Delete all</text>
-  <text x="485" y="526.418383" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">unset</text>
-  <text x="530" y="526.418383" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> fruits</text>
-  <text x="485" y="546.985759" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Prepend element</text>
-  <text x="485" y="566.524823" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">fruits=("avocado" "${fruits[@]}")</text>
-  <text x="485" y="587.092199" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Sort into new array</text>
-  <text x="485" y="591.205674" font-size="11.154972" fill="var(--primary-accent)" font-family="Courier New, monospace">mapfile -t s &lt; &lt;(printf '%s\n' "${fruits[@]}" | sort)</text>
-
-  <!-- Column 3: Slicing -->
-  <rect x="860" y="270.35461" width="380" height="349.64539" rx="6.601096" fill="var(--bg)"/>
-  <rect x="860" y="270.35461" width="380" height="41.134752" rx="6.601096" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="297.092199" width="380" height="14.397163" fill="url(#grad-warn)" rx="6.601096" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050" y="298.120624" font-size="16.225384" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Slicing and Copying</text>
-  <rect x="875" y="321.77305" width="350" height="283.829787" rx="6.601096" fill="var(--code-bg)"/>
-  <text x="895" y="346.453901" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Syntax: ${arr[@]:off:len}</text>
-  <text x="895" y="367.021277" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># From index 1, take 3:</text>
-  <text x="895" y="386.560227" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="934" y="386.560227" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[@]:1:3}"</text>
-  <text x="895" y="401.985816" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># banana cherry date</text>
-  <text x="895" y="422.553191" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># From index 2 to end:</text>
-  <text x="895" y="442.092255" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="934" y="442.092255" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[@]:2}"</text>
-  <text x="895" y="457.51773" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># cherry date elderberry</text>
-  <text x="895" y="478.085106" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Last 2 elements:</text>
-  <text x="895" y="497.624057" font-size="13.183159" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
-  <text x="934" y="497.624057" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${fruits[@]:(-2)}"</text>
-  <text x="895" y="513.049645" font-size="11.154972" fill="var(--text-muted)" font-family="Courier New, monospace"># date elderberry</text>
-  <text x="895" y="533.617021" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Copy entire array:</text>
-  <text x="895" y="553.156085" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">copy=("${fruits[@]}")</text>
-  <text x="895" y="573.723461" font-size="13.183159" fill="var(--text-muted)" font-family="Courier New, monospace"># Merge two arrays:</text>
-  <text x="895" y="593.262411" font-size="13.183159" fill="var(--primary-accent)" font-family="Courier New, monospace">m=("${a[@]}" "${b[@]}")</text>
+  <rect x="846.896551724138" y="256.078431372549" width="393.103448275862" height="363.921568627451" rx="8.677218312746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="295.882352941176" font-size="19.523741203679" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Slice / Copy</text>
+  <text x="867.586206896552" y="341.372549019608" font-size="14.100479758213" fill="var(--bg)" font-family="Courier New, monospace">${fruits[@]:off:len}</text>
+  <text x="867.586206896552" y="381.176470588235" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[@]:1:3}</text>
+  <text x="867.586206896552" y="415.294117647059" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[@]:2}</text>
+  <text x="867.586206896552" y="449.411764705882" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">${fruits[@]:(-2)}</text>
+  <text x="867.586206896552" y="494.901960784314" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">copy=("${fruits[@]}")</text>
+  <text x="867.586206896552" y="529.019607843137" font-size="15.185132047306" fill="var(--bg)" font-family="Courier New, monospace">m=("${a[@]}" "${b[@]}")</text>
 </svg>

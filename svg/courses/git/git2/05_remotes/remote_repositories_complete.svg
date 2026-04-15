@@ -34,108 +34,61 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">Connected to the World</text>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">local repo talks to many remotes</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="165" width="290" height="300" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Share code</text>
+  <text x="185" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Add remote by name</text>
+  <text x="185" y="278" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--primary-text)">git remote add origin</text>
+  <text x="185" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Publish a branch</text>
+  <text x="185" y="353" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--primary-text)">git push -u origin main</text>
+  <text x="185" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Inspect</text>
+  <text x="185" y="428" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--primary-text)">git remote -v</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="165" width="290" height="300" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Collaborate</text>
+  <text x="485" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Fetch without merge</text>
+  <text x="485" y="278" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--warn-text)">git fetch origin</text>
+  <text x="485" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Integrate</text>
+  <text x="485" y="353" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--warn-text)">git pull --rebase</text>
+  <text x="485" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Resolve, then push</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="165" width="290" height="300" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Open source</text>
+  <text x="785" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Fork + clone</text>
+  <text x="785" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Track upstream</text>
+  <text x="785" y="323" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--info-text)">git remote add upstream</text>
+  <text x="785" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Branch, push, PR</text>
+  <text x="785" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Review until merged</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="165" width="300" height="300" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Distributed</text>
+  <text x="1090" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Many remotes per repo</text>
+  <text x="1090" y="278" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--danger-text)">origin, upstream</text>
+  <text x="1090" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Protected branches</text>
+  <text x="1090" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">CI gates</text>
+  <text x="1090" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">SSH / HTTPS auth</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="1200" height="111.929825" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="95.964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.262014" font-weight="bold" fill="var(--ok-text)">Connected to the World</text>
-  <text x="640" y="129.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" fill="var(--ok-text)">local repo now talks to any number of remotes</text>
-
-  <rect x="40" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">Share code</text>
-  <text x="185" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">add a remote by name</text>
-  <text x="185" y="297.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git remote add origin</text>
-  <text x="185" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">publish a branch</text>
-  <text x="185" y="363.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git push -u origin main</text>
-  <text x="185" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">inspect remotes</text>
-  <text x="185" y="429.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git remote -v</text>
-
-  <rect x="340" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--warn-text)">Collaborate</text>
-  <text x="485" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">fetch without merging</text>
-  <text x="485" y="297.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">git fetch origin</text>
-  <text x="485" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">bring in their work</text>
-  <text x="485" y="363.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">git pull --rebase</text>
-  <text x="485" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">resolve conflicts locally</text>
-  <text x="485" y="429.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">then push the result</text>
-
-  <rect x="640" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--info-text)">Open source</text>
-  <text x="785" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">fork on GitHub/GitLab</text>
-  <text x="785" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">clone your fork</text>
-  <text x="785" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">track upstream too</text>
-  <text x="785" y="368.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">git remote add upstream</text>
-  <text x="785" y="411.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">branch, push, open PR</text>
-  <text x="785" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">review cycle until merged</text>
-
-  <rect x="940" y="182.45614" width="300" height="284.912281" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--danger-text)">Distributed</text>
-  <text x="1090" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">many remotes per repo</text>
-  <text x="1090" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">origin, upstream, staging</text>
-  <text x="1090" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">protected branches</text>
-  <text x="1090" y="368.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">CI gates before merge</text>
-  <text x="1090" y="411.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">SSH or HTTPS auth</text>
-  <text x="1090" y="436.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--danger-text)">credential helpers, tokens</text>
-
-  <rect x="40" y="487.719298" width="1200" height="132.280702" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="528.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--text)">Every clone is a full repo — remotes are just named URLs</text>
-  <text x="640" y="564.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">fetch updates refs, merge or rebase integrates them, push sends yours back</text>
-  <text x="640" y="594.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">No central server needed — GitHub is one convention, not a requirement</text>
+  <rect x="40" y="490" width="1200" height="130" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text)">Every clone is a full repo</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">fetch updates refs; merge/rebase integrates; push sends</text>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">No central server required</text>
 </svg>

@@ -2,151 +2,72 @@
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.128853838633" font-weight="bold" fill="var(--text)">Spark Fault Tolerance</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="77.247706422018" width="386.440677966102" height="244.770642201835" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--primary-text)">RDD Lineage</text>
+  <text x="233.220338983051" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">DAG of transforms</text>
+  <text x="233.220338983051" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">Recompute from source</text>
+  <text x="233.220338983051" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">Narrow: local replay</text>
+  <text x="233.220338983051" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">Wide: re-shuffle</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="446.779661016949" y="77.247706422018" width="386.440677966102" height="244.770642201835" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--ok-text)">Checkpointing</text>
+  <text x="640" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Persist to HDFS/S3</text>
+  <text x="640" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Truncates lineage</text>
+  <text x="640" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">For iterative jobs</text>
+  <text x="640" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Required in Streaming</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="853.559322033898" y="77.247706422018" width="386.440677966102" height="244.770642201835" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--warn-text)">Task Retries</text>
+  <text x="1046.779661016949" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">maxFailures=4</text>
+  <text x="1046.779661016949" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Stage re-attempts</text>
+  <text x="1046.779661016949" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Speculation + blacklist</text>
+  <text x="1046.779661016949" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Idempotency assumed</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="359.266055045872" width="386.440677966102" height="260.733944954128" rx="8.322529668181" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--info-text)">Driver Recovery</text>
+  <text x="233.220338983051" y="444.403669724771" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--info-text)">Single point of failure</text>
+  <text x="233.220338983051" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--info-text)">--supervise mode</text>
+  <text x="233.220338983051" y="518.899082568807" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--info-text)">Streaming WAL</text>
+  <text x="233.220338983051" y="556.146788990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--info-text)">Restart via YARN/K8s</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="446.779661016949" y="359.266055045872" width="386.440677966102" height="260.733944954128" rx="8.322529668181" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--danger-text)">Executor Loss</text>
+  <text x="640" y="444.403669724771" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--danger-text)">Blocks recomputed</text>
+  <text x="640" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--danger-text)">Shuffle may vanish</text>
+  <text x="640" y="518.899082568807" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--danger-text)">FetchFailed re-stages</text>
+  <text x="640" y="556.146788990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--danger-text)">Dynamic allocation</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
-
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Fault Tolerance Model</text>
-
-  <rect x="40" y="72.222222" width="390" height="247.037037" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">RDD Lineage</text>
-  <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">DAG of parent partitions</text>
-  <text x="235" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Deterministic transforms</text>
-  <text x="235" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Recomputed from source</text>
-  <text x="235" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Narrow deps: local replay</text>
-  <text x="235" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Wide deps: re-shuffle</text>
-  <text x="235" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">no data replication required</text>
-
-  <rect x="445" y="72.222222" width="390" height="247.037037" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Checkpointing</text>
-  <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Persist to reliable storage</text>
-  <text x="640" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">HDFS / S3 / DBFS</text>
-  <text x="640" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Truncates lineage graph</text>
-  <text x="640" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Use for long iterative jobs</text>
-  <text x="640" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Required in Structured Streaming</text>
-  <text x="640" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">df.checkpoint() or setCheckpointDir</text>
-
-  <rect x="850" y="72.222222" width="390" height="247.037037" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Task Retries</text>
-  <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">spark.task.maxFailures=4</text>
-  <text x="1045" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Stage re-attempts on failure</text>
-  <text x="1045" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Speculation for stragglers</text>
-  <text x="1045" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Blacklist bad executors</text>
-  <text x="1045" y="263.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Idempotent tasks assumed</text>
-  <text x="1045" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">external side effects need care</text>
-
-  <rect x="40" y="351.481481" width="390" height="268.518519" rx="6.218253" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="392.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--info-text)">Driver Recovery</text>
-  <text x="235" y="428.814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Single point of failure</text>
-  <text x="235" y="454.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Cluster-mode --supervise</text>
-  <text x="235" y="480.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Restart via YARN / K8s</text>
-  <text x="235" y="516.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Streaming: WAL on HDFS</text>
-  <text x="235" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Offset tracking in checkpoint</text>
-  <text x="235" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">exactly-once with idempotent sinks</text>
-
-  <rect x="445" y="351.481481" width="390" height="268.518519" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="392.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Executor Loss</text>
-  <text x="640" y="428.814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Lost cached blocks recomputed</text>
-  <text x="640" y="454.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Shuffle files may vanish</text>
-  <text x="640" y="480.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">External shuffle service helps</text>
-  <text x="640" y="516.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">FetchFailed triggers re-stage</text>
-  <text x="640" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Dynamic allocation replaces</text>
-  <text x="640" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--danger-text)">cost: partial job re-execution</text>
-
-  <rect x="850" y="351.481481" width="390" height="268.518519" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1045" y="392.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Guarantees</text>
-  <text x="1045" y="428.814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Batch: at-least-once default</text>
-  <text x="1045" y="454.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Deterministic UDFs preferred</text>
-  <text x="1045" y="480.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Streaming: exactly-once</text>
-  <text x="1045" y="516.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">with replayable sources</text>
-  <text x="1045" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">and idempotent sinks</text>
-  <text x="1045" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-faint)">no magic: design matters</text>
+  <rect x="853.559322033898" y="359.266055045872" width="386.440677966102" height="260.733944954128" rx="8.322529668181" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1046.779661016949" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--text)">Guarantees</text>
+  <text x="1046.779661016949" y="444.403669724771" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Batch: at-least-once</text>
+  <text x="1046.779661016949" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Streaming: exactly-once</text>
+  <text x="1046.779661016949" y="518.899082568807" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">With replayable source</text>
+  <text x="1046.779661016949" y="556.146788990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Idempotent sinks</text>
 </svg>

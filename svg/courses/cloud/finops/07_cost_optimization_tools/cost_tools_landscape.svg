@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,159 +33,77 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text-faint)">Native Cloud Provider Tools</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="55.535714285714" width="380" height="300.357142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--primary-text)">AWS</text>
+  <text x="230" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">Cost Explorer</text>
+  <text x="230" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">visualize costs</text>
+  <text x="230" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">Compute Optimizer</text>
+  <text x="230" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">ML rightsizing</text>
+  <text x="230" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">CUR</text>
+  <text x="230" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">line-item billing</text>
+  <text x="230" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--primary-text)">+ Budgets</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="450" y="55.535714285714" width="380" height="300.357142857143" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--ok-text)">Azure</text>
+  <text x="640" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">Cost Management</text>
+  <text x="640" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">monitor, allocate</text>
+  <text x="640" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">Advisor</text>
+  <text x="640" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">best practices</text>
+  <text x="640" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">Savings Plans</text>
+  <text x="640" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">commitments</text>
+  <text x="640" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">+ Power BI</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="860" y="55.535714285714" width="380" height="300.357142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="91.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--warn-text)">GCP</text>
+  <text x="1050" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">Cloud Billing</text>
+  <text x="1050" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">reports, exports</text>
+  <text x="1050" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">Recommender</text>
+  <text x="1050" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">ML advice</text>
+  <text x="1050" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">BigQuery Export</text>
+  <text x="1050" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">detailed billing</text>
+  <text x="1050" y="335.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">+ Active Assist</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <text x="640" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text-faint)">Third-Party / Multi-Cloud</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="407.678571428571" width="1200" height="212.321428571429" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="75" y="438.75" width="220" height="82.857142857143" rx="6.106202935189" fill="var(--surface)" stroke="var(--info-border)" stroke-width="1.5"/>
+  <text x="185" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-accent)">CloudHealth</text>
+  <text x="185" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">multi-cloud</text>
 
-  <!-- Background -->
-  <!-- Section label -->
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.00002" font-weight="bold" fill="var(--text-faint)">Native Cloud Provider Tools</text>
+  <rect x="325" y="438.75" width="220" height="82.857142857143" rx="6.106202935189" fill="var(--surface)" stroke="var(--info-border)" stroke-width="1.5"/>
+  <text x="435" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-accent)">Spot.io</text>
+  <text x="435" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">spot automation</text>
 
-  <!-- Column 1: AWS Tools -->
-  <rect x="40" y="54.999945" width="380" height="310" rx="6.50941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="54.999945" width="380" height="50" rx="6.50941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="86.999945" width="380" height="18" fill="url(#grad-primary)" rx="6.50941" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)">AWS</text>
+  <rect x="575" y="438.75" width="220" height="82.857142857143" rx="6.106202935189" fill="var(--surface)" stroke="var(--info-border)" stroke-width="1.5"/>
+  <text x="685" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-accent)">Kubecost</text>
+  <text x="685" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">K8s costs</text>
 
-  <rect x="65" y="120" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="230" y="142.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--primary-accent)">Cost Explorer</text>
-  <text x="230" y="162.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Visualize and analyze costs</text>
+  <rect x="825" y="438.75" width="220" height="82.857142857143" rx="6.106202935189" fill="var(--surface)" stroke="var(--info-border)" stroke-width="1.5"/>
+  <text x="935" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-accent)">Cloudability</text>
+  <text x="935" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">FinOps platform</text>
 
-  <rect x="65" y="186.999945" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="230" y="209.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--primary-accent)">Compute Optimizer</text>
-  <text x="230" y="229.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">ML-based rightsizing recommendations</text>
+  <rect x="1075" y="438.75" width="140" height="82.857142857143" rx="6.106202935189" fill="var(--surface)" stroke="var(--info-border)" stroke-width="1.5"/>
+  <text x="1145" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-accent)">Infracost</text>
+  <text x="1145" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">IaC estimates</text>
 
-  <rect x="65" y="253.99989" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="230" y="276.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--primary-accent)">Cost &amp; Usage Report (CUR)</text>
-  <text x="230" y="296.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Detailed line-item billing data</text>
-
-  <text x="230" y="344.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--primary-accent)">+ Trusted Advisor, Budgets</text>
-
-  <!-- Column 2: Azure Tools -->
-  <rect x="450" y="54.999945" width="380" height="310" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="450" y="54.999945" width="380" height="50" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="450" y="86.999945" width="380" height="18" fill="url(#grad-ok)" rx="6.50941" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)">Azure</text>
-
-  <rect x="475" y="120" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="640" y="142.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--ok-accent)">Cost Management</text>
-  <text x="640" y="162.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Monitor, allocate, optimize costs</text>
-
-  <rect x="475" y="186.999945" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="640" y="209.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--ok-accent)">Azure Advisor</text>
-  <text x="640" y="229.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Personalized best practices</text>
-
-  <rect x="475" y="253.99989" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="640" y="276.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--ok-accent)">Reservations + Savings Plans</text>
-  <text x="640" y="296.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Commitment recommendations</text>
-
-  <text x="640" y="344.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--ok-accent)">+ Power BI integration</text>
-
-  <!-- Column 3: GCP Tools -->
-  <rect x="860" y="54.999945" width="380" height="310" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="54.999945" width="380" height="50" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="86.999945" width="380" height="18" fill="url(#grad-warn)" rx="6.50941" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.000053" font-weight="bold" fill="var(--bg)">GCP</text>
-
-  <rect x="885" y="120" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
-  <text x="1050" y="142.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--warn-accent)">Cloud Billing</text>
-  <text x="1050" y="162.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Billing reports and exports</text>
-
-  <rect x="885" y="186.999945" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
-  <text x="1050" y="209.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--warn-accent)">Recommender</text>
-  <text x="1050" y="229.99989" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">ML-driven optimization advice</text>
-
-  <rect x="885" y="253.99989" width="330" height="55.000055" rx="6.50941" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
-  <text x="1050" y="276.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--warn-accent)">BigQuery Billing Export</text>
-  <text x="1050" y="296.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Detailed billing in BigQuery</text>
-
-  <text x="1050" y="344.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--warn-accent)">+ Active Assist, Budgets API</text>
-
-  <!-- Third-party row -->
-  <text x="640" y="404.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.00002" font-weight="bold" fill="var(--text-faint)">Third-Party / Multi-Cloud Tools</text>
-
-  <rect x="40" y="420" width="1200" height="200" rx="6.50941" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-
-  <!-- Tool 1 -->
-  <rect x="75" y="449.99989" width="220" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1.5"/>
-  <text x="185" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--info-accent)">CloudHealth</text>
-  <text x="185" y="502.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Multi-cloud cost management</text>
-
-  <!-- Tool 2 -->
-  <rect x="325" y="449.99989" width="220" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1.5"/>
-  <text x="435" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--info-accent)">Spot.io (NetApp)</text>
-  <text x="435" y="502.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Spot automation &amp; optimization</text>
-
-  <!-- Tool 3 -->
-  <rect x="575" y="449.99989" width="220" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1.5"/>
-  <text x="685" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--info-accent)">Kubecost</text>
-  <text x="685" y="502.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Kubernetes cost monitoring</text>
-
-  <!-- Tool 4 -->
-  <rect x="825" y="449.99989" width="220" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1.5"/>
-  <text x="935" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--info-accent)">Apptio Cloudability</text>
-  <text x="935" y="502.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">Enterprise FinOps platform</text>
-
-  <!-- Tool 5 -->
-  <rect x="1075" y="449.99989" width="140" height="80" rx="6.50941" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1.5"/>
-  <text x="1145" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--info-accent)">Infracost</text>
-  <text x="1145" y="502.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" fill="var(--text-muted)">IaC cost estimates</text>
-
-  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--info-accent)">Multi-cloud visibility | Automated optimization | Kubernetes-native | Shift-left cost awareness</text>
+  <text x="640" y="578.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">visibility | automation | k8s-native | shift-left</text>
 </svg>

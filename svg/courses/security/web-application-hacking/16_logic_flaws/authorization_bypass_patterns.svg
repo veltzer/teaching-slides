@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,85 +34,46 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--primary-accent)">Authorization Bypass Patterns</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="65.663716814159" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="96.46017699115" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">1. Horizontal Escalation</text>
+  <text x="70" y="124.176991150442" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">/api/orders/USER_B_ORDER_ID</text>
+  <text x="70" y="150.867256637168" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: verify ownership every request</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="40" y="178.58407079646" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="209.380530973451" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">2. Vertical Escalation</text>
+  <text x="70" y="237.097345132743" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--warn-text)">/admin/users (URL change)</text>
+  <text x="70" y="263.787610619469" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Fix: RBAC every endpoint</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="40" y="291.504424778761" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="322.300884955752" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">3. Method-Based Bypass</text>
+  <text x="70" y="350.017699115044" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">GET 403 | POST 200</text>
+  <text x="70" y="376.70796460177" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: authorize any HTTP method</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="404.424778761062" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="435.221238938053" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">4. Parameter Bypass</text>
+  <text x="70" y="462.938053097345" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--warn-text)">POST {"role": "admin"}</text>
+  <text x="70" y="489.628318584071" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Fix: whitelist fields per role</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="74.8" text-anchor="middle" font-size="22.4357" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Authorization Bypass Patterns</text>
-  <rect x="68.5715" y="92.1999" width="1142.8571" height="87.0001" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="106.6666" y="115.4" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pattern 1: Horizontal Privilege Escalation</text>
-  <text x="106.6666" y="138.6" font-size="13.7106" fill="var(--text)" font-family="Arial, sans-serif">User A accesses User B's data: /api/orders/USER_B_ORDER_ID</text>
-  <text x="106.6666" y="161.7999" font-size="13.7106" fill="var(--ok-accent)" font-family="Arial, sans-serif">Defense: Verify ownership on every request</text>
-  <rect x="68.5715" y="190.8" width="1142.8571" height="87.0001" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="106.6666" y="213.9999" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pattern 2: Vertical Privilege Escalation</text>
-  <text x="106.6666" y="237.2" font-size="13.7106" fill="var(--text)" font-family="Arial, sans-serif">Regular user accesses admin: /admin/users (just change the URL)</text>
-  <text x="106.6666" y="260.4" font-size="13.7106" fill="var(--ok-accent)" font-family="Arial, sans-serif">Defense: Role-based access control on every endpoint</text>
-  <rect x="68.5715" y="289.4" width="1142.8571" height="92.8" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="106.6666" y="312.6" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pattern 3: Method-Based Bypass</text>
-  <text x="106.6666" y="335.7999" font-size="13.7106" fill="var(--text)" font-family="Arial, sans-serif">GET /admin/users -&gt; 403 | POST /admin/users -&gt; 200 OK</text>
-  <text x="106.6666" y="358.9999" font-size="13.7106" fill="var(--ok-accent)" font-family="Arial, sans-serif">Defense: Check authorization regardless of HTTP method</text>
-  <rect x="68.5715" y="393.7999" width="1142.8571" height="92.8" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="106.6666" y="417" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pattern 4: Parameter-Based Bypass</text>
-  <text x="106.6666" y="440.2" font-size="13.7106" fill="var(--text)" font-family="Arial, sans-serif">POST {"name": "new"} vs POST {"name": "new", "role": "admin"}</text>
-  <text x="106.6666" y="463.3999" font-size="13.7106" fill="var(--ok-accent)" font-family="Arial, sans-serif">Defense: Whitelist updatable fields per role</text>
-  <rect x="68.5715" y="498.1999" width="1142.8571" height="104.4" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="106.6666" y="521.4" font-size="16.2035" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pattern 5: Path Traversal Bypass</text>
-  <text x="106.6666" y="544.5999" font-size="13.7106" fill="var(--text)" font-family="Arial, sans-serif">/admin/users -&gt; 403 | /ADMIN/users -&gt; 200 | /admin/./users -&gt; 200</text>
-  <text x="106.6666" y="567.8" font-size="13.7106" fill="var(--ok-accent)" font-family="Arial, sans-serif">Defense: Normalize paths before authorization check</text>
+  <rect x="40" y="517.345132743363" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="548.141592920354" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">5. Path Traversal Bypass</text>
+  <text x="70" y="575.858407079646" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">/ADMIN/users | /admin/./users</text>
+  <text x="70" y="602.548672566372" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: normalize before check</text>
 </svg>

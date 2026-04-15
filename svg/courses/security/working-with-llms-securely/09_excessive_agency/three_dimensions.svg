@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,69 +81,65 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="40" width="373.770524" height="386.666625" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.885262" y="78.666776" text-anchor="middle" font-size="20.00869" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Excessive Functionality</text>
-  <text x="226.885262" y="103.087785" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">The LLM has access to more</text>
-  <text x="226.885262" y="123.438647" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">tools/plugins than it needs</text>
-  <rect x="59.672133" y="145.824582" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="79.344266" y="170.245717" font-size="14.005945" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bad:</text>
-  <text x="79.344266" y="188.561505" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">email + calendar + DB + shell + …</text>
-  <rect x="59.672133" y="215.017587" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="79.344266" y="239.438596" font-size="14.005945" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Good:</text>
-  <text x="79.344266" y="257.754384" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">only the tools the task requires</text>
-  <text x="59.672133" y="302.526255" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• Prompt injection can abuse</text>
-  <text x="59.672133" y="324.912316" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  any available tool</text>
-  <text x="59.672133" y="347.298251" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• Unused tools = unused attack</text>
-  <text x="59.672133" y="369.684187" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  surface</text>
-  <text x="226.885262" y="416.491257" text-anchor="middle" font-size="14.005945" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Principle: Least Functionality</text>
-  <rect x="453.11479" y="40" width="373.770524" height="386.666625" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="78.666776" text-anchor="middle" font-size="20.00869" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Excessive Permissions</text>
-  <text x="640.000052" y="103.087785" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">The LLM can perform write/delete</text>
-  <text x="640.000052" y="123.438647" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">actions when read-only would suffice</text>
-  <rect x="472.786923" y="145.824582" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="492.459056" y="170.245717" font-size="14.005945" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bad:</text>
-  <text x="492.459056" y="188.561505" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">DB credentials with full CRUD</text>
-  <rect x="472.786923" y="215.017587" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="492.459056" y="239.438596" font-size="14.005945" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Good:</text>
-  <text x="492.459056" y="257.754384" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">read-only DB user for queries</text>
-  <text x="472.786923" y="302.526255" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• An injected instruction can only</text>
-  <text x="472.786923" y="324.912316" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  do what the LLM is allowed to do</text>
-  <text x="472.786923" y="347.298251" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• Read-only access = no data loss</text>
-  <text x="472.786923" y="369.684187" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  even if compromised</text>
-  <text x="640.000052" y="416.491257" text-anchor="middle" font-size="14.005945" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Principle: Least Privilege</text>
-  <rect x="866.229476" y="40" width="373.770524" height="386.666625" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114843" y="78.666776" text-anchor="middle" font-size="20.00869" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Excessive Autonomy</text>
-  <text x="1053.114843" y="103.087785" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">The LLM takes high-impact actions</text>
-  <text x="1053.114843" y="123.438647" text-anchor="middle" font-size="15.00646" fill="var(--text-muted)" font-family="Arial, sans-serif">without human confirmation</text>
-  <rect x="885.901713" y="145.824582" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="905.573846" y="170.245717" font-size="14.005945" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bad:</text>
-  <text x="905.573846" y="188.561505" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">auto-send emails, delete records</text>
-  <rect x="885.901713" y="215.017587" width="334.426259" height="56.982438" rx="6.907249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="905.573846" y="239.438596" font-size="14.005945" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Good:</text>
-  <text x="905.573846" y="257.754384" font-size="13.00566" fill="var(--text-muted)" font-family="Courier New, monospace">draft → human approves → send</text>
-  <text x="885.901713" y="302.526255" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• Irreversible actions must have</text>
-  <text x="885.901713" y="324.912316" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  human-in-the-loop confirmation</text>
-  <text x="885.901713" y="347.298251" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">• Log all autonomous actions for</text>
-  <text x="885.901713" y="369.684187" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">  audit trail</text>
-  <text x="1053.114843" y="416.491257" text-anchor="middle" font-size="14.005945" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Principle: Human Oversight</text>
-  <rect x="40" y="457.19298" width="1200" height="162.80702" rx="6.907249" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="489.754409" text-anchor="middle" font-size="18.007775" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Defence: Action Classification</text>
-  <rect x="69.508199" y="508.070198" width="344.262325" height="87.508667" rx="6.907249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="241.639362" y="534.52628" text-anchor="middle" font-size="15.00646" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Low risk — allow freely</text>
-  <text x="89.180332" y="558.947289" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">Read data · search · summarise</text>
-  <text x="89.180332" y="581.33335" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">Draft content (not yet sent)</text>
-  <rect x="467.86889" y="508.070198" width="344.262325" height="87.508667" rx="6.907249" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="534.52628" text-anchor="middle" font-size="15.00646" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Medium — log &amp; review</text>
-  <text x="487.541023" y="558.947289" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">Create records · send internal</text>
-  <text x="487.541023" y="581.33335" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">notifications · update settings</text>
-  <rect x="866.229476" y="508.070198" width="344.262325" height="87.508667" rx="6.907249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1038.360743" y="534.52628" text-anchor="middle" font-size="15.00646" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">High — require approval</text>
-  <text x="885.901713" y="558.947289" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">Delete data · send external email</text>
-  <text x="885.901713" y="581.33335" font-size="14.005945" fill="var(--text-muted)" font-family="Arial, sans-serif">Execute code · transfer money</text>
+
+  <rect x="40" y="40" width="386.440677966102" height="379.636363636364" rx="8.284613618287" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="87.454545454545" text-anchor="middle" font-size="20.711534045719" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Excessive Functionality</text>
+  <text x="233.220338983051" y="124.363636363636" text-anchor="middle" font-size="14.498073832003" fill="var(--danger-text)" font-family="Arial, sans-serif">Too many tools exposed</text>
+
+  <rect x="60.338983050847" y="150.727272727273" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="75.593220338983" y="177.090909090909" font-size="14.498073832003" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Bad:</text>
+  <text x="75.593220338983" y="200.290909090909" font-size="12.426920427431" fill="var(--danger-text)" font-family="Courier New, monospace">email + DB + shell</text>
+
+  <rect x="60.338983050847" y="229.818181818182" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="75.593220338983" y="256.181818181818" font-size="14.498073832003" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Good:</text>
+  <text x="75.593220338983" y="279.381818181818" font-size="12.426920427431" fill="var(--ok-text)" font-family="Courier New, monospace">only needed tools</text>
+
+  <text x="233.220338983051" y="393.272727272727" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Least Functionality</text>
+
+  <rect x="446.779661016949" y="40" width="386.440677966102" height="379.636363636364" rx="8.284613618287" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="87.454545454545" text-anchor="middle" font-size="20.711534045719" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Excessive Permissions</text>
+  <text x="640" y="124.363636363636" text-anchor="middle" font-size="14.498073832003" fill="var(--danger-text)" font-family="Arial, sans-serif">Write when read suffices</text>
+
+  <rect x="467.118644067797" y="150.727272727273" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="482.372881355932" y="177.090909090909" font-size="14.498073832003" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Bad:</text>
+  <text x="482.372881355932" y="200.290909090909" font-size="12.426920427431" fill="var(--danger-text)" font-family="Courier New, monospace">full CRUD access</text>
+
+  <rect x="467.118644067797" y="229.818181818182" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="482.372881355932" y="256.181818181818" font-size="14.498073832003" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Good:</text>
+  <text x="482.372881355932" y="279.381818181818" font-size="12.426920427431" fill="var(--ok-text)" font-family="Courier New, monospace">read-only user</text>
+
+  <text x="640" y="393.272727272727" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Least Privilege</text>
+
+  <rect x="853.559322033898" y="40" width="386.440677966102" height="379.636363636364" rx="8.284613618287" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="87.454545454545" text-anchor="middle" font-size="20.711534045719" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Excessive Autonomy</text>
+  <text x="1046.779661016949" y="124.363636363636" text-anchor="middle" font-size="14.498073832003" fill="var(--danger-text)" font-family="Arial, sans-serif">No human confirmation</text>
+
+  <rect x="873.898305084746" y="150.727272727273" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="889.152542372881" y="177.090909090909" font-size="14.498073832003" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Bad:</text>
+  <text x="889.152542372881" y="200.290909090909" font-size="12.426920427431" fill="var(--danger-text)" font-family="Courier New, monospace">auto-send, auto-delete</text>
+
+  <rect x="873.898305084746" y="229.818181818182" width="345.762711864407" height="63.272727272727" rx="6.213460213716" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="889.152542372881" y="256.181818181818" font-size="14.498073832003" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Good:</text>
+  <text x="889.152542372881" y="279.381818181818" font-size="12.426920427431" fill="var(--ok-text)" font-family="Courier New, monospace">draft then approve</text>
+
+  <text x="1046.779661016949" y="393.272727272727" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Human Oversight</text>
+
+  <rect x="40" y="451.272727272727" width="1200" height="168.727272727273" rx="8.284613618287" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="488.181818181818" text-anchor="middle" font-size="18.640380641147" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Action Classification</text>
+
+  <rect x="60.338983050847" y="504" width="366.101694915254" height="94.909090909091" rx="6.213460213716" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="243.389830508475" y="533.527272727273" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Low: allow</text>
+  <text x="243.389830508475" y="563.054545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--ok-text)" font-family="Arial, sans-serif">Read, search</text>
+  <text x="243.389830508475" y="586.254545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--ok-text)" font-family="Arial, sans-serif">Draft content</text>
+
+  <rect x="456.949152542373" y="504" width="366.101694915254" height="94.909090909091" rx="6.213460213716" fill="var(--warn-accent)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="640" y="533.527272727273" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Medium: log</text>
+  <text x="640" y="563.054545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--warn-text)" font-family="Arial, sans-serif">Create records</text>
+  <text x="640" y="586.254545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--warn-text)" font-family="Arial, sans-serif">Internal notify</text>
+
+  <rect x="853.559322033898" y="504" width="366.101694915254" height="94.909090909091" rx="6.213460213716" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="1036.610169491525" y="533.527272727273" text-anchor="middle" font-size="15.533650534289" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">High: approve</text>
+  <text x="1036.610169491525" y="563.054545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--danger-text)" font-family="Arial, sans-serif">Delete, send</text>
+  <text x="1036.610169491525" y="586.254545454545" text-anchor="middle" font-size="13.462497129717" fill="var(--danger-text)" font-family="Arial, sans-serif">Execute, pay</text>
 </svg>

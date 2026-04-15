@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,70 +82,45 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="1200" height="62.142857" rx="6.106203" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="67.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" font-weight="bold" fill="var(--primary-text)">class Graph[VD, ED]</text>
-  <text x="640" y="90.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">directed multigraph — parallel edges allowed — VD, ED are arbitrary user types</text>
+  <rect x="40" y="40" width="1200" height="72.5" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="71.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--primary-text)">Graph[VD, ED]</text>
+  <text x="640" y="95.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">directed multigraph with typed vertex and edge attributes</text>
 
-  <g font-family="Arial, sans-serif">
-    <rect x="157.257" y="168.149" width="85.4868" height="85.4868" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="200" y="205.714286" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">1 : Alice</text>
-    <text x="200" y="224.357143" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)" font-family="Arial, sans-serif">age=29</text>
-    <rect x="457.257" y="116.364" width="85.4868" height="85.4868" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="500" y="153.928571" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2 : Bob</text>
-    <text x="500" y="172.571429" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)" font-family="Arial, sans-serif">age=34</text>
-    <rect x="457.257" y="251.007" width="85.4868" height="85.4868" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text x="500" y="288.571429" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">3 : Carol</text>
-    <text x="500" y="307.214286" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)" font-family="Arial, sans-serif">age=41</text>
+  <rect x="60" y="143.571428571429" width="360" height="165.714285714286" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--ok-text)">VertexRDD[VD]</text>
+  <text x="240" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">RDD[(VertexId, VD)]</text>
+  <text x="240" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">hash-indexed, unique id</text>
+  <text x="240" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-style="italic" fill="var(--ok-text)">vertex attribute store</text>
 
-    <line x1="242" y1="202.607143" x2="458" y2="164.285714" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="340" y="174.642857" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold" font-family="Arial, sans-serif">follows since=2020</text>
-    <line x1="242" y1="223.321429" x2="458" y2="288.571429" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="340" y="278.214286" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold" font-family="Arial, sans-serif">likes weight=0.8</text>
-    <line x1="500" y1="202.607143" x2="500" y2="250.25" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="538" y="229.535714" font-size="11.194705" fill="var(--warn-border)" font-weight="bold" font-family="Arial, sans-serif">mgr_of</text>
-  </g>
+  <rect x="460" y="143.571428571429" width="360" height="165.714285714286" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--warn-text)">EdgeRDD[ED]</text>
+  <text x="640" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">RDD[Edge(src, dst, attr)]</text>
+  <text x="640" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">edge partitioned</text>
+  <text x="640" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-style="italic" fill="var(--warn-text)">edge attribute store</text>
 
-  <rect x="640" y="128.035714" width="280" height="93.214286" rx="6.106203" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="780" y="153.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">VertexRDD[VD]</text>
-  <text x="780" y="177.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">RDD[(VertexId, VD)]</text>
-  <text x="780" y="200.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">hash-indexed, unique id</text>
+  <rect x="860" y="143.571428571429" width="360" height="165.714285714286" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="174.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--info-text)">EdgeTriplet</text>
+  <text x="1040" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">(src, dst, edge attrs)</text>
+  <text x="1040" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">joined row view</text>
+  <text x="1040" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-style="italic" fill="var(--info-text)">drives Pregel</text>
 
-  <rect x="940" y="128.035714" width="290" height="93.214286" rx="6.106203" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="1085" y="153.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">EdgeRDD[ED]</text>
-  <text x="1085" y="177.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">RDD[Edge(src, dst, attr)]</text>
-  <text x="1085" y="200.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">partitioned by edge strategy</text>
+  <rect x="60" y="371.428571428571" width="360" height="248.571428571429" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="240" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text)">Build</text>
+  <text x="240" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">Graph(vertices, edges)</text>
+  <text x="240" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">fromEdges</text>
+  <text x="240" y="506.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">fromEdgeTuples</text>
 
-  <rect x="640" y="236.785714" width="590" height="93.214286" rx="6.106203" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--info-text)">triplets: RDD[EdgeTriplet[VD, ED]]</text>
-  <text x="935" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">(srcId, srcAttr, dstId, dstAttr, edgeAttr) — join of edges with both endpoint attrs</text>
-  <text x="935" y="311.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">drives Pregel, aggregateMessages — graph's "row view"</text>
+  <rect x="460" y="371.428571428571" width="360" height="248.571428571429" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text)">Transform</text>
+  <text x="640" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">mapVertices / mapEdges</text>
+  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">subgraph, reverse, mask</text>
+  <text x="640" y="506.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">outerJoinVertices</text>
 
-  <rect x="40" y="366.25" width="1200" height="253.75" rx="8.141604" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="640" y="397.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Construction and Views</text>
-
-  <rect x="70" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="255" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Build</text>
-  <text x="255" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph(vertices, edges)</text>
-  <text x="255" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph.fromEdges(edges, default)</text>
-  <text x="255" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph.fromEdgeTuples(pairs, default)</text>
-  <text x="255" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">VD and ED stored separately,</text>
-  <text x="255" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">joined on demand</text>
-
-  <rect x="460" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="645" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Transform</text>
-  <text x="645" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">mapVertices / mapEdges / mapTriplets</text>
-  <text x="645" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">subgraph(epred, vpred)</text>
-  <text x="645" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">reverse, mask, groupEdges</text>
-  <text x="645" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">outerJoinVertices merges external tables</text>
-  <text x="645" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">into VD without rebuild</text>
-
-  <rect x="850" y="423.214286" width="360" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="1030" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Query</text>
-  <text x="1030" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">numVertices, numEdges</text>
-  <text x="1030" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">inDegrees, outDegrees, degrees</text>
-  <text x="1030" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">aggregateMessages → VertexRDD</text>
-  <text x="1030" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">triplet-centric: attr(src) + attr(dst)</text>
-  <text x="1030" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">+ attr(edge) available together</text>
+  <rect x="860" y="371.428571428571" width="360" height="248.571428571429" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1040" y="402.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text)">Query</text>
+  <text x="1040" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">numVertices, numEdges</text>
+  <text x="1040" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">inDegrees, outDegrees</text>
+  <text x="1040" y="506.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">aggregateMessages</text>
 </svg>

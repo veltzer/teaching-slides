@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,59 +81,55 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="400" height="580" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="240" y="70.526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--text)">Executor Heap (G1GC)</text>
+  <!-- Heap layout (left) -->
+  <rect x="40" y="40" width="393.27731092437" height="580" rx="8.175740767346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="236.638655462185" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.395416726528" font-weight="bold" fill="var(--text)">Executor Heap (G1GC)</text>
 
-  <rect x="70" y="95.964912" width="340" height="81.403509" rx="4.034935" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" font-weight="bold" fill="var(--primary-text)">Young (Eden + Survivor)</text>
-  <text x="240" y="146.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--primary-text)">short-lived shuffle + task objects</text>
-  <text x="240" y="165.157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--primary-text)">minor GC, cheap</text>
+  <rect x="65.210084033613" y="96.964285714286" width="342.857142857143" height="98.392857142857" rx="4.087870383673" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.638655462185" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--primary-text)">Young</text>
+  <text x="236.638655462185" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">shuffle + task objects</text>
+  <text x="236.638655462185" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">minor GC</text>
 
-  <rect x="70" y="192.631579" width="340" height="81.403509" rx="4.034935" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="220.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" font-weight="bold" fill="var(--ok-text)">Old Generation</text>
-  <text x="240" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--ok-text)">cached RDDs, broadcast vars</text>
-  <text x="240" y="261.824561" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--ok-text)">mixed GC; full GC if fragmented</text>
+  <rect x="65.210084033613" y="210.892857142857" width="342.857142857143" height="98.392857142857" rx="4.087870383673" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.638655462185" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--ok-text)">Old</text>
+  <text x="236.638655462185" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">cached RDDs</text>
+  <text x="236.638655462185" y="298.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">mixed GC</text>
 
-  <rect x="70" y="289.298246" width="340" height="61.052632" rx="4.034935" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="314.736842" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" font-weight="bold" fill="var(--warn-text)">Humongous regions</text>
-  <text x="240" y="338.140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">objects &gt; 50% region size</text>
+  <rect x="65.210084033613" y="324.821428571429" width="342.857142857143" height="72.5" rx="4.087870383673" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.638655462185" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--warn-text)">Humongous</text>
+  <text x="236.638655462185" y="381.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">&gt; 50% region</text>
 
-  <rect x="70" y="365.614035" width="340" height="61.052632" rx="4.034935" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="391.052632" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" font-weight="bold" fill="var(--info-text)">Off-heap (Tungsten)</text>
-  <text x="240" y="414.45614" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--info-text)">native buffers, not GC-tracked</text>
+  <rect x="65.210084033613" y="412.857142857143" width="342.857142857143" height="72.5" rx="4.087870383673" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.638655462185" y="443.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--info-text)">Off-heap (Tungsten)</text>
+  <text x="236.638655462185" y="469.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--info-text)">native buffers</text>
 
-  <text x="240" y="467.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--text)">Target: &lt; 10% time in GC</text>
-  <text x="240" y="492.807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">jstat -gc &lt;pid&gt; 1s to observe</text>
-  <text x="240" y="518.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">enable -verbose:gc -XX:+PrintGC</text>
-  <text x="240" y="543.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">watch Spark UI GC Time column</text>
-  <text x="240" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">full GC &gt; 1s risks executor loss</text>
-  <text x="240" y="599.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">via heartbeat timeout</text>
+  <text x="236.638655462185" y="531.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.307546342855" font-weight="bold" fill="var(--text)">Target: &lt; 10% GC time</text>
+  <text x="236.638655462185" y="563.035714285714" text-anchor="middle" font-family="Courier New, monospace" font-size="12.263611151019" fill="var(--text-muted)">jstat -gc &lt;pid&gt; 1s</text>
+  <text x="236.638655462185" y="588.928571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.263611151019" fill="var(--text-muted)">Spark UI: GC Time column</text>
 
-  <rect x="460" y="40" width="780" height="290" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="850" y="70.526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--text)">Recommended G1GC flags</text>
+  <!-- Flags (right top) -->
+  <rect x="453.445378151261" y="40" width="786.554621848739" height="290" rx="8.175740767346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="846.72268907563" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.395416726528" font-weight="bold" fill="var(--text)">G1GC flags</text>
 
-  <text x="485" y="106.140351" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">-XX:+UseG1GC</text>
-  <text x="485" y="131.578947" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">default since JDK 9; low-pause incremental collector</text>
+  <text x="478.655462184874" y="117.678571428571" font-size="14.307546342855" fill="var(--text)" font-family="Courier New, monospace">-XX:+UseG1GC</text>
+  <text x="478.655462184874" y="143.571428571429" font-family="Arial, sans-serif" font-size="12.263611151019" fill="var(--text-muted)">default since JDK 9</text>
 
-  <text x="485" y="162.105263" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">-XX:MaxGCPauseMillis=200</text>
-  <text x="485" y="187.54386" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">soft target; G1 sizes regions to meet it</text>
+  <text x="478.655462184874" y="179.821428571429" font-size="14.307546342855" fill="var(--text)" font-family="Courier New, monospace">-XX:MaxGCPauseMillis=200</text>
+  <text x="478.655462184874" y="205.714285714286" font-family="Arial, sans-serif" font-size="12.263611151019" fill="var(--text-muted)">soft pause target</text>
 
-  <text x="485" y="218.070175" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">-XX:InitiatingHeapOccupancyPercent=35</text>
-  <text x="485" y="243.508772" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">start concurrent marking earlier; avoid full GC</text>
+  <text x="478.655462184874" y="241.964285714286" font-size="14.307546342855" fill="var(--text)" font-family="Courier New, monospace">-XX:InitiatingHeapOccupancyPercent=35</text>
+  <text x="478.655462184874" y="267.857142857143" font-family="Arial, sans-serif" font-size="12.263611151019" fill="var(--text-muted)">early marking</text>
 
-  <text x="485" y="274.035088" font-size="13.113539" fill="var(--text)" font-family="Courier New, monospace">-XX:G1HeapRegionSize=16m  -XX:ConcGCThreads=N/4</text>
-  <text x="485" y="299.473684" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">tune for large rows; parallel marking threads</text>
+  <text x="478.655462184874" y="304.107142857143" font-size="14.307546342855" fill="var(--text)" font-family="Courier New, monospace">-XX:G1HeapRegionSize=16m</text>
 
-  <rect x="460" y="350.350877" width="780" height="269.649123" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="850" y="380.877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.148474" font-weight="bold" fill="var(--text)">Heap sizing rules</text>
-  <text x="485" y="411.403509" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Prefer many small executors (5 cores, 8-32 GB heap).</text>
-  <text x="485" y="436.842105" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Heaps over ~32 GB lose compressed oops and GC scales poorly.</text>
-  <text x="485" y="462.280702" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Reserve 10-15% off-heap for Tungsten and direct buffers.</text>
-  <text x="485" y="487.719298" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Full GC symptoms: Peak Execution Memory spikes, slow stages.</text>
-  <text x="485" y="513.157895" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--text-muted)">Fix by: shrinking partitions, using Kryo, caching serialized.</text>
-  <text x="485" y="543.684211" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--danger-border)">Watch for: OOM killer, ExecutorLost, long pauses</text>
-  <text x="485" y="574.210526" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text-muted)">Record flight recordings during peak load:</text>
-  <text x="485" y="597.614035" font-size="12.104805" fill="var(--text)" font-family="Courier New, monospace">-XX:+FlightRecorder -XX:StartFlightRecording=duration=60s</text>
+  <!-- Sizing (right bottom) -->
+  <rect x="453.445378151261" y="350.714285714286" width="786.554621848739" height="269.285714285714" rx="8.175740767346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="846.72268907563" y="386.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.395416726528" font-weight="bold" fill="var(--text)">Heap sizing</text>
+  <text x="478.655462184874" y="423.214285714286" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text-muted)">Many small executors (5 cores, 8-32 GB)</text>
+  <text x="478.655462184874" y="454.285714285714" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text-muted)">&gt; 32 GB loses compressed oops</text>
+  <text x="478.655462184874" y="485.357142857143" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text-muted)">Reserve 10-15% off-heap</text>
+  <text x="478.655462184874" y="516.428571428572" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text-muted)">Fix full GC: smaller partitions, Kryo</text>
+  <text x="478.655462184874" y="557.857142857143" font-family="Arial, sans-serif" font-size="14.307546342855" font-weight="bold" fill="var(--danger-border)">Watch: OOM, ExecutorLost, pauses</text>
 </svg>

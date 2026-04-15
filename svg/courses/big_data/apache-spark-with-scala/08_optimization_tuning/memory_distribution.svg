@@ -34,100 +34,55 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="71.228070175439" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--primary-text)">Executor JVM Heap</text>
+  <text x="640" y="98" text-anchor="middle" font-family="Courier New, monospace" font-size="14.122273063895" fill="var(--primary-text)">spark.executor.memory</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">Execution (~30%)</text>
+  <text x="220" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Shuffle buffers</text>
+  <text x="220" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Joins, aggregations</text>
+  <text x="220" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">Sort, hash maps</text>
+  <text x="220" y="309.649122807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Spills to disk</text>
+  <text x="220" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">Borrows Storage</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="420" y="131.578947368421" width="360" height="234.035087719298" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="600" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">Storage (~30%)</text>
+  <text x="600" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">Cached DataFrames</text>
+  <text x="600" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">Broadcast variables</text>
+  <text x="600" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">Serialised blocks</text>
+  <text x="600" y="309.649122807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">LRU eviction</text>
+  <text x="600" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--info-text)">Spills to disk</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="800" y="131.578947368421" width="440" height="234.035087719298" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="172.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">User + Reserved (~40%)</text>
+  <text x="1020" y="212.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">User structures, UDFs</text>
+  <text x="1020" y="243.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">RDD metadata</text>
+  <text x="1020" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">Reserved 300 MB</text>
+  <text x="1020" y="309.649122807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">Off-heap Tungsten</text>
+  <text x="1020" y="340.175438596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">memoryOverhead</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">Executor JVM Heap</text>
-  <text x="640" y="96.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">spark.executor.memory - unified memory split into regions</text>
-
-  <rect x="40" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Execution (~30%)</text>
-  <text x="220" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Shuffle buffers</text>
-  <text x="220" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Joins and aggregations</text>
-  <text x="220" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Sort and hash maps</text>
-  <text x="220" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Spills to disk if tight</text>
-  <text x="220" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Borrows from Storage</text>
-
-  <rect x="420" y="131.578947" width="360" height="223.859649" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="600" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Storage (~30%)</text>
-  <text x="600" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Cached DataFrames</text>
-  <text x="600" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Broadcast variables</text>
-  <text x="600" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Serialised blocks</text>
-  <text x="600" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">LRU eviction</text>
-  <text x="600" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Spills to disk tier</text>
-
-  <rect x="800" y="131.578947" width="440" height="223.859649" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1020" y="170.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">User + Reserved (~40%)</text>
-  <text x="1020" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">User data structures, UDFs</text>
-  <text x="1020" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">RDD metadata</text>
-  <text x="1020" y="268.947368" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">Reserved 300 MB fixed overhead</text>
-  <text x="1020" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Plus off-heap for Tungsten</text>
-  <text x="1020" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Plus memoryOverhead for YARN</text>
-
-  <rect x="40" y="375.789474" width="1200" height="244.210526" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="411.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">Tuning Levers</text>
-  <text x="640" y="447.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">spark.memory.fraction - unified pool share (default 0.6)</text>
-  <text x="640" y="477.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">spark.memory.storageFraction - storage floor (default 0.5)</text>
-  <text x="640" y="508.070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">spark.executor.memoryOverhead - container extra, YARN or K8s</text>
-  <text x="640" y="538.596491" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">spark.memory.offHeap.enabled - bypass GC with Tungsten off-heap</text>
-  <text x="640" y="574.210526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Size executors around 4-8 cores and 16-32 GB for best GC behaviour</text>
-  <text x="640" y="604.736842" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Watch OOMKilled - bump memoryOverhead first, then heap</text>
+  <rect x="40" y="385.964912280702" width="1200" height="234.035087719298" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--text)">Tuning Levers</text>
+  <text x="640" y="457.19298245614" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">memory.fraction (0.6)</text>
+  <text x="640" y="487.719298245614" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">memory.storageFraction (0.5)</text>
+  <text x="640" y="518.245614035088" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">executor.memoryOverhead</text>
+  <text x="640" y="548.771929824561" text-anchor="middle" font-family="Courier New, monospace" font-size="15.131006854174" fill="var(--text-muted)">memory.offHeap.enabled</text>
+  <text x="640" y="586.421052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" font-style="italic" fill="var(--text-faint)">4-8 cores, 16-32 GB per executor</text>
 </svg>

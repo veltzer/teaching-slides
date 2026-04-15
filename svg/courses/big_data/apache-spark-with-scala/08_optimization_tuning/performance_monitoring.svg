@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,51 +81,48 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <rect x="40" y="40" width="290" height="264.561404" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--primary-text)">Spark UI</text>
-  <text x="185" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Jobs, stages, tasks</text>
-  <text x="185" y="146.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">DAG visualisation</text>
-  <text x="185" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Input and shuffle sizes</text>
-  <text x="185" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">GC and duration time</text>
-  <text x="185" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--primary-text)">Executor memory peaks</text>
-  <text x="185" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--primary-text)">Always first stop</text>
+  <!-- Four tools row -->
+  <rect x="40" y="40" width="294.915254237288" height="274.181818181818" rx="8.284613618287" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="187.457627118644" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--primary-text)">Spark UI</text>
+  <text x="187.457627118644" y="129.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">Jobs, stages, tasks</text>
+  <text x="187.457627118644" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">DAG view</text>
+  <text x="187.457627118644" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">Shuffle sizes</text>
+  <text x="187.457627118644" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--primary-text)">GC time</text>
+  <text x="187.457627118644" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--primary-text)">First stop</text>
 
-  <rect x="350" y="40" width="290" height="264.561404" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Event Logs</text>
-  <text x="495" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">JSON of every event</text>
-  <text x="495" y="146.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">spark.eventLog.enabled</text>
-  <text x="495" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">History Server replay</text>
-  <text x="495" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Post-mortem analysis</text>
-  <text x="495" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Regression comparison</text>
-  <text x="495" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--ok-text)">Feeds dashboards</text>
+  <rect x="355.254237288136" y="40" width="294.915254237288" height="274.181818181818" rx="8.284613618287" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="502.71186440678" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--ok-text)">Event Logs</text>
+  <text x="502.71186440678" y="129.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">JSON events</text>
+  <text x="502.71186440678" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">History Server</text>
+  <text x="502.71186440678" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">Post-mortem</text>
+  <text x="502.71186440678" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--ok-text)">Regression diffs</text>
+  <text x="502.71186440678" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--ok-text)">Dashboards</text>
 
-  <rect x="660" y="40" width="290" height="264.561404" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Metrics Sinks</text>
-  <text x="805" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Prometheus, Graphite</text>
-  <text x="805" y="146.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">JMX, CSV, StatsD</text>
-  <text x="805" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Executor level counters</text>
-  <text x="805" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Alert on regressions</text>
-  <text x="805" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Trend over weeks</text>
-  <text x="805" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">Grafana dashboards</text>
+  <rect x="670.508474576271" y="40" width="294.915254237288" height="274.181818181818" rx="8.284613618287" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.966101694915" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--warn-text)">Metrics Sinks</text>
+  <text x="817.966101694915" y="129.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--warn-text)">Prometheus</text>
+  <text x="817.966101694915" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--warn-text)">JMX, StatsD</text>
+  <text x="817.966101694915" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--warn-text)">Counters</text>
+  <text x="817.966101694915" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--warn-text)">Alerts</text>
+  <text x="817.966101694915" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--warn-text)">Grafana</text>
 
-  <rect x="970" y="40" width="270" height="264.561404" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Query Plans</text>
-  <text x="1105" y="116.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">df.explain(true)</text>
-  <text x="1105" y="146.842105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Parsed to physical</text>
-  <text x="1105" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Spot join strategies</text>
-  <text x="1105" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Detect predicate pushdown</text>
-  <text x="1105" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Verify AQE adjustments</text>
-  <text x="1105" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--info-text)">SQL tab in the UI</text>
+  <rect x="985.762711864407" y="40" width="254.237288135593" height="274.181818181818" rx="8.284613618287" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1112.881355932203" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--info-text)">Query Plans</text>
+  <text x="1112.881355932203" y="129.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--info-text)">df.explain(true)</text>
+  <text x="1112.881355932203" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">Join strategies</text>
+  <text x="1112.881355932203" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">Pushdown</text>
+  <text x="1112.881355932203" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">AQE effects</text>
+  <text x="1112.881355932203" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--info-text)">SQL tab</text>
 
-  <rect x="40" y="330" width="1200" height="290" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="367.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">Signals to Watch</text>
-  <text x="640" y="404.280702" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Stage duration skew - a few tasks dominate total time</text>
-  <text x="640" y="434.807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">High GC time - executors under memory pressure</text>
-  <text x="640" y="465.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Large shuffle read - unexpected wide transformations</text>
-  <text x="640" y="495.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Spill to disk - memory limits exceeded</text>
-  <text x="640" y="526.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Low CPU - too few partitions or straggler tasks</text>
-  <text x="640" y="556.912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Failed tasks retried - flaky nodes or OOM</text>
-  <text x="640" y="597.614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Baseline a healthy run and alert on deviation</text>
+  <!-- Signals panel -->
+  <rect x="40" y="345.818181818182" width="1200" height="274.181818181818" rx="8.284613618287" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.640380641147" font-weight="bold" fill="var(--text)">Signals to Watch</text>
+  <text x="640" y="424.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Stage skew - few tasks dominate</text>
+  <text x="640" y="456.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">High GC - memory pressure</text>
+  <text x="640" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Large shuffle - wide transforms</text>
+  <text x="640" y="519.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Disk spill - memory exceeded</text>
+  <text x="640" y="551.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Low CPU - stragglers</text>
+  <text x="640" y="593.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--text-faint)">Baseline healthy runs; alert on drift</text>
 </svg>

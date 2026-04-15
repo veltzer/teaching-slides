@@ -34,145 +34,61 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
-  <rect x="40" y="40" width="1200" height="42.112211" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="66.79868" font-family="Arial, sans-serif" font-size="17.464726" font-weight="bold" fill="var(--bg)" text-anchor="middle">Workflow Best Practices</text>
 
-  <!-- Reusable workflows -->
-  <rect x="40" y="97.425743" width="580.327869" height="187.590759" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.163934" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Reusable Workflows (workflow_call)</text>
-  <text x="54.754098" y="141.452145" font-size="10.6729" fill="var(--text-faint)" font-family="Courier New, monospace"># .github/workflows/reusable-ci.yml</text>
-  <text x="54.754098" y="158.679868" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">on:</text>
-  <text x="69.508197" y="175.907591" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  workflow_call:</text>
-  <text x="84.262295" y="193.135314" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    inputs:</text>
-  <text x="99.016393" y="210.363036" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">      node-version: {type: string}</text>
-  <text x="84.262295" y="227.590759" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    secrets:</text>
-  <text x="99.016393" y="244.818482" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">      NPM_TOKEN: {required: true}</text>
-  <text x="54.754098" y="267.788779" font-size="10.6729" fill="var(--text-faint)" font-family="Courier New, monospace"># caller workflow</text>
-  <text x="54.754098" y="285.016502" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">uses: org/repo/.github/workflows/ci.yml@main</text>
+  <!-- Reusable -->
+  <rect x="40" y="40" width="590" height="200" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Reusable Workflows</text>
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">on:</text>
+  <text x="60" y="135" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  workflow_call:</text>
+  <text x="60" y="160" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    inputs: { node-version }</text>
+  <text x="60" y="185" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    secrets: { NPM_TOKEN }</text>
+  <text x="60" y="220" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">uses: org/repo/.github/...@main</text>
 
   <!-- Caching -->
-  <rect x="659.672131" y="97.425743" width="580.327869" height="187.590759" rx="6.315824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.836066" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Caching Dependencies</text>
-  <text x="674.42623" y="141.452145" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">- uses: actions/cache@v4</text>
-  <text x="689.180328" y="158.679868" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  with:</text>
-  <text x="703.934426" y="175.907591" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    path: ~/.npm</text>
-  <text x="703.934426" y="193.135314" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    key: npm-${{ runner.os }}-</text>
-  <text x="718.688525" y="210.363036" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">      ${{ hashFiles('**/package-lock.json') }}</text>
-  <text x="703.934426" y="227.590759" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    restore-keys: npm-${{ runner.os }}-</text>
-  <text x="674.42623" y="250.561056" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">setup-* actions have built-in cache: option</text>
-  <text x="674.42623" y="269.70297" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Cache key includes file hash - invalidated on change</text>
-  <text x="674.42623" y="288.844884" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">restore-keys provide fallback partial matches</text>
+  <rect x="650" y="40" width="590" height="200" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Caching</text>
+  <text x="670" y="110" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">- uses: actions/cache@v4</text>
+  <text x="670" y="135" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  with:</text>
+  <text x="670" y="160" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    path: ~/.npm</text>
+  <text x="670" y="185" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    key: ${{ hashFiles(...) }}</text>
+  <text x="670" y="220" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="var(--bg)">Hash-based invalidation</text>
 
   <!-- Concurrency -->
-  <rect x="40" y="302.244224" width="383.606557" height="187.590759" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="231.803279" y="325.214521" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Concurrency Control</text>
-  <text x="54.754098" y="348.184818" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">concurrency:</text>
-  <text x="69.508197" y="365.412541" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  group: ${{ github.workflow }}-</text>
-  <text x="84.262295" y="382.640264" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    ${{ github.ref }}</text>
-  <text x="69.508197" y="399.867987" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  cancel-in-progress: true</text>
-  <text x="54.754098" y="422.838284" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Cancels old PR runs when new push arrives</text>
-  <text x="54.754098" y="441.980198" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Prevents duplicate deploys</text>
-  <text x="54.754098" y="461.122112" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Set cancel-in-progress: false on main branch</text>
-  <text x="54.754098" y="480.264026" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Saves runner minutes and reduces conflicts</text>
+  <rect x="40" y="260" width="390" height="200" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Concurrency</text>
+  <text x="60" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">concurrency:</text>
+  <text x="60" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  group: ${{ github.ref }}</text>
+  <text x="60" y="380" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  cancel-in-progress: true</text>
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Cancels old PR runs</text>
 
   <!-- Security -->
-  <rect x="443.278689" y="302.244224" width="393.442623" height="187.590759" rx="6.315824" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="325.214521" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Security: Tokens and Secrets</text>
-  <text x="458.032787" y="348.184818" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">permissions:</text>
-  <text x="472.786885" y="365.412541" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  contents: read</text>
-  <text x="472.786885" y="382.640264" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  pull-requests: write</text>
-  <text x="458.032787" y="403.69637" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">GITHUB_TOKEN: auto-created per job</text>
-  <text x="458.032787" y="422.838284" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Limit GITHUB_TOKEN permissions at top level</text>
-  <text x="458.032787" y="441.980198" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Never print secrets to logs</text>
-  <text x="458.032787" y="461.122112" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Use secrets.NAME - never hardcode in YAML</text>
-  <text x="458.032787" y="480.264026" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Environment protection rules for prod secrets</text>
+  <rect x="445" y="260" width="390" height="200" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Security</text>
+  <text x="465" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">permissions:</text>
+  <text x="465" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  contents: read</text>
+  <text x="465" y="380" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  pull-requests: write</text>
+  <text x="465" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Use secrets.NAME</text>
 
-  <!-- Matrix strategy -->
-  <rect x="856.393443" y="302.244224" width="383.606557" height="187.590759" rx="6.315824" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1048.196721" y="325.214521" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Matrix Strategy</text>
-  <text x="871.147541" y="348.184818" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">strategy:</text>
-  <text x="885.901639" y="365.412541" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  matrix:</text>
-  <text x="900.655738" y="382.640264" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    os: [ubuntu, macos, windows]</text>
-  <text x="900.655738" y="399.867987" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">    python: ["3.11", "3.12"]</text>
-  <text x="885.901639" y="417.09571" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  fail-fast: false</text>
-  <text x="885.901639" y="434.323432" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  max-parallel: 4</text>
-  <text x="871.147541" y="457.293729" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">3 x 2 = 6 parallel jobs</text>
-  <text x="871.147541" y="476.435644" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">include/exclude to adjust matrix cells</text>
-  <text x="871.147541" y="495.577558" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">fail-fast: false - all cells run to completion</text>
+  <!-- Matrix -->
+  <rect x="850" y="260" width="390" height="200" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Matrix</text>
+  <text x="870" y="330" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">strategy:</text>
+  <text x="870" y="355" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">  matrix:</text>
+  <text x="870" y="380" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    os: [ubuntu, macos]</text>
+  <text x="870" y="405" font-family="Courier New, monospace" font-size="12" fill="var(--bg)">    python: ["3.11","3.12"]</text>
+  <text x="870" y="440" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">fail-fast: false</text>
 
-  <!-- Bottom tips -->
-  <rect x="40" y="507.062706" width="1200" height="112.937294" rx="6.315824" fill="var(--surface)"/>
-  <text x="640" y="530.033003" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--text)" text-anchor="middle">Optimization Tips</text>
-  <text x="59.672131" y="551.089109" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Use needs: to express job dependencies and run independent jobs in parallel</text>
-  <text x="59.672131" y="570.231023" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Use if: github.event_name == 'push' to skip expensive steps on PR builds</text>
-  <text x="59.672131" y="589.372937" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Use paths: filter to skip workflows when unrelated files change (e.g. docs-only changes)</text>
-  <text x="59.672131" y="608.514851" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Upload test results as artifacts; use continue-on-error: true on flaky steps</text>
+  <!-- Tips -->
+  <rect x="40" y="480" width="1200" height="140" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Optimization</text>
+  <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">needs: runs independent jobs in parallel</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">paths: filter skips unrelated changes</text>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--bg)">Upload artifacts for test results</text>
 </svg>

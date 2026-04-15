@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,96 +82,65 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
-      <stop offset="100%" stop-color="#f57c00"/>
-    </linearGradient>
   </defs>
-  <!-- Header -->
-  <rect x="40" y="40" width="1200" height="42.112211" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="66.79868" font-family="Arial, sans-serif" font-size="17.464726" font-weight="bold" fill="var(--bg)" text-anchor="middle">CPack Packaging Workflow</text>
 
-  <!-- Workflow arrow: CMakeLists -> cpack -->
-  <rect x="40" y="97.425743" width="275.409836" height="95.709571" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="177.704918" y="120.39604" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">CMakeLists.txt</text>
-  <text x="54.754098" y="139.537954" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">include(CPack)</text>
-  <text x="54.754098" y="156.765677" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_NAME</text>
-  <text x="69.508197" y="173.993399" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  "myproject")</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--text)">CPack Packaging</text>
 
-  <line x1="320.327869" y1="145.280528" x2="374.42623" y2="145.280528" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Workflow row -->
+  <rect x="40" y="71.351351351351" width="270" height="99.279279279279" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--primary-text)">CMakeLists.txt</text>
+  <text x="55" y="130.918918918919" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--primary-text)">include(CPack)</text>
+  <text x="55" y="154.954954954955" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--primary-text)">CPACK_PACKAGE_NAME</text>
 
-  <rect x="379.344262" y="97.425743" width="226.229508" height="95.709571" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="492.459016" y="120.39604" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Configure &amp;amp; Build</text>
-  <text x="394.098361" y="141.452145" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cmake -B build</text>
-  <text x="394.098361" y="158.679868" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cmake --build build</text>
+  <line x1="315" y1="120.468468468468" x2="370" y2="120.468468468468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="610.491803" y1="145.280528" x2="664.590164" y2="145.280528" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="375" y="71.351351351351" width="225" height="99.279279279279" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="487" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--warn-text)">Build</text>
+  <text x="390" y="130.918918918919" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--warn-text)">cmake -B build</text>
+  <text x="390" y="154.954954954955" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--warn-text)">cmake --build build</text>
 
-  <rect x="669.508197" y="97.425743" width="226.229508" height="95.709571" rx="6.315824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="782.622951" y="120.39604" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Run CPack</text>
-  <text x="684.262295" y="141.452145" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cd build</text>
-  <text x="684.262295" y="158.679868" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cpack -G DEB</text>
-  <text x="684.262295" y="175.907591" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cpack -G RPM TGZ</text>
+  <line x1="605" y1="120.468468468468" x2="660" y2="120.468468468468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="900.655738" y1="145.280528" x2="954.754098" y2="145.280528" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="665" y="71.351351351351" width="225" height="99.279279279279" rx="6.133646682164" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="777" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--ok-text)">Run CPack</text>
+  <text x="680" y="130.918918918919" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--ok-text)">cpack -G DEB</text>
+  <text x="680" y="154.954954954955" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--ok-text)">cpack -G RPM TGZ</text>
 
-  <rect x="959.672131" y="97.425743" width="280.327869" height="95.709571" rx="6.315824" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1099.344262" y="120.39604" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Output Packages</text>
-  <text x="974.42623" y="141.452145" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">myproject-1.0.0-Linux.deb</text>
-  <text x="974.42623" y="158.679868" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">myproject-1.0.0-Linux.rpm</text>
-  <text x="974.42623" y="175.907591" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">myproject-1.0.0-Linux.tar.gz</text>
+  <line x1="895" y1="120.468468468468" x2="950" y2="120.468468468468" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Generator cards: 4 generators -->
-  <rect x="40" y="212.277228" width="580.327869" height="42.112211" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.163934" y="239.075908" font-family="Arial, sans-serif" font-size="14.553868" font-weight="bold" fill="var(--bg)" text-anchor="middle">Archive Generators</text>
+  <rect x="955" y="71.351351351351" width="285" height="99.279279279279" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--info-text)">Outputs</text>
+  <text x="970" y="130.918918918919" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--info-text)">myproj-1.0.0.deb</text>
+  <text x="970" y="154.954954954955" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--info-text)">myproj-1.0.0.rpm</text>
 
-  <rect x="659.672131" y="212.277228" width="580.327869" height="42.112211" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.836066" y="239.075908" font-family="Arial, sans-serif" font-size="14.553868" font-weight="bold" fill="var(--bg)" text-anchor="middle">Native Generators</text>
+  <!-- Generator cards -->
+  <rect x="40" y="201.981981981982" width="580" height="209.009009009009" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" font-weight="bold" fill="var(--primary-text)">Archive: TGZ / ZIP / TXZ</text>
+  <text x="60" y="269.90990990991" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">Cross-platform archives</text>
+  <text x="60" y="301.261261261261" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--primary-text)">CPACK_GENERATOR "TGZ;ZIP"</text>
+  <text x="60" y="337.837837837838" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">STGZ = self-extracting</text>
+  <text x="60" y="369.189189189189" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">No dependency metadata</text>
 
-  <!-- TGZ / ZIP / TXZ -->
-  <rect x="40" y="263.960396" width="580.327869" height="153.135314" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="59.672131" y="286.930693" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--primary-accent)">TGZ / ZIP / TXZ / STGZ</text>
-  <text x="59.672131" y="307.986799" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Cross-platform tarballs and zip archives</text>
-  <text x="59.672131" y="329.042904" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_GENERATOR "TGZ;ZIP")</text>
-  <text x="59.672131" y="348.184818" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">STGZ creates self-extracting shell script</text>
-  <text x="59.672131" y="369.240924" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Works on Linux / macOS / Windows</text>
-  <text x="59.672131" y="390.29703" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">No dependency metadata</text>
-  <text x="59.672131" y="407.524752" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Simple and universally supported</text>
+  <rect x="660" y="201.981981981982" width="580" height="209.009009009009" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" font-weight="bold" fill="var(--warn-text)">Native: DEB / RPM / NSIS</text>
+  <text x="680" y="269.90990990991" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--warn-text)">CPACK_DEBIAN_PACKAGE_DEPENDS</text>
+  <text x="680" y="301.261261261261" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--warn-text)">CPACK_RPM_PACKAGE_REQUIRES</text>
+  <text x="680" y="337.837837837838" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">apt / dnf integration</text>
+  <text x="680" y="369.189189189189" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">Pre/post install scripts</text>
 
-  <!-- DEB + RPM -->
-  <rect x="659.672131" y="263.960396" width="580.327869" height="153.135314" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="679.344262" y="286.930693" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--warn-accent)">DEB (Debian/Ubuntu) / RPM (Red Hat/Fedora)</text>
-  <text x="679.344262" y="307.986799" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_DEBIAN_PACKAGE_DEPENDS "libssl1.1")</text>
-  <text x="679.344262" y="327.128713" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_RPM_PACKAGE_REQUIRES  "openssl")</text>
-  <text x="679.344262" y="348.184818" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Native package manager integration</text>
-  <text x="679.344262" y="367.326733" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Dependency declarations tracked by apt / dnf</text>
-  <text x="679.344262" y="386.468647" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Pre/post install scripts supported</text>
-  <text x="679.344262" y="405.610561" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">NSIS generator for Windows installers</text>
+  <!-- Variables + Components -->
+  <rect x="40" y="431.891891891892" width="800" height="188.108108108108" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="440" y="458.018018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--text)">Essential CPACK_* Variables</text>
+  <text x="60" y="489.369369369369" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">CPACK_PACKAGE_NAME    "myproject"</text>
+  <text x="60" y="515.495495495495" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">CPACK_PACKAGE_VERSION "1.2.3"</text>
+  <text x="60" y="541.621621621622" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">CPACK_PACKAGE_VENDOR  "Acme"</text>
+  <text x="60" y="567.747747747748" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">CPACK_PACKAGE_CONTACT "dev@acme"</text>
+  <text x="60" y="593.873873873874" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">CPACK_COMPONENTS_ALL  Runtime Development</text>
 
-  <!-- CPACK variables -->
-  <rect x="40" y="436.237624" width="806.557377" height="183.762376" rx="6.315824" fill="var(--surface)"/>
-  <text x="443.278689" y="459.207921" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--text)" text-anchor="middle">Essential CPACK_* Variables</text>
-  <text x="59.672131" y="482.178218" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_NAME            "myproject")</text>
-  <text x="59.672131" y="501.320132" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_VERSION         "1.2.3")</text>
-  <text x="59.672131" y="520.462046" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_VENDOR          "Acme Corp")</text>
-  <text x="59.672131" y="539.60396" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_DESCRIPTION     "My awesome project")</text>
-  <text x="59.672131" y="558.745875" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_PACKAGE_CONTACT         "dev@acme.com")</text>
-  <text x="59.672131" y="577.887789" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_RESOURCE_FILE_LICENSE   "${CMAKE_SOURCE_DIR}/LICENSE")</text>
-  <text x="59.672131" y="597.029703" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">set(CPACK_COMPONENTS_ALL          Runtime Development)</text>
-
-  <!-- Component note -->
-  <rect x="866.229508" y="436.237624" width="373.770492" height="183.762376" rx="6.315824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114754" y="459.207921" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Component Packaging</text>
-  <text x="880.983607" y="482.178218" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cpack --config CPackConfig.cmake</text>
-  <text x="880.983607" y="503.234323" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Install only selected component:</text>
-  <text x="880.983607" y="522.376238" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">cpack -G DEB \</text>
-  <text x="895.737705" y="539.60396" font-size="10.6729" fill="var(--text)" font-family="Courier New, monospace">  --component Runtime</text>
-  <text x="880.983607" y="560.660066" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Separate .deb for Runtime</text>
-  <text x="880.983607" y="579.80198" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">and Development components</text>
-  <text x="880.983607" y="600.858086" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Reduces download size for users</text>
+  <rect x="860" y="431.891891891892" width="380" height="188.108108108108" rx="6.133646682164" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="458.018018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" font-weight="bold" fill="var(--ok-text)">Components</text>
+  <text x="880" y="494.594594594595" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--ok-text)">cpack -G DEB</text>
+  <text x="880" y="520.720720720721" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--ok-text)">  --component Runtime</text>
+  <text x="880" y="562.522522522523" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">Split Runtime / Dev</text>
+  <text x="880" y="593.873873873874" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">Smaller downloads</text>
 </svg>

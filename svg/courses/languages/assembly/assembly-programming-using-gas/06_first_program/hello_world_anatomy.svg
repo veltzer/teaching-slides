@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,113 +82,50 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
-      <stop offset="100%" stop-color="#f57c00"/>
-    </linearGradient>
   </defs>
-  <!-- Source code panel -->
-  <rect x="40" y="40" width="511.475425" height="580" rx="6.455833" fill="var(--code-bg)"/>
-  <text x="285.901596" y="70" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">hello.s (GAS source)</text>
 
-  <!-- .data section highlight -->
-  <rect x="49.836064" y="80" width="491.803088" height="109.99989" rx="6.455833" fill="var(--text)"/>
-  <text x="64.59016" y="102.999945" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">.section .data</text>
-  <text x="64.59016" y="126" font-size="12.893159" fill="var(--ok-accent)" font-family="Courier New, monospace">msg: .ascii "Hello, World!\n"</text>
-  <text x="64.59016" y="148.999945" font-size="12.893159" fill="var(--ok-accent)" font-family="Courier New, monospace">len: .long . - msg</text>
-  <text x="64.59016" y="172" font-size="12.491283" fill="var(--text-muted)" font-family="Courier New, monospace"># current loc minus msg start</text>
+  <rect x="40" y="40" width="510" height="580" rx="8.069870322226" fill="var(--code-bg)"/>
+  <text x="295" y="70.526315789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" font-weight="bold" fill="var(--primary-text)">hello.s</text>
 
-  <!-- .text section highlight -->
-  <rect x="49.836064" y="200.00011" width="491.803088" height="80" rx="6.455833" fill="var(--text)"/>
-  <text x="64.59016" y="223.000055" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">.section .text</text>
-  <text x="64.59016" y="245.99989" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">.globl _start</text>
-  <text x="64.59016" y="268.999945" font-size="12.491283" fill="var(--text-muted)" font-family="Courier New, monospace"># exported entry point</text>
+  <text x="60" y="106.140350877193" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">.section .data</text>
+  <text x="60" y="131.578947368421" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">msg: .ascii "Hello\n"</text>
+  <text x="60" y="157.017543859649" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--ok-text)">len: .long . - msg</text>
 
-  <!-- _start / syscall sequence -->
-  <rect x="49.836064" y="288" width="491.803088" height="200.00011" rx="6.455833" fill="var(--code-bg)"/>
-  <text x="64.59016" y="310.999945" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">_start:</text>
-  <text x="64.59016" y="334" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl $4, %eax    <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># sys_write</tspan></text>
-  <text x="64.59016" y="356.999945" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl $1, %ebx    <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># stdout fd=1</tspan></text>
-  <text x="64.59016" y="380" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl $msg, %ecx  <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># buffer addr</tspan></text>
-  <text x="64.59016" y="403.000055" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl len, %edx   <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># byte count</tspan></text>
-  <text x="64.59016" y="426" font-size="12.893159" fill="var(--warn-accent)" font-family="Courier New, monospace">  int $0x80        <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># kernel call</tspan></text>
-  <text x="64.59016" y="452" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl $1, %eax    <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># sys_exit</tspan></text>
-  <text x="64.59016" y="475.000055" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">  movl $0, %ebx    <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># exit code 0</tspan></text>
-  <text x="64.59016" y="498" font-size="12.893159" fill="var(--warn-accent)" font-family="Courier New, monospace">  int $0x80        <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># kernel call</tspan></text>
+  <text x="60" y="202.80701754386" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">.section .text</text>
+  <text x="60" y="228.245614035088" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">.globl _start</text>
 
-  <!-- Annotation panel -->
-  <rect x="580.983617" y="40" width="659.016383" height="580" rx="6.455833" fill="var(--surface)"/>
+  <text x="60" y="274.035087719298" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">_start:</text>
+  <text x="60" y="299.473684210526" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl $4, %eax</text>
+  <text x="60" y="324.912280701754" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl $1, %ebx</text>
+  <text x="60" y="350.350877192982" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl $msg, %ecx</text>
+  <text x="60" y="375.789473684211" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl len, %edx</text>
+  <text x="60" y="401.228070175439" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">  int $0x80</text>
+  <text x="60" y="436.842105263158" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl $1, %eax</text>
+  <text x="60" y="462.280701754386" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--primary-text)">  movl $0, %ebx</text>
+  <text x="60" y="487.719298245614" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--warn-text)">  int $0x80</text>
 
-  <!-- Sections legend header -->
-  <rect x="600.65564" y="55.000166" width="619.672023" height="36.00011" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="910.491651" y="77.99989" font-family="Arial, sans-serif" font-size="16.86016" font-weight="bold" fill="var(--bg)" text-anchor="middle">ELF / GAS Program Anatomy</text>
+  <text x="60" y="553.859649122807" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">$ as -o hello.o hello.s</text>
+  <text x="60" y="579.298245614035" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">$ ld -o hello hello.o</text>
+  <text x="60" y="604.736842105263" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">$ ./hello</text>
 
-  <!-- .data box -->
-  <rect x="600.65564" y="104.999945" width="275.409893" height="109.99989" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="738.360534" y="129.99989" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">.data Section</text>
-  <text x="615.409735" y="152.999834" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Initialized data (read-write)</text>
-  <text x="615.409735" y="172.999945" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Strings, constants, variables</text>
-  <text x="615.409735" y="192.999834" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Stored in ELF data segment</text>
+  <rect x="580" y="40" width="660" height="183.157894736842" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="910" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--primary-text)">Sections</text>
+  <text x="600" y="111.228070175439" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.data  initialized RW</text>
+  <text x="600" y="141.754385964912" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.text  executable RO</text>
+  <text x="600" y="172.280701754386" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">.globl exports entry</text>
+  <text x="600" y="202.80701754386" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">labels become addresses</text>
 
-  <!-- .text box -->
-  <rect x="600.65564" y="230" width="275.409893" height="109.99989" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="738.360534" y="254.999945" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">.text Section</text>
-  <text x="615.409735" y="277.99989" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Executable instructions</text>
-  <text x="615.409735" y="297.99989" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Read-only in ELF</text>
-  <text x="615.409735" y="318" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- .globl exports _start label</text>
+  <rect x="580" y="238.421052631579" width="660" height="244.210526315789" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="910" y="274.035087719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">Syscall (int 0x80)</text>
+  <text x="600" y="309.649122807018" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">eax  number</text>
+  <text x="600" y="340.175438596491" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">ebx  arg1</text>
+  <text x="600" y="370.701754385965" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">ecx  arg2</text>
+  <text x="600" y="401.228070175439" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--info-text)">edx  arg3</text>
+  <text x="600" y="436.842105263158" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">4 = write, 1 = exit</text>
+  <text x="600" y="462.280701754386" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">int 0x80 traps to kernel</text>
 
-  <!-- Labels box -->
-  <rect x="600.65564" y="355.000166" width="275.409893" height="90" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="738.360534" y="380" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Labels</text>
-  <text x="615.409735" y="403.000055" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Symbolic addresses (msg, _start)</text>
-  <text x="615.409735" y="423.000055" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">- Resolved by assembler/linker</text>
-
-  <!-- Syscall box -->
-  <rect x="905.573724" y="104.999945" width="314.754148" height="200.00011" rx="6.455833" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1062.950641" y="129.99989" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Syscall Sequence (int 0x80)</text>
-  <text x="920.32782" y="155.99989" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">Register  Purpose</text>
-  <line x1="920.32782" y1="162.999945" x2="1210.491704" y2="162.999945" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="920.32782" y="182.999945" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">%eax</text>
-  <text x="984.26234" y="182.999945" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">syscall number (4=write, 1=exit)</text>
-  <text x="920.32782" y="207.99989" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">%ebx</text>
-  <text x="984.26234" y="207.99989" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">arg1 (fd=1 for stdout)</text>
-  <text x="920.32782" y="232.999834" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">%ecx</text>
-  <text x="984.26234" y="232.999834" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">arg2 (buffer address)</text>
-  <text x="920.32782" y="257.99989" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">%edx</text>
-  <text x="984.26234" y="257.99989" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">arg3 (byte count)</text>
-  <text x="920.32782" y="283.000055" font-size="12.893159" fill="var(--warn-accent)" font-family="Courier New, monospace">int $0x80</text>
-  <text x="1013.770426" y="283.000055" font-family="Arial, sans-serif" font-size="12.893159" fill="var(--text)">transfers control to kernel</text>
-
-  <!-- ELF structure box -->
-  <rect x="905.573724" y="319.99989" width="314.754148" height="200.00011" rx="6.455833" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1062.950641" y="344.999834" font-family="Arial, sans-serif" font-size="15.868329" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">ELF Output Structure</text>
-  <!-- ELF mini diagram -->
-  <rect x="1003.934258" y="358.00011" width="196.721172" height="27.99989" rx="6.455833" fill="var(--primary-accent)"/>
-  <text x="1102.295001" y="376.999945" font-size="12.491283" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">ELF Header</text>
-  <rect x="1003.934258" y="390" width="196.721172" height="27.99989" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1102.295001" y="408.999945" font-size="12.491283" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">.text segment</text>
-  <rect x="1003.934258" y="422" width="196.721172" height="27.99989" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1102.295001" y="440.999834" font-size="12.491283" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">.data segment</text>
-  <rect x="1003.934258" y="454.00011" width="196.721172" height="27.99989" rx="6.455833" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1102.295001" y="472.999945" font-size="12.491283" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">Section headers</text>
-  <text x="920.32782" y="508" font-family="Arial, sans-serif" font-size="12.491283" fill="var(--text-muted)">Produced by ld linker from .o object file</text>
-
-  <!-- Build command -->
-  <rect x="600.65564" y="464.999945" width="599.999895" height="60" rx="6.455833" fill="var(--code-bg)"/>
-  <text x="615.409735" y="488" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">as -o hello.o hello.s</text>
-  <text x="615.409735" y="512.999945" font-size="12.893159" fill="var(--primary-accent)" font-family="Courier New, monospace">ld -o hello hello.o   <tspan fill="var(--text-muted)" font-family="Arial, sans-serif"># or: gcc -nostdlib -o hello hello.s</tspan></text>
-
-  <!-- Run command -->
-  <rect x="600.65564" y="540" width="599.999895" height="50" rx="6.455833" fill="var(--black)"/>
-  <text x="615.409735" y="563.000166" font-size="12.893159" fill="var(--ok-accent)" font-family="Courier New, monospace">$ ./hello</text>
-  <text x="748.196597" y="563.000166" font-size="12.893159" fill="var(--info-accent)" font-family="Courier New, monospace">Hello, World!</text>
+  <rect x="580" y="497.894736842105" width="660" height="122.105263157895" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="910" y="533.508771929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--text)">ELF Output</text>
+  <text x="910" y="569.122807017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">header, .text, .data</text>
+  <text x="910" y="594.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">produced by ld</text>
 </svg>

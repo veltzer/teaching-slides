@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,38 +82,39 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
-  <text x="623.3333" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.8924" font-weight="bold" fill="var(--text)">Testing Strategies for Streaming</text>
-  <rect x="40" y="456.6197" width="500" height="114.3662" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="290" y="505.6338" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7809" font-weight="bold" fill="var(--ok-accent)">Unit Tests</text>
-  <text x="290" y="538.3099" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">Transform functions, UDFs, schema validation</text>
-  <text x="290" y="562.8169" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-faint)">Fast, isolated, no Spark context needed</text>
-  <rect x="106.6666" y="317.7465" width="366.6667" height="114.3662" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="290" y="366.7606" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7809" font-weight="bold" fill="var(--primary-accent)">Integration Tests</text>
-  <text x="290" y="399.4366" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">MemoryStream, local SparkSession</text>
-  <text x="290" y="423.9436" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-faint)">Test full pipeline logic</text>
-  <rect x="173.3334" y="187.0422" width="233.3333" height="106.1972" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="290" y="231.1549" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7809" font-weight="bold" fill="var(--warn-accent)">E2E Tests</text>
-  <text x="290" y="263.831" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">Docker + Kafka</text>
-  <text x="290" y="285.0704" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-faint)">Full stack</text>
-  <text x="290" y="154.3662" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6693" fill="var(--text-faint)">Test Pyramid</text>
-  <rect x="623.3333" y="89.0141" width="616.6667" height="171.5493" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="931.6667" y="126.5915" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2251" font-weight="bold" fill="var(--ok-accent)">Unit Test Approach</text>
-  <text x="656.6667" y="162.5352" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">1. Test transformation logic separately</text>
-  <text x="656.6667" y="191.9436" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">2. Use static DataFrames as input</text>
-  <text x="656.6667" y="221.3521" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">3. Verify output schema and values</text>
-  <text x="656.6667" y="250.7605" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">4. Test edge cases (nulls, empty, malformed)</text>
-  <rect x="623.3333" y="285.0704" width="616.6667" height="155.2113" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="931.6667" y="322.6479" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2251" font-weight="bold" fill="var(--primary-accent)">Integration Test Approach</text>
-  <text x="656.6667" y="355.3239" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">1. Use MemoryStream as test source</text>
-  <text x="656.6667" y="384.7324" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">2. Add test data with addData()</text>
-  <text x="656.6667" y="414.1409" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">3. processAllAvailable() to advance</text>
-  <text x="656.6667" y="427.2113" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">4. Assert output with MemorySink</text>
-  <rect x="623.3333" y="464.7887" width="616.6667" height="155.2113" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="931.6667" y="502.3661" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2251" font-weight="bold" fill="var(--warn-accent)">E2E Test Approach</text>
-  <text x="656.6667" y="535.0423" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">1. Docker Compose with Kafka + Spark</text>
-  <text x="656.6667" y="564.4507" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">2. Produce real messages to topic</text>
-  <text x="656.6667" y="593.8591" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">3. Verify end-to-end sink output</text>
-  <text x="656.6667" y="606.9296" font-family="Arial, sans-serif" font-size="17.1135" fill="var(--text-muted)">4. Test failure recovery scenarios</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873010808237" font-weight="bold" fill="var(--text)">Testing Streaming Pipelines</text>
+
+  <text x="290" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" fill="var(--text-faint)">Test Pyramid</text>
+
+  <rect x="173" y="115.185185185185" width="233" height="107.407407407407" rx="8.291003602746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="290" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--warn-text)">E2E</text>
+  <text x="290" y="195.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Docker, Kafka</text>
+
+  <rect x="107" y="244.074074074074" width="366" height="118.148148148148" rx="8.291003602746" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="290" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--primary-text)">Integration</text>
+  <text x="290" y="324.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">MemoryStream, local Spark</text>
+
+  <rect x="40" y="383.703703703704" width="500" height="118.148148148148" rx="8.291003602746" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="290" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--ok-text)">Unit</text>
+  <text x="290" y="464.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">transform functions, UDFs</text>
+
+  <rect x="620" y="72.222222222222" width="620" height="171.851851851852" rx="8.291003602746" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--ok-text)">Unit</text>
+  <text x="650" y="147.407407407407" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">static DataFrame inputs</text>
+  <text x="650" y="179.62962962963" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">assert schema and values</text>
+  <text x="650" y="211.851851851852" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">cover null, empty, malformed</text>
+
+  <rect x="620" y="260.185185185185" width="620" height="171.851851851852" rx="8.291003602746" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--primary-text)">Integration</text>
+  <text x="650" y="335.37037037037" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">MemoryStream source</text>
+  <text x="650" y="367.592592592593" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">addData, processAllAvailable</text>
+  <text x="650" y="399.814814814815" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">assert via MemorySink</text>
+
+  <rect x="620" y="448.148148148148" width="620" height="171.851851851852" rx="8.291003602746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="485.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">E2E</text>
+  <text x="650" y="523.333333333333" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Docker Compose Kafka + Spark</text>
+  <text x="650" y="555.555555555556" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">produce real messages</text>
+  <text x="650" y="587.777777777778" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">test failure recovery</text>
 </svg>

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,72 +81,61 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">Feature Transformations</text>
+  <rect x="40" y="40" width="290" height="260" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Text</text>
+  <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Tokenizer</text>
+  <text x="185" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">StopWordsRemover</text>
+  <text x="185" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">HashingTF</text>
+  <text x="185" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">IDF</text>
+  <text x="185" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Word2Vec</text>
+  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">CountVectorizer</text>
 
-  <rect x="40" y="69.635036" width="290" height="254.014599" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">Text</text>
-  <text x="185" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Tokenizer</text>
-  <text x="185" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">StopWordsRemover</text>
-  <text x="185" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">NGram</text>
-  <text x="185" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">HashingTF</text>
-  <text x="185" y="249.562044" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">IDF</text>
-  <text x="185" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Word2Vec</text>
-  <text x="185" y="302.481752" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">CountVectorizer</text>
+  <rect x="340" y="40" width="290" height="260" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Categorical</text>
+  <text x="485" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">StringIndexer</text>
+  <text x="485" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">IndexToString</text>
+  <text x="485" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">OneHotEncoder</text>
+  <text x="485" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Bucketizer</text>
+  <text x="485" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">QuantileDiscretizer</text>
 
-  <rect x="340" y="69.635036" width="290" height="254.014599" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">Categorical</text>
-  <text x="485" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">StringIndexer</text>
-  <text x="485" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">IndexToString</text>
-  <text x="485" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">OneHotEncoder</text>
-  <text x="485" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">VectorIndexer</text>
-  <text x="485" y="249.562044" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Bucketizer</text>
-  <text x="485" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">QuantileDiscretizer</text>
-  <text x="485" y="302.481752" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">handle unknown labels</text>
+  <rect x="640" y="40" width="290" height="260" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Numeric</text>
+  <text x="785" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">StandardScaler</text>
+  <text x="785" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">MinMaxScaler</text>
+  <text x="785" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Normalizer</text>
+  <text x="785" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">PolynomialExpansion</text>
+  <text x="785" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Binarizer</text>
 
-  <rect x="640" y="69.635036" width="290" height="254.014599" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">Numeric</text>
-  <text x="785" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">StandardScaler</text>
-  <text x="785" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">MinMaxScaler</text>
-  <text x="785" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">MaxAbsScaler</text>
-  <text x="785" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Normalizer</text>
-  <text x="785" y="249.562044" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">PolynomialExpansion</text>
-  <text x="785" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Binarizer</text>
-  <text x="785" y="302.481752" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">ElementwiseProduct</text>
+  <rect x="940" y="40" width="300" height="260" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Vectors</text>
+  <text x="1090" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">VectorAssembler</text>
+  <text x="1090" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">VectorSlicer</text>
+  <text x="1090" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">PCA</text>
+  <text x="1090" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">ChiSqSelector</text>
+  <text x="1090" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Imputer</text>
+  <text x="1090" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">SQLTransformer</text>
 
-  <rect x="940" y="69.635036" width="300" height="254.014599" rx="6.172697" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="106.678832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--info-text)">Vectors</text>
-  <text x="1090" y="143.722628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">VectorAssembler</text>
-  <text x="1090" y="170.182482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">VectorSlicer</text>
-  <text x="1090" y="196.642336" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">VectorSizeHint</text>
-  <text x="1090" y="223.10219" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">PCA reduce dims</text>
-  <text x="1090" y="249.562044" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">ChiSqSelector</text>
-  <text x="1090" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Imputer fill NaN</text>
-  <text x="1090" y="302.481752" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">SQLTransformer</text>
+  <rect x="40" y="330" width="1200" height="90" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Transformer vs Estimator</text>
+  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Transformer: .transform(df). Estimator: .fit(df) returns a Model.</text>
 
-  <rect x="40" y="344.817518" width="1200" height="84.671533" rx="6.172697" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="381.861314" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--text)">Transformer Types</text>
-  <text x="640" y="413.613139" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Transformer: stateless, has .transform(df). Estimator: learns, has .fit(df) returning a Model.</text>
+  <rect x="40" y="450" width="390" height="170" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Pipeline</text>
+  <text x="235" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">chain stages in order</text>
+  <text x="235" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">fit once, transform many</text>
+  <text x="235" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">same pipeline train + serve</text>
 
-  <rect x="40" y="450.656934" width="380" height="169.343066" rx="6.172697" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="230" y="487.70073" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--primary-text)">Pipeline Stages</text>
-  <text x="230" y="519.452555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Chain transforms in order</text>
-  <text x="230" y="545.912409" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Raw columns, output columns</text>
-  <text x="230" y="572.372263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">fit() once, transform() many</text>
-  <text x="230" y="598.832117" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Same pipeline train and serve</text>
+  <rect x="445" y="450" width="390" height="170" rx="6" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Always Last</text>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">VectorAssembler combines</text>
+  <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">into single features column</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">label column stays separate</text>
 
-  <rect x="440" y="450.656934" width="380" height="169.343066" rx="6.172697" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="630" y="487.70073" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--ok-text)">Always Last</text>
-  <text x="630" y="519.452555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">VectorAssembler combines</text>
-  <text x="630" y="545.912409" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Into a single features col</text>
-  <text x="630" y="572.372263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">ML estimators expect it</text>
-  <text x="630" y="598.832117" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Label column stays separate</text>
-
-  <rect x="840" y="450.656934" width="400" height="169.343066" rx="6.172697" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1040" y="487.70073" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--info-text)">Caveats</text>
-  <text x="1040" y="519.452555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Fit scalers on training only</text>
-  <text x="1040" y="545.912409" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Handle unseen categories</text>
-  <text x="1040" y="572.372263" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Sparse vectors save memory</text>
-  <text x="1040" y="598.832117" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Leakage kills test accuracy</text>
+  <rect x="850" y="450" width="390" height="170" rx="6" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1045" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Caveats</text>
+  <text x="1045" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">fit on training only</text>
+  <text x="1045" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">handle unseen categories</text>
+  <text x="1045" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">sparse vectors save memory</text>
 </svg>

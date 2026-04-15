@@ -34,241 +34,117 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
   </defs>
-  <rect x="40" y="40" width="285.483871" height="499.109717" fill="var(--surface)" rx="6.300597" />
-  <rect x="40" y="40" width="285.483871" height="39.584613" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="65.816057" width="285.483871" height="13.768556" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="182.258065" y="65.816057" font-size="16.42618" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">N+1</text>
-  <text x="182.258065" y="98.516338" font-size="11.863393" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">One extra unit beyond minimum</text>
-  <rect x="73.870968" y="115.727007" width="38.709677" height="48.189894" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="93.225806" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S1</text>
-  <rect x="122.258065" y="115.727007" width="38.709677" height="48.189894" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="141.612903" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S2</text>
-  <rect x="170.645161" y="115.727007" width="38.709677" height="48.189894" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S3</text>
-  <rect x="228.709677" y="115.727007" width="38.709677" height="48.189894" fill="var(--text-faint)" rx="6.300597" />
-  <text x="248.064516" y="137.24037" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">spare</text>
-  <text x="248.064516" y="150.148345" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">+1</text>
-  <text x="73.870968" y="182.848626" font-size="11.40702" fill="var(--primary-accent)" font-family="Arial, sans-serif">Active (N=3)</text>
-  <text x="223.870968" y="182.848626" font-size="11.40702" fill="var(--text-muted)" font-family="Arial, sans-serif">Spare</text>
-  <text x="182.258065" y="207.804102" font-size="11.40702" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">▼ Failure scenario</text>
-  <rect x="73.870968" y="220.712183" width="38.709677" height="48.189894" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="93.225806" y="242.225546" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S1</text>
-  <text x="93.225806" y="255.133521" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="122.258065" y="220.712183" width="38.709677" height="48.189894" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="141.612903" y="248.249296" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S2</text>
-  <rect x="170.645161" y="220.712183" width="38.709677" height="48.189894" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="248.249296" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S3</text>
-  <rect x="228.709677" y="220.712183" width="38.709677" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="248.064516" y="242.225546" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">+1</text>
-  <text x="248.064516" y="255.133521" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">active</text>
-  <line x1="112.580645" y1="244.807077" x2="228.709677" y2="244.807077" stroke="var(--ok-border)" stroke-width="1.6" stroke-dasharray="4 2.4" marker-end="url(#arrow)" />
-  <text x="182.258065" y="289.554859" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Service continues, spare</text>
-  <text x="182.258065" y="303.323415" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">takes over automatically</text>
-  <rect x="59.354839" y="332.581584" width="232.258065" height="77.448063" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="175.483871" y="351.513309" font-size="11.863393" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Characteristics</text>
-  <text x="73.870968" y="368.723978" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Cost:      moderate (+1 unit)</text>
-  <text x="73.870968" y="384.213591" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Survives: 1 failure</text>
-  <text x="73.870968" y="399.703204" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Use:      most production systems</text>
-  <rect x="340" y="40" width="285.483871" height="499.109717" fill="var(--surface)" rx="6.300597" />
-  <rect x="340" y="40" width="285.483871" height="39.584613" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="340" y="65.816057" width="285.483871" height="13.768556" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="482.258065" y="65.816057" font-size="16.42618" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">N+2</text>
-  <text x="482.258065" y="98.516338" font-size="11.863393" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Two extra units — dual fault tolerance</text>
-  <rect x="364.193548" y="115.727007" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="382.580645" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S1</text>
-  <rect x="407.741935" y="115.727007" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="426.129032" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S2</text>
-  <rect x="451.290323" y="115.727007" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="469.677419" y="143.26412" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S3</text>
-  <rect x="499.677419" y="115.727007" width="36.774194" height="48.189894" fill="var(--text-faint)" rx="6.300597" />
-  <text x="518.064516" y="137.24037" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sp1</text>
-  <text x="518.064516" y="150.148345" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">+1</text>
-  <rect x="543.225806" y="115.727007" width="36.774194" height="48.189894" fill="var(--text-faint)" rx="6.300597" />
-  <text x="561.612903" y="137.24037" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sp2</text>
-  <text x="561.612903" y="150.148345" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">+2</text>
-  <text x="364.193548" y="182.848626" font-size="11.40702" fill="var(--ok-accent)" font-family="Arial, sans-serif">Active (N=3)</text>
-  <text x="496.774194" y="182.848626" font-size="11.40702" fill="var(--text-muted)" font-family="Arial, sans-serif">2 Spares</text>
-  <text x="482.258065" y="207.804102" font-size="11.40702" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">▼ Failure scenario</text>
-  <rect x="364.193548" y="220.712183" width="36.774194" height="48.189894" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="382.580645" y="248.249296" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="407.741935" y="220.712183" width="36.774194" height="48.189894" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="426.129032" y="248.249296" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="451.290323" y="220.712183" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="469.677419" y="248.249296" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S3</text>
-  <rect x="499.677419" y="220.712183" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="518.064516" y="242.225546" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sp1</text>
-  <text x="518.064516" y="255.133521" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">up</text>
-  <rect x="543.225806" y="220.712183" width="36.774194" height="48.189894" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="561.612903" y="242.225546" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sp2</text>
-  <text x="561.612903" y="255.133521" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">up</text>
-  <text x="482.258065" y="292.996971" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Survives 2 simultaneous failures</text>
-  <rect x="359.354839" y="332.581584" width="241.935484" height="77.448063" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480.322581" y="351.513309" font-size="11.863393" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Characteristics</text>
-  <text x="373.870968" y="368.723978" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Cost:      higher (+2 units)</text>
-  <text x="373.870968" y="384.213591" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Survives: 2 failures</text>
-  <text x="373.870968" y="399.703204" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Use:      critical infrastructure</text>
-  <rect x="640" y="40" width="285.483871" height="499.109717" fill="var(--surface)" rx="6.300597" />
-  <rect x="640" y="40" width="285.483871" height="39.584613" fill="var(--warn-accent)" rx="6.300597" />
-  <rect x="640" y="65.816057" width="285.483871" height="13.768556" fill="var(--warn-accent)" rx="6.300597"/>
-  <text x="782.258065" y="65.816057" font-size="16.42618" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">2N</text>
-  <text x="782.258065" y="98.516338" font-size="11.863393" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Full duplicate — active/standby</text>
-  <text x="678.709677" y="121.750757" font-size="11.40702" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Group A (active)</text>
-  <rect x="664.193548" y="127.774507" width="34.83871" height="43.026726" fill="var(--warn-accent)" rx="6.300597" />
-  <text x="681.612903" y="152.729983" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S1</text>
-  <rect x="704.83871" y="127.774507" width="34.83871" height="43.026726" fill="var(--warn-accent)" rx="6.300597" />
-  <text x="722.258065" y="152.729983" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S2</text>
-  <rect x="745.483871" y="127.774507" width="34.83871" height="43.026726" fill="var(--warn-accent)" rx="6.300597" />
-  <text x="762.903226" y="152.729983" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">S3</text>
-  <text x="794.83871" y="121.750757" font-size="11.40702" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Group B (standby)</text>
-  <rect x="794.83871" y="127.774507" width="34.83871" height="43.026726" fill="var(--text-faint)" rx="6.300597" />
-  <text x="812.258065" y="150.148345" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B1</text>
-  <rect x="835.483871" y="127.774507" width="34.83871" height="43.026726" fill="var(--text-faint)" rx="6.300597" />
-  <text x="852.903226" y="150.148345" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B2</text>
-  <rect x="876.129032" y="127.774507" width="34.83871" height="43.026726" fill="var(--text-faint)" rx="6.300597" />
-  <text x="893.548387" y="150.148345" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B3</text>
-  <text x="782.258065" y="194.896127" font-size="11.40702" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">▼ Group A fails entirely</text>
-  <rect x="664.193548" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="681.612903" y="229.317464" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="704.83871" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="722.258065" y="229.317464" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="745.483871" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="762.903226" y="229.317464" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="794.83871" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="812.258065" y="226.735933" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B1</text>
-  <rect x="835.483871" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="852.903226" y="226.735933" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B2</text>
-  <rect x="876.129032" y="205.222571" width="34.83871" height="43.026726" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="893.548387" y="226.735933" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B3</text>
-  <path d="M 751.290323 229.317464 Q 770.645161 255.133521 794.83871 226.735933" stroke="var(--ok-border)" stroke-width="1.6" fill="none" stroke-dasharray="4 2.4" marker-end="url(#arrow)" />
-  <text x="782.258065" y="268.041496" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Full standby takes over</text>
-  <text x="782.258065" y="281.810052" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">— no capacity loss</text>
-  <rect x="659.354839" y="315.370915" width="241.935484" height="94.658732" fill="url(#grad-warn)" rx="6.300597" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="780.322581" y="334.302641" font-size="11.863393" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Characteristics</text>
-  <text x="673.870968" y="351.513309" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Cost:      2x everything</text>
-  <text x="673.870968" y="367.002922" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Survives: full site failure</text>
-  <text x="673.870968" y="382.492535" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Use:      DR / high-value systems</text>
-  <text x="673.870968" y="397.982147" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Note:     standby may be idle</text>
-  <rect x="940" y="40" width="300" height="499.109717" fill="var(--surface)" rx="6.300597" />
-  <rect x="940" y="40" width="300" height="39.584613" fill="var(--info-accent)" rx="6.300597" />
-  <rect x="940" y="65.816057" width="300" height="13.768556" fill="var(--info-accent)" rx="6.300597"/>
-  <text x="1090" y="65.816057" font-size="16.42618" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">2N+1</text>
-  <text x="1090" y="98.516338" font-size="11.863393" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Dual redundancy + extra — max resilience</text>
-  <text x="964.193548" y="121.750757" font-size="11.40702" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">A (active)</text>
-  <rect x="964.193548" y="127.774507" width="32.903226" height="41.305669" fill="var(--info-accent)" rx="6.300597" />
-  <text x="980.645161" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">A1</text>
-  <rect x="1002.903226" y="127.774507" width="32.903226" height="41.305669" fill="var(--info-accent)" rx="6.300597" />
-  <text x="1019.354839" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">A2</text>
-  <rect x="1041.612903" y="127.774507" width="32.903226" height="41.305669" fill="var(--info-accent)" rx="6.300597" />
-  <text x="1058.064516" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">A3</text>
-  <text x="1090" y="121.750757" font-size="11.40702" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">B (standby)</text>
-  <rect x="1085.16129" y="127.774507" width="32.903226" height="41.305669" fill="var(--text-faint)" rx="6.300597" />
-  <text x="1101.612903" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B1</text>
-  <rect x="1123.870968" y="127.774507" width="32.903226" height="41.305669" fill="var(--text-faint)" rx="6.300597" />
-  <text x="1140.322581" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B2</text>
-  <rect x="1162.580645" y="127.774507" width="32.903226" height="41.305669" fill="var(--text-faint)" rx="6.300597" />
-  <text x="1179.032258" y="151.869401" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B3</text>
-  <rect x="1210.967742" y="127.774507" width="19.354839" height="41.305669" fill="url(#grad-warn)" rx="6.300597" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1220.645161" y="147.566814" font-size="11.40702" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">+1</text>
-  <text x="1220.645161" y="160.474789" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">xtr</text>
-  <text x="1090" y="190.593433" font-size="11.40702" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">▼ A fails + 1 standby fails</text>
-  <rect x="964.193548" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="980.645161" y="225.875352" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="1002.903226" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1019.354839" y="225.875352" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="1041.612903" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1058.064516" y="225.875352" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="1085.16129" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1101.612903" y="225.875352" font-size="11.40702" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">FAIL</text>
-  <rect x="1123.870968" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1140.322581" y="225.875352" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B2</text>
-  <rect x="1162.580645" y="201.780458" width="32.903226" height="41.305669" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1179.032258" y="225.875352" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">B3</text>
-  <rect x="1210.967742" y="201.780458" width="19.354839" height="41.305669" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1220.645161" y="225.875352" font-size="11.40702" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">+1</text>
-  <text x="1090" y="262.017746" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Still operational even after</text>
-  <text x="1090" y="275.786302" font-size="11.40702" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">N+1 compounded failures</text>
-  <rect x="959.354839" y="306.765528" width="261.290323" height="111.869401" fill="url(#grad-info)" rx="6.300597" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="325.697359" font-size="11.863393" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Characteristics</text>
-  <text x="973.870968" y="342.908028" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Cost:      2x + 1 extra unit</text>
-  <text x="973.870968" y="358.397641" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Survives: full group + 1 extra</text>
-  <text x="973.870968" y="373.887254" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">Use:      tier-1 data centers</text>
-  <text x="973.870968" y="389.376866" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">         financial systems</text>
-  <text x="973.870968" y="404.866479" font-size="11.40702" fill="var(--text)" font-family="Arial, sans-serif">         safety-critical systems</text>
-  <rect x="40" y="558.041549" width="1200" height="61.958451" fill="var(--surface)" rx="6.300597" />
-  <rect x="59.354839" y="573.531162" width="21.290323" height="15.489613" fill="url(#grad-primary)" rx="6.300597" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="88.387097" y="585.578555" font-size="11.863393" fill="var(--text)" font-family="Arial, sans-serif">Active</text>
-  <rect x="146.451613" y="573.531162" width="21.290323" height="15.489613" fill="var(--text-faint)" rx="6.300597" />
-  <text x="175.483871" y="585.578555" font-size="11.863393" fill="var(--text)" font-family="Arial, sans-serif">Standby</text>
-  <rect x="252.903226" y="573.531162" width="21.290323" height="15.489613" fill="url(#grad-ok)" rx="6.300597" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="281.935484" y="585.578555" font-size="11.863393" fill="var(--text)" font-family="Arial, sans-serif">Takes over</text>
-  <rect x="378.709677" y="573.531162" width="21.290323" height="15.489613" fill="url(#grad-danger)" rx="6.300597" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="407.741935" y="585.578555" font-size="11.863393" fill="var(--text)" font-family="Arial, sans-serif">Failed</text>
-  <rect x="465.806452" y="573.531162" width="21.290323" height="15.489613" fill="url(#grad-warn)" rx="6.300597" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="494.83871" y="585.578555" font-size="11.863393" fill="var(--text)" font-family="Arial, sans-serif">Extra spare</text>
-  <text x="756.129032" y="585.578555" font-size="11.863393" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">N+1 most common · 2N for DR · 2N+1 for maximum availability requirements</text>
-  <text x="756.129032" y="606.231444" font-size="11.40702" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">Higher redundancy = higher cost — match the pattern to your uptime SLA</text>
+
+  <!-- N+1 -->
+  <rect x="40" y="40" width="285" height="580" rx="8.448941672459" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="182" y="90.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--bg)">N+1</text>
+  <text x="182" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">One extra unit</text>
+
+  <rect x="70" y="162.692307692307" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="92" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-accent)">S1</text>
+  <rect x="125" y="162.692307692307" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="147" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-accent)">S2</text>
+  <rect x="180" y="162.692307692307" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="202" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-accent)">S3</text>
+  <rect x="240" y="162.692307692307" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="262" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">+1</text>
+
+  <text x="182" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">After S1 fails</text>
+
+  <rect x="70" y="296.538461538462" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="92" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.673412508689" fill="var(--bg)">FAIL</text>
+  <rect x="125" y="296.538461538462" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="147" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-accent)">S2</text>
+  <rect x="180" y="296.538461538462" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="202" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-accent)">S3</text>
+  <rect x="240" y="296.538461538462" width="45" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="262" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.673412508689" fill="var(--primary-accent)">ON</text>
+
+  <text x="182" y="396.923076923076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Spare takes over</text>
+  <text x="60" y="474.999999999999" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Cost: moderate</text>
+  <text x="60" y="514.038461538461" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Survives 1 failure</text>
+  <text x="60" y="553.076923076922" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Use: production</text>
+
+  <!-- N+2 -->
+  <rect x="340" y="40" width="285" height="580" rx="8.448941672459" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="482" y="90.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--bg)">N+2</text>
+  <text x="482" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Dual spare</text>
+
+  <rect x="365" y="162.692307692307" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="386" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-accent)">S1</text>
+  <rect x="415" y="162.692307692307" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="436" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-accent)">S2</text>
+  <rect x="465" y="162.692307692307" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="486" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-accent)">S3</text>
+  <rect x="515" y="162.692307692307" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="536" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">+1</text>
+  <rect x="565" y="162.692307692307" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="586" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">+2</text>
+
+  <text x="482" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Two failures</text>
+
+  <rect x="365" y="296.538461538462" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="386" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617294799631" fill="var(--bg)">X</text>
+  <rect x="415" y="296.538461538462" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="436" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617294799631" fill="var(--bg)">X</text>
+  <rect x="465" y="296.538461538462" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="486" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-accent)">S3</text>
+  <rect x="515" y="296.538461538462" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="536" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617294799631" fill="var(--ok-accent)">ON</text>
+  <rect x="565" y="296.538461538462" width="42" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="586" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.617294799631" fill="var(--ok-accent)">ON</text>
+
+  <text x="482" y="396.923076923076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Both spares up</text>
+  <text x="360" y="474.999999999999" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Cost: +2 units</text>
+  <text x="360" y="514.038461538461" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Survives 2 failures</text>
+  <text x="360" y="553.076923076922" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Use: critical infra</text>
+
+  <!-- 2N -->
+  <rect x="640" y="40" width="285" height="580" rx="8.448941672459" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="782" y="90.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--bg)">2N</text>
+  <text x="782" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Full duplicate</text>
+
+  <rect x="665" y="162.692307692307" width="120" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="725" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-accent)">Group A</text>
+  <rect x="795" y="162.692307692307" width="120" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="855" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Group B</text>
+
+  <text x="782" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">After A fails</text>
+
+  <rect x="665" y="296.538461538462" width="120" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="725" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">A down</text>
+  <rect x="795" y="296.538461538462" width="120" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="855" y="329.999999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-accent)">B active</text>
+
+  <text x="782" y="396.923076923076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">No capacity loss</text>
+  <text x="660" y="474.999999999999" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Cost: 2x</text>
+  <text x="660" y="514.038461538461" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Survives site fail</text>
+  <text x="660" y="553.076923076922" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Use: DR systems</text>
+
+  <!-- 2N+1 -->
+  <rect x="940" y="40" width="300" height="580" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="90.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.459060435492" font-weight="bold" fill="var(--bg)">2N+1</text>
+  <text x="1090" y="123.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Dual plus extra</text>
+
+  <rect x="965" y="162.692307692307" width="105" height="55.76923076923" rx="5.280588545287" fill="var(--bg)"/>
+  <text x="1017" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-accent)">A</text>
+  <rect x="1080" y="162.692307692307" width="105" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="1132" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">B</text>
+  <rect x="1195" y="162.692307692307" width="40" height="55.76923076923" rx="5.280588545287" fill="var(--text-faint)"/>
+  <text x="1215" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">+1</text>
+
+  <text x="1090" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">A plus 1 B fails</text>
+  <text x="1090" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Still running</text>
+
+  <text x="960" y="474.999999999999" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Cost: 2x + 1</text>
+  <text x="960" y="514.038461538461" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Max resilience</text>
+  <text x="960" y="553.076923076922" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--bg)">Use: tier-1 DC</text>
+
 </svg>

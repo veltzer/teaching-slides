@@ -34,107 +34,57 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.01851260961" font-weight="bold" fill="var(--text)">GraphX Performance Optimization</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="82.962962962963" width="590" height="257.777777777778" rx="10.363754503432" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="123.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80025990755" font-weight="bold" fill="var(--primary-text)">Partition Strategy</text>
+  <text x="70" y="168.888888888889" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--primary-text)">EdgePartition2D</text>
+  <text x="70" y="192.518518518519" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">Best for power-law graphs</text>
+  <text x="70" y="229.037037037037" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--primary-text)">RandomVertexCut</text>
+  <text x="70" y="252.666666666667" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">Balanced, higher replication</text>
+  <text x="70" y="289.185185185185" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--primary-text)">CanonicalRandomVertexCut</text>
+  <text x="70" y="312.814814814815" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">Co-locates both directions</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="650" y="82.962962962963" width="590" height="257.777777777778" rx="10.363754503432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="123.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80025990755" font-weight="bold" fill="var(--ok-text)">Cache / Persist</text>
+  <text x="680" y="168.888888888889" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--ok-text)">graph.cache()</text>
+  <text x="680" y="192.518518518519" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">Pin across Pregel supersteps</text>
+  <text x="680" y="229.037037037037" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--ok-text)">MEMORY_ONLY_SER</text>
+  <text x="680" y="252.666666666667" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">Shrinks big graphs</text>
+  <text x="680" y="289.185185185185" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--ok-text)">graph.unpersist()</text>
+  <text x="680" y="312.814814814815" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">Drop stale versions</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="40" y="362.222222222222" width="590" height="257.777777777778" rx="10.363754503432" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="403.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80025990755" font-weight="bold" fill="var(--info-text)">Pregel Convergence</text>
+  <text x="70" y="448.148148148148" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">activeDirection = Out</text>
+  <text x="70" y="471.777777777778" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">Skip idle vertex edges</text>
+  <text x="70" y="508.296296296296" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">Halt on empty messages</text>
+  <text x="70" y="531.925925925926" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">Vote to stop supersteps</text>
+  <text x="70" y="568.444444444444" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">Tolerance threshold</text>
+  <text x="70" y="592.074074074074" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">Skip small deltas</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="590" height="279.642857" rx="8.141604" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--primary-text)">Partition Strategy</text>
-  <text x="335" y="103.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">graph.partitionBy(PartitionStrategy.X)</text>
-  <text x="70" y="138.392857" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--primary-text)">EdgePartition2D</text>
-  <text x="70" y="161.178571" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">√P replication bound, best for power-law</text>
-  <text x="70" y="190.178571" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--primary-text)">RandomVertexCut</text>
-  <text x="70" y="212.964286" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">hashes (src,dst) — balanced, more replication</text>
-  <text x="70" y="241.964286" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--primary-text)">CanonicalRandomVertexCut</text>
-  <text x="70" y="264.75" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">co-locates both edge directions</text>
-  <text x="335" y="302.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--primary-text)">pick by graph skew — 2D wins for most web/social</text>
-
-  <rect x="650" y="40" width="590" height="279.642857" rx="8.141604" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="74.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--ok-text)">Cache / Persist</text>
-  <text x="945" y="103.178571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">iterative algorithms reuse vertex + edge RDDs</text>
-  <text x="680" y="138.392857" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">graph.cache()</text>
-  <text x="680" y="161.178571" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">pin graph across Pregel supersteps</text>
-  <text x="680" y="190.178571" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">MEMORY_ONLY_SER</text>
-  <text x="680" y="212.964286" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">shrinks big graphs; trades CPU for RAM</text>
-  <text x="680" y="241.964286" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">graph.unpersist()</text>
-  <text x="680" y="264.75" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">drop stale versions after each iteration</text>
-  <text x="945" y="302.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--ok-text)">checkpoint every N iters to cap lineage</text>
-
-  <rect x="40" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--info-text)">Pregel Convergence</text>
-  <text x="335" y="403.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">stop supersteps before maxIter when possible</text>
-  <text x="70" y="438.75" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--info-text)">activeDirection = EdgeDirection.Out</text>
-  <text x="70" y="461.535714" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">skip edges from idle vertices</text>
-  <text x="70" y="490.535714" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--info-text)">halt on empty message set</text>
-  <text x="70" y="513.321429" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">mergeMsg produces no output → vote to halt</text>
-  <text x="70" y="542.321429" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--info-text)">tolerance threshold</text>
-  <text x="70" y="565.107143" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">PageRank Δ &lt; ε → skip update/send</text>
-  <text x="335" y="602.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--info-text)">maxIterations is a safety cap, not the goal</text>
-
-  <rect x="650" y="340.357143" width="590" height="279.642857" rx="8.141604" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="374.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.336309" font-weight="bold" fill="var(--warn-text)">VertexRDD Indexing</text>
-  <text x="945" y="403.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">specialized RDD — hash index per partition</text>
-  <text x="680" y="438.75" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--warn-text)">O(1) lookup by VertexId</text>
-  <text x="680" y="461.535714" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">no full shuffle for joinVertices</text>
-  <text x="680" y="490.535714" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--warn-text)">index reuse across derived VertexRDDs</text>
-  <text x="680" y="513.321429" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">mapValues, filter preserve the index</text>
-  <text x="680" y="542.321429" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--warn-text)">use leftZipJoin / innerZipJoin</text>
-  <text x="680" y="565.107143" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">same partitioner → no shuffle</text>
-  <text x="945" y="602.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--warn-text)">avoid rebuilding graphs — reuse!</text>
+  <rect x="650" y="362.222222222222" width="590" height="257.777777777778" rx="10.363754503432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="403.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80025990755" font-weight="bold" fill="var(--warn-text)">VertexRDD Indexing</text>
+  <text x="680" y="448.148148148148" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">O(1) lookup</text>
+  <text x="680" y="471.777777777778" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">No shuffle on joinVertices</text>
+  <text x="680" y="508.296296296296" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">Index reuse</text>
+  <text x="680" y="531.925925925926" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">mapValues preserves index</text>
+  <text x="680" y="568.444444444444" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">leftZipJoin / innerZipJoin</text>
+  <text x="680" y="592.074074074074" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Same partitioner, no shuffle</text>
 </svg>

@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,68 +82,58 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="394.098361" y="245.230687" width="491.803174" height="124.922993" rx="6.468237" fill="var(--text-muted)" />
-  <text x="640" y="276.461519" font-size="16.863232" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Kernel IPC Namespace</text>
-  <text x="640" y="296.984621" font-size="12.179043" fill="var(--border)" text-anchor="middle" font-family="Arial, sans-serif">Global IPC object table — indexed by integer key</text>
-  <text x="640" y="316.615366" font-size="12.179043" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">key_t key = ftok("/tmp/app", 42);</text>
-  <text x="640" y="336.246111" font-size="11.242226" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">ftok(pathname, proj_id) → deterministic key shared between processes</text>
-  <text x="640" y="354.092364" font-size="11.242226" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">ipcs -a  shows all IPC objects on the system</text>
-  <rect x="40" y="263.07694" width="177.04918" height="89.23082" rx="6.468237" fill="var(--text-muted)" />
-  <text x="128.52459" y="295.200018" font-size="14.052675" font-weight="bold" fill="var(--surface)" text-anchor="middle" font-family="Arial, sans-serif">Process A</text>
-  <text x="128.52459" y="314.830652" font-size="11.242226" fill="var(--border)" text-anchor="middle" font-family="Arial, sans-serif">sender / writer</text>
-  <text x="128.52459" y="330.892191" font-size="10.780394" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">ftok() → key</text>
-  <line x1="217.04918" y1="307.69224" x2="392.131148" y2="307.69224" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="1062.95082" y="263.07694" width="177.04918" height="89.23082" rx="6.468237" fill="var(--text-muted)" />
-  <text x="1151.47541" y="295.200018" font-size="14.052675" font-weight="bold" fill="var(--surface)" text-anchor="middle" font-family="Arial, sans-serif">Process B</text>
-  <text x="1151.47541" y="314.830652" font-size="11.242226" fill="var(--border)" text-anchor="middle" font-family="Arial, sans-serif">receiver / reader</text>
-  <text x="1151.47541" y="330.892191" font-size="10.780394" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">ftok() → same key</text>
-  <line x1="887.868852" y1="307.69224" x2="1060.983502" y2="307.69224" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="89.180328" y="432.615344" width="324.590164" height="187.384656" rx="6.468237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="89.180328" y="432.615344" width="324.590164" height="33.907681" rx="6.468237" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="89.180328" y="455.815406" width="324.590164" height="10.707729" fill="url(#grad-primary)" rx="6.468237" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="251.47541" y="455.815406" font-size="14.989491" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Message Queues</text>
-  <text x="108.852459" y="484.369166" font-size="12.179043" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Create/access:</text>
-  <text x="108.852459" y="500.430705" font-size="11.242226" fill="var(--text)" font-family="Courier New, monospace">msgget(key, IPC_CREAT|0666)</text>
-  <text x="108.852459" y="518.276847" font-size="12.179043" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Send / Receive:</text>
-  <text x="108.852459" y="534.338386" font-size="11.242226" fill="var(--text-muted)" font-family="Courier New, monospace">msgsnd(id, &amp;msg, size, 0)</text>
-  <text x="108.852459" y="550.399925" font-size="11.242226" fill="var(--text-muted)" font-family="Courier New, monospace">msgrcv(id, &amp;msg, size, type, 0)</text>
-  <text x="108.852459" y="570.03078" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">Typed messages — select by mtype</text>
-  <text x="108.852459" y="586.092319" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">Persistent until deleted or reboot</text>
-  <text x="108.852459" y="602.153858" font-size="11.242226" fill="var(--danger-accent)" font-family="Arial, sans-serif">msgctl(id, IPC_RMID, NULL)  — delete</text>
-  <line x1="251.47541" y1="432.615344" x2="492.459016" y2="368.369189" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <rect x="477.704918" y="432.615344" width="324.590164" height="187.384656" rx="6.468237" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="477.704918" y="432.615344" width="324.590164" height="33.907681" rx="6.468237" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="477.704918" y="455.815406" width="324.590164" height="10.707729" fill="url(#grad-info)" rx="6.468237" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="455.815406" font-size="14.989491" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Semaphore Sets</text>
-  <text x="497.377049" y="484.369166" font-size="12.179043" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Create/access:</text>
-  <text x="497.377049" y="500.430705" font-size="11.242226" fill="var(--text)" font-family="Courier New, monospace">semget(key, nsems, IPC_CREAT|0666)</text>
-  <text x="497.377049" y="518.276847" font-size="12.179043" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">P (wait) / V (signal):</text>
-  <text x="497.377049" y="534.338386" font-size="11.242226" fill="var(--text-muted)" font-family="Courier New, monospace">semop(id, &amp;sops, nsops)</text>
-  <text x="497.377049" y="552.184639" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">sem_op = -1  → decrement (lock)</text>
-  <text x="497.377049" y="568.246177" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">sem_op = +1  → increment (unlock)</text>
-  <text x="497.377049" y="586.092319" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">Atomic across all sems in set</text>
-  <text x="497.377049" y="602.153858" font-size="11.242226" fill="var(--danger-accent)" font-family="Arial, sans-serif">semctl(id, 0, IPC_RMID)  — delete</text>
-  <line x1="640" y1="432.615344" x2="640" y2="370.153902" stroke="var(--info-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <rect x="866.229403" y="432.615344" width="324.590164" height="187.384656" rx="6.468237" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="866.229403" y="432.615344" width="324.590164" height="33.907681" rx="6.468237" fill="var(--ok-accent)" />
-  <rect x="866.229403" y="455.815406" width="324.590164" height="10.707729" fill="var(--ok-accent)" rx="6.468237"/>
-  <text x="1028.52459" y="455.815406" font-size="14.989491" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Shared Memory</text>
-  <text x="885.901639" y="484.369166" font-size="12.179043" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Create/access:</text>
-  <text x="885.901639" y="500.430705" font-size="11.242226" fill="var(--text)" font-family="Courier New, monospace">shmget(key, size, IPC_CREAT|0666)</text>
-  <text x="885.901639" y="518.276847" font-size="12.179043" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Attach / Detach:</text>
-  <text x="885.901639" y="534.338386" font-size="11.242226" fill="var(--text-muted)" font-family="Courier New, monospace">shmat(id, NULL, 0)  → ptr</text>
-  <text x="885.901639" y="550.399925" font-size="11.242226" fill="var(--text-muted)" font-family="Courier New, monospace">shmdt(ptr)</text>
-  <text x="885.901639" y="568.246177" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">Fastest IPC — zero-copy data sharing</text>
-  <text x="885.901639" y="584.307716" font-size="11.242226" fill="var(--text-muted)" font-family="Arial, sans-serif">Combine with semaphores for safety</text>
-  <text x="885.901639" y="602.153858" font-size="11.242226" fill="var(--danger-accent)" font-family="Arial, sans-serif">shmctl(id, IPC_RMID, NULL)  — delete</text>
-  <line x1="1028.52459" y1="432.615344" x2="787.540984" y2="370.153902" stroke="var(--ok-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <rect x="40" y="40" width="1199.999895" height="51.753933" rx="6.468237" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="59.630745" font-size="14.052675" font-weight="bold" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">System V IPC — Three Mechanisms, One Namespace</text>
-  <text x="640" y="79.26149" font-size="11.242226" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">All objects are kernel-managed and persist until deleted with IPC_RMID or system reboot  •  Identify objects with ipcs -a  •  Remove with ipcrm</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--text)">System V IPC Architecture</text>
+
+  <!-- Kernel namespace -->
+  <rect x="390" y="87.454545454545" width="500" height="137.090909090909" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">Kernel IPC Namespace</text>
+  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Global object table, integer key</text>
+  <text x="640" y="182.363636363636" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--info-text)">key = ftok("/tmp/app", 42)</text>
+  <text x="640" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--info-text)">ipcs -a lists objects</text>
+
+  <!-- Processes -->
+  <rect x="40" y="119.090909090909" width="170" height="73.818181818182" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="125" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Process A</text>
+  <text x="125" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">writer</text>
+
+  <rect x="1070" y="119.090909090909" width="170" height="73.818181818182" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1155" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Process B</text>
+  <text x="1155" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">reader</text>
+
+  <line x1="210" y1="156" x2="388" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="890" y1="156" x2="1068" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Message Queues -->
+  <rect x="60" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">Message Queues</text>
+  <text x="80" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgget(key, IPC_CREAT|0666)</text>
+  <text x="80" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgsnd(id, &amp;msg, size, 0)</text>
+  <text x="80" y="414.363636363636" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgrcv(id, &amp;msg, size, type, 0)</text>
+  <text x="80" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Typed messages</text>
+  <text x="80" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Persistent</text>
+  <text x="80" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgctl(id, IPC_RMID, NULL)</text>
+
+  <!-- Semaphores -->
+  <rect x="455" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">Semaphore Sets</text>
+  <text x="475" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semget(key, nsems, 0666)</text>
+  <text x="475" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semop(id, &amp;sops, nsops)</text>
+  <text x="475" y="424.909090909091" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">op = -1 &#8594; wait</text>
+  <text x="475" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">op = +1 &#8594; signal</text>
+  <text x="475" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Atomic in set</text>
+  <text x="475" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semctl(id, 0, IPC_RMID)</text>
+
+  <!-- Shared Memory -->
+  <rect x="850" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">Shared Memory</text>
+  <text x="870" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmget(key, size, 0666)</text>
+  <text x="870" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">ptr = shmat(id, NULL, 0)</text>
+  <text x="870" y="414.363636363636" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmdt(ptr)</text>
+  <text x="870" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Zero-copy, fastest</text>
+  <text x="870" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Combine with sems</text>
+  <text x="870" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmctl(id, IPC_RMID, NULL)</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Kernel-managed; persist until IPC_RMID or reboot</text>
 </svg>

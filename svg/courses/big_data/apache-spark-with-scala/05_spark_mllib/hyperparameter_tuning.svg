@@ -1,157 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753497810938" font-weight="bold" fill="var(--text)">Hyperparameter Tuning</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="280" height="210.909090909091" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">ParamGridBuilder</text>
+  <text x="180" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Define search space</text>
+  <text x="180" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">regParam, maxIter</text>
+  <text x="180" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Cross product grid</text>
+  <text x="180" y="256.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">.build() -&gt; ParamMap[]</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <line x1="320" y1="177.090909090909" x2="360" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="370" y="71.636363636364" width="280" height="210.909090909091" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">CrossValidator</text>
+  <text x="510" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Estimator + Evaluator</text>
+  <text x="510" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">K-fold splits</text>
+  <text x="510" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Fit each ParamMap</text>
+  <text x="510" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Average per fold</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="650" y1="177.090909090909" x2="690" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="700" y="71.636363636364" width="280" height="210.909090909091" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Select Best</text>
+  <text x="840" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Compare scores</text>
+  <text x="840" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Pick top params</text>
+  <text x="840" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Refit full data</text>
+  <text x="840" y="256.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--warn-text)">bestModel</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <line x1="980" y1="177.090909090909" x2="1020" y2="177.090909090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.9958" font-weight="bold" fill="var(--text)">Hyperparameter Tuning</text>
+  <rect x="1030" y="71.636363636364" width="210" height="210.909090909091" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1135" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--info-text)">Deploy</text>
+  <text x="1135" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Test evaluation</text>
+  <text x="1135" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Save model</text>
+  <text x="1135" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Ship to prod</text>
+  <text x="1135" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--info-text)">Log params</text>
 
-  <rect x="40" y="70.185874" width="280" height="215.613383" rx="6.2298" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="107.918216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7277" font-weight="bold" fill="var(--primary-text)">ParamGridBuilder</text>
-  <text x="180" y="145.650558" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--primary-text)">Define search space</text>
-  <text x="180" y="172.60223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--primary-text)">regParam values</text>
-  <text x="180" y="199.553903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--primary-text)">maxIter values</text>
-  <text x="180" y="226.505576" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--primary-text)">Grid cross product</text>
-  <text x="180" y="258.847584" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4979" fill="var(--primary-text)">.build() returns Array[ParamMap]</text>
+  <rect x="40" y="314.181818181818" width="595" height="305.818181818182" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="337" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--text)">CV vs TrainValidationSplit</text>
+  <text x="337" y="398.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">CV: K-fold, accurate, Kx cost</text>
+  <text x="337" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">TVS: single split, fast, noisier</text>
+  <text x="337" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">TVS for big data</text>
+  <text x="337" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">Set seed for reproducibility</text>
+  <text x="337" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">parallelism fits concurrently</text>
+  <text x="337" y="588.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--text-muted)">Both wrap Pipelines</text>
 
-  <line x1="320" y1="177.992565" x2="360" y2="177.992565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="370" y="70.185874" width="280" height="215.613383" rx="6.2298" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="510" y="107.918216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7277" font-weight="bold" fill="var(--ok-text)">CrossValidator</text>
-  <text x="510" y="145.650558" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--ok-text)">Estimator: pipeline</text>
-  <text x="510" y="172.60223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--ok-text)">Evaluator: metric</text>
-  <text x="510" y="199.553903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--ok-text)">NumFolds: K splits</text>
-  <text x="510" y="226.505576" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--ok-text)">Fit every ParamMap</text>
-  <text x="510" y="258.847584" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4979" fill="var(--ok-text)">Average metric per fold</text>
-
-  <line x1="650" y1="177.992565" x2="690" y2="177.992565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="700" y="70.185874" width="280" height="215.613383" rx="6.2298" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="840" y="107.918216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7277" font-weight="bold" fill="var(--warn-text)">Select Best</text>
-  <text x="840" y="145.650558" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--warn-text)">Compare avg scores</text>
-  <text x="840" y="172.60223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--warn-text)">Pick top ParamMap</text>
-  <text x="840" y="199.553903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--warn-text)">Refit on full data</text>
-  <text x="840" y="226.505576" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--warn-text)">bestModel returned</text>
-  <text x="840" y="258.847584" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4979" fill="var(--warn-text)">avgMetrics exposed</text>
-
-  <line x1="980" y1="177.992565" x2="1020" y2="177.992565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="1030" y="70.185874" width="210" height="215.613383" rx="6.2298" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1135" y="107.918216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7277" font-weight="bold" fill="var(--info-text)">Deploy</text>
-  <text x="1135" y="145.650558" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--info-text)">Evaluate on test</text>
-  <text x="1135" y="172.60223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--info-text)">Save bestModel</text>
-  <text x="1135" y="199.553903" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--info-text)">Ship to production</text>
-  <text x="1135" y="231.895911" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--info-text)">Log params used</text>
-
-  <rect x="40" y="307.360595" width="595" height="312.639405" rx="6.2298" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="337" y="345.092937" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6894" font-weight="bold" fill="var(--text)">CrossValidator vs TrainValidationSplit</text>
-  <text x="337" y="382.825279" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">CrossValidator: K-fold, more accurate, K times cost.</text>
-  <text x="337" y="413.011152" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">TrainValidationSplit: single split, faster, noisier score.</text>
-  <text x="337" y="452.899628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">Use TVS for big data, CV for small or critical models.</text>
-  <text x="337" y="488.475836" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">Set seed for reproducible splits.</text>
-  <text x="337" y="522.973978" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">parallelism parameter fits maps concurrently.</text>
-  <text x="337" y="560.70632" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">Both wrap any Estimator, including full Pipelines.</text>
-  <text x="337" y="596.282528" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5362" fill="var(--text-muted)">Returned model behaves like its inner Estimator.</text>
-
-  <rect x="645" y="307.360595" width="595" height="312.639405" rx="6.2298" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="670" y="345.092937" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">val paramGrid = new ParamGridBuilder()</text>
-  <text x="670" y="372.04461" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .addGrid(lr.regParam, Array(0.1, 0.01))</text>
-  <text x="670" y="398.996283" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .addGrid(lr.maxIter, Array(10, 20))</text>
-  <text x="670" y="425.947955" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .build()</text>
-  <text x="670" y="463.680297" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">val cv = new CrossValidator()</text>
-  <text x="670" y="490.63197" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .setEstimator(pipeline)</text>
-  <text x="670" y="517.583643" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .setEvaluator(evaluator)</text>
-  <text x="670" y="544.535316" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .setEstimatorParamMaps(paramGrid)</text>
-  <text x="670" y="571.486989" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">  .setNumFolds(3)</text>
-  <text x="670" y="609.219331" font-size="14.5362" fill="var(--primary-text)" font-family="Courier New, monospace">val cvModel = cv.fit(training)</text>
+  <rect x="645" y="314.181818181818" width="595" height="305.818181818182" rx="8.21528508884" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="670" y="356.363636363636" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">val grid = new ParamGridBuilder()</text>
+  <text x="670" y="388" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .addGrid(lr.regParam, Array(0.1))</text>
+  <text x="670" y="419.636363636364" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .addGrid(lr.maxIter, Array(10,20))</text>
+  <text x="670" y="451.272727272727" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .build()</text>
+  <text x="670" y="493.454545454545" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">val cv = new CrossValidator()</text>
+  <text x="670" y="525.090909090909" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .setEstimator(pipeline)</text>
+  <text x="670" y="556.727272727273" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .setEvaluator(evaluator)</text>
+  <text x="670" y="588.363636363636" font-size="15.403659541574" fill="var(--primary-text)" font-family="Courier New, monospace">  .setNumFolds(3)</text>
 </svg>

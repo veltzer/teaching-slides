@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,114 +34,62 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579135622711" font-weight="bold" fill="var(--primary-accent)">Spark Executor Configuration</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <!-- Four knob cards -->
+  <rect x="40" y="76.576576576577" width="290" height="271.711711711712" rx="10.222744470273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="118.378378378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.423214493519" font-weight="bold" fill="var(--primary-text)">executor.cores</text>
+  <text x="185" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Tasks per JVM</text>
+  <text x="185" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Sweet spot: 4-5</text>
+  <text x="185" y="222.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">More: HDFS contention</text>
+  <text x="185" y="254.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-text)">Fewer: wasted JVM</text>
+  <text x="185" y="296.036036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">reserve 1 core for OS</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="76.576576576577" width="290" height="271.711711711712" rx="10.222744470273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="118.378378378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.423214493519" font-weight="bold" fill="var(--ok-text)">executor.memory</text>
+  <text x="485" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">JVM heap size</text>
+  <text x="485" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Typical: 8-32 GB</text>
+  <text x="485" y="222.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">Avoid &gt;64 GB</text>
+  <text x="485" y="254.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--ok-text)">+10% overhead</text>
+  <text x="485" y="296.036036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">split across tasks</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="76.576576576577" width="290" height="271.711711711712" rx="10.222744470273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="118.378378378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.423214493519" font-weight="bold" fill="var(--warn-text)">num.executors</text>
+  <text x="785" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">How many JVMs</text>
+  <text x="785" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Sum: cluster use</text>
+  <text x="785" y="222.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Fat: GC stalls</text>
+  <text x="785" y="254.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--warn-text)">Thin: overhead</text>
+  <text x="785" y="296.036036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">driver takes one slot</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="76.576576576577" width="300" height="271.711711711712" rx="10.222744470273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="118.378378378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.423214493519" font-weight="bold" fill="var(--info-text)">Dynamic Allocation</text>
+  <text x="1090" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Runtime scaling</text>
+  <text x="1090" y="191.531531531532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Add on backlog</text>
+  <text x="1090" y="222.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Remove idle</text>
+  <text x="1090" y="254.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--info-text)">Needs shuffle svc</text>
+  <text x="1090" y="296.036036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--info-text)">set min/max/initial</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
-
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Executor Configuration</text>
-
-  <rect x="40" y="72.222222" width="290" height="279.259259" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">executor.cores</text>
-  <text x="185" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Tasks per executor JVM</text>
-  <text x="185" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Sweet spot: 4-5 cores</text>
-  <text x="185" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">More: HDFS thread contention</text>
-  <text x="185" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Fewer: wasted overhead</text>
-  <text x="185" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Leave 1 core per node for OS</text>
-  <text x="185" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">total tasks = executors x cores</text>
-  <text x="185" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">drives parallelism</text>
-
-  <rect x="340" y="72.222222" width="290" height="279.259259" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">executor.memory</text>
-  <text x="485" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">JVM heap per executor</text>
-  <text x="485" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Typical 8-32 GB</text>
-  <text x="485" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Avoid &gt;64 GB (GC pain)</text>
-  <text x="485" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">memoryOverhead adds ~10%</text>
-  <text x="485" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">for JVM non-heap + Python</text>
-  <text x="485" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">split among concurrent tasks</text>
-  <text x="485" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">task mem ≈ total / cores</text>
-
-  <rect x="640" y="72.222222" width="290" height="279.259259" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">num.executors</text>
-  <text x="785" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">How many JVMs to launch</text>
-  <text x="785" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Sum = cluster allocation</text>
-  <text x="785" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Balance vs per-JVM size</text>
-  <text x="785" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Too few big = slow GC</text>
-  <text x="785" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Too many small = overhead</text>
-  <text x="785" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">driver counts as 1 slot</text>
-  <text x="785" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">reserve cores for AM</text>
-
-  <rect x="940" y="72.222222" width="300" height="279.259259" rx="6.218253" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--info-text)">Dynamic Allocation</text>
-  <text x="1090" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Scale executors at runtime</text>
-  <text x="1090" y="175.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Add when backlog grows</text>
-  <text x="1090" y="201.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Remove idle executors</text>
-  <text x="1090" y="237.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Requires shuffle service</text>
-  <text x="1090" y="265.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Set min / max / initial</text>
-  <text x="1090" y="302.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">great for shared clusters</text>
-  <text x="1090" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">and variable workloads</text>
-
-  <rect x="40" y="383.703704" width="1200" height="236.296296" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="424.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Worked Example: 6 nodes x 16 cores x 64 GB</text>
-  <text x="640" y="461.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Reserve 1 core + 1 GB per node for OS: usable 15 cores, 63 GB per node.</text>
-  <text x="640" y="493.259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Pick 5 cores per executor: 3 executors per node, 18 total (minus 1 for driver = 17).</text>
-  <text x="640" y="525.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Memory per executor: 63 / 3 = 21 GB. Subtract 10% overhead = executor.memory ≈ 19 GB.</text>
-  <text x="640" y="557.703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Total parallelism: 17 x 5 = 85 concurrent tasks — set shuffle.partitions ≈ 170-340.</text>
-  <text x="640" y="596.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-faint)">Rule: fat-enough JVMs for efficient joins, thin enough to avoid GC stalls.</text>
+  <!-- Worked example -->
+  <rect x="40" y="379.63963963964" width="1200" height="240.36036036036" rx="10.222744470273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="419.351351351351" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--text)">Example: 6 x 16c x 64 GB</text>
+  <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">Reserve 1c + 1 GB per node</text>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">5 cores, 3 execs/node, 17 total</text>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">Memory: 19 GB each</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">Parallelism: 85 tasks</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-faint)">fat enough, thin enough</text>
 </svg>

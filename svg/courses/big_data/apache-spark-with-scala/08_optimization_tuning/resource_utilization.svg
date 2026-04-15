@@ -33,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -91,52 +81,45 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Resource Utilization</text>
+  <rect x="40" y="40" width="290" height="270" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">CPU</text>
+  <text x="185" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">target 70-85%</text>
+  <text x="185" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">low: skew or I/O</text>
+  <text x="185" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">high: healthy or GC</text>
+  <text x="185" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">4-5 cores per executor</text>
+  <text x="185" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">check stage timeline</text>
 
-  <rect x="40" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">CPU</text>
-  <text x="185" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Target 70-85% utilization</text>
-  <text x="185" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Low: skew or I/O wait</text>
-  <text x="185" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">High: healthy or GC storm</text>
-  <text x="185" y="241.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Cores per executor: 4-5</text>
-  <text x="185" y="269.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">avoid HDFS thread contention</text>
-  <text x="185" y="306.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--primary-text)">check Spark UI stage timeline</text>
+  <rect x="340" y="40" width="290" height="270" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Memory</text>
+  <text x="485" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">unified storage + exec</text>
+  <text x="485" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">memory.fraction=0.6</text>
+  <text x="485" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">off-heap Tungsten</text>
+  <text x="485" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">watch spill events</text>
+  <text x="485" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--ok-text)">OOM: raise or repartition</text>
 
-  <rect x="340" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Memory</text>
-  <text x="485" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Unified: storage + exec</text>
-  <text x="485" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">spark.memory.fraction=0.6</text>
-  <text x="485" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Off-heap via Tungsten</text>
-  <text x="485" y="241.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Watch spill-to-disk events</text>
-  <text x="485" y="269.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">OOM: raise executor mem</text>
-  <text x="485" y="306.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--ok-text)">or repartition to shrink tasks</text>
+  <rect x="640" y="40" width="290" height="270" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Disk I/O</text>
+  <text x="785" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">shuffle writes local</text>
+  <text x="785" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">spill hurts throughput</text>
+  <text x="785" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">spark.local.dir on SSD</text>
+  <text x="785" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">compress (lz4)</text>
+  <text x="785" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--warn-text)">external shuffle service</text>
 
-  <rect x="640" y="72.222222" width="290" height="268.518519" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Disk I/O</text>
-  <text x="785" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Shuffle writes local SSD</text>
-  <text x="785" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Spill files hurt throughput</text>
-  <text x="785" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">spark.local.dir on fast disk</text>
-  <text x="785" y="241.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Compress shuffles (lz4)</text>
-  <text x="785" y="269.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">External shuffle service</text>
-  <text x="785" y="306.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--warn-text)">survives executor loss</text>
+  <rect x="940" y="40" width="300" height="270" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Network</text>
+  <text x="1090" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">shuffle + broadcast</text>
+  <text x="1090" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">co-locate with data</text>
+  <text x="1090" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">prefer broadcast joins</text>
+  <text x="1090" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">rack-aware scheduling</text>
+  <text x="1090" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">push-based shuffle</text>
 
-  <rect x="940" y="72.222222" width="300" height="268.518519" rx="6.218253" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--info-text)">Network</text>
-  <text x="1090" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Shuffle and broadcast</text>
-  <text x="1090" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Co-locate with data (HDFS)</text>
-  <text x="1090" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Prefer broadcast joins</text>
-  <text x="1090" y="241.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Rack-aware scheduling</text>
-  <text x="1090" y="269.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Push-based shuffle (3.2+)</text>
-  <text x="1090" y="306.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--info-text)">reduces cross-rack traffic</text>
-
-  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="413.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--text)">Observability Signals</text>
-  <text x="640" y="450.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Spark UI: task duration distribution, GC time, input / shuffle sizes, spilled bytes.</text>
-  <text x="640" y="482.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Stage view reveals skew: if one task is 10x slower, partition by a better key.</text>
-  <text x="640" y="514.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Executor tab shows memory, GC, and task counts per node — catches stragglers.</text>
-  <text x="640" y="549.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Metrics sinks (Prometheus, Graphite) track long-running pipelines over time.</text>
-  <text x="640" y="587.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-faint)">Rule: measure before tuning — idle cores and spill are the two most common wastes.</text>
+  <rect x="40" y="340" width="1200" height="280" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Observability Signals</text>
+  <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Spark UI: task duration, GC time, shuffle sizes</text>
+  <text x="640" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">stage view reveals skew</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">executor tab per node</text>
+  <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Prometheus or Graphite sinks</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-style="italic" fill="var(--text-faint)">measure before tuning</text>
 </svg>

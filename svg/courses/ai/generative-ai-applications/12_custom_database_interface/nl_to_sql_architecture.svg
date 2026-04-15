@@ -1,197 +1,114 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
   </defs>
-  <rect x="40" y="59.01638" width="157.377063" height="95.082018" rx="6.676943" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="118.688531" y="95.147632" font-size="13.538948" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">User</text>
-  <text x="118.688531" y="116.06552" font-size="13.538948" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Question</text>
-  <text x="118.688531" y="136.983644" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(natural language)</text>
-  <line x1="197.377063" y1="106.557507" x2="266.229528" y2="106.557507" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="231.803295" y="97.049258" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">NL query</text>
-  <rect x="266.229528" y="40" width="196.721329" height="142.622908" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="266.229528" y="40" width="196.721329" height="32.327881" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="266.229528" y="60.918124" width="196.721329" height="11.409875" fill="url(#grad-info)" rx="6.676943" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="364.590192" y="60.918124" font-size="13.538948" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">LLM + Schema</text>
-  <text x="364.590192" y="92.295133" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">GPT-4o / Claude</text>
-  <text x="364.590192" y="109.409887" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">receives table names,</text>
-  <text x="364.590192" y="124.622896" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">columns, sample rows</text>
-  <text x="364.590192" y="141.73765" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">generates SQL query</text>
-  <text x="364.590192" y="158.852404" font-size="11.128238" fill="var(--info-accent)" text-anchor="middle" font-style="italic" font-family="Arial, sans-serif">NL → SQL translation</text>
-  <rect x="295.737727" y="258.688546" width="137.70493" height="76.06552" rx="6.676943" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="364.590192" y="283.409922" font-size="11.604972" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">DB Schema</text>
-  <text x="364.590192" y="300.524676" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">tables, columns</text>
-  <text x="364.590192" y="315.737686" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">types, samples</text>
-  <line x1="364.590192" y1="258.688546" x2="364.590192" y2="182.623026" stroke="var(--warn-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="379.344292" y="225.409911" font-size="11.128238" fill="var(--warn-accent)" font-family="Arial, sans-serif">injects</text>
-  <line x1="462.950857" y1="111.311513" x2="531.803322" y2="111.311513" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="497.377089" y="101.803264" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">SQL text</text>
-  <rect x="531.803322" y="78.032878" width="177.049196" height="76.06552" rx="6.676943" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.32792" y="106.557507" font-size="13.538948" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Generated</text>
-  <text x="620.32792" y="123.67226" font-size="13.538948" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">SQL Query</text>
-  <text x="620.32792" y="144.590148" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">SELECT name FROM users</text>
-  <line x1="708.852517" y1="116.06552" x2="777.704983" y2="116.06552" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="743.27875" y="106.557507" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">execute</text>
-  <rect x="777.704983" y="68.524629" width="157.377063" height="104.590148" rx="6.676943" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="777.704983" y="68.524629" width="157.377063" height="32.327881" rx="6.676943" fill="var(--ok-accent)" />
-  <rect x="777.704983" y="89.442753" width="157.377063" height="11.409875" fill="var(--ok-accent)" rx="6.676943"/>
-  <text x="856.393409" y="89.442753" font-size="13.538948" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Database</text>
-  <text x="856.393409" y="120.819762" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">PostgreSQL</text>
-  <text x="856.393409" y="137.934516" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">SQLite / MySQL</text>
-  <text x="856.393409" y="155.04927" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">BigQuery / Snowflake</text>
-  <line x1="856.393409" y1="173.114777" x2="856.393409" y2="239.672166" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="871.147614" y="211.147537" font-size="11.128238" fill="var(--text-muted)" font-family="Arial, sans-serif">raw rows</text>
-  <rect x="777.704983" y="239.672166" width="157.377063" height="85.573769" rx="6.676943" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="856.393409" y="270.098303" font-size="12.572016" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Query</text>
-  <text x="856.393409" y="287.213057" font-size="12.572016" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Results</text>
-  <text x="856.393409" y="310.032807" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">[(Alice,), (Bob,)]</text>
-  <line x1="777.704983" y1="282.45905" x2="708.852517" y2="282.45905" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="743.27875" y="272.950801" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">rows</text>
-  <line x1="620.32792" y1="154.098397" x2="620.32792" y2="282.45905" stroke="var(--text-faint)" stroke-width="1.3333" stroke-dasharray="3.5556 2.6667" />
-  <line x1="620.32792" y1="282.45905" x2="708.852517" y2="282.45905" stroke="var(--text-faint)" stroke-width="1.3333" stroke-dasharray="3.5556 2.6667" />
-  <rect x="462.950857" y="239.672166" width="196.721329" height="95.082018" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="462.950857" y="239.672166" width="196.721329" height="32.327881" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="462.950857" y="260.59029" width="196.721329" height="11.409875" fill="url(#grad-info)" rx="6.676943" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="561.311521" y="260.59029" font-size="13.538948" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">LLM (answer)</text>
-  <text x="561.311521" y="291.967299" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">interprets raw rows +</text>
-  <text x="561.311521" y="307.180309" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">original question</text>
-  <text x="561.311521" y="322.393436" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">→ natural language answer</text>
-  <line x1="462.950857" y1="287.213057" x2="394.098392" y2="287.213057" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="197.377063" y="239.672166" width="196.721329" height="95.082018" rx="6.676943" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="197.377063" y="239.672166" width="196.721329" height="32.327881" rx="6.676943" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="197.377063" y="260.59029" width="196.721329" height="11.409875" fill="url(#grad-primary)" rx="6.676943" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="295.737727" y="260.59029" font-size="13.538948" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">NL Answer</text>
-  <text x="295.737727" y="291.967299" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">"There are 2 users:</text>
-  <text x="295.737727" y="309.082053" font-size="11.604972" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Alice and Bob."</text>
-  <text x="295.737727" y="324.295062" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(shown to user)</text>
-  <line x1="197.377063" y1="287.213057" x2="118.688531" y2="287.213057" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <line x1="118.688531" y1="287.213057" x2="118.688531" y2="154.098397" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="531.803322" y="382.295074" width="196.721329" height="85.573769" rx="6.676943" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="630.163986" y="405.114825" font-size="12.572016" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">SQL Validation</text>
-  <text x="551.475455" y="424.131086" font-size="11.128238" fill="var(--text-muted)" font-family="Arial, sans-serif">• Block DROP/DELETE/UPDATE</text>
-  <text x="551.475455" y="441.24584" font-size="11.128238" fill="var(--text-muted)" font-family="Arial, sans-serif">• Limit rows (LIMIT 100)</text>
-  <text x="551.475455" y="458.360594" font-size="11.128238" fill="var(--text-muted)" font-family="Arial, sans-serif">• Whitelist allowed tables</text>
-  <line x1="620.32792" y1="334.754183" x2="620.32792" y2="382.295074" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="635.081914" y="363.278812" font-size="11.128238" fill="var(--danger-accent)" font-family="Arial, sans-serif">validate</text>
-  <rect x="40" y="515.409852" width="1200" height="104.590148" rx="6.676943" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="540.131228" font-size="14.506104" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Full NL→SQL→NL Pipeline</text>
-  <rect x="59.672133" y="551.541103" width="108.196731" height="28.524629" rx="6.676943" fill="var(--primary-accent)" />
-  <text x="113.770498" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">1. NL question</text>
-  <line x1="167.868864" y1="565.803359" x2="192.458925" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="192.458925" y="551.541103" width="127.868864" height="28.524629" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="256.393462" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">2. LLM + schema</text>
-  <line x1="320.327893" y1="565.803359" x2="344.918059" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="344.918059" y="551.541103" width="118.032797" height="28.524629" rx="6.676943" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="403.934458" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">3. SQL query</text>
-  <line x1="462.950857" y1="565.803359" x2="487.541023" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="487.541023" y="551.541103" width="118.032797" height="28.524629" rx="6.676943" fill="var(--danger-accent)" />
-  <text x="546.557316" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">4. Validate SQL</text>
-  <line x1="605.57382" y1="565.803359" x2="630.163986" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="630.163986" y="551.541103" width="127.868864" height="28.524629" rx="6.676943" fill="var(--ok-accent)" />
-  <text x="694.098418" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">5. DB execution</text>
-  <line x1="758.03285" y1="565.803359" x2="782.623016" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="782.623016" y="551.541103" width="118.032797" height="28.524629" rx="6.676943" fill="var(--primary-accent)" />
-  <text x="841.639414" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">6. Raw results</text>
-  <line x1="900.655708" y1="565.803359" x2="925.245979" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="925.245979" y="551.541103" width="127.868864" height="28.524629" rx="6.676943" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="989.180306" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">7. LLM formats</text>
-  <line x1="1053.114843" y1="565.803359" x2="1077.704904" y2="565.803359" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="1077.704904" y="551.541103" width="137.70493" height="28.524629" rx="6.676943" fill="var(--primary-accent)" />
-  <text x="1146.557474" y="570.557365" font-size="11.128238" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">8. NL answer</text>
-  <text x="640.000052" y="605.737745" font-size="11.128238" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Schema injection is the key: LLM needs table names, column types, and sample values to generate correct SQL</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--text)">NL to SQL Architecture</text>
+
+  <rect x="40" y="71.071428571429" width="160" height="103.571428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="112.5" text-anchor="middle" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">User Question</text>
+  <text x="120" y="143.571428571429" text-anchor="middle" font-size="13.230106359577" fill="var(--primary-text)" font-family="Arial, sans-serif">natural language</text>
+
+  <line x1="200" y1="122.857142857143" x2="265" y2="122.857142857143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="270" y="60.714285714286" width="200" height="145" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="96.964285714286" text-anchor="middle" font-size="16.283207827171" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">LLM + Schema</text>
+  <text x="370" y="128.035714285714" text-anchor="middle" font-size="13.230106359577" fill="var(--info-text)" font-family="Arial, sans-serif">GPT-4 / Claude</text>
+  <text x="370" y="153.928571428571" text-anchor="middle" font-size="13.230106359577" fill="var(--info-text)" font-family="Arial, sans-serif">Generates SQL</text>
+  <text x="370" y="179.821428571429" text-anchor="middle" font-size="12.212405870379" fill="var(--info-text)" font-family="Arial, sans-serif">NL -&gt; SQL</text>
+
+  <rect x="295" y="257.5" width="150" height="82.857142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="288.571428571429" text-anchor="middle" font-size="14.247806848775" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">DB Schema</text>
+  <text x="370" y="314.464285714286" text-anchor="middle" font-size="13.230106359577" fill="var(--warn-text)" font-family="Courier New, monospace">tables, types</text>
+  <line x1="370" y1="257.5" x2="370" y2="207.785714285714" stroke="var(--warn-border)" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow-warn)"/>
+
+  <line x1="470" y1="122.857142857143" x2="535" y2="122.857142857143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="540" y="71.071428571429" width="200" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="107.321428571429" text-anchor="middle" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">SQL Query</text>
+  <text x="640" y="143.571428571429" text-anchor="middle" font-size="13.230106359577" fill="var(--warn-text)" font-family="Courier New, monospace">SELECT name FROM users</text>
+
+  <line x1="740" y1="122.857142857143" x2="805" y2="122.857142857143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="810" y="60.714285714286" width="180" height="145" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="96.964285714286" text-anchor="middle" font-size="16.283207827171" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Database</text>
+  <text x="900" y="128.035714285714" text-anchor="middle" font-size="13.230106359577" fill="var(--ok-text)" font-family="Arial, sans-serif">Postgres / MySQL</text>
+  <text x="900" y="153.928571428571" text-anchor="middle" font-size="13.230106359577" fill="var(--ok-text)" font-family="Arial, sans-serif">SQLite</text>
+  <text x="900" y="179.821428571429" text-anchor="middle" font-size="13.230106359577" fill="var(--ok-text)" font-family="Arial, sans-serif">BigQuery</text>
+
+  <line x1="900" y1="205.714285714286" x2="900" y2="252.321428571429" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="810" y="257.5" width="180" height="82.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="288.571428571429" text-anchor="middle" font-size="14.247806848775" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Raw Results</text>
+  <text x="900" y="314.464285714286" text-anchor="middle" font-size="13.230106359577" fill="var(--ok-text)" font-family="Courier New, monospace">[(Alice,), (Bob,)]</text>
+
+  <line x1="810" y1="293.75" x2="675" y2="293.75" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="475" y="252.321428571429" width="195" height="103.571428571429" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="572" y="283.392857142857" text-anchor="middle" font-size="14.247806848775" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">LLM (answer)</text>
+  <text x="572" y="309.285714285714" text-anchor="middle" font-size="12.212405870379" fill="var(--info-text)" font-family="Arial, sans-serif">Format rows + question</text>
+  <text x="572" y="335.178571428571" text-anchor="middle" font-size="12.212405870379" fill="var(--info-text)" font-family="Arial, sans-serif">-&gt; NL answer</text>
+
+  <line x1="475" y1="293.75" x2="280" y2="293.75" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="252.321428571429" width="200" height="103.571428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="283.392857142857" text-anchor="middle" font-size="14.247806848775" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">NL Answer</text>
+  <text x="180" y="309.285714285714" text-anchor="middle" font-size="12.212405870379" fill="var(--primary-text)" font-family="Arial, sans-serif">"There are 2 users:</text>
+  <text x="180" y="330" text-anchor="middle" font-size="12.212405870379" fill="var(--primary-text)" font-family="Arial, sans-serif">Alice and Bob"</text>
+
+  <line x1="180" y1="252.321428571429" x2="180" y2="179.821428571429" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="180" y1="179.821428571429" x2="120" y2="179.821428571429" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="1010" y="60.714285714286" width="230" height="290" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1125" y="96.964285714286" text-anchor="middle" font-size="15.265507337973" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">SQL Validation</text>
+  <text x="1025" y="138.392857142857" font-size="13.230106359577" fill="var(--danger-text)" font-family="Arial, sans-serif">Block DROP/DELETE</text>
+  <text x="1025" y="169.464285714286" font-size="13.230106359577" fill="var(--danger-text)" font-family="Courier New, monospace">LIMIT 100</text>
+  <text x="1025" y="200.535714285714" font-size="13.230106359577" fill="var(--danger-text)" font-family="Arial, sans-serif">Whitelist tables</text>
+  <text x="1025" y="257.5" font-size="12.212405870379" fill="var(--danger-text)" font-family="Arial, sans-serif">Schema injection</text>
+  <text x="1025" y="278.214285714286" font-size="12.212405870379" fill="var(--danger-text)" font-family="Arial, sans-serif">is critical</text>
+  <text x="1025" y="319.642857142857" font-size="12.212405870379" fill="var(--danger-text)" font-family="Arial, sans-serif">Sample values help</text>
+
+  <rect x="40" y="392.142857142857" width="1200" height="227.857142857143" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="428.392857142857" text-anchor="middle" font-size="18.318608805568" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pipeline Summary</text>
+  <rect x="60" y="459.464285714286" width="130" height="36.25" rx="6.106202935189" fill="var(--primary-accent)"/>
+  <text x="125" y="483.285714285714" font-size="12.212405870379" fill="var(--primary-text)" text-anchor="middle" font-family="Arial, sans-serif">Question</text>
+  <rect x="200" y="459.464285714286" width="130" height="36.25" rx="6.106202935189" fill="var(--info-accent)"/>
+  <text x="265" y="483.285714285714" font-size="12.212405870379" fill="var(--info-text)" text-anchor="middle" font-family="Arial, sans-serif">LLM</text>
+  <rect x="340" y="459.464285714286" width="130" height="36.25" rx="6.106202935189" fill="var(--warn-accent)"/>
+  <text x="405" y="483.285714285714" font-size="12.212405870379" fill="var(--warn-text)" text-anchor="middle" font-family="Arial, sans-serif">SQL</text>
+  <rect x="480" y="459.464285714286" width="130" height="36.25" rx="6.106202935189" fill="var(--danger-accent)"/>
+  <text x="545" y="483.285714285714" font-size="12.212405870379" fill="var(--danger-text)" text-anchor="middle" font-family="Arial, sans-serif">Validate</text>
+  <rect x="60" y="516.428571428572" width="130" height="36.25" rx="6.106202935189" fill="var(--ok-accent)"/>
+  <text x="125" y="540.25" font-size="12.212405870379" fill="var(--ok-text)" text-anchor="middle" font-family="Arial, sans-serif">Execute</text>
+  <rect x="200" y="516.428571428572" width="130" height="36.25" rx="6.106202935189" fill="var(--primary-accent)"/>
+  <text x="265" y="540.25" font-size="12.212405870379" fill="var(--primary-text)" text-anchor="middle" font-family="Arial, sans-serif">Rows</text>
+  <rect x="340" y="516.428571428572" width="130" height="36.25" rx="6.106202935189" fill="var(--info-accent)"/>
+  <text x="405" y="540.25" font-size="12.212405870379" fill="var(--info-text)" text-anchor="middle" font-family="Arial, sans-serif">Format</text>
+  <rect x="480" y="516.428571428572" width="130" height="36.25" rx="6.106202935189" fill="var(--primary-accent)"/>
+  <text x="545" y="540.25" font-size="12.212405870379" fill="var(--primary-text)" text-anchor="middle" font-family="Arial, sans-serif">Answer</text>
+  <text x="640" y="594.107142857143" text-anchor="middle" font-size="13.230106359577" fill="var(--text-muted)" font-family="Arial, sans-serif">Schema injection enables correct SQL</text>
 </svg>

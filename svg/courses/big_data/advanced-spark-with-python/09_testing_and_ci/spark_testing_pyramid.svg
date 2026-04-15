@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,57 +82,44 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <polygon points="485.16129,49.354893 310.967742,199.032252 659.354839,199.032252" fill="var(--danger-fill)" opacity="0.88" filter="url(#shadow)" />
-  <text x="485.16129" y="128.870903" font-size="18.078031" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">End-to-End</text>
-  <text x="485.16129" y="150.38718" font-size="12.369243" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Full pipeline · Slowest</text>
-  <polygon points="310.967742,208.387145 175.483871,376.774291 794.83871,376.774291 659.354839,208.387145" fill="var(--warn-fill)" opacity="0.88" filter="url(#shadow)" />
-  <text x="485.16129" y="287.903272" font-size="19.029587" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Integration</text>
-  <text x="485.16129" y="311.290272" font-size="12.369243" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">SparkSession · Small real data</text>
-  <polygon points="175.483871,386.129184 40,554.516329 930.322581,554.516329 794.83871,386.129184" fill="var(--ok-fill)" opacity="0.88" filter="url(#shadow)" />
-  <text x="485.16129" y="465.645194" font-size="20.932481" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Unit Tests</text>
-  <text x="485.16129" y="492.774337" font-size="12.369243" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Pure Python/Scala functions · No Spark · Fastest</text>
-  <text x="69.032258" y="199.032252" font-size="13.32058" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Slow</text>
-  <text x="69.032258" y="217.742039" font-size="11.417796" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">Few</text>
-  <line x1="69.032258" y1="227.096699" x2="69.032258" y2="517.096873" stroke="var(--border)" stroke-width="1.7778" />
-  <text x="69.032258" y="531.129097" font-size="13.32058" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Fast</text>
-  <text x="69.032258" y="547.032276" font-size="11.417796" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">Many</text>
-  <rect x="978.709677" y="386.129184" width="261.290323" height="159.032252" fill="url(#grad-ok)" rx="6.569251" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="386.129184" width="261.290323" height="33.677429" fill="url(#grad-ok)" rx="6.569251" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="404.838738" width="261.290323" height="14.967759" fill="url(#grad-ok)" rx="6.569251" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1109.354839" y="408.580765" font-size="14.272136" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Unit Test Tools</text>
-  <text x="998.064516" y="440.387122" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">pytest — test runner</text>
-  <text x="998.064516" y="459.096908" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">pytest-mock — mock objects</text>
-  <text x="998.064516" y="477.806578" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Pure functions (no SparkSession)</text>
-  <text x="998.064516" y="496.516132" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">UDF logic tested in isolation</text>
-  <text x="998.064516" y="515.225918" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Runs in ms — run on every save</text>
-  <line x1="930.322581" y1="470.322757" x2="978.709677" y2="470.322757" stroke="var(--ok-border)" stroke-width="1.7778" stroke-dasharray="5.3333 2.6667" marker-end="url(#arrow)" />
-  <rect x="978.709677" y="208.387145" width="261.290323" height="159.032252" fill="url(#grad-warn)" rx="6.569251" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="208.387145" width="261.290323" height="33.677429" fill="url(#grad-warn)" rx="6.569251" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="227.096699" width="261.290323" height="14.967759" fill="url(#grad-warn)" rx="6.569251" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1109.354839" y="230.838726" font-size="14.272136" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Integration Test Tools</text>
-  <text x="998.064516" y="262.6452" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">SparkSession (local[*])</text>
-  <text x="998.064516" y="281.35487" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">chispa — DataFrame equality</text>
-  <text x="998.064516" y="300.06454" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">pytest fixtures / conftest.py</text>
-  <text x="998.064516" y="318.774326" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Small synthetic datasets</text>
-  <text x="998.064516" y="337.48388" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Runs in seconds</text>
-  <line x1="794.83871" y1="292.580718" x2="978.709677" y2="287.903272" stroke="var(--warn-border)" stroke-width="1.7778" stroke-dasharray="5.3333 2.6667" marker-end="url(#arrow)" />
-  <rect x="978.709677" y="40" width="261.290323" height="149.677476" fill="url(#grad-danger)" rx="6.569251" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="40" width="261.290323" height="33.677429" fill="url(#grad-danger)" rx="6.569251" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="978.709677" y="58.709554" width="261.290323" height="14.967759" fill="url(#grad-danger)" rx="6.569251" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1109.354839" y="62.451581" font-size="14.272136" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">E2E / CI Tools</text>
-  <text x="998.064516" y="94.258054" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">GitHub Actions / Jenkins</text>
-  <text x="998.064516" y="112.967724" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Full cluster or Docker Spark</text>
-  <text x="998.064516" y="131.677394" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Real data sources (S3, HDFS)</text>
-  <text x="998.064516" y="150.38718" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">pylint · mypy · black (lint)</text>
-  <text x="998.064516" y="169.096734" font-size="12.369243" fill="var(--text)" font-family="Arial, sans-serif">Runs in minutes — CI gated</text>
-  <line x1="659.354839" y1="124.193573" x2="978.709677" y2="114.83868" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="5.3333 2.6667" marker-end="url(#arrow)" />
-  <rect x="40" y="573.225883" width="919.354735" height="46.774117" fill="url(#grad-primary)" rx="6.569251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480.322581" y="593.806625" font-size="12.369243" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Testing ratio guideline: ~70% unit · ~20% integration · ~10% end-to-end</text>
-  <text x="480.322581" y="610.645339" font-size="11.417796" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Design transformations as pure functions to maximize unit-testable code</text>
+
+  <polygon points="485,40 315,185 655,185" fill="url(#grad-danger)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="485" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--danger-text)">End-to-End</text>
+  <text x="485" y="141.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">full pipeline</text>
+  <text x="485" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">slowest</text>
+
+  <polygon points="315,195.357142857143 175,361.071428571429 795,361.071428571429 655,195.357142857143" fill="url(#grad-warn)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="485" y="273.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--warn-text)">Integration</text>
+  <text x="485" y="304.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">SparkSession</text>
+  <text x="485" y="327.928571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">small real data</text>
+
+  <polygon points="175,371.428571428571 40,537.142857142857 930,537.142857142857 795,371.428571428571" fill="url(#grad-ok)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="485" y="449.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--ok-text)">Unit</text>
+  <text x="485" y="480.178571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">pure functions, no Spark, fastest</text>
+
+  <rect x="970" y="40" width="270" height="155.357142857143" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="71.071428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--danger-text)">E2E Tools</text>
+  <text x="990" y="102.142857142857" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">GitHub Actions, Jenkins</text>
+  <text x="990" y="128.035714285714" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">cluster or Docker</text>
+  <text x="990" y="153.928571428571" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">real sources</text>
+  <text x="990" y="179.821428571429" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--danger-text)">lint: mypy, ruff</text>
+
+  <rect x="970" y="210.892857142857" width="270" height="155.357142857143" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="241.964285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--warn-text)">Integration Tools</text>
+  <text x="990" y="273.035714285714" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">local SparkSession</text>
+  <text x="990" y="298.928571428571" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">chispa DataFrame asserts</text>
+  <text x="990" y="324.821428571429" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">pytest fixtures</text>
+  <text x="990" y="350.714285714286" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">synthetic data</text>
+
+  <rect x="970" y="381.785714285714" width="270" height="155.357142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--ok-text)">Unit Tools</text>
+  <text x="990" y="443.928571428571" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">pytest</text>
+  <text x="990" y="469.821428571429" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">pytest-mock</text>
+  <text x="990" y="495.714285714286" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">pure functions</text>
+  <text x="990" y="521.607142857143" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">UDF logic</text>
+
+  <rect x="40" y="557.857142857143" width="900" height="62.142857142857" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="583.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--primary-text)">Ratio: 70% unit, 20% integration, 10% E2E</text>
+  <text x="490" y="606.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--primary-text)">Design transforms as pure functions</text>
 </svg>

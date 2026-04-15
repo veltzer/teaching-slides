@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,76 +82,54 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="40" width="570.491853" height="580" rx="6.518574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="570.491853" height="39.874947" rx="6.518574" fill="var(--danger-accent)" />
-  <rect x="40" y="68.99991" width="570.491853" height="10.875037" fill="var(--danger-accent)" rx="6.518574"/>
-  <text x="325.245822" y="67.187423" font-size="18.882787" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Standard Prompting</text>
-  <rect x="59.672133" y="98.90612" width="531.147587" height="72.499944" rx="6.518574" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="79.344266" y="118.843706" font-size="12.273822" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Prompt:</text>
-  <text x="79.344266" y="139.687366" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">Q: Roger has 5 tennis balls. He buys 2 cans</text>
-  <text x="79.344266" y="155.999865" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">   of 3 balls each. How many balls does he have?</text>
-  <line x1="325.245822" y1="171.406289" x2="325.245822" y2="207.656148" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="335.081993" y="194.062437" font-size="11.329716" fill="var(--danger-accent)" font-family="Arial, sans-serif">direct answer</text>
-  <rect x="59.672133" y="210.374935" width="531.147587" height="54.374958" rx="6.518574" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="79.344266" y="230.312409" font-size="12.273822" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Model Output:</text>
-  <text x="79.344266" y="250.249994" font-size="13.217821" fill="var(--danger-accent)" font-family="Courier New, monospace">A: 11</text>
-  <rect x="59.672133" y="280.156204" width="531.147587" height="39.874947" rx="6.518574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.245822" y="293.750028" font-size="12.273822" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">No reasoning shown.</text>
-  <text x="325.245822" y="310.062527" font-size="11.329716" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Hard to verify. Hard to debug. Often wrong.</text>
-  <rect x="59.672133" y="337.249949" width="531.147587" height="72.499944" rx="6.518574" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="79.344266" y="357.187423" font-size="12.273822" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Harder Prompt:</text>
-  <text x="79.344266" y="375.312521" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">Q: If a shirt costs $15 and is 30% off, and</text>
-  <text x="79.344266" y="391.62502" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">   there is 8% tax — what is the final price?</text>
-  <line x1="325.245822" y1="409.749893" x2="325.245822" y2="438.749916" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="59.672133" y="441.46859" width="531.147587" height="39.874947" rx="6.518574" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="79.344266" y="457.781089" font-size="12.273822" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Model Output (often wrong):</text>
-  <text x="79.344266" y="474.093588" font-size="13.217821" fill="var(--danger-accent)" font-family="Courier New, monospace">A: $11.34  ✗</text>
-  <rect x="59.672133" y="497.656261" width="531.147587" height="90.625042" rx="6.518574" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.8889" />
-  <text x="325.245822" y="518.499921" font-size="13.217821" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Problems with Standard Prompting:</text>
-  <text x="79.344266" y="536.624907" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Model skips intermediate steps (shortcuts)</text>
-  <text x="79.344266" y="552.937406" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Errors accumulate invisibly</text>
-  <text x="79.344266" y="569.249904" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• No transparency into model reasoning</text>
-  <rect x="659.672185" y="40" width="580.327815" height="580" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="659.672185" y="40" width="580.327815" height="39.874947" rx="6.518574" fill="var(--ok-accent)" />
-  <rect x="659.672185" y="68.99991" width="580.327815" height="10.875037" fill="var(--ok-accent)" rx="6.518574"/>
-  <text x="949.836145" y="67.187423" font-size="18.882787" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Chain-of-Thought Prompting</text>
-  <rect x="679.344213" y="98.90612" width="540.983654" height="72.499944" rx="6.518574" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="699.016451" y="118.843706" font-size="12.273822" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Prompt:</text>
-  <text x="699.016451" y="139.687366" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">Q: Roger has 5 tennis balls. He buys 2 cans</text>
-  <text x="699.016451" y="155.999865" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">   of 3 balls each. How many balls does he have?</text>
-  <line x1="949.836145" y1="171.406289" x2="949.836145" y2="198.593711" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="969.508278" y="189.531162" font-size="11.329716" fill="var(--ok-accent)" font-family="Arial, sans-serif">step-by-step reasoning</text>
-  <rect x="679.344213" y="201.312499" width="540.983654" height="36.250084" rx="6.518574" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <rect x="691.621" y="208.108" width="22.6594" height="22.6594" rx="11.3297" fill="var(--ok-accent)"/>
-  <text x="702.950878" y="223.968647" font-size="11.329716" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">1</text>
-  <text x="722.623011" y="223.062459" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">Roger starts with 5 tennis balls.</text>
-  <line x1="949.836145" y1="237.562358" x2="949.836145" y2="248.437395" stroke="var(--ok-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="679.344213" y="251.156182" width="540.983654" height="36.250084" rx="6.518574" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <rect x="691.621" y="257.952" width="22.6594" height="22.6594" rx="11.3297" fill="var(--ok-accent)"/>
-  <text x="702.950878" y="273.812442" font-size="11.329716" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">2</text>
-  <text x="722.623011" y="272.906142" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">2 cans × 3 balls = 6 new balls.</text>
-  <line x1="949.836145" y1="287.406154" x2="949.836145" y2="298.28119" stroke="var(--ok-border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="679.344213" y="300.999978" width="540.983654" height="36.250084" rx="6.518574" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <rect x="691.621" y="307.795" width="22.6594" height="22.6594" rx="11.3297" fill="var(--ok-accent)"/>
-  <text x="702.950878" y="323.656238" font-size="11.329716" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">3</text>
-  <text x="722.623011" y="322.749938" font-size="11.329716" fill="var(--text)" font-family="Courier New, monospace">Total = 5 + 6 = 11 balls.</text>
-  <line x1="949.836145" y1="337.249949" x2="949.836145" y2="352.656148" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="679.344213" y="355.374935" width="540.983654" height="39.874947" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="699.016451" y="371.687434" font-size="12.273822" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Model Output:</text>
-  <text x="699.016451" y="387.999933" font-size="13.217821" fill="var(--ok-accent)" font-family="Courier New, monospace">A: 11 balls  ✓  (reasoning shown)</text>
-  <rect x="679.344213" y="411.56238" width="540.983654" height="108.750028" rx="6.518574" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="949.836145" y="431.499966" font-size="13.217821" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Benefits of Chain-of-Thought:</text>
-  <text x="699.016451" y="449.62484" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Each step can be verified independently</text>
-  <text x="699.016451" y="465.937338" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Errors are visible and debuggable</text>
-  <text x="699.016451" y="482.249837" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Dramatically better on multi-step math/logic</text>
-  <text x="699.016451" y="498.562335" font-size="11.329716" fill="var(--text-muted)" font-family="Arial, sans-serif">• Zero-shot trigger: "Let's think step by step"</text>
-  <rect x="679.344213" y="536.624907" width="540.983654" height="52.562583" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="699.016451" y="556.56238" font-size="12.273822" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Zero-Shot CoT (no examples needed):</text>
-  <text x="699.016451" y="576.499966" font-size="12.273822" fill="var(--ok-accent)" font-family="Courier New, monospace">Append: "Let's think step by step."</text>
+
+  <rect x="40" y="40" width="590" height="580" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-text)">Standard Prompting</text>
+
+  <rect x="60" y="101.052631578947" width="550" height="71.228070175439" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="80" y="126.491228070175" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--text)">Prompt</text>
+  <text x="80" y="151.929824561404" font-family="Courier New, monospace" font-size="11.096071693061" fill="var(--text)">Roger has 5 balls, buys 2 cans of 3.</text>
+
+  <line x1="335" y1="177.368421052632" x2="335" y2="207.894736842105" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+
+  <rect x="60" y="212.982456140351" width="550" height="61.052631578947" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="80" y="238.421052631579" font-family="Arial, sans-serif" font-size="12.104805483339" font-weight="bold" fill="var(--text)">Output</text>
+  <text x="80" y="261.824561403509" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">A: 11</text>
+
+  <rect x="60" y="294.385964912281" width="550" height="71.228070175439" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="335" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">No reasoning shown</text>
+  <text x="335" y="345.263157894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096071693061" fill="var(--text-muted)">hard to verify or debug</text>
+
+  <rect x="60" y="396.140350877193" width="550" height="203.508771929825" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="335" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">Problems</text>
+  <text x="80" y="462.280701754386" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">skips intermediate steps</text>
+  <text x="80" y="492.80701754386" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">errors accumulate</text>
+  <text x="80" y="523.333333333333" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">opaque failure</text>
+  <text x="80" y="553.859649122807" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">fails multi-step math</text>
+
+  <rect x="650" y="40" width="590" height="580" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="75.614035087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Chain-of-Thought</text>
+
+  <rect x="670" y="101.052631578947" width="550" height="50.877192982456" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="131.578947368421" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--text)">Let's think step by step</text>
+
+  <rect x="670" y="172.280701754386" width="550" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="197.719298245614" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--text)">1. Roger starts with 5 balls</text>
+
+  <rect x="670" y="223.157894736842" width="550" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="248.59649122807" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--text)">2. 2 cans x 3 = 6 new balls</text>
+
+  <rect x="670" y="274.035087719298" width="550" height="40.701754385965" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="299.473684210526" text-anchor="middle" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--text)">3. Total = 5 + 6 = 11</text>
+
+  <rect x="670" y="335.087719298246" width="550" height="50.877192982456" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="365.614035087719" text-anchor="middle" font-family="Courier New, monospace" font-size="13.113539273617" font-weight="bold" fill="var(--ok-accent)">A: 11 balls</text>
+
+  <rect x="670" y="406.315789473684" width="550" height="193.333333333333" rx="8.069870322226" fill="var(--bg)" stroke="var(--border)"/>
+  <text x="945" y="436.842105263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--text)">Benefits</text>
+  <text x="690" y="472.456140350877" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">verifiable steps</text>
+  <text x="690" y="497.894736842105" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">errors visible</text>
+  <text x="690" y="523.333333333333" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--text-muted)">better on multi-step</text>
+  <text x="690" y="558.947368421053" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-accent)">zero-shot trigger works</text>
 </svg>

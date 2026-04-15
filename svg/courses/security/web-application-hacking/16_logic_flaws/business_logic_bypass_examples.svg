@@ -1,116 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-size="27.6457681938" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Business Logic Bypass Examples</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="72.222222222222" width="1200" height="96.666666666667" rx="8.506390213477" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="66.315789473684" y="104.444444444444" font-size="19.139377980323" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">1. Free Premium Features</text>
+  <text x="66.315789473684" y="142.037037037037" font-size="15.949481650269" fill="var(--danger-text)" font-family="Arial, sans-serif">UI-only auth check; user calls API directly</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="40" y="185" width="1200" height="96.666666666667" rx="8.506390213477" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="66.315789473684" y="217.222222222222" font-size="19.139377980323" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">2. Skip Email Verification</text>
+  <text x="66.315789473684" y="254.814814814815" font-size="15.949481650269" fill="var(--warn-text)" font-family="Arial, sans-serif">Server fails to enforce verification gate</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="40" y="297.777777777778" width="1200" height="96.666666666667" rx="8.506390213477" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="66.315789473684" y="330" font-size="19.139377980323" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">3. Password Reset for Any User</text>
+  <text x="66.315789473684" y="367.592592592593" font-size="15.949481650269" fill="var(--danger-text)" font-family="Arial, sans-serif">Intercept token; swap user_id</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="410.555555555556" width="1200" height="96.666666666667" rx="8.506390213477" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="66.315789473684" y="442.777777777778" font-size="19.139377980323" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">4. Unlimited Free Trial</text>
+  <text x="66.315789473684" y="480.37037037037" font-size="15.949481650269" fill="var(--warn-text)" font-family="Arial, sans-serif">New email = new trial; no identity link</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="78.6667" text-anchor="middle" font-size="24.9084" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Business Logic Bypass Examples</text>
-  <rect x="71.0345" y="98" width="1137.931" height="77.3334" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112.4138" y="123.7778" font-size="17.9894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Example 1: Free Premium Features</text>
-  <text x="112.4138" y="156.0001" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Authorization only checked in UI, not API - user calls premium endpoint directly</text>
-  <rect x="71.0345" y="188.2223" width="1137.931" height="96.6666" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112.4138" y="214.0001" font-size="17.9894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Example 2: Skip Email Verification</text>
-  <text x="112.4138" y="239.7779" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Expected: Register -&gt; verify email -&gt; access app</text>
-  <text x="112.4138" y="262.9778" font-size="15.2218" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bypass: Register -&gt; directly access app URL (server doesn't enforce)</text>
-  <rect x="71.0345" y="297.7778" width="1137.931" height="77.3334" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112.4138" y="323.5556" font-size="17.9894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Example 3: Password Reset for Any User</text>
-  <text x="112.4138" y="355.7778" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Reset flow generates token - intercept and change user_id to target user</text>
-  <rect x="71.0345" y="388.0001" width="1137.931" height="96.6666" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112.4138" y="413.7779" font-size="17.9894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Example 4: Unlimited Free Trial</text>
-  <text x="112.4138" y="439.5557" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Register with email1 -&gt; trial expires -&gt; register with email2 -&gt; new trial</text>
-  <text x="112.4138" y="462.7556" font-size="15.2218" fill="var(--text-muted)" font-family="Arial, sans-serif">No identity linkage between accounts</text>
-  <rect x="71.0345" y="497.5556" width="1137.931" height="96.6666" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112.4138" y="523.3334" font-size="17.9894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Example 5: Referral Abuse</text>
-  <text x="112.4138" y="549.1112" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Create multiple accounts referring each other</text>
-  <text x="112.4138" y="572.3112" font-size="15.2218" fill="var(--text)" font-family="Arial, sans-serif">Accumulate referral bonuses</text>
+  <rect x="40" y="523.333333333333" width="1200" height="96.666666666667" rx="8.506390213477" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="66.315789473684" y="555.555555555556" font-size="19.139377980323" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">5. Referral Abuse</text>
+  <text x="66.315789473684" y="593.148148148148" font-size="15.949481650269" fill="var(--danger-text)" font-family="Arial, sans-serif">Fake accounts refer each other for bonuses</text>
 </svg>

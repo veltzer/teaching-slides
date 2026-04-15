@@ -34,128 +34,70 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.683531271721" font-weight="bold" fill="var(--primary-accent)">Pregel API: BSP on GraphX</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="84.615384615385" width="280" height="223.076923076923" rx="10.561177090574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--primary-text)">1. vprog</text>
+  <text x="180" y="173.846153846154" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--primary-text)">(id, attr, msg) =&gt; attr</text>
+  <text x="180" y="218.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">update vertex state</text>
+  <text x="180" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--primary-text)">active vertices only</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="84.615384615385" width="280" height="223.076923076923" rx="10.561177090574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--ok-text)">2. sendMsg</text>
+  <text x="480" y="173.846153846154" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--ok-text)">triplet =&gt; Iterator[msg]</text>
+  <text x="480" y="218.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">emit along edges</text>
+  <text x="480" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--ok-text)">empty halts vertex</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="84.615384615385" width="280" height="223.076923076923" rx="10.561177090574" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--warn-text)">3. mergeMsg</text>
+  <text x="780" y="173.846153846154" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--warn-text)">(a, b) =&gt; combined</text>
+  <text x="780" y="218.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">combine inbound</text>
+  <text x="780" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--warn-text)">commutative, associative</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="84.615384615385" width="300" height="223.076923076923" rx="10.561177090574" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599262" font-weight="bold" fill="var(--info-text)">Superstep Barrier</text>
+  <text x="1090" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--info-text)">all workers sync</text>
+  <text x="1090" y="212.884615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--info-text)">step N msgs → N+1</text>
+  <text x="1090" y="251.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--info-text)">deterministic</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="320" y1="196.153846153846" x2="340" y2="196.153846153846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="196.153846153846" x2="640" y2="196.153846153846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="920" y1="196.153846153846" x2="940" y2="196.153846153846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="40" y="352.307692307692" width="380" height="267.692307692308" rx="10.561177090574" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="230" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--text)">Example: Shortest Path</text>
+  <text x="230" y="435.961538461538" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--text-muted)">vprog: min(dist, msg)</text>
+  <text x="230" y="475" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--text-muted)">sendMsg: newDist &lt; dst</text>
+  <text x="230" y="514.038461538462" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--text-muted)">mergeMsg: min</text>
+  <text x="230" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">halts in ≤ diameter steps</text>
 
-  <rect x="40" y="40" width="1200" height="72.5" rx="6.106203" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="640" y="70.035714" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Pregel = Bulk Synchronous Parallel (BSP) iteration over vertices</text>
-  <text x="640" y="94.892857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">graph.pregel(initialMsg, maxIter, activeDir)(vprog, sendMsg, mergeMsg)</text>
+  <rect x="450" y="352.307692307692" width="380" height="267.692307692308" rx="10.561177090574" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--text)">Convergence</text>
+  <text x="640" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">no messages sent</text>
+  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">or maxIter reached</text>
+  <text x="640" y="530.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">active set shrinks</text>
+  <text x="640" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">bitmask tracks activity</text>
 
-  <rect x="40" y="143.571429" width="280" height="186.428571" rx="6.106203" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" font-weight="bold" fill="var(--primary-text)">1. vprog</text>
-  <text x="180" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">vertex program</text>
-  <text x="180" y="226.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">(id, attr, inMsg) => newAttr</text>
-  <text x="180" y="252.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">updates each vertex state</text>
-  <text x="180" y="283.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">step 0: everyone gets initialMsg</text>
-  <text x="180" y="309.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">next: only active vertices</text>
-
-  <rect x="340" y="143.571429" width="280" height="186.428571" rx="6.106203" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" font-weight="bold" fill="var(--ok-text)">2. sendMsg</text>
-  <text x="480" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">triplet => Iterator[(id, msg)]</text>
-  <text x="480" y="226.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">emit 0..N messages per edge</text>
-  <text x="480" y="255.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">filter by attr change</text>
-  <text x="480" y="284.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">direction: Out / In / Either</text>
-  <text x="480" y="313.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">empty → vertex votes to halt</text>
-
-  <rect x="640" y="143.571429" width="280" height="186.428571" rx="6.106203" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="780" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" font-weight="bold" fill="var(--warn-text)">3. mergeMsg</text>
-  <text x="780" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">(a, b) => combined</text>
-  <text x="780" y="226.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">combines all inbound msgs</text>
-  <text x="780" y="255.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">into one per vertex</text>
-  <text x="780" y="284.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">must be commutative</text>
-  <text x="780" y="313.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">and associative (combiner)</text>
-
-  <rect x="940" y="143.571429" width="300" height="186.428571" rx="6.106203" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="172.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283208" font-weight="bold" fill="var(--info-text)">Superstep barrier</text>
-  <text x="1090" y="197.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">all workers sync before next iter</text>
-  <text x="1090" y="226.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">msgs from step N</text>
-  <text x="1090" y="252.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">delivered at step N+1</text>
-  <text x="1090" y="283.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">no races, deterministic</text>
-  <text x="1090" y="309.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">slowest worker = step latency</text>
-
-  <line x1="320" y1="236.785714" x2="340" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="620" y1="236.785714" x2="640" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="920" y1="236.785714" x2="940" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="40" y="355.892857" width="1200" height="264.107143" rx="8.141604" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="640" y="386.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Convergence</text>
-  <text x="640" y="415.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--text-muted)">Loop stops when (a) no messages are sent, or (b) maxIterations reached</text>
-
-  <rect x="70" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="245" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Example: Shortest Path</text>
-  <text x="245" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">vprog: math.min(dist, inMsg)</text>
-  <text x="245" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">sendMsg: if newDist &lt; dst.dist emit</text>
-  <text x="245" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">mergeMsg: math.min</text>
-  <text x="245" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">halts in ≤ diameter steps</text>
-
-  <rect x="440" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="615" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Active vs Inactive</text>
-  <text x="615" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">a vertex is active if it got a message</text>
-  <text x="615" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">inactive vertices skip vprog</text>
-  <text x="615" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">active set shrinks each superstep</text>
-  <text x="615" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">activity tracked by bitmask</text>
-
-  <rect x="810" y="443.928571" width="400" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
-  <text x="1010" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Why BSP?</text>
-  <text x="1010" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">reasoning simpler than async actors</text>
-  <text x="1010" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">fits Spark's stage model directly</text>
-  <text x="1010" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">each superstep = one Spark job</text>
-  <text x="1010" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">fault tolerance via RDD lineage</text>
+  <rect x="860" y="352.307692307692" width="380" height="267.692307692308" rx="10.561177090574" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1050" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.122354181148" font-weight="bold" fill="var(--text)">Why BSP?</text>
+  <text x="1050" y="435.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">simpler than async</text>
+  <text x="1050" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">fits Spark stages</text>
+  <text x="1050" y="514.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">superstep = one job</text>
+  <text x="1050" y="569.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" fill="var(--text-muted)">lineage fault tolerance</text>
 </svg>

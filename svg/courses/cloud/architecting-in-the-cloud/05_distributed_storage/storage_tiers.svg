@@ -34,134 +34,66 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="50" y="55.535714285714" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--danger-accent)">Expensive</text>
+  <text x="50" y="76.25" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">Fast / Frequent</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <line x1="40" y1="91.785714285714" x2="40" y2="588.928571428571" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <text x="50" y="583.75" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--ok-accent)">Cheapest</text>
+  <text x="50" y="604.464285714286" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">Slow / Rare</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="150" y="40" width="1090" height="119.107142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="81.428571428571" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">HOT - S3 Standard</text>
+  <text x="390" y="110.428571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">Frequent access</text>
+  <text x="390" y="138.392857142857" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--primary-text)">ms access | 3 AZ</text>
+  <rect x="850" y="60.714285714286" width="180" height="39.357142857143" rx="6.106202935189" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="940" y="86.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--primary-accent)">$0.023 / GB</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="640" y1="162.214285714286" x2="640" y2="179.821428571429" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="700" y="176.714285714286" font-family="Arial, sans-serif" font-size="11.19470538118" fill="var(--text-faint)">after 30 days</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="210" y="185" width="970" height="119.107142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="226.428571428571" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">WARM - S3 IA</text>
+  <text x="430" y="255.428571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">Rapid but rare</text>
+  <text x="430" y="283.392857142857" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--warn-text)">Retrieval fee</text>
+  <rect x="860" y="205.714285714286" width="180" height="39.357142857143" rx="6.106202935189" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="950" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--warn-accent)">$0.0125 / GB</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- Left side labels -->
-  <text x="50.084034" y="59.078947" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--danger-accent)" font-weight="bold">Expensive</text>
-  <text x="50.084034" y="76.25" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Fast access</text>
-  <text x="50.084034" y="93.421053" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Frequent use</text>
+  <line x1="640" y1="307.214285714286" x2="640" y2="324.821428571429" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="700" y="321.714285714286" font-family="Arial, sans-serif" font-size="11.19470538118" fill="var(--text-faint)">after 90 days</text>
 
-  <!-- Arrow down left side -->
-  <line x1="40" y1="106.776316" x2="40" y2="583.75" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="270" y="330" width="850" height="119.107142857143" rx="6.106202935189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="371.428571428571" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--info-text)">COLD - Glacier Instant</text>
+  <text x="470" y="400.428571428572" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">Instant retrieval</text>
+  <text x="470" y="428.392857142857" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--info-text)">Higher fee</text>
+  <rect x="860" y="350.714285714286" width="180" height="39.357142857143" rx="6.106202935189" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="950" y="376.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--info-accent)">$0.004 / GB</text>
 
-  <text x="50.084034" y="574.210526" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--ok-accent)" font-weight="bold">Cheapest</text>
-  <text x="50.084034" y="591.381579" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Slow retrieval</text>
-  <text x="50.084034" y="608.552632" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Rare access</text>
+  <line x1="640" y1="452.214285714286" x2="640" y2="469.821428571429" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="700" y="466.714285714286" font-family="Arial, sans-serif" font-size="11.19470538118" fill="var(--text-faint)">after 365 days</text>
 
-  <!-- Tier 1: Hot (S3 Standard) - widest -->
-  <rect x="150.92437" y="40" width="1089.07563" height="114.473684" rx="6.384413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="392.941176" y="78.157895" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--primary-accent)" font-weight="bold">HOT - S3 Standard</text>
-  <text x="392.941176" y="102.006632" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Frequently accessed data</text>
-  <text x="392.941176" y="123.947368" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | 3 AZ replication</text>
+  <rect x="330" y="475" width="730" height="119.107142857143" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="520" y="516.428571428571" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">DEEP ARCHIVE</text>
+  <text x="520" y="545.428571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">Long-term retention</text>
+  <text x="520" y="573.392857142857" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--ok-text)">12+ hour retrieval</text>
+  <rect x="860" y="495.714285714286" width="180" height="39.357142857143" rx="6.106202935189" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="521.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--ok-accent)">$0.00099 / GB</text>
 
-  <rect x="846.722689" y="59.078947" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="937.478992" y="83.881579" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">$0.023 / GB</text>
-
-  <text x="846.722689" y="123.947368" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Active websites, apps, analytics</text>
-
-  <!-- Transition arrow -->
-  <line x1="634.957983" y1="154.473684" x2="634.957983" y2="173.552632" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="695.462185" y="168.782842" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (30 days)</text>
-
-  <!-- Tier 2: Warm (S3 IA) -->
-  <rect x="211.428571" y="178.322421" width="968.067227" height="114.473684" rx="6.384413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="433.277311" y="216.480316" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--warn-accent)" font-weight="bold">WARM - S3 Infrequent Access</text>
-  <text x="433.277311" y="240.328947" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Less frequent, but rapid access needed</text>
-  <text x="433.277311" y="262.269789" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | Retrieval fee applies</text>
-
-  <rect x="866.890756" y="197.401368" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="957.647059" y="222.203895" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">$0.0125 / GB</text>
-
-  <text x="866.890756" y="262.269789" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Backups, older logs, DR copies</text>
-
-  <!-- Transition arrow -->
-  <line x1="634.957983" y1="292.796105" x2="634.957983" y2="311.875053" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="695.462185" y="307.105263" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (90 days)</text>
-
-  <!-- Tier 3: Cold (Glacier Instant) -->
-  <rect x="271.932773" y="316.644737" width="847.058824" height="114.473684" rx="6.384413" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="473.613445" y="354.802632" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--info-accent)" font-weight="bold">COLD - Glacier Instant</text>
-  <text x="473.613445" y="378.651263" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Rarely accessed, instant retrieval</text>
-  <text x="473.613445" y="400.592105" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | Higher retrieval fee</text>
-
-  <rect x="866.890756" y="335.723684" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="957.647059" y="360.526316" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">$0.004 / GB</text>
-
-  <text x="866.890756" y="400.592105" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Compliance, quarterly reports</text>
-
-  <!-- Transition arrow -->
-  <line x1="634.957983" y1="431.118421" x2="634.957983" y2="450.197368" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="695.462185" y="445.427684" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (365 days)</text>
-
-  <!-- Tier 4: Deep Archive -->
-  <rect x="332.436975" y="454.967053" width="726.05042" height="114.473684" rx="6.384413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="524.033613" y="493.124947" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--ok-accent)" font-weight="bold">DEEP ARCHIVE - Glacier</text>
-  <text x="524.033613" y="516.973684" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Long-term retention, bulk retrieval</text>
-  <text x="524.033613" y="538.914421" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Hours to retrieve | 12+ hour wait</text>
-
-  <rect x="866.890756" y="474.046" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="957.647059" y="498.848737" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">$0.00099 / GB</text>
-
-  <text x="866.890756" y="538.914421" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: 7-year regulatory archives</text>
-
-  <!-- Right side: cost savings -->
-  <text x="1098.823529" y="602.828947" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">~96% cheaper</text>
-  <text x="1098.823529" y="620" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)" text-anchor="middle">vs Standard</text>
+  <text x="1100" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-weight="bold" fill="var(--ok-accent)">~96% cheaper</text>
 </svg>

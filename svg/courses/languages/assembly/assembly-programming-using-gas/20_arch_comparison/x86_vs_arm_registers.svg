@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,222 +82,55 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-x86" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-arm" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2e7d32"/>
-      <stop offset="100%" stop-color="#1b5e20"/>
-    </linearGradient>
   </defs>
-  <!-- Header -->
-  <rect x="40" y="40" width="1200" height="40.331126" rx="6.275046" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="66.887417" text-anchor="middle" font-size="17.351966" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">x86 vs ARM: Register Comparison  (CISC vs RISC)</text>
 
   <!-- x86 column -->
-  <rect x="40" y="93.774834" width="570.967742" height="526.225166" rx="6.275046" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="93.774834" width="570.967742" height="40.331126" rx="6.275046" fill="url(#grad-x86)"/>
-  <rect x="40" y="120.662252" width="570.967742" height="13.443709" fill="url(#grad-x86)" rx="6.275046"/>
-  <text x="238.387097" y="120.662252" text-anchor="middle" font-size="15.423958" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">x86 (32-bit)  —  CISC</text>
-  <text x="456.129032" y="120.662252" text-anchor="middle" font-size="11.567943" fill="var(--primary-accent)" font-family="Courier New, monospace">Intel / AMD</text>
+  <rect x="40" y="40" width="589.655172413793" height="580" rx="10.954451150103" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="334.827586206897" y="86.4" text-anchor="middle" font-size="28.481572990269" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">x86 (CISC)</text>
 
-  <!-- x86 table header -->
-  <rect x="54.516129" y="141.788079" width="541.935484" height="26.887417" rx="6.275046" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Register</text>
-  <text x="272.258065" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Alt Name</text>
-  <text x="446.451613" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Purpose</text>
+  <text x="71.034482758621" y="144.4" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">eax</text>
+  <text x="246.896551724138" y="144.4" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">return, syscall#</text>
+  <text x="71.034482758621" y="179.2" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">ebx/ecx/edx</text>
+  <text x="246.896551724138" y="179.2" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">syscall args</text>
+  <text x="71.034482758621" y="214" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">esi/edi</text>
+  <text x="246.896551724138" y="214" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">source/dest index</text>
+  <text x="71.034482758621" y="248.8" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">esp</text>
+  <text x="246.896551724138" y="248.8" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">stack pointer</text>
+  <text x="71.034482758621" y="283.6" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">ebp</text>
+  <text x="246.896551724138" y="283.6" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">frame pointer</text>
+  <text x="71.034482758621" y="318.4" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">eip</text>
+  <text x="246.896551724138" y="318.4" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">instruction pointer</text>
+  <text x="71.034482758621" y="353.2" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">eflags</text>
+  <text x="246.896551724138" y="353.2" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">ZF, CF, SF, OF</text>
 
-  <!-- x86 rows -->
-  <!-- General Purpose -->
-  <rect x="54.516129" y="168.675497" width="541.935484" height="19.205298" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.483871" y="182.119205" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">GENERAL PURPOSE (caller-saved)</text>
-
-  <!-- eax -->
-  <rect x="54.516129" y="187.880795" width="541.935484" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="127.096774" y="204.205351" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">eax</text>
-  <text x="272.258065" y="204.205351" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">accumulator</text>
-  <text x="446.451613" y="204.205351" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">arithmetic, return value, syscall#</text>
-
-  <!-- ebx -->
-  <rect x="54.516129" y="212.847682" width="541.935484" height="24.966887" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="229.172132" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">ebx</text>
-  <text x="272.258065" y="229.172132" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">base</text>
-  <text x="446.451613" y="229.172132" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">base addr, syscall arg1</text>
-
-  <!-- ecx -->
-  <rect x="54.516129" y="237.81457" width="541.935484" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="127.096774" y="254.139126" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">ecx</text>
-  <text x="272.258065" y="254.139126" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">counter</text>
-  <text x="446.451613" y="254.139126" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">loop counter, syscall arg2</text>
-
-  <!-- edx -->
-  <rect x="54.516129" y="262.781457" width="541.935484" height="24.966887" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="279.105907" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">edx</text>
-  <text x="272.258065" y="279.105907" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">data</text>
-  <text x="446.451613" y="279.105907" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">data, mul/div hi, syscall arg3</text>
-
-  <!-- Index/Pointer section -->
-  <rect x="54.516129" y="287.748344" width="541.935484" height="19.205298" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.483871" y="301.192053" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">INDEX &amp; POINTER</text>
-
-  <!-- esi -->
-  <rect x="54.516129" y="306.953642" width="541.935484" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="127.096774" y="323.278199" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">esi</text>
-  <text x="272.258065" y="323.278199" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">source index</text>
-  <text x="446.451613" y="323.278199" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">string/array source, syscall arg4</text>
-
-  <!-- edi -->
-  <rect x="54.516129" y="331.92053" width="541.935484" height="24.966887" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="348.24498" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">edi</text>
-  <text x="272.258065" y="348.24498" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">dest index</text>
-  <text x="446.451613" y="348.24498" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">string/array destination, syscall arg5</text>
-
-  <!-- Stack section -->
-  <rect x="54.516129" y="356.887417" width="541.935484" height="19.205298" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.483871" y="370.331126" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">STACK &amp; FRAME POINTERS</text>
-
-  <!-- esp -->
-  <rect x="54.516129" y="376.092715" width="541.935484" height="24.966887" fill="url(#grad-warn)" rx="6.275046" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="392.417272" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">esp</text>
-  <text x="272.258065" y="392.417272" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">stack pointer</text>
-  <text x="446.451613" y="392.417272" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">top of stack (grows downward)</text>
-
-  <!-- ebp -->
-  <rect x="54.516129" y="401.059603" width="541.935484" height="24.966887" fill="url(#grad-warn)" rx="6.275046" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="417.384053" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">ebp</text>
-  <text x="272.258065" y="417.384053" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">base pointer</text>
-  <text x="446.451613" y="417.384053" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">frame base for local variable access</text>
-
-  <!-- Special section -->
-  <rect x="54.516129" y="426.02649" width="541.935484" height="19.205298" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.483871" y="439.470199" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">SPECIAL PURPOSE</text>
-
-  <!-- eip -->
-  <rect x="54.516129" y="445.231788" width="541.935484" height="24.966887" fill="url(#grad-danger)" rx="6.275046" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="461.556344" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">eip</text>
-  <text x="272.258065" y="461.556344" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">instr pointer</text>
-  <text x="446.451613" y="461.556344" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">next instruction address (read-only)</text>
-
-  <!-- eflags -->
-  <rect x="54.516129" y="470.198675" width="541.935484" height="24.966887" fill="url(#grad-primary)" rx="6.275046" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="127.096774" y="486.523126" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">eflags</text>
-  <text x="272.258065" y="486.523126" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">flags</text>
-  <text x="446.451613" y="486.523126" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">ZF, CF, SF, OF, PF, DF…</text>
-
-  <!-- x86 CISC notes -->
-  <rect x="54.516129" y="504.768212" width="541.935484" height="100.827762" rx="6.275046" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.483871" y="523.97351" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">CISC Characteristics</text>
-  <text x="69.032258" y="541.258278" font-size="10.603991" fill="var(--primary-accent)" font-family="Arial, sans-serif">• Variable instruction length (1–17 bytes)</text>
-  <text x="69.032258" y="556.622517" font-size="10.603991" fill="var(--primary-accent)" font-family="Arial, sans-serif">• Memory-to-memory ops (e.g. add [ecx], edx)</text>
-  <text x="69.032258" y="571.986755" font-size="10.603991" fill="var(--primary-accent)" font-family="Arial, sans-serif">• Many addressing modes: base+index×scale+disp</text>
-  <text x="69.032258" y="587.350993" font-size="10.603991" fill="var(--primary-accent)" font-family="Arial, sans-serif">• 8 general-purpose registers (limited!)</text>
-  <text x="69.032258" y="602.715232" font-size="10.603991" fill="var(--primary-accent)" font-family="Arial, sans-serif">• Backward compatible from 8086 (1978)</text>
-
-  <!-- Column dividers inside x86 table -->
-  <line x1="180.322581" y1="141.788079" x2="180.322581" y2="495.165563" stroke="var(--primary-border)" stroke-width="1"/>
-  <line x1="349.677419" y1="141.788079" x2="349.677419" y2="495.165563" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="334.827586206897" y="434.4" text-anchor="middle" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">8 GP registers</text>
+  <text x="334.827586206897" y="469.2" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">variable length 1-17B</text>
+  <text x="334.827586206897" y="504" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">memory-to-memory ops</text>
+  <text x="334.827586206897" y="538.8" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">many addressing modes</text>
+  <text x="334.827586206897" y="573.6" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">return via stack</text>
 
   <!-- ARM column -->
-  <rect x="630.322581" y="93.774834" width="609.677419" height="526.225166" rx="6.275046" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="630.322581" y="93.774834" width="609.677419" height="40.331126" rx="6.275046" fill="url(#grad-arm)"/>
-  <rect x="630.322581" y="120.662252" width="609.677419" height="13.443709" fill="url(#grad-arm)" rx="6.275046"/>
-  <text x="833.548387" y="120.662252" text-anchor="middle" font-size="15.423958" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">ARM (32-bit)  —  RISC</text>
-  <text x="1075.483871" y="120.662252" text-anchor="middle" font-size="11.567943" fill="var(--ok-accent)" font-family="Courier New, monospace">Cortex / ARMv7</text>
+  <rect x="650.344827586207" y="40" width="589.655172413793" height="580" rx="10.954451150103" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945.172413793103" y="86.4" text-anchor="middle" font-size="28.481572990269" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">ARM (RISC)</text>
 
-  <!-- ARM table header -->
-  <rect x="644.83871" y="141.788079" width="580.645161" height="26.887417" rx="6.275046" fill="var(--ok-accent)"/>
-  <text x="717.419355" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Register</text>
-  <text x="852.903226" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Alias</text>
-  <text x="1031.935484" y="159.072848" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Purpose</text>
+  <text x="681.379310344828" y="144.4" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r0-r3</text>
+  <text x="857.241379310345" y="144.4" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">args / return</text>
+  <text x="681.379310344828" y="179.2" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r4-r10</text>
+  <text x="857.241379310345" y="179.2" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">callee-saved</text>
+  <text x="681.379310344828" y="214" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r11 (fp)</text>
+  <text x="857.241379310345" y="214" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">frame pointer</text>
+  <text x="681.379310344828" y="248.8" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r12 (ip)</text>
+  <text x="857.241379310345" y="248.8" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">scratch</text>
+  <text x="681.379310344828" y="283.6" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r13 (sp)</text>
+  <text x="857.241379310345" y="283.6" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">stack pointer</text>
+  <text x="681.379310344828" y="318.4" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r14 (lr)</text>
+  <text x="857.241379310345" y="318.4" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">link register</text>
+  <text x="681.379310344828" y="353.2" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">r15 (pc)</text>
+  <text x="857.241379310345" y="353.2" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">program counter</text>
 
-  <!-- ARM rows: general purpose r0-r12 -->
-  <rect x="644.83871" y="168.675497" width="580.645161" height="19.205298" fill="url(#grad-ok)" rx="6.275046" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.16129" y="182.119205" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">GENERAL PURPOSE (r0–r12)</text>
-
-  <!-- r0–r3 (argument/result regs) -->
-  <rect x="644.83871" y="187.880795" width="580.645161" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="717.419355" y="204.205351" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">r0–r3</text>
-  <text x="852.903226" y="204.205351" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">a1–a4</text>
-  <text x="1031.935484" y="204.205351" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">args / return values (caller-saved)</text>
-
-  <!-- r4-r7 -->
-  <rect x="644.83871" y="212.847682" width="580.645161" height="24.966887" fill="url(#grad-ok)" rx="6.275046" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="229.172132" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">r4–r7</text>
-  <text x="852.903226" y="229.172132" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">v1–v4</text>
-  <text x="1031.935484" y="229.172132" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">variable registers (callee-saved)</text>
-
-  <!-- r8-r10 -->
-  <rect x="644.83871" y="237.81457" width="580.645161" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="717.419355" y="254.139126" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">r8–r10</text>
-  <text x="852.903226" y="254.139126" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">v5–v7</text>
-  <text x="1031.935484" y="254.139126" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">general purpose (callee-saved)</text>
-
-  <!-- r11 -->
-  <rect x="644.83871" y="262.781457" width="580.645161" height="24.966887" fill="url(#grad-ok)" rx="6.275046" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="279.105907" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">r11</text>
-  <text x="852.903226" y="279.105907" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">fp / v8</text>
-  <text x="1031.935484" y="279.105907" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">frame pointer (optional)</text>
-
-  <!-- r12 -->
-  <rect x="644.83871" y="287.748344" width="580.645161" height="24.966887" fill="var(--bg)" rx="6.275046"/>
-  <text x="717.419355" y="304.072901" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">r12</text>
-  <text x="852.903226" y="304.072901" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">ip</text>
-  <text x="1031.935484" y="304.072901" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">intra-procedure scratch (caller-saved)</text>
-
-  <!-- Special section ARM -->
-  <rect x="644.83871" y="312.715232" width="580.645161" height="19.205298" fill="url(#grad-ok)" rx="6.275046" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.16129" y="326.15894" text-anchor="middle" font-size="10.45841" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">SPECIAL PURPOSE (r13–r15)</text>
-
-  <!-- r13 / sp -->
-  <rect x="644.83871" y="331.92053" width="580.645161" height="24.966887" fill="url(#grad-warn)" rx="6.275046" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="348.24498" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">r13</text>
-  <text x="852.903226" y="348.24498" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">sp</text>
-  <text x="1031.935484" y="348.24498" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">stack pointer (grows downward)</text>
-
-  <!-- r14 / lr -->
-  <rect x="644.83871" y="356.887417" width="580.645161" height="24.966887" fill="url(#grad-warn)" rx="6.275046" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="373.211974" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">r14</text>
-  <text x="852.903226" y="373.211974" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">lr</text>
-  <text x="1031.935484" y="373.211974" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">link register — holds return address from BL</text>
-
-  <!-- r15 / pc -->
-  <rect x="644.83871" y="381.854305" width="580.645161" height="24.966887" fill="url(#grad-danger)" rx="6.275046" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="398.178755" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">r15</text>
-  <text x="852.903226" y="398.178755" text-anchor="middle" font-size="11.567943" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">pc</text>
-  <text x="1031.935484" y="398.178755" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">program counter (readable + writable!)</text>
-
-  <!-- CPSR -->
-  <rect x="644.83871" y="406.821192" width="580.645161" height="24.966887" fill="url(#grad-ok)" rx="6.275046" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="717.419355" y="423.145748" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">CPSR</text>
-  <text x="852.903226" y="423.145748" text-anchor="middle" font-size="10.603991" fill="var(--text-muted)" font-family="Courier New, monospace">flags</text>
-  <text x="1031.935484" y="423.145748" text-anchor="middle" font-size="10.603991" fill="var(--text)" font-family="Courier New, monospace">N, Z, C, V flags + mode bits</text>
-
-  <!-- Column dividers -->
-  <line x1="785.16129" y1="141.788079" x2="785.16129" y2="431.788079" stroke="var(--ok-border)" stroke-width="1"/>
-  <line x1="920.645161" y1="141.788079" x2="920.645161" y2="431.788079" stroke="var(--ok-border)" stroke-width="1"/>
-
-  <!-- ARM RISC notes -->
-  <rect x="644.83871" y="441.390728" width="580.645161" height="100.827762" rx="6.275046" fill="var(--ok-accent)"/>
-  <text x="935.16129" y="460.596026" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">RISC Characteristics</text>
-  <text x="659.354839" y="477.880795" font-size="10.603991" fill="var(--ok-accent)" font-family="Arial, sans-serif">• Fixed 32-bit instruction length (uniform decode)</text>
-  <text x="659.354839" y="493.245033" font-size="10.603991" fill="var(--ok-accent)" font-family="Arial, sans-serif">• Load-store only: all ops on registers, not memory</text>
-  <text x="659.354839" y="508.609272" font-size="10.603991" fill="var(--ok-accent)" font-family="Arial, sans-serif">• 16 general-purpose registers (2× more than x86)</text>
-  <text x="659.354839" y="523.97351" font-size="10.603991" fill="var(--ok-accent)" font-family="Arial, sans-serif">• Condition codes on most instructions</text>
-  <text x="659.354839" y="539.337748" font-size="10.603991" fill="var(--ok-accent)" font-family="Arial, sans-serif">• Lower power consumption → mobile &amp; embedded</text>
-
-  <!-- Bottom comparison bar -->
-  <rect x="40" y="556.622517" width="1200" height="63.377483" rx="6.275046" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="574.867497" text-anchor="middle" font-size="12.531999" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Key Differences</text>
-  <text x="54.516129" y="593.112583" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Register count:  x86 = 8   vs   ARM = 16</text>
-  <text x="54.516129" y="610.397351" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Syscall mechanism:  x86 → int $0x80   |   ARM → swi 0  (r7=syscall#)</text>
-  <text x="533.548387" y="593.112583" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Instr length:  x86 variable (1-17B)   vs   ARM fixed (4B)</text>
-  <text x="533.548387" y="610.397351" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Return addr:  x86 → on stack (esp)   |   ARM → in r14 (lr)</text>
-  <text x="969.032258" y="593.112583" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Stack:  both grow downward</text>
-  <text x="969.032258" y="610.397351" font-size="10.603991" fill="var(--text)" font-family="Arial, sans-serif">Endian:  x86 little   |   ARM bi-endian</text>
+  <text x="945.172413793103" y="434.4" text-anchor="middle" font-size="18.622566955176" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">16 GP registers</text>
+  <text x="945.172413793103" y="469.2" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">fixed 4B instructions</text>
+  <text x="945.172413793103" y="504" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">load-store only</text>
+  <text x="945.172413793103" y="538.8" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">CPSR flags: N Z C V</text>
+  <text x="945.172413793103" y="573.6" text-anchor="middle" font-size="16.431676725155" fill="var(--bg)" font-family="Arial, sans-serif">return via lr</text>
 </svg>

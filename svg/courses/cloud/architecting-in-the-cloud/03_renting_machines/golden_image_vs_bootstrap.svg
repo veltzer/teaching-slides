@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,113 +81,73 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- Top Swim Lane: Golden Image -->
-  <rect x="40" y="40" width="1200" height="270" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="89.180328" y="70" font-family="Arial, sans-serif" font-size="17.851886" fill="var(--ok-accent)" font-weight="bold">Golden Image (Pre-baked AMI)</text>
+  </defs>
 
-  <!-- Build phase -->
-  <rect x="69.508197" y="90" width="157.377049" height="70" rx="6.455833" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="148.196721" y="118" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text)" text-anchor="middle" font-weight="bold">Build Pipeline</text>
-  <text x="148.196721" y="136" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">Packer / EC2 Builder</text>
-  <text x="148.196721" y="152" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">(done ahead of time)</text>
+  <text x="650.526315789474" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.178937807733" font-weight="bold" fill="var(--ok-accent)">Golden Image (Pre-baked AMI)</text>
 
-  <line x1="226.885246" y1="125.000055" x2="276.065574" y2="125.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="71.636363636364" width="189.473684210526" height="73.818181818182" rx="6.321528493018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="134.736842105263" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" font-weight="bold" fill="var(--ok-text)">Build Pipeline</text>
+  <line x1="229.473684210526" y1="108.545454545455" x2="271.578947368421" y2="108.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Install everything -->
-  <rect x="280.983607" y="90" width="177.04918" height="70" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="369.508197" y="114.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Install OS + Deps</text>
-  <text x="369.508197" y="133.000055" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">+ App code + configs</text>
-  <text x="369.508197" y="150" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">+ security hardening</text>
+  <rect x="282.105263157895" y="71.636363636364" width="189.473684210526" height="73.818181818182" rx="6.321528493018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="376.842105263158" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" font-weight="bold" fill="var(--ok-text)">Install + Harden</text>
+  <line x1="471.578947368421" y1="108.545454545455" x2="513.684210526316" y2="108.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="458.032787" y1="125.000055" x2="507.213115" y2="125.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="524.210526315789" y="71.636363636364" width="189.473684210526" height="73.818181818182" rx="6.321528493018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="618.947368421053" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" font-weight="bold" fill="var(--ok-text)">Golden AMI</text>
+  <line x1="713.684210526316" y1="108.545454545455" x2="755.789473684211" y2="108.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Create AMI -->
-  <rect x="512.131148" y="90" width="147.540984" height="70" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="585.901639" y="118" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--bg)" text-anchor="middle" font-weight="bold">Golden AMI</text>
-  <text x="585.901639" y="136" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--bg)" text-anchor="middle">ami-0abc1234</text>
-  <text x="585.901639" y="152" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--bg)" text-anchor="middle">Ready to launch!</text>
+  <rect x="766.315789473684" y="71.636363636364" width="189.473684210526" height="73.818181818182" rx="6.321528493018" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="861.052631578947" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" font-weight="bold" fill="var(--primary-text)">Launch</text>
+  <line x1="955.789473684211" y1="108.545454545455" x2="997.894736842105" y2="108.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="659.672131" y1="125.000055" x2="718.688525" y2="125.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1008.421052631579" y="71.636363636364" width="189.473684210526" height="73.818181818182" rx="6.321528493018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1103.157894736842" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.857409314715" font-weight="bold" fill="var(--ok-text)">READY</text>
+  <text x="1103.157894736842" y="132.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.696645068206" fill="var(--ok-text)">1-2 min</text>
 
-  <!-- Launch -->
-  <rect x="723.606557" y="90" width="137.704918" height="70" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="792.459016" y="118" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Launch Instance</text>
-  <text x="792.459016" y="138" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">From golden AMI</text>
+  <rect x="40" y="177.090909090909" width="1157.894736842105" height="52.727272727273" rx="6.321528493018" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="618.947368421053" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" fill="var(--text-muted)">fast, consistent, immutable — but rebuild for every change</text>
 
-  <line x1="861.311475" y1="125.000055" x2="910.491803" y2="125.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="650.526315789474" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.178937807733" font-weight="bold" fill="var(--warn-accent)">Bootstrap (User Data Script)</text>
 
-  <!-- Ready -->
-  <rect x="915.409836" y="90" width="137.704918" height="70" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="984.262295" y="118" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--bg)" text-anchor="middle" font-weight="bold">READY!</text>
-  <text x="984.262295" y="138" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--bg)" text-anchor="middle">~1-2 minutes</text>
+  <rect x="40" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="118.947368421053" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--text)">Generic AMI</text>
+  <line x1="197.894736842105" y1="340.545454545455" x2="234.736842105263" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Timeline bar -->
-  <rect x="723.606557" y="180" width="329.508197" height="30" rx="6.455833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="887.868852" y="200" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Launch time: ~1-2 min (boot only)</text>
+  <rect x="240" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.947368421053" y="345.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--primary-text)">Launch</text>
+  <line x1="397.894736842105" y1="340.545454545455" x2="434.736842105263" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Pros -->
-  <text x="69.508197" y="234.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--ok-accent)" font-weight="bold">Pros:</text>
-  <text x="69.508197" y="254.999945" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-muted)">Fast startup, consistent, tested, immutable infrastructure</text>
-  <text x="69.508197" y="274.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--danger-accent)" font-weight="bold">Cons:</text>
-  <text x="69.508197" y="294.999945" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-muted)">Rebuild AMI for every change, image sprawl, larger image size</text>
+  <rect x="440" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="518.947368421053" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--warn-text)">yum install</text>
+  <text x="518.947368421053" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.643056986036" fill="var(--warn-text)">~3 min</text>
+  <line x1="597.894736842105" y1="340.545454545455" x2="634.736842105263" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Bottom Swim Lane: Bootstrap -->
-  <rect x="40" y="340" width="1200" height="280" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="89.180328" y="370" font-family="Arial, sans-serif" font-size="17.851886" fill="var(--warn-accent)" font-weight="bold">Bootstrap (User Data Script)</text>
+  <rect x="640" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="718.947368421053" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--warn-text)">Pull Code</text>
+  <text x="718.947368421053" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.643056986036" fill="var(--warn-text)">~4 min</text>
+  <line x1="797.894736842105" y1="340.545454545455" x2="834.736842105263" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Generic AMI -->
-  <rect x="69.508197" y="390" width="147.540984" height="70" rx="6.455833" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="143.278689" y="418" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--text)" text-anchor="middle" font-weight="bold">Generic AMI</text>
-  <text x="143.278689" y="438" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">Base OS only</text>
-  <text x="143.278689" y="452" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">(Amazon Linux 2)</text>
+  <rect x="840" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="918.947368421053" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--warn-text)">Configure</text>
+  <text x="918.947368421053" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.643056986036" fill="var(--warn-text)">~2 min</text>
+  <line x1="997.894736842105" y1="340.545454545455" x2="1034.736842105263" y2="340.545454545455" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="217.04918" y1="425.000055" x2="266.229508" y2="425.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1040" y="303.636363636364" width="157.894736842105" height="73.818181818182" rx="6.321528493018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1118.947368421052" y="340.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.750233150375" font-weight="bold" fill="var(--warn-text)">READY</text>
+  <text x="1118.947368421052" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.643056986036" fill="var(--warn-text)">10+ min</text>
 
-  <!-- Launch -->
-  <rect x="271.147541" y="390" width="127.868852" height="70" rx="6.455833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.081967" y="418" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Launch</text>
-  <text x="335.081967" y="438" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">With user-data</text>
-  <text x="335.081967" y="452" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">script attached</text>
+  <rect x="40" y="398.545454545455" width="589.473684210526" height="221.454545454545" rx="6.321528493018" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="334.736842105263" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.964585479054" font-weight="bold" fill="var(--ok-text)">Golden pros / cons</text>
+  <text x="334.736842105263" y="482.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--ok-text)">+ fast boot, tested image</text>
+  <text x="334.736842105263" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--ok-text)">+ immutable</text>
+  <text x="334.736842105263" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--ok-text)">- rebuild per change</text>
+  <text x="334.736842105263" y="593.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--ok-text)">- image sprawl</text>
 
-  <line x1="399.016393" y1="425.000055" x2="448.196721" y2="425.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Install deps -->
-  <rect x="453.114754" y="390" width="127.868852" height="70" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="517.04918" y="414.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">yum install</text>
-  <text x="517.04918" y="433.000055" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">System packages</text>
-  <text x="517.04918" y="450" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">~3 min</text>
-
-  <line x1="580.983607" y1="425.000055" x2="630.163934" y2="425.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Pull code -->
-  <rect x="635.081967" y="390" width="127.868852" height="70" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="699.016393" y="414.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Pull Code</text>
-  <text x="699.016393" y="433.000055" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">git clone + build</text>
-  <text x="699.016393" y="450" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">~4 min</text>
-
-  <line x1="762.95082" y1="425.000055" x2="812.131148" y2="425.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Configure -->
-  <rect x="817.04918" y="390" width="127.868852" height="70" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="880.983607" y="414.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Configure</text>
-  <text x="880.983607" y="433.000055" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">Env vars, certs</text>
-  <text x="880.983607" y="450" font-family="Arial, sans-serif" font-size="10.759722" fill="var(--text-muted)" text-anchor="middle">~2 min</text>
-
-  <line x1="944.918033" y1="425.000055" x2="994.098361" y2="425.000055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Ready -->
-  <rect x="999.016393" y="390" width="137.704918" height="70" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1067.868852" y="418" font-family="Arial, sans-serif" font-size="12.893052" fill="var(--bg)" text-anchor="middle" font-weight="bold">READY</text>
-  <text x="1067.868852" y="438" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--bg)" text-anchor="middle">~10+ minutes</text>
-
-  <!-- Timeline bar -->
-  <rect x="271.147541" y="480" width="865.57377" height="30" rx="6.455833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="703.934426" y="500" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Launch time: ~10-15 min (boot + install + config)</text>
-
-  <!-- Pros/Cons -->
-  <text x="69.508197" y="534.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--ok-accent)" font-weight="bold">Pros:</text>
-  <text x="69.508197" y="554.999945" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-muted)">Always latest code, no image management, simple to update</text>
-  <text x="69.508197" y="574.999945" font-family="Arial, sans-serif" font-size="11.901221" fill="var(--danger-accent)" font-weight="bold">Cons:</text>
-  <text x="69.508197" y="594.999945" font-family="Arial, sans-serif" font-size="10.909498" fill="var(--text-muted)">Slow startup, fragile (external deps may fail), inconsistent builds, bad for auto-scaling</text>
+  <rect x="650.526315789474" y="398.545454545455" width="589.473684210526" height="221.454545454545" rx="6.321528493018" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945.263157894737" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.964585479054" font-weight="bold" fill="var(--warn-text)">Bootstrap pros / cons</text>
+  <text x="945.263157894737" y="482.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--warn-text)">+ latest code</text>
+  <text x="945.263157894737" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--warn-text)">+ no image management</text>
+  <text x="945.263157894737" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--warn-text)">- slow, fragile</text>
+  <text x="945.263157894737" y="593.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.803821232545" fill="var(--warn-text)">- bad for auto-scaling</text>
 </svg>

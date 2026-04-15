@@ -1,148 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--primary-accent)">Best Practices Summary</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="66.126126126126" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235.254237288136" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--ok-text)">Data Loading</text>
+  <text x="235.254237288136" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Define schema</text>
+  <text x="235.254237288136" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Use Parquet</text>
+  <text x="235.254237288136" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Filter early</text>
+  <text x="235.254237288136" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Select needed columns</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="443.728813559322" y="66.126126126126" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--primary-text)">Transformations</text>
+  <text x="640" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Built-ins over UDFs</text>
+  <text x="640" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">DataFrames over RDDs</text>
+  <text x="640" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">reduceByKey over groupByKey</text>
+  <text x="640" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Chain narrow transforms</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="848.474576271186" y="66.126126126126" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1044.745762711864" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--warn-text)">Joins</text>
+  <text x="1044.745762711864" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Broadcast small tables</text>
+  <text x="1044.745762711864" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Salt to handle skew</text>
+  <text x="1044.745762711864" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Filter before joining</text>
+  <text x="1044.745762711864" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Avoid cartesian</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="40" y="254.234234234234" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235.254237288136" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--info-text)">Memory</text>
+  <text x="235.254237288136" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Cache reused frames</text>
+  <text x="235.254237288136" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Unpersist when done</text>
+  <text x="235.254237288136" y="374.414414414414" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Kryo serialization</text>
+  <text x="235.254237288136" y="400.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Monitor in Spark UI</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="443.728813559322" y="254.234234234234" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--primary-text)">Partitioning</text>
+  <text x="640" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">2-4x core count</text>
+  <text x="640" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Target ~128 MB</text>
+  <text x="640" y="374.414414414414" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Coalesce to shrink</text>
+  <text x="640" y="400.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Enable AQE</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="27.0006" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">RDD and DataFrame Best Practices Summary</text>
-  <rect x="40" y="71.3513" width="386.8421" height="163.8821" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="232.6315" y="104.1278" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Data Loading</text>
-  <text x="232.6315" y="132.629" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Define schema explicitly</text>
-  <text x="232.6315" y="155.43" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use columnar formats (Parquet)</text>
-  <text x="232.6315" y="178.2309" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Filter early (predicate pushdown)</text>
-  <text x="232.6315" y="201.032" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Select only needed columns</text>
-  <text x="232.6315" y="223.8329" text-anchor="middle" font-size="15.0003" fill="var(--ok-accent)" font-family="Arial, sans-serif">Avoid inferSchema in production</text>
-  <rect x="447.3684" y="71.3513" width="386.8421" height="163.8821" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="104.1278" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Transformations</text>
-  <text x="639.9999" y="132.629" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use built-in functions over UDFs</text>
-  <text x="639.9999" y="155.43" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Prefer DataFrames over RDDs</text>
-  <text x="639.9999" y="178.2309" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use mapPartitions for I/O</text>
-  <text x="639.9999" y="201.032" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">reduceByKey over groupByKey</text>
-  <text x="639.9999" y="223.8329" text-anchor="middle" font-size="15.0003" fill="var(--primary-accent)" font-family="Arial, sans-serif">Chain narrow transformations</text>
-  <rect x="853.1579" y="71.3513" width="386.8421" height="163.8821" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045.7895" y="104.1278" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Joins</text>
-  <text x="1045.7895" y="132.629" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Broadcast small tables</text>
-  <text x="1045.7895" y="155.43" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Handle skew with salting</text>
-  <text x="1045.7895" y="178.2309" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Filter before joining</text>
-  <text x="1045.7895" y="201.032" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use sort-merge for large-large</text>
-  <text x="1045.7895" y="223.8329" text-anchor="middle" font-size="15.0003" fill="var(--warn-accent)" font-family="Arial, sans-serif">Avoid cartesian joins</text>
-  <rect x="40" y="256.6094" width="386.8421" height="163.8821" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="232.6315" y="289.3858" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Memory Management</text>
-  <text x="232.6315" y="317.887" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Cache reused DataFrames</text>
-  <text x="232.6315" y="340.688" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Unpersist when done</text>
-  <text x="232.6315" y="363.4889" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Choose right storage level</text>
-  <text x="232.6315" y="386.2899" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use Kryo serialization</text>
-  <text x="232.6315" y="409.0909" text-anchor="middle" font-size="15.0003" fill="var(--info-accent)" font-family="Arial, sans-serif">Monitor memory in Spark UI</text>
-  <rect x="447.3684" y="256.6094" width="386.8421" height="163.8821" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="289.3858" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Partitioning</text>
-  <text x="639.9999" y="317.887" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">2-4 partitions per core</text>
-  <text x="639.9999" y="340.688" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">128MB per partition target</text>
-  <text x="639.9999" y="363.4889" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Coalesce to reduce partitions</text>
-  <text x="639.9999" y="386.2899" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Custom partitioner for skew</text>
-  <text x="639.9999" y="409.0909" text-anchor="middle" font-size="15.0003" fill="var(--ok-accent)" font-family="Arial, sans-serif">Enable AQE for auto-tuning</text>
-  <rect x="853.1579" y="256.6094" width="386.8421" height="163.8821" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045.7895" y="289.3858" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Anti-Patterns to Avoid</text>
-  <text x="1045.7895" y="317.887" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">collect() on large datasets</text>
-  <text x="1045.7895" y="340.688" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Python UDFs (use pandas_udf)</text>
-  <text x="1045.7895" y="363.4889" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">repartition(1) bottleneck</text>
-  <text x="1045.7895" y="386.2899" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">groupByKey (use reduceByKey)</text>
-  <text x="1045.7895" y="409.0909" text-anchor="middle" font-size="15.0003" fill="var(--danger-accent)" font-family="Arial, sans-serif">Unnecessary shuffles</text>
-  <rect x="40" y="448.9927" width="592.1052" height="78.3783" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.2631" y="481.7691" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Monitoring</text>
-  <text x="335.2631" y="510.2702" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Use Spark UI, track GC time, shuffle spill, and execution time</text>
-  <rect x="647.8948" y="448.9927" width="592.1052" height="78.3783" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="943.1579" y="481.7691" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Configuration</text>
-  <text x="943.1579" y="510.2702" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Enable AQE, tune shuffle partitions, set memory fractions</text>
-  <rect x="166.3157" y="555.8722" width="947.3684" height="64.1278" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="584.3735" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Golden Rule: Prefer DataFrames + built-in functions</text>
-  <text x="639.9999" y="610.0245" text-anchor="middle" font-size="16.5003" fill="var(--text)" font-family="Arial, sans-serif">Catalyst optimizer + Tungsten engine = best performance</text>
+  <rect x="848.474576271186" y="254.234234234234" width="391.525423728814" height="172.432432432432" rx="8.24721110845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1044.745762711864" y="290.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.587126382568" font-weight="bold" fill="var(--danger-text)">Anti-Patterns</text>
+  <text x="1044.745762711864" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">collect() on big data</text>
+  <text x="1044.745762711864" y="348.288288288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Python UDFs</text>
+  <text x="1044.745762711864" y="374.414414414414" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">repartition(1)</text>
+  <text x="1044.745762711864" y="400.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Unnecessary shuffles</text>
+
+  <rect x="151.864406779661" y="463.243243243243" width="976.271186440678" height="156.756756756757" rx="8.24721110845" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="515.495495495495" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.679830548237" font-weight="bold" fill="var(--ok-text)">Golden Rule</text>
+  <text x="640" y="552.072072072072" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" fill="var(--ok-text)">DataFrames + built-in functions</text>
+  <text x="640" y="588.648648648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" fill="var(--ok-text)">Catalyst + Tungsten win</text>
 </svg>

@@ -1,150 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640.500417014178" y="40" text-anchor="middle" font-size="26.123685932026" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Skew Solutions</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <text x="270.191826522102" y="85.391304347826" text-anchor="middle" font-size="20.095143024635" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Skewed</text>
+  <rect x="90.041701417848" y="196.347826086957" width="60.050041701418" height="45.391304347826" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="170.108423686405" y="95.478260869565" width="60.050041701418" height="146.260869565217" rx="6.028542907391" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200.133444537114" y="87.408695652174" text-anchor="middle" font-size="14.066600117245" fill="var(--danger-accent)" font-family="Arial, sans-serif">90%</text>
+  <rect x="250.175145954962" y="211.478260869565" width="60.050041701418" height="30.260869565217" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="330.24186822352" y="201.391304347826" width="60.050041701418" height="40.347826086957" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="410.308590492077" y="216.521739130435" width="60.050041701418" height="25.217391304348" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="270.191826522102" y="272" text-anchor="middle" font-size="15.071357268476" fill="var(--danger-accent)" font-family="Arial, sans-serif">One hot partition</text>
+  <text x="270.191826522102" y="295.2" text-anchor="middle" font-size="15.071357268476" fill="var(--danger-accent)" font-family="Arial, sans-serif">Straggler slows job</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <line x1="530.408673894912" y1="176.173913043478" x2="610.47539616347" y2="176.173913043478" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="570.442035029191" y="166.086956521739" text-anchor="middle" font-size="16.076114419708" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Fix</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <text x="940.750625521268" y="85.391304347826" text-anchor="middle" font-size="20.095143024635" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Balanced</text>
+  <rect x="690.542118432027" y="166.086956521739" width="60.050041701418" height="75.652173913043" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="770.608840700584" y="161.04347826087" width="60.050041701418" height="80.695652173913" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.675562969141" y="176.173913043478" width="60.050041701418" height="65.565217391304" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="930.742285237698" y="166.086956521739" width="60.050041701418" height="75.652173913043" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1010.809007506255" y="171.130434782609" width="60.050041701418" height="70.608695652174" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1090.875729774812" y="181.217391304348" width="60.050041701418" height="60.521739130435" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940.750625521268" y="272" text-anchor="middle" font-size="15.071357268476" fill="var(--ok-accent)" font-family="Arial, sans-serif">Even distribution</text>
+  <text x="940.750625521268" y="295.2" text-anchor="middle" font-size="15.071357268476" fill="var(--ok-accent)" font-family="Arial, sans-serif">Tasks finish together</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <text x="640.500417014178" y="342.608695652174" text-anchor="middle" font-size="22.104657327099" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Solutions</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="40" y="367.826086956522" width="378.315262718932" height="146.260869565217" rx="6.028542907391" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="229.157631359466" y="403.130434782609" text-anchor="middle" font-size="19.090385873404" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">1. Key Salting</text>
+  <text x="229.157631359466" y="433.391304347826" text-anchor="middle" font-size="15.071357268476" fill="var(--primary-text)" font-family="Arial, sans-serif">Random prefix on hot keys</text>
+  <text x="229.157631359466" y="458.608695652174" text-anchor="middle" font-size="15.071357268476" fill="var(--primary-text)" font-family="Courier New, monospace">key_0 ... key_N</text>
+  <text x="229.157631359466" y="483.826086956522" text-anchor="middle" font-size="15.071357268476" fill="var(--primary-text)" font-family="Arial, sans-serif">Splits hot partition</text>
+  <text x="229.157631359466" y="507.026086956522" text-anchor="middle" font-size="14.066600117245" fill="var(--primary-text)" font-family="Arial, sans-serif">Best for skewed joins</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="27.0006" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Skew: Problem and Solutions</text>
-  <text x="324.2105" y="82.7518" text-anchor="middle" font-size="21.0005" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Problem: Skewed Data</text>
-  <rect x="87.3684" y="199.6069" width="63.1579" height="42.7518" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="118.9474" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P0</text>
-  <rect x="166.3157" y="99.8526" width="63.1579" height="142.5061" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="197.8947" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--danger-accent)" font-family="Arial, sans-serif">P1</text>
-  <text x="197.8947" y="92.7273" text-anchor="middle" font-size="15.0003" fill="var(--danger-accent)" font-family="Arial, sans-serif">90%!</text>
-  <rect x="245.2632" y="213.8575" width="63.1579" height="28.5012" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="276.8421" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P2</text>
-  <rect x="324.2105" y="206.7322" width="63.1579" height="35.6265" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="355.7895" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P3</text>
-  <rect x="403.1579" y="220.9828" width="63.1579" height="21.376" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="434.7369" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P4</text>
-  <text x="324.2105" y="273.7101" text-anchor="middle" font-size="16.5003" fill="var(--danger-accent)" font-family="Arial, sans-serif">One partition has most data</text>
-  <text x="324.2105" y="295.086" text-anchor="middle" font-size="16.5003" fill="var(--danger-accent)" font-family="Arial, sans-serif">Straggler task slows everything</text>
-  <line x1="529.4736" y1="185.3563" x2="608.4211" y2="185.3563" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="568.9474" y="171.1056" text-anchor="middle" font-size="16.5003" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Fix</text>
-  <text x="955.7895" y="82.7518" text-anchor="middle" font-size="21.0005" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">After Fix: Balanced</text>
-  <rect x="687.3684" y="171.1056" width="63.1579" height="71.2531" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="718.9474" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P0</text>
-  <rect x="766.3158" y="163.9803" width="63.1579" height="78.3783" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="797.8948" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P1</text>
-  <rect x="845.2631" y="178.2309" width="63.1579" height="64.1278" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="876.8421" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P2</text>
-  <rect x="924.2105" y="168.2555" width="63.1579" height="74.1031" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="955.7895" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P3</text>
-  <rect x="1003.1579" y="173.9558" width="63.1579" height="68.403" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1034.7368" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P4</text>
-  <rect x="1082.1053" y="182.5061" width="63.1579" height="59.8526" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1113.6843" y="242.3587" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">P5</text>
-  <text x="955.7895" y="273.7101" text-anchor="middle" font-size="16.5003" fill="var(--ok-accent)" font-family="Arial, sans-serif">Even distribution across partitions</text>
-  <text x="955.7895" y="295.086" text-anchor="middle" font-size="16.5003" fill="var(--ok-accent)" font-family="Arial, sans-serif">All tasks finish around same time</text>
-  <text x="639.9999" y="342.113" text-anchor="middle" font-size="22.5005" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Solutions</text>
-  <rect x="40" y="367.7641" width="378.9473" height="142.5061" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="229.4737" y="399.1155" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Key Salting</text>
-  <text x="229.4737" y="424.7666" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Add random prefix to hot keys</text>
-  <text x="229.4737" y="447.5676" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">key_0, key_1, ... key_N</text>
-  <text x="229.4737" y="470.3685" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Splits hot partition into N parts</text>
-  <text x="229.4737" y="493.1696" text-anchor="middle" font-size="15.0003" fill="var(--primary-accent)" font-family="Arial, sans-serif">Best for joins with skewed keys</text>
-  <rect x="450.5263" y="367.7641" width="378.9473" height="142.5061" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="399.1155" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. Repartition</text>
-  <text x="639.9999" y="424.7666" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">repartition(N, "column")</text>
-  <text x="639.9999" y="447.5676" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Redistribute data evenly</text>
-  <text x="639.9999" y="470.3685" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Causes full shuffle</text>
-  <text x="639.9999" y="493.1696" text-anchor="middle" font-size="15.0003" fill="var(--ok-accent)" font-family="Arial, sans-serif">Best for aggregations</text>
-  <rect x="861.0527" y="367.7641" width="378.9473" height="142.5061" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050.5263" y="399.1155" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">3. Adaptive Query (AQE)</text>
-  <text x="1050.5263" y="424.7666" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">adaptive.skewJoin.enabled</text>
-  <text x="1050.5263" y="447.5676" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">Automatically splits skewed</text>
-  <text x="1050.5263" y="470.3685" text-anchor="middle" font-size="15.0003" fill="var(--text)" font-family="Arial, sans-serif">partitions at runtime</text>
-  <text x="1050.5263" y="493.1696" text-anchor="middle" font-size="15.0003" fill="var(--warn-accent)" font-family="Arial, sans-serif">Spark 3.0+ recommended</text>
-  <rect x="166.3157" y="534.4963" width="947.3684" height="85.5037" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="565.8477" text-anchor="middle" font-size="19.5004" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Detection: skew_ratio = max(partition_size) / avg(partition_size)</text>
-  <text x="639.9999" y="594.3489" text-anchor="middle" font-size="18.0004" fill="var(--text-muted)" font-family="Arial, sans-serif">Ratio &gt; 3.0 indicates significant skew -- check with spark_partition_id()</text>
+  <rect x="450.341951626355" y="367.826086956522" width="378.315262718932" height="146.260869565217" rx="6.028542907391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.500417014178" y="403.130434782609" text-anchor="middle" font-size="19.090385873404" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. Repartition</text>
+  <text x="640.500417014178" y="433.391304347826" text-anchor="middle" font-size="15.071357268476" fill="var(--ok-text)" font-family="Courier New, monospace">repartition(N, col)</text>
+  <text x="640.500417014178" y="458.608695652174" text-anchor="middle" font-size="15.071357268476" fill="var(--ok-text)" font-family="Arial, sans-serif">Redistribute evenly</text>
+  <text x="640.500417014178" y="483.826086956522" text-anchor="middle" font-size="15.071357268476" fill="var(--ok-text)" font-family="Arial, sans-serif">Full shuffle cost</text>
+  <text x="640.500417014178" y="507.026086956522" text-anchor="middle" font-size="14.066600117245" fill="var(--ok-text)" font-family="Arial, sans-serif">Best for aggregations</text>
+
+  <rect x="861.684737281067" y="367.826086956522" width="378.315262718932" height="146.260869565217" rx="6.028542907391" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050.842368640534" y="403.130434782609" text-anchor="middle" font-size="19.090385873404" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">3. AQE Skew Join</text>
+  <text x="1050.842368640534" y="433.391304347826" text-anchor="middle" font-size="15.071357268476" fill="var(--warn-text)" font-family="Courier New, monospace">adaptive.skewJoin.enabled</text>
+  <text x="1050.842368640534" y="458.608695652174" text-anchor="middle" font-size="15.071357268476" fill="var(--warn-text)" font-family="Arial, sans-serif">Auto-splits at runtime</text>
+  <text x="1050.842368640534" y="483.826086956522" text-anchor="middle" font-size="15.071357268476" fill="var(--warn-text)" font-family="Arial, sans-serif">Spark 3+</text>
+  <text x="1050.842368640534" y="507.026086956522" text-anchor="middle" font-size="14.066600117245" fill="var(--warn-text)" font-family="Arial, sans-serif">Recommended default</text>
+
+  <rect x="170.108423686405" y="534.260869565217" width="940.783986655546" height="85.739130434783" rx="6.028542907391" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640.500417014178" y="567.547826086956" text-anchor="middle" font-size="18.085628722172" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Detection</text>
+  <text x="640.500417014178" y="597.808695652174" text-anchor="middle" font-size="16.076114419708" fill="var(--text-muted)" font-family="Arial, sans-serif">skew_ratio = max / avg &gt; 3 -- use spark_partition_id()</text>
 </svg>

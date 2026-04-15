@@ -34,43 +34,24 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,111 +73,53 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
-      <stop offset="100%" stop-color="#f57c00"/>
-    </linearGradient>
-    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
   </defs>
-  <!-- Title -->
-  <rect x="40" y="40" width="1200" height="42.890752" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="67.294115" font-family="Arial, sans-serif" font-size="19.583817" font-weight="bold" fill="var(--bg)" text-anchor="middle">Real-World Assembly Use Cases</text>
 
-  <!-- Row 1: Cryptography -->
-  <rect x="40" y="98.48739" width="373.770492" height="165.71427" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="98.48739" width="373.770492" height="38.991593" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.885246" y="123.831817" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cryptography</text>
-  <text x="59.672131" y="154.050356" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- AES-NI hardware instructions</text>
-  <text x="59.672131" y="174.520888" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Constant-time implementations</text>
-  <text x="59.672131" y="194.991528" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- SHA hash extensions (SHA-NI)</text>
-  <text x="59.672131" y="215.462169" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Used in OpenSSL, libsodium</text>
-  <text x="59.672131" y="235.932701" font-size="11.750248" fill="var(--primary-accent)" font-family="Courier New, monospace">aesenc %xmm1, %xmm0</text>
-  <text x="59.672131" y="253.478918" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">Single-round AES encryption</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--primary-accent)">Real-World Assembly Use Cases</text>
 
-  <!-- Codecs -->
-  <rect x="433.442623" y="98.48739" width="373.770492" height="165.71427" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="433.442623" y="98.48739" width="373.770492" height="38.991593" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.327869" y="123.831817" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Media Codecs</text>
-  <text x="453.114754" y="154.050356" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Video encoding (H.264, AV1)</text>
-  <text x="453.114754" y="174.520888" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Audio DSP (MP3, AAC filters)</text>
-  <text x="453.114754" y="194.991528" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- SIMD pixel/sample processing</text>
-  <text x="453.114754" y="215.462169" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Used in FFmpeg, x264, dav1d</text>
-  <text x="453.114754" y="235.932701" font-size="11.750248" fill="var(--ok-accent)" font-family="Courier New, monospace">pmaddwd %xmm2, %xmm1</text>
-  <text x="453.114754" y="253.478918" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">SIMD multiply-add for DCT</text>
+  <!-- Row 1 -->
+  <rect x="40" y="83.364485981308" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--primary-text)">Cryptography</text>
+  <text x="60" y="159.252336448598" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--primary-text)">AES-NI, SHA-NI</text>
+  <text x="60" y="191.775700934579" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--primary-text)">Constant-time code</text>
+  <text x="60" y="224.299065420561" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--primary-text)">OpenSSL, libsodium</text>
+  <text x="60" y="262.242990654206" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--primary-text)">aesenc %xmm1, %xmm0</text>
 
-  <!-- Kernel -->
-  <rect x="826.885246" y="98.48739" width="413.114754" height="165.71427" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="826.885246" y="98.48739" width="413.114754" height="38.991593" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1033.442623" y="123.831817" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">OS Kernel Code</text>
-  <text x="846.557377" y="154.050356" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Boot sequence and boot loaders</text>
-  <text x="846.557377" y="174.520888" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Context switch (save/restore regs)</text>
-  <text x="846.557377" y="194.991528" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Interrupt / syscall entry points</text>
-  <text x="846.557377" y="215.462169" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Used in Linux, FreeBSD kernels</text>
-  <text x="846.557377" y="235.932701" font-size="11.750248" fill="var(--warn-accent)" font-family="Courier New, monospace">swapgs; sysretq</text>
-  <text x="846.557377" y="253.478918" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">Fast syscall return path</text>
+  <rect x="445" y="83.364485981308" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--ok-text)">Media Codecs</text>
+  <text x="465" y="159.252336448598" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--ok-text)">H.264, AV1 encode</text>
+  <text x="465" y="191.775700934579" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--ok-text)">SIMD DSP</text>
+  <text x="465" y="224.299065420561" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--ok-text)">FFmpeg, x264, dav1d</text>
+  <text x="465" y="262.242990654206" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--ok-text)">pmaddwd %xmm2, %xmm1</text>
 
-  <!-- Row 2: Embedded -->
-  <rect x="40" y="283.697349" width="373.770492" height="165.71427" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="283.697349" width="373.770492" height="38.991593" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.885246" y="309.041992" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Embedded Systems</text>
-  <text x="59.672131" y="339.260423" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Microcontroller startup code</text>
-  <text x="59.672131" y="359.731063" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Real-time interrupt handlers</text>
-  <text x="59.672131" y="380.201595" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Hardware peripheral drivers</text>
-  <text x="59.672131" y="400.672128" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- ARM Cortex-M, AVR, RISC-V</text>
-  <text x="59.672131" y="421.142768" font-size="11.750248" fill="var(--info-accent)" font-family="Courier New, monospace">cpsid i ; disable interrupts</text>
-  <text x="59.672131" y="438.688985" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">ARM: critical section entry</text>
+  <rect x="850" y="83.364485981308" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--warn-text)">Kernel</text>
+  <text x="870" y="159.252336448598" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">Boot + loaders</text>
+  <text x="870" y="191.775700934579" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">Context switch</text>
+  <text x="870" y="224.299065420561" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">Syscall / IRQ entry</text>
+  <text x="870" y="262.242990654206" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--warn-text)">swapgs; sysretq</text>
 
-  <!-- Hot paths -->
-  <rect x="433.442623" y="283.697349" width="373.770492" height="165.71427" rx="6.373938" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="433.442623" y="283.697349" width="373.770492" height="38.991593" rx="6.373938" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.327869" y="309.041992" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Performance Hot Paths</text>
-  <text x="453.114754" y="339.260423" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Inner loops (memcpy, memset)</text>
-  <text x="453.114754" y="359.731063" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- String operations (strlen, strcmp)</text>
-  <text x="453.114754" y="380.201595" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Database sort/search kernels</text>
-  <text x="453.114754" y="400.672128" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Game engine math routines</text>
-  <text x="453.114754" y="421.142768" font-size="11.750248" fill="var(--danger-accent)" font-family="Courier New, monospace">rep movsq</text>
-  <text x="453.114754" y="438.688985" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">Fast 64-bit memory copy loop</text>
+  <!-- Row 2 -->
+  <rect x="40" y="338.130841121495" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="376.07476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--info-text)">Embedded</text>
+  <text x="60" y="414.018691588785" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--info-text)">MCU startup</text>
+  <text x="60" y="446.542056074766" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--info-text)">RT interrupt handlers</text>
+  <text x="60" y="479.065420560748" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--info-text)">Cortex-M, AVR, RISC-V</text>
+  <text x="60" y="517.009345794393" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--info-text)">cpsid i</text>
 
-  <!-- Security / RE -->
-  <rect x="826.885246" y="283.697349" width="413.114754" height="165.71427" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="826.885246" y="283.697349" width="413.114754" height="38.991593" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1033.442623" y="309.041992" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Security and Reverse Engineering</text>
-  <text x="846.557377" y="339.260423" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Shellcode / exploit development</text>
-  <text x="846.557377" y="359.731063" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Malware analysis (disassembly)</text>
-  <text x="846.557377" y="380.201595" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Vulnerability research</text>
-  <text x="846.557377" y="400.672128" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- CTF (Capture the Flag) challenges</text>
-  <text x="846.557377" y="421.142768" font-size="11.750248" fill="var(--text-muted)" font-family="Courier New, monospace">objdump -d binary | less</text>
-  <text x="846.557377" y="438.688985" font-family="Arial, sans-serif" font-size="10.771105" fill="var(--text-faint)">Disassemble to study behavior</text>
+  <rect x="445" y="338.130841121495" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="376.07476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--danger-text)">Hot Paths</text>
+  <text x="465" y="414.018691588785" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--danger-text)">memcpy / memset</text>
+  <text x="465" y="446.542056074766" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--danger-text)">String ops</text>
+  <text x="465" y="479.065420560748" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--danger-text)">Game math, DB sort</text>
+  <text x="465" y="517.009345794393" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--danger-text)">rep movsq</text>
 
-  <!-- Bottom: decision guide -->
-  <rect x="40" y="468.907523" width="1200" height="151.092477" rx="6.373938" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="491.327635" font-family="Arial, sans-serif" font-size="14.687783" font-weight="bold" fill="var(--text)" text-anchor="middle">When to Use Assembly vs. C</text>
+  <rect x="850" y="338.130841121495" width="390" height="233.084112149533" rx="10.412070637163" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="376.07476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--warn-text)">Security / RE</text>
+  <text x="870" y="414.018691588785" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">Shellcode / exploits</text>
+  <text x="870" y="446.542056074766" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">Malware analysis</text>
+  <text x="870" y="479.065420560748" font-family="Arial, sans-serif" font-size="15.618105955744" fill="var(--warn-text)">CTF challenges</text>
+  <text x="870" y="517.009345794393" font-family="Courier New, monospace" font-size="14.576898892028" fill="var(--warn-text)">objdump -d</text>
 
-  <!-- Use assembly -->
-  <rect x="59.672131" y="503.025113" width="531.147541" height="102.352878" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="325.245902" y="524.47049" font-family="Arial, sans-serif" font-size="12.729497" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Use Assembly when...</text>
-  <text x="79.344262" y="545.915866" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Compiler cannot emit required instructions (e.g. AES-NI)</text>
-  <text x="79.344262" y="565.411662" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Timing must be precise (side-channel attack resistance)</text>
-  <text x="79.344262" y="584.907459" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- No C runtime available (bootloader, startup stub)</text>
-  <text x="79.344262" y="604.403255" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Profiling shows a specific hot loop dominates runtime</text>
-
-  <!-- Use C -->
-  <rect x="610.491803" y="503.025113" width="600" height="102.352878" rx="6.373938" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="910.491803" y="524.47049" font-family="Arial, sans-serif" font-size="12.729497" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Use C (not assembly) when...</text>
-  <text x="630.163934" y="545.915866" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Compiler auto-vectorization is sufficient</text>
-  <text x="630.163934" y="565.411662" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Portability across architectures matters</text>
-  <text x="630.163934" y="584.907459" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Maintainability and debugging ease are priorities</text>
-  <text x="630.163934" y="604.403255" font-family="Arial, sans-serif" font-size="12.729497" fill="var(--text)">- Intrinsics (e.g. _mm256_add_ps) cover the SIMD need</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.659313019461" font-style="italic" fill="var(--text-muted)">Assembly where compilers cannot reach</text>
 </svg>

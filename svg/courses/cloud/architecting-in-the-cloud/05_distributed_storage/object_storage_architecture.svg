@@ -1,193 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="221.25" width="140" height="103.571428571429" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="110" y="257.5" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text)" text-anchor="middle" font-weight="bold">Client</text>
+  <text x="110" y="283.392857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)" text-anchor="middle">SDK / CLI</text>
+  <text x="110" y="306.178571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-accent)" text-anchor="middle">PUT / GET</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <line x1="180" y1="273.035714285714" x2="248" y2="273.035714285714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="214" y="264.75" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-faint)" text-anchor="middle">HTTPS</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="252" y="185" width="180" height="176.071428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="342" y="216.071428571429" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--primary-text)" text-anchor="middle" font-weight="bold">HTTP API</text>
+  <text x="342" y="241.964285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">REST / S3 API</text>
+  <text x="342" y="283.392857142857" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">PUT /bucket/key</text>
+  <text x="342" y="319.642857142857" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">GET /bucket/key</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <line x1="432" y1="273.035714285714" x2="494" y2="273.035714285714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="462" y="264.75" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-faint)" text-anchor="middle">Route</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="498" y="195.357142857143" width="160" height="155.357142857143" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="578" y="231.607142857143" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)" text-anchor="middle" font-weight="bold">Partition Router</text>
+  <text x="578" y="270.964285714286" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--info-text)" text-anchor="middle">hash(key) -&gt; node</text>
+  <text x="578" y="298.928571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)" text-anchor="middle">Consistent hashing</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="658" y1="231.607142857143" x2="732" y2="107.321428571429" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="658" y1="273.035714285714" x2="732" y2="288.571428571429" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="658" y1="314.464285714286" x2="732" y2="475" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- Client -->
-  <rect x="40" y="218.461522" width="138.271605" height="99.14529" rx="6.441398" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="109.135802" y="253.162428" font-family="Arial, sans-serif" font-size="13.853729" fill="var(--text)" text-anchor="middle" font-weight="bold">Client</text>
-  <text x="109.135802" y="272.991486" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--text-muted)" text-anchor="middle">SDK / CLI</text>
-  <text x="109.135802" y="292.820544" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--primary-accent)" text-anchor="middle">PUT/GET by key</text>
+  <rect x="736" y="40" width="504" height="145" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="71.071428571429" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--ok-text)" text-anchor="middle" font-weight="bold">AZ 1 (Primary)</text>
+  <rect x="760" y="86.607142857143" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="830" y="117.678571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle" font-weight="bold">Node 1</text>
+  <text x="830" y="143.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle">A, D</text>
+  <rect x="918" y="86.607142857143" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="117.678571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle" font-weight="bold">Node 2</text>
+  <text x="988" y="143.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle">B, E</text>
+  <rect x="1076" y="86.607142857143" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1146" y="117.678571428571" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle" font-weight="bold">Node 3</text>
+  <text x="1146" y="143.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)" text-anchor="middle">C, F</text>
 
-  <!-- Arrow Client -> API -->
-  <line x1="178.271605" y1="268.034167" x2="247.407407" y2="268.034167" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="212.839506" y="258.119638" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-faint)" text-anchor="middle">HTTPS</text>
+  <rect x="736" y="210.892857142857" width="504" height="145" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="241.964285714286" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--primary-text)" text-anchor="middle" font-weight="bold">AZ 2 (Replica)</text>
+  <rect x="760" y="257.5" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="830" y="288.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle" font-weight="bold">Node 4</text>
+  <text x="830" y="314.464285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">A, D copy</text>
+  <rect x="918" y="257.5" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="288.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle" font-weight="bold">Node 5</text>
+  <text x="988" y="314.464285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">B, E copy</text>
+  <rect x="1076" y="257.5" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1146" y="288.571428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle" font-weight="bold">Node 6</text>
+  <text x="1146" y="314.464285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)" text-anchor="middle">C, F copy</text>
 
-  <!-- HTTP API Layer -->
-  <rect x="252.345679" y="178.803406" width="177.777778" height="178.461522" rx="6.441398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="341.234568" y="213.504312" font-family="Arial, sans-serif" font-size="14.843235" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">HTTP API</text>
-  <text x="341.234568" y="238.29058" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--text-muted)" text-anchor="middle">REST / S3 API</text>
-  <rect x="272.098765" y="253.162428" width="138.271605" height="29.743587" rx="6.441398" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="341.234568" y="272.991486" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text)" text-anchor="middle">PUT bucket/key → object</text>
-  <rect x="272.098765" y="292.820544" width="138.271605" height="29.743587" rx="6.441398" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="341.234568" y="312.649602" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text)" text-anchor="middle">GET bucket/key → data</text>
+  <rect x="736" y="397.321428571429" width="504" height="145" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="428.392857142857" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)" text-anchor="middle" font-weight="bold">AZ 3 (Replica)</text>
+  <rect x="760" y="443.928571428571" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="830" y="475" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle" font-weight="bold">Node 7</text>
+  <text x="830" y="500.892857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle">A, D copy</text>
+  <rect x="918" y="443.928571428571" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="988" y="475" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle" font-weight="bold">Node 8</text>
+  <text x="988" y="500.892857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle">B, E copy</text>
+  <rect x="1076" y="443.928571428571" width="140" height="82.857142857143" rx="6.106202935189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1146" y="475" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle" font-weight="bold">Node 9</text>
+  <text x="1146" y="500.892857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)" text-anchor="middle">C, F copy</text>
 
-  <!-- Arrow API -> Routing -->
-  <line x1="430.123457" y1="268.034167" x2="494.320988" y2="268.034167" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="461.728395" y="258.119638" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-faint)" text-anchor="middle">Route</text>
-
-  <!-- Routing / Partitioning Layer -->
-  <rect x="499.259259" y="193.675254" width="158.024691" height="148.717935" rx="6.441398" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="578.271605" y="223.418731" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Partition</text>
-  <text x="578.271605" y="243.247789" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Router</text>
-  <text x="578.271605" y="272.991486" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Hash(key) → node</text>
-  <text x="578.271605" y="292.820544" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Consistent hashing</text>
-  <text x="578.271605" y="312.649602" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">for distribution</text>
-
-  <!-- Arrows to AZs -->
-  <line x1="657.283951" y1="238.29058" x2="731.358025" y2="119.316232" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="657.283951" y1="268.034167" x2="731.358025" y2="297.777753" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="657.283951" y1="307.692282" x2="731.358025" y2="476.239275" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- AZ 1 -->
-  <rect x="736.296296" y="40" width="503.703704" height="148.717935" rx="6.441398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="988.148148" y="64.786268" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Availability Zone 1</text>
-
-  <rect x="760.987654" y="79.658116" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805.432099" y="104.444384" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 1</text>
-  <text x="805.432099" y="124.273442" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition A</text>
-  <text x="805.432099" y="139.14529" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition D</text>
-
-  <rect x="869.62963" y="79.658116" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="914.074074" y="104.444384" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 2</text>
-  <text x="914.074074" y="124.273442" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition B</text>
-  <text x="914.074074" y="139.14529" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition E</text>
-
-  <rect x="978.271605" y="79.658116" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1022.716049" y="104.444384" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 3</text>
-  <text x="1022.716049" y="124.273442" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition C</text>
-  <text x="1022.716049" y="139.14529" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">Partition F</text>
-
-  <!-- AZ 2 -->
-  <rect x="736.296296" y="218.461522" width="503.703704" height="148.717935" rx="6.441398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="988.148148" y="243.247789" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Availability Zone 2 (Replica)</text>
-
-  <rect x="760.987654" y="258.119638" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805.432099" y="282.905905" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 4</text>
-  <text x="805.432099" y="307.692282" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
-
-  <rect x="869.62963" y="258.119638" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="914.074074" y="282.905905" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 5</text>
-  <text x="914.074074" y="307.692282" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
-
-  <rect x="978.271605" y="258.119638" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1022.716049" y="282.905905" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 6</text>
-  <text x="1022.716049" y="307.692282" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
-
-  <!-- AZ 3 -->
-  <rect x="736.296296" y="396.923043" width="503.703704" height="148.717935" rx="6.441398" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="988.148148" y="421.709311" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Availability Zone 3 (Replica)</text>
-
-  <rect x="760.987654" y="436.581159" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805.432099" y="461.367427" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 7</text>
-  <text x="805.432099" y="486.153804" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
-
-  <rect x="869.62963" y="436.581159" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="914.074074" y="461.367427" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 8</text>
-  <text x="914.074074" y="486.153804" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
-
-  <rect x="978.271605" y="436.581159" width="88.888889" height="69.401703" rx="6.441398" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1022.716049" y="461.367427" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 9</text>
-  <text x="1022.716049" y="486.153804" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
-
-  <!-- Replication arrows between AZs -->
-  <line x1="1096.790123" y1="188.717935" x2="1096.790123" y2="216.478616" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <line x1="1096.790123" y1="367.179456" x2="1096.790123" y2="394.940137" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="1156.049383" y="203.589673" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--info-accent)">Replicate</text>
-  <text x="1156.049383" y="382.051195" font-family="Arial, sans-serif" font-size="10.735663" fill="var(--info-accent)">Replicate</text>
-
-  <!-- Bottom: Key properties -->
-  <rect x="49.876543" y="565.470036" width="1185.185185" height="54.529964" rx="6.441398" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="642.469136" y="590.256413" font-family="Arial, sans-serif" font-size="12.864223" fill="var(--text)" text-anchor="middle" font-weight="bold">S3: 11 nines durability (99.999999999%) | 3 AZ replication | Key-value access (bucket + key) | Unlimited scale</text>
-  <text x="642.469136" y="610.085471" font-family="Arial, sans-serif" font-size="10.885104" fill="var(--text-muted)" text-anchor="middle">Objects stored as flat namespace, no hierarchy. Prefix-based partitioning for performance.</text>
+  <rect x="50" y="563.035714285714" width="1180" height="56.964285714286" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="588.928571428572" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--text)" text-anchor="middle" font-weight="bold">11 nines durability | 3-AZ replication | flat key-value</text>
+  <text x="640" y="609.642857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--text-muted)" text-anchor="middle">Prefix-based partitioning</text>
 </svg>

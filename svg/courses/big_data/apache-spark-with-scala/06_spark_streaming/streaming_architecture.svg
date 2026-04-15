@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,74 +81,64 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8141" font-weight="bold" fill="var(--text)">Structured Streaming Architecture</text>
+  </defs>
 
   <!-- Sources -->
-  <rect x="40" y="92.7273" width="220" height="527.2727" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--primary-text)">Sources</text>
-  <text x="150" y="180.6061" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Kafka</text>
-  <text x="150" y="215.7576" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Kinesis</text>
-  <text x="150" y="250.9091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">File stream</text>
-  <text x="150" y="286.0606" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Socket (dev)</text>
-  <text x="150" y="321.2121" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--primary-text)">Rate (testing)</text>
+  <rect x="40" y="40" width="223.728813559322" height="580" rx="8.520242022381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.864406779661" y="95.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.300605055953" font-weight="bold" fill="var(--primary-text)">Sources</text>
+  <text x="151.864406779661" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--primary-text)">Kafka</text>
+  <text x="151.864406779661" y="218.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--primary-text)">Kinesis</text>
+  <text x="151.864406779661" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--primary-text)">File stream</text>
+  <text x="151.864406779661" y="307.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--primary-text)">Socket</text>
+  <text x="151.864406779661" y="352.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--primary-text)">Rate</text>
+  <text x="151.864406779661" y="441.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--primary-text)">Offsets tracked</text>
+  <text x="151.864406779661" y="466.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--primary-text)">via WAL</text>
 
-  <text x="150" y="373.9394" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--primary-text)">source offsets tracked by</text>
-  <text x="150" y="395.0303" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--primary-text)">Spark via a WAL (write-ahead</text>
-  <text x="150" y="416.1212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--primary-text)">log) for exactly-once replay</text>
-
-  <line x1="260" y1="338.7879" x2="298" y2="338.7879" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="265.762711864407" y1="330" x2="302.372881355932" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Engine -->
-  <rect x="300" y="92.7273" width="680" height="527.2727" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--ok-text)">Structured Streaming Engine</text>
+  <rect x="304.406779661017" y="40" width="671.186440677966" height="580" rx="8.520242022381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="84.615384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.300605055953" font-weight="bold" fill="var(--ok-text)">Streaming Engine</text>
 
-  <rect x="330" y="163.0303" width="280" height="152.3232" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470" y="198.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Trigger policy</text>
-  <text x="470" y="227.4747" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">ProcessingTime(1s)</text>
-  <text x="470" y="248.5657" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">Once() (batch)</text>
-  <text x="470" y="269.6566" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">AvailableNow</text>
-  <text x="470" y="294.2626" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">Continuous (low-latency)</text>
+  <rect x="324.745762711864" y="118.076923076923" width="294.915254237288" height="211.923076923077" rx="6.390181516786" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="472.203389830508" y="157.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" font-weight="bold" fill="var(--ok-text)">Trigger policy</text>
+  <text x="472.203389830508" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">ProcessingTime(1s)</text>
+  <text x="472.203389830508" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">Once (batch)</text>
+  <text x="472.203389830508" y="251.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">AvailableNow</text>
+  <text x="472.203389830508" y="279.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">Continuous</text>
 
-  <rect x="670" y="163.0303" width="280" height="152.3232" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="810" y="198.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Micro-batch loop</text>
-  <text x="810" y="227.4747" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">each tick:</text>
-  <text x="810" y="250.9091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">read new offsets → batch DF</text>
-  <text x="810" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">run Catalyst → execute stages</text>
-  <text x="810" y="293.0909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">commit state + offsets</text>
+  <rect x="660.338983050847" y="118.076923076923" width="294.915254237288" height="211.923076923077" rx="6.390181516786" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="807.796610169491" y="157.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" font-weight="bold" fill="var(--ok-text)">Micro-batch loop</text>
+  <text x="807.796610169491" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">read offsets</text>
+  <text x="807.796610169491" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">Catalyst plan</text>
+  <text x="807.796610169491" y="251.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">execute stages</text>
+  <text x="807.796610169491" y="279.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">commit state</text>
 
-  <rect x="330" y="338.7879" width="280" height="152.3232" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470" y="373.9394" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Stateful operations</text>
-  <text x="470" y="406.7475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">aggregations, joins, windows</text>
-  <text x="470" y="430.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">state stored per executor</text>
-  <text x="470" y="453.6162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">HDFS / S3 checkpoint backing</text>
-  <text x="470" y="477.0505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">watermarks cap memory growth</text>
+  <rect x="324.745762711864" y="352.307692307692" width="294.915254237288" height="211.923076923077" rx="6.390181516786" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="472.203389830508" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" font-weight="bold" fill="var(--ok-text)">Stateful ops</text>
+  <text x="472.203389830508" y="430.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">aggs, joins, windows</text>
+  <text x="472.203389830508" y="458.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">per-executor state</text>
+  <text x="472.203389830508" y="486.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">watermarks</text>
 
-  <rect x="670" y="338.7879" width="280" height="152.3232" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="810" y="373.9394" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" font-weight="bold" fill="var(--ok-text)">Checkpoint directory</text>
-  <text x="810" y="406.7475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">offsets, commits, state</text>
-  <text x="810" y="430.1818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">survives restarts</text>
-  <text x="810" y="453.6162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">allows exactly-once with</text>
-  <text x="810" y="477.0505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--ok-text)">idempotent sinks</text>
+  <rect x="660.338983050847" y="352.307692307692" width="294.915254237288" height="211.923076923077" rx="6.390181516786" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="807.796610169491" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" font-weight="bold" fill="var(--ok-text)">Checkpoint dir</text>
+  <text x="807.796610169491" y="430.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">offsets + state</text>
+  <text x="807.796610169491" y="458.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">survives restarts</text>
+  <text x="807.796610169491" y="486.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--ok-text)">exactly-once</text>
 
-  <text x="640" y="543.8384" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.072" fill="var(--ok-text)">Output modes: append | update | complete</text>
-  <text x="640" y="570.7879" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.072" fill="var(--ok-text)">Same DataFrame API as batch — write once, run streaming</text>
+  <text x="640" y="597.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.910423539167" fill="var(--ok-text)">Modes: append | update | complete</text>
 
-  <line x1="980" y1="338.7879" x2="1018" y2="338.7879" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="977.627118644068" y1="330" x2="1014.237288135593" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Sinks -->
-  <rect x="1020" y="92.7273" width="220" height="527.2727" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1130" y="133.7374" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3193" font-weight="bold" fill="var(--warn-text)">Sinks</text>
-  <text x="1130" y="180.6061" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Kafka</text>
-  <text x="1130" y="215.7576" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">File (Parquet/ORC)</text>
-  <text x="1130" y="250.9091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Delta / Iceberg</text>
-  <text x="1130" y="286.0606" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Foreach / ForeachBatch</text>
-  <text x="1130" y="321.2121" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Console (dev)</text>
-  <text x="1130" y="356.3636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1544" fill="var(--warn-text)">Memory (tests)</text>
-
-  <text x="1130" y="414.9495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--warn-text)">idempotent or</text>
-  <text x="1130" y="436.0404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--warn-text)">transactional sinks</text>
-  <text x="1130" y="457.1313" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--warn-text)">enable end-to-end</text>
-  <text x="1130" y="478.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9895" fill="var(--warn-text)">exactly-once semantics</text>
+  <rect x="1016.271186440678" y="40" width="223.728813559322" height="580" rx="8.520242022381" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.135593220339" y="95.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.300605055953" font-weight="bold" fill="var(--warn-text)">Sinks</text>
+  <text x="1128.135593220339" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">Kafka</text>
+  <text x="1128.135593220339" y="218.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">Parquet / ORC</text>
+  <text x="1128.135593220339" y="263.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">Delta / Iceberg</text>
+  <text x="1128.135593220339" y="307.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">ForeachBatch</text>
+  <text x="1128.135593220339" y="352.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">Console</text>
+  <text x="1128.135593220339" y="396.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.040484044762" fill="var(--warn-text)">Memory</text>
+  <text x="1128.135593220339" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--warn-text)">Idempotent sinks</text>
+  <text x="1128.135593220339" y="499.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.845393286369" fill="var(--warn-text)">= exactly-once</text>
 </svg>

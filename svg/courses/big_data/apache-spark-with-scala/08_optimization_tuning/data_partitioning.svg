@@ -34,99 +34,52 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="80" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Partitioning Strategies</text>
+  <text x="640" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">minimise shuffle, balance executors</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="140" width="385" height="220" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--ok-text)">Hash Partitioning</text>
+  <text x="232" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Default for join, groupBy</text>
+  <text x="232" y="250" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">hash(key) mod N</text>
+  <text x="232" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Even if no skew</text>
+  <text x="232" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--ok-text)">repartition(n, col)</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="447" y="140" width="385" height="220" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--warn-text)">Range Partitioning</text>
+  <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Ordered keys (sort)</text>
+  <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Samples to pick bounds</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Good for time-series</text>
+  <text x="640" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--warn-text)">repartitionByRange</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="855" y="140" width="385" height="220" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--info-text)">Custom Partitioner</text>
+  <text x="1047" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Co-locate related rows</text>
+  <text x="1047" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Avoid cross-job shuffle</text>
+  <text x="1047" y="285" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--info-text)">override getPartition</text>
+  <text x="1047" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="var(--info-text)">partitionBy(custom)</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="1200" height="81.403509" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="75.614035" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">Partitioning Strategies</text>
-  <text x="640" y="103.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">Right partitioning minimises shuffle and balances work across executors</text>
-
-  <rect x="40" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="232" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Hash Partitioning</text>
-  <text x="232" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">Default for joins and groupBy</text>
-  <text x="232" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--ok-text)">hash(key) mod numPartitions</text>
-  <text x="232" y="279.122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">Even distribution if keys</text>
-  <text x="232" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--ok-text)">are not skewed</text>
-  <text x="232" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--ok-text)">repartition(n, col)</text>
-
-  <rect x="447" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Range Partitioning</text>
-  <text x="640" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">Ordered keys, used by sort</text>
-  <text x="640" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">Samples data to pick bounds</text>
-  <text x="640" y="279.122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Good for time-series and</text>
-  <text x="640" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">range queries</text>
-  <text x="640" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--warn-text)">repartitionByRange</text>
-
-  <rect x="855" y="141.754386" width="385" height="223.859649" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1047" y="177.368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--info-text)">Custom Partitioner</text>
-  <text x="1047" y="212.982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Co-locate related records</text>
-  <text x="1047" y="243.508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">Avoid shuffles between jobs</text>
-  <text x="1047" y="279.122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">Extend Partitioner,</text>
-  <text x="1047" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--info-text)">override getPartition</text>
-  <text x="1047" y="335.087719" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--info-text)">partitionBy(custom)</text>
-
-  <rect x="40" y="385.964912" width="1200" height="234.035088" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="421.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">Sizing Rules of Thumb</text>
-  <text x="640" y="457.192982" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Target 128 MB per partition; 2-4x cores as a starting count</text>
-  <text x="640" y="492.807018" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Too few -&gt; idle cores; too many -&gt; scheduling overhead</text>
-  <text x="640" y="528.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Inspect with df.rdd.getNumPartitions and the Spark UI stage view</text>
-  <text x="640" y="564.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">Coalesce to shrink without shuffle; repartition to grow or rebalance</text>
-  <text x="640" y="599.649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Fix skew with salting or AQE skew join handling</text>
+  <rect x="40" y="385" width="1200" height="235" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="var(--text)">Sizing Rules of Thumb</text>
+  <text x="640" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Target ~128 MB per partition; 2-4x cores</text>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Too few: idle cores. Too many: overhead.</text>
+  <text x="640" y="535" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="var(--text-muted)">df.rdd.getNumPartitions</text>
+  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">coalesce shrinks; repartition rebalances</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">Fix skew: salt keys or enable AQE</text>
 </svg>

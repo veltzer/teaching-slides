@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,64 +81,47 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">UDF Registration</text>
+  <!-- Pipeline flow -->
+  <rect x="40" y="40" width="274.576271186441" height="210.909090909091" rx="8.284613618287" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="177.28813559322" y="92.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--primary-text)">Scala Function</text>
+  <text x="177.28813559322" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--primary-text)">(String =&gt; String)</text>
+  <text x="177.28813559322" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--primary-text)">Serializable</text>
+  <text x="177.28813559322" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--primary-text)">Null-safe</text>
 
-  <rect x="40" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">Scala Function</text>
-  <text x="180" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Plain (String =&gt; String)</text>
-  <text x="180" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Serializable closure</text>
-  <text x="180" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Pure, no side effects</text>
-  <text x="180" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Null-safe inputs</text>
+  <line x1="316.610169491525" y1="145.454545454545" x2="353.220338983051" y2="145.454545454545" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="320" y1="164.890511" x2="360" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="355.254237288136" y="40" width="274.576271186441" height="210.909090909091" rx="8.284613618287" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="492.542372881356" y="92.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.640380641147" font-weight="bold" fill="var(--ok-text)">spark.udf.register</text>
+  <text x="492.542372881356" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--ok-text)">Name + function</text>
+  <text x="492.542372881356" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--ok-text)">Usable in SQL</text>
+  <text x="492.542372881356" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--ok-text)">Session-scoped</text>
 
-  <rect x="370" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="510" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">spark.udf.register</text>
-  <text x="510" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Name + function</text>
-  <text x="510" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Available in SQL strings</text>
-  <text x="510" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Session-scoped</text>
-  <text x="510" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Return type inferred</text>
+  <line x1="631.864406779661" y1="145.454545454545" x2="668.474576271186" y2="145.454545454545" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="650" y1="164.890511" x2="690" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="670.508474576271" y="40" width="274.576271186441" height="210.909090909091" rx="8.284613618287" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="807.796610169491" y="92.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--warn-text)">udf(...) wrapper</text>
+  <text x="807.796610169491" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--warn-text)">val f = udf(func)</text>
+  <text x="807.796610169491" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--warn-text)">DataFrame API</text>
+  <text x="807.796610169491" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--warn-text)">Typed Column</text>
 
-  <rect x="700" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="840" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">udf(...) wrapper</text>
-  <text x="840" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">val f = udf(func)</text>
-  <text x="840" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Use in DataFrame API</text>
-  <text x="840" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">df.select(f($"col"))</text>
-  <text x="840" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Typed Column output</text>
+  <line x1="947.118644067797" y1="145.454545454545" x2="983.728813559322" y2="145.454545454545" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="980" y1="164.890511" x2="1020" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="985.762711864407" y="40" width="254.237288135593" height="210.909090909091" rx="8.284613618287" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1112.881355932203" y="92.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--info-text)">Executor</text>
+  <text x="1112.881355932203" y="140.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--info-text)">Runs per row</text>
+  <text x="1112.881355932203" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--info-text)">Not Catalyst</text>
+  <text x="1112.881355932203" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--info-text)">No pushdown</text>
 
-  <rect x="1030" y="69.635036" width="210" height="190.510949" rx="6.172697" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1135" y="111.970803" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--info-text)">Executor</text>
-  <text x="1135" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Runs per row</text>
-  <text x="1135" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">JVM, not Catalyst</text>
-  <text x="1135" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Opaque to optimizer</text>
-  <text x="1135" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">No pushdown</text>
-
-  <rect x="40" y="291.89781" width="595" height="328.10219" rx="6.172697" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="337" y="323.649635" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.460526" font-weight="bold" fill="var(--primary-text)">Register for SQL</text>
-  <text x="60" y="360.693431" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">spark.udf.register("myUpper",</text>
-  <text x="60" y="387.153285" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  (s: String) =&gt; s.toUpperCase)</text>
-  <text x="60" y="418.905109" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">spark.sql(</text>
-  <text x="60" y="445.364964" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  "SELECT myUpper(name) FROM users")</text>
-  <text x="60" y="487.70073" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">// DataFrame API form</text>
-  <text x="60" y="514.160584" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">import org.apache.spark.sql.functions.udf</text>
-  <text x="60" y="540.620438" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">val upper = udf((s: String) =&gt;</text>
-  <text x="60" y="567.080292" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  Option(s).map(_.toUpperCase).orNull)</text>
-  <text x="60" y="598.832117" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">df.select(upper($"name"))</text>
-
-  <rect x="645" y="291.89781" width="595" height="328.10219" rx="6.172697" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="942" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--text)">Caveats</text>
-  <text x="942" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Prefer built-in functions from org.apache.spark.sql.functions.</text>
-  <text x="942" y="397.737226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Built-ins are Catalyst-visible and support codegen.</text>
-  <text x="942" y="429.489051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">UDFs break optimizations like predicate pushdown.</text>
-  <text x="942" y="461.240876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Serialization per row costs CPU.</text>
-  <text x="942" y="492.992701" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Pandas UDFs for Python give vectorized speed.</text>
-  <text x="942" y="524.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">UDAFs aggregate; typed Aggregator is preferred in Scala.</text>
-  <text x="942" y="556.49635" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Handle null: wrap in Option or check in function.</text>
-  <text x="942" y="588.248175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Deterministic by default; mark nondeterministic if needed.</text>
+  <!-- Code example -->
+  <rect x="40" y="282.545454545455" width="1200" height="337.454545454545" rx="8.284613618287" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60.338983050847" y="324.727272727273" font-size="16.569227236575" fill="var(--primary-fill)" font-family="Courier New, monospace">spark.udf.register("myUpper",</text>
+  <text x="60.338983050847" y="354.254545454545" font-size="16.569227236575" fill="var(--bg)" font-family="Courier New, monospace">  (s: String) =&gt; s.toUpperCase)</text>
+  <text x="60.338983050847" y="388" font-size="16.569227236575" fill="var(--primary-fill)" font-family="Courier New, monospace">spark.sql("SELECT myUpper(name) FROM users")</text>
+  <text x="60.338983050847" y="440.727272727273" font-size="16.569227236575" fill="var(--ok-fill)" font-family="Courier New, monospace">// DataFrame API form</text>
+  <text x="60.338983050847" y="472.363636363636" font-size="16.569227236575" fill="var(--primary-fill)" font-family="Courier New, monospace">import org.apache.spark.sql.functions.udf</text>
+  <text x="60.338983050847" y="504" font-size="16.569227236575" fill="var(--bg)" font-family="Courier New, monospace">val upper = udf((s: String) =&gt;</text>
+  <text x="60.338983050847" y="533.527272727273" font-size="16.569227236575" fill="var(--bg)" font-family="Courier New, monospace">  Option(s).map(_.toUpperCase).orNull)</text>
+  <text x="60.338983050847" y="579.927272727273" font-size="16.569227236575" fill="var(--bg)" font-family="Courier New, monospace">df.select(upper($"name"))</text>
 </svg>

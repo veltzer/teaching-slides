@@ -1,148 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.128853838633" font-weight="bold" fill="var(--text)">Hive Integration</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="77.247706422018" width="366.101694915254" height="234.128440366972" rx="8.322529668181" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.050847457627" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--primary-text)">SparkSession</text>
+  <text x="223.050847457627" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">.enableHiveSupport()</text>
+  <text x="223.050847457627" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">Reads hive-site.xml</text>
+  <text x="223.050847457627" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">HiveQL dialect</text>
+  <text x="223.050847457627" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--primary-text)">Hive UDFs + SerDes</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <line x1="411.186440677966" y1="194.311926605505" x2="448.813559322034" y2="194.311926605505" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="456.949152542373" y="77.247706422018" width="366.101694915254" height="234.128440366972" rx="8.322529668181" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--ok-text)">Hive Metastore</text>
+  <text x="640" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Table catalog</text>
+  <text x="640" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Schemas + partitions</text>
+  <text x="640" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Backed by RDBMS</text>
+  <text x="640" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--ok-text)">Thrift service</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="828.135593220339" y1="194.311926605505" x2="865.762711864407" y2="194.311926605505" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="873.898305084746" y="77.247706422018" width="366.101694915254" height="234.128440366972" rx="8.322529668181" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1056.949152542373" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.806324170452" font-weight="bold" fill="var(--warn-text)">Data (HDFS/S3)</text>
+  <text x="1056.949152542373" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Parquet, ORC, Avro</text>
+  <text x="1056.949152542373" y="199.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Managed or external</text>
+  <text x="1056.949152542373" y="236.880733944954" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Partitioned folders</text>
+  <text x="1056.949152542373" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--warn-text)">Location in DDL</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="40" y="343.302752293578" width="589.830508474576" height="276.697247706422" rx="8.322529668181" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="334.915254237288" y="380.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.725691753407" font-weight="bold" fill="var(--primary-text)">Enable and Query</text>
+  <text x="60.338983050847" y="423.119266055046" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--primary-text)">SparkSession.builder()</text>
+  <text x="60.338983050847" y="455.045871559633" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--primary-text)">  .enableHiveSupport()</text>
+  <text x="60.338983050847" y="486.97247706422" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--primary-text)">  .getOrCreate()</text>
+  <text x="60.338983050847" y="534.862385321101" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--primary-text)">spark.sql("SELECT * FROM users")</text>
+  <text x="60.338983050847" y="572.110091743119" font-family="Courier New, monospace" font-size="14.564426919316" fill="var(--primary-text)">df.write.saveAsTable("sales")</text>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">Hive Integration</text>
-
-  <rect x="40" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--primary-text)">SparkSession</text>
-  <text x="220" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">.enableHiveSupport()</text>
-  <text x="220" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Loads hive-site.xml</text>
-  <text x="220" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Binds Hive SerDes</text>
-  <text x="220" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Binds Hive UDFs</text>
-  <text x="220" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">HiveQL dialect</text>
-  <text x="220" y="307.773723" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">spark-warehouse dir</text>
-
-  <line x1="400" y1="196.642336" x2="440" y2="196.642336" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="450" y="69.635036" width="380" height="254.014599" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--ok-text)">Hive Metastore</text>
-  <text x="640" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Database and table catalog</text>
-  <text x="640" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Schema definitions</text>
-  <text x="640" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Partition metadata</text>
-  <text x="640" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Stored in MySQL/Postgres</text>
-  <text x="640" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Shared across engines</text>
-  <text x="640" y="307.773723" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Thrift service</text>
-
-  <line x1="830" y1="196.642336" x2="870" y2="196.642336" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="880" y="69.635036" width="360" height="254.014599" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.575657" font-weight="bold" fill="var(--warn-text)">Data on HDFS/S3</text>
-  <text x="1060" y="149.014599" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Parquet, ORC, Avro</text>
-  <text x="1060" y="180.766423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Managed or external</text>
-  <text x="1060" y="212.518248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Partitioned folders</text>
-  <text x="1060" y="244.270073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Bucketed columns</text>
-  <text x="1060" y="276.021898" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Location hint in DDL</text>
-  <text x="1060" y="307.773723" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Files persist independently</text>
-
-  <rect x="40" y="344.817518" width="595" height="275.182482" rx="6.172697" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
-  <text x="337" y="376.569343" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.460526" font-weight="bold" fill="var(--primary-text)">Enable and Query</text>
-  <text x="60" y="413.613139" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">val spark = SparkSession.builder()</text>
-  <text x="60" y="440.072993" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  .appName("HiveApp")</text>
-  <text x="60" y="466.532847" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  .enableHiveSupport()</text>
-  <text x="60" y="492.992701" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">  .getOrCreate()</text>
-  <text x="60" y="530.036496" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">spark.sql("CREATE TABLE IF NOT EXISTS")</text>
-  <text x="60" y="556.49635" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">spark.sql("SELECT * FROM users")</text>
-  <text x="60" y="588.248175" font-size="14.40296" fill="var(--primary-text)" font-family="Courier New, monospace">df.write.saveAsTable("sales")</text>
-
-  <rect x="645" y="344.817518" width="595" height="275.182482" rx="6.172697" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="942" y="381.861314" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--text)">Why Use It</text>
-  <text x="942" y="416.788321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Share tables with Hive, Presto, Impala, Trino.</text>
-  <text x="942" y="448.540146" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Reuse existing ETL and data governance.</text>
-  <text x="942" y="480.291971" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Persist table definitions across sessions.</text>
-  <text x="942" y="512.043796" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Read Hive UDFs where needed.</text>
-  <text x="942" y="543.79562" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--text-muted)">Drop managed table removes data; external keeps it.</text>
-  <text x="942" y="582.956204" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.374177" fill="var(--text-faint)">Requires Hive jars on classpath and metastore URI.</text>
+  <rect x="650.169491525424" y="343.302752293578" width="589.830508474576" height="276.697247706422" rx="8.322529668181" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="945.084745762712" y="380.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.725691753407" font-weight="bold" fill="var(--text)">Why Use It</text>
+  <text x="945.084745762712" y="423.119266055046" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Share tables with Presto, Trino</text>
+  <text x="945.084745762712" y="460.366972477064" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Reuse existing ETL</text>
+  <text x="945.084745762712" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Tables persist across sessions</text>
+  <text x="945.084745762712" y="534.862385321101" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">Managed drop removes data</text>
+  <text x="945.084745762712" y="572.110091743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.604743127839" fill="var(--text-muted)">External keeps files</text>
 </svg>

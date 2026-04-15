@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,63 +82,54 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3894" font-weight="bold" fill="var(--text)">Executor Memory Architecture (Unified, Spark 2.0+)</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">Executor Memory Architecture</text>
 
-  <rect x="40" y="81.4286" width="600" height="538.5714" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="340" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2655" font-weight="bold" fill="var(--text)">JVM Heap (spark.executor.memory)</text>
+  <rect x="40" y="71.636363636364" width="600" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="340" y="103.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">JVM Heap</text>
 
-  <rect x="60" y="138.3929" width="560" height="82.8571" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="169.4643" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--primary-text)">Reserved Memory</text>
-  <text x="340" y="195.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--primary-text)">300 MB — system internals</text>
+  <rect x="60" y="124.363636363636" width="560" height="73.818181818182" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--primary-text)">Reserved</text>
+  <text x="340" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">300 MB system</text>
 
-  <rect x="60" y="231.6071" width="560" height="124.2857" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="262.6786" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--info-text)">User Memory (~40%)</text>
-  <text x="340" y="288.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">your UDFs, RDD transformation closures</text>
-  <text x="340" y="309.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">large Scala structures you allocate inside tasks</text>
-  <text x="340" y="340.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">Spark does not manage this — your code does</text>
+  <rect x="60" y="219.272727272727" width="560" height="105.454545454545" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--info-text)">User (~40%)</text>
+  <text x="340" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">UDFs, closures</text>
+  <text x="340" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">unmanaged</text>
 
-  <rect x="60" y="366.25" width="560" height="238.2143" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="397.3214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--ok-text)">Unified Memory (~60% × spark.memory.fraction)</text>
+  <rect x="60" y="345.818181818182" width="560" height="253.090909090909" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="377.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--ok-text)">Unified (~60%)</text>
 
-  <rect x="80" y="412.8571" width="260" height="176.0714" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="210" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--ok-text)">Storage</text>
-  <text x="210" y="464.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">cached RDDs / DataFrames</text>
-  <text x="210" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">broadcast variables</text>
-  <text x="210" y="506.0714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">deserialized partitions</text>
-  <text x="210" y="537.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">persists across tasks within</text>
-  <text x="210" y="554.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">the executor lifetime</text>
+  <rect x="80" y="398.545454545455" width="260" height="179.272727272727" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Storage</text>
+  <text x="210" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">cached data</text>
+  <text x="210" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">broadcast vars</text>
+  <text x="210" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">persisted blocks</text>
 
-  <rect x="360" y="412.8571" width="260" height="176.0714" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="490" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--ok-text)">Execution</text>
-  <text x="490" y="464.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">shuffle buffers</text>
-  <text x="490" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">sort / aggregation / join hash tables</text>
-  <text x="490" y="506.0714" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">lives only during task execution</text>
-  <text x="490" y="537.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">can evict Storage blocks</text>
-  <text x="490" y="554.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">to reclaim space when needed</text>
+  <rect x="360" y="398.545454545455" width="260" height="179.272727272727" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Execution</text>
+  <text x="490" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">shuffle buffers</text>
+  <text x="490" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">sort, join hashes</text>
+  <text x="490" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">task-scoped</text>
 
-  <rect x="660" y="81.4286" width="580" height="538.5714" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="950" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2655" font-weight="bold" fill="var(--text)">How unified memory borrows</text>
+  <rect x="660" y="71.636363636364" width="580" height="548.363636363636" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="950" y="103.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--text)">Borrowing</text>
 
-  <text x="680" y="148.75" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--text)">Storage needs more?</text>
-  <text x="680" y="174.6429" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">— borrows from free Execution space.</text>
-  <text x="680" y="195.3571" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">— but will be evicted if Execution needs it back.</text>
+  <text x="680" y="145.454545454545" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Storage borrows</text>
+  <text x="680" y="171.818181818182" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">from idle Execution</text>
+  <text x="680" y="192.909090909091" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">evicted when reclaimed</text>
 
-  <text x="680" y="231.6071" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--text)">Execution needs more?</text>
-  <text x="680" y="257.5" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">— borrows from Storage above the unevictable</text>
-  <text x="680" y="278.2143" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">   floor (spark.memory.storageFraction, ~50%).</text>
-  <text x="680" y="298.9286" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">— evicts cached blocks (LRU) until it has enough.</text>
+  <text x="680" y="235.090909090909" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Execution borrows</text>
+  <text x="680" y="261.454545454545" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">above storageFraction</text>
+  <text x="680" y="282.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">evicts cache LRU</text>
 
-  <rect x="680" y="324.8214" width="540" height="72.5" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="353.8214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--warn-text)">Off-heap (optional)</text>
-  <text x="950" y="378.6786" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--warn-text)">spark.memory.offHeap.enabled + .size — avoids GC</text>
+  <rect x="680" y="303.636363636364" width="540" height="73.818181818182" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Off-heap (optional)</text>
+  <text x="950" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--warn-text)">avoids GC overhead</text>
 
-  <text x="680" y="428.3929" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--text)">Common symptoms</text>
-  <text x="680" y="454.2857" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">• OOM mid-shuffle — Execution starved. Increase</text>
-  <text x="680" y="471.8929" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">   memory or shuffle.partitions, reduce cached data.</text>
-  <text x="680" y="500.8929" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">• Cached DF disappears — evicted by Execution.</text>
-  <text x="680" y="519.5357" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">   Use MEMORY_AND_DISK, or raise storageFraction.</text>
-  <text x="680" y="552.6786" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">• Long GC pauses — too much on-heap data. Enable</text>
-  <text x="680" y="571.3214" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">   off-heap, or switch to G1 GC, or split executors smaller.</text>
+  <text x="680" y="419.636363636364" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Symptoms</text>
+  <text x="680" y="451.272727272727" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">OOM in shuffle</text>
+  <text x="680" y="477.636363636364" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">cache disappearing</text>
+  <text x="680" y="504" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">long GC pauses</text>
 </svg>

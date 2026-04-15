@@ -34,166 +34,64 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Visibility Timeout</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="1200" height="242.545454545455" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Success: Delete Before Timeout</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="80" y="134.909090909091" width="100" height="42.181818181818" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--primary-text)">Receive</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="200" y="134.909090909091" width="480" height="42.181818181818" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--info-text)">Invisible (timeout 30s)</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="200" y="198.181818181818" width="380" height="42.181818181818" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="390" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Processing...</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="600" y="198.181818181818" width="120" height="42.181818181818" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Delete!</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <!-- Scenario 1: Happy Path (top) -->
-  <rect x="40" y="40" width="1200" height="251.333333" rx="6.347324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="69" font-family="Arial, sans-serif" font-size="16.576672" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Scenario 1: Success - Message Deleted Before Timeout</text>
+  <text x="900" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Message removed</text>
 
-  <!-- Time axis 1 -->
-  <line x1="89.180328" y1="233.333333" x2="1190.819672" y2="233.333333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1200.655738" y="252.666667" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--text-faint)">Time</text>
+  <line x1="80" y1="277.272727272727" x2="1200" y2="277.272727272727" stroke="var(--ok-text)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <text x="80" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">t=0</text>
+  <text x="680" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">t=15s</text>
 
-  <!-- Time markers -->
-  <line x1="158.032787" y1="228.500053" x2="158.032787" y2="238.166613" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="158.032787" y="257.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=0</text>
+  <rect x="40" y="345.818181818182" width="1200" height="274.181818181818" rx="8.21528508884" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="382.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Failure: Timeout Expires</text>
 
-  <line x1="403.934426" y1="228.500053" x2="403.934426" y2="238.166613" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="403.934426" y="257.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=5s</text>
+  <rect x="80" y="409.090909090909" width="100" height="42.181818181818" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="435.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--primary-text)">Receive</text>
 
-  <line x1="699.016393" y1="228.500053" x2="699.016393" y2="238.166613" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="699.016393" y="257.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=15s</text>
+  <rect x="200" y="409.090909090909" width="480" height="42.181818181818" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="435.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--info-text)">Invisible (timeout 30s)</text>
 
-  <line x1="994.098361" y1="228.500053" x2="994.098361" y2="238.166613" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="994.098361" y="257.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=30s</text>
+  <rect x="200" y="461.818181818182" width="480" height="42.181818181818" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Consumer A crashed</text>
 
-  <!-- Message in queue -->
-  <rect x="89.180328" y="98" width="68.852459" height="33.833387" rx="6.347324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="123.606557" y="119.266667" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Msg</text>
-  <text x="123.606557" y="83.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-muted)" text-anchor="middle">In queue</text>
+  <rect x="700" y="409.090909090909" width="220" height="42.181818181818" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="810" y="435.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Message reappears</text>
 
-  <!-- ReceiveMessage -->
-  <rect x="158.032787" y="98" width="88.52459" height="33.833387" rx="6.347324" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.295082" y="119.266667" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Receive</text>
-  <text x="202.295082" y="83.499947" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--warn-accent)" text-anchor="middle">Consumer polls</text>
+  <rect x="940" y="409.090909090909" width="260" height="42.181818181818" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="435.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Consumer B picks up</text>
 
-  <!-- Invisible period -->
-  <rect x="256.393443" y="98" width="442.622951" height="33.833387" rx="6.347324" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="477.704918" y="119.266667" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
-
-  <!-- Processing -->
-  <rect x="256.393443" y="146.333333" width="295.081967" height="33.833387" rx="6.347324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="403.934426" y="167.6" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Consumer Processing...</text>
-
-  <!-- Delete -->
-  <rect x="561.311475" y="146.333333" width="98.360656" height="33.833387" rx="6.347324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610.491803" y="167.6" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--bg)" text-anchor="middle" font-weight="bold">Delete!</text>
-
-  <text x="748.196721" y="165.666667" font-family="Arial, sans-serif" font-size="12.676347" fill="var(--ok-accent)" font-weight="bold">Done - message removed from queue</text>
-
-  <!-- Scenario 2: Timeout (bottom) -->
-  <rect x="40" y="310.666667" width="1200" height="309.333333" rx="6.347324" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="339.666667" font-family="Arial, sans-serif" font-size="16.576672" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Scenario 2: Failure - Timeout Expires Before Delete</text>
-
-  <!-- Time axis 2 -->
-  <line x1="89.180328" y1="513.666667" x2="1190.819672" y2="513.666667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1200.655738" y="533" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--text-faint)">Time</text>
-
-  <!-- Time markers -->
-  <line x1="158.032787" y1="508.83328" x2="158.032787" y2="518.500053" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="158.032787" y="537.833387" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=0</text>
-
-  <line x1="403.934426" y1="508.83328" x2="403.934426" y2="518.500053" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="403.934426" y="537.833387" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=5s</text>
-
-  <line x1="748.196721" y1="508.83328" x2="748.196721" y2="518.500053" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="748.196721" y="537.833387" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=30s</text>
-
-  <line x1="1043.278689" y1="508.83328" x2="1043.278689" y2="518.500053" stroke="var(--text-muted)" stroke-width="2"/>
-  <text x="1043.278689" y="537.833387" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--text-faint)" text-anchor="middle">t=35s</text>
-
-  <!-- Message in queue -->
-  <rect x="89.180328" y="368.666667" width="68.852459" height="33.833387" rx="6.347324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="123.606557" y="389.933333" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Msg</text>
-
-  <!-- ReceiveMessage -->
-  <rect x="158.032787" y="368.666667" width="88.52459" height="33.833387" rx="6.347324" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="202.295082" y="389.933333" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Receive</text>
-
-  <!-- Invisible period with timeout -->
-  <rect x="256.393443" y="368.666667" width="491.803279" height="33.833387" rx="6.347324" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.295082" y="389.933333" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
-
-  <!-- Processing (consumer slow/crashed) -->
-  <rect x="256.393443" y="417" width="491.803279" height="33.833387" rx="6.347324" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.295082" y="438.266667" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Consumer Processing... (crashed or slow)</text>
-
-  <!-- Timeout expires! -->
-  <line x1="748.196721" y1="368.666667" x2="748.196721" y2="349.333333" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="748.196721" y="345.466667" font-family="Arial, sans-serif" font-size="12.676347" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Timeout Expires!</text>
-
-  <!-- Message reappears -->
-  <rect x="758.032787" y="368.666667" width="177.04918" height="33.833387" rx="6.347324" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="846.557377" y="389.933333" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Message Reappears!</text>
-
-  <!-- Another consumer picks up -->
-  <rect x="954.754098" y="368.666667" width="98.360656" height="33.833387" rx="6.347324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1003.934426" y="389.933333" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer B</text>
-  <text x="1003.934426" y="417" font-family="Arial, sans-serif" font-size="10.578874" fill="var(--ok-accent)" text-anchor="middle">picks up msg</text>
-
-  <!-- Warning -->
-  <rect x="748.196721" y="460.500053" width="452.459016" height="38.666667" rx="6.347324" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="974.42623" y="484.666667" font-family="Arial, sans-serif" font-size="11.701186" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Risk: Duplicate processing if Consumer A eventually succeeds!</text>
-
-  <!-- Best Practices -->
-  <rect x="49.836066" y="562" width="1180.327869" height="48.333333" rx="6.347324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="586.166613" font-family="Arial, sans-serif" font-size="12.676347" fill="var(--text)" text-anchor="middle" font-weight="bold">Best Practices: Set timeout &gt; processing time | Make consumers idempotent | Use heartbeat to extend timeout | Set up DLQ for retries</text>
-  <text x="640" y="603.56672" font-family="Arial, sans-serif" font-size="10.726132" fill="var(--text-muted)" text-anchor="middle">Default: 30 seconds | Range: 0 seconds to 12 hours</text>
+  <text x="640" y="540.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--danger-text)">Risk: duplicate processing</text>
+  <text x="640" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Fix: idempotent handlers + heartbeat</text>
+  <text x="640" y="604.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Default 30s; range 0 - 12h</text>
 </svg>

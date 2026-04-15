@@ -34,108 +34,63 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="82.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="81.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460212719154" font-weight="bold" fill="var(--ok-text)">Undoing Things: Pick by Scope</text>
+  <text x="640" y="107.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">Files → Local → Shared → Recovery</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="153.928571428571" width="290" height="290" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="195.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">Working Tree</text>
+  <text x="185" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Drop edits</text>
+  <text x="185" y="262.678571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--primary-text)">git restore file</text>
+  <text x="185" y="304.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Unstage</text>
+  <text x="185" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--primary-text)">restore --staged</text>
+  <text x="185" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">Save for later</text>
+  <text x="185" y="397.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--primary-text)">git stash push</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="153.928571428571" width="290" height="290" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="195.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">Local History</text>
+  <text x="485" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Amend last</text>
+  <text x="485" y="262.678571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--warn-text)">commit --amend</text>
+  <text x="485" y="304.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Rewrite history</text>
+  <text x="485" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--warn-text)">rebase HEAD~N</text>
+  <text x="485" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">Move branch tip</text>
+  <text x="485" y="397.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--warn-text)">reset --hard SHA</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="153.928571428571" width="290" height="290" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="195.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--info-text)">Published</text>
+  <text x="785" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">Don't rewrite</text>
+  <text x="785" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">shared history</text>
+  <text x="785" y="304.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">Invert safely</text>
+  <text x="785" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--info-text)">git revert SHA</text>
+  <text x="785" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">Safe force push</text>
+  <text x="785" y="397.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--info-text)">--force-with-lease</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="153.928571428571" width="300" height="290" rx="8.141603913586" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="195.357142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--danger-text)">Recovery</text>
+  <text x="1090" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">See everything</text>
+  <text x="1090" y="262.678571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--danger-text)">git reflog</text>
+  <text x="1090" y="304.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">Restore branch</text>
+  <text x="1090" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--danger-text)">git branch n SHA</text>
+  <text x="1090" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--danger-text)">Dangling blobs</text>
+  <text x="1090" y="397.321428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="13.230106359577" fill="var(--danger-text)">fsck --lost-found</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="1200" height="111.929825" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="95.964912" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.262014" font-weight="bold" fill="var(--ok-text)">Master of Time Travel</text>
-  <text x="640" y="129.54386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" fill="var(--ok-text)">the right undo command for any situation</text>
-
-  <rect x="40" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--primary-text)">Working tree</text>
-  <text x="185" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">drop uncommitted edits</text>
-  <text x="185" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git restore file.txt</text>
-  <text x="185" y="345.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">unstage without losing</text>
-  <text x="185" y="368.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git restore --staged</text>
-  <text x="185" y="416.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">stash away for later</text>
-  <text x="185" y="439.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--primary-text)">git stash push</text>
-
-  <rect x="340" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--warn-text)">Local history</text>
-  <text x="485" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">amend last commit</text>
-  <text x="485" y="297.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">git commit --amend</text>
-  <text x="485" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">rewrite older commits</text>
-  <text x="485" y="363.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">git rebase -i HEAD~N</text>
-  <text x="485" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">move the branch tip</text>
-  <text x="485" y="429.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--warn-text)">git reset --hard SHA</text>
-
-  <rect x="640" y="182.45614" width="290" height="284.912281" rx="6.052403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--info-text)">Published work</text>
-  <text x="785" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">never rewrite shared</text>
-  <text x="785" y="297.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">history without asking</text>
-  <text x="785" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">invert a commit safely</text>
-  <text x="785" y="363.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">git revert SHA</text>
-  <text x="785" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">force push carefully</text>
-  <text x="785" y="429.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--info-text)">push --force-with-lease</text>
-
-  <rect x="940" y="182.45614" width="300" height="284.912281" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174676" font-weight="bold" fill="var(--danger-text)">Recovery</text>
-  <text x="1090" y="274.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">reflog sees everything</text>
-  <text x="1090" y="297.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">git reflog</text>
-  <text x="1090" y="340.175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">bring back a dead branch</text>
-  <text x="1090" y="363.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">git branch name SHA</text>
-  <text x="1090" y="406.315789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">dangling blobs survive</text>
-  <text x="1090" y="429.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--danger-text)">git fsck --lost-found</text>
-
-  <rect x="40" y="487.719298" width="1200" height="132.280702" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="528.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139741" font-weight="bold" fill="var(--text)">Pick by scope: files, local commits, shared history, or deep recovery</text>
-  <text x="640" y="564.035088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">revert is safe on shared branches; reset and rebase are for your own work</text>
-  <text x="640" y="594.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-muted)">reflog survives 90 days by default — almost nothing is truly lost</text>
+  <rect x="40" y="475" width="1200" height="145" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="521.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text)">revert is safe on shared; reset/rebase are for your own work</text>
+  <text x="640" y="573.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text-muted)">reflog keeps 90 days — almost nothing truly lost</text>
 </svg>

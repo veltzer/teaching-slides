@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,97 +82,61 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
   </defs>
-  <!-- Header -->
-  <rect x="40" y="40" width="1200" height="47.61194" rx="6.715586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="70.298507" font-family="Arial, sans-serif" font-size="18.570162" font-weight="bold" fill="var(--bg)" text-anchor="middle">cmake --install . --prefix /opt/myproject</text>
 
-  <!-- Step flow: 3 boxes + arrows -->
-  <!-- Box 1: CMakeLists.txt -->
-  <rect x="40" y="104.925373" width="334.42623" height="216.41791" rx="6.715586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="207.213115" y="130.895522" font-family="Arial, sans-serif" font-size="14.443435" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">1. Declare Install Rules</text>
-  <text x="54.754098" y="154.701493" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">include(GNUInstallDirs)</text>
-  <text x="54.754098" y="176.343284" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">install(TARGETS mylib myapp</text>
-  <text x="69.508197" y="195.820896" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  RUNTIME DESTINATION</text>
-  <text x="84.262295" y="215.298507" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    ${CMAKE_INSTALL_BINDIR}</text>
-  <text x="69.508197" y="234.776119" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  LIBRARY DESTINATION</text>
-  <text x="84.262295" y="254.253731" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    ${CMAKE_INSTALL_LIBDIR}</text>
-  <text x="69.508197" y="273.731343" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  ARCHIVE DESTINATION</text>
-  <text x="84.262295" y="293.208955" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    ${CMAKE_INSTALL_LIBDIR})</text>
+  <rect x="40" y="40" width="1200" height="51.785714285714" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="73.142857142857" text-anchor="middle" font-family="Courier New, monospace" font-size="18.318608805568" font-weight="bold" fill="var(--primary-text)">cmake --install build --prefix /opt/myproject</text>
 
-  <!-- Arrow 1 -->
-  <line x1="379.344262" y1="213.134328" x2="433.442623" y2="213.134328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--primary-text)">1. Declare rules</text>
+  <text x="60" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">include(GNUInstallDirs)</text>
+  <text x="60" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">install(TARGETS mylib</text>
+  <text x="60" y="231.607142857143" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">  RUNTIME DESTINATION bin</text>
+  <text x="60" y="257.5" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">  LIBRARY DESTINATION lib</text>
+  <text x="60" y="283.392857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--primary-text)">  ARCHIVE DESTINATION lib)</text>
 
-  <!-- Box 2: Headers + Files -->
-  <rect x="438.360656" y="104.925373" width="373.770492" height="216.41791" rx="6.715586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="625.245902" y="130.895522" font-family="Arial, sans-serif" font-size="14.443435" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">2. Install Headers &amp;amp; Files</text>
-  <text x="453.114754" y="154.701493" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">install(FILES include/mylib.h</text>
-  <text x="467.868852" y="174.179104" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}</text>
-  <text x="453.114754" y="193.656716" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">)</text>
-  <text x="453.114754" y="217.462687" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">install(DIRECTORY include/</text>
-  <text x="467.868852" y="236.940299" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}</text>
-  <text x="467.868852" y="256.41791" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  FILES_MATCHING PATTERN "*.h"</text>
-  <text x="453.114754" y="275.895522" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">)</text>
+  <line x1="425" y1="216.071428571429" x2="445" y2="216.071428571429" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Arrow 2 -->
-  <line x1="817.04918" y1="213.134328" x2="871.147541" y2="213.134328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="450" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--ok-text)">2. Install headers</text>
+  <text x="470" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">install(FILES mylib.h</text>
+  <text x="470" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">  DESTINATION include)</text>
+  <text x="470" y="247.142857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">install(DIRECTORY include/</text>
+  <text x="470" y="273.035714285714" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">  DESTINATION include</text>
+  <text x="470" y="298.928571428571" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--ok-text)">  PATTERN "*.h")</text>
 
-  <!-- Box 3: Run install -->
-  <rect x="876.065574" y="104.925373" width="363.934426" height="216.41791" rx="6.715586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1058.032787" y="130.895522" font-family="Arial, sans-serif" font-size="14.443435" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">3. Run Install</text>
-  <text x="890.819672" y="154.701493" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">cmake -B build -S .</text>
-  <text x="890.819672" y="174.179104" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">cmake --build build</text>
-  <text x="890.819672" y="193.656716" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">cmake --install build</text>
-  <text x="890.819672" y="217.462687" font-family="Arial, sans-serif" font-size="11.348445" fill="var(--text-faint)">or override prefix:</text>
-  <text x="890.819672" y="239.104478" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">cmake --install build \</text>
-  <text x="905.57377" y="258.58209" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  --prefix /opt/mylib</text>
-  <text x="890.819672" y="282.38806" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">make install  (classic)</text>
+  <line x1="835" y1="216.071428571429" x2="855" y2="216.071428571429" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- GNUInstallDirs table -->
-  <rect x="40" y="340.820896" width="590.163934" height="279.179104" rx="6.715586" fill="var(--surface)"/>
-  <text x="335.081967" y="366.791045" font-family="Arial, sans-serif" font-size="14.443435" font-weight="bold" fill="var(--text)" text-anchor="middle">GNUInstallDirs Standard Paths</text>
+  <rect x="860" y="112.5" width="380" height="207.142857142857" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--warn-text)">3. Run install</text>
+  <text x="880" y="179.821428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake -B build -S .</text>
+  <text x="880" y="205.714285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake --build build</text>
+  <text x="880" y="231.607142857143" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake --install build</text>
+  <text x="880" y="273.035714285714" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">cmake --install build \</text>
+  <text x="880" y="296.857142857143" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--warn-text)">  --prefix /opt/mylib</text>
 
-  <rect x="49.836066" y="377.61194" width="570.491803" height="30.298507" rx="6.715586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="138.360656" y="398.171582" font-family="Arial, sans-serif" font-size="12.380071" font-weight="bold" fill="var(--bg)" text-anchor="middle">Variable</text>
-  <text x="394.098361" y="398.171582" font-family="Arial, sans-serif" font-size="12.380071" font-weight="bold" fill="var(--bg)" text-anchor="middle">Default Value</text>
+  <rect x="40" y="340.357142857143" width="580" height="279.642857142857" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="330" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--text)">GNUInstallDirs paths</text>
+  <text x="60" y="407.678571428571" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">BINDIR</text>
+  <text x="340" y="407.678571428571" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">bin</text>
+  <text x="60" y="433.571428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">LIBDIR</text>
+  <text x="340" y="433.571428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">lib</text>
+  <text x="60" y="459.464285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">INCLUDEDIR</text>
+  <text x="340" y="459.464285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">include</text>
+  <text x="60" y="485.357142857143" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">DATADIR</text>
+  <text x="340" y="485.357142857143" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">share</text>
+  <text x="60" y="511.25" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">MANDIR</text>
+  <text x="340" y="511.25" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">share/man</text>
+  <text x="60" y="537.142857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text)">SYSCONFDIR</text>
+  <text x="340" y="537.142857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--text-muted)">etc</text>
+  <text x="60" y="594.107142857143" font-family="Arial, sans-serif" font-size="11.19470538118" fill="var(--text-faint)">relative to CMAKE_INSTALL_PREFIX</text>
 
-  <text x="59.672131" y="425.223881" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_BINDIR</text>
-  <text x="335.081967" y="425.223881" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">bin</text>
-  <text x="59.672131" y="449.029851" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_LIBDIR</text>
-  <text x="335.081967" y="449.029851" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">lib  (or lib64 on 64-bit)</text>
-  <text x="59.672131" y="472.835821" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_INCLUDEDIR</text>
-  <text x="335.081967" y="472.835821" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">include</text>
-  <text x="59.672131" y="496.641791" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_DATADIR</text>
-  <text x="335.081967" y="496.641791" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">share</text>
-  <text x="59.672131" y="520.447761" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_MANDIR</text>
-  <text x="335.081967" y="520.447761" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">share/man</text>
-  <text x="59.672131" y="544.253731" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_DOCDIR</text>
-  <text x="335.081967" y="544.253731" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">share/doc/&lt;name&gt;</text>
-  <text x="59.672131" y="568.059701" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">CMAKE_INSTALL_SYSCONFDIR</text>
-  <text x="335.081967" y="568.059701" font-size="11.348445" fill="var(--text-muted)" font-family="Courier New, monospace">etc</text>
-  <text x="59.672131" y="591.865672" font-family="Arial, sans-serif" font-size="11.348445" fill="var(--text-faint)">All relative to CMAKE_INSTALL_PREFIX (default: /usr/local)</text>
-
-  <!-- Component packaging -->
-  <rect x="649.836066" y="340.820896" width="590.163934" height="279.179104" rx="6.715586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="944.918033" y="366.791045" font-family="Arial, sans-serif" font-size="14.443435" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Component-Based Installation</text>
-  <text x="664.590164" y="392.761194" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">install(TARGETS mylib myapp</text>
-  <text x="679.344262" y="412.238806" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  RUNTIME DESTINATION bin</text>
-  <text x="694.098361" y="431.716418" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    COMPONENT Runtime</text>
-  <text x="679.344262" y="451.19403" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  LIBRARY DESTINATION lib</text>
-  <text x="694.098361" y="470.671642" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    COMPONENT Runtime</text>
-  <text x="679.344262" y="490.149254" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  ARCHIVE DESTINATION lib</text>
-  <text x="694.098361" y="509.626866" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    COMPONENT Development</text>
-  <text x="679.344262" y="529.104478" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">  INCLUDES DESTINATION include</text>
-  <text x="694.098361" y="548.58209" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">    COMPONENT Development</text>
-  <text x="664.590164" y="572.38806" font-size="11.348445" fill="var(--text)" font-family="Courier New, monospace">)</text>
-  <text x="664.590164" y="598.358209" font-family="Arial, sans-serif" font-size="11.348445" fill="var(--text-muted)">cmake --install build --component Runtime</text>
+  <rect x="640" y="340.357142857143" width="600" height="279.642857142857" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" font-weight="bold" fill="var(--info-text)">Components</text>
+  <text x="660" y="402.5" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">install(TARGETS mylib</text>
+  <text x="660" y="428.392857142857" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">  RUNTIME DESTINATION bin</text>
+  <text x="660" y="454.285714285714" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">    COMPONENT Runtime</text>
+  <text x="660" y="480.178571428571" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">  ARCHIVE DESTINATION lib</text>
+  <text x="660" y="506.071428571429" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">    COMPONENT Development)</text>
+  <text x="660" y="568.214285714286" font-family="Courier New, monospace" font-size="12.212405870379" fill="var(--info-text)">--component Runtime</text>
 </svg>

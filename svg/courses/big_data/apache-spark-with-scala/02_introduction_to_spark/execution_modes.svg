@@ -33,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -91,66 +81,54 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <!-- palette: resources/palette_diagram.yaml -->
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Spark Execution Modes</text>
+  <!-- Row 1: three deploy modes -->
+  <rect x="40" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="231.596638655462" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--primary-text)">Local Mode</text>
+  <text x="231.596638655462" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">Single JVM</text>
+  <text x="231.596638655462" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">local[*] = all cores</text>
+  <text x="231.596638655462" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--primary-text)">No manager</text>
+  <text x="231.596638655462" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.468245399437" font-weight="bold" fill="var(--primary-text)">Use for: dev, tests</text>
 
-  <rect x="40" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Local Mode</text>
-  <text x="235" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">Single JVM, multi-thread</text>
-  <text x="235" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">local[*] uses all cores</text>
-  <text x="235" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--primary-text)">No cluster manager needed</text>
-  <text x="235" y="244.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--primary-text)">Use for:</text>
-  <text x="235" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">dev, unit tests, IDE debug</text>
-  <text x="235" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">small datasets only</text>
+  <rect x="443.361344537815" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="634.957983193277" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--ok-text)">Client Mode</text>
+  <text x="634.957983193277" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Driver on submit host</text>
+  <text x="634.957983193277" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Executors on cluster</text>
+  <text x="634.957983193277" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--ok-text)">Gateway stays online</text>
+  <text x="634.957983193277" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.468245399437" font-weight="bold" fill="var(--ok-text)">Use for: shells, notebooks</text>
 
-  <rect x="445" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Client Mode</text>
-  <text x="640" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--ok-text)">Driver runs on submit host</text>
-  <text x="640" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--ok-text)">Executors on cluster nodes</text>
-  <text x="640" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--ok-text)">Gateway must stay online</text>
-  <text x="640" y="244.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--ok-text)">Use for:</text>
-  <text x="640" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">interactive shells</text>
-  <text x="640" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">notebooks, ad-hoc queries</text>
+  <rect x="846.72268907563" y="40" width="383.193277310924" height="263.636363636364" rx="8.2497308797" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1038.319327731092" y="87.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.686759919174" font-weight="bold" fill="var(--info-text)">Cluster Mode</text>
+  <text x="1038.319327731092" y="134.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--info-text)">Driver in cluster</text>
+  <text x="1038.319327731092" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--info-text)">Submitter disconnects</text>
+  <text x="1038.319327731092" y="198.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.499461759399" fill="var(--info-text)">Gateway-resilient</text>
+  <text x="1038.319327731092" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.468245399437" font-weight="bold" fill="var(--info-text)">Use for: production</text>
 
-  <rect x="850" y="72.222222" width="390" height="268.518519" rx="6.218253" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="113.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">Cluster Mode</text>
-  <text x="1045" y="149.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--info-text)">Driver launched inside cluster</text>
-  <text x="1045" y="177.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--info-text)">Submitter can disconnect</text>
-  <text x="1045" y="205.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--info-text)">Resilient to gateway loss</text>
-  <text x="1045" y="244.074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--info-text)">Use for:</text>
-  <text x="1045" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">production batch jobs</text>
-  <text x="1045" y="299.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">long-running pipelines</text>
+  <!-- Row 2: cluster managers -->
+  <text x="634.957983193277" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.624327199249" font-weight="bold" fill="var(--text)">Cluster Managers</text>
 
-  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="413.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--text)">Cluster Managers</text>
+  <rect x="50.084033613445" y="388" width="282.352941176471" height="232" rx="8.2497308797" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="191.260504201681" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.561894479324" font-weight="bold" fill="var(--primary-accent)">Standalone</text>
+  <text x="191.260504201681" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Spark-native master</text>
+  <text x="191.260504201681" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Simple setup</text>
+  <text x="191.260504201681" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Dedicated clusters</text>
 
-  <rect x="80" y="437.407407" width="260" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="210" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--primary-accent)">Standalone</text>
-  <text x="210" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Spark-native master</text>
-  <text x="210" y="525.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Simple setup</text>
-  <text x="210" y="549.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Fewer features</text>
-  <text x="210" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Good for dedicated clusters</text>
+  <rect x="352.605042016807" y="388" width="282.352941176471" height="232" rx="8.2497308797" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="493.781512605042" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.561894479324" font-weight="bold" fill="var(--ok-accent)">YARN</text>
+  <text x="493.781512605042" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Hadoop manager</text>
+  <text x="493.781512605042" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">HDFS locality</text>
+  <text x="493.781512605042" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">On-prem default</text>
 
-  <rect x="360" y="437.407407" width="260" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="490" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--ok-accent)">YARN</text>
-  <text x="490" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Hadoop resource manager</text>
-  <text x="490" y="525.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Queues, ACLs, HDFS locality</text>
-  <text x="490" y="549.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Shares with MR, Hive</text>
-  <text x="490" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Common in on-prem</text>
+  <rect x="655.126050420168" y="388" width="282.352941176471" height="232" rx="8.2497308797" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="796.302521008403" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.561894479324" font-weight="bold" fill="var(--warn-accent)">Kubernetes</text>
+  <text x="796.302521008403" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Pods per executor</text>
+  <text x="796.302521008403" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Elastic scaling</text>
+  <text x="796.302521008403" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Cloud-native</text>
 
-  <rect x="640" y="437.407407" width="260" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="770" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--warn-accent)">Kubernetes</text>
-  <text x="770" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Pods per driver/executor</text>
-  <text x="770" y="525.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Elastic scaling</text>
-  <text x="770" y="549.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Cloud-native default</text>
-  <text x="770" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Spark 3.1+ GA</text>
-
-  <rect x="920" y="437.407407" width="280" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1060" y="471.777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--info-accent)">Mesos (deprecated)</text>
-  <text x="1060" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Removed in Spark 3.5</text>
-  <text x="1060" y="525.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Legacy deployments only</text>
-  <text x="1060" y="549.111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Migrate to K8s or YARN</text>
-  <text x="1060" y="579.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472881" fill="var(--text-muted)">Not recommended</text>
+  <rect x="957.647058823529" y="388" width="282.352941176471" height="232" rx="8.2497308797" fill="var(--surface)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1098.823529411765" y="430.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.561894479324" font-weight="bold" fill="var(--info-accent)">Mesos</text>
+  <text x="1098.823529411765" y="472.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Deprecated</text>
+  <text x="1098.823529411765" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Removed in 3.5</text>
+  <text x="1098.823529411765" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.437029039475" fill="var(--text-muted)">Migrate away</text>
 </svg>

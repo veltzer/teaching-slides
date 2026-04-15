@@ -1,123 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #c4cdd6;
-        --border: #6b7280;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000044;
-        --black: #000000;
-        --primary-fill: #5a7a9c;
-        --primary-border: #3d5a7d;
-        --primary-text: #ffffff;
-        --primary-accent: #243b59;
-        --ok-fill: #7a9a6a;
-        --ok-border: #5a7a4d;
-        --ok-text: #ffffff;
-        --ok-accent: #385030;
-        --warn-fill: #c8924a;
-        --warn-border: #9c6e2e;
-        --warn-text: #ffffff;
-        --warn-accent: #5a3f12;
-        --danger-fill: #a86058;
-        --danger-border: #7d3f38;
-        --danger-text: #ffffff;
-        --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
+        --bg: #ffffff; --surface: #c4cdd6; --border: #6b7280; --text: #212121;
+        --text-muted: #555555; --text-faint: #888888; --code-bg: #1a1a2e; --shadow: #00000044; --black: #000000;
+        --primary-fill: #5a7a9c; --primary-border: #3d5a7d; --primary-text: #ffffff; --primary-accent: #243b59;
+        --ok-fill: #7a9a6a; --ok-border: #5a7a4d; --ok-text: #ffffff; --ok-accent: #385030;
+        --warn-fill: #c8924a; --warn-border: #9c6e2e; --warn-text: #ffffff; --warn-accent: #5a3f12;
+        --danger-fill: #a86058; --danger-border: #7d3f38; --danger-text: #ffffff; --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e; --info-border: #574a68; --info-text: #ffffff; --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="590" height="285" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Do</text>
+  <text x="335" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Prefer DataFrame API</text>
+  <text x="335" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Cache reused datasets</text>
+  <text x="335" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Broadcast small tables</text>
+  <text x="335" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Enable AQE</text>
+  <text x="335" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Filter and project early</text>
+  <text x="335" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">Partition by hot columns</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="650" y="40" width="590" height="285" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">Avoid</text>
+  <text x="945" y="125" text-anchor="middle" font-family="Courier New, monospace" font-size="17" fill="var(--danger-text)">collect() on big data</text>
+  <text x="945" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-text)">UDFs over built-ins</text>
+  <text x="945" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-text)">Needless wide shuffles</text>
+  <text x="945" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-text)">Tiny files</text>
+  <text x="945" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-text)">Forgotten caches</text>
+  <text x="945" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-text)">Driver-side row loops</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="590" height="284.912281" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">Do</text>
-  <text x="335" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Prefer DataFrame / Dataset API</text>
-  <text x="335" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Cache reused datasets once</text>
-  <text x="335" y="192.631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Broadcast small lookup tables</text>
-  <text x="335" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Enable AQE and columnar formats</text>
-  <text x="335" y="263.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Filter and project early</text>
-  <text x="335" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--ok-text)">Partition output by hot columns</text>
-
-  <rect x="650" y="40" width="590" height="284.912281" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">Avoid</text>
-  <text x="945" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">collect() on large datasets</text>
-  <text x="945" y="157.017544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">UDFs where built-ins exist</text>
-  <text x="945" y="192.631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">Wide shuffles without need</text>
-  <text x="945" y="228.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">Tiny files and tiny partitions</text>
-  <text x="945" y="263.859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">Chained caches never unpersisted</text>
-  <text x="945" y="299.473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--danger-text)">Driver-side loops over rows</text>
-
-  <rect x="40" y="345.263158" width="1200" height="274.736842" rx="6.052403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="383.929825" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--text)">Workflow Checklist</text>
-  <text x="640" y="421.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">1. Profile first in the Spark UI, then tune the slowest stage</text>
-  <text x="640" y="452.105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">2. Right-size partitions near 128 MB and align shuffle partitions conf</text>
-  <text x="640" y="482.631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">3. Checkpoint long DAGs to truncate lineage and speed recovery</text>
-  <text x="640" y="513.157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">4. Favour Parquet or ORC with snappy or zstd compression</text>
-  <text x="640" y="543.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131007" fill="var(--text-muted)">5. Test with production-like data volume before shipping</text>
-  <text x="640" y="584.385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273" fill="var(--text-faint)">Document tuning decisions - future you needs the context</text>
+  <rect x="40" y="345" width="1200" height="275" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Workflow Checklist</text>
+  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">1. Profile in Spark UI</text>
+  <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">2. Right-size partitions ~128MB</text>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">3. Checkpoint long DAGs</text>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">4. Use Parquet / ORC + zstd</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">5. Test with production volume</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-faint)">Document tuning decisions</text>
 </svg>

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,52 +81,47 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">RDD Actions</text>
+  <!-- Row 1: four action groups -->
+  <rect x="40" y="40" width="294.915254237288" height="316.363636363636" rx="8.284613618287" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="187.457627118644" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--primary-text)">Materialize</text>
+  <text x="187.457627118644" y="134.909090909091" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--primary-text)">collect()</text>
+  <text x="187.457627118644" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--primary-text)">all rows to driver</text>
+  <text x="187.457627118644" y="208.727272727273" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--primary-text)">take(n)</text>
+  <text x="187.457627118644" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--primary-text)">safe first n</text>
+  <text x="187.457627118644" y="282.545454545455" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--primary-text)">first()</text>
+  <text x="187.457627118644" y="324.727272727273" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--primary-text)">takeSample()</text>
 
-  <text x="640" y="76.5766" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">Transformations are lazy. An action triggers the DAG and returns a value (or writes to storage).</text>
+  <rect x="355.254237288136" y="40" width="294.915254237288" height="316.363636363636" rx="8.284613618287" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="502.71186440678" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--ok-text)">Count / Reduce</text>
+  <text x="502.71186440678" y="134.909090909091" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--ok-text)">count()</text>
+  <text x="502.71186440678" y="177.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--ok-text)">countByKey()</text>
+  <text x="502.71186440678" y="219.272727272727" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--ok-text)">reduce(f)</text>
+  <text x="502.71186440678" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--ok-text)">f assoc + commutative</text>
+  <text x="502.71186440678" y="293.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--ok-text)">fold / aggregate</text>
 
-  <rect x="40" y="107.9279" width="300" height="240.3604" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Materialize</text>
-  <text x="190" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">collect()  → Array[T]</text>
-  <text x="190" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">pulls every row to the driver</text>
-  <text x="190" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">take(n)   → Array[T]</text>
-  <text x="190" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">first n rows — safe</text>
-  <text x="190" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">first()   → T</text>
-  <text x="190" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">takeSample(withReplace, n)</text>
+  <rect x="670.508474576271" y="40" width="294.915254237288" height="316.363636363636" rx="8.284613618287" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.966101694915" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--warn-text)">Iterate</text>
+  <text x="817.966101694915" y="134.909090909091" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--warn-text)">foreach(f)</text>
+  <text x="817.966101694915" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--warn-text)">per row on executors</text>
+  <text x="817.966101694915" y="208.727272727273" text-anchor="middle" font-family="Courier New, monospace" font-size="14.498073832003" fill="var(--warn-text)">foreachPartition(f)</text>
+  <text x="817.966101694915" y="240.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--warn-text)">Iterator per partition</text>
+  <text x="817.966101694915" y="282.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--warn-text)">side effects only</text>
 
-  <rect x="360" y="107.9279" width="300" height="240.3604" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="510" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Count / Reduce</text>
-  <text x="510" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">count()        → Long</text>
-  <text x="510" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">total rows across partitions</text>
-  <text x="510" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">countByKey()   → Map[K, Long]</text>
-  <text x="510" y="259.4595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">reduce(f)      → T</text>
-  <text x="510" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">f must be associative and commutative</text>
-  <text x="510" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">fold(zero)(f), aggregate(...)</text>
+  <rect x="985.762711864407" y="40" width="254.237288135593" height="316.363636363636" rx="8.284613618287" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1112.881355932203" y="82.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.711534045719" font-weight="bold" fill="var(--info-text)">Save</text>
+  <text x="1112.881355932203" y="140.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="13.462497129717" fill="var(--info-text)">saveAsTextFile</text>
+  <text x="1112.881355932203" y="182.363636363636" text-anchor="middle" font-family="Courier New, monospace" font-size="13.462497129717" fill="var(--info-text)">saveAsSequenceFile</text>
+  <text x="1112.881355932203" y="224.545454545455" text-anchor="middle" font-family="Courier New, monospace" font-size="13.462497129717" fill="var(--info-text)">saveAsObjectFile</text>
+  <text x="1112.881355932203" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--info-text)">one file per partition</text>
+  <text x="1112.881355932203" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.426920427431" fill="var(--info-text)">HDFS / S3 / local</text>
 
-  <rect x="680" y="107.9279" width="300" height="240.3604" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="830" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Iterate</text>
-  <text x="830" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">foreach(f)</text>
-  <text x="830" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">f runs once per row on executors</text>
-  <text x="830" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">foreachPartition(f)</text>
-  <text x="830" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">f receives Iterator[T] per partition</text>
-  <text x="830" y="275.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">good for setting up a connection once</text>
-  <text x="830" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">side effects only — no return value</text>
-
-  <rect x="1000" y="107.9279" width="240" height="240.3604" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--info-text)">Save</text>
-  <text x="1120" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsTextFile(path)</text>
-  <text x="1120" y="212.4324" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsSequenceFile</text>
-  <text x="1120" y="243.7838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsObjectFile</text>
-  <text x="1120" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">writes one file per partition</text>
-  <text x="1120" y="301.2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">to HDFS / S3 / local</text>
-
-  <rect x="40" y="379.6396" width="1200" height="240.3604" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">Common pitfalls</text>
-  <text x="80" y="452.7928" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• collect() on a large RDD: OOMs the driver. Always use take(n) or write to storage instead.</text>
-  <text x="80" y="484.1441" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• foreach(println) prints on the executor stdout — you will not see it in the driver console.</text>
-  <text x="80" y="515.4955" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• count() runs the whole DAG. If you only need "is the result non-empty" use isEmpty() or take(1).length &gt; 0.</text>
-  <text x="80" y="546.8468" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• Multiple actions on the same RDD recompute from the source. Call .cache() if you will act more than once.</text>
-  <text x="80" y="578.1982" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• reduce with a non-associative f (e.g. subtraction) gives non-deterministic results — partitions combine in arbitrary order.</text>
+  <!-- Bottom: lazy vs eager note -->
+  <rect x="40" y="398.545454545455" width="1200" height="221.454545454545" rx="8.284613618287" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="440.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.640380641147" font-weight="bold" fill="var(--text)">Lazy vs eager</text>
+  <text x="640" y="482.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Transformations are lazy; actions trigger the DAG.</text>
+  <text x="640" y="519.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Each action re-runs the lineage unless cached.</text>
+  <text x="640" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.533650534289" fill="var(--text-muted)">Avoid collect() on large RDDs.</text>
+  <text x="640" y="598.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--text-faint)">Use take(n), isEmpty, or save to storage.</text>
 </svg>

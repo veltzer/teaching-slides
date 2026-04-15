@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,139 +82,62 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
-      <stop offset="100%" stop-color="#f57c00"/>
-    </linearGradient>
-    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
   </defs>
-  <!-- Header -->
-  <rect x="40" y="40" width="1200" height="50.860029" fill="url(#grad-primary)" rx="6.23324" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="73.254634" font-family="Arial, sans-serif" font-size="21.066586" font-weight="bold" fill="var(--bg)" text-anchor="middle">Custom Module Structure</text>
 
-  <!-- LEFT: Python Module Structure -->
-  <rect x="58.75" y="100.640804" width="440.625" height="430.354091" rx="6.23324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="58.75" y="100.640804" width="440.625" height="29.342324" rx="6.23324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="58.75" y="118.246198" width="440.625" height="11.73693" fill="url(#grad-primary)" rx="6.23324" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="279.0625" y="120.202353" font-family="Arial, sans-serif" font-size="13.406038" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Module Structure</text>
+  <!-- Module skeleton -->
+  <rect x="40" y="40" width="455.172413793103" height="580" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="267.586206896552" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Module Skeleton</text>
+  <text x="60.689655172414" y="120.555555555556" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">from ansible.module_utils.basic</text>
+  <text x="60.689655172414" y="142.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  import AnsibleModule</text>
+  <text x="60.689655172414" y="185" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">DOCUMENTATION = r'''...'''</text>
+  <text x="60.689655172414" y="227.962962962963" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">def main():</text>
+  <text x="60.689655172414" y="254.814814814815" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  m = AnsibleModule(</text>
+  <text x="60.689655172414" y="281.666666666667" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">    argument_spec=dict(</text>
+  <text x="60.689655172414" y="308.518518518519" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">      name=dict(required=True),</text>
+  <text x="60.689655172414" y="335.37037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">      state=dict(choices=[...]),</text>
+  <text x="60.689655172414" y="362.222222222222" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">      secret=dict(no_log=True)),</text>
+  <text x="60.689655172414" y="389.074074074074" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">    supports_check_mode=True)</text>
+  <text x="60.689655172414" y="432.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  m.exit_json(changed=True,</text>
+  <text x="60.689655172414" y="458.888888888889" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">              msg="ok")</text>
+  <text x="60.689655172414" y="512.592592592593" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  # or m.fail_json(msg=...)</text>
+  <text x="267.586206896552" y="571.666666666667" font-family="Arial, sans-serif" font-size="14.757295747452" font-style="italic" fill="var(--bg)" text-anchor="middle">library/ beside playbook</text>
+  <text x="267.586206896552" y="598.518518518519" font-family="Arial, sans-serif" font-size="13.703203194063" fill="var(--bg)" text-anchor="middle">or collections/plugins/modules/</text>
 
-  <text x="72.8125" y="149.544678" font-size="10.533345" fill="var(--text-faint)" font-family="Courier New, monospace">#!/usr/bin/python</text>
-  <text x="72.8125" y="166.171941" font-size="10.533345" fill="var(--text-faint)" font-family="Courier New, monospace"># -*- coding: utf-8 -*-</text>
-  <text x="72.8125" y="182.799312" font-size="10.533345" fill="var(--ok-accent)" font-family="Courier New, monospace">from ansible.module_utils.basic import AnsibleModule</text>
-  <line x1="72.8125" y1="194.536242" x2="485.3125" y2="194.536242" stroke="var(--border)" stroke-width="1"/>
+  <!-- AnsibleModule features -->
+  <rect x="515.862068965517" y="40" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="681.379310344828" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Helpers</text>
+  <text x="536.551724137931" y="115.185185185185" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">exit_json / fail_json</text>
+  <text x="536.551724137931" y="147.407407407407" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">run_command(cmd)</text>
+  <text x="536.551724137931" y="179.62962962963" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">get_bin_path('git')</text>
+  <text x="536.551724137931" y="211.851851851852" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">atomic_move(src,dst)</text>
+  <text x="536.551724137931" y="244.074074074074" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">check_mode guard</text>
+  <text x="536.551724137931" y="287.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">set_mode_if_different</text>
 
-  <text x="72.8125" y="212.141637" font-size="10.533345" fill="var(--primary-accent)" font-family="Courier New, monospace">DOCUMENTATION = r'''</text>
-  <text x="72.8125" y="228.7689" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  module: my_module</text>
-  <text x="72.8125" y="245.396271" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  short_description: Does X</text>
-  <text x="72.8125" y="262.023642" font-size="10.533345" fill="var(--primary-accent)" font-family="Courier New, monospace">'''</text>
-  <line x1="72.8125" y1="273.760572" x2="485.3125" y2="273.760572" stroke="var(--border)" stroke-width="1"/>
+  <!-- Return values -->
+  <rect x="515.862068965517" y="340.740740740741" width="331.034482758621" height="279.259259259259" rx="10.540925533895" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="681.379310344828" y="378.333333333333" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Return Keys</text>
+  <text x="536.551724137931" y="415.925925925926" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">changed</text>
+  <text x="536.551724137931" y="448.148148148148" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">failed</text>
+  <text x="536.551724137931" y="480.37037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">msg</text>
+  <text x="536.551724137931" y="512.592592592593" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">diff</text>
+  <text x="536.551724137931" y="544.814814814815" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">result</text>
+  <text x="536.551724137931" y="577.037037037037" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">invocation (auto)</text>
 
-  <text x="72.8125" y="291.365859" font-size="10.533345" fill="var(--warn-accent)" font-family="Courier New, monospace">def main():</text>
-  <text x="72.8125" y="307.99323" font-size="10.533345" fill="var(--info-accent)" font-family="Courier New, monospace">  module = AnsibleModule(</text>
-  <text x="72.8125" y="324.620601" font-size="10.533345" fill="var(--info-accent)" font-family="Courier New, monospace">    argument_spec=dict(</text>
-  <text x="72.8125" y="341.247864" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">      name=dict(type='str', required=True),</text>
-  <text x="72.8125" y="357.875127" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">      state=dict(type='str',</text>
-  <text x="72.8125" y="374.502498" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">             choices=['present','absent'],</text>
-  <text x="72.8125" y="391.12987" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">             default='present'),</text>
-  <text x="72.8125" y="407.757133" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">      port=dict(type='int', default=8080),</text>
-  <text x="72.8125" y="424.384396" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">      secret=dict(type='str', no_log=True),</text>
-  <text x="72.8125" y="441.011767" font-size="10.533345" fill="var(--info-accent)" font-family="Courier New, monospace">    ),</text>
-  <text x="72.8125" y="457.639138" font-size="10.533345" fill="var(--info-accent)" font-family="Courier New, monospace">    supports_check_mode=True,</text>
-  <text x="72.8125" y="474.266401" font-size="10.533345" fill="var(--info-accent)" font-family="Courier New, monospace">  )</text>
-  <line x1="72.8125" y1="486.003331" x2="485.3125" y2="486.003331" stroke="var(--border)" stroke-width="1"/>
-  <text x="72.8125" y="503.608726" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  name = module.params['name']</text>
-  <text x="72.8125" y="520.236097" font-size="10.533345" fill="var(--ok-accent)" font-family="Courier New, monospace">  module.exit_json(changed=True,</text>
-  <text x="72.8125" y="536.86336" font-size="10.533345" fill="var(--ok-accent)" font-family="Courier New, monospace">                  msg="Created",</text>
-  <text x="72.8125" y="553.490623" font-size="10.533345" fill="var(--ok-accent)" font-family="Courier New, monospace">                  result={"name": name})</text>
+  <!-- Filter / callback plugins -->
+  <rect x="867.586206896552" y="40" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103448276" y="77.592592592593" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Filter Plugin</text>
+  <text x="888.275862068966" y="120.555555555556" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">class FilterModule:</text>
+  <text x="888.275862068966" y="147.407407407407" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">  def filters(self):</text>
+  <text x="888.275862068966" y="174.259259259259" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">    return {'upper': fn}</text>
+  <text x="888.275862068966" y="217.222222222222" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">{{ v | upper }}</text>
+  <text x="888.275862068966" y="260.185185185185" font-family="Arial, sans-serif" font-size="13.703203194063" font-style="italic" fill="var(--bg)">filter_plugins/ dir</text>
 
-  <!-- CENTER: AnsibleModule class features -->
-  <rect x="518.125" y="100.640804" width="309.375" height="273.861695" rx="6.23324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="518.125" y="100.640804" width="309.375" height="29.342324" rx="6.23324" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="518.125" y="118.246198" width="309.375" height="11.73693" fill="url(#grad-info)" rx="6.23324" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="672.8125" y="120.202353" font-family="Arial, sans-serif" font-size="13.406038" font-weight="bold" fill="var(--bg)" text-anchor="middle">AnsibleModule Features</text>
-
-  <text x="532.1875" y="150.522701" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--info-accent)">Exit methods:</text>
-  <text x="532.1875" y="168.128204" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.exit_json(**result)</text>
-  <text x="532.1875" y="184.755467" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.fail_json(msg="err")</text>
-  <line x1="532.1875" y1="196.492397" x2="813.4375" y2="196.492397" stroke="var(--border)" stroke-width="1"/>
-
-  <text x="532.1875" y="214.097792" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--info-accent)">Helpers:</text>
-  <text x="532.1875" y="231.703186" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.run_command(cmd)</text>
-  <text x="532.1875" y="248.330449" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.get_bin_path('git')</text>
-  <text x="532.1875" y="264.957821" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.atomic_move(src,dst)</text>
-  <text x="532.1875" y="281.585192" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">module.set_mode_if_different()</text>
-  <line x1="532.1875" y1="293.322121" x2="813.4375" y2="293.322121" stroke="var(--border)" stroke-width="1"/>
-
-  <text x="532.1875" y="310.927408" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--info-accent)">Check mode support:</text>
-  <text x="532.1875" y="328.532911" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">if module.check_mode:</text>
-  <text x="532.1875" y="345.160174" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  module.exit_json(changed=True)</text>
-  <text x="532.1875" y="361.787437" font-family="Arial, sans-serif" font-size="10.533345" fill="var(--text-muted)">  # no real changes in check mode</text>
-
-  <!-- CENTER: Return Values -->
-  <rect x="518.125" y="387.21756" width="309.375" height="144.755467" rx="6.23324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="518.125" y="387.21756" width="309.375" height="29.342324" rx="6.23324" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="518.125" y="404.822846" width="309.375" height="11.73693" fill="url(#grad-warn)" rx="6.23324" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="672.8125" y="406.779109" font-family="Arial, sans-serif" font-size="13.406038" font-weight="bold" fill="var(--bg)" text-anchor="middle">Standard Return Values</text>
-  <text x="532.1875" y="437.099457" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">changed: true/false</text>
-  <text x="677.5" y="437.099457" font-family="Arial, sans-serif" font-size="10.388734" fill="var(--text-muted)">was anything changed?</text>
-  <text x="532.1875" y="453.726828" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">failed: true/false</text>
-  <text x="677.5" y="453.726828" font-family="Arial, sans-serif" font-size="10.388734" fill="var(--text-muted)">did the task fail?</text>
-  <text x="532.1875" y="470.354091" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">msg: "human message"</text>
-  <text x="532.1875" y="486.981355" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">diff: {before:, after:}</text>
-  <text x="677.5" y="486.981355" font-family="Arial, sans-serif" font-size="10.388734" fill="var(--text-muted)">for --diff mode</text>
-  <text x="532.1875" y="503.608726" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">result: {}</text>
-  <text x="677.5" y="503.608726" font-family="Arial, sans-serif" font-size="10.388734" fill="var(--text-muted)">custom data</text>
-  <text x="532.1875" y="520.236097" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">invocation: {}</text>
-  <text x="677.5" y="520.236097" font-family="Arial, sans-serif" font-size="10.388734" fill="var(--text-muted)">auto-added by Ansible</text>
-
-  <!-- RIGHT: Filter Plugins vs Callback Plugins -->
-  <rect x="846.25" y="100.640804" width="375" height="200.50583" rx="6.23324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="846.25" y="100.640804" width="375" height="29.342324" rx="6.23324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="846.25" y="118.246198" width="375" height="11.73693" fill="url(#grad-ok)" rx="6.23324" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1033.75" y="120.202353" font-family="Arial, sans-serif" font-size="13.406038" font-weight="bold" fill="var(--bg)" text-anchor="middle">Filter Plugins</text>
-  <text x="860.3125" y="149.544678" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace"># filter_plugins/my_filters.py</text>
-  <text x="860.3125" y="166.171941" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">class FilterModule(object):</text>
-  <text x="860.3125" y="182.799312" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  def filters(self):</text>
-  <text x="860.3125" y="199.426683" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">    return {'my_filter': self.do_it}</text>
-  <text x="860.3125" y="216.053947" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">  def do_it(self, value, arg='default'):</text>
-  <text x="860.3125" y="232.68121" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">    return value.upper()</text>
-  <text x="860.3125" y="249.308581" font-size="10.533345" fill="var(--text-muted)" font-family="Courier New, monospace"># usage: {{ my_var | my_filter }}</text>
-  <text x="860.3125" y="265.935952" font-size="10.533345" fill="var(--text-muted)" font-family="Courier New, monospace"># usage: {{ my_var | my_filter('arg') }}</text>
-  <text x="860.3125" y="292.34399" font-family="Arial, sans-serif" font-size="10.533345" fill="var(--text-faint)">Place in filter_plugins/ next to playbook or in role</text>
-
-  <!-- RIGHT: Callback Plugins -->
-  <rect x="846.25" y="313.861695" width="375" height="220.067379" rx="6.23324" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="846.25" y="313.861695" width="375" height="29.342324" rx="6.23324" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="846.25" y="331.467089" width="375" height="11.73693" fill="url(#grad-primary)" rx="6.23324" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1033.75" y="333.423244" font-family="Arial, sans-serif" font-size="13.406038" font-weight="bold" fill="var(--bg)" text-anchor="middle">Callback Plugins</text>
-  <text x="860.3125" y="364.721724" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--primary-accent)">Built-in callbacks:</text>
-  <text x="860.3125" y="382.327118" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">yaml       # pretty YAML output</text>
-  <text x="860.3125" y="398.954489" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">json       # JSON output for CI</text>
-  <text x="860.3125" y="415.581753" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">junit      # JUnit XML for Jenkins</text>
-  <text x="860.3125" y="432.209016" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">profile_tasks  # timing info</text>
-  <line x1="860.3125" y1="443.945946" x2="1207.1875" y2="443.945946" stroke="var(--border)" stroke-width="1"/>
-  <text x="860.3125" y="461.551448" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--primary-accent)">Enable in ansible.cfg:</text>
-  <text x="860.3125" y="479.156735" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">[defaults]</text>
-  <text x="860.3125" y="495.784106" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">stdout_callback = yaml</text>
-  <text x="860.3125" y="512.411477" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">callback_whitelist = profile_tasks</text>
-
-  <!-- File locations box -->
-  <rect x="58.75" y="546.644135" width="440.625" height="73.355865" rx="6.23324" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="72.8125" y="566.205685" font-family="Arial, sans-serif" font-size="11.490875" font-weight="bold" fill="var(--ok-accent)">Module search path:</text>
-  <text x="72.8125" y="583.811079" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">./library/       # next to playbook</text>
-  <text x="274.375" y="583.811079" font-family="Arial, sans-serif" font-size="10.533345" fill="var(--text-muted)">role/library/    # in role</text>
-  <text x="72.8125" y="601.416474" font-size="10.533345" fill="var(--text)" font-family="Courier New, monospace">collections/ansible_collections/ns/name/plugins/modules/</text>
-  <text x="72.8125" y="615.109559" font-family="Arial, sans-serif" font-size="10.533345" fill="var(--text-faint)">Test with: python -m pytest tests/unit/ or ansible-test units</text>
+  <rect x="867.586206896552" y="340.740740740741" width="372.413793103448" height="279.259259259259" rx="10.540925533895" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103448276" y="378.333333333333" font-family="Arial, sans-serif" font-size="18.97366596101" font-weight="bold" fill="var(--bg)" text-anchor="middle">Callback Plugin</text>
+  <text x="888.275862068966" y="415.925925925926" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">yaml</text>
+  <text x="888.275862068966" y="442.777777777778" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">json</text>
+  <text x="888.275862068966" y="469.62962962963" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">junit</text>
+  <text x="888.275862068966" y="496.481481481482" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">profile_tasks</text>
+  <text x="888.275862068966" y="539.444444444444" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">[defaults]</text>
+  <text x="888.275862068966" y="566.296296296296" font-size="13.703203194063" fill="var(--bg)" font-family="Courier New, monospace">stdout_callback = yaml</text>
 </svg>

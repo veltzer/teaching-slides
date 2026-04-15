@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,129 +33,81 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">Feature Engineering Flow</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="71.636363636364" width="180" height="137.090909090909" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--primary-text)">Raw DataFrame</text>
+  <text x="130" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">text, numbers</text>
+  <text x="130" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">categoricals, dates</text>
+  <text x="130" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">possibly nulls</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <line x1="220" y1="140.181818181818" x2="258" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="260" y="71.636363636364" width="200" height="137.090909090909" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--ok-text)">Clean / Impute</text>
+  <text x="360" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Imputer</text>
+  <text x="360" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">drop outliers</text>
+  <text x="360" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">typecast</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <line x1="460" y1="140.181818181818" x2="498" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <rect x="500" y="71.636363636364" width="220" height="137.090909090909" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="610" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--warn-text)">Encode</text>
+  <text x="610" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">StringIndexer</text>
+  <text x="610" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">OneHotEncoder</text>
+  <text x="610" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">FeatureHasher</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <line x1="720" y1="140.181818181818" x2="758" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2901" font-weight="bold" fill="var(--text)">Feature Engineering Flow</text>
+  <rect x="760" y="71.636363636364" width="200" height="137.090909090909" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--info-text)">Text</text>
+  <text x="860" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Tokenizer</text>
+  <text x="860" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">HashingTF / IDF</text>
+  <text x="860" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Word2Vec</text>
 
-  <rect x="40" y="81.0619" width="180" height="123.1858" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="130" y="111.8584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--primary-text)">Raw DataFrame</text>
-  <text x="130" y="142.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">text, numbers,</text>
-  <text x="130" y="160.1062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">categoricals, dates</text>
-  <text x="130" y="183.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">possibly nulls</text>
+  <line x1="960" y1="140.181818181818" x2="998" y2="140.181818181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="220" y1="142.6549" x2="258" y2="142.6549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1000" y="71.636363636364" width="240" height="137.090909090909" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--danger-text)">Scale</text>
+  <text x="1120" y="145.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">StandardScaler</text>
+  <text x="1120" y="166.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">MinMaxScaler</text>
+  <text x="1120" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--danger-text)">Normalizer</text>
 
-  <rect x="260" y="81.0619" width="200" height="123.1858" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="360" y="111.8584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--ok-text)">Clean / Impute</text>
-  <text x="360" y="142.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">Imputer (mean/median)</text>
-  <text x="360" y="160.1062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">drop / replace outliers</text>
-  <text x="360" y="183.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">typecast with spark.sql</text>
+  <rect x="80" y="261.454545454545" width="340" height="116" rx="6.16146381663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--info-text)">Derive</text>
+  <text x="250" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Bucketizer</text>
+  <text x="250" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">PolynomialExpansion</text>
 
-  <line x1="460" y1="142.6549" x2="498" y2="142.6549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="470" y="261.454545454545" width="340" height="116" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--ok-text)">Select</text>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">ChiSqSelector</text>
+  <text x="640" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">PCA / SVD</text>
 
-  <rect x="500" y="81.0619" width="220" height="123.1858" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610" y="111.8584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--warn-text)">Encode categoricals</text>
-  <text x="610" y="142.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--warn-text)">StringIndexer</text>
-  <text x="610" y="160.1062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--warn-text)">OneHotEncoder</text>
-  <text x="610" y="183.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--warn-text)">FeatureHasher for high cardinality</text>
+  <rect x="860" y="261.454545454545" width="340" height="116" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1030" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--primary-text)">Assemble</text>
+  <text x="1030" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">VectorAssembler</text>
+  <text x="1030" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">one features column</text>
 
-  <line x1="720" y1="142.6549" x2="758" y2="142.6549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="760" y="81.0619" width="200" height="123.1858" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="860" y="111.8584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--info-text)">Transform text</text>
-  <text x="860" y="142.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">Tokenizer → Stopwords</text>
-  <text x="860" y="160.1062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">HashingTF → IDF</text>
-  <text x="860" y="183.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">or Word2Vec</text>
-
-  <line x1="960" y1="142.6549" x2="998" y2="142.6549" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <rect x="1000" y="81.0619" width="240" height="123.1858" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="111.8584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--danger-text)">Scale numerics</text>
-  <text x="1120" y="142.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--danger-text)">StandardScaler (z-score)</text>
-  <text x="1120" y="160.1062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--danger-text)">MinMaxScaler [0, 1]</text>
-  <text x="1120" y="183.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--danger-text)">Normalizer (per-row L2)</text>
-
-  <rect x="150" y="270.9735" width="320" height="102.6549" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310" y="301.7699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--info-text)">Derive / interact</text>
-  <text x="310" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">Bucketizer, QuantileDiscretizer</text>
-  <text x="310" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">PolynomialExpansion</text>
-  <text x="310" y="365.4159" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--info-text)">Interaction, SQLTransformer</text>
-
-  <rect x="500" y="270.9735" width="320" height="102.6549" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="660" y="301.7699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--ok-text)">Select / reduce</text>
-  <text x="660" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">ChiSqSelector (categorical vs label)</text>
-  <text x="660" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">VectorSlicer (keep columns)</text>
-  <text x="660" y="365.4159" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--ok-text)">PCA / SVD (dim reduction)</text>
-
-  <rect x="850" y="270.9735" width="320" height="102.6549" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1010" y="301.7699" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" font-weight="bold" fill="var(--primary-text)">Assemble</text>
-  <text x="1010" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">VectorAssembler combines</text>
-  <text x="1010" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">all feature columns into one</text>
-  <text x="1010" y="365.4159" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1451" fill="var(--primary-text)">"features" Vector column</text>
-
-  <rect x="40" y="404.4248" width="1200" height="215.5752" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="440.354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--text)">Put it all in a Pipeline</text>
-  <text x="80" y="474.2301" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">Encode every step as a Pipeline stage. The Pipeline fits once (producing a PipelineModel), then transforms both</text>
-  <text x="80" y="496.8142" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">train and test data identically — no skew between training and serving.</text>
-  <text x="80" y="527.6106" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">val pipeline = new Pipeline().setStages(Array(imputer, indexer, encoder, assembler, scaler, lr))</text>
-  <text x="80" y="553.2743" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">val model = pipeline.fit(trainDF)</text>
-  <text x="80" y="584.0708" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">model.transform(testDF)   // applies every step plus prediction in one pass</text>
+  <rect x="40" y="409.090909090909" width="1200" height="210.909090909091" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Wrap it in a Pipeline</text>
+  <text x="80" y="488.181818181818" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">val pipeline = new Pipeline().setStages(Array(imputer, indexer, encoder, assembler, scaler, lr))</text>
+  <text x="80" y="519.818181818182" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">val model = pipeline.fit(trainDF)</text>
+  <text x="80" y="551.454545454545" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">model.transform(testDF)</text>
+  <text x="80" y="593.636363636364" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Fit once, transform train and test identically.</text>
 </svg>

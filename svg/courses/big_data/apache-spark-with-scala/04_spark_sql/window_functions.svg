@@ -34,43 +34,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,52 +82,39 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2901" font-weight="bold" fill="var(--text)">Window Functions</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">Window Functions</text>
 
-  <text x="640" y="75.9292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" fill="var(--text-muted)">Compute per-row values using a window of related rows, without collapsing the row itself.</text>
+  <rect x="40" y="82.181818181818" width="390" height="295.272727272727" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">Ranking</text>
+  <text x="235" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">row_number — unique</text>
+  <text x="235" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">rank — ties, gaps</text>
+  <text x="235" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">dense_rank — no gaps</text>
+  <text x="235" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">percent_rank</text>
+  <text x="235" y="287.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">ntile(n) — buckets</text>
 
-  <rect x="40" y="101.5929" width="390" height="287.4336" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--primary-text)">Ranking</text>
-  <text x="235" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">row_number()</text>
-  <text x="235" y="186.7965" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">1, 2, 3, 4 — unique per partition</text>
-  <text x="235" y="214.5133" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">rank()</text>
-  <text x="235" y="232.9912" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">1, 2, 2, 4 — ties share rank, gaps</text>
-  <text x="235" y="260.708" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">dense_rank()</text>
-  <text x="235" y="279.1858" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">1, 2, 2, 3 — no gaps</text>
-  <text x="235" y="306.9027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">percent_rank()</text>
-  <text x="235" y="325.3805" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">relative rank in [0, 1]</text>
-  <text x="235" y="353.0973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">ntile(4)</text>
-  <text x="235" y="371.5752" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">bucket into quartiles</text>
+  <rect x="445" y="82.181818181818" width="390" height="295.272727272727" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">Aggregate</text>
+  <text x="640" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">sum, avg, min, max, count</text>
+  <text x="640" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">over a frame, kept per row</text>
+  <text x="640" y="240.363636363636" text-anchor="middle" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">Window.partitionBy("store")</text>
+  <text x="640" y="266.727272727273" text-anchor="middle" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">.orderBy("date")</text>
+  <text x="640" y="293.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">.rowsBetween(-6, 0)</text>
 
-  <rect x="445" y="101.5929" width="390" height="287.4336" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--ok-text)">Aggregate (over window)</text>
-  <text x="640" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">sum, avg, min, max, count</text>
-  <text x="640" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">computed over the frame but kept per row</text>
-  <text x="640" y="229.9115" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">Example — running 7-day sum of sales:</text>
-  <text x="640" y="258.6549" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">val w = Window.partitionBy("store")</text>
-  <text x="640" y="279.1858" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">   .orderBy("date")</text>
-  <text x="640" y="299.7168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">   .rowsBetween(-6, 0)</text>
-  <text x="640" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">df.withColumn("sales7d", sum("amount").over(w))</text>
+  <rect x="850" y="82.181818181818" width="390" height="295.272727272727" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">Analytic / Offset</text>
+  <text x="1045" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">lag — prior row</text>
+  <text x="1045" y="192.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">lead — next row</text>
+  <text x="1045" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">first_value, last_value</text>
+  <text x="1045" y="256.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--warn-text)">nth_value, cume_dist</text>
 
-  <rect x="850" y="101.5929" width="390" height="287.4336" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="137.5221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--warn-text)">Analytic / Offset</text>
-  <text x="1045" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">lag(col, n)</text>
-  <text x="1045" y="186.7965" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">value n rows before current (history)</text>
-  <text x="1045" y="214.5133" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">lead(col, n)</text>
-  <text x="1045" y="232.9912" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">value n rows after current (future)</text>
-  <text x="1045" y="260.708" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">first_value / last_value</text>
-  <text x="1045" y="279.1858" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">first/last row in the frame</text>
-  <text x="1045" y="306.9027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">nth_value(col, k)</text>
-  <text x="1045" y="325.3805" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">cume_dist()</text>
-  <text x="1045" y="353.0973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">Use lag for diffs: amount - lag(amount)</text>
-
-  <rect x="40" y="414.6903" width="1200" height="205.3097" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="450.6195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--text)">Anatomy of a window spec</text>
-  <text x="80" y="484.4956" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">Window.partitionBy(cols)   — rows with the same values get grouped (a separate window per group)</text>
-  <text x="80" y="507.0796" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">      .orderBy(cols)        — defines row order inside the window (required for rank / lag / lead)</text>
-  <text x="80" y="529.6637" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">      .rowsBetween(a, b)    — physical frame: a, b are row offsets (Window.unboundedPreceding, Window.currentRow)</text>
-  <text x="80" y="552.2478" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">      .rangeBetween(a, b)   — logical frame: a, b are value offsets on the order column (e.g. 7 days)</text>
-  <text x="80" y="585.0973" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">Each row keeps all its original columns AND gets the window-computed values. Unlike groupBy, no rows collapse.</text>
+  <rect x="40" y="409.090909090909" width="1200" height="210.909090909091" rx="8.21528508884" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--text)">Window Spec</text>
+  <text x="80" y="488.181818181818" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">partitionBy — group rows</text>
+  <text x="80" y="519.818181818182" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">orderBy — row order</text>
+  <text x="80" y="551.454545454545" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">rowsBetween — physical frame</text>
+  <text x="80" y="583.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--text-muted)">rangeBetween — logical frame</text>
+  <text x="700" y="504" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Rows keep all columns.</text>
+  <text x="700" y="535.636363636364" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Unlike groupBy, none collapse.</text>
 </svg>

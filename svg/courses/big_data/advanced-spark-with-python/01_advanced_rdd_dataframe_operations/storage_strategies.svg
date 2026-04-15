@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,56 +81,68 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-size="27.4668" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark Data Storage Strategies</text>
-  <text x="640" y="86.1538" text-anchor="middle" font-size="21.3632" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">File Formats</text>
-  <rect x="40" y="104.6154" width="259.4594" height="138.4615" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7298" y="140" text-anchor="middle" font-size="19.8372" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Parquet</text>
-  <text x="169.7298" y="170.7692" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Columnar format</text>
-  <text x="169.7298" y="193.8462" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Best compression</text>
-  <text x="169.7298" y="216.9231" text-anchor="middle" font-size="15.2594" fill="var(--ok-accent)" font-family="Arial, sans-serif">Recommended</text>
-  <rect x="331.8919" y="104.6154" width="259.4594" height="138.4615" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="461.6216" y="140" text-anchor="middle" font-size="19.8372" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">ORC</text>
-  <text x="461.6216" y="170.7692" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Columnar format</text>
-  <text x="461.6216" y="193.8462" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Hive optimized</text>
-  <text x="461.6216" y="216.9231" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">ACID support</text>
-  <rect x="623.7838" y="104.6154" width="259.4594" height="138.4615" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="753.5135" y="140" text-anchor="middle" font-size="19.8372" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Avro</text>
-  <text x="753.5135" y="170.7692" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Row-based format</text>
-  <text x="753.5135" y="193.8462" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Schema evolution</text>
-  <text x="753.5135" y="216.9231" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Good for writes</text>
-  <rect x="915.6757" y="104.6154" width="324.3243" height="138.4615" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8377" y="140" text-anchor="middle" font-size="19.8372" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">CSV / JSON</text>
-  <text x="1077.8377" y="170.7692" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Text-based, no schema</text>
-  <text x="1077.8377" y="193.8462" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Large, slow to parse</text>
-  <text x="1077.8377" y="216.9231" text-anchor="middle" font-size="15.2594" fill="var(--danger-accent)" font-family="Arial, sans-serif">Avoid in production</text>
-  <text x="640" y="289.2308" text-anchor="middle" font-size="21.3632" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Compression Strategies</text>
-  <rect x="40" y="312.3077" width="372.973" height="107.6923" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4865" y="347.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Snappy (Default)</text>
-  <text x="226.4865" y="378.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Fast, moderate compression</text>
-  <text x="226.4865" y="401.5383" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Splittable with Parquet</text>
-  <rect x="445.4053" y="312.3077" width="372.973" height="107.6923" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="631.8919" y="347.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">GZIP</text>
-  <text x="631.8919" y="378.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">High compression ratio</text>
-  <text x="631.8919" y="401.5383" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Slower, CPU intensive</text>
-  <rect x="850.8108" y="312.3077" width="389.1892" height="107.6923" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045.4053" y="347.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">ZSTD</text>
-  <text x="1045.4053" y="378.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Best of both worlds</text>
-  <text x="1045.4053" y="401.5383" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Good ratio + speed</text>
-  <text x="640" y="473.8461" text-anchor="middle" font-size="21.3632" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Layout Strategies</text>
-  <rect x="40" y="496.923" width="372.973" height="123.077" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4865" y="527.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Partition by Date</text>
-  <text x="226.4865" y="558.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">data/year=2024/month=01/</text>
-  <text x="226.4865" y="581.5384" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Enables partition pruning</text>
-  <text x="226.4865" y="604.6154" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Reduces scan size</text>
-  <rect x="445.4053" y="496.923" width="389.1892" height="123.077" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="527.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Bucketing</text>
-  <text x="640" y="558.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Pre-shuffle for joins</text>
-  <text x="640" y="581.5384" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Fixed number of buckets</text>
-  <text x="640" y="604.6154" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Avoids runtime shuffles</text>
-  <rect x="867.0269" y="496.923" width="372.973" height="123.077" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="527.6922" text-anchor="middle" font-size="18.3113" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">File Sizing</text>
-  <text x="1053.5135" y="558.4615" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Target 128MB-1GB per file</text>
-  <text x="1053.5135" y="581.5384" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Avoid small files problem</text>
-  <text x="1053.5135" y="604.6154" text-anchor="middle" font-size="15.2594" fill="var(--text)" font-family="Arial, sans-serif">Use coalesce() to merge</text>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--text)">File Formats</text>
+
+  <rect x="40" y="60.900900900901" width="284.745762711864" height="135.855855855856" rx="8.24721110845" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="182.372881355932" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--ok-text)">Parquet</text>
+  <text x="182.372881355932" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Columnar</text>
+  <text x="182.372881355932" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Best compression</text>
+  <text x="182.372881355932" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" font-weight="bold" fill="var(--ok-text)">Recommended</text>
+
+  <rect x="340" y="60.900900900901" width="284.745762711864" height="135.855855855856" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="482.372881355932" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--primary-text)">ORC</text>
+  <text x="482.372881355932" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Columnar</text>
+  <text x="482.372881355932" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Hive-optimized</text>
+  <text x="482.372881355932" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">ACID</text>
+
+  <rect x="640" y="60.900900900901" width="284.745762711864" height="135.855855855856" rx="8.24721110845" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="782.372881355932" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--warn-text)">Avro</text>
+  <text x="782.372881355932" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Row-based</text>
+  <text x="782.372881355932" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Schema evolution</text>
+  <text x="782.372881355932" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Good for writes</text>
+
+  <rect x="940" y="60.900900900901" width="300" height="135.855855855856" rx="8.24721110845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1089.491525423729" y="97.477477477477" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--danger-text)">CSV / JSON</text>
+  <text x="1089.491525423729" y="134.054054054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Text, no schema</text>
+  <text x="1089.491525423729" y="160.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--danger-text)">Slow to parse</text>
+  <text x="1089.491525423729" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" font-weight="bold" fill="var(--danger-text)">Avoid</text>
+
+  <text x="640" y="254.234234234234" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--text)">Compression</text>
+
+  <rect x="40" y="275.135135135135" width="386.440677966102" height="114.954954954955" rx="8.24721110845" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="311.711711711712" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--info-text)">Snappy (default)</text>
+  <text x="233.220338983051" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Fast, splittable</text>
+  <text x="233.220338983051" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">Moderate ratio</text>
+
+  <rect x="446.779661016949" y="275.135135135135" width="386.440677966102" height="114.954954954955" rx="8.24721110845" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="311.711711711712" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--info-text)">GZIP</text>
+  <text x="640" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">High ratio</text>
+  <text x="640" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--info-text)">CPU-heavy</text>
+
+  <rect x="853.559322033898" y="275.135135135135" width="386.440677966102" height="114.954954954955" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="311.711711711712" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--primary-text)">ZSTD</text>
+  <text x="1046.779661016949" y="343.063063063063" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Balanced</text>
+  <text x="1046.779661016949" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Ratio + speed</text>
+
+  <text x="640" y="447.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.618027771125" font-weight="bold" fill="var(--text)">Layout</text>
+
+  <rect x="40" y="468.468468468468" width="386.440677966102" height="151.531531531532" rx="8.24721110845" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="505.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--ok-text)">Partition</text>
+  <text x="233.220338983051" y="536.396396396396" text-anchor="middle" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--ok-text)">year=2024/month=01/</text>
+  <text x="233.220338983051" y="567.747747747748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">Prunes scans</text>
+  <text x="233.220338983051" y="593.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--ok-text)">By date / key</text>
+
+  <rect x="446.779661016949" y="468.468468468468" width="386.440677966102" height="151.531531531532" rx="8.24721110845" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="505.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--primary-text)">Bucket</text>
+  <text x="640" y="541.621621621622" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Pre-shuffle joins</text>
+  <text x="640" y="567.747747747748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">Fixed buckets</text>
+  <text x="640" y="593.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--primary-text)">No runtime shuffle</text>
+
+  <rect x="853.559322033898" y="468.468468468468" width="386.440677966102" height="151.531531531532" rx="8.24721110845" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="505.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--warn-text)">File size</text>
+  <text x="1046.779661016949" y="541.621621621622" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">128MB - 1GB</text>
+  <text x="1046.779661016949" y="567.747747747748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--warn-text)">Avoid small files</text>
+  <text x="1046.779661016949" y="593.873873873874" text-anchor="middle" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--warn-text)">coalesce()</text>
 </svg>

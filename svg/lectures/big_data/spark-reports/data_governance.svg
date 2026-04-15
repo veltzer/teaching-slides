@@ -34,128 +34,64 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.342871951533" font-weight="bold" fill="var(--text)">Data Governance</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--info-text)">Policies</text>
+  <text x="175" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Ownership</text>
+  <text x="175" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Classification</text>
+  <text x="175" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Retention</text>
+  <text x="175" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Privacy</text>
+  <text x="175" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--info-text)">Compliance</text>
+  <text x="175" y="435.221238938053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--info-text)">GDPR, HIPAA</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="340" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="475" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--primary-text)">Implementation</text>
+  <text x="475" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Catalogs</text>
+  <text x="475" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Lineage</text>
+  <text x="475" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">RBAC</text>
+  <text x="475" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Masking</text>
+  <text x="475" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">Encryption</text>
+  <text x="475" y="435.221238938053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--primary-text)">Unity Catalog</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="640" y="70.796460176991" width="270" height="431.150442477876" rx="10.131873827513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="775" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--ok-text)">Monitoring</text>
+  <text x="775" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Audit logs</text>
+  <text x="775" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Access reviews</text>
+  <text x="775" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Drift detection</text>
+  <text x="775" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">Alerts</text>
+  <text x="775" y="337.699115044248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">SLA dashboards</text>
+  <text x="775" y="435.221238938053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--ok-text)">Continuous</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <rect x="940" y="70.796460176991" width="300" height="431.150442477876" rx="10.131873827513" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--danger-text)">Enforcement</text>
+  <text x="1090" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Block reads</text>
+  <text x="1090" y="214.513274336283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Revoke grants</text>
+  <text x="1090" y="255.575221238938" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Quarantine</text>
+  <text x="1090" y="296.637168141593" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Escalate</text>
+  <text x="1090" y="435.221238938053" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" font-style="italic" fill="var(--danger-text)">Automate</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <line x1="312" y1="286.371681415929" x2="338" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="612" y1="286.371681415929" x2="638" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="912" y1="286.371681415929" x2="938" y2="286.371681415929" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--text)">Data Governance</text>
-
-  <!-- Stage 1: Policies -->
-  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="175" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Policies</text>
-  <line x1="60" y1="145.454545" x2="290" y2="145.454545" stroke="var(--info-text)" stroke-width="1" opacity="0.5"/>
-  <text x="175" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">Define the rules</text>
-  <text x="175" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Data ownership</text>
-  <text x="175" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Access classification</text>
-  <text x="175" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Retention periods</text>
-  <text x="175" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Privacy standards</text>
-  <text x="175" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Compliance mandates</text>
-  <text x="175" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">GDPR, HIPAA,</text>
-  <text x="175" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">SOX drive scope</text>
-
-  <!-- Stage 2: Implementation -->
-  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="475" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Implementation</text>
-  <line x1="360" y1="145.454545" x2="590" y2="145.454545" stroke="var(--primary-text)" stroke-width="1" opacity="0.5"/>
-  <text x="475" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">Apply the rules</text>
-  <text x="475" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Data catalogs</text>
-  <text x="475" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Lineage tracking</text>
-  <text x="475" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Role-based ACLs</text>
-  <text x="475" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Column masking</text>
-  <text x="475" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Encryption at rest</text>
-  <text x="475" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Unity Catalog,</text>
-  <text x="475" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Ranger, Atlas</text>
-
-  <!-- Stage 3: Monitoring -->
-  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="775" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Monitoring</text>
-  <line x1="660" y1="145.454545" x2="890" y2="145.454545" stroke="var(--ok-text)" stroke-width="1" opacity="0.5"/>
-  <text x="775" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Watch the flows</text>
-  <text x="775" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Audit log streams</text>
-  <text x="775" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Access reviews</text>
-  <text x="775" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Drift detection</text>
-  <text x="775" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Anomaly alerts</text>
-  <text x="775" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">SLA dashboards</text>
-  <text x="775" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">Continuous visibility</text>
-  <text x="775" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">beats point-in-time</text>
-
-  <!-- Stage 4: Enforcement -->
-  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Enforcement</text>
-  <line x1="960" y1="145.454545" x2="1220" y2="145.454545" stroke="var(--danger-text)" stroke-width="1" opacity="0.5"/>
-  <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">Act on violations</text>
-  <text x="1090" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Block unauthorized reads</text>
-  <text x="1090" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Revoke stale grants</text>
-  <text x="1090" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Quarantine bad data</text>
-  <text x="1090" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Escalate incidents</text>
-  <text x="1090" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Audit remediation</text>
-  <text x="1090" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">Automate where</text>
-  <text x="1090" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">risk is high</text>
-
-  <!-- Arrows -->
-  <line x1="312" y1="282.545455" x2="338" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="612" y1="282.545455" x2="638" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="912" y1="282.545455" x2="938" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <!-- Summary band -->
-  <rect x="40" y="509.272727" width="1200" height="110.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Governance is a loop, not a gate</text>
-  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Policies feed implementation, monitoring feeds enforcement, findings feed the next policy revision.</text>
-  <text x="640" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Treat it as code: versioned, tested, reviewed.</text>
+  <rect x="40" y="517.345132743363" width="1200" height="102.654867256637" rx="8.10549906201" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="553.274336283186" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.21099812402" font-weight="bold" fill="var(--text)">Governance is a loop</text>
+  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--text-muted)">Versioned, tested, reviewed as code</text>
 </svg>

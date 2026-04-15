@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,33 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,74 +81,59 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.748354" font-weight="bold" fill="var(--text)">Task Scheduling</text>
+  <rect x="40" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">DAGScheduler</text>
+  <text x="175" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">build DAG</text>
+  <text x="175" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">split into stages</text>
+  <text x="175" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">shuffle boundary</text>
+  <text x="175" y="218.070175438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--primary-text)">submit TaskSet</text>
 
-  <rect x="40" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="180" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--primary-text)">Driver / DAGScheduler</text>
-  <text x="180" y="145.839416" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Build DAG from actions</text>
-  <text x="180" y="175.474453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Split into stages</text>
-  <text x="180" y="205.109489" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Boundary = shuffle</text>
-  <text x="180" y="234.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Submit stage as TaskSet</text>
+  <line x1="310" y1="141.754385964912" x2="350" y2="141.754385964912" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="320" y1="164.890511" x2="360" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="360" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">TaskScheduler</text>
+  <text x="495" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">assign to executors</text>
+  <text x="495" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">locality preference</text>
+  <text x="495" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--ok-text)">retry failures</text>
 
-  <rect x="370" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="510" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--ok-text)">TaskScheduler</text>
-  <text x="510" y="145.839416" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Accept TaskSets</text>
-  <text x="510" y="175.474453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Assign to executors</text>
-  <text x="510" y="205.109489" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Locality preference</text>
-  <text x="510" y="234.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Retry failed tasks</text>
+  <line x1="630" y1="141.754385964912" x2="670" y2="141.754385964912" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="650" y1="164.890511" x2="690" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="680" y="40" width="270" height="203.508771929825" rx="6.052402741669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="815" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">Cluster Manager</text>
+  <text x="815" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">YARN / K8s</text>
+  <text x="815" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">allocate executors</text>
+  <text x="815" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--warn-text)">dynamic allocation</text>
 
-  <rect x="700" y="69.635036" width="280" height="190.510949" rx="6.172697" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="840" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--warn-text)">Cluster Manager</text>
-  <text x="840" y="145.839416" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">YARN, K8s, standalone</text>
-  <text x="840" y="175.474453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Allocate executors</text>
-  <text x="840" y="205.109489" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">CPU and memory</text>
-  <text x="840" y="234.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--warn-text)">Dynamic allocation</text>
+  <line x1="950" y1="141.754385964912" x2="990" y2="141.754385964912" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <line x1="980" y1="164.890511" x2="1020" y2="164.890511" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1000" y="40" width="240" height="203.508771929825" rx="6.052402741669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="85.789473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">Executors</text>
+  <text x="1120" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">run tasks</text>
+  <text x="1120" y="157.017543859649" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">slot = one core</text>
+  <text x="1120" y="187.543859649123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" fill="var(--info-text)">cache blocks</text>
 
-  <rect x="1030" y="69.635036" width="210" height="190.510949" rx="6.172697" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1135" y="109.854015" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.546874" font-weight="bold" fill="var(--info-text)">Executors</text>
-  <text x="1135" y="145.839416" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Run tasks</text>
-  <text x="1135" y="175.474453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Slot = one core</text>
-  <text x="1135" y="205.109489" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Cache RDD blocks</text>
-  <text x="1135" y="234.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Report status</text>
+  <rect x="40" y="284.210526315789" width="390" height="335.789473684211" rx="6.052402741669" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--primary-text)">Locality Levels</text>
+  <text x="235" y="380.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--primary-text)">PROCESS_LOCAL</text>
+  <text x="235" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--primary-text)">NODE_LOCAL</text>
+  <text x="235" y="462.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--primary-text)">RACK_LOCAL</text>
+  <text x="235" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--primary-text)">ANY</text>
+  <text x="235" y="558.947368421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.131006854174" font-style="italic" fill="var(--primary-text)">move code to data</text>
 
-  <rect x="40" y="291.89781" width="390" height="328.10219" rx="6.172697" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="235" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--primary-text)">Locality Levels</text>
-  <text x="235" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">PROCESS_LOCAL (same JVM)</text>
-  <text x="235" y="397.737226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">NODE_LOCAL (same host)</text>
-  <text x="235" y="429.489051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">RACK_LOCAL (same rack)</text>
-  <text x="235" y="461.240876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">ANY (remote)</text>
-  <text x="235" y="498.284672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Scheduler waits briefly</text>
-  <text x="235" y="524.744526" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">for better locality</text>
-  <text x="235" y="556.49635" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">Move code to data</text>
-  <text x="235" y="588.248175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--primary-text)">whenever possible</text>
+  <rect x="445" y="284.210526315789" width="390" height="335.789473684211" rx="6.052402741669" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">Pools and Modes</text>
+  <text x="640" y="380.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">FIFO: default queue</text>
+  <text x="640" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">FAIR: share across jobs</text>
+  <text x="640" y="462.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">pool weights, minShare</text>
+  <text x="640" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--ok-text)">speculation reruns stragglers</text>
 
-  <rect x="450" y="291.89781" width="390" height="328.10219" rx="6.172697" fill="var(--ok-accent)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="645" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--ok-text)">Pools and Modes</text>
-  <text x="645" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">FIFO: default, jobs queue</text>
-  <text x="645" y="397.737226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">FAIR: share across jobs</text>
-  <text x="645" y="429.489051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Pool weights and minShare</text>
-  <text x="645" y="461.240876" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Set via spark.scheduler.mode</text>
-  <text x="645" y="498.284672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Useful in multi-user apps</text>
-  <text x="645" y="530.036496" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">Speculative execution</text>
-  <text x="645" y="561.788321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">reruns slow tasks</text>
-  <text x="645" y="593.540146" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--ok-text)">first result wins</text>
-
-  <rect x="860" y="291.89781" width="380" height="328.10219" rx="6.172697" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1050" y="328.941606" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.518091" font-weight="bold" fill="var(--info-text)">Failure Handling</text>
-  <text x="1050" y="365.985401" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Task retried up to N times</text>
-  <text x="1050" y="397.737226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Lost executor reassigned</text>
-  <text x="1050" y="429.489051" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Stage recomputed from</text>
-  <text x="1050" y="455.948905" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">lineage if needed</text>
-  <text x="1050" y="487.70073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Shuffle blocks tracked</text>
-  <text x="1050" y="514.160584" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">by external shuffle service</text>
-  <text x="1050" y="551.20438" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Blacklist flaky nodes</text>
-  <text x="1050" y="582.956204" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.40296" fill="var(--info-text)">Keep the job alive</text>
+  <rect x="850" y="284.210526315789" width="390" height="335.789473684211" rx="6.052402741669" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1045" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--info-text)">Failure Handling</text>
+  <text x="1045" y="380.877192982456" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">task retry</text>
+  <text x="1045" y="421.578947368421" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">executor reassigned</text>
+  <text x="1045" y="462.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">lineage recomputes</text>
+  <text x="1045" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">external shuffle service</text>
+  <text x="1045" y="543.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" fill="var(--info-text)">blacklist flaky nodes</text>
 </svg>

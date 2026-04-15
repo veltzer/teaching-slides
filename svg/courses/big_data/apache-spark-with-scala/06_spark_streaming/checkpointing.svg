@@ -34,94 +34,47 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093454119" font-weight="bold" fill="var(--primary-accent)">Streaming Checkpointing</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <rect x="40" y="77.247706422018" width="580" height="234.128440366972" rx="10.316104805043" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695430571094" font-weight="bold" fill="var(--primary-text)">Metadata Checkpoint</text>
+  <text x="330" y="157.064220183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--primary-text)">Driver recovery info</text>
+  <text x="330" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--primary-text)">Config + DStream DAG</text>
+  <text x="330" y="226.238532110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--primary-text)">Queued batches</text>
+  <text x="330" y="258.165137614679" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--primary-text)">Kafka offsets</text>
+  <text x="330" y="295.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--primary-text)">small; every batch</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <rect x="660" y="77.247706422018" width="580" height="234.128440366972" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695430571094" font-weight="bold" fill="var(--info-text)">Data Checkpoint</text>
+  <text x="950" y="157.064220183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--info-text)">Truncates RDD lineage</text>
+  <text x="950" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--info-text)">Stateful op RDDs</text>
+  <text x="950" y="226.238532110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--info-text)">updateStateByKey, window</text>
+  <text x="950" y="258.165137614679" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--info-text)">Avoids stack overflow</text>
+  <text x="950" y="295.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-style="italic" fill="var(--info-text)">larger; every N batches</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <rect x="40" y="343.302752293578" width="1200" height="127.706422018349" rx="10.316104805043" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="380.550458715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695430571094" font-weight="bold" fill="var(--ok-text)">HDFS-Compatible Storage</text>
+  <text x="640" y="417.798165137615" text-anchor="middle" font-family="Courier New, monospace" font-size="16.505767688068" fill="var(--ok-text)">ssc.checkpoint("hdfs://...")</text>
+  <text x="640" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--ok-text)">S3, GCS, Azure — replicated, durable</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-
-  <rect x="40" y="40" width="580" height="258.928571" rx="8.141604" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--primary-text)">Metadata Checkpoint</text>
-  <text x="330" y="105.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">driver-side recovery info</text>
-  <text x="330" y="143.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">StreamingContext configuration</text>
-  <text x="330" y="169.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">DStream operations (the DAG)</text>
-  <text x="330" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">incomplete batches (queued)</text>
-  <text x="330" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">Kafka offsets / receiver state</text>
-  <text x="330" y="260.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--primary-text)">small; written every batch interval</text>
-  <text x="330" y="283.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">needed to restart driver</text>
-
-  <rect x="660" y="40" width="580" height="258.928571" rx="8.141604" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--info-text)">Data Checkpoint</text>
-  <text x="950" y="105.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">truncates long RDD lineage</text>
-  <text x="950" y="143.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">materialized RDDs from stateful ops</text>
-  <text x="950" y="169.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">updateStateByKey, mapWithState, window</text>
-  <text x="950" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">every N batches (dstream.checkpoint())</text>
-  <text x="950" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--info-text)">prevents stack overflow on replay</text>
-  <text x="950" y="260.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" font-style="italic" fill="var(--info-text)">larger; I/O cost proportional to state</text>
-  <text x="950" y="283.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">needed for fault-tolerant state</text>
-
-  <rect x="40" y="335.178571" width="1200" height="155.357143" rx="8.141604" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="368.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--ok-text)">HDFS-compatible Storage</text>
-  <text x="640" y="397.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">ssc.checkpoint("hdfs://nn/path") — also works with S3, GCS, Azure, local FS</text>
-  <text x="640" y="428.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">replicated, durable, shared across driver + executors</text>
-  <text x="640" y="459.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">avoid NFS / single-node disk — no fault tolerance</text>
-
-  <rect x="40" y="521.607143" width="1200" height="98.392857" rx="8.141604" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="552.678571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" font-weight="bold" fill="var(--danger-text)">Recovery on Failure</text>
-  <text x="640" y="581.678571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">StreamingContext.getOrCreate(dir, factory) — if dir has checkpoints, reconstruct context; else build new one</text>
-  <text x="640" y="606.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">driver restart replays from last checkpoint — at-least-once by default, exactly-once with idempotent sinks</text>
+  <rect x="40" y="502.935779816514" width="1200" height="117.064220183486" rx="10.316104805043" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="540.183486238532" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695430571094" font-weight="bold" fill="var(--danger-text)">Recovery</text>
+  <text x="640" y="577.431192660551" text-anchor="middle" font-family="Courier New, monospace" font-size="16.505767688068" fill="var(--danger-text)">StreamingContext.getOrCreate(dir, factory)</text>
+  <text x="640" y="607.229357798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--danger-text)">Replays last checkpoint; at-least-once default</text>
 </svg>

@@ -34,166 +34,82 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/></linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#c4cdd6"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/></linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/></linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#555555"/></marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/></marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/></marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/></marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/></marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/></marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/></marker>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
+  <rect x="40" y="40" width="380" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Reserved Instances</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+  <text x="70" y="130" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Flexibility</text>
+  <text x="70" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Low - locked type / region</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
+  <text x="70" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Discount</text>
+  <text x="70" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Up to 72%</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
+  <text x="70" y="290" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Commitment</text>
+  <text x="70" y="320" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">1 or 3 year</text>
+  <text x="70" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Upfront options</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
-    </linearGradient>
+  <text x="70" y="395" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Best For</text>
+  <text x="70" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Steady workloads</text>
+  <text x="70" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Predictable demand</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
-    </filter>
+  <text x="70" y="510" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Risk</text>
+  <rect x="70" y="525" width="120" height="30" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">Medium</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <rect x="450" y="40" width="380" height="580" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Savings Plans</text>
 
-  <!-- Background -->
-  <!-- Column 1: Reserved Instances -->
-  <rect x="40" y="40" width="380" height="580" rx="6.50941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="40" width="380" height="60" rx="6.50941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="80" width="380" height="20" fill="url(#grad-primary)" rx="6.50941" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.99996" font-weight="bold" fill="var(--bg)">Reserved Instances</text>
+  <text x="480" y="130" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Flexibility</text>
+  <text x="480" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">High - across families</text>
 
-  <text x="70" y="134.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Flexibility</text>
-  <text x="70" y="158" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Low - locked to instance type,</text>
-  <text x="70" y="178" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">region, and OS</text>
+  <text x="480" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Discount</text>
+  <text x="480" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Up to 66%</text>
 
-  <line x1="70" y1="194.999945" x2="390" y2="194.999945" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="480" y="290" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Commitment</text>
+  <text x="480" y="320" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">1 or 3 year</text>
+  <text x="480" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">$/hour pledge</text>
 
-  <text x="70" y="220" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Discount Range</text>
-  <text x="70" y="242.999945" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Up to 72% (3-year, all upfront)</text>
+  <text x="480" y="395" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Best For</text>
+  <text x="480" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Dynamic workloads</text>
+  <text x="480" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Multi-region</text>
 
-  <line x1="70" y1="260" x2="390" y2="260" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="480" y="510" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Risk</text>
+  <rect x="480" y="525" width="120" height="30" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="540" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Low</text>
 
-  <text x="70" y="285.000055" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Commitment</text>
-  <text x="70" y="308" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">1 or 3 year term</text>
-  <text x="70" y="328" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">No / Partial / All upfront</text>
+  <rect x="860" y="40" width="380" height="580" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Spot Instances</text>
 
-  <line x1="70" y1="345.000055" x2="390" y2="345.000055" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="890" y="130" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Flexibility</text>
+  <text x="890" y="160" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Very High; no commit</text>
 
-  <text x="70" y="370" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Best For</text>
-  <text x="70" y="393.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Steady-state workloads</text>
-  <text x="70" y="413.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Known instance types</text>
-  <text x="70" y="433.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Predictable demand</text>
+  <text x="890" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Discount</text>
+  <text x="890" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Up to 90% off</text>
 
-  <line x1="70" y1="450" x2="390" y2="450" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="890" y="290" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Commitment</text>
+  <text x="890" y="320" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">None; market price</text>
+  <text x="890" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">2-min interruption</text>
 
-  <text x="70" y="474.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--primary-accent)">Risk Level</text>
-  <rect x="70" y="488" width="120" height="24" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="130" y="506" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--warn-accent)">Medium</text>
+  <text x="890" y="395" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Best For</text>
+  <text x="890" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Fault-tolerant jobs</text>
+  <text x="890" y="450" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Batch, CI/CD</text>
 
-  <!-- Column 2: Savings Plans -->
-  <rect x="450" y="40" width="380" height="580" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="450" y="40" width="380" height="60" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="450" y="80" width="380" height="20" fill="url(#grad-ok)" rx="6.50941" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.99996" font-weight="bold" fill="var(--bg)">Savings Plans</text>
-
-  <text x="480" y="134.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)">Flexibility</text>
-  <text x="480" y="158" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">High - applies across instance</text>
-  <text x="480" y="178" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">families, sizes, OS, regions</text>
-
-  <line x1="480" y1="194.999945" x2="800" y2="194.999945" stroke="var(--ok-border)" stroke-width="1"/>
-
-  <text x="480" y="220" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)">Discount Range</text>
-  <text x="480" y="242.999945" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Up to 66% (Compute SP)</text>
-
-  <line x1="480" y1="260" x2="800" y2="260" stroke="var(--ok-border)" stroke-width="1"/>
-
-  <text x="480" y="285.000055" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)">Commitment</text>
-  <text x="480" y="308" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">1 or 3 year term</text>
-  <text x="480" y="328" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">$/hour commitment</text>
-
-  <line x1="480" y1="345.000055" x2="800" y2="345.000055" stroke="var(--ok-border)" stroke-width="1"/>
-
-  <text x="480" y="370" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)">Best For</text>
-  <text x="480" y="393.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Dynamic workloads</text>
-  <text x="480" y="413.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Changing instance types</text>
-  <text x="480" y="433.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Multi-region deployments</text>
-
-  <line x1="480" y1="450" x2="800" y2="450" stroke="var(--ok-border)" stroke-width="1"/>
-
-  <text x="480" y="474.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--ok-accent)">Risk Level</text>
-  <rect x="480" y="488" width="120" height="24" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="540" y="506" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--ok-accent)">Low</text>
-
-  <!-- Column 3: Spot Instances -->
-  <rect x="860" y="40" width="380" height="580" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="40" width="380" height="60" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="80" width="380" height="20" fill="url(#grad-warn)" rx="6.50941" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.99996" font-weight="bold" fill="var(--bg)">Spot Instances</text>
-
-  <text x="890" y="134.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Flexibility</text>
-  <text x="890" y="158" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Very High - any instance, any</text>
-  <text x="890" y="178" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">time, no commitment</text>
-
-  <line x1="890" y1="194.999945" x2="1210" y2="194.999945" stroke="var(--warn-border)" stroke-width="1"/>
-
-  <text x="890" y="220" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Discount Range</text>
-  <text x="890" y="242.999945" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Up to 90% off On-Demand</text>
-
-  <line x1="890" y1="260" x2="1210" y2="260" stroke="var(--warn-border)" stroke-width="1"/>
-
-  <text x="890" y="285.000055" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Commitment</text>
-  <text x="890" y="308" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">None - pay market price</text>
-  <text x="890" y="328" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Can be interrupted (2-min notice)</text>
-
-  <line x1="890" y1="345.000055" x2="1210" y2="345.000055" stroke="var(--warn-border)" stroke-width="1"/>
-
-  <text x="890" y="370" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Best For</text>
-  <text x="890" y="393.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Fault-tolerant workloads</text>
-  <text x="890" y="413.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Batch processing, CI/CD</text>
-  <text x="890" y="433.000055" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--text-muted)">Stateless applications</text>
-
-  <line x1="890" y1="450" x2="1210" y2="450" stroke="var(--warn-border)" stroke-width="1"/>
-
-  <text x="890" y="474.999945" font-family="Arial, sans-serif" font-size="14.000004" font-weight="bold" fill="var(--warn-accent)">Risk Level</text>
-  <rect x="890" y="488" width="120" height="24" rx="6.50941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="506" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--danger-accent)">High</text>
+  <text x="890" y="510" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Risk</text>
+  <rect x="890" y="525" width="120" height="30" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">High</text>
 </svg>

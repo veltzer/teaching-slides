@@ -34,43 +34,24 @@
         --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,86 +73,57 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
   </defs>
-  <!-- Header -->
-  <rect x="40" y="40" width="1200" height="42.112211" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="66.79868" font-family="Arial, sans-serif" font-size="17.464726" font-weight="bold" fill="var(--bg)" text-anchor="middle">GNU Make Advanced Features</text>
 
-  <!-- Pattern Rules -->
-  <rect x="40" y="97.425743" width="383.606557" height="220.132013" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="231.803279" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Pattern Rules  %</text>
-  <text x="54.754098" y="141.452145" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">%.o: %.c</text>
-  <text x="69.508197" y="158.679868" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(CC) $(CFLAGS) -c $&lt; -o $@</text>
-  <text x="54.754098" y="181.650165" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">%.o: %.cpp</text>
-  <text x="69.508197" y="198.877888" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(CXX) -c $&lt; -o $@</text>
-  <text x="54.754098" y="221.848185" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--primary-accent)">Automatic Variables:</text>
-  <text x="54.754098" y="240.990099" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$@  - target filename</text>
-  <text x="54.754098" y="258.217822" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$&lt;  - first prerequisite</text>
-  <text x="54.754098" y="275.445545" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$^  - all prerequisites</text>
-  <text x="54.754098" y="292.673267" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$*  - stem (matched by %)</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">GNU Make Advanced Features</text>
 
-  <!-- String Functions -->
-  <rect x="443.278689" y="97.425743" width="393.442623" height="220.132013" rx="6.315824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">String Functions</text>
-  <text x="458.032787" y="141.452145" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(subst from,to,text)</text>
-  <text x="458.032787" y="160.594059" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(patsubst %.c,%.o,$(SRCS))</text>
-  <text x="458.032787" y="179.735974" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(filter %.c,$(FILES))</text>
-  <text x="458.032787" y="198.877888" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(filter-out %.h,$(FILES))</text>
-  <text x="458.032787" y="218.019802" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(sort $(LIST))</text>
-  <text x="458.032787" y="237.161716" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(words $(LIST))</text>
-  <text x="458.032787" y="256.30363" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(addprefix src/,$(SRCS))</text>
-  <text x="458.032787" y="275.445545" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(addsuffix .bak,$(FILES))</text>
-  <text x="458.032787" y="294.587459" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(wildcard src/*.c)</text>
+  <!-- Row 1: 3 cols -->
+  <rect x="40" y="82.181818181818" width="390" height="232" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">Pattern Rules</text>
+  <text x="60" y="150.727272727273" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">%.o: %.c</text>
+  <text x="60" y="177.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">  $(CC) -c $&lt; -o $@</text>
+  <text x="60" y="214" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">$@ target</text>
+  <text x="60" y="240.363636363636" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">$&lt; first prereq</text>
+  <text x="60" y="266.727272727273" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">$^ all prereqs</text>
+  <text x="60" y="293.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--primary-text)">$* stem</text>
 
-  <!-- Conditionals + Include -->
-  <rect x="856.393443" y="97.425743" width="383.606557" height="220.132013" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1048.196721" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Conditionals &amp;amp; Include</text>
-  <text x="871.147541" y="141.452145" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">ifeq ($(CC),gcc)</text>
-  <text x="885.901639" y="158.679868" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  CFLAGS += -O2</text>
-  <text x="871.147541" y="175.907591" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">else</text>
-  <text x="885.901639" y="193.135314" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  CFLAGS += -O0</text>
-  <text x="871.147541" y="210.363036" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">endif</text>
-  <text x="871.147541" y="233.333333" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">ifneq ($(DEBUG),)</text>
-  <text x="885.901639" y="250.561056" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  CFLAGS += -g</text>
-  <text x="871.147541" y="267.788779" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">endif</text>
-  <text x="871.147541" y="290.759076" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">-include config.mk</text>
-  <text x="871.147541" y="307.986799" font-size="11.643116" fill="var(--text-muted)" font-family="Courier New, monospace"># - silences missing file</text>
+  <rect x="445" y="82.181818181818" width="390" height="232" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">String Functions</text>
+  <text x="465" y="150.727272727273" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(patsubst %.c,%.o,$X)</text>
+  <text x="465" y="177.090909090909" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(filter %.c,$X)</text>
+  <text x="465" y="203.454545454545" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(filter-out %.h,$X)</text>
+  <text x="465" y="229.818181818182" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(sort $X)</text>
+  <text x="465" y="256.181818181818" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(addprefix src/,$X)</text>
+  <text x="465" y="282.545454545455" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">$(wildcard src/*.c)</text>
 
-  <!-- Parallel builds -->
-  <rect x="40" y="334.785479" width="590.163934" height="172.277228" rx="6.315824" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.081967" y="357.755776" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Parallel Builds  -j</text>
-  <text x="54.754098" y="380.726073" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make -j4          # 4 parallel jobs</text>
-  <text x="54.754098" y="399.867987" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make -j$(nproc)   # use all CPUs</text>
-  <text x="54.754098" y="419.009901" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make -j           # unlimited (risky)</text>
-  <text x="54.754098" y="441.980198" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Dependency graph determines what can run in parallel</text>
-  <text x="54.754098" y="461.122112" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Output may interleave; use --output-sync to fix</text>
-  <text x="54.754098" y="480.264026" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make -j4 --output-sync=recurse</text>
-  <text x="54.754098" y="499.405941" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">.NOTPARALLEL can force serial execution of a target</text>
+  <rect x="850" y="82.181818181818" width="390" height="232" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Conditionals</text>
+  <text x="870" y="150.727272727273" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">ifeq ($(CC),gcc)</text>
+  <text x="870" y="177.090909090909" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">  CFLAGS += -O2</text>
+  <text x="870" y="203.454545454545" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">else</text>
+  <text x="870" y="229.818181818182" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">  CFLAGS += -O0</text>
+  <text x="870" y="256.181818181818" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">endif</text>
+  <text x="870" y="287.818181818182" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--warn-text)">-include config.mk</text>
 
-  <!-- Real example -->
-  <rect x="649.836066" y="334.785479" width="590.163934" height="172.277228" rx="6.315824" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="944.918033" y="357.755776" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Real Pattern: Dependency Files</text>
-  <text x="664.590164" y="380.726073" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">SRCS := $(wildcard src/*.c)</text>
-  <text x="664.590164" y="399.867987" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">OBJS := $(patsubst src/%.c,obj/%.o,$(SRCS))</text>
-  <text x="664.590164" y="419.009901" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">DEPS := $(OBJS:.o=.d)</text>
-  <text x="664.590164" y="440.066007" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">obj/%.o: src/%.c</text>
-  <text x="679.344262" y="457.293729" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">$(CC) -MMD -MP -c $&lt; -o $@</text>
-  <text x="664.590164" y="478.349835" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">-include $(DEPS)</text>
-  <text x="664.590164" y="499.405941" font-family="Arial, sans-serif" font-size="10.6729" fill="var(--text-muted)">-MMD generates .d files; -include rebuilds on header change</text>
+  <!-- Row 2 -->
+  <rect x="40" y="335.272727272727" width="590" height="189.818181818182" rx="10.269106361049" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="372.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--info-text)">Parallel Builds</text>
+  <text x="60" y="409.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--info-text)">make -j4</text>
+  <text x="60" y="435.454545454545" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--info-text)">make -j$(nproc)</text>
+  <text x="60" y="467.090909090909" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--info-text)">make -j4 --output-sync</text>
+  <text x="60" y="504" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">.NOTPARALLEL forces serial</text>
 
-  <!-- Bottom tip bar -->
-  <rect x="40" y="524.290429" width="1200" height="95.709571" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="547.260726" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Tips</text>
-  <text x="59.672131" y="568.316832" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Use := (immediate) assignment, not = (deferred) to avoid unexpected re-evaluation</text>
-  <text x="59.672131" y="587.458746" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">$(shell cmd) runs shell during Makefile parsing - expensive, cache result in a variable</text>
-  <text x="59.672131" y="606.60066" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">$(eval ...) dynamically generates Makefile rules - useful for repetitive patterns but hard to debug</text>
+  <rect x="650" y="335.272727272727" width="590" height="189.818181818182" rx="10.269106361049" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="372.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Dependency Files</text>
+  <text x="670" y="409.090909090909" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">SRCS := $(wildcard src/*.c)</text>
+  <text x="670" y="435.454545454545" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">DEPS := $(OBJS:.o=.d)</text>
+  <text x="670" y="461.818181818182" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">$(CC) -MMD -MP -c</text>
+  <text x="670" y="488.181818181818" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">-include $(DEPS)</text>
+  <text x="670" y="514.545454545455" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--danger-text)">header-aware</text>
+
+  <!-- Tips -->
+  <rect x="40" y="546.181818181818" width="1200" height="73.818181818182" rx="10.269106361049" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="580" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Prefer := over =</text>
+  <text x="60" y="605" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">cache $(shell) output</text>
+  <text x="700" y="580" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">$(eval) = dynamic rules</text>
 </svg>
