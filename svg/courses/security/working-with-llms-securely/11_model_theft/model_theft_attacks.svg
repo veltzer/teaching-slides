@@ -28,179 +28,106 @@
         --danger-border: #7d3f38;
         --danger-text: #ffffff;
         --danger-accent: #4a1f1a;
-        --info-fill: #7c6a8e;
-        --info-border: #574a68;
-        --info-text: #ffffff;
-        --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/>
-      <stop offset="100%" stop-color="#3d5a7d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#c4cdd6"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/>
-      <stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/>
-      <stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/>
-      <stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/>
-      <stop offset="100%" stop-color="#574a68"/>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
   </defs>
-  <!-- == ATTACK VECTORS (top half) == -->
-  <text x="40" y="40" font-family="Arial, sans-serif" font-size="18.183316" font-weight="bold" fill="var(--danger-accent)">LLM Model Theft - Attack Vectors</text>
-  <text x="812.881356" y="40" font-family="Arial, sans-serif" font-size="18.183316" font-weight="bold" fill="var(--ok-accent)">Mitigations</text>
 
-  <!-- Attack 1: Weight Theft -->
-  <rect x="40" y="56.055363" width="345.762712" height="140.484429" rx="6.57569" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="56.055363" width="345.762712" height="36.124567" rx="6.57569" fill="var(--danger-accent)"/>
-  <rect x="40" y="76.124567" width="345.762712" height="16.055363" fill="var(--danger-accent)" rx="6.57569"/>
-  <text x="212.881356" y="80.138408" font-family="Arial, sans-serif" font-size="14.142555" font-weight="bold" fill="var(--bg)" text-anchor="middle">Weight Theft (Direct)</text>
-  <text x="60.338983" y="110.242215" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">Attacker gains access to model files on disk</text>
-  <text x="60.338983" y="128.304498" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">or cloud storage, copies weights directly.</text>
-  <text x="60.338983" y="148.373702" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">Attack surface: insider threat, misconfigured</text>
-  <text x="60.338983" y="166.435986" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">S3 bucket, stolen cloud credentials, CI/CD</text>
-  <text x="60.338983" y="182.491349" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">pipeline compromise, unencrypted storage.</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="27.644805915717" font-weight="bold" fill="var(--primary-accent)">LLM Model Theft: Attacks and Defenses</text>
 
-  <!-- Attack 2: API Extraction / Model Stealing -->
-  <rect x="416.271186" y="56.055363" width="366.101695" height="140.484429" rx="6.57569" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="416.271186" y="56.055363" width="366.101695" height="36.124567" rx="6.57569" fill="var(--danger-accent)"/>
-  <rect x="416.271186" y="76.124567" width="366.101695" height="16.055363" fill="var(--danger-accent)" rx="6.57569"/>
-  <text x="599.322034" y="80.138408" font-family="Arial, sans-serif" font-size="14.142555" font-weight="bold" fill="var(--bg)" text-anchor="middle">API Extraction (Model Stealing)</text>
-  <text x="436.610169" y="110.242215" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">Attacker queries the API with crafted inputs</text>
-  <text x="436.610169" y="128.304498" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">and uses input/output pairs to train a surrogate</text>
-  <text x="436.610169" y="146.366782" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">model that mimics the target model's behavior.</text>
-  <text x="436.610169" y="166.435986" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">Technique: thousands of adaptive queries,</text>
-  <text x="436.610169" y="182.491349" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">then distill into smaller clone model.</text>
+  <!-- LEFT: Attacks column header -->
+  <text x="310" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.720918933777" font-weight="bold" fill="var(--danger-accent)">Attack Vectors</text>
 
-  <!-- Attack 3: Membership Inference -->
-  <rect x="40" y="216.608997" width="345.762712" height="130.449827" rx="6.57569" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="216.608997" width="345.762712" height="36.124567" rx="6.57569" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="236.678201" width="345.762712" height="16.055363" fill="url(#grad-warn)" rx="6.57569" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="212.881356" y="240.692042" font-family="Arial, sans-serif" font-size="14.142555" font-weight="bold" fill="var(--bg)" text-anchor="middle">Membership Inference</text>
-  <text x="60.338983" y="270.795848" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">Attacker determines whether a specific data</text>
-  <text x="60.338983" y="288.858131" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">record was in the training set, extracting</text>
-  <text x="60.338983" y="306.920415" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">private information or IP about training data.</text>
-  <text x="60.338983" y="326.989619" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">Risk: reveals PII or proprietary training sets.</text>
+  <rect x="40" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">Weight Theft</text>
+  <text x="310" y="182" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="16" fill="var(--danger-text)">direct file copy via leaked credentials</text>
 
-  <!-- Attack 4: Hyperparameter Extraction -->
-  <rect x="416.271186" y="216.608997" width="366.101695" height="130.449827" rx="6.57569" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="416.271186" y="216.608997" width="366.101695" height="36.124567" rx="6.57569" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="416.271186" y="236.678201" width="366.101695" height="16.055363" fill="url(#grad-warn)" rx="6.57569" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="599.322034" y="240.692042" font-family="Arial, sans-serif" font-size="14.142555" font-weight="bold" fill="var(--bg)" text-anchor="middle">Hyperparameter Extraction</text>
-  <text x="436.610169" y="270.795848" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">Attacker probes the API to reverse-engineer</text>
-  <text x="436.610169" y="288.858131" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">model architecture: layer count, embedding</text>
-  <text x="436.610169" y="306.920415" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">dimensions, activation functions, context size.</text>
-  <text x="436.610169" y="326.989619" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">Used to guide targeted model stealing effort.</text>
+  <rect x="40" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">API Extraction</text>
+  <text x="310" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--danger-text)">query → distill → surrogate clone</text>
+  <text x="310" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--danger-text)">that mimics the target</text>
 
-  <!-- == MITIGATIONS == -->
-  <!-- Mitigation 1: Rate Limiting -->
-  <rect x="812.881356" y="56.055363" width="427.118644" height="108.373702" rx="6.57569" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="812.881356" y="56.055363" width="427.118644" height="32.110727" rx="6.57569" fill="var(--ok-accent)"/>
-  <rect x="812.881356" y="72.110727" width="427.118644" height="16.055363" fill="var(--ok-accent)" rx="6.57569"/>
-  <text x="1026.440678" y="78.131488" font-family="Arial, sans-serif" font-size="13.132419" font-weight="bold" fill="var(--bg)" text-anchor="middle">Rate Limiting + API Throttling</text>
-  <text x="833.220339" y="104.221453" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Limit queries per user/key per time window</text>
-  <text x="833.220339" y="122.283737" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Detect and block systematic probing patterns</text>
-  <text x="833.220339" y="140.346021" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Increase pricing / CAPTCHA at high volumes</text>
-  <text x="833.220339" y="156.401384" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Alert on anomalous input diversity patterns</text>
+  <rect x="40" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Membership Inference</text>
+  <text x="310" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--warn-text)">determine if a record was in</text>
+  <text x="310" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--warn-text)">training data (PII risk)</text>
 
-  <!-- Mitigation 2: Output Filtering -->
-  <rect x="812.881356" y="178.477509" width="427.118644" height="108.373702" rx="6.57569" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="812.881356" y="178.477509" width="427.118644" height="32.110727" rx="6.57569" fill="var(--ok-accent)"/>
-  <rect x="812.881356" y="194.532872" width="427.118644" height="16.055363" fill="var(--ok-accent)" rx="6.57569"/>
-  <text x="1026.440678" y="200.553633" font-family="Arial, sans-serif" font-size="13.132419" font-weight="bold" fill="var(--bg)" text-anchor="middle">Output Filtering + Truncation</text>
-  <text x="833.220339" y="226.643599" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Return rounded/noisy logits instead of exact probs</text>
-  <text x="833.220339" y="244.705882" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Do not expose raw token probabilities</text>
-  <text x="833.220339" y="262.768166" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Limit output tokens to what the task requires</text>
-  <text x="833.220339" y="280.83045" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Redact model metadata from API responses</text>
+  <rect x="40" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Hyperparameter Extraction</text>
+  <text x="310" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--warn-text)">probe API to recover layers,</text>
+  <text x="310" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--warn-text)">embeddings, activations</text>
 
-  <!-- Mitigation 3: Watermarking -->
-  <rect x="812.881356" y="300.899654" width="427.118644" height="108.373702" rx="6.57569" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="812.881356" y="300.899654" width="427.118644" height="32.110727" rx="6.57569" fill="var(--ok-accent)"/>
-  <rect x="812.881356" y="316.955017" width="427.118644" height="16.055363" fill="var(--ok-accent)" rx="6.57569"/>
-  <text x="1026.440678" y="322.975779" font-family="Arial, sans-serif" font-size="13.132419" font-weight="bold" fill="var(--bg)" text-anchor="middle">Model Watermarking</text>
-  <text x="833.220339" y="349.065744" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Embed covert signals in model outputs</text>
-  <text x="833.220339" y="367.128028" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Survive distillation into clone models</text>
-  <text x="833.220339" y="385.190311" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Detect stolen/cloned model in the wild</text>
-  <text x="833.220339" y="403.252595" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Legal evidence for IP theft litigation</text>
+  <!-- RIGHT: Defenses column header -->
+  <text x="970" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.720918933777" font-weight="bold" fill="var(--ok-accent)">Defenses</text>
 
-  <!-- == BOTTOM: IMPACT AND DEFENSE LAYERS == -->
-  <rect x="40" y="369.134948" width="752.542373" height="250.865052" rx="6.57569" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="416.271186" y="393.217993" font-family="Arial, sans-serif" font-size="15.15269" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Attack Impact and Defense Layers</text>
+  <rect x="700" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Rate Limit + Throttle</text>
+  <text x="970" y="171.596638655462" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">per-key quotas, detect probing,</text>
+  <text x="970" y="193.042016806723" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">CAPTCHA at high volume</text>
 
-  <!-- Impact table -->
-  <text x="60.338983" y="415.294118" font-family="Arial, sans-serif" font-size="13.132419" font-weight="bold" fill="var(--danger-accent)">Impact of Successful Model Theft:</text>
-  <text x="60.338983" y="435.363322" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Competitor gains model without training cost (millions $)</text>
-  <text x="60.338983" y="453.425606" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Clone can be used to find adversarial examples against original</text>
-  <text x="60.338983" y="471.487889" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Safety guardrails removed from stolen weights via fine-tuning</text>
-  <text x="60.338983" y="489.550173" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Private training data (PII, code) may be extractable from clone</text>
-  <text x="60.338983" y="507.612457" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Stolen model used to undermine API pricing strategy</text>
+  <rect x="700" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Output Filtering</text>
+  <text x="970" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">hide raw logits, add noise,</text>
+  <text x="970" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">truncate tokens</text>
 
-  <text x="60.338983" y="531.695502" font-family="Arial, sans-serif" font-size="13.132419" font-weight="bold" fill="var(--primary-accent)">Defense-in-Depth Layers:</text>
-  <text x="60.338983" y="551.764706" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">Access control -&gt; Rate limiting -&gt; Output noise -&gt; Watermark -&gt; Monitoring -&gt; Legal</text>
-  <text x="60.338983" y="571.83391" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">No single control is sufficient; layer all defenses together.</text>
-  <text x="60.338983" y="591.903114" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">OWASP LLM10: Model Theft - monitor API usage anomalies continuously</text>
-  <text x="60.338983" y="607.958478" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">Encrypt model weights at rest (AES-256), restrict filesystem access strictly.</text>
+  <rect x="700" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Watermarking</text>
+  <text x="970" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">covert signals survive distillation,</text>
+  <text x="970" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--ok-text)">prove theft in court</text>
 
-  <!-- Monitoring box -->
-  <rect x="812.881356" y="423.321799" width="427.118644" height="170.588235" rx="6.57569" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1026.440678" y="445.397924" font-family="Arial, sans-serif" font-size="14.142555" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Monitoring and Detection</text>
-  <text x="833.220339" y="467.474048" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Log and analyze all API requests</text>
-  <text x="833.220339" y="485.536332" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Flag high-volume users with broad input diversity</text>
-  <text x="833.220339" y="503.598616" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Honeypot queries: plant known unique outputs</text>
-  <text x="833.220339" y="521.6609" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Alert on sequential/grid-search-like query patterns</text>
-  <text x="833.220339" y="539.723183" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Track IP ranges, user agents, time distributions</text>
-  <text x="833.220339" y="557.785467" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text)">&#x2022; Compare public model outputs vs your API outputs</text>
-  <text x="833.220339" y="579.861592" font-family="Arial, sans-serif" font-size="12.122174" fill="var(--text-muted)">If clone appears in wild: activate watermark verification.</text>
+  <rect x="700" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.746289939798" font-weight="bold" fill="var(--primary-text)">Monitoring + Honeypots</text>
+  <text x="970" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--primary-text)">flag high input diversity,</text>
+  <text x="970" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" fill="var(--primary-text)">detect grid-search patterns</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.797031951838" font-style="italic" fill="var(--text-muted)">OWASP LLM10 — no single control is enough; layer all defenses</text>
 </svg>

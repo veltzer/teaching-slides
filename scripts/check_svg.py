@@ -39,7 +39,7 @@ MIN_ELEMENTS = 5
 MIN_FONT_SIZE = 10
 REQUIRED_VIEWBOX = "0 0 1280 720"
 MAX_Y_BOUND = 640
-MAX_WORD_COUNT = 60
+MAX_WORD_COUNT = 100
 MIN_FILL_PCT = 40.0
 USABLE_W = 1200.0
 USABLE_H = 580.0
@@ -605,9 +605,7 @@ def main() -> None:
     do_bounds = args.bounds or not explicit
     do_title = args.title or not explicit
     do_colors = args.colors or not explicit
-    # Words check is opt-in only for now; too many existing SVGs exceed the
-    # limit. Flip to `args.words or not explicit` once the backlog is clean.
-    do_words = args.words
+    do_words = args.words or not explicit
     do_fill = args.fill or not explicit
     do_fit = args.fit or not explicit
     do_no_circles = args.no_circles or not explicit
