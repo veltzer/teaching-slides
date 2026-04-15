@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,28 +97,25 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="690.46729" y="40" text-anchor="middle" font-size="29.566639" font-weight="bold" fill="var(--text)">Interrupt Mitigation: IRQ to NAPI Polling</text>
-  <rect x="40" y="111.491284" width="244.485981" height="193.717667" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)" />
-  <text x="162.242991" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--danger-accent)">HW IRQ</text>
-  <text x="162.242991" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">Packet arrives</text>
-  <rect x="358.504673" y="111.491284" width="244.485981" height="193.717667" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)" />
-  <text x="480.747664" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--warn-accent)">Disable IRQ</text>
-  <text x="480.747664" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">Stop interrupts</text>
-  <rect x="677.009346" y="111.491284" width="244.485981" height="193.717667" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)" />
-  <text x="799.252336" y="180.676135" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--ok-accent)">NAPI Poll</text>
-  <text x="799.252336" y="238.330105" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">napi_schedule()</text>
-  <text x="799.252336" y="282.147192" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">batch process</text>
-  <rect x="995.514019" y="111.491284" width="244.485981" height="193.717667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)" />
-  <text x="1117.757009" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--primary-accent)">Re-enable IRQ</text>
-  <text x="1117.757009" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">napi_complete()</text>
+  <text x="690.46729" y="40" text-anchor="middle" font-size="29.566639" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Interrupt Mitigation: IRQ to NAPI Polling</text>
+  <rect x="40" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
+  <text x="162.242991" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">HW IRQ</text>
+  <text x="162.242991" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">Packet arrives</text>
+  <rect x="358.504673" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
+  <text x="480.747664" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Disable IRQ</text>
+  <text x="480.747664" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">Stop interrupts</text>
+  <rect x="677.009346" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
+  <text x="799.252336" y="180.676135" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">NAPI Poll</text>
+  <text x="799.252336" y="238.330105" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">napi_schedule()</text>
+  <text x="799.252336" y="282.147192" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">batch process</text>
+  <rect x="995.514019" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
+  <text x="1117.757009" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Re-enable IRQ</text>
+  <text x="1117.757009" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">napi_complete()</text>
   <line x1="284.485981" y1="208.350046" x2="358.504673" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="602.990654" y1="208.350046" x2="677.009346" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="921.495327" y1="208.350046" x2="995.514019" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="211.588785" y="406.680008" width="957.757009" height="213.319992" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="7.851391" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)" />
-  <text x="690.46729" y="492.008177" text-anchor="middle" font-size="23.880792" fill="var(--text)">Benefit: Process multiple packets per interrupt (budget)</text>
-  <text x="690.46729" y="565.805322" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)">Reduces CPU overhead from per-packet interrupt handling</text>
+  <rect x="211.588785" y="406.680008" width="957.757009" height="213.319992" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.851391" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
+  <text x="690.46729" y="492.008177" text-anchor="middle" font-size="23.880792" fill="var(--text)" font-family="Arial, sans-serif">Benefit: Process multiple packets per interrupt (budget)</text>
+  <text x="690.46729" y="565.805322" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">Reduces CPU overhead from per-packet interrupt handling</text>
 </svg>

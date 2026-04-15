@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,29 +97,26 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="447.804913" y="40" width="384.390277" height="110.82135" rx="6.940262" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640.000052" y="104.214344" font-size="26.135524" font-weight="bold" fill="var(--bg)" text-anchor="middle">Root Module</text>
+  <rect x="447.804913" y="40" width="384.390277" height="110.82135" rx="6.940262" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="104.214344" font-size="26.135524" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Root Module</text>
   <line x1="640.000052" y1="150.821478" x2="640.000052" y2="233.678548" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="135.609764" y1="233.678548" x2="1144.390236" y2="233.678548" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="135.609764" y1="233.678548" x2="135.609764" y2="316.535617" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="436.097595" y1="233.678548" x2="436.097595" y2="316.535617" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="784.390204" y1="233.678548" x2="784.390204" y2="316.535617" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="1144.390236" y1="233.678548" x2="1144.390236" y2="316.535617" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="40" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="135.609764" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">VPC</text>
-  <rect x="327.804799" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="423.414667" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">SG</text>
-  <rect x="687.80483" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="783.414699" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">EC2</text>
-  <rect x="1048.780471" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1144.390236" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">RDS</text>
+  <rect x="40" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="135.609764" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">VPC</text>
+  <rect x="327.804799" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="423.414667" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">SG</text>
+  <rect x="687.80483" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="783.414699" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">EC2</text>
+  <rect x="1048.780471" y="316.535617" width="191.219529" height="137.749987" rx="6.940262" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1144.390236" y="394.214216" font-size="26.135524" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">RDS</text>
   <line x1="231.219425" y1="454.285733" x2="687.80483" y2="454.285733" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="10.6667 6.2222" marker-end="url(#arrow)" />
   <line x1="519.024432" y1="440.82135" x2="687.80483" y2="440.82135" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="10.6667 6.2222" marker-end="url(#arrow)" />
   <line x1="519.024432" y1="413.892841" x2="1048.780471" y2="413.892841" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="10.6667 6.2222" marker-end="url(#arrow)" />
   <line x1="87.804882" y1="613.785758" x2="207.804893" y2="613.785758" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="10.6667 6.2222" marker-end="url(#arrow)" />
-  <text x="232.195139" y="620" font-size="20.104321" fill="var(--text-muted)">outputs flow between modules</text>
+  <text x="232.195139" y="620" font-size="20.104321" fill="var(--text-muted)" font-family="Arial, sans-serif">outputs flow between modules</text>
 </svg>

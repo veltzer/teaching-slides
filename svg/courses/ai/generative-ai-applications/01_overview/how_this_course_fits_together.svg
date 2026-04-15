@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,52 +75,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,21.1765 6.7879,0" fill="#555" />
-    </marker>
   </defs>
-  <text x="649.836055" y="40" font-family="sans-serif" font-size="27.718938" font-weight="bold" fill="var(--text)" text-anchor="middle">Course Outline — 5-Day Schedule</text>
-  <rect x="40" y="70.326889" width="344.262247" height="151.634" fill="var(--primary-fill)" rx="6.578654" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="211.147615" y="108.235444" font-family="sans-serif" font-size="22.175107" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Day 1: FOUNDATIONS</text>
-  <text x="211.147615" y="142.353111" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">How LLMs work</text>
-  <text x="211.147615" y="174.575333" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">GPT architecture</text>
-  <line x1="384.262247" y1="146.143889" x2="439.34422" y2="146.143889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="443.278685" y="70.326889" width="344.262247" height="151.634" fill="var(--ok-fill)" rx="6.578654" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="614.426192" y="108.235444" font-family="sans-serif" font-size="22.175107" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Day 2: APIs &amp; PROMPTS</text>
-  <text x="614.426192" y="142.353111" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">OpenAI API</text>
-  <text x="614.426192" y="174.575333" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">Prompt Engineering</text>
-  <text x="614.426192" y="206.797556" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">Fine-tuning</text>
-  <line x1="787.540932" y1="146.143889" x2="842.622905" y2="146.143889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="846.55737" y="70.326889" width="393.44263" height="151.634" fill="var(--warn-fill)" rx="6.578654" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1043.278577" y="108.235444" font-family="sans-serif" font-size="22.175107" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Day 4: OPEN SOURCE</text>
-  <text x="1043.278577" y="142.353111" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">HuggingFace</text>
-  <text x="1043.278577" y="174.575333" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">LoRA / QLoRA</text>
-  <text x="1043.278577" y="206.797556" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">Local models</text>
-  <rect x="443.278685" y="316.732111" width="344.262247" height="151.634" fill="var(--info-fill)" rx="6.578654" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="614.426192" y="354.640556" font-family="sans-serif" font-size="22.175107" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Day 3: AGENTS</text>
-  <text x="614.426192" y="388.758222" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">LangChain</text>
-  <text x="614.426192" y="420.980444" font-family="sans-serif" font-size="22.175107" fill="var(--text)" text-anchor="middle">Memory &amp; Custom DB</text>
-  <line x1="614.426192" y1="221.960778" x2="614.426192" y2="312.941222" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="1043.278577" y1="221.960778" x2="787.540932" y2="388.758222" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="443.278685" y="553.660222" width="393.44263" height="66.339778" fill="var(--danger-fill)" rx="6.578654" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.999892" y="595.359556" font-family="sans-serif" font-size="22.175107" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Day 5: IMAGES &amp; SAFETY — Diffusion · DreamBooth · Bias &amp; Safety</text>
-  <line x1="614.426192" y1="468.366111" x2="614.426192" y2="549.869333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
+  <text x="649.836055" y="40" font-size="27.718938" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Course Outline — 5-Day Schedule</text>
+  <rect x="40" y="70.326889" width="344.262247" height="151.634" fill="url(#grad-primary)" rx="6.578654" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.147615" y="108.235444" font-size="22.175107" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Day 1: FOUNDATIONS</text>
+  <text x="211.147615" y="142.353111" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">How LLMs work</text>
+  <text x="211.147615" y="174.575333" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">GPT architecture</text>
+  <line x1="384.262247" y1="146.143889" x2="439.34422" y2="146.143889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="443.278685" y="70.326889" width="344.262247" height="151.634" fill="url(#grad-ok)" rx="6.578654" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="614.426192" y="108.235444" font-size="22.175107" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Day 2: APIs &amp; PROMPTS</text>
+  <text x="614.426192" y="142.353111" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI API</text>
+  <text x="614.426192" y="174.575333" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Prompt Engineering</text>
+  <text x="614.426192" y="206.797556" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Fine-tuning</text>
+  <line x1="787.540932" y1="146.143889" x2="842.622905" y2="146.143889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="846.55737" y="70.326889" width="393.44263" height="151.634" fill="url(#grad-warn)" rx="6.578654" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.278577" y="108.235444" font-size="22.175107" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Day 4: OPEN SOURCE</text>
+  <text x="1043.278577" y="142.353111" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">HuggingFace</text>
+  <text x="1043.278577" y="174.575333" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">LoRA / QLoRA</text>
+  <text x="1043.278577" y="206.797556" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Local models</text>
+  <rect x="443.278685" y="316.732111" width="344.262247" height="151.634" fill="url(#grad-info)" rx="6.578654" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="614.426192" y="354.640556" font-size="22.175107" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Day 3: AGENTS</text>
+  <text x="614.426192" y="388.758222" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">LangChain</text>
+  <text x="614.426192" y="420.980444" font-size="22.175107" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Memory &amp; Custom DB</text>
+  <line x1="614.426192" y1="221.960778" x2="614.426192" y2="312.941222" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="1043.278577" y1="221.960778" x2="787.540932" y2="388.758222" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="443.278685" y="553.660222" width="393.44263" height="66.339778" fill="url(#grad-danger)" rx="6.578654" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.999892" y="595.359556" font-size="22.175107" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Day 5: IMAGES &amp; SAFETY — Diffusion · DreamBooth · Bias &amp; Safety</text>
+  <line x1="614.426192" y1="468.366111" x2="614.426192" y2="549.869333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
 </svg>

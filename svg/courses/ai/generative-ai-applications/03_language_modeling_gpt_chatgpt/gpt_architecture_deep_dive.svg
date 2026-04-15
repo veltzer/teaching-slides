@@ -1,115 +1,151 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
 
   <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">GPT Architecture: Token to Next Token</text>
+  <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">GPT Architecture: Token to Next Token</text>
 
-  <rect x="40" y="150" width="200" height="200" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="140" y="210" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-text)">Token Embed</text>
-  <text x="140" y="250" text-anchor="middle" font-size="15" fill="var(--primary-text)">"quantum" to</text>
-  <text x="140" y="275" text-anchor="middle" font-size="15" fill="var(--primary-text)">[0.78, 0.11, ...]</text>
-  <text x="140" y="320" text-anchor="middle" font-size="14" fill="var(--primary-text)">vocab x d_model</text>
+  <rect x="40" y="150" width="200" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="210" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Token Embed</text>
+  <text x="140" y="250" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">"quantum" to</text>
+  <text x="140" y="275" text-anchor="middle" font-size="15" fill="var(--primary-text)" font-family="Arial, sans-serif">[0.78, 0.11, ...]</text>
+  <text x="140" y="320" text-anchor="middle" font-size="14" fill="var(--primary-text)" font-family="Arial, sans-serif">vocab x d_model</text>
 
   <line x1="250" y1="250" x2="310" y2="250" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="320" y="150" width="200" height="200" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="420" y="210" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--warn-text)">+ Position</text>
-  <text x="420" y="255" text-anchor="middle" font-size="15" fill="var(--warn-text)">add position info</text>
-  <text x="420" y="285" text-anchor="middle" font-size="15" fill="var(--warn-text)">sinusoidal or</text>
-  <text x="420" y="310" text-anchor="middle" font-size="15" fill="var(--warn-text)">learned (RoPE)</text>
+  <rect x="320" y="150" width="200" height="200" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="420" y="210" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">+ Position</text>
+  <text x="420" y="255" text-anchor="middle" font-size="15" fill="var(--warn-text)" font-family="Arial, sans-serif">add position info</text>
+  <text x="420" y="285" text-anchor="middle" font-size="15" fill="var(--warn-text)" font-family="Arial, sans-serif">sinusoidal or</text>
+  <text x="420" y="310" text-anchor="middle" font-size="15" fill="var(--warn-text)" font-family="Arial, sans-serif">learned (RoPE)</text>
 
   <line x1="530" y1="250" x2="590" y2="250" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="600" y="150" width="420" height="200" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="810" y="200" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Decoder Block x N</text>
+  <rect x="600" y="150" width="420" height="200" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="810" y="200" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Decoder Block x N</text>
   <rect x="620" y="225" width="180" height="100" rx="6" fill="var(--info-text)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="710" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--info-accent)">Masked Self-Attn</text>
-  <text x="710" y="285" text-anchor="middle" font-size="13" fill="var(--info-accent)">causal: look left</text>
-  <text x="710" y="310" text-anchor="middle" font-size="13" fill="var(--info-accent)">multi-head Q,K,V</text>
+  <text x="710" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Masked Self-Attn</text>
+  <text x="710" y="285" text-anchor="middle" font-size="13" fill="var(--info-accent)" font-family="Arial, sans-serif">causal: look left</text>
+  <text x="710" y="310" text-anchor="middle" font-size="13" fill="var(--info-accent)" font-family="Arial, sans-serif">multi-head Q,K,V</text>
   <rect x="820" y="225" width="180" height="100" rx="6" fill="var(--info-text)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="910" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--info-accent)">Feed-Forward MLP</text>
-  <text x="910" y="285" text-anchor="middle" font-size="13" fill="var(--info-accent)">GELU(xW1+b1)W2+b2</text>
-  <text x="910" y="310" text-anchor="middle" font-size="13" fill="var(--info-accent)">LayerNorm + residual</text>
+  <text x="910" y="255" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Feed-Forward MLP</text>
+  <text x="910" y="285" text-anchor="middle" font-size="13" fill="var(--info-accent)" font-family="Arial, sans-serif">GELU(xW1+b1)W2+b2</text>
+  <text x="910" y="310" text-anchor="middle" font-size="13" fill="var(--info-accent)" font-family="Arial, sans-serif">LayerNorm + residual</text>
 
   <line x1="1030" y1="250" x2="1090" y2="250" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="1100" y="150" width="140" height="200" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1170" y="230" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">Linear</text>
-  <text x="1170" y="265" text-anchor="middle" font-size="14" fill="var(--primary-text)">d_model to</text>
-  <text x="1170" y="285" text-anchor="middle" font-size="14" fill="var(--primary-text)">vocab size</text>
-  <text x="1170" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--primary-text)">Softmax</text>
+  <rect x="1100" y="150" width="140" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1170" y="230" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Linear</text>
+  <text x="1170" y="265" text-anchor="middle" font-size="14" fill="var(--primary-text)" font-family="Arial, sans-serif">d_model to</text>
+  <text x="1170" y="285" text-anchor="middle" font-size="14" fill="var(--primary-text)" font-family="Arial, sans-serif">vocab size</text>
+  <text x="1170" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Softmax</text>
 
   <rect x="40" y="380" width="600" height="240" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="340" y="420" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)">Block structure detail</text>
-  <text x="340" y="460" text-anchor="middle" font-size="17" fill="var(--text-muted)">x = x + Attention(LN(x))</text>
-  <text x="340" y="490" text-anchor="middle" font-size="17" fill="var(--text-muted)">x = x + MLP(LN(x))</text>
-  <text x="340" y="535" text-anchor="middle" font-size="16" fill="var(--text-muted)">N: GPT-2 small 12, GPT-3 96, GPT-4 unknown</text>
-  <text x="340" y="570" text-anchor="middle" font-size="16" fill="var(--text-muted)">d_model: 768, 1024, 4096, 12288</text>
-  <text x="340" y="600" text-anchor="middle" font-size="15" fill="var(--text-faint)">params dominated by MLP (~2/3) and attention (~1/3)</text>
+  <text x="340" y="420" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Block structure detail</text>
+  <text x="340" y="460" text-anchor="middle" font-size="17" fill="var(--text-muted)" font-family="Arial, sans-serif">x = x + Attention(LN(x))</text>
+  <text x="340" y="490" text-anchor="middle" font-size="17" fill="var(--text-muted)" font-family="Arial, sans-serif">x = x + MLP(LN(x))</text>
+  <text x="340" y="535" text-anchor="middle" font-size="16" fill="var(--text-muted)" font-family="Arial, sans-serif">N: GPT-2 small 12, GPT-3 96, GPT-4 unknown</text>
+  <text x="340" y="570" text-anchor="middle" font-size="16" fill="var(--text-muted)" font-family="Arial, sans-serif">d_model: 768, 1024, 4096, 12288</text>
+  <text x="340" y="600" text-anchor="middle" font-size="15" fill="var(--text-faint)" font-family="Arial, sans-serif">params dominated by MLP (~2/3) and attention (~1/3)</text>
 
-  <rect x="660" y="380" width="580" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="420" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Next token distribution</text>
-  <text x="950" y="470" text-anchor="middle" font-size="18" fill="var(--ok-text)">"in" p=0.32</text>
-  <text x="950" y="500" text-anchor="middle" font-size="18" fill="var(--ok-text)">"of" p=0.18</text>
-  <text x="950" y="530" text-anchor="middle" font-size="18" fill="var(--ok-text)">"mechanics" p=0.09</text>
-  <text x="950" y="570" text-anchor="middle" font-size="16" fill="var(--ok-text)">sample with temperature, top-k, top-p</text>
-  <text x="950" y="600" text-anchor="middle" font-size="15" fill="var(--ok-text)">append token, feed back, repeat</text>
+  <rect x="660" y="380" width="580" height="240" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="420" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Next token distribution</text>
+  <text x="950" y="470" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">"in" p=0.32</text>
+  <text x="950" y="500" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">"of" p=0.18</text>
+  <text x="950" y="530" text-anchor="middle" font-size="18" fill="var(--ok-text)" font-family="Arial, sans-serif">"mechanics" p=0.09</text>
+  <text x="950" y="570" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">sample with temperature, top-k, top-p</text>
+  <text x="950" y="600" text-anchor="middle" font-size="15" fill="var(--ok-text)" font-family="Arial, sans-serif">append token, feed back, repeat</text>
 
 </svg>

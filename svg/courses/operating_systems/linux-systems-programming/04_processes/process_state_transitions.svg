@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <ellipse cx="171.25" cy="103.937" rx="131.25" ry="63.937" fill="var(--primary-fill)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="171.25" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581">NEW</text>
+  <text x="171.25" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">NEW</text>
   <ellipse cx="640.0002" cy="103.937" rx="131.25" ry="63.937" fill="var(--ok-fill)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="640.0002" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581">RUNNABLE</text>
+  <text x="640.0002" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">RUNNABLE</text>
   <ellipse cx="1108.75" cy="103.937" rx="131.25" ry="63.937" fill="var(--danger-fill)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="1108.75" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581">RUNNING</text>
+  <text x="1108.75" y="114.2126" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">RUNNING</text>
   <ellipse cx="358.7499" cy="412.205" rx="131.25" ry="63.937" fill="var(--warn-fill)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="358.7499" y="422.4805" text-anchor="middle" fill="var(--bg)" font-size="20.3581">SLEEPING</text>
+  <text x="358.7499" y="422.4805" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">SLEEPING</text>
   <ellipse cx="827.5001" cy="412.205" rx="131.25" ry="63.937" fill="var(--info-fill)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="827.5001" y="422.4805" text-anchor="middle" fill="var(--bg)" font-size="20.3581">STOPPED</text>
+  <text x="827.5001" y="422.4805" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">STOPPED</text>
   <ellipse cx="1108.75" cy="556.063" rx="131.25" ry="63.937" fill="var(--text-faint)" stroke="var(--text)" stroke-width="0.7548" />
-  <text x="1108.75" y="566.3389" text-anchor="middle" fill="var(--bg)" font-size="20.3581">ZOMBIE</text>
+  <text x="1108.75" y="566.3389" text-anchor="middle" fill="var(--bg)" font-size="20.3581" font-family="Arial, sans-serif">ZOMBIE</text>
   <path d="M 302.5 103.937 L 508.7502 103.937" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
   <path d="M 771.2498 103.937 L 977.5 103.937" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
   <path d="M 1108.75 175.8663 L 1108.75 484.1341" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
@@ -18,96 +19,104 @@
   <path d="M 583.7501 145.0395 L 415 340.2757" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
   <path d="M 415 371.1025 Q 546.25 268.3465 583.7501 145.0395" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
   <path d="M 696.2501 145.0395 L 771.2498 340.2757" stroke="var(--text)" stroke-width="0.7548" marker-end="url(#arrow)" />
-  <text x="405.6249" y="83.3858" font-size="18.9815">fork/exec</text>
-  <text x="874.3751" y="83.3858" font-size="18.9815">schedule</text>
-  <text x="874.3751" y="186.1416" font-size="18.9815">preempt</text>
-  <text x="489.9999" y="247.7954" font-size="18.9815">sleep</text>
-  <text x="489.9999" y="309.449" font-size="18.9815">wake</text>
-  <text x="1127.5001" y="309.449" font-size="18.9815">exit</text>
+  <text x="405.6249" y="83.3858" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">fork/exec</text>
+  <text x="874.3751" y="83.3858" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">schedule</text>
+  <text x="874.3751" y="186.1416" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">preempt</text>
+  <text x="489.9999" y="247.7954" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">sleep</text>
+  <text x="489.9999" y="309.449" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">wake</text>
+  <text x="1127.5001" y="309.449" font-size="18.9815" font-family="Arial, sans-serif" fill="var(--text)">exit</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
+
   </defs>
 </svg>

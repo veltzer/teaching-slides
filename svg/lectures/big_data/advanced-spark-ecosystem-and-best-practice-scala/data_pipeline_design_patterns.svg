@@ -1,118 +1,161 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg);height: 300px; display: block; margin: auto;">
-  <rect width="987.6544" height="473.2141" fill="var(--surface)" rx="5.986" x="40" y="40"/>
-  <g transform="translate(50, 50)">
-    <rect x="506.872" y="258.014" width="182.305" height="182.305" rx="14" fill="var(--warn-fill)" opacity="0.8" filter="url(#shadow)"/>
-    <text x="598.0246" y="341.2798" font-family="Arial, sans-serif" font-size="20.5096" font-weight="bold" text-anchor="middle" fill="var(--bg)">BRONZE</text>
-    <text x="598.0246" y="372.8273" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--bg)">Raw Data</text>
-    <text x="598.0246" y="522.6784" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Ingestion</text>
-    <text x="598.0246" y="546.3391" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Historical</text>
-    <text x="598.0246" y="570" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Unvalidated</text>
-  </g>
-  <g transform="translate(300, 50)">
-    <rect x="506.872" y="258.014" width="182.305" height="182.305" rx="14" fill="var(--border)" opacity="0.8"/>
-    <text x="598.0246" y="341.2798" font-family="Arial, sans-serif" font-size="20.5096" font-weight="bold" text-anchor="middle" fill="var(--bg)">SILVER</text>
-    <text x="598.0246" y="372.8273" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--bg)">Refined Data</text>
-    <text x="598.0246" y="522.6784" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Cleaned</text>
-    <text x="598.0246" y="546.3391" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Deduplicated</text>
-    <text x="598.0246" y="570" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Validated</text>
-  </g>
-  <g transform="translate(550, 50)">
-    <rect x="506.872" y="258.014" width="182.305" height="182.305" rx="14" fill="var(--warn-fill)" opacity="0.8" filter="url(#shadow)"/>
-    <text x="598.0246" y="341.2798" font-family="Arial, sans-serif" font-size="20.5096" font-weight="bold" text-anchor="middle" fill="var(--bg)">GOLD</text>
-    <text x="598.0246" y="372.8273" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--bg)">Business Data</text>
-    <text x="598.0246" y="522.6784" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Aggregated</text>
-    <text x="598.0246" y="546.3391" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Features</text>
-    <text x="598.0246" y="570" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">• Analytics</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowBSG" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 16 12 L 0 24 z" fill="#333" />
-    </marker>
-  </defs>
-  <path d="M 758.5187 428.0358 L 931.3579 428.0358" stroke="var(--text)" stroke-width="1.3279" marker-end="url(#arrowBSG)" />
-  <path d="M 1067.1604 428.0358 L 1240 428.0358" stroke="var(--text)" stroke-width="1.3279" marker-end="url(#arrowBSG)" />
-  <text x="844.9383" y="420.1489" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">Clean &amp; Validate</text>
-  <text x="1153.5801" y="420.1489" font-family="Arial, sans-serif" font-size="17.3049" text-anchor="middle" fill="var(--text-muted)">Aggregate</text>
-  <text x="968.3948" y="238.7501" font-family="Arial, sans-serif" font-size="18.2305" font-weight="bold" text-anchor="middle" fill="var(--text)">Delta Lake Medallion Architecture</text>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="39.047482" font-weight="bold" fill="var(--primary-accent)">Delta Lake Medallion Architecture</text>
+
+  <!-- Bronze tier -->
+  <rect x="40" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
+        fill="var(--warn-accent)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="226.206897" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="43.386092" font-weight="bold" fill="var(--warn-text)">BRONZE</text>
+  <text x="226.206897" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="23.86235" fill="var(--warn-text)">Raw Data</text>
+  <text x="226.206897" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Ingestion</text>
+  <text x="226.206897" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Historical record</text>
+  <text x="226.206897" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Unvalidated</text>
+  <text x="226.206897" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.523741" font-style="italic" fill="var(--warn-text)">As-received from sources</text>
+
+  <!-- Silver tier -->
+  <rect x="453.793103" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
+        fill="var(--border)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="43.386092" font-weight="bold" fill="var(--bg)">SILVER</text>
+  <text x="640" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="23.86235" fill="var(--bg)">Refined Data</text>
+  <text x="640" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--bg)">• Cleaned</text>
+  <text x="640" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--bg)">• Deduplicated</text>
+  <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--bg)">• Validated</text>
+  <text x="640" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.523741" font-style="italic" fill="var(--bg)">Joined &amp; conformed</text>
+
+  <!-- Gold tier -->
+  <rect x="867.586207" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="43.386092" font-weight="bold" fill="var(--warn-text)">GOLD</text>
+  <text x="1053.793103" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="23.86235" fill="var(--warn-text)">Business Data</text>
+  <text x="1053.793103" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Aggregated</text>
+  <text x="1053.793103" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Feature engineered</text>
+  <text x="1053.793103" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--warn-text)">• Analytics-ready</text>
+  <text x="1053.793103" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="19.523741" font-style="italic" fill="var(--warn-text)">Consumed by BI &amp; ML</text>
+
+  <!-- Flow arrows between tiers -->
+  <line x1="417.586207" y1="347.058824" x2="448.62069" y2="347.058824" stroke="var(--text)" stroke-width="3"
+        marker-end="url(#arrow)"/>
+  <line x1="831.37931" y1="347.058824" x2="862.413793" y2="347.058824" stroke="var(--text)" stroke-width="3"
+        marker-end="url(#arrow)"/>
+  <text x="433.103448" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.185132" fill="var(--text-muted)">clean</text>
+  <text x="846.896552" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.185132" fill="var(--text-muted)">aggregate</text>
+
+  <!-- Bottom legend -->
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="21.693046" fill="var(--text-muted)">Each tier is a Delta Lake table; data flows left to right with increasing quality &amp; semantics.</text>
 </svg>

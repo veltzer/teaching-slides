@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg);height: 400px; display: block; margin: auto;">
+  <!-- palette: resources/palette_diagram.yaml -->
   <rect width="890.5712" height="460.8295" fill="var(--surface)" rx="6" x="40" y="40"/>
   <text x="872.6394" y="222.5347" font-family="Arial, sans-serif" font-size="19.2189" font-weight="bold" text-anchor="middle" fill="var(--text)">Apache Ranger Security Architecture</text>
   <rect x="783.5822" y="251.3365" width="178.1143" height="69.1244" fill="var(--ok-accent)" rx="6" />
@@ -13,23 +14,23 @@
   <g transform="translate(0, 180)">
     <rect x="483.0146" y="193.7327" width="133.5856" height="92.166" fill="var(--warn-accent)" rx="6" />
     <text x="549.8072" y="216.7743" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)" font-weight="bold">HDFS</text>
-    <rect x="494.1466" y="228.2949" width="111.3213" height="40.3224" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="494.1466" y="228.2949" width="111.3213" height="40.3224" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="549.8072" y="253.6405" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)">Ranger Plugin</text>
     <rect x="638.8644" y="193.7327" width="133.5856" height="92.166" fill="var(--warn-accent)" rx="6" />
     <text x="705.6572" y="216.7743" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)" font-weight="bold">Hive</text>
-    <rect x="649.9966" y="228.2949" width="111.3213" height="40.3224" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="649.9966" y="228.2949" width="111.3213" height="40.3224" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="705.6572" y="253.6405" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)">Ranger Plugin</text>
     <rect x="794.7144" y="193.7327" width="133.5856" height="92.166" fill="var(--warn-accent)" rx="6" />
     <text x="861.5074" y="216.7743" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)" font-weight="bold">Spark</text>
-    <rect x="805.8466" y="228.2949" width="111.3213" height="40.3224" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="805.8466" y="228.2949" width="111.3213" height="40.3224" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="861.5074" y="253.6405" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)">Ranger Plugin</text>
     <rect x="950.5644" y="193.7327" width="133.5856" height="92.166" fill="var(--warn-accent)" rx="6" />
     <text x="1017.3574" y="216.7743" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)" font-weight="bold">Kafka</text>
-    <rect x="961.6965" y="228.2949" width="111.3213" height="40.3224" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="961.6965" y="228.2949" width="111.3213" height="40.3224" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="1017.3574" y="253.6405" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)">Ranger Plugin</text>
     <rect x="1106.4144" y="193.7327" width="133.5856" height="92.166" fill="var(--warn-accent)" rx="6" />
     <text x="1173.2072" y="216.7743" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)" font-weight="bold">HBase</text>
-    <rect x="1117.5465" y="228.2949" width="111.3213" height="40.3224" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="1117.5465" y="228.2949" width="111.3213" height="40.3224" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
     <text x="1173.2072" y="253.6405" font-family="Arial, sans-serif" font-size="16.9826" text-anchor="middle" fill="var(--bg)">Ranger Plugin</text>
   </g>
   <rect x="705.6572" y="562.3962" width="333.9643" height="57.6038" fill="var(--border)" rx="6" />
@@ -38,99 +39,107 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowRanger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 12.8 7.2 L 0 14.4 z" fill="#666" />
-    </marker>
+
   </defs>
-  <path d="M 872.6394 320.461 L 549.8072 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 872.6394 320.461 L 705.6572 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 872.6394 320.461 L 861.5074 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 872.6394 320.461 L 1017.3574 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 872.6394 320.461 L 1173.2072 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 549.8072 493.2718 L 638.8644 320.461" stroke="var(--info-border)" stroke-width="0.7985" marker-end="url(#arrowRanger)" stroke-dasharray="1.9964 1.1978" />
-  <path d="M 705.6572 493.2718 L 638.8644 320.461" stroke="var(--info-border)" stroke-width="0.7985" marker-end="url(#arrowRanger)" stroke-dasharray="1.9964 1.1978" />
-  <path d="M 961.6965 285.8987 L 1039.6213 285.8987" stroke="var(--primary-border)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 816.9787 562.3962 L 705.6572 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 872.6394 562.3962 L 861.5074 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
-  <path d="M 928.3 562.3962 L 1017.3574 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrowRanger)" />
+  <path d="M 872.6394 320.461 L 549.8072 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 872.6394 320.461 L 705.6572 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 872.6394 320.461 L 861.5074 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 872.6394 320.461 L 1017.3574 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 872.6394 320.461 L 1173.2072 401.106" stroke="var(--text-muted)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 549.8072 493.2718 L 638.8644 320.461" stroke="var(--info-border)" stroke-width="0.7985" marker-end="url(#arrow)" stroke-dasharray="1.9964 1.1978" />
+  <path d="M 705.6572 493.2718 L 638.8644 320.461" stroke="var(--info-border)" stroke-width="0.7985" marker-end="url(#arrow)" stroke-dasharray="1.9964 1.1978" />
+  <path d="M 961.6965 285.8987 L 1039.6213 285.8987" stroke="var(--primary-border)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 816.9787 562.3962 L 705.6572 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 872.6394 562.3962 L 861.5074 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrow)" />
+  <path d="M 928.3 562.3962 L 1017.3574 493.2718" stroke="var(--text)" stroke-width="0.7985" marker-end="url(#arrow)" />
   <text x="761.3181" y="355.0231" font-family="Arial, sans-serif" font-size="16.9826" fill="var(--text-muted)">Policy Sync</text>
   <text x="594.3359" y="389.5853" font-family="Arial, sans-serif" font-size="16.9826" fill="var(--info-accent)">Audit</text>
   <text x="1000.659" y="280.1383" font-family="Arial, sans-serif" font-size="16.9826" fill="var(--primary-accent)">Store</text>

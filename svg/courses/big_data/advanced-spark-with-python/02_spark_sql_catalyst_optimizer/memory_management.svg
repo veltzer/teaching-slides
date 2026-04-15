@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,59 +75,56 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial" font-size="30.6923" font-weight="bold" fill="var(--primary-accent)">Spark SQL Memory Management</text>
+  <text x="640" y="40" text-anchor="middle" font-size="30.6923" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark SQL Memory Management</text>
   <rect x="40" y="72.6761" width="1200" height="547.3239" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="113.5211" text-anchor="middle" font-family="Arial" font-size="23.0192" font-weight="bold" fill="var(--text)">JVM Heap (spark.executor.memory)</text>
-  <rect x="72.4325" y="138.0282" width="194.5946" height="457.4647" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7298" y="178.8732" text-anchor="middle" font-family="Arial" font-size="19.9499" font-weight="bold" fill="var(--danger-accent)">Reserved</text>
-  <text x="169.7298" y="211.5493" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">300 MB</text>
-  <text x="169.7298" y="244.2253" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">System use</text>
-  <rect x="299.4595" y="138.0282" width="648.6486" height="457.4647" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="623.7838" y="178.8732" text-anchor="middle" font-family="Arial" font-size="21.4846" font-weight="bold" fill="var(--primary-accent)">Unified Memory (spark.memory.fraction = 0.6)</text>
-  <rect x="323.7838" y="203.3803" width="291.8919" height="359.4366" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="469.7298" y="244.2253" text-anchor="middle" font-family="Arial" font-size="19.9499" font-weight="bold" fill="var(--primary-accent)">Execution</text>
-  <text x="469.7298" y="276.9014" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Shuffles</text>
-  <text x="469.7298" y="309.5774" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Joins</text>
-  <text x="469.7298" y="342.2535" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Sorts</text>
-  <text x="469.7298" y="374.9296" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Aggregations</text>
+  <text x="640" y="113.5211" text-anchor="middle" font-size="23.0192" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">JVM Heap (spark.executor.memory)</text>
+  <rect x="72.4325" y="138.0282" width="194.5946" height="457.4647" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.7298" y="178.8732" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Reserved</text>
+  <text x="169.7298" y="211.5493" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">300 MB</text>
+  <text x="169.7298" y="244.2253" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">System use</text>
+  <rect x="299.4595" y="138.0282" width="648.6486" height="457.4647" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="623.7838" y="178.8732" text-anchor="middle" font-size="21.4846" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Unified Memory (spark.memory.fraction = 0.6)</text>
+  <rect x="323.7838" y="203.3803" width="291.8919" height="359.4366" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="469.7298" y="244.2253" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Execution</text>
+  <text x="469.7298" y="276.9014" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Shuffles</text>
+  <text x="469.7298" y="309.5774" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Joins</text>
+  <text x="469.7298" y="342.2535" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Sorts</text>
+  <text x="469.7298" y="374.9296" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Aggregations</text>
   <line x1="631.8919" y1="252.3944" x2="631.8919" y2="530.1408" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="7.3882 4.4329" />
-  <text x="631.8919" y="244.2253" text-anchor="middle" font-family="Arial" font-size="15.3461" fill="var(--warn-accent)">dynamic</text>
+  <text x="631.8919" y="244.2253" text-anchor="middle" font-size="15.3461" fill="var(--warn-accent)" font-family="Arial, sans-serif">dynamic</text>
   <line x1="615.6757" y1="391.2676" x2="648.1081" y2="391.2676" stroke="var(--warn-border)" stroke-width="2" />
   <line x1="599.4595" y1="383.0986" x2="615.6757" y2="391.2676" stroke="var(--warn-border)" stroke-width="2" />
   <line x1="599.4595" y1="399.4366" x2="615.6757" y2="391.2676" stroke="var(--warn-border)" stroke-width="2" />
   <line x1="648.1081" y1="391.2676" x2="664.3243" y2="383.0986" stroke="var(--warn-border)" stroke-width="2" />
   <line x1="648.1081" y1="391.2676" x2="664.3243" y2="399.4366" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="640" y="203.3803" width="283.7838" height="359.4366" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.0811" y="244.2253" text-anchor="middle" font-family="Arial" font-size="19.9499" font-weight="bold" fill="var(--ok-accent)">Storage</text>
-  <text x="781.0811" y="276.9014" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Cached tables</text>
-  <text x="781.0811" y="309.5774" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Broadcast vars</text>
-  <text x="781.0811" y="342.2535" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Unroll memory</text>
-  <rect x="980.5405" y="138.0282" width="235.1352" height="457.4647" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1097.2972" y="178.8732" text-anchor="middle" font-family="Arial" font-size="19.9499" font-weight="bold" fill="var(--warn-accent)">User Memory</text>
-  <text x="1097.2972" y="219.7184" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">UDF data</text>
-  <text x="1097.2972" y="252.3944" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">Internal metadata</text>
-  <text x="1097.2972" y="285.0705" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text)">RDD dependencies</text>
-  <text x="1097.2972" y="334.0845" text-anchor="middle" font-family="Arial" font-size="16.8808" fill="var(--text-faint)">(1 - fraction)</text>
+  <rect x="640" y="203.3803" width="283.7838" height="359.4366" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="781.0811" y="244.2253" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Storage</text>
+  <text x="781.0811" y="276.9014" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Cached tables</text>
+  <text x="781.0811" y="309.5774" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Broadcast vars</text>
+  <text x="781.0811" y="342.2535" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Unroll memory</text>
+  <rect x="980.5405" y="138.0282" width="235.1352" height="457.4647" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097.2972" y="178.8732" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">User Memory</text>
+  <text x="1097.2972" y="219.7184" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">UDF data</text>
+  <text x="1097.2972" y="252.3944" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Internal metadata</text>
+  <text x="1097.2972" y="285.0705" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">RDD dependencies</text>
+  <text x="1097.2972" y="334.0845" text-anchor="middle" font-size="16.8808" fill="var(--text-faint)" font-family="Arial, sans-serif">(1 - fraction)</text>
 </svg>

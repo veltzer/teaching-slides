@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,54 +97,51 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="40" y="40" font-size="25.891917" fill="var(--text)">int arr[5] = {10, 20, 30, 40, 50};</text>
-  <text x="40" y="82.384471" font-size="23.734319" fill="var(--text-muted)" font-family="sans-serif">Contiguous memory (4 bytes per int):</text>
+  <text x="40" y="40" font-size="25.891917" fill="var(--text)" font-family="Arial, sans-serif">int arr[5] = {10, 20, 30, 40, 50};</text>
+  <text x="40" y="82.384471" font-size="23.734319" fill="var(--text-muted)" font-family="Arial, sans-serif">Contiguous memory (4 bytes per int):</text>
   <rect x="40" y="101.345951" width="237.913043" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="280" y="101.345951" width="237.913043" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="520" y="101.345951" width="237.913043" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="760" y="101.345951" width="237.913043" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="1000" y="101.345951" width="237.913043" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
-  <text x="158.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">10</text>
-  <text x="398.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">20</text>
-  <text x="638.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">30</text>
-  <text x="878.95641" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">40</text>
-  <text x="1118.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">50</text>
-  <text x="158.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle">arr[0]</text>
-  <text x="398.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle">arr[1]</text>
-  <text x="638.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle">arr[2]</text>
-  <text x="878.95641" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle">arr[3]</text>
-  <text x="1118.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle">arr[4]</text>
-  <text x="40" y="225.153716" font-size="20.497798" fill="var(--text-faint)">0x1000</text>
-  <text x="280" y="225.153716" font-size="20.497798" fill="var(--text-faint)">0x1004</text>
-  <text x="520" y="225.153716" font-size="20.497798" fill="var(--text-faint)">0x1008</text>
-  <text x="760" y="225.153716" font-size="20.497798" fill="var(--text-faint)">0x100C</text>
-  <text x="1000" y="225.153716" font-size="20.497798" fill="var(--text-faint)">0x1010</text>
-  <text x="40" y="276.461481" font-size="25.891917" fill="var(--text)">arr      == &amp;arr[0] == 0x1000</text>
-  <text x="40" y="316.615336" font-size="25.891917" fill="var(--text)">arr + 1  == &amp;arr[1] == 0x1004  (advances by sizeof(int))</text>
-  <text x="40" y="356.76919" font-size="25.891917" fill="var(--text)">*(arr+i) == arr[i]             (pointer arithmetic identity)</text>
-  <text x="40" y="414.769218" font-size="23.734319" fill="var(--text-muted)" font-family="sans-serif">2D array: int matrix[2][3] = {{1,2,3},{4,5,6}};</text>
-  <text x="40" y="457.153827" font-size="23.734319" fill="var(--text-muted)" font-family="sans-serif">Row-major layout in memory:</text>
+  <text x="158.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">10</text>
+  <text x="398.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">20</text>
+  <text x="638.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">30</text>
+  <text x="878.95641" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">40</text>
+  <text x="1118.956522" y="151.53827" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">50</text>
+  <text x="158.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">arr[0]</text>
+  <text x="398.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">arr[1]</text>
+  <text x="638.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">arr[2]</text>
+  <text x="878.95641" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">arr[3]</text>
+  <text x="1118.956522" y="182.769107" font-size="21.576721" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">arr[4]</text>
+  <text x="40" y="225.153716" font-size="20.497798" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1000</text>
+  <text x="280" y="225.153716" font-size="20.497798" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1004</text>
+  <text x="520" y="225.153716" font-size="20.497798" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1008</text>
+  <text x="760" y="225.153716" font-size="20.497798" fill="var(--text-faint)" font-family="Arial, sans-serif">0x100C</text>
+  <text x="1000" y="225.153716" font-size="20.497798" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1010</text>
+  <text x="40" y="276.461481" font-size="25.891917" fill="var(--text)" font-family="Arial, sans-serif">arr      == &amp;arr[0] == 0x1000</text>
+  <text x="40" y="316.615336" font-size="25.891917" fill="var(--text)" font-family="Arial, sans-serif">arr + 1  == &amp;arr[1] == 0x1004  (advances by sizeof(int))</text>
+  <text x="40" y="356.76919" font-size="25.891917" fill="var(--text)" font-family="Arial, sans-serif">*(arr+i) == arr[i]             (pointer arithmetic identity)</text>
+  <text x="40" y="414.769218" font-size="23.734319" fill="var(--text-muted)" font-family="Arial, sans-serif">2D array: int matrix[2][3] = {{1,2,3},{4,5,6}};</text>
+  <text x="40" y="457.153827" font-size="23.734319" fill="var(--text-muted)" font-family="Arial, sans-serif">Row-major layout in memory:</text>
   <rect x="40" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="240.347715" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="440.695652" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="641.043478" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="841.391193" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
   <rect x="1041.73913" y="472.769107" width="198.26087" height="86.999972" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.448553"/>
-  <text x="139.130435" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">1</text>
-  <text x="339.478261" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">2</text>
-  <text x="539.826087" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">3</text>
-  <text x="740.173913" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">4</text>
-  <text x="940.521739" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">5</text>
-  <text x="1140.869565" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle">6</text>
-  <text x="139.130435" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[0][0]</text>
-  <text x="339.478261" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[0][1]</text>
-  <text x="539.826087" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[0][2]</text>
-  <text x="740.173913" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[1][0]</text>
-  <text x="940.521739" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[1][1]</text>
-  <text x="1140.869565" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle">[1][2]</text>
-  <text x="40" y="620" font-size="25.891917" fill="var(--text)">matrix[i][j] is at offset (i * 3 + j) * sizeof(int)</text>
+  <text x="139.130435" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">1</text>
+  <text x="339.478261" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">2</text>
+  <text x="539.826087" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">3</text>
+  <text x="740.173913" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">4</text>
+  <text x="940.521739" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">5</text>
+  <text x="1140.869565" y="522.961426" font-size="28.049638" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">6</text>
+  <text x="139.130435" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[0][0]</text>
+  <text x="339.478261" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[0][1]</text>
+  <text x="539.826087" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[0][2]</text>
+  <text x="740.173913" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[1][0]</text>
+  <text x="940.521739" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[1][1]</text>
+  <text x="1140.869565" y="553.076817" font-size="20.497798" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">[1][2]</text>
+  <text x="40" y="620" font-size="25.891917" fill="var(--text)" font-family="Arial, sans-serif">matrix[i][j] is at offset (i * 3 + j) * sizeof(int)</text>
 </svg>

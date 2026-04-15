@@ -1,67 +1,154 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Process Memory Layout</text>
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Process Memory Layout</text>
 
-  <rect x="40" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">Kernel</text>
-  <text x="160" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">High addresses</text>
-  <text x="160" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Protected ring 0</text>
-  <text x="160" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Shared among</text>
-  <text x="160" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">all processes</text>
-  <text x="160" y="364.587156" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Syscall entry</text>
-  <text x="160" y="428.440367" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">User cannot read</text>
-  <text x="160" y="492.293578" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Page tables</text>
-  <text x="160" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">isolate per task</text>
+  <rect x="40" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Kernel</text>
+  <text x="160" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">High addresses</text>
+  <text x="160" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Protected ring 0</text>
+  <text x="160" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Shared among</text>
+  <text x="160" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">all processes</text>
+  <text x="160" y="364.587156" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Syscall entry</text>
+  <text x="160" y="428.440367" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">User cannot read</text>
+  <text x="160" y="492.293578" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Page tables</text>
+  <text x="160" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">isolate per task</text>
 
-  <rect x="300" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="420" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)">Stack</text>
-  <text x="420" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Grows downward</text>
-  <text x="420" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Local variables</text>
-  <text x="420" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Return addresses</text>
-  <text x="420" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Saved registers</text>
-  <text x="420" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Usually 8 MB limit</text>
-  <text x="420" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">ulimit -s</text>
-  <text x="420" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Guard page catches</text>
-  <text x="420" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">overflow</text>
+  <rect x="300" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="420" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Stack</text>
+  <text x="420" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Grows downward</text>
+  <text x="420" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Local variables</text>
+  <text x="420" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Return addresses</text>
+  <text x="420" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Saved registers</text>
+  <text x="420" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Usually 8 MB limit</text>
+  <text x="420" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">ulimit -s</text>
+  <text x="420" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Guard page catches</text>
+  <text x="420" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">overflow</text>
 
-  <rect x="560" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="680" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)">Mmap / Libs</text>
-  <text x="680" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Middle region</text>
-  <text x="680" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Shared libraries</text>
-  <text x="680" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">libc, libm, ld.so</text>
-  <text x="680" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">File mappings</text>
-  <text x="680" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Anonymous mmap</text>
-  <text x="680" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Large allocations</text>
-  <text x="680" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">ASLR randomizes</text>
-  <text x="680" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">base address</text>
+  <rect x="560" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Mmap / Libs</text>
+  <text x="680" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Middle region</text>
+  <text x="680" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Shared libraries</text>
+  <text x="680" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">libc, libm, ld.so</text>
+  <text x="680" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">File mappings</text>
+  <text x="680" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Anonymous mmap</text>
+  <text x="680" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Large allocations</text>
+  <text x="680" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">ASLR randomizes</text>
+  <text x="680" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">base address</text>
 
-  <rect x="820" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Heap</text>
-  <text x="940" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Grows upward</text>
-  <text x="940" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">malloc / new</text>
-  <text x="940" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">brk / sbrk</text>
-  <text x="940" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Dynamic objects</text>
-  <text x="940" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Lifetime managed</text>
-  <text x="940" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">by the program</text>
-  <text x="940" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Leaks if orphaned</text>
-  <text x="940" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Fragments over time</text>
+  <rect x="820" y="77.247706" width="240" height="542.752294" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Heap</text>
+  <text x="940" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Grows upward</text>
+  <text x="940" y="215.59633" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">malloc / new</text>
+  <text x="940" y="268.807339" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">brk / sbrk</text>
+  <text x="940" y="322.018349" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Dynamic objects</text>
+  <text x="940" y="385.87156" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Lifetime managed</text>
+  <text x="940" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">by the program</text>
+  <text x="940" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Leaks if orphaned</text>
+  <text x="940" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Fragments over time</text>
 
-  <rect x="1080" y="77.247706" width="160" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">BSS</text>
-  <text x="1160" y="162.385321" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">zero init</text>
-  <text x="1160" y="204.954128" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">globals</text>
-  <text x="1160" y="268.807339" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Data</text>
-  <text x="1160" y="311.376147" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">initialized</text>
-  <text x="1160" y="343.302752" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">globals</text>
-  <text x="1160" y="417.798165" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Text</text>
-  <text x="1160" y="460.366972" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">code, R/X</text>
-  <text x="1160" y="502.93578" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">read-only</text>
-  <text x="1160" y="556.146789" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)">low addrs</text>
+  <rect x="1080" y="77.247706" width="160" height="542.752294" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1160" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">BSS</text>
+  <text x="1160" y="162.385321" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">zero init</text>
+  <text x="1160" y="204.954128" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">globals</text>
+  <text x="1160" y="268.807339" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Data</text>
+  <text x="1160" y="311.376147" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">initialized</text>
+  <text x="1160" y="343.302752" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">globals</text>
+  <text x="1160" y="417.798165" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Text</text>
+  <text x="1160" y="460.366972" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">code, R/X</text>
+  <text x="1160" y="502.93578" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">read-only</text>
+  <text x="1160" y="556.146789" text-anchor="middle" font-size="13.410936" fill="var(--primary-text)" font-family="Arial, sans-serif">low addrs</text>
 </svg>

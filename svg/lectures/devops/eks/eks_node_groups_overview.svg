@@ -1,73 +1,73 @@
-<svg viewBox="0 0 1280 720" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,76 +75,76 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="639.9999" y="40" font-family="Arial" font-size="36.6522" font-weight="bold" text-anchor="middle" fill="var(--text)">EKS Node Group Types</text>
-  <rect x="40" y="91.1765" width="400" height="255.8824" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="239.9999" y="133.8235" font-family="Arial" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--ok-accent)">Managed Node Groups</text>
-  <rect x="80" y="159.4118" width="80.0001" height="51.1765" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="120" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <rect x="180" y="159.4118" width="80.0001" height="51.1765" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="220" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <rect x="279.9999" y="159.4118" width="80.0001" height="51.1765" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="320" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <text x="239.9999" y="244.7059" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">✓ Automated provisioning</text>
-  <text x="239.9999" y="270.2941" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">✓ Auto Scaling Groups</text>
-  <text x="239.9999" y="295.8824" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">✓ Managed updates</text>
-  <text x="239.9999" y="321.4706" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">✓ AWS optimized AMIs</text>
-  <rect x="489.9999" y="91.1765" width="400" height="255.8824" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="690" y="133.8235" font-family="Arial" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--warn-accent)">Self-Managed Nodes</text>
-  <rect x="530" y="159.4118" width="80.0001" height="51.1765" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="569.9999" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <rect x="629.9999" y="159.4118" width="80.0001" height="51.1765" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="670" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <rect x="730" y="159.4118" width="80.0001" height="51.1765" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="769.9999" y="193.5294" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">EC2</text>
-  <text x="690" y="244.7059" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">• Full control over nodes</text>
-  <text x="690" y="270.2941" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">• Custom AMIs</text>
-  <text x="690" y="295.8824" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">• Manual management</text>
-  <text x="690" y="321.4706" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">• More complexity</text>
-  <rect x="940" y="91.1765" width="299.9999" height="255.8824" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1089.9999" y="133.8235" font-family="Arial" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--primary-accent)">AWS Fargate</text>
-  <rect x="1018.01" y="154.479" width="43.9828" height="43.9828" rx="14" fill="var(--ok-fill)" filter="url(#shadow)"/>
-  <text x="1040" y="185" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">Pod</text>
-  <rect x="1118.01" y="154.479" width="43.9828" height="43.9828" rx="14" fill="var(--ok-fill)" filter="url(#shadow)"/>
-  <text x="1140" y="185" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">Pod</text>
-  <rect x="1068.01" y="205.656" width="43.9828" height="43.9828" rx="14" fill="var(--ok-fill)" filter="url(#shadow)"/>
-  <text x="1089.9999" y="236.1765" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--bg)">Pod</text>
-  <text x="1089.9999" y="278.8236" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)">✓ Serverless</text>
-  <text x="1089.9999" y="304.4118" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)">✓ No node management</text>
-  <text x="1089.9999" y="330" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)">✓ Pay per pod</text>
+  <text x="639.9999" y="40" font-size="36.6522" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">EKS Node Group Types</text>
+  <rect x="40" y="91.1765" width="400" height="255.8824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="239.9999" y="133.8235" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">Managed Node Groups</text>
+  <rect x="80" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="120" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <rect x="180" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="220" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <rect x="279.9999" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="320" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <text x="239.9999" y="244.7059" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">✓ Automated provisioning</text>
+  <text x="239.9999" y="270.2941" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">✓ Auto Scaling Groups</text>
+  <text x="239.9999" y="295.8824" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">✓ Managed updates</text>
+  <text x="239.9999" y="321.4706" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">✓ AWS optimized AMIs</text>
+  <rect x="489.9999" y="91.1765" width="400" height="255.8824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="690" y="133.8235" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">Self-Managed Nodes</text>
+  <rect x="530" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="569.9999" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <rect x="629.9999" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="670" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <rect x="730" y="159.4118" width="80.0001" height="51.1765" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="769.9999" y="193.5294" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">EC2</text>
+  <text x="690" y="244.7059" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">• Full control over nodes</text>
+  <text x="690" y="270.2941" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">• Custom AMIs</text>
+  <text x="690" y="295.8824" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">• Manual management</text>
+  <text x="690" y="321.4706" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">• More complexity</text>
+  <rect x="940" y="91.1765" width="299.9999" height="255.8824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1089.9999" y="133.8235" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif">AWS Fargate</text>
+  <rect x="1018.01" y="154.479" width="43.9828" height="43.9828" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="1040" y="185" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <rect x="1118.01" y="154.479" width="43.9828" height="43.9828" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="1140" y="185" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <rect x="1068.01" y="205.656" width="43.9828" height="43.9828" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="1089.9999" y="236.1765" font-size="18.3261" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="1089.9999" y="278.8236" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif">✓ Serverless</text>
+  <text x="1089.9999" y="304.4118" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif">✓ No node management</text>
+  <text x="1089.9999" y="330" font-size="18.3261" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif">✓ Pay per pod</text>
   <rect x="40" y="398.2353" width="1200" height="221.7647" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="432.3529" font-family="Arial" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--text)">Feature Comparison</text>
-  <text x="99.9999" y="475" font-family="Arial" font-size="20.1587" font-weight="bold" fill="var(--text-muted)">Feature</text>
-  <text x="380" y="475" font-family="Arial" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)">Managed</text>
-  <text x="639.9999" y="475" font-family="Arial" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)">Self-Managed</text>
-  <text x="940" y="475" font-family="Arial" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)">Fargate</text>
-  <text x="99.9999" y="509.1177" font-family="Arial" font-size="18.3261" fill="var(--text-muted)">Management</text>
-  <text x="380" y="509.1177" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">AWS Managed</text>
-  <text x="639.9999" y="509.1177" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--danger-accent)">You Manage</text>
-  <text x="940" y="509.1177" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">AWS Managed</text>
-  <text x="99.9999" y="543.2353" font-family="Arial" font-size="18.3261" fill="var(--text-muted)">Cost</text>
-  <text x="380" y="543.2353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">EC2 pricing</text>
-  <text x="639.9999" y="543.2353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">EC2 pricing</text>
-  <text x="940" y="543.2353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">Premium pricing</text>
-  <text x="99.9999" y="577.353" font-family="Arial" font-size="18.3261" fill="var(--text-muted)">Flexibility</text>
-  <text x="380" y="577.353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)">Medium</text>
-  <text x="639.9999" y="577.353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)">High</text>
-  <text x="940" y="577.353" font-family="Arial" font-size="18.3261" text-anchor="middle" fill="var(--danger-accent)">Low</text>
+  <text x="639.9999" y="432.3529" font-size="25.6565" font-weight="bold" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Feature Comparison</text>
+  <text x="99.9999" y="475" font-size="20.1587" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Feature</text>
+  <text x="380" y="475" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Managed</text>
+  <text x="639.9999" y="475" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Self-Managed</text>
+  <text x="940" y="475" font-size="20.1587" font-weight="bold" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Fargate</text>
+  <text x="99.9999" y="509.1177" font-size="18.3261" fill="var(--text-muted)" font-family="Arial, sans-serif">Management</text>
+  <text x="380" y="509.1177" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">AWS Managed</text>
+  <text x="639.9999" y="509.1177" font-size="18.3261" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif">You Manage</text>
+  <text x="940" y="509.1177" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">AWS Managed</text>
+  <text x="99.9999" y="543.2353" font-size="18.3261" fill="var(--text-muted)" font-family="Arial, sans-serif">Cost</text>
+  <text x="380" y="543.2353" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">EC2 pricing</text>
+  <text x="639.9999" y="543.2353" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">EC2 pricing</text>
+  <text x="940" y="543.2353" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">Premium pricing</text>
+  <text x="99.9999" y="577.353" font-size="18.3261" fill="var(--text-muted)" font-family="Arial, sans-serif">Flexibility</text>
+  <text x="380" y="577.353" font-size="18.3261" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif">Medium</text>
+  <text x="639.9999" y="577.353" font-size="18.3261" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial, sans-serif">High</text>
+  <text x="940" y="577.353" font-size="18.3261" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif">Low</text>
 </svg>

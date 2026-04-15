@@ -1,82 +1,138 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
-  </defs>
-  <text x="661.818182" y="40" text-anchor="middle" font-size="28.818941" font-weight="bold" fill="var(--primary-accent)">Request Lifecycle: Call Graph and Data Flow</text>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <text x="661.818182" y="40" text-anchor="middle" font-size="28.818941" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Request Lifecycle: Call Graph and Data Flow</text>
 
-  <rect x="40" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="143.636364" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--ok-text)">API Handler</text>
-  <text x="143.636364" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--ok-text)">POST /orders</text>
+  <rect x="40" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.636364" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">API Handler</text>
+  <text x="143.636364" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--ok-text)" font-family="Arial, sans-serif">POST /orders</text>
 
   <line x1="247.272727" y1="180.776699" x2="285.454545" y2="180.776699" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="290.909091" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="394.545455" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--primary-text)">Validator</text>
-  <text x="394.545455" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--primary-text)">input schema</text>
+  <rect x="290.909091" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="394.545455" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Validator</text>
+  <text x="394.545455" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--primary-text)" font-family="Arial, sans-serif">input schema</text>
 
   <line x1="498.181818" y1="180.776699" x2="536.363636" y2="180.776699" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="541.818182" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="645.454545" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--info-text)">Service Layer</text>
-  <text x="645.454545" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--info-text)">business logic</text>
+  <rect x="541.818182" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="645.454545" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Service Layer</text>
+  <text x="645.454545" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--info-text)" font-family="Arial, sans-serif">business logic</text>
 
   <line x1="749.090909" y1="180.776699" x2="787.272727" y2="180.776699" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="792.727273" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="896.363636" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--warn-text)">Repository</text>
-  <text x="896.363636" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--warn-text)">data access</text>
+  <rect x="792.727273" y="101.941748" width="207.272727" height="157.669903" rx="8.867366" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="896.363636" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Repository</text>
+  <text x="896.363636" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--warn-text)" font-family="Arial, sans-serif">data access</text>
 
   <line x1="1000" y1="180.776699" x2="1038.181818" y2="180.776699" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1043.636364" y="101.941748" width="196.363636" height="157.669903" rx="8.867366" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1141.818182" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--danger-text)">Database</text>
-  <text x="1141.818182" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--danger-text)">PostgreSQL</text>
+  <rect x="1043.636364" y="101.941748" width="196.363636" height="157.669903" rx="8.867366" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1141.818182" y="152.621359" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Database</text>
+  <text x="1141.818182" y="197.669903" text-anchor="middle" font-size="15.517891" fill="var(--danger-text)" font-family="Arial, sans-serif">PostgreSQL</text>
 
   <line x1="645.454545" y1="259.61165" x2="645.454545" y2="321.553398" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-warn)"/>
-  <text x="716.363636" y="299.029126" font-size="15.517891" fill="var(--warn-accent)" font-style="italic">side effect</text>
+  <text x="716.363636" y="299.029126" font-size="15.517891" fill="var(--warn-accent)" font-style="italic" font-family="Arial, sans-serif">side effect</text>
 
-  <rect x="498.181818" y="327.184466" width="327.272727" height="101.359223" rx="8.867366" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="661.818182" y="366.601942" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--warn-text)">Event Bus</text>
-  <text x="661.818182" y="400.38835" text-anchor="middle" font-size="15.517891" fill="var(--warn-text)">order.created</text>
+  <rect x="498.181818" y="327.184466" width="327.272727" height="101.359223" rx="8.867366" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="661.818182" y="366.601942" text-anchor="middle" font-size="19.951574" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Event Bus</text>
+  <text x="661.818182" y="400.38835" text-anchor="middle" font-size="15.517891" fill="var(--warn-text)" font-family="Arial, sans-serif">order.created</text>
 
-  <rect x="40" y="462.330097" width="1200" height="157.669903" rx="8.867366" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="501.747573" text-anchor="middle" font-size="22.168416" font-weight="bold" fill="var(--info-text)">AI Navigation Prompts for Call Graphs</text>
-  <text x="67.272727" y="541.165049" font-size="16.626312" fill="var(--info-text)">▶ "Trace the request from POST /orders to the database write"</text>
-  <text x="67.272727" y="572.699029" font-size="16.626312" fill="var(--info-text)">▶ "Identify all shared mutable state and side effects in OrderService"</text>
-  <text x="67.272727" y="604.23301" font-size="16.626312" fill="var(--info-text)">▶ "Map the lifecycle of an order across all service boundaries"</text>
+  <rect x="40" y="462.330097" width="1200" height="157.669903" rx="8.867366" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="501.747573" text-anchor="middle" font-size="22.168416" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">AI Navigation Prompts for Call Graphs</text>
+  <text x="67.272727" y="541.165049" font-size="16.626312" fill="var(--info-text)" font-family="Arial, sans-serif">▶ "Trace the request from POST /orders to the database write"</text>
+  <text x="67.272727" y="572.699029" font-size="16.626312" fill="var(--info-text)" font-family="Arial, sans-serif">▶ "Identify all shared mutable state and side effects in OrderService"</text>
+  <text x="67.272727" y="604.23301" font-size="16.626312" fill="var(--info-text)" font-family="Arial, sans-serif">▶ "Map the lifecycle of an order across all service boundaries"</text>
 </svg>

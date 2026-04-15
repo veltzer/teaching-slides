@@ -1,84 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
-  </defs>
-  <text x="319.752967" y="40" text-anchor="middle" font-size="25.698566" font-weight="bold" fill="var(--text)">git pull (merge)</text>
-  <text x="1002.942264" y="40" text-anchor="middle" font-size="25.698566" font-weight="bold" fill="var(--text)">git pull --rebase</text>
-  <rect x="40" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="146.748635" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="253.496271" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="360.244906" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="466.993541" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <text x="319.752967" y="40" text-anchor="middle" font-size="25.698566" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">git pull (merge)</text>
+  <text x="1002.942264" y="40" text-anchor="middle" font-size="25.698566" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">git pull --rebase</text>
+  <rect x="40" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="146.748635" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="253.496271" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360.244906" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="466.993541" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="87.041613" y1="190.37037" x2="146.820676" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="193.789941" y1="190.37037" x2="253.569003" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="300.538268" y1="190.37037" x2="360.317332" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="407.286595" y1="190.37037" x2="467.065658" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
-  <rect x="232.147343" y="338.665" width="47.113939" height="47.1141" rx="13.999976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="338.894979" y="338.665" width="47.113939" height="47.1141" rx="13.999976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="232.147343" y="338.665" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="338.894979" y="338.665" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="189.520007" y1="205.407407" x2="236.489272" y2="347.185185" stroke="var(--text)" stroke-width="2"/>
   <line x1="279.188603" y1="362.222222" x2="338.967666" y2="362.222222" stroke="var(--text)" stroke-width="2"/>
-  <rect x="548.109264" y="463.271" width="55.68011" height="55.6803" rx="13.999976" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="575.948953" y="497.555556" text-anchor="middle" font-size="14.990831" font-weight="bold" fill="var(--bg)">M</text>
+  <rect x="548.109264" y="463.271" width="55.68011" height="55.6803" rx="13.999976" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575.948953" y="497.555556" text-anchor="middle" font-size="14.990831" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">M</text>
   <line x1="514.034922" y1="205.407407" x2="558.869221" y2="467.481481" stroke="var(--text)" stroke-width="2"/>
   <line x1="385.93693" y1="377.259259" x2="556.734254" y2="476.074074" stroke="var(--text)" stroke-width="2"/>
-  <text x="319.752967" y="577.037037" text-anchor="middle" font-size="19.273926" fill="var(--text-muted)">Extra merge commit preserves history</text>
-  <rect x="659.139885" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="765.88852" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="872.637155" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="979.38479" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1086.136426" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1192.886061" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="319.752967" y="577.037037" text-anchor="middle" font-size="19.273926" fill="var(--text-muted)" font-family="Arial, sans-serif">Extra merge commit preserves history</text>
+  <rect x="659.139885" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="765.88852" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="872.637155" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="979.38479" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1086.136426" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1192.886061" y="166.813" width="47.113939" height="47.1141" rx="13.999976" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="706.181913" y1="190.37037" x2="765.960978" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="812.930242" y1="190.37037" x2="872.709305" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="919.678568" y1="190.37037" x2="979.457632" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="1026.426897" y1="190.37037" x2="1086.205959" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
   <line x1="1133.175224" y1="190.37037" x2="1192.954287" y2="190.37037" stroke="var(--text)" stroke-width="2"/>
-  <text x="1002.942264" y="577.037037" text-anchor="middle" font-size="19.273926" fill="var(--text-muted)">Linear history, replayed commits</text>
+  <text x="1002.942264" y="577.037037" text-anchor="middle" font-size="19.273926" fill="var(--text-muted)" font-family="Arial, sans-serif">Linear history, replayed commits</text>
   <line x1="661.347615" y1="82.962963" x2="661.347615" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 4"/>
 </svg>

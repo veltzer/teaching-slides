@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -99,63 +99,63 @@
     </linearGradient>
   </defs>
   <rect x="40" y="40" width="156.097547" height="46.231823" rx="6.990373" fill="var(--text)" />
-  <text x="118.048878" y="69.420346" text-anchor="middle" font-family="monospace" font-size="18.224485" font-weight="bold" fill="var(--bg)">Operator</text>
+  <text x="118.048878" y="69.420346" text-anchor="middle" font-size="18.224485" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Operator</text>
   <rect x="205.853644" y="40" width="195.12183" height="46.231823" rx="6.990373" fill="var(--text)" />
-  <text x="303.414715" y="69.420346" text-anchor="middle" font-family="sans-serif" font-size="17.21193" font-weight="bold" fill="var(--bg)">Name</text>
+  <text x="303.414715" y="69.420346" text-anchor="middle" font-size="17.21193" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Name</text>
   <rect x="410.731675" y="40" width="409.756062" height="46.231823" rx="6.990373" fill="var(--text)" />
-  <text x="615.609706" y="69.420346" text-anchor="middle" font-family="sans-serif" font-size="17.21193" font-weight="bold" fill="var(--bg)">Behaviour</text>
+  <text x="615.609706" y="69.420346" text-anchor="middle" font-size="17.21193" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Behaviour</text>
   <rect x="830.243938" y="40" width="409.756062" height="46.231823" rx="6.990373" fill="var(--text)" />
-  <text x="1035.121761" y="69.420346" text-anchor="middle" font-family="sans-serif" font-size="17.21193" font-weight="bold" fill="var(--bg)">Example</text>
-  <rect x="40" y="96.739257" width="156.097547" height="105.072644" rx="6.990373" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="118.048878" y="157.681122" text-anchor="middle" font-family="monospace" font-size="36.44897" font-weight="bold" fill="var(--bg)">=</text>
+  <text x="1035.121761" y="69.420346" text-anchor="middle" font-size="17.21193" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Example</text>
+  <rect x="40" y="96.739257" width="156.097547" height="105.072644" rx="6.990373" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="118.048878" y="157.681122" text-anchor="middle" font-size="36.44897" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">=</text>
   <rect x="205.853644" y="96.739257" width="195.12183" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="303.414715" y="145.072644" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">Recursive</text>
-  <text x="303.414715" y="168.188425" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">expand</text>
+  <text x="303.414715" y="145.072644" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">Recursive</text>
+  <text x="303.414715" y="168.188425" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">expand</text>
   <rect x="410.731675" y="96.739257" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="615.609706" y="136.666906" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Expanded every time it is used.</text>
-  <text x="615.609706" y="159.782556" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Can reference variables defined later.</text>
-  <text x="615.609706" y="182.898598" text-anchor="middle" font-family="sans-serif" font-size="13.525556" fill="var(--text-faint)">Risk: infinite recursion if self-referential</text>
+  <text x="615.609706" y="136.666906" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Expanded every time it is used.</text>
+  <text x="615.609706" y="159.782556" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Can reference variables defined later.</text>
+  <text x="615.609706" y="182.898598" text-anchor="middle" font-size="13.525556" fill="var(--text-faint)" font-family="Arial, sans-serif">Risk: infinite recursion if self-referential</text>
   <rect x="830.243938" y="96.739257" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="849.756027" y="136.666906" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">CC = gcc</text>
-  <text x="849.756027" y="161.884252" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">CFLAGS = $(EXTRA)</text>
-  <text x="849.756027" y="187.101467" font-family="sans-serif" font-size="13.525556" fill="var(--text-faint)">EXTRA can be set later</text>
-  <rect x="40" y="212.318944" width="156.097547" height="105.072644" rx="6.990373" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="118.048878" y="273.260939" text-anchor="middle" font-family="monospace" font-size="36.44897" font-weight="bold" fill="var(--bg)">:=</text>
+  <text x="849.756027" y="136.666906" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">CC = gcc</text>
+  <text x="849.756027" y="161.884252" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">CFLAGS = $(EXTRA)</text>
+  <text x="849.756027" y="187.101467" font-size="13.525556" fill="var(--text-faint)" font-family="Arial, sans-serif">EXTRA can be set later</text>
+  <rect x="40" y="212.318944" width="156.097547" height="105.072644" rx="6.990373" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="118.048878" y="273.260939" text-anchor="middle" font-size="36.44897" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">:=</text>
   <rect x="205.853644" y="212.318944" width="195.12183" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="303.414715" y="260.652201" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">Simple</text>
-  <text x="303.414715" y="283.768243" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">expand</text>
+  <text x="303.414715" y="260.652201" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">Simple</text>
+  <text x="303.414715" y="283.768243" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">expand</text>
   <rect x="410.731675" y="212.318944" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="615.609706" y="252.246332" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Expanded once at definition time.</text>
-  <text x="615.609706" y="275.362374" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Safe — no recursion possible.</text>
-  <text x="615.609706" y="298.478285" text-anchor="middle" font-family="sans-serif" font-size="13.525556" fill="var(--text-faint)">Preferred for performance</text>
+  <text x="615.609706" y="252.246332" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Expanded once at definition time.</text>
+  <text x="615.609706" y="275.362374" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Safe — no recursion possible.</text>
+  <text x="615.609706" y="298.478285" text-anchor="middle" font-size="13.525556" fill="var(--text-faint)" font-family="Arial, sans-serif">Preferred for performance</text>
   <rect x="830.243938" y="212.318944" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="849.756027" y="252.246332" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">SRC := $(wildcard *.c)</text>
-  <text x="849.756027" y="277.463939" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">OBJ := $(SRC:.c=.o)</text>
+  <text x="849.756027" y="252.246332" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">SRC := $(wildcard *.c)</text>
+  <text x="849.756027" y="277.463939" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">OBJ := $(SRC:.c=.o)</text>
   <rect x="40" y="327.898631" width="156.097547" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="118.048878" y="388.840626" text-anchor="middle" font-family="monospace" font-size="36.44897" font-weight="bold" fill="var(--primary-accent)">?=</text>
+  <text x="118.048878" y="388.840626" text-anchor="middle" font-size="36.44897" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">?=</text>
   <rect x="205.853644" y="327.898631" width="195.12183" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="303.414715" y="376.232018" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">Conditional</text>
-  <text x="303.414715" y="399.347799" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">assign</text>
+  <text x="303.414715" y="376.232018" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">Conditional</text>
+  <text x="303.414715" y="399.347799" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">assign</text>
   <rect x="410.731675" y="327.898631" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="615.609706" y="367.826149" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Only assigns if variable is not</text>
-  <text x="615.609706" y="390.942191" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">already set (or set via environment).</text>
-  <text x="615.609706" y="414.057972" text-anchor="middle" font-family="sans-serif" font-size="13.525556" fill="var(--text-faint)">Great for defaults users can override</text>
+  <text x="615.609706" y="367.826149" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Only assigns if variable is not</text>
+  <text x="615.609706" y="390.942191" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">already set (or set via environment).</text>
+  <text x="615.609706" y="414.057972" text-anchor="middle" font-size="13.525556" fill="var(--text-faint)" font-family="Arial, sans-serif">Great for defaults users can override</text>
   <rect x="830.243938" y="327.898631" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="849.756027" y="367.826149" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">CC ?= gcc</text>
-  <text x="849.756027" y="393.043495" font-family="sans-serif" font-size="14.174379" fill="var(--text-faint)">User can override:</text>
-  <text x="849.756027" y="414.057972" font-family="monospace" font-size="16.199374" fill="var(--text-muted)">make CC=clang</text>
+  <text x="849.756027" y="367.826149" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">CC ?= gcc</text>
+  <text x="849.756027" y="393.043495" font-size="14.174379" fill="var(--text-faint)" font-family="Arial, sans-serif">User can override:</text>
+  <text x="849.756027" y="414.057972" font-size="16.199374" fill="var(--text-muted)" font-family="Courier New, monospace">make CC=clang</text>
   <rect x="40" y="443.478187" width="156.097547" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="118.048878" y="504.420443" text-anchor="middle" font-family="monospace" font-size="36.44897" font-weight="bold" fill="var(--primary-accent)">+=</text>
+  <text x="118.048878" y="504.420443" text-anchor="middle" font-size="36.44897" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">+=</text>
   <rect x="205.853644" y="443.478187" width="195.12183" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="303.414715" y="491.811705" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--text)">Append</text>
+  <text x="303.414715" y="491.811705" text-anchor="middle" font-size="17.21193" fill="var(--text)" font-family="Arial, sans-serif">Append</text>
   <rect x="410.731675" y="443.478187" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="615.609706" y="483.405967" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">Appends to existing value</text>
-  <text x="615.609706" y="506.521748" text-anchor="middle" font-family="sans-serif" font-size="15.187168" fill="var(--text-muted)">with a space separator.</text>
-  <text x="615.609706" y="529.637789" text-anchor="middle" font-family="sans-serif" font-size="13.525556" fill="var(--text-faint)">Inherits expansion type of original</text>
+  <text x="615.609706" y="483.405967" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">Appends to existing value</text>
+  <text x="615.609706" y="506.521748" text-anchor="middle" font-size="15.187168" fill="var(--text-muted)" font-family="Arial, sans-serif">with a space separator.</text>
+  <text x="615.609706" y="529.637789" text-anchor="middle" font-size="13.525556" fill="var(--text-faint)" font-family="Arial, sans-serif">Inherits expansion type of original</text>
   <rect x="830.243938" y="443.478187" width="409.756062" height="105.072644" rx="6.990373" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="849.756027" y="483.405967" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">CFLAGS := -Wall</text>
-  <text x="849.756027" y="508.623313" font-family="monospace" font-size="16.199374" fill="var(--primary-accent)">CFLAGS += -O2</text>
-  <text x="849.756027" y="533.840789" font-family="sans-serif" font-size="14.174379" fill="var(--text-faint)">result: -Wall -O2</text>
-  <rect x="40" y="573.768177" width="1190.243799" height="46.231823" rx="6.990373" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="635.1219" y="602.13774" text-anchor="middle" font-family="sans-serif" font-size="17.21193" fill="var(--primary-accent)">Prefer <tspan font-family="monospace">:=</tspan> for most variables — it is faster and avoids unexpected re-expansion</text>
+  <text x="849.756027" y="483.405967" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">CFLAGS := -Wall</text>
+  <text x="849.756027" y="508.623313" font-size="16.199374" fill="var(--primary-accent)" font-family="Courier New, monospace">CFLAGS += -O2</text>
+  <text x="849.756027" y="533.840789" font-size="14.174379" fill="var(--text-faint)" font-family="Arial, sans-serif">result: -Wall -O2</text>
+  <rect x="40" y="573.768177" width="1190.243799" height="46.231823" rx="6.990373" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.1219" y="602.13774" text-anchor="middle" font-size="17.21193" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prefer <tspan font-family="Courier New, monospace" fill="var(--text)">:=</tspan> for most variables — it is faster and avoids unexpected re-expansion</text>
 </svg>

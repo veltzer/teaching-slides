@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,52 +97,49 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="490" y="40" width="300" height="47.598771" rx="6.482147" fill="var(--text)" />
-  <text x="640" y="69.088211" text-anchor="middle" font-family="sans-serif" font-size="18.777266" font-weight="bold" fill="var(--bg)">Power On / Reset</text>
+  <text x="640" y="69.088211" text-anchor="middle" font-size="18.777266" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Power On / Reset</text>
   <line x1="640" y1="89.361786" x2="640" y2="119.331285" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="390" y="121.0943" width="499.999893" height="58.176312" rx="6.482147" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--bg)">1. CPU Initialisation</text>
-  <text x="640" y="166.930057" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--primary-accent)">Exception vectors · cache disable · privileged mode</text>
+  <rect x="390" y="121.0943" width="499.999893" height="58.176312" rx="6.482147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="145.775084" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">1. CPU Initialisation</text>
+  <text x="640" y="166.930057" text-anchor="middle" font-size="13.143957" fill="var(--primary-accent)" font-family="Arial, sans-serif">Exception vectors · cache disable · privileged mode</text>
   <line x1="640" y1="181.033518" x2="640" y2="207.477207" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="390" y="209.240112" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="233.921005" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">2. Memory Controller</text>
-  <text x="640" y="255.075978" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">DRAM init · timing calibration · ECC setup</text>
+  <text x="640" y="233.921005" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2. Memory Controller</text>
+  <text x="640" y="255.075978" text-anchor="middle" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">DRAM init · timing calibration · ECC setup</text>
   <line x1="640" y1="269.179439" x2="640" y2="295.623128" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="390" y="297.386033" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="322.066926" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">3. Clock &amp; PLL Configuration</text>
-  <text x="640" y="343.221899" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">CPU freq · bus freq · peripheral clocks</text>
+  <text x="640" y="322.066926" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Clock &amp; PLL Configuration</text>
+  <text x="640" y="343.221899" text-anchor="middle" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">CPU freq · bus freq · peripheral clocks</text>
   <line x1="640" y1="357.325141" x2="640" y2="383.76894" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="390" y="385.531954" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="410.212738" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">4. Pin Mux (IOMUX)</text>
-  <text x="640" y="431.367711" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Assign GPIO pins to UART / SPI / I²C / etc.</text>
+  <text x="640" y="410.212738" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">4. Pin Mux (IOMUX)</text>
+  <text x="640" y="431.367711" text-anchor="middle" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">Assign GPIO pins to UART / SPI / I²C / etc.</text>
   <line x1="640" y1="445.471063" x2="640" y2="471.914861" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="390" y="473.677766" width="499.999893" height="58.176312" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="498.358659" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--text)">5. Interrupt Controller (GIC/NVIC)</text>
-  <text x="640" y="519.513632" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Enable IRQs · set priorities · map vectors</text>
+  <text x="640" y="498.358659" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">5. Interrupt Controller (GIC/NVIC)</text>
+  <text x="640" y="519.513632" text-anchor="middle" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">Enable IRQs · set priorities · map vectors</text>
   <line x1="640" y1="533.616984" x2="640" y2="560.060782" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="390" y="561.823688" width="499.999893" height="58.176312" rx="6.482147" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="586.504581" text-anchor="middle" font-family="sans-serif" font-size="16.899497" font-weight="bold" fill="var(--bg)">6. Hand off to Kernel</text>
-  <text x="640" y="607.659554" text-anchor="middle" font-family="sans-serif" font-size="13.143957" fill="var(--primary-accent)">Jump to kernel entry · pass device tree blob</text>
+  <rect x="390" y="561.823688" width="499.999893" height="58.176312" rx="6.482147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="586.504581" text-anchor="middle" font-size="16.899497" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">6. Hand off to Kernel</text>
+  <text x="640" y="607.659554" text-anchor="middle" font-size="13.143957" fill="var(--primary-accent)" font-family="Arial, sans-serif">Jump to kernel entry · pass device tree blob</text>
   <rect x="949.999893" y="121.0943" width="290" height="246.808492" rx="6.482147" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1094.999893" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="14.082896" font-weight="bold" fill="var(--text)">Who does this?</text>
-  <text x="970" y="168.693071" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Bootloader (U-Boot / SPL)</text>
-  <text x="970" y="188.085139" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">board_init_f()</text>
-  <text x="970" y="205.714411" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">board_init_r()</text>
+  <text x="1094.999893" y="145.775084" text-anchor="middle" font-size="14.082896" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Who does this?</text>
+  <text x="970" y="168.693071" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">Bootloader (U-Boot / SPL)</text>
+  <text x="970" y="188.085139" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">board_init_f()</text>
+  <text x="970" y="205.714411" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">board_init_r()</text>
   <line x1="949.999893" y1="219.817653" x2="1240" y2="219.817653" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="970" y="240.972626" font-family="sans-serif" font-size="13.143957" fill="var(--text-muted)">Device Tree specifies:</text>
-  <text x="970" y="260.364803" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• compatible strings</text>
-  <text x="970" y="277.993856" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• reg addresses</text>
-  <text x="970" y="295.623128" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• clock frequencies</text>
-  <text x="970" y="313.25229" font-family="monospace" font-size="12.205234" fill="var(--primary-accent)">• pinmux config</text>
-  <text x="970" y="341.458884" font-family="sans-serif" font-size="12.205234" fill="var(--text-faint)">Order matters — clocks before</text>
-  <text x="970" y="357.325141" font-family="sans-serif" font-size="12.205234" fill="var(--text-faint)">peripherals that depend on them</text>
-  <rect x="40" y="121.0943" width="300" height="88.145921" rx="6.482147" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="145.775084" text-anchor="middle" font-family="sans-serif" font-size="13.143957" font-weight="bold" fill="var(--primary-accent)">BSP components</text>
-  <text x="60" y="166.930057" font-family="monospace" font-size="12.205234" fill="var(--text)">board/vendor/board.c</text>
-  <text x="60" y="184.559328" font-family="monospace" font-size="12.205234" fill="var(--text)">arch/arm/mach-xxx/</text>
-  <text x="60" y="202.188491" font-family="monospace" font-size="12.205234" fill="var(--text)">arch/xxx/board/dts/</text>
+  <text x="970" y="240.972626" font-size="13.143957" fill="var(--text-muted)" font-family="Arial, sans-serif">Device Tree specifies:</text>
+  <text x="970" y="260.364803" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">• compatible strings</text>
+  <text x="970" y="277.993856" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">• reg addresses</text>
+  <text x="970" y="295.623128" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">• clock frequencies</text>
+  <text x="970" y="313.25229" font-size="12.205234" fill="var(--primary-accent)" font-family="Courier New, monospace">• pinmux config</text>
+  <text x="970" y="341.458884" font-size="12.205234" fill="var(--text-faint)" font-family="Arial, sans-serif">Order matters — clocks before</text>
+  <text x="970" y="357.325141" font-size="12.205234" fill="var(--text-faint)" font-family="Arial, sans-serif">peripherals that depend on them</text>
+  <rect x="40" y="121.0943" width="300" height="88.145921" rx="6.482147" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="145.775084" text-anchor="middle" font-size="13.143957" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">BSP components</text>
+  <text x="60" y="166.930057" font-size="12.205234" fill="var(--text)" font-family="Courier New, monospace">board/vendor/board.c</text>
+  <text x="60" y="184.559328" font-size="12.205234" fill="var(--text)" font-family="Courier New, monospace">arch/arm/mach-xxx/</text>
+  <text x="60" y="202.188491" font-size="12.205234" fill="var(--text)" font-family="Courier New, monospace">arch/xxx/board/dts/</text>
 </svg>

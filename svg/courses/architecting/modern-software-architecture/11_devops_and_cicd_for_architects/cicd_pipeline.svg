@@ -1,194 +1,203 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect width="901.2519" height="490.9983" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="380.9944" y="208.1071" width="859.0056" height="31.3693" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="810.4973" y="228.5651" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">CI/CD Pipeline — Code to Production</text>
-  <rect x="380.9944" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="380.9944" y="208.1071" width="859.0056" height="31.3693" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="810.4973" y="228.5651" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">CI/CD Pipeline — Code to Production</text>
+  <rect x="380.9944" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="380.9944" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--primary-accent)" />
   <rect x="380.9944" y="275.6192" width="112.6565" height="8.1835" fill="var(--primary-accent)" rx="6" />
-  <text x="437.3225" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">1. Code</text>
-  <text x="437.3225" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">git push</text>
-  <text x="437.3225" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Pull Request</text>
-  <text x="437.3225" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Code Review</text>
-  <text x="437.3225" y="341.7677" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Branch policy</text>
+  <text x="437.3225" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">1. Code</text>
+  <text x="437.3225" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">git push</text>
+  <text x="437.3225" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Pull Request</text>
+  <text x="437.3225" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Code Review</text>
+  <text x="437.3225" y="341.7677" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Branch policy</text>
   <rect x="391.5559" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.2747" />
-  <text x="437.3225" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">GitHub / GitLab</text>
+  <text x="437.3225" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">GitHub / GitLab</text>
   <line x1="493.6509" y1="324.7192" x2="502.1001" y2="324.7192" stroke="var(--text-muted)" stroke-width="0.5495" marker-end="url(#arrow)" />
-  <rect x="502.1001" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="502.1001" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="502.1001" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--primary-accent)" />
   <rect x="502.1001" y="275.6192" width="112.6565" height="8.1835" fill="var(--primary-accent)" rx="6" />
-  <text x="558.4282" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">2. Build</text>
-  <text x="558.4282" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Compile</text>
-  <text x="558.4282" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Docker image build</text>
-  <text x="558.4282" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Artifact creation</text>
-  <text x="558.4282" y="340.4036" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Versioning</text>
+  <text x="558.4282" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">2. Build</text>
+  <text x="558.4282" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Compile</text>
+  <text x="558.4282" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Docker image build</text>
+  <text x="558.4282" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Artifact creation</text>
+  <text x="558.4282" y="340.4036" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Versioning</text>
   <rect x="512.6616" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.2747" />
-  <text x="558.4282" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">GitHub Actions / Jenkins</text>
+  <text x="558.4282" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">GitHub Actions / Jenkins</text>
   <polygon points="615.4607,317.8996 624.614,309.0343 633.7673,317.8996 624.614,326.7647" fill="var(--ok-accent)" stroke="var(--bg)" stroke-width="0.4121" />
-  <text x="624.614" y="341.7677" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--ok-accent)">GATE</text>
-  <rect x="634.4714" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="624.614" y="341.7677" text-anchor="middle" font-size="16.0923" fill="var(--ok-accent)" font-family="Arial, sans-serif">GATE</text>
+  <rect x="634.4714" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="634.4714" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--ok-accent)" />
   <rect x="634.4714" y="275.6192" width="112.6565" height="8.1835" fill="var(--ok-accent)" rx="6" />
-  <text x="690.7998" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">3. Test</text>
-  <text x="690.7998" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Unit tests</text>
-  <text x="690.7998" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Integration tests</text>
-  <text x="690.7998" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Coverage gate</text>
-  <text x="690.7998" y="340.4036" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Contract tests</text>
+  <text x="690.7998" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">3. Test</text>
+  <text x="690.7998" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Unit tests</text>
+  <text x="690.7998" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Integration tests</text>
+  <text x="690.7998" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Coverage gate</text>
+  <text x="690.7998" y="340.4036" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Contract tests</text>
   <rect x="645.033" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.2747" />
-  <text x="690.7998" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">JUnit / Pytest / Jest</text>
+  <text x="690.7998" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">JUnit / Pytest / Jest</text>
   <polygon points="747.1281,317.8996 756.2812,309.0343 765.4346,317.8996 756.2812,326.7647" fill="var(--ok-accent)" stroke="var(--bg)" stroke-width="0.4121" />
-  <text x="756.2812" y="341.7677" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--ok-accent)">GATE</text>
-  <rect x="766.1388" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="756.2812" y="341.7677" text-anchor="middle" font-size="16.0923" fill="var(--ok-accent)" font-family="Arial, sans-serif">GATE</text>
+  <rect x="766.1388" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="766.1388" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--warn-accent)" />
   <rect x="766.1388" y="275.6192" width="112.6565" height="8.1835" fill="var(--warn-accent)" rx="6" />
-  <text x="822.467" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">4. Security</text>
-  <text x="822.467" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">SAST analysis</text>
-  <text x="822.467" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Dependency scan</text>
-  <text x="822.467" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Container scan</text>
-  <text x="822.467" y="340.4036" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Secret detection</text>
+  <text x="822.467" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">4. Security</text>
+  <text x="822.467" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">SAST analysis</text>
+  <text x="822.467" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Dependency scan</text>
+  <text x="822.467" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Container scan</text>
+  <text x="822.467" y="340.4036" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Secret detection</text>
   <rect x="776.7004" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.2747" />
-  <text x="822.467" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">Snyk / Trivy / SonarQube</text>
+  <text x="822.467" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">Snyk / Trivy / SonarQube</text>
   <polygon points="878.7953,317.8996 887.9485,309.0343 897.102,317.8996 887.9485,326.7647" fill="var(--ok-accent)" stroke="var(--bg)" stroke-width="0.4121" />
-  <text x="887.9485" y="341.7677" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--ok-accent)">GATE</text>
-  <rect x="897.8059" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="887.9485" y="341.7677" text-anchor="middle" font-size="16.0923" fill="var(--ok-accent)" font-family="Arial, sans-serif">GATE</text>
+  <rect x="897.8059" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="897.8059" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--info-accent)" />
   <rect x="897.8059" y="275.6192" width="112.6565" height="8.1835" fill="var(--info-accent)" rx="6" />
-  <text x="954.1342" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">5. Staging</text>
-  <text x="954.1342" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Deploy to staging</text>
-  <text x="954.1342" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">E2E / smoke tests</text>
-  <text x="954.1342" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Perf regression</text>
-  <text x="954.1342" y="340.4036" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Manual approval?</text>
+  <text x="954.1342" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">5. Staging</text>
+  <text x="954.1342" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Deploy to staging</text>
+  <text x="954.1342" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">E2E / smoke tests</text>
+  <text x="954.1342" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Perf regression</text>
+  <text x="954.1342" y="340.4036" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Manual approval?</text>
   <rect x="908.3676" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="0.2747" />
-  <text x="954.1342" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">Kubernetes / ECS</text>
+  <text x="954.1342" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">Kubernetes / ECS</text>
   <polygon points="1010.4624,317.8996 1019.6159,309.0343 1028.7692,317.8996 1019.6159,326.7647" fill="var(--warn-fill)" stroke="var(--bg)" stroke-width="0.4121" />
-  <text x="1019.6159" y="338.358" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--warn-accent)">APPROVE</text>
-  <rect x="1030.1773" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1019.6159" y="338.358" text-anchor="middle" font-size="16.0923" fill="var(--warn-accent)" font-family="Arial, sans-serif">APPROVE</text>
+  <rect x="1030.1773" y="256.5249" width="112.6565" height="136.3884" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="1030.1773" y="256.5249" width="112.6565" height="27.2776" rx="6" fill="var(--ok-accent)" />
   <rect x="1030.1773" y="275.6192" width="112.6565" height="8.1835" fill="var(--ok-accent)" rx="6" />
-  <text x="1086.5056" y="275.6192" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--bg)">6. Production</text>
-  <text x="1086.5056" y="299.4872" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Blue/Green deploy</text>
-  <text x="1086.5056" y="313.1258" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Canary rollout</text>
-  <text x="1086.5056" y="326.7647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Feature flags</text>
-  <text x="1086.5056" y="340.4036" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Auto rollback</text>
+  <text x="1086.5056" y="275.6192" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">6. Production</text>
+  <text x="1086.5056" y="299.4872" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Blue/Green deploy</text>
+  <text x="1086.5056" y="313.1258" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Canary rollout</text>
+  <text x="1086.5056" y="326.7647" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Feature flags</text>
+  <text x="1086.5056" y="340.4036" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Auto rollback</text>
   <rect x="1040.739" y="362.2259" width="91.5334" height="20.4584" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.2747" />
-  <text x="1086.5056" y="375.8647" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">k8s / Spinnaker / ArgoCD</text>
+  <text x="1086.5056" y="375.8647" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">k8s / Spinnaker / ArgoCD</text>
   <path d="M 1086.5056 392.9133 Q 1086.5056 423.6006 810.4973 430.42 Q 535.897 437.2394 437.3225 392.9133" fill="none" stroke="var(--text-muted)" stroke-width="0.5495" stroke-dasharray="2.1978 1.0989" marker-end="url(#arrow)" />
-  <text x="810.4973" y="444.0589" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text-muted)">Feedback loop — metrics, alerts, logs flow back to developers</text>
-  <rect x="1162.5486" y="256.5249" width="77.4514" height="136.3884" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1201.2746" y="285.8483" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--danger-accent)">Monitor</text>
-  <text x="1201.2746" y="302.2149" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Prometheus</text>
-  <text x="1201.2746" y="315.8538" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Grafana</text>
-  <text x="1201.2746" y="329.4927" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">PagerDuty</text>
-  <text x="1201.2746" y="343.1316" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Alerts</text>
+  <text x="810.4973" y="444.0589" text-anchor="middle" font-size="16.0923" fill="var(--text-muted)" font-family="Arial, sans-serif">Feedback loop — metrics, alerts, logs flow back to developers</text>
+  <rect x="1162.5486" y="256.5249" width="77.4514" height="136.3884" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1201.2746" y="285.8483" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Monitor</text>
+  <text x="1201.2746" y="302.2149" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Prometheus</text>
+  <text x="1201.2746" y="315.8538" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Grafana</text>
+  <text x="1201.2746" y="329.4927" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">PagerDuty</text>
+  <text x="1201.2746" y="343.1316" text-anchor="middle" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Alerts</text>
   <line x1="1142.8338" y1="324.7192" x2="1161.1406" y2="324.7192" stroke="var(--text-muted)" stroke-width="0.4121" marker-end="url(#arrow)" />
-  <rect x="380.9944" y="464.5173" width="373.1747" height="27.2776" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="567.5816" y="482.2476" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--primary-accent)">Continuous Integration (CI): Stages 1–4</text>
-  <rect x="766.1388" y="464.5173" width="464.7078" height="27.2776" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="998.4927" y="482.2476" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--ok-accent)">Continuous Delivery / Deployment (CD): Stages 5–6</text>
+  <rect x="380.9944" y="464.5173" width="373.1747" height="27.2776" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="567.5816" y="482.2476" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Continuous Integration (CI): Stages 1–4</text>
+  <rect x="766.1388" y="464.5173" width="464.7078" height="27.2776" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="998.4927" y="482.2476" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Continuous Delivery / Deployment (CD): Stages 5–6</text>
   <rect x="380.9944" y="504.0698" width="859.0056" height="115.9302" rx="6" fill="var(--surface)" />
-  <text x="810.4973" y="519.0725" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--text)">Architectural Implications</text>
+  <text x="810.4973" y="519.0725" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Architectural Implications</text>
   <rect x="395.0764" y="527.2558" width="253.4771" height="81.8331" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.4121" />
-  <text x="521.8149" y="542.2585" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--primary-accent)">Design for Deployability</text>
-  <text x="409.1584" y="557.2614" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Services must be independently deployable</text>
-  <text x="409.1584" y="570.9001" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Feature flags decouple deploy from release</text>
-  <text x="409.1584" y="584.5389" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Database migrations must be backward compat</text>
+  <text x="521.8149" y="542.2585" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Design for Deployability</text>
+  <text x="409.1584" y="557.2614" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Services must be independently deployable</text>
+  <text x="409.1584" y="570.9001" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Feature flags decouple deploy from release</text>
+  <text x="409.1584" y="584.5389" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Database migrations must be backward compat</text>
   <rect x="683.7586" y="527.2558" width="253.4771" height="81.8331" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.4121" />
-  <text x="810.4973" y="542.2585" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--ok-accent)">Test Strategy</text>
-  <text x="697.8408" y="557.2614" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Fast unit tests → slow E2E tests pyramid</text>
-  <text x="697.8408" y="570.9001" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Contract tests prevent integration drift</text>
-  <text x="697.8408" y="584.5389" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Chaos engineering in staging</text>
+  <text x="810.4973" y="542.2585" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Test Strategy</text>
+  <text x="697.8408" y="557.2614" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Fast unit tests → slow E2E tests pyramid</text>
+  <text x="697.8408" y="570.9001" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Contract tests prevent integration drift</text>
+  <text x="697.8408" y="584.5389" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Chaos engineering in staging</text>
   <rect x="972.4411" y="527.2558" width="253.4771" height="81.8331" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="0.4121" />
-  <text x="1099.1794" y="542.2585" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.0923" font-weight="bold" fill="var(--warn-accent)">Security (DevSecOps)</text>
-  <text x="986.5231" y="557.2614" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Shift-left security scanning</text>
-  <text x="986.5231" y="570.9001" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">SBOM — Software Bill of Materials</text>
-  <text x="986.5231" y="584.5389" font-family="Arial,sans-serif" font-size="16.0923" fill="var(--text)">Signed images &amp; supply chain integrity</text>
+  <text x="1099.1794" y="542.2585" text-anchor="middle" font-size="16.0923" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Security (DevSecOps)</text>
+  <text x="986.5231" y="557.2614" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Shift-left security scanning</text>
+  <text x="986.5231" y="570.9001" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">SBOM — Software Bill of Materials</text>
+  <text x="986.5231" y="584.5389" font-size="16.0923" fill="var(--text)" font-family="Arial, sans-serif">Signed images &amp; supply chain integrity</text>
 </svg>

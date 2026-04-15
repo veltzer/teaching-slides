@@ -1,85 +1,142 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)">Branches in Git: cheap, named pointers</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="28.753498" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Branches in Git: cheap, named pointers</text>
 
   <!-- Shared trunk C1-C2-C3 -->
-  <rect x="80" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="135" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C1</text>
-  <rect x="260" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C2</text>
-  <rect x="440" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">C3</text>
+  <rect x="80" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="135" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">C1</text>
+  <rect x="260" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">C2</text>
+  <rect x="440" y="282.545455" width="110" height="84.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">C3</text>
 
   <line x1="190" y1="324.727273" x2="260" y2="324.727273" stroke="var(--text)" stroke-width="2"/>
   <line x1="370" y1="324.727273" x2="440" y2="324.727273" stroke="var(--text)" stroke-width="2"/>
 
   <!-- feature branch up -->
-  <rect x="620" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="675" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">C4</text>
-  <rect x="800" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="855" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">C5</text>
+  <rect x="620" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="675" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">C4</text>
+  <rect x="800" y="134.909091" width="110" height="84.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">C5</text>
   <line x1="550" y1="303.636364" x2="620" y2="219.272727" stroke="var(--text)" stroke-width="2"/>
   <line x1="730" y1="177.090909" x2="800" y2="177.090909" stroke="var(--text)" stroke-width="2"/>
 
   <!-- hotfix branch down -->
-  <rect x="620" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="675" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">C6</text>
-  <rect x="800" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="855" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">C7</text>
+  <rect x="620" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="675" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">C6</text>
+  <rect x="800" y="430.181818" width="110" height="84.363636" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">C7</text>
   <line x1="550" y1="345.818182" x2="620" y2="430.181818" stroke="var(--text)" stroke-width="2"/>
   <line x1="730" y1="472.363636" x2="800" y2="472.363636" stroke="var(--text)" stroke-width="2"/>
 
   <!-- branch labels pointing at tips -->
-  <rect x="1000" y="134.909091" width="240" height="84.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">feature</text>
+  <rect x="1000" y="134.909091" width="240" height="84.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="184.472727" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">feature</text>
   <line x1="910" y1="177.090909" x2="1000" y2="177.090909" stroke="var(--primary-border)" stroke-width="2"/>
 
-  <rect x="1000" y="282.545455" width="240" height="84.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">main → C3</text>
+  <rect x="1000" y="282.545455" width="240" height="84.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="332.109091" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">main → C3</text>
   <line x1="550" y1="324.727273" x2="1000" y2="324.727273" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="4 4"/>
 
-  <rect x="1000" y="430.181818" width="240" height="84.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">hotfix</text>
+  <rect x="1000" y="430.181818" width="240" height="84.363636" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="479.745455" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">hotfix</text>
   <line x1="910" y1="472.363636" x2="1000" y2="472.363636" stroke="var(--warn-border)" stroke-width="2"/>
 
   <rect x="40" y="535.636364" width="1200" height="84.363636" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
-  <text x="640" y="572.545455" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--text)">A branch is a 40-byte ref file — git branch feature costs nothing</text>
-  <text x="640" y="604.181818" text-anchor="middle" font-size="15.40366" fill="var(--text-muted)">Create and delete freely; commits are the heavyweight objects, names are just pointers</text>
+  <text x="640" y="572.545455" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">A branch is a 40-byte ref file — git branch feature costs nothing</text>
+  <text x="640" y="604.181818" text-anchor="middle" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">Create and delete freely; commits are the heavyweight objects, names are just pointers</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,60 +97,57 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="42.699417" rx="6.406013" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="68.466278" text-anchor="middle" font-size="20.412333" font-weight="bold" fill="var(--bg)">Ansible in CI/CD Pipeline</text>
-  <rect x="49.677419" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="165.806452" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--primary-accent)">Code</text>
-  <text x="165.806452" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)">Commit / PR</text>
-  <text x="165.806452" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">git push</text>
-  <text x="165.806452" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">merge request</text>
+  <rect x="40" y="40" width="1200" height="42.699417" rx="6.406013" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="68.466278" text-anchor="middle" font-size="20.412333" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Ansible in CI/CD Pipeline</text>
+  <rect x="49.677419" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="165.806452" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Code</text>
+  <text x="165.806452" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)" font-family="Arial, sans-serif">Commit / PR</text>
+  <text x="165.806452" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">git push</text>
+  <text x="165.806452" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">merge request</text>
   <line x1="283.870968" y1="173.435526" x2="318.709677" y2="173.435526" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="323.548387" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="439.677419" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)">Build</text>
-  <text x="439.677419" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)">Lint + Syntax</text>
-  <text x="439.677419" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">ansible-lint</text>
-  <text x="439.677419" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">yamllint</text>
+  <rect x="323.548387" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="439.677419" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Build</text>
+  <text x="439.677419" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)" font-family="Arial, sans-serif">Lint + Syntax</text>
+  <text x="439.677419" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">ansible-lint</text>
+  <text x="439.677419" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">yamllint</text>
   <line x1="557.741935" y1="173.435526" x2="592.580645" y2="173.435526" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="597.419355" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="713.548284" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--warn-accent)">Test</text>
-  <text x="713.548284" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)">Molecule tests</text>
-  <text x="713.548284" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">unit + functional</text>
-  <text x="713.548284" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">molecule test</text>
+  <rect x="597.419355" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.548284" y="157.423259" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Test</text>
+  <text x="713.548284" y="185.889647" text-anchor="middle" font-size="14.845294" fill="var(--text)" font-family="Arial, sans-serif">Molecule tests</text>
+  <text x="713.548284" y="209.018429" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">unit + functional</text>
+  <text x="713.548284" y="225.030697" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">molecule test</text>
   <line x1="831.612903" y1="173.435526" x2="866.451613" y2="173.435526" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="871.290219" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="987.419355" y="153.865112" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--danger-accent)">Deploy</text>
-  <text x="987.419355" y="180.552151" text-anchor="middle" font-size="14.845294" fill="var(--text)">(Ansible)</text>
-  <text x="987.419355" y="207.2393" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">ansible-playbook</text>
-  <text x="987.419355" y="223.251568" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">site.yml</text>
+  <rect x="871.290219" y="111.165695" width="232.258065" height="124.539773" rx="6.406013" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="987.419355" y="153.865112" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Deploy</text>
+  <text x="987.419355" y="180.552151" text-anchor="middle" font-size="14.845294" fill="var(--text)" font-family="Arial, sans-serif">(Ansible)</text>
+  <text x="987.419355" y="207.2393" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">ansible-playbook</text>
+  <text x="987.419355" y="223.251568" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">site.yml</text>
   <line x1="987.419355" y1="237.484597" x2="987.419355" y2="305.092034" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="832.580645" y="312.208549" width="309.677316" height="115.644241" rx="6.406013" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="987.419355" y="358.466223" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)">Staging</text>
-  <text x="987.419355" y="386.93239" text-anchor="middle" font-size="14.845294" fill="var(--text-muted)">Environment</text>
-  <text x="987.419355" y="413.61954" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">Integration tests run here</text>
+  <rect x="832.580645" y="312.208549" width="309.677316" height="115.644241" rx="6.406013" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="987.419355" y="358.466223" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Staging</text>
+  <text x="987.419355" y="386.93239" text-anchor="middle" font-size="14.845294" fill="var(--text-muted)" font-family="Arial, sans-serif">Environment</text>
+  <text x="987.419355" y="413.61954" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">Integration tests run here</text>
   <line x1="987.419355" y1="429.631807" x2="987.419355" y2="497.239245" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="1007.741935" y="468.772967" font-size="12.989579" fill="var(--text-muted)">Approval / gate</text>
-  <rect x="832.580645" y="504.355759" width="309.677316" height="115.644241" rx="6.406013" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="987.419355" y="550.613434" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)">Production</text>
-  <text x="987.419355" y="579.079601" text-anchor="middle" font-size="14.845294" fill="var(--text-muted)">Environment</text>
-  <text x="987.419355" y="604.877242" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)">ansible-playbook --limit prod</text>
+  <text x="1007.741935" y="468.772967" font-size="12.989579" fill="var(--text-muted)" font-family="Arial, sans-serif">Approval / gate</text>
+  <rect x="832.580645" y="504.355759" width="309.677316" height="115.644241" rx="6.406013" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="987.419355" y="550.613434" text-anchor="middle" font-size="18.556725" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Production</text>
+  <text x="987.419355" y="579.079601" text-anchor="middle" font-size="14.845294" fill="var(--text-muted)" font-family="Arial, sans-serif">Environment</text>
+  <text x="987.419355" y="604.877242" text-anchor="middle" font-size="12.061882" fill="var(--text-muted)" font-family="Arial, sans-serif">ansible-playbook --limit prod</text>
   <rect x="49.677419" y="280.184014" width="735.483871" height="338.036747" rx="6.406013" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <rect x="49.677419" y="280.184014" width="735.483871" height="35.582903" rx="6.406013" fill="var(--surface)" />
   <rect x="49.677419" y="297.97552" width="735.483871" height="17.791396" rx="6.406013" fill="var(--surface)" />
-  <text x="417.419252" y="303.312906" text-anchor="middle" font-size="14.845294" font-weight="bold" fill="var(--text)">CI Runner (GitHub Actions / GitLab CI / Jenkins)</text>
-  <text x="78.709677" y="344.233084" font-size="14.845294" fill="var(--text)" font-weight="600">Example .github/workflows/ansible.yml steps:</text>
-  <text x="78.709677" y="372.699362" font-family="monospace" font-size="12.989579" fill="var(--primary-accent)">- name: Lint</text>
-  <text x="78.709677" y="392.269886" font-family="monospace" font-size="12.989579" fill="var(--text-muted)">  run: ansible-lint roles/</text>
-  <text x="78.709677" y="417.177907" font-family="monospace" font-size="12.989579" fill="var(--primary-accent)">- name: Molecule test</text>
-  <text x="78.709677" y="436.748432" font-family="monospace" font-size="12.989579" fill="var(--text-muted)">  run: molecule test</text>
-  <text x="78.709677" y="461.656342" font-family="monospace" font-size="12.989579" fill="var(--primary-accent)">- name: Deploy to staging</text>
-  <text x="78.709677" y="481.226978" font-family="monospace" font-size="12.989579" fill="var(--text-muted)">  run: ansible-playbook site.yml -i inventory/staging</text>
-  <text x="78.709677" y="506.134998" font-family="monospace" font-size="12.989579" fill="var(--primary-accent)">- name: Deploy to production</text>
-  <text x="78.709677" y="525.705413" font-family="monospace" font-size="12.989579" fill="var(--text-muted)">  run: ansible-playbook site.yml -i inventory/prod</text>
-  <text x="78.709677" y="550.613434" font-family="monospace" font-size="12.989579" fill="var(--text-faint)">  if: github.ref == 'refs/heads/main'</text>
-  <text x="78.709677" y="575.521454" font-family="monospace" font-size="12.989579" fill="var(--text-faint)">  environment: production</text>
-  <text x="78.709677" y="602.208604" font-size="12.989579" fill="var(--text-muted)">Secrets stored in GitHub Secrets / HashiCorp Vault / AWX credentials</text>
+  <text x="417.419252" y="303.312906" text-anchor="middle" font-size="14.845294" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CI Runner (GitHub Actions / GitLab CI / Jenkins)</text>
+  <text x="78.709677" y="344.233084" font-size="14.845294" fill="var(--text)" font-weight="600" font-family="Arial, sans-serif">Example .github/workflows/ansible.yml steps:</text>
+  <text x="78.709677" y="372.699362" font-size="12.989579" fill="var(--primary-accent)" font-family="Courier New, monospace">- name: Lint</text>
+  <text x="78.709677" y="392.269886" font-size="12.989579" fill="var(--text-muted)" font-family="Courier New, monospace">  run: ansible-lint roles/</text>
+  <text x="78.709677" y="417.177907" font-size="12.989579" fill="var(--primary-accent)" font-family="Courier New, monospace">- name: Molecule test</text>
+  <text x="78.709677" y="436.748432" font-size="12.989579" fill="var(--text-muted)" font-family="Courier New, monospace">  run: molecule test</text>
+  <text x="78.709677" y="461.656342" font-size="12.989579" fill="var(--primary-accent)" font-family="Courier New, monospace">- name: Deploy to staging</text>
+  <text x="78.709677" y="481.226978" font-size="12.989579" fill="var(--text-muted)" font-family="Courier New, monospace">  run: ansible-playbook site.yml -i inventory/staging</text>
+  <text x="78.709677" y="506.134998" font-size="12.989579" fill="var(--primary-accent)" font-family="Courier New, monospace">- name: Deploy to production</text>
+  <text x="78.709677" y="525.705413" font-size="12.989579" fill="var(--text-muted)" font-family="Courier New, monospace">  run: ansible-playbook site.yml -i inventory/prod</text>
+  <text x="78.709677" y="550.613434" font-size="12.989579" fill="var(--text-faint)" font-family="Courier New, monospace">  if: github.ref == 'refs/heads/main'</text>
+  <text x="78.709677" y="575.521454" font-size="12.989579" fill="var(--text-faint)" font-family="Courier New, monospace">  environment: production</text>
+  <text x="78.709677" y="602.208604" font-size="12.989579" fill="var(--text-muted)" font-family="Arial, sans-serif">Secrets stored in GitHub Secrets / HashiCorp Vault / AWX credentials</text>
 </svg>

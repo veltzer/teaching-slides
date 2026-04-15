@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,38 +97,35 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="270.967799" height="179.926886" rx="6.987491" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="175.483951" y="116.204484" font-size="26.31326" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">command1</text>
-  <text x="175.483951" y="156.423433" font-size="20.24113" fill="var(--text)" text-anchor="middle" font-family="monospace">stdout = fd 1</text>
-  <text x="175.483951" y="194.525741" font-size="16.192695" fill="var(--text-muted)" text-anchor="middle">writes to pipe</text>
+  <rect x="40" y="40" width="270.967799" height="179.926886" rx="6.987491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175.483951" y="116.204484" font-size="26.31326" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">command1</text>
+  <text x="175.483951" y="156.423433" font-size="20.24113" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">stdout = fd 1</text>
+  <text x="175.483951" y="194.525741" font-size="16.192695" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">writes to pipe</text>
   <line x1="310.967799" y1="129.963574" x2="396.128971" y2="129.963574" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="398.064558" y="40" width="483.870678" height="179.926886" rx="6.987491" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="639.999897" y="103.503715" font-size="24.289333" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">pipe buffer</text>
-  <text x="639.999897" y="145.839569" font-size="20.24113" fill="var(--text-muted)" text-anchor="middle">4 KB - 64 KB  (kernel memory)</text>
-  <text x="639.999897" y="183.941745" font-size="16.192695" fill="var(--text-faint)" text-anchor="middle">managed by the kernel automatically</text>
+  <rect x="398.064558" y="40" width="483.870678" height="179.926886" rx="6.987491" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.999897" y="103.503715" font-size="24.289333" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">pipe buffer</text>
+  <text x="639.999897" y="145.839569" font-size="20.24113" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">4 KB - 64 KB  (kernel memory)</text>
+  <text x="639.999897" y="183.941745" font-size="16.192695" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">managed by the kernel automatically</text>
   <line x1="881.935442" y1="129.963574" x2="967.096615" y2="129.963574" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="969.032201" y="40" width="270.967799" height="179.926886" rx="6.987491" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1104.516049" y="116.204484" font-size="26.31326" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">command2</text>
-  <text x="1104.516049" y="156.423433" font-size="20.24113" fill="var(--text)" text-anchor="middle" font-family="monospace">stdin = fd 0</text>
-  <text x="1104.516049" y="194.525741" font-size="16.192695" fill="var(--text-muted)" text-anchor="middle">reads from pipe</text>
+  <rect x="969.032201" y="40" width="270.967799" height="179.926886" rx="6.987491" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1104.516049" y="116.204484" font-size="26.31326" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">command2</text>
+  <text x="1104.516049" y="156.423433" font-size="20.24113" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">stdin = fd 0</text>
+  <text x="1104.516049" y="194.525741" font-size="16.192695" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">reads from pipe</text>
   <rect x="40" y="260.146098" width="1199.999897" height="359.853902" rx="6.987491" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="52.8396" y="296.873" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)"/>
-  <text x="69.032253" y="319.416135" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle">1</text>
-  <text x="98.064609" y="319.416135" font-size="22.265174" fill="var(--text)">Shell calls pipe() — kernel returns two file descriptors: read end and write end</text>
-  <rect x="52.8396" y="360.377" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)"/>
-  <text x="69.032253" y="382.919719" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle">2</text>
-  <text x="98.064609" y="382.919719" font-size="22.265174" fill="var(--text)">Shell forks command1, connects its stdout (fd 1) to the pipe write end</text>
-  <rect x="52.8396" y="423.88" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)"/>
-  <text x="69.032253" y="446.423433" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle">3</text>
-  <text x="98.064609" y="446.423433" font-size="22.265174" fill="var(--text)">Shell forks command2, connects its stdin (fd 0) to the pipe read end</text>
-  <rect x="52.8396" y="487.384" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)"/>
-  <text x="69.032253" y="509.926886" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle">4</text>
-  <text x="98.064609" y="509.926886" font-size="22.265174" fill="var(--text)">Both commands run <tspan font-weight="bold" fill="var(--primary-accent)">concurrently</tspan> — they do not wait for each other</text>
-  <rect x="52.8396" y="550.888" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)"/>
-  <text x="69.032253" y="573.4306" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle">5</text>
-  <text x="98.064609" y="573.4306" font-size="22.265174" fill="var(--text)">Kernel manages back-pressure: command1 blocks when buffer is full</text>
+  <rect x="52.8396" y="296.873" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="69.032253" y="319.416135" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">1</text>
+  <text x="98.064609" y="319.416135" font-size="22.265174" fill="var(--text)" font-family="Arial, sans-serif">Shell calls pipe() — kernel returns two file descriptors: read end and write end</text>
+  <rect x="52.8396" y="360.377" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="69.032253" y="382.919719" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">2</text>
+  <text x="98.064609" y="382.919719" font-size="22.265174" fill="var(--text)" font-family="Arial, sans-serif">Shell forks command1, connects its stdout (fd 1) to the pipe write end</text>
+  <rect x="52.8396" y="423.88" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="69.032253" y="446.423433" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">3</text>
+  <text x="98.064609" y="446.423433" font-size="22.265174" fill="var(--text)" font-family="Arial, sans-serif">Shell forks command2, connects its stdin (fd 0) to the pipe read end</text>
+  <rect x="52.8396" y="487.384" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="69.032253" y="509.926886" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">4</text>
+  <text x="98.064609" y="509.926886" font-size="22.265174" fill="var(--text)" font-family="Arial, sans-serif">Both commands run <tspan font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">concurrently</tspan> — they do not wait for each other</text>
+  <rect x="52.8396" y="550.888" width="32.3854" height="32.3854" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="69.032253" y="573.4306" font-size="16.192695" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">5</text>
+  <text x="98.064609" y="573.4306" font-size="22.265174" fill="var(--text)" font-family="Arial, sans-serif">Kernel manages back-pressure: command1 blocks when buffer is full</text>
 </svg>

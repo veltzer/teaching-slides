@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,55 +75,52 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 9.3913 L 15.0588 4.6957 z" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="160.3687" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1818" y="64.0553" font-family="sans-serif" font-size="18.4785" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">Good partition column:</text>
-  <text x="58.1818" y="88.1106" font-family="sans-serif" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start">[✓] Used in WHERE clauses frequently</text>
-  <text x="58.1818" y="110.8295" font-family="sans-serif" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start">[✓] Low-to-medium cardinality (10 – 10,000)</text>
-  <text x="58.1818" y="133.5484" font-family="sans-serif" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start">[✓] Even data distribution</text>
-  <text x="58.1818" y="156.2673" font-family="sans-serif" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start">[✓] Each partition &gt; 128 MB</text>
-  <rect x="40" y="213.7327" width="1200" height="213.8249" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1818" y="237.788" font-family="sans-serif" font-size="18.4785" fill="var(--danger-accent)" text-anchor="start" font-weight="bold">Bad partition column:</text>
-  <text x="58.1818" y="261.8433" font-family="sans-serif" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start">[✗] High cardinality (user_id with millions) → too many small files</text>
-  <text x="58.1818" y="284.5622" font-family="sans-serif" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start">[✗] Never filtered on → no pruning benefit, extra overhead</text>
-  <text x="58.1818" y="307.2812" font-family="sans-serif" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start">[✗] Very skewed (99% in one value) → one giant partition, rest tiny</text>
-  <text x="58.1818" y="330" font-family="sans-serif" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start">[✗] Too few values (boolean: true/false) → only 2 partitions, minimal benefit</text>
-  <text x="40" y="454.2858" font-family="sans-serif" font-size="18.4785" fill="var(--text)" text-anchor="start" font-weight="bold">Partition count guidelines:</text>
-  <rect x="40" y="472.9954" width="1200" height="29.4009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1818" y="493.0415" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start" font-weight="bold">Total data size</text>
-  <text x="467.2728" y="493.0415" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start" font-weight="bold">Target partitions</text>
+  <rect x="40" y="40" width="1200" height="160.3687" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1818" y="64.0553" font-size="18.4785" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Good partition column:</text>
+  <text x="58.1818" y="88.1106" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">[✓] Used in WHERE clauses frequently</text>
+  <text x="58.1818" y="110.8295" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">[✓] Low-to-medium cardinality (10 – 10,000)</text>
+  <text x="58.1818" y="133.5484" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">[✓] Even data distribution</text>
+  <text x="58.1818" y="156.2673" font-size="17.0571" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">[✓] Each partition &gt; 128 MB</text>
+  <rect x="40" y="213.7327" width="1200" height="213.8249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1818" y="237.788" font-size="18.4785" fill="var(--danger-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Bad partition column:</text>
+  <text x="58.1818" y="261.8433" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start" font-family="Arial, sans-serif">[✗] High cardinality (user_id with millions) → too many small files</text>
+  <text x="58.1818" y="284.5622" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start" font-family="Arial, sans-serif">[✗] Never filtered on → no pruning benefit, extra overhead</text>
+  <text x="58.1818" y="307.2812" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start" font-family="Arial, sans-serif">[✗] Very skewed (99% in one value) → one giant partition, rest tiny</text>
+  <text x="58.1818" y="330" font-size="17.0571" fill="var(--danger-accent)" text-anchor="start" font-family="Arial, sans-serif">[✗] Too few values (boolean: true/false) → only 2 partitions, minimal benefit</text>
+  <text x="40" y="454.2858" font-size="18.4785" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Partition count guidelines:</text>
+  <rect x="40" y="472.9954" width="1200" height="29.4009" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1818" y="493.0415" font-size="17.0571" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Total data size</text>
+  <text x="467.2728" y="493.0415" font-size="17.0571" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Target partitions</text>
   <line x1="449.0909" y1="472.9954" x2="449.0909" y2="620" stroke="var(--text)" stroke-width="1.4414" />
-  <rect x="40" y="502.3964" width="1200" height="29.4009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1818" y="522.4424" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">&lt; 1 GB</text>
-  <text x="467.2728" y="522.4424" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">No partitioning needed</text>
+  <rect x="40" y="502.3964" width="1200" height="29.4009" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1818" y="522.4424" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">&lt; 1 GB</text>
+  <text x="467.2728" y="522.4424" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">No partitioning needed</text>
   <rect x="40" y="531.7973" width="1200" height="29.4009" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="58.1818" y="551.8433" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">1 GB – 100 GB</text>
-  <text x="467.2728" y="551.8433" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">10 – 100 partitions</text>
-  <rect x="40" y="561.1982" width="1200" height="29.4009" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1818" y="581.2442" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">100 GB – 10 TB</text>
-  <text x="467.2728" y="581.2442" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">100 – 10,000 partitions</text>
+  <text x="58.1818" y="551.8433" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">1 GB – 100 GB</text>
+  <text x="467.2728" y="551.8433" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">10 – 100 partitions</text>
+  <rect x="40" y="561.1982" width="1200" height="29.4009" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1818" y="581.2442" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">100 GB – 10 TB</text>
+  <text x="467.2728" y="581.2442" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">100 – 10,000 partitions</text>
   <rect x="40" y="590.5991" width="1200" height="29.4009" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="58.1818" y="610.6452" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">&gt; 10 TB</text>
-  <text x="467.2728" y="610.6452" font-family="sans-serif" font-size="17.0571" fill="var(--text)" text-anchor="start">1,000 – 100,000 partitions</text>
+  <text x="58.1818" y="610.6452" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">&gt; 10 TB</text>
+  <text x="467.2728" y="610.6452" font-size="17.0571" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">1,000 – 100,000 partitions</text>
 </svg>

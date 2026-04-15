@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,64 +97,61 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="392.903192" height="61.515171" rx="6.367071" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="392.903192" height="61.515171" rx="6.367071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="443.548352" y="40" width="392.903192" height="61.515171" rx="6.367071" fill="var(--text-muted)" />
   <rect x="847.096808" y="40" width="392.903192" height="61.515171" rx="6.367071" fill="var(--info-accent)" />
-  <text x="236.451596" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle">Function</text>
-  <text x="639.999948" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle">Script</text>
-  <text x="1043.548507" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle">Alias</text>
-  <rect x="40" y="115.5759" width="392.903192" height="114.242523" rx="6.367071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.451596" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Function</text>
+  <text x="639.999948" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Script</text>
+  <text x="1043.548507" y="77.788005" font-size="23.976903" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Alias</text>
+  <rect x="40" y="115.5759" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="443.548352" y="115.5759" width="392.903192" height="114.242523" rx="6.367071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="847.096808" y="115.5759" width="392.903192" height="114.242523" rx="6.367071" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="59.354837" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--primary-accent)">EXECUTION CONTEXT</text>
-  <text x="236.451596" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle">Runs in <tspan font-weight="bold">current</tspan>
+  <rect x="847.096808" y="115.5759" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="59.354837" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">EXECUTION CONTEXT</text>
+  <text x="236.451596" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Runs in <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">current</tspan>
   </text>
-  <text x="236.451596" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle">shell process</text>
-  <text x="236.451596" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle">(no fork)</text>
-  <text x="462.903189" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--text-muted)">EXECUTION CONTEXT</text>
-  <text x="639.999948" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle">Runs in a <tspan font-weight="bold">subshell</tspan>
+  <text x="236.451596" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">shell process</text>
+  <text x="236.451596" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(no fork)</text>
+  <text x="462.903189" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">EXECUTION CONTEXT</text>
+  <text x="639.999948" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Runs in a <tspan font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">subshell</tspan>
   </text>
-  <text x="639.999948" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle">new process each time</text>
-  <text x="639.999948" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle">(fork + exec)</text>
-  <text x="866.451645" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--info-accent)">EXECUTION CONTEXT</text>
-  <text x="1043.548507" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle">Text replacement</text>
-  <text x="1043.548507" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle">before parsing</text>
-  <text x="1043.548507" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle">(no process at all)</text>
-  <rect x="40" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="443.548352" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="847.096808" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="59.354837" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--ok-accent)">SHELL STATE</text>
-  <text x="236.451596" y="293.09105" font-size="18.443919" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Can modify shell state</text>
-  <text x="236.451596" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle">cd, set vars, export</text>
-  <text x="462.903189" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--danger-accent)">SHELL STATE</text>
-  <text x="639.999948" y="293.09105" font-size="18.443919" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Cannot modify parent</text>
-  <text x="639.999948" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle">subshell vars are local</text>
-  <text x="866.451645" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--danger-accent)">SHELL STATE</text>
-  <text x="1043.548507" y="293.09105" font-size="18.443919" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Cannot modify state</text>
-  <text x="1043.548507" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle">pure text substitution</text>
-  <rect x="40" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="443.548352" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="847.096808" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="59.354837" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--primary-accent)">CAPABILITIES</text>
-  <text x="236.451596" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle">Logic, loops, args</text>
-  <text x="236.451596" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle">loaded in memory</text>
-  <text x="462.903189" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--ok-accent)">CAPABILITIES</text>
-  <text x="639.999948" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle">Full script, any language</text>
-  <text x="639.999948" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle">lives on disk</text>
-  <text x="866.451645" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--warn-accent)">CAPABILITIES</text>
-  <text x="1043.548507" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle">Simple shortcuts only</text>
-  <text x="1043.548507" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle">no logic, no real args</text>
+  <text x="639.999948" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">new process each time</text>
+  <text x="639.999948" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(fork + exec)</text>
+  <text x="866.451645" y="140.181794" font-size="12.91051" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">EXECUTION CONTEXT</text>
+  <text x="1043.548507" y="170.060707" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Text replacement</text>
+  <text x="1043.548507" y="196.424274" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">before parsing</text>
+  <text x="1043.548507" y="221.030386" font-size="14.754944" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(no process at all)</text>
+  <rect x="40" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.548352" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="847.096808" y="240.363698" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="59.354837" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">SHELL STATE</text>
+  <text x="236.451596" y="293.09105" font-size="18.443919" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Can modify shell state</text>
+  <text x="236.451596" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">cd, set vars, export</text>
+  <text x="462.903189" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">SHELL STATE</text>
+  <text x="639.999948" y="293.09105" font-size="18.443919" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Cannot modify parent</text>
+  <text x="639.999948" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">subshell vars are local</text>
+  <text x="866.451645" y="264.96981" font-size="12.91051" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">SHELL STATE</text>
+  <text x="1043.548507" y="293.09105" font-size="18.443919" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Cannot modify state</text>
+  <text x="1043.548507" y="319.454617" font-size="16.599484" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">pure text substitution</text>
+  <rect x="40" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.548352" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="847.096808" y="365.151604" width="392.903192" height="114.242523" rx="6.367071" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="59.354837" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">CAPABILITIES</text>
+  <text x="236.451596" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Logic, loops, args</text>
+  <text x="236.451596" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">loaded in memory</text>
+  <text x="462.903189" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">CAPABILITIES</text>
+  <text x="639.999948" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Full script, any language</text>
+  <text x="639.999948" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">lives on disk</text>
+  <text x="866.451645" y="389.757717" font-size="12.91051" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">CAPABILITIES</text>
+  <text x="1043.548507" y="417.878956" font-size="18.443919" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Simple shortcuts only</text>
+  <text x="1043.548507" y="444.242633" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">no logic, no real args</text>
   <rect x="40" y="489.93962" width="392.903192" height="70.302991" rx="6.367071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <rect x="443.548352" y="489.93962" width="392.903192" height="70.302991" rx="6.367071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <rect x="847.096808" y="489.93962" width="392.903192" height="70.302991" rx="6.367071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="59.354837" y="514.545623" font-size="12.91051" font-weight="bold" fill="var(--text-muted)">BEST FOR</text>
-  <text x="236.451596" y="536.515335" font-size="16.599484" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Reusable shell logic</text>
-  <text x="639.999948" y="536.515335" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle" font-weight="bold">Portable, complex tasks</text>
-  <text x="1043.548507" y="536.515335" font-size="16.599484" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Typing shortcuts</text>
-  <rect x="40" y="572.545558" width="1200" height="47.454442" rx="6.367071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.999948" y="601.545743" text-anchor="middle" font-size="17.521754" fill="var(--text)">Functions are fastest (in-memory). Aliases have zero overhead. Scripts pay fork+exec cost every call.</text>
+  <text x="59.354837" y="514.545623" font-size="12.91051" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">BEST FOR</text>
+  <text x="236.451596" y="536.515335" font-size="16.599484" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Reusable shell logic</text>
+  <text x="639.999948" y="536.515335" font-size="16.599484" fill="var(--text-muted)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Portable, complex tasks</text>
+  <text x="1043.548507" y="536.515335" font-size="16.599484" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Typing shortcuts</text>
+  <rect x="40" y="572.545558" width="1200" height="47.454442" rx="6.367071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.999948" y="601.545743" text-anchor="middle" font-size="17.521754" fill="var(--text)" font-family="Arial, sans-serif">Functions are fastest (in-memory). Aliases have zero overhead. Scripts pay fork+exec cost every call.</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,34 +97,31 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="361.428602" y="40" width="557.14291" height="95.867824" rx="6.997386" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640.000057" y="86.01657" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--bg)">Constructor</text>
-  <text x="640.000057" y="114.776822" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--primary-accent)">Acquires the resource</text>
+  <rect x="361.428602" y="40" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000057" y="86.01657" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Constructor</text>
+  <text x="640.000057" y="114.776822" text-anchor="middle" font-size="18.242768" fill="var(--primary-accent)" font-family="Arial, sans-serif">Acquires the resource</text>
   <line x1="640.000057" y1="137.785166" x2="640.000057" y2="181.884155" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
   <rect x="361.428602" y="183.801617" width="557.14291" height="95.867824" rx="6.997386" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000057" y="229.818186" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--text)">Object Lifetime</text>
-  <text x="640.000057" y="258.578557" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--text-muted)">Resource is valid and usable</text>
+  <text x="640.000057" y="229.818186" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Object Lifetime</text>
+  <text x="640.000057" y="258.578557" text-anchor="middle" font-size="18.242768" fill="var(--text-muted)" font-family="Arial, sans-serif">Resource is valid and usable</text>
   <line x1="640.000057" y1="281.586782" x2="640.000057" y2="325.685891" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="361.428602" y="327.603352" width="557.14291" height="95.867824" rx="6.997386" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640.000057" y="373.619803" text-anchor="middle" font-family="sans-serif" font-size="26.350638" font-weight="bold" fill="var(--bg)">Destructor</text>
-  <text x="640.000057" y="402.380174" text-anchor="middle" font-family="sans-serif" font-size="18.242768" fill="var(--primary-accent)">Releases the resource — always, even on exception</text>
+  <rect x="361.428602" y="327.603352" width="557.14291" height="95.867824" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000057" y="373.619803" text-anchor="middle" font-size="26.350638" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Destructor</text>
+  <text x="640.000057" y="402.380174" text-anchor="middle" font-size="18.242768" fill="var(--primary-accent)" font-family="Arial, sans-serif">Releases the resource — always, even on exception</text>
   <rect x="40" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="61.428573" y="480.991679" font-family="monospace" font-size="17.229313" fill="var(--text)">class MutexGuard {</text>
-  <text x="82.857147" y="505.917366" font-family="monospace" font-size="17.229313" fill="var(--primary-accent)">  MutexGuard(Mutex&amp; m) {</text>
-  <text x="104.28572" y="528.925591" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">    m.lock();   // acquire</text>
-  <text x="82.857147" y="551.933936" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">  }</text>
-  <text x="82.857147" y="574.942161" font-family="monospace" font-size="17.229313" fill="var(--primary-accent)">  ~MutexGuard() {</text>
-  <text x="104.28572" y="597.950386" font-family="monospace" font-size="17.229313" fill="var(--text-muted)">    m.unlock(); // release</text>
-  <text x="61.428573" y="613.289124" font-family="monospace" font-size="17.229313" fill="var(--text)">};</text>
-  <rect x="682.85709" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="961.428659" y="488.661167" text-anchor="middle" font-family="sans-serif" font-size="20.269794" font-weight="bold" fill="var(--primary-accent)">Why it matters in embedded:</text>
-  <text x="704.285778" y="519.338761" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• Mutex always unlocked on scope exit</text>
-  <text x="704.285778" y="544.264329" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• DMA buffer always returned to pool</text>
-  <text x="704.285778" y="569.190134" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• GPIO always restored to safe state</text>
-  <text x="704.285778" y="594.115702" font-family="sans-serif" font-size="17.229313" fill="var(--text-muted)">• No resource leak on error paths</text>
-  <text x="704.285778" y="613.289124" font-family="sans-serif" font-size="15.202287" fill="var(--text-faint)">  even without exceptions</text>
+  <text x="61.428573" y="480.991679" font-size="17.229313" fill="var(--text)" font-family="Courier New, monospace">class MutexGuard {</text>
+  <text x="82.857147" y="505.917366" font-size="17.229313" fill="var(--primary-accent)" font-family="Courier New, monospace">  MutexGuard(Mutex&amp; m) {</text>
+  <text x="104.28572" y="528.925591" font-size="17.229313" fill="var(--text-muted)" font-family="Courier New, monospace">    m.lock();   // acquire</text>
+  <text x="82.857147" y="551.933936" font-size="17.229313" fill="var(--text-muted)" font-family="Courier New, monospace">  }</text>
+  <text x="82.857147" y="574.942161" font-size="17.229313" fill="var(--primary-accent)" font-family="Courier New, monospace">  ~MutexGuard() {</text>
+  <text x="104.28572" y="597.950386" font-size="17.229313" fill="var(--text-muted)" font-family="Courier New, monospace">    m.unlock(); // release</text>
+  <text x="61.428573" y="613.289124" font-size="17.229313" fill="var(--text)" font-family="Courier New, monospace">};</text>
+  <rect x="682.85709" y="452.231309" width="557.14291" height="167.768691" rx="6.997386" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428659" y="488.661167" text-anchor="middle" font-size="20.269794" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Why it matters in embedded:</text>
+  <text x="704.285778" y="519.338761" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• Mutex always unlocked on scope exit</text>
+  <text x="704.285778" y="544.264329" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• DMA buffer always returned to pool</text>
+  <text x="704.285778" y="569.190134" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• GPIO always restored to safe state</text>
+  <text x="704.285778" y="594.115702" font-size="17.229313" fill="var(--text-muted)" font-family="Arial, sans-serif">• No resource leak on error paths</text>
+  <text x="704.285778" y="613.289124" font-size="15.202287" fill="var(--text-faint)" font-family="Arial, sans-serif">  even without exceptions</text>
 </svg>

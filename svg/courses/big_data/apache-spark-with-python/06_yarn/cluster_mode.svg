@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,29 +97,26 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="201.639288" width="195.121951" height="76.06552" rx="6.649745" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="137.560976" y="244.426172" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.33644" font-weight="bold" fill="var(--primary-accent)">Client</text>
   <text x="137.560976" y="265.344179" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.520805" fill="var(--text-faint)" font-style="italic">submits job</text>
-  <rect x="283.902439" y="40" width="956.097561" height="580" rx="6.649745" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="7.1111 3.5556" filter="url(#shadow)"/>
+  <rect x="283.902439" y="40" width="956.097561" height="580" rx="6.649745" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="7.1111 3.5556" filter="url(#shadow)"/>
   <text x="761.951115" y="66.623003" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.483799" fill="var(--primary-accent)" font-weight="bold">YARN Cluster</text>
-  <rect x="322.926725" y="87.540891" width="273.170732" height="76.06552" rx="6.649745" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="322.926725" y="87.540891" width="273.170732" height="76.06552" rx="6.649745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="459.512195" y="120.819644" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.33644" font-weight="bold" fill="var(--warn-accent)">Resource Manager</text>
   <text x="459.512195" y="147.442529" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.520805" fill="var(--text-faint)" font-style="italic">allocates AM container</text>
-  <rect x="693.658537" y="68.524511" width="312.195018" height="114.098397" rx="6.649745" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="693.658537" y="68.524511" width="312.195018" height="114.098397" rx="6.649745" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="849.755993" y="104.655644" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.33644" font-weight="bold" fill="var(--ok-accent)">Application Master</text>
-  <rect x="722.926829" y="116.06552" width="253.658537" height="47.540891" rx="6.649745" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="722.926829" y="116.06552" width="253.658537" height="47.540891" rx="6.649745" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="849.755993" y="145.540903" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.41012" font-weight="bold" fill="var(--bg)">Driver (inside AM)</text>
-  <rect x="342.439024" y="287.213057" width="234.146341" height="61.803264" rx="6.649745" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="342.439024" y="287.213057" width="234.146341" height="61.803264" rx="6.649745" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="459.512195" y="324.294944" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.41012" fill="var(--ok-accent)">Node Manager 1</text>
-  <rect x="342.439024" y="372.786825" width="234.146341" height="57.04914" rx="6.649745" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="342.439024" y="372.786825" width="234.146341" height="57.04914" rx="6.649745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="459.512195" y="407.016333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.41012" fill="var(--warn-accent)">Executor 1</text>
-  <rect x="674.146237" y="287.213057" width="234.146341" height="61.803264" rx="6.649745" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="674.146237" y="287.213057" width="234.146341" height="61.803264" rx="6.649745" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="791.219512" y="324.294944" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.41012" fill="var(--ok-accent)">Node Manager 2</text>
-  <rect x="674.146237" y="372.786825" width="234.146341" height="57.04914" rx="6.649745" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="674.146237" y="372.786825" width="234.146341" height="57.04914" rx="6.649745" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="791.219512" y="407.016333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.41012" fill="var(--warn-accent)">Executor 2</text>
   <line x1="235.121847" y1="239.672048" x2="322.926725" y2="201.639288" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <line x1="596.097561" y1="116.06552" x2="693.658537" y2="116.06552" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,60 +97,57 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="285.901639" y="40" text-anchor="middle" font-family="sans-serif" font-size="16.837345" font-weight="bold" fill="var(--text)">Activity Lifecycle</text>
-  <rect x="167.868957" y="50.67499" width="236.065574" height="39.141042" rx="6.458307" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="285.901639" y="75.583006" text-anchor="middle" font-family="monospace" font-size="14.966373" font-weight="bold" fill="var(--bg)">onCreate()</text>
+  <text x="285.901639" y="40" text-anchor="middle" font-size="16.837345" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Activity Lifecycle</text>
+  <rect x="167.868957" y="50.67499" width="236.065574" height="39.141042" rx="6.458307" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="285.901639" y="75.583006" text-anchor="middle" font-size="14.966373" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">onCreate()</text>
   <line x1="285.901639" y1="91.595271" x2="285.901639" y2="116.503066" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="167.868957" y="118.282415" width="236.065574" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="285.901639" y="143.19021" text-anchor="middle" font-family="monospace" font-size="14.966373" fill="var(--text)">onStart()</text>
+  <text x="285.901639" y="143.19021" text-anchor="middle" font-size="14.966373" fill="var(--text)" font-family="Courier New, monospace">onStart()</text>
   <line x1="285.901639" y1="159.202475" x2="285.901639" y2="184.110491" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="167.868957" y="185.889619" width="236.065574" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="285.901639" y="210.797525" text-anchor="middle" font-family="monospace" font-size="14.966373" fill="var(--text)">onResume()</text>
-  <rect x="138.360656" y="237.48478" width="295.081967" height="39.141042" rx="6.458307" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="285.901639" y="262.392796" text-anchor="middle" font-family="sans-serif" font-size="13.095509" font-weight="bold" fill="var(--ok-accent)">RUNNING (visible + interactive)</text>
+  <text x="285.901639" y="210.797525" text-anchor="middle" font-size="14.966373" fill="var(--text)" font-family="Courier New, monospace">onResume()</text>
+  <rect x="138.360656" y="237.48478" width="295.081967" height="39.141042" rx="6.458307" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="285.901639" y="262.392796" text-anchor="middle" font-size="13.095509" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">RUNNING (visible + interactive)</text>
   <line x1="285.901639" y1="226.8099" x2="285.901639" y2="239.263798" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="285.901639" y1="278.40506" x2="285.901639" y2="299.75471" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="167.868957" y="301.533838" width="236.065574" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="285.901639" y="326.441854" text-anchor="middle" font-family="monospace" font-size="14.966373" fill="var(--text-muted)">onPause()</text>
+  <text x="285.901639" y="326.441854" text-anchor="middle" font-size="14.966373" fill="var(--text-muted)" font-family="Courier New, monospace">onPause()</text>
   <line x1="285.901639" y1="342.454118" x2="285.901639" y2="367.361914" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="167.868957" y="369.141152" width="236.065574" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="285.901639" y="394.049058" text-anchor="middle" font-family="monospace" font-size="14.966373" fill="var(--text-muted)">onStop()</text>
+  <text x="285.901639" y="394.049058" text-anchor="middle" font-size="14.966373" fill="var(--text-muted)" font-family="Courier New, monospace">onStop()</text>
   <line x1="285.901639" y1="410.061323" x2="285.901639" y2="434.969339" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="167.868957" y="436.748357" width="236.065574" height="39.141042" rx="6.458307" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="285.901639" y="461.656373" text-anchor="middle" font-family="monospace" font-size="14.966373" fill="var(--danger-accent)">onDestroy()</text>
+  <rect x="167.868957" y="436.748357" width="236.065574" height="39.141042" rx="6.458307" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="285.901639" y="461.656373" text-anchor="middle" font-size="14.966373" fill="var(--danger-accent)" font-family="Courier New, monospace">onDestroy()</text>
   <path d="M 167.868957 390.490802 Q 69.508197 410.061323 69.508197 321.104359 Q 69.508197 169.877244 167.868957 160.981603" stroke="var(--primary-border)" stroke-width="1.3333" fill="none" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-primary)" />
-  <text x="68.1249" y="289.7222" font-family="monospace" font-size="11.6093" fill="var(--primary-accent)" transform="rotate(-90 30 310)">onRestart()</text>
-  <text x="895.737705" y="40" text-anchor="middle" font-family="sans-serif" font-size="16.837345" font-weight="bold" fill="var(--text)">Fragment Lifecycle (extra callbacks)</text>
-  <rect x="738.360656" y="50.67499" width="314.754098" height="39.141042" rx="6.458307" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="895.737705" y="75.583006" text-anchor="middle" font-family="monospace" font-size="14.031211" font-weight="bold" fill="var(--bg)">onAttach() → onCreate()</text>
+  <text x="68.1249" y="289.7222" font-size="11.6093" fill="var(--primary-accent)" transform="rotate(-90 30 310)" font-family="Courier New, monospace">onRestart()</text>
+  <text x="895.737705" y="40" text-anchor="middle" font-size="16.837345" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Fragment Lifecycle (extra callbacks)</text>
+  <rect x="738.360656" y="50.67499" width="314.754098" height="39.141042" rx="6.458307" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="895.737705" y="75.583006" text-anchor="middle" font-size="14.031211" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">onAttach() → onCreate()</text>
   <line x1="895.737705" y1="91.595271" x2="895.737705" y2="116.503066" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="738.360656" y="118.282415" width="314.754098" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="895.737705" y="143.19021" text-anchor="middle" font-family="monospace" font-size="14.031211" fill="var(--text)">onCreateView()</text>
+  <text x="895.737705" y="143.19021" text-anchor="middle" font-size="14.031211" fill="var(--text)" font-family="Courier New, monospace">onCreateView()</text>
   <line x1="895.737705" y1="159.202475" x2="895.737705" y2="184.110491" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="738.360656" y="185.889619" width="314.754098" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="895.737705" y="210.797525" text-anchor="middle" font-family="monospace" font-size="14.031211" fill="var(--text)">onViewCreated()</text>
+  <text x="895.737705" y="210.797525" text-anchor="middle" font-size="14.031211" fill="var(--text)" font-family="Courier New, monospace">onViewCreated()</text>
   <line x1="895.737705" y1="226.8099" x2="895.737705" y2="239.263798" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="708.852459" y="239.263798" width="373.770597" height="39.141042" rx="6.458307" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="895.737705" y="264.171814" text-anchor="middle" font-family="sans-serif" font-size="13.095509" font-weight="bold" fill="var(--ok-accent)">onStart() → onResume() [same as Activity]</text>
+  <rect x="708.852459" y="239.263798" width="373.770597" height="39.141042" rx="6.458307" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="895.737705" y="264.171814" text-anchor="middle" font-size="13.095509" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">onStart() → onResume() [same as Activity]</text>
   <line x1="895.737705" y1="280.184078" x2="895.737705" y2="301.533838" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="738.360656" y="303.312745" width="314.754098" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="895.737705" y="328.220761" text-anchor="middle" font-family="monospace" font-size="14.031211" fill="var(--text-muted)">onPause() → onStop()</text>
+  <text x="895.737705" y="328.220761" text-anchor="middle" font-size="14.031211" fill="var(--text-muted)" font-family="Courier New, monospace">onPause() → onStop()</text>
   <line x1="895.737705" y1="344.233136" x2="895.737705" y2="369.141152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="738.360656" y="370.920281" width="314.754098" height="39.141042" rx="6.458307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="895.737705" y="395.828297" text-anchor="middle" font-family="monospace" font-size="14.031211" fill="var(--text-muted)">onDestroyView()</text>
+  <text x="895.737705" y="395.828297" text-anchor="middle" font-size="14.031211" fill="var(--text-muted)" font-family="Courier New, monospace">onDestroyView()</text>
   <line x1="895.737705" y1="411.840561" x2="895.737705" y2="436.748357" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="738.360656" y="438.527706" width="314.754098" height="39.141042" rx="6.458307" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="895.737705" y="463.435501" text-anchor="middle" font-family="monospace" font-size="14.031211" fill="var(--danger-accent)">onDestroy() → onDetach()</text>
-  <rect x="40" y="513.251533" width="1200" height="106.748467" rx="6.458307" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="538.159439" text-anchor="middle" font-family="sans-serif" font-size="14.966373" font-weight="bold" fill="var(--primary-accent)">Key differences: Fragment has extra callbacks</text>
-  <text x="59.672131" y="563.067455" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• <tspan font-family="monospace">onAttach()</tspan> — fragment associated with host activity</text>
-  <text x="59.672131" y="582.638086" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• <tspan font-family="monospace">onCreateView()</tspan> — inflate fragment layout (return View)</text>
-  <text x="59.672131" y="602.208497" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• <tspan font-family="monospace">onViewCreated()</tspan> — safe to access views, setup observers</text>
-  <text x="679.344262" y="563.067455" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• <tspan font-family="monospace">onDestroyView()</tspan> — nullify view bindings here to avoid leaks</text>
-  <text x="679.344262" y="582.638086" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• <tspan font-family="monospace">onDetach()</tspan> — fragment disassociated from activity</text>
-  <text x="679.344262" y="602.208497" font-family="sans-serif" font-size="13.095509" fill="var(--text-muted)">• Fragment can survive activity rotation (retain instance)</text>
+  <rect x="738.360656" y="438.527706" width="314.754098" height="39.141042" rx="6.458307" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="895.737705" y="463.435501" text-anchor="middle" font-size="14.031211" fill="var(--danger-accent)" font-family="Courier New, monospace">onDestroy() → onDetach()</text>
+  <rect x="40" y="513.251533" width="1200" height="106.748467" rx="6.458307" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="538.159439" text-anchor="middle" font-size="14.966373" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Key differences: Fragment has extra callbacks</text>
+  <text x="59.672131" y="563.067455" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• <tspan font-family="Courier New, monospace" fill="var(--text)">onAttach()</tspan> — fragment associated with host activity</text>
+  <text x="59.672131" y="582.638086" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• <tspan font-family="Courier New, monospace" fill="var(--text)">onCreateView()</tspan> — inflate fragment layout (return View)</text>
+  <text x="59.672131" y="602.208497" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• <tspan font-family="Courier New, monospace" fill="var(--text)">onViewCreated()</tspan> — safe to access views, setup observers</text>
+  <text x="679.344262" y="563.067455" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• <tspan font-family="Courier New, monospace" fill="var(--text)">onDestroyView()</tspan> — nullify view bindings here to avoid leaks</text>
+  <text x="679.344262" y="582.638086" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• <tspan font-family="Courier New, monospace" fill="var(--text)">onDetach()</tspan> — fragment disassociated from activity</text>
+  <text x="679.344262" y="602.208497" font-size="13.095509" fill="var(--text-muted)" font-family="Arial, sans-serif">• Fragment can survive activity rotation (retain instance)</text>
 </svg>

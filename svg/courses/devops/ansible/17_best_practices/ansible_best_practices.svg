@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -111,55 +111,55 @@
     </linearGradient>
   </defs>
   <!-- Header -->
-  <rect x="40" y="40" width="1200" height="59.137255" fill="var(--primary-fill)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="59.137255" fill="url(#grad-primary)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="78.666667" font-family="Arial, sans-serif" font-size="22.71624" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Best Practices</text>
 
   <!-- COL 1: Project Structure -->
   <rect x="58.75" y="110.509804" width="234.375" height="432.156863" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="58.75" y="110.509804" width="234.375" height="34.117647" rx="6.721344" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="58.75" y="130.980392" width="234.375" height="13.647059" fill="var(--primary-fill)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="110.509804" width="234.375" height="34.117647" rx="6.721344" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="130.980392" width="234.375" height="13.647059" fill="url(#grad-primary)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="175.9375" y="133.254902" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Project Structure</text>
-  <text x="72.8125" y="165.098039" font-family="monospace" font-size="11.202241" fill="var(--text)">project/</text>
-  <text x="72.8125" y="183.294118" font-family="monospace" font-size="11.202241" fill="var(--text)">  ansible.cfg</text>
-  <text x="72.8125" y="201.490196" font-family="monospace" font-size="11.202241" fill="var(--text)">  requirements.yml</text>
-  <text x="72.8125" y="219.686275" font-family="monospace" font-size="11.202241" fill="var(--text)">  site.yml</text>
-  <text x="72.8125" y="237.882353" font-family="monospace" font-size="11.202241" fill="var(--primary-accent)">  inventories/</text>
-  <text x="72.8125" y="256.078431" font-family="monospace" font-size="11.202241" fill="var(--text)">    production/</text>
-  <text x="72.8125" y="274.27451" font-family="monospace" font-size="11.202241" fill="var(--text)">      hosts.yml</text>
-  <text x="72.8125" y="292.470588" font-family="monospace" font-size="11.202241" fill="var(--text)">      group_vars/</text>
-  <text x="72.8125" y="310.666667" font-family="monospace" font-size="11.202241" fill="var(--ok-accent)">        all/vars.yml</text>
-  <text x="72.8125" y="328.862745" font-family="monospace" font-size="11.202241" fill="var(--danger-accent)">        all/vault.yml</text>
-  <text x="72.8125" y="347.058824" font-family="monospace" font-size="11.202241" fill="var(--primary-accent)">  roles/</text>
-  <text x="72.8125" y="365.254902" font-family="monospace" font-size="11.202241" fill="var(--text)">    webserver/</text>
-  <text x="72.8125" y="383.45098" font-family="monospace" font-size="11.202241" fill="var(--text)">      tasks/main.yml</text>
-  <text x="72.8125" y="401.647059" font-family="monospace" font-size="11.202241" fill="var(--text)">      handlers/main.yml</text>
-  <text x="72.8125" y="419.843137" font-family="monospace" font-size="11.202241" fill="var(--text)">      defaults/main.yml</text>
-  <text x="72.8125" y="438.039216" font-family="monospace" font-size="11.202241" fill="var(--text)">      vars/main.yml</text>
-  <text x="72.8125" y="456.235294" font-family="monospace" font-size="11.202241" fill="var(--text)">      templates/</text>
-  <text x="72.8125" y="474.431373" font-family="monospace" font-size="11.202241" fill="var(--text)">      files/</text>
-  <text x="72.8125" y="492.627451" font-family="monospace" font-size="11.202241" fill="var(--text)">      meta/main.yml</text>
-  <text x="72.8125" y="510.823529" font-family="monospace" font-size="11.202241" fill="var(--text-muted)">      molecule/</text>
-  <text x="72.8125" y="529.019608" font-family="monospace" font-size="11.202241" fill="var(--text-muted)">        default/</text>
+  <text x="72.8125" y="165.098039" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">project/</text>
+  <text x="72.8125" y="183.294118" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">  ansible.cfg</text>
+  <text x="72.8125" y="201.490196" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">  requirements.yml</text>
+  <text x="72.8125" y="219.686275" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">  site.yml</text>
+  <text x="72.8125" y="237.882353" font-size="11.202241" fill="var(--primary-accent)" font-family="Courier New, monospace">  inventories/</text>
+  <text x="72.8125" y="256.078431" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">    production/</text>
+  <text x="72.8125" y="274.27451" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      hosts.yml</text>
+  <text x="72.8125" y="292.470588" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      group_vars/</text>
+  <text x="72.8125" y="310.666667" font-size="11.202241" fill="var(--ok-accent)" font-family="Courier New, monospace">        all/vars.yml</text>
+  <text x="72.8125" y="328.862745" font-size="11.202241" fill="var(--danger-accent)" font-family="Courier New, monospace">        all/vault.yml</text>
+  <text x="72.8125" y="347.058824" font-size="11.202241" fill="var(--primary-accent)" font-family="Courier New, monospace">  roles/</text>
+  <text x="72.8125" y="365.254902" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">    webserver/</text>
+  <text x="72.8125" y="383.45098" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      tasks/main.yml</text>
+  <text x="72.8125" y="401.647059" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      handlers/main.yml</text>
+  <text x="72.8125" y="419.843137" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      defaults/main.yml</text>
+  <text x="72.8125" y="438.039216" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      vars/main.yml</text>
+  <text x="72.8125" y="456.235294" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      templates/</text>
+  <text x="72.8125" y="474.431373" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      files/</text>
+  <text x="72.8125" y="492.627451" font-size="11.202241" fill="var(--text)" font-family="Courier New, monospace">      meta/main.yml</text>
+  <text x="72.8125" y="510.823529" font-size="11.202241" fill="var(--text-muted)" font-family="Courier New, monospace">      molecule/</text>
+  <text x="72.8125" y="529.019608" font-size="11.202241" fill="var(--text-muted)" font-family="Courier New, monospace">        default/</text>
 
   <!-- COL 2: Naming Conventions -->
   <rect x="307.1875" y="110.509804" width="253.125" height="216.078431" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="307.1875" y="110.509804" width="253.125" height="34.117647" rx="6.721344" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="307.1875" y="130.980392" width="253.125" height="13.647059" fill="var(--ok-fill)" rx="6.721344" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="307.1875" y="110.509804" width="253.125" height="34.117647" rx="6.721344" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="307.1875" y="130.980392" width="253.125" height="13.647059" fill="url(#grad-ok)" rx="6.721344" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.75" y="133.254902" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Naming Conventions</text>
   <text x="321.25" y="167.372549" font-family="Arial, sans-serif" font-size="11.358176" font-weight="bold" fill="var(--ok-accent)">Tasks: verb + noun + detail</text>
-  <text x="321.25" y="187.843137" font-family="monospace" font-size="11.358176" fill="var(--text-muted)">- name: Install nginx package</text>
-  <text x="321.25" y="208.313725" font-family="monospace" font-size="11.358176" fill="var(--text-muted)">- name: Configure nginx vhosts</text>
-  <text x="321.25" y="228.784314" font-family="monospace" font-size="11.358176" fill="var(--text-muted)">- name: Enable nginx service</text>
+  <text x="321.25" y="187.843137" font-size="11.358176" fill="var(--text-muted)" font-family="Courier New, monospace">- name: Install nginx package</text>
+  <text x="321.25" y="208.313725" font-size="11.358176" fill="var(--text-muted)" font-family="Courier New, monospace">- name: Configure nginx vhosts</text>
+  <text x="321.25" y="228.784314" font-size="11.358176" fill="var(--text-muted)" font-family="Courier New, monospace">- name: Enable nginx service</text>
   <line x1="321.25" y1="242.431373" x2="546.25" y2="242.431373" stroke="var(--border)" stroke-width="1"/>
   <text x="321.25" y="262.901961" font-family="Arial, sans-serif" font-size="11.358176" font-weight="bold" fill="var(--ok-accent)">Variables: lowercase_with_underscores</text>
-  <text x="321.25" y="283.372549" font-family="monospace" font-size="11.358176" fill="var(--text)">nginx_port: 80</text>
-  <text x="321.25" y="302.705945" font-family="monospace" font-size="11.358176" fill="var(--text)">app_db_password: !vault |</text>
+  <text x="321.25" y="283.372549" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">nginx_port: 80</text>
+  <text x="321.25" y="302.705945" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">app_db_password: !vault |</text>
   <text x="321.25" y="322.039216" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text-faint)">Prefix with role name to avoid collisions</text>
 
   <!-- COL 2: Idempotency -->
   <rect x="307.1875" y="341.372486" width="253.125" height="204.705882" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="307.1875" y="341.372486" width="253.125" height="34.117647" rx="6.721344" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="307.1875" y="361.8432" width="253.125" height="13.647059" fill="var(--info-fill)" rx="6.721344" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="307.1875" y="341.372486" width="253.125" height="34.117647" rx="6.721344" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="307.1875" y="361.8432" width="253.125" height="13.647059" fill="url(#grad-info)" rx="6.721344" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.75" y="364.117584" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Idempotency Rules</text>
   <text x="321.25" y="399.372549" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Prefer declarative modules over shell/command</text>
   <text x="321.25" y="419.843137" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Use state: present/absent explicitly</text>
@@ -171,12 +171,12 @@
 
   <!-- COL 3: Vault Usage -->
   <rect x="574.375" y="110.509804" width="262.5" height="199.019671" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="574.375" y="110.509804" width="262.5" height="34.117647" rx="6.721344" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="574.375" y="130.980392" width="262.5" height="13.647059" fill="var(--danger-fill)" rx="6.721344" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="574.375" y="110.509804" width="262.5" height="34.117647" rx="6.721344" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="574.375" y="130.980392" width="262.5" height="13.647059" fill="url(#grad-danger)" rx="6.721344" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="705.625" y="133.254902" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Vault Usage</text>
   <text x="588.4375" y="167.372549" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ ALL secrets in vault-encrypted files</text>
   <text x="588.4375" y="187.843137" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Separate vars from vault (vars ref vault)</text>
-  <text x="588.4375" y="208.313725" font-family="monospace" font-size="11.358176" fill="var(--text)">  db_pass: "{{ vault_db_pass }}"</text>
+  <text x="588.4375" y="208.313725" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">  db_pass: "{{ vault_db_pass }}"</text>
   <text x="588.4375" y="228.784314" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Use vault-id per environment</text>
   <text x="588.4375" y="249.254902" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Rotate vault passwords regularly</text>
   <text x="588.4375" y="269.72549" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--danger-accent)">- Never commit .vault_pass to Git</text>
@@ -185,14 +185,14 @@
 
   <!-- COL 3: Testing with Molecule -->
   <rect x="574.375" y="324.313725" width="262.5" height="225.176471" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="574.375" y="324.313725" width="262.5" height="34.117647" rx="6.721344" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="574.375" y="344.784314" width="262.5" height="13.647059" fill="var(--warn-fill)" rx="6.721344" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="574.375" y="324.313725" width="262.5" height="34.117647" rx="6.721344" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="574.375" y="344.784314" width="262.5" height="13.647059" fill="url(#grad-warn)" rx="6.721344" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="705.625" y="347.058824" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Testing with Molecule</text>
-  <text x="588.4375" y="383.45098" font-family="monospace" font-size="11.358176" fill="var(--text)">molecule init role myrole</text>
-  <text x="588.4375" y="402.784376" font-family="monospace" font-size="11.358176" fill="var(--text)">molecule test      # full test cycle</text>
-  <text x="588.4375" y="422.117647" font-family="monospace" font-size="11.358176" fill="var(--text)">molecule converge  # run role</text>
-  <text x="588.4375" y="441.450918" font-family="monospace" font-size="11.358176" fill="var(--text)">molecule verify    # run tests</text>
-  <text x="588.4375" y="460.784314" font-family="monospace" font-size="11.358176" fill="var(--text)">molecule lint      # lint checks</text>
+  <text x="588.4375" y="383.45098" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">molecule init role myrole</text>
+  <text x="588.4375" y="402.784376" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">molecule test      # full test cycle</text>
+  <text x="588.4375" y="422.117647" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">molecule converge  # run role</text>
+  <text x="588.4375" y="441.450918" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">molecule verify    # run tests</text>
+  <text x="588.4375" y="460.784314" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">molecule lint      # lint checks</text>
   <line x1="588.4375" y1="474.431373" x2="822.8125" y2="474.431373" stroke="var(--border)" stroke-width="1"/>
   <text x="588.4375" y="494.901961" font-family="Arial, sans-serif" font-size="11.358176" font-weight="bold" fill="var(--warn-accent)">Test cycle order:</text>
   <text x="588.4375" y="515.372549" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">lint -&gt; create -&gt; converge -&gt; idempotency</text>
@@ -201,8 +201,8 @@
 
   <!-- COL 4: Role Best Practices -->
   <rect x="850.9375" y="110.509804" width="370.3125" height="221.764769" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="850.9375" y="110.509804" width="370.3125" height="34.117647" rx="6.721344" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="850.9375" y="130.980392" width="370.3125" height="13.647059" fill="var(--primary-fill)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.9375" y="110.509804" width="370.3125" height="34.117647" rx="6.721344" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.9375" y="130.980392" width="370.3125" height="13.647059" fill="url(#grad-primary)" rx="6.721344" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1035.625" y="133.254902" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Role Best Practices</text>
   <text x="865" y="167.372549" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ One role per service/application component</text>
   <text x="865" y="187.843137" font-family="Arial, sans-serif" font-size="11.358176" fill="var(--text)">+ Put overridable defaults in defaults/main.yml</text>
@@ -216,29 +216,29 @@
 
   <!-- COL 4: ansible.cfg settings -->
   <rect x="850.9375" y="347.058824" width="370.3125" height="204.705882" rx="6.721344" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="850.9375" y="347.058824" width="370.3125" height="34.117647" rx="6.721344" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="850.9375" y="367.529412" width="370.3125" height="13.647059" fill="var(--ok-fill)" rx="6.721344" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.9375" y="347.058824" width="370.3125" height="34.117647" rx="6.721344" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850.9375" y="367.529412" width="370.3125" height="13.647059" fill="url(#grad-ok)" rx="6.721344" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1035.625" y="369.803922" font-family="Arial, sans-serif" font-size="13.423309" font-weight="bold" fill="var(--bg)" text-anchor="middle">Recommended ansible.cfg</text>
-  <text x="865" y="406.196078" font-family="monospace" font-size="11.358176" fill="var(--text)">[defaults]</text>
-  <text x="865" y="425.529475" font-family="monospace" font-size="11.358176" fill="var(--text)">inventory           = inventories/production</text>
-  <text x="865" y="444.862745" font-family="monospace" font-size="11.358176" fill="var(--text)">roles_path          = roles</text>
-  <text x="865" y="464.196016" font-family="monospace" font-size="11.358176" fill="var(--text)">stdout_callback     = yaml</text>
-  <text x="865" y="483.529412" font-family="monospace" font-size="11.358176" fill="var(--text)">callback_whitelist  = profile_tasks</text>
-  <text x="865" y="502.862808" font-family="monospace" font-size="11.358176" fill="var(--text)">retry_files_enabled = False</text>
-  <text x="865" y="522.196078" font-family="monospace" font-size="11.358176" fill="var(--text)">[ssh_connection]</text>
-  <text x="865" y="541.529349" font-family="monospace" font-size="11.358176" fill="var(--text)">pipelining          = True</text>
-  <text x="865" y="560.862745" font-family="monospace" font-size="11.358176" fill="var(--text-muted)">ssh_args = -o ControlMaster=auto -o ControlPersist=60s</text>
+  <text x="865" y="406.196078" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">[defaults]</text>
+  <text x="865" y="425.529475" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">inventory           = inventories/production</text>
+  <text x="865" y="444.862745" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">roles_path          = roles</text>
+  <text x="865" y="464.196016" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">stdout_callback     = yaml</text>
+  <text x="865" y="483.529412" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">callback_whitelist  = profile_tasks</text>
+  <text x="865" y="502.862808" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">retry_files_enabled = False</text>
+  <text x="865" y="522.196078" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">[ssh_connection]</text>
+  <text x="865" y="541.529349" font-size="11.358176" fill="var(--text)" font-family="Courier New, monospace">pipelining          = True</text>
+  <text x="865" y="560.862745" font-size="11.358176" fill="var(--text-muted)" font-family="Courier New, monospace">ssh_args = -o ControlMaster=auto -o ControlPersist=60s</text>
 
   <!-- Bottom bar -->
-  <rect x="58.75" y="563.137255" width="1162.5" height="56.862745" rx="6.721344" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="58.75" y="563.137255" width="1162.5" height="56.862745" rx="6.721344" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="72.8125" y="584.745161" font-family="Arial, sans-serif" font-size="12.390686" font-weight="bold" fill="var(--warn-accent)">CI/CD Integration:</text>
-  <text x="208.75" y="584.745161" font-family="monospace" font-size="12.390686" fill="var(--text)">ansible-lint site.yml</text>
+  <text x="208.75" y="584.745161" font-size="12.390686" fill="var(--text)" font-family="Courier New, monospace">ansible-lint site.yml</text>
   <text x="377.5" y="584.745161" font-family="Arial, sans-serif" font-size="12.390686" fill="var(--text-muted)">in every PR check |</text>
-  <text x="527.5" y="584.745161" font-family="monospace" font-size="12.390686" fill="var(--text)">yamllint</text>
+  <text x="527.5" y="584.745161" font-size="12.390686" fill="var(--text)" font-family="Courier New, monospace">yamllint</text>
   <text x="611.875" y="584.745161" font-family="Arial, sans-serif" font-size="12.390686" fill="var(--text-muted)">for YAML style |</text>
-  <text x="724.375" y="584.745161" font-family="monospace" font-size="12.390686" fill="var(--text)">molecule test</text>
+  <text x="724.375" y="584.745161" font-size="12.390686" fill="var(--text)" font-family="Courier New, monospace">molecule test</text>
   <text x="841.5625" y="584.745161" font-family="Arial, sans-serif" font-size="12.390686" fill="var(--text-muted)">per role |</text>
-  <text x="911.875" y="584.745161" font-family="monospace" font-size="12.390686" fill="var(--text)">--check --diff</text>
+  <text x="911.875" y="584.745161" font-size="12.390686" fill="var(--text)" font-family="Courier New, monospace">--check --diff</text>
   <text x="1033.75" y="584.745161" font-family="Arial, sans-serif" font-size="12.390686" fill="var(--text-muted)">dry-run in staging</text>
   <text x="72.8125" y="609.764643" font-family="Arial, sans-serif" font-size="12.390686" fill="var(--text-muted)">Golden rule: if it is not tested it is broken. Run molecule in CI. Use --check in staging pipeline before production apply.</text>
 </svg>

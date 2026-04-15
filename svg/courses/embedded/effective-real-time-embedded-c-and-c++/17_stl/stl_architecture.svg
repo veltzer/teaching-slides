@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,37 +97,34 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="433.103448" y="224.899387" width="413.793103" height="107.046969" rx="6.927402" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="281.342194" text-anchor="middle" font-family="sans-serif" font-size="26.087093" font-weight="bold" fill="var(--bg)">Iterators</text>
-  <text x="640" y="310.536865" text-anchor="middle" font-family="sans-serif" font-size="17.056995" fill="var(--primary-accent)">bridge: containers ↔ algorithms</text>
+  <rect x="433.103448" y="224.899387" width="413.793103" height="107.046969" rx="6.927402" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="281.342194" text-anchor="middle" font-size="26.087093" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Iterators</text>
+  <text x="640" y="310.536865" text-anchor="middle" font-size="17.056995" fill="var(--primary-accent)" font-family="Arial, sans-serif">bridge: containers ↔ algorithms</text>
   <rect x="40" y="40" width="393.103448" height="136.24152" rx="6.927402" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="236.551724" y="88.657625" text-anchor="middle" font-family="sans-serif" font-size="26.087093" font-weight="bold" fill="var(--text)">Containers</text>
-  <text x="236.551724" y="117.852297" text-anchor="middle" font-family="monospace" font-size="16.05356" fill="var(--text-muted)">array · vector · deque</text>
-  <text x="236.551724" y="141.207962" text-anchor="middle" font-family="monospace" font-size="16.05356" fill="var(--text-muted)">map · set · list</text>
-  <text x="236.551724" y="164.563627" text-anchor="middle" font-family="sans-serif" font-size="14.046808" fill="var(--text-faint)">store elements</text>
+  <text x="236.551724" y="88.657625" text-anchor="middle" font-size="26.087093" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Containers</text>
+  <text x="236.551724" y="117.852297" text-anchor="middle" font-size="16.05356" fill="var(--text-muted)" font-family="Courier New, monospace">array · vector · deque</text>
+  <text x="236.551724" y="141.207962" text-anchor="middle" font-size="16.05356" fill="var(--text-muted)" font-family="Courier New, monospace">map · set · list</text>
+  <text x="236.551724" y="164.563627" text-anchor="middle" font-size="14.046808" fill="var(--text-faint)" font-family="Arial, sans-serif">store elements</text>
   <line x1="379.310345" y1="137.315492" x2="495.172303" y2="244.36234" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="846.896552" y="40" width="393.103448" height="136.24152" rx="6.927402" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1043.448276" y="88.657625" text-anchor="middle" font-family="sans-serif" font-size="26.087093" font-weight="bold" fill="var(--text)">Algorithms</text>
-  <text x="1043.448276" y="117.852297" text-anchor="middle" font-family="monospace" font-size="16.05356" fill="var(--text-muted)">sort · find · transform</text>
-  <text x="1043.448276" y="141.207962" text-anchor="middle" font-family="monospace" font-size="16.05356" fill="var(--text-muted)">count · fill · copy</text>
-  <text x="1043.448276" y="164.563627" text-anchor="middle" font-family="sans-serif" font-size="14.046808" fill="var(--text-faint)">operate on ranges</text>
+  <text x="1043.448276" y="88.657625" text-anchor="middle" font-size="26.087093" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Algorithms</text>
+  <text x="1043.448276" y="117.852297" text-anchor="middle" font-size="16.05356" fill="var(--text-muted)" font-family="Courier New, monospace">sort · find · transform</text>
+  <text x="1043.448276" y="141.207962" text-anchor="middle" font-size="16.05356" fill="var(--text-muted)" font-family="Courier New, monospace">count · fill · copy</text>
+  <text x="1043.448276" y="164.563627" text-anchor="middle" font-size="14.046808" fill="var(--text-faint)" font-family="Arial, sans-serif">operate on ranges</text>
   <line x1="900.689655" y1="137.315492" x2="784.827586" y2="244.36234" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="40" y="409.798532" width="393.103448" height="126.510164" rx="6.927402" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="236.551724" y="458.456399" text-anchor="middle" font-family="sans-serif" font-size="26.087093" font-weight="bold" fill="var(--text)">Allocators</text>
-  <text x="236.551724" y="487.651071" text-anchor="middle" font-family="sans-serif" font-size="17.056995" fill="var(--text-muted)">Control memory allocation</text>
-  <text x="236.551724" y="512.953031" text-anchor="middle" font-family="monospace" font-size="15.050242" fill="var(--text-faint)">custom pool allocators</text>
-  <text x="236.551724" y="530.46981" text-anchor="middle" font-family="sans-serif" font-size="14.046808" fill="var(--text-faint)">critical for embedded (no heap)</text>
+  <text x="236.551724" y="458.456399" text-anchor="middle" font-size="26.087093" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Allocators</text>
+  <text x="236.551724" y="487.651071" text-anchor="middle" font-size="17.056995" fill="var(--text-muted)" font-family="Arial, sans-serif">Control memory allocation</text>
+  <text x="236.551724" y="512.953031" text-anchor="middle" font-size="15.050242" fill="var(--text-faint)" font-family="Courier New, monospace">custom pool allocators</text>
+  <text x="236.551724" y="530.46981" text-anchor="middle" font-size="14.046808" fill="var(--text-faint)" font-family="Arial, sans-serif">critical for embedded (no heap)</text>
   <line x1="379.310345" y1="409.798532" x2="495.172303" y2="331.946235" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="846.896552" y="409.798532" width="393.103448" height="126.510164" rx="6.927402" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1043.448276" y="458.456399" text-anchor="middle" font-family="sans-serif" font-size="26.087093" font-weight="bold" fill="var(--text)">Functors</text>
-  <text x="1043.448276" y="487.651071" text-anchor="middle" font-family="sans-serif" font-size="17.056995" fill="var(--text-muted)">Callable objects / lambdas</text>
-  <text x="1043.448276" y="512.953031" text-anchor="middle" font-family="monospace" font-size="15.050242" fill="var(--text-faint)">std::function, lambdas</text>
-  <text x="1043.448276" y="530.46981" text-anchor="middle" font-family="sans-serif" font-size="14.046808" fill="var(--text-faint)">customize algorithm behavior</text>
+  <text x="1043.448276" y="458.456399" text-anchor="middle" font-size="26.087093" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Functors</text>
+  <text x="1043.448276" y="487.651071" text-anchor="middle" font-size="17.056995" fill="var(--text-muted)" font-family="Arial, sans-serif">Callable objects / lambdas</text>
+  <text x="1043.448276" y="512.953031" text-anchor="middle" font-size="15.050242" fill="var(--text-faint)" font-family="Courier New, monospace">std::function, lambdas</text>
+  <text x="1043.448276" y="530.46981" text-anchor="middle" font-size="14.046808" fill="var(--text-faint)" font-family="Arial, sans-serif">customize algorithm behavior</text>
   <line x1="900.689655" y1="409.798532" x2="784.827586" y2="331.946235" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="184.827586" y="573.288549" width="910.344828" height="46.711451" rx="6.927402" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="602.4831" text-anchor="middle" font-family="sans-serif" font-size="17.056995" fill="var(--warn-accent)">Embedded caution: avoid containers that use dynamic memory (vector, map) in production code</text>
+  <rect x="184.827586" y="573.288549" width="910.344828" height="46.711451" rx="6.927402" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="602.4831" text-anchor="middle" font-size="17.056995" fill="var(--warn-accent)" font-family="Arial, sans-serif">Embedded caution: avoid containers that use dynamic memory (vector, map) in production code</text>
 </svg>

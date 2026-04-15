@@ -1,95 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="650.9091" y="40" text-anchor="middle" font-size="28.2824" font-weight="bold">GDB + QEMU Kernel Debug Setup</text>
-  <rect x="40" y="104.4444" width="349.0909" height="386.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="214.5454" y="190.3704" text-anchor="middle" font-size="25.9255" font-weight="bold">GDB (Host)</text>
-  <rect x="61.8181" y="224.7407" width="305.4546" height="94.5185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="214.5454" y="293.4815" text-anchor="middle" font-size="23.5686">target remote :1234</text>
-  <rect x="61.8181" y="340.7407" width="305.4546" height="94.5185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="214.5454" y="409.4815" text-anchor="middle" font-size="23.5686">vmlinux (symbols)</text>
-  <rect x="498.1818" y="104.4444" width="152.7272" height="386.6667" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="574.5454" y="211.8519" text-anchor="middle" font-size="23.5686" font-weight="bold">GDB</text>
-  <text x="574.5454" y="276.2963" text-anchor="middle" font-size="23.5686">Stub</text>
-  <text x="574.5454" y="340.7407" text-anchor="middle" font-size="23.5686">:1234</text>
-  <rect x="738.1818" y="82.963" width="501.8182" height="429.6296" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="989.0909" y="168.8889" text-anchor="middle" font-size="25.9255" font-weight="bold">QEMU VM</text>
-  <rect x="760" y="211.8519" width="218.1818" height="128.8889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="869.0909" y="297.7778" text-anchor="middle" font-size="23.5686">Guest Kernel</text>
-  <rect x="1000" y="211.8519" width="218.1818" height="128.8889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1109.0909" y="297.7778" text-anchor="middle" font-size="23.5686">vCPU (paused)</text>
-  <text x="989.0909" y="448.1481" text-anchor="middle" font-size="23.5686">qemu-system-x86_64 -s -S -kernel vmlinux</text>
-  <line x1="389.0909" y1="297.7778" x2="498.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
-  <line x1="650.9091" y1="297.7778" x2="738.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
-  <text x="443.6363" y="267.7037" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)">TCP</text>
-  <text x="650.9091" y="620" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)">-s = gdbserver on :1234 | -S = freeze CPU at startup</text>
+  <text x="650.9091" y="40" text-anchor="middle" font-size="28.2824" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">GDB + QEMU Kernel Debug Setup</text>
+  <rect x="40" y="104.4444" width="349.0909" height="386.6667" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="214.5454" y="190.3704" text-anchor="middle" font-size="25.9255" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">GDB (Host)</text>
+  <rect x="61.8181" y="224.7407" width="305.4546" height="94.5185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="214.5454" y="293.4815" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--warn-text)">target remote :1234</text>
+  <rect x="61.8181" y="340.7407" width="305.4546" height="94.5185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="214.5454" y="409.4815" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--warn-text)">vmlinux (symbols)</text>
+  <rect x="498.1818" y="104.4444" width="152.7272" height="386.6667" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="574.5454" y="211.8519" text-anchor="middle" font-size="23.5686" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">GDB</text>
+  <text x="574.5454" y="276.2963" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--info-text)">Stub</text>
+  <text x="574.5454" y="340.7407" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--info-text)">:1234</text>
+  <rect x="738.1818" y="82.963" width="501.8182" height="429.6296" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="989.0909" y="168.8889" text-anchor="middle" font-size="25.9255" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">QEMU VM</text>
+  <rect x="760" y="211.8519" width="218.1818" height="128.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="869.0909" y="297.7778" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--danger-text)">Guest Kernel</text>
+  <rect x="1000" y="211.8519" width="218.1818" height="128.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1109.0909" y="297.7778" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--warn-text)">vCPU (paused)</text>
+  <text x="989.0909" y="448.1481" text-anchor="middle" font-size="23.5686" font-family="Arial, sans-serif" fill="var(--ok-text)">qemu-system-x86_64 -s -S -kernel vmlinux</text>
+  <line x1="389.0909" y1="297.7778" x2="498.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="650.9091" y1="297.7778" x2="738.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="443.6363" y="267.7037" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)" font-family="Arial, sans-serif">TCP</text>
+  <text x="650.9091" y="620" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)" font-family="Arial, sans-serif">-s = gdbserver on :1234 | -S = freeze CPU at startup</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -97,26 +97,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowd0_05_qemu_kernel_debugging" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
 </svg>

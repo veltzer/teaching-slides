@@ -4,146 +4,144 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --danger-accent: #4a1f1a;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+  </defs>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  <!--
+    Layout:
+      x=60..290  → left-side label column (text-anchor=start, fits within)
+      x=310..1210 → 900px bar track, scaled 0..100 relative cost
+      y=60..540  → 5 rows, each 90px tall with 40px bar
+      y=560..600 → axis + legend
+      y=610..650 → recommendation strip
+    All text kept well inside [40,1240].
+  -->
 
-  <!-- Background -->
-  <!-- Chart area -->
-  <rect x="40" y="40" width="1200" height="580" rx="6.4" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.478667" font-weight="bold" fill="var(--primary-accent)">EC2 Pricing Models — Relative Cost Comparison</text>
 
-  <!-- Y-axis labels and bars -->
-  <!-- Bar 1: On-Demand -->
-  <text x="250" y="104.76672" text-anchor="end" font-family="Arial, sans-serif" font-size="15.731093" font-weight="bold" fill="var(--text)">On-Demand</text>
-  <text x="250" y="124.100053" text-anchor="end" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--text-muted)">Pay by hour/second, no commitment</text>
-  <rect x="270" y="90.266667" width="700" height="42.533333" rx="6.4" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="930" y="117.333333" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--bg)">100% (baseline)</text>
-  <text x="990" y="117.333333" font-family="Arial, sans-serif" font-size="13.764693" fill="var(--danger-accent)">$$$$</text>
+  <!-- Row 1: On-Demand (100%) -->
+  <text x="40" y="85" font-family="Arial, sans-serif" font-size="18.307715"
+        font-weight="bold" fill="var(--text)">On-Demand</text>
+  <text x="40" y="108" font-family="Arial, sans-serif" font-size="13.222238"
+        fill="var(--text-muted)">Pay by hour/second, no commitment</text>
+  <rect x="298.62069" y="80" width="931.034483" height="38" rx="6.102572"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="1214.137931" y="104" text-anchor="end" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--bg)">100% (baseline)  $$$$</text>
 
-  <!-- Bar 2: Reserved Instances -->
-  <text x="250" y="201.433387" text-anchor="end" font-family="Arial, sans-serif" font-size="15.731093" font-weight="bold" fill="var(--text)">Reserved</text>
-  <text x="250" y="220.76672" text-anchor="end" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--text-muted)">1-3 year commitment</text>
-  <rect x="270" y="186.933333" width="490" height="42.533333" rx="6.4" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="720" y="214" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--bg)">28-72% savings</text>
-  <rect x="760" y="186.933333" width="210" height="42.533333" rx="6.4" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3" opacity="0.5" filter="url(#shadow)"/>
-  <text x="865" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--danger-accent)">saved</text>
+  <!-- Row 2: Reserved -->
+  <text x="40" y="175" font-family="Arial, sans-serif" font-size="18.307715"
+        font-weight="bold" fill="var(--text)">Reserved</text>
+  <text x="40" y="198" font-family="Arial, sans-serif" font-size="13.222238"
+        fill="var(--text-muted)">1–3 year commitment</text>
+  <rect x="298.62069" y="170" width="418.965517" height="38" rx="6.102572"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <rect x="717.586207" y="170" width="512.068966" height="38" rx="6.102572"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"
+        stroke-dasharray="5,3" opacity="0.4" filter="url(#shadow)"/>
+  <text x="505.517241" y="194" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--bg)">28–72% savings</text>
+  <text x="971.034483" y="194" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="13.222238" fill="var(--danger-accent)">saved</text>
 
-  <!-- Bar 3: Savings Plans -->
-  <text x="250" y="298.100053" text-anchor="end" font-family="Arial, sans-serif" font-size="15.731093" font-weight="bold" fill="var(--text)">Savings Plans</text>
-  <text x="250" y="317.433387" text-anchor="end" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--text-muted)">Flexible, $/hr commitment</text>
-  <rect x="270" y="283.6" width="440" height="42.533333" rx="6.4" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="670" y="310.666667" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--primary-accent)">34-66% savings</text>
-  <rect x="710" y="283.6" width="260" height="42.533333" rx="6.4" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3" opacity="0.5" filter="url(#shadow)"/>
-  <text x="840" y="310.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--danger-accent)">saved</text>
+  <!-- Row 3: Savings Plans -->
+  <text x="40" y="265" font-family="Arial, sans-serif" font-size="18.307715"
+        font-weight="bold" fill="var(--text)">Savings Plans</text>
+  <text x="40" y="288" font-family="Arial, sans-serif" font-size="13.222238"
+        fill="var(--text-muted)">Flexible $/hr commitment</text>
+  <rect x="298.62069" y="260" width="465.517241" height="38" rx="6.102572"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <rect x="764.137931" y="260" width="465.517241" height="38" rx="6.102572"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"
+        stroke-dasharray="5,3" opacity="0.4" filter="url(#shadow)"/>
+  <text x="531.37931" y="284" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--bg)">34–66% savings</text>
+  <text x="996.896552" y="284" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="13.222238" fill="var(--danger-accent)">saved</text>
 
-  <!-- Bar 4: Spot Instances -->
-  <text x="250" y="394.76672" text-anchor="end" font-family="Arial, sans-serif" font-size="15.731093" font-weight="bold" fill="var(--text)">Spot</text>
-  <text x="250" y="414.100053" text-anchor="end" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--text-muted)">Spare capacity, can be interrupted</text>
-  <rect x="270" y="380.266667" width="70" height="42.533333" rx="6.4" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="360" y="407.333333" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--ok-accent)">Up to 90% savings</text>
-  <rect x="340" y="380.266667" width="630" height="42.533333" rx="6.4" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3" opacity="0.5" filter="url(#shadow)"/>
-  <text x="655" y="407.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--ok-accent)">saved</text>
+  <!-- Row 4: Spot -->
+  <text x="40" y="355" font-family="Arial, sans-serif" font-size="18.307715"
+        font-weight="bold" fill="var(--text)">Spot</text>
+  <text x="40" y="378" font-family="Arial, sans-serif" font-size="13.222238"
+        fill="var(--text-muted)">Spare capacity, can be interrupted</text>
+  <rect x="298.62069" y="350" width="93.103448" height="38" rx="6.102572"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <rect x="391.724138" y="350" width="837.931034" height="38" rx="6.102572"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
+        stroke-dasharray="5,3" opacity="0.4" filter="url(#shadow)"/>
+  <text x="810.689655" y="374" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--ok-accent)">up to 90% savings</text>
 
-  <!-- Bar 5: Dedicated Hosts -->
-  <text x="250" y="491.433387" text-anchor="end" font-family="Arial, sans-serif" font-size="15.731093" font-weight="bold" fill="var(--text)">Dedicated Hosts</text>
-  <text x="250" y="510.76672" text-anchor="end" font-family="Arial, sans-serif" font-size="11.798293" fill="var(--text-muted)">Physical server, compliance needs</text>
-  <rect x="270" y="476.933333" width="750" height="42.533333" rx="6.4" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="935" y="504" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--warn-accent)">Most expensive</text>
-  <text x="980" y="504" font-family="Arial, sans-serif" font-size="13.764693" fill="var(--warn-accent)">$$$$$</text>
+  <!-- Row 5: Dedicated Hosts -->
+  <text x="40" y="445" font-family="Arial, sans-serif" font-size="18.307715"
+        font-weight="bold" fill="var(--text)">Dedicated Hosts</text>
+  <text x="40" y="468" font-family="Arial, sans-serif" font-size="13.222238"
+        fill="var(--text-muted)">Physical server, compliance needs</text>
+  <rect x="298.62069" y="440" width="931.034483" height="38" rx="6.102572"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="1214.137931" y="464" text-anchor="end" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--bg)">most expensive  $$$$$</text>
 
-  <!-- Cost axis -->
-  <line x1="270" y1="542.666667" x2="970" y2="542.666667" stroke="var(--border)" stroke-width="2"/>
-  <text x="270" y="566.83328" font-family="Arial, sans-serif" font-size="12.781547" fill="var(--text-muted)">$0</text>
-  <text x="620" y="566.83328" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.764693" font-weight="bold" fill="var(--text)">Relative Cost per Hour</text>
-  <text x="970" y="566.83328" text-anchor="end" font-family="Arial, sans-serif" font-size="12.781547" fill="var(--text-muted)">$$$</text>
+  <!-- Cost axis under bars -->
+  <line x1="298.62069" y1="510" x2="1229.655172" y2="510" stroke="var(--border)" stroke-width="2"/>
+  <text x="298.62069" y="535" font-family="Arial, sans-serif" font-size="13.222238" fill="var(--text-muted)">$0</text>
+  <text x="764.137931" y="535" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="14.239334" font-weight="bold" fill="var(--text)">Relative Cost per Hour</text>
+  <text x="1229.655172" y="535" text-anchor="end" font-family="Arial, sans-serif"
+        font-size="13.222238" fill="var(--text-muted)">$$$$$</text>
 
-  <!-- Recommendation note -->
-  <rect x="270" y="581.333333" width="700" height="29" rx="6.4" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620" y="600.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.781547" fill="var(--primary-accent)">Tip: Combine pricing models for optimal cost. Use Reserved for baseline, Spot for burst, On-Demand for unpredictable.</text>
+  <!-- Recommendation strip -->
+  <rect x="40" y="560" width="1200" height="60" rx="8.136762"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="15.256429" font-weight="bold" fill="var(--bg)">Tip</text>
+  <text x="640" y="607" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="14.239334" fill="var(--bg)">Combine models: Reserved for baseline, Spot for burst, On-Demand for unpredictable.</text>
 </svg>

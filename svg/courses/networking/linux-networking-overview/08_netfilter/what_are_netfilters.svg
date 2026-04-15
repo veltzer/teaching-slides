@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,34 +97,31 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="356.896552" height="301.599994" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)" />
-  <rect x="40" y="40" width="356.896552" height="60.320028" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="86.399833" width="356.896552" height="13.920051" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="217.931034" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)">User Space</text>
-  <text x="217.931034" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">iptables / nftables</text>
-  <text x="217.931034" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">libnetfilter_queue</text>
-  <text x="217.931034" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">conntrack CLI</text>
-  <rect x="461.034483" y="40" width="356.896552" height="301.599994" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)" />
-  <rect x="461.034483" y="40" width="356.896552" height="60.320028" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="461.034483" y="86.399833" width="356.896552" height="13.920051" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="638.965517" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)">Netfilter Hooks</text>
-  <text x="638.965517" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">PRE/POST ROUTING</text>
-  <text x="638.965517" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">INPUT / OUTPUT</text>
-  <text x="638.965517" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">FORWARD</text>
-  <rect x="882.068966" y="40" width="356.896552" height="301.599994" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)" />
-  <rect x="882.068966" y="40" width="356.896552" height="60.320028" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="882.068966" y="86.399833" width="356.896552" height="13.920051" fill="var(--primary-fill)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)">Tables</text>
-  <text x="1060" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">filter (default)</text>
-  <text x="1060" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">nat / mangle</text>
-  <text x="1060" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">raw / security</text>
+  <rect x="40" y="40" width="356.896552" height="301.599994" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="356.896552" height="60.320028" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.399833" width="356.896552" height="13.920051" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="217.931034" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">User Space</text>
+  <text x="217.931034" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">iptables / nftables</text>
+  <text x="217.931034" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">libnetfilter_queue</text>
+  <text x="217.931034" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">conntrack CLI</text>
+  <rect x="461.034483" y="40" width="356.896552" height="301.599994" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)"/>
+  <rect x="461.034483" y="40" width="356.896552" height="60.320028" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="461.034483" y="86.399833" width="356.896552" height="13.920051" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="638.965517" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Netfilter Hooks</text>
+  <text x="638.965517" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">PRE/POST ROUTING</text>
+  <text x="638.965517" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">INPUT / OUTPUT</text>
+  <text x="638.965517" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">FORWARD</text>
+  <rect x="882.068966" y="40" width="356.896552" height="301.599994" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.563251" filter="url(#shadow)"/>
+  <rect x="882.068966" y="40" width="356.896552" height="60.320028" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="882.068966" y="86.399833" width="356.896552" height="13.920051" fill="url(#grad-primary)" rx="7.563251" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="81.760008" text-anchor="middle" font-size="23.004385" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Tables</text>
+  <text x="1060" y="165.280024" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">filter (default)</text>
+  <text x="1060" y="216.31997" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">nat / mangle</text>
+  <text x="1060" y="267.359916" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">raw / security</text>
   <line x1="396.896552" y1="188.480013" x2="461.034483" y2="188.480013" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="817.931034" y1="188.480013" x2="882.068966" y2="188.480013" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="40" y="443.68003" width="1200" height="176.31997" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.563251" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)" />
-  <text x="640" y="522.560077" text-anchor="middle" font-size="23.004385" fill="var(--text)">Each hook point invokes registered callback functions (nf_hook_ops)</text>
-  <text x="640" y="578.239992" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)">Verdicts: NF_ACCEPT | NF_DROP | NF_QUEUE | NF_STOLEN | NF_REPEAT</text>
+  <rect x="40" y="443.68003" width="1200" height="176.31997" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.563251" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
+  <text x="640" y="522.560077" text-anchor="middle" font-size="23.004385" fill="var(--text)" font-family="Arial, sans-serif">Each hook point invokes registered callback functions (nf_hook_ops)</text>
+  <text x="640" y="578.239992" text-anchor="middle" font-size="19.718026" fill="var(--text-muted)" font-family="Arial, sans-serif">Verdicts: NF_ACCEPT | NF_DROP | NF_QUEUE | NF_STOLEN | NF_REPEAT</text>
 </svg>

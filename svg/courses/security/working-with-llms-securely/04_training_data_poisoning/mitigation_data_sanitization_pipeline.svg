@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,33 +97,30 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="741.821812" y="40" text-anchor="middle" font-size="33.251068" font-weight="bold" fill="var(--text)">Training Data Cleaning Pipeline</text>
-  <rect x="40" y="125.29405" width="189.837047" height="170.588277" rx="8.829788" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="135.493788" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)">Raw Data</text>
+  <text x="741.821812" y="40" text-anchor="middle" font-size="33.251068" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Training Data Cleaning Pipeline</text>
+  <rect x="40" y="125.29405" width="189.837047" height="170.588277" rx="8.829788" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="135.493788" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Raw Data</text>
   <line x1="229.837047" y1="210.588277" x2="267.804457" y2="210.588277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="272.406567" y="125.29405" width="201.342323" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="373.65287" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)">Deduplication</text>
+  <rect x="272.406567" y="125.29405" width="201.342323" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="373.65287" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Deduplication</text>
   <line x1="473.74889" y1="210.588277" x2="511.7163" y2="210.588277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="516.31841" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="623.317473" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)">Lang Filtering</text>
+  <rect x="516.31841" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="623.317473" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Lang Filtering</text>
   <line x1="729.166009" y1="210.588277" x2="767.133295" y2="210.588277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="771.735528" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="878.734591" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)">Toxicity Filter</text>
+  <rect x="771.735528" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="878.734591" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Toxicity Filter</text>
   <line x1="984.583004" y1="210.588277" x2="1022.550537" y2="210.588277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1027.152524" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1134.15171" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)">Quality Scoring</text>
+  <rect x="1027.152524" y="125.29405" width="212.847476" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1134.15171" y="221.960923" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Quality Scoring</text>
   <line x1="1134.15171" y1="295.882327" x2="1134.15171" y2="438.039254" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1027.152524" y="449.411723" width="212.847476" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1134.15171" y="546.078596" text-anchor="middle" font-size="23.019993" fill="var(--text)">PII Removal</text>
+  <rect x="1027.152524" y="449.411723" width="212.847476" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1134.15171" y="546.078596" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">PII Removal</text>
   <line x1="1027.152524" y1="534.705773" x2="969.626269" y2="534.705773" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="672.790158" y="449.411723" width="287.63189" height="170.588277" rx="8.829788" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="816.606103" y="546.078596" text-anchor="middle" font-size="23.019993" fill="var(--text)">Manual Sampling</text>
-  <text x="816.606103" y="583.039298" text-anchor="middle" font-size="23.019993" fill="var(--text)">&amp; Review</text>
+  <rect x="672.790158" y="449.411723" width="287.63189" height="170.588277" rx="8.829788" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="816.606103" y="546.078596" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">Manual Sampling</text>
+  <text x="816.606103" y="583.039298" text-anchor="middle" font-size="23.019993" fill="var(--text)" font-family="Arial, sans-serif">&amp; Review</text>
   <line x1="672.790158" y1="534.705773" x2="615.26378" y2="534.705773" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="281.610788" y="449.411723" width="322.147717" height="170.588277" rx="8.829788" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="442.684646" y="546.078596" text-anchor="middle" font-size="25.577835" font-weight="bold" fill="var(--ok-accent)">Clean Training Data</text>
+  <rect x="281.610788" y="449.411723" width="322.147717" height="170.588277" rx="8.829788" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="442.684646" y="546.078596" text-anchor="middle" font-size="25.577835" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Clean Training Data</text>
 </svg>

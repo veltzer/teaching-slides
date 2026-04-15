@@ -1,86 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <stop offset="0%" style="stop-color:#1a1a2e" />
       <stop offset="100%" style="stop-color:#0d1117" />
@@ -93,39 +105,39 @@
   <rect width="902.2558" height="517.8572" fill="url(#bg)" rx="6" x="40" y="40"/>
   <polygon points="484.3608,257.5001 439.248,438.7501 484.3608,438.7501 450.5262,594.1072 563.3083,386.9642 512.5563,386.9642 552.0299,257.5001" fill="url(#spark-orange)" />
   <circle cx="732.4812" cy="309.2858" r="28.4813" fill="var(--text)" stroke="var(--warn-border)" stroke-width="0.9689" />
-  <text x="732.4812" y="315.7589" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="17.694">RDD</text>
+  <text x="732.4812" y="315.7589" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-family="Courier New, monospace">RDD</text>
   <circle cx="653.5339" cy="425.8037" r="28.4813" fill="var(--text)" stroke="var(--warn-border)" stroke-width="0.9689" />
-  <text x="653.5339" y="432.2769" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="17.694">map</text>
+  <text x="653.5339" y="432.2769" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-family="Courier New, monospace">map</text>
   <circle cx="811.4284" cy="425.8037" r="28.4813" fill="var(--text)" stroke="var(--warn-border)" stroke-width="0.9689" />
-  <text x="811.4284" y="432.2769" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="17.694">filter</text>
+  <text x="811.4284" y="432.2769" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-family="Courier New, monospace">filter</text>
   <circle cx="732.4812" cy="542.3215" r="28.4813" fill="var(--text)" stroke="var(--ok-border)" stroke-width="0.9689" />
-  <text x="732.4812" y="548.7949" text-anchor="middle" fill="var(--ok-accent)" font-family="monospace" font-size="17.694">reduce</text>
+  <text x="732.4812" y="548.7949" text-anchor="middle" fill="var(--ok-accent)" font-size="17.694" font-family="Courier New, monospace">reduce</text>
   <line x1="715.5637" y1="339.0625" x2="670.4509" y2="396.0269" stroke="var(--text-muted)" stroke-width="0.6459" />
   <line x1="749.3985" y1="339.0625" x2="794.5112" y2="396.0269" stroke="var(--text-muted)" stroke-width="0.6459" />
   <line x1="670.4509" y1="455.5804" x2="715.5637" y2="512.5447" stroke="var(--text-muted)" stroke-width="0.6459" />
   <line x1="794.5112" y1="455.5804" x2="749.3985" y2="512.5447" stroke="var(--text-muted)" stroke-width="0.6459" />
   <rect x="935.4886" y="283.3928" width="124.0601" height="90.625" rx="6" fill="var(--text)" stroke="var(--primary-border)" stroke-width="0.6459" />
-  <text x="997.5188" y="315.7589" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial" font-size="17.694" font-weight="bold">Executor 1</text>
-  <rect x="950.1504" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="991.8799" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="967.0676" y="353.3037" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="17.694">T1</text>
-  <text x="1008.7969" y="353.3037" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="17.694">T2</text>
+  <text x="997.5188" y="315.7589" text-anchor="middle" fill="var(--primary-accent)" font-size="17.694" font-weight="bold" font-family="Arial, sans-serif">Executor 1</text>
+  <rect x="950.1504" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="url(#grad-primary)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="991.8799" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="url(#grad-primary)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="967.0676" y="353.3037" text-anchor="middle" fill="var(--primary-accent)" font-size="17.694" font-family="Courier New, monospace">T1</text>
+  <text x="1008.7969" y="353.3037" text-anchor="middle" fill="var(--primary-accent)" font-size="17.694" font-family="Courier New, monospace">T2</text>
   <rect x="1093.3835" y="283.3928" width="124.0601" height="90.625" rx="6" fill="var(--text)" stroke="var(--info-border)" stroke-width="0.6459" />
-  <text x="1155.4136" y="315.7589" text-anchor="middle" fill="var(--info-accent)" font-family="Arial" font-size="17.694" font-weight="bold">Executor 2</text>
-  <rect x="1108.0451" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="var(--info-fill)" opacity="0.3" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1149.7745" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="var(--info-fill)" opacity="0.3" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1124.9623" y="353.3037" text-anchor="middle" fill="var(--info-accent)" font-family="monospace" font-size="17.694">T3</text>
-  <text x="1166.6917" y="353.3037" text-anchor="middle" fill="var(--info-accent)" font-family="monospace" font-size="17.694">T4</text>
+  <text x="1155.4136" y="315.7589" text-anchor="middle" fill="var(--info-accent)" font-size="17.694" font-weight="bold" font-family="Arial, sans-serif">Executor 2</text>
+  <rect x="1108.0451" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="url(#grad-info)" opacity="0.3" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1149.7745" y="335.1786" width="33.8346" height="25.8928" rx="6" fill="url(#grad-info)" opacity="0.3" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1124.9623" y="353.3037" text-anchor="middle" fill="var(--info-accent)" font-size="17.694" font-family="Courier New, monospace">T3</text>
+  <text x="1166.6917" y="353.3037" text-anchor="middle" fill="var(--info-accent)" font-size="17.694" font-family="Courier New, monospace">T4</text>
   <rect x="1014.436" y="425.8037" width="135.3386" height="64.7321" rx="6" fill="var(--text)" stroke="var(--warn-border)" stroke-width="0.6459" />
-  <text x="1082.1053" y="464.6431" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial" font-size="17.694" font-weight="bold">Driver</text>
+  <text x="1082.1053" y="464.6431" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-weight="bold" font-family="Arial, sans-serif">Driver</text>
   <path d="M 935.4886 568.2144 Q 991.8799 529.375 1048.2706 568.2144" fill="none" stroke="var(--warn-border)" stroke-width="0.6459" stroke-dasharray="1.6149 0.9689" />
   <path d="M 1048.2706 568.2144 Q 1104.6616 529.375 1161.0527 568.2144" fill="none" stroke="var(--warn-border)" stroke-width="0.6459" stroke-dasharray="1.6149 0.9689" />
   <rect x="901.6542" y="568.2144" width="90.2255" height="51.7856" rx="6" fill="var(--text)" stroke="var(--ok-border)" stroke-width="0.4845" />
-  <text x="946.767" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial" font-size="17.694">Stage 0</text>
+  <text x="946.767" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-size="17.694" font-family="Arial, sans-serif">Stage 0</text>
   <rect x="1025.7141" y="568.2144" width="90.2255" height="51.7856" rx="6" fill="var(--text)" stroke="var(--ok-border)" stroke-width="0.4845" />
-  <text x="1070.827" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial" font-size="17.694">Stage 1</text>
+  <text x="1070.827" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-size="17.694" font-family="Arial, sans-serif">Stage 1</text>
   <rect x="1149.7745" y="568.2144" width="90.2255" height="51.7856" rx="6" fill="var(--text)" stroke="var(--ok-border)" stroke-width="0.4845" />
-  <text x="1194.8873" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-family="Arial" font-size="17.694">Stage 2</text>
-  <text x="1048.2706" y="548.7949" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial" font-size="17.694">shuffle</text>
-  <text x="1161.0527" y="548.7949" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial" font-size="17.694">shuffle</text>
+  <text x="1194.8873" y="600.5803" text-anchor="middle" fill="var(--ok-accent)" font-size="17.694" font-family="Arial, sans-serif">Stage 2</text>
+  <text x="1048.2706" y="548.7949" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-family="Arial, sans-serif">shuffle</text>
+  <text x="1161.0527" y="548.7949" text-anchor="middle" fill="var(--warn-accent)" font-size="17.694" font-family="Arial, sans-serif">shuffle</text>
 </svg>

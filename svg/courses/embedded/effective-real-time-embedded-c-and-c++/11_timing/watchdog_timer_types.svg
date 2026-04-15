@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,42 +97,39 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="372.413827" height="201.388875" rx="7.046643" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="226.206914" y="88.33325" text-anchor="middle" font-family="sans-serif" font-size="26.536131" font-weight="bold" fill="var(--bg)">Independent WDT</text>
-  <text x="226.206914" y="118.541625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--primary-accent)">Separate RC clock</text>
-  <text x="226.206914" y="144.722125" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--primary-accent)">Runs even if main clock fails</text>
-  <text x="226.206914" y="170.902625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--primary-accent)">Must be kicked before timeout</text>
-  <text x="226.206914" y="197.08325" text-anchor="middle" font-family="sans-serif" font-size="15.309302" fill="var(--primary-accent)">→ catch complete hangs</text>
-  <text x="226.206914" y="221.25" text-anchor="middle" font-family="monospace" font-size="14.288595" fill="var(--primary-accent)">IWDG_KR = 0xAAAA (kick)</text>
+  <rect x="40" y="40" width="372.413827" height="201.388875" rx="7.046643" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.206914" y="88.33325" text-anchor="middle" font-size="26.536131" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Independent WDT</text>
+  <text x="226.206914" y="118.541625" text-anchor="middle" font-size="17.350597" fill="var(--primary-accent)" font-family="Arial, sans-serif">Separate RC clock</text>
+  <text x="226.206914" y="144.722125" text-anchor="middle" font-size="17.350597" fill="var(--primary-accent)" font-family="Arial, sans-serif">Runs even if main clock fails</text>
+  <text x="226.206914" y="170.902625" text-anchor="middle" font-size="17.350597" fill="var(--primary-accent)" font-family="Arial, sans-serif">Must be kicked before timeout</text>
+  <text x="226.206914" y="197.08325" text-anchor="middle" font-size="15.309302" fill="var(--primary-accent)" font-family="Arial, sans-serif">→ catch complete hangs</text>
+  <text x="226.206914" y="221.25" text-anchor="middle" font-size="14.288595" fill="var(--primary-accent)" font-family="Courier New, monospace">IWDG_KR = 0xAAAA (kick)</text>
   <rect x="453.793141" y="40" width="372.413827" height="201.388875" rx="7.046643" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000055" y="88.33325" text-anchor="middle" font-family="sans-serif" font-size="26.536131" font-weight="bold" fill="var(--text)">Window WDT</text>
-  <text x="640.000055" y="118.541625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">Must kick within a time window</text>
-  <text x="640.000055" y="144.722125" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">Too early = reset. Too late = reset</text>
-  <text x="640.000055" y="170.902625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">Enforces correct timing</text>
-  <text x="640.000055" y="197.08325" text-anchor="middle" font-family="sans-serif" font-size="15.309302" fill="var(--text-faint)">→ catch runaway/too-fast loops</text>
-  <text x="640.000055" y="221.25" text-anchor="middle" font-family="monospace" font-size="14.288595" fill="var(--text-faint)">min_time &lt; kick &lt; max_time</text>
+  <text x="640.000055" y="88.33325" text-anchor="middle" font-size="26.536131" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Window WDT</text>
+  <text x="640.000055" y="118.541625" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">Must kick within a time window</text>
+  <text x="640.000055" y="144.722125" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">Too early = reset. Too late = reset</text>
+  <text x="640.000055" y="170.902625" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">Enforces correct timing</text>
+  <text x="640.000055" y="197.08325" text-anchor="middle" font-size="15.309302" fill="var(--text-faint)" font-family="Arial, sans-serif">→ catch runaway/too-fast loops</text>
+  <text x="640.000055" y="221.25" text-anchor="middle" font-size="14.288595" fill="var(--text-faint)" font-family="Courier New, monospace">min_time &lt; kick &lt; max_time</text>
   <rect x="867.586173" y="40" width="372.413827" height="201.388875" rx="7.046643" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1053.793086" y="88.33325" text-anchor="middle" font-family="sans-serif" font-size="26.536131" font-weight="bold" fill="var(--text)">System WDT</text>
-  <text x="1053.793086" y="118.541625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">Uses CPU/APB clock</text>
-  <text x="1053.793086" y="144.722125" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">Software-configurable</text>
-  <text x="1053.793086" y="170.902625" text-anchor="middle" font-family="sans-serif" font-size="17.350597" fill="var(--text-muted)">May stop in low-power modes</text>
-  <text x="1053.793086" y="197.08325" text-anchor="middle" font-family="sans-serif" font-size="15.309302" fill="var(--text-faint)">→ general-purpose watchdog</text>
+  <text x="1053.793086" y="88.33325" text-anchor="middle" font-size="26.536131" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">System WDT</text>
+  <text x="1053.793086" y="118.541625" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">Uses CPU/APB clock</text>
+  <text x="1053.793086" y="144.722125" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">Software-configurable</text>
+  <text x="1053.793086" y="170.902625" text-anchor="middle" font-size="17.350597" fill="var(--text-muted)" font-family="Arial, sans-serif">May stop in low-power modes</text>
+  <text x="1053.793086" y="197.08325" text-anchor="middle" font-size="15.309302" fill="var(--text-faint)" font-family="Arial, sans-serif">→ general-purpose watchdog</text>
   <rect x="164.137942" y="291.736" width="951.724225" height="201.388875" rx="7.046643" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000055" y="321.94425" text-anchor="middle" font-family="sans-serif" font-size="18.371185" font-weight="bold" fill="var(--text)">Window WDT kick timing</text>
+  <text x="640.000055" y="321.94425" text-anchor="middle" font-size="18.371185" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Window WDT kick timing</text>
   <line x1="205.517257" y1="382.361" x2="1074.482854" y2="382.361" stroke="var(--border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="205.517257" y="352.152625" width="289.655199" height="60.416625" rx="7.046643" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="350.344856" y="386.38875" text-anchor="middle" font-family="sans-serif" font-size="14.288595" fill="var(--danger-accent)">Too early → reset</text>
-  <rect x="495.172345" y="352.152625" width="289.655199" height="60.416625" rx="7.046643" fill="var(--ok-fill)" opacity="0.8" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000055" y="386.38875" text-anchor="middle" font-family="sans-serif" font-size="16.32989" fill="var(--ok-accent)" font-weight="bold">✓ Valid window</text>
-  <rect x="784.827655" y="352.152625" width="258.620713" height="60.416625" rx="7.046643" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="914.137901" y="386.38875" text-anchor="middle" font-family="sans-serif" font-size="14.288595" fill="var(--danger-accent)">Too late → reset</text>
+  <rect x="205.517257" y="352.152625" width="289.655199" height="60.416625" rx="7.046643" fill="url(#grad-danger)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="350.344856" y="386.38875" text-anchor="middle" font-size="14.288595" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too early → reset</text>
+  <rect x="495.172345" y="352.152625" width="289.655199" height="60.416625" rx="7.046643" fill="url(#grad-ok)" opacity="0.8" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000055" y="386.38875" text-anchor="middle" font-size="16.32989" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">✓ Valid window</text>
+  <rect x="784.827655" y="352.152625" width="258.620713" height="60.416625" rx="7.046643" fill="url(#grad-danger)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="914.137901" y="386.38875" text-anchor="middle" font-size="14.288595" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too late → reset</text>
   <line x1="495.172345" y1="342.08325" x2="495.172345" y2="422.63875" stroke="var(--text-muted)" stroke-width="1.7778" />
   <line x1="784.827655" y1="342.08325" x2="784.827655" y2="422.63875" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <text x="495.172345" y="338.0555" text-anchor="middle" font-family="sans-serif" font-size="13.268124" fill="var(--text-muted)">t_min</text>
-  <text x="784.827655" y="338.0555" text-anchor="middle" font-family="sans-serif" font-size="13.268124" fill="var(--text-muted)">t_max</text>
-  <text x="640.000055" y="620" text-anchor="middle" font-family="sans-serif" font-size="16.32989" fill="var(--text-muted)">Always kick watchdog from the main application loop — not from an ISR alone</text>
+  <text x="495.172345" y="338.0555" text-anchor="middle" font-size="13.268124" fill="var(--text-muted)" font-family="Arial, sans-serif">t_min</text>
+  <text x="784.827655" y="338.0555" text-anchor="middle" font-size="13.268124" fill="var(--text-muted)" font-family="Arial, sans-serif">t_max</text>
+  <text x="640.000055" y="620" text-anchor="middle" font-size="16.32989" fill="var(--text-muted)" font-family="Arial, sans-serif">Always kick watchdog from the main application loop — not from an ISR alone</text>
 </svg>

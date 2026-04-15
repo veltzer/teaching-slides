@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,50 +75,47 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="asd" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16 0,8" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="27.0523" font-weight="bold" fill="var(--text)">Stage 3: RLHF</text>
-  <rect x="40" y="67.9518" width="1200" height="181.6868" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="102.8916" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--primary-accent)">Step 1: Collect Comparison Data</text>
-  <text x="639.9999" y="137.8313" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)">Prompt: "Write a haiku about coding"</text>
-  <rect x="105.4544" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="367.2726" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--ok-accent)">Response A (better)</text>
-  <text x="367.2726" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)">"Fingers on the keys / Logic</text>
-  <text x="367.2726" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)">flows like a river / Bug found..."</text>
-  <rect x="672.7272" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="934.5454" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--danger-accent)">Response B (worse)</text>
-  <text x="934.5454" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)">"Code code code today / I</text>
-  <text x="934.5454" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)">like to write the code..."</text>
-  <line x1="639.9999" y1="249.6385" x2="639.9999" y2="291.5663" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#asd)" />
-  <rect x="149.0909" y="291.5663" width="981.8182" height="83.8554" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="326.506" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--danger-accent)">Step 2: Train Reward Model</text>
-  <text x="639.9999" y="358.6506" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)">reward_model(prompt, response) -&gt; scalar score</text>
-  <line x1="639.9999" y1="375.4217" x2="639.9999" y2="417.3494" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#asd)" />
-  <rect x="149.0909" y="417.3494" width="981.8182" height="83.8554" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="452.2891" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--ok-accent)">Step 3: Optimize with PPO</text>
-  <text x="639.9999" y="484.4337" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)">Maximize reward while staying close to SFT model</text>
-  <line x1="639.9999" y1="501.2048" x2="639.9999" y2="536.1446" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#asd)" />
-  <text x="639.9999" y="568.2891" text-anchor="middle" font-size="21.98" fill="var(--text)">Human ranks: A &gt; B</text>
-  <rect x="258.1816" y="578.0723" width="763.6363" height="41.9277" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="606.0241" text-anchor="middle" font-size="20.2892" font-weight="bold" fill="var(--ok-accent)">Result: Aligned, safe, helpful model</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="27.0523" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Stage 3: RLHF</text>
+  <rect x="40" y="67.9518" width="1200" height="181.6868" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="102.8916" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Step 1: Collect Comparison Data</text>
+  <text x="639.9999" y="137.8313" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">Prompt: "Write a haiku about coding"</text>
+  <rect x="105.4544" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="367.2726" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Response A (better)</text>
+  <text x="367.2726" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">"Fingers on the keys / Logic</text>
+  <text x="367.2726" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">flows like a river / Bug found..."</text>
+  <rect x="672.7272" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="934.5454" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Response B (worse)</text>
+  <text x="934.5454" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">"Code code code today / I</text>
+  <text x="934.5454" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">like to write the code..."</text>
+  <line x1="639.9999" y1="249.6385" x2="639.9999" y2="291.5663" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="149.0909" y="291.5663" width="981.8182" height="83.8554" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="326.506" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 2: Train Reward Model</text>
+  <text x="639.9999" y="358.6506" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">reward_model(prompt, response) -&gt; scalar score</text>
+  <line x1="639.9999" y1="375.4217" x2="639.9999" y2="417.3494" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="149.0909" y="417.3494" width="981.8182" height="83.8554" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="452.2891" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 3: Optimize with PPO</text>
+  <text x="639.9999" y="484.4337" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">Maximize reward while staying close to SFT model</text>
+  <line x1="639.9999" y1="501.2048" x2="639.9999" y2="536.1446" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="639.9999" y="568.2891" text-anchor="middle" font-size="21.98" fill="var(--text)" font-family="Arial, sans-serif">Human ranks: A &gt; B</text>
+  <rect x="258.1816" y="578.0723" width="763.6363" height="41.9277" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="606.0241" text-anchor="middle" font-size="20.2892" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Result: Aligned, safe, helpful model</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -103,16 +103,16 @@
     </linearGradient>
   </defs>
   <!-- Header bar -->
-  <rect x="40" y="40" width="1200" height="8.436364" fill="var(--primary-fill)" rx="6.472319" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="1200" height="8.436364" fill="url(#grad-primary)" rx="6.472319" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
 
   <!-- Column headers -->
-  <rect x="77.5" y="61.090909" width="337.5" height="46.4" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="77.5" y="61.090909" width="337.5" height="46.4" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="246.25" y="90.618182" font-family="Arial, sans-serif" font-size="19.886091" font-weight="bold" fill="var(--bg)" text-anchor="middle">Feature</text>
 
-  <rect x="443.125" y="61.090909" width="337.5" height="46.4" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="443.125" y="61.090909" width="337.5" height="46.4" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="611.875" y="90.618182" font-family="Arial, sans-serif" font-size="19.886091" font-weight="bold" fill="var(--bg)" text-anchor="middle">AT&amp;T Syntax (GAS)</text>
 
-  <rect x="808.75" y="61.090909" width="393.75" height="46.4" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="808.75" y="61.090909" width="393.75" height="46.4" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1005.625" y="90.618182" font-family="Arial, sans-serif" font-size="19.886091" font-weight="bold" fill="var(--bg)" text-anchor="middle">Intel Syntax (NASM)</text>
 
   <!-- Row 1: Operand Order -->
@@ -120,39 +120,39 @@
   <text x="246.25" y="150.727215" font-family="Arial, sans-serif" font-size="15.908851" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Operand Order</text>
   <text x="246.25" y="174.981818" font-family="Arial, sans-serif" font-size="13.920232" fill="var(--text)" text-anchor="middle">Which comes first?</text>
 
-  <rect x="443.125" y="122.254545" width="337.5" height="71.709091" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="611.875" y="150.727215" font-family="monospace" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">source, destination</text>
-  <text x="611.875" y="174.981818" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">movl $42, %eax</text>
+  <rect x="443.125" y="122.254545" width="337.5" height="71.709091" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="150.727215" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">source, destination</text>
+  <text x="611.875" y="174.981818" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">movl $42, %eax</text>
 
-  <rect x="808.75" y="122.254545" width="393.75" height="71.709091" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="150.727215" font-family="monospace" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">destination, source</text>
-  <text x="1005.625" y="174.981818" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">mov eax, 42</text>
+  <rect x="808.75" y="122.254545" width="393.75" height="71.709091" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005.625" y="150.727215" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">destination, source</text>
+  <text x="1005.625" y="174.981818" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">mov eax, 42</text>
 
   <!-- Row 2: Register Names -->
   <rect x="77.5" y="206.618182" width="337.5" height="71.709091" rx="6.472319" fill="var(--surface)"/>
   <text x="246.25" y="235.090851" font-family="Arial, sans-serif" font-size="15.908851" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Register Names</text>
   <text x="246.25" y="259.345455" font-family="Arial, sans-serif" font-size="13.920232" fill="var(--text)" text-anchor="middle">How are registers named?</text>
 
-  <rect x="443.125" y="206.618182" width="337.5" height="71.709091" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="611.875" y="235.090851" font-family="monospace" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">% prefix required</text>
-  <text x="611.875" y="259.345455" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">%eax  %ebx  %esp</text>
+  <rect x="443.125" y="206.618182" width="337.5" height="71.709091" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="235.090851" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">% prefix required</text>
+  <text x="611.875" y="259.345455" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">%eax  %ebx  %esp</text>
 
-  <rect x="808.75" y="206.618182" width="393.75" height="71.709091" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="235.090851" font-family="monospace" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">No prefix</text>
-  <text x="1005.625" y="259.345455" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">eax   ebx   esp</text>
+  <rect x="808.75" y="206.618182" width="393.75" height="71.709091" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005.625" y="235.090851" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">No prefix</text>
+  <text x="1005.625" y="259.345455" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">eax   ebx   esp</text>
 
   <!-- Row 3: Immediate Values -->
   <rect x="77.5" y="290.981818" width="337.5" height="71.709091" rx="6.472319" fill="var(--surface)"/>
   <text x="246.25" y="319.454487" font-family="Arial, sans-serif" font-size="15.908851" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Immediate Values</text>
   <text x="246.25" y="343.709091" font-family="Arial, sans-serif" font-size="13.920232" fill="var(--text)" text-anchor="middle">Constant literals</text>
 
-  <rect x="443.125" y="290.981818" width="337.5" height="71.709091" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="611.875" y="319.454487" font-family="monospace" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">$ prefix required</text>
-  <text x="611.875" y="343.709091" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">$42  $0xFF  $0b1010</text>
+  <rect x="443.125" y="290.981818" width="337.5" height="71.709091" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="319.454487" font-size="15.908851" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">$ prefix required</text>
+  <text x="611.875" y="343.709091" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">$42  $0xFF  $0b1010</text>
 
-  <rect x="808.75" y="290.981818" width="393.75" height="71.709091" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="319.454487" font-family="monospace" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">No prefix</text>
-  <text x="1005.625" y="343.709091" font-family="monospace" font-size="13.920232" fill="var(--text)" text-anchor="middle">42   0xFF   1010b</text>
+  <rect x="808.75" y="290.981818" width="393.75" height="71.709091" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005.625" y="319.454487" font-size="15.908851" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">No prefix</text>
+  <text x="1005.625" y="343.709091" font-size="13.920232" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">42   0xFF   1010b</text>
 
   <!-- Row 4: Memory References -->
   <rect x="77.5" y="375.345455" width="337.5" height="86.472727" rx="6.472319" fill="var(--surface)"/>
@@ -160,15 +160,15 @@
   <text x="246.25" y="428.072727" font-family="Arial, sans-serif" font-size="13.920232" fill="var(--text)" text-anchor="middle">Addressing mode</text>
   <text x="246.25" y="449.163636" font-family="Arial, sans-serif" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">Base+Index*Scale+Offset</text>
 
-  <rect x="443.125" y="375.345455" width="337.5" height="86.472727" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="611.875" y="403.818124" font-family="monospace" font-size="14.914488" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Offset(Base,Index,Scale)</text>
-  <text x="611.875" y="428.072727" font-family="monospace" font-size="12.925976" fill="var(--text)" text-anchor="middle">(%ebx,%ecx,4)</text>
-  <text x="611.875" y="449.163636" font-family="monospace" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">8(%ebp)    (%esp)</text>
+  <rect x="443.125" y="375.345455" width="337.5" height="86.472727" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="403.818124" font-size="14.914488" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Offset(Base,Index,Scale)</text>
+  <text x="611.875" y="428.072727" font-size="12.925976" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">(%ebx,%ecx,4)</text>
+  <text x="611.875" y="449.163636" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">8(%ebp)    (%esp)</text>
 
-  <rect x="808.75" y="375.345455" width="393.75" height="86.472727" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="403.818124" font-family="monospace" font-size="14.914488" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">[Base + Index*Scale + Off]</text>
-  <text x="1005.625" y="428.072727" font-family="monospace" font-size="12.925976" fill="var(--text)" text-anchor="middle">[ebx + ecx*4]</text>
-  <text x="1005.625" y="449.163636" font-family="monospace" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">[ebp+8]    [esp]</text>
+  <rect x="808.75" y="375.345455" width="393.75" height="86.472727" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005.625" y="403.818124" font-size="14.914488" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[Base + Index*Scale + Off]</text>
+  <text x="1005.625" y="428.072727" font-size="12.925976" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">[ebx + ecx*4]</text>
+  <text x="1005.625" y="449.163636" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">[ebp+8]    [esp]</text>
 
   <!-- Row 5: Size Suffixes -->
   <rect x="77.5" y="474.472727" width="337.5" height="86.472727" rx="6.472319" fill="var(--surface)"/>
@@ -176,18 +176,18 @@
   <text x="246.25" y="527.2" font-family="Arial, sans-serif" font-size="13.920232" fill="var(--text)" text-anchor="middle">Operand size indicator</text>
   <text x="246.25" y="548.290909" font-family="Arial, sans-serif" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">8/16/32/64-bit</text>
 
-  <rect x="443.125" y="474.472727" width="337.5" height="86.472727" rx="6.472319" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="611.875" y="502.945513" font-family="monospace" font-size="14.914488" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Instruction suffixed</text>
-  <text x="611.875" y="527.2" font-family="monospace" font-size="12.925976" fill="var(--text)" text-anchor="middle">movb  movw  movl  movq</text>
-  <text x="611.875" y="548.290909" font-family="monospace" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">b=byte  w=word  l=long  q=quad</text>
+  <rect x="443.125" y="474.472727" width="337.5" height="86.472727" rx="6.472319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="502.945513" font-size="14.914488" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Instruction suffixed</text>
+  <text x="611.875" y="527.2" font-size="12.925976" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">movb  movw  movl  movq</text>
+  <text x="611.875" y="548.290909" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">b=byte  w=word  l=long  q=quad</text>
 
-  <rect x="808.75" y="474.472727" width="393.75" height="86.472727" rx="6.472319" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1005.625" y="502.945513" font-family="monospace" font-size="14.914488" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Keyword or register size</text>
-  <text x="1005.625" y="527.2" font-family="monospace" font-size="12.925976" fill="var(--text)" text-anchor="middle">BYTE PTR  WORD PTR  DWORD PTR</text>
-  <text x="1005.625" y="548.290909" font-family="monospace" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle">mov al, bl  (inferred from reg)</text>
+  <rect x="808.75" y="474.472727" width="393.75" height="86.472727" rx="6.472319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005.625" y="502.945513" font-size="14.914488" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Keyword or register size</text>
+  <text x="1005.625" y="527.2" font-size="12.925976" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">BYTE PTR  WORD PTR  DWORD PTR</text>
+  <text x="1005.625" y="548.290909" font-size="12.925976" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">mov al, bl  (inferred from reg)</text>
 
   <!-- Note at bottom -->
-  <rect x="77.5" y="575.709091" width="1125" height="44.290909" rx="6.472319" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="77.5" y="575.709091" width="1125" height="44.290909" rx="6.472319" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="594.690909" font-family="Arial, sans-serif" font-size="14.914488" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">GAS also supports Intel syntax via: </text>
-  <text x="640" y="612.61824" font-family="monospace" font-size="14.914488" fill="var(--warn-accent)" text-anchor="middle">.intel_syntax noprefix</text>
+  <text x="640" y="612.61824" font-size="14.914488" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">.intel_syntax noprefix</text>
 </svg>

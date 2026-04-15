@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,37 +97,34 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="28.077607" font-weight="bold" fill="var(--primary-accent)">Geohash Precision Trade-offs</text>
-  <rect x="61.428571" y="103.8188" width="171.428571" height="281.553456" rx="6.923397" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="147.142857" y="272.750851" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <text x="147.142857" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~5,000 km</text>
-  <rect x="286.428571" y="178.89966" width="150" height="206.472596" rx="6.923397" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="361.428571" y="278.38188" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--ok-accent)">3</text>
-  <text x="361.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~150 km</text>
-  <rect x="489.999886" y="235.210304" width="128.571429" height="150.161835" rx="6.923397" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="554.285714" y="312.16829" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--text-muted)">5</text>
-  <text x="554.285714" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~5 km</text>
-  <rect x="682.857029" y="263.365685" width="107.142857" height="122.006571" rx="6.923397" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="736.428571" y="327.184485" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--text-muted)">7</text>
-  <text x="736.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~150 m</text>
-  <rect x="854.285714" y="282.136016" width="85.714286" height="103.23624" rx="6.923397" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="897.142857" y="340.323671" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--bg)">9</text>
-  <text x="897.142857" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~5 m</text>
-  <rect x="1004.285714" y="291.520949" width="64.285714" height="93.851191" rx="6.923397" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1036.428571" y="347.83171" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--bg)">12</text>
-  <text x="1036.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)">~2 cm</text>
-  <text x="147.142857" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">Country</text>
-  <text x="361.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">Region</text>
-  <text x="554.285714" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">City</text>
-  <text x="736.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">Street</text>
-  <text x="897.142857" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">Building</text>
-  <text x="1036.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)">Precise</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.077607" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Geohash Precision Trade-offs</text>
+  <rect x="61.428571" y="103.8188" width="171.428571" height="281.553456" rx="6.923397" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.142857" y="272.750851" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">1</text>
+  <text x="147.142857" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~5,000 km</text>
+  <rect x="286.428571" y="178.89966" width="150" height="206.472596" rx="6.923397" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="361.428571" y="278.38188" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">3</text>
+  <text x="361.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~150 km</text>
+  <rect x="489.999886" y="235.210304" width="128.571429" height="150.161835" rx="6.923397" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="554.285714" y="312.16829" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">5</text>
+  <text x="554.285714" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~5 km</text>
+  <rect x="682.857029" y="263.365685" width="107.142857" height="122.006571" rx="6.923397" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="736.428571" y="327.184485" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">7</text>
+  <text x="736.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~150 m</text>
+  <rect x="854.285714" y="282.136016" width="85.714286" height="103.23624" rx="6.923397" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="897.142857" y="340.323671" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">9</text>
+  <text x="897.142857" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~5 m</text>
+  <rect x="1004.285714" y="291.520949" width="64.285714" height="93.851191" rx="6.923397" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1036.428571" y="347.83171" text-anchor="middle" font-size="20.055466" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">12</text>
+  <text x="1036.428571" y="434.174861" text-anchor="middle" font-size="18.049873" fill="var(--text-muted)" font-family="Arial, sans-serif">~2 cm</text>
+  <text x="147.142857" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">Country</text>
+  <text x="361.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">Region</text>
+  <text x="554.285714" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">City</text>
+  <text x="736.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">Street</text>
+  <text x="897.142857" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">Building</text>
+  <text x="1036.428571" y="469.838165" text-anchor="middle" font-size="14.038688" fill="var(--text-faint)" font-family="Arial, sans-serif">Precise</text>
   <line x1="40" y1="507.378711" x2="1132.857143" y2="507.378711" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="586.428457" y="544.919024" text-anchor="middle" font-size="17.047135" fill="var(--text-muted)">Increasing Precision → More storage, slower queries</text>
+  <text x="586.428457" y="544.919024" text-anchor="middle" font-size="17.047135" fill="var(--text-muted)" font-family="Arial, sans-serif">Increasing Precision → More storage, slower queries</text>
   <rect x="40" y="571.197395" width="1200" height="48.802605" rx="6.923397" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="601.229785" text-anchor="middle" font-size="16.044281" fill="var(--primary-accent)">Choose precision based on use case. Geohash precision 5 suitable for most city-level applications.</text>
+  <text x="640" y="601.229785" text-anchor="middle" font-size="16.044281" fill="var(--primary-accent)" font-family="Arial, sans-serif">Choose precision based on use case. Geohash precision 5 suitable for most city-level applications.</text>
 </svg>

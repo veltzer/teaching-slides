@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,46 +75,43 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr_ref1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <text x="673.9622" y="40" text-anchor="middle" font-size="25.305" font-weight="bold">Memory Layout: &amp;s1 borrows String s1</text>
-  <text x="175.849" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold">Stack</text>
-  <rect x="40" y="139.4285" width="271.6982" height="99.4285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="175.849" y="202.4" text-anchor="middle" font-size="21.0875">s1: { ptr, len, cap }</text>
-  <rect x="40" y="238.8572" width="271.6982" height="82.8571" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="175.849" y="295.2" text-anchor="middle" font-size="21.0875">&amp;s1: ptr to s1</text>
-  <text x="787.1698" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold">Heap</text>
-  <rect x="606.0378" y="139.4285" width="362.2642" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="787.1698" y="189.1429" text-anchor="middle" font-size="21.0875">"hello" (5 bytes)</text>
-  <text x="787.1698" y="232.2285" text-anchor="middle" font-size="21.0875">heap-allocated buffer</text>
-  <line x1="311.6981" y1="189.1429" x2="606.0378" y2="189.1429" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_ref1)" stroke-dasharray="9.9805 5.9883" />
-  <text x="458.8678" y="165.9429" text-anchor="middle" font-size="21.0875">s1.ptr</text>
-  <line x1="175.849" y1="238.8572" x2="175.849" y2="189.1429" stroke="var(--text)" stroke-width="1.9961" marker-end="url(#arr_ref1)" stroke-dasharray="5.9883 3.9922" />
-  <text x="221.132" y="222.2858" font-size="21.0875">&amp;s1 points to s1</text>
-  <rect x="40" y="388" width="566.0378" height="99.4285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="323.0188" y="447.6571" text-anchor="middle" font-size="21.0875">Reference = pointer to the stack variable</text>
-  <rect x="673.9622" y="388" width="566.0378" height="99.4285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.9812" y="447.6571" text-anchor="middle" font-size="21.0875">No heap copy, no ownership transfer</text>
-  <rect x="221.132" y="537.1429" width="905.6604" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="673.9622" y="593.4857" text-anchor="middle" font-size="21.0875">Reference is an extra level of indirection: &amp;s1 -&gt; s1 -&gt; heap</text>
+  <text x="673.9622" y="40" text-anchor="middle" font-size="25.305" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Memory Layout: &amp;s1 borrows String s1</text>
+  <text x="175.849" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Stack</text>
+  <rect x="40" y="139.4285" width="271.6982" height="99.4285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="175.849" y="202.4" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">s1: { ptr, len, cap }</text>
+  <rect x="40" y="238.8572" width="271.6982" height="82.8571" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="175.849" y="295.2" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--info-text)">&amp;s1: ptr to s1</text>
+  <text x="787.1698" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Heap</text>
+  <rect x="606.0378" y="139.4285" width="362.2642" height="116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="787.1698" y="189.1429" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello" (5 bytes)</text>
+  <text x="787.1698" y="232.2285" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--ok-text)">heap-allocated buffer</text>
+  <line x1="311.6981" y1="189.1429" x2="606.0378" y2="189.1429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="9.9805 5.9883" />
+  <text x="458.8678" y="165.9429" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--text)">s1.ptr</text>
+  <line x1="175.849" y1="238.8572" x2="175.849" y2="189.1429" stroke="var(--text)" stroke-width="1.9961" marker-end="url(#arrow)" stroke-dasharray="5.9883 3.9922" />
+  <text x="221.132" y="222.2858" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">&amp;s1 points to s1</text>
+  <rect x="40" y="388" width="566.0378" height="99.4285" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="323.0188" y="447.6571" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--warn-text)">Reference = pointer to the stack variable</text>
+  <rect x="673.9622" y="388" width="566.0378" height="99.4285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="956.9812" y="447.6571" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--danger-text)">No heap copy, no ownership transfer</text>
+  <rect x="221.132" y="537.1429" width="905.6604" height="82.8571" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="673.9622" y="593.4857" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">Reference is an extra level of indirection: &amp;s1 -&gt; s1 -&gt; heap</text>
 </svg>

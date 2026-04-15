@@ -1,109 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
-  <text x="555.6251" y="40" text-anchor="middle" font-size="27.2684" font-weight="bold" fill="var(--text)">Prompt Length vs Quality Tradeoff</text>
+</defs>
+  <text x="555.6251" y="40" text-anchor="middle" font-size="27.2684" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Prompt Length vs Quality Tradeoff</text>
   <line x1="40" y1="89.0142" x2="40" y2="448.451" stroke="var(--text)" stroke-width="0.8757" />
   <line x1="40" y1="448.451" x2="1071.2497" y2="448.451" stroke="var(--text)" stroke-width="0.8757" />
-  <text x="40" y="276.9016" text-anchor="middle" font-size="21.3378" fill="var(--text)" transform="rotate(-90, 50, 175)">Quality</text>
-  <text x="555.6251" y="497.465" text-anchor="middle" font-size="22.1556" fill="var(--text)">Prompt Length (tokens)</text>
-  <text x="133.7501" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">0</text>
-  <text x="321.2499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">100</text>
-  <text x="508.7499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">200</text>
-  <text x="696.2499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">300</text>
-  <text x="883.75" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">400</text>
-  <text x="1033.7498" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">500</text>
+  <text x="40" y="276.9016" text-anchor="middle" font-size="21.3378" fill="var(--text)" transform="rotate(-90, 50, 175)" font-family="Arial, sans-serif">Quality</text>
+  <text x="555.6251" y="497.465" text-anchor="middle" font-size="22.1556" fill="var(--text)" font-family="Arial, sans-serif">Prompt Length (tokens)</text>
+  <text x="133.7501" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">0</text>
+  <text x="321.2499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">100</text>
+  <text x="508.7499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">200</text>
+  <text x="696.2499" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">300</text>
+  <text x="883.75" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">400</text>
+  <text x="1033.7498" y="481.1269" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">500</text>
   <path d="M 77.4999 415.7749 Q 227.4999 285.0704 414.9998 154.3662 Q 508.7499 121.6903 564.9997 129.8593 Q 658.7501 146.1972 752.4998 187.0423 Q 846.2499 236.0565 939.9999 285.0704 Q 1014.9999 325.9154 1052.4998 366.7605" fill="none" stroke="var(--primary-border)" stroke-width="1.3136" />
-  <rect x="481.478" y="121.338" width="17.043" height="17.043" rx="8.5215" fill="var(--ok-fill)" filter="url(#shadow)"/>
+  <rect x="481.478" y="121.338" width="17.043" height="17.043" rx="8.5215" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <line x1="489.9998" y1="141.2958" x2="489.9998" y2="448.451" stroke="var(--ok-border)" stroke-width="0.4379" stroke-dasharray="2.1894 1.3136" />
-  <text x="564.9997" y="108.6198" font-size="19.2862" font-weight="bold" fill="var(--ok-accent)">Optimal prompt length</text>
-  <rect x="40" y="530.1409" width="375" height="89.8591" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="227.4999" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--danger-accent)">Too Short</text>
-  <text x="227.4999" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">Lacks context, guesses intent</text>
-  <rect x="452.4999" y="530.1409" width="375" height="89.8591" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--ok-accent)">Optimal</text>
-  <text x="639.9999" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">Clear instructions + context</text>
-  <rect x="865" y="530.1409" width="375" height="89.8591" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1052.4998" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--danger-accent)">Too Long</text>
-  <text x="1052.4998" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)">"Lost in the middle" effect</text>
+  <text x="564.9997" y="108.6198" font-size="19.2862" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimal prompt length</text>
+  <rect x="40" y="530.1409" width="375" height="89.8591" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="227.4999" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too Short</text>
+  <text x="227.4999" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">Lacks context, guesses intent</text>
+  <rect x="452.4999" y="530.1409" width="375" height="89.8591" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimal</text>
+  <text x="639.9999" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">Clear instructions + context</text>
+  <rect x="865" y="530.1409" width="375" height="89.8591" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1052.4998" y="562.8172" text-anchor="middle" font-size="19.2862" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Too Long</text>
+  <text x="1052.4998" y="595.4933" text-anchor="middle" font-size="19.2862" fill="var(--text-muted)" font-family="Arial, sans-serif">"Lost in the middle" effect</text>
 </svg>

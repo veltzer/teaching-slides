@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -101,35 +101,35 @@
   <rect width="1200" height="580" fill="url(#bg)" rx="6" x="40" y="40"/>
   <g transform="translate(400,160)">
     <path d="M -50 40 C -50 -32.4999 10.0001 -32.4999 40 3.75 C 69.9999 -32.4999 130 -32.4999 130 40 C 130 112.5001 69.9999 112.5001 40 76.2501 C 10.0001 112.5001 -50 112.5001 -50 40 Z" fill="none" stroke="var(--danger-border)" stroke-width="5.6889" />
-    <text x="-20" y="47.2501" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="22.2471" font-weight="bold">Dev</text>
-    <text x="58" y="47.2501" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="22.2471" font-weight="bold">Ops</text>
+    <text x="-20" y="47.2501" fill="var(--primary-accent)" font-size="22.2471" font-weight="bold" font-family="Arial, sans-serif">Dev</text>
+    <text x="58" y="47.2501" fill="var(--primary-accent)" font-size="22.2471" font-weight="bold" font-family="Arial, sans-serif">Ops</text>
   </g>
   <g transform="translate(130,100)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-family="Arial,sans-serif" font-size="15.2948">Plan</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-size="15.2948" font-family="Arial, sans-serif">Plan</text>
   </g>
   <g transform="translate(130,160)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-family="Arial,sans-serif" font-size="15.2948">Code</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-size="15.2948" font-family="Arial, sans-serif">Code</text>
   </g>
   <g transform="translate(130,220)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-family="Arial,sans-serif" font-size="15.2948">Build</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--info-accent)" font-size="15.2948" font-family="Arial, sans-serif">Build</text>
   </g>
   <g transform="translate(610,100)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="15.2948">Deploy</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-size="15.2948" font-family="Arial, sans-serif">Deploy</text>
   </g>
   <g transform="translate(610,160)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="15.2948">Monitor</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-size="15.2948" font-family="Arial, sans-serif">Monitor</text>
   </g>
   <g transform="translate(610,220)">
     <rect x="40" y="40" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="15.2948">Operate</text>
+    <text x="85" y="69" text-anchor="middle" fill="var(--primary-accent)" font-size="15.2948" font-family="Arial, sans-serif">Operate</text>
   </g>
   <circle cx="639.9999" cy="170.5" r="27.8088" fill="none" stroke="var(--text)" stroke-width="2.8444" />
   <circle cx="639.9999" cy="170.5" r="11.1235" fill="var(--text)" />
-  <text x="639.9999" y="504" text-anchor="middle" fill="var(--surface)" font-family="Arial,sans-serif" font-size="44.4942" font-weight="bold">DevOps Practices</text>
-  <text x="639.9999" y="554.75" text-anchor="middle" fill="var(--text-faint)" font-family="Arial,sans-serif" font-size="22.2471">Bridging Development and Operations</text>
+  <text x="639.9999" y="504" text-anchor="middle" fill="var(--surface)" font-size="44.4942" font-weight="bold" font-family="Arial, sans-serif">DevOps Practices</text>
+  <text x="639.9999" y="554.75" text-anchor="middle" fill="var(--text-faint)" font-size="22.2471" font-family="Arial, sans-serif">Bridging Development and Operations</text>
 </svg>

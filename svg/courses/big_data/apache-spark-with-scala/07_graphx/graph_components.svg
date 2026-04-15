@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -129,20 +129,20 @@
   <text x="500" y="274.2308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">component B</text>
   <text x="330" y="525.1923" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">component C (isolated)</text>
 
-  <rect x="40" y="569.8077" width="580" height="39.0385" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="569.8077" width="580" height="39.0385" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="595.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--info-text)">val cc = graph.connectedComponents()</text>
 
-  <rect x="640" y="106.9231" width="600" height="513.0769" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="106.9231" width="600" height="513.0769" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="940" y="145.9615" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8979" font-weight="bold" fill="var(--ok-text)">Output</text>
   <text x="940" y="179.4231" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--ok-text)">cc.vertices — VertexRDD[VertexId]</text>
   <text x="940" y="207.3077" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">vertex id → component representative (min id)</text>
 
-  <text x="680" y="251.9231" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(1L, 1L)</text>
-  <text x="680" y="279.8077" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(2L, 1L)</text>
-  <text x="680" y="307.6923" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(3L, 1L)</text>
-  <text x="680" y="335.5769" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(4L, 4L)</text>
-  <text x="680" y="363.4615" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(5L, 4L)</text>
-  <text x="680" y="391.3462" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(6L, 6L)</text>
+  <text x="680" y="251.9231" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(1L, 1L)</text>
+  <text x="680" y="279.8077" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(2L, 1L)</text>
+  <text x="680" y="307.6923" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(3L, 1L)</text>
+  <text x="680" y="335.5769" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(4L, 4L)</text>
+  <text x="680" y="363.4615" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(5L, 4L)</text>
+  <text x="680" y="391.3462" font-size="13.7295" fill="var(--ok-text)" font-family="Courier New, monospace">(6L, 6L)</text>
 
   <text x="940" y="447.1154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" font-weight="bold" fill="var(--ok-text)">Common follow-ups</text>
   <text x="680" y="480.5769" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• count by component — cc.vertices.map(_._2).countByValue</text>

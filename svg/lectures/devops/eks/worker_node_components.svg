@@ -1,73 +1,73 @@
-<svg viewBox="0 0 1280 720" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,48 +75,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="639.9999" y="94.375" font-family="Arial" font-size="34.4845" font-weight="bold" text-anchor="middle" fill="var(--primary-accent)">EKS Worker Node (Your Responsibility)</text>
-  <rect x="112" y="148.75" width="432" height="108.75" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="328" y="194.0625" font-family="Arial" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)">kubelet</text>
-  <text x="328" y="230.3125" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Pod lifecycle management</text>
-  <rect x="735.9999" y="148.75" width="432" height="108.75" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="951.9999" y="194.0625" font-family="Arial" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)">kube-proxy</text>
-  <text x="951.9999" y="230.3125" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Network proxy &amp; load balancing</text>
-  <rect x="112" y="293.7499" width="432" height="108.75" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="328" y="339.0625" font-family="Arial" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)">Container Runtime</text>
-  <text x="328" y="375.3125" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Docker / containerd</text>
-  <rect x="735.9999" y="293.7499" width="432" height="108.75" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="951.9999" y="339.0625" font-family="Arial" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)">AWS VPC CNI</text>
-  <text x="951.9999" y="375.3125" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Native VPC networking</text>
-  <rect x="112" y="438.75" width="1056" height="145" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="639.9999" y="484.0625" font-family="Arial" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--info-accent)">Application Pods</text>
-  <rect x="251.263" y="500.638" width="57.474" height="57.474" rx="14" fill="var(--danger-fill)" filter="url(#shadow)"/>
-  <text x="280" y="538.4375" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">App1</text>
-  <rect x="419.263" y="500.638" width="57.474" height="57.474" rx="14" fill="var(--info-fill)" filter="url(#shadow)"/>
-  <text x="448" y="538.4375" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">App2</text>
-  <rect x="587.263" y="500.638" width="57.474" height="57.474" rx="14" fill="var(--ok-fill)" filter="url(#shadow)"/>
-  <text x="615.9999" y="538.4375" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">DB</text>
-  <rect x="755.263" y="500.638" width="57.474" height="57.474" rx="14" fill="var(--danger-fill)" filter="url(#shadow)"/>
-  <text x="783.9999" y="538.4375" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Cache</text>
+  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="639.9999" y="94.375" font-size="34.4845" font-weight="bold" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif">EKS Worker Node (Your Responsibility)</text>
+  <rect x="112" y="148.75" width="432" height="108.75" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="328" y="194.0625" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">kubelet</text>
+  <text x="328" y="230.3125" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Pod lifecycle management</text>
+  <rect x="735.9999" y="148.75" width="432" height="108.75" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="951.9999" y="194.0625" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">kube-proxy</text>
+  <text x="951.9999" y="230.3125" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Network proxy &amp; load balancing</text>
+  <rect x="112" y="293.7499" width="432" height="108.75" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="328" y="339.0625" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Container Runtime</text>
+  <text x="328" y="375.3125" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Docker / containerd</text>
+  <rect x="735.9999" y="293.7499" width="432" height="108.75" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="951.9999" y="339.0625" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">AWS VPC CNI</text>
+  <text x="951.9999" y="375.3125" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Native VPC networking</text>
+  <rect x="112" y="438.75" width="1056" height="145" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="639.9999" y="484.0625" font-size="26.8213" font-weight="bold" text-anchor="middle" fill="var(--info-accent)" font-family="Arial, sans-serif">Application Pods</text>
+  <rect x="251.263" y="500.638" width="57.474" height="57.474" rx="14" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="280" y="538.4375" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">App1</text>
+  <rect x="419.263" y="500.638" width="57.474" height="57.474" rx="14" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="448" y="538.4375" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">App2</text>
+  <rect x="587.263" y="500.638" width="57.474" height="57.474" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="615.9999" y="538.4375" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">DB</text>
+  <rect x="755.263" y="500.638" width="57.474" height="57.474" rx="14" fill="url(#grad-danger)" filter="url(#shadow)"/>
+  <text x="783.9999" y="538.4375" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Cache</text>
   <rect x="923.263" y="500.638" width="57.474" height="57.474" rx="14" fill="var(--text-muted)"/>
-  <text x="951.9999" y="538.4375" font-family="Arial" font-size="19.1581" text-anchor="middle" fill="var(--bg)">Nginx</text>
+  <text x="951.9999" y="538.4375" font-size="19.1581" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Nginx</text>
 </svg>

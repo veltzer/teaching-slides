@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,89 +97,86 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.64372" font-weight="bold" fill="var(--text)">Rolling Update: image v1 → v2  (maxSurge=1, maxUnavailable=0)</text>
-  <text x="160" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 0 — Before</text>
-  <text x="450" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 1 — +1 new pod</text>
-  <text x="740" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 2 — -1 old pod</text>
-  <text x="1039.999893" y="74.62702" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" font-weight="bold" fill="var(--text-muted)">Step 3 — Complete</text>
+  <text x="640" y="40" text-anchor="middle" font-size="16.64372" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rolling Update: image v1 → v2  (maxSurge=1, maxUnavailable=0)</text>
+  <text x="160" y="74.62702" text-anchor="middle" font-size="14.563195" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Step 0 — Before</text>
+  <text x="450" y="74.62702" text-anchor="middle" font-size="14.563195" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Step 1 — +1 new pod</text>
+  <text x="740" y="74.62702" text-anchor="middle" font-size="14.563195" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Step 2 — -1 old pod</text>
+  <text x="1039.999893" y="74.62702" text-anchor="middle" font-size="14.563195" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Step 3 — Complete</text>
   <line x1="300" y1="55.149414" x2="300" y2="620" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="589.999893" y1="55.149414" x2="589.999893" y2="620" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="880" y1="55.149414" x2="880" y2="620" stroke="var(--border)" stroke-width="1.3333" />
-  <rect x="60" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="100" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="100" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="160" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="200" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="200" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="60" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="100" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="100" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <text x="160" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 3/3</text>
-  <text x="160" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">New RS: 0/0</text>
-  <rect x="330" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="370" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="370" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="430" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="470" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="470" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="330" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="370" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="370" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="430" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="470" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="470" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2 NEW</text>
-  <text x="450" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 3/3</text>
-  <text x="450" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 1/1 (surge)</text>
+  <rect x="60" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="100" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="160" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="200" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="60" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="208.805967" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="100" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <text x="160" y="273.731277" text-anchor="middle" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">Old RS: 3/3</text>
+  <text x="160" y="293.208884" text-anchor="middle" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">New RS: 0/0</text>
+  <rect x="330" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="370" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="430" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="470" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="330" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="208.805967" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="370" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="430" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="208.805967" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="470" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 NEW</text>
+  <text x="450" y="273.731277" text-anchor="middle" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">Old RS: 3/3</text>
+  <text x="450" y="293.208884" text-anchor="middle" font-size="12.48291" fill="var(--ok-accent)" font-family="Arial, sans-serif">New RS: 1/1 (surge)</text>
   <line x1="260" y1="170.932903" x2="319.999893" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="620" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="660" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="660" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
-  <rect x="720" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="760" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="760" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--primary-accent)">v1</text>
+  <rect x="620" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="660" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
+  <rect x="720" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="760" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--primary-accent)" font-family="Arial, sans-serif">v1</text>
   <rect x="620" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="660" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--text-muted)">Terminating</text>
-  <text x="660" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--text-muted)">v1</text>
-  <rect x="720" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="760" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="760" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
-  <text x="740" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 2/3 (terminating)</text>
-  <text x="740" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 1/1</text>
+  <text x="660" y="208.805967" text-anchor="middle" font-size="11.97011" fill="var(--text-muted)" font-family="Arial, sans-serif">Terminating</text>
+  <text x="660" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--text-muted)" font-family="Arial, sans-serif">v1</text>
+  <rect x="720" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="208.805967" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="760" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2</text>
+  <text x="740" y="273.731277" text-anchor="middle" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">Old RS: 2/3 (terminating)</text>
+  <text x="740" y="293.208884" text-anchor="middle" font-size="12.48291" fill="var(--ok-accent)" font-family="Arial, sans-serif">New RS: 1/1</text>
   <line x1="548" y1="170.932903" x2="607.999893" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="910" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="949.999893" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="949.999893" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
-  <rect x="1010" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1049.999893" y="133.059839" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="1049.999893" y="152.537446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
-  <rect x="910" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="949.999893" y="208.805967" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="949.999893" y="228.283574" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.97011" fill="var(--ok-accent)">v2</text>
-  <text x="1039.999893" y="273.731277" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS: 0/0</text>
-  <text x="1039.999893" y="293.208884" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--ok-accent)">New RS: 3/3  Done!</text>
+  <rect x="910" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="949.999893" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="949.999893" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2</text>
+  <rect x="1010" y="111.417935" width="80" height="54.104358" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1049.999893" y="133.059839" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="1049.999893" y="152.537446" text-anchor="middle" font-size="11.97011" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2</text>
+  <rect x="910" y="187.164197" width="80" height="54.104358" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="949.999893" y="208.805967" text-anchor="middle" font-size="12.48291" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="949.999893" y="228.283574" text-anchor="middle" font-size="11.97011" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2</text>
+  <text x="1039.999893" y="273.731277" text-anchor="middle" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">Old RS: 0/0</text>
+  <text x="1039.999893" y="293.208884" text-anchor="middle" font-size="12.48291" fill="var(--ok-accent)" font-family="Arial, sans-serif">New RS: 3/3  Done!</text>
   <line x1="838" y1="170.932903" x2="898" y2="170.932903" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="40" y="334.328394" width="1200" height="64.92531" rx="7.182066" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="362.462655" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.684043" font-weight="bold" fill="var(--bg)">Deployment  (spec.strategy.type: RollingUpdate)</text>
-  <text x="640" y="386.268723" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--primary-accent)">owns Old ReplicaSet (rs-abc) AND New ReplicaSet (rs-def) simultaneously during rollout</text>
-  <rect x="40" y="420.895474" width="580" height="108.208984" rx="7.182066" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="50" y="446.865571" font-family="Arial,sans-serif" font-size="15.603518" font-weight="bold" fill="var(--warn-accent)">Rollback</text>
-  <text x="60" y="472.835803" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout undo deployment/my-app</text>
-  <text x="60" y="494.477439" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout undo deployment/my-app --to-revision=2</text>
-  <text x="60" y="516.119343" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">Old RS is kept (scaled to 0) enabling instant rollback</text>
-  <rect x="640" y="420.895474" width="600" height="108.208984" rx="7.182066" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="650" y="446.865571" font-family="Arial,sans-serif" font-size="15.603518" font-weight="bold" fill="var(--ok-accent)">Monitor Rollout</text>
-  <text x="660" y="472.835803" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout status deployment/my-app</text>
-  <text x="660" y="494.477439" font-family="Arial,sans-serif" font-size="13.523112" fill="var(--text-muted)">kubectl rollout history deployment/my-app</text>
-  <text x="660" y="516.119343" font-family="Arial,sans-serif" font-size="12.48291" fill="var(--text-muted)">kubectl get rs  (see old and new ReplicaSets)</text>
-  <rect x="40" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">Old version (v1)</text>
-  <rect x="220" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="250" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">New version (v2)</text>
+  <rect x="40" y="334.328394" width="1200" height="64.92531" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="362.462655" text-anchor="middle" font-size="17.684043" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Deployment  (spec.strategy.type: RollingUpdate)</text>
+  <text x="640" y="386.268723" text-anchor="middle" font-size="13.523112" fill="var(--primary-accent)" font-family="Arial, sans-serif">owns Old ReplicaSet (rs-abc) AND New ReplicaSet (rs-def) simultaneously during rollout</text>
+  <rect x="40" y="420.895474" width="580" height="108.208984" rx="7.182066" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="50" y="446.865571" font-size="15.603518" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Rollback</text>
+  <text x="60" y="472.835803" font-size="13.523112" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl rollout undo deployment/my-app</text>
+  <text x="60" y="494.477439" font-size="13.523112" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl rollout undo deployment/my-app --to-revision=2</text>
+  <text x="60" y="516.119343" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">Old RS is kept (scaled to 0) enabling instant rollback</text>
+  <rect x="640" y="420.895474" width="600" height="108.208984" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="446.865571" font-size="15.603518" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Monitor Rollout</text>
+  <text x="660" y="472.835803" font-size="13.523112" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl rollout status deployment/my-app</text>
+  <text x="660" y="494.477439" font-size="13.523112" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl rollout history deployment/my-app</text>
+  <text x="660" y="516.119343" font-size="12.48291" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl get rs  (see old and new ReplicaSets)</text>
+  <rect x="40" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="566.977522" font-size="14.563195" fill="var(--text)" font-family="Arial, sans-serif">Old version (v1)</text>
+  <rect x="220" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="250" y="566.977522" font-size="14.563195" fill="var(--text)" font-family="Arial, sans-serif">New version (v2)</text>
   <rect x="400" y="550.746229" width="20" height="21.64177" rx="7.182066" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="430" y="566.977522" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text)">Terminating</text>
-  <text x="640" y="620" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.563195" fill="var(--text-muted)">Rolling update ensures zero downtime — always ≥ (desired - maxUnavailable) pods running during update</text>
+  <text x="430" y="566.977522" font-size="14.563195" fill="var(--text)" font-family="Arial, sans-serif">Terminating</text>
+  <text x="640" y="620" text-anchor="middle" font-size="14.563195" fill="var(--text-muted)" font-family="Arial, sans-serif">Rolling update ensures zero downtime — always ≥ (desired - maxUnavailable) pods running during update</text>
 </svg>

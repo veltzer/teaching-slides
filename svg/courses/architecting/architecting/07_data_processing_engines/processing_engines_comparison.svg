@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,115 +97,112 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="48.739397" fill="var(--primary-fill)" rx="6.705839" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="156.129032" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">Engine</text>
-  <text x="378.709677" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">Batch Processing</text>
-  <text x="572.258065" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">Stream Processing</text>
-  <text x="765.806348" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">Interactive SQL</text>
-  <text x="959.354839" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">OLAP / Time Series</text>
-  <text x="1143.225806" y="71.193301" font-family="Arial,sans-serif" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle">ML Support</text>
+  <rect x="40" y="40" width="1200" height="48.739397" fill="url(#grad-primary)" rx="6.705839" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="156.129032" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Engine</text>
+  <text x="378.709677" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Batch Processing</text>
+  <text x="572.258065" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Stream Processing</text>
+  <text x="765.806348" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Interactive SQL</text>
+  <text x="959.354839" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">OLAP / Time Series</text>
+  <text x="1143.225806" y="71.193301" font-size="15.540112" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">ML Support</text>
   <line x1="262.580645" y1="40" x2="262.580645" y2="88.739518" stroke="var(--bg)" stroke-width="0.8889" opacity="0.4" />
   <line x1="475.483871" y1="40" x2="475.483871" y2="88.739518" stroke="var(--bg)" stroke-width="0.8889" opacity="0.4" />
   <line x1="669.032258" y1="40" x2="669.032258" y2="88.739518" stroke="var(--bg)" stroke-width="0.8889" opacity="0.4" />
   <line x1="862.580542" y1="40" x2="862.580542" y2="88.739518" stroke="var(--bg)" stroke-width="0.8889" opacity="0.4" />
   <line x1="1056.129032" y1="40" x2="1056.129032" y2="88.739518" stroke="var(--bg)" stroke-width="0.8889" opacity="0.4" />
   <rect x="40" y="98.487349" width="1200" height="97.479036" fill="var(--surface)" rx="6.705839" />
-  <rect x="40" y="98.487349" width="222.580542" height="97.479036" fill="var(--primary-fill)" rx="6.705839" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="151.290323" y="135.52947" font-family="Arial,sans-serif" font-size="16.511453" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Apache Spark</text>
-  <text x="151.290323" y="156.974698" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Batch &amp; Micro-batch</text>
-  <text x="151.290323" y="173.546314" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Seconds+ latency</text>
-  <rect x="281.935484" y="113.109156" width="174.193548" height="27.294169" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="369.032258" y="131.630217" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <text x="369.032258" y="166.72265" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">ETL, ML pipelines</text>
-  <rect x="494.83871" y="113.109156" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="569.354839" y="131.630217" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <text x="569.354839" y="166.72265" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Micro-batch only</text>
-  <rect x="688.387097" y="113.109156" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="762.903226" y="131.630217" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <text x="762.903226" y="166.72265" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Spark SQL</text>
-  <rect x="881.935484" y="113.109156" width="150" height="27.294169" fill="var(--danger-fill)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.451613" y="131.630217" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Limited</text>
-  <text x="956.451613" y="166.72265" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Not specialized</text>
-  <rect x="1075.483871" y="113.109156" width="150" height="27.294169" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1149.999897" y="131.630217" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <text x="1149.999897" y="166.72265" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">MLlib, GraphX</text>
+  <rect x="40" y="98.487349" width="222.580542" height="97.479036" fill="url(#grad-primary)" rx="6.705839" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.290323" y="135.52947" font-size="16.511453" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Apache Spark</text>
+  <text x="151.290323" y="156.974698" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Batch &amp; Micro-batch</text>
+  <text x="151.290323" y="173.546314" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Seconds+ latency</text>
+  <rect x="281.935484" y="113.109156" width="174.193548" height="27.294169" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="369.032258" y="131.630217" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <text x="369.032258" y="166.72265" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">ETL, ML pipelines</text>
+  <rect x="494.83871" y="113.109156" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="569.354839" y="131.630217" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <text x="569.354839" y="166.72265" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Micro-batch only</text>
+  <rect x="688.387097" y="113.109156" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="762.903226" y="131.630217" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <text x="762.903226" y="166.72265" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Spark SQL</text>
+  <rect x="881.935484" y="113.109156" width="150" height="27.294169" fill="url(#grad-danger)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.451613" y="131.630217" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Limited</text>
+  <text x="956.451613" y="166.72265" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Not specialized</text>
+  <rect x="1075.483871" y="113.109156" width="150" height="27.294169" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1149.999897" y="131.630217" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <text x="1149.999897" y="166.72265" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">MLlib, GraphX</text>
   <rect x="40" y="207.663904" width="1200" height="97.479036" fill="var(--surface)" rx="6.705839" />
-  <rect x="40" y="207.663904" width="222.580542" height="97.479036" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="151.290323" y="244.705783" font-family="Arial,sans-serif" font-size="16.511453" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Apache Flink</text>
-  <text x="151.290323" y="266.151253" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Streaming-first</text>
-  <text x="151.290323" y="282.722626" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Millisecond latency</text>
-  <rect x="281.935484" y="222.285711" width="174.193548" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="369.032258" y="240.806771" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <text x="369.032258" y="275.899205" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Bounded streams</text>
-  <rect x="494.83871" y="222.285711" width="150" height="27.294169" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="569.354839" y="240.806771" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <text x="569.354839" y="275.899205" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Exactly-once CEP</text>
-  <rect x="688.387097" y="222.285711" width="150" height="27.294169" fill="var(--danger-fill)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="762.903226" y="240.806771" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Limited</text>
-  <text x="762.903226" y="275.899205" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Flink SQL (streaming)</text>
-  <rect x="881.935484" y="222.285711" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.451613" y="240.806771" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <text x="956.451613" y="275.899205" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Real-time windows</text>
-  <rect x="1075.483871" y="222.285711" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1149.999897" y="240.806771" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <text x="1149.999897" y="275.899205" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Flink ML (limited)</text>
+  <rect x="40" y="207.663904" width="222.580542" height="97.479036" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.290323" y="244.705783" font-size="16.511453" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Apache Flink</text>
+  <text x="151.290323" y="266.151253" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Streaming-first</text>
+  <text x="151.290323" y="282.722626" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Millisecond latency</text>
+  <rect x="281.935484" y="222.285711" width="174.193548" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="369.032258" y="240.806771" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <text x="369.032258" y="275.899205" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Bounded streams</text>
+  <rect x="494.83871" y="222.285711" width="150" height="27.294169" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="569.354839" y="240.806771" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <text x="569.354839" y="275.899205" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Exactly-once CEP</text>
+  <rect x="688.387097" y="222.285711" width="150" height="27.294169" fill="url(#grad-danger)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="762.903226" y="240.806771" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Limited</text>
+  <text x="762.903226" y="275.899205" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Flink SQL (streaming)</text>
+  <rect x="881.935484" y="222.285711" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.451613" y="240.806771" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <text x="956.451613" y="275.899205" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Real-time windows</text>
+  <rect x="1075.483871" y="222.285711" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1149.999897" y="240.806771" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <text x="1149.999897" y="275.899205" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Flink ML (limited)</text>
   <rect x="40" y="316.840337" width="1200" height="97.479036" fill="var(--surface)" rx="6.705839" />
-  <rect x="40" y="316.840337" width="222.580542" height="97.479036" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="151.290323" y="353.882337" font-family="Arial,sans-serif" font-size="16.511453" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Trino</text>
-  <text x="151.290323" y="375.327808" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Interactive SQL</text>
-  <text x="151.290323" y="391.899181" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Sub-second latency</text>
-  <rect x="281.935484" y="331.462265" width="174.193548" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="369.032258" y="349.983084" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <text x="369.032258" y="385.075518" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Large queries only</text>
+  <rect x="40" y="316.840337" width="222.580542" height="97.479036" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.290323" y="353.882337" font-size="16.511453" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Trino</text>
+  <text x="151.290323" y="375.327808" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Interactive SQL</text>
+  <text x="151.290323" y="391.899181" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Sub-second latency</text>
+  <rect x="281.935484" y="331.462265" width="174.193548" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="369.032258" y="349.983084" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <text x="369.032258" y="385.075518" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Large queries only</text>
   <rect x="494.83871" y="331.462265" width="150" height="27.294169" fill="var(--border)" rx="6.705839" />
-  <text x="569.354839" y="349.983084" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">None</text>
-  <text x="569.354839" y="385.075518" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">No streaming</text>
-  <rect x="688.387097" y="331.462265" width="150" height="27.294169" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="762.903226" y="349.983084" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <text x="762.903226" y="385.075518" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Federation, CBO</text>
-  <rect x="881.935484" y="331.462265" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.451613" y="349.983084" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <text x="956.451613" y="385.075518" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Ad-hoc analytics</text>
+  <text x="569.354839" y="349.983084" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">None</text>
+  <text x="569.354839" y="385.075518" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">No streaming</text>
+  <rect x="688.387097" y="331.462265" width="150" height="27.294169" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="762.903226" y="349.983084" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <text x="762.903226" y="385.075518" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Federation, CBO</text>
+  <rect x="881.935484" y="331.462265" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.451613" y="349.983084" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <text x="956.451613" y="385.075518" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Ad-hoc analytics</text>
   <rect x="1075.483871" y="331.462265" width="150" height="27.294169" fill="var(--border)" rx="6.705839" />
-  <text x="1149.999897" y="349.983084" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">None</text>
-  <text x="1149.999897" y="385.075518" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Query engine only</text>
+  <text x="1149.999897" y="349.983084" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">None</text>
+  <text x="1149.999897" y="385.075518" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Query engine only</text>
   <rect x="40" y="426.016771" width="1200" height="97.479036" fill="var(--surface)" rx="6.705839" />
-  <rect x="40" y="426.016771" width="222.580542" height="97.479036" fill="var(--info-fill)" rx="6.705839" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="151.290323" y="463.058892" font-family="Arial,sans-serif" font-size="16.511453" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Apache Druid</text>
-  <text x="151.290323" y="484.50412" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">OLAP / Time Series</text>
-  <text x="151.290323" y="501.075614" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Sub-second latency</text>
-  <rect x="281.935484" y="440.638578" width="174.193548" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="369.032258" y="459.159638" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <text x="369.032258" y="494.252072" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Batch ingestion</text>
-  <rect x="494.83871" y="440.638578" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="569.354839" y="459.159638" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <text x="569.354839" y="494.252072" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Real-time ingestion</text>
-  <rect x="688.387097" y="440.638578" width="150" height="27.294169" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="762.903226" y="459.159638" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <text x="762.903226" y="494.252072" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Druid SQL</text>
-  <rect x="881.935484" y="440.638578" width="150" height="27.294169" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.451613" y="459.159638" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <text x="956.451613" y="494.252072" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Click-stream, telemetry</text>
+  <rect x="40" y="426.016771" width="222.580542" height="97.479036" fill="url(#grad-info)" rx="6.705839" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.290323" y="463.058892" font-size="16.511453" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Apache Druid</text>
+  <text x="151.290323" y="484.50412" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OLAP / Time Series</text>
+  <text x="151.290323" y="501.075614" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Sub-second latency</text>
+  <rect x="281.935484" y="440.638578" width="174.193548" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="369.032258" y="459.159638" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <text x="369.032258" y="494.252072" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Batch ingestion</text>
+  <rect x="494.83871" y="440.638578" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="569.354839" y="459.159638" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <text x="569.354839" y="494.252072" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Real-time ingestion</text>
+  <rect x="688.387097" y="440.638578" width="150" height="27.294169" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="762.903226" y="459.159638" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <text x="762.903226" y="494.252072" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Druid SQL</text>
+  <rect x="881.935484" y="440.638578" width="150" height="27.294169" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.451613" y="459.159638" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <text x="956.451613" y="494.252072" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Click-stream, telemetry</text>
   <rect x="1075.483871" y="440.638578" width="150" height="27.294169" fill="var(--border)" rx="6.705839" />
-  <text x="1149.999897" y="459.159638" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle">None</text>
-  <text x="1149.999897" y="494.252072" font-family="Arial,sans-serif" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle">Storage/query only</text>
+  <text x="1149.999897" y="459.159638" font-size="13.597542" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">None</text>
+  <text x="1149.999897" y="494.252072" font-size="11.655196" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Storage/query only</text>
   <rect x="40" y="542.016868" width="1200" height="77.983132" fill="var(--surface)" rx="6.705839" />
-  <text x="156.129032" y="566.386506" font-family="Arial,sans-serif" font-size="13.597542" font-weight="bold" fill="var(--text)" text-anchor="middle">Legend</text>
-  <rect x="190" y="554.688988" width="96.774194" height="21.44547" fill="var(--ok-fill)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="238.387097" y="570.285638" font-family="Arial,sans-serif" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle">Excellent</text>
-  <rect x="306.129032" y="554.688988" width="77.419355" height="21.44547" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="344.83871" y="570.285638" font-family="Arial,sans-serif" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle">Good</text>
-  <rect x="402.903226" y="554.688988" width="77.419355" height="21.44547" fill="var(--warn-fill)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="441.612903" y="570.285638" font-family="Arial,sans-serif" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle">Fair</text>
-  <rect x="499.677419" y="554.688988" width="96.774194" height="21.44547" fill="var(--danger-fill)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="548.064413" y="570.285638" font-family="Arial,sans-serif" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle">Limited</text>
+  <text x="156.129032" y="566.386506" font-size="13.597542" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Legend</text>
+  <rect x="190" y="554.688988" width="96.774194" height="21.44547" fill="url(#grad-ok)" rx="6.705839" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="238.387097" y="570.285638" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Excellent</text>
+  <rect x="306.129032" y="554.688988" width="77.419355" height="21.44547" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="344.83871" y="570.285638" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Good</text>
+  <rect x="402.903226" y="554.688988" width="77.419355" height="21.44547" fill="url(#grad-warn)" rx="6.705839" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="441.612903" y="570.285638" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Fair</text>
+  <rect x="499.677419" y="554.688988" width="96.774194" height="21.44547" fill="url(#grad-danger)" rx="6.705839" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="548.064413" y="570.285638" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Limited</text>
   <rect x="615.806452" y="554.688988" width="77.419355" height="21.44547" fill="var(--border)" rx="6.705839" />
-  <text x="654.516129" y="570.285638" font-family="Arial,sans-serif" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle">None</text>
-  <text x="156.129032" y="603.428627" font-family="Arial,sans-serif" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle">Primary strength</text>
-  <text x="794.83871" y="585.88241" font-family="Arial,sans-serif" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle">Spark: best all-rounder for batch + ML   |   Flink: streaming-first with exactly-once guarantees</text>
-  <text x="794.83871" y="605.378072" font-family="Arial,sans-serif" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle">Trino: fastest interactive SQL federation   |   Druid: sub-second OLAP on time series data</text>
+  <text x="654.516129" y="570.285638" font-size="12.626425" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">None</text>
+  <text x="156.129032" y="603.428627" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Primary strength</text>
+  <text x="794.83871" y="585.88241" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Spark: best all-rounder for batch + ML   |   Flink: streaming-first with exactly-once guarantees</text>
+  <text x="794.83871" y="605.378072" font-size="12.626425" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Trino: fastest interactive SQL federation   |   Druid: sub-second OLAP on time series data</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,61 +75,58 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow-fs" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,22.5 7.2258,0" fill="#333" />
-    </marker>
   </defs>
   <text x="634.6903" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.9519" font-weight="bold" fill="var(--text)">Choosing the Right Format</text>
-  <rect x="40" y="72.0737" width="637.1681" height="80.1843" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="72.0737" width="637.1681" height="80.1843" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="358.5841" y="125.53" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" fill="var(--text)">Streaming / message use case?</text>
-  <line x1="677.1681" y1="112.1659" x2="783.3628" y2="112.1659" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="677.1681" y1="112.1659" x2="783.3628" y2="112.1659" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="719.646" y="93.4562" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--ok-accent)">Yes</text>
-  <rect x="793.9823" y="72.0737" width="424.7787" height="80.1843" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="793.9823" y="72.0737" width="424.7787" height="80.1843" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1006.3717" y="125.53" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" font-weight="bold" fill="var(--ok-accent)">Use Avro</text>
-  <line x1="358.5841" y1="152.2581" x2="358.5841" y2="205.7143" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="358.5841" y1="152.2581" x2="358.5841" y2="205.7143" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="390.4424" y="192.3502" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--danger-accent)">No</text>
-  <rect x="40" y="219.0783" width="637.1681" height="80.1843" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="219.0783" width="637.1681" height="80.1843" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="358.5841" y="272.5346" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" fill="var(--text)">Analytics / OLAP workload?</text>
-  <line x1="677.1681" y1="259.1705" x2="783.3628" y2="259.1705" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="677.1681" y1="259.1705" x2="783.3628" y2="259.1705" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="719.646" y="240.4608" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--ok-accent)">Yes</text>
-  <rect x="793.9823" y="219.0783" width="424.7787" height="80.1843" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="793.9823" y="219.0783" width="424.7787" height="80.1843" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1006.3717" y="272.5346" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" fill="var(--text)">Hive primary engine?</text>
-  <line x1="1006.3717" y1="299.2627" x2="910.7965" y2="366.0829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="1006.3717" y1="299.2627" x2="910.7965" y2="366.0829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="910.7965" y="352.7189" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--ok-accent)">Yes</text>
-  <rect x="793.9823" y="379.447" width="191.1505" height="66.8203" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="793.9823" y="379.447" width="191.1505" height="66.8203" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="889.5575" y="424.8848" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.8228" font-weight="bold" fill="var(--text)">Use ORC</text>
-  <line x1="1006.3717" y1="299.2627" x2="1101.9468" y2="366.0829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="1006.3717" y1="299.2627" x2="1101.9468" y2="366.0829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="1101.9468" y="352.7189" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--danger-accent)">No</text>
-  <rect x="1016.9911" y="379.447" width="223.0089" height="66.8203" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1016.9911" y="379.447" width="223.0089" height="66.8203" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1129.5576" y="424.8848" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.8228" font-weight="bold" fill="var(--text)">Use Parquet</text>
-  <line x1="358.5841" y1="299.2627" x2="358.5841" y2="352.7189" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="358.5841" y1="299.2627" x2="358.5841" y2="352.7189" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="390.4424" y="339.3548" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--danger-accent)">No</text>
-  <rect x="40" y="366.0829" width="637.1681" height="80.1843" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="366.0829" width="637.1681" height="80.1843" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="358.5841" y="419.5392" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" fill="var(--text)">Need ACID / time travel / MERGE?</text>
-  <line x1="677.1681" y1="406.1751" x2="783.3628" y2="526.4516" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="677.1681" y1="406.1751" x2="783.3628" y2="526.4516" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="709.0266" y="459.6313" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--ok-accent)">Yes</text>
-  <rect x="793.9823" y="499.7235" width="424.7787" height="80.1843" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="793.9823" y="499.7235" width="424.7787" height="80.1843" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1006.3717" y="553.1797" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" font-weight="bold" fill="var(--info-accent)">Use Delta Lake / Iceberg</text>
-  <line x1="358.5841" y1="446.2673" x2="358.5841" y2="526.4516" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-fs)" />
+  <line x1="358.5841" y1="446.2673" x2="358.5841" y2="526.4516" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="390.4424" y="499.7235" font-family="Arial, sans-serif" font-size="22.8228" fill="var(--danger-accent)">No</text>
-  <rect x="146.1947" y="539.8157" width="424.7787" height="80.1843" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="146.1947" y="539.8157" width="424.7787" height="80.1843" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="358.5841" y="593.2719" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.1051" font-weight="bold" fill="var(--ok-accent)">Use Parquet (safe default)</text>
 </svg>

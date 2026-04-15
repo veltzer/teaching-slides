@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,39 +97,36 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)">Method 1: Job Outputs (for small data)</text>
-  <rect x="40" y="58.191952" width="455.172414" height="267.527636" rx="7.264301" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="267.586207" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
-  <text x="267.586207" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">steps:</text>
-  <text x="267.586207" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- name: set output</text>
-  <text x="267.586207" y="219.778517" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">echo "result=42" &gt;&gt; $GITHUB_OUTPUT</text>
-  <text x="267.586207" y="256.162288" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle">outputs: result: ${{ steps.x.outputs.result }}</text>
+  <text x="640" y="40" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)" font-family="Arial, sans-serif">Method 1: Job Outputs (for small data)</text>
+  <rect x="40" y="58.191952" width="455.172414" height="267.527636" rx="7.264301" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="267.586207" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Job A</text>
+  <text x="267.586207" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">steps:</text>
+  <text x="267.586207" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">- name: set output</text>
+  <text x="267.586207" y="219.778517" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">echo "result=42" &gt;&gt; $GITHUB_OUTPUT</text>
+  <text x="267.586207" y="256.162288" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">outputs: result: ${{ steps.x.outputs.result }}</text>
   <line x1="495.172303" y1="191.955703" x2="743.448276" y2="191.955703" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="619.310345" y="175.90409" font-size="18.938637" fill="var(--primary-accent)" text-anchor="middle">outputs</text>
-  <text x="619.310345" y="213.357898" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle">(small values)</text>
-  <rect x="743.448276" y="58.191952" width="496.551724" height="267.527636" rx="7.264301" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="991.724138" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
-  <text x="991.724138" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">needs: [job_a]</text>
-  <text x="991.724138" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">steps:</text>
-  <text x="991.724138" y="219.778517" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- name: use output</text>
-  <text x="991.724138" y="256.162288" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">${{ needs.job_a.outputs.result }}</text>
+  <text x="619.310345" y="175.90409" font-size="18.938637" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">outputs</text>
+  <text x="619.310345" y="213.357898" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(small values)</text>
+  <rect x="743.448276" y="58.191952" width="496.551724" height="267.527636" rx="7.264301" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724138" y="106.346924" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Job B</text>
+  <text x="991.724138" y="147.011107" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">needs: [job_a]</text>
+  <text x="991.724138" y="183.394879" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">steps:</text>
+  <text x="991.724138" y="219.778517" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">- name: use output</text>
+  <text x="991.724138" y="256.162288" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">${{ needs.job_a.outputs.result }}</text>
   <line x1="40" y1="361.033056" x2="1239.99989" y2="361.033056" stroke="var(--surface)" stroke-width="1.7778" stroke-dasharray="8.8889 5.3333" />
-  <text x="640" y="395.276754" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)">Method 2: Artifacts (for large files / binaries)</text>
-  <rect x="40" y="416.678949" width="455.172414" height="203.321051" rx="7.264301" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="267.586207" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job A</text>
-  <text x="267.586207" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- uses: actions/upload-artifact</text>
-  <text x="267.586207" y="545.092119" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
-  <text x="267.586207" y="582.545926" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">path: ./dist/</text>
+  <text x="640" y="395.276754" text-anchor="middle" font-size="21.042984" fill="var(--text-muted)" font-family="Arial, sans-serif">Method 2: Artifacts (for large files / binaries)</text>
+  <rect x="40" y="416.678949" width="455.172414" height="203.321051" rx="7.264301" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="267.586207" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Job A</text>
+  <text x="267.586207" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">- uses: actions/upload-artifact</text>
+  <text x="267.586207" y="545.092119" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">name: build-output</text>
+  <text x="267.586207" y="582.545926" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">path: ./dist/</text>
   <line x1="495.172303" y1="518.339342" x2="743.448276" y2="518.339342" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="619.310345" y="502.287729" font-size="18.938637" fill="var(--text-muted)" text-anchor="middle">artifact</text>
-  <text x="619.310345" y="539.741669" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle">(files/binaries)</text>
-  <rect x="743.448276" y="416.678949" width="496.551724" height="203.321051" rx="7.264301" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="991.724138" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle">Job B</text>
-  <text x="991.724138" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle">- uses: actions/download-artifact</text>
-  <text x="991.724138" y="545.092119" font-family="monospace" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle">name: build-output</text>
-  <text x="991.724138" y="582.545926" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle">files available in workspace</text>
+  <text x="619.310345" y="502.287729" font-size="18.938637" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">artifact</text>
+  <text x="619.310345" y="539.741669" font-size="14.729943" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">(files/binaries)</text>
+  <rect x="743.448276" y="416.678949" width="496.551724" height="203.321051" rx="7.264301" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724138" y="464.833921" font-size="31.564354" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Job B</text>
+  <text x="991.724138" y="507.638311" font-size="21.042984" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">- uses: actions/download-artifact</text>
+  <text x="991.724138" y="545.092119" font-size="16.83429" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">name: build-output</text>
+  <text x="991.724138" y="582.545926" font-size="16.83429" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">files available in workspace</text>
 </svg>

@@ -1,0 +1,185 @@
+# Canonical color palette for all course SVG diagrams.
+#
+# Only semantic role names are allowed. Every role describes WHAT a color
+# is used for (fill, border, text on fill, accent), never what it LOOKS
+# LIKE (vivid, pale, soft). To retune the visual theme, edit the hex
+# values here; role names stay the same so every SVG follows automatically.
+#
+# Roles per semantic family (primary, ok, warn, danger, info):
+#   {family}-fill    - the box background fill
+#   {family}-border  - matching border / stroke
+#   {family}-text    - text drawn on top of the fill (always readable)
+#   {family}-accent  - deeper shade for emphasis, lines, marker heads
+#
+# Neutrals have their own role set (bg, surface, border, text, text-muted,
+# text-faint, code-bg, shadow, black).
+#
+# check_svg.py --colors validates every SVG attribute against this file.
+
+colors:
+  neutrals:
+    bg: "#ffffff"                 # slide/page background
+    surface: "#c4cdd6"            # neutral box fills, panel backgrounds
+    border: "#6b7280"             # dividers, default box strokes
+    text: "#212121"               # primary body text
+    text-muted: "#555555"         # secondary text, annotations
+    text-faint: "#888888"         # placeholder, minor labels
+    code-bg: "#1a1a2e"            # dark code-block background
+    shadow: "#00000022"           # feDropShadow flood-color
+    black: "#000000"              # pure black (use sparingly)
+
+  primary:
+    primary-fill: "#2196f3"       # saturated blue box fill
+    primary-border: "#1565c0"     # matching border / stroke
+    primary-text: "#ffffff"       # text on primary fill
+    primary-accent: "#0d47a1"     # deeper shade for emphasis
+
+  ok:
+    ok-fill: "#4caf50"            # saturated green box fill
+    ok-border: "#2e7d32"          # matching border / stroke
+    ok-text: "#ffffff"            # text on ok fill
+    ok-accent: "#1b5e20"          # deeper shade for emphasis
+
+  warn:
+    warn-fill: "#ff9800"          # saturated orange box fill
+    warn-border: "#e65100"        # matching border / stroke
+    warn-text: "#ffffff"          # text on warn fill
+    warn-accent: "#bf360c"        # deeper shade for emphasis
+
+  danger:
+    danger-fill: "#e74c3c"        # saturated red box fill
+    danger-border: "#c62828"      # matching border / stroke
+    danger-text: "#ffffff"        # text on danger fill
+    danger-accent: "#b71c1c"      # deeper shade for emphasis
+
+  info:
+    info-fill: "#9c27b0"          # saturated purple box fill
+    info-border: "#6a1b9a"        # matching border / stroke
+    info-text: "#ffffff"          # text on info fill
+    info-accent: "#4a148c"        # deeper shade for emphasis
+
+gradients:
+  grad-primary:
+    direction: vertical
+    stops:
+      - color: "#2196f3"          # primary-fill
+        offset: "0%"
+      - color: "#1565c0"          # primary-border
+        offset: "100%"
+  grad-surface:
+    direction: vertical
+    stops:
+      - color: "#ffffff"          # bg
+        offset: "0%"
+      - color: "#f5f5f5"          # surface
+        offset: "100%"
+  grad-ok:
+    direction: vertical
+    stops:
+      - color: "#4caf50"          # ok-fill
+        offset: "0%"
+      - color: "#2e7d32"          # ok-border
+        offset: "100%"
+  grad-warn:
+    direction: vertical
+    stops:
+      - color: "#ff9800"          # warn-fill
+        offset: "0%"
+      - color: "#e65100"          # warn-border
+        offset: "100%"
+  grad-danger:
+    direction: vertical
+    stops:
+      - color: "#e74c3c"          # danger-fill
+        offset: "0%"
+      - color: "#c62828"          # danger-border
+        offset: "100%"
+  grad-info:
+    direction: vertical
+    stops:
+      - color: "#9c27b0"          # info-fill
+        offset: "0%"
+      - color: "#6a1b9a"          # info-border
+        offset: "100%"
+
+filters:
+  shadow:
+    type: drop-shadow
+    dx: 0
+    dy: 2
+    stdDeviation: 3
+    flood-color: "#00000022"      # shadow
+
+# Visual effects applied uniformly across all SVGs. Enforced by
+# check_svg.py --shadows; fix_svg_shadows.py rewrites files to comply.
+# Canonical typography. Every <text>/<tspan> in every SVG must use one of
+# these two font stacks (enforced by check_svg.py --typography; rewritten
+# by fix_svg_fonts.py). To re-skin the deck typographically, change these
+# values and re-run fix_svg_fonts.py.
+typography:
+  sans: "Arial, sans-serif"               # body, headings, labels, captions
+  mono: "Courier New, monospace"          # code samples, identifiers, file names
+
+effects:
+  rect-shadow:
+    enabled: true                 # whether shadow filter is used at all
+    apply-to: family-only         # family-only | all | none
+    # family-only: rects with fill=var(--{family}-fill) MUST have
+    #              filter="url(#shadow)"; other rects MUST NOT.
+    # all:         every <rect> outside <defs> MUST have the shadow filter.
+    # none:        equivalent to enabled: false — no rect may have it.
+
+markers:
+  arrow:
+    fill: "#555555"               # text-muted
+    markerWidth: 10
+    markerHeight: 10
+  arrow-primary:
+    fill: "#1565c0"               # primary-border
+    markerWidth: 10
+    markerHeight: 10
+  arrow-ok:
+    fill: "#2e7d32"               # ok-border
+    markerWidth: 10
+    markerHeight: 10
+  arrow-warn:
+    fill: "#e65100"               # warn-border
+    markerWidth: 10
+    markerHeight: 10
+  arrow-danger:
+    fill: "#c62828"               # danger-border
+    markerWidth: 10
+    markerHeight: 10
+  arrow-info:
+    fill: "#6a1b9a"               # info-border
+    markerWidth: 10
+    markerHeight: 10
+  arrow-white:
+    fill: "#ffffff"               # bg
+    markerWidth: 10
+    markerHeight: 10
+
+# Shape primitives. Every <rect>/<circle>/<ellipse> in an SVG must match
+# one of these. The normalize_svg_style.py script enforces them; the
+# check_svg.py --shapes flag validates compliance.
+shapes:
+  box:
+    rx: 6                         # corner radius for all boxes
+    stroke-width: 2               # when fill is a semantic family color
+    stroke-width-neutral: 1       # when fill is --surface or --bg
+    # When fill is var(--{family}-fill), stroke MUST be var(--{family}-border)
+    # When fill is var(--surface) or none, stroke MUST be var(--border)
+    # When text is placed inside a family-filled box, text fill MUST be
+    # var(--{family}-text)
+
+# Line primitives. Every <line>/<path> used as a connector must match
+# one of these.
+lines:
+  connector:
+    stroke: "#555555"             # text-muted
+    stroke-width: 2
+    marker-end: "url(#arrow)"
+  emphasis:
+    stroke: "#212121"             # text
+    stroke-width: 3
+    marker-end: "url(#arrow)"

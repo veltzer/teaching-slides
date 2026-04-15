@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,88 +97,85 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="373.770524" height="39.141057" rx="6.458309" fill="var(--text-muted)" />
-  <text x="226.885262" y="64.908026" font-family="Arial,sans-serif" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle">Zero-Shot</text>
+  <text x="226.885262" y="64.908026" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Zero-Shot</text>
   <rect x="453.11479" y="40" width="373.770524" height="39.141057" rx="6.458309" fill="var(--primary-accent)" />
-  <text x="640.000052" y="64.908026" font-family="Arial,sans-serif" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle">One-Shot</text>
+  <text x="640.000052" y="64.908026" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">One-Shot</text>
   <rect x="866.229476" y="40" width="373.770524" height="39.141057" rx="6.458309" fill="var(--ok-accent)" />
-  <text x="1053.114843" y="64.908026" font-family="Arial,sans-serif" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle">Few-Shot</text>
+  <text x="1053.114843" y="64.908026" font-size="18.708213" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Few-Shot</text>
   <rect x="40" y="93.374199" width="373.770524" height="257.975459" rx="6.458309" fill="var(--surface)" />
-  <text x="59.672133" y="118.282224" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--text-muted)">PROMPT:</text>
+  <text x="59.672133" y="118.282224" font-size="12.160349" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">PROMPT:</text>
   <rect x="59.672133" y="127.177869" width="334.426259" height="49.815941" rx="6.458309" fill="var(--bg)" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="226.885262" y="145.858777" font-family="monospace" font-size="11.224971" fill="var(--text)" text-anchor="middle">Classify the sentiment of:</text>
-  <text x="226.885262" y="161.871048" font-family="monospace" font-size="11.224971" fill="var(--primary-accent)" text-anchor="middle">"The movie was fantastic!"</text>
-  <text x="59.672133" y="200.122706" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--text-muted)">NO EXAMPLES — relies on pre-training</text>
+  <text x="226.885262" y="145.858777" font-size="11.224971" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Classify the sentiment of:</text>
+  <text x="226.885262" y="161.871048" font-size="11.224971" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">"The movie was fantastic!"</text>
+  <text x="59.672133" y="200.122706" font-size="12.160349" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">NO EXAMPLES — relies on pre-training</text>
   <rect x="59.672133" y="210.79748" width="334.426259" height="88.957108" rx="6.458309" fill="var(--bg)" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="226.885262" y="233.926266" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Task description only</text>
-  <text x="226.885262" y="251.717776" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">No format examples</text>
-  <text x="226.885262" y="269.509175" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Model uses general knowledge</text>
-  <text x="226.885262" y="287.300575" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Fastest, cheapest</text>
-  <text x="59.672133" y="333.558258" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--text-muted)">MODEL OUTPUT:</text>
+  <text x="226.885262" y="233.926266" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Task description only</text>
+  <text x="226.885262" y="251.717776" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">No format examples</text>
+  <text x="226.885262" y="269.509175" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Model uses general knowledge</text>
+  <text x="226.885262" y="287.300575" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Fastest, cheapest</text>
+  <text x="59.672133" y="333.558258" font-size="12.160349" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">MODEL OUTPUT:</text>
   <rect x="59.672133" y="342.454013" width="334.426259" height="21.349657" rx="6.458309" fill="var(--border)" />
-  <text x="226.885262" y="356.687044" font-family="monospace" font-size="12.160349" fill="var(--text)" text-anchor="middle">Positive</text>
-  <rect x="453.11479" y="93.374199" width="373.770524" height="257.975459" rx="6.458309" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="472.786923" y="118.282224" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)">PROMPT:</text>
+  <text x="226.885262" y="356.687044" font-size="12.160349" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Positive</text>
+  <rect x="453.11479" y="93.374199" width="373.770524" height="257.975459" rx="6.458309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="472.786923" y="118.282224" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">PROMPT:</text>
   <rect x="472.786923" y="127.177869" width="334.426259" height="88.957108" rx="6.458309" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="640.000052" y="146.748397" font-family="monospace" font-size="11.224971" fill="var(--text)" text-anchor="middle">Classify the sentiment:</text>
-  <text x="640.000052" y="164.539797" font-family="monospace" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Input: "It was terrible."</text>
-  <text x="640.000052" y="180.552067" font-family="monospace" font-size="11.224971" fill="var(--ok-accent)" text-anchor="middle">Label: Negative</text>
-  <text x="640.000052" y="200.122706" font-family="monospace" font-size="11.224971" fill="var(--primary-accent)" text-anchor="middle">Input: "The movie was fantastic!"</text>
-  <text x="640.000052" y="216.134977" font-family="monospace" font-size="11.224971" fill="var(--danger-accent)" text-anchor="middle">Label: ???</text>
-  <text x="472.786923" y="233.926266" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)">ONE EXAMPLE provided:</text>
+  <text x="640.000052" y="146.748397" font-size="11.224971" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Classify the sentiment:</text>
+  <text x="640.000052" y="164.539797" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">Input: "It was terrible."</text>
+  <text x="640.000052" y="180.552067" font-size="11.224971" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">Label: Negative</text>
+  <text x="640.000052" y="200.122706" font-size="11.224971" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">Input: "The movie was fantastic!"</text>
+  <text x="640.000052" y="216.134977" font-size="11.224971" fill="var(--danger-accent)" text-anchor="middle" font-family="Courier New, monospace">Label: ???</text>
+  <text x="472.786923" y="233.926266" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">ONE EXAMPLE provided:</text>
   <rect x="472.786923" y="242.822021" width="334.426259" height="62.269954" rx="6.458309" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="640.000052" y="260.61342" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Shows desired input/output format</text>
-  <text x="640.000052" y="278.40493" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Helps model understand task</text>
-  <text x="640.000052" y="296.19633" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle">Costs a few extra tokens</text>
-  <text x="472.786923" y="333.558258" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)">MODEL OUTPUT:</text>
-  <rect x="472.786923" y="342.454013" width="334.426259" height="21.349657" rx="6.458309" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="356.687044" font-family="monospace" font-size="12.160349" fill="var(--text)" text-anchor="middle">Positive</text>
-  <rect x="866.229476" y="93.374199" width="373.770524" height="257.975459" rx="6.458309" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="885.901713" y="118.282224" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)">PROMPT:</text>
+  <text x="640.000052" y="260.61342" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Shows desired input/output format</text>
+  <text x="640.000052" y="278.40493" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Helps model understand task</text>
+  <text x="640.000052" y="296.19633" font-size="11.224971" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Costs a few extra tokens</text>
+  <text x="472.786923" y="333.558258" font-size="12.160349" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">MODEL OUTPUT:</text>
+  <rect x="472.786923" y="342.454013" width="334.426259" height="21.349657" rx="6.458309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="356.687044" font-size="12.160349" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Positive</text>
+  <rect x="866.229476" y="93.374199" width="373.770524" height="257.975459" rx="6.458309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="885.901713" y="118.282224" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">PROMPT:</text>
   <rect x="885.901713" y="127.177869" width="334.426259" height="149.447822" rx="6.458309" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="1053.114843" y="144.969379" font-family="monospace" font-size="10.763848" fill="var(--text)" text-anchor="middle">Classify the sentiment:</text>
-  <text x="885.901713" y="160.981649" font-family="monospace" font-size="10.763848" fill="var(--text-muted)" dx="10">Input: "Absolutely loved it!"</text>
-  <text x="885.901713" y="175.214681" font-family="monospace" font-size="10.763848" fill="var(--ok-accent)" dx="10">Label: Positive</text>
-  <text x="885.901713" y="191.226951" font-family="monospace" font-size="10.763848" fill="var(--text-muted)" dx="10">Input: "Worst film ever."</text>
-  <text x="885.901713" y="205.460093" font-family="monospace" font-size="10.763848" fill="var(--danger-accent)" dx="10">Label: Negative</text>
-  <text x="885.901713" y="221.472364" font-family="monospace" font-size="10.763848" fill="var(--text-muted)" dx="10">Input: "It was okay, I guess."</text>
-  <text x="885.901713" y="235.705505" font-family="monospace" font-size="10.763848" fill="var(--warn-accent)" dx="10">Label: Neutral</text>
-  <text x="885.901713" y="251.717776" font-family="monospace" font-size="10.763848" fill="var(--primary-accent)" dx="10">Input: "The movie was fantastic!"</text>
-  <text x="885.901713" y="265.950807" font-family="monospace" font-size="10.763848" fill="var(--danger-accent)" dx="10">Label: ???</text>
-  <text x="885.901713" y="293.527581" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)">MULTIPLE EXAMPLES (3+):</text>
-  <text x="885.901713" y="309.539852" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">Covers edge cases, consistent format</text>
-  <text x="885.901713" y="324.662503" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">Highest accuracy for complex tasks</text>
-  <text x="885.901713" y="340.674773" font-family="Arial,sans-serif" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)">MODEL OUTPUT:</text>
-  <rect x="885.901713" y="346.90178" width="334.426259" height="21.349657" rx="6.458309" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.114843" y="361.135032" font-family="monospace" font-size="12.160349" fill="var(--text)" text-anchor="middle">Positive</text>
+  <text x="1053.114843" y="144.969379" font-size="10.763848" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Classify the sentiment:</text>
+  <text x="885.901713" y="160.981649" font-size="10.763848" fill="var(--text-muted)" dx="10" font-family="Courier New, monospace">Input: "Absolutely loved it!"</text>
+  <text x="885.901713" y="175.214681" font-size="10.763848" fill="var(--ok-accent)" dx="10" font-family="Courier New, monospace">Label: Positive</text>
+  <text x="885.901713" y="191.226951" font-size="10.763848" fill="var(--text-muted)" dx="10" font-family="Courier New, monospace">Input: "Worst film ever."</text>
+  <text x="885.901713" y="205.460093" font-size="10.763848" fill="var(--danger-accent)" dx="10" font-family="Courier New, monospace">Label: Negative</text>
+  <text x="885.901713" y="221.472364" font-size="10.763848" fill="var(--text-muted)" dx="10" font-family="Courier New, monospace">Input: "It was okay, I guess."</text>
+  <text x="885.901713" y="235.705505" font-size="10.763848" fill="var(--warn-accent)" dx="10" font-family="Courier New, monospace">Label: Neutral</text>
+  <text x="885.901713" y="251.717776" font-size="10.763848" fill="var(--primary-accent)" dx="10" font-family="Courier New, monospace">Input: "The movie was fantastic!"</text>
+  <text x="885.901713" y="265.950807" font-size="10.763848" fill="var(--danger-accent)" dx="10" font-family="Courier New, monospace">Label: ???</text>
+  <text x="885.901713" y="293.527581" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">MULTIPLE EXAMPLES (3+):</text>
+  <text x="885.901713" y="309.539852" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">Covers edge cases, consistent format</text>
+  <text x="885.901713" y="324.662503" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">Highest accuracy for complex tasks</text>
+  <text x="885.901713" y="340.674773" font-size="12.160349" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">MODEL OUTPUT:</text>
+  <rect x="885.901713" y="346.90178" width="334.426259" height="21.349657" rx="6.458309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.114843" y="361.135032" font-size="12.160349" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">Positive</text>
   <rect x="40" y="400.276089" width="1200" height="160.122706" rx="6.458309" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="424.294495" font-family="Arial,sans-serif" font-size="14.966485" font-weight="bold" fill="var(--text)" text-anchor="middle">When to Use Each Approach</text>
+  <text x="640.000052" y="424.294495" font-size="14.966485" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">When to Use Each Approach</text>
   <rect x="59.672133" y="435.858888" width="354.098392" height="106.748508" rx="6.458309" fill="var(--surface)" />
-  <text x="236.721224" y="456.319036" font-family="Arial,sans-serif" font-size="13.09562" font-weight="bold" fill="var(--text-muted)" text-anchor="middle">Zero-Shot — use when:</text>
-  <text x="79.344266" y="474.110325" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Task is well-known (translation, summarize)</text>
-  <text x="79.344266" y="491.901835" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Token budget is tight</text>
-  <text x="79.344266" y="509.693235" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Rapid prototyping</text>
-  <text x="79.344266" y="527.484634" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• You have a capable model (GPT-4o)</text>
-  <rect x="443.278724" y="435.858888" width="373.770524" height="106.748508" rx="6.458309" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="630.163986" y="456.319036" font-family="Arial,sans-serif" font-size="13.09562" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">One-Shot — use when:</text>
-  <text x="462.950857" y="474.110325" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Output format needs to be specific</text>
-  <text x="462.950857" y="491.901835" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Zero-shot results are inconsistent</text>
-  <text x="462.950857" y="509.693235" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• One clear canonical example exists</text>
-  <rect x="846.557448" y="435.858888" width="373.770524" height="106.748508" rx="6.458309" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1033.442605" y="456.319036" font-family="Arial,sans-serif" font-size="13.09562" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Few-Shot — use when:</text>
-  <text x="866.229476" y="474.110325" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Task has unusual output structure</text>
-  <text x="866.229476" y="491.901835" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Domain is specialised / technical</text>
-  <text x="866.229476" y="509.693235" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Need consistent style/tone</text>
-  <text x="866.229476" y="527.484634" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">• Edge cases must be demonstrated</text>
-  <text x="59.672133" y="579.079704" font-family="Arial,sans-serif" font-size="12.160349" fill="var(--text)">Accuracy (typical):</text>
+  <text x="236.721224" y="456.319036" font-size="13.09562" font-weight="bold" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Zero-Shot — use when:</text>
+  <text x="79.344266" y="474.110325" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Task is well-known (translation, summarize)</text>
+  <text x="79.344266" y="491.901835" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Token budget is tight</text>
+  <text x="79.344266" y="509.693235" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Rapid prototyping</text>
+  <text x="79.344266" y="527.484634" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• You have a capable model (GPT-4o)</text>
+  <rect x="443.278724" y="435.858888" width="373.770524" height="106.748508" rx="6.458309" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630.163986" y="456.319036" font-size="13.09562" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">One-Shot — use when:</text>
+  <text x="462.950857" y="474.110325" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Output format needs to be specific</text>
+  <text x="462.950857" y="491.901835" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Zero-shot results are inconsistent</text>
+  <text x="462.950857" y="509.693235" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• One clear canonical example exists</text>
+  <rect x="846.557448" y="435.858888" width="373.770524" height="106.748508" rx="6.458309" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1033.442605" y="456.319036" font-size="13.09562" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Few-Shot — use when:</text>
+  <text x="866.229476" y="474.110325" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Task has unusual output structure</text>
+  <text x="866.229476" y="491.901835" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Domain is specialised / technical</text>
+  <text x="866.229476" y="509.693235" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Need consistent style/tone</text>
+  <text x="866.229476" y="527.484634" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">• Edge cases must be demonstrated</text>
+  <text x="59.672133" y="579.079704" font-size="12.160349" fill="var(--text)" font-family="Arial, sans-serif">Accuracy (typical):</text>
   <rect x="207.213129" y="566.625801" width="98.360664" height="16.012271" rx="6.458309" fill="var(--text-muted)" />
-  <text x="315.40986" y="579.079704" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">Zero-shot</text>
+  <text x="315.40986" y="579.079704" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">Zero-shot</text>
   <rect x="207.213129" y="585.306821" width="157.377063" height="16.012271" rx="6.458309" fill="var(--primary-accent)" />
-  <text x="374.426259" y="597.760723" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">One-shot</text>
+  <text x="374.426259" y="597.760723" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">One-shot</text>
   <rect x="207.213129" y="603.987729" width="216.393462" height="16.012271" rx="6.458309" fill="var(--ok-accent)" />
-  <text x="433.442657" y="616.441742" font-family="Arial,sans-serif" font-size="11.224971" fill="var(--text-muted)">Few-shot (3-5 examples)</text>
+  <text x="433.442657" y="616.441742" font-size="11.224971" fill="var(--text-muted)" font-family="Arial, sans-serif">Few-shot (3-5 examples)</text>
 </svg>

@@ -1,109 +1,118 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <text x="676.2654" y="40" text-anchor="middle" font-size="42.4728" font-weight="bold">Remote Triggers CI/CD</text>
-  <rect x="40" y="276.909" width="106.183" height="106.183" rx="14" fill="var(--ok-fill)" filter="url(#shadow)"/>
-  <text x="93.0914" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)">Push</text>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <text x="676.2654" y="40" text-anchor="middle" font-size="42.4728" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Remote Triggers CI/CD</text>
+  <rect x="40" y="276.909" width="106.183" height="106.183" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="93.0914" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)" font-family="Arial, sans-serif">Push</text>
   <path d="M 151.4085 330 L 229.1653 330" stroke="var(--text)" stroke-width="1.0237" marker-end="url(#arrow)" />
-  <rect x="229.1653" y="284.6875" width="194.3913" height="90.6251" fill="var(--primary-fill)" rx="6.0003" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="326.361" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)">Webhook</text>
+  <rect x="229.1653" y="284.6875" width="194.3913" height="90.6251" fill="url(#grad-primary)" rx="6.0003" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="326.361" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)" font-family="Arial, sans-serif">Webhook</text>
   <path d="M 423.5566 330 L 501.3133 330" stroke="var(--text)" stroke-width="1.0237" marker-end="url(#arrow)" />
-  <rect x="501.3133" y="284.6875" width="194.3913" height="90.6251" fill="var(--warn-fill)" rx="6.0003" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="598.5086" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)">CI Build</text>
+  <rect x="501.3133" y="284.6875" width="194.3913" height="90.6251" fill="url(#grad-warn)" rx="6.0003" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="598.5086" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)" font-family="Arial, sans-serif">CI Build</text>
   <path d="M 695.7046 330 L 773.4609 330" stroke="var(--text)" stroke-width="1.0237" marker-end="url(#arrow)" />
-  <rect x="773.4609" y="284.6875" width="194.3913" height="90.6251" fill="var(--info-fill)" rx="6.0003" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870.6567" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)">Tests</text>
+  <rect x="773.4609" y="284.6875" width="194.3913" height="90.6251" fill="url(#grad-info)" rx="6.0003" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="870.6567" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)" font-family="Arial, sans-serif">Tests</text>
   <path d="M 967.8524 330 L 1045.6087 330" stroke="var(--text)" stroke-width="1.0237" marker-end="url(#arrow)" />
-  <rect x="1045.6087" y="284.6875" width="194.3913" height="90.6251" fill="var(--danger-fill)" rx="6.0003" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1142.8045" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)">Deploy</text>
+  <rect x="1045.6087" y="284.6875" width="194.3913" height="90.6251" fill="url(#grad-danger)" rx="6.0003" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1142.8045" y="339.0625" text-anchor="middle" font-size="21.2365" fill="var(--bg)" font-family="Arial, sans-serif">Deploy</text>
   <rect x="287.4827" y="438.75" width="777.5655" height="181.25" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.0003" />
-  <text x="676.2654" y="493.1251" text-anchor="middle" font-size="24.7759" font-weight="bold">Triggers:</text>
-  <text x="326.361" y="538.4377" font-size="21.2365">• Push to branch</text>
-  <text x="326.361" y="574.6877" font-size="21.2365">• Pull request</text>
-  <text x="637.387" y="538.4377" font-size="21.2365">• Tag creation</text>
-  <text x="637.387" y="574.6877" font-size="21.2365">• Schedule</text>
+  <text x="676.2654" y="493.1251" text-anchor="middle" font-size="24.7759" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Triggers:</text>
+  <text x="326.361" y="538.4377" font-size="21.2365" font-family="Arial, sans-serif" fill="var(--text)">• Push to branch</text>
+  <text x="326.361" y="574.6877" font-size="21.2365" font-family="Arial, sans-serif" fill="var(--text)">• Pull request</text>
+  <text x="637.387" y="538.4377" font-size="21.2365" font-family="Arial, sans-serif" fill="var(--text)">• Tag creation</text>
+  <text x="637.387" y="574.6877" font-size="21.2365" font-family="Arial, sans-serif" fill="var(--text)">• Schedule</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" fill="#333" />
-    </marker>
+
   </defs>
 </svg>

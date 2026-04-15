@@ -1,99 +1,156 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <rect x="40" y="40" width="1200" height="244.2105" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="177.3684" text-anchor="middle" font-size="46.5915">ACPI Tables (DSDT/SSDT)</text>
-  <rect x="140.0001" y="436.8423" width="240.0001" height="183.1577" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="260.0002" y="543.6845" text-anchor="middle">_CRS Method</text>
-  <rect x="520.0001" y="436.8423" width="240.0001" height="183.1577" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="543.6845" text-anchor="middle">IRQ Resource</text>
-  <rect x="900.0001" y="436.8423" width="240.0001" height="183.1577" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1020" y="543.6845" text-anchor="middle">Linux IRQ</text>
-  <path d="M 640.0001 284.2107 L 260.0002 436.8423" stroke="var(--black)" stroke-width="1.2697" />
-  <path d="M 379.9999 528.4211 L 520.0001 528.4211" stroke="var(--black)" stroke-width="1.2697" marker-end="url(#arrow)" />
-  <path d="M 760.0001 528.4211 L 900.0001 528.4211" stroke="var(--black)" stroke-width="1.2697" marker-end="url(#arrow)" />
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" fill="black" />
-    </marker>
-  </defs>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="34.89382" font-weight="bold" fill="var(--primary-accent)">ACPI IRQ Resolution (x86 / x86_64)</text>
+
+  <!-- Top: ACPI tables source -->
+  <rect x="211.428571" y="89.152542" width="857.142857" height="157.288136" rx="10.262888"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="148.135593" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="32.841243" font-weight="bold" fill="var(--primary-text)">ACPI Tables (DSDT / SSDT)</text>
+  <text x="640" y="192.372881" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.525777" fill="var(--primary-text)">Firmware-provided device descriptions</text>
+  <text x="640" y="221.864407" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--primary-text)">parsed by the kernel at boot</text>
+
+  <!-- Three-step pipeline -->
+  <rect x="40" y="364.40678" width="342.857143" height="196.610169" rx="10.262888"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571" y="423.389831" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="26.68351" font-weight="bold" fill="var(--warn-text)">_CRS Method</text>
+  <text x="211.428571" y="462.711864" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">Current Resource</text>
+  <text x="211.428571" y="487.288136" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">Settings — runs ACPI</text>
+  <text x="211.428571" y="511.864407" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">bytecode for a device</text>
+
+  <rect x="468.571429" y="364.40678" width="342.857143" height="196.610169" rx="10.262888"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="423.389831" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="26.68351" font-weight="bold" fill="var(--warn-text)">IRQ Resource</text>
+  <text x="640" y="462.711864" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">Returned descriptor:</text>
+  <text x="640" y="487.288136" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">vector, polarity,</text>
+  <text x="640" y="511.864407" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">trigger mode</text>
+
+  <rect x="897.142857" y="364.40678" width="342.857143" height="196.610169" rx="10.262888"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571429" y="423.389831" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="26.68351" font-weight="bold" fill="var(--warn-text)">Linux IRQ</text>
+  <text x="1068.571429" y="462.711864" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">Mapped to a kernel</text>
+  <text x="1068.571429" y="487.288136" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">virq via the irq</text>
+  <text x="1068.571429" y="511.864407" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" fill="var(--warn-text)">domain framework</text>
+
+  <!-- Connector from ACPI tables down to first stage -->
+  <path d="M 640 251.355932 L 640 305.423729 L 211.428571 305.423729 L 211.428571 359.491525" stroke="var(--text)"
+        stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Sequential arrows between stages -->
+  <line x1="388.214286" y1="462.711864" x2="463.214286" y2="462.711864" stroke="var(--text)" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+  <line x1="816.785714" y1="462.711864" x2="891.785714" y2="462.711864" stroke="var(--text)" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.473199" font-style="italic" fill="var(--text-muted)">ACPI replaces hard-coded board files used on legacy embedded systems.</text>
 </svg>

@@ -784,12 +784,6 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 ---
 
-## **Conclusion & Q&A**
-
-![conclusion_q_a](svg/courses/languages/python/advanced-python/17_porting_2_to_3/conclusion_q_a.svg)
-
----
-
 ## **Recap: Key Takeaways**
 
 1. **Why Port?** EOL, features, ecosystem.

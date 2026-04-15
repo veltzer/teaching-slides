@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,65 +75,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,33.6449 7.2258,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,0 7.2258,33.6449" fill="#555" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="1200" height="101.6495" fill="var(--text-muted)" stroke="var(--text-muted)" stroke-width="2.8876" rx="6" />
-  <text x="639.9999" y="105.7732" text-anchor="middle" font-size="24.9013" fill="var(--bg)" font-weight="bold">Memory Layout: Without ASLR vs With ASLR</text>
+  <text x="639.9999" y="105.7732" text-anchor="middle" font-size="24.9013" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Memory Layout: Without ASLR vs With ASLR</text>
   <rect x="40" y="141.6494" width="400" height="83.7113" fill="var(--border)" stroke="var(--text-faint)" stroke-width="2.8876" rx="6" />
-  <rect x="440" y="141.6494" width="400" height="83.7113" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <rect x="839.9999" y="141.6494" width="400" height="83.7113" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="239.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-weight="bold">Region</text>
-  <text x="639.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold">Without ASLR</text>
-  <text x="1039.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold">With ASLR</text>
+  <rect x="440" y="141.6494" width="400" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <rect x="839.9999" y="141.6494" width="400" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="239.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Region</text>
+  <text x="639.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Without ASLR</text>
+  <text x="1039.9999" y="195.4639" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">With ASLR</text>
   <rect x="40" y="225.3608" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="239.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)">Stack</text>
+  <text x="239.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">Stack</text>
   <rect x="440" y="225.3608" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x7fff...   (fixed)</text>
+  <text x="639.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x7fff...   (fixed)</text>
   <rect x="839.9999" y="225.3608" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="1039.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x7ffd2a... (random)</text>
+  <text x="1039.9999" y="276.1856" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x7ffd2a... (random)</text>
   <rect x="40" y="303.0928" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="239.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)">Heap</text>
+  <text x="239.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">Heap</text>
   <rect x="440" y="303.0928" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x0060...   (fixed)</text>
+  <text x="639.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x0060...   (fixed)</text>
   <rect x="839.9999" y="303.0928" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="1039.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x5617b3... (random)</text>
+  <text x="1039.9999" y="353.9175" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x5617b3... (random)</text>
   <rect x="40" y="380.8248" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="239.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)">Libs</text>
+  <text x="239.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">Libs</text>
   <rect x="440" y="380.8248" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x7f00...   (fixed)</text>
+  <text x="639.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x7f00...   (fixed)</text>
   <rect x="839.9999" y="380.8248" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="1039.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x7f8c21... (random)</text>
+  <text x="1039.9999" y="431.6494" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x7f8c21... (random)</text>
   <rect x="40" y="458.5567" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="239.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)">Code</text>
+  <text x="239.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">Code</text>
   <rect x="440" y="458.5567" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x0040...   (fixed)</text>
+  <text x="639.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x0040...   (fixed)</text>
   <rect x="839.9999" y="458.5567" width="400" height="77.7319" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="1039.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)">0x5617a1... (random)</text>
-  <rect x="40" y="536.2887" width="600" height="83.7113" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="339.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold">Predictable → exploitable!</text>
-  <rect x="639.9999" y="536.2887" width="600" height="83.7113" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="939.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold">Unpredictable → harder to exploit</text>
+  <text x="1039.9999" y="509.3815" text-anchor="middle" font-size="22.9858" fill="var(--text)" font-family="Arial, sans-serif">0x5617a1... (random)</text>
+  <rect x="40" y="536.2887" width="600" height="83.7113" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="339.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Predictable → exploitable!</text>
+  <rect x="639.9999" y="536.2887" width="600" height="83.7113" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="939.9999" y="590.1031" text-anchor="middle" font-size="22.9858" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Unpredictable → harder to exploit</text>
 </svg>

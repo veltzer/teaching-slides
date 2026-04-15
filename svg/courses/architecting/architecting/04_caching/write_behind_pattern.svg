@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,54 +75,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
-    </marker>
   </defs>
-  <text x="623.3333" y="40" text-anchor="middle" font-size="24.976" font-weight="bold" fill="var(--text)">Write-Behind (Write-Back) Pattern</text>
-  <rect x="40" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="140" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Application</text>
-  <rect x="373.3334" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="473.3334" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Cache</text>
-  <rect x="706.6666" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="806.6666" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Queue</text>
-  <rect x="1040" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1139.9999" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Database</text>
+  <text x="623.3333" y="40" text-anchor="middle" font-size="24.976" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Write-Behind (Write-Back) Pattern</text>
+  <rect x="40" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
+  <rect x="373.3334" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="473.3334" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Cache</text>
+  <rect x="706.6666" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="806.6666" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Queue</text>
+  <rect x="1040" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1139.9999" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Database</text>
   <line x1="240" y1="252.9553" x2="370" y2="252.9553" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="306.6667" y="239.1046" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)">1. Write</text>
+  <text x="306.6667" y="239.1046" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Write</text>
   <line x1="370" y1="287.5821" x2="243.3334" y2="287.5821" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="306.6667" y="322.209" text-anchor="middle" font-size="17.171" fill="var(--ok-accent)">2. Confirm</text>
+  <text x="306.6667" y="322.209" text-anchor="middle" font-size="17.171" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. Confirm</text>
   <line x1="573.3333" y1="265.0747" x2="703.3333" y2="265.0747" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="639.9999" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--danger-accent)">3. Queue</text>
-  <rect x="690" y="360.2985" width="233.3334" height="60.597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="806.6666" y="398.388" text-anchor="middle" font-size="17.171" fill="var(--text)">Async processing</text>
+  <text x="639.9999" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--danger-accent)" font-family="Arial, sans-serif">3. Queue</text>
+  <rect x="690" y="360.2985" width="233.3334" height="60.597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="806.6666" y="398.388" text-anchor="middle" font-size="17.171" fill="var(--text)" font-family="Arial, sans-serif">Async processing</text>
   <line x1="806.6666" y1="308.3582" x2="806.6666" y2="356.8359" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6.0049 4.5037" />
   <line x1="906.6666" y1="265.0747" x2="1036.6666" y2="265.0747" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="973.3333" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)">4. Write (later)</text>
+  <text x="973.3333" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)" font-family="Arial, sans-serif">4. Write (later)</text>
   <rect x="40" y="481.4926" width="1199.9999" height="138.5074" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="623.3333" y="516.1195" text-anchor="middle" font-size="18.7319" font-weight="bold" fill="var(--text)">Key Characteristics</text>
-  <text x="81.6667" y="550.7464" font-size="17.171" fill="var(--text-muted)">- Immediate response to app (write confirmed at cache level)</text>
-  <text x="81.6667" y="581.9106" font-size="17.171" fill="var(--text-muted)">- Database updated asynchronously via queue (eventual consistency)</text>
-  <text x="81.6667" y="611.3434" font-size="17.171" fill="var(--danger-accent)">- Risk: data loss if cache/queue fails before DB write</text>
+  <text x="623.3333" y="516.1195" text-anchor="middle" font-size="18.7319" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Characteristics</text>
+  <text x="81.6667" y="550.7464" font-size="17.171" fill="var(--text-muted)" font-family="Arial, sans-serif">- Immediate response to app (write confirmed at cache level)</text>
+  <text x="81.6667" y="581.9106" font-size="17.171" fill="var(--text-muted)" font-family="Arial, sans-serif">- Database updated asynchronously via queue (eventual consistency)</text>
+  <text x="81.6667" y="611.3434" font-size="17.171" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Risk: data loss if cache/queue fails before DB write</text>
 </svg>

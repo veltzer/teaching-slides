@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,76 +97,73 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="550.819672" height="500.90919" rx="6.419048" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="40" y="40" width="550.819672" height="500.90919" rx="6.419048" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="40" width="550.819672" height="40.424296" rx="6.419048" fill="var(--ok-accent)" />
   <rect x="40" y="69.878804" width="550.819672" height="10.545492" fill="var(--ok-accent)" rx="6.419048"/>
-  <text x="315.409836" y="68.999967" font-family="Arial,sans-serif" font-size="18.594484" font-weight="bold" fill="var(--bg)" text-anchor="middle">resource  — Creates / Manages</text>
-  <text x="59.672131" y="105.03019" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)">What it does:</text>
-  <text x="59.672131" y="122.606047" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">Terraform creates, updates, and destroys</text>
-  <text x="59.672131" y="138.424231" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">the infrastructure object. It owns the lifecycle.</text>
+  <text x="315.409836" y="68.999967" font-size="18.594484" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">resource  — Creates / Manages</text>
+  <text x="59.672131" y="105.03019" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">What it does:</text>
+  <text x="59.672131" y="122.606047" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">Terraform creates, updates, and destroys</text>
+  <text x="59.672131" y="138.424231" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">the infrastructure object. It owns the lifecycle.</text>
   <rect x="59.672131" y="150.727287" width="511.47541" height="96.666667" rx="6.419048" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
-  <text x="79.344262" y="168.302925" font-family="monospace" font-size="11.156733" fill="var(--ok-accent)">resource "aws_instance" "web" {</text>
-  <text x="79.344262" y="184.121109" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  ami           = "ami-0c55b159cbfafe1f0"</text>
-  <text x="79.344262" y="199.939293" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  instance_type = "t3.micro"</text>
-  <text x="79.344262" y="215.757477" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  tags = { Name = "my-web-server" }</text>
-  <text x="79.344262" y="231.57566" font-family="monospace" font-size="11.156733" fill="var(--ok-accent)">}</text>
-  <text x="59.672131" y="268.484829" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)">Terraform State interaction:</text>
-  <rect x="59.672131" y="277.272757" width="511.47541" height="87.878847" rx="6.419048" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315.409836" y="297.484796" font-family="Arial,sans-serif" font-size="12.086426" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Stored in terraform.tfstate</text>
-  <text x="79.344262" y="316.818217" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• ID, ARN, all attributes recorded</text>
-  <text x="79.344262" y="332.6364" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• terraform plan compares desired vs actual</text>
-  <text x="79.344262" y="348.454584" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• terraform destroy removes the real resource</text>
-  <text x="59.672131" y="386.24248" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)">Lifecycle:</text>
+  <text x="79.344262" y="168.302925" font-size="11.156733" fill="var(--ok-accent)" font-family="Courier New, monospace">resource "aws_instance" "web" {</text>
+  <text x="79.344262" y="184.121109" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  ami           = "ami-0c55b159cbfafe1f0"</text>
+  <text x="79.344262" y="199.939293" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  instance_type = "t3.micro"</text>
+  <text x="79.344262" y="215.757477" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  tags = { Name = "my-web-server" }</text>
+  <text x="79.344262" y="231.57566" font-size="11.156733" fill="var(--ok-accent)" font-family="Courier New, monospace">}</text>
+  <text x="59.672131" y="268.484829" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Terraform State interaction:</text>
+  <rect x="59.672131" y="277.272757" width="511.47541" height="87.878847" rx="6.419048" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315.409836" y="297.484796" font-size="12.086426" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Stored in terraform.tfstate</text>
+  <text x="79.344262" y="316.818217" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• ID, ARN, all attributes recorded</text>
+  <text x="79.344262" y="332.6364" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• terraform plan compares desired vs actual</text>
+  <text x="79.344262" y="348.454584" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• terraform destroy removes the real resource</text>
+  <text x="59.672131" y="386.24248" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Lifecycle:</text>
   <rect x="59.672131" y="395.030299" width="511.47541" height="70.302991" rx="6.419048" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="0.8889" />
   <rect x="79.344262" y="407.333355" width="78.688525" height="24.606112" rx="6.419048" fill="var(--ok-accent)" />
-  <text x="118.688525" y="424.030266" font-family="Arial,sans-serif" font-size="10.698413" fill="var(--bg)" text-anchor="middle">create</text>
+  <text x="118.688525" y="424.030266" font-size="10.698413" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">create</text>
   <line x1="158.032787" y1="419.636411" x2="197.377049" y2="419.636411" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <rect x="197.377049" y="407.333355" width="78.688525" height="24.606112" rx="6.419048" fill="var(--primary-accent)" />
-  <text x="236.721207" y="424.030266" font-family="Arial,sans-serif" font-size="10.698413" fill="var(--bg)" text-anchor="middle">update</text>
+  <text x="236.721207" y="424.030266" font-size="10.698413" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">update</text>
   <line x1="276.065574" y1="419.636411" x2="315.409836" y2="419.636411" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <rect x="315.409836" y="407.333355" width="78.688525" height="24.606112" rx="6.419048" fill="var(--danger-accent)" />
-  <text x="354.754098" y="424.030266" font-family="Arial,sans-serif" font-size="10.698413" fill="var(--bg)" text-anchor="middle">destroy</text>
-  <text x="79.344262" y="457.424307" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text-muted)">terraform apply drives all three phases</text>
-  <text x="59.672131" y="488.181838" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)">Use when:</text>
-  <text x="59.672131" y="505.757586" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">• You need to create new infrastructure</text>
-  <text x="59.672131" y="521.575769" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">• You want Terraform to fully own the resource</text>
-  <rect x="640" y="40" width="600" height="500.90919" rx="6.419048" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="640" y="40" width="600" height="40.424296" rx="6.419048" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="640" y="69.878804" width="600" height="10.545492" fill="var(--primary-fill)" rx="6.419048" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="68.999967" font-family="Arial,sans-serif" font-size="18.594484" font-weight="bold" fill="var(--bg)" text-anchor="middle">data  — Reads Existing Infrastructure</text>
-  <text x="659.672131" y="105.03019" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)">What it does:</text>
-  <text x="659.672131" y="122.606047" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">Terraform queries the provider API to read</text>
-  <text x="659.672131" y="138.424231" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">attributes of existing resources. Read-only.</text>
+  <text x="354.754098" y="424.030266" font-size="10.698413" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">destroy</text>
+  <text x="79.344262" y="457.424307" font-size="11.156733" fill="var(--text-muted)" font-family="Arial, sans-serif">terraform apply drives all three phases</text>
+  <text x="59.672131" y="488.181838" font-size="13.016011" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use when:</text>
+  <text x="59.672131" y="505.757586" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">• You need to create new infrastructure</text>
+  <text x="59.672131" y="521.575769" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">• You want Terraform to fully own the resource</text>
+  <rect x="640" y="40" width="600" height="500.90919" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="40" width="600" height="40.424296" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="69.878804" width="600" height="10.545492" fill="url(#grad-primary)" rx="6.419048" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="68.999967" font-size="18.594484" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">data  — Reads Existing Infrastructure</text>
+  <text x="659.672131" y="105.03019" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">What it does:</text>
+  <text x="659.672131" y="122.606047" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">Terraform queries the provider API to read</text>
+  <text x="659.672131" y="138.424231" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">attributes of existing resources. Read-only.</text>
   <rect x="659.672131" y="150.727287" width="560.655738" height="109.84845" rx="6.419048" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="679.344157" y="168.302925" font-family="monospace" font-size="11.156733" fill="var(--primary-accent)">data "aws_ami" "amazon_linux" {</text>
-  <text x="679.344157" y="184.121109" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  most_recent = true</text>
-  <text x="679.344157" y="199.939293" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  owners      = ["amazon"]</text>
-  <text x="679.344157" y="215.757477" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  filter {</text>
-  <text x="679.344157" y="231.57566" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">    name   = "name"</text>
-  <text x="679.344157" y="247.393844" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">    values = ["amzn2-ami-hvm-*"]</text>
-  <text x="679.344157" y="263.212028" font-family="monospace" font-size="11.156733" fill="var(--text-muted)">  }</text>
-  <text x="1082.622951" y="251.787917" font-family="monospace" font-size="11.156733" fill="var(--primary-accent)">}</text>
-  <text x="659.672131" y="283.424285" font-family="monospace" font-size="11.156733" fill="var(--text)">ami = data.aws_ami.amazon_linux.id</text>
-  <text x="659.672131" y="312.424252" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)">Terraform State interaction:</text>
-  <rect x="659.672131" y="321.212072" width="560.655738" height="87.878847" rx="6.419048" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="341.424329" font-family="Arial,sans-serif" font-size="12.086426" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">NOT stored in tfstate (read-only)</text>
-  <text x="679.344157" y="360.757531" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• Fetched fresh on every terraform plan/apply</text>
-  <text x="679.344157" y="376.575715" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• Never destroyed by terraform destroy</text>
-  <text x="679.344157" y="392.393899" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• Values exposed as data.TYPE.NAME.ATTR</text>
-  <text x="659.672131" y="430.181794" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)">Common data sources:</text>
+  <text x="679.344157" y="168.302925" font-size="11.156733" fill="var(--primary-accent)" font-family="Courier New, monospace">data "aws_ami" "amazon_linux" {</text>
+  <text x="679.344157" y="184.121109" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  most_recent = true</text>
+  <text x="679.344157" y="199.939293" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  owners      = ["amazon"]</text>
+  <text x="679.344157" y="215.757477" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  filter {</text>
+  <text x="679.344157" y="231.57566" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">    name   = "name"</text>
+  <text x="679.344157" y="247.393844" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">    values = ["amzn2-ami-hvm-*"]</text>
+  <text x="679.344157" y="263.212028" font-size="11.156733" fill="var(--text-muted)" font-family="Courier New, monospace">  }</text>
+  <text x="1082.622951" y="251.787917" font-size="11.156733" fill="var(--primary-accent)" font-family="Courier New, monospace">}</text>
+  <text x="659.672131" y="283.424285" font-size="11.156733" fill="var(--text)" font-family="Courier New, monospace">ami = data.aws_ami.amazon_linux.id</text>
+  <text x="659.672131" y="312.424252" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Terraform State interaction:</text>
+  <rect x="659.672131" y="321.212072" width="560.655738" height="87.878847" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="341.424329" font-size="12.086426" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">NOT stored in tfstate (read-only)</text>
+  <text x="679.344157" y="360.757531" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• Fetched fresh on every terraform plan/apply</text>
+  <text x="679.344157" y="376.575715" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• Never destroyed by terraform destroy</text>
+  <text x="679.344157" y="392.393899" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• Values exposed as data.TYPE.NAME.ATTR</text>
+  <text x="659.672131" y="430.181794" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Common data sources:</text>
   <rect x="659.672131" y="438.969723" width="560.655738" height="79.090919" rx="6.419048" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.8889" />
-  <text x="679.344157" y="456.54547" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• aws_ami — find latest AMI by filter</text>
-  <text x="679.344157" y="472.363654" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• aws_availability_zones — list AZs in region</text>
-  <text x="679.344157" y="488.181838" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• aws_vpc / aws_subnet — look up existing VPCs</text>
-  <text x="679.344157" y="504.000022" font-family="Arial,sans-serif" font-size="11.156733" fill="var(--text)">• aws_iam_policy_document — build IAM JSON</text>
-  <text x="659.672131" y="536.515226" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)">Use when:</text>
-  <text x="659.672131" y="554.090974" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">• Infrastructure was created outside Terraform</text>
-  <text x="659.672131" y="569.909157" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text)">• You need dynamic values (latest AMI ID, AZs)</text>
+  <text x="679.344157" y="456.54547" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• aws_ami — find latest AMI by filter</text>
+  <text x="679.344157" y="472.363654" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• aws_availability_zones — list AZs in region</text>
+  <text x="679.344157" y="488.181838" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• aws_vpc / aws_subnet — look up existing VPCs</text>
+  <text x="679.344157" y="504.000022" font-size="11.156733" fill="var(--text)" font-family="Arial, sans-serif">• aws_iam_policy_document — build IAM JSON</text>
+  <text x="659.672131" y="536.515226" font-size="13.016011" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use when:</text>
+  <text x="659.672131" y="554.090974" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">• Infrastructure was created outside Terraform</text>
+  <text x="659.672131" y="569.909157" font-size="12.086426" fill="var(--text)" font-family="Arial, sans-serif">• You need dynamic values (latest AMI ID, AZs)</text>
   <rect x="40" y="563.75752" width="1199.999895" height="56.24248" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="583.090941" font-family="Arial,sans-serif" font-size="13.016011" font-weight="bold" fill="var(--text)" text-anchor="middle">Key Rule: resource owns &amp; mutates • data queries &amp; observes</text>
-  <text x="640" y="604.181816" font-family="Arial,sans-serif" font-size="12.086426" fill="var(--text-muted)" text-anchor="middle">Combine them: use data sources to find existing infra IDs, then pass those IDs into resources</text>
+  <text x="640" y="583.090941" font-size="13.016011" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Key Rule: resource owns &amp; mutates • data queries &amp; observes</text>
+  <text x="640" y="604.181816" font-size="12.086426" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Combine them: use data sources to find existing infra IDs, then pass those IDs into resources</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,56 +75,50 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 6.7879,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,0 6.7879,18.9474" fill="#555" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="25.2185" fill="var(--text)" font-weight="bold">Tokio Runtime Architecture</text>
+  <text x="640" y="40" text-anchor="middle" font-size="25.2185" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Tokio Runtime Architecture</text>
   <rect x="40" y="62.3077" width="1200" height="557.6923" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="640" y="101.7751" text-anchor="middle" font-size="25.2185" fill="var(--text)" font-weight="bold">Tokio Runtime</text>
-  <rect x="98.0645" y="122.3669" width="290.3226" height="102.9586" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="243.2257" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold">Worker 1</text>
-  <text x="243.2257" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)">(thread)</text>
-  <rect x="427.0968" y="122.3669" width="290.3226" height="102.9586" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="572.258" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold">Worker 2</text>
-  <text x="572.258" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)">(thread)</text>
-  <rect x="756.129" y="122.3669" width="290.3226" height="102.9586" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="901.2904" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold">Worker 3</text>
-  <text x="901.2904" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)">(thread)</text>
-  <text x="1104.5161" y="182.4261" text-anchor="middle" font-size="28.8212" fill="var(--text-faint)">...</text>
-  <rect x="98.0645" y="285.3846" width="1064.5162" height="102.9586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="630.3226" y="324.8521" text-anchor="middle" font-size="23.4172" fill="var(--text)" font-weight="bold">Task Scheduler</text>
-  <text x="630.3226" y="359.1716" text-anchor="middle" font-size="21.6159" fill="var(--text)">(work-stealing queue)</text>
-  <line x1="243.2257" y1="225.3254" x2="243.2257" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="572.258" y1="225.3254" x2="572.258" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="901.2904" y1="225.3254" x2="901.2904" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="98.0645" y="456.9822" width="512.9032" height="120.1184" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="353.5483" y="499.8816" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold">I/O Driver (epoll)</text>
-  <text x="353.5483" y="534.2012" text-anchor="middle" font-size="19.8145" fill="var(--text)">async I/O notifications</text>
-  <rect x="649.6774" y="456.9822" width="512.9032" height="120.1184" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="905.1613" y="499.8816" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold">Timer Wheel</text>
-  <text x="905.1613" y="534.2012" text-anchor="middle" font-size="19.8145" fill="var(--text)">scheduled wakeups</text>
-  <line x1="353.5483" y1="388.3432" x2="353.5483" y2="456.9822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="905.1613" y1="388.3432" x2="905.1613" y2="456.9822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
+  <text x="640" y="101.7751" text-anchor="middle" font-size="25.2185" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Tokio Runtime</text>
+  <rect x="98.0645" y="122.3669" width="290.3226" height="102.9586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="243.2257" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Worker 1</text>
+  <text x="243.2257" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)" font-family="Arial, sans-serif">(thread)</text>
+  <rect x="427.0968" y="122.3669" width="290.3226" height="102.9586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="572.258" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Worker 2</text>
+  <text x="572.258" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)" font-family="Arial, sans-serif">(thread)</text>
+  <rect x="756.129" y="122.3669" width="290.3226" height="102.9586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="901.2904" y="166.9822" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Worker 3</text>
+  <text x="901.2904" y="197.8699" text-anchor="middle" font-size="19.8145" fill="var(--text)" font-family="Arial, sans-serif">(thread)</text>
+  <text x="1104.5161" y="182.4261" text-anchor="middle" font-size="28.8212" fill="var(--text-faint)" font-family="Arial, sans-serif">...</text>
+  <rect x="98.0645" y="285.3846" width="1064.5162" height="102.9586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="630.3226" y="324.8521" text-anchor="middle" font-size="23.4172" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Task Scheduler</text>
+  <text x="630.3226" y="359.1716" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-family="Arial, sans-serif">(work-stealing queue)</text>
+  <line x1="243.2257" y1="225.3254" x2="243.2257" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="572.258" y1="225.3254" x2="572.258" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="901.2904" y1="225.3254" x2="901.2904" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="98.0645" y="456.9822" width="512.9032" height="120.1184" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="353.5483" y="499.8816" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">I/O Driver (epoll)</text>
+  <text x="353.5483" y="534.2012" text-anchor="middle" font-size="19.8145" fill="var(--text)" font-family="Arial, sans-serif">async I/O notifications</text>
+  <rect x="649.6774" y="456.9822" width="512.9032" height="120.1184" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="905.1613" y="499.8816" text-anchor="middle" font-size="21.6159" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Timer Wheel</text>
+  <text x="905.1613" y="534.2012" text-anchor="middle" font-size="19.8145" fill="var(--text)" font-family="Arial, sans-serif">scheduled wakeups</text>
+  <line x1="353.5483" y1="388.3432" x2="353.5483" y2="456.9822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="905.1613" y1="388.3432" x2="905.1613" y2="456.9822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,29 +97,26 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="40" y="40" font-family="monospace" font-size="18.58803" fill="var(--text-faint)">High address (RAM)</text>
-  <rect x="203.636218" y="49.897667" width="872.727273" height="87.099" rx="8.021071" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="530.909091" y="99.385632" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--bg)">Stack  ↓  (grows down)</text>
-  <text x="1021.818182" y="94.436921" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--primary-accent)">local vars, return addr</text>
+  <text x="40" y="40" font-size="18.58803" fill="var(--text-faint)" font-family="Courier New, monospace">High address (RAM)</text>
+  <rect x="203.636218" y="49.897667" width="872.727273" height="87.099" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530.909091" y="99.385632" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Stack  ↓  (grows down)</text>
+  <text x="1021.818182" y="94.436921" text-anchor="middle" font-size="17.426312" fill="var(--primary-accent)" font-family="Courier New, monospace">local vars, return addr</text>
   <rect x="203.636218" y="142.93507" width="872.727273" height="104.914702" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" />
-  <text x="640" y="198.361807" text-anchor="middle" font-family="sans-serif" font-size="25.558608" fill="var(--text-faint)">Free Space</text>
+  <text x="640" y="198.361807" text-anchor="middle" font-size="25.558608" fill="var(--text-faint)" font-family="Arial, sans-serif">Free Space</text>
   <line x1="640" y1="153.822553" x2="640" y2="178.566474" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="640" y1="236.962535" x2="640" y2="212.218368" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="203.636218" y="253.788421" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="530.909091" y="303.276386" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">Heap  ↑  (grows up)</text>
-  <text x="1021.818182" y="298.327675" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">malloc / new</text>
+  <text x="530.909091" y="303.276386" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Heap  ↑  (grows up)</text>
+  <text x="1021.818182" y="298.327675" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Courier New, monospace">malloc / new</text>
   <rect x="203.636218" y="346.825947" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="530.909091" y="396.314035" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">.bss</text>
-  <text x="1021.818182" y="391.365202" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">uninitialized globals (zeroed)</text>
+  <text x="530.909091" y="396.314035" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">.bss</text>
+  <text x="1021.818182" y="391.365202" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Courier New, monospace">uninitialized globals (zeroed)</text>
   <rect x="203.636218" y="439.863474" width="872.727273" height="87.099" rx="8.021071" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="530.909091" y="489.351561" text-anchor="middle" font-family="sans-serif" font-size="30.205616" font-weight="bold" fill="var(--text)">.data</text>
-  <text x="1021.818182" y="484.402728" text-anchor="middle" font-family="monospace" font-size="17.426312" fill="var(--text-muted)">initialized globals</text>
-  <text x="40" y="542.798667" font-family="monospace" font-size="18.58803" fill="var(--text-faint)">Low address (RAM)</text>
-  <rect x="40" y="564.573386" width="1200" height="55.426614" rx="8.021071" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="592.286754" text-anchor="middle" font-family="sans-serif" font-size="20.911601" font-weight="bold" fill="var(--primary-accent)">Stack overflow: stack grows into heap — silent data corruption in embedded systems</text>
-  <text x="640" y="612.081842" text-anchor="middle" font-family="sans-serif" font-size="17.426312" fill="var(--text-muted)">Use MPU stack guard regions or canary values to detect overflow early</text>
+  <text x="530.909091" y="489.351561" text-anchor="middle" font-size="30.205616" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">.data</text>
+  <text x="1021.818182" y="484.402728" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Courier New, monospace">initialized globals</text>
+  <text x="40" y="542.798667" font-size="18.58803" fill="var(--text-faint)" font-family="Courier New, monospace">Low address (RAM)</text>
+  <rect x="40" y="564.573386" width="1200" height="55.426614" rx="8.021071" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="592.286754" text-anchor="middle" font-size="20.911601" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stack overflow: stack grows into heap — silent data corruption in embedded systems</text>
+  <text x="640" y="612.081842" text-anchor="middle" font-size="17.426312" fill="var(--text-muted)" font-family="Arial, sans-serif">Use MPU stack guard regions or canary values to detect overflow early</text>
 </svg>

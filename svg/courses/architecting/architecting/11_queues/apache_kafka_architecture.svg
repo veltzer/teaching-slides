@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,50 +75,47 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="648.2192" y="40" text-anchor="middle" font-size="25.0771" font-weight="bold" fill="var(--text)">Apache Kafka Architecture</text>
-  <rect x="40" y="199.7102" width="197.2603" height="84.058" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="138.6302" y="250.145" text-anchor="middle" font-size="20.3752" font-weight="bold" fill="var(--text)">Producers</text>
-  <rect x="352.3288" y="82.029" width="460.274" height="268.9855" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="9.2252 4.6126" filter="url(#shadow)"/>
-  <text x="582.4658" y="119.0145" text-anchor="middle" font-size="18.8079" font-weight="bold" fill="var(--primary-accent)">Kafka Cluster</text>
-  <rect x="385.2055" y="140.8696" width="164.3836" height="58.8405" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="467.3973" y="177.8551" text-anchor="middle" font-size="17.2405" fill="var(--text)">Broker 1</text>
-  <rect x="574.2466" y="140.8696" width="164.3836" height="58.8405" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="656.4384" y="177.8551" text-anchor="middle" font-size="17.2405" fill="var(--text)">Broker 2</text>
-  <rect x="483.8357" y="224.9276" width="164.3836" height="58.8405" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="566.0274" y="261.9131" text-anchor="middle" font-size="17.2405" fill="var(--text)">Broker 3</text>
+  <text x="648.2192" y="40" text-anchor="middle" font-size="25.0771" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Apache Kafka Architecture</text>
+  <rect x="40" y="199.7102" width="197.2603" height="84.058" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="138.6302" y="250.145" text-anchor="middle" font-size="20.3752" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Producers</text>
+  <rect x="352.3288" y="82.029" width="460.274" height="268.9855" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="9.2252 4.6126" filter="url(#shadow)"/>
+  <text x="582.4658" y="119.0145" text-anchor="middle" font-size="18.8079" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Kafka Cluster</text>
+  <rect x="385.2055" y="140.8696" width="164.3836" height="58.8405" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="467.3973" y="177.8551" text-anchor="middle" font-size="17.2405" fill="var(--text)" font-family="Arial, sans-serif">Broker 1</text>
+  <rect x="574.2466" y="140.8696" width="164.3836" height="58.8405" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="656.4384" y="177.8551" text-anchor="middle" font-size="17.2405" fill="var(--text)" font-family="Arial, sans-serif">Broker 2</text>
+  <rect x="483.8357" y="224.9276" width="164.3836" height="58.8405" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="566.0274" y="261.9131" text-anchor="middle" font-size="17.2405" fill="var(--text)" font-family="Arial, sans-serif">Broker 3</text>
   <rect x="352.3288" y="401.4493" width="460.274" height="151.3044" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="9.2252 4.6126" />
-  <text x="582.4658" y="435.0724" text-anchor="middle" font-size="18.8079" font-weight="bold" fill="var(--warn-accent)">Topic</text>
-  <rect x="385.2055" y="451.884" width="123.2877" height="50.4348" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="446.0274" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)">Part 0</text>
-  <rect x="524.9315" y="451.884" width="123.2877" height="50.4348" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="585.7535" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)">Part 1</text>
-  <rect x="664.6576" y="451.884" width="123.2877" height="50.4348" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="725.4795" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)">Part 2</text>
-  <rect x="960.5479" y="384.6377" width="279.4521" height="92.4637" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1100.274" y="426.6667" text-anchor="middle" font-size="20.3752" font-weight="bold" fill="var(--text)">Consumer Group</text>
-  <text x="1100.274" y="460.2899" text-anchor="middle" font-size="17.2405" fill="var(--text-muted)">Pull-based</text>
+  <text x="582.4658" y="435.0724" text-anchor="middle" font-size="18.8079" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Topic</text>
+  <rect x="385.2055" y="451.884" width="123.2877" height="50.4348" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.0274" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)" font-family="Arial, sans-serif">Part 0</text>
+  <rect x="524.9315" y="451.884" width="123.2877" height="50.4348" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="585.7535" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)" font-family="Arial, sans-serif">Part 1</text>
+  <rect x="664.6576" y="451.884" width="123.2877" height="50.4348" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="725.4795" y="485.5072" text-anchor="middle" font-size="15.6732" fill="var(--text)" font-family="Arial, sans-serif">Part 2</text>
+  <rect x="960.5479" y="384.6377" width="279.4521" height="92.4637" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100.274" y="426.6667" text-anchor="middle" font-size="20.3752" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Consumer Group</text>
+  <text x="1100.274" y="460.2899" text-anchor="middle" font-size="17.2405" fill="var(--text-muted)" font-family="Arial, sans-serif">Pull-based</text>
   <line x1="237.2603" y1="224.9276" x2="381.9178" y2="166.087" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="237.2603" y1="241.7391" x2="570.959" y2="166.087" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="237.2603" y1="258.5507" x2="480.548" y2="241.7391" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -126,5 +123,5 @@
   <line x1="656.4384" y1="199.7102" x2="585.7535" y2="448.5218" stroke="var(--warn-border)" stroke-width="1.5375" marker-end="url(#arrow)" />
   <line x1="566.0274" y1="283.7682" x2="725.4795" y2="448.5218" stroke="var(--warn-border)" stroke-width="1.5375" marker-end="url(#arrow)" />
   <line x1="787.9452" y1="477.1015" x2="957.2603" y2="435.0724" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="648.2192" y="620" text-anchor="middle" font-size="17.2405" fill="var(--text-faint)" font-style="italic">Producers write to brokers; data is partitioned across the topic; consumer groups pull messages.</text>
+  <text x="648.2192" y="620" text-anchor="middle" font-size="17.2405" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Producers write to brokers; data is partitioned across the topic; consumer groups pull messages.</text>
 </svg>

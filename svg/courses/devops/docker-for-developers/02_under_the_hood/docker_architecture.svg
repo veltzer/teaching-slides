@@ -1,115 +1,112 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="40" width="283.6363" height="217.5" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="181.818" y="130.625" text-anchor="middle" font-size="23.8141" font-weight="bold">Docker CLI</text>
-  <text x="181.818" y="192.25" text-anchor="middle" font-size="21.6491">REST API calls</text>
-  <rect x="432.7272" y="40" width="392.7273" height="217.5" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.0908" y="130.625" text-anchor="middle" font-size="23.8141" font-weight="bold">Docker Daemon</text>
-  <text x="629.0908" y="192.25" text-anchor="middle" font-size="21.6491">dockerd (manages objects)</text>
-  <rect x="934.5454" y="40" width="305.4546" height="217.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1087.2727" y="130.625" text-anchor="middle" font-size="23.8141" font-weight="bold">containerd</text>
-  <text x="1087.2727" y="192.25" text-anchor="middle" font-size="21.6491">Container runtime</text>
-  <rect x="934.5454" y="402.5" width="305.4546" height="217.5" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1087.2727" y="493.125" text-anchor="middle" font-size="23.8141" font-weight="bold">runc</text>
-  <text x="1087.2727" y="554.75" text-anchor="middle" font-size="21.6491">OCI runtime</text>
-  <line x1="323.6363" y1="148.75" x2="432.7272" y2="148.75" stroke="var(--text)" stroke-width="2" marker-end="url(#arr02a)" />
-  <line x1="825.4546" y1="148.75" x2="934.5454" y2="148.75" stroke="var(--text)" stroke-width="2" marker-end="url(#arr02a)" />
-  <line x1="1087.2727" y1="257.5" x2="1087.2727" y2="402.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arr02a)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --warn-accent: #5a3f12;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr02a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
     </marker>
   </defs>
+
+  <text x="660.689655172414" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="36.155691703426" font-weight="bold" fill="var(--primary-accent)">Docker Architecture</text>
+
+  <!-- Linear 4-stage pipeline: uniform size, horizontally laid out -->
+  <!-- Each box: 260x220, rx=10. Stack vertically centered at y=330. -->
+  <!-- x starts at 40, 320, 600, 880, 1160 — that's 5 positions, we use 4. -->
+  <!-- Actually: 280+20 gap * 4 = 1200, start 40: 40, 340, 640, 940 -->
+
+  <rect x="40" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="174.48275862069" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="29.376499509034" font-weight="bold" fill="var(--primary-text)">Docker CLI</text>
+  <text x="174.48275862069" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--primary-text)">user-facing</text>
+  <text x="174.48275862069" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--primary-text)">REST API calls</text>
+
+  <rect x="350.344827586207" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
+        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="484.827586206897" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="29.376499509034" font-weight="bold" fill="var(--info-text)">Docker Daemon</text>
+  <text x="484.827586206897" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--info-text)">dockerd</text>
+  <text x="484.827586206897" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--info-text)">manages objects</text>
+
+  <rect x="660.689655172414" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="795.172413793103" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="29.376499509034" font-weight="bold" fill="var(--ok-text)">containerd</text>
+  <text x="795.172413793103" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--ok-text)">container</text>
+  <text x="795.172413793103" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--ok-text)">lifecycle</text>
+
+  <rect x="971.034482758621" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="29.376499509034" font-weight="bold" fill="var(--warn-text)">runc</text>
+  <text x="1105.51724137931" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--warn-text)">OCI runtime</text>
+  <text x="1105.51724137931" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--warn-text)">spawns process</text>
+
+  <!-- Arrows between adjacent boxes, centered at y=330 -->
+  <line x1="314.137931034483" y1="373.191489361702" x2="345.172413793103" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+  <line x1="624.48275862069" y1="373.191489361702" x2="655.51724137931" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+  <line x1="934.827586206897" y1="373.191489361702" x2="965.862068965517" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- Bottom note -->
+  <text x="660.689655172414" y="620" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.597307314641" fill="var(--text-muted)">Each layer narrows the abstraction: user intent → API → runtime → kernel process.</text>
 </svg>

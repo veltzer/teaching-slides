@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,45 +75,39 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="24.48" font-weight="bold" fill="var(--text)">HDFS Architecture</text>
-  <rect x="40" y="78.6667" width="178.3784" height="61.8667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="129.1892" y="117.3333" text-anchor="middle" fill="var(--text)">Client</text>
-  <rect x="510.2703" y="78.6667" width="227.0271" height="69.6" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="623.7838" y="109.6" text-anchor="middle" font-weight="bold" fill="var(--text)">NameNode</text>
-  <text x="623.7838" y="132.8" text-anchor="middle" font-size="15.3" fill="var(--text-muted)">(Metadata)</text>
-  <rect x="283.2433" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="380.5406" y="349.3333" text-anchor="middle" fill="var(--text)">DataNode 1</text>
-  <rect x="575.1352" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="672.4325" y="349.3333" text-anchor="middle" fill="var(--text)">DataNode 2</text>
-  <rect x="867.0271" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="964.3244" y="349.3333" text-anchor="middle" fill="var(--text)">DataNode 3</text>
+  <text x="640" y="40" text-anchor="middle" font-size="24.48" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">HDFS Architecture</text>
+  <rect x="40" y="78.6667" width="178.3784" height="61.8667" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="129.1892" y="117.3333" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
+  <rect x="510.2703" y="78.6667" width="227.0271" height="69.6" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="623.7838" y="109.6" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">NameNode</text>
+  <text x="623.7838" y="132.8" text-anchor="middle" font-size="15.3" fill="var(--text-muted)" font-family="Arial, sans-serif">(Metadata)</text>
+  <rect x="283.2433" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380.5406" y="349.3333" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">DataNode 1</text>
+  <rect x="575.1352" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="672.4325" y="349.3333" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">DataNode 2</text>
+  <rect x="867.0271" y="310.6667" width="194.5946" height="61.8667" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="964.3244" y="349.3333" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">DataNode 3</text>
   <line x1="218.3784" y1="101.8667" x2="507.0271" y2="101.8667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="364.3244" y="91.04" text-anchor="middle" font-size="16.83" fill="var(--primary-accent)">Metadata Query</text>
+  <text x="364.3244" y="91.04" text-anchor="middle" font-size="16.83" fill="var(--primary-accent)" font-family="Arial, sans-serif">Metadata Query</text>
   <line x1="129.1892" y1="140.5333" x2="129.1892" y2="264.2667" stroke="var(--primary-border)" stroke-width="2" />
   <line x1="129.1892" y1="264.2667" x2="380.5406" y2="264.2667" stroke="var(--primary-border)" stroke-width="2" />
   <line x1="380.5406" y1="264.2667" x2="380.5406" y2="307.5733" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -121,19 +115,19 @@
   <line x1="672.4325" y1="264.2667" x2="672.4325" y2="307.5733" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="129.1892" y1="264.2667" x2="964.3244" y2="264.2667" stroke="var(--primary-border)" stroke-width="2" />
   <line x1="964.3244" y1="264.2667" x2="964.3244" y2="307.5733" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="558.919" y="254.9867" text-anchor="middle" font-size="16.83" fill="var(--primary-accent)">Read/Write Data Blocks</text>
+  <text x="558.919" y="254.9867" text-anchor="middle" font-size="16.83" fill="var(--primary-accent)" font-family="Arial, sans-serif">Read/Write Data Blocks</text>
   <line x1="477.8379" y1="349.3333" x2="571.8919" y2="349.3333" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
   <line x1="769.7298" y1="349.3333" x2="863.7838" y2="349.3333" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
   <line x1="964.3244" y1="372.5333" x2="964.3244" y2="418.9333" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="7.4667 4.48" />
   <line x1="964.3244" y1="418.9333" x2="380.5406" y2="418.9333" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
   <line x1="380.5406" y1="418.9333" x2="380.5406" y2="375.6267" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="0" />
-  <text x="672.4325" y="403.4667" text-anchor="middle" font-size="16.83" fill="var(--ok-accent)">Replication</text>
+  <text x="672.4325" y="403.4667" text-anchor="middle" font-size="16.83" fill="var(--ok-accent)" font-family="Arial, sans-serif">Replication</text>
   <line x1="591.3513" y1="148.2667" x2="396.7567" y2="307.5733" stroke="var(--text-faint)" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
   <line x1="623.7838" y1="148.2667" x2="672.4325" y2="307.5733" stroke="var(--text-faint)" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
   <line x1="656.2163" y1="148.2667" x2="948.1081" y2="307.5733" stroke="var(--text-faint)" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
-  <text x="802.1622" y="217.8667" text-anchor="middle" font-size="15.3" fill="var(--text-faint)">Heartbeat</text>
+  <text x="802.1622" y="217.8667" text-anchor="middle" font-size="15.3" fill="var(--text-faint)" font-family="Arial, sans-serif">Heartbeat</text>
   <rect x="40" y="496.2667" width="1200" height="123.7333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="534.9333" text-anchor="middle" font-size="18.36" fill="var(--text-muted)">HDFS splits files into blocks distributed across DataNodes with automatic replication.</text>
-  <text x="640" y="565.8667" text-anchor="middle" font-size="18.36" fill="var(--text-muted)">The NameNode manages metadata and tracks block locations. Clients query the NameNode</text>
-  <text x="640" y="596.8" text-anchor="middle" font-size="18.36" fill="var(--text-muted)">for metadata, then read/write data blocks directly to DataNodes.</text>
+  <text x="640" y="534.9333" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">HDFS splits files into blocks distributed across DataNodes with automatic replication.</text>
+  <text x="640" y="565.8667" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">The NameNode manages metadata and tracks block locations. Clients query the NameNode</text>
+  <text x="640" y="596.8" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">for metadata, then read/write data blocks directly to DataNodes.</text>
 </svg>

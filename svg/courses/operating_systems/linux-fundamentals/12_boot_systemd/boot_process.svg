@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,145 +97,142 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="14.815935" fill="var(--text-faint)">Power ON  ——————————————————————————————————————————————  System ready</text>
+  <text x="640" y="40" text-anchor="middle" font-size="14.815935" fill="var(--text-faint)" font-family="Arial, sans-serif">Power ON  ——————————————————————————————————————————————  System ready</text>
   <line x1="74.146341" y1="51.999918" x2="1205.853554" y2="51.999918" stroke="var(--border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="40" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="68.000057" width="151.219512" height="36.000002" rx="6.819554" fill="var(--primary-accent)" />
   <rect x="40" y="89.999906" width="151.219512" height="13.999904" fill="var(--primary-accent)" rx="6.819554"/>
-  <text x="115.121951" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">BIOS / UEFI</text>
-  <text x="115.121951" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--primary-accent)">POST check</text>
-  <text x="115.121951" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Memory / CPU</text>
-  <text x="115.121951" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">hardware init</text>
-  <text x="115.121951" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">Finds bootable</text>
-  <text x="115.121951" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">disk / partition</text>
+  <text x="115.121951" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">BIOS / UEFI</text>
+  <text x="115.121951" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--primary-accent)" font-family="Arial, sans-serif">POST check</text>
+  <text x="115.121951" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Memory / CPU</text>
+  <text x="115.121951" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">hardware init</text>
+  <text x="115.121951" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">Finds bootable</text>
+  <text x="115.121951" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">disk / partition</text>
   <line x1="191.219512" y1="128.000018" x2="220.487805" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="220.487805" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="220.487805" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="220.487805" y="68.000057" width="151.219512" height="36.000002" rx="6.819554" fill="var(--ok-accent)" />
   <rect x="220.487805" y="89.999906" width="151.219512" height="13.999904" fill="var(--ok-accent)" rx="6.819554"/>
-  <text x="295.609756" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">GRUB2</text>
-  <text x="295.609756" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--ok-accent)">Bootloader</text>
-  <text x="295.609756" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Menu with</text>
-  <text x="295.609756" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">kernel entries</text>
-  <text x="295.609756" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">Loads kernel</text>
-  <text x="295.609756" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">+ initrd image</text>
+  <text x="295.609756" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">GRUB2</text>
+  <text x="295.609756" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--ok-accent)" font-family="Arial, sans-serif">Bootloader</text>
+  <text x="295.609756" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Menu with</text>
+  <text x="295.609756" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">kernel entries</text>
+  <text x="295.609756" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">Loads kernel</text>
+  <text x="295.609756" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">+ initrd image</text>
   <line x1="371.707213" y1="128.000018" x2="400.97561" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="400.97561" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="400.97561" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="400.97561" y="68.000057" width="151.219512" height="36.000002" rx="6.819554" fill="var(--warn-accent)" />
   <rect x="400.97561" y="89.999906" width="151.219512" height="13.999904" fill="var(--warn-accent)" rx="6.819554"/>
-  <text x="476.097561" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">Linux Kernel</text>
-  <text x="476.097561" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--warn-accent)">Decompresses</text>
-  <text x="476.097561" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">self into RAM</text>
-  <text x="476.097561" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Init subsystems</text>
-  <text x="476.097561" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">CPU, memory,</text>
-  <text x="476.097561" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">scheduler, VFS</text>
+  <text x="476.097561" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Linux Kernel</text>
+  <text x="476.097561" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--warn-accent)" font-family="Arial, sans-serif">Decompresses</text>
+  <text x="476.097561" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">self into RAM</text>
+  <text x="476.097561" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Init subsystems</text>
+  <text x="476.097561" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">CPU, memory,</text>
+  <text x="476.097561" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">scheduler, VFS</text>
   <line x1="552.195122" y1="128.000018" x2="581.463415" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="581.463415" y="68.000057" width="160.97561" height="120.000047" rx="6.819554" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="581.463415" y="68.000057" width="160.97561" height="120.000047" rx="6.819554" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="581.463415" y="68.000057" width="160.97561" height="36.000002" rx="6.819554" fill="var(--info-accent)" />
   <rect x="581.463415" y="89.999906" width="160.97561" height="13.999904" fill="var(--info-accent)" rx="6.819554"/>
-  <text x="661.463311" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">initramfs</text>
-  <text x="661.463311" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--info-accent)">Temp root FS</text>
-  <text x="661.463311" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Load drivers</text>
-  <text x="661.463311" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Mount real /</text>
-  <text x="661.463311" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">LUKS decrypt,</text>
-  <text x="661.463311" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">RAID assemble</text>
+  <text x="661.463311" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">initramfs</text>
+  <text x="661.463311" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--info-accent)" font-family="Arial, sans-serif">Temp root FS</text>
+  <text x="661.463311" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Load drivers</text>
+  <text x="661.463311" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Mount real /</text>
+  <text x="661.463311" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">LUKS decrypt,</text>
+  <text x="661.463311" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">RAID assemble</text>
   <line x1="742.439024" y1="128.000018" x2="771.707317" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="771.707317" y="68.000057" width="160.97561" height="120.000047" rx="6.819554" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="771.707317" y="68.000057" width="160.97561" height="36.000002" rx="6.819554" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="771.707317" y="89.999906" width="160.97561" height="13.999904" fill="var(--danger-fill)" rx="6.819554" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="851.707317" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">systemd (PID 1)</text>
-  <text x="851.707317" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--danger-accent)">First process</text>
-  <text x="851.707317" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Reads units</text>
-  <text x="851.707317" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Parallel start</text>
-  <text x="851.707317" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">Dep resolution</text>
-  <text x="851.707317" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">cgroups control</text>
+  <rect x="771.707317" y="68.000057" width="160.97561" height="120.000047" rx="6.819554" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="771.707317" y="68.000057" width="160.97561" height="36.000002" rx="6.819554" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="771.707317" y="89.999906" width="160.97561" height="13.999904" fill="url(#grad-danger)" rx="6.819554" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="851.707317" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">systemd (PID 1)</text>
+  <text x="851.707317" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--danger-accent)" font-family="Arial, sans-serif">First process</text>
+  <text x="851.707317" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Reads units</text>
+  <text x="851.707317" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Parallel start</text>
+  <text x="851.707317" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">Dep resolution</text>
+  <text x="851.707317" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">cgroups control</text>
   <line x1="932.682927" y1="128.000018" x2="961.95122" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="961.95122" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="961.95122" y="68.000057" width="151.219512" height="120.000047" rx="6.819554" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="961.95122" y="68.000057" width="151.219512" height="36.000002" rx="6.819554" fill="var(--primary-accent)" />
   <rect x="961.95122" y="89.999906" width="151.219512" height="13.999904" fill="var(--primary-accent)" rx="6.819554"/>
-  <text x="1037.073171" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="13.828122" font-weight="bold" fill="var(--bg)">Targets</text>
-  <text x="1037.073171" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--primary-accent)">multi-user.target</text>
-  <text x="1037.073171" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">graphical.target</text>
-  <text x="1037.073171" y="148.000005" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">Services started</text>
-  <text x="1037.073171" y="164.00002" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">network, logging,</text>
-  <text x="1037.073171" y="177.999924" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">cron, ssh, etc.</text>
+  <text x="1037.073171" y="92.000016" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Targets</text>
+  <text x="1037.073171" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--primary-accent)" font-family="Arial, sans-serif">multi-user.target</text>
+  <text x="1037.073171" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">graphical.target</text>
+  <text x="1037.073171" y="148.000005" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">Services started</text>
+  <text x="1037.073171" y="164.00002" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">network, logging,</text>
+  <text x="1037.073171" y="177.999924" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">cron, ssh, etc.</text>
   <line x1="1113.170732" y1="128.000018" x2="1142.439024" y2="128.000018" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="1142.439024" y="68.000057" width="97.560976" height="120.000047" rx="6.819554" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="1142.439024" y="68.000057" width="97.560976" height="120.000047" rx="6.819554" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="1142.439024" y="68.000057" width="97.560976" height="36.000002" rx="6.819554" fill="var(--primary-accent)" />
   <rect x="1142.439024" y="89.999906" width="97.560976" height="13.999904" fill="var(--primary-accent)" rx="6.819554"/>
-  <text x="1191.219512" y="92.000016" text-anchor="middle" font-family="sans-serif" font-size="12.840537" font-weight="bold" fill="var(--bg)">Login</text>
-  <text x="1191.219512" y="115.999976" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--primary-accent)">getty /</text>
-  <text x="1191.219512" y="131.999866" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--primary-accent)">GDM/LightDM</text>
-  <text x="1191.219512" y="149.999867" text-anchor="middle" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">User shell</text>
-  <text x="1191.219512" y="167.999868" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">PAM auth</text>
-  <text x="1191.219512" y="184.000007" text-anchor="middle" font-family="sans-serif" font-size="11.365923" fill="var(--text-faint)">.bashrc etc.</text>
+  <text x="1191.219512" y="92.000016" text-anchor="middle" font-size="12.840537" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Login</text>
+  <text x="1191.219512" y="115.999976" text-anchor="middle" font-size="11.852839" fill="var(--primary-accent)" font-family="Arial, sans-serif">getty /</text>
+  <text x="1191.219512" y="131.999866" text-anchor="middle" font-size="11.852839" fill="var(--primary-accent)" font-family="Arial, sans-serif">GDM/LightDM</text>
+  <text x="1191.219512" y="149.999867" text-anchor="middle" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">User shell</text>
+  <text x="1191.219512" y="167.999868" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">PAM auth</text>
+  <text x="1191.219512" y="184.000007" text-anchor="middle" font-size="11.365923" fill="var(--text-faint)" font-family="Arial, sans-serif">.bashrc etc.</text>
   <rect x="40" y="220.000009" width="370.731707" height="220.000107" rx="6.819554" fill="var(--text)" />
   <rect x="40" y="220.000009" width="370.731707" height="36.000002" rx="6.819554" fill="var(--ok-accent)" />
   <rect x="40" y="239.999872" width="370.731707" height="16.000015" fill="var(--ok-accent)" rx="6.819554"/>
-  <text x="225.365854" y="243.999968" text-anchor="middle" font-family="monospace" font-size="13.828122" font-weight="bold" fill="var(--bg)">GRUB config: /etc/grub.d/ + /boot/grub/grub.cfg</text>
-  <text x="59.512195" y="277.999984" font-family="monospace" font-size="12.840537" fill="var(--text-faint)">menuentry 'Ubuntu' {</text>
-  <text x="59.512195" y="296.999916" font-family="monospace" font-size="12.840537" fill="var(--ok-accent)">  linux</text>
-  <text x="118.04878" y="296.999916" font-family="monospace" font-size="12.840537" fill="var(--bg)">/boot/vmlinuz-6.x root=/dev/sda1</text>
-  <text x="59.512195" y="315.999972" font-family="monospace" font-size="12.840537" fill="var(--ok-accent)">  initrd</text>
-  <text x="127.804878" y="315.999972" font-family="monospace" font-size="12.840537" fill="var(--bg)">/boot/initrd.img-6.x</text>
-  <text x="59.512195" y="335.000028" font-family="monospace" font-size="12.840537" fill="var(--text-faint)">}</text>
-  <text x="59.512195" y="359.999919" font-family="monospace" font-size="11.852839" fill="var(--ok-accent)">update-grub</text>
-  <text x="181.463415" y="359.999919" font-family="monospace" font-size="11.852839" fill="var(--text-faint)">  # regenerate grub.cfg</text>
-  <text x="59.512195" y="380.00003" font-family="monospace" font-size="11.852839" fill="var(--ok-accent)">grub-install /dev/sda</text>
-  <text x="274.146341" y="380.00003" font-family="monospace" font-size="11.852839" fill="var(--text-faint)">  # install GRUB</text>
-  <text x="59.512195" y="400.000017" font-family="monospace" font-size="11.852839" fill="var(--text-faint)"># Boot params: quiet splash ro</text>
-  <text x="59.512195" y="419.99988" font-family="monospace" font-size="11.852839" fill="var(--text-faint)"># Edit: /etc/default/grub</text>
+  <text x="225.365854" y="243.999968" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">GRUB config: /etc/grub.d/ + /boot/grub/grub.cfg</text>
+  <text x="59.512195" y="277.999984" font-size="12.840537" fill="var(--text-faint)" font-family="Courier New, monospace">menuentry 'Ubuntu' {</text>
+  <text x="59.512195" y="296.999916" font-size="12.840537" fill="var(--ok-accent)" font-family="Courier New, monospace">  linux</text>
+  <text x="118.04878" y="296.999916" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">/boot/vmlinuz-6.x root=/dev/sda1</text>
+  <text x="59.512195" y="315.999972" font-size="12.840537" fill="var(--ok-accent)" font-family="Courier New, monospace">  initrd</text>
+  <text x="127.804878" y="315.999972" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">/boot/initrd.img-6.x</text>
+  <text x="59.512195" y="335.000028" font-size="12.840537" fill="var(--text-faint)" font-family="Courier New, monospace">}</text>
+  <text x="59.512195" y="359.999919" font-size="11.852839" fill="var(--ok-accent)" font-family="Courier New, monospace">update-grub</text>
+  <text x="181.463415" y="359.999919" font-size="11.852839" fill="var(--text-faint)" font-family="Courier New, monospace">  # regenerate grub.cfg</text>
+  <text x="59.512195" y="380.00003" font-size="11.852839" fill="var(--ok-accent)" font-family="Courier New, monospace">grub-install /dev/sda</text>
+  <text x="274.146341" y="380.00003" font-size="11.852839" fill="var(--text-faint)" font-family="Courier New, monospace">  # install GRUB</text>
+  <text x="59.512195" y="400.000017" font-size="11.852839" fill="var(--text-faint)" font-family="Courier New, monospace"># Boot params: quiet splash ro</text>
+  <text x="59.512195" y="419.99988" font-size="11.852839" fill="var(--text-faint)" font-family="Courier New, monospace"># Edit: /etc/default/grub</text>
   <rect x="430.243902" y="220.000009" width="409.756098" height="220.000107" rx="6.819554" fill="var(--text)" />
-  <rect x="430.243902" y="220.000009" width="409.756098" height="36.000002" rx="6.819554" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="430.243902" y="239.999872" width="409.756098" height="16.000015" fill="var(--danger-fill)" rx="6.819554" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="635.121847" y="243.999968" text-anchor="middle" font-family="monospace" font-size="13.828122" font-weight="bold" fill="var(--bg)">systemd key commands</text>
-  <text x="449.756098" y="277.999984" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">systemctl</text>
-  <text x="552.195122" y="277.999984" font-family="monospace" font-size="12.840537" fill="var(--bg)">status sshd</text>
-  <text x="449.756098" y="297.999971" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">systemctl</text>
-  <text x="552.195122" y="297.999971" font-family="monospace" font-size="12.840537" fill="var(--bg)">enable --now nginx</text>
-  <text x="449.756098" y="317.999958" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">systemctl</text>
-  <text x="552.195122" y="317.999958" font-family="monospace" font-size="12.840537" fill="var(--bg)">list-units --type=service</text>
-  <text x="449.756098" y="338.000069" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">journalctl</text>
-  <text x="561.95122" y="338.000069" font-family="monospace" font-size="12.840537" fill="var(--bg)">-b          # boot logs</text>
-  <text x="449.756098" y="357.999932" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">journalctl</text>
-  <text x="561.95122" y="357.999932" font-family="monospace" font-size="12.840537" fill="var(--bg)">-u sshd -f  # follow</text>
-  <text x="449.756098" y="377.99992" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">systemctl</text>
-  <text x="552.195122" y="377.99992" font-family="monospace" font-size="12.840537" fill="var(--bg)">get-default</text>
-  <text x="449.756098" y="398.000031" font-family="monospace" font-size="12.840537" fill="var(--info-accent)">systemctl</text>
-  <text x="552.195122" y="398.000031" font-family="monospace" font-size="12.840537" fill="var(--bg)">isolate rescue.target</text>
-  <text x="449.756098" y="419.99988" font-family="monospace" font-size="11.852839" fill="var(--text-faint)">Units: /etc/systemd/system/  /lib/systemd/system/</text>
+  <rect x="430.243902" y="220.000009" width="409.756098" height="36.000002" rx="6.819554" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430.243902" y="239.999872" width="409.756098" height="16.000015" fill="url(#grad-danger)" rx="6.819554" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.121847" y="243.999968" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">systemd key commands</text>
+  <text x="449.756098" y="277.999984" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">systemctl</text>
+  <text x="552.195122" y="277.999984" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">status sshd</text>
+  <text x="449.756098" y="297.999971" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">systemctl</text>
+  <text x="552.195122" y="297.999971" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">enable --now nginx</text>
+  <text x="449.756098" y="317.999958" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">systemctl</text>
+  <text x="552.195122" y="317.999958" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">list-units --type=service</text>
+  <text x="449.756098" y="338.000069" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">journalctl</text>
+  <text x="561.95122" y="338.000069" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">-b          # boot logs</text>
+  <text x="449.756098" y="357.999932" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">journalctl</text>
+  <text x="561.95122" y="357.999932" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">-u sshd -f  # follow</text>
+  <text x="449.756098" y="377.99992" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">systemctl</text>
+  <text x="552.195122" y="377.99992" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">get-default</text>
+  <text x="449.756098" y="398.000031" font-size="12.840537" fill="var(--info-accent)" font-family="Courier New, monospace">systemctl</text>
+  <text x="552.195122" y="398.000031" font-size="12.840537" fill="var(--bg)" font-family="Courier New, monospace">isolate rescue.target</text>
+  <text x="449.756098" y="419.99988" font-size="11.852839" fill="var(--text-faint)" font-family="Courier New, monospace">Units: /etc/systemd/system/  /lib/systemd/system/</text>
   <rect x="859.512195" y="220.000009" width="380.487805" height="220.000107" rx="6.819554" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <rect x="859.512195" y="220.000009" width="380.487805" height="36.000002" rx="6.819554" fill="var(--primary-accent)" />
   <rect x="859.512195" y="239.999872" width="380.487805" height="16.000015" fill="var(--primary-accent)" rx="6.819554"/>
-  <text x="1049.756098" y="243.999968" text-anchor="middle" font-family="monospace" font-size="13.828122" font-weight="bold" fill="var(--bg)">systemd target hierarchy</text>
-  <text x="879.02439" y="277.999984" font-family="monospace" font-size="12.840537" fill="var(--primary-accent)">graphical.target</text>
-  <text x="879.02439" y="299.999957" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">  └─ multi-user.target</text>
-  <text x="879.02439" y="320.000068" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">       └─ network.target</text>
-  <text x="879.02439" y="339.999932" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">            └─ sysinit.target</text>
-  <text x="879.02439" y="359.999919" font-family="sans-serif" font-size="11.852839" fill="var(--text-muted)">                 └─ local-fs.target</text>
-  <text x="879.02439" y="383.999878" font-family="monospace" font-size="11.852839" fill="var(--text-muted)">rescue.target    (runlevel 1)</text>
-  <text x="879.02439" y="401.999879" font-family="monospace" font-size="11.852839" fill="var(--text-muted)">emergency.target (root shell)</text>
-  <text x="879.02439" y="419.99988" font-family="monospace" font-size="11.852839" fill="var(--text-muted)">reboot.target    shutdown.target</text>
-  <rect x="40" y="459.999979" width="1199.999896" height="120.000047" rx="6.819554" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="64.390244" y="484.999994" font-family="sans-serif" font-size="14.815935" font-weight="bold" fill="var(--primary-accent)">Debugging the Boot</text>
-  <text x="64.390244" y="508.000022" font-family="monospace" font-size="12.840537" fill="var(--text)">dmesg | head -50          </text>
-  <text x="298.536585" y="508.000022" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">kernel ring buffer from current boot</text>
-  <text x="64.390244" y="527.999885" font-family="monospace" font-size="12.840537" fill="var(--text)">journalctl -b -p err      </text>
-  <text x="298.536585" y="527.999885" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">errors from this boot (systemd journal)</text>
-  <text x="64.390244" y="547.999997" font-family="monospace" font-size="12.840537" fill="var(--text)">systemctl --failed         </text>
-  <text x="298.536585" y="547.999997" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">list units that failed to start</text>
-  <text x="64.390244" y="567.999984" font-family="monospace" font-size="12.840537" fill="var(--text)">systemd-analyze blame      </text>
-  <text x="298.536585" y="567.999984" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">show services sorted by startup time</text>
-  <text x="698.536585" y="508.000022" font-family="monospace" font-size="12.840537" fill="var(--text)">systemd-analyze            </text>
-  <text x="932.682927" y="508.000022" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">total boot time breakdown</text>
-  <text x="698.536585" y="527.999885" font-family="monospace" font-size="12.840537" fill="var(--text)">cat /proc/cmdline          </text>
-  <text x="932.682927" y="527.999885" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">kernel command line used at boot</text>
-  <text x="698.536585" y="547.999997" font-family="monospace" font-size="12.840537" fill="var(--text)">ls /boot/                  </text>
-  <text x="932.682927" y="547.999997" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">vmlinuz, initrd, grub/</text>
-  <text x="698.536585" y="567.999984" font-family="monospace" font-size="12.840537" fill="var(--text)">uname -r                   </text>
-  <text x="932.682927" y="567.999984" font-family="sans-serif" font-size="12.840537" fill="var(--text-muted)">running kernel version</text>
-  <text x="640" y="620" text-anchor="middle" font-family="sans-serif" font-size="13.828122" fill="var(--text-muted)">Modern Linux systems boot in ~5-30 seconds thanks to systemd parallel service activation and readahead optimizations.</text>
+  <text x="1049.756098" y="243.999968" text-anchor="middle" font-size="13.828122" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">systemd target hierarchy</text>
+  <text x="879.02439" y="277.999984" font-size="12.840537" fill="var(--primary-accent)" font-family="Courier New, monospace">graphical.target</text>
+  <text x="879.02439" y="299.999957" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">  └─ multi-user.target</text>
+  <text x="879.02439" y="320.000068" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">       └─ network.target</text>
+  <text x="879.02439" y="339.999932" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">            └─ sysinit.target</text>
+  <text x="879.02439" y="359.999919" font-size="11.852839" fill="var(--text-muted)" font-family="Arial, sans-serif">                 └─ local-fs.target</text>
+  <text x="879.02439" y="383.999878" font-size="11.852839" fill="var(--text-muted)" font-family="Courier New, monospace">rescue.target    (runlevel 1)</text>
+  <text x="879.02439" y="401.999879" font-size="11.852839" fill="var(--text-muted)" font-family="Courier New, monospace">emergency.target (root shell)</text>
+  <text x="879.02439" y="419.99988" font-size="11.852839" fill="var(--text-muted)" font-family="Courier New, monospace">reboot.target    shutdown.target</text>
+  <rect x="40" y="459.999979" width="1199.999896" height="120.000047" rx="6.819554" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="64.390244" y="484.999994" font-size="14.815935" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Debugging the Boot</text>
+  <text x="64.390244" y="508.000022" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">dmesg | head -50          </text>
+  <text x="298.536585" y="508.000022" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">kernel ring buffer from current boot</text>
+  <text x="64.390244" y="527.999885" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">journalctl -b -p err      </text>
+  <text x="298.536585" y="527.999885" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">errors from this boot (systemd journal)</text>
+  <text x="64.390244" y="547.999997" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">systemctl --failed         </text>
+  <text x="298.536585" y="547.999997" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">list units that failed to start</text>
+  <text x="64.390244" y="567.999984" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">systemd-analyze blame      </text>
+  <text x="298.536585" y="567.999984" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">show services sorted by startup time</text>
+  <text x="698.536585" y="508.000022" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">systemd-analyze            </text>
+  <text x="932.682927" y="508.000022" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">total boot time breakdown</text>
+  <text x="698.536585" y="527.999885" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">cat /proc/cmdline          </text>
+  <text x="932.682927" y="527.999885" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">kernel command line used at boot</text>
+  <text x="698.536585" y="547.999997" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">ls /boot/                  </text>
+  <text x="932.682927" y="547.999997" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">vmlinuz, initrd, grub/</text>
+  <text x="698.536585" y="567.999984" font-size="12.840537" fill="var(--text)" font-family="Courier New, monospace">uname -r                   </text>
+  <text x="932.682927" y="567.999984" font-size="12.840537" fill="var(--text-muted)" font-family="Arial, sans-serif">running kernel version</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13.828122" fill="var(--text-muted)" font-family="Arial, sans-serif">Modern Linux systems boot in ~5-30 seconds thanks to systemd parallel service activation and readahead optimizations.</text>
 </svg>

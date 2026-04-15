@@ -1,85 +1,142 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <text x="640" y="40" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">Top-p (Nucleus) Sampling</text>
-  <text x="640" y="71.636364" text-anchor="middle" font-size="15.40366" fill="var(--text-muted)">Sorted token probabilities — keep smallest set whose cumulative mass ≥ p</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
 
-  <text x="180" y="124.363636" text-anchor="end" font-size="16.43057" fill="var(--text)">"Paris"</text>
-  <rect x="200" y="103.272727" width="800" height="31.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1020" y="124.363636" font-size="15.40366" fill="var(--text)">0.40 (cum 0.40)</text>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
 
-  <text x="180" y="177.090909" text-anchor="end" font-size="16.43057" fill="var(--text)">"Lyon"</text>
-  <rect x="200" y="156" width="480" height="31.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="700" y="177.090909" font-size="15.40366" fill="var(--text)">0.24 (cum 0.64)</text>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
 
-  <text x="180" y="229.818182" text-anchor="end" font-size="16.43057" fill="var(--text)">"the"</text>
-  <rect x="200" y="208.727273" width="240" height="31.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="460" y="229.818182" font-size="15.40366" fill="var(--text)">0.12 (cum 0.76)</text>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
 
-  <text x="180" y="282.545455" text-anchor="end" font-size="16.43057" fill="var(--text)">"a"</text>
-  <rect x="200" y="261.454545" width="160" height="31.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="380" y="282.545455" font-size="15.40366" fill="var(--text)">0.08 (cum 0.84)</text>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
 
-  <text x="180" y="335.272727" text-anchor="end" font-size="16.43057" fill="var(--text)">"Marseille"</text>
-  <rect x="200" y="314.181818" width="120" height="31.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="335.272727" font-size="15.40366" fill="var(--text)">0.06 (cum 0.90)</text>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
 
-  <text x="180" y="388" text-anchor="end" font-size="16.43057" fill="var(--text-muted)">"Berlin"</text>
-  <rect x="200" y="366.909091" width="80" height="31.636364" rx="6.161464" fill="var(--danger-fill)" opacity="0.45" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="300" y="388" font-size="15.40366" fill="var(--text-muted)">0.04 (cum 0.94)</text>
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="180" y="440.727273" text-anchor="end" font-size="16.43057" fill="var(--text-muted)">"one"</text>
-  <rect x="200" y="419.636364" width="40" height="31.636364" rx="6.161464" fill="var(--danger-fill)" opacity="0.35" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="260" y="440.727273" font-size="15.40366" fill="var(--text-muted)">0.02</text>
+  <text x="640" y="40" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Top-p (Nucleus) Sampling</text>
+  <text x="640" y="71.636364" text-anchor="middle" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">Sorted token probabilities — keep smallest set whose cumulative mass ≥ p</text>
 
-  <text x="180" y="493.454545" text-anchor="end" font-size="16.43057" fill="var(--text-muted)">"London"</text>
-  <rect x="200" y="472.363636" width="20" height="31.636364" rx="6.161464" fill="var(--danger-fill)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="493.454545" font-size="15.40366" fill="var(--text-muted)">0.01</text>
+  <text x="180" y="124.363636" text-anchor="end" font-size="16.43057" fill="var(--text)" font-family="Arial, sans-serif">"Paris"</text>
+  <rect x="200" y="103.272727" width="800" height="31.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="124.363636" font-size="15.40366" fill="var(--text)" font-family="Arial, sans-serif">0.40 (cum 0.40)</text>
+
+  <text x="180" y="177.090909" text-anchor="end" font-size="16.43057" fill="var(--text)" font-family="Arial, sans-serif">"Lyon"</text>
+  <rect x="200" y="156" width="480" height="31.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="177.090909" font-size="15.40366" fill="var(--text)" font-family="Arial, sans-serif">0.24 (cum 0.64)</text>
+
+  <text x="180" y="229.818182" text-anchor="end" font-size="16.43057" fill="var(--text)" font-family="Arial, sans-serif">"the"</text>
+  <rect x="200" y="208.727273" width="240" height="31.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="229.818182" font-size="15.40366" fill="var(--text)" font-family="Arial, sans-serif">0.12 (cum 0.76)</text>
+
+  <text x="180" y="282.545455" text-anchor="end" font-size="16.43057" fill="var(--text)" font-family="Arial, sans-serif">"a"</text>
+  <rect x="200" y="261.454545" width="160" height="31.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="282.545455" font-size="15.40366" fill="var(--text)" font-family="Arial, sans-serif">0.08 (cum 0.84)</text>
+
+  <text x="180" y="335.272727" text-anchor="end" font-size="16.43057" fill="var(--text)" font-family="Arial, sans-serif">"Marseille"</text>
+  <rect x="200" y="314.181818" width="120" height="31.636364" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="335.272727" font-size="15.40366" fill="var(--text)" font-family="Arial, sans-serif">0.06 (cum 0.90)</text>
+
+  <text x="180" y="388" text-anchor="end" font-size="16.43057" fill="var(--text-muted)" font-family="Arial, sans-serif">"Berlin"</text>
+  <rect x="200" y="366.909091" width="80" height="31.636364" rx="6.161464" fill="url(#grad-danger)" opacity="0.45" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="388" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">0.04 (cum 0.94)</text>
+
+  <text x="180" y="440.727273" text-anchor="end" font-size="16.43057" fill="var(--text-muted)" font-family="Arial, sans-serif">"one"</text>
+  <rect x="200" y="419.636364" width="40" height="31.636364" rx="6.161464" fill="url(#grad-danger)" opacity="0.35" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="260" y="440.727273" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">0.02</text>
+
+  <text x="180" y="493.454545" text-anchor="end" font-size="16.43057" fill="var(--text-muted)" font-family="Arial, sans-serif">"London"</text>
+  <rect x="200" y="472.363636" width="20" height="31.636364" rx="6.161464" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="493.454545" font-size="15.40366" fill="var(--text-muted)" font-family="Arial, sans-serif">0.01</text>
 
   <line x1="200" y1="356.363636" x2="1240" y2="356.363636" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="1240" y="347.927273" text-anchor="end" font-size="15.40366" font-weight="bold" fill="var(--danger-accent)">p = 0.9 cutoff</text>
+  <text x="1240" y="347.927273" text-anchor="end" font-size="15.40366" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">p = 0.9 cutoff</text>
 
-  <rect x="40" y="525.090909" width="590" height="94.909091" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="562" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Kept in nucleus</text>
-  <text x="335" y="598.909091" text-anchor="middle" font-size="15.40366" fill="var(--ok-text)">Paris, Lyon, the, a, Marseille — sampled from</text>
+  <rect x="40" y="525.090909" width="590" height="94.909091" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="562" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Kept in nucleus</text>
+  <text x="335" y="598.909091" text-anchor="middle" font-size="15.40366" fill="var(--ok-text)" font-family="Arial, sans-serif">Paris, Lyon, the, a, Marseille — sampled from</text>
 
-  <rect x="650" y="525.090909" width="590" height="94.909091" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="562" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--danger-text)">Excluded (tail)</text>
-  <text x="945" y="598.909091" text-anchor="middle" font-size="15.40366" fill="var(--danger-text)">Berlin, one, London — unreachable this step</text>
+  <rect x="650" y="525.090909" width="590" height="94.909091" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="562" text-anchor="middle" font-size="17.457481" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Excluded (tail)</text>
+  <text x="945" y="598.909091" text-anchor="middle" font-size="15.40366" fill="var(--danger-text)" font-family="Arial, sans-serif">Berlin, one, London — unreachable this step</text>
 </svg>

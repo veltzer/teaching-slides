@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,51 +75,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.2706,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="22.7365" font-weight="bold" fill="var(--text)">Ambassador Pattern</text>
-  <rect x="40" y="206.8493" width="197.4683" height="79.4521" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="138.7341" y="254.5206" text-anchor="middle" font-weight="bold" fill="var(--text)">Application</text>
-  <rect x="389.367" y="190.959" width="227.8482" height="95.3424" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="503.291" y="235.4521" text-anchor="middle" font-weight="bold" fill="var(--text)">Ambassador</text>
-  <text x="503.291" y="262.4657" text-anchor="middle" font-size="14.2103" fill="var(--text-muted)">Proxy / Sidecar</text>
-  <rect x="814.6834" y="79.7261" width="212.6582" height="55.6164" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="921.0124" y="114.6849" text-anchor="middle" font-size="17.0524" fill="var(--text)">External Service 1</text>
-  <rect x="814.6834" y="175.0685" width="212.6582" height="55.6164" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="921.0124" y="210.0274" text-anchor="middle" font-size="17.0524" fill="var(--text)">External Service 2</text>
-  <rect x="814.6834" y="270.411" width="212.6582" height="55.6164" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="921.0124" y="305.3699" text-anchor="middle" font-size="17.0524" fill="var(--text)">External Service 3</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="22.7365" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Ambassador Pattern</text>
+  <rect x="40" y="206.8493" width="197.4683" height="79.4521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="138.7341" y="254.5206" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
+  <rect x="389.367" y="190.959" width="227.8482" height="95.3424" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="503.291" y="235.4521" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Ambassador</text>
+  <text x="503.291" y="262.4657" text-anchor="middle" font-size="14.2103" fill="var(--text-muted)" font-family="Arial, sans-serif">Proxy / Sidecar</text>
+  <rect x="814.6834" y="79.7261" width="212.6582" height="55.6164" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="921.0124" y="114.6849" text-anchor="middle" font-size="17.0524" fill="var(--text)" font-family="Arial, sans-serif">External Service 1</text>
+  <rect x="814.6834" y="175.0685" width="212.6582" height="55.6164" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="921.0124" y="210.0274" text-anchor="middle" font-size="17.0524" fill="var(--text)" font-family="Arial, sans-serif">External Service 2</text>
+  <rect x="814.6834" y="270.411" width="212.6582" height="55.6164" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="921.0124" y="305.3699" text-anchor="middle" font-size="17.0524" fill="var(--text)" font-family="Arial, sans-serif">External Service 3</text>
   <rect x="343.7973" y="413.4247" width="151.8987" height="47.6713" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="419.7468" y="445.2055" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)">Retry Logic</text>
+  <text x="419.7468" y="445.2055" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)" font-family="Arial, sans-serif">Retry Logic</text>
   <rect x="526.0758" y="413.4247" width="167.0886" height="47.6713" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="609.6201" y="445.2055" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)">Circuit Breaker</text>
+  <text x="609.6201" y="445.2055" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)" font-family="Arial, sans-serif">Circuit Breaker</text>
   <rect x="343.7973" y="492.8767" width="151.8987" height="47.6713" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="419.7468" y="524.6576" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)">Logging</text>
+  <text x="419.7468" y="524.6576" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)" font-family="Arial, sans-serif">Logging</text>
   <rect x="526.0758" y="492.8767" width="167.0886" height="47.6713" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="609.6201" y="524.6576" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)">Metrics</text>
+  <text x="609.6201" y="524.6576" text-anchor="middle" font-size="15.6313" fill="var(--text-muted)" font-family="Arial, sans-serif">Metrics</text>
   <line x1="237.4683" y1="246.5754" x2="386.329" y2="238.6301" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="617.2152" y1="214.7946" x2="811.6454" y2="111.5069" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="617.2152" y1="238.6301" x2="811.6454" y2="203.6713" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -129,5 +123,5 @@
   <line x1="465.3163" y1="286.3014" x2="419.7468" y2="489.6986" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6.8644 4.1186" marker-end="url(#arrow)" />
   <line x1="526.0758" y1="286.3014" x2="602.0251" y2="489.6986" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6.8644 4.1186" marker-end="url(#arrow)" />
   <rect x="40" y="572.3287" width="1200" height="47.6713" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="604.1095" text-anchor="middle" font-size="17.0524" fill="var(--text-muted)">The Ambassador acts as a proxy handling cross-cutting concerns (retries, circuit breaking, logging, monitoring) for the application.</text>
+  <text x="639.9999" y="604.1095" text-anchor="middle" font-size="17.0524" fill="var(--text-muted)" font-family="Arial, sans-serif">The Ambassador acts as a proxy handling cross-cutting concerns (retries, circuit breaking, logging, monitoring) for the application.</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,80 +97,77 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="130" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.466118" font-weight="bold" fill="var(--text)">Clients</text>
+  <text x="130" y="40" text-anchor="middle" font-size="17.466118" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Clients</text>
   <rect x="40" y="54.123452" width="180" height="48.961044" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="130" y="84.253344" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" fill="var(--text)">Web Browser</text>
+  <text x="130" y="84.253344" text-anchor="middle" font-size="14.55508" fill="var(--text)" font-family="Arial, sans-serif">Web Browser</text>
   <rect x="40" y="120.032546" width="180" height="48.961044" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="130" y="150.16232" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" fill="var(--text)">Mobile App</text>
+  <text x="130" y="150.16232" text-anchor="middle" font-size="14.55508" fill="var(--text)" font-family="Arial, sans-serif">Mobile App</text>
   <rect x="40" y="185.941639" width="180" height="48.961044" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="130" y="216.071531" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" fill="var(--text)">3rd Party API</text>
+  <text x="130" y="216.071531" text-anchor="middle" font-size="14.55508" fill="var(--text)" font-family="Arial, sans-serif">3rd Party API</text>
   <rect x="40" y="251.850616" width="180" height="48.961044" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="130" y="281.980624" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" fill="var(--text)">IoT Device</text>
+  <text x="130" y="281.980624" text-anchor="middle" font-size="14.55508" fill="var(--text)" font-family="Arial, sans-serif">IoT Device</text>
   <line x1="220" y1="78.604033" x2="370" y2="209.480493" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
   <line x1="220" y1="144.51301" x2="370" y2="218.896128" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
   <line x1="220" y1="210.422103" x2="370" y2="228.311763" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
   <line x1="220" y1="276.331314" x2="370" y2="237.727281" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
-  <rect x="370" y="134.155881" width="240" height="207.142916" rx="6.699486" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="490" y="162.402669" text-anchor="middle" font-family="Arial,sans-serif" font-size="18.436427" font-weight="bold" fill="var(--bg)">API Gateway</text>
+  <rect x="370" y="134.155881" width="240" height="207.142916" rx="6.699486" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="162.402669" text-anchor="middle" font-size="18.436427" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">API Gateway</text>
   <rect x="390" y="173.701408" width="200" height="26.363684" rx="6.699486" fill="var(--bg)" fill-opacity="0.2" />
-  <text x="490" y="191.591067" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--bg)">Authentication / AuthZ</text>
+  <text x="490" y="191.591067" text-anchor="middle" font-size="12.614462" fill="var(--bg)" font-family="Arial, sans-serif">Authentication / AuthZ</text>
   <rect x="390" y="205.714403" width="200" height="26.363684" rx="6.699486" fill="var(--bg)" fill-opacity="0.2" />
-  <text x="490" y="223.603945" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--bg)">Rate Limiting</text>
+  <text x="490" y="223.603945" text-anchor="middle" font-size="12.614462" fill="var(--bg)" font-family="Arial, sans-serif">Rate Limiting</text>
   <rect x="390" y="237.727281" width="200" height="26.363684" rx="6.699486" fill="var(--bg)" fill-opacity="0.2" />
-  <text x="490" y="255.61694" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--bg)">SSL Termination</text>
+  <text x="490" y="255.61694" text-anchor="middle" font-size="12.614462" fill="var(--bg)" font-family="Arial, sans-serif">SSL Termination</text>
   <rect x="390" y="269.740276" width="200" height="26.363684" rx="6.699486" fill="var(--bg)" fill-opacity="0.2" />
-  <text x="490" y="287.629935" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--bg)">Request Routing</text>
+  <text x="490" y="287.629935" text-anchor="middle" font-size="12.614462" fill="var(--bg)" font-family="Arial, sans-serif">Request Routing</text>
   <rect x="390" y="301.753388" width="200" height="26.363684" rx="6.699486" fill="var(--bg)" fill-opacity="0.2" />
-  <text x="490" y="319.642813" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--bg)">Logging / Tracing</text>
-  <text x="900" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.466118" font-weight="bold" fill="var(--text)">Backend Services</text>
-  <rect x="750" y="54.123452" width="180" height="75.324612" rx="6.699486" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="840" y="85.194837" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" font-weight="bold" fill="var(--text)">Auth Service</text>
-  <text x="840" y="105.90921" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">JWT / OAuth2</text>
-  <rect x="750" y="157.694969" width="180" height="75.324612" rx="6.699486" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="840" y="188.766353" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" font-weight="bold" fill="var(--text)">Products</text>
-  <text x="840" y="209.480493" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">Catalog, Search</text>
-  <rect x="750" y="261.266251" width="180" height="75.324612" rx="6.699486" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="840" y="292.337753" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" font-weight="bold" fill="var(--text)">Orders</text>
-  <text x="840" y="313.052009" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">Cart, Checkout</text>
-  <rect x="750" y="364.83765" width="180" height="75.324612" rx="6.699486" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="840" y="395.909035" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" font-weight="bold" fill="var(--text)">Payments</text>
-  <text x="840" y="416.623409" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">Stripe, PayPal</text>
+  <text x="490" y="319.642813" text-anchor="middle" font-size="12.614462" fill="var(--bg)" font-family="Arial, sans-serif">Logging / Tracing</text>
+  <text x="900" y="40" text-anchor="middle" font-size="17.466118" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Backend Services</text>
+  <rect x="750" y="54.123452" width="180" height="75.324612" rx="6.699486" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="85.194837" text-anchor="middle" font-size="14.55508" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Auth Service</text>
+  <text x="840" y="105.90921" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">JWT / OAuth2</text>
+  <rect x="750" y="157.694969" width="180" height="75.324612" rx="6.699486" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="188.766353" text-anchor="middle" font-size="14.55508" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Products</text>
+  <text x="840" y="209.480493" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">Catalog, Search</text>
+  <rect x="750" y="261.266251" width="180" height="75.324612" rx="6.699486" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="292.337753" text-anchor="middle" font-size="14.55508" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Orders</text>
+  <text x="840" y="313.052009" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">Cart, Checkout</text>
+  <rect x="750" y="364.83765" width="180" height="75.324612" rx="6.699486" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="395.909035" text-anchor="middle" font-size="14.55508" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Payments</text>
+  <text x="840" y="416.623409" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">Stripe, PayPal</text>
   <line x1="612" y1="181.233822" x2="748" y2="91.785758" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="612" y1="209.480493" x2="748" y2="195.357157" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="612" y1="237.727281" x2="748" y2="298.928674" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="612" y1="256.55855" x2="748" y2="402.500073" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <rect x="959.999893" y="63.539087" width="120" height="37.662423" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1020" y="87.078058" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text)">Auth DB</text>
+  <text x="1020" y="87.078058" text-anchor="middle" font-size="11.644153" fill="var(--text)" font-family="Arial, sans-serif">Auth DB</text>
   <rect x="959.999893" y="167.11037" width="120" height="37.662423" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1020" y="190.649457" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text)">Products DB</text>
+  <text x="1020" y="190.649457" text-anchor="middle" font-size="11.644153" fill="var(--text)" font-family="Arial, sans-serif">Products DB</text>
   <rect x="959.999893" y="270.681886" width="120" height="37.662423" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1020" y="294.220739" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text)">Orders DB</text>
+  <text x="1020" y="294.220739" text-anchor="middle" font-size="11.644153" fill="var(--text)" font-family="Arial, sans-serif">Orders DB</text>
   <rect x="959.999893" y="374.253285" width="120" height="37.662423" rx="6.699486" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1020" y="397.792256" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text)">Payments DB</text>
+  <text x="1020" y="397.792256" text-anchor="middle" font-size="11.644153" fill="var(--text)" font-family="Arial, sans-serif">Payments DB</text>
   <line x1="930" y1="91.785758" x2="958" y2="82.370123" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="930" y1="195.357157" x2="958" y2="185.941639" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="930" y1="298.928674" x2="958" y2="289.513039" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="930" y1="402.500073" x2="958" y2="393.084438" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="229.999893" y="303.636374" width="130" height="33.896099" rx="6.699486" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="295" y="325.292241" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--danger-accent)">Internet Zone</text>
-  <rect x="620" y="303.636374" width="130" height="33.896099" rx="6.699486" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="685" y="325.292241" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--ok-accent)">Internal Zone</text>
+  <rect x="229.999893" y="303.636374" width="130" height="33.896099" rx="6.699486" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="295" y="325.292241" text-anchor="middle" font-size="12.614462" fill="var(--danger-accent)" font-family="Arial, sans-serif">Internet Zone</text>
+  <rect x="620" y="303.636374" width="130" height="33.896099" rx="6.699486" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="685" y="325.292241" text-anchor="middle" font-size="12.614462" fill="var(--ok-accent)" font-family="Arial, sans-serif">Internal Zone</text>
   <rect x="40" y="482.532502" width="1200" height="94.155881" rx="6.699486" fill="var(--surface)" />
-  <text x="640" y="506.071356" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.55508" font-weight="bold" fill="var(--primary-accent)">API Gateway Benefits</text>
-  <text x="160" y="532.43504" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--text)">Single entry point</text>
-  <text x="380" y="532.43504" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--text)">Cross-cutting concerns</text>
-  <text x="620" y="532.43504" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--text)">Client simplification</text>
-  <text x="859.999893" y="532.43504" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--text)">Protocol translation</text>
-  <text x="1080" y="532.43504" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--text)">Security boundary</text>
-  <text x="160" y="555.974127" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">for all clients</text>
-  <text x="380" y="555.974127" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">auth, rate-limit, log</text>
-  <text x="620" y="555.974127" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">hides topology</text>
-  <text x="859.999893" y="555.974127" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">REST↔gRPC</text>
-  <text x="1080" y="555.974127" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.644153" fill="var(--text-muted)">perimeter defense</text>
-  <rect x="40" y="586.103901" width="1200" height="33.896099" rx="6.699486" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="608.701262" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.614462" fill="var(--primary-accent)">Tools: Kong · AWS API Gateway · NGINX · Traefik · Azure API Management · Envoy</text>
+  <text x="640" y="506.071356" text-anchor="middle" font-size="14.55508" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">API Gateway Benefits</text>
+  <text x="160" y="532.43504" text-anchor="middle" font-size="12.614462" fill="var(--text)" font-family="Arial, sans-serif">Single entry point</text>
+  <text x="380" y="532.43504" text-anchor="middle" font-size="12.614462" fill="var(--text)" font-family="Arial, sans-serif">Cross-cutting concerns</text>
+  <text x="620" y="532.43504" text-anchor="middle" font-size="12.614462" fill="var(--text)" font-family="Arial, sans-serif">Client simplification</text>
+  <text x="859.999893" y="532.43504" text-anchor="middle" font-size="12.614462" fill="var(--text)" font-family="Arial, sans-serif">Protocol translation</text>
+  <text x="1080" y="532.43504" text-anchor="middle" font-size="12.614462" fill="var(--text)" font-family="Arial, sans-serif">Security boundary</text>
+  <text x="160" y="555.974127" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">for all clients</text>
+  <text x="380" y="555.974127" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">auth, rate-limit, log</text>
+  <text x="620" y="555.974127" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">hides topology</text>
+  <text x="859.999893" y="555.974127" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">REST↔gRPC</text>
+  <text x="1080" y="555.974127" text-anchor="middle" font-size="11.644153" fill="var(--text-muted)" font-family="Arial, sans-serif">perimeter defense</text>
+  <rect x="40" y="586.103901" width="1200" height="33.896099" rx="6.699486" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="608.701262" text-anchor="middle" font-size="12.614462" fill="var(--primary-accent)" font-family="Arial, sans-serif">Tools: Kong · AWS API Gateway · NGINX · Traefik · Azure API Management · Envoy</text>
 </svg>

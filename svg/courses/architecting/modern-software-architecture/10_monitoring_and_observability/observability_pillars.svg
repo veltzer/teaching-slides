@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,95 +97,92 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="43.171576" rx="6.633586" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="68.155381" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.215951" font-weight="bold" fill="var(--bg)">The Three Pillars of Observability</text>
-  <rect x="49.836066" y="101.941791" width="363.934458" height="450.485506" rx="6.633586" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="40" width="1200" height="43.171576" rx="6.633586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="68.155381" text-anchor="middle" font-size="19.215951" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">The Three Pillars of Observability</text>
+  <rect x="49.836066" y="101.941791" width="363.934458" height="450.485506" rx="6.633586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="49.836066" y="101.941791" width="363.934458" height="46.925479" rx="6.633586" fill="var(--primary-accent)" />
   <rect x="49.836066" y="135.728201" width="363.934458" height="13.139069" fill="var(--primary-accent)" rx="6.633586"/>
-  <text x="231.803295" y="135.728201" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.13748" font-weight="bold" fill="var(--bg)">Metrics</text>
-  <text x="231.803295" y="172.330184" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)">What is it?</text>
-  <text x="231.803295" y="193.915971" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Numeric measurements over time</text>
-  <text x="231.803295" y="212.686186" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Aggregated, time-series data</text>
-  <text x="231.803295" y="242.71846" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)">What it reveals</text>
-  <text x="231.803295" y="263.365801" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Is the system healthy?</text>
-  <text x="231.803295" y="282.136016" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Where is the bottleneck?</text>
-  <text x="231.803295" y="300.906348" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Are SLOs being met?</text>
-  <text x="231.803295" y="331.877185" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)">Examples</text>
+  <text x="231.803295" y="135.728201" text-anchor="middle" font-size="21.13748" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Metrics</text>
+  <text x="231.803295" y="172.330184" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">What is it?</text>
+  <text x="231.803295" y="193.915971" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Numeric measurements over time</text>
+  <text x="231.803295" y="212.686186" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Aggregated, time-series data</text>
+  <text x="231.803295" y="242.71846" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">What it reveals</text>
+  <text x="231.803295" y="263.365801" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Is the system healthy?</text>
+  <text x="231.803295" y="282.136016" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Where is the bottleneck?</text>
+  <text x="231.803295" y="300.906348" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Are SLOs being met?</text>
+  <text x="231.803295" y="331.877185" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Examples</text>
   <rect x="67.540986" y="342.200797" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="231.803295" y="359.094002" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">CPU / Memory / Disk usage</text>
+  <text x="231.803295" y="359.094002" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">CPU / Memory / Disk usage</text>
   <rect x="67.540986" y="372.233071" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="231.803295" y="389.126276" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">HTTP request rate &amp; latency</text>
+  <text x="231.803295" y="389.126276" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">HTTP request rate &amp; latency</text>
   <rect x="67.540986" y="402.265578" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="231.803295" y="419.158783" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Error rate (4xx / 5xx %)</text>
+  <text x="231.803295" y="419.158783" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Error rate (4xx / 5xx %)</text>
   <rect x="67.540986" y="432.297852" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="231.803295" y="449.191057" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Queue depth, DB connections</text>
-  <text x="231.803295" y="486.731603" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)">Tools</text>
+  <text x="231.803295" y="449.191057" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Queue depth, DB connections</text>
+  <text x="231.803295" y="486.731603" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Tools</text>
   <rect x="67.540986" y="496.116535" width="152.45903" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.3333" />
-  <text x="143.278698" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" fill="var(--text)">Prometheus</text>
+  <text x="143.278698" y="522.394906" text-anchor="middle" font-size="13.451033" fill="var(--text)" font-family="Arial, sans-serif">Prometheus</text>
   <rect x="231.803295" y="496.116535" width="152.45903" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.3333" />
-  <text x="307.540902" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" fill="var(--text)">Grafana</text>
-  <rect x="458.032719" y="101.941791" width="363.934458" height="450.485506" rx="6.633586" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="307.540902" y="522.394906" text-anchor="middle" font-size="13.451033" fill="var(--text)" font-family="Arial, sans-serif">Grafana</text>
+  <rect x="458.032719" y="101.941791" width="363.934458" height="450.485506" rx="6.633586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="458.032719" y="101.941791" width="363.934458" height="46.925479" rx="6.633586" fill="var(--ok-accent)" />
   <rect x="458.032719" y="135.728201" width="363.934458" height="13.139069" fill="var(--ok-accent)" rx="6.633586"/>
-  <text x="640.000052" y="135.728201" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.13748" font-weight="bold" fill="var(--bg)">Logs</text>
-  <text x="640.000052" y="172.330184" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)">What is it?</text>
-  <text x="640.000052" y="193.915971" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Timestamped text/JSON records</text>
-  <text x="640.000052" y="212.686186" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Events as they happen</text>
-  <text x="640.000052" y="242.71846" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)">What it reveals</text>
-  <text x="640.000052" y="263.365801" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">What exactly happened?</text>
-  <text x="640.000052" y="282.136016" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">What error was thrown?</text>
-  <text x="640.000052" y="300.906348" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Who did what, when?</text>
-  <text x="640.000052" y="331.877185" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)">Examples</text>
+  <text x="640.000052" y="135.728201" text-anchor="middle" font-size="21.13748" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Logs</text>
+  <text x="640.000052" y="172.330184" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">What is it?</text>
+  <text x="640.000052" y="193.915971" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Timestamped text/JSON records</text>
+  <text x="640.000052" y="212.686186" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Events as they happen</text>
+  <text x="640.000052" y="242.71846" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">What it reveals</text>
+  <text x="640.000052" y="263.365801" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">What exactly happened?</text>
+  <text x="640.000052" y="282.136016" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">What error was thrown?</text>
+  <text x="640.000052" y="300.906348" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Who did what, when?</text>
+  <text x="640.000052" y="331.877185" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Examples</text>
   <rect x="475.737638" y="342.200797" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="640.000052" y="359.094002" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Application error stack traces</text>
+  <text x="640.000052" y="359.094002" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Application error stack traces</text>
   <rect x="475.737638" y="372.233071" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="640.000052" y="389.126276" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Audit logs (user actions)</text>
+  <text x="640.000052" y="389.126276" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Audit logs (user actions)</text>
   <rect x="475.737638" y="402.265578" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="640.000052" y="419.158783" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Access logs (who, when)</text>
+  <text x="640.000052" y="419.158783" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Access logs (who, when)</text>
   <rect x="475.737638" y="432.297852" width="328.524619" height="24.401244" rx="6.633586" fill="var(--bg)" />
-  <text x="640.000052" y="449.191057" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Structured JSON events</text>
-  <text x="640.000052" y="486.731603" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)">Tools</text>
+  <text x="640.000052" y="449.191057" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Structured JSON events</text>
+  <text x="640.000052" y="486.731603" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Tools</text>
   <rect x="475.737638" y="496.116535" width="98.360664" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="524.918075" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">ELK Stack</text>
+  <text x="524.918075" y="522.394906" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">ELK Stack</text>
   <rect x="583.934474" y="496.116535" width="98.360664" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="633.114806" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Loki</text>
+  <text x="633.114806" y="522.394906" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Loki</text>
   <rect x="692.131205" y="496.116535" width="98.360664" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="741.311432" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Splunk</text>
-  <rect x="866.229476" y="101.941791" width="368.852491" height="450.485506" rx="6.633586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="741.311432" y="522.394906" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Splunk</text>
+  <rect x="866.229476" y="101.941791" width="368.852491" height="450.485506" rx="6.633586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="866.229476" y="101.941791" width="368.852491" height="46.925479" rx="6.633586" fill="var(--warn-accent)" />
   <rect x="866.229476" y="135.728201" width="368.852491" height="13.139069" fill="var(--warn-accent)" rx="6.633586"/>
-  <text x="1050.164023" y="135.728201" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.13748" font-weight="bold" fill="var(--bg)">Traces</text>
-  <text x="1050.164023" y="172.330184" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)">What is it?</text>
-  <text x="1050.164023" y="193.915971" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">End-to-end request journey</text>
-  <text x="1050.164023" y="212.686186" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Spans across services</text>
-  <text x="1050.164023" y="242.71846" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)">What it reveals</text>
-  <text x="1050.164023" y="263.365801" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Where was the latency?</text>
-  <text x="1050.164023" y="282.136016" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Which service failed?</text>
-  <text x="1050.164023" y="300.906348" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">How do services interact?</text>
-  <text x="1050.164023" y="331.877185" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)">Examples</text>
-  <rect x="883.934395" y="342.200797" width="334.426259" height="20.647341" rx="6.633586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1051.147524" y="357.216992" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--text)">Gateway → 250ms total</text>
-  <rect x="883.934395" y="368.479168" width="216.393462" height="20.647341" rx="6.633586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="992.131231" y="383.495246" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--text)">Auth svc → 80ms</text>
-  <rect x="883.934395" y="394.757305" width="275.40986" height="20.647341" rx="6.633586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1021.63943" y="409.773617" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--text)">Orders svc → 140ms</text>
-  <rect x="883.934395" y="421.035676" width="177.049196" height="20.647341" rx="6.633586" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="972.458993" y="436.051988" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--bg)">DB query → 100ms</text>
+  <text x="1050.164023" y="135.728201" text-anchor="middle" font-size="21.13748" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Traces</text>
+  <text x="1050.164023" y="172.330184" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">What is it?</text>
+  <text x="1050.164023" y="193.915971" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">End-to-end request journey</text>
+  <text x="1050.164023" y="212.686186" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Spans across services</text>
+  <text x="1050.164023" y="242.71846" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">What it reveals</text>
+  <text x="1050.164023" y="263.365801" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Where was the latency?</text>
+  <text x="1050.164023" y="282.136016" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Which service failed?</text>
+  <text x="1050.164023" y="300.906348" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">How do services interact?</text>
+  <text x="1050.164023" y="331.877185" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Examples</text>
+  <rect x="883.934395" y="342.200797" width="334.426259" height="20.647341" rx="6.633586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1051.147524" y="357.216992" text-anchor="middle" font-size="11.529615" fill="var(--text)" font-family="Arial, sans-serif">Gateway → 250ms total</text>
+  <rect x="883.934395" y="368.479168" width="216.393462" height="20.647341" rx="6.633586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="992.131231" y="383.495246" text-anchor="middle" font-size="11.529615" fill="var(--text)" font-family="Arial, sans-serif">Auth svc → 80ms</text>
+  <rect x="883.934395" y="394.757305" width="275.40986" height="20.647341" rx="6.633586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.63943" y="409.773617" text-anchor="middle" font-size="11.529615" fill="var(--text)" font-family="Arial, sans-serif">Orders svc → 140ms</text>
+  <rect x="883.934395" y="421.035676" width="177.049196" height="20.647341" rx="6.633586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.458993" y="436.051988" text-anchor="middle" font-size="11.529615" fill="var(--bg)" font-family="Arial, sans-serif">DB query → 100ms</text>
   <rect x="883.934395" y="447.314047" width="98.360664" height="20.647341" rx="6.633586" fill="var(--warn-accent)" />
-  <text x="933.114832" y="462.330125" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.055977" fill="var(--bg)">Cache → 20ms</text>
-  <text x="1050.164023" y="486.731603" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)">Tools</text>
+  <text x="933.114832" y="462.330125" text-anchor="middle" font-size="11.055977" fill="var(--bg)" font-family="Arial, sans-serif">Cache → 20ms</text>
+  <text x="1050.164023" y="486.731603" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Tools</text>
   <rect x="883.934395" y="496.116535" width="103.278698" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.3333" />
-  <text x="935.082045" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Jaeger</text>
+  <text x="935.082045" y="522.394906" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Jaeger</text>
   <rect x="997.049264" y="496.116535" width="103.278698" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.3333" />
-  <text x="1048.196809" y="522.394906" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text)">Zipkin</text>
+  <text x="1048.196809" y="522.394906" text-anchor="middle" font-size="12.490379" fill="var(--text)" font-family="Arial, sans-serif">Zipkin</text>
   <rect x="1110.164028" y="496.116535" width="113.114764" height="41.294449" rx="6.633586" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.3333" />
-  <text x="1166.229502" y="513.948304" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--text)">Open</text>
-  <text x="1166.229502" y="530.841509" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.529615" fill="var(--text)">Telemetry</text>
+  <text x="1166.229502" y="513.948304" text-anchor="middle" font-size="11.529615" fill="var(--text)" font-family="Arial, sans-serif">Open</text>
+  <text x="1166.229502" y="530.841509" text-anchor="middle" font-size="11.529615" fill="var(--text)" font-family="Arial, sans-serif">Telemetry</text>
   <rect x="49.836066" y="573.074521" width="1180.327972" height="46.925479" rx="6.633586" fill="var(--surface)" />
-  <text x="640.000052" y="591.844736" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.451033" font-weight="bold" fill="var(--text)">Together: Metrics tell you WHEN, Logs tell you WHAT, Traces tell you WHERE across services</text>
-  <text x="640.000052" y="610.615067" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.490379" fill="var(--text-muted)">Unified with correlation IDs → OpenTelemetry standard — instrument once, export anywhere</text>
+  <text x="640.000052" y="591.844736" text-anchor="middle" font-size="13.451033" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Together: Metrics tell you WHEN, Logs tell you WHAT, Traces tell you WHERE across services</text>
+  <text x="640.000052" y="610.615067" text-anchor="middle" font-size="12.490379" fill="var(--text-muted)" font-family="Arial, sans-serif">Unified with correlation IDs → OpenTelemetry standard — instrument once, export anywhere</text>
 </svg>

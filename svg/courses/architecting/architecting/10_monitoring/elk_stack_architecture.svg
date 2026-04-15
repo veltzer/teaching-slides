@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,56 +75,53 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.2706,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="23.4429" font-weight="bold" fill="var(--text)">ELK Stack Architecture</text>
-  <rect x="40" y="109.2833" width="192.5926" height="376.1092" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="8.8396 4.4197" filter="url(#shadow)"/>
-  <text x="136.2963" y="152.8327" text-anchor="middle" font-size="17.5822" font-weight="bold" fill="var(--primary-accent)">Data Sources</text>
-  <rect x="62.2222" y="178.5666" width="148.1481" height="69.2833" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.2963" y="222.116" text-anchor="middle" font-size="16.117" fill="var(--text)">App 1</text>
-  <rect x="62.2222" y="267.645" width="148.1481" height="69.2833" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.2963" y="311.1945" text-anchor="middle" font-size="16.117" fill="var(--text)">App 2</text>
-  <rect x="62.2222" y="356.7235" width="148.1481" height="69.2833" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.2963" y="400.2731" text-anchor="middle" font-size="16.117" fill="var(--text)">App N</text>
-  <rect x="321.4816" y="188.4642" width="207.4074" height="108.8738" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="425.1853" y="237.9523" text-anchor="middle" font-size="19.0474" font-weight="bold" fill="var(--text)">Beats</text>
-  <text x="425.1853" y="273.5836" text-anchor="middle" font-size="16.117" fill="var(--text-muted)">/ Fluentd</text>
-  <rect x="321.4816" y="366.6211" width="207.4074" height="108.8738" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="425.1853" y="429.9659" text-anchor="middle" font-size="19.0474" font-weight="bold" fill="var(--text)">Logstash</text>
-  <rect x="647.4075" y="228.0546" width="266.6666" height="158.3618" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="780.7408" y="297.3379" text-anchor="middle" font-size="20.5126" font-weight="bold" fill="var(--text)">Elasticsearch</text>
-  <text x="780.7408" y="342.8669" text-anchor="middle" font-size="16.117" fill="var(--text-muted)">Cluster</text>
-  <rect x="1032.5926" y="247.8499" width="207.4074" height="118.7714" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136.2964" y="317.1331" text-anchor="middle" font-size="20.5126" font-weight="bold" fill="var(--text)">Kibana</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="23.4429" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ELK Stack Architecture</text>
+  <rect x="40" y="109.2833" width="192.5926" height="376.1092" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="8.8396 4.4197" filter="url(#shadow)"/>
+  <text x="136.2963" y="152.8327" text-anchor="middle" font-size="17.5822" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Sources</text>
+  <rect x="62.2222" y="178.5666" width="148.1481" height="69.2833" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.2963" y="222.116" text-anchor="middle" font-size="16.117" fill="var(--text)" font-family="Arial, sans-serif">App 1</text>
+  <rect x="62.2222" y="267.645" width="148.1481" height="69.2833" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.2963" y="311.1945" text-anchor="middle" font-size="16.117" fill="var(--text)" font-family="Arial, sans-serif">App 2</text>
+  <rect x="62.2222" y="356.7235" width="148.1481" height="69.2833" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.2963" y="400.2731" text-anchor="middle" font-size="16.117" fill="var(--text)" font-family="Arial, sans-serif">App N</text>
+  <rect x="321.4816" y="188.4642" width="207.4074" height="108.8738" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="425.1853" y="237.9523" text-anchor="middle" font-size="19.0474" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Beats</text>
+  <text x="425.1853" y="273.5836" text-anchor="middle" font-size="16.117" fill="var(--text-muted)" font-family="Arial, sans-serif">/ Fluentd</text>
+  <rect x="321.4816" y="366.6211" width="207.4074" height="108.8738" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="425.1853" y="429.9659" text-anchor="middle" font-size="19.0474" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Logstash</text>
+  <rect x="647.4075" y="228.0546" width="266.6666" height="158.3618" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780.7408" y="297.3379" text-anchor="middle" font-size="20.5126" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Elasticsearch</text>
+  <text x="780.7408" y="342.8669" text-anchor="middle" font-size="16.117" fill="var(--text-muted)" font-family="Arial, sans-serif">Cluster</text>
+  <rect x="1032.5926" y="247.8499" width="207.4074" height="118.7714" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.2964" y="317.1331" text-anchor="middle" font-size="20.5126" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Kibana</text>
   <line x1="210.3704" y1="212.2184" x2="318.5185" y2="228.0546" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="210.3704" y1="301.2969" x2="318.5185" y2="257.7474" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="210.3704" y1="390.3754" x2="318.5185" y2="406.2116" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="425.1853" y1="297.3379" x2="425.1853" y2="362.6621" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="528.8889" y1="420.0683" x2="644.4444" y2="336.9284" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="914.0741" y1="307.2355" x2="1029.6298" y2="307.2355" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="425.1853" y="330.9898" text-anchor="middle" font-size="14.6518" fill="var(--text-muted)">Ship</text>
-  <text x="580.7408" y="366.6211" text-anchor="middle" font-size="14.6518" fill="var(--info-accent)">Parse &amp; Index</text>
-  <text x="973.3334" y="287.4403" text-anchor="middle" font-size="14.6518" fill="var(--warn-accent)">Query</text>
-  <text x="640.0001" y="584.3687" text-anchor="middle" font-size="16.117" fill="var(--text-faint)" font-style="italic">Beats collects logs from apps, Logstash parses/transforms them,</text>
-  <text x="640.0001" y="620" text-anchor="middle" font-size="16.117" fill="var(--text-faint)" font-style="italic">Elasticsearch indexes for search, Kibana visualizes the data.</text>
+  <text x="425.1853" y="330.9898" text-anchor="middle" font-size="14.6518" fill="var(--text-muted)" font-family="Arial, sans-serif">Ship</text>
+  <text x="580.7408" y="366.6211" text-anchor="middle" font-size="14.6518" fill="var(--info-accent)" font-family="Arial, sans-serif">Parse &amp; Index</text>
+  <text x="973.3334" y="287.4403" text-anchor="middle" font-size="14.6518" fill="var(--warn-accent)" font-family="Arial, sans-serif">Query</text>
+  <text x="640.0001" y="584.3687" text-anchor="middle" font-size="16.117" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Beats collects logs from apps, Logstash parses/transforms them,</text>
+  <text x="640.0001" y="620" text-anchor="middle" font-size="16.117" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Elasticsearch indexes for search, Kibana visualizes the data.</text>
 </svg>

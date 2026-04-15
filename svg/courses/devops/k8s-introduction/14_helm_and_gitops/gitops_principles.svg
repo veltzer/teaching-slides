@@ -1,106 +1,117 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <rect x="40" y="76.25" width="1200" height="543.75" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="639.9999" y="40" text-anchor="middle" font-size="29.9142" font-weight="bold">GitOps Workflow</text>
-  <rect x="125.7142" y="130.6249" width="257.143" height="108.75" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="254.2857" y="175.9377" text-anchor="middle" fill="var(--bg)" font-weight="bold">Git Repository</text>
-  <text x="254.2857" y="212.1877" text-anchor="middle" fill="var(--bg)" font-size="16.6189">Source of truth</text>
-  <rect x="468.5714" y="130.6249" width="257.143" height="108.75" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="597.1428" y="175.9377" text-anchor="middle" fill="var(--bg)" font-weight="bold">GitOps Agent</text>
-  <text x="597.1428" y="212.1877" text-anchor="middle" fill="var(--bg)" font-size="16.6189">ArgoCD/Flux</text>
-  <rect x="811.4284" y="130.6249" width="257.143" height="108.75" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="175.9377" text-anchor="middle" font-weight="bold">Kubernetes</text>
-  <text x="940" y="212.1877" text-anchor="middle" font-size="16.6189">Target cluster</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="29.9142" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">GitOps Workflow</text>
+  <rect x="125.7142" y="130.6249" width="257.143" height="108.75" fill="url(#grad-primary)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="254.2857" y="175.9377" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Git Repository</text>
+  <text x="254.2857" y="212.1877" text-anchor="middle" fill="var(--bg)" font-size="16.6189" font-family="Arial, sans-serif">Source of truth</text>
+  <rect x="468.5714" y="130.6249" width="257.143" height="108.75" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="597.1428" y="175.9377" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">GitOps Agent</text>
+  <text x="597.1428" y="212.1877" text-anchor="middle" fill="var(--bg)" font-size="16.6189" font-family="Arial, sans-serif">ArgoCD/Flux</text>
+  <rect x="811.4284" y="130.6249" width="257.143" height="108.75" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="175.9377" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Kubernetes</text>
+  <text x="940" y="212.1877" text-anchor="middle" font-size="16.6189" font-family="Arial, sans-serif" fill="var(--warn-text)">Target cluster</text>
   <path d="M 382.8571 185 L 460 185" stroke="var(--text-muted)" stroke-width="1.7775" marker-end="url(#arrow)" />
-  <text x="420.5715" y="166.8749" text-anchor="middle" font-size="16.6189">Pull</text>
+  <text x="420.5715" y="166.8749" text-anchor="middle" font-size="16.6189" font-family="Arial, sans-serif" fill="var(--text)">Pull</text>
   <path d="M 725.7142 185 L 802.8571 185" stroke="var(--text-muted)" stroke-width="1.7775" marker-end="url(#arrow)" />
-  <text x="763.4284" y="166.8749" text-anchor="middle" font-size="16.6189">Apply</text>
-  <rect x="297.143" y="311.875" width="685.7142" height="217.5001" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="366.25" text-anchor="middle" font-weight="bold">Benefits</text>
-  <text x="639.9999" y="411.5627" text-anchor="middle" font-size="19.9427">• Increased reliability</text>
-  <text x="639.9999" y="447.8127" text-anchor="middle" font-size="19.9427">• Better security (pull vs push)</text>
-  <text x="639.9999" y="484.0627" text-anchor="middle" font-size="19.9427">• Easier rollbacks</text>
-  <text x="639.9999" y="520.3127" text-anchor="middle" font-size="19.9427">• Complete audit trail</text>
+  <text x="763.4284" y="166.8749" text-anchor="middle" font-size="16.6189" font-family="Arial, sans-serif" fill="var(--text)">Apply</text>
+  <rect x="297.143" y="311.875" width="685.7142" height="217.5001" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="366.25" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Benefits</text>
+  <text x="639.9999" y="411.5627" text-anchor="middle" font-size="19.9427" font-family="Arial, sans-serif" fill="var(--ok-text)">• Increased reliability</text>
+  <text x="639.9999" y="447.8127" text-anchor="middle" font-size="19.9427" font-family="Arial, sans-serif" fill="var(--ok-text)">• Better security (pull vs push)</text>
+  <text x="639.9999" y="484.0627" text-anchor="middle" font-size="19.9427" font-family="Arial, sans-serif" fill="var(--ok-text)">• Easier rollbacks</text>
+  <text x="639.9999" y="520.3127" text-anchor="middle" font-size="19.9427" font-family="Arial, sans-serif" fill="var(--ok-text)">• Complete audit trail</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
 </svg>

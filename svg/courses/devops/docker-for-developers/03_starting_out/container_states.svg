@@ -1,51 +1,138 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)">Container States</text>
+  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Container States</text>
 
   <rect x="40" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="180" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--text)">Created</text>
-  <text x="180" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">docker create</text>
-  <text x="180" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Filesystem ready</text>
-  <text x="180" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">No process yet</text>
-  <text x="180" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Config frozen</text>
-  <text x="180" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Writable layer</text>
-  <text x="180" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">is allocated</text>
-  <text x="180" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Awaiting start</text>
+  <text x="180" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Created</text>
+  <text x="180" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">docker create</text>
+  <text x="180" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">Filesystem ready</text>
+  <text x="180" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">No process yet</text>
+  <text x="180" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">Config frozen</text>
+  <text x="180" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">Writable layer</text>
+  <text x="180" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">is allocated</text>
+  <text x="180" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)" font-family="Arial, sans-serif">Awaiting start</text>
 
-  <rect x="340" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Running</text>
-  <text x="480" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">docker start</text>
-  <text x="480" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">PID 1 executing</text>
-  <text x="480" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Namespaces active</text>
-  <text x="480" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Network attached</text>
-  <text x="480" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Logs streaming</text>
-  <text x="480" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Can exec into it</text>
-  <text x="480" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Healthy state</text>
+  <rect x="340" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Running</text>
+  <text x="480" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">docker start</text>
+  <text x="480" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">PID 1 executing</text>
+  <text x="480" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">Namespaces active</text>
+  <text x="480" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">Network attached</text>
+  <text x="480" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">Logs streaming</text>
+  <text x="480" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">Can exec into it</text>
+  <text x="480" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)" font-family="Arial, sans-serif">Healthy state</text>
 
-  <rect x="640" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="780" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Paused</text>
-  <text x="780" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">docker pause</text>
-  <text x="780" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">SIGSTOP via cgroup</text>
-  <text x="780" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Processes frozen</text>
-  <text x="780" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Memory retained</text>
-  <text x="780" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">No CPU use</text>
-  <text x="780" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Resume via unpause</text>
-  <text x="780" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Good for debugging</text>
+  <rect x="640" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Paused</text>
+  <text x="780" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">docker pause</text>
+  <text x="780" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">SIGSTOP via cgroup</text>
+  <text x="780" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">Processes frozen</text>
+  <text x="780" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">Memory retained</text>
+  <text x="780" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">No CPU use</text>
+  <text x="780" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">Resume via unpause</text>
+  <text x="780" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)" font-family="Arial, sans-serif">Good for debugging</text>
 
-  <rect x="940" y="82.962963" width="300" height="537.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Exited</text>
-  <text x="1090" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">PID 1 terminated</text>
-  <text x="1090" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">docker stop or crash</text>
-  <text x="1090" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Exit code recorded</text>
-  <text x="1090" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Filesystem kept</text>
-  <text x="1090" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Can restart</text>
-  <text x="1090" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">docker rm removes</text>
-  <text x="1090" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Final cleanup</text>
+  <rect x="940" y="82.962963" width="300" height="537.037037" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Exited</text>
+  <text x="1090" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">PID 1 terminated</text>
+  <text x="1090" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">docker stop or crash</text>
+  <text x="1090" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">Exit code recorded</text>
+  <text x="1090" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">Filesystem kept</text>
+  <text x="1090" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">Can restart</text>
+  <text x="1090" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">docker rm removes</text>
+  <text x="1090" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)" font-family="Arial, sans-serif">Final cleanup</text>
 </svg>

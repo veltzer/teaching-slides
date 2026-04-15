@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -103,73 +103,73 @@
     </linearGradient>
   </defs>
   <!-- Header -->
-  <rect x="40" y="40" width="1200" height="42.112211" rx="6.315824" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="42.112211" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="66.79868" font-family="Arial, sans-serif" font-size="17.464726" font-weight="bold" fill="var(--bg)" text-anchor="middle">Makefile Best Practices</text>
 
   <!-- PHONY targets -->
-  <rect x="40" y="97.425743" width="383.606557" height="210.561056" rx="6.315824" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="97.425743" width="383.606557" height="210.561056" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="231.803279" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">.PHONY Targets</text>
-  <text x="54.754098" y="141.452145" font-family="monospace" font-size="11.643116" fill="var(--text)">.PHONY: all clean test install</text>
-  <text x="54.754098" y="160.594059" font-family="monospace" font-size="11.643116" fill="var(--text)">.PHONY: help lint format</text>
+  <text x="54.754098" y="141.452145" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">.PHONY: all clean test install</text>
+  <text x="54.754098" y="160.594059" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">.PHONY: help lint format</text>
   <text x="54.754098" y="183.564356" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Prevents conflict with files named</text>
   <text x="54.754098" y="200.792079" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">"clean" or "all"</text>
   <text x="54.754098" y="219.933993" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Always runs recipe (no up-to-date check)</text>
   <text x="54.754098" y="242.90429" font-family="Arial, sans-serif" font-size="12.613437" font-weight="bold" fill="var(--primary-accent)">Common phony targets:</text>
-  <text x="54.754098" y="262.046205" font-family="monospace" font-size="11.643116" fill="var(--text)">all  clean  test  install</text>
-  <text x="54.754098" y="279.273927" font-family="monospace" font-size="11.643116" fill="var(--text)">lint  format  doc  help</text>
+  <text x="54.754098" y="262.046205" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">all  clean  test  install</text>
+  <text x="54.754098" y="279.273927" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">lint  format  doc  help</text>
 
   <!-- Variable organization -->
-  <rect x="443.278689" y="97.425743" width="393.442623" height="210.561056" rx="6.315824" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="443.278689" y="97.425743" width="393.442623" height="210.561056" rx="6.315824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Variable Organization</text>
-  <text x="458.032787" y="141.452145" font-family="monospace" font-size="10.6729" fill="var(--text-faint)"># Toolchain</text>
-  <text x="458.032787" y="158.679868" font-family="monospace" font-size="11.643116" fill="var(--text)">CC      := gcc</text>
-  <text x="458.032787" y="175.907591" font-family="monospace" font-size="11.643116" fill="var(--text)">CXX     := g++</text>
-  <text x="458.032787" y="196.963696" font-family="monospace" font-size="10.6729" fill="var(--text-faint)"># Flags (override via env)</text>
-  <text x="458.032787" y="214.191419" font-family="monospace" font-size="11.643116" fill="var(--text)">CFLAGS  ?= -Wall -O2</text>
-  <text x="458.032787" y="235.247525" font-family="monospace" font-size="10.6729" fill="var(--text-faint)"># Sources and objects</text>
-  <text x="458.032787" y="252.475248" font-family="monospace" font-size="11.643116" fill="var(--text)">SRCS    := $(wildcard src/*.c)</text>
-  <text x="458.032787" y="269.70297" font-family="monospace" font-size="11.643116" fill="var(--text)">OBJS    := $(SRCS:.c=.o)</text>
+  <text x="458.032787" y="141.452145" font-size="10.6729" fill="var(--text-faint)" font-family="Courier New, monospace"># Toolchain</text>
+  <text x="458.032787" y="158.679868" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">CC      := gcc</text>
+  <text x="458.032787" y="175.907591" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">CXX     := g++</text>
+  <text x="458.032787" y="196.963696" font-size="10.6729" fill="var(--text-faint)" font-family="Courier New, monospace"># Flags (override via env)</text>
+  <text x="458.032787" y="214.191419" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">CFLAGS  ?= -Wall -O2</text>
+  <text x="458.032787" y="235.247525" font-size="10.6729" fill="var(--text-faint)" font-family="Courier New, monospace"># Sources and objects</text>
+  <text x="458.032787" y="252.475248" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">SRCS    := $(wildcard src/*.c)</text>
+  <text x="458.032787" y="269.70297" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">OBJS    := $(SRCS:.c=.o)</text>
   <text x="458.032787" y="290.759076" font-family="Arial, sans-serif" font-size="10.6729" fill="var(--text-muted)">?= allows environment override</text>
 
   <!-- Debug targets -->
-  <rect x="856.393443" y="97.425743" width="383.606557" height="210.561056" rx="6.315824" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="856.393443" y="97.425743" width="383.606557" height="210.561056" rx="6.315824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1048.196721" y="120.39604" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Debug Targets</text>
-  <text x="871.147541" y="141.452145" font-family="monospace" font-size="11.643116" fill="var(--text)">print-%:</text>
-  <text x="885.901639" y="158.679868" font-family="monospace" font-size="11.643116" fill="var(--text)">@echo "$* = $($*)"</text>
+  <text x="871.147541" y="141.452145" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">print-%:</text>
+  <text x="885.901639" y="158.679868" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">@echo "$* = $($*)"</text>
   <text x="871.147541" y="181.650165" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Usage: make print-SRCS</text>
-  <text x="871.147541" y="202.706271" font-family="monospace" font-size="11.643116" fill="var(--text)">make VERBOSE=1    # show cmds</text>
-  <text x="871.147541" y="221.848185" font-family="monospace" font-size="11.643116" fill="var(--text)">make --dry-run    # no execute</text>
-  <text x="871.147541" y="240.990099" font-family="monospace" font-size="11.643116" fill="var(--text)">make --warn-undef # undef vars</text>
+  <text x="871.147541" y="202.706271" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make VERBOSE=1    # show cmds</text>
+  <text x="871.147541" y="221.848185" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make --dry-run    # no execute</text>
+  <text x="871.147541" y="240.990099" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">make --warn-undef # undef vars</text>
   <text x="871.147541" y="263.960396" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Prefix recipe with @ to silence echo</text>
-  <text x="871.147541" y="283.10231" font-family="monospace" font-size="11.643116" fill="var(--text)">@$(CC) -c $&lt; -o $@</text>
+  <text x="871.147541" y="283.10231" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">@$(CC) -c $&lt; -o $@</text>
 
   <!-- Self-documenting help -->
-  <rect x="40" y="325.214521" width="590.163934" height="191.419142" rx="6.315824" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="325.214521" width="590.163934" height="191.419142" rx="6.315824" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335.081967" y="348.184818" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Self-Documenting Help Target</text>
-  <text x="54.754098" y="369.240924" font-family="monospace" font-size="11.643116" fill="var(--text)">help: ## Show this help</text>
-  <text x="69.508197" y="386.468647" font-family="monospace" font-size="11.643116" fill="var(--text)">@grep -E '^[a-zA-Z_-]+:.*##' \</text>
-  <text x="84.262295" y="403.69637" font-family="monospace" font-size="11.643116" fill="var(--text)">  $(MAKEFILE_LIST) | \</text>
-  <text x="84.262295" y="420.924092" font-family="monospace" font-size="11.643116" fill="var(--text)">  awk 'BEGIN{FS="## "}; \</text>
-  <text x="84.262295" y="438.151815" font-family="monospace" font-size="11.643116" fill="var(--text)">  {printf "%-20s %s\n",$$1,$$2}'</text>
+  <text x="54.754098" y="369.240924" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">help: ## Show this help</text>
+  <text x="69.508197" y="386.468647" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">@grep -E '^[a-zA-Z_-]+:.*##' \</text>
+  <text x="84.262295" y="403.69637" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  $(MAKEFILE_LIST) | \</text>
+  <text x="84.262295" y="420.924092" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  awk 'BEGIN{FS="## "}; \</text>
+  <text x="84.262295" y="438.151815" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  {printf "%-20s %s\n",$$1,$$2}'</text>
   <text x="54.754098" y="463.036304" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text-muted)">Tag each target with ## description:</text>
-  <text x="54.754098" y="482.178218" font-family="monospace" font-size="11.643116" fill="var(--text)">clean: ## Remove build artifacts</text>
-  <text x="54.754098" y="501.320132" font-family="monospace" font-size="11.643116" fill="var(--text)">test:  ## Run all unit tests</text>
+  <text x="54.754098" y="482.178218" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">clean: ## Remove build artifacts</text>
+  <text x="54.754098" y="501.320132" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">test:  ## Run all unit tests</text>
 
   <!-- Project structure -->
-  <rect x="649.836066" y="325.214521" width="590.163934" height="191.419142" rx="6.315824" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="649.836066" y="325.214521" width="590.163934" height="191.419142" rx="6.315824" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="944.918033" y="348.184818" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Real-World Project Structure</text>
-  <text x="664.590164" y="369.240924" font-family="monospace" font-size="11.643116" fill="var(--text)">project/</text>
-  <text x="679.344262" y="386.468647" font-family="monospace" font-size="11.643116" fill="var(--text)">  Makefile          # main entry</text>
-  <text x="679.344262" y="403.69637" font-family="monospace" font-size="11.643116" fill="var(--text)">  config.mk         # user settings</text>
-  <text x="679.344262" y="420.924092" font-family="monospace" font-size="11.643116" fill="var(--text)">  rules.mk          # pattern rules</text>
-  <text x="679.344262" y="438.151815" font-family="monospace" font-size="11.643116" fill="var(--text)">  src/</text>
-  <text x="694.098361" y="455.379538" font-family="monospace" font-size="11.643116" fill="var(--text)">*.c  *.h</text>
-  <text x="679.344262" y="472.607261" font-family="monospace" font-size="11.643116" fill="var(--text)">  build/            # obj files</text>
-  <text x="679.344262" y="489.834983" font-family="monospace" font-size="11.643116" fill="var(--text)">  dist/             # final binaries</text>
+  <text x="664.590164" y="369.240924" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">project/</text>
+  <text x="679.344262" y="386.468647" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  Makefile          # main entry</text>
+  <text x="679.344262" y="403.69637" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  config.mk         # user settings</text>
+  <text x="679.344262" y="420.924092" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  rules.mk          # pattern rules</text>
+  <text x="679.344262" y="438.151815" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  src/</text>
+  <text x="694.098361" y="455.379538" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">*.c  *.h</text>
+  <text x="679.344262" y="472.607261" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  build/            # obj files</text>
+  <text x="679.344262" y="489.834983" font-size="11.643116" fill="var(--text)" font-family="Courier New, monospace">  dist/             # final binaries</text>
   <text x="664.590164" y="508.976898" font-family="Arial, sans-serif" font-size="10.6729" fill="var(--text-muted)">-include config.mk at top of Makefile</text>
 
   <!-- Bottom tips -->
-  <rect x="40" y="533.861386" width="1200" height="86.138614" rx="6.315824" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="533.861386" width="1200" height="86.138614" rx="6.315824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="556.831683" font-family="Arial, sans-serif" font-size="13.583652" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Common Pitfalls to Avoid</text>
   <text x="59.672131" y="577.887789" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Use tabs (not spaces) for recipe lines - spaces cause "missing separator" errors</text>
   <text x="59.672131" y="597.029703" font-family="Arial, sans-serif" font-size="11.643116" fill="var(--text)">Avoid spaces around := assignment - "CC := gcc" not "CC :=gcc"</text>

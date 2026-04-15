@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,62 +75,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)">Data Lake vs Data Warehouse</text>
+  <text x="640" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Lake vs Data Warehouse</text>
   <rect x="40" y="78.158" width="531.6456" height="366.3158" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.1051 5.5525" />
-  <text x="305.8227" y="116.3158" text-anchor="middle" font-size="19.9794" font-weight="bold" fill="var(--primary-accent)">Data Lake</text>
-  <rect x="77.9746" y="146.8421" width="212.6582" height="61.0526" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="184.3037" y="172.7896" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)">Raw Data</text>
-  <text x="184.3037" y="194.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">All Formats</text>
+  <text x="305.8227" y="116.3158" text-anchor="middle" font-size="19.9794" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Lake</text>
+  <rect x="77.9746" y="146.8421" width="212.6582" height="61.0526" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.3037" y="172.7896" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Raw Data</text>
+  <text x="184.3037" y="194.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">All Formats</text>
   <line x1="290.6329" y1="177.3685" x2="340.7595" y2="177.3685" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="343.7974" y="146.8421" width="197.4684" height="61.0526" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="442.5316" y="181.9474" text-anchor="middle" font-size="15.698" fill="var(--text)">Schema on Read</text>
-  <rect x="77.9746" y="238.4211" width="212.6582" height="61.0526" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="184.3037" y="273.5264" text-anchor="middle" font-size="15.698" fill="var(--text)">Low Cost Storage</text>
-  <rect x="77.9746" y="330" width="212.6582" height="61.0526" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="184.3037" y="355.9474" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)">Users:</text>
-  <text x="184.3037" y="380.3685" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">Data Scientists</text>
+  <rect x="343.7974" y="146.8421" width="197.4684" height="61.0526" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="442.5316" y="181.9474" text-anchor="middle" font-size="15.698" fill="var(--text)" font-family="Arial, sans-serif">Schema on Read</text>
+  <rect x="77.9746" y="238.4211" width="212.6582" height="61.0526" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.3037" y="273.5264" text-anchor="middle" font-size="15.698" fill="var(--text)" font-family="Arial, sans-serif">Low Cost Storage</text>
+  <rect x="77.9746" y="330" width="212.6582" height="61.0526" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.3037" y="355.9474" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Users:</text>
+  <text x="184.3037" y="380.3685" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">Data Scientists</text>
   <rect x="708.3544" y="78.158" width="531.6456" height="366.3158" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.1051 5.5525" />
-  <text x="974.1771" y="116.3158" text-anchor="middle" font-size="19.9794" font-weight="bold" fill="var(--danger-accent)">Data Warehouse</text>
-  <rect x="746.3291" y="146.8421" width="212.6582" height="61.0526" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="852.6581" y="172.7896" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)">Structured Data</text>
-  <text x="852.6581" y="194.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">Tables/Schemas</text>
+  <text x="974.1771" y="116.3158" text-anchor="middle" font-size="19.9794" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data Warehouse</text>
+  <rect x="746.3291" y="146.8421" width="212.6582" height="61.0526" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="852.6581" y="172.7896" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Structured Data</text>
+  <text x="852.6581" y="194.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">Tables/Schemas</text>
   <line x1="958.9873" y1="177.3685" x2="1009.1139" y2="177.3685" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1012.1519" y="146.8421" width="197.4684" height="61.0526" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1110.886" y="181.9474" text-anchor="middle" font-size="15.698" fill="var(--text)">Schema on Write</text>
-  <rect x="746.3291" y="238.4211" width="212.6582" height="61.0526" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="852.6581" y="273.5264" text-anchor="middle" font-size="15.698" fill="var(--text)">Optimized for BI</text>
-  <rect x="746.3291" y="330" width="212.6582" height="61.0526" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="852.6581" y="355.9474" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)">Users:</text>
-  <text x="852.6581" y="380.3685" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">Business Users</text>
+  <rect x="1012.1519" y="146.8421" width="197.4684" height="61.0526" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1110.886" y="181.9474" text-anchor="middle" font-size="15.698" fill="var(--text)" font-family="Arial, sans-serif">Schema on Write</text>
+  <rect x="746.3291" y="238.4211" width="212.6582" height="61.0526" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="852.6581" y="273.5264" text-anchor="middle" font-size="15.698" fill="var(--text)" font-family="Arial, sans-serif">Optimized for BI</text>
+  <rect x="746.3291" y="330" width="212.6582" height="61.0526" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="852.6581" y="355.9474" text-anchor="middle" font-size="15.698" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Users:</text>
+  <text x="852.6581" y="380.3685" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">Business Users</text>
   <line x1="571.6455" y1="177.3685" x2="705.3164" y2="177.3685" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="6.9407 4.1644" marker-end="url(#arrow)" />
-  <text x="638.4809" y="166.6843" text-anchor="middle" font-size="14.271" fill="var(--danger-accent)">ETL Process</text>
+  <text x="638.4809" y="166.6843" text-anchor="middle" font-size="14.271" fill="var(--danger-accent)" font-family="Arial, sans-serif">ETL Process</text>
   <rect x="40" y="475.0001" width="1200" height="144.9999" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="508.579" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)">Key Differences</text>
-  <text x="298.2278" y="542.1579" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)">Data Lake: Schema on read, all formats</text>
-  <text x="298.2278" y="569.6316" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)">Low cost, flexible, for exploration</text>
-  <text x="943.7975" y="542.1579" text-anchor="middle" font-size="15.698" fill="var(--danger-accent)">Warehouse: Schema on write, structured</text>
-  <text x="943.7975" y="569.6316" text-anchor="middle" font-size="15.698" fill="var(--danger-accent)">Optimized, fast queries, for reporting</text>
+  <text x="640" y="508.579" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Differences</text>
+  <text x="298.2278" y="542.1579" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Lake: Schema on read, all formats</text>
+  <text x="298.2278" y="569.6316" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)" font-family="Arial, sans-serif">Low cost, flexible, for exploration</text>
+  <text x="943.7975" y="542.1579" text-anchor="middle" font-size="15.698" fill="var(--danger-accent)" font-family="Arial, sans-serif">Warehouse: Schema on write, structured</text>
+  <text x="943.7975" y="569.6316" text-anchor="middle" font-size="15.698" fill="var(--danger-accent)" font-family="Arial, sans-serif">Optimized, fast queries, for reporting</text>
   <line x1="640" y1="520.7894" x2="640" y2="604.7369" stroke="var(--border)" stroke-width="1.3882" />
 </svg>

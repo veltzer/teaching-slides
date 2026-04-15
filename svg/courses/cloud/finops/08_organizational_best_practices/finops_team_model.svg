@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,80 +75,77 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow-back" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto">
-      <path d="M9,2 L1,5 L9,8 Z" fill="#555555"/>
-    </marker>
   </defs>
 
   <!-- Background -->
   <!-- Central FinOps Team -->
-  <rect x="513.283817" y="191.982" width="253.430366" height="253.431" rx="13.999983" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="513.283817" y="191.982" width="253.430366" height="253.431" rx="13.999983" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
   <rect x="542.082745" y="220.781" width="195.83251" height="195.833" rx="13.999983" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="639.9985" y="303.632713" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.039198" font-weight="bold" fill="var(--primary-accent)">FinOps</text>
   <text x="639.9985" y="328.741178" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.039198" font-weight="bold" fill="var(--primary-accent)">Team</text>
   <text x="639.9985" y="353.849641" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.823469" fill="var(--text-muted)">Central Hub</text>
 
   <!-- Engineering Teams (top-left) -->
-  <rect x="40" y="40" width="195.83251" height="195.833" rx="13.999983" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="195.83251" height="195.833" rx="13.999983" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2.5" filter="url(#shadow)"/>
   <text x="137.916186" y="122.851377" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.431333" font-weight="bold" fill="var(--ok-accent)">Engineering</text>
   <text x="137.916186" y="145.951158" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.431333" font-weight="bold" fill="var(--ok-accent)">Teams</text>
   <text x="137.916186" y="173.068304" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">Rightsizing, tagging</text>
   <text x="137.916186" y="188.133468" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">resource ownership</text>
 
   <!-- Bidirectional arrow to center -->
-  <line x1="230.405033" y1="198.176877" x2="534.29696" y2="273.50238" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow-back)"/>
+  <line x1="230.405033" y1="198.176877" x2="534.29696" y2="273.50238" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <!-- Label on connection -->
   <rect x="283.255802" y="213.241932" width="171.765003" height="28.12154" rx="7.498559" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
   <text x="369.138303" y="232.324465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--ok-accent)">Cost awareness</text>
 
   <!-- Finance (top-right) -->
-  <rect x="1044.16749" y="40" width="195.83251" height="195.833" rx="13.999983" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="1044.16749" y="40" width="195.83251" height="195.833" rx="13.999983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2.5" filter="url(#shadow)"/>
   <text x="1142.080814" y="127.873024" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.431333" font-weight="bold" fill="var(--warn-accent)">Finance</text>
   <text x="1142.080814" y="158.003247" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">Budgets, forecasting</text>
   <text x="1142.080814" y="173.068304" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">chargeback models</text>
 
   <!-- Bidirectional arrow to center -->
-  <line x1="1049.591967" y1="198.176877" x2="745.70004" y2="273.50238" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow-back)"/>
+  <line x1="1049.591967" y1="198.176877" x2="745.70004" y2="273.50238" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <rect x="811.763503" y="213.241932" width="158.55231" height="28.12154" rx="7.498559" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
   <text x="891.039657" y="232.324465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--warn-accent)">Cost reports</text>
 
   <!-- Leadership (bottom-right) -->
-  <rect x="1044.16749" y="401.563" width="195.83251" height="195.833" rx="13.999983" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="1044.16749" y="401.563" width="195.83251" height="195.833" rx="13.999983" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2.5" filter="url(#shadow)"/>
   <text x="1142.080814" y="489.4357" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.431333" font-weight="bold" fill="var(--info-accent)">Leadership</text>
   <text x="1142.080814" y="519.565923" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">Strategy, KPIs</text>
   <text x="1142.080814" y="534.630979" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">executive dashboards</text>
 
   <!-- Bidirectional arrow to center -->
-  <line x1="1049.591967" y1="439.218663" x2="745.70004" y2="363.89316" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow-back)"/>
+  <line x1="1049.591967" y1="439.218663" x2="745.70004" y2="363.89316" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <rect x="811.763503" y="383.979975" width="158.55231" height="28.12154" rx="7.498559" fill="var(--bg)" stroke="var(--info-border)" stroke-width="1"/>
   <text x="891.039657" y="403.062394" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--info-accent)">KPI updates</text>
 
   <!-- Procurement (bottom-left) -->
-  <rect x="40" y="401.563" width="195.83251" height="195.833" rx="13.999983" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="401.563" width="195.83251" height="195.833" rx="13.999983" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2.5" filter="url(#shadow)"/>
   <text x="137.916186" y="487.427019" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.431333" font-weight="bold" fill="var(--danger-accent)">Procurement</text>
   <text x="137.916186" y="517.557241" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">Vendor negotiations</text>
   <text x="137.916186" y="532.62241" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--text-muted)">contracts, commitments</text>
 
   <!-- Bidirectional arrow to center -->
-  <line x1="230.405033" y1="439.218663" x2="534.29696" y2="363.89316" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow-back)"/>
+  <line x1="230.405033" y1="439.218663" x2="534.29696" y2="363.89316" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
   <rect x="283.255802" y="383.979975" width="171.765003" height="28.12154" rx="7.498559" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
   <text x="369.138303" y="403.062394" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.671565" fill="var(--danger-accent)">Rate optimization</text>
 

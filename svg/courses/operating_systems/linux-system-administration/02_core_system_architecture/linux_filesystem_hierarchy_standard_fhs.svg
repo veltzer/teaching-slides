@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,30 +97,27 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="522.142857" y="40" width="342.857029" height="121.395345" fill="var(--primary-fill)" rx="8.300022" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="693.571429" y="110.139551" text-anchor="middle" font-size="43.277697" font-weight="bold" fill="var(--bg)" font-family="monospace">/</text>
+  <rect x="522.142857" y="40" width="342.857029" height="121.395345" fill="url(#grad-primary)" rx="8.300022" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="693.571429" y="110.139551" text-anchor="middle" font-size="43.277697" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">/</text>
   <rect x="40" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="131.071429" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/bin</text>
+  <text x="131.071429" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/bin</text>
   <rect x="243.571429" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="334.642857" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/etc</text>
+  <text x="334.642857" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/etc</text>
   <rect x="447.142743" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="538.214286" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/home</text>
+  <text x="538.214286" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/home</text>
   <rect x="650.714286" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="741.785714" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/var</text>
+  <text x="741.785714" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/var</text>
   <rect x="854.285714" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="945.357143" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/usr</text>
+  <text x="945.357143" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/usr</text>
   <rect x="1057.857143" y="269.302411" width="182.142857" height="101.162843" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="1148.928571" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/tmp</text>
-  <text x="131.071429" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">Essential binaries</text>
-  <text x="334.642857" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">Config files</text>
-  <text x="538.214286" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">User home dirs</text>
-  <text x="741.785714" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">Variable data</text>
-  <text x="945.357143" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">User programs</text>
-  <text x="1148.928571" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="sans-serif">Temporary files</text>
+  <text x="1148.928571" y="331.348828" text-anchor="middle" font-size="21.638849" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/tmp</text>
+  <text x="131.071429" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">Essential binaries</text>
+  <text x="334.642857" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">Config files</text>
+  <text x="538.214286" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">User home dirs</text>
+  <text x="741.785714" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">Variable data</text>
+  <text x="945.357143" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">User programs</text>
+  <text x="1148.928571" y="410.930258" text-anchor="middle" font-size="15.628111" fill="var(--text-muted)" font-family="Arial, sans-serif">Temporary files</text>
   <line x1="693.571429" y1="161.395345" x2="131.071429" y2="269.302411" stroke="var(--text-muted)" stroke-width="1.3333" />
   <line x1="693.571429" y1="161.395345" x2="334.642857" y2="269.302411" stroke="var(--text-muted)" stroke-width="1.3333" />
   <line x1="693.571429" y1="161.395345" x2="538.214286" y2="269.302411" stroke="var(--text-muted)" stroke-width="1.3333" />
@@ -128,21 +125,21 @@
   <line x1="693.571429" y1="161.395345" x2="945.357143" y2="269.302411" stroke="var(--text-muted)" stroke-width="1.3333" />
   <line x1="693.571429" y1="161.395345" x2="1148.928571" y2="269.302411" stroke="var(--text-muted)" stroke-width="1.3333" />
   <rect x="40" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="131.071429" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/proc</text>
-  <text x="131.071429" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Kernel info</text>
+  <text x="131.071429" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/proc</text>
+  <text x="131.071429" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Kernel info</text>
   <rect x="243.571429" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="334.642857" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/sys</text>
-  <text x="334.642857" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Devices</text>
+  <text x="334.642857" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/sys</text>
+  <text x="334.642857" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Devices</text>
   <rect x="447.142743" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="538.214286" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/dev</text>
-  <text x="538.214286" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Device files</text>
+  <text x="538.214286" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/dev</text>
+  <text x="538.214286" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Device files</text>
   <rect x="650.714286" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="741.785714" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/boot</text>
-  <text x="741.785714" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Boot files</text>
+  <text x="741.785714" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/boot</text>
+  <text x="741.785714" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Boot files</text>
   <rect x="854.285714" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="945.357143" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/lib</text>
-  <text x="945.357143" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Libraries</text>
+  <text x="945.357143" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/lib</text>
+  <text x="945.357143" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Libraries</text>
   <rect x="1057.857143" y="525.58138" width="182.142857" height="94.41862" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.300022" />
-  <text x="1148.928571" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="monospace">/opt</text>
-  <text x="1148.928571" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="sans-serif">Optional pkgs</text>
+  <text x="1148.928571" y="582.232485" text-anchor="middle" font-size="19.234471" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/opt</text>
+  <text x="1148.928571" y="606.511554" text-anchor="middle" font-size="14.425991" fill="var(--text-muted)" font-family="Arial, sans-serif">Optional pkgs</text>
 </svg>

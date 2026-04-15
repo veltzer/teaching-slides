@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,65 +97,62 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="60" y="82.963057" width="180" height="107.407442" rx="7.155417" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="150" y="125.925847" text-anchor="middle" font-family="Arial,sans-serif" font-size="20.727573" font-weight="bold" fill="var(--text-muted)">Pending</text>
-  <text x="150" y="149.555575" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">accepted by API server</text>
-  <text x="150" y="168.888904" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">waiting to be scheduled</text>
+  <text x="150" y="125.925847" text-anchor="middle" font-size="20.727573" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Pending</text>
+  <text x="150" y="149.555575" text-anchor="middle" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">accepted by API server</text>
+  <text x="150" y="168.888904" text-anchor="middle" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">waiting to be scheduled</text>
   <line x1="240" y1="136.666644" x2="340" y2="136.666644" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="290" y="125.925847" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.925695" fill="var(--text-muted)">scheduled</text>
-  <rect x="340" y="82.963057" width="180" height="107.407442" rx="7.155417" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="430" y="125.925847" text-anchor="middle" font-family="Arial,sans-serif" font-size="20.727573" font-weight="bold" fill="var(--primary-accent)">Running</text>
-  <text x="430" y="149.555575" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--primary-accent)">bound to node</text>
-  <text x="430" y="168.888904" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--primary-accent)">≥1 container running</text>
+  <text x="290" y="125.925847" text-anchor="middle" font-size="11.925695" fill="var(--text-muted)" font-family="Arial, sans-serif">scheduled</text>
+  <rect x="340" y="82.963057" width="180" height="107.407442" rx="7.155417" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="125.925847" text-anchor="middle" font-size="20.727573" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Running</text>
+  <text x="430" y="149.555575" text-anchor="middle" font-size="12.436591" fill="var(--primary-accent)" font-family="Arial, sans-serif">bound to node</text>
+  <text x="430" y="168.888904" text-anchor="middle" font-size="12.436591" fill="var(--primary-accent)" font-family="Arial, sans-serif">≥1 container running</text>
   <line x1="520" y1="115.185316" x2="620" y2="115.185316" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="570" y="104.444519" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.925695" fill="var(--text-muted)">all containers</text>
-  <text x="570" y="119.481448" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.925695" fill="var(--text-muted)">exit 0</text>
+  <text x="570" y="104.444519" text-anchor="middle" font-size="11.925695" fill="var(--text-muted)" font-family="Arial, sans-serif">all containers</text>
+  <text x="570" y="119.481448" text-anchor="middle" font-size="11.925695" fill="var(--text-muted)" font-family="Arial, sans-serif">exit 0</text>
   <line x1="520" y1="168.888904" x2="620" y2="211.85196" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="568" y="206.481428" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.925695" fill="var(--text-muted)">container exit ≠0</text>
-  <rect x="620" y="61.481462" width="180" height="107.407442" rx="7.155417" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="710" y="102.296386" text-anchor="middle" font-family="Arial,sans-serif" font-size="20.727573" font-weight="bold" fill="var(--ok-accent)">Succeeded</text>
-  <text x="710" y="125.925847" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--ok-accent)">all containers</text>
-  <text x="710" y="145.259176" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--ok-accent)">terminated exit 0</text>
-  <text x="710" y="162.444505" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--ok-accent)">(terminal state)</text>
-  <rect x="620" y="190.370365" width="180" height="107.407442" rx="7.155417" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="710" y="231.185289" text-anchor="middle" font-family="Arial,sans-serif" font-size="20.727573" font-weight="bold" fill="var(--danger-accent)">Failed</text>
-  <text x="710" y="254.814751" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--danger-accent)">≥1 container</text>
-  <text x="710" y="274.14808" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--danger-accent)">terminated with error</text>
-  <rect x="340" y="233.333289" width="180" height="85.925847" rx="7.155417" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="430" y="267.703681" text-anchor="middle" font-family="Arial,sans-serif" font-size="18.654768" font-weight="bold" fill="var(--warn-accent)">Unknown</text>
-  <text x="430" y="292.407409" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--warn-accent)">node communication lost</text>
+  <text x="568" y="206.481428" text-anchor="middle" font-size="11.925695" fill="var(--text-muted)" font-family="Arial, sans-serif">container exit ≠0</text>
+  <rect x="620" y="61.481462" width="180" height="107.407442" rx="7.155417" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="102.296386" text-anchor="middle" font-size="20.727573" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Succeeded</text>
+  <text x="710" y="125.925847" text-anchor="middle" font-size="12.436591" fill="var(--ok-accent)" font-family="Arial, sans-serif">all containers</text>
+  <text x="710" y="145.259176" text-anchor="middle" font-size="12.436591" fill="var(--ok-accent)" font-family="Arial, sans-serif">terminated exit 0</text>
+  <text x="710" y="162.444505" text-anchor="middle" font-size="12.436591" fill="var(--ok-accent)" font-family="Arial, sans-serif">(terminal state)</text>
+  <rect x="620" y="190.370365" width="180" height="107.407442" rx="7.155417" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="231.185289" text-anchor="middle" font-size="20.727573" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failed</text>
+  <text x="710" y="254.814751" text-anchor="middle" font-size="12.436591" fill="var(--danger-accent)" font-family="Arial, sans-serif">≥1 container</text>
+  <text x="710" y="274.14808" text-anchor="middle" font-size="12.436591" fill="var(--danger-accent)" font-family="Arial, sans-serif">terminated with error</text>
+  <rect x="340" y="233.333289" width="180" height="85.925847" rx="7.155417" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="267.703681" text-anchor="middle" font-size="18.654768" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Unknown</text>
+  <text x="430" y="292.407409" text-anchor="middle" font-size="12.436591" fill="var(--warn-accent)" font-family="Arial, sans-serif">node communication lost</text>
   <line x1="430" y1="190.370365" x2="430" y2="233.333289" stroke="var(--warn-border)" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
   <rect x="880" y="40" width="360" height="332.96299" rx="7.155417" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <rect x="880" y="40" width="360" height="49.407455" rx="7.155417" fill="var(--text-muted)" />
   <rect x="880" y="76.518658" width="360" height="12.88893" fill="var(--text-muted)" rx="7.155417"/>
-  <text x="1060" y="74.370392" text-anchor="middle" font-family="Arial,sans-serif" font-size="18.654768" font-weight="bold" fill="var(--bg)">Container States</text>
+  <text x="1060" y="74.370392" text-anchor="middle" font-size="18.654768" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Container States</text>
   <rect x="900" y="104.444519" width="310" height="64.444385" rx="7.155417" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1055" y="131.296379" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.581963" font-weight="bold" fill="var(--text-muted)">Waiting</text>
-  <text x="1055" y="155.999973" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">pulling image, initializing</text>
+  <text x="1055" y="131.296379" text-anchor="middle" font-size="16.581963" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Waiting</text>
+  <text x="1055" y="155.999973" text-anchor="middle" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">pulling image, initializing</text>
   <line x1="1060" y1="168.888904" x2="1060" y2="190.370365" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="900" y="190.370365" width="310" height="64.444385" rx="7.155417" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="217.222226" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.581963" font-weight="bold" fill="var(--primary-accent)">Running</text>
-  <text x="1055" y="241.92582" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--primary-accent)">process executing</text>
+  <rect x="900" y="190.370365" width="310" height="64.444385" rx="7.155417" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1055" y="217.222226" text-anchor="middle" font-size="16.581963" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Running</text>
+  <text x="1055" y="241.92582" text-anchor="middle" font-size="12.436591" fill="var(--primary-accent)" font-family="Arial, sans-serif">process executing</text>
   <line x1="1060" y1="254.814751" x2="1060" y2="276.296346" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="900" y="276.296346" width="310" height="73.036917" rx="7.155417" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1055" y="306.370339" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.581963" font-weight="bold" fill="var(--danger-accent)">Terminated</text>
-  <text x="1055" y="327.851934" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--danger-accent)">exit code 0 (ok) or non-0 (err)</text>
-  <text x="1055" y="345.036997" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.925695" fill="var(--danger-accent)">reason, message, startedAt, finishedAt</text>
-  <rect x="40" y="383.703654" width="780" height="128.888904" rx="7.155417" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="50" y="411.629648" font-family="Arial,sans-serif" font-size="16.581963" font-weight="bold" fill="var(--info-accent)">Restart Policy (restartPolicy on Pod spec)</text>
-  <text x="80" y="441.703641" font-family="Arial,sans-serif" font-size="14.509158" fill="var(--text-muted)">Always (default)   — restart container on any exit (good for services)</text>
-  <text x="80" y="467.481368" font-family="Arial,sans-serif" font-size="14.509158" fill="var(--text-muted)">OnFailure            — restart only on non-zero exit (good for jobs)</text>
-  <text x="80" y="493.259096" font-family="Arial,sans-serif" font-size="14.509158" fill="var(--text-muted)">Never                   — never restart (one-shot tasks)</text>
-  <rect x="880" y="405.185249" width="360" height="214.814751" rx="7.155417" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1060" y="432.036977" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.581963" font-weight="bold" fill="var(--ok-accent)">Health Probes</text>
-  <text x="900" y="461.03697" font-family="Arial,sans-serif" font-size="13.472934" fill="var(--ok-accent)">startupProbe   — has container started? (blocks others)</text>
-  <text x="900" y="486.814697" font-family="Arial,sans-serif" font-size="13.472934" fill="var(--ok-accent)">livenessProbe  — is container alive? (restart if fails)</text>
-  <text x="900" y="512.592425" font-family="Arial,sans-serif" font-size="13.472934" fill="var(--ok-accent)">readinessProbe — ready for traffic? (remove from svc)</text>
-  <text x="900" y="540.518552" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">Methods: httpGet / tcpSocket / exec</text>
-  <text x="900" y="564.148013" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">Params: initialDelaySeconds, periodSeconds, failureThreshold</text>
-  <text x="900" y="587.777741" font-family="Arial,sans-serif" font-size="12.436591" fill="var(--text-muted)">successThreshold, timeoutSeconds</text>
+  <rect x="900" y="276.296346" width="310" height="73.036917" rx="7.155417" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1055" y="306.370339" text-anchor="middle" font-size="16.581963" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Terminated</text>
+  <text x="1055" y="327.851934" text-anchor="middle" font-size="12.436591" fill="var(--danger-accent)" font-family="Arial, sans-serif">exit code 0 (ok) or non-0 (err)</text>
+  <text x="1055" y="345.036997" text-anchor="middle" font-size="11.925695" fill="var(--danger-accent)" font-family="Arial, sans-serif">reason, message, startedAt, finishedAt</text>
+  <rect x="40" y="383.703654" width="780" height="128.888904" rx="7.155417" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="50" y="411.629648" font-size="16.581963" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Restart Policy (restartPolicy on Pod spec)</text>
+  <text x="80" y="441.703641" font-size="14.509158" fill="var(--text-muted)" font-family="Arial, sans-serif">Always (default)   — restart container on any exit (good for services)</text>
+  <text x="80" y="467.481368" font-size="14.509158" fill="var(--text-muted)" font-family="Arial, sans-serif">OnFailure            — restart only on non-zero exit (good for jobs)</text>
+  <text x="80" y="493.259096" font-size="14.509158" fill="var(--text-muted)" font-family="Arial, sans-serif">Never                   — never restart (one-shot tasks)</text>
+  <rect x="880" y="405.185249" width="360" height="214.814751" rx="7.155417" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="432.036977" text-anchor="middle" font-size="16.581963" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Health Probes</text>
+  <text x="900" y="461.03697" font-size="13.472934" fill="var(--ok-accent)" font-family="Arial, sans-serif">startupProbe   — has container started? (blocks others)</text>
+  <text x="900" y="486.814697" font-size="13.472934" fill="var(--ok-accent)" font-family="Arial, sans-serif">livenessProbe  — is container alive? (restart if fails)</text>
+  <text x="900" y="512.592425" font-size="13.472934" fill="var(--ok-accent)" font-family="Arial, sans-serif">readinessProbe — ready for traffic? (remove from svc)</text>
+  <text x="900" y="540.518552" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">Methods: httpGet / tcpSocket / exec</text>
+  <text x="900" y="564.148013" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">Params: initialDelaySeconds, periodSeconds, failureThreshold</text>
+  <text x="900" y="587.777741" font-size="12.436591" fill="var(--text-muted)" font-family="Arial, sans-serif">successThreshold, timeoutSeconds</text>
 </svg>

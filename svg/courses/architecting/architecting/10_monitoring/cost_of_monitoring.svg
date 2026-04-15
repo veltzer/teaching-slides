@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,58 +75,55 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.2706,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="23.3187" font-weight="bold" fill="var(--text)">Cost of Monitoring</text>
-  <rect x="40" y="98.5014" width="303.7975" height="150.4323" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="135.2738" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--primary-accent)">Data Volume</text>
-  <text x="191.8986" y="168.7032" text-anchor="middle" font-size="16.0316" fill="var(--text)">100 GB/day Logs</text>
-  <text x="191.8986" y="195.4467" text-anchor="middle" font-size="16.0316" fill="var(--text)">1M metrics/min</text>
-  <text x="191.8986" y="222.1901" text-anchor="middle" font-size="16.0316" fill="var(--text)">10K traces/sec</text>
-  <rect x="480.5063" y="81.7867" width="303.7975" height="133.7176" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="632.405" y="118.5591" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--danger-accent)">Storage Costs</text>
-  <text x="632.405" y="157.0029" text-anchor="middle" font-size="17.4891" fill="var(--text)">Hot Storage: $$$</text>
-  <text x="632.405" y="187.0893" text-anchor="middle" font-size="17.4891" fill="var(--text)">Warm: $$ | Cold: $</text>
-  <rect x="480.5063" y="257.2911" width="303.7975" height="133.7176" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="632.405" y="294.0633" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--warn-accent)">Processing Costs</text>
-  <text x="632.405" y="327.4927" text-anchor="middle" font-size="16.0316" fill="var(--text)">Ingestion</text>
-  <text x="632.405" y="354.2363" text-anchor="middle" font-size="16.0316" fill="var(--text)">Indexing | Query</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="23.3187" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cost of Monitoring</text>
+  <rect x="40" y="98.5014" width="303.7975" height="150.4323" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="135.2738" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Volume</text>
+  <text x="191.8986" y="168.7032" text-anchor="middle" font-size="16.0316" fill="var(--text)" font-family="Arial, sans-serif">100 GB/day Logs</text>
+  <text x="191.8986" y="195.4467" text-anchor="middle" font-size="16.0316" fill="var(--text)" font-family="Arial, sans-serif">1M metrics/min</text>
+  <text x="191.8986" y="222.1901" text-anchor="middle" font-size="16.0316" fill="var(--text)" font-family="Arial, sans-serif">10K traces/sec</text>
+  <rect x="480.5063" y="81.7867" width="303.7975" height="133.7176" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="632.405" y="118.5591" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Storage Costs</text>
+  <text x="632.405" y="157.0029" text-anchor="middle" font-size="17.4891" fill="var(--text)" font-family="Arial, sans-serif">Hot Storage: $$$</text>
+  <text x="632.405" y="187.0893" text-anchor="middle" font-size="17.4891" fill="var(--text)" font-family="Arial, sans-serif">Warm: $$ | Cold: $</text>
+  <rect x="480.5063" y="257.2911" width="303.7975" height="133.7176" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="632.405" y="294.0633" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Processing Costs</text>
+  <text x="632.405" y="327.4927" text-anchor="middle" font-size="16.0316" fill="var(--text)" font-family="Arial, sans-serif">Ingestion</text>
+  <text x="632.405" y="354.2363" text-anchor="middle" font-size="16.0316" fill="var(--text)" font-family="Arial, sans-serif">Indexing | Query</text>
   <rect x="936.2025" y="81.7867" width="303.7975" height="317.5793" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1088.1012" y="123.5735" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--ok-accent)">Optimization</text>
-  <rect x="966.5822" y="148.6455" width="243.038" height="58.5015" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1088.1012" y="185.4179" text-anchor="middle" font-size="17.4891" fill="var(--text)">Sampling</text>
-  <rect x="966.5822" y="223.8617" width="243.038" height="58.5015" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1088.1012" y="260.634" text-anchor="middle" font-size="17.4891" fill="var(--text)">Aggregation</text>
-  <rect x="966.5822" y="299.0778" width="243.038" height="58.5015" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1088.1012" y="335.8501" text-anchor="middle" font-size="17.4891" fill="var(--text)">Tiered Storage</text>
+  <text x="1088.1012" y="123.5735" text-anchor="middle" font-size="18.9465" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimization</text>
+  <rect x="966.5822" y="148.6455" width="243.038" height="58.5015" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1088.1012" y="185.4179" text-anchor="middle" font-size="17.4891" fill="var(--text)" font-family="Arial, sans-serif">Sampling</text>
+  <rect x="966.5822" y="223.8617" width="243.038" height="58.5015" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1088.1012" y="260.634" text-anchor="middle" font-size="17.4891" fill="var(--text)" font-family="Arial, sans-serif">Aggregation</text>
+  <rect x="966.5822" y="299.0778" width="243.038" height="58.5015" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1088.1012" y="335.8501" text-anchor="middle" font-size="17.4891" fill="var(--text)" font-family="Arial, sans-serif">Tiered Storage</text>
   <line x1="343.7974" y1="157.0029" x2="477.4683" y2="140.2882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="343.7974" y1="190.4323" x2="477.4683" y2="307.4352" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="784.3037" y1="198.7896" x2="933.1645" y2="324.1499" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="784.3037" y1="299.0778" x2="933.1645" y2="177.0605" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="784.3037" y1="332.5072" x2="933.1645" y2="252.2767" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="191.8986" y="482.9394" width="896.2025" height="133.7176" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="524.7262" text-anchor="middle" font-size="17.4891" font-weight="bold" fill="var(--text)">Cost Reduction Strategies</text>
-  <text x="639.9999" y="563.17" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)">Sampling: Reduce trace volume by collecting a percentage of requests</text>
-  <text x="639.9999" y="591.585" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)">Aggregation: Pre-compute metrics to reduce raw data stored</text>
-  <text x="639.9999" y="620" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)">Tiered Storage: Move old data from hot (fast) to cold (cheap) storage</text>
+  <text x="639.9999" y="524.7262" text-anchor="middle" font-size="17.4891" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cost Reduction Strategies</text>
+  <text x="639.9999" y="563.17" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)" font-family="Arial, sans-serif">Sampling: Reduce trace volume by collecting a percentage of requests</text>
+  <text x="639.9999" y="591.585" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)" font-family="Arial, sans-serif">Aggregation: Pre-compute metrics to reduce raw data stored</text>
+  <text x="639.9999" y="620" text-anchor="middle" font-size="16.0316" fill="var(--text-muted)" font-family="Arial, sans-serif">Tiered Storage: Move old data from hot (fast) to cold (cheap) storage</text>
 </svg>

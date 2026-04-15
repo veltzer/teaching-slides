@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,27 +97,24 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="264.406804" height="238.44432" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)" />
-  <text x="172.203402" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--primary-accent)">tcpdump</text>
-  <text x="172.203402" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">CLI capture</text>
-  <text x="172.203402" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">BPF filters</text>
-  <rect x="345.084773" y="40" width="264.406804" height="238.44432" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)" />
-  <text x="477.288175" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--info-accent)">Wireshark</text>
-  <text x="477.288175" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">GUI analysis</text>
-  <text x="477.288175" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">protocol decode</text>
-  <rect x="650.169547" y="40" width="264.406804" height="238.44432" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)" />
-  <text x="782.372948" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--ok-accent)">netcat (nc)</text>
-  <text x="782.372948" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">raw connections</text>
-  <text x="782.372948" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">port scanning</text>
-  <rect x="955.254212" y="40" width="284.745788" height="238.44432" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)" />
-  <text x="1097.627214" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--warn-accent)">tshark</text>
-  <text x="1097.627214" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">CLI Wireshark</text>
-  <text x="1097.627214" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)">scriptable</text>
-  <rect x="170.169503" y="369.95536" width="955.93229" height="128.88896" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)" />
-  <text x="648.135648" y="449.86672" text-anchor="middle" font-size="24.042374" fill="var(--danger-accent)">Capture point: NIC --&gt; libpcap/AF_PACKET --&gt; user tool</text>
-  <text x="648.135648" y="620" text-anchor="middle" font-size="19.462893" fill="var(--text-muted)">tcpdump -i eth0 -w capture.pcap / wireshark capture.pcap</text>
+  <rect x="40" y="40" width="264.406804" height="238.44432" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)"/>
+  <text x="172.203402" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">tcpdump</text>
+  <text x="172.203402" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">CLI capture</text>
+  <text x="172.203402" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">BPF filters</text>
+  <rect x="345.084773" y="40" width="264.406804" height="238.44432" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)"/>
+  <text x="477.288175" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Wireshark</text>
+  <text x="477.288175" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">GUI analysis</text>
+  <text x="477.288175" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">protocol decode</text>
+  <rect x="650.169547" y="40" width="264.406804" height="238.44432" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)"/>
+  <text x="782.372948" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">netcat (nc)</text>
+  <text x="782.372948" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">raw connections</text>
+  <text x="782.372948" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">port scanning</text>
+  <rect x="955.254212" y="40" width="284.745788" height="238.44432" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)"/>
+  <text x="1097.627214" y="119.91104" text-anchor="middle" font-size="25.187211" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">tshark</text>
+  <text x="1097.627214" y="181.77776" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">CLI Wireshark</text>
+  <text x="1097.627214" y="235.91104" text-anchor="middle" font-size="20.60773" fill="var(--text-muted)" font-family="Arial, sans-serif">scriptable</text>
+  <rect x="170.169503" y="369.95536" width="955.93229" height="128.88896" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.904515" filter="url(#shadow)"/>
+  <text x="648.135648" y="449.86672" text-anchor="middle" font-size="24.042374" fill="var(--danger-accent)" font-family="Arial, sans-serif">Capture point: NIC --&gt; libpcap/AF_PACKET --&gt; user tool</text>
+  <text x="648.135648" y="620" text-anchor="middle" font-size="19.462893" fill="var(--text-muted)" font-family="Arial, sans-serif">tcpdump -i eth0 -w capture.pcap / wireshark capture.pcap</text>
 </svg>

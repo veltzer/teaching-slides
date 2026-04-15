@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,48 +75,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowpipe" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 15.4286 L 16.4571 7.7143 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="223.2559" height="128.8889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="151.6279" y="117.3332" text-anchor="middle" font-size="20.314">Code Commit</text>
-  <rect x="319.0698" y="40" width="223.2559" height="128.8889" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="430.6977" y="104.4444" text-anchor="middle" font-size="20.314">Lint Migration</text>
-  <rect x="598.1396" y="40" width="223.2559" height="128.8889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="709.7675" y="104.4444" text-anchor="middle" font-size="20.314">Test on Clone</text>
-  <rect x="877.2093" y="40" width="223.2559" height="128.8889" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="988.8372" y="104.4444" text-anchor="middle" font-size="20.314">Apply Staging</text>
-  <rect x="458.6047" y="297.7777" width="223.2559" height="128.8889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="570.2326" y="362.2222" text-anchor="middle" font-size="20.314">Approval Gate</text>
-  <rect x="737.6744" y="297.7777" width="223.2559" height="128.8889" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="849.3023" y="362.2222" text-anchor="middle" font-size="20.314">Apply Production</text>
-  <rect x="1016.7441" y="297.7777" width="223.2559" height="128.8889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1128.3721" y="362.2222" text-anchor="middle" font-size="20.314">Verify + Monitor</text>
-  <line x1="263.2559" y1="104.4444" x2="319.0698" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <line x1="542.3256" y1="104.4444" x2="598.1396" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <line x1="821.3953" y1="104.4444" x2="877.2093" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <line x1="988.8372" y1="168.8888" x2="728.3721" y2="297.7777" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <line x1="681.8604" y1="362.2222" x2="737.6744" y2="362.2222" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <line x1="960.9302" y1="362.2222" x2="1016.7441" y2="362.2222" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowpipe)" />
-  <text x="635.3489" y="555.5555" text-anchor="middle" font-size="22.1607" font-weight="bold">Every migration passes through this pipeline</text>
-  <text x="635.3489" y="620" text-anchor="middle" font-size="20.314">Automated linting, testing, and approval before production</text>
+  <rect x="40" y="40" width="223.2559" height="128.8889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="151.6279" y="117.3332" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--primary-text)">Code Commit</text>
+  <rect x="319.0698" y="40" width="223.2559" height="128.8889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="430.6977" y="104.4444" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--ok-text)">Lint Migration</text>
+  <rect x="598.1396" y="40" width="223.2559" height="128.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="709.7675" y="104.4444" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--warn-text)">Test on Clone</text>
+  <rect x="877.2093" y="40" width="223.2559" height="128.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="988.8372" y="104.4444" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--info-text)">Apply Staging</text>
+  <rect x="458.6047" y="297.7777" width="223.2559" height="128.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="570.2326" y="362.2222" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--danger-text)">Approval Gate</text>
+  <rect x="737.6744" y="297.7777" width="223.2559" height="128.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="849.3023" y="362.2222" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--info-text)">Apply Production</text>
+  <rect x="1016.7441" y="297.7777" width="223.2559" height="128.8889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1128.3721" y="362.2222" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--primary-text)">Verify + Monitor</text>
+  <line x1="263.2559" y1="104.4444" x2="319.0698" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="542.3256" y1="104.4444" x2="598.1396" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="821.3953" y1="104.4444" x2="877.2093" y2="104.4444" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="988.8372" y1="168.8888" x2="728.3721" y2="297.7777" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="681.8604" y1="362.2222" x2="737.6744" y2="362.2222" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="960.9302" y1="362.2222" x2="1016.7441" y2="362.2222" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="635.3489" y="555.5555" text-anchor="middle" font-size="22.1607" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Every migration passes through this pipeline</text>
+  <text x="635.3489" y="620" text-anchor="middle" font-size="20.314" font-family="Arial, sans-serif" fill="var(--text)">Automated linting, testing, and approval before production</text>
 </svg>

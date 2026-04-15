@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <style>
     .txt { font-family: sans-serif; font-size: 12px; }
     .title { font-weight: bold; text-anchor: middle; }
@@ -12,111 +13,119 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-      <path d="M 0 0 L 28.4444 12.8571 L 0 25.7143 z" fill="#555" />
-    </marker>
+
   </defs>
-  <text x="221.3952" y="40" class="title">Process FD Table</text>
+  <text x="221.3952" y="40" class="title" font-family="Arial, sans-serif" fill="var(--text)">Process FD Table</text>
   <rect x="40" y="64.1667" width="362.7906" height="555.8333" class="box proc" rx="6" />
-  <text x="67.9069" y="124.5834" class="txt">0 (stdin)</text>
+  <text x="67.9069" y="124.5834" class="txt" font-family="Arial, sans-serif" fill="var(--text)">0 (stdin)</text>
   <path d="M 263.2558 112.5 L 444.6512 185" class="arr" />
-  <text x="67.9069" y="197.0834" class="txt">1 (stdout)</text>
+  <text x="67.9069" y="197.0834" class="txt" font-family="Arial, sans-serif" fill="var(--text)">1 (stdout)</text>
   <path d="M 263.2558 185 L 444.6512 257.4998" class="arr" />
-  <text x="67.9069" y="269.5833" class="txt">2 (stderr)</text>
+  <text x="67.9069" y="269.5833" class="txt" font-family="Arial, sans-serif" fill="var(--text)">2 (stderr)</text>
   <path d="M 263.2558 257.4998 L 444.6512 257.4998" class="arr" />
-  <text x="67.9069" y="342.0833" class="txt">3</text>
+  <text x="67.9069" y="342.0833" class="txt" font-family="Arial, sans-serif" fill="var(--text)">3</text>
   <path d="M 263.2558 329.9999 L 444.6512 402.4999" class="arr" />
-  <text x="67.9069" y="414.5832" class="txt">4</text>
+  <text x="67.9069" y="414.5832" class="txt" font-family="Arial, sans-serif" fill="var(--text)">4</text>
   <path d="M 263.2558 402.4999 L 444.6512 402.4999" class="arr" />
-  <text x="67.9069" y="487.0831" class="txt">...</text>
-  <text x="667.9069" y="40" class="title">System Open File Table</text>
+  <text x="67.9069" y="487.0831" class="txt" font-family="Arial, sans-serif" fill="var(--text)">...</text>
+  <text x="667.9069" y="40" class="title" font-family="Arial, sans-serif" fill="var(--text)">System Open File Table</text>
   <rect x="458.6045" y="64.1667" width="418.6047" height="555.8333" class="box sys" rx="6" />
-  <text x="486.5116" y="197.0834" class="txt">Entry A (tty)</text>
+  <text x="486.5116" y="197.0834" class="txt" font-family="Arial, sans-serif" fill="var(--text)">Entry A (tty)</text>
   <path d="M 765.5813 185 L 919.0696 257.4998" class="arr" />
-  <text x="486.5116" y="269.5833" class="txt">Entry B (tty)</text>
+  <text x="486.5116" y="269.5833" class="txt" font-family="Arial, sans-serif" fill="var(--text)">Entry B (tty)</text>
   <path d="M 765.5813 257.4998 L 919.0696 257.4998" class="arr" />
-  <text x="486.5116" y="414.5832" class="txt">Entry C (file.txt)</text>
+  <text x="486.5116" y="414.5832" class="txt" font-family="Arial, sans-serif" fill="var(--text)">Entry C (file.txt)</text>
   <path d="M 765.5813 402.4999 L 919.0696 426.6664" class="arr" />
-  <text x="1086.5115" y="40" class="title">i-node Table</text>
+  <text x="1086.5115" y="40" class="title" font-family="Arial, sans-serif" fill="var(--text)">i-node Table</text>
   <rect x="933.0232" y="64.1667" width="306.9768" height="555.8333" class="box inode" rx="6" />
-  <text x="960.9302" y="269.5833" class="txt">tty i-node</text>
-  <text x="960.9302" y="438.75" class="txt">file.txt i-node</text>
+  <text x="960.9302" y="269.5833" class="txt" font-family="Arial, sans-serif" fill="var(--text)">tty i-node</text>
+  <text x="960.9302" y="438.75" class="txt" font-family="Arial, sans-serif" fill="var(--text)">file.txt i-node</text>
 </svg>

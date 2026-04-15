@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,26 +97,23 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="29.871567" font-weight="bold" fill="var(--primary-accent)">Geo Data Types</text>
-  <rect x="40" y="90.989059" width="535.714171" height="276.190439" rx="7.365753" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="307.857143" y="175.970692" text-anchor="middle" font-size="27.737831" font-weight="bold" fill="var(--ok-accent)">geo_point</text>
-  <text x="307.857143" y="224.835223" text-anchor="middle" font-size="20.269939" fill="var(--text-muted)">Single lat/lon coordinate</text>
+  <text x="640" y="40" text-anchor="middle" font-size="29.871567" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Geo Data Types</text>
+  <rect x="40" y="90.989059" width="535.714171" height="276.190439" rx="7.365753" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.857143" y="175.970692" text-anchor="middle" font-size="27.737831" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">geo_point</text>
+  <text x="307.857143" y="224.835223" text-anchor="middle" font-size="20.269939" fill="var(--text-muted)" font-family="Arial, sans-serif">Single lat/lon coordinate</text>
   <rect x="286.52" y="282.106" width="42.6737" height="42.6737" rx="14" fill="var(--ok-accent)"/>
-  <text x="307.857143" y="373.55308" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)">Queries: geo_distance, geo_bounding_box,</text>
-  <text x="307.857143" y="401.172071" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)">geo_polygon</text>
-  <rect x="704.285714" y="90.989059" width="535.714171" height="276.190439" rx="7.365753" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="972.142743" y="175.970692" text-anchor="middle" font-size="27.737831" font-weight="bold" fill="var(--primary-accent)">geo_shape</text>
-  <text x="972.142743" y="224.835223" text-anchor="middle" font-size="20.269939" fill="var(--text-muted)">GeoJSON shapes: points, lines, polygons</text>
+  <text x="307.857143" y="373.55308" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)" font-family="Arial, sans-serif">Queries: geo_distance, geo_bounding_box,</text>
+  <text x="307.857143" y="401.172071" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)" font-family="Arial, sans-serif">geo_polygon</text>
+  <rect x="704.285714" y="90.989059" width="535.714171" height="276.190439" rx="7.365753" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142743" y="175.970692" text-anchor="middle" font-size="27.737831" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">geo_shape</text>
+  <text x="972.142743" y="224.835223" text-anchor="middle" font-size="20.269939" fill="var(--text-muted)" font-family="Arial, sans-serif">GeoJSON shapes: points, lines, polygons</text>
   <polygon points="886.428457,282.197865 972.142743,250.329686 1057.857143,282.197865 1036.428571,345.934089 907.857143,345.934089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.6667" />
-  <text x="972.142743" y="401.172071" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)">Queries: geo_shape (intersects, within,</text>
-  <text x="972.142743" y="426.666667" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)">contains, disjoint)</text>
+  <text x="972.142743" y="401.172071" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)" font-family="Arial, sans-serif">Queries: geo_shape (intersects, within,</text>
+  <text x="972.142743" y="426.666667" text-anchor="middle" font-size="18.136326" fill="var(--text-muted)" font-family="Arial, sans-serif">contains, disjoint)</text>
   <rect x="40" y="426.666667" width="1200" height="84.981633" rx="7.365753" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="460.659373" text-anchor="middle" font-size="19.203133" fill="var(--primary-accent)" font-weight="bold">Common Use Cases</text>
-  <text x="640" y="494.652078" text-anchor="middle" font-size="17.069397" fill="var(--text-muted)">geo_point: store locations, radius search, map clustering, location-based sorting</text>
-  <rect x="40" y="560.512831" width="1200" height="59.487169" rx="7.365753" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="596.630064" text-anchor="middle" font-size="17.069397" fill="var(--ok-accent)">geo_shape: Areas &amp; lines - countries, zones, routes, geofencing</text>
+  <text x="640" y="460.659373" text-anchor="middle" font-size="19.203133" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">Common Use Cases</text>
+  <text x="640" y="494.652078" text-anchor="middle" font-size="17.069397" fill="var(--text-muted)" font-family="Arial, sans-serif">geo_point: store locations, radius search, map clustering, location-based sorting</text>
+  <rect x="40" y="560.512831" width="1200" height="59.487169" rx="7.365753" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="596.630064" text-anchor="middle" font-size="17.069397" fill="var(--ok-accent)" font-family="Arial, sans-serif">geo_shape: Areas &amp; lines - countries, zones, routes, geofencing</text>
 </svg>

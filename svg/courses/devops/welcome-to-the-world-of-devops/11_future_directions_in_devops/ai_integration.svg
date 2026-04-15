@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,40 +75,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr11a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="278.5714" height="220" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="179.2857" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">AI Code Gen</text>
-  <text x="179.2857" y="192" text-anchor="middle" font-size="22.5374">Copilot / LLMs</text>
-  <rect x="500.7142" y="40" width="278.5714" height="220" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="640" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">AI Testing</text>
-  <text x="640" y="192" text-anchor="middle" font-size="22.5374">Auto Test Gen</text>
-  <rect x="961.4286" y="40" width="278.5714" height="220" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1100.7143" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">AI Ops</text>
-  <text x="1100.7143" y="192" text-anchor="middle" font-size="22.5374">Smart Incidents</text>
-  <line x1="318.5714" y1="148" x2="500.7142" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arr11a)" />
-  <line x1="779.2858" y1="148" x2="961.4286" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arr11a)" />
-  <rect x="211.4285" y="400" width="857.1429" height="220" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" stroke-dasharray="8.5333" filter="url(#shadow)"/>
-  <text x="640" y="492" text-anchor="middle" font-size="24.7912" font-weight="bold">AI-Augmented SDLC</text>
-  <text x="640" y="560" text-anchor="middle" font-size="22.5374">Code Review - Root Cause - Capacity Predict - Auto Fix</text>
+  <rect x="40" y="40" width="278.5714" height="220" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="179.2857" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">AI Code Gen</text>
+  <text x="179.2857" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--primary-text)">Copilot / LLMs</text>
+  <rect x="500.7142" y="40" width="278.5714" height="220" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="640" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">AI Testing</text>
+  <text x="640" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--info-text)">Auto Test Gen</text>
+  <rect x="961.4286" y="40" width="278.5714" height="220" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1100.7143" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">AI Ops</text>
+  <text x="1100.7143" y="192" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--ok-text)">Smart Incidents</text>
+  <line x1="318.5714" y1="148" x2="500.7142" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="779.2858" y1="148" x2="961.4286" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="211.4285" y="400" width="857.1429" height="220" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" stroke-dasharray="8.5333" filter="url(#shadow)"/>
+  <text x="640" y="492" text-anchor="middle" font-size="24.7912" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">AI-Augmented SDLC</text>
+  <text x="640" y="560" text-anchor="middle" font-size="22.5374" font-family="Arial, sans-serif" fill="var(--warn-text)">Code Review - Root Cause - Capacity Predict - Auto Fix</text>
 </svg>

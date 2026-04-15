@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,60 +97,57 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="373.770524" height="175.757586" rx="6.419048" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="226.885262" y="73.394041" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--bg)">1. Immediate</text>
-  <text x="226.885262" y="96.24248" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--primary-accent)">Constant encoded in instruction</text>
+  <rect x="40" y="40" width="373.770524" height="175.757586" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.885262" y="73.394041" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">1. Immediate</text>
+  <text x="226.885262" y="96.24248" text-anchor="middle" font-size="13.94581" fill="var(--primary-accent)" font-family="Arial, sans-serif">Constant encoded in instruction</text>
   <rect x="63.606559" y="110.3031" width="326.557406" height="38.666623" rx="6.419048" fill="var(--primary-accent)" />
-  <text x="226.885262" y="134.909103" text-anchor="middle" font-family="monospace" font-size="18.594485" fill="var(--bg)">movl  $42, %eax</text>
-  <text x="226.885262" y="168.303143" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--primary-accent)">EAX ← 42</text>
-  <text x="226.885262" y="191.151583" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--primary-accent)">No memory access · fastest mode</text>
+  <text x="226.885262" y="134.909103" text-anchor="middle" font-size="18.594485" fill="var(--bg)" font-family="Courier New, monospace">movl  $42, %eax</text>
+  <text x="226.885262" y="168.303143" text-anchor="middle" font-size="13.94581" fill="var(--primary-accent)" font-family="Arial, sans-serif">EAX ← 42</text>
+  <text x="226.885262" y="191.151583" text-anchor="middle" font-size="13.016011" fill="var(--primary-accent)" font-family="Arial, sans-serif">No memory access · fastest mode</text>
   <rect x="453.11479" y="40" width="373.770524" height="175.757586" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="73.394041" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--text)">2. Register</text>
-  <text x="640.000052" y="96.24248" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">Value already in a register</text>
-  <rect x="476.72135" y="110.3031" width="326.557406" height="38.666623" rx="6.419048" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="134.909103" text-anchor="middle" font-family="monospace" font-size="18.594485" fill="var(--primary-accent)">movl  %ebx, %eax</text>
-  <text x="640.000052" y="168.303143" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">EAX ← EBX</text>
-  <text x="640.000052" y="191.151583" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--text-faint)">No memory access · very fast</text>
+  <text x="640.000052" y="73.394041" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2. Register</text>
+  <text x="640.000052" y="96.24248" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">Value already in a register</text>
+  <rect x="476.72135" y="110.3031" width="326.557406" height="38.666623" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="134.909103" text-anchor="middle" font-size="18.594485" fill="var(--primary-accent)" font-family="Courier New, monospace">movl  %ebx, %eax</text>
+  <text x="640.000052" y="168.303143" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">EAX ← EBX</text>
+  <text x="640.000052" y="191.151583" text-anchor="middle" font-size="13.016011" fill="var(--text-faint)" font-family="Arial, sans-serif">No memory access · very fast</text>
   <rect x="866.229476" y="40" width="373.770524" height="175.757586" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1053.114843" y="73.394041" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--text)">3. Direct</text>
-  <text x="1053.114843" y="96.24248" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">Fixed memory address in instruction</text>
+  <text x="1053.114843" y="73.394041" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Direct</text>
+  <text x="1053.114843" y="96.24248" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">Fixed memory address in instruction</text>
   <rect x="889.83614" y="110.3031" width="326.557406" height="38.666623" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1053.114843" y="134.909103" text-anchor="middle" font-family="monospace" font-size="18.594485" fill="var(--text)">movl  0x1000, %eax</text>
-  <text x="1053.114843" y="168.303143" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">EAX ← mem[0x1000]</text>
-  <text x="1053.114843" y="191.151583" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--text-faint)">One memory read · global variables</text>
+  <text x="1053.114843" y="134.909103" text-anchor="middle" font-size="18.594485" fill="var(--text)" font-family="Courier New, monospace">movl  0x1000, %eax</text>
+  <text x="1053.114843" y="168.303143" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">EAX ← mem[0x1000]</text>
+  <text x="1053.114843" y="191.151583" text-anchor="middle" font-size="13.016011" fill="var(--text-faint)" font-family="Arial, sans-serif">One memory read · global variables</text>
   <rect x="40" y="242.121262" width="373.770524" height="175.757586" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="226.885262" y="275.515193" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--text)">4. Indirect</text>
-  <text x="226.885262" y="298.363632" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">Address stored in a register</text>
-  <rect x="63.606559" y="312.424252" width="326.557406" height="38.666623" rx="6.419048" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.885262" y="337.030365" text-anchor="middle" font-family="monospace" font-size="18.594485" fill="var(--primary-accent)">movl  (%ebx), %eax</text>
-  <text x="226.885262" y="370.424296" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">EAX ← mem[EBX]</text>
-  <text x="226.885262" y="393.272735" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--text-faint)">EBX is a pointer · dereference</text>
-  <rect x="453.11479" y="242.121262" width="373.770524" height="175.757586" rx="6.419048" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640.000052" y="275.515193" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--bg)">5. Base + Offset</text>
-  <text x="640.000052" y="298.363632" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--primary-accent)">Register + constant displacement</text>
+  <text x="226.885262" y="275.515193" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">4. Indirect</text>
+  <text x="226.885262" y="298.363632" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">Address stored in a register</text>
+  <rect x="63.606559" y="312.424252" width="326.557406" height="38.666623" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.885262" y="337.030365" text-anchor="middle" font-size="18.594485" fill="var(--primary-accent)" font-family="Courier New, monospace">movl  (%ebx), %eax</text>
+  <text x="226.885262" y="370.424296" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">EAX ← mem[EBX]</text>
+  <text x="226.885262" y="393.272735" text-anchor="middle" font-size="13.016011" fill="var(--text-faint)" font-family="Arial, sans-serif">EBX is a pointer · dereference</text>
+  <rect x="453.11479" y="242.121262" width="373.770524" height="175.757586" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="275.515193" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">5. Base + Offset</text>
+  <text x="640.000052" y="298.363632" text-anchor="middle" font-size="13.94581" fill="var(--primary-accent)" font-family="Arial, sans-serif">Register + constant displacement</text>
   <rect x="476.72135" y="312.424252" width="326.557406" height="38.666623" rx="6.419048" fill="var(--primary-accent)" />
-  <text x="640.000052" y="337.030365" text-anchor="middle" font-family="monospace" font-size="18.594485" fill="var(--bg)">movl  8(%ebp), %eax</text>
-  <text x="640.000052" y="370.424296" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--primary-accent)">EAX ← mem[EBP + 8]</text>
-  <text x="640.000052" y="393.272735" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--primary-accent)">Stack params · struct fields</text>
+  <text x="640.000052" y="337.030365" text-anchor="middle" font-size="18.594485" fill="var(--bg)" font-family="Courier New, monospace">movl  8(%ebp), %eax</text>
+  <text x="640.000052" y="370.424296" text-anchor="middle" font-size="13.94581" fill="var(--primary-accent)" font-family="Arial, sans-serif">EAX ← mem[EBP + 8]</text>
+  <text x="640.000052" y="393.272735" text-anchor="middle" font-size="13.016011" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stack params · struct fields</text>
   <rect x="866.229476" y="242.121262" width="373.770524" height="175.757586" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1053.114843" y="275.515193" text-anchor="middle" font-family="sans-serif" font-size="18.594485" font-weight="bold" fill="var(--text)">6. Scaled Index</text>
-  <text x="1053.114843" y="298.363632" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">Base + index×scale + displacement</text>
+  <text x="1053.114843" y="275.515193" text-anchor="middle" font-size="18.594485" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">6. Scaled Index</text>
+  <text x="1053.114843" y="298.363632" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">Base + index×scale + displacement</text>
   <rect x="889.83614" y="312.424252" width="326.557406" height="38.666623" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1053.114843" y="337.030365" text-anchor="middle" font-family="monospace" font-size="16.734994" fill="var(--text)">movl (%ebx,%ecx,4),%eax</text>
-  <text x="1053.114843" y="370.424296" text-anchor="middle" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">EAX ← mem[EBX + ECX×4]</text>
-  <text x="1053.114843" y="393.272735" text-anchor="middle" font-family="sans-serif" font-size="13.016011" fill="var(--text-faint)">Array access · scale = element size</text>
-  <rect x="207.213129" y="445.999978" width="865.573846" height="61.515171" rx="6.419048" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000052" y="472.363654" text-anchor="middle" font-family="sans-serif" font-size="15.805302" font-weight="bold" fill="var(--primary-accent)">General memory form (AT&amp;T syntax):</text>
-  <text x="640.000052" y="496.969766" text-anchor="middle" font-family="monospace" font-size="16.734994" fill="var(--text)">disp(base, index, scale)   →   mem[ base + index×scale + disp ]</text>
+  <text x="1053.114843" y="337.030365" text-anchor="middle" font-size="16.734994" fill="var(--text)" font-family="Courier New, monospace">movl (%ebx,%ecx,4),%eax</text>
+  <text x="1053.114843" y="370.424296" text-anchor="middle" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">EAX ← mem[EBX + ECX×4]</text>
+  <text x="1053.114843" y="393.272735" text-anchor="middle" font-size="13.016011" fill="var(--text-faint)" font-family="Arial, sans-serif">Array access · scale = element size</text>
+  <rect x="207.213129" y="445.999978" width="865.573846" height="61.515171" rx="6.419048" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000052" y="472.363654" text-anchor="middle" font-size="15.805302" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">General memory form (AT&amp;T syntax):</text>
+  <text x="640.000052" y="496.969766" text-anchor="middle" font-size="16.734994" fill="var(--text)" font-family="Courier New, monospace">disp(base, index, scale)   →   mem[ base + index×scale + disp ]</text>
   <rect x="207.213129" y="533.878826" width="865.573846" height="84.363611" rx="6.419048" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="558.484938" text-anchor="middle" font-family="sans-serif" font-size="14.875503" font-weight="bold" fill="var(--text)">AT&amp;T (GAS) syntax reminder</text>
-  <text x="246.557395" y="581.333377" font-family="monospace" font-size="13.94581" fill="var(--primary-accent)">movl $42, %eax   </text>
-  <text x="502.295017" y="581.333377" font-family="sans-serif" font-size="13.94581" fill="var(--text-muted)">← source before destination · % for regs · $ for immediates</text>
-  <text x="246.557395" y="602.424361" font-family="monospace" font-size="13.94581" fill="var(--text-faint)">mov  eax, 42     </text>
-  <text x="502.295017" y="602.424361" font-family="sans-serif" font-size="13.94581" fill="var(--text-faint)">← Intel syntax (destination first) — opposite!</text>
-  <text x="246.557395" y="620" font-family="sans-serif" font-size="13.016011" fill="var(--text-faint)">GAS uses AT&amp;T syntax by default. Use .intel_syntax noprefix to switch.</text>
+  <text x="640.000052" y="558.484938" text-anchor="middle" font-size="14.875503" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">AT&amp;T (GAS) syntax reminder</text>
+  <text x="246.557395" y="581.333377" font-size="13.94581" fill="var(--primary-accent)" font-family="Courier New, monospace">movl $42, %eax   </text>
+  <text x="502.295017" y="581.333377" font-size="13.94581" fill="var(--text-muted)" font-family="Arial, sans-serif">← source before destination · % for regs · $ for immediates</text>
+  <text x="246.557395" y="602.424361" font-size="13.94581" fill="var(--text-faint)" font-family="Courier New, monospace">mov  eax, 42     </text>
+  <text x="502.295017" y="602.424361" font-size="13.94581" fill="var(--text-faint)" font-family="Arial, sans-serif">← Intel syntax (destination first) — opposite!</text>
+  <text x="246.557395" y="620" font-size="13.016011" fill="var(--text-faint)" font-family="Arial, sans-serif">GAS uses AT&amp;T syntax by default. Use .intel_syntax noprefix to switch.</text>
 </svg>

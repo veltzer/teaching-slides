@@ -1,87 +1,132 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
-  </defs>
-  <text x="660.689655" y="40" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--text)">DevOps Implementation Roadmap</text>
-  <rect x="40" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <text x="660.689655" y="40" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">DevOps Implementation Roadmap</text>
+  <rect x="40" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="132.319" y="105.244" width="84.3274" height="84.3274" rx="14" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3"/>
-  <text x="174.482759" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--primary-border)">1</text>
-  <text x="174.482759" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--primary-text)">Version Control</text>
-  <text x="174.482759" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)">Week 1-2</text>
-  <text x="174.482759" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)">Git adopted</text>
-  <text x="174.482759" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)">Branching model</text>
-  <text x="174.482759" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)">Code review</text>
+  <text x="174.482759" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--primary-border)" font-family="Arial, sans-serif">1</text>
+  <text x="174.482759" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Version Control</text>
+  <text x="174.482759" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)" font-family="Arial, sans-serif">Week 1-2</text>
+  <text x="174.482759" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)" font-family="Arial, sans-serif">Git adopted</text>
+  <text x="174.482759" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)" font-family="Arial, sans-serif">Branching model</text>
+  <text x="174.482759" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)" font-family="Arial, sans-serif">Code review</text>
   <line x1="314.137931" y1="346.111111" x2="345.172414" y2="346.111111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="350.344828" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350.344828" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="442.664" y="105.244" width="84.3274" height="84.3274" rx="14" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3"/>
-  <text x="484.827586" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--info-border)">2</text>
-  <text x="484.827586" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--info-text)">CI/CD Pipeline</text>
-  <text x="484.827586" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--info-text)">Month 1-2</text>
-  <text x="484.827586" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--info-text)">Automated tests</text>
-  <text x="484.827586" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--info-text)">Build artifacts</text>
-  <text x="484.827586" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--info-text)">Auto deploy</text>
+  <text x="484.827586" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--info-border)" font-family="Arial, sans-serif">2</text>
+  <text x="484.827586" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">CI/CD Pipeline</text>
+  <text x="484.827586" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--info-text)" font-family="Arial, sans-serif">Month 1-2</text>
+  <text x="484.827586" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--info-text)" font-family="Arial, sans-serif">Automated tests</text>
+  <text x="484.827586" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--info-text)" font-family="Arial, sans-serif">Build artifacts</text>
+  <text x="484.827586" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--info-text)" font-family="Arial, sans-serif">Auto deploy</text>
   <line x1="624.482759" y1="346.111111" x2="655.517241" y2="346.111111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="660.689655" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="753.009" y="105.244" width="84.3274" height="84.3274" rx="14" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3"/>
-  <text x="795.172414" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--ok-border)">3</text>
-  <text x="795.172414" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--ok-text)">IaC + Containers</text>
-  <text x="795.172414" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)">Month 3-4</text>
-  <text x="795.172414" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)">Terraform</text>
-  <text x="795.172414" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)">Docker images</text>
-  <text x="795.172414" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)">Kubernetes</text>
+  <text x="795.172414" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--ok-border)" font-family="Arial, sans-serif">3</text>
+  <text x="795.172414" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">IaC + Containers</text>
+  <text x="795.172414" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)" font-family="Arial, sans-serif">Month 3-4</text>
+  <text x="795.172414" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)" font-family="Arial, sans-serif">Terraform</text>
+  <text x="795.172414" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)" font-family="Arial, sans-serif">Docker images</text>
+  <text x="795.172414" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--ok-text)" font-family="Arial, sans-serif">Kubernetes</text>
   <line x1="934.827586" y1="346.111111" x2="965.862069" y2="346.111111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="971.034483" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.034483" y="72.222222" width="268.965517" height="547.777778" rx="6.324555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="1063.35" y="105.244" width="84.3274" height="84.3274" rx="14" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="3"/>
-  <text x="1105.517241" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--warn-border)">4</text>
-  <text x="1105.517241" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--warn-text)">Monitor + Observe</text>
-  <text x="1105.517241" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)">Month 5+</text>
-  <text x="1105.517241" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)">Metrics</text>
-  <text x="1105.517241" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)">Logs</text>
-  <text x="1105.517241" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)">Traces + alerts</text>
+  <text x="1105.517241" y="163.518519" text-anchor="middle" font-size="37.947332" font-weight="bold" fill="var(--warn-border)" font-family="Arial, sans-serif">4</text>
+  <text x="1105.517241" y="233.333333" text-anchor="middle" font-size="23.190036" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Monitor + Observe</text>
+  <text x="1105.517241" y="270.925926" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)" font-family="Arial, sans-serif">Month 5+</text>
+  <text x="1105.517241" y="340.740741" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)" font-family="Arial, sans-serif">Metrics</text>
+  <text x="1105.517241" y="383.703704" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)" font-family="Arial, sans-serif">Logs</text>
+  <text x="1105.517241" y="426.666667" text-anchor="middle" font-size="16.865481" fill="var(--warn-text)" font-family="Arial, sans-serif">Traces + alerts</text>
 </svg>

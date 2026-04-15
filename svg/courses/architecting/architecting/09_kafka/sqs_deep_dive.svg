@@ -1,117 +1,123 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-dash" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#999" />
-    </marker>
+
   </defs>
-  <text x="702.6865" y="40" text-anchor="middle" font-size="26.252" font-weight="bold" fill="var(--text)">Amazon SQS Architecture</text>
-  <rect x="40" y="200.6414" width="214.9254" height="76.0933" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="147.4626" y="246.2972" text-anchor="middle" font-size="21.2509" fill="var(--text)">Producer</text>
-  <rect x="398.2087" y="166.8222" width="322.388" height="135.277" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="559.4028" y="226.0058" text-anchor="middle" font-size="22.9707" font-weight="bold" fill="var(--text)">SQS Queue</text>
-  <text x="559.4028" y="259.8251" text-anchor="middle" font-size="21.2509" fill="var(--text-muted)">Messages in flight</text>
-  <rect x="899.7013" y="99.1837" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="136.3848" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer 1</text>
-  <rect x="899.7013" y="183.7318" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="220.9327" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer 2</text>
-  <rect x="899.7013" y="268.2797" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="305.481" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer N</text>
-  <rect x="434.0297" y="437.3761" width="322.388" height="84.5481" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="595.2237" y="488.105" text-anchor="middle" font-size="21.2509" font-weight="bold" fill="var(--danger-accent)">Dead Letter Queue</text>
+  <text x="702.6865" y="40" text-anchor="middle" font-size="26.252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Amazon SQS Architecture</text>
+  <rect x="40" y="200.6414" width="214.9254" height="76.0933" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.4626" y="246.2972" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Producer</text>
+  <rect x="398.2087" y="166.8222" width="322.388" height="135.277" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="559.4028" y="226.0058" text-anchor="middle" font-size="22.9707" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SQS Queue</text>
+  <text x="559.4028" y="259.8251" text-anchor="middle" font-size="21.2509" fill="var(--text-muted)" font-family="Arial, sans-serif">Messages in flight</text>
+  <rect x="899.7013" y="99.1837" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="136.3848" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer 1</text>
+  <rect x="899.7013" y="183.7318" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="220.9327" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer 2</text>
+  <rect x="899.7013" y="268.2797" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="305.481" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer N</text>
+  <rect x="434.0297" y="437.3761" width="322.388" height="84.5481" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="595.2237" y="488.105" text-anchor="middle" font-size="21.2509" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead Letter Queue</text>
   <line x1="254.9254" y1="237.8426" x2="394.6268" y2="234.4606" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
   <line x1="720.597" y1="200.6414" x2="896.1194" y2="129.621" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
   <line x1="720.597" y1="234.4606" x2="896.1194" y2="212.4781" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
   <line x1="720.597" y1="268.2797" x2="896.1194" y2="297.0262" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
   <path d="M 1016.1192 158.3673 Q 1240 158.3673 1240 234.4606 Q 1240 335.9184 702.6865 335.9184 Q 613.1342 335.9184 613.1342 305.481" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)" />
-  <text x="1240" y="268.2797" font-size="21.2509" fill="var(--text-faint)">Visibility Timeout</text>
+  <text x="1240" y="268.2797" font-size="21.2509" fill="var(--text-faint)" font-family="Arial, sans-serif">Visibility Timeout</text>
   <path d="M 1016.1192 242.9155 Q 1204.1791 242.9155 1204.1791 268.2797 Q 1204.1791 352.828 684.7758 352.828 Q 622.0895 352.828 622.0895 305.481" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" />
-  <text x="1204.1791" y="352.828" font-size="21.2509" fill="var(--ok-accent)">Delete Message</text>
+  <text x="1204.1791" y="352.828" font-size="21.2509" fill="var(--ok-accent)" font-family="Arial, sans-serif">Delete Message</text>
   <line x1="559.4028" y1="302.0991" x2="595.2237" y2="433.9942" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <text x="487.7611" y="386.6472" font-size="21.2509" fill="var(--danger-accent)">Failed messages</text>
-  <text x="702.6865" y="589.5627" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</text>
-  <text x="702.6865" y="620" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</text>
+  <text x="487.7611" y="386.6472" font-size="21.2509" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failed messages</text>
+  <text x="702.6865" y="589.5627" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">SQS uses visibility timeout to prevent duplicate processing.</text>
+  <text x="702.6865" y="620" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Failed messages move to the Dead Letter Queue after max retries.</text>
 </svg>

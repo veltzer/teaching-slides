@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,7 +96,7 @@
 
   <!-- Background -->
   <!-- Root Account -->
-  <rect x="505.517241" y="40" width="268.965517" height="67.666667" rx="6.50941" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="505.517241" y="40" width="268.965517" height="67.666667" rx="6.50941" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="70.933333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.00002" font-weight="bold" fill="var(--bg)">Management Account</text>
   <text x="640" y="92.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.00005" fill="var(--primary-accent)">Organization Root</text>
 
@@ -109,86 +109,86 @@
   <line x1="1012.413793" y1="146.333333" x2="1012.413793" y2="175.333333" stroke="var(--text-muted)" stroke-width="2"/>
 
   <!-- SCP label -->
-  <rect x="526.206897" y="131.833387" width="82.758621" height="23.2" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="526.206897" y="131.833387" width="82.758621" height="23.2" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="567.586207" y="148.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.000034" font-weight="bold" fill="var(--warn-accent)">SCP</text>
 
   <!-- OU: Production -->
-  <rect x="60.689655" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="60.689655" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="164.137931" y="209.16672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--bg)">Production OU</text>
 
   <!-- SCP on Production -->
-  <rect x="102.068966" y="238.166613" width="124.137931" height="21.266667" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="102.068966" y="238.166613" width="124.137931" height="21.266667" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="164.137931" y="252.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" font-weight="bold" fill="var(--warn-accent)">Restrict Regions SCP</text>
 
   <!-- Production accounts -->
   <line x1="102.068966" y1="262.333333" x2="102.068966" y2="301" stroke="var(--ok-border)" stroke-width="1.5"/>
   <line x1="226.206897" y1="262.333333" x2="226.206897" y2="301" stroke="var(--ok-border)" stroke-width="1.5"/>
 
-  <rect x="40" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="102.068966" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--ok-accent)">Prod App</text>
   <text x="102.068966" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">123456789012</text>
 
-  <rect x="174.482759" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="174.482759" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="236.551724" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--ok-accent)">Prod Data</text>
   <text x="236.551724" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">123456789013</text>
 
   <!-- OU: Development -->
-  <rect x="329.655172" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="329.655172" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.103448" y="209.16672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--bg)">Development OU</text>
 
   <!-- SCP on Development -->
-  <rect x="360.689655" y="238.166613" width="144.827586" height="21.266667" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360.689655" y="238.166613" width="144.827586" height="21.266667" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.103448" y="252.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" font-weight="bold" fill="var(--warn-accent)">Cost Control SCP</text>
 
   <!-- Dev accounts -->
   <line x1="381.37931" y1="262.333333" x2="381.37931" y2="301" stroke="var(--warn-border)" stroke-width="1.5"/>
   <line x1="484.827586" y1="262.333333" x2="484.827586" y2="301" stroke="var(--warn-border)" stroke-width="1.5"/>
 
-  <rect x="319.310345" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="319.310345" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="381.37931" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--warn-accent)">Dev Team A</text>
   <text x="381.37931" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">223456789012</text>
 
-  <rect x="453.793103" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="453.793103" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="515.862069" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--warn-accent)">Dev Team B</text>
   <text x="515.862069" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">223456789013</text>
 
   <!-- OU: Security -->
-  <rect x="619.310345" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="619.310345" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="722.758621" y="209.16672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--bg)">Security OU</text>
 
   <!-- SCP on Security -->
-  <rect x="660.689655" y="238.166613" width="124.137931" height="21.266667" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660.689655" y="238.166613" width="124.137931" height="21.266667" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="722.758621" y="252.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" font-weight="bold" fill="var(--warn-accent)">Full Access SCP</text>
 
   <!-- Security accounts -->
   <line x1="671.034483" y1="262.333333" x2="671.034483" y2="301" stroke="var(--danger-border)" stroke-width="1.5"/>
   <line x1="774.482759" y1="262.333333" x2="774.482759" y2="301" stroke="var(--danger-border)" stroke-width="1.5"/>
 
-  <rect x="608.965517" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="608.965517" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="671.034483" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--danger-accent)">Log Archive</text>
   <text x="671.034483" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">323456789012</text>
 
-  <rect x="743.448276" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="743.448276" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="805.517241" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--danger-accent)">Audit</text>
   <text x="805.517241" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">323456789013</text>
 
   <!-- OU: Shared Services -->
-  <rect x="908.965517" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="908.965517" y="175.333333" width="206.896552" height="58" rx="6.50941" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1012.413793" y="209.16672" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.999958" font-weight="bold" fill="var(--bg)">Shared Services OU</text>
 
   <!-- SCP on Shared -->
-  <rect x="940" y="238.166613" width="144.827586" height="21.266667" rx="6.50941" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="238.166613" width="144.827586" height="21.266667" rx="6.50941" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1012.413793" y="252.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" font-weight="bold" fill="var(--warn-accent)">Network Restrict SCP</text>
 
   <!-- Shared accounts -->
   <line x1="960.689655" y1="262.333333" x2="960.689655" y2="301" stroke="var(--info-border)" stroke-width="1.5"/>
   <line x1="1064.137931" y1="262.333333" x2="1064.137931" y2="301" stroke="var(--info-border)" stroke-width="1.5"/>
 
-  <rect x="898.62069" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="898.62069" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="960.689655" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--info-accent)">Networking</text>
   <text x="960.689655" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">423456789012</text>
 
-  <rect x="1033.103448" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1033.103448" y="301" width="124.137931" height="48.333333" rx="6.50941" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1095.172414" y="322.266667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.999988" font-weight="bold" fill="var(--info-accent)">CI/CD</text>
   <text x="1095.172414" y="339.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.849016" fill="var(--text-muted)">423456789013</text>
 

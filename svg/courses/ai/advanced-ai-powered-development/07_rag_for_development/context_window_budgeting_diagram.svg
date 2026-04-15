@@ -1,90 +1,148 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Context Window Budget Allocation for RAG</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Context Window Budget Allocation for RAG</text>
 
   <!-- Proportional stacked bar: 1200px wide. 12.5% / 55% / 7.5% / 25% -->
   <!-- widths: 150, 660, 90, 300 -->
   <rect x="40" y="82.568807" width="1200" height="127.706422" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
-  <rect x="40" y="82.568807" width="150" height="127.706422" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="190" y="82.568807" width="660" height="127.706422" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="850" y="82.568807" width="90" height="127.706422" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="940" y="82.568807" width="300" height="127.706422" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="82.568807" width="150" height="127.706422" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="190" y="82.568807" width="660" height="127.706422" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="850" y="82.568807" width="90" height="127.706422" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="82.568807" width="300" height="127.706422" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
 
-  <text x="115" y="130.458716" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)">System</text>
-  <text x="115" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">prompt</text>
-  <text x="115" y="191.119266" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)">10-15%</text>
+  <text x="115" y="130.458716" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">System</text>
+  <text x="115" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">prompt</text>
+  <text x="115" y="191.119266" text-anchor="middle" font-size="16.505768" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">10-15%</text>
 
-  <text x="520" y="130.458716" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Retrieved Code Chunks</text>
-  <text x="520" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">ranked by similarity, truncate tail first</text>
-  <text x="520" y="194.311927" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">50-60%</text>
+  <text x="520" y="130.458716" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Retrieved Code Chunks</text>
+  <text x="520" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">ranked by similarity, truncate tail first</text>
+  <text x="520" y="194.311927" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">50-60%</text>
 
-  <text x="895" y="130.458716" text-anchor="middle" font-size="14.442547" font-weight="bold" fill="var(--warn-text)">User</text>
-  <text x="895" y="157.06422" text-anchor="middle" font-size="12.379326" fill="var(--warn-text)">query</text>
-  <text x="895" y="191.119266" text-anchor="middle" font-size="14.442547" font-weight="bold" fill="var(--warn-text)">5-10%</text>
+  <text x="895" y="130.458716" text-anchor="middle" font-size="14.442547" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">User</text>
+  <text x="895" y="157.06422" text-anchor="middle" font-size="12.379326" fill="var(--warn-text)" font-family="Arial, sans-serif">query</text>
+  <text x="895" y="191.119266" text-anchor="middle" font-size="14.442547" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">5-10%</text>
 
-  <text x="1090" y="130.458716" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Response (reserved)</text>
-  <text x="1090" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">headroom for generation</text>
-  <text x="1090" y="194.311927" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">20-30%</text>
+  <text x="1090" y="130.458716" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Response (reserved)</text>
+  <text x="1090" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">headroom for generation</text>
+  <text x="1090" y="194.311927" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">20-30%</text>
 
-  <text x="640" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--text-muted)">Total context window: 128K – 200K tokens</text>
+  <text x="640" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Total context window: 128K – 200K tokens</text>
 
   <!-- Rules grid -->
-  <text x="640" y="300.733945" text-anchor="middle" font-size="22.695431" font-weight="bold" fill="var(--info-accent)">Budget Allocation Rules</text>
+  <text x="640" y="300.733945" text-anchor="middle" font-size="22.695431" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Budget Allocation Rules</text>
 
   <rect x="40" y="327.33945" width="590" height="138.348624" rx="6.189663" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="60" y="364.587156" font-size="16.505768" font-weight="bold" fill="var(--danger-accent)">Reserve 10-15% for system prompt</text>
-  <text x="60" y="396.513761" font-size="14.442547" fill="var(--text-muted)">Instructions, persona, output format, safety rails.</text>
-  <text x="60" y="423.119266" font-size="14.442547" fill="var(--text-muted)">Stable across turns - counts once per request.</text>
+  <text x="60" y="364.587156" font-size="16.505768" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Reserve 10-15% for system prompt</text>
+  <text x="60" y="396.513761" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Instructions, persona, output format, safety rails.</text>
+  <text x="60" y="423.119266" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Stable across turns - counts once per request.</text>
 
   <rect x="650" y="327.33945" width="590" height="138.348624" rx="6.189663" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="670" y="364.587156" font-size="16.505768" font-weight="bold" fill="var(--primary-accent)">Allocate 50-60% for retrieved chunks</text>
-  <text x="670" y="396.513761" font-size="14.442547" fill="var(--text-muted)">Code files, functions, and docs from the vector store.</text>
-  <text x="670" y="423.119266" font-size="14.442547" fill="var(--text-muted)">This is where retrieval quality pays off.</text>
+  <text x="670" y="364.587156" font-size="16.505768" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Allocate 50-60% for retrieved chunks</text>
+  <text x="670" y="396.513761" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Code files, functions, and docs from the vector store.</text>
+  <text x="670" y="423.119266" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">This is where retrieval quality pays off.</text>
 
   <rect x="40" y="481.651376" width="590" height="138.348624" rx="6.189663" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="60" y="518.899083" font-size="16.505768" font-weight="bold" fill="var(--warn-accent)">Reserve 5-10% for query + history</text>
-  <text x="60" y="550.825688" font-size="14.442547" fill="var(--text-muted)">User question and recent conversation turns.</text>
-  <text x="60" y="577.431193" font-size="14.442547" fill="var(--text-muted)">Summarize or drop old turns when tight.</text>
+  <text x="60" y="518.899083" font-size="16.505768" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Reserve 5-10% for query + history</text>
+  <text x="60" y="550.825688" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">User question and recent conversation turns.</text>
+  <text x="60" y="577.431193" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Summarize or drop old turns when tight.</text>
 
   <rect x="650" y="481.651376" width="590" height="138.348624" rx="6.189663" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="670" y="518.899083" font-size="16.505768" font-weight="bold" fill="var(--ok-accent)">Leave 20-30% for model response</text>
-  <text x="670" y="550.825688" font-size="14.442547" fill="var(--text-muted)">Hard limit the output cannot exceed.</text>
-  <text x="670" y="577.431193" font-size="14.442547" fill="var(--text-muted)">Count tokens first, truncate lowest-ranked chunks.</text>
+  <text x="670" y="518.899083" font-size="16.505768" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Leave 20-30% for model response</text>
+  <text x="670" y="550.825688" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Hard limit the output cannot exceed.</text>
+  <text x="670" y="577.431193" font-size="14.442547" fill="var(--text-muted)" font-family="Arial, sans-serif">Count tokens first, truncate lowest-ranked chunks.</text>
 </svg>

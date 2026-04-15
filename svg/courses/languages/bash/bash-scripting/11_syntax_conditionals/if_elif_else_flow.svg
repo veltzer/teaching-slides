@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -116,15 +116,15 @@
   <!-- if condition diamond -->
   <polygon points="377.190083,87.154476 476.363636,134.308952 377.190083,181.463427 278.016529,134.308952" fill="url(#blueGrad)" filter="url(#shadow)"/>
   <text x="377.190083" y="130.536593" font-family="Arial, sans-serif" font-size="13.539498" font-weight="bold" fill="var(--bg)" text-anchor="middle">if condition</text>
-  <text x="377.190083" y="145.626026" font-family="monospace" font-size="11.605269" fill="var(--primary-accent)" text-anchor="middle">return code == 0?</text>
+  <text x="377.190083" y="145.626026" font-size="11.605269" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">return code == 0?</text>
 
   <!-- True branch (right) -->
   <line x1="476.363636" y1="134.308952" x2="575.53719" y2="134.308952" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="520.991736" y="127.707273" font-family="Arial, sans-serif" font-size="12.572436" fill="var(--ok-accent)" text-anchor="middle">true (rc=0)</text>
 
-  <rect x="575.53719" y="110.731766" width="119.008264" height="47.154476" rx="6.295294" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="575.53719" y="110.731766" width="119.008264" height="47.154476" rx="6.295294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="635.041322" y="131.479631" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">then block</text>
-  <text x="635.041322" y="148.455346" font-family="monospace" font-size="10.638207" fill="var(--ok-accent)" text-anchor="middle">executes</text>
+  <text x="635.041322" y="148.455346" font-size="10.638207" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">executes</text>
 
   <!-- False branch down -->
   <line x1="377.190083" y1="181.463427" x2="377.190083" y2="219.187008" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -133,15 +133,15 @@
   <!-- elif diamond -->
   <polygon points="377.190083,219.187008 476.363636,266.341484 377.190083,313.495959 278.016529,266.341484" fill="var(--warn-fill)" filter="url(#shadow)"/>
   <text x="377.190083" y="262.569126" font-family="Arial, sans-serif" font-size="13.539498" font-weight="bold" fill="var(--bg)" text-anchor="middle">elif condition</text>
-  <text x="377.190083" y="277.658558" font-family="monospace" font-size="11.605269" fill="var(--warn-accent)" text-anchor="middle">return code == 0?</text>
+  <text x="377.190083" y="277.658558" font-size="11.605269" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">return code == 0?</text>
 
   <!-- elif true branch -->
   <line x1="476.363636" y1="266.341484" x2="575.53719" y2="266.341484" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="520.991736" y="259.739805" font-family="Arial, sans-serif" font-size="12.572436" fill="var(--ok-accent)" text-anchor="middle">true</text>
 
-  <rect x="575.53719" y="242.764298" width="119.008264" height="47.154476" rx="6.295294" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="575.53719" y="242.764298" width="119.008264" height="47.154476" rx="6.295294" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="635.041322" y="263.512163" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">elif block</text>
-  <text x="635.041322" y="280.487878" font-family="monospace" font-size="10.638207" fill="var(--warn-accent)" text-anchor="middle">executes</text>
+  <text x="635.041322" y="280.487878" font-size="10.638207" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">executes</text>
 
   <!-- elif false branch -->
   <line x1="377.190083" y1="313.495959" x2="377.190083" y2="351.21954" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -152,7 +152,7 @@
   <line x1="377.190083" y1="351.21954" x2="377.190083" y2="393.65862" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="6,4"/>
 
   <!-- else box -->
-  <rect x="278.016529" y="393.65862" width="198.347107" height="56.585371" rx="6.295294" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="278.016529" y="393.65862" width="198.347107" height="56.585371" rx="6.295294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="377.190083" y="417.235806" font-family="Arial, sans-serif" font-size="13.539498" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">else block</text>
   <text x="377.190083" y="436.097597" font-family="Arial, sans-serif" font-size="11.605269" fill="var(--danger-accent)" text-anchor="middle">(optional fallback)</text>
 
@@ -165,11 +165,11 @@
 
   <!-- fi / end box -->
   <rect x="560.661157" y="502.113863" width="148.760331" height="47.154476" rx="6.295294" fill="var(--text)"/>
-  <text x="635.041322" y="530.406548" font-family="monospace" font-size="17.407956" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">fi</text>
+  <text x="635.041322" y="530.406548" font-size="17.407956" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">fi</text>
 
   <!-- Arrow to continue -->
   <line x1="635.041322" y1="549.268338" x2="635.041322" y2="577.561024" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="560.661157" y="577.561024" width="148.760331" height="42.438976" rx="6.295294" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560.661157" y="577.561024" width="148.760331" height="42.438976" rx="6.295294" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="635.041322" y="603.96753" font-family="Arial, sans-serif" font-size="13.539498" fill="var(--primary-accent)" text-anchor="middle">Continue script</text>
 
   <!-- RIGHT: Syntax reference -->
@@ -177,39 +177,39 @@
   <text x="987.107438" y="66.406506" font-family="Arial, sans-serif" font-size="16.440789" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Syntax Reference</text>
 
   <!-- Basic if -->
-  <rect x="754.049587" y="75.837402" width="466.115702" height="111.284563" rx="6.295294" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="754.049587" y="75.837402" width="466.115702" height="111.284563" rx="6.295294" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="773.884298" y="94.699192" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--ok-accent)">Basic if</text>
-  <text x="773.884298" y="113.560982" font-family="monospace" font-size="12.572436" fill="var(--text)">if command; then</text>
-  <text x="793.719008" y="130.536593" font-family="monospace" font-size="12.572436" fill="var(--text)">  echo "success"</text>
-  <text x="773.884298" y="147.512205" font-family="monospace" font-size="12.572436" fill="var(--text)">fi</text>
+  <text x="773.884298" y="113.560982" font-size="12.572436" fill="var(--text)" font-family="Courier New, monospace">if command; then</text>
+  <text x="793.719008" y="130.536593" font-size="12.572436" fill="var(--text)" font-family="Courier New, monospace">  echo "success"</text>
+  <text x="773.884298" y="147.512205" font-size="12.572436" fill="var(--text)" font-family="Courier New, monospace">fi</text>
   <text x="773.884298" y="164.487816" font-family="Arial, sans-serif" font-size="10.638207" fill="var(--ok-accent)">0 = true, non-zero = false. Works with ANY command.</text>
 
   <!-- if/elif/else -->
-  <rect x="754.049587" y="194.666681" width="466.115702" height="139.577248" rx="6.295294" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="754.049587" y="194.666681" width="466.115702" height="139.577248" rx="6.295294" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="773.884298" y="211.642292" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--primary-accent)">if / elif / else</text>
-  <text x="773.884298" y="228.617903" font-family="monospace" font-size="11.605269" fill="var(--text)">if [ "$1" = "start" ]; then</text>
-  <text x="793.719008" y="244.650373" font-family="monospace" font-size="11.605269" fill="var(--text)">  start_service</text>
-  <text x="773.884298" y="260.682947" font-family="monospace" font-size="11.605269" fill="var(--text)">elif [ "$1" = "stop" ]; then</text>
-  <text x="793.719008" y="276.71552" font-family="monospace" font-size="11.605269" fill="var(--text)">  stop_service</text>
-  <text x="773.884298" y="292.74799" font-family="monospace" font-size="11.605269" fill="var(--text)">else</text>
-  <text x="793.719008" y="308.78046" font-family="monospace" font-size="11.605269" fill="var(--text)">  echo "Usage..."</text>
-  <text x="773.884298" y="324.813034" font-family="monospace" font-size="11.605269" fill="var(--text)">fi</text>
+  <text x="773.884298" y="228.617903" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">if [ "$1" = "start" ]; then</text>
+  <text x="793.719008" y="244.650373" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">  start_service</text>
+  <text x="773.884298" y="260.682947" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">elif [ "$1" = "stop" ]; then</text>
+  <text x="793.719008" y="276.71552" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">  stop_service</text>
+  <text x="773.884298" y="292.74799" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">else</text>
+  <text x="793.719008" y="308.78046" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">  echo "Usage..."</text>
+  <text x="773.884298" y="324.813034" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">fi</text>
 
   <!-- [ ] vs [[ ]] -->
-  <rect x="754.049587" y="341.788645" width="466.115702" height="139.577248" rx="6.295294" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="754.049587" y="341.788645" width="466.115702" height="139.577248" rx="6.295294" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="773.884298" y="360.650435" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--warn-accent)">[ ] vs [[ ]] — test commands</text>
-  <text x="773.884298" y="379.512226" font-family="monospace" font-size="11.605269" fill="var(--text)">[ "$f" = "foo" ]    # POSIX, word-splits</text>
-  <text x="773.884298" y="396.487837" font-family="monospace" font-size="11.605269" fill="var(--text)">[[ $f = "foo" ]]    # bash, safer</text>
-  <text x="773.884298" y="413.463448" font-family="monospace" font-size="11.605269" fill="var(--text)">[[ $f == *.txt ]]   # glob patterns</text>
-  <text x="773.884298" y="430.439059" font-family="monospace" font-size="11.605269" fill="var(--text)">[[ $f =~ ^[0-9]+$ ]] # regex</text>
-  <text x="773.884298" y="447.414671" font-family="monospace" font-size="11.605269" fill="var(--text)">(( x > 0 ))         # arithmetic</text>
-  <text x="773.884298" y="464.390282" font-family="monospace" font-size="11.605269" fill="var(--text)">command             # any command's rc</text>
+  <text x="773.884298" y="379.512226" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">[ "$f" = "foo" ]    # POSIX, word-splits</text>
+  <text x="773.884298" y="396.487837" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">[[ $f = "foo" ]]    # bash, safer</text>
+  <text x="773.884298" y="413.463448" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">[[ $f == *.txt ]]   # glob patterns</text>
+  <text x="773.884298" y="430.439059" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">[[ $f =~ ^[0-9]+$ ]] # regex</text>
+  <text x="773.884298" y="447.414671" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">(( x > 0 ))         # arithmetic</text>
+  <text x="773.884298" y="464.390282" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">command             # any command's rc</text>
 
   <!-- Negation + chaining -->
-  <rect x="754.049587" y="488.910609" width="466.115702" height="105.626026" rx="6.295294" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="754.049587" y="488.910609" width="466.115702" height="105.626026" rx="6.295294" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="773.884298" y="507.7724" font-family="Arial, sans-serif" font-size="12.572436" font-weight="bold" fill="var(--danger-accent)">Negation &amp; Short-circuit</text>
-  <text x="773.884298" y="526.63419" font-family="monospace" font-size="11.605269" fill="var(--text)">if ! grep -q "error" log; then</text>
-  <text x="773.884298" y="543.609801" font-family="monospace" font-size="11.605269" fill="var(--text)">mkdir /tmp/dir &amp;&amp; echo "created"</text>
-  <text x="773.884298" y="560.585413" font-family="monospace" font-size="11.605269" fill="var(--text)">mkdir /tmp/dir || echo "failed"</text>
+  <text x="773.884298" y="526.63419" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">if ! grep -q "error" log; then</text>
+  <text x="773.884298" y="543.609801" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">mkdir /tmp/dir &amp;&amp; echo "created"</text>
+  <text x="773.884298" y="560.585413" font-size="11.605269" fill="var(--text)" font-family="Courier New, monospace">mkdir /tmp/dir || echo "failed"</text>
   <text x="773.884298" y="577.561024" font-family="Arial, sans-serif" font-size="10.638207" fill="var(--danger-accent)">! negates return code; &amp;&amp; / || chain on rc</text>
 </svg>

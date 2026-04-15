@@ -1,93 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect width="882.3855" height="460.8296" fill="var(--code-bg)" rx="6" x="40" y="40"/>
   <path d="M 743.6584 308.9402 Q 798.8073 251.3364 853.9566 308.9402 L 853.9566 424.1476 Q 853.9566 481.7512 798.8073 481.7512 L 688.5093 481.7512 Q 633.3602 481.7512 633.3602 424.1476 L 633.3602 366.5438" fill="none" stroke="var(--warn-border)" stroke-width="3.1652" />
@@ -95,27 +104,27 @@
   <circle cx="710.569" cy="343.5023" r="12.7535" fill="var(--warn-fill)" />
   <circle cx="997.3442" cy="504.7927" r="12.7535" fill="var(--primary-fill)" />
   <rect x="467.9127" y="251.3364" width="176.4771" height="126.7282" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.7913" />
-  <text x="484.4576" y="280.1382" font-family="monospace" font-size="15.5759" fill="var(--danger-accent)">for</text>
-  <text x="512.0322" y="280.1382" font-family="monospace" font-size="15.5759" fill="var(--bg)">i</text>
-  <text x="523.062" y="280.1382" font-family="monospace" font-size="15.5759" fill="var(--danger-accent)">in</text>
-  <text x="545.1216" y="280.1382" font-family="monospace" font-size="15.5759" fill="var(--warn-accent)">range</text>
-  <text x="594.7557" y="280.1382" font-family="monospace" font-size="15.5759" fill="var(--bg)">(10):</text>
-  <text x="501.0022" y="303.1798" font-family="monospace" font-size="15.5759" fill="var(--warn-accent)">print</text>
-  <text x="550.6365" y="303.1798" font-family="monospace" font-size="15.5759" fill="var(--bg)">(i)</text>
-  <text x="484.4576" y="337.742" font-family="monospace" font-size="15.5759" fill="var(--primary-accent)">list</text>
-  <text x="523.062" y="337.742" font-family="monospace" font-size="15.5759" fill="var(--bg)">= [1, 2, 3]</text>
-  <text x="484.4576" y="360.7833" font-family="monospace" font-size="15.5759" fill="var(--primary-accent)">dict</text>
-  <text x="523.062" y="360.7833" font-family="monospace" font-size="15.5759" fill="var(--bg)">= {"a": 1}</text>
+  <text x="484.4576" y="280.1382" font-size="15.5759" fill="var(--danger-accent)" font-family="Courier New, monospace">for</text>
+  <text x="512.0322" y="280.1382" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">i</text>
+  <text x="523.062" y="280.1382" font-size="15.5759" fill="var(--danger-accent)" font-family="Courier New, monospace">in</text>
+  <text x="545.1216" y="280.1382" font-size="15.5759" fill="var(--warn-accent)" font-family="Courier New, monospace">range</text>
+  <text x="594.7557" y="280.1382" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">(10):</text>
+  <text x="501.0022" y="303.1798" font-size="15.5759" fill="var(--warn-accent)" font-family="Courier New, monospace">print</text>
+  <text x="550.6365" y="303.1798" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">(i)</text>
+  <text x="484.4576" y="337.742" font-size="15.5759" fill="var(--primary-accent)" font-family="Courier New, monospace">list</text>
+  <text x="523.062" y="337.742" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">= [1, 2, 3]</text>
+  <text x="484.4576" y="360.7833" font-size="15.5759" fill="var(--primary-accent)" font-family="Courier New, monospace">dict</text>
+  <text x="523.062" y="360.7833" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">= {"a": 1}</text>
   <rect x="1096.6124" y="251.3364" width="143.3876" height="149.7695" rx="6" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="0.7913" />
-  <text x="1129.702" y="285.8987" font-family="monospace" font-size="15.5759" fill="var(--ok-accent)">str</text>
-  <text x="1129.702" y="308.9402" font-family="monospace" font-size="15.5759" fill="var(--primary-accent)">int</text>
-  <text x="1129.702" y="331.9816" font-family="monospace" font-size="15.5759" fill="var(--warn-accent)">list</text>
-  <text x="1129.702" y="355.0231" font-family="monospace" font-size="15.5759" fill="var(--danger-accent)">dict</text>
-  <text x="1129.702" y="378.0647" font-family="monospace" font-size="15.5759" fill="var(--bg)">tuple</text>
+  <text x="1129.702" y="285.8987" font-size="15.5759" fill="var(--ok-accent)" font-family="Courier New, monospace">str</text>
+  <text x="1129.702" y="308.9402" font-size="15.5759" fill="var(--primary-accent)" font-family="Courier New, monospace">int</text>
+  <text x="1129.702" y="331.9816" font-size="15.5759" fill="var(--warn-accent)" font-family="Courier New, monospace">list</text>
+  <text x="1129.702" y="355.0231" font-size="15.5759" fill="var(--danger-accent)" font-family="Courier New, monospace">dict</text>
+  <text x="1129.702" y="378.0647" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">tuple</text>
   <rect x="467.9127" y="527.8341" width="275.7455" height="92.1659" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.7913" />
-  <text x="484.4576" y="556.6361" font-family="monospace" font-size="15.5759" fill="var(--ok-accent)">&gt;&gt;&gt;</text>
-  <text x="523.062" y="556.6361" font-family="monospace" font-size="15.5759" fill="var(--bg)">2 + 2</text>
-  <text x="484.4576" y="585.4379" font-family="monospace" font-size="15.5759" fill="var(--warn-accent)">4</text>
-  <text x="484.4576" y="608.4793" font-family="monospace" font-size="15.5759" fill="var(--ok-accent)">&gt;&gt;&gt;</text>
-  <text x="1096.6124" y="596.9585" font-family="monospace" font-size="17.0046" fill="var(--primary-accent)">#!/usr/bin/env python</text>
+  <text x="484.4576" y="556.6361" font-size="15.5759" fill="var(--ok-accent)" font-family="Courier New, monospace">&gt;&gt;&gt;</text>
+  <text x="523.062" y="556.6361" font-size="15.5759" fill="var(--bg)" font-family="Courier New, monospace">2 + 2</text>
+  <text x="484.4576" y="585.4379" font-size="15.5759" fill="var(--warn-accent)" font-family="Courier New, monospace">4</text>
+  <text x="484.4576" y="608.4793" font-size="15.5759" fill="var(--ok-accent)" font-family="Courier New, monospace">&gt;&gt;&gt;</text>
+  <text x="1096.6124" y="596.9585" font-size="17.0046" fill="var(--primary-accent)" font-family="Courier New, monospace">#!/usr/bin/env python</text>
 </svg>

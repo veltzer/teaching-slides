@@ -1,115 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
   <rect width="898.9101" height="460.8295" fill="var(--code-bg)" rx="6" x="40" y="40"/>
   <rect x="756.836" y="308.9402" width="269.6732" height="230.4147" rx="6" fill="var(--primary-accent)" stroke="var(--ok-border)" stroke-width="1.5496" />
-  <rect x="790.5451" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="824.2543" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="857.9633" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="891.6724" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="925.3817" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="959.0907" y="295.1153" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="790.5451" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="824.2543" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="857.9633" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="891.6724" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="925.3817" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="959.0907" y="537.0508" width="8.9891" height="16.1289" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="790.5451" y="331.9816" width="202.2547" height="46.083" rx="6" fill="var(--danger-fill)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="891.6724" y="360.7835" text-anchor="middle" font-family="monospace" font-size="16.0563" fill="var(--danger-accent)">BOOTLOADER</text>
-  <rect x="790.5451" y="387.2811" width="202.2547" height="34.5623" rx="6" fill="var(--warn-fill)" opacity="0.2" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="891.6724" y="410.3225" text-anchor="middle" font-family="monospace" font-size="16.0563" fill="var(--warn-accent)">VECTOR TABLE</text>
-  <rect x="790.5451" y="431.0601" width="202.2547" height="80.6452" rx="6" fill="var(--ok-fill)" opacity="0.15" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="891.6724" y="475.9908" text-anchor="middle" font-family="monospace" font-size="16.0563" fill="var(--ok-accent)">APPLICATION</text>
+  <rect x="790.5451" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="824.2543" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.9633" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="891.6724" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="925.3817" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="959.0907" y="295.1153" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790.5451" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="824.2543" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="857.9633" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="891.6724" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="925.3817" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="959.0907" y="537.0508" width="8.9891" height="16.1289" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790.5451" y="331.9816" width="202.2547" height="46.083" rx="6" fill="url(#grad-danger)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="891.6724" y="360.7835" text-anchor="middle" font-size="16.0563" fill="var(--danger-accent)" font-family="Courier New, monospace">BOOTLOADER</text>
+  <rect x="790.5451" y="387.2811" width="202.2547" height="34.5623" rx="6" fill="url(#grad-warn)" opacity="0.2" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="891.6724" y="410.3225" text-anchor="middle" font-size="16.0563" fill="var(--warn-accent)" font-family="Courier New, monospace">VECTOR TABLE</text>
+  <rect x="790.5451" y="431.0601" width="202.2547" height="80.6452" rx="6" fill="url(#grad-ok)" opacity="0.15" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="891.6724" y="475.9908" text-anchor="middle" font-size="16.0563" fill="var(--ok-accent)" font-family="Courier New, monospace">APPLICATION</text>
   <path d="M 588.2902 424.1476 L 745.5996 424.1476" stroke="var(--danger-border)" stroke-width="1.2913" stroke-dasharray="3.0992 1.5496" />
   <polygon points="745.5996,417.235 759.0833,424.1476 745.5996,431.0601" fill="var(--danger-fill)" />
-  <text x="588.2902" y="406.8663" font-family="monospace" font-size="16.0563" fill="var(--danger-accent)">RESET</text>
+  <text x="588.2902" y="406.8663" font-size="16.0563" fill="var(--danger-accent)" font-family="Courier New, monospace">RESET</text>
   <path d="M 1048.9817 360.7835 C 1116.4 360.7835 1116.4 470.2306 1048.9817 470.2306" stroke="var(--ok-border)" stroke-width="1.0331" fill="none" stroke-dasharray="2.0661 1.5496" />
   <polygon points="1048.9817,463.3181 1035.4981,470.2306 1048.9817,477.1429" fill="var(--ok-fill)" />
-  <text x="1127.6365" y="418.3871" font-family="monospace" font-size="16.0563" fill="var(--text-faint)">jump to app</text>
+  <text x="1127.6365" y="418.3871" font-size="16.0563" fill="var(--text-faint)" font-family="Courier New, monospace">jump to app</text>
   <polygon points="1206.291,343.5023 1228.7639,389.5854 1217.5275,389.5854 1240,435.6682 1195.0547,389.5854 1206.291,389.5854" fill="var(--warn-fill)" opacity="0.8" />
-  <text x="1217.5275" y="470.2306" text-anchor="middle" font-family="monospace" font-size="16.0563" fill="var(--warn-accent)">FLASH</text>
-  <text x="891.6724" y="251.3365" text-anchor="middle" font-family="sans-serif" font-size="27.8901" font-weight="bold" fill="var(--surface)">Microcontroller Bootloader</text>
-  <text x="891.6724" y="620" text-anchor="middle" font-family="monospace" font-size="16.0563" fill="var(--text-muted)">reset vector | firmware update | application launch</text>
+  <text x="1217.5275" y="470.2306" text-anchor="middle" font-size="16.0563" fill="var(--warn-accent)" font-family="Courier New, monospace">FLASH</text>
+  <text x="891.6724" y="251.3365" text-anchor="middle" font-size="27.8901" font-weight="bold" fill="var(--surface)" font-family="Arial, sans-serif">Microcontroller Bootloader</text>
+  <text x="891.6724" y="620" text-anchor="middle" font-size="16.0563" fill="var(--text-muted)" font-family="Courier New, monospace">reset vector | firmware update | application launch</text>
 </svg>

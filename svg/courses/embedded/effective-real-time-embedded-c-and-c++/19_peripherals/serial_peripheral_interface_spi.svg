@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,40 +97,34 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-back" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto">
-      <path d="M9,2 L1,5 L9,8 Z" fill="#555555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="321.428571" height="329.257433" rx="8.042307" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="200.714171" y="148.908286" text-anchor="middle" font-family="sans-serif" font-size="30.285585" font-weight="bold" fill="var(--bg)">SPI Master</text>
-  <text x="200.714171" y="186.899432" text-anchor="middle" font-family="sans-serif" font-size="19.80217" fill="var(--primary-accent)">controls clock</text>
-  <text x="200.714171" y="219.825426" text-anchor="middle" font-family="sans-serif" font-size="19.80217" fill="var(--primary-accent)">drives CS low to select</text>
-  <text x="200.714171" y="255.283682" text-anchor="middle" font-family="monospace" font-size="17.472448" fill="var(--primary-accent)">MCU SPI peripheral</text>
-  <text x="200.714171" y="333.799177" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--primary-accent)">full-duplex: send &amp; receive</text>
-  <text x="200.714171" y="359.126503" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--primary-accent)">simultaneously</text>
+  <rect x="40" y="40" width="321.428571" height="329.257433" rx="8.042307" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200.714171" y="148.908286" text-anchor="middle" font-size="30.285585" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">SPI Master</text>
+  <text x="200.714171" y="186.899432" text-anchor="middle" font-size="19.80217" fill="var(--primary-accent)" font-family="Arial, sans-serif">controls clock</text>
+  <text x="200.714171" y="219.825426" text-anchor="middle" font-size="19.80217" fill="var(--primary-accent)" font-family="Arial, sans-serif">drives CS low to select</text>
+  <text x="200.714171" y="255.283682" text-anchor="middle" font-size="17.472448" fill="var(--primary-accent)" font-family="Courier New, monospace">MCU SPI peripheral</text>
+  <text x="200.714171" y="333.799177" text-anchor="middle" font-size="16.30752" fill="var(--primary-accent)" font-family="Arial, sans-serif">full-duplex: send &amp; receive</text>
+  <text x="200.714171" y="359.126503" text-anchor="middle" font-size="16.30752" fill="var(--primary-accent)" font-family="Arial, sans-serif">simultaneously</text>
   <rect x="918.571429" y="40" width="321.428571" height="329.257433" rx="8.042307" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1079.2856" y="148.908286" text-anchor="middle" font-family="sans-serif" font-size="30.285585" font-weight="bold" fill="var(--text)">SPI Slave</text>
-  <text x="1079.2856" y="186.899432" text-anchor="middle" font-family="sans-serif" font-size="19.80217" fill="var(--text-muted)">responds to clock</text>
-  <text x="1079.2856" y="219.825426" text-anchor="middle" font-family="sans-serif" font-size="19.80217" fill="var(--text-muted)">enabled when CS low</text>
-  <text x="1079.2856" y="255.283682" text-anchor="middle" font-family="monospace" font-size="17.472448" fill="var(--text-faint)">flash / ADC / display</text>
+  <text x="1079.2856" y="148.908286" text-anchor="middle" font-size="30.285585" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SPI Slave</text>
+  <text x="1079.2856" y="186.899432" text-anchor="middle" font-size="19.80217" fill="var(--text-muted)" font-family="Arial, sans-serif">responds to clock</text>
+  <text x="1079.2856" y="219.825426" text-anchor="middle" font-size="19.80217" fill="var(--text-muted)" font-family="Arial, sans-serif">enabled when CS low</text>
+  <text x="1079.2856" y="255.283682" text-anchor="middle" font-size="17.472448" fill="var(--text-faint)" font-family="Courier New, monospace">flash / ADC / display</text>
   <line x1="363.571429" y1="128.646426" x2="916.428571" y2="128.646426" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="640" y="113.449873" text-anchor="middle" font-family="monospace" font-size="20.966964" font-weight="bold" fill="var(--primary-accent)">MOSI</text>
-  <text x="640" y="151.441176" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--text-faint)">Master Out · Slave In</text>
-  <line x1="916.428571" y1="217.292537" x2="363.571429" y2="217.292537" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow-back)" />
-  <text x="640" y="202.095984" text-anchor="middle" font-family="monospace" font-size="20.966964" font-weight="bold" fill="var(--text-muted)">MISO</text>
-  <text x="640" y="240.087287" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--text-faint)">Master In · Slave Out</text>
+  <text x="640" y="113.449873" text-anchor="middle" font-size="20.966964" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">MOSI</text>
+  <text x="640" y="151.441176" text-anchor="middle" font-size="16.30752" fill="var(--text-faint)" font-family="Arial, sans-serif">Master Out · Slave In</text>
+  <line x1="916.428571" y1="217.292537" x2="363.571429" y2="217.292537" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="202.095984" text-anchor="middle" font-size="20.966964" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">MISO</text>
+  <text x="640" y="240.087287" text-anchor="middle" font-size="16.30752" fill="var(--text-faint)" font-family="Arial, sans-serif">Master In · Slave Out</text>
   <line x1="363.571429" y1="305.938805" x2="916.428571" y2="305.938805" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="640" y="290.742252" text-anchor="middle" font-family="monospace" font-size="20.966964" font-weight="bold" fill="var(--text)">SCK</text>
-  <text x="640" y="328.733555" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--text-faint)">Clock — driven by master</text>
+  <text x="640" y="290.742252" text-anchor="middle" font-size="20.966964" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">SCK</text>
+  <text x="640" y="328.733555" text-anchor="middle" font-size="16.30752" fill="var(--text-faint)" font-family="Arial, sans-serif">Clock — driven by master</text>
   <line x1="363.571429" y1="394.585073" x2="916.428571" y2="394.585073" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.1111 3.5556" marker-end="url(#arrow-primary)" />
-  <text x="640" y="379.388678" text-anchor="middle" font-family="monospace" font-size="20.966964" font-weight="bold" fill="var(--text-faint)">CS / SS</text>
-  <text x="640" y="417.379823" text-anchor="middle" font-family="sans-serif" font-size="16.30752" fill="var(--text-faint)">Chip Select (active low) — one per slave</text>
-  <rect x="168.571429" y="478.165876" width="942.857143" height="141.834124" rx="8.042307" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="518.689755" text-anchor="middle" font-family="sans-serif" font-size="20.966964" font-weight="bold" fill="var(--primary-accent)">SPI vs I²C</text>
-  <text x="190" y="551.615435" font-family="sans-serif" font-size="18.637242" fill="var(--text-muted)">• SPI: 4 wires, full-duplex, no address — faster (MHz), one CS per slave</text>
-  <text x="190" y="582.00854" font-family="sans-serif" font-size="18.637242" fill="var(--text-muted)">• I²C: 2 wires, half-duplex, 7-bit address — slower (kHz), many devices on 2 wires</text>
-  <text x="190" y="609.868755" font-family="sans-serif" font-size="18.637242" fill="var(--text-muted)">• SPI modes 0–3: configure CPOL/CPHA to match the slave device's datasheet</text>
+  <text x="640" y="379.388678" text-anchor="middle" font-size="20.966964" font-weight="bold" fill="var(--text-faint)" font-family="Courier New, monospace">CS / SS</text>
+  <text x="640" y="417.379823" text-anchor="middle" font-size="16.30752" fill="var(--text-faint)" font-family="Arial, sans-serif">Chip Select (active low) — one per slave</text>
+  <rect x="168.571429" y="478.165876" width="942.857143" height="141.834124" rx="8.042307" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="518.689755" text-anchor="middle" font-size="20.966964" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">SPI vs I²C</text>
+  <text x="190" y="551.615435" font-size="18.637242" fill="var(--text-muted)" font-family="Arial, sans-serif">• SPI: 4 wires, full-duplex, no address — faster (MHz), one CS per slave</text>
+  <text x="190" y="582.00854" font-size="18.637242" fill="var(--text-muted)" font-family="Arial, sans-serif">• I²C: 2 wires, half-duplex, 7-bit address — slower (kHz), many devices on 2 wires</text>
+  <text x="190" y="609.868755" font-size="18.637242" fill="var(--text-muted)" font-family="Arial, sans-serif">• SPI modes 0–3: configure CPOL/CPHA to match the slave device's datasheet</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,46 +75,43 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,21.8182 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <rect x="40" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="141.4084" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Created</text>
+  <rect x="40" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.4084" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--warn-text)">Created</text>
   <text x="141.4084" y="339.355" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">fork()</text>
   <line x1="242.8168" y1="234.113" x2="344.2253" y2="234.113" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="361.1266" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="462.5352" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Ready</text>
+  <rect x="361.1266" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="462.5352" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--primary-text)">Ready</text>
   <line x1="563.9437" y1="210.7259" x2="699.1549" y2="210.7259" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="631.5492" y="192.0162" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">scheduled</text>
-  <rect x="716.0563" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="817.4647" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Running</text>
+  <rect x="716.0563" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.4647" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--ok-text)">Running</text>
   <line x1="817.4647" y1="292.5807" x2="817.4647" y2="374.4355" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="817.4647" y1="374.4355" x2="462.5352" y2="374.4355" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="462.5352" y1="374.4355" x2="462.5352" y2="304.2742" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="639.9999" y="409.5161" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">preempted</text>
   <line x1="918.8731" y1="234.113" x2="1020.2818" y2="234.113" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="969.5774" y="215.4032" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">I/O wait</text>
-  <rect x="1037.1831" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1138.5915" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Blocked</text>
+  <rect x="1037.1831" y="175.6452" width="202.8169" height="116.9355" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1138.5915" y="245.8064" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--danger-text)">Blocked</text>
   <line x1="1138.5915" y1="175.6452" x2="1138.5915" y2="58.7097" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="1138.5915" y1="58.7097" x2="462.5352" y2="58.7097" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="462.5352" y1="58.7097" x2="462.5352" y2="163.9516" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
@@ -122,9 +119,9 @@
   <line x1="817.4647" y1="292.5807" x2="817.4647" y2="491.3711" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="851.2675" y="456.2904" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">exit()</text>
   <rect x="716.0563" y="503.0645" width="202.8169" height="116.9355" rx="6" fill="var(--border)" stroke="var(--text-muted)" stroke-width="2.7812" />
-  <text x="817.4647" y="573.2259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Zombie</text>
+  <text x="817.4647" y="573.2259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--text)">Zombie</text>
   <line x1="918.8731" y1="561.5323" x2="1020.2818" y2="561.5323" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="969.5774" y="542.8227" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0518" fill="var(--text-faint)">wait()</text>
   <rect x="1037.1831" y="503.0645" width="202.8169" height="116.9355" rx="6" fill="var(--border)" stroke="var(--text-muted)" stroke-width="2.7812" />
-  <text x="1138.5915" y="573.2259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold">Terminated</text>
+  <text x="1138.5915" y="573.2259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2622" font-weight="bold" fill="var(--text)">Terminated</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -111,72 +111,72 @@
     </linearGradient>
   </defs>
   <!-- Title -->
-  <rect x="40" y="40" width="1200" height="42.89076" rx="6.373938" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="42.89076" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="67.29412" font-family="Arial, sans-serif" font-size="19.583819" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python-C Integration Methods</text>
 
   <!-- Method 1: ctypes -->
-  <rect x="40" y="98.4874" width="363.934426" height="292.437002" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="98.4874" width="363.934426" height="37.04202" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="98.4874" width="363.934426" height="292.437002" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="98.4874" width="363.934426" height="37.04202" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="221.967213" y="122.857097" font-family="Arial, sans-serif" font-size="13.708641" font-weight="bold" fill="var(--bg)" text-anchor="middle">ctypes (stdlib)</text>
   <text x="59.672131" y="150.151217" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Load shared libraries directly:</text>
   <rect x="49.836066" y="157.949537" width="344.262295" height="151.092505" rx="6.373938" fill="var(--code-bg)"/>
-  <text x="64.590164" y="179.394917" font-family="monospace" font-size="11.750249" fill="var(--info-accent)">from ctypes import cdll, c_int</text>
-  <text x="64.590164" y="198.890717" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">lib = cdll.LoadLibrary("./mylib.so")</text>
-  <text x="64.590164" y="218.386517" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">lib.add.restype = c_int</text>
-  <text x="64.590164" y="237.882318" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">lib.add.argtypes = [c_int, c_int]</text>
-  <text x="64.590164" y="261.277278" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">result = lib.add(3, 4)  # 7</text>
-  <text x="64.590164" y="293.445402" font-family="monospace" font-size="11.750249" fill="var(--text-muted)"># No compilation step required</text>
+  <text x="64.590164" y="179.394917" font-size="11.750249" fill="var(--info-accent)" font-family="Courier New, monospace">from ctypes import cdll, c_int</text>
+  <text x="64.590164" y="198.890717" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">lib = cdll.LoadLibrary("./mylib.so")</text>
+  <text x="64.590164" y="218.386517" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">lib.add.restype = c_int</text>
+  <text x="64.590164" y="237.882318" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">lib.add.argtypes = [c_int, c_int]</text>
+  <text x="64.590164" y="261.277278" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">result = lib.add(3, 4)  # 7</text>
+  <text x="64.590164" y="293.445402" font-size="11.750249" fill="var(--text-muted)" font-family="Courier New, monospace"># No compilation step required</text>
   <text x="59.672131" y="322.688994" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Pros: no compile, stdlib, works with any .so</text>
   <text x="59.672131" y="342.184794" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Cons: manual type mapping, error-prone</text>
   <text x="59.672131" y="361.680595" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Best for: quick .so calls, legacy libraries</text>
   <text x="59.672131" y="379.226922" font-family="Arial, sans-serif" font-size="11.750249" fill="var(--text-faint)">Use: ctypes.POINTER, Structure for structs</text>
 
   <!-- Method 2: cffi -->
-  <rect x="423.606557" y="98.4874" width="363.934426" height="292.437002" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="423.606557" y="98.4874" width="363.934426" height="37.04202" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="423.606557" y="98.4874" width="363.934426" height="292.437002" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="423.606557" y="98.4874" width="363.934426" height="37.04202" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="605.57377" y="122.857097" font-family="Arial, sans-serif" font-size="13.708641" font-weight="bold" fill="var(--bg)" text-anchor="middle">cffi (C Foreign Function Interface)</text>
   <text x="443.278689" y="150.151217" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Declare C API in Python:</text>
   <rect x="433.442623" y="157.949537" width="344.262295" height="151.092505" rx="6.373938" fill="var(--code-bg)"/>
-  <text x="448.196721" y="179.394917" font-family="monospace" font-size="11.750249" fill="var(--info-accent)">from cffi import FFI</text>
-  <text x="448.196721" y="198.890717" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">ffi = FFI()</text>
-  <text x="448.196721" y="218.386517" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">ffi.cdef("int add(int a, int b);")</text>
-  <text x="448.196721" y="237.882318" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">lib = ffi.dlopen("./mylib.so")</text>
-  <text x="448.196721" y="261.277278" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">result = lib.add(3, 4)</text>
-  <text x="448.196721" y="284.672238" font-family="monospace" font-size="11.750249" fill="var(--text-muted)"># Also: ffi.verify() for inline C</text>
+  <text x="448.196721" y="179.394917" font-size="11.750249" fill="var(--info-accent)" font-family="Courier New, monospace">from cffi import FFI</text>
+  <text x="448.196721" y="198.890717" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">ffi = FFI()</text>
+  <text x="448.196721" y="218.386517" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">ffi.cdef("int add(int a, int b);")</text>
+  <text x="448.196721" y="237.882318" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">lib = ffi.dlopen("./mylib.so")</text>
+  <text x="448.196721" y="261.277278" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">result = lib.add(3, 4)</text>
+  <text x="448.196721" y="284.672238" font-size="11.750249" fill="var(--text-muted)" font-family="Courier New, monospace"># Also: ffi.verify() for inline C</text>
   <text x="443.278689" y="322.688994" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Pros: cleaner API, ABI + API modes</text>
   <text x="443.278689" y="342.184794" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Cons: external dependency</text>
   <text x="443.278689" y="361.680595" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Best for: wrapping C libraries cleanly</text>
   <text x="443.278689" y="379.226922" font-family="Arial, sans-serif" font-size="11.750249" fill="var(--text-faint)">Used by: PyPy, cryptography, bcrypt</text>
 
   <!-- Method 3: Cython -->
-  <rect x="807.213115" y="98.4874" width="432.786885" height="292.437002" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="807.213115" y="98.4874" width="432.786885" height="37.04202" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="807.213115" y="98.4874" width="432.786885" height="292.437002" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="807.213115" y="98.4874" width="432.786885" height="37.04202" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1023.606557" y="122.857097" font-family="Arial, sans-serif" font-size="13.708641" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cython</text>
   <text x="826.885246" y="150.151217" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Python superset compiled to C:</text>
   <rect x="817.04918" y="157.949537" width="413.114754" height="151.092505" rx="6.373938" fill="var(--code-bg)"/>
-  <text x="831.803279" y="179.394917" font-family="monospace" font-size="11.750249" fill="var(--text-muted)"># hello.pyx</text>
-  <text x="831.803279" y="198.890717" font-family="monospace" font-size="11.750249" fill="var(--info-accent)">def add(int a, int b):</text>
-  <text x="831.803279" y="218.386517" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">    return a + b</text>
-  <text x="831.803279" y="241.781478" font-family="monospace" font-size="11.750249" fill="var(--text-muted)"># cdef for pure C speed:</text>
-  <text x="831.803279" y="261.277278" font-family="monospace" font-size="11.750249" fill="var(--info-accent)">cdef int fast_add(int a, int b):</text>
-  <text x="831.803279" y="280.773078" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">    return a + b</text>
+  <text x="831.803279" y="179.394917" font-size="11.750249" fill="var(--text-muted)" font-family="Courier New, monospace"># hello.pyx</text>
+  <text x="831.803279" y="198.890717" font-size="11.750249" fill="var(--info-accent)" font-family="Courier New, monospace">def add(int a, int b):</text>
+  <text x="831.803279" y="218.386517" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">    return a + b</text>
+  <text x="831.803279" y="241.781478" font-size="11.750249" fill="var(--text-muted)" font-family="Courier New, monospace"># cdef for pure C speed:</text>
+  <text x="831.803279" y="261.277278" font-size="11.750249" fill="var(--info-accent)" font-family="Courier New, monospace">cdef int fast_add(int a, int b):</text>
+  <text x="831.803279" y="280.773078" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">    return a + b</text>
   <text x="826.885246" y="322.688994" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Pros: near-C speed, Python-compatible</text>
   <text x="826.885246" y="342.184794" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Cons: compile step, new syntax to learn</text>
   <text x="826.885246" y="361.680595" font-family="Arial, sans-serif" font-size="12.729498" fill="var(--text)">Best for: speed-critical numerical code</text>
   <text x="826.885246" y="379.226922" font-family="Arial, sans-serif" font-size="11.750249" fill="var(--text-faint)">Used by: NumPy, pandas, lxml, scikit-learn</text>
 
   <!-- Bottom: C extensions + comparison table -->
-  <rect x="40" y="405.546199" width="590.163934" height="214.453801" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="405.546199" width="590.163934" height="37.04202" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="405.546199" width="590.163934" height="214.453801" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="405.546199" width="590.163934" height="37.04202" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335.081967" y="429.916003" font-family="Arial, sans-serif" font-size="13.708641" font-weight="bold" fill="var(--bg)" text-anchor="middle">C Extension Module (Python/C API)</text>
   <rect x="49.836066" y="449.411803" width="570.491803" height="160.840297" rx="6.373938" fill="var(--code-bg)"/>
-  <text x="64.590164" y="469.882339" font-family="monospace" font-size="11.750249" fill="var(--text-muted)">// mymodule.c</text>
-  <text x="64.590164" y="487.428559" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">#include &lt;Python.h&gt;</text>
-  <text x="64.590164" y="504.974779" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
-  <text x="64.590164" y="522.520999" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">    int a, b;</text>
-  <text x="64.590164" y="540.067219" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
-  <text x="64.590164" y="557.61344" font-family="monospace" font-size="11.750249" fill="var(--ok-accent)">    return PyLong_FromLong(a + b);</text>
-  <text x="64.590164" y="575.15966" font-family="monospace" font-size="11.750249" fill="var(--primary-accent)">}</text>
+  <text x="64.590164" y="469.882339" font-size="11.750249" fill="var(--text-muted)" font-family="Courier New, monospace">// mymodule.c</text>
+  <text x="64.590164" y="487.428559" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">#include &lt;Python.h&gt;</text>
+  <text x="64.590164" y="504.974779" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
+  <text x="64.590164" y="522.520999" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">    int a, b;</text>
+  <text x="64.590164" y="540.067219" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
+  <text x="64.590164" y="557.61344" font-size="11.750249" fill="var(--ok-accent)" font-family="Courier New, monospace">    return PyLong_FromLong(a + b);</text>
+  <text x="64.590164" y="575.15966" font-size="11.750249" fill="var(--primary-accent)" font-family="Courier New, monospace">}</text>
   <text x="64.590164" y="594.65546" font-family="Arial, sans-serif" font-size="11.750249" fill="var(--text-faint)">Pros: maximum control  Cons: verbose, reference counting manual</text>
 
   <!-- Comparison table -->

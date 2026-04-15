@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,7 +96,7 @@
 
   <!-- Background -->
   <!-- Column 1: Object Storage (S3) -->
-  <rect x="40" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="277.68595" height="580" rx="6.373499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Bucket icon -->
   <ellipse cx="178.842975" cy="98" rx="49.586777" ry="19.333333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <path d="M 129.256198 98 L 129.256198 156 Q 178.842975 185 228.429752 156 L 228.429752 98" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
@@ -122,17 +122,17 @@
   <line x1="69.752066" y1="450.83328" x2="287.933884" y2="450.83328" stroke="var(--primary-border)" stroke-width="1.5"/>
 
   <text x="178.842975" y="479.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.707696" font-weight="bold" fill="var(--text)">Cost</text>
-  <rect x="109.421488" y="494.333333" width="138.842975" height="23.2" rx="6.373499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="109.421488" y="494.333333" width="138.842975" height="23.2" rx="6.373499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="178.842975" y="510.76672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--bg)">$0.023/GB</text>
   <text x="178.842975" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Virtually unlimited</text>
   <text x="178.842975" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">11 nines durability</text>
 
   <!-- Column 2: Block Storage (EBS) -->
-  <rect x="347.438017" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="347.438017" y="40" width="277.68595" height="580" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Disk icon -->
-  <rect x="144.132231" y="73.833387" width="69.421488" height="48.333333" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" transform="translate(325,0)" filter="url(#shadow)"/>
-  <rect x="154.049587" y="83.499947" width="49.586777" height="9.666667" rx="6.373499" fill="var(--ok-fill)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="154.049587" y="99.933333" width="49.586777" height="9.666667" rx="6.373499" fill="var(--ok-fill)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="144.132231" y="73.833387" width="69.421488" height="48.333333" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" transform="translate(325,0)" filter="url(#shadow)"/>
+  <rect x="154.049587" y="83.499947" width="49.586777" height="9.666667" rx="6.373499" fill="url(#grad-ok)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="154.049587" y="99.933333" width="49.586777" height="9.666667" rx="6.373499" fill="url(#grad-ok)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
 
   <text x="486.280992" y="204.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.582469" font-weight="bold" fill="var(--ok-accent)">Block Storage</text>
   <text x="486.280992" y="228.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.686772" fill="var(--text)">Amazon EBS</text>
@@ -153,16 +153,16 @@
   <line x1="377.190083" y1="450.83328" x2="595.371901" y2="450.83328" stroke="var(--ok-border)" stroke-width="1.5"/>
 
   <text x="486.280992" y="479.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.707696" font-weight="bold" fill="var(--text)">Cost</text>
-  <rect x="406.942149" y="494.333333" width="158.677686" height="23.2" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="406.942149" y="494.333333" width="158.677686" height="23.2" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="486.280992" y="510.76672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--bg)">$0.08/GB (gp3)</text>
   <text x="486.280992" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Single AZ attached</text>
   <text x="486.280992" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Snapshot for backup</text>
 
   <!-- Column 3: File Storage (EFS) -->
-  <rect x="654.876033" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="654.876033" y="40" width="277.68595" height="580" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Shared folder icon -->
-  <rect x="139.173554" y="73.833387" width="79.338843" height="53.16672" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)" filter="url(#shadow)"/>
-  <rect x="139.173554" y="69" width="39.669421" height="14.500053" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)" filter="url(#shadow)"/>
+  <rect x="139.173554" y="73.833387" width="79.338843" height="53.16672" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)" filter="url(#shadow)"/>
+  <rect x="139.173554" y="69" width="39.669421" height="14.500053" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)" filter="url(#shadow)"/>
 
   <text x="793.719008" y="204.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.582469" font-weight="bold" fill="var(--warn-accent)">File Storage</text>
   <text x="793.719008" y="228.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.686772" fill="var(--text)">Amazon EFS</text>
@@ -183,19 +183,19 @@
   <line x1="684.628099" y1="450.83328" x2="902.809917" y2="450.83328" stroke="var(--warn-border)" stroke-width="1.5"/>
 
   <text x="793.719008" y="479.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.707696" font-weight="bold" fill="var(--text)">Cost</text>
-  <rect x="714.380165" y="494.333333" width="158.677686" height="23.2" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="714.380165" y="494.333333" width="158.677686" height="23.2" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="793.719008" y="510.76672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--bg)">$0.30/GB</text>
   <text x="793.719008" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Multi-AZ by default</text>
   <text x="793.719008" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Auto-scaling capacity</text>
 
   <!-- Column 4: Archive (Glacier) -->
-  <rect x="962.31405" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="962.31405" y="40" width="277.68595" height="580" rx="6.373499" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Snowflake/archive icon -->
   <line x1="1101.157025" y1="73.833387" x2="1101.157025" y2="122.166613" stroke="var(--info-border)" stroke-width="2"/>
   <line x1="1076.363636" y1="98" x2="1125.950413" y2="98" stroke="var(--info-border)" stroke-width="2"/>
   <line x1="1081.322314" y1="78.666667" x2="1120.991736" y2="117.333333" stroke="var(--info-border)" stroke-width="2"/>
   <line x1="1120.991736" y1="78.666667" x2="1081.322314" y2="117.333333" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="1093.32" y="90.1671" width="15.6658" height="15.6658" rx="7.83292" fill="var(--info-fill)" filter="url(#shadow)"/>
+  <rect x="1093.32" y="90.1671" width="15.6658" height="15.6658" rx="7.83292" fill="url(#grad-info)" filter="url(#shadow)"/>
 
   <text x="1101.157025" y="204.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.582469" font-weight="bold" fill="var(--info-accent)">Archive</text>
   <text x="1101.157025" y="228.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.686772" fill="var(--text)">S3 Glacier</text>
@@ -216,7 +216,7 @@
   <line x1="992.066116" y1="450.83328" x2="1210.247934" y2="450.83328" stroke="var(--info-border)" stroke-width="1.5"/>
 
   <text x="1101.157025" y="479.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.707696" font-weight="bold" fill="var(--text)">Cost</text>
-  <rect x="1031.735537" y="494.333333" width="138.842975" height="23.2" rx="6.373499" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1031.735537" y="494.333333" width="138.842975" height="23.2" rx="6.373499" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1101.157025" y="510.76672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--bg)">$0.004/GB</text>
   <text x="1101.157025" y="542.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Lowest cost storage</text>
   <text x="1101.157025" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Retrieval fees apply</text>

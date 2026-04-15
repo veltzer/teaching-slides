@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,7 +96,7 @@
 
   <!-- Background -->
   <!-- Load Balancer at top -->
-  <rect x="484.827586" y="40" rx="6.564342" width="310.344828" height="49.152542" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="484.827586" y="40" rx="6.564342" width="310.344828" height="49.152542" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="70.474631" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.135044" font-weight="bold" fill="var(--bg)">Global Load Balancer</text>
 
   <!-- Lines from LB to AZs -->
@@ -104,55 +104,55 @@
   <line x1="722.758621" y1="89.152542" x2="971.034483" y2="138.305085" stroke="var(--primary-border)" stroke-width="2"/>
 
   <!-- AZ 1 -->
-  <rect x="40" y="138.305085" rx="6.564342" width="537.931034" height="412.881356" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="138.305085" rx="6.564342" width="537.931034" height="412.881356" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="308.965517" y="167.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.135044" font-weight="bold" fill="var(--primary-accent)">Availability Zone A</text>
 
   <!-- AZ1 Web tier -->
-  <rect x="81.37931" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="81.37931" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="184.827586" y="214.983051" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--ok-accent)">Web Server 1</text>
 
-  <rect x="329.655172" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="329.655172" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.103448" y="214.983051" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--ok-accent)">Web Server 2</text>
 
   <!-- AZ1 App tier -->
-  <rect x="81.37931" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="81.37931" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="184.827586" y="283.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--warn-accent)">App Server 1</text>
 
-  <rect x="329.655172" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="329.655172" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.103448" y="283.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--warn-accent)">App Server 2</text>
 
   <!-- AZ1 DB -->
-  <rect x="164.137931" y="325.084746" rx="6.564342" width="289.655172" height="49.152542" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="164.137931" y="325.084746" rx="6.564342" width="289.655172" height="49.152542" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="308.965517" y="355.559268" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--info-accent)">Database Primary</text>
 
   <!-- AZ1 SLA -->
-  <rect x="184.827586" y="403.728814" rx="6.564342" width="248.275862" height="35.389831" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="184.827586" y="403.728814" rx="6.564342" width="248.275862" height="35.389831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="308.965517" y="427.322034" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.11815" font-weight="bold" fill="var(--ok-accent)">Single AZ: 99.9% SLA</text>
 
   <!-- AZ 2 -->
-  <rect x="702.068966" y="138.305085" rx="6.564342" width="537.931034" height="412.881356" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702.068966" y="138.305085" rx="6.564342" width="537.931034" height="412.881356" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="971.034483" y="167.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.135044" font-weight="bold" fill="var(--primary-accent)">Availability Zone B</text>
 
   <!-- AZ2 Web tier -->
-  <rect x="743.448276" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="743.448276" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="846.896552" y="214.983051" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--ok-accent)">Web Server 3</text>
 
-  <rect x="991.724138" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="991.724138" y="187.457627" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1095.172414" y="214.983051" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--ok-accent)">Web Server 4</text>
 
   <!-- AZ2 App tier -->
-  <rect x="743.448276" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="743.448276" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="846.896552" y="283.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--warn-accent)">App Server 3</text>
 
-  <rect x="991.724138" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="991.724138" y="256.271186" rx="6.564342" width="206.896552" height="44.237234" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1095.172414" y="283.79661" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--warn-accent)">App Server 4</text>
 
   <!-- AZ2 DB -->
-  <rect x="826.206897" y="325.084746" rx="6.564342" width="289.655172" height="49.152542" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="826.206897" y="325.084746" rx="6.564342" width="289.655172" height="49.152542" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="971.034483" y="355.559268" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.109757" font-weight="bold" fill="var(--info-accent)">Database Replica</text>
 
   <!-- AZ2 SLA -->
-  <rect x="846.896552" y="403.728814" rx="6.564342" width="248.275862" height="35.389831" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896552" y="403.728814" rx="6.564342" width="248.275862" height="35.389831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="971.034483" y="427.322034" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.11815" font-weight="bold" fill="var(--ok-accent)">Single AZ: 99.9% SLA</text>
 
   <!-- Failover arrows between AZs -->
@@ -160,7 +160,7 @@
   <text x="640" y="379.152488" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.092863" fill="var(--danger-accent)">Replication</text>
 
   <!-- Combined SLA -->
-  <rect x="422.758621" y="570.847458" rx="6.564342" width="434.482759" height="49.152542" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="422.758621" y="570.847458" rx="6.564342" width="434.482759" height="49.152542" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="601.322088" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.151938" font-weight="bold" fill="var(--ok-accent)">Multi-AZ Combined: 99.99% SLA</text>
 
   <!-- Arrows from AZs to combined -->

@@ -1,100 +1,111 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
-  <text x="593.8464" y="40" text-anchor="middle" font-size="35.811" font-weight="bold">Blue/Green Deployment</text>
-  <rect x="40" y="192.6314" width="369.2306" height="305.2631" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="224.6154" y="314.7369" text-anchor="middle" fill="var(--bg)" font-weight="bold">Blue (Current)</text>
-  <text x="224.6154" y="391.0526" text-anchor="middle" fill="var(--bg)">Version 1.0</text>
-  <text x="224.6154" y="452.1052" text-anchor="middle" fill="var(--bg)">Active Traffic</text>
-  <rect x="501.5386" y="192.6314" width="369.2306" height="305.2631" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="686.154" y="314.7369" text-anchor="middle" fill="var(--bg)" font-weight="bold">Green (New)</text>
-  <text x="686.154" y="391.0526" text-anchor="middle" fill="var(--bg)">Version 2.0</text>
-  <text x="686.154" y="452.1052" text-anchor="middle" fill="var(--bg)">Testing</text>
-  <rect x="963.077" y="192.6314" width="276.923" height="305.2631" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1101.5386" y="314.7369" text-anchor="middle" font-weight="bold">Service</text>
-  <text x="1101.5386" y="391.0526" text-anchor="middle">Selector: blue</text>
-  <text x="1101.5386" y="452.1052" text-anchor="middle">→ Switch to green</text>
+</defs>
+  <text x="593.8464" y="40" text-anchor="middle" font-size="35.811" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Blue/Green Deployment</text>
+  <rect x="40" y="192.6314" width="369.2306" height="305.2631" fill="url(#grad-primary)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="224.6154" y="314.7369" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Blue (Current)</text>
+  <text x="224.6154" y="391.0526" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Version 1.0</text>
+  <text x="224.6154" y="452.1052" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Active Traffic</text>
+  <rect x="501.5386" y="192.6314" width="369.2306" height="305.2631" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="686.154" y="314.7369" text-anchor="middle" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Green (New)</text>
+  <text x="686.154" y="391.0526" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Version 2.0</text>
+  <text x="686.154" y="452.1052" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif">Testing</text>
+  <rect x="963.077" y="192.6314" width="276.923" height="305.2631" fill="url(#grad-warn)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1101.5386" y="314.7369" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Service</text>
+  <text x="1101.5386" y="391.0526" text-anchor="middle" font-family="Arial, sans-serif" fill="var(--warn-text)">Selector: blue</text>
+  <text x="1101.5386" y="452.1052" text-anchor="middle" font-family="Arial, sans-serif" fill="var(--warn-text)">→ Switch to green</text>
   <path d="M 224.6154 497.8943 L 1101.5386 497.8943" stroke="var(--primary-border)" stroke-width="1.0162" />
   <path d="M 686.154 497.8943 L 1101.5386 620" stroke="var(--ok-border)" stroke-width="0.6774" stroke-dasharray="1.6936 1.6936" />
 </svg>

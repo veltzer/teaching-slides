@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,125 +75,121 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
 
-  <!-- Background -->
-  <!-- Dashboard outer frame -->
-  <rect x="40" y="40" width="1200" height="580" rx="6.244109" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
-
   <!-- Top KPI Row -->
   <!-- KPI 1: Total Spend -->
-  <rect x="69.508197" y="58.709677" width="354.098361" height="93.548387" rx="6.244109" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="89.180328" y="86.774194" font-family="Arial, sans-serif" font-size="12.470214" fill="var(--text-muted)">Total Monthly Spend</text>
-  <text x="89.180328" y="119.516181" font-family="Arial, sans-serif" font-size="30.695831" font-weight="bold" fill="var(--primary-accent)">$142,850</text>
-  <text x="285.901639" y="119.516181" font-family="Arial, sans-serif" font-size="13.429413" fill="var(--danger-accent)">+8.2% MoM</text>
+  <rect x="40" y="40" width="372.413793321047" height="99.999999741974" rx="6.620689855872" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60.689655009215" y="70.000000884661" font-family="Arial, sans-serif" font-size="13.222289894418" fill="var(--text-muted)">Total Monthly Spend</text>
+  <text x="60.689655009215" y="105.000055899524" font-family="Arial, sans-serif" font-size="32.547089892128" font-weight="bold" fill="var(--primary-accent)">$142,850</text>
+  <text x="267.586206153092" y="105.000055899524" font-family="Arial, sans-serif" font-size="14.23933797751" fill="var(--danger-accent)">+8.2% MoM</text>
 
   <!-- KPI 2: Savings Rate -->
-  <rect x="453.114754" y="58.709677" width="354.098361" height="93.548387" rx="6.244109" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="472.786885" y="86.774194" font-family="Arial, sans-serif" font-size="12.470214" fill="var(--text-muted)">Savings Rate</text>
-  <text x="472.786885" y="119.516181" font-family="Arial, sans-serif" font-size="30.695831" font-weight="bold" fill="var(--ok-accent)">32%</text>
-  <text x="571.147541" y="119.516181" font-family="Arial, sans-serif" font-size="13.429413" fill="var(--ok-accent)">$67,200 saved</text>
+  <rect x="443.448275309007" y="40" width="372.413793321047" height="99.999999741974" rx="6.620689855872" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137930318222" y="70.000000884661" font-family="Arial, sans-serif" font-size="13.222289894418" fill="var(--text-muted)">Savings Rate</text>
+  <text x="464.137930318222" y="105.000055899524" font-family="Arial, sans-serif" font-size="32.547089892128" font-weight="bold" fill="var(--ok-accent)">32%</text>
+  <text x="567.586206416023" y="105.000055899524" font-family="Arial, sans-serif" font-size="14.23933797751" fill="var(--ok-accent)">$67,200 saved</text>
 
   <!-- KPI 3: Coverage -->
-  <rect x="836.721311" y="58.709677" width="373.770492" height="93.548387" rx="6.244109" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="856.393443" y="86.774194" font-family="Arial, sans-serif" font-size="12.470214" fill="var(--text-muted)">RI/SP Coverage</text>
-  <text x="856.393443" y="119.516181" font-family="Arial, sans-serif" font-size="30.695831" font-weight="bold" fill="var(--warn-accent)">68%</text>
-  <text x="954.754098" y="119.516181" font-family="Arial, sans-serif" font-size="13.429413" fill="var(--warn-accent)">Target: 80%</text>
+  <rect x="846.896550618015" y="40" width="393.103448330262" height="99.999999741974" rx="6.620689855872" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="867.586206678954" y="70.000000884661" font-family="Arial, sans-serif" font-size="13.222289894418" fill="var(--text-muted)">RI/SP Coverage</text>
+  <text x="867.586206678954" y="105.000055899524" font-family="Arial, sans-serif" font-size="32.547089892128" font-weight="bold" fill="var(--warn-accent)">68%</text>
+  <text x="971.03448172503" y="105.000055899524" font-family="Arial, sans-serif" font-size="14.23933797751" fill="var(--warn-accent)">Target: 80%</text>
 
   <!-- Middle Row: Spend Trend Line Chart -->
-  <rect x="69.508197" y="170.967742" width="1140.983607" height="205.806452" rx="6.244109" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="89.180328" y="197.16129" font-family="Arial, sans-serif" font-size="13.429413" font-weight="bold" fill="var(--text)">Monthly Spend Trend (Last 12 Months)</text>
+  <rect x="40" y="160.000000331748" width="1200" height="220.000000073722" rx="6.620689855872" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="60.689655009215" y="187.999999874673" font-family="Arial, sans-serif" font-size="14.23933797751" font-weight="bold" fill="var(--text)">Monthly Spend Trend (Last 12 Months)</text>
 
   <!-- Chart axes -->
-  <line x1="128.52459" y1="213.064568" x2="128.52459" y2="353.387045" stroke="var(--border)" stroke-width="1"/>
-  <line x1="128.52459" y1="353.387045" x2="1171.147541" y2="353.387045" stroke="var(--border)" stroke-width="1"/>
+  <line x1="102.068965027646" y1="205.000055641498" x2="102.068965027646" y2="354.999944616528" stroke="var(--border)" stroke-width="1"/>
+  <line x1="102.068965027646" y1="354.999944616528" x2="1198.620688929846" y2="354.999944616528" stroke="var(--border)" stroke-width="1"/>
 
   <!-- Y-axis labels -->
-  <text x="118.688525" y="222.419303" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$160k</text>
-  <text x="118.688525" y="259.838658" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$140k</text>
-  <text x="118.688525" y="297.258013" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$120k</text>
-  <text x="118.688525" y="334.677368" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$100k</text>
+  <text x="91.7241380489" y="214.999944763972" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$160k</text>
+  <text x="91.7241380489" y="254.999944874554" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$140k</text>
+  <text x="91.7241380489" y="294.999944985137" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$120k</text>
+  <text x="91.7241380489" y="334.999945095719" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$100k</text>
 
   <!-- Grid lines -->
-  <line x1="128.52459" y1="222.419303" x2="1171.147541" y2="222.419303" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
-  <line x1="128.52459" y1="259.838658" x2="1171.147541" y2="259.838658" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
-  <line x1="128.52459" y1="297.258013" x2="1171.147541" y2="297.258013" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="102.068965027646" y1="214.999944763972" x2="1198.620688929846" y2="214.999944763972" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="102.068965027646" y1="254.999944874554" x2="1198.620688929846" y2="254.999944874554" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="102.068965027646" y1="294.999944985137" x2="1198.620688929846" y2="294.999944985137" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
 
   <!-- Spend line (trending slightly up) -->
-  <polyline points="175.737705,320.645161 262.295082,311.290323 348.852459,297.258013 435.409836,301.935484 521.967213,287.903277 608.52459,273.870968 695.081967,278.548335 781.639344,264.516129 868.196721,255.16129 954.754098,250.483923 1041.311475,241.128981 1127.868852,231.774245" fill="none" stroke="var(--primary-border)" stroke-width="3"/>
+  <polyline points="151.724137680797,319.999999705113 242.758620352378,310.000000479191 333.79310302396,294.999944985137 424.827585695541,300.000000184304 515.862068367123,285.000054793698 606.896551038704,270.000000368609 697.931033710286,274.999944395363 788.965516381867,260.000000073722 879.999999053449,249.999999778835 971.03448172503,245.000055752081 1062.068964396612,234.999945353746 1153.103447068193,225.000055162307" fill="none" stroke="var(--primary-border)" stroke-width="3"/>
 
   <!-- Data dots -->
-  <rect x="171.901" y="316.808" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="258.458" y="307.453" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="345.015" y="293.421" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="431.573" y="298.098" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="518.13" y="284.066" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="604.688" y="270.034" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="691.245" y="274.711" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="777.802" y="260.679" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="864.36" y="251.324" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="950.917" y="246.647" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="1037.47" y="237.292" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
-  <rect x="1124.03" y="227.937" width="7.67401" height="7.67401" rx="3.837" fill="var(--primary-fill)" filter="url(#shadow)"/>
+  <rect x="147.688982423741" y="315.89820691835" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="238.723068595323" y="305.898034520015" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="329.757154766905" y="290.89831040527" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="420.792292662624" y="295.89786212168" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="511.826378834205" y="280.898138006935" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="602.861516729925" y="265.89841389219" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="693.895602901506" y="270.8979656086" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="784.929689073088" y="255.898241493855" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="875.964826968807" y="245.89806909552" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="966.998913140389" y="240.89851737911" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1058.02879241542" y="230.898344980775" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="1149.066033759414" y="220.89817258244" width="8.070941548593" height="8.203252056285" rx="4.06840863556" fill="url(#grad-primary)" filter="url(#shadow)"/>
 
   <!-- Month labels -->
-  <text x="175.737705" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">Jan</text>
-  <text x="348.852459" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">Mar</text>
-  <text x="521.967213" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">May</text>
-  <text x="695.081967" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">Jul</text>
-  <text x="868.196721" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">Sep</text>
-  <text x="1041.311475" y="367.419355" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">Nov</text>
+  <text x="151.724137680797" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">Jan</text>
+  <text x="333.79310302396" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">Mar</text>
+  <text x="515.862068367123" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">May</text>
+  <text x="697.931033710286" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">Jul</text>
+  <text x="879.999999053449" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">Sep</text>
+  <text x="1062.068964396612" y="370.000000110583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">Nov</text>
 
   <!-- Bottom Row: Bar Chart by Team -->
-  <rect x="69.508197" y="395.483871" width="1140.983607" height="205.806452" rx="6.244109" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="89.180328" y="421.677419" font-family="Arial, sans-serif" font-size="13.429413" font-weight="bold" fill="var(--text)">Spend by Team (Current Month)</text>
+  <rect x="40" y="399.999999926278" width="1200" height="220.000000073722" rx="6.620689855872" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="60.689655009215" y="427.999999469203" font-family="Arial, sans-serif" font-size="14.23933797751" font-weight="bold" fill="var(--text)">Spend by Team (Current Month)</text>
 
   <!-- Bar chart -->
-  <line x1="207.213115" y1="437.580697" x2="207.213115" y2="577.903174" stroke="var(--border)" stroke-width="1"/>
-  <line x1="207.213115" y1="577.903174" x2="1171.147541" y2="577.903174" stroke="var(--border)" stroke-width="1"/>
+  <line x1="184.827586116231" y1="445.000055236028" x2="184.827586116231" y2="594.999944211058" stroke="var(--border)" stroke-width="1"/>
+  <line x1="184.827586116231" y1="594.999944211058" x2="1198.620688929846" y2="594.999944211058" stroke="var(--border)" stroke-width="1"/>
 
   <!-- Bars -->
-  <rect x="246.557377" y="446.935432" width="118.032787" height="130.967742" rx="6.244109" fill="var(--primary-fill)" opacity="0.85" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="305.57377" y="442.258065" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" font-weight="bold" fill="var(--primary-accent)">$48.2k</text>
-  <text x="305.57377" y="591.935484" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" fill="var(--text-muted)">Platform</text>
+  <rect x="226.206896134661" y="454.999944358502" width="124.137931107016" height="139.999999852556" rx="6.620689855872" fill="url(#grad-primary)" opacity="0.85" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="288.275861162307" y="450.000000331748" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" font-weight="bold" fill="var(--primary-accent)">$48.2k</text>
+  <text x="288.275861162307" y="609.999999705113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" fill="var(--text-muted)">Platform</text>
 
-  <rect x="403.934426" y="475.000052" width="118.032787" height="102.903226" rx="6.244109" fill="var(--primary-fill)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="462.95082" y="470.322581" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" font-weight="bold" fill="var(--primary-accent)">$38.1k</text>
-  <text x="462.95082" y="591.935484" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" fill="var(--text-muted)">Backend</text>
+  <rect x="391.724137260107" y="485.000055346611" width="124.137931107016" height="110.000000036861" rx="6.620689855872" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="453.793103339477" y="480.000000147443" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" font-weight="bold" fill="var(--primary-accent)">$38.1k</text>
+  <text x="453.793103339477" y="609.999999705113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" fill="var(--text-muted)">Backend</text>
 
-  <rect x="561.311475" y="503.064465" width="118.032787" height="74.83871" rx="6.244109" fill="var(--primary-fill)" opacity="0.55" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.327869" y="498.387097" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" font-weight="bold" fill="var(--primary-accent)">$27.5k</text>
-  <text x="620.327869" y="591.935484" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" fill="var(--text-muted)">Data</text>
+  <rect x="557.241378385553" y="514.999945058858" width="124.137931107016" height="80.000000221165" rx="6.620689855872" fill="url(#grad-primary)" opacity="0.55" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="619.310344464923" y="509.999999963139" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" font-weight="bold" fill="var(--primary-accent)">$27.5k</text>
+  <text x="619.310344464923" y="609.999999705113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" fill="var(--text-muted)">Data</text>
 
-  <rect x="718.688525" y="521.774142" width="118.032787" height="56.129032" rx="6.244109" fill="var(--primary-fill)" opacity="0.4" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="777.704918" y="517.096774" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" font-weight="bold" fill="var(--primary-accent)">$18.3k</text>
-  <text x="777.704918" y="591.935484" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" fill="var(--text-muted)">ML/AI</text>
+  <rect x="722.758620562723" y="534.999944579667" width="124.137931107016" height="59.999999631391" rx="6.620689855872" fill="url(#grad-primary)" opacity="0.4" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="784.827585590369" y="529.999999483947" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" font-weight="bold" fill="var(--primary-accent)">$18.3k</text>
+  <text x="784.827585590369" y="609.999999705113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" fill="var(--text-muted)">ML/AI</text>
 
-  <rect x="876.065574" y="549.838761" width="118.032787" height="28.064516" rx="6.244109" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.081967" y="545.16129" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" font-weight="bold" fill="var(--primary-accent)">$10.8k</text>
-  <text x="935.081967" y="591.935484" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.551711" fill="var(--text-muted)">Frontend</text>
+  <rect x="888.275861688169" y="565.000054498811" width="124.137931107016" height="29.999999815696" rx="6.620689855872" fill="url(#grad-primary)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344826715815" y="559.999999299643" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" font-weight="bold" fill="var(--primary-accent)">$10.8k</text>
+  <text x="950.344826715815" y="609.999999705113" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188082395709" fill="var(--text-muted)">Frontend</text>
 
   <!-- Team labels on Y-axis area -->
-  <text x="118.688525" y="446.935432" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$50k</text>
-  <text x="118.688525" y="512.419406" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$25k</text>
-  <text x="118.688525" y="577.903174" text-anchor="end" font-family="Arial, sans-serif" font-size="10.406848" fill="var(--text-faint)">$0</text>
-  <line x1="207.213115" y1="446.935432" x2="1171.147541" y2="446.935432" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
-  <line x1="207.213115" y1="512.419406" x2="1171.147541" y2="512.419406" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="91.7241380489" y="454.999944358502" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$50k</text>
+  <text x="91.7241380489" y="525.000054388228" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$25k</text>
+  <text x="91.7241380489" y="594.999944211058" text-anchor="end" font-family="Arial, sans-serif" font-size="11.034482739683" fill="var(--text-faint)">$0</text>
+  <line x1="184.827586116231" y1="454.999944358502" x2="1198.620688929846" y2="454.999944358502" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="184.827586116231" y1="525.000054388228" x2="1198.620688929846" y2="525.000054388228" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -98,40 +98,40 @@
   <line x1="119.3388" y1="185" x2="1210.2479" y2="185" stroke="var(--primary-border)" stroke-width="2"/>
 
   <!-- Commits on trunk -->
-  <rect x="172.544" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="331.222" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="489.9" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="648.578" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="807.255" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="965.933" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1124.61" y="168.784" width="32.4316" height="32.4316" rx="14" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="172.544" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="331.222" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="489.9" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="648.578" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="807.255" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="965.933" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1124.61" y="168.784" width="32.4316" height="32.4316" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
 
   <!-- Short-lived branch 1 -->
   <line x1="347.438" y1="201.5714" x2="367.2727" y2="288.5714" stroke="var(--ok-border)" stroke-width="2"/>
   <line x1="367.2727" y1="288.5714" x2="486.281" y2="288.5714" stroke="var(--ok-border)" stroke-width="2"/>
   <line x1="486.281" y1="288.5714" x2="506.1157" y2="201.5714" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3"/>
-  <rect x="414.615" y="276.41" width="24.3236" height="24.3236" rx="12.1618" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="414.615" y="276.41" width="24.3236" height="24.3236" rx="12.1618" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="426.7769" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1618" fill="var(--ok-accent)">1-2 days</text>
 
   <!-- Short-lived branch 2 -->
   <line x1="664.7934" y1="201.5714" x2="684.6281" y2="288.5714" stroke="var(--warn-border)" stroke-width="2"/>
   <line x1="684.6281" y1="288.5714" x2="803.6364" y2="288.5714" stroke="var(--warn-border)" stroke-width="2"/>
   <line x1="803.6364" y1="288.5714" x2="823.4711" y2="201.5714" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
-  <rect x="731.97" y="276.41" width="24.3236" height="24.3236" rx="12.1618" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="731.97" y="276.41" width="24.3236" height="24.3236" rx="12.1618" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="744.1322" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1618" fill="var(--warn-accent)">hours</text>
 
   <!-- CI/CD pipeline indicator -->
-  <rect x="149.0909" y="40" width="1090.9091" height="51.7857" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="149.0909" y="40" width="1090.9091" height="51.7857" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="694.5455" y="73.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2158" font-weight="bold" fill="var(--ok-accent)">Continuous Integration - every commit triggers build + tests</text>
 
   <!-- Release tags -->
-  <rect x="491.2397" y="117.6786" width="29.7521" height="31.0714" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="491.2397" y="117.6786" width="29.7521" height="31.0714" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="506.1157" y="139.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1484" fill="var(--primary-accent)">v1</text>
-  <rect x="967.2727" y="117.6786" width="29.7521" height="31.0714" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="967.2727" y="117.6786" width="29.7521" height="31.0714" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="982.1488" y="139.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1484" fill="var(--primary-accent)">v2</text>
 
   <!-- Key principles -->
-  <rect x="89.5868" y="392.1429" width="515.7025" height="227.8571" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="89.5868" y="392.1429" width="515.7025" height="227.8571" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="347.438" y="428.3929" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2293" font-weight="bold" fill="var(--ok-accent)">Key Principles</text>
   <text x="119.3388" y="464.6429" font-family="Arial, sans-serif" font-size="14.1888" fill="var(--text)">1. Branches live at most 1-2 days</text>
   <text x="119.3388" y="495.7143" font-family="Arial, sans-serif" font-size="14.1888" fill="var(--text)">2. Merge to trunk at least once per day</text>
@@ -140,7 +140,7 @@
   <text x="119.3388" y="588.9286" font-family="Arial, sans-serif" font-size="14.1888" fill="var(--text)">5. Trunk is always releasable</text>
 
   <!-- Benefits -->
-  <rect x="644.9587" y="392.1429" width="515.7025" height="227.8571" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="644.9587" y="392.1429" width="515.7025" height="227.8571" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="902.8099" y="428.3929" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2293" font-weight="bold" fill="var(--primary-accent)">Benefits</text>
   <text x="674.7107" y="464.6429" font-family="Arial, sans-serif" font-size="14.1888" fill="var(--text)">Faster integration and feedback</text>
   <text x="674.7107" y="495.7143" font-family="Arial, sans-serif" font-size="14.1888" fill="var(--text)">Fewer merge conflicts</text>

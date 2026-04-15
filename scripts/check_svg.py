@@ -9,6 +9,7 @@ Checks:
   --fonts       Flag SVGs with font-size below minimum
   --parse       Flag SVGs with XML parse errors
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
+  --namespace   Flag SVGs whose root <svg> lacks xmlns="http://www.w3.org/2000/svg"
   --bounds      Flag SVGs with elements drawn below y=640
   --title       Flag SVGs that contain a <title> element
   --colors      Flag SVGs against their <!-- palette: path --> comment
@@ -17,6 +18,8 @@ Checks:
   --fit         Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]
   --no-circles  Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)
   --shadows     Validate <rect> shadow filter usage against palette effects.rect-shadow
+  --typography  Validate <text>/<tspan> font-family against palette typography
+  --gradients   Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill
 
 Usage:
     check_svg.py file1.svg file2.svg ...
@@ -42,7 +45,7 @@ USABLE_W = 1200.0
 USABLE_H = 580.0
 USABLE_X0 = 40.0
 USABLE_Y0 = 40.0
-FIT_TOL = 1.0  # px — bbox must match target to within this tolerance
+FIT_TOL = 0.0  # px — bbox must match target exactly
 
 
 def _check_size(path: Path) -> list[str]:
@@ -110,13 +113,32 @@ def _check_fonts(tree: ET.ElementTree) -> list[str]:
     return []
 
 
+SVG_NS = "http://www.w3.org/2000/svg"
+
+
+def _check_namespace(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs whose root <svg> lacks xmlns="http://www.w3.org/2000/svg".
+
+    Without the SVG namespace the browser treats the file as generic XML
+    and renders nothing — the slide appears blank. ElementTree parses such
+    files fine (they are valid XML), which is why every earlier check
+    passed. This check exists to catch that specific failure mode."""
+    root = tree.getroot()
+    tag = root.tag
+    if tag.startswith("{"):
+        ns = tag[1:].split("}", 1)[0]
+        if ns != SVG_NS:
+            return [f"root element in namespace {ns!r}, must be {SVG_NS!r}"]
+        return []
+    return [f'root <svg> missing xmlns="{SVG_NS}"']
+
+
 def _check_dimensions(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that do not have exactly viewBox="0 0 1280 720"."""
     root = tree.getroot()
     viewbox = root.get("viewBox")
     if viewbox is None:
         return [f"missing viewBox (required: {REQUIRED_VIEWBOX!r})"]
-    # Normalise whitespace for comparison
     normalised = " ".join(viewbox.split())
     if normalised != REQUIRED_VIEWBOX:
         return [f"viewBox is {viewbox!r}, must be {REQUIRED_VIEWBOX!r}"]
@@ -367,6 +389,7 @@ def _shadow_policy() -> tuple[bool, str, set[str]]:
         for name in group:
             if name.endswith("-fill"):
                 family_fills.add(f"var(--{name})")
+                family_fills.add(f"url(#grad-{name[:-len('-fill')]})")
     _SHADOW_POLICY = (enabled, apply_to, family_fills)
     return _SHADOW_POLICY
 
@@ -398,6 +421,99 @@ def _check_shadows(tree: ET.ElementTree) -> list[str]:
             errors.append(f"<rect fill={fill!r}> missing filter=\"url(#shadow)\"")
         elif has and not want:
             errors.append(f"<rect fill={fill!r}> has filter=\"url(#shadow)\" but policy forbids it")
+    return errors
+
+
+_TYPOGRAPHY: tuple[str, str] | None = None
+
+
+def _typography() -> tuple[str, str]:
+    global _TYPOGRAPHY
+    if _TYPOGRAPHY is not None:
+        return _TYPOGRAPHY
+    if not _DEFAULT_PALETTE.exists():
+        _TYPOGRAPHY = ("Arial, sans-serif", "Courier New, monospace")
+        return _TYPOGRAPHY
+    data = yaml.safe_load(_DEFAULT_PALETTE.read_text(encoding="utf-8"))
+    typo = data.get("typography", {})
+    _TYPOGRAPHY = (
+        typo.get("sans", "Arial, sans-serif"),
+        typo.get("mono", "Courier New, monospace"),
+    )
+    return _TYPOGRAPHY
+
+
+_RECT_FILL_POLICY: tuple[str, list[str]] | None = None
+
+
+def _rect_fill_policy() -> tuple[str, list[str]]:
+    global _RECT_FILL_POLICY
+    if _RECT_FILL_POLICY is not None:
+        return _RECT_FILL_POLICY
+    if not _DEFAULT_PALETTE.exists():
+        _RECT_FILL_POLICY = ("solid", [])
+        return _RECT_FILL_POLICY
+    data = yaml.safe_load(_DEFAULT_PALETTE.read_text(encoding="utf-8"))
+    style = data.get("effects", {}).get("rect-fill", {}).get("style", "solid")
+    fams = []
+    for group_name, group in data.get("colors", {}).items():
+        if group_name == "neutrals":
+            continue
+        for name in group:
+            if name.endswith("-fill"):
+                fams.append(name[:-len("-fill")])
+    _RECT_FILL_POLICY = (style, fams)
+    return _RECT_FILL_POLICY
+
+
+def _check_gradients(tree: ET.ElementTree) -> list[str]:
+    """Validate <rect> family fills against palette effects.rect-fill.style."""
+    style, families = _rect_fill_policy()
+    errors: list[str] = []
+    defs_children: set[ET.Element] = set()
+    root = tree.getroot()
+    for elem in root.iter():
+        if elem.tag.split('}')[-1] == 'defs':
+            for child in elem.iter():
+                defs_children.add(child)
+    solid_fills = {f"var(--{f}-fill)": f for f in families}
+    grad_fills = {f"url(#grad-{f})": f for f in families}
+    for elem in tree.iter():
+        if elem in defs_children:
+            continue
+        if elem.tag.split('}')[-1] != 'rect':
+            continue
+        fill = (elem.get('fill') or '').strip()
+        if style == 'gradient' and fill in solid_fills:
+            fam = solid_fills[fill]
+            errors.append(
+                f"<rect fill={fill!r}> should be url(#grad-{fam}) "
+                f"per rect-fill.style=gradient"
+            )
+        elif style == 'solid' and fill in grad_fills:
+            fam = grad_fills[fill]
+            errors.append(
+                f"<rect fill={fill!r}> should be var(--{fam}-fill) "
+                f"per rect-fill.style=solid"
+            )
+    return errors
+
+
+def _check_typography(tree: ET.ElementTree) -> list[str]:
+    """Validate font-family on every <text>/<tspan> against palette typography."""
+    sans, mono = _typography()
+    allowed = {sans, mono}
+    errors: list[str] = []
+    for elem in tree.iter():
+        tag = elem.tag.split('}')[-1]
+        if tag not in ('text', 'tspan'):
+            continue
+        ff = elem.get('font-family')
+        if ff is None:
+            errors.append(f"<{tag}> missing font-family")
+            continue
+        if ff not in allowed:
+            errors.append(f"<{tag}> font-family={ff!r} not in palette typography")
     return errors
 
 
@@ -447,6 +563,8 @@ def main() -> None:
                         help='Flag SVGs with XML parse errors')
     parser.add_argument('--dimensions', action='store_true',
                         help='Flag SVGs that do not have exactly viewBox="0 0 1280 720"')
+    parser.add_argument('--namespace', action='store_true',
+                        help='Flag SVGs whose root <svg> lacks xmlns="http://www.w3.org/2000/svg"')
     parser.add_argument('--bounds', action='store_true',
                         help='Flag SVGs with elements drawn below y=640')
     parser.add_argument('--title', action='store_true',
@@ -463,6 +581,10 @@ def main() -> None:
                         help='Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)')
     parser.add_argument('--shadows', action='store_true',
                         help='Validate <rect> shadow filter usage against palette effects.rect-shadow')
+    parser.add_argument('--typography', action='store_true',
+                        help='Validate <text>/<tspan> font-family against palette typography')
+    parser.add_argument('--gradients', action='store_true',
+                        help='Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill')
     args = parser.parse_args()
 
     if not args.paths:
@@ -470,14 +592,16 @@ def main() -> None:
 
     # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
-            args.bounds, args.title, args.colors, args.words, args.fill, args.fit,
-            args.no_circles, args.shadows]
+            args.namespace, args.bounds, args.title, args.colors, args.words,
+            args.fill, args.fit, args.no_circles, args.shadows, args.typography,
+            args.gradients]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
     do_fonts = args.fonts or not explicit
     do_parse = args.parse or not explicit
     do_dimensions = args.dimensions or not explicit
+    do_namespace = args.namespace or not explicit
     do_bounds = args.bounds or not explicit
     do_title = args.title or not explicit
     do_colors = args.colors or not explicit
@@ -486,10 +610,10 @@ def main() -> None:
     do_words = args.words
     do_fill = args.fill or not explicit
     do_fit = args.fit or not explicit
-    # no-circles check is opt-in only — existing SVGs still contain circles.
-    # Flip to `args.no_circles or not explicit` once the backlog is clean.
-    do_no_circles = args.no_circles
+    do_no_circles = args.no_circles or not explicit
     do_shadows = args.shadows or not explicit
+    do_typography = args.typography or not explicit
+    do_gradients = args.gradients or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -510,7 +634,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors or do_no_circles or do_shadows:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_namespace or do_bounds or do_title or do_colors or do_no_circles or do_shadows or do_typography or do_gradients:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -522,6 +646,8 @@ def main() -> None:
                 errors.extend(_check_fonts(tree))
             if do_dimensions:
                 errors.extend(_check_dimensions(tree))
+            if do_namespace:
+                errors.extend(_check_namespace(tree))
             if do_bounds:
                 errors.extend(_check_bounds(tree))
             if do_title:
@@ -532,6 +658,10 @@ def main() -> None:
                 errors.extend(_check_no_circles(tree, path))
             if do_shadows:
                 errors.extend(_check_shadows(tree))
+            if do_typography:
+                errors.extend(_check_typography(tree))
+            if do_gradients:
+                errors.extend(_check_gradients(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

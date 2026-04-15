@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -100,16 +100,16 @@
   <!-- Each column: 240px wide, 4 columns = 960, start at 240 -->
 
   <!-- Column headers -->
-  <rect x="243.389831" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="243.389831" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="68.752085" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.065944" font-weight="bold" fill="var(--bg)">IaaS</text>
 
-  <rect x="497.627119" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="497.627119" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="68.752085" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.065944" font-weight="bold" fill="var(--bg)">PaaS</text>
 
-  <rect x="751.864407" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="751.864407" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="68.752085" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.065944" font-weight="bold" fill="var(--bg)">SaaS</text>
 
-  <rect x="1006.101695" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1006.101695" y="40" rx="6.53623" width="233.898305" height="44.615334" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="68.752085" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.065944" font-weight="bold" fill="var(--bg)">FaaS</text>
 
   <!-- Row labels and grid cells -->
@@ -119,96 +119,96 @@
   <rect x="40" y="99.487185" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="135.179496" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Data</text>
 
-  <rect x="243.389831" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="135.179496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="497.627119" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="135.179496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="751.864407" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="135.179496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="1006.101695" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="99.487185" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="135.179496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
 
   <!-- Row 2: Application -->
   <rect x="40" y="168.888901" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="204.581212" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Application</text>
 
-  <rect x="243.389831" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="204.581212" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="497.627119" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="204.581212" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="751.864407" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="204.581212" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="168.888901" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="204.581212" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
 
   <!-- Row 3: Runtime -->
   <rect x="40" y="238.290617" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="273.982928" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Runtime</text>
 
-  <rect x="243.389831" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="273.982928" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="497.627119" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="273.982928" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="751.864407" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="273.982928" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="238.290617" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="273.982928" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
 
   <!-- Row 4: OS -->
   <rect x="40" y="307.692333" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="343.384644" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">OS</text>
 
-  <rect x="243.389831" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="343.384644" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--warn-accent)">Customer</text>
-  <rect x="497.627119" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="343.384644" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="751.864407" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="343.384644" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="307.692333" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="343.384644" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
 
   <!-- Row 5: Virtualization -->
   <rect x="40" y="377.094049" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="412.78636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Virtualization</text>
 
-  <rect x="243.389831" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="412.78636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="497.627119" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="412.78636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="751.864407" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="412.78636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="377.094049" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="412.78636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
 
   <!-- Row 6: Network -->
   <rect x="40" y="446.495765" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="482.188076" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Network</text>
 
-  <rect x="243.389831" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="482.188076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="497.627119" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="482.188076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="751.864407" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="482.188076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="446.495765" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="482.188076" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
 
   <!-- Row 7: Hardware -->
   <rect x="40" y="515.897481" rx="6.53623" width="183.050847" height="59.487185" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="131.525424" y="551.589792" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.057687" font-weight="bold" fill="var(--text)">Hardware</text>
 
-  <rect x="243.389831" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="243.389831" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="360.338983" y="551.589792" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="497.627119" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="497.627119" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="614.576271" y="551.589792" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="751.864407" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="751.864407" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="868.813559" y="551.589792" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
-  <rect x="1006.101695" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1006.101695" y="515.897481" rx="6.53623" width="233.898305" height="59.487185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1123.050847" y="551.589792" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--primary-accent)">Provider</text>
 
   <!-- Legend -->
-  <rect x="385.762712" y="600.170938" rx="6.53623" width="20.338983" height="19.829062" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="385.762712" y="600.170938" rx="6.53623" width="20.338983" height="19.829062" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="416.271186" y="616.034188" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--text)">Customer Responsibility</text>
-  <rect x="629.830508" y="600.170938" rx="6.53623" width="20.338983" height="19.829062" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="629.830508" y="600.170938" rx="6.53623" width="20.338983" height="19.829062" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="660.338983" y="616.034188" font-family="Arial, sans-serif" font-size="13.053613" fill="var(--text)">Provider Responsibility</text>
 </svg>

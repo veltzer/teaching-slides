@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,52 +75,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 12 L 12.4878 6 z" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="54.9999" y="77.5294" font-family="sans-serif" font-size="19.7848" fill="var(--text)" text-anchor="start" font-weight="bold">ORC File Structure</text>
+  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="54.9999" y="77.5294" font-size="19.7848" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">ORC File Structure</text>
   <rect x="70" y="108.2353" width="1140" height="196.1765" fill="var(--bg)" stroke="var(--text)" stroke-width="2.1408" rx="6" />
-  <text x="85" y="138.9412" font-family="sans-serif" font-size="16.9584" fill="var(--primary-accent)" text-anchor="start" font-weight="bold">Stripe 0</text>
-  <rect x="85" y="156" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="181.5882" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Index</text>
-  <text x="287.5" y="181.5882" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start">← min/max per 10K rows</text>
-  <rect x="85" y="200.3529" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="225.9412" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Data</text>
-  <text x="287.5" y="225.9412" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start">← column encoded data</text>
-  <rect x="85" y="244.7059" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="270.2942" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Footer</text>
-  <text x="287.5" y="270.2942" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start">← column statistics</text>
+  <text x="85" y="138.9412" font-size="16.9584" fill="var(--primary-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Stripe 0</text>
+  <rect x="85" y="156" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="181.5882" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Index</text>
+  <text x="287.5" y="181.5882" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">← min/max per 10K rows</text>
+  <rect x="85" y="200.3529" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="225.9412" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Data</text>
+  <text x="287.5" y="225.9412" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">← column encoded data</text>
+  <rect x="85" y="244.7059" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="270.2942" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Footer</text>
+  <text x="287.5" y="270.2942" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">← column statistics</text>
   <rect x="70" y="338.5294" width="1140" height="196.1765" fill="var(--bg)" stroke="var(--text)" stroke-width="2.1408" rx="6" />
-  <text x="85" y="369.2353" font-family="sans-serif" font-size="16.9584" fill="var(--primary-accent)" text-anchor="start" font-weight="bold">Stripe 1</text>
-  <rect x="85" y="386.2941" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="411.8824" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Index</text>
-  <text x="287.5" y="411.8824" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" />
-  <rect x="85" y="430.6471" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="456.2353" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Data</text>
-  <text x="287.5" y="456.2353" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" />
-  <rect x="85" y="475" width="180" height="34.1176" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="96.9999" y="500.5882" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">Footer</text>
-  <text x="287.5" y="500.5882" font-family="sans-serif" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" />
-  <rect x="70" y="560.2941" width="1140" height="40.9412" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="85" y="589.2941" font-family="sans-serif" font-size="15.5451" fill="var(--text)" text-anchor="start">File Footer (column types, statistics)   |   Postscript (compression, version)</text>
+  <text x="85" y="369.2353" font-size="16.9584" fill="var(--primary-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Stripe 1</text>
+  <rect x="85" y="386.2941" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="411.8824" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Index</text>
+  <text x="287.5" y="411.8824" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif"/>
+  <rect x="85" y="430.6471" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="456.2353" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Data</text>
+  <text x="287.5" y="456.2353" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif"/>
+  <rect x="85" y="475" width="180" height="34.1176" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="96.9999" y="500.5882" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Footer</text>
+  <text x="287.5" y="500.5882" font-size="15.5451" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif"/>
+  <rect x="70" y="560.2941" width="1140" height="40.9412" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="85" y="589.2941" font-size="15.5451" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">File Footer (column types, statistics)   |   Postscript (compression, version)</text>
 </svg>

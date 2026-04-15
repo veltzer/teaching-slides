@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,31 +97,28 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="362.068999" height="193.333253" rx="6.904271" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="40" y="40" width="362.068999" height="44.466705" rx="6.904271" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="70.933469" width="362.068999" height="13.533235" fill="var(--primary-fill)" rx="6.904271" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="362.068999" height="193.333253" rx="6.904271" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="362.068999" height="44.466705" rx="6.904271" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="70.933469" width="362.068999" height="13.533235" fill="url(#grad-primary)" rx="6.904271" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="221.034499" y="73.833388" text-anchor="middle" fill="var(--bg)" font-size="20.000061" font-weight="bold" font-family="Arial, sans-serif">Tool Selection</text>
   <text x="221.034499" y="125.066651" text-anchor="middle" fill="var(--primary-accent)" font-size="15.999957" font-family="Arial, sans-serif">Evaluate fit for team</text>
   <text x="221.034499" y="154.066681" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Security &amp; privacy</text>
   <text x="221.034499" y="179.199952" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Cost per seat</text>
   <text x="221.034499" y="204.333343" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Integration support</text>
   <line x1="402.068888" y1="136.666687" x2="458.965556" y2="136.666687" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="469.310384" y="40" width="341.379342" height="193.333253" rx="6.904271" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="469.310384" y="40" width="341.379342" height="44.466705" rx="6.904271" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="469.310384" y="70.933469" width="341.379342" height="13.533235" fill="var(--info-fill)" rx="6.904271" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="469.310384" y="40" width="341.379342" height="193.333253" rx="6.904271" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="469.310384" y="40" width="341.379342" height="44.466705" rx="6.904271" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="469.310384" y="70.933469" width="341.379342" height="13.533235" fill="url(#grad-info)" rx="6.904271" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.000055" y="73.833388" text-anchor="middle" fill="var(--bg)" font-size="20.000061" font-weight="bold" font-family="Arial, sans-serif">Configuration</text>
   <text x="640.000055" y="125.066651" text-anchor="middle" fill="var(--info-accent)" font-size="15.999957" font-family="Arial, sans-serif">Standardize settings</text>
   <text x="640.000055" y="154.066681" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Prompt templates</text>
   <text x="640.000055" y="179.199952" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Shared context files</text>
   <text x="640.000055" y="204.333343" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">IDE plugin settings</text>
   <line x1="810.689726" y1="136.666687" x2="867.586173" y2="136.666687" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="877.931001" y="40" width="362.068999" height="193.333253" rx="6.904271" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="877.931001" y="40" width="362.068999" height="44.466705" rx="6.904271" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="877.931001" y="70.933469" width="362.068999" height="13.533235" fill="var(--ok-fill)" rx="6.904271" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931001" y="40" width="362.068999" height="193.333253" rx="6.904271" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931001" y="40" width="362.068999" height="44.466705" rx="6.904271" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="877.931001" y="70.933469" width="362.068999" height="13.533235" fill="url(#grad-ok)" rx="6.904271" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1058.965611" y="73.833388" text-anchor="middle" fill="var(--bg)" font-size="20.000061" font-weight="bold" font-family="Arial, sans-serif">Governance</text>
   <text x="1058.965611" y="125.066651" text-anchor="middle" fill="var(--ok-accent)" font-size="15.999957" font-family="Arial, sans-serif">Policy &amp; compliance</text>
   <text x="1058.965611" y="154.066681" text-anchor="middle" fill="var(--text-muted)" font-size="13.999905" font-family="Arial, sans-serif">Data handling rules</text>
@@ -132,7 +129,7 @@
   <text x="640.000055" y="368.666567" text-anchor="middle" fill="var(--text)" font-size="17.00004" font-family="Arial, sans-serif">Unified approach across all projects</text>
   <text x="640.000055" y="403.466555" text-anchor="middle" fill="var(--text-muted)" font-size="14.999988" font-family="Arial, sans-serif">Consistent prompting patterns — shared knowledge base</text>
   <text x="640.000055" y="434.399904" text-anchor="middle" fill="var(--text-muted)" font-size="14.999988" font-family="Arial, sans-serif">Regular review cadence — adopt new capabilities as team</text>
-  <rect x="60.689657" y="494.333283" width="1158.620796" height="125.666717" rx="6.904271" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="60.689657" y="494.333283" width="1158.620796" height="125.666717" rx="6.904271" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.000055" y="534.933229" text-anchor="middle" fill="var(--bg)" font-size="20.000061" font-weight="bold" font-family="Arial, sans-serif">Why Governance Matters</text>
   <text x="640.000055" y="569.733217" text-anchor="middle" fill="var(--primary-accent)" font-size="15.999957" font-family="Arial, sans-serif">Without standards: 10 devs use 10 different prompts — unpredictable output quality</text>
   <text x="640.000055" y="600.666567" text-anchor="middle" fill="var(--primary-accent)" font-size="15.999957" font-family="Arial, sans-serif">With standards: multiplied productivity, consistent code, shared learning</text>

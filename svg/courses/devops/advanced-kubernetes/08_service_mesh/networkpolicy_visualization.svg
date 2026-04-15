@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,48 +75,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,19.4595 6.8923,0" fill="#555" />
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,19.4595 6.8923,0" fill="#555" />
-    </marker>
   </defs>
-  <text x="943.8961" y="40" text-anchor="middle" font-size="34.451556" fill="var(--text)" font-weight="bold">production namespace</text>
-  <rect x="40" y="89.152533" width="405.194691" height="127.796586" rx="7.993833" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="242.597346" y="142.237377" text-anchor="middle" font-size="31.990654" fill="var(--text)">frontend</text>
-  <line x1="445.194854" y1="152.067884" x2="616.623402" y2="152.067884" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="529.350575" y="138.305066" text-anchor="middle" font-size="24.608349" fill="var(--text-muted)">8080</text>
-  <rect x="616.623402" y="69.491628" width="623.376598" height="304.745706" rx="7.993833" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="928.311538" y="114.711959" text-anchor="middle" font-size="31.990654" fill="var(--text)" font-weight="bold">api-server</text>
-  <text x="928.311538" y="157.96608" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">Ingress:</text>
-  <text x="928.311538" y="189.423809" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">  from: frontend</text>
-  <text x="928.311538" y="220.881322" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">  port: 8080</text>
-  <text x="928.311538" y="260.203349" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">Egress:</text>
-  <text x="928.311538" y="291.661078" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">  to: database</text>
-  <text x="928.311538" y="323.118591" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">  port: 5432</text>
-  <line x1="928.311538" y1="374.237334" x2="928.311538" y2="443.050881" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="990.649297" y="417.491455" text-anchor="middle" font-size="24.608349" fill="var(--text-muted)">5432</text>
-  <rect x="616.623402" y="443.050881" width="623.376598" height="127.796586" rx="7.993833" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="928.311538" y="498.101718" text-anchor="middle" font-size="31.990654" fill="var(--text)">database</text>
-  <text x="928.311538" y="535.457643" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)">port: 5432</text>
-  <text x="40" y="620" text-anchor="start" font-size="27.068984" fill="var(--danger-accent)">✗ backend → api-server (BLOCKED)   ✗ api-server → internet (BLOCKED)</text>
+  <text x="943.8961" y="40" text-anchor="middle" font-size="34.451556" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">production namespace</text>
+  <rect x="40" y="89.152533" width="405.194691" height="127.796586" rx="7.993833" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="242.597346" y="142.237377" text-anchor="middle" font-size="31.990654" fill="var(--text)" font-family="Arial, sans-serif">frontend</text>
+  <line x1="445.194854" y1="152.067884" x2="616.623402" y2="152.067884" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="529.350575" y="138.305066" text-anchor="middle" font-size="24.608349" fill="var(--text-muted)" font-family="Arial, sans-serif">8080</text>
+  <rect x="616.623402" y="69.491628" width="623.376598" height="304.745706" rx="7.993833" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="928.311538" y="114.711959" text-anchor="middle" font-size="31.990654" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">api-server</text>
+  <text x="928.311538" y="157.96608" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">Ingress:</text>
+  <text x="928.311538" y="189.423809" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">  from: frontend</text>
+  <text x="928.311538" y="220.881322" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">  port: 8080</text>
+  <text x="928.311538" y="260.203349" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">Egress:</text>
+  <text x="928.311538" y="291.661078" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">  to: database</text>
+  <text x="928.311538" y="323.118591" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">  port: 5432</text>
+  <line x1="928.311538" y1="374.237334" x2="928.311538" y2="443.050881" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="990.649297" y="417.491455" text-anchor="middle" font-size="24.608349" fill="var(--text-muted)" font-family="Arial, sans-serif">5432</text>
+  <rect x="616.623402" y="443.050881" width="623.376598" height="127.796586" rx="7.993833" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="928.311538" y="498.101718" text-anchor="middle" font-size="31.990654" fill="var(--text)" font-family="Arial, sans-serif">database</text>
+  <text x="928.311538" y="535.457643" text-anchor="middle" font-size="27.068984" fill="var(--text-muted)" font-family="Arial, sans-serif">port: 5432</text>
+  <text x="40" y="620" text-anchor="start" font-size="27.068984" fill="var(--danger-accent)" font-family="Arial, sans-serif">✗ backend → api-server (BLOCKED)   ✗ api-server → internet (BLOCKED)</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,76 +75,70 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="aft" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="aftd" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16 0,8" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="606.6666" y="40" text-anchor="middle" font-size="23.7683" font-weight="bold" fill="var(--text)">Fine-Tuning vs Prompt Engineering: Decision Tree</text>
-  <rect x="356.6667" y="62.5974" width="500" height="52.7272" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="606.6666" y="97.2468" text-anchor="middle" font-size="19.0147" font-weight="bold" fill="var(--text)">Do you have a working prompt?</text>
-  <line x1="473.3334" y1="115.3247" x2="240" y2="152.987" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="323.3334" y="137.9221" font-size="15.8456" fill="var(--danger-accent)">NO</text>
-  <rect x="73.3333" y="152.987" width="333.3333" height="45.1948" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="183.1169" text-anchor="middle" font-size="17.4301" fill="var(--danger-accent)">Try prompt engineering first</text>
-  <line x1="740" y1="115.3247" x2="906.6667" y2="152.987" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="840" y="137.9221" font-size="15.8456" fill="var(--ok-accent)">YES</text>
-  <rect x="723.3333" y="152.987" width="433.3334" height="52.7272" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="187.6364" text-anchor="middle" font-size="19.0147" font-weight="bold" fill="var(--text)">Is quality sufficient?</text>
-  <line x1="1006.6667" y1="205.7143" x2="1106.6666" y2="243.3766" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="1073.3333" y="231.3247" font-size="15.8456" fill="var(--ok-accent)">YES</text>
-  <rect x="973.3333" y="243.3766" width="266.6667" height="52.7272" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1106.6666" y="278.0259" text-anchor="middle" font-size="15.8456" fill="var(--ok-accent)">Keep using prompts</text>
-  <line x1="840" y1="205.7143" x2="673.3334" y2="258.4416" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="740" y="235.8441" font-size="15.8456" fill="var(--danger-accent)">NO</text>
-  <rect x="456.6666" y="258.4416" width="433.3334" height="52.7272" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="673.3334" y="293.0909" text-anchor="middle" font-size="17.4301" font-weight="bold" fill="var(--text)">Better examples help?</text>
-  <line x1="773.3333" y1="311.1688" x2="906.6667" y2="348.8312" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="856.6667" y="336.7792" font-size="15.8456" fill="var(--ok-accent)">YES</text>
-  <rect x="806.6666" y="348.8312" width="266.6667" height="45.1948" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="378.961" text-anchor="middle" font-size="15.8456" fill="var(--ok-accent)">Use few-shot learning</text>
-  <line x1="573.3333" y1="311.1688" x2="456.6666" y2="363.8961" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="506.6667" y="341.2987" font-size="15.8456" fill="var(--danger-accent)">NO</text>
-  <rect x="256.6667" y="363.8961" width="399.9999" height="52.7272" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="456.6666" y="398.5455" text-anchor="middle" font-size="17.4301" font-weight="bold" fill="var(--text)">50+ labeled examples?</text>
-  <line x1="340" y1="416.6234" x2="206.6667" y2="454.2857" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="256.6667" y="442.2338" font-size="15.8456" fill="var(--danger-accent)">NO</text>
-  <rect x="40" y="454.2857" width="333.3333" height="45.1948" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="206.6667" y="484.4156" text-anchor="middle" font-size="15.8456" fill="var(--danger-accent)">Collect more data first</text>
-  <line x1="556.6667" y1="416.6234" x2="656.6667" y2="461.8182" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#aft)" />
-  <text x="623.3333" y="443.7403" font-size="15.8456" fill="var(--ok-accent)">YES</text>
-  <rect x="540" y="461.8182" width="233.3333" height="52.7272" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="656.6667" y="496.4675" text-anchor="middle" font-size="20.5993" font-weight="bold" fill="var(--ok-accent)">FINE-TUNE</text>
+  <text x="606.6666" y="40" text-anchor="middle" font-size="23.7683" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Fine-Tuning vs Prompt Engineering: Decision Tree</text>
+  <rect x="356.6667" y="62.5974" width="500" height="52.7272" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="606.6666" y="97.2468" text-anchor="middle" font-size="19.0147" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Do you have a working prompt?</text>
+  <line x1="473.3334" y1="115.3247" x2="240" y2="152.987" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="323.3334" y="137.9221" font-size="15.8456" fill="var(--danger-accent)" font-family="Arial, sans-serif">NO</text>
+  <rect x="73.3333" y="152.987" width="333.3333" height="45.1948" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="183.1169" text-anchor="middle" font-size="17.4301" fill="var(--danger-accent)" font-family="Arial, sans-serif">Try prompt engineering first</text>
+  <line x1="740" y1="115.3247" x2="906.6667" y2="152.987" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="840" y="137.9221" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">YES</text>
+  <rect x="723.3333" y="152.987" width="433.3334" height="52.7272" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="187.6364" text-anchor="middle" font-size="19.0147" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Is quality sufficient?</text>
+  <line x1="1006.6667" y1="205.7143" x2="1106.6666" y2="243.3766" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="1073.3333" y="231.3247" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">YES</text>
+  <rect x="973.3333" y="243.3766" width="266.6667" height="52.7272" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1106.6666" y="278.0259" text-anchor="middle" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">Keep using prompts</text>
+  <line x1="840" y1="205.7143" x2="673.3334" y2="258.4416" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="740" y="235.8441" font-size="15.8456" fill="var(--danger-accent)" font-family="Arial, sans-serif">NO</text>
+  <rect x="456.6666" y="258.4416" width="433.3334" height="52.7272" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="673.3334" y="293.0909" text-anchor="middle" font-size="17.4301" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Better examples help?</text>
+  <line x1="773.3333" y1="311.1688" x2="906.6667" y2="348.8312" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="856.6667" y="336.7792" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">YES</text>
+  <rect x="806.6666" y="348.8312" width="266.6667" height="45.1948" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="378.961" text-anchor="middle" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use few-shot learning</text>
+  <line x1="573.3333" y1="311.1688" x2="456.6666" y2="363.8961" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="506.6667" y="341.2987" font-size="15.8456" fill="var(--danger-accent)" font-family="Arial, sans-serif">NO</text>
+  <rect x="256.6667" y="363.8961" width="399.9999" height="52.7272" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="456.6666" y="398.5455" text-anchor="middle" font-size="17.4301" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">50+ labeled examples?</text>
+  <line x1="340" y1="416.6234" x2="206.6667" y2="454.2857" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="256.6667" y="442.2338" font-size="15.8456" fill="var(--danger-accent)" font-family="Arial, sans-serif">NO</text>
+  <rect x="40" y="454.2857" width="333.3333" height="45.1948" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="206.6667" y="484.4156" text-anchor="middle" font-size="15.8456" fill="var(--danger-accent)" font-family="Arial, sans-serif">Collect more data first</text>
+  <line x1="556.6667" y1="416.6234" x2="656.6667" y2="461.8182" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="623.3333" y="443.7403" font-size="15.8456" fill="var(--ok-accent)" font-family="Arial, sans-serif">YES</text>
+  <rect x="540" y="461.8182" width="233.3333" height="52.7272" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="656.6667" y="496.4675" text-anchor="middle" font-size="20.5993" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">FINE-TUNE</text>
   <line x1="656.6667" y1="514.5454" x2="656.6667" y2="552.2078" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="106.6667" y="559.7403" width="300" height="60.2597" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="256.6667" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)">50-500: OpenAI</text>
-  <text x="256.6667" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)">fine-tuning</text>
-  <rect x="456.6666" y="559.7403" width="300" height="60.2597" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="606.6666" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)">500-10K: Open-source</text>
-  <text x="606.6666" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)">+ LoRA</text>
-  <rect x="806.6666" y="559.7403" width="300" height="60.2597" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.6666" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)">10K+: Full</text>
-  <text x="956.6666" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)">fine-tuning viable</text>
+  <rect x="106.6667" y="559.7403" width="300" height="60.2597" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="256.6667" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">50-500: OpenAI</text>
+  <text x="256.6667" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">fine-tuning</text>
+  <rect x="456.6666" y="559.7403" width="300" height="60.2597" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="606.6666" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">500-10K: Open-source</text>
+  <text x="606.6666" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">+ LoRA</text>
+  <rect x="806.6666" y="559.7403" width="300" height="60.2597" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.6666" y="585.3507" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">10K+: Full</text>
+  <text x="956.6666" y="607.9481" text-anchor="middle" font-size="15.8456" fill="var(--text)" font-family="Arial, sans-serif">fine-tuning viable</text>
   <line x1="656.6667" y1="552.2078" x2="256.6667" y2="559.7403" stroke="var(--primary-border)" stroke-width="1.561" />
   <line x1="656.6667" y1="552.2078" x2="606.6666" y2="559.7403" stroke="var(--primary-border)" stroke-width="1.561" />
   <line x1="656.6667" y1="552.2078" x2="956.6666" y2="559.7403" stroke="var(--primary-border)" stroke-width="1.561" />

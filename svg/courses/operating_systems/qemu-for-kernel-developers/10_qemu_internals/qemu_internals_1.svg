@@ -1,97 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="662.2222" y="40" text-anchor="middle" font-size="28.543" font-weight="bold">QEMU Main Loop / Event Loop</text>
-  <rect x="40" y="104.4444" width="266.6667" height="236.2963" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="173.3333" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">I/O Handlers</text>
-  <text x="173.3333" y="254.8148" text-anchor="middle" font-size="23.7858">fd read/write</text>
-  <text x="173.3333" y="310.6667" text-anchor="middle" font-size="23.7858">select/poll/epoll</text>
-  <rect x="351.111" y="104.4444" width="266.6667" height="236.2963" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="484.4444" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">Timers</text>
-  <text x="484.4444" y="254.8148" text-anchor="middle" font-size="23.7858">QEMU clocks</text>
-  <text x="484.4444" y="310.6667" text-anchor="middle" font-size="23.7858">ns resolution</text>
-  <rect x="662.2222" y="104.4444" width="266.6667" height="236.2963" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="795.5555" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">BH (Bottom</text>
-  <text x="795.5555" y="254.8148" text-anchor="middle" font-size="23.7858">Halves)</text>
-  <text x="795.5555" y="310.6667" text-anchor="middle" font-size="23.7858">Deferred work</text>
-  <rect x="973.3333" y="104.4444" width="266.6667" height="236.2963" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1106.6667" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">vCPU Threads</text>
-  <text x="1106.6667" y="254.8148" text-anchor="middle" font-size="23.7858">TCG or KVM</text>
-  <text x="1106.6667" y="310.6667" text-anchor="middle" font-size="23.7858">Per-CPU thread</text>
-  <rect x="217.7777" y="448.1481" width="888.8889" height="171.8519" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="662.2222" y="525.4815" text-anchor="middle" font-size="26.1645" font-weight="bold">main_loop_wait()</text>
-  <text x="662.2222" y="589.9259" text-anchor="middle" font-size="23.7858">Poll fds, run timers, execute BHs, dispatch events</text>
-  <line x1="173.3333" y1="340.7407" x2="173.3333" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="484.4444" y1="340.7407" x2="484.4444" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="795.5555" y1="340.7407" x2="795.5555" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="1106.6667" y1="340.7407" x2="1106.6667" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
+  <text x="662.2222" y="40" text-anchor="middle" font-size="28.543" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">QEMU Main Loop / Event Loop</text>
+  <rect x="40" y="104.4444" width="266.6667" height="236.2963" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="173.3333" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">I/O Handlers</text>
+  <text x="173.3333" y="254.8148" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--primary-text)">fd read/write</text>
+  <text x="173.3333" y="310.6667" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--primary-text)">select/poll/epoll</text>
+  <rect x="351.111" y="104.4444" width="266.6667" height="236.2963" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="484.4444" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Timers</text>
+  <text x="484.4444" y="254.8148" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--info-text)">QEMU clocks</text>
+  <text x="484.4444" y="310.6667" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--info-text)">ns resolution</text>
+  <rect x="662.2222" y="104.4444" width="266.6667" height="236.2963" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="795.5555" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">BH (Bottom</text>
+  <text x="795.5555" y="254.8148" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--warn-text)">Halves)</text>
+  <text x="795.5555" y="310.6667" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--warn-text)">Deferred work</text>
+  <rect x="973.3333" y="104.4444" width="266.6667" height="236.2963" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1106.6667" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">vCPU Threads</text>
+  <text x="1106.6667" y="254.8148" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--ok-text)">TCG or KVM</text>
+  <text x="1106.6667" y="310.6667" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--ok-text)">Per-CPU thread</text>
+  <rect x="217.7777" y="448.1481" width="888.8889" height="171.8519" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="662.2222" y="525.4815" text-anchor="middle" font-size="26.1645" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">main_loop_wait()</text>
+  <text x="662.2222" y="589.9259" text-anchor="middle" font-size="23.7858" font-family="Arial, sans-serif" fill="var(--danger-text)">Poll fds, run timers, execute BHs, dispatch events</text>
+  <line x1="173.3333" y1="340.7407" x2="173.3333" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="484.4444" y1="340.7407" x2="484.4444" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="795.5555" y1="340.7407" x2="795.5555" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="1106.6667" y1="340.7407" x2="1106.6667" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -99,26 +99,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowd0_09_qemu_internals" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -102,8 +102,8 @@
   <g transform="translate(300,155)">
     <circle cx="40" cy="40" r="97.3311" fill="none" stroke="var(--danger-border)" stroke-width="5.5652" />
     <circle cx="40" cy="40" r="69.5221" fill="none" stroke="var(--danger-border)" stroke-width="2.7826" opacity="0.4" />
-    <text x="40" y="32.7501" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial,sans-serif" font-size="18.0758" font-weight="bold">Submission</text>
-    <text x="40" y="57.4001" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial,sans-serif" font-size="18.0758" font-weight="bold">Queue</text>
+    <text x="40" y="32.7501" text-anchor="middle" fill="var(--danger-accent)" font-size="18.0758" font-weight="bold" font-family="Arial, sans-serif">Submission</text>
+    <text x="40" y="57.4001" text-anchor="middle" fill="var(--danger-accent)" font-size="18.0758" font-weight="bold" font-family="Arial, sans-serif">Queue</text>
     <circle cx="40" cy="-61.5" r="6.9522" fill="var(--danger-fill)" />
     <circle cx="130.0001" cy="-10.75" r="6.9522" fill="var(--danger-fill)" />
     <circle cx="130.0001" cy="90.75" r="6.9522" fill="var(--danger-fill)" />
@@ -113,17 +113,17 @@
   <g transform="translate(530,155)">
     <circle cx="40" cy="40" r="97.3311" fill="none" stroke="var(--primary-border)" stroke-width="5.5652" />
     <circle cx="40" cy="40" r="69.5221" fill="none" stroke="var(--primary-border)" stroke-width="2.7826" opacity="0.4" />
-    <text x="40" y="32.7501" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="18.0758" font-weight="bold">Completion</text>
-    <text x="40" y="57.4001" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="18.0758" font-weight="bold">Queue</text>
+    <text x="40" y="32.7501" text-anchor="middle" fill="var(--primary-accent)" font-size="18.0758" font-weight="bold" font-family="Arial, sans-serif">Completion</text>
+    <text x="40" y="57.4001" text-anchor="middle" fill="var(--primary-accent)" font-size="18.0758" font-weight="bold" font-family="Arial, sans-serif">Queue</text>
     <circle cx="40" cy="-61.5" r="6.9522" fill="var(--primary-fill)" />
     <circle cx="130.0001" cy="-10.75" r="6.9522" fill="var(--primary-fill)" />
     <circle cx="130.0001" cy="90.75" r="6.9522" fill="var(--primary-fill)" />
     <circle cx="-50" cy="-10.75" r="6.9522" fill="var(--primary-fill)" />
   </g>
   <path d="M 595 264.75 L 730 264.75" stroke="var(--text-faint)" stroke-width="2.7826" stroke-dasharray="8.3478" />
-  <text x="662.5" y="250.25" text-anchor="middle" fill="var(--text-muted)" font-family="Arial,sans-serif" font-size="13.9043">shared</text>
+  <text x="662.5" y="250.25" text-anchor="middle" fill="var(--text-muted)" font-size="13.9043" font-family="Arial, sans-serif">shared</text>
   <rect x="565" y="127" width="195" height="36.2499" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-  <text x="662.5" y="151.65" text-anchor="middle" fill="var(--info-accent)" font-family="Arial,sans-serif" font-size="16.6854">Linux Kernel 5.1+</text>
-  <text x="639.9999" y="475" text-anchor="middle" fill="var(--surface)" font-family="Arial,sans-serif" font-size="44.4941" font-weight="bold">io_uring</text>
-  <text x="639.9999" y="525.75" text-anchor="middle" fill="var(--text-faint)" font-family="Arial,sans-serif" font-size="22.2472">High-Performance Asynchronous I/O for Linux</text>
+  <text x="662.5" y="151.65" text-anchor="middle" fill="var(--info-accent)" font-size="16.6854" font-family="Arial, sans-serif">Linux Kernel 5.1+</text>
+  <text x="639.9999" y="475" text-anchor="middle" fill="var(--surface)" font-size="44.4941" font-weight="bold" font-family="Arial, sans-serif">io_uring</text>
+  <text x="639.9999" y="525.75" text-anchor="middle" fill="var(--text-faint)" font-size="22.2472" font-family="Arial, sans-serif">High-Performance Asynchronous I/O for Linux</text>
 </svg>

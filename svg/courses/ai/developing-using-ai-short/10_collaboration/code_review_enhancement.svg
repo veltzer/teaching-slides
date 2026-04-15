@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,48 +97,45 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="50.634971" rx="6.737879" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="50.634971" rx="6.737879" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="74.063543" text-anchor="middle" fill="var(--bg)" font-size="23.421542" font-weight="bold" font-family="Arial, sans-serif">AI-Enhanced Code Review Process</text>
-  <rect x="40" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="171.37931" y="164.285714" text-anchor="middle" fill="var(--warn-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">Pre-Review</text>
   <text x="171.37931" y="187.301714" text-anchor="middle" fill="var(--warn-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">AI Check</text>
   <text x="171.37931" y="214.920686" text-anchor="middle" fill="var(--text-muted)" font-size="12.686753" font-family="Arial, sans-serif">Automated scan</text>
   <line x1="303.793103" y1="178.095314" x2="360.689655" y2="178.095314" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="371.034483" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="371.034483" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="502.413793" y="171.650971" text-anchor="middle" fill="var(--ok-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">Human</text>
   <text x="502.413793" y="194.666743" text-anchor="middle" fill="var(--ok-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">Review</text>
   <text x="502.413793" y="218.603314" text-anchor="middle" fill="var(--text-muted)" font-size="12.686753" font-family="Arial, sans-serif">Focus on design</text>
   <line x1="634.827476" y1="178.095314" x2="691.724138" y2="178.095314" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="702.068966" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="702.068966" y="127.460457" width="263.793103" height="101.269829" rx="6.737879" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="833.448276" y="171.650971" text-anchor="middle" fill="var(--primary-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">AI</text>
   <text x="833.448276" y="194.666743" text-anchor="middle" fill="var(--primary-accent)" font-size="15.614361" font-weight="bold" font-family="Arial, sans-serif">Suggestions</text>
   <text x="833.448276" y="218.603314" text-anchor="middle" fill="var(--text-muted)" font-size="12.686753" font-family="Arial, sans-serif">Refactor hints</text>
   <line x1="965.862069" y1="178.095314" x2="1022.758621" y2="178.095314" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <rect x="1033.103448" y="127.460457" width="206.896552" height="101.269829" rx="6.737879" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="1033.103448" y="127.460457" width="206.896552" height="101.269829" rx="6.737879" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1136.551724" y="187.301714" text-anchor="middle" fill="var(--ok-accent)" font-size="19.518064" font-weight="bold" font-family="Arial, sans-serif">Merge</text>
   <text x="1136.551724" y="214.920686" text-anchor="middle" fill="var(--text-muted)" font-size="12.686753" font-family="Arial, sans-serif">Approved</text>
   <rect x="40" y="270.158857" width="1200" height="82.857143" rx="6.737879" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="640" y="305.142857" text-anchor="middle" fill="var(--primary-accent)" font-size="18.542082" font-weight="bold" font-family="Arial, sans-serif">AI Pre-Review: Humans focus on what matters</text>
   <text x="640" y="334.603314" text-anchor="middle" fill="var(--text)" font-size="15.614361" font-family="Arial, sans-serif">AI handles style/linting/security → humans review architecture &amp; logic</text>
-  <rect x="40" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="40" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="226.206897" y="417.460457" text-anchor="middle" fill="var(--primary-accent)" font-size="17.566212" font-weight="bold" font-family="Arial, sans-serif">AI Catches</text>
   <text x="226.206897" y="448.761943" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Code style violations</text>
   <text x="226.206897" y="476.381029" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Security patterns</text>
   <text x="226.206897" y="504" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Missing test cases</text>
   <text x="226.206897" y="531.619086" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Documentation gaps</text>
   <text x="226.206897" y="559.238171" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Complexity metrics</text>
-  <rect x="453.793103" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="453.793103" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="417.460457" text-anchor="middle" fill="var(--ok-accent)" font-size="17.566212" font-weight="bold" font-family="Arial, sans-serif">Humans Focus On</text>
   <text x="640" y="448.761943" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Business logic</text>
   <text x="640" y="476.381029" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Architecture decisions</text>
   <text x="640" y="504" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Domain correctness</text>
   <text x="640" y="531.619086" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Team knowledge share</text>
   <text x="640" y="559.238171" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Mentoring junior devs</text>
-  <rect x="867.586097" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="867.586097" y="380.634971" width="372.413793" height="239.365029" rx="6.737879" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1053.792993" y="417.460457" text-anchor="middle" fill="var(--warn-accent)" font-size="17.566212" font-weight="bold" font-family="Arial, sans-serif">Outcomes</text>
   <text x="1053.792993" y="448.761943" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• 50% faster review</text>
   <text x="1053.792993" y="476.381029" text-anchor="middle" fill="var(--text)" font-size="14.638492" font-family="Arial, sans-serif">• Fewer reopened PRs</text>

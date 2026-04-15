@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,77 +97,74 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="186.885262" height="163.380418" rx="7.989837" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="40" y="40" width="186.885262" height="49.014108" rx="7.989837" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="72.676184" width="186.885262" height="16.338092" fill="var(--primary-fill)" rx="7.989837" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="133.442631" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">LLM / ChatModel</text>
-  <text x="133.442631" y="121.690293" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ChatOpenAI</text>
-  <text x="133.442631" y="146.197348" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ChatAnthropic</text>
-  <text x="133.442631" y="170.704402" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">HuggingFaceHub</text>
+  <rect x="40" y="40" width="186.885262" height="163.380418" rx="7.989837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="186.885262" height="49.014108" rx="7.989837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="72.676184" width="186.885262" height="16.338092" fill="url(#grad-primary)" rx="7.989837" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.442631" y="71.314607" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">LLM / ChatModel</text>
+  <text x="133.442631" y="121.690293" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">ChatOpenAI</text>
+  <text x="133.442631" y="146.197348" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">ChatAnthropic</text>
+  <text x="133.442631" y="170.704402" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">HuggingFaceHub</text>
   <line x1="226.885262" y1="121.690293" x2="276.065594" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="276.065594" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
-  <rect x="276.065594" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="276.065594" y="72.676184" width="196.721329" height="16.338092" fill="var(--info-fill)" rx="7.989837" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="374.426259" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">PromptTemplate</text>
-  <text x="374.426259" y="118.967136" font-family="monospace" font-size="13.316394" fill="var(--text)" text-anchor="middle">ChatPromptTemplate</text>
-  <text x="374.426259" y="143.47419" font-family="monospace" font-size="13.316394" fill="var(--text)" text-anchor="middle">FewShotPromptTemplate</text>
-  <text x="374.426259" y="167.981245" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">variable injection</text>
+  <rect x="276.065594" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="276.065594" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="276.065594" y="72.676184" width="196.721329" height="16.338092" fill="url(#grad-info)" rx="7.989837" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="374.426259" y="71.314607" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">PromptTemplate</text>
+  <text x="374.426259" y="118.967136" font-size="13.316394" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">ChatPromptTemplate</text>
+  <text x="374.426259" y="143.47419" font-size="13.316394" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">FewShotPromptTemplate</text>
+  <text x="374.426259" y="167.981245" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">variable injection</text>
   <line x1="472.786923" y1="121.690293" x2="521.967255" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="521.967255" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="521.967255" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="521.967255" y="72.676184" width="196.721329" height="16.338092" fill="var(--warn-fill)" rx="7.989837" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.32792" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">Chain (LCEL)</text>
-  <text x="620.32792" y="118.967136" font-family="monospace" font-size="13.886868" fill="var(--text)" text-anchor="middle">prompt | llm | parser</text>
-  <text x="620.32792" y="143.47419" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">SequentialChain</text>
-  <text x="620.32792" y="167.981245" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle">RouterChain</text>
+  <rect x="521.967255" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="521.967255" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="521.967255" y="72.676184" width="196.721329" height="16.338092" fill="url(#grad-warn)" rx="7.989837" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.32792" y="71.314607" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Chain (LCEL)</text>
+  <text x="620.32792" y="118.967136" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">prompt | llm | parser</text>
+  <text x="620.32792" y="143.47419" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">SequentialChain</text>
+  <text x="620.32792" y="167.981245" font-size="13.316394" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">RouterChain</text>
   <line x1="718.688584" y1="121.690293" x2="767.868811" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="767.868811" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="767.868811" y="40" width="196.721329" height="163.380418" rx="7.989837" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="767.868811" y="40" width="196.721329" height="49.014108" rx="7.989837" fill="var(--ok-accent)" />
   <rect x="767.868811" y="72.676184" width="196.721329" height="16.338092" fill="var(--ok-accent)" rx="7.989837"/>
-  <text x="866.229476" y="71.314607" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle">OutputParser</text>
-  <text x="866.229476" y="118.967136" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">StrOutputParser</text>
-  <text x="866.229476" y="143.47419" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">JsonOutputParser</text>
-  <text x="866.229476" y="167.981245" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">PydanticOutputParser</text>
+  <text x="866.229476" y="71.314607" font-size="17.358452" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">OutputParser</text>
+  <text x="866.229476" y="118.967136" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">StrOutputParser</text>
+  <text x="866.229476" y="143.47419" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">JsonOutputParser</text>
+  <text x="866.229476" y="167.981245" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">PydanticOutputParser</text>
   <line x1="964.590245" y1="121.690293" x2="1013.770577" y2="121.690293" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1013.770577" y="60.422657" width="167.213129" height="122.53527" rx="7.989837" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1097.377142" y="110.798007" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Structured</text>
-  <text x="1097.377142" y="135.305061" font-family="Arial,sans-serif" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Output</text>
-  <text x="1097.377142" y="165.258258" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text-muted)" text-anchor="middle">dict / Pydantic</text>
-  <rect x="40" y="298.685477" width="196.721329" height="149.765312" rx="7.989837" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="1013.770577" y="60.422657" width="167.213129" height="122.53527" rx="7.989837" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097.377142" y="110.798007" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Structured</text>
+  <text x="1097.377142" y="135.305061" font-size="17.358452" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Output</text>
+  <text x="1097.377142" y="165.258258" font-size="13.886868" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">dict / Pydantic</text>
+  <rect x="40" y="298.685477" width="196.721329" height="149.765312" rx="7.989837" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="298.685477" width="196.721329" height="46.291122" rx="7.989837" fill="var(--danger-accent)" />
   <rect x="40" y="328.638676" width="196.721329" height="16.338092" fill="var(--danger-accent)" rx="7.989837"/>
-  <text x="138.360664" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Memory</text>
-  <text x="138.360664" y="370.845231" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ConversationBuffer</text>
-  <text x="138.360664" y="395.352285" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">ConversationSummary</text>
-  <text x="138.360664" y="419.859339" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)" text-anchor="middle">VectorStoreRetriever</text>
+  <text x="138.360664" y="328.638676" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Memory</text>
+  <text x="138.360664" y="370.845231" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">ConversationBuffer</text>
+  <text x="138.360664" y="395.352285" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">ConversationSummary</text>
+  <text x="138.360664" y="419.859339" font-size="13.886868" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">VectorStoreRetriever</text>
   <line x1="138.360664" y1="298.685477" x2="138.360664" y2="203.380418" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="150.163944" y="260.563488" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--danger-accent)">history</text>
-  <rect x="492.459056" y="298.685477" width="255.737727" height="176.995523" rx="7.989837" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="150.163944" y="260.563488" font-size="13.316394" fill="var(--danger-accent)" font-family="Arial, sans-serif">history</text>
+  <rect x="492.459056" y="298.685477" width="255.737727" height="176.995523" rx="7.989837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="492.459056" y="298.685477" width="255.737727" height="46.291122" rx="7.989837" fill="var(--primary-accent)" />
   <rect x="492.459056" y="328.638676" width="255.737727" height="16.338092" fill="var(--primary-accent)" rx="7.989837"/>
-  <text x="620.32792" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Tools / Agents</text>
-  <text x="512.131189" y="373.568218" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Search (DuckDuckGo, Tavily)</text>
-  <text x="512.131189" y="398.075273" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Python REPL</text>
-  <text x="512.131189" y="422.582327" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• SQL Database</text>
-  <text x="512.131189" y="447.089381" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Custom @tool functions</text>
+  <text x="620.32792" y="328.638676" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Tools / Agents</text>
+  <text x="512.131189" y="373.568218" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Search (DuckDuckGo, Tavily)</text>
+  <text x="512.131189" y="398.075273" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Python REPL</text>
+  <text x="512.131189" y="422.582327" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• SQL Database</text>
+  <text x="512.131189" y="447.089381" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Custom @tool functions</text>
   <line x1="620.32792" y1="298.685477" x2="620.32792" y2="203.380418" stroke="var(--primary-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="632.131199" y="257.840331" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--primary-accent)">tool results</text>
-  <rect x="787.541049" y="298.685477" width="236.065594" height="176.995523" rx="7.989837" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="632.131199" y="257.840331" font-size="13.316394" fill="var(--primary-accent)" font-family="Arial, sans-serif">tool results</text>
+  <rect x="787.541049" y="298.685477" width="236.065594" height="176.995523" rx="7.989837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="787.541049" y="298.685477" width="236.065594" height="46.291122" rx="7.989837" fill="var(--text-muted)" />
   <rect x="787.541049" y="328.638676" width="236.065594" height="16.338092" fill="var(--text-muted)" rx="7.989837"/>
-  <text x="905.573846" y="328.638676" font-family="Arial,sans-serif" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle">Vector Store / RAG</text>
-  <text x="807.213182" y="373.568218" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Chroma / FAISS / Pinecone</text>
-  <text x="807.213182" y="398.075273" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Document loaders</text>
-  <text x="807.213182" y="422.582327" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Text splitters</text>
-  <text x="807.213182" y="447.089381" font-family="Arial,sans-serif" font-size="13.886868" fill="var(--text)">• Embeddings retrieval</text>
+  <text x="905.573846" y="328.638676" font-size="16.201125" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Vector Store / RAG</text>
+  <text x="807.213182" y="373.568218" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Chroma / FAISS / Pinecone</text>
+  <text x="807.213182" y="398.075273" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Document loaders</text>
+  <text x="807.213182" y="422.582327" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Text splitters</text>
+  <text x="807.213182" y="447.089381" font-size="13.886868" fill="var(--text)" font-family="Arial, sans-serif">• Embeddings retrieval</text>
   <line x1="866.229476" y1="298.685477" x2="748.196783" y2="203.380418" stroke="var(--text-muted)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <text x="795.409902" y="268.732618" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-muted)">context docs</text>
+  <text x="795.409902" y="268.732618" font-size="13.316394" fill="var(--text-muted)" font-family="Arial, sans-serif">context docs</text>
   <rect x="40" y="527.417927" width="1200" height="92.582073" rx="7.989837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="554.648138" font-family="Arial,sans-serif" font-size="15.044063" font-weight="bold" fill="var(--text)" text-anchor="middle">LCEL (LangChain Expression Language) — pipe everything together:</text>
-  <text x="640.000052" y="584.601167" font-family="monospace" font-size="15.044063" fill="var(--primary-accent)" text-anchor="middle">chain = prompt | llm | output_parser    response = chain.invoke({"question": "..."})</text>
-  <text x="640.000052" y="609.108221" font-family="Arial,sans-serif" font-size="13.316394" fill="var(--text-faint)" text-anchor="middle">Supports streaming, async, batch, and parallel execution out of the box</text>
+  <text x="640.000052" y="554.648138" font-size="15.044063" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">LCEL (LangChain Expression Language) — pipe everything together:</text>
+  <text x="640.000052" y="584.601167" font-size="15.044063" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">chain = prompt | llm | output_parser    response = chain.invoke({"question": "..."})</text>
+  <text x="640.000052" y="609.108221" font-size="13.316394" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">Supports streaming, async, batch, and parallel execution out of the box</text>
 </svg>

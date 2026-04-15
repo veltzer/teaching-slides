@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,9 +97,6 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
     <linearGradient id="scope1" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#bbdefb" />
       <stop offset="100%" stop-color="#90caf9" />
@@ -125,27 +122,27 @@
       <stop offset="100%" stop-color="#0d47a1" />
     </linearGradient>
   </defs>
-  <text x="60.689655" y="40" font-size="18.323528" fill="var(--text-muted)">Scope</text>
-  <text x="1219.310345" y="40" font-size="18.323528" fill="var(--text-muted)" text-anchor="end">Priority</text>
+  <text x="60.689655" y="40" font-size="18.323528" fill="var(--text-muted)" font-family="Arial, sans-serif">Scope</text>
+  <text x="1219.310345" y="40" font-size="18.323528" fill="var(--text-muted)" text-anchor="end" font-family="Arial, sans-serif">Priority</text>
   <line x1="60.689655" y1="50.017201" x2="1219.310345" y2="50.017201" stroke="var(--surface)" stroke-width="1.3333" />
   <rect x="40" y="60.034527" width="1200" height="84.145113" rx="7.028363" fill="url(#scope1)" />
-  <text x="640" y="95.094918" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle">Organization Secrets</text>
-  <text x="640" y="127.150211" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle">shared across all repositories in the org</text>
-  <text x="1214.137931" y="115.12957" font-size="16.287529" fill="var(--text-muted)" text-anchor="end">lowest</text>
+  <text x="640" y="95.094918" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Organization Secrets</text>
+  <text x="640" y="127.150211" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">shared across all repositories in the org</text>
+  <text x="1214.137931" y="115.12957" font-size="16.287529" fill="var(--text-muted)" text-anchor="end" font-family="Arial, sans-serif">lowest</text>
   <rect x="81.37931" y="155.1985" width="1117.241379" height="84.145113" rx="7.028363" fill="url(#scope2)" />
-  <text x="640" y="190.259015" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle">Repository Secrets</text>
-  <text x="640" y="222.314308" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle">scoped to a single repository</text>
+  <text x="640" y="190.259015" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Repository Secrets</text>
+  <text x="640" y="222.314308" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">scoped to a single repository</text>
   <rect x="122.758621" y="250.362721" width="1034.482759" height="84.145113" rx="7.028363" fill="url(#scope3)" />
-  <text x="640" y="285.423112" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle">Environment Secrets</text>
-  <text x="640" y="317.478281" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle">scoped to a named deployment environment</text>
+  <text x="640" y="285.423112" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Environment Secrets</text>
+  <text x="640" y="317.478281" font-size="18.323528" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">scoped to a named deployment environment</text>
   <rect x="164.137931" y="345.526693" width="951.724138" height="84.145113" rx="7.028363" fill="url(#scope4)" />
-  <text x="640" y="380.587084" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle">Workflow env:</text>
-  <text x="640" y="412.642502" font-size="18.323528" fill="var(--text)" text-anchor="middle">workflow-level variables (env: at top level)</text>
+  <text x="640" y="380.587084" font-size="24.431293" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Workflow env:</text>
+  <text x="640" y="412.642502" font-size="18.323528" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">workflow-level variables (env: at top level)</text>
   <rect x="205.517241" y="440.690666" width="868.965517" height="84.145113" rx="7.028363" fill="url(#scope5)" />
-  <text x="640" y="475.751306" font-size="24.431293" font-weight="bold" fill="var(--bg)" text-anchor="middle">Job env:</text>
-  <text x="640" y="507.806474" font-size="18.323528" fill="var(--primary-accent)" text-anchor="middle">job-level variables (env: under a job)</text>
+  <text x="640" y="475.751306" font-size="24.431293" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Job env:</text>
+  <text x="640" y="507.806474" font-size="18.323528" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">job-level variables (env: under a job)</text>
   <rect x="246.896552" y="535.854887" width="786.206897" height="84.145113" rx="7.028363" fill="url(#scope6)" />
-  <text x="640" y="570.915278" font-size="24.431293" font-weight="bold" fill="var(--bg)" text-anchor="middle">Step env:</text>
-  <text x="640" y="602.970447" font-size="18.323528" fill="var(--primary-accent)" text-anchor="middle">step-level variables — highest specificity wins</text>
-  <text x="1012.413793" y="585.941142" font-size="16.287529" fill="var(--primary-accent)">highest</text>
+  <text x="640" y="570.915278" font-size="24.431293" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Step env:</text>
+  <text x="640" y="602.970447" font-size="18.323528" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">step-level variables — highest specificity wins</text>
+  <text x="1012.413793" y="585.941142" font-size="16.287529" fill="var(--primary-accent)" font-family="Arial, sans-serif">highest</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,50 +75,44 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.6,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="24.451" font-weight="bold" fill="var(--text)">Real-Time Stream Processing</text>
-  <rect x="40" y="201.6393" width="173.6842" height="76.0655" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="126.8422" y="235.8688" text-anchor="middle" font-size="18.3382" fill="var(--text)">Stream</text>
-  <text x="126.8422" y="262.4917" text-anchor="middle" font-size="18.3382" fill="var(--text)">Source</text>
-  <rect x="292.6316" y="201.6393" width="173.6842" height="76.0655" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="379.4738" y="249.1803" text-anchor="middle" fill="var(--text)">Kafka</text>
-  <rect x="545.2632" y="182.6229" width="221.0526" height="95.0819" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="655.7895" y="224.4589" text-anchor="middle" font-size="18.3382" fill="var(--text)">Stream</text>
-  <text x="655.7895" y="254.8852" text-anchor="middle" font-size="18.3382" fill="var(--text)">Processor</text>
-  <rect x="861.0527" y="106.5574" width="205.2632" height="76.0655" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="963.6843" y="148.3934" text-anchor="middle" font-size="18.3382" fill="var(--text)">Real-time Analytics</text>
-  <rect x="861.0527" y="277.7048" width="189.4737" height="76.0655" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="955.7895" y="325.2458" text-anchor="middle" fill="var(--text)">State Store</text>
-  <rect x="1145.2632" y="68.5245" width="94.7368" height="66.5574" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1192.6316" y="110.3607" text-anchor="middle" font-size="16.81" fill="var(--text)">Dash</text>
-  <rect x="1145.2632" y="163.6066" width="94.7368" height="66.5574" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1192.6316" y="205.4426" text-anchor="middle" font-size="16.81" fill="var(--text)">Alerts</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="24.451" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Real-Time Stream Processing</text>
+  <rect x="40" y="201.6393" width="173.6842" height="76.0655" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="126.8422" y="235.8688" text-anchor="middle" font-size="18.3382" fill="var(--text)" font-family="Arial, sans-serif">Stream</text>
+  <text x="126.8422" y="262.4917" text-anchor="middle" font-size="18.3382" fill="var(--text)" font-family="Arial, sans-serif">Source</text>
+  <rect x="292.6316" y="201.6393" width="173.6842" height="76.0655" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="379.4738" y="249.1803" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Kafka</text>
+  <rect x="545.2632" y="182.6229" width="221.0526" height="95.0819" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="655.7895" y="224.4589" text-anchor="middle" font-size="18.3382" fill="var(--text)" font-family="Arial, sans-serif">Stream</text>
+  <text x="655.7895" y="254.8852" text-anchor="middle" font-size="18.3382" fill="var(--text)" font-family="Arial, sans-serif">Processor</text>
+  <rect x="861.0527" y="106.5574" width="205.2632" height="76.0655" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="963.6843" y="148.3934" text-anchor="middle" font-size="18.3382" fill="var(--text)" font-family="Arial, sans-serif">Real-time Analytics</text>
+  <rect x="861.0527" y="277.7048" width="189.4737" height="76.0655" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="955.7895" y="325.2458" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">State Store</text>
+  <rect x="1145.2632" y="68.5245" width="94.7368" height="66.5574" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1192.6316" y="110.3607" text-anchor="middle" font-size="16.81" fill="var(--text)" font-family="Arial, sans-serif">Dash</text>
+  <rect x="1145.2632" y="163.6066" width="94.7368" height="66.5574" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1192.6316" y="205.4426" text-anchor="middle" font-size="16.81" fill="var(--text)" font-family="Arial, sans-serif">Alerts</text>
   <rect x="545.2632" y="391.8032" width="189.4737" height="66.5574" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.0001" y="433.6392" text-anchor="middle" fill="var(--text-muted)">Checkpoints</text>
+  <text x="640.0001" y="433.6392" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Checkpoints</text>
   <line x1="213.6843" y1="239.6721" x2="289.4737" y2="239.6721" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="466.3158" y1="239.6721" x2="542.1053" y2="230.164" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="766.3158" y1="205.4426" x2="857.8948" y2="148.3934" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -126,8 +120,8 @@
   <line x1="1066.3158" y1="129.377" x2="1142.1053" y2="102.7541" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="1066.3158" y1="159.8033" x2="1142.1053" y2="186.4262" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="655.7895" y1="277.7048" x2="647.8948" y2="387.9999" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.5421 4.5253" marker-end="url(#arrow)" />
-  <text x="679.4738" y="344.2622" text-anchor="start" font-size="15.2819" fill="var(--text-faint)">Checkpoint</text>
+  <text x="679.4738" y="344.2622" text-anchor="start" font-size="15.2819" fill="var(--text-faint)" font-family="Arial, sans-serif">Checkpoint</text>
   <rect x="40" y="515.4098" width="1200" height="104.5902" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.0001" y="559.1475" text-anchor="middle" font-size="18.3382" fill="var(--text-muted)">Events flow from sources through Kafka into stream processors for real-time analytics.</text>
-  <text x="640.0001" y="597.1803" text-anchor="middle" font-size="18.3382" fill="var(--text-muted)">Results feed dashboards and alerts. State and checkpoints enable fault-tolerant processing.</text>
+  <text x="640.0001" y="559.1475" text-anchor="middle" font-size="18.3382" fill="var(--text-muted)" font-family="Arial, sans-serif">Events flow from sources through Kafka into stream processors for real-time analytics.</text>
+  <text x="640.0001" y="597.1803" text-anchor="middle" font-size="18.3382" fill="var(--text-muted)" font-family="Arial, sans-serif">Results feed dashboards and alerts. State and checkpoints enable fault-tolerant processing.</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,52 +75,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowd8_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="198.1651" height="126.875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="139.0826" y="119.75" text-anchor="middle" font-size="21.7482">Sentinel 1</text>
-  <rect x="40" y="203.125" width="198.1651" height="126.875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="139.0826" y="282.875" text-anchor="middle" font-size="21.7482">Sentinel 2</text>
-  <rect x="40" y="366.25" width="198.1651" height="126.875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="139.0826" y="446" text-anchor="middle" font-size="21.7482">Sentinel 3</text>
-  <rect x="414.312" y="58.125" width="374.312" height="435" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="601.4679" y="130.625" text-anchor="middle" font-size="23.9231" font-weight="bold">Sentinel Channels</text>
-  <rect x="436.3303" y="156" width="330.2752" height="72.5" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="601.4679" y="206.75" text-anchor="middle" font-size="21.7482" fill="var(--danger-accent)">+sdown (subj. down)</text>
-  <rect x="436.3303" y="246.625" width="330.2752" height="72.5" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="601.4679" y="297.375" text-anchor="middle" font-size="21.7482" fill="var(--danger-accent)">+odown (obj. down)</text>
-  <rect x="436.3303" y="337.25" width="330.2752" height="72.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="601.4679" y="388" text-anchor="middle" font-size="21.7482" fill="var(--ok-accent)">+switch-master</text>
+  <rect x="40" y="40" width="198.1651" height="126.875" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="139.0826" y="119.75" text-anchor="middle" font-size="21.7482" font-family="Arial, sans-serif" fill="var(--info-text)">Sentinel 1</text>
+  <rect x="40" y="203.125" width="198.1651" height="126.875" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="139.0826" y="282.875" text-anchor="middle" font-size="21.7482" font-family="Arial, sans-serif" fill="var(--info-text)">Sentinel 2</text>
+  <rect x="40" y="366.25" width="198.1651" height="126.875" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="139.0826" y="446" text-anchor="middle" font-size="21.7482" font-family="Arial, sans-serif" fill="var(--info-text)">Sentinel 3</text>
+  <rect x="414.312" y="58.125" width="374.312" height="435" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="601.4679" y="130.625" text-anchor="middle" font-size="23.9231" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Sentinel Channels</text>
+  <rect x="436.3303" y="156" width="330.2752" height="72.5" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="601.4679" y="206.75" text-anchor="middle" font-size="21.7482" fill="var(--danger-accent)" font-family="Arial, sans-serif">+sdown (subj. down)</text>
+  <rect x="436.3303" y="246.625" width="330.2752" height="72.5" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="601.4679" y="297.375" text-anchor="middle" font-size="21.7482" fill="var(--danger-accent)" font-family="Arial, sans-serif">+odown (obj. down)</text>
+  <rect x="436.3303" y="337.25" width="330.2752" height="72.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="601.4679" y="388" text-anchor="middle" font-size="21.7482" fill="var(--ok-accent)" font-family="Arial, sans-serif">+switch-master</text>
   <rect x="436.3303" y="427.875" width="330.2752" height="43.5" fill="var(--bg)" stroke="var(--text-faint)" stroke-width="2.1333" rx="6" />
-  <text x="601.4679" y="464.125" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)">...more events</text>
-  <rect x="975.7798" y="130.625" width="264.2202" height="290" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1107.8899" y="214" text-anchor="middle" font-size="23.9231" font-weight="bold">Application</text>
-  <text x="1107.8899" y="275.625" text-anchor="middle" font-size="21.7482">SUBSCRIBE</text>
-  <text x="1107.8899" y="330" text-anchor="middle" font-size="21.7482">+switch-master</text>
-  <text x="1107.8899" y="384.375" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)">reconnect logic</text>
-  <line x1="238.1651" y1="105.25" x2="409.9082" y2="185" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd8_03_pubsub)" />
-  <line x1="238.1651" y1="264.75" x2="409.9082" y2="275.625" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd8_03_pubsub)" />
-  <line x1="238.1651" y1="431.5" x2="409.9082" y2="373.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd8_03_pubsub)" />
-  <line x1="788.6238" y1="275.625" x2="971.3761" y2="275.625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd8_03_pubsub)" />
-  <text x="667.5229" y="620" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)">Apps subscribe to Sentinel events for automatic failover handling</text>
+  <text x="601.4679" y="464.125" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)" font-family="Arial, sans-serif">...more events</text>
+  <rect x="975.7798" y="130.625" width="264.2202" height="290" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1107.8899" y="214" text-anchor="middle" font-size="23.9231" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Application</text>
+  <text x="1107.8899" y="275.625" text-anchor="middle" font-size="21.7482" font-family="Arial, sans-serif" fill="var(--primary-text)">SUBSCRIBE</text>
+  <text x="1107.8899" y="330" text-anchor="middle" font-size="21.7482" font-family="Arial, sans-serif" fill="var(--primary-text)">+switch-master</text>
+  <text x="1107.8899" y="384.375" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)" font-family="Arial, sans-serif">reconnect logic</text>
+  <line x1="238.1651" y1="105.25" x2="409.9082" y2="185" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="238.1651" y1="264.75" x2="409.9082" y2="275.625" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="238.1651" y1="431.5" x2="409.9082" y2="373.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="788.6238" y1="275.625" x2="971.3761" y2="275.625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="667.5229" y="620" text-anchor="middle" font-size="21.7482" fill="var(--text-muted)" font-family="Arial, sans-serif">Apps subscribe to Sentinel events for automatic failover handling</text>
 </svg>

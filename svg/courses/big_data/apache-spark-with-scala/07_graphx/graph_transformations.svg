@@ -1,79 +1,147 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">mapVertices</text>
-  <text x="230" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--primary-text)">transform every vertex attribute</text>
-  <text x="230" y="156" text-anchor="middle" font-family="monospace" font-size="14.376749" fill="var(--primary-text)">(id, attr) =&gt; newAttr</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+
+  <rect x="40" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--primary-text)" font-family="Courier New, monospace">mapVertices</text>
+  <text x="230" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--primary-text)" font-family="Arial, sans-serif">transform every vertex attribute</text>
+  <text x="230" y="156" text-anchor="middle" font-size="14.376749" fill="var(--primary-text)" font-family="Courier New, monospace">(id, attr) =&gt; newAttr</text>
   <rect x="80" y="187.636364" width="300" height="105.454545" rx="4.107643" fill="var(--shadow)"/>
-  <text x="230" y="219.272727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">g.mapVertices((id, a) =&gt;</text>
-  <text x="230" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  a.age * 2)</text>
-  <text x="230" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--primary-text)">edges unchanged, vertex type may change</text>
+  <text x="230" y="219.272727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">g.mapVertices((id, a) =&gt;</text>
+  <text x="230" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  a.age * 2)</text>
+  <text x="230" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--primary-text)" font-family="Arial, sans-serif">edges unchanged, vertex type may change</text>
 
-  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="630" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">mapEdges</text>
-  <text x="630" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--ok-text)">transform every edge attribute</text>
-  <text x="630" y="156" text-anchor="middle" font-family="monospace" font-size="14.376749" fill="var(--ok-text)">edge =&gt; newAttr</text>
+  <rect x="440" y="40" width="380" height="284.727273" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">mapEdges</text>
+  <text x="630" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--ok-text)" font-family="Arial, sans-serif">transform every edge attribute</text>
+  <text x="630" y="156" text-anchor="middle" font-size="14.376749" fill="var(--ok-text)" font-family="Courier New, monospace">edge =&gt; newAttr</text>
   <rect x="480" y="187.636364" width="300" height="105.454545" rx="4.107643" fill="var(--shadow)"/>
-  <text x="630" y="219.272727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">g.mapEdges(e =&gt;</text>
-  <text x="630" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  e.attr.length.toDouble)</text>
-  <text x="630" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--ok-text)">sees only the edge, not its endpoints</text>
+  <text x="630" y="219.272727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">g.mapEdges(e =&gt;</text>
+  <text x="630" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  e.attr.length.toDouble)</text>
+  <text x="630" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--ok-text)" font-family="Arial, sans-serif">sees only the edge, not its endpoints</text>
 
-  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1040" y="76.909091" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">mapTriplets</text>
-  <text x="1040" y="103.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--warn-text)">edge + both vertex attrs</text>
-  <text x="1040" y="156" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--warn-text)">(srcAttr, edge, dstAttr) =&gt; newAttr</text>
+  <rect x="840" y="40" width="400" height="284.727273" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="76.909091" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">mapTriplets</text>
+  <text x="1040" y="103.272727" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Arial, sans-serif">edge + both vertex attrs</text>
+  <text x="1040" y="156" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Courier New, monospace">(srcAttr, edge, dstAttr) =&gt; newAttr</text>
   <rect x="880" y="187.636364" width="320" height="105.454545" rx="4.107643" fill="var(--shadow)"/>
-  <text x="1040" y="219.272727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">g.mapTriplets(t =&gt;</text>
-  <text x="1040" y="242.472727" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--bg)">  t.srcAttr.age - t.dstAttr.age)</text>
-  <text x="1040" y="277.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--warn-text)">richest edge-level rewrite</text>
+  <text x="1040" y="219.272727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">g.mapTriplets(t =&gt;</text>
+  <text x="1040" y="242.472727" text-anchor="middle" font-size="13.349838" fill="var(--bg)" font-family="Courier New, monospace">  t.srcAttr.age - t.dstAttr.age)</text>
+  <text x="1040" y="277.272727" text-anchor="middle" font-size="12.322928" fill="var(--warn-text)" font-family="Arial, sans-serif">richest edge-level rewrite</text>
 
-  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="393.272727" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">reverse</text>
-  <text x="335" y="419.636364" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--danger-text)">flip every edge direction; structure preserved</text>
+  <rect x="40" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="393.272727" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">reverse</text>
+  <text x="335" y="419.636364" text-anchor="middle" font-size="13.349838" fill="var(--danger-text)" font-family="Arial, sans-serif">flip every edge direction; structure preserved</text>
   <rect x="133.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
-  <text x="160" y="510.327273" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--danger-border)">A</text>
+  <text x="160" y="510.327273" text-anchor="middle" font-size="14.376749" font-weight="bold" fill="var(--danger-border)" font-family="Arial, sans-serif">A</text>
   <rect x="283.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
-  <text x="310" y="510.327273" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--danger-border)">B</text>
+  <text x="310" y="510.327273" text-anchor="middle" font-size="14.376749" font-weight="bold" fill="var(--danger-border)" font-family="Arial, sans-serif">B</text>
   <line x1="186" y1="504" x2="278" y2="504" stroke="var(--bg)" stroke-width="3"/>
   <polygon points="284,504 272,497.672727 272,510.327273" fill="var(--bg)"/>
-  <text x="410" y="510.327273" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--bg)">=&gt;</text>
+  <text x="410" y="510.327273" font-size="22.592034" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">=&gt;</text>
   <rect x="463.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
-  <text x="490" y="510.327273" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--danger-border)">A</text>
+  <text x="490" y="510.327273" text-anchor="middle" font-size="14.376749" font-weight="bold" fill="var(--danger-border)" font-family="Arial, sans-serif">A</text>
   <rect x="573.3" y="477.3" width="53.3994" height="53.3994" rx="14" fill="var(--bg)"/>
-  <text x="600" y="510.327273" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--danger-border)">B</text>
+  <text x="600" y="510.327273" text-anchor="middle" font-size="14.376749" font-weight="bold" fill="var(--danger-border)" font-family="Arial, sans-serif">B</text>
   <line x1="578" y1="504" x2="520" y2="504" stroke="var(--bg)" stroke-width="3"/>
   <polygon points="516,504 528,497.672727 528,510.327273" fill="var(--bg)"/>
-  <text x="335" y="588.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--danger-text)">graph.reverse - no data shuffled</text>
+  <text x="335" y="588.363636" text-anchor="middle" font-size="12.322928" fill="var(--danger-text)" font-family="Arial, sans-serif">graph.reverse - no data shuffled</text>
 
-  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="393.272727" text-anchor="middle" font-family="monospace" font-size="20.538213" font-weight="bold" fill="var(--info-text)">subgraph</text>
-  <text x="945" y="419.636364" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--info-text)">filter with epred and vpred</text>
+  <rect x="650" y="356.363636" width="590" height="263.636364" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="393.272727" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--info-text)" font-family="Courier New, monospace">subgraph</text>
+  <text x="945" y="419.636364" text-anchor="middle" font-size="13.349838" fill="var(--info-text)" font-family="Arial, sans-serif">filter with epred and vpred</text>
   <rect x="697.408" y="470.863" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>
   <rect x="807.408" y="439.226" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>
   <rect x="917.408" y="481.408" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>
@@ -83,5 +151,5 @@
   <line x1="852" y1="463.927273" x2="918" y2="501.890909" stroke="var(--bg)" stroke-width="2"/>
   <line x1="830" y1="485.018182" x2="830" y2="544.072727" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="4,3"/>
   <line x1="962" y1="504" x2="1058" y2="474.472727" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="4,3"/>
-  <text x="945" y="598.909091" text-anchor="middle" font-family="monospace" font-size="12.322928" fill="var(--info-text)">g.subgraph(e =&gt; e.attr &gt; 0, (id,a) =&gt; a.active)</text>
+  <text x="945" y="598.909091" text-anchor="middle" font-size="12.322928" fill="var(--info-text)" font-family="Courier New, monospace">g.subgraph(e =&gt; e.attr &gt; 0, (id,a) =&gt; a.active)</text>
 </svg>

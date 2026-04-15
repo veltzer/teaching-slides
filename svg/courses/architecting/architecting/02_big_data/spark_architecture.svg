@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,62 +75,56 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="24.4543" font-weight="bold" fill="var(--text)">Apache Spark Architecture</text>
-  <rect x="477.8378" y="82.647" width="227.027" height="85.2941" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="591.3514" y="120.1765" text-anchor="middle" font-weight="bold" fill="var(--text)">Driver</text>
-  <text x="591.3514" y="147.4705" text-anchor="middle" font-size="15.2839" fill="var(--text-muted)">SparkContext</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="24.4543" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Apache Spark Architecture</text>
+  <rect x="477.8378" y="82.647" width="227.027" height="85.2941" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="591.3514" y="120.1765" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Driver</text>
+  <text x="591.3514" y="147.4705" text-anchor="middle" font-size="15.2839" fill="var(--text-muted)" font-family="Arial, sans-serif">SparkContext</text>
   <rect x="899.4595" y="91.1764" width="210.8108" height="68.2353" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1004.8649" y="125.2942" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)">Cluster Manager</text>
-  <text x="1004.8649" y="147.4705" text-anchor="middle" font-size="15.2839" fill="var(--text-faint)">(YARN/Mesos/K8s)</text>
-  <rect x="121.0811" y="287.353" width="210.8108" height="76.7647" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4865" y="333.4118" text-anchor="middle" fill="var(--text)">Executor 1</text>
-  <rect x="477.8378" y="287.353" width="210.8108" height="76.7647" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="583.2432" y="333.4118" text-anchor="middle" fill="var(--text)">Executor 2</text>
-  <rect x="834.5946" y="287.353" width="210.8108" height="76.7647" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="333.4118" text-anchor="middle" fill="var(--text)">Executor 3</text>
-  <rect x="121.0811" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4865" y="478.4117" text-anchor="middle" fill="var(--text)">Workers / Tasks</text>
-  <rect x="477.8378" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="583.2432" y="478.4117" text-anchor="middle" fill="var(--text)">Workers / Tasks</text>
-  <rect x="834.5946" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="478.4117" text-anchor="middle" fill="var(--text)">Workers / Tasks</text>
+  <text x="1004.8649" y="125.2942" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)" font-family="Arial, sans-serif">Cluster Manager</text>
+  <text x="1004.8649" y="147.4705" text-anchor="middle" font-size="15.2839" fill="var(--text-faint)" font-family="Arial, sans-serif">(YARN/Mesos/K8s)</text>
+  <rect x="121.0811" y="287.353" width="210.8108" height="76.7647" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4865" y="333.4118" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Executor 1</text>
+  <rect x="477.8378" y="287.353" width="210.8108" height="76.7647" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="583.2432" y="333.4118" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Executor 2</text>
+  <rect x="834.5946" y="287.353" width="210.8108" height="76.7647" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="333.4118" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Executor 3</text>
+  <rect x="121.0811" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4865" y="478.4117" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Workers / Tasks</text>
+  <rect x="477.8378" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="583.2432" y="478.4117" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Workers / Tasks</text>
+  <rect x="834.5946" y="440.8823" width="210.8108" height="59.7059" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="478.4117" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Workers / Tasks</text>
   <line x1="526.4865" y1="167.9412" x2="250.8108" y2="283.9411" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="591.3514" y1="167.9412" x2="583.2432" y2="283.9411" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="656.2162" y1="167.9412" x2="915.6757" y2="283.9411" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="704.8648" y1="125.2942" x2="896.2162" y2="125.2942" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.4033 4.442" marker-end="url(#arrow)" />
-  <text x="802.1622" y="113.353" text-anchor="middle" font-size="15.2839" fill="var(--text-faint)">Coordinates</text>
+  <text x="802.1622" y="113.353" text-anchor="middle" font-size="15.2839" fill="var(--text-faint)" font-family="Arial, sans-serif">Coordinates</text>
   <line x1="226.4865" y1="364.1177" x2="226.4865" y2="437.4705" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.4033 4.442" marker-end="url(#arrow)" />
-  <text x="250.8108" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)">Tasks</text>
+  <text x="250.8108" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)" font-family="Arial, sans-serif">Tasks</text>
   <line x1="583.2432" y1="364.1177" x2="583.2432" y2="437.4705" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.4033 4.442" marker-end="url(#arrow)" />
-  <text x="607.5675" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)">Tasks</text>
+  <text x="607.5675" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)" font-family="Arial, sans-serif">Tasks</text>
   <line x1="940" y1="364.1177" x2="940" y2="437.4705" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.4033 4.442" marker-end="url(#arrow)" />
-  <text x="964.3244" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)">Tasks</text>
+  <text x="964.3244" y="410.1764" text-anchor="start" font-size="15.2839" fill="var(--text-faint)" font-family="Arial, sans-serif">Tasks</text>
   <rect x="40" y="543.2353" width="1200" height="76.7647" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="580.7647" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)">The Driver coordinates with the Cluster Manager and distributes work across Executors.</text>
-  <text x="639.9999" y="608.0588" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)">Each Executor runs tasks on its workers for parallel data processing.</text>
+  <text x="639.9999" y="580.7647" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)" font-family="Arial, sans-serif">The Driver coordinates with the Cluster Manager and distributes work across Executors.</text>
+  <text x="639.9999" y="608.0588" text-anchor="middle" font-size="18.3407" fill="var(--text-muted)" font-family="Arial, sans-serif">Each Executor runs tasks on its workers for parallel data processing.</text>
 </svg>

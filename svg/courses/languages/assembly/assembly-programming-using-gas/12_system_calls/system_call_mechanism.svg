@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -105,155 +105,152 @@
       <stop offset="0%" stop-color="#fce4ec"/>
       <stop offset="100%" stop-color="#ffcdd2"/>
     </linearGradient>
-    <marker id="arrow-ret" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
   </defs>
   <!-- User Space zone -->
   <rect x="40" y="40" width="550.819672" height="235.932203" rx="6.400889" fill="url(#grad-user)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="40" width="550.819672" height="37.355932" rx="6.400889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="63.59322" width="550.819672" height="13.762712" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315.409836" y="65.559322" text-anchor="middle" font-family="monospace" font-size="17.699952" font-weight="bold" fill="var(--bg)">USER SPACE</text>
+  <rect x="40" y="40" width="550.819672" height="37.355932" rx="6.400889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="63.59322" width="550.819672" height="13.762712" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315.409836" y="65.559322" text-anchor="middle" font-size="17.699952" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">USER SPACE</text>
 
   <!-- User program box -->
   <rect x="69.508197" y="94.067851" width="196.721311" height="157.288136" rx="6.400889" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="167.868852" y="118.644068" text-anchor="middle" font-family="monospace" font-size="13.766605" font-weight="bold" fill="var(--primary-accent)">User Program</text>
-  <text x="167.868852" y="140.271186" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">mov $4, %eax</text>
-  <text x="167.868852" y="156" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">mov $1, %ebx</text>
-  <text x="167.868852" y="171.728814" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">mov $msg, %ecx</text>
-  <text x="167.868852" y="187.457627" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">mov $len, %edx</text>
-  <rect x="99.016393" y="199.254237" width="137.704918" height="27.525424" rx="6.400889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="167.868852" y="216.949153" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">int $0x80</text>
-  <text x="167.868852" y="242.508475" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">← triggers trap</text>
+  <text x="167.868852" y="118.644068" text-anchor="middle" font-size="13.766605" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">User Program</text>
+  <text x="167.868852" y="140.271186" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">mov $4, %eax</text>
+  <text x="167.868852" y="156" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">mov $1, %ebx</text>
+  <text x="167.868852" y="171.728814" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">mov $msg, %ecx</text>
+  <text x="167.868852" y="187.457627" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">mov $len, %edx</text>
+  <rect x="99.016393" y="199.254237" width="137.704918" height="27.525424" rx="6.400889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="167.868852" y="216.949153" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">int $0x80</text>
+  <text x="167.868852" y="242.508475" text-anchor="middle" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">← triggers trap</text>
 
   <!-- Register table in user space -->
   <rect x="290.819672" y="94.067851" width="280.327869" height="167.118644" rx="6.400889" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="430.491803" y="115.694861" text-anchor="middle" font-family="sans-serif" font-size="12.783322" font-weight="bold" fill="var(--primary-accent)">Register Assignments</text>
+  <text x="430.491803" y="115.694861" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Register Assignments</text>
   <line x1="290.819672" y1="121.593275" x2="571.147541" y2="121.593275" stroke="var(--primary-border)" stroke-width="1"/>
   <!-- header -->
-  <text x="344.918033" y="138.305085" text-anchor="middle" font-family="monospace" font-size="10.816649" font-weight="bold" fill="var(--text-muted)">Register</text>
-  <text x="492.459016" y="138.305085" text-anchor="middle" font-family="monospace" font-size="10.816649" font-weight="bold" fill="var(--text-muted)">Purpose</text>
+  <text x="344.918033" y="138.305085" text-anchor="middle" font-size="10.816649" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">Register</text>
+  <text x="492.459016" y="138.305085" text-anchor="middle" font-size="10.816649" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">Purpose</text>
   <line x1="290.819672" y1="144.20339" x2="571.147541" y2="144.20339" stroke="var(--primary-border)" stroke-width="1"/>
   <!-- rows -->
-  <text x="335.081967" y="160.915308" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--danger-accent)" font-weight="bold">EAX</text>
-  <text x="472.786885" y="160.915308" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">syscall number</text>
-  <text x="335.081967" y="177.627119" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--primary-accent)">EBX</text>
-  <text x="472.786885" y="177.627119" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">argument 1</text>
-  <text x="335.081967" y="194.338929" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--primary-accent)">ECX</text>
-  <text x="472.786885" y="194.338929" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">argument 2</text>
-  <text x="335.081967" y="211.050847" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--primary-accent)">EDX</text>
-  <text x="472.786885" y="211.050847" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">argument 3</text>
-  <text x="335.081967" y="227.762766" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--primary-accent)">ESI</text>
-  <text x="472.786885" y="227.762766" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">argument 4</text>
-  <text x="335.081967" y="244.474576" text-anchor="middle" font-family="monospace" font-size="11.799932" fill="var(--primary-accent)">EDI</text>
-  <text x="472.786885" y="244.474576" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">argument 5</text>
+  <text x="335.081967" y="160.915308" text-anchor="middle" font-size="11.799932" fill="var(--danger-accent)" font-weight="bold" font-family="Courier New, monospace">EAX</text>
+  <text x="472.786885" y="160.915308" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">syscall number</text>
+  <text x="335.081967" y="177.627119" text-anchor="middle" font-size="11.799932" fill="var(--primary-accent)" font-family="Courier New, monospace">EBX</text>
+  <text x="472.786885" y="177.627119" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">argument 1</text>
+  <text x="335.081967" y="194.338929" text-anchor="middle" font-size="11.799932" fill="var(--primary-accent)" font-family="Courier New, monospace">ECX</text>
+  <text x="472.786885" y="194.338929" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">argument 2</text>
+  <text x="335.081967" y="211.050847" text-anchor="middle" font-size="11.799932" fill="var(--primary-accent)" font-family="Courier New, monospace">EDX</text>
+  <text x="472.786885" y="211.050847" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">argument 3</text>
+  <text x="335.081967" y="227.762766" text-anchor="middle" font-size="11.799932" fill="var(--primary-accent)" font-family="Courier New, monospace">ESI</text>
+  <text x="472.786885" y="227.762766" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">argument 4</text>
+  <text x="335.081967" y="244.474576" text-anchor="middle" font-size="11.799932" fill="var(--primary-accent)" font-family="Courier New, monospace">EDI</text>
+  <text x="472.786885" y="244.474576" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">argument 5</text>
 
   <!-- int 0x80 trap arrow -->
   <line x1="315.409836" y1="325.084746" x2="315.409836" y2="364.40678" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="236.721311" y="325.084746" width="157.377049" height="25.559322" rx="6.400889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315.409836" y="341.796664" text-anchor="middle" font-family="monospace" font-size="11.799932" font-weight="bold" fill="var(--warn-accent)">CPU trap / int 0x80</text>
+  <rect x="236.721311" y="325.084746" width="157.377049" height="25.559322" rx="6.400889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315.409836" y="341.796664" text-anchor="middle" font-size="11.799932" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">CPU trap / int 0x80</text>
 
   <!-- Kernel Space zone -->
   <rect x="40" y="374.237288" width="550.819672" height="235.932203" rx="6.400889" fill="url(#grad-kernel)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="40" y="374.237288" width="550.819672" height="37.355932" rx="6.400889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="397.830508" width="550.819672" height="13.762712" fill="var(--danger-fill)" rx="6.400889" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315.409836" y="399.79661" text-anchor="middle" font-family="monospace" font-size="17.699952" font-weight="bold" fill="var(--bg)">KERNEL SPACE</text>
+  <rect x="40" y="374.237288" width="550.819672" height="37.355932" rx="6.400889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="397.830508" width="550.819672" height="13.762712" fill="url(#grad-danger)" rx="6.400889" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315.409836" y="399.79661" text-anchor="middle" font-size="17.699952" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">KERNEL SPACE</text>
 
   <!-- syscall dispatch box -->
   <rect x="69.508197" y="423.389831" width="216.393443" height="167.118644" rx="6.400889" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5"/>
-  <text x="177.704918" y="445.016949" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">syscall_table[EAX]</text>
+  <text x="177.704918" y="445.016949" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">syscall_table[EAX]</text>
   <line x1="69.508197" y1="450.915254" x2="285.901639" y2="450.915254" stroke="var(--danger-border)" stroke-width="1"/>
-  <text x="177.704918" y="468.610169" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">Dispatches to handler</text>
-  <text x="177.704918" y="484.338983" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">sys_write() / sys_read()</text>
-  <text x="177.704918" y="500.067797" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">sys_open() / sys_exit()</text>
-  <text x="177.704918" y="519.728814" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">Executes kernel logic</text>
-  <text x="177.704918" y="535.457627" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">Copies data if needed</text>
-  <text x="177.704918" y="554.135647" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">Return value → EAX</text>
-  <text x="177.704918" y="572.813559" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">(negative = error)</text>
+  <text x="177.704918" y="468.610169" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">Dispatches to handler</text>
+  <text x="177.704918" y="484.338983" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">sys_write() / sys_read()</text>
+  <text x="177.704918" y="500.067797" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">sys_open() / sys_exit()</text>
+  <text x="177.704918" y="519.728814" text-anchor="middle" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">Executes kernel logic</text>
+  <text x="177.704918" y="535.457627" text-anchor="middle" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">Copies data if needed</text>
+  <text x="177.704918" y="554.135647" text-anchor="middle" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">Return value → EAX</text>
+  <text x="177.704918" y="572.813559" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">(negative = error)</text>
 
   <!-- return arrow -->
-  <line x1="315.409836" y1="364.40678" x2="315.409836" y2="325.084746" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-ret)"/>
-  <text x="359.672131" y="350.644068" font-family="monospace" font-size="10.816649" fill="var(--ok-accent)">return value</text>
-  <text x="359.672131" y="364.40678" font-family="monospace" font-size="10.816649" fill="var(--ok-accent)">in EAX</text>
+  <line x1="315.409836" y1="364.40678" x2="315.409836" y2="325.084746" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="359.672131" y="350.644068" font-size="10.816649" fill="var(--ok-accent)" font-family="Courier New, monospace">return value</text>
+  <text x="359.672131" y="364.40678" font-size="10.816649" fill="var(--ok-accent)" font-family="Courier New, monospace">in EAX</text>
 
   <!-- Common syscalls table - right side -->
   <rect x="640" y="40" width="600" height="580" rx="6.400889" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="640" y="40" width="600" height="41.288136" rx="6.400889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="640" y="67.525424" width="600" height="13.762712" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="69.491525" text-anchor="middle" font-family="sans-serif" font-size="16.716562" font-weight="bold" fill="var(--bg)">Common Linux System Calls (x86)</text>
+  <rect x="640" y="40" width="600" height="41.288136" rx="6.400889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="67.525424" width="600" height="13.762712" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="69.491525" text-anchor="middle" font-size="16.716562" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Common Linux System Calls (x86)</text>
 
   <!-- Table header -->
-  <rect x="654.754098" y="94.067851" width="570.491803" height="31.457627" rx="6.400889" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="114.711864" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">EAX</text>
-  <text x="787.540984" y="114.711864" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">Name</text>
-  <text x="935.081967" y="114.711864" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">EBX</text>
-  <text x="1072.786885" y="114.711864" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">ECX</text>
-  <text x="1176.065574" y="114.711864" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--bg)">EDX</text>
+  <rect x="654.754098" y="94.067851" width="570.491803" height="31.457627" rx="6.400889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="114.711864" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">EAX</text>
+  <text x="787.540984" y="114.711864" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Name</text>
+  <text x="935.081967" y="114.711864" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">EBX</text>
+  <text x="1072.786885" y="114.711864" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">ECX</text>
+  <text x="1176.065574" y="114.711864" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">EDX</text>
 
   <!-- rows data -->
   <!-- exit -->
-  <rect x="654.754098" y="125.525478" width="570.491803" height="33.423729" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="147.152488" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">1</text>
-  <text x="787.540984" y="147.152488" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_exit</text>
-  <text x="935.081967" y="147.152488" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">exit code</text>
-  <text x="1072.786885" y="147.152488" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1176.065574" y="147.152488" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
+  <rect x="654.754098" y="125.525478" width="570.491803" height="33.423729" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="147.152488" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">1</text>
+  <text x="787.540984" y="147.152488" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_exit</text>
+  <text x="935.081967" y="147.152488" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">exit code</text>
+  <text x="1072.786885" y="147.152488" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1176.065574" y="147.152488" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
   <!-- fork -->
   <rect x="654.754098" y="158.949098" width="570.491803" height="33.423729" fill="var(--bg)" rx="6.400889"/>
-  <text x="713.770492" y="180.576325" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">2</text>
-  <text x="787.540984" y="180.576325" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_fork</text>
-  <text x="935.081967" y="180.576325" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1072.786885" y="180.576325" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1176.065574" y="180.576325" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
+  <text x="713.770492" y="180.576325" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">2</text>
+  <text x="787.540984" y="180.576325" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_fork</text>
+  <text x="935.081967" y="180.576325" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1072.786885" y="180.576325" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1176.065574" y="180.576325" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
   <!-- read -->
-  <rect x="654.754098" y="192.372936" width="570.491803" height="33.423729" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="213.999946" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">3</text>
-  <text x="787.540984" y="213.999946" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_read</text>
-  <text x="935.081967" y="213.999946" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">fd</text>
-  <text x="1072.786885" y="213.999946" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">buf ptr</text>
-  <text x="1176.065574" y="213.999946" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">count</text>
+  <rect x="654.754098" y="192.372936" width="570.491803" height="33.423729" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="213.999946" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">3</text>
+  <text x="787.540984" y="213.999946" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_read</text>
+  <text x="935.081967" y="213.999946" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">fd</text>
+  <text x="1072.786885" y="213.999946" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">buf ptr</text>
+  <text x="1176.065574" y="213.999946" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">count</text>
   <!-- write -->
   <rect x="654.754098" y="225.796556" width="570.491803" height="33.423729" fill="var(--bg)" rx="6.400889"/>
-  <text x="713.770492" y="247.423783" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">4</text>
-  <text x="787.540984" y="247.423783" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_write</text>
-  <text x="935.081967" y="247.423783" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">fd</text>
-  <text x="1072.786885" y="247.423783" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">buf ptr</text>
-  <text x="1176.065574" y="247.423783" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">count</text>
+  <text x="713.770492" y="247.423783" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">4</text>
+  <text x="787.540984" y="247.423783" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_write</text>
+  <text x="935.081967" y="247.423783" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">fd</text>
+  <text x="1072.786885" y="247.423783" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">buf ptr</text>
+  <text x="1176.065574" y="247.423783" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">count</text>
   <!-- open -->
-  <rect x="654.754098" y="259.220393" width="570.491803" height="33.423729" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="280.847403" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">5</text>
-  <text x="787.540984" y="280.847403" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_open</text>
-  <text x="935.081967" y="280.847403" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">filename</text>
-  <text x="1072.786885" y="280.847403" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">flags</text>
-  <text x="1176.065574" y="280.847403" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">mode</text>
+  <rect x="654.754098" y="259.220393" width="570.491803" height="33.423729" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="280.847403" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">5</text>
+  <text x="787.540984" y="280.847403" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_open</text>
+  <text x="935.081967" y="280.847403" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">filename</text>
+  <text x="1072.786885" y="280.847403" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">flags</text>
+  <text x="1176.065574" y="280.847403" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">mode</text>
   <!-- close -->
   <rect x="654.754098" y="292.644014" width="570.491803" height="33.423729" fill="var(--bg)" rx="6.400889"/>
-  <text x="713.770492" y="314.271241" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">6</text>
-  <text x="787.540984" y="314.271241" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_close</text>
-  <text x="935.081967" y="314.271241" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">fd</text>
-  <text x="1072.786885" y="314.271241" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1176.065574" y="314.271241" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
+  <text x="713.770492" y="314.271241" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">6</text>
+  <text x="787.540984" y="314.271241" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_close</text>
+  <text x="935.081967" y="314.271241" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">fd</text>
+  <text x="1072.786885" y="314.271241" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1176.065574" y="314.271241" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
   <!-- waitpid -->
-  <rect x="654.754098" y="326.067851" width="570.491803" height="33.423729" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="347.694861" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">7</text>
-  <text x="787.540984" y="347.694861" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_waitpid</text>
-  <text x="935.081967" y="347.694861" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">pid</text>
-  <text x="1072.786885" y="347.694861" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">stat_addr</text>
-  <text x="1176.065574" y="347.694861" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">options</text>
+  <rect x="654.754098" y="326.067851" width="570.491803" height="33.423729" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="347.694861" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">7</text>
+  <text x="787.540984" y="347.694861" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_waitpid</text>
+  <text x="935.081967" y="347.694861" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">pid</text>
+  <text x="1072.786885" y="347.694861" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">stat_addr</text>
+  <text x="1176.065574" y="347.694861" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">options</text>
   <!-- getpid -->
   <rect x="654.754098" y="359.491471" width="570.491803" height="33.423729" fill="var(--bg)" rx="6.400889"/>
-  <text x="713.770492" y="381.118698" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">20</text>
-  <text x="787.540984" y="381.118698" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_getpid</text>
-  <text x="935.081967" y="381.118698" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1072.786885" y="381.118698" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1176.065574" y="381.118698" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
+  <text x="713.770492" y="381.118698" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">20</text>
+  <text x="787.540984" y="381.118698" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_getpid</text>
+  <text x="935.081967" y="381.118698" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1072.786885" y="381.118698" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1176.065574" y="381.118698" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
   <!-- brk -->
-  <rect x="654.754098" y="392.915308" width="570.491803" height="33.423729" fill="var(--primary-fill)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="713.770492" y="414.542319" text-anchor="middle" font-family="monospace" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">45</text>
-  <text x="787.540984" y="414.542319" text-anchor="middle" font-family="monospace" font-size="12.783322" fill="var(--primary-accent)">sys_brk</text>
-  <text x="935.081967" y="414.542319" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text)">new brk addr</text>
-  <text x="1072.786885" y="414.542319" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
-  <text x="1176.065574" y="414.542319" text-anchor="middle" font-family="monospace" font-size="10.816649" fill="var(--text-faint)">—</text>
+  <rect x="654.754098" y="392.915308" width="570.491803" height="33.423729" fill="url(#grad-primary)" rx="6.400889" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="713.770492" y="414.542319" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Courier New, monospace">45</text>
+  <text x="787.540984" y="414.542319" text-anchor="middle" font-size="12.783322" fill="var(--primary-accent)" font-family="Courier New, monospace">sys_brk</text>
+  <text x="935.081967" y="414.542319" text-anchor="middle" font-size="10.816649" fill="var(--text)" font-family="Courier New, monospace">new brk addr</text>
+  <text x="1072.786885" y="414.542319" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
+  <text x="1176.065574" y="414.542319" text-anchor="middle" font-size="10.816649" fill="var(--text-faint)" font-family="Courier New, monospace">—</text>
 
   <!-- column dividers in table -->
   <line x1="744.262295" y1="94.067851" x2="744.262295" y2="426.338929" stroke="var(--primary-border)" stroke-width="1"/>
@@ -262,16 +259,16 @@
   <line x1="1131.803279" y1="94.067851" x2="1131.803279" y2="426.338929" stroke="var(--primary-border)" stroke-width="1"/>
 
   <!-- Note box -->
-  <rect x="654.754098" y="438.135539" width="570.491803" height="83.559268" rx="6.400889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="459.762766" text-anchor="middle" font-family="sans-serif" font-size="12.783322" font-weight="bold" fill="var(--warn-accent)">Flow Summary</text>
-  <text x="669.508197" y="478.440678" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">1. Load syscall number into EAX</text>
-  <text x="669.508197" y="494.169492" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">2. Load arguments into EBX, ECX, EDX, ESI, EDI</text>
-  <text x="669.508197" y="509.898305" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">3. Execute  int $0x80  →  CPU switches to ring 0 (kernel mode)</text>
+  <rect x="654.754098" y="438.135539" width="570.491803" height="83.559268" rx="6.400889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="459.762766" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Flow Summary</text>
+  <text x="669.508197" y="478.440678" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">1. Load syscall number into EAX</text>
+  <text x="669.508197" y="494.169492" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">2. Load arguments into EBX, ECX, EDX, ESI, EDI</text>
+  <text x="669.508197" y="509.898305" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">3. Execute  int $0x80  →  CPU switches to ring 0 (kernel mode)</text>
 
   <!-- Error note box -->
-  <rect x="654.754098" y="531.525424" width="570.491803" height="78.644068" rx="6.400889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="553.152542" text-anchor="middle" font-family="sans-serif" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)">Return Values</text>
-  <text x="669.508197" y="571.830454" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">EAX ≥ 0 : success (result value)</text>
-  <text x="669.508197" y="587.559268" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">EAX &lt; 0 : error (EAX = -errno, e.g. -2 = ENOENT)</text>
-  <text x="669.508197" y="603.288081" font-family="monospace" font-size="10.816649" fill="var(--text-muted)">Check with:  cmp $0, %eax  /  jl error_handler</text>
+  <rect x="654.754098" y="531.525424" width="570.491803" height="78.644068" rx="6.400889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="553.152542" text-anchor="middle" font-size="12.783322" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Return Values</text>
+  <text x="669.508197" y="571.830454" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">EAX ≥ 0 : success (result value)</text>
+  <text x="669.508197" y="587.559268" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">EAX &lt; 0 : error (EAX = -errno, e.g. -2 = ENOENT)</text>
+  <text x="669.508197" y="603.288081" font-size="10.816649" fill="var(--text-muted)" font-family="Courier New, monospace">Check with:  cmp $0, %eax  /  jl error_handler</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,59 +97,56 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="69.752066" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="149.090909" y="73.833388" text-anchor="middle" font-family="monospace" font-size="17.624184" fill="var(--primary-accent)">main.c</text>
+  <text x="149.090909" y="73.833388" text-anchor="middle" font-size="17.624184" fill="var(--primary-accent)" font-family="Courier New, monospace">main.c</text>
   <rect x="268.099174" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="347.438017" y="73.833388" text-anchor="middle" font-family="monospace" font-size="17.624184" fill="var(--primary-accent)">utils.c</text>
+  <text x="347.438017" y="73.833388" text-anchor="middle" font-size="17.624184" fill="var(--primary-accent)" font-family="Courier New, monospace">utils.c</text>
   <rect x="466.446281" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="545.785124" y="73.833388" text-anchor="middle" font-family="monospace" font-size="17.624184" fill="var(--primary-accent)">math.c</text>
-  <rect x="763.966942" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="843.305785" y="73.833388" text-anchor="middle" font-family="monospace" font-size="17.624184" fill="var(--warn-accent)">utils.h</text>
-  <rect x="962.313944" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1041.652787" y="73.833388" text-anchor="middle" font-family="monospace" font-size="17.624184" fill="var(--warn-accent)">math.h</text>
+  <text x="545.785124" y="73.833388" text-anchor="middle" font-size="17.624184" fill="var(--primary-accent)" font-family="Courier New, monospace">math.c</text>
+  <rect x="763.966942" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="843.305785" y="73.833388" text-anchor="middle" font-size="17.624184" fill="var(--warn-accent)" font-family="Courier New, monospace">utils.h</text>
+  <rect x="962.313944" y="40" width="158.677686" height="57.99994" rx="6.760115" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1041.652787" y="73.833388" text-anchor="middle" font-size="17.624184" fill="var(--warn-accent)" font-family="Courier New, monospace">math.h</text>
   <line x1="149.090909" y1="99.933379" x2="843.305785" y2="204.333343" stroke="var(--warn-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
   <line x1="347.438017" y1="99.933379" x2="843.305785" y2="204.333343" stroke="var(--warn-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
   <line x1="545.785124" y1="99.933379" x2="1041.652787" y2="204.333343" stroke="var(--warn-border)" stroke-width="1.3333" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
-  <text x="506.115597" y="126.99997" font-family="sans-serif" font-size="12.728621" fill="var(--warn-accent)">#include</text>
-  <text x="40" y="204.333343" font-family="sans-serif" font-size="13.707598" fill="var(--text-faint)">1. Preprocess</text>
+  <text x="506.115597" y="126.99997" font-size="12.728621" fill="var(--warn-accent)" font-family="Arial, sans-serif">#include</text>
+  <text x="40" y="204.333343" font-size="13.707598" fill="var(--text-faint)" font-family="Arial, sans-serif">1. Preprocess</text>
   <rect x="69.752066" y="213.99994" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="149.090909" y="242.99985" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text-muted)">main.i</text>
+  <text x="149.090909" y="242.99985" text-anchor="middle" font-size="14.686801" fill="var(--text-muted)" font-family="Courier New, monospace">main.i</text>
   <rect x="268.099174" y="213.99994" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="347.438017" y="242.99985" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text-muted)">utils.i</text>
+  <text x="347.438017" y="242.99985" text-anchor="middle" font-size="14.686801" fill="var(--text-muted)" font-family="Courier New, monospace">utils.i</text>
   <rect x="466.446281" y="213.99994" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="545.785124" y="242.99985" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text-muted)">math.i</text>
+  <text x="545.785124" y="242.99985" text-anchor="middle" font-size="14.686801" fill="var(--text-muted)" font-family="Courier New, monospace">math.i</text>
   <line x1="149.090909" y1="99.933379" x2="149.090909" y2="212.066621" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="347.438017" y1="99.933379" x2="347.438017" y2="212.066621" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="545.785124" y1="99.933379" x2="545.785124" y2="212.066621" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <text x="40" y="329.99982" font-family="sans-serif" font-size="13.707598" fill="var(--text-faint)">2. Compile</text>
+  <text x="40" y="329.99982" font-size="13.707598" fill="var(--text-faint)" font-family="Arial, sans-serif">2. Compile</text>
   <rect x="69.752066" y="339.666537" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="149.090909" y="368.666567" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text)">main.o</text>
+  <text x="149.090909" y="368.666567" text-anchor="middle" font-size="14.686801" fill="var(--text)" font-family="Courier New, monospace">main.o</text>
   <rect x="268.099174" y="339.666537" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="347.438017" y="368.666567" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text)">utils.o</text>
+  <text x="347.438017" y="368.666567" text-anchor="middle" font-size="14.686801" fill="var(--text)" font-family="Courier New, monospace">utils.o</text>
   <rect x="466.446281" y="339.666537" width="158.677686" height="48.333223" rx="6.760115" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="545.785124" y="368.666567" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--text)">math.o</text>
+  <text x="545.785124" y="368.666567" text-anchor="middle" font-size="14.686801" fill="var(--text)" font-family="Courier New, monospace">math.o</text>
   <line x1="149.090909" y1="264.266603" x2="149.090909" y2="337.733337" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="347.438017" y1="264.266603" x2="347.438017" y2="337.733337" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="545.785124" y1="264.266603" x2="545.785124" y2="337.733337" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="763.966942" y="339.666537" width="198.347107" height="48.333223" rx="6.760115" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="863.14039" y="368.666567" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--warn-accent)">libm.a / libc.a</text>
-  <text x="863.14039" y="310.666627" text-anchor="middle" font-family="sans-serif" font-size="13.707598" fill="var(--warn-accent)">system libraries</text>
-  <text x="40" y="484.666567" font-family="sans-serif" font-size="13.707598" fill="var(--text-faint)">3. Link</text>
+  <rect x="763.966942" y="339.666537" width="198.347107" height="48.333223" rx="6.760115" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="863.14039" y="368.666567" text-anchor="middle" font-size="14.686801" fill="var(--warn-accent)" font-family="Courier New, monospace">libm.a / libc.a</text>
+  <text x="863.14039" y="310.666627" text-anchor="middle" font-size="13.707598" fill="var(--warn-accent)" font-family="Arial, sans-serif">system libraries</text>
+  <text x="40" y="484.666567" font-size="13.707598" fill="var(--text-faint)" font-family="Arial, sans-serif">3. Link</text>
   <line x1="149.090909" y1="389.933319" x2="406.942149" y2="465.333253" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="347.438017" y1="389.933319" x2="406.942149" y2="465.333253" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="545.785124" y1="389.933319" x2="406.942149" y2="465.333253" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="863.14039" y1="389.933319" x2="565.619835" y2="465.333253" stroke="var(--warn-border)" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
-  <rect x="317.68595" y="467.266573" width="357.024793" height="57.99994" rx="6.760115" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="496.198347" y="502.066561" text-anchor="middle" font-family="monospace" font-size="21.540656" font-weight="bold" fill="var(--bg)">./program</text>
-  <rect x="763.966942" y="467.266573" width="476.033058" height="96.666687" rx="6.760115" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1001.983471" y="494.333283" text-anchor="middle" font-family="sans-serif" font-size="15.665891" font-weight="bold" fill="var(--primary-accent)">Header files (.h) are shared contracts</text>
-  <text x="783.801653" y="517.533235" font-family="sans-serif" font-size="13.707598" fill="var(--text-muted)">• Declare functions — never define them</text>
-  <text x="783.801653" y="536.866549" font-family="sans-serif" font-size="13.707598" fill="var(--text-muted)">• Use include guards: #ifndef MY_H / #define MY_H</text>
-  <text x="783.801653" y="556.199742" font-family="sans-serif" font-size="13.707598" fill="var(--text-muted)">• Each .c file compiled independently</text>
-  <rect x="69.752066" y="581.333253" width="654.545455" height="38.666747" rx="6.760115" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="397.024793" y="605.499805" text-anchor="middle" font-family="monospace" font-size="14.686801" fill="var(--primary-accent)">gcc main.c utils.c math.c -o program   # or use Make</text>
+  <rect x="317.68595" y="467.266573" width="357.024793" height="57.99994" rx="6.760115" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="496.198347" y="502.066561" text-anchor="middle" font-size="21.540656" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">./program</text>
+  <rect x="763.966942" y="467.266573" width="476.033058" height="96.666687" rx="6.760115" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1001.983471" y="494.333283" text-anchor="middle" font-size="15.665891" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Header files (.h) are shared contracts</text>
+  <text x="783.801653" y="517.533235" font-size="13.707598" fill="var(--text-muted)" font-family="Arial, sans-serif">• Declare functions — never define them</text>
+  <text x="783.801653" y="536.866549" font-size="13.707598" fill="var(--text-muted)" font-family="Arial, sans-serif">• Use include guards: #ifndef MY_H / #define MY_H</text>
+  <text x="783.801653" y="556.199742" font-size="13.707598" fill="var(--text-muted)" font-family="Arial, sans-serif">• Each .c file compiled independently</text>
+  <rect x="69.752066" y="581.333253" width="654.545455" height="38.666747" rx="6.760115" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="397.024793" y="605.499805" text-anchor="middle" font-size="14.686801" fill="var(--primary-accent)" font-family="Courier New, monospace">gcc main.c utils.c math.c -o program   # or use Make</text>
 </svg>

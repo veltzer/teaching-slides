@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,59 +75,53 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#28a745" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)">Valet Key Pattern</text>
-  <rect x="40" y="154.4737" width="182.2785" height="76.3157" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="131.1391" y="200.2631" text-anchor="middle" font-weight="bold" fill="var(--text)">Client</text>
-  <rect x="480.5063" y="78.1579" width="243.0379" height="83.9474" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="602.0252" y="116.3158" text-anchor="middle" font-weight="bold" fill="var(--text)">Application</text>
-  <text x="602.0252" y="143.7896" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">Auth &amp; Token Gen</text>
-  <rect x="936.2025" y="154.4737" width="243.0379" height="83.9474" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1057.7214" y="188.0527" text-anchor="middle" font-weight="bold" fill="var(--text)">Storage Service</text>
-  <text x="1057.7214" y="215.5263" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">Validate &amp; Serve</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Valet Key Pattern</text>
+  <rect x="40" y="154.4737" width="182.2785" height="76.3157" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.1391" y="200.2631" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
+  <rect x="480.5063" y="78.1579" width="243.0379" height="83.9474" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="602.0252" y="116.3158" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
+  <text x="602.0252" y="143.7896" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">Auth &amp; Token Gen</text>
+  <rect x="936.2025" y="154.4737" width="243.0379" height="83.9474" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1057.7214" y="188.0527" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Storage Service</text>
+  <text x="1057.7214" y="215.5263" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">Validate &amp; Serve</text>
   <line x1="222.2785" y1="177.3685" x2="477.4683" y2="116.3158" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="336.2024" y="127" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)">1. Request access</text>
+  <text x="336.2024" y="127" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Request access</text>
   <rect x="526.0759" y="200.2631" width="182.2785" height="38.1578" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="617.2151" y="226.2106" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">2. Validate request</text>
+  <text x="617.2151" y="226.2106" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">2. Validate request</text>
   <line x1="723.5442" y1="116.3158" x2="933.1645" y2="177.3685" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="837.4682" y="127" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)">3. Generate token</text>
+  <text x="837.4682" y="127" text-anchor="middle" font-size="15.698" fill="var(--primary-accent)" font-family="Arial, sans-serif">3. Generate token</text>
   <line x1="936.2025" y1="197.2106" x2="726.5822" y2="136.1579" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.3288 4.1644" marker-end="url(#arrow-ok)" />
-  <text x="845.0632" y="181.9474" text-anchor="middle" font-size="14.271" fill="var(--ok-accent)">Signed token/URL</text>
+  <text x="845.0632" y="181.9474" text-anchor="middle" font-size="14.271" fill="var(--ok-accent)" font-family="Arial, sans-serif">Signed token/URL</text>
   <line x1="480.5063" y1="136.1579" x2="225.3164" y2="197.2106" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.3288 4.1644" marker-end="url(#arrow-ok)" />
-  <text x="336.2024" y="185" text-anchor="middle" font-size="15.698" fill="var(--ok-accent)">4. Return token</text>
+  <text x="336.2024" y="185" text-anchor="middle" font-size="15.698" fill="var(--ok-accent)" font-family="Arial, sans-serif">4. Return token</text>
   <line x1="131.1391" y1="230.7895" x2="131.1391" y2="398.6842" stroke="var(--danger-border)" stroke-width="2" />
   <line x1="131.1391" y1="398.6842" x2="1057.7214" y2="398.6842" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="602.0252" y="386.4737" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--danger-accent)">5. Direct access with token</text>
+  <text x="602.0252" y="386.4737" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">5. Direct access with token</text>
   <rect x="966.5822" y="429.2105" width="197.4684" height="38.1578" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1065.3164" y="455.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)">6. Validate token</text>
+  <text x="1065.3164" y="455.1579" text-anchor="middle" font-size="14.271" fill="var(--text-muted)" font-family="Arial, sans-serif">6. Validate token</text>
   <line x1="1057.7214" y1="467.3683" x2="1057.7214" y2="505.5263" stroke="var(--ok-border)" stroke-width="2" />
   <line x1="1057.7214" y1="505.5263" x2="131.1391" y2="505.5263" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="602.0252" y="497.8947" text-anchor="middle" font-size="17.1252" fill="var(--ok-accent)">7. Grant access to resource</text>
+  <text x="602.0252" y="497.8947" text-anchor="middle" font-size="17.1252" fill="var(--ok-accent)" font-family="Arial, sans-serif">7. Grant access to resource</text>
   <rect x="40" y="551.3158" width="1200" height="68.6842" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="581.8421" text-anchor="middle" font-size="17.1252" fill="var(--text-muted)">The Valet Key pattern offloads resource access from the application to the storage directly.</text>
-  <text x="639.9999" y="606.2631" text-anchor="middle" font-size="17.1252" fill="var(--text-muted)">The app generates a limited-scope token, and the client accesses storage directly, bypassing the app for data transfer.</text>
+  <text x="639.9999" y="581.8421" text-anchor="middle" font-size="17.1252" fill="var(--text-muted)" font-family="Arial, sans-serif">The Valet Key pattern offloads resource access from the application to the storage directly.</text>
+  <text x="639.9999" y="606.2631" text-anchor="middle" font-size="17.1252" fill="var(--text-muted)" font-family="Arial, sans-serif">The app generates a limited-scope token, and the client accesses storage directly, bypassing the app for data transfer.</text>
 </svg>

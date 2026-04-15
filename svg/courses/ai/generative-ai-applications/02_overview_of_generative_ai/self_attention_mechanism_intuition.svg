@@ -1,87 +1,144 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <rect x="40" y="40" width="1200" height="87.731092" rx="5.923887" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="74.117647" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.720919" font-weight="bold" fill="var(--text)">"The animal didn't cross the street because it was too tired"</text>
   <text x="640" y="108.235294" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.771661" fill="var(--text-muted)">What does "it" refer to? Attention weights resolve the reference.</text>
 
   <text x="280" y="171.596639" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">The</text>
-  <rect x="300" y="152.10084" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="152.10084" width="60" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="380" y="171.596639" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.05</text>
 
   <text x="280" y="220.336134" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" font-weight="bold" fill="var(--danger-accent)">animal</text>
-  <rect x="300" y="200.840336" width="820" height="29.243697" rx="5.923887" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="200.840336" width="820" height="29.243697" rx="5.923887" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1130" y="220.336134" font-family="Arial, sans-serif" font-size="15.797032" font-weight="bold" fill="var(--danger-accent)">0.68  high</text>
 
   <text x="280" y="269.07563" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">didn't</text>
-  <rect x="300" y="249.579832" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="249.579832" width="60" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="380" y="269.07563" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.05</text>
 
   <text x="280" y="317.815126" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">cross</text>
-  <rect x="300" y="298.319328" width="90" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="298.319328" width="90" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="410" y="317.815126" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.07</text>
 
   <text x="280" y="366.554622" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">the</text>
-  <rect x="300" y="347.058824" width="30" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="347.058824" width="30" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="350" y="366.554622" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.02</text>
 
   <text x="280" y="415.294118" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">street</text>
-  <rect x="300" y="395.798319" width="140" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="395.798319" width="140" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="460" y="415.294118" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.12</text>
 
   <text x="280" y="464.033613" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">because</text>
-  <rect x="300" y="444.537815" width="30" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="444.537815" width="30" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="350" y="464.033613" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.02</text>
 
   <text x="280" y="512.773109" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">was</text>
-  <rect x="300" y="493.277311" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="493.277311" width="60" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="380" y="512.773109" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.04</text>
 
   <text x="280" y="561.512605" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">too</text>
-  <rect x="300" y="542.016807" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="542.016807" width="60" height="29.243697" rx="5.923887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="380" y="561.512605" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.04</text>
 
   <text x="280" y="610.252101" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" font-weight="bold" fill="var(--warn-accent)">tired</text>
-  <rect x="300" y="590.756303" width="200" height="29.243697" rx="5.923887" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="300" y="590.756303" width="200" height="29.243697" rx="5.923887" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="520" y="610.252101" font-family="Arial, sans-serif" font-size="15.797032" font-weight="bold" fill="var(--warn-accent)">0.17  supports</text>
 
-  <rect x="1150" y="298.319328" width="90" height="38.991597" rx="5.923887" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1150" y="298.319328" width="90" height="38.991597" rx="5.923887" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1195" y="324.638655" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.771661" font-weight="bold" fill="var(--danger-text)">it =</text>
   <text x="1195" y="361.680672" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text)">animal</text>
 </svg>

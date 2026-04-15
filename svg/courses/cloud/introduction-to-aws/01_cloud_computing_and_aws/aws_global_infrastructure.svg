@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,79 +96,79 @@
 
   <!-- Background -->
   <!-- Region 1: us-east-1 -->
-  <rect x="40" y="40" width="370" height="407.017544" rx="6.566261" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="370" height="407.017544" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174729" font-weight="bold" fill="var(--primary-accent)">us-east-1</text>
   <text x="225" y="106.140295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text-muted)">N. Virginia</text>
   <!-- AZs -->
-  <rect x="69.5633" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="69.5633" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="120" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-1a</text>
   <text x="120" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">us-east-1a</text>
-  <rect x="174.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="174.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="225" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-1b</text>
   <text x="225" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">us-east-1b</text>
-  <rect x="279.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="279.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-1c</text>
   <text x="330" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">us-east-1c</text>
   <!-- Edge Locations for Region 1 -->
-  <rect x="67.8952" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="117.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="167.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="257.895" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="327.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="67.8952" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="117.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="167.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="257.895" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="327.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="225" y="416.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--warn-accent)">Edge Locations</text>
 
   <!-- Region 2: eu-west-1 -->
-  <rect x="455" y="40" width="370" height="407.017544" rx="6.566261" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="455" y="40" width="370" height="407.017544" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174729" font-weight="bold" fill="var(--primary-accent)">eu-west-1</text>
   <text x="640" y="106.140295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text-muted)">Ireland</text>
   <!-- AZs -->
-  <rect x="484.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="484.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="535" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-2a</text>
   <text x="535" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">eu-west-1a</text>
-  <rect x="589.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="589.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-2b</text>
   <text x="640" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">eu-west-1b</text>
-  <rect x="694.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="694.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="745" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-2c</text>
   <text x="745" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">eu-west-1c</text>
   <!-- Edge Locations for Region 2 -->
-  <rect x="482.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="542.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="607.895" y="338.246" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="687.895" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="747.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="482.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="542.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="607.895" y="338.246" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="687.895" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="747.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="640" y="416.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--warn-accent)">Edge Locations</text>
 
   <!-- Region 3: ap-southeast-1 -->
-  <rect x="870" y="40" width="370" height="407.017544" rx="6.566261" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="870" y="40" width="370" height="407.017544" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="80.701754" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174729" font-weight="bold" fill="var(--primary-accent)">ap-southeast-1</text>
   <text x="1055" y="106.140295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text-muted)">Singapore</text>
   <!-- AZs -->
-  <rect x="899.563" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="899.563" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-3a</text>
   <text x="950" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">ap-se-1a</text>
-  <rect x="1004.56" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1004.56" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1055" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-3b</text>
   <text x="1055" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">ap-se-1b</text>
-  <rect x="1109.56" y="152.37" width="100.873" height="100.873" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1109.56" y="152.37" width="100.873" height="100.873" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1160" y="197.719354" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" font-weight="bold" fill="var(--ok-accent)">AZ-3c</text>
   <text x="1160" y="218.070232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096106" fill="var(--text-muted)">ap-se-1c</text>
   <!-- Edge Locations for Region 3 -->
-  <rect x="897.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="957.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1027.9" y="338.246" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1097.9" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1157.9" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="897.895" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="957.895" y="353.509" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1027.9" y="338.246" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1097.9" y="343.334" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1157.9" y="333.158" width="24.2096" height="24.2096" rx="12.1048" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="1055" y="416.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--warn-accent)">Edge Locations</text>
 
   <!-- Legend -->
   <rect x="340" y="487.719298" width="600" height="132.280702" rx="6.566261" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="518.245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139761" font-weight="bold" fill="var(--text)">Legend</text>
-  <rect x="400" y="538.596491" width="30" height="20.350877" rx="6.566261" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="400" y="538.596491" width="30" height="20.350877" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="445" y="554.877193" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text)">Region</text>
-  <rect x="555.878" y="534.65" width="28.2446" height="28.2446" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="555.878" y="534.65" width="28.2446" height="28.2446" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="598" y="554.877193" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text)">Availability Zone</text>
-  <rect x="759.913" y="538.685" width="20.1746" height="20.1746" rx="10.0873" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="759.913" y="538.685" width="20.1746" height="20.1746" rx="10.0873" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="793" y="554.877193" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--text)">Edge Location</text>
   <text x="640" y="594.561347" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.11359" fill="var(--text-muted)">Each Region has multiple isolated AZs connected via low-latency links</text>
 </svg>

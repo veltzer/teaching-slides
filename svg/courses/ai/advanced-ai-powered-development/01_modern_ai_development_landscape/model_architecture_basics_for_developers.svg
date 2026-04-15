@@ -1,48 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.996148" font-weight="bold" fill="var(--text)">Transformer Architecture for Developers</text>
 
   <!-- Pipeline of 4 stages -->
-  <rect x="40" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="172.20339" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--primary-text)">Input Tokens</text>
   <text x="172.20339" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--primary-text)">code + text split</text>
   <text x="172.20339" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--primary-text)">into subwords</text>
@@ -50,7 +105,7 @@
 
   <line x1="309.491525" y1="187.636364" x2="350.169492" y2="187.636364" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="355.254237" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="355.254237" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487.457627" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--ok-text)">Self-Attention</text>
   <text x="487.457627" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--ok-text)">every token sees</text>
   <text x="487.457627" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--ok-text)">every other token</text>
@@ -58,7 +113,7 @@
 
   <line x1="624.745763" y1="187.636364" x2="665.423729" y2="187.636364" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="670.508475" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="670.508475" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="802.711864" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--warn-text)">Feed-Forward</text>
   <text x="802.711864" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--warn-text)">non-linear</text>
   <text x="802.711864" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--warn-text)">transformations</text>
@@ -66,7 +121,7 @@
 
   <line x1="940" y1="187.636364" x2="980.677966" y2="187.636364" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <rect x="985.762712" y="92.727273" width="254.237288" height="189.818182" rx="8.284614" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="985.762712" y="92.727273" width="254.237288" height="189.818182" rx="8.284614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1112.881356" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--danger-text)">Output Probs</text>
   <text x="1112.881356" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--danger-text)">softmax over vocab</text>
   <text x="1112.881356" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--danger-text)">sample next token</text>

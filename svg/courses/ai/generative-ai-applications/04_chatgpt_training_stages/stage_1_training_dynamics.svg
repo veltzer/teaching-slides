@@ -1,110 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
-  <text x="630.4763" y="40" text-anchor="middle" font-size="26.1303" font-weight="bold" fill="var(--text)">Stage 1: Training Dynamics - Loss Curve</text>
+</defs>
+  <text x="630.4763" y="40" text-anchor="middle" font-size="26.1303" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Stage 1: Training Dynamics - Loss Curve</text>
   <line x1="59.0477" y1="82.9631" x2="59.0477" y2="440.9877" stroke="var(--text)" stroke-width="0.6929" />
   <line x1="59.0477" y1="440.9877" x2="1240" y2="440.9877" stroke="var(--text)" stroke-width="0.6929" />
-  <text x="40" y="269.136" text-anchor="middle" font-size="21.1611" fill="var(--text)" transform="rotate(-90, 50, 190)">Loss</text>
-  <text x="630.4763" y="491.1112" text-anchor="middle" font-size="21.8225" fill="var(--text)">Tokens processed</text>
-  <text x="40" y="97.2841" text-anchor="end" font-size="21.8225" fill="var(--text-muted)">4.0</text>
-  <text x="40" y="183.21" text-anchor="end" font-size="21.8225" fill="var(--text-muted)">3.0</text>
-  <text x="40" y="269.136" text-anchor="end" font-size="21.8225" fill="var(--text-muted)">2.0</text>
-  <text x="40" y="355.0617" text-anchor="end" font-size="21.8225" fill="var(--text-muted)">1.5</text>
-  <text x="249.5239" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)">200B</text>
-  <text x="478.0954" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)">400B</text>
-  <text x="706.6667" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)">600B</text>
-  <text x="935.2379" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)">800B</text>
-  <text x="1163.8094" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)">1T+</text>
+  <text x="40" y="269.136" text-anchor="middle" font-size="21.1611" fill="var(--text)" transform="rotate(-90, 50, 190)" font-family="Arial, sans-serif">Loss</text>
+  <text x="630.4763" y="491.1112" text-anchor="middle" font-size="21.8225" fill="var(--text)" font-family="Arial, sans-serif">Tokens processed</text>
+  <text x="40" y="97.2841" text-anchor="end" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">4.0</text>
+  <text x="40" y="183.21" text-anchor="end" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">3.0</text>
+  <text x="40" y="269.136" text-anchor="end" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">2.0</text>
+  <text x="40" y="355.0617" text-anchor="end" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">1.5</text>
+  <text x="249.5239" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">200B</text>
+  <text x="478.0954" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">400B</text>
+  <text x="706.6667" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">600B</text>
+  <text x="935.2379" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">800B</text>
+  <text x="1163.8094" y="469.6298" text-anchor="middle" font-size="21.8225" fill="var(--text-muted)" font-family="Arial, sans-serif">1T+</text>
   <path d="M 78.0952 97.2841 Q 154.2858 140.2471 249.5239 197.531 Q 363.8094 254.8148 478.0954 297.7779 Q 630.4763 340.7408 782.8573 369.3829 Q 935.2379 390.8642 1087.6191 405.1854 Q 1182.8571 412.346 1220.9523 415.2101" fill="none" stroke="var(--primary-border)" stroke-width="1.0394" />
   <path d="M 592.381 326.4198 L 601.9048 283.4569 L 611.4287 333.5806" fill="none" stroke="var(--danger-border)" stroke-width="0.6929" />
-  <text x="649.5239" y="276.2963" font-size="21.8225" fill="var(--danger-accent)">spike</text>
-  <rect x="59.0477" y="519.7533" width="571.4284" height="42.9629" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="344.7619" y="548.3952" text-anchor="middle" font-size="21.8225" fill="var(--text)">Rapid initial improvement</text>
-  <rect x="649.5239" y="519.7533" width="571.4284" height="42.9629" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.2379" y="548.3952" text-anchor="middle" font-size="21.8225" fill="var(--text)">Gradual diminishing returns</text>
-  <rect x="59.0477" y="577.0371" width="571.4284" height="42.9629" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="344.7619" y="605.6792" text-anchor="middle" font-size="21.8225" fill="var(--text)">Occasional loss spikes</text>
-  <rect x="649.5239" y="577.0371" width="571.4284" height="42.9629" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="935.2379" y="605.6792" text-anchor="middle" font-size="21.8225" fill="var(--text)">No clear convergence</text>
+  <text x="649.5239" y="276.2963" font-size="21.8225" fill="var(--danger-accent)" font-family="Arial, sans-serif">spike</text>
+  <rect x="59.0477" y="519.7533" width="571.4284" height="42.9629" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="344.7619" y="548.3952" text-anchor="middle" font-size="21.8225" fill="var(--text)" font-family="Arial, sans-serif">Rapid initial improvement</text>
+  <rect x="649.5239" y="519.7533" width="571.4284" height="42.9629" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="935.2379" y="548.3952" text-anchor="middle" font-size="21.8225" fill="var(--text)" font-family="Arial, sans-serif">Gradual diminishing returns</text>
+  <rect x="59.0477" y="577.0371" width="571.4284" height="42.9629" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="344.7619" y="605.6792" text-anchor="middle" font-size="21.8225" fill="var(--text)" font-family="Arial, sans-serif">Occasional loss spikes</text>
+  <rect x="649.5239" y="577.0371" width="571.4284" height="42.9629" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="935.2379" y="605.6792" text-anchor="middle" font-size="21.8225" fill="var(--text)" font-family="Arial, sans-serif">No clear convergence</text>
 </svg>

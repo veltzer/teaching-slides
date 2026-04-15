@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,12 +97,9 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="566.829268" y="40" width="146.341463" height="49.512187" rx="6.412362" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="70.0611" text-anchor="middle" font-family="monospace" font-size="27.862568" font-weight="bold" fill="var(--bg)">/</text>
+  <rect x="566.829268" y="40" width="146.341463" height="49.512187" rx="6.412362" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="70.0611" text-anchor="middle" font-size="27.862568" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">/</text>
   <line x1="640" y1="89.512187" x2="640" y2="107.195213" stroke="var(--text-faint)" stroke-width="1.3333" />
   <line x1="93.658537" y1="107.195213" x2="1186.341463" y2="107.195213" stroke="var(--text-faint)" stroke-width="1.3333" />
   <line x1="93.658537" y1="107.195213" x2="93.658537" y2="155.823205" stroke="var(--text-faint)" stroke-width="1.3333" marker-end="url(#arrow)" />
@@ -112,23 +109,23 @@
   <line x1="952.195018" y1="107.195213" x2="952.195018" y2="155.823205" stroke="var(--text-faint)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="1186.341463" y1="107.195213" x2="1186.341463" y2="155.823205" stroke="var(--text-faint)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <rect x="40" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="93.658537" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/bin</text>
-  <text x="93.658537" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Binaries</text>
+  <text x="93.658537" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/bin</text>
+  <text x="93.658537" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Binaries</text>
   <rect x="254.634146" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="308.292683" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/sbin</text>
-  <text x="308.292683" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Sys Binaries</text>
+  <text x="308.292683" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/sbin</text>
+  <text x="308.292683" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Sys Binaries</text>
   <rect x="469.268293" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="522.926829" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/etc</text>
-  <text x="522.926829" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Config files</text>
+  <text x="522.926829" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/etc</text>
+  <text x="522.926829" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Config files</text>
   <rect x="683.902439" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="737.560976" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/home</text>
-  <text x="737.560976" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">User homes</text>
+  <text x="737.560976" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/home</text>
+  <text x="737.560976" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">User homes</text>
   <rect x="898.536481" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="952.195018" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/var</text>
-  <text x="952.195018" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Variable data</text>
+  <text x="952.195018" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/var</text>
+  <text x="952.195018" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Variable data</text>
   <rect x="1132.682927" y="158.475571" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1186.341463" y="178.811073" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/usr</text>
-  <text x="1186.341463" y="195.609794" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">User programs</text>
+  <text x="1186.341463" y="178.811073" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/usr</text>
+  <text x="1186.341463" y="195.609794" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">User programs</text>
   <line x1="640" y1="89.512187" x2="640" y2="107.195213" stroke="var(--text-faint)" stroke-width="1.3333" />
   <line x1="200.97561" y1="266.341568" x2="1079.02439" y2="266.341568" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="200.97561" y1="266.341568" x2="200.97561" y2="314.96956" stroke="var(--text-faint)" stroke-width="1.3333" marker-end="url(#arrow)" />
@@ -138,55 +135,55 @@
   <line x1="1079.02439" y1="266.341568" x2="1079.02439" y2="314.96956" stroke="var(--text-faint)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="640" y1="107.195213" x2="640" y2="266.341568" stroke="var(--border)" stroke-width="0.8889" stroke-dasharray="3.5556 3.5556" />
   <rect x="147.317073" y="317.621926" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="200.97561" y="337.957427" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/lib</text>
-  <text x="200.97561" y="354.756148" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Libraries</text>
+  <text x="200.97561" y="337.957427" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/lib</text>
+  <text x="200.97561" y="354.756148" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Libraries</text>
   <rect x="361.95122" y="317.621926" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="415.609652" y="337.957427" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/dev</text>
-  <text x="415.609652" y="354.756148" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Device files</text>
+  <text x="415.609652" y="337.957427" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/dev</text>
+  <text x="415.609652" y="354.756148" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Device files</text>
   <rect x="586.341463" y="317.621926" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="337.957427" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/tmp</text>
-  <text x="640" y="354.756148" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Temp files</text>
+  <text x="640" y="337.957427" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/tmp</text>
+  <text x="640" y="354.756148" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Temp files</text>
   <rect x="800.97561" y="317.621926" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="854.634042" y="337.957427" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/proc</text>
-  <text x="854.634042" y="354.756148" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Process info</text>
+  <text x="854.634042" y="337.957427" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/proc</text>
+  <text x="854.634042" y="354.756148" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Process info</text>
   <rect x="1025.365854" y="317.621926" width="107.317073" height="45.975626" rx="6.412362" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1079.02439" y="337.957427" text-anchor="middle" font-family="monospace" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)">/root</text>
-  <text x="1079.02439" y="354.756148" text-anchor="middle" font-family="sans-serif" font-size="10.68727" fill="var(--text-muted)">Root home</text>
-  <rect x="44.878049" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="59.512195" y="427.256203" font-family="monospace" font-size="14.860008" font-weight="bold" fill="var(--primary-accent)">/etc  — Configuration</text>
-  <text x="59.512195" y="447.591485" font-family="monospace" font-size="12.073836" fill="var(--text)">passwd    user accounts</text>
-  <text x="59.512195" y="463.506121" font-family="monospace" font-size="12.073836" fill="var(--text)">shadow    password hashes</text>
-  <text x="59.512195" y="479.420756" font-family="monospace" font-size="12.073836" fill="var(--text)">hosts     hostname mapping</text>
-  <text x="59.512195" y="495.335392" font-family="monospace" font-size="12.073836" fill="var(--text)">fstab     mount config</text>
-  <text x="59.512195" y="511.250027" font-family="monospace" font-size="12.073836" fill="var(--text)">crontab   scheduled tasks</text>
-  <text x="59.512195" y="527.164663" font-family="monospace" font-size="12.073836" fill="var(--text)">ssh/      SSH config</text>
-  <text x="59.512195" y="549.268336" font-family="sans-serif" font-size="10.68727" fill="var(--text-faint)">Text files, editable by root</text>
-  <rect x="337.560976" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="352.195122" y="427.256203" font-family="monospace" font-size="14.860008" font-weight="bold" fill="var(--warn-accent)">/var  — Variable data</text>
-  <text x="352.195122" y="447.591485" font-family="monospace" font-size="12.073836" fill="var(--text)">log/      system log files</text>
-  <text x="352.195122" y="463.506121" font-family="monospace" font-size="12.073836" fill="var(--text)">spool/    queues (mail/print)</text>
-  <text x="352.195122" y="479.420756" font-family="monospace" font-size="12.073836" fill="var(--text)">cache/    app caches</text>
-  <text x="352.195122" y="495.335392" font-family="monospace" font-size="12.073836" fill="var(--text)">lib/      persistent state</text>
-  <text x="352.195122" y="511.250027" font-family="monospace" font-size="12.073836" fill="var(--text)">run/      runtime PID files</text>
-  <text x="352.195122" y="527.164663" font-family="monospace" font-size="12.073836" fill="var(--text)">www/      web root</text>
-  <text x="352.195122" y="549.268336" font-family="sans-serif" font-size="10.68727" fill="var(--text-faint)">Changes during normal operation</text>
-  <rect x="630.243902" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="644.878049" y="427.256203" font-family="monospace" font-size="14.860008" font-weight="bold" fill="var(--ok-accent)">/proc  — Kernel virtual FS</text>
-  <text x="644.878049" y="447.591485" font-family="monospace" font-size="12.073836" fill="var(--text)">cpuinfo   CPU details</text>
-  <text x="644.878049" y="463.506121" font-family="monospace" font-size="12.073836" fill="var(--text)">meminfo   memory usage</text>
-  <text x="644.878049" y="479.420756" font-family="monospace" font-size="12.073836" fill="var(--text)">PID/      per-process info</text>
-  <text x="644.878049" y="495.335392" font-family="monospace" font-size="12.073836" fill="var(--text)">net/      network stats</text>
-  <text x="644.878049" y="511.250027" font-family="monospace" font-size="12.073836" fill="var(--text)">sys/      kernel params</text>
-  <text x="644.878049" y="527.164663" font-family="monospace" font-size="12.073836" fill="var(--text)">mounts    mounted filesystems</text>
-  <text x="644.878049" y="549.268336" font-family="sans-serif" font-size="10.68727" fill="var(--text-faint)">Virtual — exists only in RAM</text>
-  <rect x="922.926829" y="403.38425" width="312.195018" height="159.146355" rx="6.412362" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="937.560976" y="427.256203" font-family="monospace" font-size="14.860008" font-weight="bold" fill="var(--info-accent)">/usr  — User programs</text>
-  <text x="937.560976" y="447.591485" font-family="monospace" font-size="12.073836" fill="var(--text)">bin/      user commands</text>
-  <text x="937.560976" y="463.506121" font-family="monospace" font-size="12.073836" fill="var(--text)">sbin/     admin commands</text>
-  <text x="937.560976" y="479.420756" font-family="monospace" font-size="12.073836" fill="var(--text)">lib/      shared libraries</text>
-  <text x="937.560976" y="495.335392" font-family="monospace" font-size="12.073836" fill="var(--text)">share/    arch-independent data</text>
-  <text x="937.560976" y="511.250027" font-family="monospace" font-size="12.073836" fill="var(--text)">local/    locally installed SW</text>
-  <text x="937.560976" y="527.164663" font-family="monospace" font-size="12.073836" fill="var(--text)">include/  C header files</text>
-  <text x="937.560976" y="549.268336" font-family="sans-serif" font-size="10.68727" fill="var(--text-faint)">Read-only; shared across network</text>
-  <text x="640" y="620" text-anchor="middle" font-family="sans-serif" font-size="13.002453" fill="var(--text-muted)">FHS (Filesystem Hierarchy Standard) defines the layout — every Linux distribution follows this convention.</text>
+  <text x="1079.02439" y="337.957427" text-anchor="middle" font-size="15.788838" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/root</text>
+  <text x="1079.02439" y="354.756148" text-anchor="middle" font-size="10.68727" fill="var(--text-muted)" font-family="Arial, sans-serif">Root home</text>
+  <rect x="44.878049" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="59.512195" y="427.256203" font-size="14.860008" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">/etc  — Configuration</text>
+  <text x="59.512195" y="447.591485" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">passwd    user accounts</text>
+  <text x="59.512195" y="463.506121" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">shadow    password hashes</text>
+  <text x="59.512195" y="479.420756" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">hosts     hostname mapping</text>
+  <text x="59.512195" y="495.335392" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">fstab     mount config</text>
+  <text x="59.512195" y="511.250027" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">crontab   scheduled tasks</text>
+  <text x="59.512195" y="527.164663" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">ssh/      SSH config</text>
+  <text x="59.512195" y="549.268336" font-size="10.68727" fill="var(--text-faint)" font-family="Arial, sans-serif">Text files, editable by root</text>
+  <rect x="337.560976" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="352.195122" y="427.256203" font-size="14.860008" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">/var  — Variable data</text>
+  <text x="352.195122" y="447.591485" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">log/      system log files</text>
+  <text x="352.195122" y="463.506121" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">spool/    queues (mail/print)</text>
+  <text x="352.195122" y="479.420756" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">cache/    app caches</text>
+  <text x="352.195122" y="495.335392" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">lib/      persistent state</text>
+  <text x="352.195122" y="511.250027" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">run/      runtime PID files</text>
+  <text x="352.195122" y="527.164663" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">www/      web root</text>
+  <text x="352.195122" y="549.268336" font-size="10.68727" fill="var(--text-faint)" font-family="Arial, sans-serif">Changes during normal operation</text>
+  <rect x="630.243902" y="403.38425" width="263.414634" height="159.146355" rx="6.412362" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="644.878049" y="427.256203" font-size="14.860008" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">/proc  — Kernel virtual FS</text>
+  <text x="644.878049" y="447.591485" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">cpuinfo   CPU details</text>
+  <text x="644.878049" y="463.506121" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">meminfo   memory usage</text>
+  <text x="644.878049" y="479.420756" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">PID/      per-process info</text>
+  <text x="644.878049" y="495.335392" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">net/      network stats</text>
+  <text x="644.878049" y="511.250027" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">sys/      kernel params</text>
+  <text x="644.878049" y="527.164663" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">mounts    mounted filesystems</text>
+  <text x="644.878049" y="549.268336" font-size="10.68727" fill="var(--text-faint)" font-family="Arial, sans-serif">Virtual — exists only in RAM</text>
+  <rect x="922.926829" y="403.38425" width="312.195018" height="159.146355" rx="6.412362" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="937.560976" y="427.256203" font-size="14.860008" font-weight="bold" fill="var(--info-accent)" font-family="Courier New, monospace">/usr  — User programs</text>
+  <text x="937.560976" y="447.591485" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">bin/      user commands</text>
+  <text x="937.560976" y="463.506121" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">sbin/     admin commands</text>
+  <text x="937.560976" y="479.420756" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">lib/      shared libraries</text>
+  <text x="937.560976" y="495.335392" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">share/    arch-independent data</text>
+  <text x="937.560976" y="511.250027" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">local/    locally installed SW</text>
+  <text x="937.560976" y="527.164663" font-size="12.073836" fill="var(--text)" font-family="Courier New, monospace">include/  C header files</text>
+  <text x="937.560976" y="549.268336" font-size="10.68727" fill="var(--text-faint)" font-family="Arial, sans-serif">Read-only; shared across network</text>
+  <text x="640" y="620" text-anchor="middle" font-size="13.002453" fill="var(--text-muted)" font-family="Arial, sans-serif">FHS (Filesystem Hierarchy Standard) defines the layout — every Linux distribution follows this convention.</text>
 </svg>

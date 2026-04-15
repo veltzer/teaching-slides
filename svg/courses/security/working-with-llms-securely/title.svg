@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,12 +97,9 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect width="1200" height="6.4444" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" x="40" y="40" filter="url(#shadow)"/>
+  <rect width="1200" height="6.4444" fill="url(#grad-primary)" rx="6" stroke="var(--primary-border)" stroke-width="2" x="40" y="40" filter="url(#shadow)"/>
   <circle cx="640" cy="313.8889" r="130.3541" fill="none" stroke="var(--primary-border)" stroke-width="2.6667" opacity="0.35" />
   <circle cx="640" cy="313.8889" r="86.9027" fill="none" stroke="var(--primary-border)" stroke-width="1.7778" opacity="0.25" />
   <circle cx="640" cy="193.0556" r="11.2974" fill="var(--primary-fill)" opacity="0.7" />
@@ -124,26 +121,26 @@
   <line x1="640" y1="313.8889" x2="640" y2="434.7223" stroke="var(--primary-border)" stroke-width="1.3333" opacity="0.25" />
   <line x1="640" y1="313.8889" x2="518.125" y2="374.3056" stroke="var(--primary-border)" stroke-width="1.3333" opacity="0.25" />
   <line x1="640" y1="313.8889" x2="518.125" y2="253.4723" stroke="var(--primary-border)" stroke-width="1.3333" opacity="0.25" />
-  <rect x="96.25" y="164.8611" width="206.25" height="40.2777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="199.375" y="189.8333" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)">Prompt Injection</text>
-  <rect x="96.25" y="225.2777" width="206.25" height="40.2777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="199.375" y="250.25" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)">Data Leakage</text>
-  <rect x="96.25" y="285.6944" width="206.25" height="40.2777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="199.375" y="310.6667" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)">Model Poisoning</text>
-  <rect x="96.25" y="346.1111" width="206.25" height="40.2777" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="199.375" y="371.0833" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)">Jailbreaking</text>
+  <rect x="96.25" y="164.8611" width="206.25" height="40.2777" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="199.375" y="189.8333" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)" font-family="Arial, sans-serif">Prompt Injection</text>
+  <rect x="96.25" y="225.2777" width="206.25" height="40.2777" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="199.375" y="250.25" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data Leakage</text>
+  <rect x="96.25" y="285.6944" width="206.25" height="40.2777" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="199.375" y="310.6667" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)" font-family="Arial, sans-serif">Model Poisoning</text>
+  <rect x="96.25" y="346.1111" width="206.25" height="40.2777" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="199.375" y="371.0833" text-anchor="middle" font-size="13.9044" fill="var(--danger-accent)" font-family="Arial, sans-serif">Jailbreaking</text>
   <line x1="302.5" y1="185" x2="499.375" y2="265.5556" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" opacity="0.5" />
   <line x1="302.5" y1="245.4167" x2="499.375" y2="289.7223" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" opacity="0.5" />
   <line x1="302.5" y1="305.8333" x2="499.375" y2="313.8889" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" opacity="0.5" />
   <line x1="302.5" y1="366.25" x2="499.375" y2="354.1667" stroke="var(--danger-border)" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" opacity="0.5" />
-  <rect x="977.5" y="164.8611" width="206.25" height="40.2777" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.625" y="189.8333" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)">Input Validation</text>
-  <rect x="977.5" y="225.2777" width="206.25" height="40.2777" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.625" y="250.25" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)">Output Filtering</text>
-  <rect x="977.5" y="285.6944" width="206.25" height="40.2777" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.625" y="310.6667" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)">Access Controls</text>
-  <rect x="977.5" y="346.1111" width="206.25" height="40.2777" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.625" y="371.0833" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)">OWASP LLM Top 10</text>
-  <text x="640" y="531.3889" text-anchor="middle" font-size="15.6425" fill="var(--text-muted)" font-family="monospace">OWASP Top 10 for LLM Applications</text>
-  <rect y="613.5556" width="1200" height="6.4444" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" x="40" filter="url(#shadow)"/>
+  <rect x="977.5" y="164.8611" width="206.25" height="40.2777" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.625" y="189.8333" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)" font-family="Arial, sans-serif">Input Validation</text>
+  <rect x="977.5" y="225.2777" width="206.25" height="40.2777" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.625" y="250.25" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)" font-family="Arial, sans-serif">Output Filtering</text>
+  <rect x="977.5" y="285.6944" width="206.25" height="40.2777" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.625" y="310.6667" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)" font-family="Arial, sans-serif">Access Controls</text>
+  <rect x="977.5" y="346.1111" width="206.25" height="40.2777" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.625" y="371.0833" text-anchor="middle" font-size="13.9044" fill="var(--ok-accent)" font-family="Arial, sans-serif">OWASP LLM Top 10</text>
+  <text x="640" y="531.3889" text-anchor="middle" font-size="15.6425" fill="var(--text-muted)" font-family="Courier New, monospace">OWASP Top 10 for LLM Applications</text>
+  <rect y="613.5556" width="1200" height="6.4444" fill="url(#grad-primary)" rx="6" stroke="var(--primary-border)" stroke-width="2" x="40" filter="url(#shadow)"/>
 </svg>

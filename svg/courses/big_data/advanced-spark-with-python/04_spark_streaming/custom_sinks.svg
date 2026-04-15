@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,66 +75,63 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow-cs" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.3826" font-weight="bold" fill="var(--text)">Custom Sink Implementation</text>
-  <rect x="40" y="80.2778" width="567.5675" height="257.7777" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="80.2778" width="567.5675" height="257.7777" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="323.7838" y="120.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3349" font-weight="bold" fill="var(--primary-accent)">foreachBatch (Recommended)</text>
-  <text x="72.4325" y="160.8334" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">def write_batch(df, epoch_id):</text>
-  <text x="72.4325" y="189.8333" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">    df.write.format("jdbc")</text>
-  <text x="72.4325" y="218.8333" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">      .option("url", jdbc_url)</text>
-  <text x="72.4325" y="247.8334" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">      .mode("append").save()</text>
+  <text x="72.4325" y="160.8334" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">def write_batch(df, epoch_id):</text>
+  <text x="72.4325" y="189.8333" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">    df.write.format("jdbc")</text>
+  <text x="72.4325" y="218.8333" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">      .option("url", jdbc_url)</text>
+  <text x="72.4325" y="247.8334" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">      .mode("append").save()</text>
   <text x="323.7838" y="297.7778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--ok-accent)">Full DataFrame API available</text>
   <text x="323.7838" y="321.9444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--ok-accent)">Multiple writes per batch</text>
-  <rect x="656.2162" y="80.2778" width="583.7838" height="257.7777" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="656.2162" y="80.2778" width="583.7838" height="257.7777" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="948.1081" y="120.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3349" font-weight="bold" fill="var(--warn-accent)">foreach (Row-by-Row)</text>
-  <text x="688.6486" y="160.8334" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">class MySink(ForeachWriter):</text>
-  <text x="688.6486" y="189.8333" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">    def open(partition, epoch):</text>
-  <text x="688.6486" y="218.8333" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">    def process(row):</text>
-  <text x="688.6486" y="247.8334" font-family="monospace" font-size="16.7631" fill="var(--text-muted)">    def close(error):</text>
+  <text x="688.6486" y="160.8334" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">class MySink(ForeachWriter):</text>
+  <text x="688.6486" y="189.8333" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">    def open(partition, epoch):</text>
+  <text x="688.6486" y="218.8333" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">    def process(row):</text>
+  <text x="688.6486" y="247.8334" font-size="16.7631" fill="var(--text-muted)" font-family="Courier New, monospace">    def close(error):</text>
   <text x="948.1081" y="297.7778" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--warn-accent)">Per-row processing</text>
   <text x="948.1081" y="321.9444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--warn-accent)">Connection management built-in</text>
   <text x="640" y="386.3889" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3349" font-weight="bold" fill="var(--text)">Custom Sink Flow</text>
-  <rect x="72.4325" y="418.6111" width="210.8109" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="72.4325" y="418.6111" width="210.8109" height="72.5" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="177.8378" y="462.1111" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--primary-accent)">Stream</text>
-  <line x1="283.2432" y1="454.0555" x2="348.1081" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cs)" />
-  <rect x="364.3243" y="418.6111" width="210.8109" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <line x1="283.2432" y1="454.0555" x2="348.1081" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="364.3243" y="418.6111" width="210.8109" height="72.5" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="469.7298" y="450.8333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--ok-accent)">Transform</text>
   <text x="469.7298" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2391" fill="var(--text-muted)">filter / map / agg</text>
-  <line x1="575.1352" y1="454.0555" x2="640" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cs)" />
-  <rect x="656.2162" y="418.6111" width="210.8109" height="72.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <line x1="575.1352" y1="454.0555" x2="640" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="656.2162" y="418.6111" width="210.8109" height="72.5" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="761.6216" y="450.8333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--warn-accent)">Custom Sink</text>
   <text x="761.6216" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2391" fill="var(--text-muted)">foreachBatch</text>
-  <line x1="867.027" y1="434.7223" x2="931.8919" y2="418.6111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cs)" />
-  <line x1="867.027" y1="454.0555" x2="931.8919" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cs)" />
-  <line x1="867.027" y1="473.3889" x2="931.8919" y2="489.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cs)" />
-  <rect x="948.1081" y="399.2778" width="162.1621" height="40.2777" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <line x1="867.027" y1="434.7223" x2="931.8919" y2="418.6111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="867.027" y1="454.0555" x2="931.8919" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="867.027" y1="473.3889" x2="931.8919" y2="489.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="948.1081" y="399.2778" width="162.1621" height="40.2777" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1029.1891" y="426.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--info-accent)">Database</text>
-  <rect x="948.1081" y="447.6112" width="162.1621" height="40.2777" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="948.1081" y="447.6112" width="162.1621" height="40.2777" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1029.1891" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--info-accent)">REST API</text>
-  <rect x="948.1081" y="495.9445" width="162.1621" height="40.2777" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="948.1081" y="495.9445" width="162.1621" height="40.2777" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1029.1891" y="523.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--info-accent)">Cache / Redis</text>
-  <rect x="72.4325" y="531.3889" width="810.8107" height="88.6111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="72.4325" y="531.3889" width="810.8107" height="88.6111" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="477.8378" y="566.8334" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--ok-accent)">Best Practices</text>
   <text x="477.8378" y="599.0555" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">Make writes idempotent | Use epoch_id for dedup | Handle retries | Batch connections</text>
 </svg>

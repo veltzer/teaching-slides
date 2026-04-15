@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,27 +97,24 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="28.736134" font-weight="bold" fill="var(--primary-accent)">Query vs Filter Context</text>
-  <rect x="40" y="81.288102" width="557.142857" height="432.542389" rx="7.085777" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="318.571429" y="150.101686" text-anchor="middle" font-size="26.683502" font-weight="bold" fill="var(--ok-accent)">Query Context</text>
-  <text x="318.571429" y="209.084828" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Calculates relevance score</text>
-  <text x="318.571429" y="256.271195" text-anchor="middle" font-size="19.499469" fill="var(--text)">• "How well does this match?"</text>
-  <text x="318.571429" y="303.457684" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Not cached (per query)</text>
-  <text x="318.571429" y="350.644173" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Slower (scoring overhead)</text>
-  <text x="318.571429" y="397.83054" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Use for: full-text search</text>
-  <text x="318.571429" y="445.017029" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Example: match, multi_match</text>
-  <rect x="682.857029" y="81.288102" width="557.142857" height="432.542389" rx="7.085777" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="961.428571" y="150.101686" text-anchor="middle" font-size="26.683502" font-weight="bold" fill="var(--primary-accent)">Filter Context</text>
-  <text x="961.428571" y="209.084828" text-anchor="middle" font-size="19.499469" fill="var(--text)">• No relevance scoring</text>
-  <text x="961.428571" y="256.271195" text-anchor="middle" font-size="19.499469" fill="var(--text)">• "Yes or No - does it match?"</text>
-  <text x="961.428571" y="303.457684" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Results are cached</text>
-  <text x="961.428571" y="350.644173" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Faster execution</text>
-  <text x="961.428571" y="397.83054" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Use for: dates, status, IDs</text>
-  <text x="961.428571" y="445.017029" text-anchor="middle" font-size="19.499469" fill="var(--text)">• Example: term, range, exists</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.736134" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Query vs Filter Context</text>
+  <rect x="40" y="81.288102" width="557.142857" height="432.542389" rx="7.085777" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="318.571429" y="150.101686" text-anchor="middle" font-size="26.683502" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Query Context</text>
+  <text x="318.571429" y="209.084828" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Calculates relevance score</text>
+  <text x="318.571429" y="256.271195" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• "How well does this match?"</text>
+  <text x="318.571429" y="303.457684" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Not cached (per query)</text>
+  <text x="318.571429" y="350.644173" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Slower (scoring overhead)</text>
+  <text x="318.571429" y="397.83054" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Use for: full-text search</text>
+  <text x="318.571429" y="445.017029" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Example: match, multi_match</text>
+  <rect x="682.857029" y="81.288102" width="557.142857" height="432.542389" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="961.428571" y="150.101686" text-anchor="middle" font-size="26.683502" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Filter Context</text>
+  <text x="961.428571" y="209.084828" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• No relevance scoring</text>
+  <text x="961.428571" y="256.271195" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• "Yes or No - does it match?"</text>
+  <text x="961.428571" y="303.457684" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Results are cached</text>
+  <text x="961.428571" y="350.644173" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Faster execution</text>
+  <text x="961.428571" y="397.83054" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Use for: dates, status, IDs</text>
+  <text x="961.428571" y="445.017029" text-anchor="middle" font-size="19.499469" fill="var(--text)" font-family="Arial, sans-serif">• Example: term, range, exists</text>
   <rect x="40" y="564.949157" width="1200" height="55.050843" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="598.373027" text-anchor="middle" font-size="17.446955" fill="var(--primary-accent)">Prefer filter context wherever possible to leverage caching and improve performance</text>
+  <text x="640" y="598.373027" text-anchor="middle" font-size="17.446955" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prefer filter context wherever possible to leverage caching and improve performance</text>
 </svg>

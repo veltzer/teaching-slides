@@ -63,11 +63,12 @@ def _parse_num(val: str | None) -> float | None:
 
 def _fmt_num(v: float) -> str:
     """Format without exponent notation, trim trailing zeros.
-    6-decimal precision keeps the re-parsed bbox stable to well under 1e-3px,
-    which is what the fit loop needs to converge to an exact center."""
+    12-decimal precision keeps the re-parsed bbox stable well below float
+    epsilon, so fit-loop convergence compares exactly against the integer
+    target (1200.0 == 1200.0)."""
     if v != v:  # NaN
         return "0"
-    out = f"{v:.6f}".rstrip("0").rstrip(".")
+    out = f"{v:.12f}".rstrip("0").rstrip(".")
     return out if out else "0"
 
 
@@ -261,7 +262,14 @@ def compute_bbox(outside_defs: str) -> tuple[float, float, float, float] | None:
 
     if not mins_x:
         return None
-    return (min(mins_x), min(mins_y), max(maxs_x), max(maxs_y))
+    # Snap to integer when within float epsilon — otherwise accumulated
+    # double-precision noise like 1199.999999999984 shows up as "not fitted"
+    # even though it's the same number as 1200 for any rendering purpose.
+    def _snap(v: float) -> float:
+        r = round(v)
+        return float(r) if abs(v - r) < 1e-9 else v
+    return (_snap(min(mins_x)), _snap(min(mins_y)),
+            _snap(max(maxs_x)), _snap(max(maxs_y)))
 
 
 # ------------------- Transform application -------------------
@@ -463,12 +471,9 @@ def fit_svg(content: str) -> tuple[str, dict]:
     target_x0 = USABLE_X0 + (USABLE_W - target_w) / 2.0
     target_y0 = USABLE_Y0 + (USABLE_H - target_h) / 2.0
 
-    # If the current bbox already matches target exactly, no-op.
-    def _matches() -> bool:
-        return (abs(x0 - target_x0) < 1e-6 and abs(y0 - target_y0) < 1e-6
-                and abs(bbox_w - target_w) < 1e-6 and abs(bbox_h - target_h) < 1e-6)
-
-    if _matches():
+    # If the current bbox already matches target EXACTLY, no-op.
+    if (x0 == target_x0 and y0 == target_y0
+            and bbox_w == target_w and bbox_h == target_h):
         return content, {"skipped": "already exactly fitted"}
 
     # Iterate: apply transform, re-measure, correct residual.
@@ -476,15 +481,25 @@ def fit_svg(content: str) -> tuple[str, dict]:
     cur_x0, cur_y0, cur_w, cur_h = x0, y0, bbox_w, bbox_h
     first_sx = first_sy = first_tx = first_ty = None
 
-    for _ in range(6):
-        sx = target_w / cur_w
-        sy = target_h / cur_h
+    # Iterate to convergence, then keep going (bounded) until the measured
+    # bbox is EXACTLY the target. Each pass writes the SVG, re-parses the
+    # serialized coordinates, and re-measures — so the only source of
+    # residual drift is format rounding in the emitter (_apply_transform
+    # writes coordinates with finite decimals). We loop until zero residual.
+    for _ in range(20):
+        sx = target_w / cur_w if cur_w else 1.0
+        sy = target_h / cur_h if cur_h else 1.0
         if uniform:
             sx = sy = min(sx, sy)
         tx = target_x0 - cur_x0 * sx
         ty = target_y0 - cur_y0 * sy
         if first_sx is None:
             first_sx, first_sy, first_tx, first_ty = sx, sy, tx, ty
+
+        # Skip no-op transforms (happens once we've converged exactly).
+        if abs(sx - 1.0) < 1e-15 and abs(sy - 1.0) < 1e-15 \
+                and abs(tx) < 1e-15 and abs(ty) < 1e-15:
+            break
 
         cur_segments = _apply_transform(cur_segments, sx, sy, tx, ty)
 
@@ -496,8 +511,9 @@ def fit_svg(content: str) -> tuple[str, dict]:
         cur_x0, cur_y0, nx1, ny1 = new_bbox
         cur_w = nx1 - cur_x0
         cur_h = ny1 - cur_y0
-        if (abs(cur_x0 - target_x0) < 1e-6 and abs(cur_y0 - target_y0) < 1e-6
-                and abs(cur_w - target_w) < 1e-6 and abs(cur_h - target_h) < 1e-6):
+        # Exact match — the serialized output measures exactly at target.
+        if (cur_x0 == target_x0 and cur_y0 == target_y0
+                and cur_w == target_w and cur_h == target_h):
             break
 
     info = {

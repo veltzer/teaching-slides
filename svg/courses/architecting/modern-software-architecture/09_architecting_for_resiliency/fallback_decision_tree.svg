@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,55 +75,52 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.9733,0" fill="#4a90e2" />
-    </marker>
   </defs>
   <polygon points="640,40 874.7826,112.5 640,185 405.2174,112.5" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3.4133" />
-  <text x="640" y="107.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">Primary service</text>
-  <text x="640" y="132.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">available?</text>
-  <rect x="961.7391" y="76.25" width="278.2609" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1100.8696" y="121.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202">Return fresh data</text>
+  <text x="640" y="107.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">Primary service</text>
+  <text x="640" y="132.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">available?</text>
+  <rect x="961.7391" y="76.25" width="278.2609" height="72.5" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100.8696" y="121.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202" fill="var(--ok-text)">Return fresh data</text>
   <line x1="874.7826" y1="112.5" x2="958.2609" y2="112.5" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="909.5652" y="99.8125" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--ok-accent)">Yes</text>
   <polygon points="640,257.5 874.7826,330 640,402.5 405.2174,330" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3.4133" />
-  <text x="640" y="324.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">Cache</text>
-  <text x="640" y="349.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">available?</text>
+  <text x="640" y="324.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">Cache</text>
+  <text x="640" y="349.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">available?</text>
   <line x1="640" y1="185" x2="640" y2="253.875" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="666.087" y="224.875" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--danger-accent)">No</text>
-  <rect x="961.7391" y="293.75" width="278.2609" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1100.8696" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202">Return cached data</text>
+  <rect x="961.7391" y="293.75" width="278.2609" height="72.5" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100.8696" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202" fill="var(--ok-text)">Return cached data</text>
   <line x1="874.7826" y1="330" x2="958.2609" y2="330" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="909.5652" y="317.3125" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--ok-accent)">Yes</text>
   <polygon points="640,475 874.7826,547.5 640,620 405.2174,547.5" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3.4133" />
-  <text x="640" y="542.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">Default value</text>
-  <text x="640" y="567.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352">sensible?</text>
+  <text x="640" y="542.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">Default value</text>
+  <text x="640" y="567.4375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5352" fill="var(--text)">sensible?</text>
   <line x1="640" y1="402.5" x2="640" y2="471.375" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="666.087" y="442.375" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--danger-accent)">No</text>
-  <rect x="961.7391" y="511.25" width="278.2609" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1100.8696" y="556.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202">Return default</text>
+  <rect x="961.7391" y="511.25" width="278.2609" height="72.5" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100.8696" y="556.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202" fill="var(--ok-text)">Return default</text>
   <line x1="874.7826" y1="547.5" x2="958.2609" y2="547.5" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="909.5652" y="534.8125" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--ok-accent)">Yes</text>
-  <rect x="40" y="511.25" width="295.6521" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="187.8261" y="556.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202">Return graceful error</text>
+  <rect x="40" y="511.25" width="295.6521" height="72.5" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="187.8261" y="556.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2202" fill="var(--danger-text)">Return graceful error</text>
   <line x1="405.2174" y1="547.5" x2="339.1305" y2="547.5" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
   <text x="379.1304" y="534.8125" font-family="Arial, sans-serif" font-size="16.8502" fill="var(--danger-accent)">No</text>
 </svg>

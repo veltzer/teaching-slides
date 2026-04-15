@@ -4,116 +4,111 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowd0_07_security" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="257.1429" height="220" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5714" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">Azure AD</text>
-  <text x="168.5714" y="208" text-anchor="middle" font-size="22.5374">(Entra ID)</text>
-  <rect x="511.4286" y="40" width="257.1429" height="220" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="640" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">Key Vault</text>
-  <text x="640" y="208" text-anchor="middle" font-size="22.5374">Secrets &amp; Keys</text>
-  <rect x="982.8571" y="40" width="257.1429" height="220" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1111.4286" y="128" text-anchor="middle" font-size="24.7912" font-weight="bold">Defender</text>
-  <text x="1111.4286" y="208" text-anchor="middle" font-size="22.5374">for Cloud</text>
-  <rect x="275.7142" y="400" width="257.1429" height="220" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="404.2857" y="488" text-anchor="middle" font-size="24.7912" font-weight="bold">Network</text>
-  <text x="404.2857" y="560" text-anchor="middle" font-size="22.5374">NSG / Firewall</text>
-  <rect x="747.1429" y="400" width="257.1429" height="220" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="875.7143" y="488" text-anchor="middle" font-size="24.7912" font-weight="bold">RBAC</text>
-  <text x="875.7143" y="560" text-anchor="middle" font-size="22.5374">Access Control</text>
-  <line x1="297.1429" y1="260" x2="511.4286" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_07_security)" />
-  <line x1="768.5714" y1="148" x2="982.8571" y2="148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_07_security)" />
-  <line x1="168.5714" y1="260" x2="318.5714" y2="400" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_07_security)" />
-  <line x1="640" y1="260" x2="832.8572" y2="400" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_07_security)" />
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="30.807319083148" font-weight="bold" fill="var(--primary-accent)">Azure Security Components</text>
+
+  <!-- Uniform 5-box grid: 3 on top row, 2 on bottom row (centered under the gaps) -->
+  <!-- Each box: 360x200, rx=10 -->
+
+  <!-- Top row: 3 boxes, y=110..310, x centers at 220, 640, 1060 -->
+  <rect x="40" y="92.727272727273" width="360" height="210.909090909091" rx="10.269106361049"
+        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="220" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.753497810938" font-weight="bold" fill="var(--primary-text)">Azure AD</text>
+  <text x="220" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.538212722099" fill="var(--primary-text)">Entra ID</text>
+  <text x="220" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.484391449889" fill="var(--primary-text)">identity &amp; single sign-on</text>
+
+  <rect x="460" y="92.727272727273" width="360" height="210.909090909091" rx="10.269106361049"
+        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="640" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.753497810938" font-weight="bold" fill="var(--info-text)">Key Vault</text>
+  <text x="640" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.538212722099" fill="var(--info-text)">Secrets &amp; Keys</text>
+  <text x="640" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.484391449889" fill="var(--info-text)">central credential store</text>
+
+  <rect x="880" y="92.727272727273" width="360" height="210.909090909091" rx="10.269106361049"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="1060" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.753497810938" font-weight="bold" fill="var(--ok-text)">Defender</text>
+  <text x="1060" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.538212722099" fill="var(--ok-text)">for Cloud</text>
+  <text x="1060" y="261.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.484391449889" fill="var(--ok-text)">threat detection</text>
+
+  <!-- Bottom row: 2 boxes centered, y=410..610, x centers at 430, 850 -->
+  <rect x="250" y="409.090909090909" width="360" height="210.909090909091" rx="10.269106361049"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="430" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.753497810938" font-weight="bold" fill="var(--warn-text)">Network</text>
+  <text x="430" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.538212722099" fill="var(--warn-text)">NSG &amp; Firewall</text>
+  <text x="430" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.484391449889" fill="var(--warn-text)">perimeter &amp; flow control</text>
+
+  <rect x="670" y="409.090909090909" width="360" height="210.909090909091" rx="10.269106361049"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"
+        filter="url(#shadow)"/>
+  <text x="850" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.753497810938" font-weight="bold" fill="var(--danger-text)">RBAC</text>
+  <text x="850" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="20.538212722099" fill="var(--danger-text)">Access Control</text>
+  <text x="850" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.484391449889" fill="var(--danger-text)">who can do what</text>
 </svg>

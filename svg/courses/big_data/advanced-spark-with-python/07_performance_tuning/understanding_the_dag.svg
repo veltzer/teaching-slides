@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,61 +75,58 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow-dag" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,23.2258 7.2258,0" fill="#333" />
-    </marker>
   </defs>
   <text x="650.5263" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.9795" font-weight="bold" fill="var(--text)">DAG: Join + Aggregation</text>
-  <rect x="40" y="67.619" width="1200" height="161.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="67.619" width="1200" height="161.1111" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="103.1579" y="109.0476" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--primary-accent)">Stage 0: Scan Table A</text>
   <rect x="82.1052" y="125.1587" width="210.5263" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
   <text x="187.3685" y="159.6825" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">FileScan</text>
   <text x="187.3685" y="187.3016" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">Parquet</text>
-  <line x1="292.6316" y1="164.2857" x2="376.8421" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <line x1="292.6316" y1="164.2857" x2="376.8421" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="387.3685" y="125.1587" width="252.6315" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
   <text x="513.6843" y="159.6825" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Filter</text>
   <text x="513.6843" y="187.3016" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">(pushdown)</text>
-  <line x1="640" y1="164.2857" x2="724.2106" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="734.7368" y="125.1587" width="252.6315" height="80.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <line x1="640" y1="164.2857" x2="724.2106" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="734.7368" y="125.1587" width="252.6315" height="80.5556" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="861.0526" y="175.7936" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleWrite</text>
-  <rect x="40" y="263.254" width="1200" height="161.1111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="263.254" width="1200" height="161.1111" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="103.1579" y="304.6825" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--ok-accent)">Stage 1: Scan Table B</text>
   <rect x="82.1052" y="320.7937" width="210.5263" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
   <text x="187.3685" y="355.3175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">FileScan</text>
   <text x="187.3685" y="382.9366" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">Parquet</text>
-  <line x1="292.6316" y1="359.9207" x2="376.8421" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <line x1="292.6316" y1="359.9207" x2="376.8421" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="387.3685" y="320.7937" width="210.5263" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
   <text x="492.6316" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Select</text>
-  <line x1="597.8948" y1="359.9207" x2="724.2106" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="734.7368" y="320.7937" width="252.6315" height="80.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <line x1="597.8948" y1="359.9207" x2="724.2106" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="734.7368" y="320.7937" width="252.6315" height="80.5556" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="861.0526" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleWrite</text>
-  <rect x="40" y="458.8889" width="1200" height="161.1111" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="458.8889" width="1200" height="161.1111" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="103.1579" y="500.3175" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--info-accent)">Stage 2: Join + Aggregate</text>
   <rect x="82.1052" y="516.4286" width="252.6315" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
   <text x="208.4211" y="550.9525" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleRead</text>
   <text x="208.4211" y="578.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">(both sides)</text>
-  <line x1="334.7369" y1="555.5556" x2="418.9474" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <line x1="334.7369" y1="555.5556" x2="418.9474" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="429.4737" y="516.4286" width="210.5263" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
   <text x="534.7368" y="567.0635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Join</text>
-  <line x1="640" y1="555.5556" x2="724.2106" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <line x1="640" y1="555.5556" x2="724.2106" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="734.7368" y="516.4286" width="252.6315" height="80.5556" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
   <text x="861.0526" y="567.0635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Aggregate</text>
 </svg>

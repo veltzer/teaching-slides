@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,32 +97,29 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="307.857168" y="106.5928" text-anchor="middle" font-family="sans-serif" font-size="30.037062" font-weight="bold" fill="var(--bg)">Code Reuse</text>
-  <text x="307.857168" y="140.963067" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--primary-accent)">Driver works for UART1, UART2, UART3</text>
-  <text x="307.857168" y="166.7408" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--primary-accent)">without copy-paste</text>
-  <text x="307.857168" y="192.518667" text-anchor="middle" font-family="monospace" font-size="16.091248" fill="var(--primary-accent)">uart_init(&amp;uart1, ...);</text>
+  <rect x="40" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.857168" y="106.5928" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Code Reuse</text>
+  <text x="307.857168" y="140.963067" text-anchor="middle" font-size="18.236805" fill="var(--primary-accent)" font-family="Arial, sans-serif">Driver works for UART1, UART2, UART3</text>
+  <text x="307.857168" y="166.7408" text-anchor="middle" font-size="18.236805" fill="var(--primary-accent)" font-family="Arial, sans-serif">without copy-paste</text>
+  <text x="307.857168" y="192.518667" text-anchor="middle" font-size="16.091248" fill="var(--primary-accent)" font-family="Courier New, monospace">uart_init(&amp;uart1, ...);</text>
   <rect x="704.285778" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="972.142832" y="106.5928" text-anchor="middle" font-family="sans-serif" font-size="30.037062" font-weight="bold" fill="var(--text)">Modularity</text>
-  <text x="972.142832" y="140.963067" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">Each peripheral is a self-contained</text>
-  <text x="972.142832" y="166.7408" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">struct with its own state</text>
-  <text x="972.142832" y="192.518667" text-anchor="middle" font-family="monospace" font-size="16.091248" fill="var(--text-faint)">struct UART { reg, baud, ... };</text>
+  <text x="972.142832" y="106.5928" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Modularity</text>
+  <text x="972.142832" y="140.963067" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Each peripheral is a self-contained</text>
+  <text x="972.142832" y="166.7408" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">struct with its own state</text>
+  <text x="972.142832" y="192.518667" text-anchor="middle" font-size="16.091248" fill="var(--text-faint)" font-family="Courier New, monospace">struct UART { reg, baud, ... };</text>
   <rect x="40" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="307.857168" y="321.407467" text-anchor="middle" font-family="sans-serif" font-size="30.037062" font-weight="bold" fill="var(--text)">Abstraction</text>
-  <text x="307.857168" y="355.777867" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">Caller doesn't know register details</text>
-  <text x="307.857168" y="381.5556" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">just calls the API</text>
-  <text x="307.857168" y="407.333333" text-anchor="middle" font-family="monospace" font-size="16.091248" fill="var(--text-faint)">uart_send(&amp;uart1, buf, len);</text>
+  <text x="307.857168" y="321.407467" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Abstraction</text>
+  <text x="307.857168" y="355.777867" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Caller doesn't know register details</text>
+  <text x="307.857168" y="381.5556" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">just calls the API</text>
+  <text x="307.857168" y="407.333333" text-anchor="middle" font-size="16.091248" fill="var(--text-faint)" font-family="Courier New, monospace">uart_send(&amp;uart1, buf, len);</text>
   <rect x="704.285778" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="972.142832" y="321.407467" text-anchor="middle" font-family="sans-serif" font-size="30.037062" font-weight="bold" fill="var(--text)">Maintainability</text>
-  <text x="972.142832" y="355.777867" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">Change implementation without</text>
-  <text x="972.142832" y="381.5556" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">touching callers</text>
-  <text x="972.142832" y="407.333333" text-anchor="middle" font-family="monospace" font-size="16.091248" fill="var(--text-faint)">stable API across hardware revisions</text>
-  <rect x="168.571441" y="478.222267" width="942.857233" height="75.1852" rx="7.406561" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.000057" y="510.444533" text-anchor="middle" font-family="sans-serif" font-size="23.600513" font-weight="bold" fill="var(--primary-accent)">Without C++ overhead!</text>
-  <text x="640.000057" y="540.518667" text-anchor="middle" font-family="sans-serif" font-size="18.236805" fill="var(--text-muted)">C structs + function pointers give you encapsulation and polymorphism at zero runtime cost</text>
-  <text x="640.000057" y="620" text-anchor="middle" font-family="sans-serif" font-size="17.163965" fill="var(--text-faint)">Technique: pass struct* as first argument (the "this" pointer) to all related functions</text>
+  <text x="972.142832" y="321.407467" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Maintainability</text>
+  <text x="972.142832" y="355.777867" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Change implementation without</text>
+  <text x="972.142832" y="381.5556" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">touching callers</text>
+  <text x="972.142832" y="407.333333" text-anchor="middle" font-size="16.091248" fill="var(--text-faint)" font-family="Courier New, monospace">stable API across hardware revisions</text>
+  <rect x="168.571441" y="478.222267" width="942.857233" height="75.1852" rx="7.406561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000057" y="510.444533" text-anchor="middle" font-size="23.600513" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Without C++ overhead!</text>
+  <text x="640.000057" y="540.518667" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">C structs + function pointers give you encapsulation and polymorphism at zero runtime cost</text>
+  <text x="640.000057" y="620" text-anchor="middle" font-size="17.163965" fill="var(--text-faint)" font-family="Arial, sans-serif">Technique: pass struct* as first argument (the "this" pointer) to all related functions</text>
 </svg>

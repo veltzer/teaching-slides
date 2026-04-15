@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,65 +97,62 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="472.131148" height="580" rx="6.622878" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="40" y="40" width="472.131148" height="44.903269" rx="6.622878" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="68.064441" width="472.131148" height="16.838711" fill="var(--primary-fill)" rx="6.622878" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="276.065574" y="69.935396" text-anchor="middle" font-family="monospace" font-size="17.266394" font-weight="bold" fill="var(--bg)">Directory Tree</text>
-  <text x="89.180328" y="122.322601" font-family="monospace" font-size="19.184932" fill="var(--primary-accent)" font-weight="bold">/</text>
+  <rect x="40" y="40" width="472.131148" height="44.903269" rx="6.622878" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="68.064441" width="472.131148" height="16.838711" fill="url(#grad-primary)" rx="6.622878" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="276.065574" y="69.935396" text-anchor="middle" font-size="17.266394" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Directory Tree</text>
+  <text x="89.180328" y="122.322601" font-size="19.184932" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">/</text>
   <line x1="108.852459" y1="126.064395" x2="108.852459" y2="554.516226" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="108.852459" y1="169.096708" x2="138.360656" y2="169.096708" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="146.229508" y="174.709689" font-family="monospace" font-size="17.266394" fill="var(--text)">home/</text>
+  <text x="146.229508" y="174.709689" font-size="17.266394" fill="var(--text)" font-family="Courier New, monospace">home/</text>
   <line x1="156.065574" y1="176.580528" x2="156.065574" y2="301.935559" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="156.065574" y1="213.064441" x2="185.57377" y2="213.064441" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="193.442623" y="218.677306" font-family="monospace" font-size="16.307181" fill="var(--text)">alice/</text>
+  <text x="193.442623" y="218.677306" font-size="16.307181" fill="var(--text)" font-family="Courier New, monospace">alice/</text>
   <line x1="203.278689" y1="220.548377" x2="203.278689" y2="300.064488" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="203.278689" y1="252.354729" x2="232.786885" y2="252.354729" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="240.655738" y="257.96771" font-family="monospace" font-size="15.347857" fill="var(--text)">documents/</text>
+  <text x="240.655738" y="257.96771" font-size="15.347857" fill="var(--text)" font-family="Courier New, monospace">documents/</text>
   <line x1="250.491803" y1="259.838781" x2="250.491803" y2="299.129068" stroke="var(--border)" stroke-width="1.3333" />
   <line x1="250.491803" y1="286.032151" x2="280" y2="286.032151" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="287.868852" y="291.645132" font-family="monospace" font-size="14.388644" fill="var(--text-muted)">report.txt</text>
+  <text x="287.868852" y="291.645132" font-size="14.388644" fill="var(--text-muted)" font-family="Courier New, monospace">report.txt</text>
   <line x1="203.278689" y1="299.129068" x2="232.786885" y2="299.129068" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="240.655738" y="304.741933" font-family="monospace" font-size="15.347857" fill="var(--text)">downloads/</text>
+  <text x="240.655738" y="304.741933" font-size="15.347857" fill="var(--text)" font-family="Courier New, monospace">downloads/</text>
   <line x1="156.065574" y1="342.161266" x2="185.57377" y2="342.161266" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="193.442623" y="347.774131" font-family="monospace" font-size="16.307181" fill="var(--text)">bob/</text>
+  <text x="193.442623" y="347.774131" font-size="16.307181" fill="var(--text)" font-family="Courier New, monospace">bob/</text>
   <line x1="108.852459" y1="384.258044" x2="138.360656" y2="384.258044" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="146.229508" y="389.870909" font-family="monospace" font-size="17.266394" fill="var(--text)">usr/</text>
+  <text x="146.229508" y="389.870909" font-size="17.266394" fill="var(--text)" font-family="Courier New, monospace">usr/</text>
   <line x1="108.852459" y1="426.354821" x2="138.360656" y2="426.354821" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="146.229508" y="431.967686" font-family="monospace" font-size="17.266394" fill="var(--text)">etc/</text>
+  <text x="146.229508" y="431.967686" font-size="17.266394" fill="var(--text)" font-family="Courier New, monospace">etc/</text>
   <line x1="108.852459" y1="468.451599" x2="138.360656" y2="468.451599" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="146.229508" y="474.064464" font-family="monospace" font-size="17.266394" fill="var(--text)">var/</text>
+  <text x="146.229508" y="474.064464" font-size="17.266394" fill="var(--text)" font-family="Courier New, monospace">var/</text>
   <line x1="108.852459" y1="510.548377" x2="138.360656" y2="510.548377" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="146.229508" y="516.161242" font-family="monospace" font-size="17.266394" fill="var(--text)">tmp/</text>
+  <text x="146.229508" y="516.161242" font-size="17.266394" fill="var(--text)" font-family="Courier New, monospace">tmp/</text>
   <rect x="561.311475" y="40" width="678.688525" height="580" rx="6.622878" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="561.311475" y="40" width="678.688525" height="44.903269" rx="6.622878" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="561.311475" y="68.064441" width="678.688525" height="16.838711" fill="var(--primary-fill)" rx="6.622878" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="900.655633" y="69.935396" text-anchor="middle" font-family="monospace" font-size="17.266394" font-weight="bold" fill="var(--bg)">Navigation Commands</text>
-  <rect x="590.819567" y="97.999954" width="619.672131" height="84.193556" rx="6.622878" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="620.327869" y="122.322601" font-family="monospace" font-size="19.184932" font-weight="bold" fill="var(--primary-accent)">pwd</text>
-  <text x="620.327869" y="142.903106" font-family="monospace" font-size="13.42932" fill="var(--text-muted)">Print Working Directory — shows current location</text>
-  <text x="620.327869" y="159.741817" font-family="monospace" font-size="14.388644" fill="var(--text)">$ pwd  →  /home/alice/documents</text>
-  <text x="620.327869" y="175.645225" font-family="monospace" font-size="11.511003" fill="var(--text-faint)">No arguments needed</text>
-  <rect x="590.819567" y="199.032221" width="619.672131" height="121.613004" rx="6.622878" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="620.327869" y="223.354868" font-family="monospace" font-size="19.184932" font-weight="bold" fill="var(--ok-accent)">ls</text>
-  <text x="620.327869" y="243.935373" font-family="monospace" font-size="13.42932" fill="var(--text-muted)">List directory contents</text>
-  <text x="620.327869" y="264.51611" font-family="monospace" font-size="14.388644" fill="var(--text)">$ ls              → file1.txt  dir1/  report.pdf</text>
-  <text x="620.327869" y="283.225776" font-family="monospace" font-size="14.388644" fill="var(--text)">$ ls -l           → long format with permissions</text>
-  <text x="620.327869" y="301.935559" font-family="monospace" font-size="14.388644" fill="var(--text)">$ ls -la          → include hidden files (dot files)</text>
-  <text x="620.327869" y="318.77427" font-family="monospace" font-size="11.511003" fill="var(--text-faint)">Flags: -l (long)  -a (all)  -h (human sizes)  -R (recursive)</text>
-  <rect x="590.819567" y="337.48382" width="619.672131" height="163.709782" rx="6.622878" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="620.327869" y="361.806351" font-family="monospace" font-size="19.184932" font-weight="bold" fill="var(--warn-accent)">cd</text>
-  <text x="620.327869" y="382.387089" font-family="monospace" font-size="13.42932" fill="var(--text-muted)">Change Directory — move around the tree</text>
-  <text x="620.327869" y="404.838665" font-family="monospace" font-size="14.388644" fill="var(--text)">$ cd /home/alice/documents   → absolute path</text>
-  <text x="620.327869" y="425.419402" font-family="monospace" font-size="14.388644" fill="var(--text)">$ cd documents               → relative path</text>
-  <text x="620.327869" y="445.999907" font-family="monospace" font-size="14.388644" fill="var(--text)">$ cd ..                      → go up one level</text>
-  <text x="620.327869" y="466.580644" font-family="monospace" font-size="14.388644" fill="var(--text)">$ cd ~                       → go to home dir</text>
-  <text x="620.327869" y="487.161382" font-family="monospace" font-size="14.388644" fill="var(--text)">$ cd -                       → previous directory</text>
-  <rect x="590.819567" y="517.096778" width="619.672131" height="74.838665" rx="6.622878" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="620.327869" y="540.48389" font-family="sans-serif" font-size="14.388644" font-weight="bold" fill="var(--info-accent)">Tip: Tab completion</text>
-  <text x="620.327869" y="561.064511" font-family="monospace" font-size="13.42932" fill="var(--text-muted)">Type the first letters of a path then press TAB →</text>
-  <text x="620.327869" y="579.774293" font-family="monospace" font-size="13.42932" fill="var(--text-muted)">the shell auto-completes file and directory names.</text>
+  <rect x="561.311475" y="40" width="678.688525" height="44.903269" rx="6.622878" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="561.311475" y="68.064441" width="678.688525" height="16.838711" fill="url(#grad-primary)" rx="6.622878" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900.655633" y="69.935396" text-anchor="middle" font-size="17.266394" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Navigation Commands</text>
+  <rect x="590.819567" y="97.999954" width="619.672131" height="84.193556" rx="6.622878" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.327869" y="122.322601" font-size="19.184932" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">pwd</text>
+  <text x="620.327869" y="142.903106" font-size="13.42932" fill="var(--text-muted)" font-family="Courier New, monospace">Print Working Directory — shows current location</text>
+  <text x="620.327869" y="159.741817" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ pwd  →  /home/alice/documents</text>
+  <text x="620.327869" y="175.645225" font-size="11.511003" fill="var(--text-faint)" font-family="Courier New, monospace">No arguments needed</text>
+  <rect x="590.819567" y="199.032221" width="619.672131" height="121.613004" rx="6.622878" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.327869" y="223.354868" font-size="19.184932" font-weight="bold" fill="var(--ok-accent)" font-family="Courier New, monospace">ls</text>
+  <text x="620.327869" y="243.935373" font-size="13.42932" fill="var(--text-muted)" font-family="Courier New, monospace">List directory contents</text>
+  <text x="620.327869" y="264.51611" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ ls              → file1.txt  dir1/  report.pdf</text>
+  <text x="620.327869" y="283.225776" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ ls -l           → long format with permissions</text>
+  <text x="620.327869" y="301.935559" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ ls -la          → include hidden files (dot files)</text>
+  <text x="620.327869" y="318.77427" font-size="11.511003" fill="var(--text-faint)" font-family="Courier New, monospace">Flags: -l (long)  -a (all)  -h (human sizes)  -R (recursive)</text>
+  <rect x="590.819567" y="337.48382" width="619.672131" height="163.709782" rx="6.622878" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.327869" y="361.806351" font-size="19.184932" font-weight="bold" fill="var(--warn-accent)" font-family="Courier New, monospace">cd</text>
+  <text x="620.327869" y="382.387089" font-size="13.42932" fill="var(--text-muted)" font-family="Courier New, monospace">Change Directory — move around the tree</text>
+  <text x="620.327869" y="404.838665" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ cd /home/alice/documents   → absolute path</text>
+  <text x="620.327869" y="425.419402" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ cd documents               → relative path</text>
+  <text x="620.327869" y="445.999907" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ cd ..                      → go up one level</text>
+  <text x="620.327869" y="466.580644" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ cd ~                       → go to home dir</text>
+  <text x="620.327869" y="487.161382" font-size="14.388644" fill="var(--text)" font-family="Courier New, monospace">$ cd -                       → previous directory</text>
+  <rect x="590.819567" y="517.096778" width="619.672131" height="74.838665" rx="6.622878" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.327869" y="540.48389" font-size="14.388644" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Tip: Tab completion</text>
+  <text x="620.327869" y="561.064511" font-size="13.42932" fill="var(--text-muted)" font-family="Courier New, monospace">Type the first letters of a path then press TAB →</text>
+  <text x="620.327869" y="579.774293" font-size="13.42932" fill="var(--text-muted)" font-family="Courier New, monospace">the shell auto-completes file and directory names.</text>
 </svg>

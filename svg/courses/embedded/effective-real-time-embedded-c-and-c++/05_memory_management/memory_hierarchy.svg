@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,37 +97,34 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="18.531634" fill="var(--text-muted)">Faster &amp; smaller at top · Slower &amp; larger at bottom</text>
+  <text x="640" y="40" text-anchor="middle" font-size="18.531634" fill="var(--text-muted)" font-family="Arial, sans-serif">Faster &amp; smaller at top · Slower &amp; larger at bottom</text>
   <polygon points="535.833333,60.350988 744.166667,60.350988 806.666667,131.578941 473.333333,131.578941" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <text x="640" y="105.122858" text-anchor="middle" font-family="sans-serif" font-size="22.649762" font-weight="bold" fill="var(--bg)">CPU Registers</text>
+  <text x="640" y="105.122858" text-anchor="middle" font-size="22.649762" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">CPU Registers</text>
   <polygon points="473.333333,137.684161 806.666667,137.684161 879.583222,219.087861 400.416556,219.087861" fill="var(--primary-fill)" filter="url(#shadow)" />
-  <text x="640" y="186.526305" text-anchor="middle" font-family="sans-serif" font-size="22.649762" font-weight="bold" fill="var(--bg)">L1 Cache</text>
+  <text x="640" y="186.526305" text-anchor="middle" font-size="22.649762" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">L1 Cache</text>
   <polygon points="400.416556,225.193081 879.583222,225.193081 962.916556,316.772022 317.083333,316.772022" fill="url(#grad-surface)" stroke="var(--primary-border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <text x="640" y="279.122846" text-anchor="middle" font-family="sans-serif" font-size="22.649762" font-weight="bold" fill="var(--text)">L2 / L3 Cache</text>
+  <text x="640" y="279.122846" text-anchor="middle" font-size="22.649762" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">L2 / L3 Cache</text>
   <polygon points="317.083333,322.877243 962.916556,322.877243 1056.666556,424.631551 223.333333,424.631551" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <text x="640" y="377.824607" text-anchor="middle" font-family="sans-serif" font-size="22.649762" font-weight="bold" fill="var(--text)">SRAM / DRAM</text>
+  <text x="640" y="377.824607" text-anchor="middle" font-size="22.649762" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SRAM / DRAM</text>
   <polygon points="223.333333,430.736772 1056.666556,430.736772 1160.833222,542.6667 119.166667,542.6667" fill="var(--surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <text x="640" y="491.789483" text-anchor="middle" font-family="sans-serif" font-size="22.649762" font-weight="bold" fill="var(--text-muted)">Flash / ROM</text>
-  <text x="71.25" y="96.982564" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--primary-accent)" font-weight="bold">1 cycle</text>
-  <text x="71.25" y="184.491232" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--primary-accent)">~4 cycles</text>
-  <text x="71.25" y="276.070172" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-muted)">~10 cycles</text>
-  <text x="71.25" y="373.75446" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-muted)">~100 cycles</text>
-  <text x="71.25" y="483.649189" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-faint)">~100+ cycles</text>
+  <text x="640" y="491.789483" text-anchor="middle" font-size="22.649762" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Flash / ROM</text>
+  <text x="71.25" y="96.982564" text-anchor="middle" font-size="13.384004" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">1 cycle</text>
+  <text x="71.25" y="184.491232" text-anchor="middle" font-size="13.384004" fill="var(--primary-accent)" font-family="Arial, sans-serif">~4 cycles</text>
+  <text x="71.25" y="276.070172" text-anchor="middle" font-size="13.384004" fill="var(--text-muted)" font-family="Arial, sans-serif">~10 cycles</text>
+  <text x="71.25" y="373.75446" text-anchor="middle" font-size="13.384004" fill="var(--text-muted)" font-family="Arial, sans-serif">~100 cycles</text>
+  <text x="71.25" y="483.649189" text-anchor="middle" font-size="13.384004" fill="var(--text-faint)" font-family="Arial, sans-serif">~100+ cycles</text>
   <line x1="44.166667" y1="60.350988" x2="44.166667" y2="542.6667" stroke="var(--border)" stroke-width="1.3333" />
   <polygon points="44.166667,55.263115 40,68.491282 48.333333,68.491282" fill="var(--text-faint)" />
-  <text x="75.625" y="273.6111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)" transform="rotate(-90 38 290)">Speed</text>
-  <text x="1208.75" y="96.982564" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--primary-accent)" font-weight="bold">bytes</text>
-  <text x="1208.75" y="184.491232" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--primary-accent)">KB</text>
-  <text x="1208.75" y="276.070172" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-muted)">MB</text>
-  <text x="1208.75" y="373.75446" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-muted)">MB–GB</text>
-  <text x="1208.75" y="483.649189" text-anchor="middle" font-family="sans-serif" font-size="13.384004" fill="var(--text-faint)">MB–GB</text>
+  <text x="75.625" y="273.6111" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)" transform="rotate(-90 38 290)" font-family="Arial, sans-serif">Speed</text>
+  <text x="1208.75" y="96.982564" text-anchor="middle" font-size="13.384004" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">bytes</text>
+  <text x="1208.75" y="184.491232" text-anchor="middle" font-size="13.384004" fill="var(--primary-accent)" font-family="Arial, sans-serif">KB</text>
+  <text x="1208.75" y="276.070172" text-anchor="middle" font-size="13.384004" fill="var(--text-muted)" font-family="Arial, sans-serif">MB</text>
+  <text x="1208.75" y="373.75446" text-anchor="middle" font-size="13.384004" fill="var(--text-muted)" font-family="Arial, sans-serif">MB–GB</text>
+  <text x="1208.75" y="483.649189" text-anchor="middle" font-size="13.384004" fill="var(--text-faint)" font-family="Arial, sans-serif">MB–GB</text>
   <line x1="1235.833222" y1="60.350988" x2="1235.833222" y2="542.6667" stroke="var(--border)" stroke-width="1.3333" />
   <polygon points="1235.833222,547.754447 1231.666667,534.52628 1240,534.52628" fill="var(--text-faint)" />
-  <text x="1204.375" y="273.6111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)" transform="rotate(90 1242 290)">Size</text>
-  <rect x="223.333333" y="571.157856" width="833.333333" height="48.842144" rx="7.108186" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="601.684212" text-anchor="middle" font-family="sans-serif" font-size="17.502132" fill="var(--primary-accent)">Embedded: often no L2/L3 cache · Flash is the primary non-volatile storage</text>
+  <text x="1204.375" y="273.6111" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)" transform="rotate(90 1242 290)" font-family="Arial, sans-serif">Size</text>
+  <rect x="223.333333" y="571.157856" width="833.333333" height="48.842144" rx="7.108186" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="601.684212" text-anchor="middle" font-size="17.502132" fill="var(--primary-accent)" font-family="Arial, sans-serif">Embedded: often no L2/L3 cache · Flash is the primary non-volatile storage</text>
 </svg>

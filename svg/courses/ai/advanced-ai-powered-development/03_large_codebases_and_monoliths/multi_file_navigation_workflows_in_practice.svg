@@ -1,73 +1,132 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
-    </marker>
-  </defs>
-  <text x="650.714286" y="40" text-anchor="middle" font-size="28.560469" font-weight="bold" fill="var(--primary-accent)">Multi-File Navigation Workflow</text>
-  <text x="650.714286" y="73.786408" text-anchor="middle" font-size="17.575674" fill="var(--text-muted)">Locate definition → call sites → tests before making changes</text>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <rect x="40" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="173.928571" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--primary-text)">1. Definition</text>
-  <text x="173.928571" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)">OrderService</text>
-  <text x="173.928571" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)">.submitOrder()</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <text x="650.714286" y="40" text-anchor="middle" font-size="28.560469" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Multi-File Navigation Workflow</text>
+  <text x="650.714286" y="73.786408" text-anchor="middle" font-size="17.575674" fill="var(--text-muted)" font-family="Arial, sans-serif">Locate definition → call sites → tests before making changes</text>
+
+  <rect x="40" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="173.928571" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">1. Definition</text>
+  <text x="173.928571" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)" font-family="Arial, sans-serif">OrderService</text>
+  <text x="173.928571" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--primary-text)" font-family="Arial, sans-serif">.submitOrder()</text>
 
   <line x1="307.857143" y1="208.932039" x2="345.357143" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="350.714286" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="484.642857" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--ok-text)">2. Call Sites</text>
-  <text x="484.642857" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)">all usages of</text>
-  <text x="484.642857" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)">submitOrder()</text>
+  <rect x="350.714286" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="484.642857" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. Call Sites</text>
+  <text x="484.642857" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)" font-family="Arial, sans-serif">all usages of</text>
+  <text x="484.642857" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--ok-text)" font-family="Arial, sans-serif">submitOrder()</text>
 
   <line x1="618.571429" y1="208.932039" x2="656.071429" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="661.428571" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="795.357143" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--info-text)">3. Unit Tests</text>
-  <text x="795.357143" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--info-text)">test_order.py</text>
-  <text x="795.357143" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--info-text)">coverage check</text>
+  <rect x="661.428571" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.357143" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">3. Unit Tests</text>
+  <text x="795.357143" y="214.563107" text-anchor="middle" font-size="16.477194" fill="var(--info-text)" font-family="Arial, sans-serif">test_order.py</text>
+  <text x="795.357143" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--info-text)" font-family="Arial, sans-serif">coverage check</text>
 
   <line x1="929.285714" y1="208.932039" x2="966.785714" y2="208.932039" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="972.142857" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1106.071429" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)">4. Integration</text>
-  <text x="1106.071429" y="193.165049" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)">Tests</text>
-  <text x="1106.071429" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--warn-text)">end-to-end flows</text>
+  <rect x="972.142857" y="113.203883" width="267.857143" height="191.456311" rx="8.787837" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1106.071429" y="163.883495" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">4. Integration</text>
+  <text x="1106.071429" y="193.165049" text-anchor="middle" font-size="21.969592" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Tests</text>
+  <text x="1106.071429" y="246.097087" text-anchor="middle" font-size="16.477194" fill="var(--warn-text)" font-family="Arial, sans-serif">end-to-end flows</text>
 
-  <rect x="40" y="349.708738" width="1200" height="270.291262" rx="8.787837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="389.126214" text-anchor="middle" font-size="24.166551" font-weight="bold" fill="var(--info-text)">Navigation Prompt Pattern</text>
-  <text x="72.142857" y="434.174757" font-size="17.575674" fill="var(--info-text)">1. "Find the definition of OrderService.submitOrder()"</text>
-  <text x="72.142857" y="467.961165" font-size="17.575674" fill="var(--info-text)">2. "Show all call sites of submitOrder() across the codebase"</text>
-  <text x="72.142857" y="501.747573" font-size="17.575674" fill="var(--info-text)">3. "Find test files that exercise submitOrder()"</text>
-  <text x="72.142857" y="535.533981" font-size="17.575674" fill="var(--info-text)">4. "Are there integration tests covering the full order flow?"</text>
-  <text x="72.142857" y="569.320388" font-size="17.575674" fill="var(--info-text)">5. "Show the database migration for the orders table"</text>
+  <rect x="40" y="349.708738" width="1200" height="270.291262" rx="8.787837" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="389.126214" text-anchor="middle" font-size="24.166551" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Navigation Prompt Pattern</text>
+  <text x="72.142857" y="434.174757" font-size="17.575674" fill="var(--info-text)" font-family="Arial, sans-serif">1. "Find the definition of OrderService.submitOrder()"</text>
+  <text x="72.142857" y="467.961165" font-size="17.575674" fill="var(--info-text)" font-family="Arial, sans-serif">2. "Show all call sites of submitOrder() across the codebase"</text>
+  <text x="72.142857" y="501.747573" font-size="17.575674" fill="var(--info-text)" font-family="Arial, sans-serif">3. "Find test files that exercise submitOrder()"</text>
+  <text x="72.142857" y="535.533981" font-size="17.575674" fill="var(--info-text)" font-family="Arial, sans-serif">4. "Are there integration tests covering the full order flow?"</text>
+  <text x="72.142857" y="569.320388" font-size="17.575674" fill="var(--info-text)" font-family="Arial, sans-serif">5. "Show the database migration for the orders table"</text>
 </svg>

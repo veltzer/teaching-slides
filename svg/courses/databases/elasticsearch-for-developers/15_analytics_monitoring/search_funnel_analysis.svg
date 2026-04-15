@@ -4,70 +4,125 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)">Search Funnel Analysis</text>
+  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Search Funnel Analysis</text>
 
   <!-- Funnel as progressively narrower bars, full width usage -->
   <!-- Stage 1: search 100% -->
   <polygon points="40,82.962963 1240,82.962963 1160,233.333333 120,233.333333" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="142.037037" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--ok-text)">Search</text>
-  <text x="640" y="190.37037" text-anchor="middle" font-size="20.727509" fill="var(--ok-text)">100% — 1,000,000 queries</text>
+  <text x="640" y="142.037037" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Search</text>
+  <text x="640" y="190.37037" text-anchor="middle" font-size="20.727509" fill="var(--ok-text)" font-family="Arial, sans-serif">100% — 1,000,000 queries</text>
 
   <!-- arrow between -->
   <line x1="640" y1="238.703704" x2="640" y2="270.925926" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Stage 2: click 40% -->
   <polygon points="200,276.296296 1080,276.296296 1000,426.666667 280,426.666667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="335.37037" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--primary-text)">Click</text>
-  <text x="640" y="383.703704" text-anchor="middle" font-size="20.727509" fill="var(--primary-text)">40% — 400,000 result clicks</text>
+  <text x="640" y="335.37037" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Click</text>
+  <text x="640" y="383.703704" text-anchor="middle" font-size="20.727509" fill="var(--primary-text)" font-family="Arial, sans-serif">40% — 400,000 result clicks</text>
 
   <!-- arrow between -->
   <line x1="640" y1="432.037037" x2="640" y2="464.259259" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Stage 3: convert 15% -->
   <polygon points="360,469.62963 920,469.62963 840,620 440,620" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="528.703704" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--warn-text)">Convert</text>
-  <text x="640" y="577.037037" text-anchor="middle" font-size="20.727509" fill="var(--warn-text)">15% — 150,000 purchases</text>
+  <text x="640" y="528.703704" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Convert</text>
+  <text x="640" y="577.037037" text-anchor="middle" font-size="20.727509" fill="var(--warn-text)" font-family="Arial, sans-serif">15% — 150,000 purchases</text>
 
   <!-- Side annotations at edges -->
-  <text x="60" y="158.148148" font-size="14.509256" fill="var(--text-muted)">queries</text>
-  <text x="220" y="351.481481" font-size="14.509256" fill="var(--text-muted)">CTR = 40%</text>
-  <text x="380" y="544.814815" font-size="14.509256" fill="var(--text-muted)">CR = 37.5% of clicks</text>
-  <text x="1080" y="158.148148" text-anchor="end" font-size="14.509256" fill="var(--text-muted)">track each stage</text>
-  <text x="1060" y="351.481481" text-anchor="end" font-size="14.509256" fill="var(--text-muted)">zero-result pct</text>
-  <text x="900" y="544.814815" text-anchor="end" font-size="14.509256" fill="var(--text-muted)">revenue per query</text>
+  <text x="60" y="158.148148" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">queries</text>
+  <text x="220" y="351.481481" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">CTR = 40%</text>
+  <text x="380" y="544.814815" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">CR = 37.5% of clicks</text>
+  <text x="1080" y="158.148148" text-anchor="end" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">track each stage</text>
+  <text x="1060" y="351.481481" text-anchor="end" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">zero-result pct</text>
+  <text x="900" y="544.814815" text-anchor="end" font-size="14.509256" fill="var(--text-muted)" font-family="Arial, sans-serif">revenue per query</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -107,82 +107,82 @@
     </linearGradient>
   </defs>
   <!-- Title bar -->
-  <rect x="40" y="40" width="1200" height="42.89076" rx="6.373938" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="1200" height="42.89076" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="639.999948" y="67.294013" font-family="Arial, sans-serif" font-size="19.583924" font-weight="bold" fill="var(--bg)" text-anchor="middle">SIMD and AVX: Vector Registers and Data Parallelism</text>
 
   <!-- Register hierarchy -->
   <!-- ZMM (512-bit) -->
-  <rect x="40" y="98.4874" width="1200" height="42.89076" rx="6.373938" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="40" y="98.4874" width="1200" height="42.89076" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="64.590162" y="122.856989" font-family="Arial, sans-serif" font-size="13.708534" font-weight="bold" fill="var(--bg)">ZMM0 (512-bit, AVX-512):</text>
   <!-- 16 floats -->
-  <rect x="285.901618" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310.491885" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="337.049259" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="361.639421" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="388.196796" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="412.786748" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="439.344227" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="463.934389" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f3</text>
-  <rect x="490.491869" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="515.081926" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f4</text>
-  <rect x="541.6393" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="566.229672" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f5</text>
-  <rect x="592.786942" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="617.376999" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f6</text>
-  <rect x="643.934478" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="668.524535" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f7</text>
-  <rect x="695.082015" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="719.672072" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f8</text>
-  <rect x="746.229551" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="770.819713" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f9</text>
-  <rect x="797.377088" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="821.96725" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f10</text>
-  <rect x="848.524624" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="873.114786" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f11</text>
-  <rect x="899.672266" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="924.262218" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f12</text>
-  <rect x="950.819592" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="975.409859" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f13</text>
-  <rect x="1001.967339" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1026.557396" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f14</text>
-  <rect x="1053.114666" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.704932" y="124.806677" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f15</text>
+  <rect x="285.901618" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310.491885" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f0</text>
+  <rect x="337.049259" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="361.639421" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f1</text>
+  <rect x="388.196796" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="412.786748" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f2</text>
+  <rect x="439.344227" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="463.934389" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f3</text>
+  <rect x="490.491869" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.081926" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f4</text>
+  <rect x="541.6393" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="566.229672" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f5</text>
+  <rect x="592.786942" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="617.376999" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f6</text>
+  <rect x="643.934478" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="668.524535" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f7</text>
+  <rect x="695.082015" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="719.672072" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f8</text>
+  <rect x="746.229551" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="770.819713" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f9</text>
+  <rect x="797.377088" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="821.96725" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f10</text>
+  <rect x="848.524624" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="873.114786" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f11</text>
+  <rect x="899.672266" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="924.262218" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f12</text>
+  <rect x="950.819592" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="975.409859" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f13</text>
+  <rect x="1001.967339" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1026.557396" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f14</text>
+  <rect x="1053.114666" y="102.386453" width="49.180324" height="35.092548" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1077.704932" y="124.806677" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f15</text>
   <text x="1121.967223" y="122.856989" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--bg)">16 x float32</text>
 
   <!-- YMM (256-bit) -->
-  <rect x="40" y="155.025006" width="1200" height="42.89076" rx="6.373938" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="155.025006" width="1200" height="42.89076" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="64.590162" y="179.394917" font-family="Arial, sans-serif" font-size="13.708534" font-weight="bold" fill="var(--bg)">YMM0 (256-bit, AVX):</text>
   <!-- 8 floats -->
-  <rect x="285.901618" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.081941" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="386.229478" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="435.409906" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="486.557443" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="535.737662" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="586.885303" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="636.065627" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f3</text>
-  <rect x="687.213058" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="736.393487" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f4</text>
-  <rect x="787.540813" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="836.721347" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f5</text>
-  <rect x="887.868988" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="937.049102" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f6</text>
-  <rect x="988.196743" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1037.377172" y="181.34439" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f7</text>
+  <rect x="285.901618" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335.081941" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f0</text>
+  <rect x="386.229478" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="435.409906" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f1</text>
+  <rect x="486.557443" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="535.737662" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f2</text>
+  <rect x="586.885303" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="636.065627" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f3</text>
+  <rect x="687.213058" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="736.393487" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f4</text>
+  <rect x="787.540813" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="836.721347" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f5</text>
+  <rect x="887.868988" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="937.049102" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f6</text>
+  <rect x="988.196743" y="158.924166" width="98.360752" height="35.092548" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1037.377172" y="181.34439" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f7</text>
   <text x="1112.131159" y="179.394917" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--bg)">8 x float32</text>
 
   <!-- XMM (128-bit) -->
-  <rect x="40" y="211.562934" width="1200" height="42.89076" rx="6.373938" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="211.562934" width="1200" height="42.89076" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="64.590162" y="235.93263" font-family="Arial, sans-serif" font-size="13.708534" font-weight="bold" fill="var(--bg)">XMM0 (128-bit, SSE):</text>
   <!-- 4 floats -->
-  <rect x="285.901618" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="384.26237" y="237.882318" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="484.59023" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="582.950877" y="237.882318" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="683.278737" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.639384" y="237.882318" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="881.967244" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="980.327892" y="237.882318" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">f3</text>
+  <rect x="285.901618" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="384.26237" y="237.882318" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f0</text>
+  <rect x="484.59023" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="582.950877" y="237.882318" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f1</text>
+  <rect x="683.278737" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="781.639384" y="237.882318" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f2</text>
+  <rect x="881.967244" y="215.462201" width="196.721189" height="35.092548" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="980.327892" y="237.882318" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">f3</text>
   <text x="1112.131159" y="235.93263" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--bg)">4 x float32</text>
 
   <!-- Packed operation diagram -->
@@ -190,65 +190,65 @@
   <text x="335.081941" y="296.36961" font-family="Arial, sans-serif" font-size="14.687784" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Packed Operation: vaddps ymm0, ymm1, ymm2</text>
 
   <!-- ymm1 -->
-  <text x="59.672129" y="322.688887" font-family="monospace" font-size="12.332826" fill="var(--text-muted)">ymm1:</text>
-  <rect x="128.524582" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="158.032777" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">1.0</text>
-  <rect x="189.508184" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="219.016378" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">2.0</text>
-  <rect x="250.491785" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="279.999979" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">3.0</text>
-  <rect x="311.475386" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340.983685" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">4.0</text>
-  <rect x="372.458987" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="401.967286" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">5.0</text>
-  <rect x="433.442589" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="462.950783" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">6.0</text>
-  <rect x="494.42619" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="523.934384" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">7.0</text>
-  <rect x="555.409791" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="584.917985" y="326.588047" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">8.0</text>
+  <text x="59.672129" y="322.688887" font-size="12.332826" fill="var(--text-muted)" font-family="Courier New, monospace">ymm1:</text>
+  <rect x="128.524582" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="158.032777" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">1.0</text>
+  <rect x="189.508184" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="219.016378" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">2.0</text>
+  <rect x="250.491785" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="279.999979" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">3.0</text>
+  <rect x="311.475386" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340.983685" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">4.0</text>
+  <rect x="372.458987" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="401.967286" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">5.0</text>
+  <rect x="433.442589" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="462.950783" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">6.0</text>
+  <rect x="494.42619" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="523.934384" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">7.0</text>
+  <rect x="555.409791" y="308.067198" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="584.917985" y="326.588047" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">8.0</text>
 
   <!-- ymm2 -->
-  <text x="59.672129" y="358.756278" font-family="monospace" font-size="12.332826" fill="var(--text-muted)">ymm2:</text>
-  <rect x="128.524582" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="158.032777" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">10</text>
-  <rect x="189.508184" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="219.016378" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">20</text>
-  <rect x="250.491785" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="279.999979" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">30</text>
-  <rect x="311.475386" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340.983685" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">40</text>
-  <rect x="372.458987" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="401.967286" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">50</text>
-  <rect x="433.442589" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="462.950783" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">60</text>
-  <rect x="494.42619" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="523.934384" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">70</text>
-  <rect x="555.409791" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="584.917985" y="363.630175" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">80</text>
+  <text x="59.672129" y="358.756278" font-size="12.332826" fill="var(--text-muted)" font-family="Courier New, monospace">ymm2:</text>
+  <rect x="128.524582" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="158.032777" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">10</text>
+  <rect x="189.508184" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="219.016378" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">20</text>
+  <rect x="250.491785" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="279.999979" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">30</text>
+  <rect x="311.475386" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340.983685" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">40</text>
+  <rect x="372.458987" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="401.967286" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">50</text>
+  <rect x="433.442589" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="462.950783" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">60</text>
+  <rect x="494.42619" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="523.934384" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">70</text>
+  <rect x="555.409791" y="345.109111" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="584.917985" y="363.630175" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">80</text>
 
   <!-- Arrow -->
   <line x1="359.672103" y1="376.302498" x2="359.672103" y2="403.596726" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="374.426305" y="395.798299" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text-muted)">vaddps (8 adds simultaneously)</text>
 
   <!-- Result ymm0 -->
-  <text x="59.672129" y="429.915895" font-family="monospace" font-size="12.332826" fill="var(--text-muted)">ymm0:</text>
-  <rect x="128.524582" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="158.032777" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">11</text>
-  <rect x="189.508184" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="219.016378" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">22</text>
-  <rect x="250.491785" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="279.999979" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">33</text>
-  <rect x="311.475386" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340.983685" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">44</text>
-  <rect x="372.458987" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="401.967286" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">55</text>
-  <rect x="433.442589" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="462.950783" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">66</text>
-  <rect x="494.42619" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="523.934384" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">77</text>
-  <rect x="555.409791" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="584.917985" y="433.815163" font-family="monospace" font-size="12.332826" fill="var(--bg)" text-anchor="middle">88</text>
+  <text x="59.672129" y="429.915895" font-size="12.332826" fill="var(--text-muted)" font-family="Courier New, monospace">ymm0:</text>
+  <rect x="128.524582" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="158.032777" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">11</text>
+  <rect x="189.508184" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="219.016378" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">22</text>
+  <rect x="250.491785" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="279.999979" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">33</text>
+  <rect x="311.475386" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340.983685" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">44</text>
+  <rect x="372.458987" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="401.967286" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">55</text>
+  <rect x="433.442589" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="462.950783" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">66</text>
+  <rect x="494.42619" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="523.934384" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">77</text>
+  <rect x="555.409791" y="415.294099" width="59.016388" height="27.294013" rx="6.373938" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="584.917985" y="433.815163" font-size="12.332826" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">88</text>
 
   <text x="335.081941" y="475.731079" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text-faint)" text-anchor="middle">8 additions in one instruction (vs 8 scalar addss)</text>
 
@@ -257,32 +257,32 @@
   <text x="944.918059" y="296.36961" font-family="Arial, sans-serif" font-size="14.687784" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Common SIMD Instructions</text>
 
   <!-- Table -->
-  <rect x="664.590109" y="303.193087" width="560.655794" height="27.294013" rx="6.373938" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="664.590109" y="303.193087" width="560.655794" height="27.294013" rx="6.373938" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="679.344311" y="321.714258" font-family="Arial, sans-serif" font-size="12.729604" font-weight="bold" fill="var(--text)">Instruction</text>
   <text x="836.721347" y="321.714258" font-family="Arial, sans-serif" font-size="12.729604" font-weight="bold" fill="var(--text)">Operation</text>
   <text x="1053.114666" y="321.714258" font-family="Arial, sans-serif" font-size="12.729604" font-weight="bold" fill="var(--text)">Width</text>
 
-  <text x="679.344311" y="345.109111" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vaddps</text>
+  <text x="679.344311" y="345.109111" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vaddps</text>
   <text x="836.721347" y="345.109111" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Packed float add</text>
   <text x="1053.114666" y="345.109111" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="679.344311" y="366.554491" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vmulps</text>
+  <text x="679.344311" y="366.554491" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vmulps</text>
   <text x="836.721347" y="366.554491" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Packed float multiply</text>
   <text x="1053.114666" y="366.554491" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="679.344311" y="387.999978" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vmovaps</text>
+  <text x="679.344311" y="387.999978" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vmovaps</text>
   <text x="836.721347" y="387.999978" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Aligned move</text>
   <text x="1053.114666" y="387.999978" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="679.344311" y="409.445466" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vpand</text>
+  <text x="679.344311" y="409.445466" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vpand</text>
   <text x="836.721347" y="409.445466" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Bitwise AND</text>
   <text x="1053.114666" y="409.445466" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="679.344311" y="430.890739" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vpcmpeqd</text>
+  <text x="679.344311" y="430.890739" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vpcmpeqd</text>
   <text x="836.721347" y="430.890739" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Packed int compare</text>
   <text x="1053.114666" y="430.890739" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="679.344311" y="452.336119" font-family="monospace" font-size="12.332826" fill="var(--info-accent)">vfmadd231ps</text>
+  <text x="679.344311" y="452.336119" font-size="12.332826" fill="var(--info-accent)" font-family="Courier New, monospace">vfmadd231ps</text>
   <text x="836.721347" y="452.336119" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">Fused multiply-add</text>
   <text x="1053.114666" y="452.336119" font-family="Arial, sans-serif" font-size="12.332826" fill="var(--text)">YMM/ZMM</text>
 
@@ -291,8 +291,8 @@
   <!-- GCC vectorization hint -->
   <rect x="40" y="512.773207" width="1200" height="107.226793" rx="6.373938" fill="var(--code-bg)"/>
   <text x="639.999948" y="534.218479" font-family="Arial, sans-serif" font-size="13.708534" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Using SIMD in GAS / GCC</text>
-  <text x="59.672129" y="557.613547" font-family="monospace" font-size="12.729604" fill="var(--primary-accent)">vmovaps (%rsi), %ymm1          <tspan fill="var(--text-muted)">; load 8 floats from aligned memory</tspan></text>
-  <text x="59.672129" y="577.109132" font-family="monospace" font-size="12.729604" fill="var(--primary-accent)">vmovaps (%rdx), %ymm2          <tspan fill="var(--text-muted)">; load 8 more floats</tspan></text>
-  <text x="59.672129" y="596.605147" font-family="monospace" font-size="12.729604" fill="var(--ok-accent)">vaddps  %ymm2, %ymm1, %ymm0    <tspan fill="var(--text-muted)">; add them together (8 ops at once)</tspan></text>
-  <text x="59.672129" y="616.100948" font-family="monospace" font-size="12.729604" fill="var(--primary-accent)">vmovaps %ymm0, (%rdi)          <tspan fill="var(--text-muted)">; store 8 results</tspan></text>
+  <text x="59.672129" y="557.613547" font-size="12.729604" fill="var(--primary-accent)" font-family="Courier New, monospace">vmovaps (%rsi), %ymm1          <tspan fill="var(--text-muted)" font-family="Arial, sans-serif">; load 8 floats from aligned memory</tspan></text>
+  <text x="59.672129" y="577.109132" font-size="12.729604" fill="var(--primary-accent)" font-family="Courier New, monospace">vmovaps (%rdx), %ymm2          <tspan fill="var(--text-muted)" font-family="Arial, sans-serif">; load 8 more floats</tspan></text>
+  <text x="59.672129" y="596.605147" font-size="12.729604" fill="var(--ok-accent)" font-family="Courier New, monospace">vaddps  %ymm2, %ymm1, %ymm0    <tspan fill="var(--text-muted)" font-family="Arial, sans-serif">; add them together (8 ops at once)</tspan></text>
+  <text x="59.672129" y="616.100948" font-size="12.729604" fill="var(--primary-accent)" font-family="Courier New, monospace">vmovaps %ymm0, (%rdi)          <tspan fill="var(--text-muted)" font-family="Arial, sans-serif">; store 8 results</tspan></text>
 </svg>

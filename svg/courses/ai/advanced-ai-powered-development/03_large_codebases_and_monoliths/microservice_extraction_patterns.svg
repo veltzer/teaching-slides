@@ -1,37 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrw" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+
   </defs>
   <text x="642.690583" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.996963" font-weight="bold" fill="var(--primary-accent)">Strangler Fig: Microservice Extraction Pattern</text>
 
@@ -41,7 +102,7 @@
   <text x="1089.327354" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.414515" font-weight="bold" fill="var(--ok-accent)">Phase 3: After</text>
 
   <!-- Phase 1: Monolith -->
-  <rect x="40" y="107.593985" width="312.107623" height="348.87218" rx="8.665654" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="107.593985" width="312.107623" height="348.87218" rx="8.665654" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="196.053812" y="151.203008" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.664136" font-weight="bold" fill="var(--danger-text)">Monolith</text>
   <text x="196.053812" y="200.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">auth module</text>
   <text x="196.053812" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">payments module</text>
@@ -51,22 +112,22 @@
   <text x="196.053812" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.164895" font-style="italic" fill="var(--danger-text)">shared deploy</text>
 
   <!-- Arrow to Phase 2 -->
-  <line x1="357.488789" y1="282.030075" x2="416.681614" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="357.488789" y1="282.030075" x2="416.681614" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Phase 2: Shrinking monolith + proxy + new service -->
-  <rect x="422.06278" y="107.593985" width="139.910314" height="348.87218" rx="8.665654" fill="var(--danger-fill)" fill-opacity="0.5" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="422.06278" y="107.593985" width="139.910314" height="348.87218" rx="8.665654" fill="url(#grad-danger)" fill-opacity="0.5" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="492.017937" y="145.75188" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--danger-text)">Monolith</text>
   <text x="492.017937" y="173.007519" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" font-style="italic" fill="var(--danger-text)">(shrinking)</text>
   <text x="492.017937" y="216.616541" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">payments</text>
   <text x="492.017937" y="247.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">billing</text>
   <text x="492.017937" y="277.669173" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">notifications</text>
 
-  <rect x="572.735426" y="238.421053" width="139.910314" height="109.022556" rx="8.665654" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="572.735426" y="238.421053" width="139.910314" height="109.022556" rx="8.665654" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="642.690583" y="276.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--warn-text)">Proxy / Facade</text>
   <text x="642.690583" y="303.834586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" fill="var(--warn-text)">AI-generated</text>
   <text x="642.690583" y="325.639098" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" fill="var(--warn-text)">adapter</text>
 
-  <rect x="723.408072" y="107.593985" width="139.910314" height="261.654135" rx="8.665654" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="723.408072" y="107.593985" width="139.910314" height="261.654135" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="793.363229" y="151.203008" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--ok-text)">New Service</text>
   <text x="793.363229" y="194.81203" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">auth module</text>
   <text x="793.363229" y="227.518797" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">(extracted)</text>
@@ -74,26 +135,26 @@
   <text x="793.363229" y="303.834586" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">own DB</text>
 
   <line x1="561.973094" y1="282.030075" x2="572.735426" y2="282.030075" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="712.64574" y1="238.421053" x2="723.408072" y2="238.421053" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrw)"/>
+  <line x1="712.64574" y1="238.421053" x2="723.408072" y2="238.421053" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Arrow to Phase 3 -->
-  <line x1="874.080717" y1="282.030075" x2="933.273543" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="874.080717" y1="282.030075" x2="933.273543" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Phase 3: Independent services -->
-  <rect x="938.654709" y="107.593985" width="301.345291" height="103.571429" rx="8.665654" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="938.654709" y="107.593985" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1089.327354" y="145.75188" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Auth Service</text>
   <text x="1089.327354" y="178.458647" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
 
-  <rect x="938.654709" y="227.518797" width="301.345291" height="103.571429" rx="8.665654" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="938.654709" y="227.518797" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1089.327354" y="265.676692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Payments Service</text>
   <text x="1089.327354" y="298.383459" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
 
-  <rect x="938.654709" y="347.443609" width="301.345291" height="103.571429" rx="8.665654" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="938.654709" y="347.443609" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1089.327354" y="385.601504" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Billing Service</text>
   <text x="1089.327354" y="418.308271" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
 
   <!-- Bottom steps note -->
-  <rect x="40" y="483.721805" width="1200" height="136.278195" rx="8.665654" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="483.721805" width="1200" height="136.278195" rx="8.665654" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="642.690583" y="521.879699" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.497722" font-weight="bold" fill="var(--info-text)">AI-Assisted Strangler Fig Steps</text>
   <text x="642.690583" y="560.037594" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--info-text)">1. identify public API surface  2. generate proxy service  3. migrate endpoints one-by-one</text>
   <text x="642.690583" y="592.744361" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--info-text)">4. write data-sync logic  5. complete migration  6. retire proxy</text>

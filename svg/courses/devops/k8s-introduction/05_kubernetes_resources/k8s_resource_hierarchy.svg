@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,56 +97,53 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="340" y="40" width="600" height="66.557402" rx="6.732355" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="66.622772" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.452199" font-weight="bold" fill="var(--info-accent)">Namespace</text>
-  <text x="640" y="89.442527" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.651308" fill="var(--info-accent)">logical isolation boundary — e.g. production, staging, dev</text>
+  <rect x="340" y="40" width="600" height="66.557402" rx="6.732355" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="66.622772" text-anchor="middle" font-size="21.452199" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Namespace</text>
+  <text x="640" y="89.442527" text-anchor="middle" font-size="13.651308" fill="var(--info-accent)" font-family="Arial, sans-serif">logical isolation boundary — e.g. production, staging, dev</text>
   <line x1="640" y1="106.557284" x2="640" y2="133.180292" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="660" y="125.573786" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">contains</text>
-  <rect x="390" y="136.983545" width="499.999893" height="66.557402" rx="6.732355" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="163.606435" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.452199" font-weight="bold" fill="var(--bg)">Deployment</text>
-  <text x="640" y="187.376945" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.651308" fill="var(--primary-accent)">desired state: replicas, image, update strategy</text>
+  <text x="660" y="125.573786" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">contains</text>
+  <rect x="390" y="136.983545" width="499.999893" height="66.557402" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="163.606435" text-anchor="middle" font-size="21.452199" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Deployment</text>
+  <text x="640" y="187.376945" text-anchor="middle" font-size="13.651308" fill="var(--primary-accent)" font-family="Arial, sans-serif">desired state: replicas, image, update strategy</text>
   <line x1="640" y1="203.54083" x2="640" y2="230.163838" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="660" y="222.557331" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">owns</text>
-  <rect x="430" y="233.967209" width="420" height="66.557402" rx="6.732355" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="260.590099" text-anchor="middle" font-family="Arial,sans-serif" font-size="21.452199" font-weight="bold" fill="var(--bg)">ReplicaSet</text>
-  <text x="640" y="284.360608" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.651308" fill="var(--primary-accent)">ensures N identical pods running at all times</text>
+  <text x="660" y="222.557331" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">owns</text>
+  <rect x="430" y="233.967209" width="420" height="66.557402" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="260.590099" text-anchor="middle" font-size="21.452199" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">ReplicaSet</text>
+  <text x="640" y="284.360608" text-anchor="middle" font-size="13.651308" fill="var(--primary-accent)" font-family="Arial, sans-serif">ensures N identical pods running at all times</text>
   <line x1="640" y1="300.524493" x2="640" y2="327.147501" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="660" y="319.540995" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">manages</text>
-  <rect x="140" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="280" y="355.672136" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)">Pod</text>
-  <text x="280" y="376.590146" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">IP: 10.244.1.5</text>
-  <rect x="160" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="280" y="410.819661" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.626489" font-weight="bold" fill="var(--bg)">Container</text>
-  <text x="280" y="431.737671" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--primary-accent)">nginx:1.21  port 80</text>
-  <text x="280" y="462.163932" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.220591" fill="var(--text-muted)">app=web, ver=v1</text>
+  <text x="660" y="319.540995" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">manages</text>
+  <rect x="140" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="355.672136" text-anchor="middle" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pod</text>
+  <text x="280" y="376.590146" text-anchor="middle" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">IP: 10.244.1.5</text>
+  <rect x="160" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="410.819661" text-anchor="middle" font-size="14.626489" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Container</text>
+  <text x="280" y="431.737671" text-anchor="middle" font-size="11.701281" fill="var(--primary-accent)" font-family="Arial, sans-serif">nginx:1.21  port 80</text>
+  <text x="280" y="462.163932" text-anchor="middle" font-size="11.220591" fill="var(--text-muted)" font-family="Arial, sans-serif">app=web, ver=v1</text>
   <line x1="490" y1="330.950872" x2="340" y2="330.950872" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <rect x="499.999893" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="355.672136" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)">Pod</text>
-  <text x="640" y="376.590146" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">IP: 10.244.1.6</text>
-  <rect x="520" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="410.819661" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.626489" font-weight="bold" fill="var(--bg)">Container</text>
-  <text x="640" y="431.737671" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--primary-accent)">nginx:1.21  port 80</text>
-  <text x="640" y="462.163932" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.220591" fill="var(--text-muted)">app=web, ver=v1</text>
-  <rect x="859.999893" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1000" y="355.672136" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)">Pod</text>
-  <text x="1000" y="376.590146" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">IP: 10.244.2.3</text>
-  <rect x="880" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="410.819661" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.626489" font-weight="bold" fill="var(--bg)">Container</text>
-  <text x="1000" y="431.737671" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--primary-accent)">nginx:1.21  port 80</text>
-  <text x="1000" y="462.163932" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.220591" fill="var(--text-muted)">app=web, ver=v1</text>
+  <rect x="499.999893" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="355.672136" text-anchor="middle" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pod</text>
+  <text x="640" y="376.590146" text-anchor="middle" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">IP: 10.244.1.6</text>
+  <rect x="520" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="410.819661" text-anchor="middle" font-size="14.626489" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Container</text>
+  <text x="640" y="431.737671" text-anchor="middle" font-size="11.701281" fill="var(--primary-accent)" font-family="Arial, sans-serif">nginx:1.21  port 80</text>
+  <text x="640" y="462.163932" text-anchor="middle" font-size="11.220591" fill="var(--text-muted)" font-family="Arial, sans-serif">app=web, ver=v1</text>
+  <rect x="859.999893" y="330.950872" width="280" height="142.622937" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="355.672136" text-anchor="middle" font-size="17.551809" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pod</text>
+  <text x="1000" y="376.590146" text-anchor="middle" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">IP: 10.244.2.3</text>
+  <rect x="880" y="386.098279" width="240" height="57.049151" rx="6.732355" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="410.819661" text-anchor="middle" font-size="14.626489" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Container</text>
+  <text x="1000" y="431.737671" text-anchor="middle" font-size="11.701281" fill="var(--primary-accent)" font-family="Arial, sans-serif">nginx:1.21  port 80</text>
+  <text x="1000" y="462.163932" text-anchor="middle" font-size="11.220591" fill="var(--text-muted)" font-family="Arial, sans-serif">app=web, ver=v1</text>
   <line x1="790" y1="330.950872" x2="940" y2="330.950872" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <text x="280" y="496.393446" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">replica 1/3</text>
-  <text x="640" y="496.393446" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">replica 2/3</text>
-  <text x="1000" y="496.393446" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">replica 3/3</text>
+  <text x="280" y="496.393446" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">replica 1/3</text>
+  <text x="640" y="496.393446" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">replica 2/3</text>
+  <text x="1000" y="496.393446" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">replica 3/3</text>
   <rect x="40" y="534.426214" width="1200" height="85.573786" rx="6.732355" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="560.09835" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.626489" font-weight="bold" fill="var(--text)">Key Facts</text>
-  <text x="200" y="583.868859" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">Namespace isolates resources</text>
-  <text x="499.999893" y="583.868859" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">Deployment owns ReplicaSets</text>
-  <text x="800" y="583.868859" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">ReplicaSet maintains pod count</text>
-  <text x="1100" y="583.868859" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.67635" fill="var(--text-muted)">Pod hosts containers</text>
-  <text x="640" y="596.229609" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.701281" fill="var(--text-muted)">Pods are ephemeral — controllers recreate them if they die</text>
+  <text x="640" y="560.09835" text-anchor="middle" font-size="14.626489" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Facts</text>
+  <text x="200" y="583.868859" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">Namespace isolates resources</text>
+  <text x="499.999893" y="583.868859" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">Deployment owns ReplicaSets</text>
+  <text x="800" y="583.868859" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">ReplicaSet maintains pod count</text>
+  <text x="1100" y="583.868859" text-anchor="middle" font-size="12.67635" fill="var(--text-muted)" font-family="Arial, sans-serif">Pod hosts containers</text>
+  <text x="640" y="596.229609" text-anchor="middle" font-size="11.701281" fill="var(--text-muted)" font-family="Arial, sans-serif">Pods are ephemeral — controllers recreate them if they die</text>
 </svg>

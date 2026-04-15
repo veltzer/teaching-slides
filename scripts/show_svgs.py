@@ -52,7 +52,7 @@ def main() -> None:
         ".cell img{width:100%;height:auto;display:block}",
         ".cell .cap{padding:8px 12px;background:#333;color:#ddd;",
         "font-size:12px;font-family:monospace;word-break:break-all}",
-        f"h1{{font-size:18px;margin:0 0 12px}}",
+        "h1{font-size:18px;margin:0 0 12px}",
         "</style></head><body>",
         f"<h1>{len(paths)} slides — {SVG_DIR}</h1>",
         "<div class='grid'>",

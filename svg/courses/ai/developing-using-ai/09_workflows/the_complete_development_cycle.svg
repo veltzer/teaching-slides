@@ -1,60 +1,147 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">The Complete Development Cycle</text>
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">The Complete Development Cycle</text>
 
-  <rect x="40" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="155" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Plan</text>
-  <text x="155" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Clarify intent</text>
-  <text x="155" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Draft spec</text>
-  <text x="155" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">List tasks</text>
-  <text x="155" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">AI brainstorms</text>
-  <text x="155" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">tradeoffs</text>
+  <rect x="40" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="155" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Plan</text>
+  <text x="155" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">Clarify intent</text>
+  <text x="155" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">Draft spec</text>
+  <text x="155" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">List tasks</text>
+  <text x="155" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">AI brainstorms</text>
+  <text x="155" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)" font-family="Arial, sans-serif">tradeoffs</text>
 
-  <rect x="295" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="410" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)">Generate</text>
-  <text x="410" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Prompt agent</text>
-  <text x="410" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Stream diffs</text>
-  <text x="410" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Apply to repo</text>
-  <text x="410" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Inspect changes</text>
-  <text x="410" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Keep or revert</text>
+  <rect x="295" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Generate</text>
+  <text x="410" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Prompt agent</text>
+  <text x="410" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Stream diffs</text>
+  <text x="410" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Apply to repo</text>
+  <text x="410" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Inspect changes</text>
+  <text x="410" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--info-text)" font-family="Arial, sans-serif">Keep or revert</text>
 
-  <rect x="550" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="665" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)">Test</text>
-  <text x="665" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Run unit suite</text>
-  <text x="665" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Integration checks</text>
-  <text x="665" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Linters, types</text>
-  <text x="665" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">AI fixes failures</text>
-  <text x="665" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Iterate fast</text>
+  <rect x="550" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="665" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Test</text>
+  <text x="665" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Run unit suite</text>
+  <text x="665" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Integration checks</text>
+  <text x="665" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Linters, types</text>
+  <text x="665" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">AI fixes failures</text>
+  <text x="665" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)" font-family="Arial, sans-serif">Iterate fast</text>
 
-  <rect x="805" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="920" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Review</text>
-  <text x="920" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Read the diff</text>
-  <text x="920" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Question choices</text>
-  <text x="920" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Security scan</text>
-  <text x="920" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Human approves</text>
-  <text x="920" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Accept commit</text>
+  <rect x="805" y="77.247706" width="230" height="255.412844" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="920" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Review</text>
+  <text x="920" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Read the diff</text>
+  <text x="920" y="194.311927" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Question choices</text>
+  <text x="920" y="236.880734" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Security scan</text>
+  <text x="920" y="279.449541" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Human approves</text>
+  <text x="920" y="311.376147" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Arial, sans-serif">Accept commit</text>
 
-  <rect x="1060" y="77.247706" width="180" height="255.412844" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1150" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">Ship</text>
-  <text x="1150" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">CI gates</text>
-  <text x="1150" y="204.954128" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Merge PR</text>
-  <text x="1150" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Deploy</text>
-  <text x="1150" y="290.091743" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Monitor</text>
+  <rect x="1060" y="77.247706" width="180" height="255.412844" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="119.816514" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Ship</text>
+  <text x="1150" y="162.385321" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">CI gates</text>
+  <text x="1150" y="204.954128" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Merge PR</text>
+  <text x="1150" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Deploy</text>
+  <text x="1150" y="290.091743" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)" font-family="Arial, sans-serif">Monitor</text>
 
   <rect x="40" y="364.587156" width="1200" height="255.412844" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="407.155963" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--text)">Feedback Loop</text>
-  <text x="640" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)">Telemetry, user reports, postmortems flow back to Plan.</text>
-  <text x="640" y="486.972477" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)">Each turn is shorter when AI handles boilerplate.</text>
-  <text x="640" y="524.220183" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)">Humans stay on the path: intent, review, accountability.</text>
-  <text x="640" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)">Small batches keep diffs reviewable.</text>
-  <text x="640" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)">Tight loops compound over time.</text>
+  <text x="640" y="407.155963" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Feedback Loop</text>
+  <text x="640" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)" font-family="Arial, sans-serif">Telemetry, user reports, postmortems flow back to Plan.</text>
+  <text x="640" y="486.972477" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)" font-family="Arial, sans-serif">Each turn is shorter when AI handles boilerplate.</text>
+  <text x="640" y="524.220183" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)" font-family="Arial, sans-serif">Humans stay on the path: intent, review, accountability.</text>
+  <text x="640" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)" font-family="Arial, sans-serif">Small batches keep diffs reviewable.</text>
+  <text x="640" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--text-muted)" font-family="Arial, sans-serif">Tight loops compound over time.</text>
 
   <line x1="270" y1="204.954128" x2="295" y2="204.954128" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="525" y1="204.954128" x2="550" y2="204.954128" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>

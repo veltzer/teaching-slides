@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,27 +75,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow-md" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#333" />
-    </marker>
   </defs>
   <text x="640.0001" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.84" font-weight="bold" fill="var(--text)">Monitoring Dashboard Layout</text>
   <rect x="40" y="62.5974" width="1200" height="557.4026" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
@@ -107,31 +104,31 @@
   <text x="387.3685" y="273.5065" font-family="Arial, sans-serif" font-size="14.9" fill="var(--ok-accent)">-- Process rate</text>
   <rect x="647.8947" y="92.7272" width="560.5263" height="195.8441" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2.1854" />
   <text x="927.3684" y="125.8701" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.88" font-weight="bold" fill="var(--warn-accent)">Batch Duration (ms)</text>
-  <rect x="695.2631" y="183.1169" width="39.4737" height="75.3247" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="750.5263" y="168.0519" width="39.4737" height="90.3896" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="805.7895" y="198.1818" width="39.4737" height="60.2597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="861.0527" y="160.5194" width="39.4737" height="97.9221" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="916.3158" y="175.5844" width="39.4737" height="82.8572" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="971.579" y="190.6494" width="39.4737" height="67.7922" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1026.8421" y="152.987" width="39.4737" height="105.4546" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1082.1052" y="168.0519" width="39.4737" height="90.3896" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="695.2631" y="183.1169" width="39.4737" height="75.3247" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="750.5263" y="168.0519" width="39.4737" height="90.3896" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="805.7895" y="198.1818" width="39.4737" height="60.2597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="861.0527" y="160.5194" width="39.4737" height="97.9221" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="916.3158" y="175.5844" width="39.4737" height="82.8572" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.579" y="190.6494" width="39.4737" height="67.7922" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1026.8421" y="152.987" width="39.4737" height="105.4546" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1082.1052" y="168.0519" width="39.4737" height="90.3896" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="927.3684" y="273.5065" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9" fill="var(--text-faint)">Batch #  (red = exceeded trigger)</text>
   <rect x="71.5789" y="303.6363" width="363.1579" height="150.6494" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.1854" />
   <text x="253.158" y="336.7792" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.88" font-weight="bold" fill="var(--ok-accent)">State Store</text>
   <text x="103.1579" y="371.4285" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Total rows:</text>
-  <text x="324.2105" y="371.4285" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">1,234,567</text>
+  <text x="324.2105" y="371.4285" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">1,234,567</text>
   <text x="103.1579" y="398.5455" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Memory used:</text>
-  <text x="324.2105" y="398.5455" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">2.4 GB</text>
+  <text x="324.2105" y="398.5455" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">2.4 GB</text>
   <text x="103.1579" y="425.6624" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Updated rows:</text>
-  <text x="324.2105" y="425.6624" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">45,678</text>
+  <text x="324.2105" y="425.6624" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">45,678</text>
   <rect x="458.421" y="303.6363" width="363.1579" height="150.6494" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2.1854" />
   <text x="640.0001" y="336.7792" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.88" font-weight="bold" fill="var(--info-accent)">Kafka Source</text>
   <text x="490.0001" y="371.4285" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Topic:</text>
-  <text x="711.0526" y="371.4285" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">user_events</text>
+  <text x="711.0526" y="371.4285" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">user_events</text>
   <text x="490.0001" y="398.5455" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Partitions:</text>
-  <text x="711.0526" y="398.5455" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">12</text>
+  <text x="711.0526" y="398.5455" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">12</text>
   <text x="490.0001" y="425.6624" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Consumer lag:</text>
-  <text x="711.0526" y="425.6624" text-anchor="end" font-family="monospace" font-size="16.39" fill="var(--text)">5,432</text>
+  <text x="711.0526" y="425.6624" text-anchor="end" font-size="16.39" fill="var(--text)" font-family="Courier New, monospace">5,432</text>
   <rect x="845.2631" y="303.6363" width="363.1579" height="150.6494" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2.1854" />
   <text x="1026.8421" y="336.7792" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.88" font-weight="bold" fill="var(--danger-accent)">Health Status</text>
   <rect x="883.692" y="367.008" width="17.88" height="17.88" rx="8.94" fill="var(--ok-accent)"/>
@@ -140,9 +137,9 @@
   <text x="916.3158" y="413.6104" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">Processing on schedule</text>
   <rect x="883.692" y="427.268" width="17.88" height="17.88" rx="8.94" fill="var(--warn-accent)"/>
   <text x="916.3158" y="443.7403" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">State size warning</text>
-  <rect x="71.5789" y="476.8831" width="1136.8421" height="60.2597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="71.5789" y="476.8831" width="1136.8421" height="60.2597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="103.1579" y="514.5454" font-family="Arial, sans-serif" font-size="17.88" font-weight="bold" fill="var(--warn-accent)">Alerts:</text>
   <text x="197.8948" y="514.5454" font-family="Arial, sans-serif" font-size="17.88" fill="var(--text-muted)">processRate/inputRate ratio = 0.85 (below 0.9 threshold) | State size growing 5%/hour</text>
-  <rect x="71.5789" y="552.2078" width="1136.8421" height="52.7272" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="71.5789" y="552.2078" width="1136.8421" height="52.7272" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="585.3507" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.39" fill="var(--text-muted)">API: query.lastProgress | query.status | spark.streams.active | StreamingQueryListener</text>
 </svg>

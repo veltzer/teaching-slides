@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,43 +96,43 @@
 
   <!-- Background -->
   <!-- Origins (right side) -->
-  <rect x="1033.103448" y="91.785714" width="206.896552" height="82.857143" rx="6.737879" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="1033.103448" y="91.785714" width="206.896552" height="82.857143" rx="6.737879" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1136.551724" y="128.035771" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491381" font-weight="bold" fill="var(--bg)">S3 Bucket</text>
   <text x="1136.551724" y="148.750057" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--primary-accent)">Static Assets</text>
 
-  <rect x="1033.103448" y="216.071429" width="206.896552" height="82.857143" rx="6.737879" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1033.103448" y="216.071429" width="206.896552" height="82.857143" rx="6.737879" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1136.551724" y="252.321486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491381" font-weight="bold" fill="var(--bg)">ALB / EC2</text>
   <text x="1136.551724" y="273.035771" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--info-accent)">Dynamic Content</text>
 
   <text x="1136.551724" y="71.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631808" font-weight="bold" fill="var(--text)">Origins</text>
 
   <!-- CloudFront Edge Locations (middle) -->
-  <rect x="433.103448" y="40" width="372.413793" height="559.285714" rx="6.737879" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.103448" y="40" width="372.413793" height="559.285714" rx="6.737879" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="619.310345" y="71.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561595" font-weight="bold" fill="var(--primary-accent)">CloudFront Edge Locations</text>
 
   <!-- Edge location dots -->
-  <rect x="493.09" y="110.442" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)"/>
+  <rect x="493.09" y="110.442" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="515.862069" y="138.3928" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.386117" font-weight="bold" fill="var(--bg)">US-E</text>
 
-  <rect x="658.607" y="110.442" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)"/>
+  <rect x="658.607" y="110.442" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="681.37931" y="138.3928" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.386117" font-weight="bold" fill="var(--bg)">US-W</text>
 
-  <rect x="493.09" y="203.656" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)"/>
+  <rect x="493.09" y="203.656" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="515.862069" y="231.6072" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.386117" font-weight="bold" fill="var(--bg)">EU</text>
 
-  <rect x="658.607" y="203.656" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)"/>
+  <rect x="658.607" y="203.656" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="681.37931" y="231.6072" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.386117" font-weight="bold" fill="var(--bg)">APAC</text>
 
-  <rect x="575.849" y="296.871" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)"/>
+  <rect x="575.849" y="296.871" width="45.5442" height="45.5442" rx="14" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="598.62069" y="324.821371" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.386117" font-weight="bold" fill="var(--bg)">SA</text>
 
   <!-- Cache Hit path (green, short) -->
-  <rect x="464.137931" y="381.785714" width="310.344828" height="82.857143" rx="6.737879" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="464.137931" y="381.785714" width="310.344828" height="82.857143" rx="6.737879" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="619.310345" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.526432" font-weight="bold" fill="var(--ok-accent)">Cache HIT</text>
   <text x="619.310345" y="438.750057" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456331" fill="var(--text)">Response from edge (low latency)</text>
 
   <!-- Cache Miss path (orange, long) -->
-  <rect x="464.137931" y="485.357143" width="310.344828" height="82.857143" rx="6.737879" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="464.137931" y="485.357143" width="310.344828" height="82.857143" rx="6.737879" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="619.310345" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.526432" font-weight="bold" fill="var(--warn-accent)">Cache MISS</text>
   <text x="619.310345" y="542.321486" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456331" fill="var(--text)">Fetch from origin, cache, respond</text>
 
@@ -148,19 +148,19 @@
   <text x="153.793103" y="71.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631808" font-weight="bold" fill="var(--text)">End Users</text>
 
   <!-- User icons as simple shapes -->
-  <rect x="81.3669" y="133.227" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)"/>
+  <rect x="81.3669" y="133.227" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="102.068966" y="159.107086" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561595" fill="var(--bg)">&#x263A;</text>
   <text x="102.068966" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--text)">Americas</text>
 
-  <rect x="205.505" y="133.227" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)"/>
+  <rect x="205.505" y="133.227" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="226.206897" y="159.107086" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561595" fill="var(--bg)">&#x263A;</text>
   <text x="226.206897" y="195.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--text)">Europe</text>
 
-  <rect x="81.3669" y="257.512" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)"/>
+  <rect x="81.3669" y="257.512" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="102.068966" y="283.3928" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561595" fill="var(--bg)">&#x263A;</text>
   <text x="102.068966" y="319.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--text)">Asia</text>
 
-  <rect x="205.505" y="257.512" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)"/>
+  <rect x="205.505" y="257.512" width="41.404" height="41.404" rx="14" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="226.206897" y="283.3928" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561595" fill="var(--bg)">&#x263A;</text>
   <text x="226.206897" y="319.642857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.421168" fill="var(--text)">Global</text>
 

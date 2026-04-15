@@ -1,33 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <rect x="40" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">PageRank</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+
+  <rect x="40" y="40" width="290" height="284.727273" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="82.181818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">PageRank</text>
   <rect x="85.6233" y="141.623" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
   <rect x="162.408" y="112.317" width="45.1841" height="45.1841" rx="14" fill="var(--bg)"/>
   <rect x="259.731" y="145.731" width="20.5382" height="20.5382" rx="10.2691" fill="var(--bg)"/>
@@ -37,20 +105,20 @@
   <line x1="207" y1="140.181818" x2="260" y2="156" stroke="var(--bg)" stroke-width="1.5"/>
   <line x1="150" y1="214" x2="175" y2="156" stroke="var(--bg)" stroke-width="1.5"/>
   <line x1="218" y1="206.618182" x2="195" y2="158.109091" stroke="var(--bg)" stroke-width="1.5"/>
-  <text x="185" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--primary-text)">rank by inbound influence</text>
-  <text x="185" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--primary-text)">g.pageRank(0.0001)</text>
+  <text x="185" y="277.272727" text-anchor="middle" font-size="13.349838" fill="var(--primary-text)" font-family="Arial, sans-serif">rank by inbound influence</text>
+  <text x="185" y="303.636364" text-anchor="middle" font-size="13.349838" fill="var(--primary-text)" font-family="Courier New, monospace">g.pageRank(0.0001)</text>
 
-  <rect x="350" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Triangle Count</text>
+  <rect x="350" y="40" width="290" height="284.727273" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="82.181818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Triangle Count</text>
   <polygon points="495,134.909091 430,229.818182 560,229.818182" fill="none" stroke="var(--bg)" stroke-width="2.5"/>
   <rect x="482.677" y="122.586" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
   <rect x="417.677" y="217.495" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
   <rect x="547.677" y="217.495" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
-  <text x="495" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--ok-text)">count closed triads per vertex</text>
-  <text x="495" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--ok-text)">g.triangleCount()</text>
+  <text x="495" y="277.272727" text-anchor="middle" font-size="13.349838" fill="var(--ok-text)" font-family="Arial, sans-serif">count closed triads per vertex</text>
+  <text x="495" y="303.636364" text-anchor="middle" font-size="13.349838" fill="var(--ok-text)" font-family="Courier New, monospace">g.triangleCount()</text>
 
-  <rect x="660" y="40" width="290" height="284.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805" y="82.181818" text-anchor="middle" font-family="Arial" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Connected Components</text>
+  <rect x="660" y="40" width="290" height="284.727273" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805" y="82.181818" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Connected Components</text>
   <rect x="707.677" y="143.677" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
   <rect x="757.677" y="175.313" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
   <rect x="707.677" y="217.495" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)"/>
@@ -61,42 +129,42 @@
   <rect x="857.677" y="154.223" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)" opacity="0.7"/>
   <rect x="887.677" y="206.95" width="24.6459" height="24.6459" rx="12.3229" fill="var(--bg)" opacity="0.7"/>
   <line x1="878" y1="176.036364" x2="895" y2="207.672727" stroke="var(--bg)" stroke-width="2" opacity="0.7"/>
-  <text x="805" y="277.272727" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--warn-text)">label propagation to min id</text>
-  <text x="805" y="303.636364" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--warn-text)">g.connectedComponents()</text>
+  <text x="805" y="277.272727" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Arial, sans-serif">label propagation to min id</text>
+  <text x="805" y="303.636364" text-anchor="middle" font-size="13.349838" fill="var(--warn-text)" font-family="Courier New, monospace">g.connectedComponents()</text>
 
-  <rect x="970" y="40" width="270" height="284.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="82.181818" text-anchor="middle" font-family="Arial" font-size="22.592034" font-weight="bold" fill="var(--info-text)">SSSP</text>
+  <rect x="970" y="40" width="270" height="284.727273" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="82.181818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">SSSP</text>
   <rect x="1005.62" y="173.26" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
-  <text x="1020" y="192.909091" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--info-border)">0</text>
+  <text x="1020" y="192.909091" text-anchor="middle" font-size="10.269106" font-weight="bold" fill="var(--info-border)" font-family="Arial, sans-serif">0</text>
   <rect x="1090.62" y="141.623" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
-  <text x="1105" y="161.272727" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--info-border)">3</text>
+  <text x="1105" y="161.272727" text-anchor="middle" font-size="10.269106" font-weight="bold" fill="var(--info-border)" font-family="Arial, sans-serif">3</text>
   <rect x="1175.62" y="173.26" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
-  <text x="1190" y="192.909091" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--info-border)">7</text>
+  <text x="1190" y="192.909091" text-anchor="middle" font-size="10.269106" font-weight="bold" fill="var(--info-border)" font-family="Arial, sans-serif">7</text>
   <rect x="1090.62" y="225.987" width="28.7535" height="28.7535" rx="14" fill="var(--bg)"/>
-  <text x="1105" y="245.636364" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--info-border)">5</text>
+  <text x="1105" y="245.636364" text-anchor="middle" font-size="10.269106" font-weight="bold" fill="var(--info-border)" font-family="Arial, sans-serif">5</text>
   <line x1="1033" y1="182.363636" x2="1091" y2="161.272727" stroke="var(--bg)" stroke-width="2"/>
   <line x1="1119" y1="161.272727" x2="1177" y2="182.363636" stroke="var(--bg)" stroke-width="2"/>
   <line x1="1030" y1="198.181818" x2="1093" y2="234.036364" stroke="var(--bg)" stroke-width="2"/>
-  <text x="1105" y="287.818182" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--info-text)">shortest path from source</text>
-  <text x="1105" y="308.909091" text-anchor="middle" font-family="monospace" font-size="12.322928" fill="var(--info-text)">via Pregel</text>
+  <text x="1105" y="287.818182" text-anchor="middle" font-size="13.349838" fill="var(--info-text)" font-family="Arial, sans-serif">shortest path from source</text>
+  <text x="1105" y="308.909091" text-anchor="middle" font-size="12.322928" fill="var(--info-text)" font-family="Courier New, monospace">via Pregel</text>
 
   <rect x="40" y="366.909091" width="1200" height="253.090909" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="409.090909" text-anchor="middle" font-family="Arial" font-size="20.538213" font-weight="bold" fill="var(--text)">When to use which</text>
-  <text x="180" y="461.818182" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--primary-border)" font-weight="bold">PageRank</text>
-  <text x="180" y="488.181818" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">influence, ranking</text>
-  <text x="180" y="509.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">recommendations</text>
+  <text x="640" y="409.090909" text-anchor="middle" font-size="20.538213" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">When to use which</text>
+  <text x="180" y="461.818182" text-anchor="middle" font-size="14.376749" fill="var(--primary-border)" font-weight="bold" font-family="Arial, sans-serif">PageRank</text>
+  <text x="180" y="488.181818" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">influence, ranking</text>
+  <text x="180" y="509.272727" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">recommendations</text>
 
-  <text x="460" y="461.818182" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--ok-border)" font-weight="bold">Triangle Count</text>
-  <text x="460" y="488.181818" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">community detection</text>
-  <text x="460" y="509.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">clustering coefficient</text>
+  <text x="460" y="461.818182" text-anchor="middle" font-size="14.376749" fill="var(--ok-border)" font-weight="bold" font-family="Arial, sans-serif">Triangle Count</text>
+  <text x="460" y="488.181818" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">community detection</text>
+  <text x="460" y="509.272727" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">clustering coefficient</text>
 
-  <text x="780" y="461.818182" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--warn-border)" font-weight="bold">Connected Components</text>
-  <text x="780" y="488.181818" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">fraud rings</text>
-  <text x="780" y="509.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">entity resolution</text>
+  <text x="780" y="461.818182" text-anchor="middle" font-size="14.376749" fill="var(--warn-border)" font-weight="bold" font-family="Arial, sans-serif">Connected Components</text>
+  <text x="780" y="488.181818" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">fraud rings</text>
+  <text x="780" y="509.272727" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">entity resolution</text>
 
-  <text x="1100" y="461.818182" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--info-border)" font-weight="bold">SSSP</text>
-  <text x="1100" y="488.181818" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">routing, logistics</text>
-  <text x="1100" y="509.272727" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">reachability</text>
+  <text x="1100" y="461.818182" text-anchor="middle" font-size="14.376749" fill="var(--info-border)" font-weight="bold" font-family="Arial, sans-serif">SSSP</text>
+  <text x="1100" y="488.181818" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">routing, logistics</text>
+  <text x="1100" y="509.272727" text-anchor="middle" font-size="12.322928" fill="var(--text-muted)" font-family="Arial, sans-serif">reachability</text>
 
-  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial" font-size="13.349838" fill="var(--text-muted)">All four ship built-in under org.apache.spark.graphx.lib</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-size="13.349838" fill="var(--text-muted)" font-family="Arial, sans-serif">All four ship built-in under org.apache.spark.graphx.lib</text>
 </svg>

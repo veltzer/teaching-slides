@@ -1,49 +1,117 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.832006" font-weight="bold" fill="var(--primary-accent)">Continuous AI Integration Patterns</text>
 
   <!-- Pipeline row: 4 stages -->
-  <rect x="40" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="182.105263" y="119.240987" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.450338" font-weight="bold" fill="var(--primary-text)">IDE Copilot</text>
   <text x="182.105263" y="157.760911" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.145004" fill="var(--primary-text)">inline completion</text>
   <text x="182.105263" y="190.777989" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--primary-text)">stage: dev time</text>
 
-  <rect x="345.263158" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="345.263158" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="487.368421" y="119.240987" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.450338" font-weight="bold" fill="var(--warn-text)">PR AI Review</text>
   <text x="487.368421" y="157.760911" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.145004" fill="var(--warn-text)">code review bot</text>
   <text x="487.368421" y="190.777989" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--warn-text)">stage: pre-merge</text>
 
-  <rect x="650.526316" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="650.526316" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="792.631579" y="119.240987" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.450338" font-weight="bold" fill="var(--ok-text)">CI AI Checks</text>
   <text x="792.631579" y="157.760911" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.145004" fill="var(--ok-text)">test selection</text>
   <text x="792.631579" y="190.777989" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--ok-text)">stage: every push</text>
 
-  <rect x="955.789474" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="955.789474" y="75.218216" width="284.210526" height="154.079696" rx="8.610669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1097.894737" y="119.240987" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.450338" font-weight="bold" fill="var(--info-text)">Deploy AI</text>
   <text x="1097.894737" y="157.760911" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.145004" fill="var(--info-text)">risk assessment</text>
   <text x="1097.894737" y="190.777989" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--info-text)">stage: auto-rollback</text>
@@ -55,7 +123,7 @@
   <line x1="1097.894737" y1="229.297913" x2="1097.894737" y2="284.326376" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="4 3"/>
 
   <!-- Shared context layer -->
-  <rect x="40" y="284.326376" width="1200" height="121.062619" rx="8.610669" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="284.326376" width="1200" height="121.062619" rx="8.610669" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="328.349146" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.526671" font-weight="bold" fill="var(--warn-text)">Shared Context Layer</text>
   <text x="640" y="370.170778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.145004" fill="var(--warn-text)">codebase knowledge · team conventions · project history · test results</text>
 
@@ -63,17 +131,17 @@
   <text x="640" y="454.914611" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.526671" font-weight="bold" fill="var(--text)">Adoption Maturity</text>
 
   <!-- Adoption stages -->
-  <rect x="40" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="229.473684" y="515.44592" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.374004" font-weight="bold" fill="var(--primary-text)">Start: Advisory</text>
   <text x="229.473684" y="551.764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--primary-text)">non-blocking comments</text>
   <text x="229.473684" y="581.480076" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--primary-text)">build trust first</text>
 
-  <rect x="450.526316" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450.526316" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="515.44592" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.374004" font-weight="bold" fill="var(--ok-text)">Grow: Gate-based</text>
   <text x="640" y="551.764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--ok-text)">required CI check</text>
   <text x="640" y="581.480076" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--ok-text)">blocks merge on failure</text>
 
-  <rect x="861.052632" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="861.052632" y="476.925996" width="378.947368" height="143.074004" rx="8.610669" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1050.526316" y="515.44592" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.374004" font-weight="bold" fill="var(--info-text)">Mature: Ambient</text>
   <text x="1050.526316" y="551.764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--info-text)">proactive improvement PRs</text>
   <text x="1050.526316" y="581.480076" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.06867" fill="var(--info-text)">continuous monitoring</text>

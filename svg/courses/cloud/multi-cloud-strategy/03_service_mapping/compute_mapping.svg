@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -98,53 +98,53 @@
   <rect x="40" y="40" width="212.389381" height="73.818182" rx="6.888516" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="146.19469" y="86.4" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--text)" text-anchor="middle">Service Type</text>
   <!-- AWS header -->
-  <rect x="273.628319" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="273.628319" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="427.610619" y="86.4" font-family="Arial, sans-serif" font-size="23.281231" font-weight="bold" fill="var(--bg)" text-anchor="middle">AWS</text>
   <!-- Azure header -->
-  <rect x="602.831858" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="602.831858" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="756.814159" y="86.4" font-family="Arial, sans-serif" font-size="23.281231" font-weight="bold" fill="var(--bg)" text-anchor="middle">Azure</text>
   <!-- GCP header -->
-  <rect x="932.035398" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="932.035398" y="40" width="307.964602" height="73.818182" rx="6.888516" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.017699" y="86.4" font-family="Arial, sans-serif" font-size="23.281231" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCP</text>
   <!-- Row 1: VMs -->
   <rect x="40" y="134.909091" width="212.389381" height="105.454545" rx="6.888516" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="146.19469" y="182.363695" font-family="Arial, sans-serif" font-size="19.048353" font-weight="bold" fill="var(--text)" text-anchor="middle">Virtual</text>
   <text x="146.19469" y="208.727273" font-family="Arial, sans-serif" font-size="19.048353" font-weight="bold" fill="var(--text)" text-anchor="middle">Machines</text>
-  <rect x="273.628319" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="273.628319" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="427.610619" y="192.909033" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">EC2</text>
-  <rect x="602.831858" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="602.831858" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="756.814159" y="182.363695" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Virtual</text>
   <text x="756.814159" y="208.727273" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Machines</text>
-  <rect x="932.035398" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="134.909091" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.017699" y="182.363695" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Compute</text>
   <text x="1086.017699" y="208.727273" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Engine</text>
   <!-- Row 2: Containers -->
   <rect x="40" y="261.454545" width="212.389381" height="105.454545" rx="6.888516" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="146.19469" y="319.454487" font-family="Arial, sans-serif" font-size="19.048353" font-weight="bold" fill="var(--text)" text-anchor="middle">Containers</text>
-  <rect x="273.628319" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="273.628319" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="427.610619" y="314.181818" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">ECS / EKS</text>
-  <rect x="602.831858" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="602.831858" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="756.814159" y="314.181818" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">ACI / AKS</text>
-  <rect x="932.035398" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="261.454545" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.017699" y="308.909149" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Cloud Run</text>
   <text x="1086.017699" y="335.272727" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">GKE</text>
   <!-- Row 3: Serverless -->
   <rect x="40" y="388" width="212.389381" height="105.454545" rx="6.888516" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="146.19469" y="445.999942" font-family="Arial, sans-serif" font-size="19.048353" font-weight="bold" fill="var(--text)" text-anchor="middle">Serverless</text>
-  <rect x="273.628319" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="273.628319" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="427.610619" y="445.999942" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Lambda</text>
-  <rect x="602.831858" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="602.831858" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="756.814159" y="445.999942" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Functions</text>
-  <rect x="932.035398" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="388" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.017699" y="435.454604" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Cloud</text>
   <text x="1086.017699" y="461.818182" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Functions</text>
   <!-- Row 4: Batch -->
   <rect x="40" y="514.545455" width="212.389381" height="105.454545" rx="6.888516" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="146.19469" y="572.545396" font-family="Arial, sans-serif" font-size="19.048353" font-weight="bold" fill="var(--text)" text-anchor="middle">Batch</text>
-  <rect x="273.628319" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="273.628319" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="427.610619" y="572.545396" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Batch</text>
-  <rect x="602.831858" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="602.831858" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="756.814159" y="572.545396" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Batch</text>
-  <rect x="932.035398" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="932.035398" y="514.545455" width="307.964602" height="105.454545" rx="6.888516" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.017699" y="572.545396" font-family="Arial, sans-serif" font-size="21.16485" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Batch</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,73 +75,67 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#28a745" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)">Database Replication Types</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="22.8335" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Database Replication Types</text>
   <rect x="40" y="70.5265" width="577.2151" height="473.1579" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.1051 5.5525" />
-  <text x="328.6076" y="105.6317" text-anchor="middle" font-size="18.5522" font-weight="bold" fill="var(--primary-accent)">Master-Slave Replication</text>
-  <rect x="222.2784" y="131.579" width="182.2784" height="68.6843" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="313.4177" y="172.7896" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)">Master</text>
-  <rect x="85.5696" y="276.5789" width="167.0887" height="61.0526" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.1139" y="314.737" text-anchor="middle" font-size="17.1252" fill="var(--text)">Slave 1</text>
-  <rect x="374.1771" y="276.5789" width="167.0887" height="61.0526" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="457.7214" y="314.737" text-anchor="middle" font-size="17.1252" fill="var(--text)">Slave 2</text>
+  <text x="328.6076" y="105.6317" text-anchor="middle" font-size="18.5522" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Master-Slave Replication</text>
+  <rect x="222.2784" y="131.579" width="182.2784" height="68.6843" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="313.4177" y="172.7896" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Master</text>
+  <rect x="85.5696" y="276.5789" width="167.0887" height="61.0526" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.1139" y="314.737" text-anchor="middle" font-size="17.1252" fill="var(--text)" font-family="Arial, sans-serif">Slave 1</text>
+  <rect x="374.1771" y="276.5789" width="167.0887" height="61.0526" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="457.7214" y="314.737" text-anchor="middle" font-size="17.1252" fill="var(--text)" font-family="Arial, sans-serif">Slave 2</text>
   <line x1="267.848" y1="200.2632" x2="191.8987" y2="273.5264" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="191.8987" y="238.4211" font-size="14.271" fill="var(--primary-accent)">Write</text>
+  <text x="191.8987" y="238.4211" font-size="14.271" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write</text>
   <line x1="358.9873" y1="200.2632" x2="434.9367" y2="273.5264" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="419.7468" y="238.4211" font-size="14.271" fill="var(--primary-accent)">Write</text>
-  <rect x="77.9746" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="131.1392" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)">Client</text>
+  <text x="419.7468" y="238.4211" font-size="14.271" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write</text>
+  <rect x="77.9746" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="131.1392" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
   <line x1="131.1392" y1="398.6842" x2="146.329" y2="340.6842" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="85.5696" y="380.3685" font-size="14.271" fill="var(--ok-accent)">Read</text>
-  <rect x="366.5823" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="419.7468" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)">Client</text>
+  <text x="85.5696" y="380.3685" font-size="14.271" fill="var(--ok-accent)" font-family="Arial, sans-serif">Read</text>
+  <rect x="366.5823" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="419.7468" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
   <line x1="419.7468" y1="398.6842" x2="434.9367" y2="340.6842" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="381.7721" y="380.3685" font-size="14.271" fill="var(--ok-accent)">Read</text>
-  <rect x="222.2784" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="275.4429" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)">Client</text>
+  <text x="381.7721" y="380.3685" font-size="14.271" fill="var(--ok-accent)" font-family="Arial, sans-serif">Read</text>
+  <rect x="222.2784" y="398.6842" width="106.3291" height="45.7895" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="275.4429" y="429.2105" text-anchor="middle" font-size="14.271" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
   <line x1="275.4429" y1="398.6842" x2="298.2278" y2="203.3158" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="245.0633" y="307.1052" font-size="14.271" fill="var(--danger-accent)">Write</text>
+  <text x="245.0633" y="307.1052" font-size="14.271" fill="var(--danger-accent)" font-family="Arial, sans-serif">Write</text>
   <rect x="677.9747" y="70.5265" width="562.0253" height="473.1579" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.1051 5.5525" />
-  <text x="958.9872" y="105.6317" text-anchor="middle" font-size="18.5522" font-weight="bold" fill="var(--ok-accent)">Master-Master Replication</text>
-  <rect x="738.7341" y="169.7368" width="182.2784" height="68.6843" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="829.8733" y="210.9474" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)">Master 1</text>
-  <rect x="1027.3417" y="169.7368" width="182.2784" height="68.6843" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1118.4808" y="210.9474" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)">Master 2</text>
+  <text x="958.9872" y="105.6317" text-anchor="middle" font-size="18.5522" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Master-Master Replication</text>
+  <rect x="738.7341" y="169.7368" width="182.2784" height="68.6843" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="829.8733" y="210.9474" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Master 1</text>
+  <rect x="1027.3417" y="169.7368" width="182.2784" height="68.6843" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1118.4808" y="210.9474" text-anchor="middle" font-size="17.1252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Master 2</text>
   <line x1="921.0124" y1="192.6317" x2="1024.3037" y2="192.6317" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="1024.3037" y1="215.5264" x2="924.0506" y2="215.5264" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="974.1771" y="181.9474" text-anchor="middle" font-size="14.271" fill="var(--primary-accent)">Sync</text>
-  <rect x="761.5189" y="322.3685" width="121.519" height="45.7895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="822.2784" y="352.8948" text-anchor="middle" font-size="14.271" fill="var(--text)">Client</text>
+  <text x="974.1771" y="181.9474" text-anchor="middle" font-size="14.271" fill="var(--primary-accent)" font-family="Arial, sans-serif">Sync</text>
+  <rect x="761.5189" y="322.3685" width="121.519" height="45.7895" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.2784" y="352.8948" text-anchor="middle" font-size="14.271" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
   <line x1="822.2784" y1="322.3685" x2="822.2784" y2="241.4738" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="845.0631" y="291.8421" font-size="14.271" fill="var(--ok-accent)">R/W</text>
-  <rect x="1057.7213" y="322.3685" width="121.519" height="45.7895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1118.4808" y="352.8948" text-anchor="middle" font-size="14.271" fill="var(--text)">Client</text>
+  <text x="845.0631" y="291.8421" font-size="14.271" fill="var(--ok-accent)" font-family="Arial, sans-serif">R/W</text>
+  <rect x="1057.7213" y="322.3685" width="121.519" height="45.7895" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1118.4808" y="352.8948" text-anchor="middle" font-size="14.271" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
   <line x1="1118.4808" y1="322.3685" x2="1118.4808" y2="241.4738" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="1141.2657" y="291.8421" font-size="14.271" fill="var(--ok-accent)">R/W</text>
+  <text x="1141.2657" y="291.8421" font-size="14.271" fill="var(--ok-accent)" font-family="Arial, sans-serif">R/W</text>
   <rect x="40" y="566.579" width="1199.9999" height="53.421" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="601.6843" text-anchor="middle" font-size="15.698" fill="var(--text-muted)">Master-Slave: reads scale, writes go to master. Master-Master: both nodes accept reads and writes with bi-directional sync.</text>
+  <text x="639.9999" y="601.6843" text-anchor="middle" font-size="15.698" fill="var(--text-muted)" font-family="Arial, sans-serif">Master-Slave: reads scale, writes go to master. Master-Master: both nodes accept reads and writes with bi-directional sync.</text>
 </svg>

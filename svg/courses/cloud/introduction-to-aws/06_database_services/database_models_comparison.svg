@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,12 +97,12 @@
   <!-- Background -->
   <!-- Column 1: Relational -->
   <rect x="40" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="73.833387" width="277.68595" height="19.333333" fill="var(--primary-accent)" rx="6.373499"/>
   <text x="178.842975" y="73.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.64503" font-weight="bold" fill="var(--bg)">Relational</text>
 
   <!-- Table icon -->
-  <rect x="109.421488" y="112.500053" width="138.842975" height="96.666667" rx="6.373499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="109.421488" y="112.500053" width="138.842975" height="96.666667" rx="6.373499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="109.421488" y1="136.666667" x2="248.264463" y2="136.666667" stroke="var(--primary-border)" stroke-width="1.5"/>
   <line x1="109.421488" y1="160.83328" x2="248.264463" y2="160.83328" stroke="var(--primary-border)" stroke-width="1"/>
   <line x1="109.421488" y1="185" x2="248.264463" y2="185" stroke="var(--primary-border)" stroke-width="1"/>
@@ -119,7 +119,7 @@
   <text x="178.842975" y="286.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">ACID transactions</text>
   <text x="178.842975" y="305.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">JOINs across tables</text>
 
-  <rect x="59.834711" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="59.834711" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="178.842975" y="354.166613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--primary-accent)">AWS: RDS, Aurora</text>
 
   <text x="69.752066" y="397.666667" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--text)">Use Cases:</text>
@@ -130,20 +130,20 @@
 
   <!-- Column 2: Key-Value -->
   <rect x="347.438017" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="347.438017" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="347.438017" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="347.438017" y="73.833387" width="277.68595" height="19.333333" fill="var(--ok-accent)" rx="6.373499"/>
   <text x="486.280992" y="73.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.64503" font-weight="bold" fill="var(--bg)">Key-Value</text>
 
   <!-- KV icon -->
-  <rect x="397.024793" y="112.500053" width="178.512397" height="29" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="397.024793" y="112.500053" width="178.512397" height="29" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="436.694215" y="131.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" font-weight="bold" fill="var(--ok-accent)">user:1</text>
   <text x="535.867769" y="131.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--text)">{data...}</text>
 
-  <rect x="397.024793" y="146.333333" width="178.512397" height="29" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="397.024793" y="146.333333" width="178.512397" height="29" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="436.694215" y="165.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" font-weight="bold" fill="var(--ok-accent)">sess:a</text>
   <text x="535.867769" y="165.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--text)">{data...}</text>
 
-  <rect x="397.024793" y="180.166613" width="178.512397" height="29" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="397.024793" y="180.166613" width="178.512397" height="29" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="436.694215" y="199.499947" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" font-weight="bold" fill="var(--ok-accent)">cart:5</text>
   <text x="535.867769" y="199.499947" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--text)">{data...}</text>
 
@@ -152,7 +152,7 @@
   <text x="486.280992" y="286.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Millisecond latency</text>
   <text x="486.280992" y="305.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Massive scale</text>
 
-  <rect x="367.272727" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="367.272727" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="486.280992" y="354.166613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--ok-accent)">AWS: DynamoDB</text>
 
   <text x="377.190083" y="397.666667" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--text)">Use Cases:</text>
@@ -163,12 +163,12 @@
 
   <!-- Column 3: Document -->
   <rect x="654.876033" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="654.876033" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="654.876033" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="654.876033" y="73.833387" width="277.68595" height="19.333333" fill="var(--warn-accent)" rx="6.373499"/>
   <text x="793.719008" y="73.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.64503" font-weight="bold" fill="var(--bg)">Document</text>
 
   <!-- JSON doc icon -->
-  <rect x="714.380165" y="112.500053" width="158.677686" height="96.666667" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="714.380165" y="112.500053" width="158.677686" height="96.666667" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="734.214876" y="131.833387" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--warn-accent)">{</text>
   <text x="749.090909" y="149.23328" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--text)">"name": "Alice",</text>
   <text x="749.090909" y="166.633387" font-family="Arial, sans-serif" font-size="10.770363" fill="var(--text)">"age": 30,</text>
@@ -180,7 +180,7 @@
   <text x="793.719008" y="286.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Rich query language</text>
   <text x="793.719008" y="305.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Schema-less flexibility</text>
 
-  <rect x="674.710744" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="674.710744" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="793.719008" y="354.166613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--warn-accent)">AWS: DocumentDB</text>
 
   <text x="684.628099" y="397.666667" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--text)">Use Cases:</text>
@@ -191,14 +191,14 @@
 
   <!-- Column 4: Graph -->
   <rect x="962.31405" y="40" width="277.68595" height="580" rx="6.373499" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="962.31405" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="962.31405" y="40" width="277.68595" height="53.16672" rx="6.373499" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="962.31405" y="73.833387" width="277.68595" height="19.333333" fill="var(--info-accent)" rx="6.373499"/>
   <text x="1101.157025" y="73.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.64503" font-weight="bold" fill="var(--bg)">Graph</text>
 
   <!-- Graph icon -->
-  <rect x="1036.88" y="121.98" width="29.3735" height="29.3735" rx="14" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1136.06" y="121.98" width="29.3735" height="29.3735" rx="14" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1086.47" y="170.313" width="29.3735" height="29.3735" rx="14" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1036.88" y="121.98" width="29.3735" height="29.3735" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1136.06" y="121.98" width="29.3735" height="29.3735" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1086.47" y="170.313" width="29.3735" height="29.3735" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <line x1="1066.446281" y1="136.666667" x2="1135.867769" y2="136.666667" stroke="var(--info-border)" stroke-width="2"/>
   <line x1="1056.528926" y1="149.23328" x2="1089.256198" y2="173.4" stroke="var(--info-border)" stroke-width="2"/>
   <line x1="1145.785124" y1="149.23328" x2="1113.057851" y2="173.4" stroke="var(--info-border)" stroke-width="2"/>
@@ -211,7 +211,7 @@
   <text x="1101.157025" y="286.500053" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Pattern matching</text>
   <text x="1101.157025" y="305.833387" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.749439" fill="var(--text-muted)">Traversal algorithms</text>
 
-  <rect x="982.14876" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="982.14876" y="330" width="238.016529" height="38.666667" rx="6.373499" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1101.157025" y="354.166613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--info-accent)">AWS: Neptune</text>
 
   <text x="992.066116" y="397.666667" font-family="Arial, sans-serif" font-size="12.728621" font-weight="bold" fill="var(--text)">Use Cases:</text>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,57 +75,51 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 6.4,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 6.4,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="25.8695" font-weight="bold" fill="var(--text)">Layered Architecture</text>
+  <text x="640" y="40" text-anchor="middle" font-size="25.8695" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Layered Architecture</text>
   <rect x="921.25" y="77.1796" width="187.5" height="52.0513" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1015.0001" y="109.8975" text-anchor="middle" fill="var(--text-muted)">Users</text>
-  <rect x="265" y="77.1796" width="468.7501" height="66.9231" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="499.375" y="117.3334" text-anchor="middle" font-weight="bold" fill="var(--text)">Presentation Layer</text>
-  <rect x="265" y="181.2821" width="468.7501" height="66.9231" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="499.375" y="221.4359" text-anchor="middle" font-weight="bold" fill="var(--text)">Application Layer</text>
-  <rect x="265" y="285.3847" width="468.7501" height="66.9231" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="499.375" y="325.5385" text-anchor="middle" font-weight="bold" fill="var(--text)">Business Logic Layer</text>
-  <rect x="265" y="389.4872" width="468.7501" height="66.9231" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="499.375" y="429.6411" text-anchor="middle" font-weight="bold" fill="var(--text)">Data Access Layer</text>
-  <rect x="265" y="493.5898" width="468.7501" height="66.9231" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="499.375" y="533.7437" text-anchor="middle" font-weight="bold" fill="var(--text)">Database</text>
+  <text x="1015.0001" y="109.8975" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Users</text>
+  <rect x="265" y="77.1796" width="468.7501" height="66.9231" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="499.375" y="117.3334" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Presentation Layer</text>
+  <rect x="265" y="181.2821" width="468.7501" height="66.9231" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="499.375" y="221.4359" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Application Layer</text>
+  <rect x="265" y="285.3847" width="468.7501" height="66.9231" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="499.375" y="325.5385" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Business Logic Layer</text>
+  <rect x="265" y="389.4872" width="468.7501" height="66.9231" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="499.375" y="429.6411" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Access Layer</text>
+  <rect x="265" y="493.5898" width="468.7501" height="66.9231" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="499.375" y="533.7437" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Database</text>
   <line x1="499.375" y1="144.1026" x2="499.375" y2="178.3077" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="499.375" y1="248.2051" x2="499.375" y2="282.4103" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="499.375" y1="352.3077" x2="499.375" y2="386.5128" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="499.375" y1="456.4103" x2="499.375" y2="490.6155" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="921.25" y1="102.4616" x2="737.5" y2="102.4616" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
-  <text x="827.5" y="92.0513" text-anchor="middle" font-size="16.1684" fill="var(--text-faint)">User Input</text>
+  <text x="827.5" y="92.0513" text-anchor="middle" font-size="16.1684" fill="var(--text-faint)" font-family="Arial, sans-serif">User Input</text>
   <line x1="733.7501" y1="118.8206" x2="917.5001" y2="118.8206" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
-  <text x="827.5" y="139.641" text-anchor="middle" font-size="16.1684" fill="var(--text-faint)">Display</text>
-  <text x="133.75" y="117.3334" text-anchor="middle" font-size="17.7852" fill="var(--primary-accent)">UI / Views</text>
-  <text x="133.75" y="221.4359" text-anchor="middle" font-size="17.7852" fill="var(--ok-accent)">Controllers</text>
-  <text x="133.75" y="325.5385" text-anchor="middle" font-size="17.7852" fill="var(--danger-accent)">Services</text>
-  <text x="133.75" y="429.6411" text-anchor="middle" font-size="17.7852" fill="var(--ok-accent)">Repositories</text>
-  <text x="133.75" y="533.7437" text-anchor="middle" font-size="17.7852" fill="var(--primary-accent)">Storage</text>
+  <text x="827.5" y="139.641" text-anchor="middle" font-size="16.1684" fill="var(--text-faint)" font-family="Arial, sans-serif">Display</text>
+  <text x="133.75" y="117.3334" text-anchor="middle" font-size="17.7852" fill="var(--primary-accent)" font-family="Arial, sans-serif">UI / Views</text>
+  <text x="133.75" y="221.4359" text-anchor="middle" font-size="17.7852" fill="var(--ok-accent)" font-family="Arial, sans-serif">Controllers</text>
+  <text x="133.75" y="325.5385" text-anchor="middle" font-size="17.7852" fill="var(--danger-accent)" font-family="Arial, sans-serif">Services</text>
+  <text x="133.75" y="429.6411" text-anchor="middle" font-size="17.7852" fill="var(--ok-accent)" font-family="Arial, sans-serif">Repositories</text>
+  <text x="133.75" y="533.7437" text-anchor="middle" font-size="17.7852" fill="var(--primary-accent)" font-family="Arial, sans-serif">Storage</text>
   <rect x="40" y="582.8205" width="1200" height="37.1795" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="608.1026" text-anchor="middle" font-size="19.4021" fill="var(--text-muted)">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</text>
+  <text x="640" y="608.1026" text-anchor="middle" font-size="19.4021" fill="var(--text-muted)" font-family="Arial, sans-serif">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</text>
 </svg>

@@ -1,81 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
-  </defs>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.772793" font-weight="bold" fill="var(--text)">Docker Layer Caching: When Layers Rebuild</text>
-<rect x="40" y="77.111517" width="1200" height="101.79159" rx="6.178337" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="121.645338" font-family="Courier, monospace" font-size="22.653902" font-weight="bold" fill="var(--ok-text)">FROM ubuntu:22.04</text>
+<rect x="40" y="77.111517" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="121.645338" font-size="22.653902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">FROM ubuntu:22.04</text>
 <text x="70" y="159.817185" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--ok-text)">base layer rarely changes</text>
 <rect x="1060" y="100.438757" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
 <text x="1140" y="136.489945" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--ok-accent)">cached</text>
-<rect x="40" y="187.38574" width="1200" height="101.79159" rx="6.178337" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="231.919561" font-family="Courier, monospace" font-size="22.653902" font-weight="bold" fill="var(--ok-text)">RUN apt-get update &amp;&amp; apt-get install -y python3</text>
+<rect x="40" y="187.38574" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="231.919561" font-size="22.653902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">RUN apt-get update &amp;&amp; apt-get install -y python3</text>
 <text x="70" y="270.091408" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--ok-text)">stable system packages</text>
 <rect x="1060" y="210.71298" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
 <text x="1140" y="246.764168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--ok-accent)">cached</text>
-<rect x="40" y="297.659963" width="1200" height="101.79159" rx="6.178337" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="342.193784" font-family="Courier, monospace" font-size="22.653902" font-weight="bold" fill="var(--warn-text)">COPY requirements.txt .</text>
+<rect x="40" y="297.659963" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="342.193784" font-size="22.653902" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">COPY requirements.txt .</text>
 <text x="70" y="380.365631" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--warn-text)">trigger: requirements.txt modified</text>
 <rect x="1060" y="320.987203" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
 <text x="1140" y="357.038391" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--warn-accent)">changed</text>
-<rect x="40" y="407.934186" width="1200" height="101.79159" rx="6.178337" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="452.468007" font-family="Courier, monospace" font-size="22.653902" font-weight="bold" fill="var(--danger-text)">RUN pip install -r requirements.txt</text>
+<rect x="40" y="407.934186" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="452.468007" font-size="22.653902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">RUN pip install -r requirements.txt</text>
 <text x="70" y="490.639854" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--danger-text)">all downstream invalidated</text>
 <rect x="1060" y="431.261426" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
 <text x="1140" y="467.312614" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>
-<rect x="40" y="518.20841" width="1200" height="101.79159" rx="6.178337" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="562.74223" font-family="Courier, monospace" font-size="22.653902" font-weight="bold" fill="var(--danger-text)">COPY . .</text>
+<rect x="40" y="518.20841" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="562.74223" font-size="22.653902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">COPY . .</text>
 <text x="70" y="600.914077" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--danger-text)">source copy always rebuilds here</text>
 <rect x="1060" y="541.535649" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
 <text x="1140" y="577.586837" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>

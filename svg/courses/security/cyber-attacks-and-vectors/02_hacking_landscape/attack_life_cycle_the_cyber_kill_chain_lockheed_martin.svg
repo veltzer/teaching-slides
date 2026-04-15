@@ -1,83 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.227079" font-weight="bold" fill="var(--text)">Cyber Kill Chain (Lockheed Martin)</text>
-  <rect x="40" y="60.350877" width="1200" height="71.22807" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="92.912281" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">1. Reconnaissance</text>
-  <text x="60" y="119.368421" font-size="17.148474" fill="var(--primary-text)">Gather public data, scan targets, identify victims and exposed services</text>
-  <rect x="40" y="141.754386" width="1200" height="71.22807" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="174.315789" font-size="22.192143" font-weight="bold" fill="var(--ok-text)">2. Weaponization</text>
-  <text x="60" y="200.77193" font-size="17.148474" fill="var(--ok-text)">Bundle exploit with payload (malicious PDF, Office macro, implant)</text>
-  <rect x="40" y="223.157895" width="1200" height="71.22807" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="255.719298" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">3. Delivery</text>
-  <text x="60" y="282.175439" font-size="17.148474" fill="var(--warn-text)">Transmit weapon: phishing email, USB drop, watering-hole website</text>
-  <rect x="40" y="304.561404" width="1200" height="71.22807" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="337.122807" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">4. Exploitation</text>
-  <text x="60" y="363.578947" font-size="17.148474" fill="var(--danger-text)">Trigger the vulnerability on target, gain code execution</text>
-  <rect x="40" y="385.964912" width="1200" height="71.22807" rx="6.052403" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="418.526316" font-size="22.192143" font-weight="bold" fill="var(--danger-text)">5. Installation</text>
-  <text x="60" y="444.982456" font-size="17.148474" fill="var(--danger-text)">Install persistent backdoor, RAT, or rootkit on the compromised host</text>
-  <rect x="40" y="467.368421" width="1200" height="71.22807" rx="6.052403" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="499.929825" font-size="22.192143" font-weight="bold" fill="var(--primary-text)">6. Command and Control</text>
-  <text x="60" y="526.385965" font-size="17.148474" fill="var(--primary-text)">Open outbound C2 channel — attacker drives from inside the network</text>
-  <rect x="40" y="548.77193" width="1200" height="71.22807" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="60" y="581.333333" font-size="22.192143" font-weight="bold" fill="var(--warn-text)">7. Actions on Objectives</text>
-  <text x="60" y="607.789474" font-size="17.148474" fill="var(--warn-text)">Exfiltrate data, destroy, encrypt for ransom, or pivot deeper</text>
+  <text x="640" y="40" text-anchor="middle" font-size="26.227079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cyber Kill Chain (Lockheed Martin)</text>
+  <rect x="40" y="60.350877" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="92.912281" font-size="22.192143" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">1. Reconnaissance</text>
+  <text x="60" y="119.368421" font-size="17.148474" fill="var(--primary-text)" font-family="Arial, sans-serif">Gather public data, scan targets, identify victims and exposed services</text>
+  <rect x="40" y="141.754386" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="174.315789" font-size="22.192143" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. Weaponization</text>
+  <text x="60" y="200.77193" font-size="17.148474" fill="var(--ok-text)" font-family="Arial, sans-serif">Bundle exploit with payload (malicious PDF, Office macro, implant)</text>
+  <rect x="40" y="223.157895" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="255.719298" font-size="22.192143" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">3. Delivery</text>
+  <text x="60" y="282.175439" font-size="17.148474" fill="var(--warn-text)" font-family="Arial, sans-serif">Transmit weapon: phishing email, USB drop, watering-hole website</text>
+  <rect x="40" y="304.561404" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="337.122807" font-size="22.192143" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">4. Exploitation</text>
+  <text x="60" y="363.578947" font-size="17.148474" fill="var(--danger-text)" font-family="Arial, sans-serif">Trigger the vulnerability on target, gain code execution</text>
+  <rect x="40" y="385.964912" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="418.526316" font-size="22.192143" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">5. Installation</text>
+  <text x="60" y="444.982456" font-size="17.148474" fill="var(--danger-text)" font-family="Arial, sans-serif">Install persistent backdoor, RAT, or rootkit on the compromised host</text>
+  <rect x="40" y="467.368421" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="499.929825" font-size="22.192143" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">6. Command and Control</text>
+  <text x="60" y="526.385965" font-size="17.148474" fill="var(--primary-text)" font-family="Arial, sans-serif">Open outbound C2 channel — attacker drives from inside the network</text>
+  <rect x="40" y="548.77193" width="1200" height="71.22807" rx="6.052403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="581.333333" font-size="22.192143" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">7. Actions on Objectives</text>
+  <text x="60" y="607.789474" font-size="17.148474" fill="var(--warn-text)" font-family="Arial, sans-serif">Exfiltrate data, destroy, encrypt for ransom, or pivot deeper</text>
 </svg>

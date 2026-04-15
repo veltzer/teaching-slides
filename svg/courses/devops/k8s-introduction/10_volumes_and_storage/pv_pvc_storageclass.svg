@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,89 +97,86 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="82.181916" width="240" height="295.272756" rx="7.09007" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="40" y="82.181916" width="240" height="48.509144" rx="7.09007" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="118.036472" width="240" height="12.654588" fill="var(--info-fill)" rx="7.09007" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="115.927265" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.457524" font-weight="bold" fill="var(--bg)">StorageClass</text>
-  <text x="160" y="151.781822" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--info-accent)">kind: StorageClass</text>
-  <text x="160" y="172.872714" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--info-accent)">name: fast-ssd</text>
-  <text x="160" y="193.963737" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">provisioner:</text>
-  <text x="160" y="212.945554" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--info-accent)">  ebs.csi.aws.com</text>
-  <text x="160" y="234.036446" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">parameters:</text>
-  <text x="160" y="253.018262" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--info-accent)">  type: gp3</text>
-  <text x="160" y="272.000079" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">reclaimPolicy: Retain</text>
-  <text x="160" y="345.818268" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Cluster-scoped</text>
-  <text x="160" y="364.800084" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Admin creates once</text>
+  <rect x="40" y="82.181916" width="240" height="295.272756" rx="7.09007" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="82.181916" width="240" height="48.509144" rx="7.09007" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="118.036472" width="240" height="12.654588" fill="url(#grad-info)" rx="7.09007" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="115.927265" text-anchor="middle" font-size="17.457524" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">StorageClass</text>
+  <text x="160" y="151.781822" text-anchor="middle" font-size="12.323014" fill="var(--info-accent)" font-family="Courier New, monospace">kind: StorageClass</text>
+  <text x="160" y="172.872714" text-anchor="middle" font-size="12.323014" fill="var(--info-accent)" font-family="Courier New, monospace">name: fast-ssd</text>
+  <text x="160" y="193.963737" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">provisioner:</text>
+  <text x="160" y="212.945554" text-anchor="middle" font-size="11.816783" fill="var(--info-accent)" font-family="Courier New, monospace">  ebs.csi.aws.com</text>
+  <text x="160" y="234.036446" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">parameters:</text>
+  <text x="160" y="253.018262" text-anchor="middle" font-size="11.816783" fill="var(--info-accent)" font-family="Courier New, monospace">  type: gp3</text>
+  <text x="160" y="272.000079" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">reclaimPolicy: Retain</text>
+  <text x="160" y="345.818268" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Cluster-scoped</text>
+  <text x="160" y="364.800084" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Admin creates once</text>
   <line x1="280" y1="229.818163" x2="340" y2="229.818163" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="310" y="219.272782" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.816783" fill="var(--info-accent)">dynamic</text>
-  <text x="310" y="236.145391" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.816783" fill="var(--info-accent)">provision</text>
-  <rect x="340" y="40" width="260" height="379.636326" rx="7.09007" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="340" y="40" width="260" height="48.509144" rx="7.09007" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="340" y="75.854556" width="260" height="12.654588" fill="var(--primary-fill)" rx="7.09007" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470" y="73.745611" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.457524" font-weight="bold" fill="var(--bg)">PersistentVolume</text>
-  <text x="470" y="111.709244" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--primary-accent)">kind: PersistentVolume</text>
-  <text x="470" y="132.800005" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--primary-accent)">name: pv-ssd-100g</text>
-  <text x="470" y="153.890898" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">capacity:</text>
-  <text x="470" y="172.872714" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--primary-accent)">  storage: 100Gi</text>
-  <text x="470" y="193.963737" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">accessModes:</text>
-  <text x="470" y="212.945554" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--primary-accent)">  - ReadWriteOnce</text>
-  <text x="470" y="234.036446" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">storageClassName: fast-ssd</text>
-  <text x="470" y="255.127208" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">persistentVolumeReclaimPolicy:</text>
-  <text x="470" y="274.109024" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--primary-accent)">  Retain</text>
-  <rect x="380" y="288.872819" width="180" height="31.636404" rx="7.09007" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470" y="309.963711" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.349892" font-weight="bold" fill="var(--ok-accent)">Status: Bound</text>
-  <text x="470" y="377.454672" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Cluster-scoped resource</text>
-  <text x="470" y="396.436488" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Backed by real storage</text>
+  <text x="310" y="219.272782" text-anchor="middle" font-size="11.816783" fill="var(--info-accent)" font-family="Arial, sans-serif">dynamic</text>
+  <text x="310" y="236.145391" text-anchor="middle" font-size="11.816783" fill="var(--info-accent)" font-family="Arial, sans-serif">provision</text>
+  <rect x="340" y="40" width="260" height="379.636326" rx="7.09007" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="40" width="260" height="48.509144" rx="7.09007" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="75.854556" width="260" height="12.654588" fill="url(#grad-primary)" rx="7.09007" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="73.745611" text-anchor="middle" font-size="17.457524" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">PersistentVolume</text>
+  <text x="470" y="111.709244" text-anchor="middle" font-size="12.323014" fill="var(--primary-accent)" font-family="Courier New, monospace">kind: PersistentVolume</text>
+  <text x="470" y="132.800005" text-anchor="middle" font-size="12.323014" fill="var(--primary-accent)" font-family="Courier New, monospace">name: pv-ssd-100g</text>
+  <text x="470" y="153.890898" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">capacity:</text>
+  <text x="470" y="172.872714" text-anchor="middle" font-size="11.816783" fill="var(--primary-accent)" font-family="Courier New, monospace">  storage: 100Gi</text>
+  <text x="470" y="193.963737" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">accessModes:</text>
+  <text x="470" y="212.945554" text-anchor="middle" font-size="11.816783" fill="var(--primary-accent)" font-family="Courier New, monospace">  - ReadWriteOnce</text>
+  <text x="470" y="234.036446" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">storageClassName: fast-ssd</text>
+  <text x="470" y="255.127208" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">persistentVolumeReclaimPolicy:</text>
+  <text x="470" y="274.109024" text-anchor="middle" font-size="11.816783" fill="var(--primary-accent)" font-family="Courier New, monospace">  Retain</text>
+  <rect x="380" y="288.872819" width="180" height="31.636404" rx="7.09007" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="309.963711" text-anchor="middle" font-size="13.349892" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Status: Bound</text>
+  <text x="470" y="377.454672" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Cluster-scoped resource</text>
+  <text x="470" y="396.436488" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Backed by real storage</text>
   <line x1="600" y1="229.818163" x2="660" y2="229.818163" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="630" y="219.272782" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.816783" fill="var(--text-muted)">binds</text>
-  <rect x="660" y="61.091023" width="260" height="337.45441" rx="7.09007" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="660" y="61.091023" width="260" height="48.509144" rx="7.09007" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="660" y="96.945449" width="260" height="12.654588" fill="var(--ok-fill)" rx="7.09007" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="790" y="94.836373" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.457524" font-weight="bold" fill="var(--bg)">PersistentVolumeClaim</text>
-  <text x="790" y="130.69106" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--ok-accent)">kind: PersistentVolumeClaim</text>
-  <text x="790" y="151.781822" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--ok-accent)">name: my-data-pvc</text>
-  <text x="790" y="172.872714" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">resources.requests:</text>
-  <text x="790" y="191.85453" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--ok-accent)">  storage: 20Gi</text>
-  <text x="790" y="212.945554" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">accessModes:</text>
-  <text x="790" y="231.92737" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--ok-accent)">  - ReadWriteOnce</text>
-  <text x="790" y="253.018262" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--text-muted)">storageClassName: fast-ssd</text>
-  <rect x="700" y="267.781795" width="180" height="31.636404" rx="7.09007" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="790" y="288.872819" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.349892" font-weight="bold" fill="var(--ok-accent)">Status: Bound</text>
-  <text x="790" y="356.363648" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Namespace-scoped</text>
-  <text x="790" y="375.345465" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Developer's request</text>
+  <text x="630" y="219.272782" text-anchor="middle" font-size="11.816783" fill="var(--text-muted)" font-family="Arial, sans-serif">binds</text>
+  <rect x="660" y="61.091023" width="260" height="337.45441" rx="7.09007" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="61.091023" width="260" height="48.509144" rx="7.09007" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="96.945449" width="260" height="12.654588" fill="url(#grad-ok)" rx="7.09007" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="94.836373" text-anchor="middle" font-size="17.457524" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">PersistentVolumeClaim</text>
+  <text x="790" y="130.69106" text-anchor="middle" font-size="12.323014" fill="var(--ok-accent)" font-family="Courier New, monospace">kind: PersistentVolumeClaim</text>
+  <text x="790" y="151.781822" text-anchor="middle" font-size="12.323014" fill="var(--ok-accent)" font-family="Courier New, monospace">name: my-data-pvc</text>
+  <text x="790" y="172.872714" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">resources.requests:</text>
+  <text x="790" y="191.85453" text-anchor="middle" font-size="11.816783" fill="var(--ok-accent)" font-family="Courier New, monospace">  storage: 20Gi</text>
+  <text x="790" y="212.945554" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">accessModes:</text>
+  <text x="790" y="231.92737" text-anchor="middle" font-size="11.816783" fill="var(--ok-accent)" font-family="Courier New, monospace">  - ReadWriteOnce</text>
+  <text x="790" y="253.018262" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Courier New, monospace">storageClassName: fast-ssd</text>
+  <rect x="700" y="267.781795" width="180" height="31.636404" rx="7.09007" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="288.872819" text-anchor="middle" font-size="13.349892" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Status: Bound</text>
+  <text x="790" y="356.363648" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Namespace-scoped</text>
+  <text x="790" y="375.345465" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Developer's request</text>
   <line x1="920" y1="229.818163" x2="980" y2="229.818163" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="949.999893" y="219.272782" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.816783" fill="var(--text-muted)">mounts</text>
-  <rect x="980" y="61.091023" width="260" height="337.45441" rx="7.09007" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="980" y="61.091023" width="260" height="48.509144" rx="7.09007" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="980" y="96.945449" width="260" height="12.654588" fill="var(--warn-fill)" rx="7.09007" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1110" y="94.836373" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.457524" font-weight="bold" fill="var(--bg)">Pod</text>
-  <text x="1110" y="132.800005" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--danger-accent)">spec:</text>
-  <text x="1110" y="153.890898" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--danger-accent)">  volumes:</text>
-  <text x="1110" y="174.981921" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">  - name: data</text>
-  <text x="1110" y="193.963737" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">    persistentVolumeClaim:</text>
-  <text x="1110" y="212.945554" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">      claimName: my-data-pvc</text>
-  <text x="1110" y="234.036446" text-anchor="middle" font-family="monospace" font-size="12.323014" fill="var(--danger-accent)">  containers:</text>
-  <text x="1110" y="253.018262" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">  - volumeMounts:</text>
-  <text x="1110" y="272.000079" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">    - name: data</text>
-  <text x="1110" y="290.981895" text-anchor="middle" font-family="monospace" font-size="11.816783" fill="var(--warn-accent)">      mountPath: /data</text>
-  <text x="1110" y="356.363648" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Namespace-scoped</text>
-  <text x="1110" y="375.345465" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">References PVC by name</text>
+  <text x="949.999893" y="219.272782" text-anchor="middle" font-size="11.816783" fill="var(--text-muted)" font-family="Arial, sans-serif">mounts</text>
+  <rect x="980" y="61.091023" width="260" height="337.45441" rx="7.09007" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="61.091023" width="260" height="48.509144" rx="7.09007" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="980" y="96.945449" width="260" height="12.654588" fill="url(#grad-warn)" rx="7.09007" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1110" y="94.836373" text-anchor="middle" font-size="17.457524" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod</text>
+  <text x="1110" y="132.800005" text-anchor="middle" font-size="12.323014" fill="var(--danger-accent)" font-family="Courier New, monospace">spec:</text>
+  <text x="1110" y="153.890898" text-anchor="middle" font-size="12.323014" fill="var(--danger-accent)" font-family="Courier New, monospace">  volumes:</text>
+  <text x="1110" y="174.981921" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">  - name: data</text>
+  <text x="1110" y="193.963737" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">    persistentVolumeClaim:</text>
+  <text x="1110" y="212.945554" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">      claimName: my-data-pvc</text>
+  <text x="1110" y="234.036446" text-anchor="middle" font-size="12.323014" fill="var(--danger-accent)" font-family="Courier New, monospace">  containers:</text>
+  <text x="1110" y="253.018262" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">  - volumeMounts:</text>
+  <text x="1110" y="272.000079" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">    - name: data</text>
+  <text x="1110" y="290.981895" text-anchor="middle" font-size="11.816783" fill="var(--warn-accent)" font-family="Courier New, monospace">      mountPath: /data</text>
+  <text x="1110" y="356.363648" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Namespace-scoped</text>
+  <text x="1110" y="375.345465" text-anchor="middle" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">References PVC by name</text>
   <rect x="300" y="472.363753" width="720" height="84.36357" rx="7.09007" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="660" y="506.109102" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.430527" font-weight="bold" fill="var(--text-muted)">Physical Storage</text>
-  <text x="660" y="533.527223" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.349892" fill="var(--text-muted)">AWS EBS  |  GCP PD  |  Azure Disk  |  NFS  |  Ceph RBD  |  Local Disk</text>
+  <text x="660" y="506.109102" text-anchor="middle" font-size="16.430527" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Physical Storage</text>
+  <text x="660" y="533.527223" text-anchor="middle" font-size="13.349892" fill="var(--text-muted)" font-family="Arial, sans-serif">AWS EBS  |  GCP PD  |  Azure Disk  |  NFS  |  Ceph RBD  |  Local Disk</text>
   <line x1="470" y1="419.636326" x2="470" y2="472.363753" stroke="var(--text-muted)" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
   <rect x="40" y="533.527223" width="580" height="86.472777" rx="7.09007" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="50" y="554.618247" font-family="Arial,sans-serif" font-size="13.349892" font-weight="bold" fill="var(--text)">Access Modes</text>
-  <text x="60" y="575.709139" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">ReadWriteOnce (RWO)   — single node R/W</text>
-  <text x="60" y="594.690955" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">ReadOnlyMany  (ROX)   — many nodes read-only</text>
-  <text x="60" y="613.672772" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">ReadWriteMany (RWX)  — many nodes R/W (NFS, CephFS)</text>
+  <text x="50" y="554.618247" font-size="13.349892" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Access Modes</text>
+  <text x="60" y="575.709139" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">ReadWriteOnce (RWO)   — single node R/W</text>
+  <text x="60" y="594.690955" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">ReadOnlyMany  (ROX)   — many nodes read-only</text>
+  <text x="60" y="613.672772" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">ReadWriteMany (RWX)  — many nodes R/W (NFS, CephFS)</text>
   <rect x="660" y="533.527223" width="580" height="86.472777" rx="7.09007" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="670" y="554.618247" font-family="Arial,sans-serif" font-size="13.349892" font-weight="bold" fill="var(--text)">Reclaim Policies</text>
-  <text x="679.999893" y="575.709139" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Retain   — keep data, manual cleanup required</text>
-  <text x="679.999893" y="594.690955" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Delete   — delete PV and backing storage</text>
-  <text x="679.999893" y="613.672772" font-family="Arial,sans-serif" font-size="12.323014" fill="var(--text-muted)">Recycle  — deprecated (use Delete)</text>
+  <text x="670" y="554.618247" font-size="13.349892" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Reclaim Policies</text>
+  <text x="679.999893" y="575.709139" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Retain   — keep data, manual cleanup required</text>
+  <text x="679.999893" y="594.690955" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Delete   — delete PV and backing storage</text>
+  <text x="679.999893" y="613.672772" font-size="12.323014" fill="var(--text-muted)" font-family="Arial, sans-serif">Recycle  — deprecated (use Delete)</text>
 </svg>

@@ -1,133 +1,144 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
-  <rect x="40" y="40" width="580.000103" height="580" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+</defs>
+  <rect x="40" y="40" width="580.000103" height="580" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330.000052" y="78.666546" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.596584" font-weight="bold" fill="var(--danger-accent)">Traditional IT</text>
-  <rect x="79.999794" y="107.666642" width="500.000196" height="96.666631" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.999794" y="107.666642" width="500.000196" height="96.666631" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="99.999691" y="134.733298" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Provisioning Time</text>
-  <rect x="99.999691" y="151.166679" width="440.000078" height="28.999989" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="99.999691" y="151.166679" width="440.000078" height="28.999989" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="319.999836" y="171.466832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--bg)">Weeks to Months</text>
   <text x="99.999691" y="194.666716" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Hardware procurement, setup, configuration...</text>
-  <rect x="79.999794" y="223.666706" width="500.000196" height="96.666631" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.999794" y="223.666706" width="500.000196" height="96.666631" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="99.999691" y="250.733149" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Cost Model: CapEx</text>
   <text x="99.999691" y="273.933247" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Large upfront investment</text>
   <text x="99.999691" y="293.26668" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Depreciation over 3-5 years</text>
   <text x="99.999691" y="312.5999" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Must predict future needs</text>
-  <rect x="79.999794" y="339.666556" width="500.000196" height="135.333284" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.999794" y="339.666556" width="500.000196" height="135.333284" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="99.999691" y="366.73332" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Fixed Capacity</text>
-  <rect x="119.999908" y="383.166594" width="419.999968" height="28.999989" rx="6.399999" fill="var(--danger-fill)" opacity="0.7" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="119.999908" y="383.166594" width="419.999968" height="28.999989" rx="6.399999" fill="url(#grad-danger)" opacity="0.7" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330.000052" y="403.466426" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--bg)">Provisioned Capacity (constant)</text>
   <path d="M 119.999908 426.666631 Q 179.999812 407.333198 239.999929 436.333081 Q 299.999833 465.333284 360.000057 421.833246 Q 419.999748 388.000085 479.999865 445.999851 L 539.999876 431.500123" fill="none" stroke="var(--text)" stroke-width="0.5161" stroke-dasharray="1.2386 0.8258" />
   <text x="439.999858" y="463.399951" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Actual Demand</text>
   <text x="119.999908" y="463.399951" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--danger-accent)">Waste or shortage</text>
-  <rect x="79.999794" y="494.333273" width="500.000196" height="106.333508" rx="6.399999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.999794" y="494.333273" width="500.000196" height="106.333508" rx="6.399999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="99.999691" y="521.400036" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Scaling Challenges</text>
   <text x="99.999691" y="544.599814" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Manual scaling only</text>
   <text x="99.999691" y="563.933247" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Risk of over/under provisioning</text>
   <text x="99.999691" y="583.266467" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Hardware lifecycle management</text>
   <rect x="610.504" y="290.838" width="58.9914" height="58.9914" rx="14" fill="var(--text)"/>
   <text x="639.999787" y="328.066667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--bg)">VS</text>
-  <rect x="659.999897" y="40" width="580.000103" height="580" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="659.999897" y="40" width="580.000103" height="580" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="949.999948" y="78.666546" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.596584" font-weight="bold" fill="var(--ok-accent)">Cloud (AWS)</text>
-  <rect x="699.999904" y="107.666642" width="500.000196" height="96.666631" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="699.999904" y="107.666642" width="500.000196" height="96.666631" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="720.000014" y="134.733298" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Provisioning Time</text>
-  <rect x="720.000014" y="151.166679" width="99.999911" height="28.999989" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="720.000014" y="151.166679" width="99.999911" height="28.999989" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="769.999916" y="171.466832" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--bg)">Minutes</text>
   <text x="720.000014" y="194.666716" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">API call, instant provisioning, global reach</text>
-  <rect x="699.999904" y="223.666706" width="500.000196" height="96.666631" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="699.999904" y="223.666706" width="500.000196" height="96.666631" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="720.000014" y="250.733149" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Cost Model: OpEx</text>
   <text x="720.000014" y="273.933247" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Pay-as-you-go pricing</text>
   <text x="720.000014" y="293.26668" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">No upfront commitment</text>
   <text x="720.000014" y="312.5999" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Scale costs with actual usage</text>
-  <rect x="699.999904" y="339.666556" width="500.000196" height="135.333284" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="699.999904" y="339.666556" width="500.000196" height="135.333284" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="720.000014" y="366.73332" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Elastic Capacity</text>
   <path d="M 740.000124 426.666631 Q 799.999922 407.333198 860.000039 436.333081 Q 919.999943 465.333284 980.000167 421.833246 Q 1040.000071 388.000085 1100.000188 445.999851 L 1160.000092 431.500123" fill="none" stroke="var(--ok-border)" stroke-width="0.6194" />
   <path d="M 740.000124 426.666631 Q 799.999922 407.333198 860.000039 436.333081 Q 919.999943 465.333284 980.000167 421.833246 Q 1040.000071 388.000085 1100.000188 445.999851 L 1160.000092 431.500123" fill="none" stroke="var(--text)" stroke-width="0.5161" stroke-dasharray="1.2386 0.8258" />
   <text x="1060.000181" y="463.399951" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Actual Demand</text>
   <text x="740.000124" y="463.399951" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--ok-accent)">Capacity matches demand</text>
   <text x="740.000124" y="397.666642" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--ok-accent)">Auto-scaled Capacity</text>
-  <rect x="699.999904" y="494.333273" width="500.000196" height="106.333508" rx="6.399999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="699.999904" y="494.333273" width="500.000196" height="106.333508" rx="6.399999" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="720.000014" y="521.400036" font-family="Arial, sans-serif" font-size="20.573331" font-weight="bold" fill="var(--text)">Auto Scaling</text>
   <text x="720.000014" y="544.599814" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">Automatic scale up and down</text>
   <text x="720.000014" y="563.933247" font-family="Arial, sans-serif" font-size="20.573331" fill="var(--text-muted)">200+ services at your fingertips</text>

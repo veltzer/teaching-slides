@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,67 +75,64 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16.7442 5.2706,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="22.9532" font-weight="bold" fill="var(--text)">Data Lake Monitoring Dashboard</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="22.9532" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Lake Monitoring Dashboard</text>
   <rect x="40" y="77.6623" width="303.7975" height="391.6883" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.2309 5.6154" />
-  <text x="191.8986" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--primary-accent)">Data Lake Metrics</text>
-  <rect x="70.3797" y="134.909" width="243.038" height="48.2078" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="166.5454" text-anchor="middle" font-size="15.7803" fill="var(--text)">Storage Usage</text>
-  <rect x="70.3797" y="198.1818" width="243.038" height="48.2078" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="229.8182" text-anchor="middle" font-size="15.7803" fill="var(--text)">Processing Jobs</text>
-  <rect x="70.3797" y="261.4545" width="243.038" height="48.2078" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="293.0909" text-anchor="middle" font-size="15.7803" fill="var(--text)">Query Performance</text>
-  <rect x="70.3797" y="324.7273" width="243.038" height="48.2078" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="356.3637" text-anchor="middle" font-size="15.7803" fill="var(--text)">Data Quality</text>
-  <rect x="70.3797" y="388" width="243.038" height="48.2078" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="191.8986" y="419.6364" text-anchor="middle" font-size="15.7803" fill="var(--text)">Cost Metrics</text>
+  <text x="191.8986" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Lake Metrics</text>
+  <rect x="70.3797" y="134.909" width="243.038" height="48.2078" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="166.5454" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Storage Usage</text>
+  <rect x="70.3797" y="198.1818" width="243.038" height="48.2078" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="229.8182" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Processing Jobs</text>
+  <rect x="70.3797" y="261.4545" width="243.038" height="48.2078" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="293.0909" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Query Performance</text>
+  <rect x="70.3797" y="324.7273" width="243.038" height="48.2078" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="356.3637" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Data Quality</text>
+  <rect x="70.3797" y="388" width="243.038" height="48.2078" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="191.8986" y="419.6364" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Cost Metrics</text>
   <rect x="465.3164" y="77.6623" width="334.1772" height="391.6883" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.2309 5.6154" />
-  <text x="632.405" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--danger-accent)">Monitoring Tools</text>
-  <rect x="495.6961" y="152.987" width="273.4177" height="60.2597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="632.405" y="183.1169" text-anchor="middle" font-size="15.7803" fill="var(--text)">CloudWatch /</text>
-  <text x="632.405" y="204.2078" text-anchor="middle" font-size="15.7803" fill="var(--text)">Azure Monitor</text>
-  <rect x="495.6961" y="243.3766" width="273.4177" height="60.2597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="632.405" y="281.039" text-anchor="middle" font-size="15.7803" fill="var(--text)">Datadog</text>
-  <rect x="495.6961" y="333.7663" width="273.4177" height="60.2597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="632.405" y="371.4286" text-anchor="middle" font-size="15.7803" fill="var(--text)">Grafana</text>
+  <text x="632.405" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Monitoring Tools</text>
+  <rect x="495.6961" y="152.987" width="273.4177" height="60.2597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="632.405" y="183.1169" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">CloudWatch /</text>
+  <text x="632.405" y="204.2078" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Azure Monitor</text>
+  <rect x="495.6961" y="243.3766" width="273.4177" height="60.2597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="632.405" y="281.039" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Datadog</text>
+  <rect x="495.6961" y="333.7663" width="273.4177" height="60.2597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="632.405" y="371.4286" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Grafana</text>
   <line x1="313.4177" y1="159.0129" x2="492.6582" y2="175.5844" stroke="var(--primary-border)" stroke-width="1.6847" marker-end="url(#arrow)" />
   <line x1="313.4177" y1="222.2857" x2="492.6582" y2="265.9741" stroke="var(--primary-border)" stroke-width="1.6847" marker-end="url(#arrow)" />
   <line x1="313.4177" y1="285.5584" x2="492.6582" y2="356.3637" stroke="var(--primary-border)" stroke-width="1.6847" marker-end="url(#arrow)" />
   <line x1="313.4177" y1="348.8312" x2="492.6582" y2="265.9741" stroke="var(--primary-border)" stroke-width="1.6847" marker-end="url(#arrow)" />
   <line x1="313.4177" y1="412.1039" x2="492.6582" y2="175.5844" stroke="var(--primary-border)" stroke-width="1.6847" marker-end="url(#arrow)" />
   <rect x="921.0126" y="77.6623" width="318.9874" height="391.6883" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.2309 5.6154" />
-  <text x="1080.5063" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--ok-accent)">Alerts and Actions</text>
-  <rect x="951.3924" y="152.987" width="258.2278" height="60.2597" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1080.5063" y="190.6493" text-anchor="middle" font-size="15.7803" fill="var(--text)">Threshold Alerts</text>
-  <rect x="951.3924" y="243.3766" width="258.2278" height="60.2597" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1080.5063" y="281.039" text-anchor="middle" font-size="15.7803" fill="var(--text)">Auto-scaling</text>
-  <rect x="951.3924" y="333.7663" width="258.2278" height="60.2597" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1080.5063" y="371.4286" text-anchor="middle" font-size="15.7803" fill="var(--text)">Notifications</text>
+  <text x="1080.5063" y="110.8051" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Alerts and Actions</text>
+  <rect x="951.3924" y="152.987" width="258.2278" height="60.2597" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.5063" y="190.6493" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Threshold Alerts</text>
+  <rect x="951.3924" y="243.3766" width="258.2278" height="60.2597" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.5063" y="281.039" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Auto-scaling</text>
+  <rect x="951.3924" y="333.7663" width="258.2278" height="60.2597" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.5063" y="371.4286" text-anchor="middle" font-size="15.7803" fill="var(--text)" font-family="Arial, sans-serif">Notifications</text>
   <line x1="769.1139" y1="183.1169" x2="948.3543" y2="183.1169" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="769.1139" y1="273.5065" x2="948.3543" y2="273.5065" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="769.1139" y1="363.8962" x2="948.3543" y2="363.8962" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="40" y="514.5454" width="1200" height="105.4546" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="552.2078" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--text)">Monitoring Flow</text>
-  <text x="639.9999" y="586.8571" text-anchor="middle" font-size="15.7803" fill="var(--text-muted)">Data lake metrics feed into monitoring tools, which trigger alerts, auto-scaling, and notifications based on thresholds.</text>
+  <text x="639.9999" y="552.2078" text-anchor="middle" font-size="17.2149" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Monitoring Flow</text>
+  <text x="639.9999" y="586.8571" text-anchor="middle" font-size="15.7803" fill="var(--text-muted)" font-family="Arial, sans-serif">Data lake metrics feed into monitoring tools, which trigger alerts, auto-scaling, and notifications based on thresholds.</text>
 </svg>

@@ -1,113 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,24 5.4857,0" fill="#333" />
-    </marker>
+
   </defs>
-  <text x="325.2459" y="64.1667" text-anchor="middle" font-size="30.451" font-weight="bold" fill="var(--primary-accent)">Pull Model</text>
-  <rect x="177.705" y="112.5" width="295.0819" height="120.8333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="325.2459" y="185.0002" text-anchor="middle" font-size="26.6448">Prometheus</text>
-  <rect x="40" y="354.1668" width="236.0657" height="96.6666" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="158.0328" y="414.5835" text-anchor="middle" font-size="22.8384">Service A</text>
-  <rect x="315.4099" y="354.1668" width="236.0657" height="96.6666" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="433.4428" y="414.5835" text-anchor="middle" font-size="22.8384">Service B</text>
+  <text x="325.2459" y="64.1667" text-anchor="middle" font-size="30.451" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pull Model</text>
+  <rect x="177.705" y="112.5" width="295.0819" height="120.8333" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="325.2459" y="185.0002" text-anchor="middle" font-size="26.6448" font-family="Arial, sans-serif" fill="var(--primary-text)">Prometheus</text>
+  <rect x="40" y="354.1668" width="236.0657" height="96.6666" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="158.0328" y="414.5835" text-anchor="middle" font-size="22.8384" font-family="Arial, sans-serif" fill="var(--primary-text)">Service A</text>
+  <rect x="315.4099" y="354.1668" width="236.0657" height="96.6666" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="433.4428" y="414.5835" text-anchor="middle" font-size="22.8384" font-family="Arial, sans-serif" fill="var(--primary-text)">Service B</text>
   <path d="M 276.0657 233.3333 L 158.0328 354.1668" stroke="var(--primary-border)" stroke-width="0.8539" marker-end="url(#arrow)" />
   <path d="M 374.4263 233.3333 L 433.4428 354.1668" stroke="var(--primary-border)" stroke-width="0.8539" marker-end="url(#arrow)" />
-  <text x="118.6886" y="305.8335" font-size="19.2758" fill="var(--primary-accent)">scrape</text>
-  <text x="433.4428" y="305.8335" font-size="19.2758" fill="var(--primary-accent)">scrape</text>
-  <text x="1013.7705" y="64.1667" text-anchor="middle" font-size="30.451" font-weight="bold" fill="var(--ok-accent)">Push Model</text>
-  <rect x="866.2296" y="112.5" width="295.0819" height="120.8333" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1013.7705" y="185.0002" text-anchor="middle" font-size="26.6448">Collector</text>
-  <rect x="728.5244" y="354.1668" width="236.0657" height="96.6666" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="846.5572" y="414.5835" text-anchor="middle" font-size="22.8384">Service A</text>
-  <rect x="1003.9343" y="354.1668" width="236.0657" height="96.6666" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1121.9672" y="414.5835" text-anchor="middle" font-size="22.8384">Service B</text>
+  <text x="118.6886" y="305.8335" font-size="19.2758" fill="var(--primary-accent)" font-family="Arial, sans-serif">scrape</text>
+  <text x="433.4428" y="305.8335" font-size="19.2758" fill="var(--primary-accent)" font-family="Arial, sans-serif">scrape</text>
+  <text x="1013.7705" y="64.1667" text-anchor="middle" font-size="30.451" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Push Model</text>
+  <rect x="866.2296" y="112.5" width="295.0819" height="120.8333" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1013.7705" y="185.0002" text-anchor="middle" font-size="26.6448" font-family="Arial, sans-serif" fill="var(--ok-text)">Collector</text>
+  <rect x="728.5244" y="354.1668" width="236.0657" height="96.6666" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="846.5572" y="414.5835" text-anchor="middle" font-size="22.8384" font-family="Arial, sans-serif" fill="var(--ok-text)">Service A</text>
+  <rect x="1003.9343" y="354.1668" width="236.0657" height="96.6666" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1121.9672" y="414.5835" text-anchor="middle" font-size="22.8384" font-family="Arial, sans-serif" fill="var(--ok-text)">Service B</text>
   <path d="M 846.5572 354.1668 L 944.9181 233.3333" stroke="var(--ok-border)" stroke-width="0.8539" marker-end="url(#arrow)" />
   <path d="M 1121.9672 354.1668 L 1082.6231 233.3333" stroke="var(--ok-border)" stroke-width="0.8539" marker-end="url(#arrow)" />
-  <text x="846.5572" y="305.8335" font-size="19.2758" fill="var(--ok-accent)">push</text>
-  <text x="1121.9672" y="305.8335" font-size="19.2758" fill="var(--ok-accent)">push</text>
+  <text x="846.5572" y="305.8335" font-size="19.2758" fill="var(--ok-accent)" font-family="Arial, sans-serif">push</text>
+  <text x="1121.9672" y="305.8335" font-size="19.2758" fill="var(--ok-accent)" font-family="Arial, sans-serif">push</text>
   <line x1="669.5082" y1="40" x2="669.5082" y2="620" stroke="var(--text-faint)" stroke-width="0.427" stroke-dasharray="2.1347 2.1347" />
-  <text x="325.2459" y="547.5002" text-anchor="middle" font-size="20.9351" fill="var(--text-muted)">Server controls scrape rate</text>
-  <text x="1013.7705" y="547.5002" text-anchor="middle" font-size="20.9351" fill="var(--text-muted)">Agents push to collector</text>
+  <text x="325.2459" y="547.5002" text-anchor="middle" font-size="20.9351" fill="var(--text-muted)" font-family="Arial, sans-serif">Server controls scrape rate</text>
+  <text x="1013.7705" y="547.5002" text-anchor="middle" font-size="20.9351" fill="var(--text-muted)" font-family="Arial, sans-serif">Agents push to collector</text>
 </svg>

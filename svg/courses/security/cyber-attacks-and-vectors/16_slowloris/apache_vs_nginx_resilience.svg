@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,56 +75,50 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,22.5 6.4,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,0 6.4,22.5" fill="#555" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="25.1381" fill="var(--text)" font-weight="bold">Thread-per-Connection vs Event-Driven Model</text>
-  <rect x="40" y="80.4651" width="547.0588" height="539.5349" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="313.5294" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--danger-accent)" font-weight="bold">Apache (Thread-per-Connection)</text>
-  <rect x="75.2941" y="152.4031" width="141.1765" height="179.845" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="145.8824" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold">Thread</text>
-  <text x="145.8824" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)">Conn #1</text>
-  <text x="145.8824" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)">BLOCKED</text>
-  <rect x="234.1177" y="152.4031" width="141.1765" height="179.845" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="304.7059" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold">Thread</text>
-  <text x="304.7059" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)">Conn #2</text>
-  <text x="304.7059" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)">BLOCKED</text>
-  <rect x="392.9412" y="152.4031" width="141.1765" height="179.845" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="463.5295" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold">Thread</text>
-  <text x="463.5295" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)">Conn #3</text>
-  <text x="463.5295" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)">BLOCKED</text>
-  <text x="313.5294" y="395.1938" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)">3 slots consumed by 3 slow connections</text>
-  <text x="313.5294" y="435.6589" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)" font-weight="bold">Thread pool exhausted → server unresponsive</text>
-  <rect x="622.353" y="80.4651" width="617.647" height="539.5349" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="931.1765" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold">Nginx (Event-Driven)</text>
-  <rect x="657.647" y="152.4031" width="511.7647" height="224.8062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="913.5294" y="201.8605" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold">Event Loop</text>
-  <text x="675.2941" y="251.3178" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)">Conn#1</text>
-  <text x="675.2941" y="282.7907" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)">Conn#2</text>
-  <text x="675.2941" y="314.2636" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)">Conn#3</text>
-  <text x="675.2941" y="345.7364" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)">… Conn#N</text>
-  <text x="931.1765" y="431.1628" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)">Thousands of slow conns handled</text>
-  <text x="931.1765" y="467.1318" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)" font-weight="bold">by a single worker thread</text>
+  <text x="640" y="40" text-anchor="middle" font-size="25.1381" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread-per-Connection vs Event-Driven Model</text>
+  <rect x="40" y="80.4651" width="547.0588" height="539.5349" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="313.5294" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Apache (Thread-per-Connection)</text>
+  <rect x="75.2941" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="145.8824" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="145.8824" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #1</text>
+  <text x="145.8824" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <rect x="234.1177" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="304.7059" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="304.7059" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #2</text>
+  <text x="304.7059" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <rect x="392.9412" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="463.5295" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="463.5295" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #3</text>
+  <text x="463.5295" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <text x="313.5294" y="395.1938" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)" font-family="Arial, sans-serif">3 slots consumed by 3 slow connections</text>
+  <text x="313.5294" y="435.6589" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Thread pool exhausted → server unresponsive</text>
+  <rect x="622.353" y="80.4651" width="617.647" height="539.5349" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="931.1765" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Nginx (Event-Driven)</text>
+  <rect x="657.647" y="152.4031" width="511.7647" height="224.8062" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="913.5294" y="201.8605" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Event Loop</text>
+  <text x="675.2941" y="251.3178" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#1</text>
+  <text x="675.2941" y="282.7907" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#2</text>
+  <text x="675.2941" y="314.2636" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#3</text>
+  <text x="675.2941" y="345.7364" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">… Conn#N</text>
+  <text x="931.1765" y="431.1628" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Thousands of slow conns handled</text>
+  <text x="931.1765" y="467.1318" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">by a single worker thread</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,60 +75,57 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr0" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 10.8 L 16 5.4 Z" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="499.7389" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="76.3447" text-anchor="middle" font-size="25.9867" font-weight="bold" fill="var(--text)">CPU</text>
+  <rect x="40" y="40" width="1200" height="499.7389" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="76.3447" text-anchor="middle" font-size="25.9867" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CPU</text>
   <rect x="88.3871" y="100.5744" width="222.5806" height="106.0052" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="200.6452" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)">Control Unit</text>
-  <text x="200.6452" y="171.7494" text-anchor="middle" font-size="19.49" fill="var(--text-muted)">(CU)</text>
+  <text x="200.6452" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">Control Unit</text>
+  <text x="200.6452" y="171.7494" text-anchor="middle" font-size="19.49" fill="var(--text-muted)" font-family="Arial, sans-serif">(CU)</text>
   <rect x="432.9033" y="100.5744" width="280.6451" height="106.0052" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="574.1936" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)">ALU</text>
-  <text x="574.1936" y="168.7206" text-anchor="middle" font-size="19.49" fill="var(--text-muted)">(Arithmetic Logic Unit)</text>
+  <text x="574.1936" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">ALU</text>
+  <text x="574.1936" y="168.7206" text-anchor="middle" font-size="19.49" fill="var(--text-muted)" font-family="Arial, sans-serif">(Arithmetic Logic Unit)</text>
   <rect x="843.2258" y="100.5744" width="290.3226" height="106.0052" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="988.3871" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)">Registers</text>
-  <text x="988.3871" y="168.7206" text-anchor="middle" font-size="19.49" fill="var(--text-muted)">(Fast local storage)</text>
-  <line x1="310.9678" y1="153.577" x2="432.9033" y2="153.577" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <line x1="713.5484" y1="153.577" x2="843.2258" y2="153.577" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
+  <text x="988.3871" y="142.9765" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">Registers</text>
+  <text x="988.3871" y="168.7206" text-anchor="middle" font-size="19.49" fill="var(--text-muted)" font-family="Arial, sans-serif">(Fast local storage)</text>
+  <line x1="310.9678" y1="153.577" x2="432.9033" y2="153.577" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="713.5484" y1="153.577" x2="843.2258" y2="153.577" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="200.6452" y1="206.5796" x2="200.6452" y2="289.8695" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="574.1936" y1="206.5796" x2="574.1936" y2="289.8695" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="988.3871" y1="206.5796" x2="988.3871" y2="289.8695" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="200.6452" y1="289.8695" x2="988.3871" y2="289.8695" stroke="var(--text-muted)" stroke-width="2" />
-  <line x1="574.1936" y1="289.8695" x2="574.1936" y2="323.1853" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <rect x="419.3549" y="323.1853" width="309.6774" height="45.4308" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="574.1936" y="353.4726" text-anchor="middle" font-size="21.1142" fill="var(--text)">Internal Bus</text>
+  <line x1="574.1936" y1="289.8695" x2="574.1936" y2="323.1853" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="419.3549" y="323.1853" width="309.6774" height="45.4308" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="574.1936" y="353.4726" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">Internal Bus</text>
   <line x1="574.1936" y1="368.6162" x2="574.1936" y2="406.4752" stroke="var(--text-muted)" stroke-width="2" />
   <line x1="214.1936" y1="406.4752" x2="1007.7419" y2="406.4752" stroke="var(--text-muted)" stroke-width="2" />
-  <line x1="214.1936" y1="406.4752" x2="214.1936" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <line x1="574.1936" y1="406.4752" x2="574.1936" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <line x1="949.6775" y1="406.4752" x2="949.6775" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <rect x="88.3871" y="441.3055" width="251.6129" height="60.5744" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="214.1936" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)">L1 I-Cache</text>
-  <rect x="429.0323" y="441.3055" width="290.3226" height="60.5744" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="574.1936" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)">L1 D-Cache</text>
-  <rect x="804.5161" y="441.3055" width="290.3226" height="60.5744" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.6775" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)">Branch Pred.</text>
-  <line x1="640.0001" y1="539.7389" x2="640.0001" y2="574.5692" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr0)" />
-  <rect x="485.1613" y="574.5692" width="309.6774" height="45.4308" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="604.8564" text-anchor="middle" font-size="21.1142" fill="var(--text)">External Bus</text>
+  <line x1="214.1936" y1="406.4752" x2="214.1936" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="574.1936" y1="406.4752" x2="574.1936" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="949.6775" y1="406.4752" x2="949.6775" y2="441.3055" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="88.3871" y="441.3055" width="251.6129" height="60.5744" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="214.1936" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">L1 I-Cache</text>
+  <rect x="429.0323" y="441.3055" width="290.3226" height="60.5744" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="574.1936" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">L1 D-Cache</text>
+  <rect x="804.5161" y="441.3055" width="290.3226" height="60.5744" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="949.6775" y="479.1645" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">Branch Pred.</text>
+  <line x1="640.0001" y1="539.7389" x2="640.0001" y2="574.5692" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="485.1613" y="574.5692" width="309.6774" height="45.4308" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="604.8564" text-anchor="middle" font-size="21.1142" fill="var(--text)" font-family="Arial, sans-serif">External Bus</text>
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,51 +75,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,45 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,45 5.2706,0" fill="#dc3545" />
-    </marker>
   </defs>
   <text x="640" y="70.5262" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4593" font-weight="bold" fill="var(--text)">Dead Letter Queue Flow</text>
-  <rect x="40" y="214.436" width="160.9757" height="196.2406" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="120.4878" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold">Producer</text>
+  <rect x="40" y="214.436" width="160.9757" height="196.2406" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120.4878" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold" fill="var(--primary-text)">Producer</text>
   <line x1="200.9757" y1="314.7368" x2="252.1952" y2="314.7368" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="259.5122" y="214.436" width="190.2439" height="196.2406" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="354.6341" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold">Main Queue</text>
+  <rect x="259.5122" y="214.436" width="190.2439" height="196.2406" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="354.6341" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold" fill="var(--warn-text)">Main Queue</text>
   <line x1="449.7561" y1="314.7368" x2="515.6098" y2="314.7368" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="522.9269" y="214.436" width="160.9757" height="196.2406" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="603.4146" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold">Consumer</text>
+  <rect x="522.9269" y="214.436" width="160.9757" height="196.2406" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="603.4146" y="336.5413" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5364" font-weight="bold" fill="var(--ok-text)">Consumer</text>
   <path d="M 603.4146 410.6766 Q 603.4146 563.3083 442.439 563.3083 Q 354.6341 563.3083 354.6341 432.4812" fill="none" stroke="var(--danger-border)" stroke-width="2.1706" stroke-dasharray="7.2355 4.3412" marker-end="url(#arrow-danger)" />
   <text x="515.6098" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6137" fill="var(--danger-accent)">Processing Failed (retry)</text>
   <line x1="354.6341" y1="214.436" x2="354.6341" y2="61.8045" stroke="var(--danger-border)" stroke-width="2" />
   <line x1="354.6341" y1="61.8045" x2="866.8293" y2="61.8045" stroke="var(--danger-border)" stroke-width="2" />
   <line x1="866.8293" y1="61.8045" x2="866.8293" y2="192.6315" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
   <text x="610.7318" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6137" fill="var(--danger-accent)">Max Retries Exceeded</text>
-  <rect x="764.3902" y="214.436" width="204.8781" height="196.2406" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="866.8293" y="301.6541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold">Dead Letter</text>
-  <text x="866.8293" y="367.0677" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold">Queue</text>
+  <rect x="764.3902" y="214.436" width="204.8781" height="196.2406" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="866.8293" y="301.6541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold" fill="var(--danger-text)">Dead Letter</text>
+  <text x="866.8293" y="367.0677" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold" fill="var(--danger-text)">Queue</text>
   <line x1="969.2683" y1="314.7368" x2="1027.8048" y2="314.7368" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
-  <rect x="1035.1219" y="214.436" width="204.8781" height="196.2406" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1137.561" y="301.6541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold">Manual Review /</text>
-  <text x="1137.561" y="367.0677" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold">Alerting</text>
+  <rect x="1035.1219" y="214.436" width="204.8781" height="196.2406" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1137.561" y="301.6541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold" fill="var(--warn-text)">Manual Review /</text>
+  <text x="1137.561" y="367.0677" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0751" font-weight="bold" fill="var(--warn-text)">Alerting</text>
 </svg>

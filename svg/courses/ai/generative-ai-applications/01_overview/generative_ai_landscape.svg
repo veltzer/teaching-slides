@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,97 +97,94 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="216.039318" height="497.142857" rx="6.564727" fill="var(--surface)" />
-  <rect x="40" y="40" width="216.039318" height="40.507886" rx="6.564727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="69.460343" width="216.039318" height="11.047657" fill="var(--primary-fill)" rx="6.564727" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="148.019659" y="67.619086" font-family="Arial,sans-serif" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Text / LLMs</text>
-  <rect x="59.639938" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="148.019659" y="121.936457" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">GPT-4o</text>
-  <text x="148.019659" y="137.587429" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • chat &amp; reasoning</text>
-  <rect x="59.639938" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="148.019659" y="175.333371" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Claude 3.5</text>
-  <text x="148.019659" y="190.984114" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Anthropic • long context</text>
-  <rect x="59.639938" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="148.019659" y="228.730286" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Gemini 1.5</text>
-  <text x="148.019659" y="244.381029" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Google • multimodal</text>
-  <rect x="59.639938" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="148.019659" y="282.126971" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Llama 3</text>
-  <text x="148.019659" y="297.777829" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Meta • open-source</text>
-  <rect x="59.639938" y="318.031771" width="176.759442" height="40.507886" rx="6.564727" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="148.019659" y="335.523886" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Mistral</text>
-  <text x="148.019659" y="351.174629" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Mistral AI • efficient</text>
+  <rect x="40" y="40" width="216.039318" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="69.460343" width="216.039318" height="11.047657" fill="url(#grad-primary)" rx="6.564727" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="67.619086" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Text / LLMs</text>
+  <rect x="59.639938" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="121.936457" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">GPT-4o</text>
+  <text x="148.019659" y="137.587429" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • chat &amp; reasoning</text>
+  <rect x="59.639938" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="175.333371" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Claude 3.5</text>
+  <text x="148.019659" y="190.984114" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Anthropic • long context</text>
+  <rect x="59.639938" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="228.730286" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Gemini 1.5</text>
+  <text x="148.019659" y="244.381029" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Google • multimodal</text>
+  <rect x="59.639938" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="282.126971" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Llama 3</text>
+  <text x="148.019659" y="297.777829" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Meta • open-source</text>
+  <rect x="59.639938" y="318.031771" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="148.019659" y="335.523886" font-size="13.311406" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Mistral</text>
+  <text x="148.019659" y="351.174629" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Mistral AI • efficient</text>
   <rect x="283.535231" y="40" width="216.039318" height="497.142857" rx="6.564727" fill="var(--surface)" />
   <rect x="283.535231" y="40" width="216.039318" height="40.507886" rx="6.564727" fill="var(--info-accent)" />
   <rect x="283.535231" y="69.460343" width="216.039318" height="11.047657" fill="var(--info-accent)" rx="6.564727"/>
-  <text x="391.55489" y="67.619086" font-family="Arial,sans-serif" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Image / Diffusion</text>
-  <rect x="303.175169" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="391.55489" y="121.936457" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">DALL·E 3</text>
-  <text x="391.55489" y="137.587429" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • text-to-image</text>
-  <rect x="303.175169" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="391.55489" y="175.333371" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Stable Diffusion</text>
-  <text x="391.55489" y="190.984114" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Stability AI • open model</text>
-  <rect x="303.175169" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="391.55489" y="228.730286" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Midjourney</text>
-  <text x="391.55489" y="244.381029" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Midjourney • artistic</text>
-  <rect x="303.175169" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="391.55489" y="282.126971" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Imagen 3</text>
-  <text x="391.55489" y="297.777829" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Google • photorealistic</text>
-  <rect x="303.175169" y="318.031771" width="176.759442" height="40.507886" rx="6.564727" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="391.55489" y="335.523886" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">FLUX</text>
-  <text x="391.55489" y="351.174629" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Black Forest Labs • SOTA</text>
+  <text x="391.55489" y="67.619086" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Image / Diffusion</text>
+  <rect x="303.175169" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.55489" y="121.936457" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">DALL·E 3</text>
+  <text x="391.55489" y="137.587429" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • text-to-image</text>
+  <rect x="303.175169" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.55489" y="175.333371" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Stable Diffusion</text>
+  <text x="391.55489" y="190.984114" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Stability AI • open model</text>
+  <rect x="303.175169" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.55489" y="228.730286" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Midjourney</text>
+  <text x="391.55489" y="244.381029" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Midjourney • artistic</text>
+  <rect x="303.175169" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.55489" y="282.126971" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Imagen 3</text>
+  <text x="391.55489" y="297.777829" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Google • photorealistic</text>
+  <rect x="303.175169" y="318.031771" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.55489" y="335.523886" font-size="13.311406" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">FLUX</text>
+  <text x="391.55489" y="351.174629" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Black Forest Labs • SOTA</text>
   <rect x="527.070461" y="40" width="216.039318" height="497.142857" rx="6.564727" fill="var(--surface)" />
   <rect x="527.070461" y="40" width="216.039318" height="40.507886" rx="6.564727" fill="var(--ok-accent)" />
   <rect x="527.070461" y="69.460343" width="216.039318" height="11.047657" fill="var(--ok-accent)" rx="6.564727"/>
-  <text x="635.09012" y="67.619086" font-family="Arial,sans-serif" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Audio</text>
-  <rect x="546.710399" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="635.09012" y="121.936457" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Whisper</text>
-  <text x="635.09012" y="137.587429" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • speech-to-text</text>
-  <rect x="546.710399" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="635.09012" y="175.333371" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">TTS-1-HD</text>
-  <text x="635.09012" y="190.984114" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • text-to-speech</text>
-  <rect x="546.710399" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="635.09012" y="228.730286" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">MusicGen</text>
-  <text x="635.09012" y="244.381029" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Meta • music generation</text>
-  <rect x="546.710399" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="635.09012" y="282.126971" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">AudioCraft</text>
-  <text x="635.09012" y="297.777829" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Meta • sound effects</text>
+  <text x="635.09012" y="67.619086" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Audio</text>
+  <rect x="546.710399" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.09012" y="121.936457" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Whisper</text>
+  <text x="635.09012" y="137.587429" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • speech-to-text</text>
+  <rect x="546.710399" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.09012" y="175.333371" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">TTS-1-HD</text>
+  <text x="635.09012" y="190.984114" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • text-to-speech</text>
+  <rect x="546.710399" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.09012" y="228.730286" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">MusicGen</text>
+  <text x="635.09012" y="244.381029" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Meta • music generation</text>
+  <rect x="546.710399" y="264.634971" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.09012" y="282.126971" font-size="13.311406" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">AudioCraft</text>
+  <text x="635.09012" y="297.777829" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Meta • sound effects</text>
   <rect x="770.605692" y="40" width="216.039318" height="497.142857" rx="6.564727" fill="var(--surface)" />
   <rect x="770.605692" y="40" width="216.039318" height="40.507886" rx="6.564727" fill="var(--danger-accent)" />
   <rect x="770.605692" y="69.460343" width="216.039318" height="11.047657" fill="var(--danger-accent)" rx="6.564727"/>
-  <text x="878.625351" y="67.619086" font-family="Arial,sans-serif" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Video</text>
-  <rect x="790.24563" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="878.625351" y="121.936457" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Sora</text>
-  <text x="878.625351" y="137.587429" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • text-to-video</text>
-  <rect x="790.24563" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="878.625351" y="175.333371" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Runway Gen-3</text>
-  <text x="878.625351" y="190.984114" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Runway • creative video</text>
-  <rect x="790.24563" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="878.625351" y="228.730286" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Lumiere</text>
-  <text x="878.625351" y="244.381029" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">Google • video diffusion</text>
+  <text x="878.625351" y="67.619086" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Video</text>
+  <rect x="790.24563" y="104.444571" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="878.625351" y="121.936457" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Sora</text>
+  <text x="878.625351" y="137.587429" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • text-to-video</text>
+  <rect x="790.24563" y="157.841257" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="878.625351" y="175.333371" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Runway Gen-3</text>
+  <text x="878.625351" y="190.984114" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Runway • creative video</text>
+  <rect x="790.24563" y="211.238171" width="176.759442" height="40.507886" rx="6.564727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="878.625351" y="228.730286" font-size="13.311406" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Lumiere</text>
+  <text x="878.625351" y="244.381029" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Google • video diffusion</text>
   <rect x="1014.140818" y="40" width="225.859182" height="497.142857" rx="6.564727" fill="var(--surface)" />
-  <rect x="1014.140818" y="40" width="225.859182" height="40.507886" rx="6.564727" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1014.140818" y="69.460343" width="225.859182" height="11.047657" fill="var(--warn-fill)" rx="6.564727" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1127.070566" y="67.619086" font-family="Arial,sans-serif" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle">Code</text>
-  <rect x="1033.780861" y="104.444571" width="186.579411" height="40.507886" rx="6.564727" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1127.070566" y="121.936457" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">GitHub Copilot</text>
-  <text x="1127.070566" y="137.587429" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">GitHub • IDE completion</text>
-  <rect x="1033.780861" y="157.841257" width="186.579411" height="40.507886" rx="6.564727" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1127.070566" y="175.333371" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Codex / GPT-4o</text>
-  <text x="1127.070566" y="190.984114" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">OpenAI • code generation</text>
-  <rect x="1033.780861" y="211.238171" width="186.579411" height="40.507886" rx="6.564727" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1127.070566" y="228.730286" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">DeepSeek Coder</text>
-  <text x="1127.070566" y="244.381029" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">DeepSeek • open-source</text>
-  <rect x="1033.780861" y="264.634971" width="186.579411" height="40.507886" rx="6.564727" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1127.070566" y="282.126971" font-family="Arial,sans-serif" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">StarCoder 2</text>
-  <text x="1127.070566" y="297.777829" font-family="Arial,sans-serif" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle">BigCode • open model</text>
+  <rect x="1014.140818" y="40" width="225.859182" height="40.507886" rx="6.564727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1014.140818" y="69.460343" width="225.859182" height="11.047657" fill="url(#grad-warn)" rx="6.564727" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.070566" y="67.619086" font-size="17.114789" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Code</text>
+  <rect x="1033.780861" y="104.444571" width="186.579411" height="40.507886" rx="6.564727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.070566" y="121.936457" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">GitHub Copilot</text>
+  <text x="1127.070566" y="137.587429" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">GitHub • IDE completion</text>
+  <rect x="1033.780861" y="157.841257" width="186.579411" height="40.507886" rx="6.564727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.070566" y="175.333371" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Codex / GPT-4o</text>
+  <text x="1127.070566" y="190.984114" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">OpenAI • code generation</text>
+  <rect x="1033.780861" y="211.238171" width="186.579411" height="40.507886" rx="6.564727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.070566" y="228.730286" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">DeepSeek Coder</text>
+  <text x="1127.070566" y="244.381029" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">DeepSeek • open-source</text>
+  <rect x="1033.780861" y="264.634971" width="186.579411" height="40.507886" rx="6.564727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.070566" y="282.126971" font-size="13.311406" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">StarCoder 2</text>
+  <text x="1127.070566" y="297.777829" font-size="10.941211" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">BigCode • open model</text>
   <rect x="40" y="564.761943" width="1198.036111" height="55.238057" rx="6.564727" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="59.639938" y="581.333371" width="15.71195" height="14.730171" rx="6.564727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="83.207864" y="592.381029" font-family="Arial,sans-serif" font-size="12.360724" fill="var(--text)">Proprietary API</text>
-  <rect x="216.759442" y="581.333371" width="15.71195" height="14.730171" rx="6.564727" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240.327367" y="592.381029" font-family="Arial,sans-serif" font-size="12.360724" fill="var(--text)">Open-source / local</text>
-  <text x="639.018108" y="595.142857" font-family="Arial,sans-serif" font-size="11.409932" fill="var(--text-muted)" text-anchor="middle">Each category uses different architectures: Transformers for text/code, Diffusion for images/video, Encoder-Decoder for audio</text>
+  <rect x="59.639938" y="581.333371" width="15.71195" height="14.730171" rx="6.564727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="83.207864" y="592.381029" font-size="12.360724" fill="var(--text)" font-family="Arial, sans-serif">Proprietary API</text>
+  <rect x="216.759442" y="581.333371" width="15.71195" height="14.730171" rx="6.564727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240.327367" y="592.381029" font-size="12.360724" fill="var(--text)" font-family="Arial, sans-serif">Open-source / local</text>
+  <text x="639.018108" y="595.142857" font-size="11.409932" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Each category uses different architectures: Transformers for text/code, Diffusion for images/video, Encoder-Decoder for audio</text>
 </svg>

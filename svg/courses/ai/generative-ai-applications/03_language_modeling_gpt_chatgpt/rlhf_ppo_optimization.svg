@@ -1,104 +1,113 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="apd" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 0,9" fill="#4a90e2" />
-    </marker>
+
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="29.415" font-weight="bold" fill="var(--text)">RLHF PPO Optimization Loop</text>
-  <rect x="203.6364" y="72.6761" width="872.7274" height="310.4225" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="118.4227" text-anchor="middle" font-size="23.8997" font-weight="bold" fill="var(--primary-accent)">PPO (Proximal Policy Optimization)</text>
-  <text x="640.0001" y="162.5352" text-anchor="middle" font-size="22.061" fill="var(--text)">1. Sample prompt from dataset</text>
-  <text x="640.0001" y="200.1126" text-anchor="middle" font-size="22.061" fill="var(--text)">2. Generate response with policy</text>
-  <text x="640.0001" y="237.6903" text-anchor="middle" font-size="22.061" fill="var(--text)">3. Score with reward model</text>
-  <text x="640.0001" y="275.2676" text-anchor="middle" font-size="22.061" fill="var(--text)">4. Compute advantage</text>
-  <text x="640.0001" y="312.8451" text-anchor="middle" font-size="22.061" fill="var(--text)">5. Update policy (with KL penalty)</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="29.415" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RLHF PPO Optimization Loop</text>
+  <rect x="203.6364" y="72.6761" width="872.7274" height="310.4225" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="118.4227" text-anchor="middle" font-size="23.8997" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">PPO (Proximal Policy Optimization)</text>
+  <text x="640.0001" y="162.5352" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">1. Sample prompt from dataset</text>
+  <text x="640.0001" y="200.1126" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">2. Generate response with policy</text>
+  <text x="640.0001" y="237.6903" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">3. Score with reward model</text>
+  <text x="640.0001" y="275.2676" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">4. Compute advantage</text>
+  <text x="640.0001" y="312.8451" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">5. Update policy (with KL penalty)</text>
   <path d="M 1076.3636 187.0423 Q 1174.5454 187.0423 1174.5454 252.3945 Q 1174.5454 317.7465 1076.3636 317.7465" fill="none" stroke="var(--primary-border)" stroke-width="0.904" stroke-dasharray="2.26 1.356" />
-  <text x="1218.1819" y="260.5635" text-anchor="middle" font-size="20.8044" fill="var(--primary-accent)">repeat</text>
-  <rect x="40" y="432.1127" width="1200" height="81.6903" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="468.0565" text-anchor="middle" font-size="22.061" font-weight="bold" fill="var(--danger-accent)">Objective: maximize E[reward(prompt, response)]</text>
-  <text x="640.0001" y="497.4648" text-anchor="middle" font-size="22.061" fill="var(--danger-accent)">subject to KL(policy || sft_model) &lt; delta</text>
-  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="579.155" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
-  <text x="640.0001" y="605.2959" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)">that score high on reward model but are actually low quality</text>
+  <text x="1218.1819" y="260.5635" text-anchor="middle" font-size="20.8044" fill="var(--primary-accent)" font-family="Arial, sans-serif">repeat</text>
+  <rect x="40" y="432.1127" width="1200" height="81.6903" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="468.0565" text-anchor="middle" font-size="22.061" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Objective: maximize E[reward(prompt, response)]</text>
+  <text x="640.0001" y="497.4648" text-anchor="middle" font-size="22.061" fill="var(--danger-accent)" font-family="Arial, sans-serif">subject to KL(policy || sft_model) &lt; delta</text>
+  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="579.155" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
+  <text x="640.0001" y="605.2959" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)" font-family="Arial, sans-serif">that score high on reward model but are actually low quality</text>
 </svg>

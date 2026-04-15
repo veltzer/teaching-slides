@@ -1,106 +1,123 @@
 #!/usr/bin/env python
+
 """
-Cap the size of custom arrow markers in SVGs.
+Normalize arrow markers across all SVGs.
 
-Many SVGs define per-file arrow markers (id="arrowhead", id="arrowd0_...",
-id="ah12b", etc.) with markerWidth/markerHeight values ranging from 11 up to
-~36. These render as oversized triangles that overpower the boxes and lines
-they attach to.
+Every marker-start/mid/end attribute is rewritten to point at one of the
+palette's canonical markers:
 
-This script rewrites any marker whose markerWidth > 10 or markerHeight > 10
-to the palette standard (10x10, refX=9, refY=5). The marker id, fill, and
-shape are preserved so existing marker-end="url(#...)" references still
-resolve to the same marker, just smaller.
+  arrow          neutral (text-muted)
+  arrow-primary  blue / primary
+  arrow-ok       green / success
+  arrow-warn     orange / warning
+  arrow-danger   red / danger
+  arrow-info     purple / info
+  arrow-white    white (over dark fills)
 
-Rules:
-  - Skip markers whose id is in the palette standard set (arrow, arrow-primary,
-    arrow-ok, arrow-warn, arrow-danger, arrow-info, arrow-white). These are
-    already 10x10.
-  - Skip markers with both dimensions <= 10.
-  - For markers with a polygon/path child, leave the shape untouched (just
-    resize the marker viewport). The shape's coordinates are often in a
-    local space compatible with 10x10 once the viewport shrinks.
+Custom <marker> definitions outside that set are removed. The mapping from
+a custom name to a canonical one uses a name heuristic (looks for
+"red"/"danger", "green"/"ok", etc.); if no hint is present the neutral
+`arrow` is used.
 
-Idempotent: running twice has no further effect.
+This replaces the previous size-capping behaviour. The palette markers are
+already 10x10 with clean triangles; the old script only resized broken
+polygon markers, which didn't help when the polygon was malformed
+(e.g. 2-point "triangles" that render as nothing).
+
+Idempotent.
+
+Usage: fix_svg_markers.py [--dry-run] svg/**/*.svg
 """
+
 from __future__ import annotations
 
+import argparse
+import pathlib
 import re
 import sys
-from pathlib import Path
 
-PALETTE_MARKER_IDS = {
-    "arrow",
-    "arrow-primary",
-    "arrow-ok",
-    "arrow-warn",
-    "arrow-danger",
-    "arrow-info",
-    "arrow-white",
-}
+CANONICAL = {"arrow", "arrow-primary", "arrow-ok", "arrow-warn",
+             "arrow-danger", "arrow-info", "arrow-white"}
 
-# Match a full <marker ...> opening tag (self-closing or with content).
-MARKER_OPEN_RE = re.compile(r'<marker\b([^>]*?)>', re.DOTALL)
+MARKER_DEF_RE = re.compile(
+    r'[ \t]*<marker\b[^>]*?id="([^"]+)"[^>]*?>.*?</marker>\n?',
+    re.DOTALL,
+)
+MARKER_REF_RE = re.compile(
+    r'\b(marker-(?:start|mid|end))="url\(#([^)]+)\)"'
+)
 
 
-def _get_attr(attrs: str, name: str) -> str | None:
-    m = re.search(rf'\b{name}="([^"]*)"', attrs)
-    return m.group(1) if m else None
+def resolve(name: str) -> str:
+    low = name.lower()
+    if "white" in low or low.endswith("-bg"):
+        return "arrow-white"
+    if "red" in low or "danger" in low or "error" in low:
+        return "arrow-danger"
+    if "green" in low or re.search(r'(^|[^a-z])ok([^a-z]|$)', low) or "success" in low:
+        return "arrow-ok"
+    if "orange" in low or "warn" in low or "yellow" in low or "amber" in low:
+        return "arrow-warn"
+    if "blue" in low or "primary" in low or "accent" in low:
+        return "arrow-primary"
+    if "purple" in low or "info" in low or "mauve" in low:
+        return "arrow-info"
+    return "arrow"
 
 
-def _set_attr(attrs: str, name: str, value: str) -> str:
-    if re.search(rf'\b{name}="[^"]*"', attrs):
-        return re.sub(rf'\b{name}="[^"]*"', f'{name}="{value}"', attrs)
-    return attrs.rstrip() + f' {name}="{value}"'
+def transform(text: str) -> tuple[str, int, int]:
+    refs_changed = 0
+    defs_removed = 0
+
+    def ref_sub(m: re.Match) -> str:
+        nonlocal refs_changed
+        attr = m.group(1)
+        name = m.group(2)
+        if name in CANONICAL:
+            return m.group(0)
+        target = resolve(name)
+        refs_changed += 1
+        return f'{attr}="url(#{target})"'
+
+    text = MARKER_REF_RE.sub(ref_sub, text)
+
+    def def_sub(m: re.Match) -> str:
+        nonlocal defs_removed
+        if m.group(1) in CANONICAL:
+            return m.group(0)
+        defs_removed += 1
+        return ""
+
+    text = MARKER_DEF_RE.sub(def_sub, text)
+    text = re.sub(r"\n[ \t]*\n[ \t]*\n+", "\n\n", text)
+    return text, refs_changed, defs_removed
 
 
-def rewrite_marker_tag(match: re.Match) -> str:
-    attrs = match.group(1)
-    marker_id = _get_attr(attrs, "id")
-    if marker_id in PALETTE_MARKER_IDS:
-        return match.group(0)
+def main() -> None:
+    p = argparse.ArgumentParser()
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("paths", nargs="+")
+    args = p.parse_args()
 
-    width = _get_attr(attrs, "markerWidth")
-    height = _get_attr(attrs, "markerHeight")
-    if width is None or height is None:
-        return match.group(0)
-    try:
-        w = float(width)
-        h = float(height)
-    except ValueError:
-        return match.group(0)
-    if w <= 10 and h <= 10:
-        return match.group(0)
+    files_changed = 0
+    total_refs = 0
+    total_defs = 0
+    for path_str in args.paths:
+        path = pathlib.Path(path_str)
+        if not path.is_file() or path.suffix != ".svg":
+            continue
+        s = path.read_text(encoding="utf-8")
+        new, refs, defs = transform(s)
+        if refs or defs:
+            files_changed += 1
+            total_refs += refs
+            total_defs += defs
+            if not args.dry_run:
+                path.write_text(new, encoding="utf-8")
 
-    new_attrs = attrs
-    new_attrs = _set_attr(new_attrs, "markerWidth", "10")
-    new_attrs = _set_attr(new_attrs, "markerHeight", "10")
-    new_attrs = _set_attr(new_attrs, "refX", "9")
-    new_attrs = _set_attr(new_attrs, "refY", "5")
-    return f"<marker{new_attrs}>"
-
-
-def fix_svg(path: Path) -> bool:
-    content = path.read_text(encoding="utf-8")
-    new_content = MARKER_OPEN_RE.sub(rewrite_marker_tag, content)
-    if new_content == content:
-        return False
-    path.write_text(new_content, encoding="utf-8")
-    return True
-
-
-def main() -> int:
-    repo_root = Path(__file__).resolve().parent.parent
-    svg_root = repo_root / "svg"
-    fixed = 0
-    scanned = 0
-    for svg_path in sorted(svg_root.rglob("*.svg")):
-        scanned += 1
-        if fix_svg(svg_path):
-            fixed += 1
-            print(f"fixed: {svg_path.relative_to(repo_root)}")
-    print(f"\n{fixed} files fixed out of {scanned} scanned")
-    return 0
+    action = "would update" if args.dry_run else "updated"
+    print(f"{action} {files_changed} file(s); rewrote {total_refs} refs, "
+          f"removed {total_defs} defs", file=sys.stderr)
 
 
 if __name__ == "__main__":

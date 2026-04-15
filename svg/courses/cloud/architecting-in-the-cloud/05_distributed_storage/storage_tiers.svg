@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -106,12 +106,12 @@
   <text x="50.084034" y="608.552632" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Rare access</text>
 
   <!-- Tier 1: Hot (S3 Standard) - widest -->
-  <rect x="150.92437" y="40" width="1089.07563" height="114.473684" rx="6.384413" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="150.92437" y="40" width="1089.07563" height="114.473684" rx="6.384413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="392.941176" y="78.157895" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--primary-accent)" font-weight="bold">HOT - S3 Standard</text>
   <text x="392.941176" y="102.006632" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Frequently accessed data</text>
   <text x="392.941176" y="123.947368" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | 3 AZ replication</text>
 
-  <rect x="846.722689" y="59.078947" width="181.512605" height="38.157895" rx="6.384413" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.722689" y="59.078947" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="937.478992" y="83.881579" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">$0.023 / GB</text>
 
   <text x="846.722689" y="123.947368" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Active websites, apps, analytics</text>
@@ -121,12 +121,12 @@
   <text x="695.462185" y="168.782842" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (30 days)</text>
 
   <!-- Tier 2: Warm (S3 IA) -->
-  <rect x="211.428571" y="178.322421" width="968.067227" height="114.473684" rx="6.384413" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="211.428571" y="178.322421" width="968.067227" height="114.473684" rx="6.384413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.277311" y="216.480316" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--warn-accent)" font-weight="bold">WARM - S3 Infrequent Access</text>
   <text x="433.277311" y="240.328947" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Less frequent, but rapid access needed</text>
   <text x="433.277311" y="262.269789" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | Retrieval fee applies</text>
 
-  <rect x="866.890756" y="197.401368" width="181.512605" height="38.157895" rx="6.384413" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="866.890756" y="197.401368" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="957.647059" y="222.203895" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">$0.0125 / GB</text>
 
   <text x="866.890756" y="262.269789" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Backups, older logs, DR copies</text>
@@ -136,12 +136,12 @@
   <text x="695.462185" y="307.105263" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (90 days)</text>
 
   <!-- Tier 3: Cold (Glacier Instant) -->
-  <rect x="271.932773" y="316.644737" width="847.058824" height="114.473684" rx="6.384413" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="271.932773" y="316.644737" width="847.058824" height="114.473684" rx="6.384413" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="473.613445" y="354.802632" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--info-accent)" font-weight="bold">COLD - Glacier Instant</text>
   <text x="473.613445" y="378.651263" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Rarely accessed, instant retrieval</text>
   <text x="473.613445" y="400.592105" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Millisecond access | Higher retrieval fee</text>
 
-  <rect x="866.890756" y="335.723684" width="181.512605" height="38.157895" rx="6.384413" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="866.890756" y="335.723684" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="957.647059" y="360.526316" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">$0.004 / GB</text>
 
   <text x="866.890756" y="400.592105" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: Compliance, quarterly reports</text>
@@ -151,12 +151,12 @@
   <text x="695.462185" y="445.427684" font-family="Arial, sans-serif" font-size="10.640688" fill="var(--text-faint)">Lifecycle policy (365 days)</text>
 
   <!-- Tier 4: Deep Archive -->
-  <rect x="332.436975" y="454.967053" width="726.05042" height="114.473684" rx="6.384413" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="332.436975" y="454.967053" width="726.05042" height="114.473684" rx="6.384413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="524.033613" y="493.124947" font-family="Arial, sans-serif" font-size="19.616002" fill="var(--ok-accent)" font-weight="bold">DEEP ARCHIVE - Glacier</text>
   <text x="524.033613" y="516.973684" font-family="Arial, sans-serif" font-size="12.750417" fill="var(--text-muted)">Long-term retention, bulk retrieval</text>
   <text x="524.033613" y="538.914421" font-family="Arial, sans-serif" font-size="11.769558" fill="var(--text-muted)">Hours to retrieve | 12+ hour wait</text>
 
-  <rect x="866.890756" y="474.046" width="181.512605" height="38.157895" rx="6.384413" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="866.890756" y="474.046" width="181.512605" height="38.157895" rx="6.384413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="957.647059" y="498.848737" font-family="Arial, sans-serif" font-size="13.731169" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">$0.00099 / GB</text>
 
   <text x="866.890756" y="538.914421" font-family="Arial, sans-serif" font-size="10.788806" fill="var(--text-muted)">Use: 7-year regulatory archives</text>

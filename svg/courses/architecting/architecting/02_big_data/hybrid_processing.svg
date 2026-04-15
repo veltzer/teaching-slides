@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,49 +75,46 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="665.3521" y="40" text-anchor="middle" font-size="24.351" font-weight="bold" fill="var(--text)">Hybrid Processing Architecture</text>
-  <rect x="40" y="238.2278" width="202.8169" height="66.076" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="141.4084" y="277.8735" text-anchor="middle" fill="var(--text)">Data Sources</text>
-  <rect x="361.1267" y="120.7596" width="219.7183" height="58.7342" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470.9858" y="157.4684" text-anchor="middle" fill="var(--text)">Real-time Stream</text>
-  <rect x="361.1267" y="355.6962" width="219.7183" height="58.7342" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="470.9858" y="392.4051" text-anchor="middle" fill="var(--text)">Batch Data</text>
-  <rect x="699.1548" y="120.7596" width="236.6197" height="58.7342" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="817.4647" y="150.1267" text-anchor="middle" font-size="18.2632" fill="var(--text)">Stream Processing</text>
-  <rect x="699.1548" y="355.6962" width="236.6197" height="58.7342" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="817.4647" y="385.0633" text-anchor="middle" font-size="18.2632" fill="var(--text)">Batch Processing</text>
-  <rect x="1037.1831" y="120.7596" width="202.8169" height="58.7342" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1138.5915" y="157.4684" text-anchor="middle" fill="var(--text)">Speed Views</text>
-  <rect x="1037.1831" y="355.6962" width="202.8169" height="58.7342" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1138.5915" y="392.4051" text-anchor="middle" fill="var(--text)">Batch Views</text>
-  <rect x="969.5774" y="230.8861" width="219.7183" height="66.076" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1079.4365" y="270.5316" text-anchor="middle" font-weight="bold" fill="var(--text)">Serving Layer</text>
-  <rect x="969.5774" y="487.8482" width="219.7183" height="58.7342" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1079.4365" y="524.557" text-anchor="middle" fill="var(--text)">API / Queries</text>
-  <rect x="969.5774" y="575.9494" width="219.7183" height="44.0506" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1079.4365" y="605.3165" text-anchor="middle" fill="var(--text)">Users</text>
+  <text x="665.3521" y="40" text-anchor="middle" font-size="24.351" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Hybrid Processing Architecture</text>
+  <rect x="40" y="238.2278" width="202.8169" height="66.076" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.4084" y="277.8735" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Data Sources</text>
+  <rect x="361.1267" y="120.7596" width="219.7183" height="58.7342" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470.9858" y="157.4684" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Real-time Stream</text>
+  <rect x="361.1267" y="355.6962" width="219.7183" height="58.7342" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470.9858" y="392.4051" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Batch Data</text>
+  <rect x="699.1548" y="120.7596" width="236.6197" height="58.7342" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.4647" y="150.1267" text-anchor="middle" font-size="18.2632" fill="var(--text)" font-family="Arial, sans-serif">Stream Processing</text>
+  <rect x="699.1548" y="355.6962" width="236.6197" height="58.7342" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="817.4647" y="385.0633" text-anchor="middle" font-size="18.2632" fill="var(--text)" font-family="Arial, sans-serif">Batch Processing</text>
+  <rect x="1037.1831" y="120.7596" width="202.8169" height="58.7342" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1138.5915" y="157.4684" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Speed Views</text>
+  <rect x="1037.1831" y="355.6962" width="202.8169" height="58.7342" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1138.5915" y="392.4051" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Batch Views</text>
+  <rect x="969.5774" y="230.8861" width="219.7183" height="66.076" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1079.4365" y="270.5316" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Serving Layer</text>
+  <rect x="969.5774" y="487.8482" width="219.7183" height="58.7342" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1079.4365" y="524.557" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">API / Queries</text>
+  <rect x="969.5774" y="575.9494" width="219.7183" height="44.0506" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1079.4365" y="605.3165" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Users</text>
   <line x1="242.8168" y1="252.9114" x2="357.7464" y2="157.4684" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="242.8168" y1="282.2785" x2="357.7464" y2="377.7216" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="580.845" y1="150.1267" x2="695.7746" y2="150.1267" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -128,6 +125,6 @@
   <line x1="1138.5915" y1="355.6962" x2="1096.338" y2="299.8987" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="1079.4365" y1="296.962" x2="1079.4365" y2="484.9114" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="40" y="487.8482" width="845.0704" height="88.1012" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="462.5351" y="524.557" text-anchor="middle" font-size="18.2632" fill="var(--text-muted)">Combines real-time stream and batch processing paths.</text>
-  <text x="462.5351" y="553.924" text-anchor="middle" font-size="18.2632" fill="var(--text-muted)">Both feed into a unified serving layer for queries.</text>
+  <text x="462.5351" y="524.557" text-anchor="middle" font-size="18.2632" fill="var(--text-muted)" font-family="Arial, sans-serif">Combines real-time stream and batch processing paths.</text>
+  <text x="462.5351" y="553.924" text-anchor="middle" font-size="18.2632" fill="var(--text-muted)" font-family="Arial, sans-serif">Both feed into a unified serving layer for queries.</text>
 </svg>

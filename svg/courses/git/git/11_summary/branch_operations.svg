@@ -1,110 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrBO" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#555" />
-    </marker>
+
   </defs>
   <ellipse cx="639.9996" cy="345.2633" rx="143.4782" ry="56.2789" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="0.9172" />
-  <text x="639.9996" y="362.2223" text-anchor="middle" font-size="29.7678" font-weight="bold" fill="var(--info-accent)">Branch</text>
-  <rect x="40" y="56.9589" width="260.8696" height="122.1053" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="170.4348" y="107.8362" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--primary-accent)">Create</text>
-  <text x="170.4348" y="151.9296" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)">git branch &lt;name&gt;</text>
-  <line x1="300.8696" y1="148.538" x2="522.6085" y2="284.2104" stroke="var(--primary-border)" stroke-width="0.6879" marker-end="url(#arrBO)" />
-  <rect x="979.1304" y="56.9589" width="260.8696" height="122.1053" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1109.5652" y="107.8362" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--ok-accent)">Develop</text>
-  <text x="1109.5652" y="151.9296" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)">switch + commit</text>
-  <line x1="979.1304" y1="148.538" x2="757.3915" y2="284.2104" stroke="var(--ok-border)" stroke-width="0.6879" marker-end="url(#arrBO)" />
-  <rect x="979.1304" y="497.8947" width="260.8696" height="122.1053" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1109.5652" y="548.7718" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--warn-accent)">Merge</text>
-  <text x="1109.5652" y="592.8656" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)">git merge &lt;br&gt;</text>
-  <line x1="979.1304" y1="531.8128" x2="757.3915" y2="406.3157" stroke="var(--warn-border)" stroke-width="0.6879" marker-end="url(#arrBO)" />
-  <rect x="40" y="497.8947" width="260.8696" height="122.1053" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="170.4348" y="548.7718" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--danger-accent)">Delete</text>
-  <text x="170.4348" y="592.8656" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)">git branch -d</text>
-  <line x1="300.8696" y1="531.8128" x2="522.6085" y2="406.3157" stroke="var(--danger-border)" stroke-width="0.6879" marker-end="url(#arrBO)" />
-  <path d="M 300.8696 118.0117 L 979.1304 118.0117" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrBO)" />
-  <text x="639.9996" y="40" text-anchor="middle" font-size="22.8985" fill="var(--text-faint)">lifecycle</text>
-  <path d="M 1240 179.0644 L 1240 497.8947" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrBO)" />
-  <path d="M 979.1304 558.9473 L 300.8696 558.9473" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrBO)" />
+  <text x="639.9996" y="362.2223" text-anchor="middle" font-size="29.7678" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Branch</text>
+  <rect x="40" y="56.9589" width="260.8696" height="122.1053" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="170.4348" y="107.8362" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Create</text>
+  <text x="170.4348" y="151.9296" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)" font-family="Arial, sans-serif">git branch &lt;name&gt;</text>
+  <line x1="300.8696" y1="148.538" x2="522.6085" y2="284.2104" stroke="var(--primary-border)" stroke-width="0.6879" marker-end="url(#arrow)" />
+  <rect x="979.1304" y="56.9589" width="260.8696" height="122.1053" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1109.5652" y="107.8362" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Develop</text>
+  <text x="1109.5652" y="151.9296" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)" font-family="Arial, sans-serif">switch + commit</text>
+  <line x1="979.1304" y1="148.538" x2="757.3915" y2="284.2104" stroke="var(--ok-border)" stroke-width="0.6879" marker-end="url(#arrow)" />
+  <rect x="979.1304" y="497.8947" width="260.8696" height="122.1053" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1109.5652" y="548.7718" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Merge</text>
+  <text x="1109.5652" y="592.8656" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)" font-family="Arial, sans-serif">git merge &lt;br&gt;</text>
+  <line x1="979.1304" y1="531.8128" x2="757.3915" y2="406.3157" stroke="var(--warn-border)" stroke-width="0.6879" marker-end="url(#arrow)" />
+  <rect x="40" y="497.8947" width="260.8696" height="122.1053" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="170.4348" y="548.7718" text-anchor="middle" font-size="25.1884" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Delete</text>
+  <text x="170.4348" y="592.8656" text-anchor="middle" font-size="22.8985" fill="var(--text-muted)" font-family="Arial, sans-serif">git branch -d</text>
+  <line x1="300.8696" y1="531.8128" x2="522.6085" y2="406.3157" stroke="var(--danger-border)" stroke-width="0.6879" marker-end="url(#arrow)" />
+  <path d="M 300.8696 118.0117 L 979.1304 118.0117" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrow)" />
+  <text x="639.9996" y="40" text-anchor="middle" font-size="22.8985" fill="var(--text-faint)" font-family="Arial, sans-serif">lifecycle</text>
+  <path d="M 1240 179.0644 L 1240 497.8947" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrow)" />
+  <path d="M 979.1304 558.9473 L 300.8696 558.9473" stroke="var(--text-faint)" stroke-width="0.4586" stroke-dasharray="1.8344 1.3758" marker-end="url(#arrow)" />
 </svg>

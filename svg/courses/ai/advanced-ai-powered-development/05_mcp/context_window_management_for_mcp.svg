@@ -1,92 +1,150 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
-  </defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
 
-  <text x="640" y="40" text-anchor="middle" font-size="27.45906" font-weight="bold" fill="var(--text)">Context Window Management for MCP Tools</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="27.45906" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Context Window Management for MCP Tools</text>
 
   <!-- 200K window bar -->
-  <text x="640" y="90.192308" text-anchor="middle" font-size="16.897883" fill="var(--text-muted)">Context Window: 200K tokens</text>
+  <text x="640" y="90.192308" text-anchor="middle" font-size="16.897883" fill="var(--text-muted)" font-family="Arial, sans-serif">Context Window: 200K tokens</text>
 
   <rect x="40" y="106.923077" width="1200" height="122.692308" rx="6.336706" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <!-- Segment widths: schemas 150px, conversation 900px, response 150px -->
-  <rect x="40" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="190" y="106.923077" width="900" height="122.692308" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1090" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="190" y="106.923077" width="900" height="122.692308" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1090" y="106.923077" width="150" height="122.692308" rx="6.336706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
 
-  <text x="115" y="151.538462" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--danger-text)">Tool Schemas</text>
-  <text x="115" y="177.192308" text-anchor="middle" font-size="12.673413" fill="var(--danger-text)">20 tools × 100</text>
-  <text x="115" y="201.730769" text-anchor="middle" font-size="13.72953" font-weight="bold" fill="var(--danger-text)">~2K tokens</text>
+  <text x="115" y="151.538462" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Tool Schemas</text>
+  <text x="115" y="177.192308" text-anchor="middle" font-size="12.673413" fill="var(--danger-text)" font-family="Arial, sans-serif">20 tools × 100</text>
+  <text x="115" y="201.730769" text-anchor="middle" font-size="13.72953" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">~2K tokens</text>
 
-  <text x="640" y="151.538462" text-anchor="middle" font-size="16.897883" font-weight="bold" fill="var(--ok-text)">Conversation + Code Context</text>
-  <text x="640" y="179.423077" text-anchor="middle" font-size="13.72953" fill="var(--ok-text)">retrieved files, tool call results, chat history</text>
-  <text x="640" y="205.076923" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--ok-text)">~150K tokens</text>
+  <text x="640" y="151.538462" text-anchor="middle" font-size="16.897883" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Conversation + Code Context</text>
+  <text x="640" y="179.423077" text-anchor="middle" font-size="13.72953" fill="var(--ok-text)" font-family="Arial, sans-serif">retrieved files, tool call results, chat history</text>
+  <text x="640" y="205.076923" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">~150K tokens</text>
 
-  <text x="1165" y="151.538462" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--warn-text)">Response</text>
-  <text x="1165" y="177.192308" text-anchor="middle" font-size="12.673413" fill="var(--warn-text)">model output</text>
-  <text x="1165" y="201.730769" text-anchor="middle" font-size="13.72953" font-weight="bold" fill="var(--warn-text)">~48K tokens</text>
+  <text x="1165" y="151.538462" text-anchor="middle" font-size="14.785648" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Response</text>
+  <text x="1165" y="177.192308" text-anchor="middle" font-size="12.673413" fill="var(--warn-text)" font-family="Arial, sans-serif">model output</text>
+  <text x="1165" y="201.730769" text-anchor="middle" font-size="13.72953" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">~48K tokens</text>
 
   <!-- Strategies section -->
-  <text x="640" y="285.384615" text-anchor="middle" font-size="23.23459" font-weight="bold" fill="var(--info-accent)">Strategies to Manage Tool Schema Cost</text>
+  <text x="640" y="285.384615" text-anchor="middle" font-size="23.23459" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Strategies to Manage Tool Schema Cost</text>
 
-  <rect x="40" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Dynamic Registration</text>
-  <text x="185" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Register only tools</text>
-  <text x="185" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">needed for the</text>
-  <text x="185" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">current task</text>
-  <text x="185" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">swap tool sets per phase</text>
+  <rect x="40" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Dynamic Registration</text>
+  <text x="185" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">Register only tools</text>
+  <text x="185" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">needed for the</text>
+  <text x="185" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">current task</text>
+  <text x="185" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">swap tool sets per phase</text>
 
-  <rect x="350" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Tool Grouping</text>
-  <text x="495" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Combine fine-grained</text>
-  <text x="495" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">tools into a single</text>
-  <text x="495" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">higher-level tool</text>
-  <text x="495" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">fewer schemas, more power</text>
+  <rect x="350" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Tool Grouping</text>
+  <text x="495" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">Combine fine-grained</text>
+  <text x="495" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">tools into a single</text>
+  <text x="495" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">higher-level tool</text>
+  <text x="495" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">fewer schemas, more power</text>
 
-  <rect x="660" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Minimal Descriptions</text>
-  <text x="805" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Keep tool names,</text>
-  <text x="805" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">descriptions, and</text>
-  <text x="805" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">params concise</text>
-  <text x="805" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">every word is a token</text>
+  <rect x="660" y="307.692308" width="290" height="312.307692" rx="6.336706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Minimal Descriptions</text>
+  <text x="805" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">Keep tool names,</text>
+  <text x="805" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">descriptions, and</text>
+  <text x="805" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">params concise</text>
+  <text x="805" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">every word is a token</text>
 
-  <rect x="970" y="307.692308" width="270" height="312.307692" rx="6.336706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)">Lazy Loading</text>
-  <text x="1105" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">Connect MCP servers</text>
-  <text x="1105" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">on demand, not all</text>
-  <text x="1105" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)">at startup</text>
-  <text x="1105" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)">pay for what you use</text>
+  <rect x="970" y="307.692308" width="270" height="312.307692" rx="6.336706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="357.884615" text-anchor="middle" font-size="21.122354" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Lazy Loading</text>
+  <text x="1105" y="419.230769" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">Connect MCP servers</text>
+  <text x="1105" y="447.115385" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">on demand, not all</text>
+  <text x="1105" y="475" text-anchor="middle" font-size="15.841766" fill="var(--primary-text)" font-family="Arial, sans-serif">at startup</text>
+  <text x="1105" y="541.923077" text-anchor="middle" font-size="14.785648" font-style="italic" fill="var(--primary-text)" font-family="Arial, sans-serif">pay for what you use</text>
 </svg>

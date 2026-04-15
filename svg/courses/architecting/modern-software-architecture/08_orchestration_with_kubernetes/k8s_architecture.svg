@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,38 +97,35 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="245.230648" width="108.196721" height="53.538416" rx="6.468236" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="94.098361" y="270.215309" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--text)">kubectl</text>
-  <text x="94.098361" y="287.169201" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">operator</text>
+  <text x="94.098361" y="270.215309" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">kubectl</text>
+  <text x="94.098361" y="287.169201" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">operator</text>
   <line x1="148.196721" y1="271.999911" x2="185.57377" y2="271.999911" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="187.540984" y="40" width="688.52459" height="303.384576" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="187.540984" y="40" width="688.52459" height="35.692388" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="187.540984" y="64.98466" width="688.52459" height="10.707727" fill="var(--primary-fill)" rx="6.468236" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="531.803279" y="64.98466" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.86323" font-weight="bold" fill="var(--bg)">Control Plane</text>
+  <rect x="187.540984" y="40" width="688.52459" height="303.384576" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="187.540984" y="40" width="688.52459" height="35.692388" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="187.540984" y="64.98466" width="688.52459" height="10.707727" fill="url(#grad-primary)" rx="6.468236" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="531.803279" y="64.98466" text-anchor="middle" font-size="16.86323" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Control Plane</text>
   <rect x="207.213115" y="89.076964" width="196.721311" height="71.384554" rx="6.468236" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <text x="305.57377" y="113.169268" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--primary-accent)">API Server</text>
-  <text x="305.57377" y="131.015295" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">REST API front door</text>
-  <text x="305.57377" y="147.076831" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Authentication &amp; Authz</text>
-  <rect x="433.442623" y="89.076964" width="196.721311" height="71.384554" rx="6.468236" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="531.803279" y="113.169268" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--warn-accent)">etcd</text>
-  <text x="531.803279" y="131.015295" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Distributed key-value</text>
-  <text x="531.803279" y="147.076831" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Cluster state store</text>
+  <text x="305.57377" y="113.169268" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">API Server</text>
+  <text x="305.57377" y="131.015295" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">REST API front door</text>
+  <text x="305.57377" y="147.076831" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Authentication &amp; Authz</text>
+  <rect x="433.442623" y="89.076964" width="196.721311" height="71.384554" rx="6.468236" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="531.803279" y="113.169268" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">etcd</text>
+  <text x="531.803279" y="131.015295" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Distributed key-value</text>
+  <text x="531.803279" y="147.076831" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Cluster state store</text>
   <rect x="207.213115" y="178.307546" width="196.721311" height="71.384554" rx="6.468236" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <text x="305.57377" y="202.399849" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--primary-accent)">Scheduler</text>
-  <text x="305.57377" y="220.246099" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Assigns pods to nodes</text>
-  <text x="305.57377" y="236.307634" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Resource-aware placement</text>
+  <text x="305.57377" y="202.399849" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Scheduler</text>
+  <text x="305.57377" y="220.246099" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Assigns pods to nodes</text>
+  <text x="305.57377" y="236.307634" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Resource-aware placement</text>
   <rect x="433.442623" y="178.307546" width="196.721311" height="71.384554" rx="6.468236" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <text x="531.803279" y="198.830755" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.11575" font-weight="bold" fill="var(--primary-accent)">Controller Manager</text>
-  <text x="531.803279" y="216.676893" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Reconciliation loops</text>
-  <text x="531.803279" y="232.738429" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text-muted)">Desired vs actual state</text>
-  <rect x="659.672131" y="89.076964" width="196.721311" height="71.384554" rx="6.468236" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="758.032787" y="109.599951" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--info-accent)">Cloud Controller</text>
-  <text x="758.032787" y="125.661487" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Manages cloud resources</text>
-  <text x="758.032787" y="139.93842" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">LB, storage, nodes</text>
+  <text x="531.803279" y="198.830755" text-anchor="middle" font-size="13.11575" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Controller Manager</text>
+  <text x="531.803279" y="216.676893" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Reconciliation loops</text>
+  <text x="531.803279" y="232.738429" text-anchor="middle" font-size="11.242225" fill="var(--text-muted)" font-family="Arial, sans-serif">Desired vs actual state</text>
+  <rect x="659.672131" y="89.076964" width="196.721311" height="71.384554" rx="6.468236" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="758.032787" y="109.599951" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Cloud Controller</text>
+  <text x="758.032787" y="125.661487" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Manages cloud resources</text>
+  <text x="758.032787" y="139.93842" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">LB, storage, nodes</text>
   <line x1="403.934426" y1="124.76913" x2="431.47541" y2="124.76913" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
   <line x1="305.57377" y1="160.461518" x2="305.57377" y2="176.523054" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
   <line x1="531.803279" y1="160.461518" x2="531.803279" y2="176.523054" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
@@ -136,47 +133,47 @@
   <line x1="531.803279" y1="343.384576" x2="369.508197" y2="383.538416" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="531.803279" y1="343.384576" x2="807.213115" y2="383.538416" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="531.803279" y1="343.384576" x2="1112.131148" y2="383.538416" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <rect x="187.540984" y="383.538416" width="354.098361" height="236.461584" rx="6.468236" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="187.540984" y="383.538416" width="354.098361" height="236.461584" rx="6.468236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="187.540984" y="383.538416" width="354.098361" height="32.123071" rx="6.468236" fill="var(--ok-accent)" />
   <rect x="187.540984" y="405.846006" width="354.098361" height="9.815371" fill="var(--ok-accent)" rx="6.468236"/>
-  <text x="364.590164" y="404.061403" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--bg)">Worker Node 1</text>
+  <text x="364.590164" y="404.061403" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Worker Node 1</text>
   <rect x="202.294977" y="425.476858" width="152.459016" height="44.615291" rx="6.468236" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="278.032787" y="443.322885" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--text)">kubelet</text>
-  <text x="278.032787" y="460.276778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Node agent</text>
+  <text x="278.032787" y="443.322885" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">kubelet</text>
+  <text x="278.032787" y="460.276778" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Node agent</text>
   <rect x="366.557377" y="425.476858" width="152.459016" height="44.615291" rx="6.468236" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="442.295082" y="443.322885" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--text)">kube-proxy</text>
-  <text x="442.295082" y="460.276778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Network proxy</text>
-  <rect x="202.294977" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="271.147541" y="499.53826" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" font-weight="bold" fill="var(--text)">Pod A</text>
-  <text x="271.147541" y="515.599796" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Container(s)</text>
-  <rect x="354.754098" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="423.606452" y="499.53826" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" font-weight="bold" fill="var(--text)">Pod B</text>
-  <text x="423.606452" y="515.599796" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Container(s)</text>
-  <rect x="202.294977" y="543.261416" width="290.163934" height="24.98466" rx="6.468236" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="346.885246" y="560.215309" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text)">Container Runtime (containerd)</text>
-  <rect x="625.245902" y="383.538416" width="354.098361" height="236.461584" rx="6.468236" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="442.295082" y="443.322885" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">kube-proxy</text>
+  <text x="442.295082" y="460.276778" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Network proxy</text>
+  <rect x="202.294977" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="271.147541" y="499.53826" text-anchor="middle" font-size="11.242225" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pod A</text>
+  <text x="271.147541" y="515.599796" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Container(s)</text>
+  <rect x="354.754098" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="423.606452" y="499.53826" text-anchor="middle" font-size="11.242225" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pod B</text>
+  <text x="423.606452" y="515.599796" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Container(s)</text>
+  <rect x="202.294977" y="543.261416" width="290.163934" height="24.98466" rx="6.468236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="346.885246" y="560.215309" text-anchor="middle" font-size="11.242225" fill="var(--text)" font-family="Arial, sans-serif">Container Runtime (containerd)</text>
+  <rect x="625.245902" y="383.538416" width="354.098361" height="236.461584" rx="6.468236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="625.245902" y="383.538416" width="354.098361" height="32.123071" rx="6.468236" fill="var(--ok-accent)" />
   <rect x="625.245902" y="405.846006" width="354.098361" height="9.815371" fill="var(--ok-accent)" rx="6.468236"/>
-  <text x="802.295082" y="404.061403" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--bg)">Worker Node 2</text>
+  <text x="802.295082" y="404.061403" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Worker Node 2</text>
   <rect x="640" y="425.476858" width="152.459016" height="44.615291" rx="6.468236" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="715.7376" y="443.322885" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--text)">kubelet</text>
-  <text x="715.7376" y="460.276778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Node agent</text>
+  <text x="715.7376" y="443.322885" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">kubelet</text>
+  <text x="715.7376" y="460.276778" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Node agent</text>
   <rect x="805.245902" y="425.476858" width="152.459016" height="44.615291" rx="6.468236" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.3333" />
-  <text x="880.983607" y="443.322885" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" font-weight="bold" fill="var(--text)">kube-proxy</text>
-  <text x="880.983607" y="460.276778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Network proxy</text>
-  <rect x="640" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="708.852459" y="499.53826" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" font-weight="bold" fill="var(--text)">Pod C</text>
-  <text x="708.852459" y="515.599796" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Container(s)</text>
-  <rect x="792.459016" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="861.311475" y="499.53826" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" font-weight="bold" fill="var(--text)">Pod D</text>
-  <text x="861.311475" y="515.599796" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.780393" fill="var(--text-muted)">Container(s)</text>
-  <rect x="640" y="543.261416" width="290.163934" height="24.98466" rx="6.468236" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="784.590164" y="560.215309" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.242225" fill="var(--text)">Container Runtime (containerd)</text>
-  <rect x="1003.934426" y="383.538416" width="236.065574" height="236.461584" rx="6.468236" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="880.983607" y="443.322885" text-anchor="middle" font-size="12.179041" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">kube-proxy</text>
+  <text x="880.983607" y="460.276778" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Network proxy</text>
+  <rect x="640" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="708.852459" y="499.53826" text-anchor="middle" font-size="11.242225" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pod C</text>
+  <text x="708.852459" y="515.599796" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Container(s)</text>
+  <rect x="792.459016" y="480.799876" width="137.704918" height="49.076964" rx="6.468236" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="861.311475" y="499.53826" text-anchor="middle" font-size="11.242225" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pod D</text>
+  <text x="861.311475" y="515.599796" text-anchor="middle" font-size="10.780393" fill="var(--text-muted)" font-family="Arial, sans-serif">Container(s)</text>
+  <rect x="640" y="543.261416" width="290.163934" height="24.98466" rx="6.468236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="784.590164" y="560.215309" text-anchor="middle" font-size="11.242225" fill="var(--text)" font-family="Arial, sans-serif">Container Runtime (containerd)</text>
+  <rect x="1003.934426" y="383.538416" width="236.065574" height="236.461584" rx="6.468236" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="1003.934426" y="383.538416" width="236.065574" height="32.123071" rx="6.468236" fill="var(--ok-accent)" />
   <rect x="1003.934426" y="405.846006" width="236.065574" height="9.815371" fill="var(--ok-accent)" rx="6.468236"/>
-  <text x="1121.967213" y="404.061403" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.052674" font-weight="bold" fill="var(--bg)">Worker Node N</text>
-  <text x="1121.967213" y="468.307546" text-anchor="middle" font-family="Arial,sans-serif" font-size="16.86323" fill="var(--ok-accent)">…</text>
-  <text x="1121.967213" y="512.922947" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" fill="var(--text-muted)">Scales horizontally</text>
-  <text x="1121.967213" y="530.769197" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.179041" fill="var(--text-muted)">to N nodes</text>
+  <text x="1121.967213" y="404.061403" text-anchor="middle" font-size="14.052674" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Worker Node N</text>
+  <text x="1121.967213" y="468.307546" text-anchor="middle" font-size="16.86323" fill="var(--ok-accent)" font-family="Arial, sans-serif">…</text>
+  <text x="1121.967213" y="512.922947" text-anchor="middle" font-size="12.179041" fill="var(--text-muted)" font-family="Arial, sans-serif">Scales horizontally</text>
+  <text x="1121.967213" y="530.769197" text-anchor="middle" font-size="12.179041" fill="var(--text-muted)" font-family="Arial, sans-serif">to N nodes</text>
 </svg>

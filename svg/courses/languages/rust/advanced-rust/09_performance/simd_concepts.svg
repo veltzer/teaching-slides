@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,72 +75,69 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 17.28 L 15.0588 8.64 z" fill="#555" />
-    </marker>
   </defs>
-  <text x="40" y="40" font-family="sans-serif" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold">Scalar operation (one element at a time):</text>
-  <rect x="40" y="90.8772" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="71.2137" y="144.2983" font-family="sans-serif" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold">a</text>
-  <text x="178.7282" y="141.7544" font-family="sans-serif" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold">+</text>
-  <rect x="282.7745" y="90.8772" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="313.9884" y="144.2983" font-family="sans-serif" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold">b</text>
-  <text x="421.5029" y="141.7544" font-family="sans-serif" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold">=</text>
-  <rect x="525.5492" y="90.8772" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="556.763" y="144.2983" font-family="sans-serif" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold">c</text>
-  <text x="698.9596" y="141.7544" font-family="sans-serif" font-size="20.376" fill="var(--text-muted)" text-anchor="start">→ 1 instruction per element</text>
-  <text x="40" y="268.9474" font-family="sans-serif" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold">SIMD operation (four elements at a time with SSE/NEON):</text>
-  <rect x="40" y="294.3859" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="64.2774" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">a0</text>
-  <rect x="133.6415" y="294.3859" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="157.919" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">a1</text>
-  <rect x="227.2832" y="294.3859" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="251.5606" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">a2</text>
-  <rect x="320.9248" y="294.3859" width="86.7052" height="76.3158" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="345.2023" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">a3</text>
-  <rect x="456.1849" y="294.3859" width="86.7052" height="76.3158" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="480.4624" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">b0</text>
-  <rect x="549.8266" y="294.3859" width="86.7052" height="76.3158" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="574.1041" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">b1</text>
-  <rect x="643.4682" y="294.3859" width="86.7052" height="76.3158" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="667.7456" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">b2</text>
-  <rect x="737.1099" y="294.3859" width="86.7052" height="76.3158" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="761.3874" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">b3</text>
-  <rect x="872.37" y="294.3859" width="86.7052" height="76.3158" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="896.6474" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">c0</text>
-  <rect x="966.0116" y="294.3859" width="86.7052" height="76.3158" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="990.2891" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">c1</text>
-  <rect x="1059.6533" y="294.3859" width="86.7052" height="76.3158" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1083.9307" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">c2</text>
-  <rect x="1153.2948" y="294.3859" width="86.7052" height="76.3158" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1177.5723" y="347.8071" font-family="sans-serif" font-size="20.376" fill="var(--text)" text-anchor="start">c3</text>
-  <text x="407.63" y="347.8071" font-family="sans-serif" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold">+</text>
-  <text x="823.8151" y="347.8071" font-family="sans-serif" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold">=</text>
-  <text x="40" y="434.2982" font-family="sans-serif" font-size="20.376" fill="var(--ok-accent)" text-anchor="start">→ 1 instruction for 4 elements  (4× throughput)</text>
-  <text x="40" y="497.8947" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold">SSE:</text>
-  <text x="161.3873" y="497.8947" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start">128-bit  (4× f32, 2× f64, 16× u8)</text>
-  <text x="40" y="538.5965" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold">AVX2:</text>
-  <text x="161.3873" y="538.5965" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start">256-bit  (8× f32, 4× f64, 32× u8)</text>
-  <text x="40" y="579.2983" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold">AVX-512:</text>
-  <text x="161.3873" y="579.2983" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start">512-bit (16× f32, 8× f64, 64× u8)</text>
-  <text x="40" y="620" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold">NEON:</text>
-  <text x="161.3873" y="620" font-family="sans-serif" font-size="18.6781" fill="var(--text)" text-anchor="start">128-bit  (ARM)</text>
+  <text x="40" y="40" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Scalar operation (one element at a time):</text>
+  <rect x="40" y="90.8772" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="71.2137" y="144.2983" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">a</text>
+  <text x="178.7282" y="141.7544" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">+</text>
+  <rect x="282.7745" y="90.8772" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="313.9884" y="144.2983" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">b</text>
+  <text x="421.5029" y="141.7544" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">=</text>
+  <rect x="525.5492" y="90.8772" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="556.763" y="144.2983" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">c</text>
+  <text x="698.9596" y="141.7544" font-size="20.376" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">→ 1 instruction per element</text>
+  <text x="40" y="268.9474" font-size="22.0741" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">SIMD operation (four elements at a time with SSE/NEON):</text>
+  <rect x="40" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="64.2774" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">a0</text>
+  <rect x="133.6415" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="157.919" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">a1</text>
+  <rect x="227.2832" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="251.5606" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">a2</text>
+  <rect x="320.9248" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="345.2023" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">a3</text>
+  <rect x="456.1849" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="480.4624" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">b0</text>
+  <rect x="549.8266" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="574.1041" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">b1</text>
+  <rect x="643.4682" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="667.7456" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">b2</text>
+  <rect x="737.1099" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="761.3874" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">b3</text>
+  <rect x="872.37" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="896.6474" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">c0</text>
+  <rect x="966.0116" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="990.2891" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">c1</text>
+  <rect x="1059.6533" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1083.9307" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">c2</text>
+  <rect x="1153.2948" y="294.3859" width="86.7052" height="76.3158" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1177.5723" y="347.8071" font-size="20.376" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">c3</text>
+  <text x="407.63" y="347.8071" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">+</text>
+  <text x="823.8151" y="347.8071" font-size="27.168" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">=</text>
+  <text x="40" y="434.2982" font-size="20.376" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">→ 1 instruction for 4 elements  (4× throughput)</text>
+  <text x="40" y="497.8947" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">SSE:</text>
+  <text x="161.3873" y="497.8947" font-size="18.6781" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">128-bit  (4× f32, 2× f64, 16× u8)</text>
+  <text x="40" y="538.5965" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">AVX2:</text>
+  <text x="161.3873" y="538.5965" font-size="18.6781" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">256-bit  (8× f32, 4× f64, 32× u8)</text>
+  <text x="40" y="579.2983" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">AVX-512:</text>
+  <text x="161.3873" y="579.2983" font-size="18.6781" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">512-bit (16× f32, 8× f64, 64× u8)</text>
+  <text x="40" y="620" font-size="18.6781" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">NEON:</text>
+  <text x="161.3873" y="620" font-size="18.6781" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">128-bit  (ARM)</text>
 </svg>

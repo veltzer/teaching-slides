@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,66 +97,63 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="510.000042" y="40" width="260.000023" height="55.050831" rx="6.845511" fill="var(--text-muted)" />
-  <text x="640.000053" y="72.440636" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.863787" font-weight="bold" fill="var(--bg)">Pod not running as expected</text>
+  <text x="640.000053" y="72.440636" text-anchor="middle" font-size="15.863787" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Pod not running as expected</text>
   <line x1="640.000053" y1="95.050709" x2="640.000053" y2="122.576186" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <polygon points="640.000053,126.508484 760.000064,163.864401 640.000053,201.220196 520.000043,163.864401" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.2222" filter="url(#shadow)" />
-  <text x="640.000053" y="157.966015" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.889412" font-weight="bold" fill="var(--primary-accent)">kubectl get pod</text>
-  <text x="640.000053" y="175.660929" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.897954" fill="var(--primary-accent)">What PHASE?</text>
+  <text x="640.000053" y="157.966015" text-anchor="middle" font-size="12.889412" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">kubectl get pod</text>
+  <text x="640.000053" y="175.660929" text-anchor="middle" font-size="11.897954" fill="var(--primary-accent)" font-family="Arial, sans-serif">What PHASE?</text>
   <line x1="520.000043" y1="163.864401" x2="120.000007" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="280.000021" y="211.050758" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.897954" fill="var(--text-muted)">Pending</text>
+  <text x="280.000021" y="211.050758" text-anchor="middle" font-size="11.897954" fill="var(--text-muted)" font-family="Arial, sans-serif">Pending</text>
   <rect x="40" y="275.932152" width="200.000018" height="98.305134" rx="6.845511" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="140.000009" y="299.52533" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--text-muted)">Pending</text>
-  <text x="140.000009" y="319.186333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl describe pod</text>
-  <text x="140.000009" y="336.881247" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">→ check Events section</text>
-  <text x="140.000009" y="354.576162" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">→ kubectl get nodes</text>
+  <text x="140.000009" y="299.52533" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Pending</text>
+  <text x="140.000009" y="319.186333" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl describe pod</text>
+  <text x="140.000009" y="336.881247" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ check Events section</text>
+  <text x="140.000009" y="354.576162" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ kubectl get nodes</text>
   <rect x="260.00002" y="275.932152" width="200.000018" height="98.305134" rx="6.845511" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="360.000028" y="297.559364" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.897954" font-weight="bold" fill="var(--text-muted)">Causes</text>
-  <text x="270.00002" y="317.220245" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• No node with free resources</text>
-  <text x="270.00002" y="334.915159" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• nodeSelector mismatch</text>
-  <text x="270.00002" y="352.610074" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• PVC not bound</text>
-  <text x="270.00002" y="370.304988" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• Taint/toleration missing</text>
+  <text x="360.000028" y="297.559364" text-anchor="middle" font-size="11.897954" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Causes</text>
+  <text x="270.00002" y="317.220245" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• No node with free resources</text>
+  <text x="270.00002" y="334.915159" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• nodeSelector mismatch</text>
+  <text x="270.00002" y="352.610074" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• PVC not bound</text>
+  <text x="270.00002" y="370.304988" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Taint/toleration missing</text>
   <line x1="640.000053" y1="201.220196" x2="640.000053" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="660.000055" y="244.474621" font-family="Arial,sans-serif" font-size="11.897954" fill="var(--text-muted)">Running</text>
-  <rect x="510.000042" y="275.932152" width="260.000023" height="98.305134" rx="6.845511" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640.000053" y="299.52533" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--primary-accent)">Check readiness/liveness</text>
-  <text x="640.000053" y="319.186333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl describe pod → Events</text>
-  <text x="640.000053" y="336.881247" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl logs my-pod</text>
-  <text x="640.000053" y="354.576162" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl logs --previous (crash)</text>
+  <text x="660.000055" y="244.474621" font-size="11.897954" fill="var(--text-muted)" font-family="Arial, sans-serif">Running</text>
+  <rect x="510.000042" y="275.932152" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000053" y="299.52533" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Check readiness/liveness</text>
+  <text x="640.000053" y="319.186333" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl describe pod → Events</text>
+  <text x="640.000053" y="336.881247" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl logs my-pod</text>
+  <text x="640.000053" y="354.576162" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl logs --previous (crash)</text>
   <line x1="760.000064" y1="163.864401" x2="1000.000085" y2="275.932152" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="920.000078" y="211.050758" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.897954" fill="var(--text-muted)">CrashLoop/Error</text>
-  <rect x="920.000078" y="275.932152" width="319.999922" height="117.966137" rx="6.845511" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.000092" y="301.491418" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)">CrashLoopBackOff</text>
-  <text x="935.00008" y="323.118631" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl logs my-pod --previous</text>
-  <text x="935.00008" y="340.813545" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl describe pod → Last State</text>
-  <text x="935.00008" y="358.50846" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">→ app crash / bad CMD / OOMKilled</text>
-  <text x="935.00008" y="376.203374" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">→ kubectl get events --sort-by='.lastTimestamp'</text>
-  <rect x="920.000078" y="413.559169" width="319.999922" height="98.305134" rx="6.845511" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.000092" y="437.15247" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--warn-accent)">ImagePullBackOff</text>
-  <text x="935.00008" y="458.77956" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• Wrong image name/tag</text>
-  <text x="935.00008" y="476.474475" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• Private registry: missing imagePullSecret</text>
-  <text x="935.00008" y="494.169389" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">• Network policy blocking registry</text>
-  <rect x="920.000078" y="531.525306" width="319.999922" height="78.64401" rx="6.845511" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="1080.000092" y="555.118484" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)">OOMKilled</text>
-  <text x="935.00008" y="574.779609" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">Container hit memory limit</text>
-  <text x="935.00008" y="592.474523" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">→ increase resources.limits.memory</text>
-  <rect x="510.000042" y="423.389731" width="260.000023" height="98.305134" rx="6.845511" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640.000053" y="446.983032" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--ok-accent)">Check Node</text>
-  <text x="640.000053" y="466.643912" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl describe node NODE</text>
-  <text x="640.000053" y="484.338827" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">kubectl top node</text>
-  <text x="640.000053" y="502.033741" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.409185" fill="var(--text-muted)">journalctl -u kubelet (on node)</text>
+  <text x="920.000078" y="211.050758" text-anchor="middle" font-size="11.897954" fill="var(--text-muted)" font-family="Arial, sans-serif">CrashLoop/Error</text>
+  <rect x="920.000078" y="275.932152" width="319.999922" height="117.966137" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.000092" y="301.491418" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">CrashLoopBackOff</text>
+  <text x="935.00008" y="323.118631" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl logs my-pod --previous</text>
+  <text x="935.00008" y="340.813545" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl describe pod → Last State</text>
+  <text x="935.00008" y="358.50846" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ app crash / bad CMD / OOMKilled</text>
+  <text x="935.00008" y="376.203374" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ kubectl get events --sort-by='.lastTimestamp'</text>
+  <rect x="920.000078" y="413.559169" width="319.999922" height="98.305134" rx="6.845511" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.000092" y="437.15247" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">ImagePullBackOff</text>
+  <text x="935.00008" y="458.77956" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Wrong image name/tag</text>
+  <text x="935.00008" y="476.474475" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Private registry: missing imagePullSecret</text>
+  <text x="935.00008" y="494.169389" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">• Network policy blocking registry</text>
+  <rect x="920.000078" y="531.525306" width="319.999922" height="78.64401" rx="6.845511" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080.000092" y="555.118484" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">OOMKilled</text>
+  <text x="935.00008" y="574.779609" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">Container hit memory limit</text>
+  <text x="935.00008" y="592.474523" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">→ increase resources.limits.memory</text>
+  <rect x="510.000042" y="423.389731" width="260.000023" height="98.305134" rx="6.845511" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.000053" y="446.983032" text-anchor="middle" font-size="13.880756" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Check Node</text>
+  <text x="640.000053" y="466.643912" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl describe node NODE</text>
+  <text x="640.000053" y="484.338827" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">kubectl top node</text>
+  <text x="640.000053" y="502.033741" text-anchor="middle" font-size="11.409185" fill="var(--text-muted)" font-family="Arial, sans-serif">journalctl -u kubelet (on node)</text>
   <line x1="640.000053" y1="374.237286" x2="640.000053" y2="423.389731" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="40" y="433.220293" width="440.000039" height="186.779707" rx="6.845511" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="50.000001" y="456.813594" font-family="Arial,sans-serif" font-size="13.880756" font-weight="bold" fill="var(--text)">Key Diagnostic Commands</text>
-  <text x="60.000002" y="480.406773" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl get pods -o wide</text>
-  <text x="60.000002" y="500.067775" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl describe pod &lt;name&gt;</text>
-  <text x="60.000002" y="519.728656" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl logs &lt;pod&gt; [-c container]</text>
-  <text x="60.000002" y="539.38978" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl logs --previous</text>
-  <text x="60.000002" y="559.050783" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl exec -it &lt;pod&gt; -- /bin/sh</text>
-  <text x="60.000002" y="578.711785" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl get events --sort-by='.lastTimestamp'</text>
-  <text x="60.000002" y="598.372909" font-family="monospace" font-size="11.897954" fill="var(--primary-accent)">kubectl top pods / nodes</text>
+  <text x="50.000001" y="456.813594" font-size="13.880756" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Diagnostic Commands</text>
+  <text x="60.000002" y="480.406773" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl get pods -o wide</text>
+  <text x="60.000002" y="500.067775" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl describe pod &lt;name&gt;</text>
+  <text x="60.000002" y="519.728656" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl logs &lt;pod&gt; [-c container]</text>
+  <text x="60.000002" y="539.38978" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl logs --previous</text>
+  <text x="60.000002" y="559.050783" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl exec -it &lt;pod&gt; -- /bin/sh</text>
+  <text x="60.000002" y="578.711785" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl get events --sort-by='.lastTimestamp'</text>
+  <text x="60.000002" y="598.372909" font-size="11.897954" fill="var(--primary-accent)" font-family="Courier New, monospace">kubectl top pods / nodes</text>
 </svg>

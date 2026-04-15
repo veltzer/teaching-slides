@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,37 +97,34 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="214.634146" height="210.909136" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.829672" />
-  <rect x="40" y="40" width="214.634146" height="59.318189" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="86.136296" width="214.634146" height="13.181892" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="147.317073" y="79.545514" text-anchor="middle" font-size="19.278612" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Client A</text>
-  <text x="147.317073" y="152.045268" text-anchor="middle" font-size="17.010486" fill="var(--text)" font-family="sans-serif">apt install ...</text>
+  <rect x="40" y="40" width="214.634146" height="59.318189" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="86.136296" width="214.634146" height="13.181892" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.317073" y="79.545514" text-anchor="middle" font-size="19.278612" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Client A</text>
+  <text x="147.317073" y="152.045268" text-anchor="middle" font-size="17.010486" fill="var(--text)" font-family="Arial, sans-serif">apt install ...</text>
   <rect x="40" y="409.090864" width="214.634146" height="210.909136" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.829672" />
-  <rect x="40" y="409.090864" width="214.634146" height="59.318189" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="455.227325" width="214.634146" height="13.181892" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="147.317073" y="448.636215" text-anchor="middle" font-size="19.278612" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Client B</text>
-  <text x="147.317073" y="521.136297" text-anchor="middle" font-size="17.010486" fill="var(--text)" font-family="sans-serif">apt install ...</text>
+  <rect x="40" y="409.090864" width="214.634146" height="59.318189" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="455.227325" width="214.634146" height="13.181892" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.317073" y="448.636215" text-anchor="middle" font-size="19.278612" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Client B</text>
+  <text x="147.317073" y="521.136297" text-anchor="middle" font-size="17.010486" fill="var(--text)" font-family="Arial, sans-serif">apt install ...</text>
   <rect x="430.243902" y="198.181892" width="331.707317" height="263.63638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.829672" />
-  <rect x="430.243902" y="198.181892" width="331.707317" height="65.908972" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="430.243902" y="250.908972" width="331.707317" height="13.181892" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="596.097457" y="240.363588" text-anchor="middle" font-size="20.41261" font-weight="bold" fill="var(--bg)" font-family="sans-serif">apt-cacher-ng</text>
-  <text x="596.097457" y="310.227161" text-anchor="middle" font-size="18.144485" fill="var(--text)" font-family="sans-serif">Port 3142</text>
-  <text x="596.097457" y="343.181728" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="sans-serif">Caches downloaded packages</text>
-  <text x="596.097457" y="376.136461" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="sans-serif">Serves from cache on hit</text>
-  <text x="596.097457" y="432.81814" text-anchor="middle" font-size="14.742491" fill="var(--primary-accent)" font-family="sans-serif">Saves bandwidth</text>
+  <rect x="430.243902" y="198.181892" width="331.707317" height="65.908972" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430.243902" y="250.908972" width="331.707317" height="13.181892" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="596.097457" y="240.363588" text-anchor="middle" font-size="20.41261" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">apt-cacher-ng</text>
+  <text x="596.097457" y="310.227161" text-anchor="middle" font-size="18.144485" fill="var(--text)" font-family="Arial, sans-serif">Port 3142</text>
+  <text x="596.097457" y="343.181728" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="Arial, sans-serif">Caches downloaded packages</text>
+  <text x="596.097457" y="376.136461" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="Arial, sans-serif">Serves from cache on hit</text>
+  <text x="596.097457" y="432.81814" text-anchor="middle" font-size="14.742491" fill="var(--primary-accent)" font-family="Arial, sans-serif">Saves bandwidth</text>
   <rect x="937.560976" y="198.181892" width="302.439024" height="263.63638" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.829672" />
-  <rect x="937.560976" y="198.181892" width="302.439024" height="65.908972" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="937.560976" y="250.908972" width="302.439024" height="13.181892" fill="var(--primary-fill)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1088.780384" y="240.363588" text-anchor="middle" font-size="20.41261" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Ubuntu Archive</text>
-  <text x="1088.780384" y="310.227161" text-anchor="middle" font-size="15.876358" fill="var(--text)" font-family="sans-serif">archive.ubuntu.com</text>
-  <text x="1088.780384" y="343.181728" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="sans-serif">Fetched only on</text>
-  <text x="1088.780384" y="369.54535" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="sans-serif">cache miss</text>
+  <rect x="937.560976" y="198.181892" width="302.439024" height="65.908972" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="937.560976" y="250.908972" width="302.439024" height="13.181892" fill="url(#grad-primary)" rx="7.829672" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1088.780384" y="240.363588" text-anchor="middle" font-size="20.41261" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Ubuntu Archive</text>
+  <text x="1088.780384" y="310.227161" text-anchor="middle" font-size="15.876358" fill="var(--text)" font-family="Arial, sans-serif">archive.ubuntu.com</text>
+  <text x="1088.780384" y="343.181728" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="Arial, sans-serif">Fetched only on</text>
+  <text x="1088.780384" y="369.54535" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="Arial, sans-serif">cache miss</text>
   <line x1="254.634146" y1="145.454486" x2="430.243902" y2="297.045433" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <line x1="254.634146" y1="514.545514" x2="430.243902" y2="349.772675" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <line x1="761.95122" y1="329.999836" x2="937.560976" y2="329.999836" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="849.756098" y="310.227161" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="sans-serif">cache miss</text>
+  <text x="849.756098" y="310.227161" text-anchor="middle" font-size="15.876358" fill="var(--text-muted)" font-family="Arial, sans-serif">cache miss</text>
 </svg>

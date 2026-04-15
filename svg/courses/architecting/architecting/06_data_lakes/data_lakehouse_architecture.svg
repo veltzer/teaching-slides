@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,61 +75,58 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="631.5493" y="40" text-anchor="middle" font-size="24.7402" font-weight="bold" fill="var(--text)">Data Lakehouse Architecture</text>
+  <text x="631.5493" y="40" text-anchor="middle" font-size="24.7402" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Data Lakehouse Architecture</text>
   <rect x="40" y="75.3658" width="591.5493" height="424.3902" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.7701 5.8851" />
-  <text x="335.7747" y="106.4878" text-anchor="middle" font-size="20.1014" font-weight="bold" fill="var(--primary-accent)">Lakehouse Platform</text>
-  <rect x="82.2535" y="131.9512" width="507.0422" height="63.6585" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.7747" y="160.2439" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)">Object Storage</text>
-  <text x="335.7747" y="182.878" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)">Parquet / ORC / Avro</text>
-  <rect x="82.2535" y="216.8293" width="507.0422" height="63.6585" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.7747" y="245.1219" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)">Metadata Layer</text>
-  <text x="335.7747" y="267.7561" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)">Delta Lake / Iceberg / Hudi</text>
-  <rect x="82.2535" y="301.7073" width="507.0422" height="63.6585" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.7747" y="330" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)">Transaction Layer</text>
-  <text x="335.7747" y="352.6341" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)">ACID Support</text>
-  <rect x="82.2535" y="386.5854" width="507.0422" height="63.6585" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335.7747" y="414.8781" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)">Query Engine</text>
-  <text x="335.7747" y="437.5122" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)">SQL / DataFrame API</text>
+  <text x="335.7747" y="106.4878" text-anchor="middle" font-size="20.1014" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Lakehouse Platform</text>
+  <rect x="82.2535" y="131.9512" width="507.0422" height="63.6585" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335.7747" y="160.2439" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Object Storage</text>
+  <text x="335.7747" y="182.878" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)" font-family="Arial, sans-serif">Parquet / ORC / Avro</text>
+  <rect x="82.2535" y="216.8293" width="507.0422" height="63.6585" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335.7747" y="245.1219" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Metadata Layer</text>
+  <text x="335.7747" y="267.7561" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)" font-family="Arial, sans-serif">Delta Lake / Iceberg / Hudi</text>
+  <rect x="82.2535" y="301.7073" width="507.0422" height="63.6585" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335.7747" y="330" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Transaction Layer</text>
+  <text x="335.7747" y="352.6341" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)" font-family="Arial, sans-serif">ACID Support</text>
+  <rect x="82.2535" y="386.5854" width="507.0422" height="63.6585" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335.7747" y="414.8781" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Query Engine</text>
+  <text x="335.7747" y="437.5122" text-anchor="middle" font-size="15.4626" fill="var(--text-muted)" font-family="Arial, sans-serif">SQL / DataFrame API</text>
   <line x1="335.7747" y1="195.6098" x2="335.7747" y2="214" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="335.7747" y1="280.4879" x2="335.7747" y2="298.8781" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="335.7747" y1="365.3658" x2="335.7747" y2="383.7561" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="766.7606" y="75.3658" width="473.2394" height="424.3902" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="11.7701 5.8851" />
-  <text x="1003.3803" y="106.4878" text-anchor="middle" font-size="20.1014" font-weight="bold" fill="var(--ok-accent)">Workloads</text>
-  <rect x="817.4648" y="139.0244" width="371.831" height="56.5854" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1003.3803" y="174.3902" text-anchor="middle" font-size="18.5552" fill="var(--text)">BI and Analytics</text>
-  <rect x="817.4648" y="223.9025" width="371.831" height="56.5854" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1003.3803" y="259.2683" text-anchor="middle" font-size="18.5552" fill="var(--text)">Data Science</text>
-  <rect x="817.4648" y="308.7805" width="371.831" height="56.5854" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1003.3803" y="344.1463" text-anchor="middle" font-size="18.5552" fill="var(--text)">Machine Learning</text>
-  <rect x="817.4648" y="393.6585" width="371.831" height="56.5854" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1003.3803" y="429.0244" text-anchor="middle" font-size="18.5552" fill="var(--text)">Real-time Analytics</text>
+  <text x="1003.3803" y="106.4878" text-anchor="middle" font-size="20.1014" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Workloads</text>
+  <rect x="817.4648" y="139.0244" width="371.831" height="56.5854" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1003.3803" y="174.3902" text-anchor="middle" font-size="18.5552" fill="var(--text)" font-family="Arial, sans-serif">BI and Analytics</text>
+  <rect x="817.4648" y="223.9025" width="371.831" height="56.5854" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1003.3803" y="259.2683" text-anchor="middle" font-size="18.5552" fill="var(--text)" font-family="Arial, sans-serif">Data Science</text>
+  <rect x="817.4648" y="308.7805" width="371.831" height="56.5854" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1003.3803" y="344.1463" text-anchor="middle" font-size="18.5552" fill="var(--text)" font-family="Arial, sans-serif">Machine Learning</text>
+  <rect x="817.4648" y="393.6585" width="371.831" height="56.5854" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1003.3803" y="429.0244" text-anchor="middle" font-size="18.5552" fill="var(--text)" font-family="Arial, sans-serif">Real-time Analytics</text>
   <line x1="589.2958" y1="414.8781" x2="814.0845" y2="167.3171" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="589.2958" y1="414.8781" x2="814.0845" y2="252.1952" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="589.2958" y1="414.8781" x2="814.0845" y2="337.0731" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="589.2958" y1="421.9512" x2="814.0845" y2="421.9512" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="40" y="542.1952" width="1200" height="77.8048" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="631.5493" y="570.4878" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)">Lakehouse = Data Lake + Data Warehouse</text>
-  <text x="631.5493" y="598.7805" text-anchor="middle" font-size="17.0089" fill="var(--text-muted)">Combines low-cost storage with ACID transactions and a unified query engine for all workload types.</text>
+  <text x="631.5493" y="570.4878" text-anchor="middle" font-size="18.5552" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lakehouse = Data Lake + Data Warehouse</text>
+  <text x="631.5493" y="598.7805" text-anchor="middle" font-size="17.0089" fill="var(--text-muted)" font-family="Arial, sans-serif">Combines low-cost storage with ACID transactions and a unified query engine for all workload types.</text>
 </svg>

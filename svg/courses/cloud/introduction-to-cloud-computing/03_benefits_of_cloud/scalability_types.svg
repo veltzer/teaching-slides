@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -99,11 +99,11 @@
   <line x1="640" y1="40" x2="640" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="8,4"/>
 
   <!-- Left Panel: Scale Up (Vertical) -->
-  <rect x="40" y="40" rx="6.62069" width="558.62069" height="50" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" rx="6.62069" width="558.62069" height="50" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="319.310345" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.341959" font-weight="bold" fill="var(--primary-accent)">Scale Up (Vertical Scaling)</text>
 
   <!-- Small server before -->
-  <rect x="122.758621" y="360" rx="6.62069" width="103.448276" height="120" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="122.758621" y="360" rx="6.62069" width="103.448276" height="120" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="174.482759" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.205131" fill="var(--primary-accent)">2 CPU</text>
   <text x="174.482759" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.205131" fill="var(--primary-accent)">4 GB</text>
   <text x="174.482759" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.205131" fill="var(--primary-accent)">RAM</text>
@@ -114,7 +114,7 @@
   <text x="298.62069" y="394.999945" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.307752" fill="var(--primary-accent)">+</text>
 
   <!-- Large server after -->
-  <rect x="360.689655" y="290" rx="6.62069" width="155.172414" height="190" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360.689655" y="290" rx="6.62069" width="155.172414" height="190" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="438.275862" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.239338" font-weight="bold" fill="var(--primary-accent)">16 CPU</text>
   <text x="438.275862" y="385.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.239338" font-weight="bold" fill="var(--primary-accent)">64 GB</text>
   <text x="438.275862" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.239338" font-weight="bold" fill="var(--primary-accent)">RAM</text>
@@ -129,11 +129,11 @@
   <text x="319.310345" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.22229" fill="var(--text-muted)">Hardware limits apply</text>
 
   <!-- Right Panel: Scale Out (Horizontal) -->
-  <rect x="681.37931" y="40" rx="6.62069" width="558.62069" height="50" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="681.37931" y="40" rx="6.62069" width="558.62069" height="50" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="960.689655" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.341959" font-weight="bold" fill="var(--ok-accent)">Scale Out (Horizontal Scaling)</text>
 
   <!-- Load Balancer -->
-  <rect x="898.62069" y="120" rx="6.62069" width="124.137931" height="44.999945" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="898.62069" y="120" rx="6.62069" width="124.137931" height="44.999945" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="960.689655" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.205131" font-weight="bold" fill="var(--warn-accent)">Load Balancer</text>
 
   <!-- Lines from LB to servers -->
@@ -143,22 +143,22 @@
   <line x1="991.724138" y1="165.000055" x2="1146.896552" y2="250" stroke="var(--ok-border)" stroke-width="1.5"/>
 
   <!-- Server 1 -->
-  <rect x="722.758621" y="250" rx="6.62069" width="103.448276" height="80" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="722.758621" y="250" rx="6.62069" width="103.448276" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="774.482759" y="285.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">Server 1</text>
   <text x="774.482759" y="305.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">2 CPU / 4 GB</text>
 
   <!-- Server 2 -->
-  <rect x="846.896552" y="250" rx="6.62069" width="103.448276" height="80" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="846.896552" y="250" rx="6.62069" width="103.448276" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="898.62069" y="285.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">Server 2</text>
   <text x="898.62069" y="305.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">2 CPU / 4 GB</text>
 
   <!-- Server 3 -->
-  <rect x="971.034483" y="250" rx="6.62069" width="103.448276" height="80" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="971.034483" y="250" rx="6.62069" width="103.448276" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1022.758621" y="285.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">Server 3</text>
   <text x="1022.758621" y="305.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">2 CPU / 4 GB</text>
 
   <!-- Server 4 (new, dashed) -->
-  <rect x="1095.172414" y="250" rx="6.62069" width="103.448276" height="80" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3" filter="url(#shadow)"/>
+  <rect x="1095.172414" y="250" rx="6.62069" width="103.448276" height="80" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3" filter="url(#shadow)"/>
   <text x="1146.896552" y="285.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">Server N</text>
   <text x="1146.896552" y="305.000055" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.188083" fill="var(--ok-accent)">2 CPU / 4 GB</text>
 

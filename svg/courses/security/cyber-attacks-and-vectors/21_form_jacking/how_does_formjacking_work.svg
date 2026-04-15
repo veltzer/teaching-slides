@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,50 +75,47 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arw2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,21.1765 6.7879,0" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="59.939205" rx="6.081513" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="78.78421" font-size="25.738989" font-weight="bold" fill="var(--text)" text-anchor="middle">Formjacking Attack Flow</text>
-  <text x="63.7082" y="133.434589" font-size="22.30709" fill="var(--text)">1. Attacker compromises website or third-party script</text>
-  <text x="63.7082" y="165.167134" font-size="22.30709" fill="var(--text)">2. Malicious JavaScript injected into payment page</text>
-  <rect x="92.8875" y="196.899679" width="255.3192" height="141.033509" rx="6.081513" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="220.5471" y="260.364665" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">Customer</text>
-  <text x="220.5471" y="292.09721" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">Browser</text>
-  <text x="220.5471" y="323.829754" font-size="18.875292" fill="var(--text-muted)" text-anchor="middle">Enters card details</text>
-  <rect x="494.1034" y="196.899679" width="291.7933" height="141.033509" rx="6.081513" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="253.313103" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">Compromised</text>
-  <text x="640.0001" y="281.519763" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">E-Commerce Site</text>
-  <text x="640.0001" y="313.252308" font-size="18.875292" fill="var(--warn-accent)" text-anchor="middle">Skimmer JS active</text>
-  <line x1="348.2067" y1="267.41633" x2="494.1034" y2="267.41633" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arw2)" />
-  <rect x="257.0213" y="461.337379" width="273.5563" height="123.404192" rx="6.081513" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="393.7994" y="515.987862" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">Payment</text>
-  <text x="393.7994" y="547.720406" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle">Processor (Stripe)</text>
-  <rect x="822.3709" y="461.337379" width="273.5563" height="123.404192" rx="6.081513" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="959.149" y="515.987862" font-size="22.30709" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Attacker's</text>
-  <text x="959.149" y="547.720406" font-size="22.30709" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Server (exfil.cc)</text>
-  <line x1="640.0001" y1="337.933085" x2="393.7994" y2="461.337379" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arw2)" />
-  <text x="466.7477" y="408.449839" font-size="18.875292" fill="var(--ok-accent)" text-anchor="middle">normal flow</text>
-  <line x1="731.1854" y1="337.933085" x2="959.149" y2="461.337379" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8.645 5.187" marker-end="url(#arw2)" />
-  <text x="880.7295" y="408.449839" font-size="18.875292" fill="var(--danger-accent)" text-anchor="middle">stolen copy</text>
-  <text x="63.7082" y="620" font-size="22.30709" fill="var(--text)">3. Transaction completes normally (victim unaware)  4. Attacker collects stolen card data</text>
+  <rect x="40" y="40" width="1200" height="59.939205" rx="6.081513" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="78.78421" font-size="25.738989" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Formjacking Attack Flow</text>
+  <text x="63.7082" y="133.434589" font-size="22.30709" fill="var(--text)" font-family="Arial, sans-serif">1. Attacker compromises website or third-party script</text>
+  <text x="63.7082" y="165.167134" font-size="22.30709" fill="var(--text)" font-family="Arial, sans-serif">2. Malicious JavaScript injected into payment page</text>
+  <rect x="92.8875" y="196.899679" width="255.3192" height="141.033509" rx="6.081513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220.5471" y="260.364665" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Customer</text>
+  <text x="220.5471" y="292.09721" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Browser</text>
+  <text x="220.5471" y="323.829754" font-size="18.875292" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Enters card details</text>
+  <rect x="494.1034" y="196.899679" width="291.7933" height="141.033509" rx="6.081513" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="253.313103" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Compromised</text>
+  <text x="640.0001" y="281.519763" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">E-Commerce Site</text>
+  <text x="640.0001" y="313.252308" font-size="18.875292" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Skimmer JS active</text>
+  <line x1="348.2067" y1="267.41633" x2="494.1034" y2="267.41633" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="257.0213" y="461.337379" width="273.5563" height="123.404192" rx="6.081513" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="393.7994" y="515.987862" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Payment</text>
+  <text x="393.7994" y="547.720406" font-size="22.30709" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Processor (Stripe)</text>
+  <rect x="822.3709" y="461.337379" width="273.5563" height="123.404192" rx="6.081513" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="959.149" y="515.987862" font-size="22.30709" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Attacker's</text>
+  <text x="959.149" y="547.720406" font-size="22.30709" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Server (exfil.cc)</text>
+  <line x1="640.0001" y1="337.933085" x2="393.7994" y2="461.337379" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="466.7477" y="408.449839" font-size="18.875292" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">normal flow</text>
+  <line x1="731.1854" y1="337.933085" x2="959.149" y2="461.337379" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8.645 5.187" marker-end="url(#arrow)" />
+  <text x="880.7295" y="408.449839" font-size="18.875292" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">stolen copy</text>
+  <text x="63.7082" y="620" font-size="22.30709" fill="var(--text)" font-family="Arial, sans-serif">3. Transaction completes normally (victim unaware)  4. Attacker collects stolen card data</text>
 </svg>

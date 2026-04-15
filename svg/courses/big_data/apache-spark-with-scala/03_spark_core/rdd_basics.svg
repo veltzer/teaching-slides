@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -96,26 +96,26 @@
 
   <text x="630.1639" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.718" font-weight="bold" fill="var(--text)">RDD: Resilient Distributed Dataset</text>
 
-  <rect x="40" y="88.785" width="590.1639" height="260.1869" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="88.785" width="590.1639" height="260.1869" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335.082" y="126.729" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5875" font-weight="bold" fill="var(--primary-text)">One logical dataset</text>
   <text x="335.082" y="159.2523" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4569" fill="var(--primary-text)">val lines: RDD[String] = sc.textFile("log.txt")</text>
 
-  <rect x="79.3443" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="79.3443" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="138.3607" y="224.2991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" font-weight="bold" fill="var(--ok-text)">Partition 0</text>
   <text x="138.3607" y="251.4019" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">lines 0..99</text>
   <text x="138.3607" y="273.0841" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">on node A</text>
 
-  <rect x="217.0492" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="217.0492" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="276.0656" y="224.2991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" font-weight="bold" fill="var(--ok-text)">Partition 1</text>
   <text x="276.0656" y="251.4019" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">lines 100..199</text>
   <text x="276.0656" y="273.0841" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">on node B</text>
 
-  <rect x="354.7541" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="354.7541" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="413.7705" y="224.2991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" font-weight="bold" fill="var(--ok-text)">Partition 2</text>
   <text x="413.7705" y="251.4019" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">lines 200..299</text>
   <text x="413.7705" y="273.0841" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">on node C</text>
 
-  <rect x="492.459" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="492.459" y="186.3551" width="118.0328" height="130.0935" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="551.4754" y="224.2991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" font-weight="bold" fill="var(--ok-text)">Partition 3</text>
   <text x="551.4754" y="251.4019" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">lines 300..399</text>
   <text x="551.4754" y="273.0841" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.359" fill="var(--ok-text)">on node D</text>
@@ -128,14 +128,14 @@
   <text x="674.4262" y="262.243" font-family="Arial, sans-serif" font-size="14.4569" fill="var(--text-muted)">4. Preferred locations (data-local scheduling)</text>
   <text x="674.4262" y="294.7664" font-family="Arial, sans-serif" font-size="14.4569" fill="var(--text-muted)">5. Partitioner (hash / range) for pair RDDs</text>
 
-  <rect x="40" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="231.8033" y="419.4393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5222" font-weight="bold" fill="var(--info-text)">Immutable</text>
   <text x="231.8033" y="451.9626" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--info-text)">Transformations produce new RDDs.</text>
   <text x="231.8033" y="476.8972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--info-text)">The parent is untouched.</text>
   <text x="231.8033" y="517.0093" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--info-text)">val filtered = lines.filter(_.contains("ERR"))</text>
   <text x="231.8033" y="576.6355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.3916" fill="var(--info-text)">Safe to share across threads and tasks.</text>
 
-  <rect x="438.3607" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="438.3607" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630.1639" y="419.4393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5222" font-weight="bold" fill="var(--warn-text)">Lazy</text>
   <text x="630.1639" y="451.9626" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--warn-text)">Transformations record a plan.</text>
   <text x="630.1639" y="476.8972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--warn-text)">Nothing runs until an action is called.</text>
@@ -143,7 +143,7 @@
   <text x="630.1639" y="544.1121" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.3916" fill="var(--warn-text)">Actions: count, collect, take, saveAsTextFile</text>
   <text x="630.1639" y="582.0561" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.3916" fill="var(--warn-text)">Spark can optimize and fuse before running.</text>
 
-  <rect x="836.7213" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="836.7213" y="381.4953" width="383.6066" height="238.5047" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1028.5246" y="419.4393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5222" font-weight="bold" fill="var(--ok-text)">Fault tolerant (via lineage)</text>
   <text x="1028.5246" y="451.9626" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--ok-text)">If a partition is lost, Spark</text>
   <text x="1028.5246" y="476.8972" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4243" fill="var(--ok-text)">recomputes it from the DAG.</text>

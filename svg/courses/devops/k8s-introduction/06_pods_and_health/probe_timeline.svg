@@ -1,116 +1,152 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
   <rect x="40" y="40" width="289.655172" height="580" rx="6.324555" fill="var(--text-faint)" stroke="var(--border)" stroke-width="2"/>
-  <text x="184.827586" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--bg)">Stage 1</text>
-  <text x="184.827586" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--bg)">Container Start</text>
-  <text x="184.827586" y="244.074074" text-anchor="middle" font-size="21.081851" fill="var(--bg)">initialDelaySeconds</text>
-  <text x="184.827586" y="287.037037" text-anchor="middle" font-size="50.596443" font-weight="bold" fill="var(--bg)">30s</text>
-  <text x="184.827586" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--bg)">wait before the first</text>
-  <text x="184.827586" y="389.074074" text-anchor="middle" font-size="18.973666" fill="var(--bg)">probe is executed</text>
-  <text x="184.827586" y="480.37037" text-anchor="middle" font-size="16.865481" fill="var(--bg)">app gets time</text>
-  <text x="184.827586" y="504" text-anchor="middle" font-size="16.865481" fill="var(--bg)">to warm up</text>
-  <text x="184.827586" y="577.037037" text-anchor="middle" font-size="14.757296" fill="var(--bg)">no probes run yet</text>
+  <text x="184.827586" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Stage 1</text>
+  <text x="184.827586" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--bg)" font-family="Arial, sans-serif">Container Start</text>
+  <text x="184.827586" y="244.074074" text-anchor="middle" font-size="21.081851" fill="var(--bg)" font-family="Arial, sans-serif">initialDelaySeconds</text>
+  <text x="184.827586" y="287.037037" text-anchor="middle" font-size="50.596443" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">30s</text>
+  <text x="184.827586" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--bg)" font-family="Arial, sans-serif">wait before the first</text>
+  <text x="184.827586" y="389.074074" text-anchor="middle" font-size="18.973666" fill="var(--bg)" font-family="Arial, sans-serif">probe is executed</text>
+  <text x="184.827586" y="480.37037" text-anchor="middle" font-size="16.865481" fill="var(--bg)" font-family="Arial, sans-serif">app gets time</text>
+  <text x="184.827586" y="504" text-anchor="middle" font-size="16.865481" fill="var(--bg)" font-family="Arial, sans-serif">to warm up</text>
+  <text x="184.827586" y="577.037037" text-anchor="middle" font-size="14.757296" fill="var(--bg)" font-family="Arial, sans-serif">no probes run yet</text>
 
-  <rect x="350.344828" y="40" width="434.482759" height="580" rx="6.324555" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="567.586207" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--primary-text)">Stage 2</text>
-  <text x="567.586207" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--primary-text)">Periodic Checks</text>
+  <rect x="350.344828" y="40" width="434.482759" height="580" rx="6.324555" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="567.586207" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Stage 2</text>
+  <text x="567.586207" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--primary-text)" font-family="Arial, sans-serif">Periodic Checks</text>
 
   <rect x="399.569" y="199.403" width="46.3801" height="46.3801" rx="14" fill="var(--primary-text)"/>
-  <text x="422.758621" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)">1</text>
+  <text x="422.758621" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">1</text>
   <rect x="503.017" y="199.403" width="46.3801" height="46.3801" rx="14" fill="var(--primary-text)"/>
-  <text x="526.206897" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)">2</text>
+  <text x="526.206897" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">2</text>
   <rect x="606.465" y="199.403" width="46.3801" height="46.3801" rx="14" fill="var(--primary-text)"/>
-  <text x="629.655172" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)">3</text>
+  <text x="629.655172" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">3</text>
   <rect x="709.913" y="199.403" width="46.3801" height="46.3801" rx="14" fill="var(--primary-text)"/>
-  <text x="733.103448" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)">4</text>
+  <text x="733.103448" y="231.185185" text-anchor="middle" font-size="18.973666" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">4</text>
 
   <line x1="445.517241" y1="222.592593" x2="503.448276" y2="222.592593" stroke="var(--primary-text)" stroke-width="3"/>
   <line x1="548.965517" y1="222.592593" x2="606.896552" y2="222.592593" stroke="var(--primary-text)" stroke-width="3"/>
   <line x1="652.413793" y1="222.592593" x2="710.344828" y2="222.592593" stroke="var(--primary-text)" stroke-width="3"/>
 
-  <text x="567.586207" y="319.259259" text-anchor="middle" font-size="21.081851" fill="var(--primary-text)">periodSeconds = 10</text>
-  <text x="567.586207" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)">probe runs every N seconds</text>
-  <text x="567.586207" y="426.666667" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)">timeoutSeconds = 1</text>
-  <text x="567.586207" y="458.888889" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)">probe fails if no response</text>
-  <text x="567.586207" y="534.074074" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)">successThreshold = 1</text>
-  <text x="567.586207" y="577.037037" text-anchor="middle" font-size="14.757296" fill="var(--primary-text)">one success resets failure count</text>
+  <text x="567.586207" y="319.259259" text-anchor="middle" font-size="21.081851" fill="var(--primary-text)" font-family="Arial, sans-serif">periodSeconds = 10</text>
+  <text x="567.586207" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)" font-family="Arial, sans-serif">probe runs every N seconds</text>
+  <text x="567.586207" y="426.666667" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)" font-family="Arial, sans-serif">timeoutSeconds = 1</text>
+  <text x="567.586207" y="458.888889" text-anchor="middle" font-size="16.865481" fill="var(--primary-text)" font-family="Arial, sans-serif">probe fails if no response</text>
+  <text x="567.586207" y="534.074074" text-anchor="middle" font-size="18.973666" fill="var(--primary-text)" font-family="Arial, sans-serif">successThreshold = 1</text>
+  <text x="567.586207" y="577.037037" text-anchor="middle" font-size="14.757296" fill="var(--primary-text)" font-family="Arial, sans-serif">one success resets failure count</text>
 
-  <rect x="805.517241" y="40" width="227.586207" height="580" rx="6.324555" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="919.310345" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--warn-text)">Stage 3</text>
-  <text x="919.310345" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--warn-text)">Failures</text>
-  <text x="919.310345" y="222.592593" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)">Fail 1</text>
-  <text x="919.310345" y="276.296296" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)">Fail 2</text>
-  <text x="919.310345" y="330" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)">Fail 3</text>
-  <text x="919.310345" y="426.666667" text-anchor="middle" font-size="21.081851" fill="var(--warn-text)">failureThreshold</text>
-  <text x="919.310345" y="480.37037" text-anchor="middle" font-size="50.596443" font-weight="bold" fill="var(--warn-text)">3</text>
-  <text x="919.310345" y="577.037037" text-anchor="middle" font-size="15.811388" fill="var(--warn-text)">consecutive failures</text>
+  <rect x="805.517241" y="40" width="227.586207" height="580" rx="6.324555" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="919.310345" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Stage 3</text>
+  <text x="919.310345" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--warn-text)" font-family="Arial, sans-serif">Failures</text>
+  <text x="919.310345" y="222.592593" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)" font-family="Arial, sans-serif">Fail 1</text>
+  <text x="919.310345" y="276.296296" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)" font-family="Arial, sans-serif">Fail 2</text>
+  <text x="919.310345" y="330" text-anchor="middle" font-size="18.973666" fill="var(--warn-text)" font-family="Arial, sans-serif">Fail 3</text>
+  <text x="919.310345" y="426.666667" text-anchor="middle" font-size="21.081851" fill="var(--warn-text)" font-family="Arial, sans-serif">failureThreshold</text>
+  <text x="919.310345" y="480.37037" text-anchor="middle" font-size="50.596443" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">3</text>
+  <text x="919.310345" y="577.037037" text-anchor="middle" font-size="15.811388" fill="var(--warn-text)" font-family="Arial, sans-serif">consecutive failures</text>
 
-  <rect x="1053.793103" y="40" width="186.206897" height="580" rx="6.324555" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1146.896552" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--danger-text)">Stage 4</text>
-  <text x="1146.896552" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--danger-text)">Action</text>
-  <text x="1146.896552" y="233.333333" text-anchor="middle" font-size="18.973666" fill="var(--danger-text)">liveness:</text>
-  <text x="1146.896552" y="265.555556" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)">restart</text>
-  <text x="1146.896552" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--danger-text)">readiness:</text>
-  <text x="1146.896552" y="394.444444" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)">drop from</text>
-  <text x="1146.896552" y="426.666667" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)">endpoints</text>
-  <text x="1146.896552" y="534.074074" text-anchor="middle" font-size="15.811388" fill="var(--danger-text)">kubelet drives</text>
-  <text x="1146.896552" y="560.925926" text-anchor="middle" font-size="15.811388" fill="var(--danger-text)">the decision</text>
+  <rect x="1053.793103" y="40" width="186.206897" height="580" rx="6.324555" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1146.896552" y="93.703704" text-anchor="middle" font-size="27.406406" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Stage 4</text>
+  <text x="1146.896552" y="136.666667" text-anchor="middle" font-size="23.190036" fill="var(--danger-text)" font-family="Arial, sans-serif">Action</text>
+  <text x="1146.896552" y="233.333333" text-anchor="middle" font-size="18.973666" fill="var(--danger-text)" font-family="Arial, sans-serif">liveness:</text>
+  <text x="1146.896552" y="265.555556" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">restart</text>
+  <text x="1146.896552" y="362.222222" text-anchor="middle" font-size="18.973666" fill="var(--danger-text)" font-family="Arial, sans-serif">readiness:</text>
+  <text x="1146.896552" y="394.444444" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">drop from</text>
+  <text x="1146.896552" y="426.666667" text-anchor="middle" font-size="21.081851" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">endpoints</text>
+  <text x="1146.896552" y="534.074074" text-anchor="middle" font-size="15.811388" fill="var(--danger-text)" font-family="Arial, sans-serif">kubelet drives</text>
+  <text x="1146.896552" y="560.925926" text-anchor="middle" font-size="15.811388" fill="var(--danger-text)" font-family="Arial, sans-serif">the decision</text>
 
 </svg>

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,53 +97,50 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="70.769231" y="40" font-size="22.514393" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
+  <text x="70.769231" y="40" font-size="22.514393" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">char *str = "Hello";</text>
   <rect x="40" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="81.025641" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'H'</text>
-  <text x="81.025641" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x48</text>
+  <text x="81.025641" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'H'</text>
+  <text x="81.025641" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x48</text>
   <rect x="126.153846" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="167.179487" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'e'</text>
-  <text x="167.179487" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x65</text>
+  <text x="167.179487" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'e'</text>
+  <text x="167.179487" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x65</text>
   <rect x="212.307692" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="253.333224" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'l'</text>
-  <text x="253.333224" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6C</text>
+  <text x="253.333224" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'l'</text>
+  <text x="253.333224" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x6C</text>
   <rect x="298.461538" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="339.487179" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'l'</text>
-  <text x="339.487179" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6C</text>
+  <text x="339.487179" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'l'</text>
+  <text x="339.487179" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x6C</text>
   <rect x="384.615385" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="425.641026" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)">'o'</text>
-  <text x="425.641026" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x6F</text>
-  <rect x="470.769231" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="511.794762" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--danger-accent)">'\0'</text>
-  <text x="511.794762" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)">0x00</text>
-  <text x="706.666667" y="99.225331" font-size="17.397529" fill="var(--danger-accent)" font-weight="bold">Null terminator</text>
+  <text x="425.641026" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--text)" font-family="Arial, sans-serif">'o'</text>
+  <text x="425.641026" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x6F</text>
+  <rect x="470.769231" y="58.380284" width="82.051282" height="61.267571" rx="7.065704" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="511.794762" y="85.95071" text-anchor="middle" font-size="20.467694" fill="var(--danger-accent)" font-family="Arial, sans-serif">'\0'</text>
+  <text x="511.794762" y="107.394417" text-anchor="middle" font-size="14.327245" fill="var(--text-muted)" font-family="Arial, sans-serif">0x00</text>
+  <text x="706.666667" y="99.225331" font-size="17.397529" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Null terminator</text>
   <line x1="704.615385" y1="93.098485" x2="561.025641" y2="93.098485" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="788.717839" y="58.380284" width="410.25641" height="81.690094" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="993.846154" y="93.098485" text-anchor="middle" font-size="18.420878" font-weight="bold" fill="var(--text)">str (pointer)</text>
-  <text x="993.846154" y="121.690094" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">stores address: 0x1000</text>
+  <text x="993.846154" y="93.098485" text-anchor="middle" font-size="18.420878" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">str (pointer)</text>
+  <text x="993.846154" y="121.690094" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">stores address: 0x1000</text>
   <line x1="788.717839" y1="99.225331" x2="568.205128" y2="99.225331" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" marker-end="url(#arrow-primary)" />
   <rect x="70.769231" y="191.126751" width="543.589744" height="214.436688" rx="7.065704" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="342.564103" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="monospace">char str[] = "Hello";</text>
-  <text x="101.538462" y="267.711183" font-size="16.374061" fill="var(--text-muted)">- Array on stack (6 bytes)</text>
-  <text x="101.538462" y="298.345031" font-size="16.374061" fill="var(--text-muted)">- Modifiable contents</text>
-  <text x="101.538462" y="328.97888" font-size="16.374061" fill="var(--text-muted)">- sizeof(str) == 6</text>
-  <text x="101.538462" y="359.612602" font-size="16.374061" fill="var(--primary-accent)">- str[0] = 'h'; // OK</text>
-  <rect x="665.641026" y="191.126751" width="574.358974" height="214.436688" rx="7.065704" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="952.820513" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="monospace">char *str = "Hello";</text>
-  <text x="696.410147" y="267.711183" font-size="16.374061" fill="var(--text-muted)">- Pointer to read-only data</text>
-  <text x="696.410147" y="298.345031" font-size="16.374061" fill="var(--text-muted)">- String in .rodata section</text>
-  <text x="696.410147" y="328.97888" font-size="16.374061" fill="var(--text-muted)">- sizeof(str) == 8 (pointer)</text>
-  <text x="696.410147" y="359.612602" font-size="16.374061" fill="var(--danger-accent)">- str[0] = 'h'; // SEGFAULT!</text>
-  <rect x="70.769231" y="446.408486" width="1169.23066" height="173.591514" rx="7.065704" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="655.384615" y="487.25366" text-anchor="middle" font-size="22.514393" font-weight="bold" fill="var(--text)">strlen() vs sizeof()</text>
-  <text x="347.692308" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)">strlen("Hello") = 5</text>
-  <text x="347.692308" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Counts chars until '\0'</text>
-  <text x="347.692308" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Runtime function, O(n)</text>
-  <text x="881.025532" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)">sizeof("Hello") = 6</text>
-  <text x="881.025532" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Includes null terminator</text>
-  <text x="881.025532" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)">Compile-time operator</text>
+  <text x="342.564103" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">char str[] = "Hello";</text>
+  <text x="101.538462" y="267.711183" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- Array on stack (6 bytes)</text>
+  <text x="101.538462" y="298.345031" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- Modifiable contents</text>
+  <text x="101.538462" y="328.97888" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- sizeof(str) == 6</text>
+  <text x="101.538462" y="359.612602" font-size="16.374061" fill="var(--primary-accent)" font-family="Arial, sans-serif">- str[0] = 'h'; // OK</text>
+  <rect x="665.641026" y="191.126751" width="574.358974" height="214.436688" rx="7.065704" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="952.820513" y="229.929685" text-anchor="middle" font-size="20.467694" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">char *str = "Hello";</text>
+  <text x="696.410147" y="267.711183" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- Pointer to read-only data</text>
+  <text x="696.410147" y="298.345031" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- String in .rodata section</text>
+  <text x="696.410147" y="328.97888" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">- sizeof(str) == 8 (pointer)</text>
+  <text x="696.410147" y="359.612602" font-size="16.374061" fill="var(--danger-accent)" font-family="Arial, sans-serif">- str[0] = 'h'; // SEGFAULT!</text>
+  <rect x="70.769231" y="446.408486" width="1169.23066" height="173.591514" rx="7.065704" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="655.384615" y="487.25366" text-anchor="middle" font-size="22.514393" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">strlen() vs sizeof()</text>
+  <text x="347.692308" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)" font-family="Arial, sans-serif">strlen("Hello") = 5</text>
+  <text x="347.692308" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">Counts chars until '\0'</text>
+  <text x="347.692308" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">Runtime function, O(n)</text>
+  <text x="881.025532" y="533.20437" text-anchor="middle" font-size="18.420878" fill="var(--text)" font-family="Arial, sans-serif">sizeof("Hello") = 6</text>
+  <text x="881.025532" y="566.901515" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">Includes null terminator</text>
+  <text x="881.025532" y="595.492997" text-anchor="middle" font-size="16.374061" fill="var(--text-muted)" font-family="Arial, sans-serif">Compile-time operator</text>
 </svg>

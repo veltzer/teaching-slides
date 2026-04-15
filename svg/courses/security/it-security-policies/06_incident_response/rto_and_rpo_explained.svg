@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,39 +97,36 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="391.724138" y="40" text-anchor="middle" font-size="20.100822" fill="var(--text-muted)">Data loss tolerated</text>
-  <text x="865.517241" y="40" text-anchor="middle" font-size="20.100822" fill="var(--text-muted)">Downtime tolerated</text>
+  <text x="391.724138" y="40" text-anchor="middle" font-size="20.100822" fill="var(--text-muted)" font-family="Arial, sans-serif">Data loss tolerated</text>
+  <text x="865.517241" y="40" text-anchor="middle" font-size="20.100822" fill="var(--text-muted)" font-family="Arial, sans-serif">Downtime tolerated</text>
   <line x1="148.62069" y1="102.491407" x2="635.862069" y2="102.491407" stroke="var(--text-muted)" stroke-width="2" />
   <polygon points="148.62069,86.868616 148.62069,118.114441 130,102.491407" fill="var(--text-muted)" />
   <polygon points="635.862069,86.868616 635.862069,118.114441 654.482759,102.491407" fill="var(--text-muted)" />
-  <text x="391.724138" y="170.841724" text-anchor="middle" font-size="20.100822" font-weight="bold" fill="var(--text)">RPO</text>
-  <text x="391.724138" y="200.134579" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)">(Recovery Point Objective)</text>
+  <text x="391.724138" y="170.841724" text-anchor="middle" font-size="20.100822" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RPO</text>
+  <text x="391.724138" y="200.134579" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)" font-family="Arial, sans-serif">(Recovery Point Objective)</text>
   <line x1="673.103448" y1="102.491407" x2="1053.792993" y2="102.491407" stroke="var(--text-muted)" stroke-width="2" />
   <polygon points="673.103448,86.868616 673.103448,118.114441 654.482759,102.491407" fill="var(--text-muted)" />
   <polygon points="1053.792993,86.868616 1053.792993,118.114441 1072.413683,102.491407" fill="var(--text-muted)" />
-  <text x="865.517241" y="170.841724" text-anchor="middle" font-size="20.100822" font-weight="bold" fill="var(--text)">RTO</text>
-  <text x="865.517241" y="200.134579" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)">(Recovery Time Objective)</text>
+  <text x="865.517241" y="170.841724" text-anchor="middle" font-size="20.100822" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RTO</text>
+  <text x="865.517241" y="200.134579" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)" font-family="Arial, sans-serif">(Recovery Time Objective)</text>
   <line x1="148.62069" y1="120.067168" x2="148.62069" y2="293.872053" stroke="var(--text-faint)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" />
   <line x1="654.482759" y1="120.067168" x2="654.482759" y2="293.872053" stroke="var(--text-faint)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" />
   <line x1="1072.413683" y1="120.067168" x2="1072.413683" y2="293.872053" stroke="var(--text-faint)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" />
   <line x1="52.413793" y1="327.070727" x2="1208.965517" y2="327.070727" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="1224.482759" y="334.882122" font-size="20.100822" fill="var(--text)">time</text>
+  <text x="1224.482759" y="334.882122" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">time</text>
   <line x1="148.62069" y1="305.589146" x2="148.62069" y2="348.552064" stroke="var(--text)" stroke-width="2" />
   <line x1="654.482759" y1="305.589146" x2="654.482759" y2="348.552064" stroke="var(--text)" stroke-width="2" />
   <line x1="1072.413683" y1="305.589146" x2="1072.413683" y2="348.552064" stroke="var(--text)" stroke-width="2" />
-  <text x="148.62069" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)">Last backup</text>
-  <text x="654.482759" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)">Disaster</text>
-  <text x="654.482759" y="454.006632" text-anchor="middle" font-size="20.100822" fill="var(--text)">occurs</text>
-  <text x="1072.413683" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)">Recovery</text>
-  <text x="1072.413683" y="454.006632" text-anchor="middle" font-size="20.100822" fill="var(--text)">complete</text>
-  <rect x="40" y="512.592584" width="537.931034" height="107.407416" rx="6.939055" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="308.965407" y="551.649804" text-anchor="middle" font-size="18.090694" font-weight="bold" fill="var(--primary-accent)">RPO: How much data can we lose?</text>
-  <text x="308.965407" y="588.754175" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)">Determines backup frequency</text>
-  <rect x="702.068966" y="512.592584" width="537.931034" height="107.407416" rx="6.939055" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="971.034372" y="551.649804" text-anchor="middle" font-size="18.090694" font-weight="bold" fill="var(--primary-accent)">RTO: How long can we be down?</text>
-  <text x="971.034372" y="588.754175" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)">Determines recovery infrastructure</text>
+  <text x="148.62069" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">Last backup</text>
+  <text x="654.482759" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">Disaster</text>
+  <text x="654.482759" y="454.006632" text-anchor="middle" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">occurs</text>
+  <text x="1072.413683" y="411.043714" text-anchor="middle" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">Recovery</text>
+  <text x="1072.413683" y="454.006632" text-anchor="middle" font-size="20.100822" fill="var(--text)" font-family="Arial, sans-serif">complete</text>
+  <rect x="40" y="512.592584" width="537.931034" height="107.407416" rx="6.939055" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="308.965407" y="551.649804" text-anchor="middle" font-size="18.090694" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">RPO: How much data can we lose?</text>
+  <text x="308.965407" y="588.754175" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)" font-family="Arial, sans-serif">Determines backup frequency</text>
+  <rect x="702.068966" y="512.592584" width="537.931034" height="107.407416" rx="6.939055" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="971.034372" y="551.649804" text-anchor="middle" font-size="18.090694" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">RTO: How long can we be down?</text>
+  <text x="971.034372" y="588.754175" text-anchor="middle" font-size="16.080565" fill="var(--text-muted)" font-family="Arial, sans-serif">Determines recovery infrastructure</text>
 </svg>

@@ -4,108 +4,98 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --danger-accent: #4a1f1a;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
+    </marker>
+  </defs>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="76.25" width="1200" height="543.75" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
-  <text x="640" y="40" text-anchor="middle" font-size="29.9142" font-weight="bold">Configuration Management</text>
-  <rect x="125.7143" y="130.625" width="342.8571" height="181.25" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="297.1429" y="185" text-anchor="middle" fill="var(--bg)" font-weight="bold">Hardcoded Config</text>
-  <text x="297.1429" y="230.3125" text-anchor="middle" fill="var(--bg)" font-size="18.2809">❌ Rebuild for changes</text>
-  <text x="297.1429" y="266.5625" text-anchor="middle" fill="var(--bg)" font-size="18.2809">❌ Environment specific</text>
-  <text x="297.1429" y="302.8125" text-anchor="middle" fill="var(--bg)" font-size="18.2809">❌ Security risks</text>
-  <rect x="554.2857" y="130.625" width="342.8571" height="181.25" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="725.7143" y="185" text-anchor="middle" fill="var(--bg)" font-weight="bold">External Config</text>
-  <text x="725.7143" y="230.3125" text-anchor="middle" fill="var(--bg)" font-size="18.2809">✓ No rebuild needed</text>
-  <text x="725.7143" y="266.5625" text-anchor="middle" fill="var(--bg)" font-size="18.2809">✓ Environment agnostic</text>
-  <text x="725.7143" y="302.8125" text-anchor="middle" fill="var(--bg)" font-size="18.2809">✓ Secure secrets</text>
-  <rect x="125.7143" y="384.375" width="1028.5714" height="145" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="438.75" text-anchor="middle" font-weight="bold">Kubernetes Solution</text>
-  <text x="640" y="484.0625" text-anchor="middle" font-size="19.9428">ConfigMaps for non-sensitive data | Secrets for sensitive data</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="32.270046981735" font-weight="bold" fill="var(--primary-accent)">Why External Configuration?</text>
+
+  <!-- Hardcoded column -->
+  <rect x="40" y="79.322033898305" width="579.310344827586" height="373.559322033898" rx="14.118145554509"
+        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.655172413793" y="133.389830508475" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.236291109018" font-weight="bold" fill="var(--danger-text)">Hardcoded Config</text>
+  <text x="329.655172413793" y="192.372881355932" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--danger-text)">✗ Rebuild image for every change</text>
+  <text x="329.655172413793" y="241.525423728814" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--danger-text)">✗ One image per environment</text>
+  <text x="329.655172413793" y="290.677966101695" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--danger-text)">✗ Secrets baked into layers</text>
+  <text x="329.655172413793" y="339.830508474576" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--danger-text)">✗ Leaks in logs &amp; git history</text>
+  <text x="329.655172413793" y="398.813559322034" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.151901427226" font-style="italic" fill="var(--danger-text)">Slow to change, unsafe to share</text>
+
+  <!-- Arrow between columns -->
+  <line x1="624.48275862069" y1="266.101694915254" x2="655.51724137931" y2="266.101694915254" stroke="var(--text)" stroke-width="3"
+        marker-end="url(#arrow)"/>
+
+  <!-- External column -->
+  <rect x="660.689655172414" y="79.322033898305" width="579.310344827586" height="373.559322033898" rx="14.118145554509"
+        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950.344827586207" y="133.389830508475" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28.236291109018" font-weight="bold" fill="var(--ok-text)">External Config</text>
+  <text x="950.344827586207" y="192.372881355932" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--ok-text)">✓ Change config, no rebuild</text>
+  <text x="950.344827586207" y="241.525423728814" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--ok-text)">✓ One image, many environments</text>
+  <text x="950.344827586207" y="290.677966101695" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--ok-text)">✓ Secrets injected at runtime</text>
+  <text x="950.344827586207" y="339.830508474576" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--ok-text)">✓ Rotate without redeploying</text>
+  <text x="950.344827586207" y="398.813559322034" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18.151901427226" font-style="italic" fill="var(--ok-text)">Flexible, secure, portable</text>
+
+  <!-- Kubernetes solution strip -->
+  <rect x="40" y="492.203389830509" width="1200" height="127.796610169492" rx="14.118145554509"
+        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="536.440677966102" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="26.21941317266" font-weight="bold" fill="var(--warn-text)">Kubernetes answer</text>
+  <text x="640" y="575.762711864407" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--warn-text)">ConfigMaps for non-sensitive data</text>
+  <text x="640" y="605.254237288136" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="22.185657299943" fill="var(--warn-text)">Secrets for passwords, tokens, keys</text>
 </svg>

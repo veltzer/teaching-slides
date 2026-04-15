@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,57 +75,54 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 17.28 L 14.6286 8.64 z" fill="#555" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="1200" height="77.732" fill="var(--primary-accent)" stroke="var(--text)" stroke-width="2.7429" rx="6" />
-  <text x="50.5882" y="90.8247" font-family="sans-serif" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold">Setting</text>
-  <text x="359.4117" y="90.8247" font-family="sans-serif" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold">Compile</text>
-  <text x="535.8824" y="90.8247" font-family="sans-serif" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold">Binary Size</text>
-  <text x="703.5294" y="90.8247" font-family="sans-serif" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold">Runtime Performance</text>
+  <text x="50.5882" y="90.8247" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Setting</text>
+  <text x="359.4117" y="90.8247" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Compile</text>
+  <text x="535.8824" y="90.8247" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Binary Size</text>
+  <text x="703.5294" y="90.8247" font-size="21.963" fill="var(--bg)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Runtime Performance</text>
   <line x1="348.8235" y1="40" x2="348.8235" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286" />
   <line x1="525.2942" y1="40" x2="525.2942" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286" />
   <line x1="692.9411" y1="40" x2="692.9411" y2="452.5773" stroke="var(--text-faint)" stroke-width="1.8286" />
-  <rect x="40" y="117.732" width="1200" height="83.7113" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="50.5882" y="171.5464" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">lto = false</text>
-  <text x="359.4117" y="171.5464" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Fast</text>
-  <text x="535.8824" y="171.5464" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Larger</text>
-  <text x="703.5294" y="171.5464" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Baseline</text>
+  <rect x="40" y="117.732" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="50.5882" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">lto = false</text>
+  <text x="359.4117" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Fast</text>
+  <text x="535.8824" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Larger</text>
+  <text x="703.5294" y="171.5464" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Baseline</text>
   <rect x="40" y="201.4433" width="1200" height="83.7113" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="50.5882" y="255.2577" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">lto = "thin"</text>
-  <text x="359.4117" y="255.2577" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Moderate</text>
-  <text x="535.8824" y="255.2577" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Smaller</text>
-  <text x="703.5294" y="255.2577" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Good (5–15% faster)</text>
-  <rect x="40" y="285.1546" width="1200" height="83.7113" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="50.5882" y="338.9691" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">lto = true</text>
-  <text x="359.4117" y="338.9691" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Slow</text>
-  <text x="535.8824" y="338.9691" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Smallest</text>
-  <text x="703.5294" y="338.9691" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Best (10–20% faster)</text>
+  <text x="50.5882" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">lto = "thin"</text>
+  <text x="359.4117" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Moderate</text>
+  <text x="535.8824" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smaller</text>
+  <text x="703.5294" y="255.2577" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Good (5–15% faster)</text>
+  <rect x="40" y="285.1546" width="1200" height="83.7113" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="50.5882" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">lto = true</text>
+  <text x="359.4117" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Slow</text>
+  <text x="535.8824" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smallest</text>
+  <text x="703.5294" y="338.9691" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Best (10–20% faster)</text>
   <rect x="40" y="368.866" width="1200" height="83.7113" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="50.5882" y="422.6804" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">codegen-units=1</text>
-  <text x="359.4117" y="422.6804" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Slower</text>
-  <text x="535.8824" y="422.6804" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Smaller</text>
-  <text x="703.5294" y="422.6804" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">Better inlining</text>
-  <text x="57.647" y="524.3299" font-family="sans-serif" font-size="21.963" fill="var(--text)" text-anchor="start" font-weight="bold">Recommended release profile for maximum performance:</text>
-  <rect x="40" y="548.2474" width="1200" height="71.7526" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="54.1177" y="596.0825" font-family="sans-serif" font-size="20.1327" fill="var(--text)" text-anchor="start">[profile.release]  lto=true  codegen-units=1  opt-level=3  strip=true  panic="abort"</text>
+  <text x="50.5882" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">codegen-units=1</text>
+  <text x="359.4117" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Slower</text>
+  <text x="535.8824" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Smaller</text>
+  <text x="703.5294" y="422.6804" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Better inlining</text>
+  <text x="57.647" y="524.3299" font-size="21.963" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Recommended release profile for maximum performance:</text>
+  <rect x="40" y="548.2474" width="1200" height="71.7526" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="54.1177" y="596.0825" font-size="20.1327" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">[profile.release]  lto=true  codegen-units=1  opt-level=3  strip=true  panic="abort"</text>
 </svg>

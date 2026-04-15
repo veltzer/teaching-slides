@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,69 +75,60 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#dc3545" />
-    </marker>
   </defs>
-  <text x="650.5263" y="40" text-anchor="middle" font-size="21.5365" font-weight="bold" fill="var(--text)">Saga Pattern - Distributed Transactions</text>
-  <text x="650.5263" y="89.0141" text-anchor="middle" font-size="17.4985" fill="var(--ok-accent)" font-weight="bold">Success Path</text>
+  <text x="650.5263" y="40" text-anchor="middle" font-size="21.5365" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Saga Pattern - Distributed Transactions</text>
+  <text x="650.5263" y="89.0141" text-anchor="middle" font-size="17.4985" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Success Path</text>
   <ellipse cx="103.1578" cy="162.5352" rx="63.1578" ry="25.818" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.6614" />
-  <text x="103.1578" y="170.7042" text-anchor="middle" font-size="16.1524" fill="var(--text)">Start</text>
-  <rect x="229.4736" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="320.7018" y="170.7042" text-anchor="middle" fill="var(--text)">Service A Txn</text>
-  <rect x="496.1404" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="587.3684" y="170.7042" text-anchor="middle" fill="var(--text)">Service B Txn</text>
-  <rect x="762.807" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="854.035" y="170.7042" text-anchor="middle" fill="var(--text)">Service C Txn</text>
+  <text x="103.1578" y="170.7042" text-anchor="middle" font-size="16.1524" fill="var(--text)" font-family="Arial, sans-serif">Start</text>
+  <rect x="229.4736" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320.7018" y="170.7042" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Service A Txn</text>
+  <rect x="496.1404" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="587.3684" y="170.7042" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Service B Txn</text>
+  <rect x="762.807" y="129.8591" width="182.4562" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="854.035" y="170.7042" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Service C Txn</text>
   <ellipse cx="1057.5437" cy="162.5352" rx="70.1754" ry="25.818" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2.6614" />
-  <text x="1057.5437" y="170.7042" text-anchor="middle" font-size="16.1524" fill="var(--text)">Complete</text>
+  <text x="1057.5437" y="170.7042" text-anchor="middle" font-size="16.1524" fill="var(--text)" font-family="Arial, sans-serif">Complete</text>
   <line x1="166.3158" y1="162.5352" x2="226.6667" y2="162.5352" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
   <line x1="411.9298" y1="162.5352" x2="493.3333" y2="162.5352" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="454.035" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)">Success</text>
+  <text x="454.035" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)" font-family="Arial, sans-serif">Success</text>
   <line x1="678.5964" y1="162.5352" x2="759.9999" y2="162.5352" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="720.7017" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)">Success</text>
+  <text x="720.7017" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)" font-family="Arial, sans-serif">Success</text>
   <line x1="945.2631" y1="162.5352" x2="984.5614" y2="162.5352" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="966.3157" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)">Success</text>
-  <text x="650.5263" y="309.5774" text-anchor="middle" font-size="17.4985" fill="var(--danger-accent)" font-weight="bold">Compensation Path (on failure)</text>
-  <rect x="762.807" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="854.035" y="383.0986" text-anchor="middle" fill="var(--text)">Compensate C</text>
-  <rect x="496.1404" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="587.3684" y="383.0986" text-anchor="middle" fill="var(--text)">Compensate B</text>
-  <rect x="229.4736" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="320.7018" y="383.0986" text-anchor="middle" fill="var(--text)">Compensate A</text>
+  <text x="966.3157" y="151.0986" text-anchor="middle" font-size="13.4603" fill="var(--ok-accent)" font-family="Arial, sans-serif">Success</text>
+  <text x="650.5263" y="309.5774" text-anchor="middle" font-size="17.4985" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Compensation Path (on failure)</text>
+  <rect x="762.807" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="854.035" y="383.0986" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Compensate C</text>
+  <rect x="496.1404" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="587.3684" y="383.0986" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Compensate B</text>
+  <rect x="229.4736" y="342.2535" width="182.4562" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320.7018" y="383.0986" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Compensate A</text>
   <ellipse cx="103.1578" cy="374.9295" rx="63.1578" ry="25.818" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2.6614" />
-  <text x="103.1578" y="383.0986" text-anchor="middle" font-size="16.1524" fill="var(--text)">Failed</text>
+  <text x="103.1578" y="383.0986" text-anchor="middle" font-size="16.1524" fill="var(--text)" font-family="Arial, sans-serif">Failed</text>
   <line x1="854.035" y1="195.2113" x2="854.035" y2="338.9859" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
-  <text x="875.0877" y="276.9014" text-anchor="start" font-size="13.4603" fill="var(--danger-accent)">Failure</text>
+  <text x="875.0877" y="276.9014" text-anchor="start" font-size="13.4603" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failure</text>
   <line x1="762.807" y1="374.9295" x2="681.4035" y2="374.9295" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
   <line x1="496.1404" y1="374.9295" x2="414.7369" y2="374.9295" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
   <line x1="229.4736" y1="374.9295" x2="169.1228" y2="374.9295" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
   <rect x="61.0527" y="472.9578" width="1178.9473" height="147.0422" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="650.5263" y="513.8028" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)">The Saga pattern manages distributed transactions across multiple services.</text>
-  <text x="650.5263" y="546.4788" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)">Each service executes its local transaction. On success, the next service is triggered.</text>
-  <text x="650.5263" y="579.1549" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)">On failure, compensating transactions are executed in reverse order to maintain consistency.</text>
+  <text x="650.5263" y="513.8028" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)" font-family="Arial, sans-serif">The Saga pattern manages distributed transactions across multiple services.</text>
+  <text x="650.5263" y="546.4788" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)" font-family="Arial, sans-serif">Each service executes its local transaction. On success, the next service is triggered.</text>
+  <text x="650.5263" y="579.1549" text-anchor="middle" font-size="16.1524" fill="var(--text-muted)" font-family="Arial, sans-serif">On failure, compensating transactions are executed in reverse order to maintain consistency.</text>
 </svg>

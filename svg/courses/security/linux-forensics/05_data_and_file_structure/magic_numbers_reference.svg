@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,62 +97,59 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="52.553586" rx="6.639223" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="252.903226" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)">File Type</text>
-  <text x="698.064516" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)">Magic Bytes (Hex)</text>
-  <text x="1085.16129" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)">ASCII</text>
-  <rect x="40" y="92.553586" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)">ELF binary</text>
-  <text x="698.064516" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)">7F 45 4C 46</text>
-  <text x="1085.16129" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)">.ELF</text>
+  <rect x="40" y="40" width="1200" height="52.553586" rx="6.639223" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="252.903226" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">File Type</text>
+  <text x="698.064516" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Magic Bytes (Hex)</text>
+  <text x="1085.16129" y="74.398677" text-anchor="middle" font-size="21.155442" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">ASCII</text>
+  <rect x="40" y="92.553586" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">ELF binary</text>
+  <text x="698.064516" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">7F 45 4C 46</text>
+  <text x="1085.16129" y="122.174643" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">.ELF</text>
   <rect x="40" y="136.507504" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)">PDF</text>
-  <text x="698.064516" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)">25 50 44 46</text>
-  <text x="1085.16129" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)">%PDF</text>
-  <rect x="40" y="180.461184" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)">ZIP/DOCX/XLSX</text>
-  <text x="698.064516" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)">50 4B 03 04</text>
-  <text x="1085.16129" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)">PK..</text>
+  <text x="252.903226" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">PDF</text>
+  <text x="698.064516" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">25 50 44 46</text>
+  <text x="1085.16129" y="166.128441" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">%PDF</text>
+  <rect x="40" y="180.461184" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">ZIP/DOCX/XLSX</text>
+  <text x="698.064516" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">50 4B 03 04</text>
+  <text x="1085.16129" y="210.082358" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">PK..</text>
   <rect x="40" y="224.415101" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)">JPEG</text>
-  <text x="698.064516" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)">FF D8 FF E0/E1</text>
-  <text x="1085.16129" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)">-</text>
-  <rect x="40" y="268.369018" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)">PNG</text>
-  <text x="698.064516" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)">89 50 4E 47 0D 0A 1A 0A</text>
-  <text x="1085.16129" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)">.PNG....</text>
+  <text x="252.903226" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">JPEG</text>
+  <text x="698.064516" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">FF D8 FF E0/E1</text>
+  <text x="1085.16129" y="254.036276" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">-</text>
+  <rect x="40" y="268.369018" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">PNG</text>
+  <text x="698.064516" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">89 50 4E 47 0D 0A 1A 0A</text>
+  <text x="1085.16129" y="297.990074" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">.PNG....</text>
   <rect x="40" y="312.322817" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)">GIF</text>
-  <text x="698.064516" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)">47 49 46 38</text>
-  <text x="1085.16129" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)">GIF8</text>
-  <rect x="40" y="356.276734" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)">gzip</text>
-  <text x="698.064516" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)">1F 8B</text>
-  <text x="1085.16129" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)">-</text>
+  <text x="252.903226" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">GIF</text>
+  <text x="698.064516" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">47 49 46 38</text>
+  <text x="1085.16129" y="341.943992" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">GIF8</text>
+  <rect x="40" y="356.276734" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">gzip</text>
+  <text x="698.064516" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">1F 8B</text>
+  <text x="1085.16129" y="385.897909" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">-</text>
   <rect x="40" y="400.230651" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)">bzip2</text>
-  <text x="698.064516" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)">42 5A 68</text>
-  <text x="1085.16129" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)">BZh</text>
-  <rect x="40" y="444.18445" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)">7-Zip</text>
-  <text x="698.064516" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)">37 7A BC AF 27 1C</text>
-  <text x="1085.16129" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)">7z..'.</text>
+  <text x="252.903226" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">bzip2</text>
+  <text x="698.064516" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">42 5A 68</text>
+  <text x="1085.16129" y="429.851589" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">BZh</text>
+  <rect x="40" y="444.18445" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">7-Zip</text>
+  <text x="698.064516" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">37 7A BC AF 27 1C</text>
+  <text x="1085.16129" y="473.805506" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">7z..'.</text>
   <rect x="40" y="488.138367" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)">tar</text>
-  <text x="698.064516" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)">75 73 74 61 72 (at 257)</text>
-  <text x="1085.16129" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)">ustar</text>
-  <rect x="40" y="532.092284" width="1200" height="43.953917" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
-  <text x="252.903226" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)">RAR</text>
-  <text x="698.064516" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)">52 61 72 21 1A 07</text>
-  <text x="1085.16129" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)">Rar!..</text>
+  <text x="252.903226" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">tar</text>
+  <text x="698.064516" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">75 73 74 61 72 (at 257)</text>
+  <text x="1085.16129" y="517.759423" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">ustar</text>
+  <rect x="40" y="532.092284" width="1200" height="43.953917" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.639223" filter="url(#shadow)"/>
+  <text x="252.903226" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">RAR</text>
+  <text x="698.064516" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">52 61 72 21 1A 07</text>
+  <text x="1085.16129" y="561.713222" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">Rar!..</text>
   <rect x="40" y="576.045964" width="1200" height="43.953917" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="0.7111" rx="6.639223"/>
-  <text x="252.903226" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)">SQLite</text>
-  <text x="698.064516" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)">53 51 4C 69 74 65</text>
-  <text x="1085.16129" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)">SQLite</text>
+  <text x="252.903226" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">SQLite</text>
+  <text x="698.064516" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">53 51 4C 69 74 65</text>
+  <text x="1085.16129" y="605.667139" text-anchor="middle" font-size="19.23228" fill="var(--text)" font-family="Arial, sans-serif">SQLite</text>
   <line x1="398.064516" y1="40" x2="398.064516" y2="619.999881" stroke="var(--text-faint)" stroke-width="0.8889" />
   <line x1="814.193548" y1="40" x2="814.193548" y2="619.999881" stroke="var(--text-faint)" stroke-width="0.8889" />
   <rect x="40" y="40" width="1200" height="580" fill="none" stroke="var(--border)" stroke-width="1" rx="6.639223" />

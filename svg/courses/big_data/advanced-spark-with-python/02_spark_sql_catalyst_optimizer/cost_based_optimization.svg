@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,61 +75,58 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
   </defs>
-  <text x="635.9731" y="40" text-anchor="middle" font-family="Arial" font-size="30.1671" font-weight="bold" fill="var(--primary-accent)">Cost-Based Optimization (CBO)</text>
-  <rect x="40" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="168.8591" y="127.3972" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--primary-accent)">Statistics</text>
-  <text x="168.8591" y="156" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Row count, data size</text>
-  <text x="168.8591" y="181.4246" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Column min/max/nulls</text>
+  <text x="635.9731" y="40" text-anchor="middle" font-size="30.1671" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Cost-Based Optimization (CBO)</text>
+  <rect x="40" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168.8591" y="127.3972" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Statistics</text>
+  <text x="168.8591" y="156" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Row count, data size</text>
+  <text x="168.8591" y="181.4246" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Column min/max/nulls</text>
   <line x1="297.7181" y1="143.2877" x2="378.255" y2="143.2877" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="386.3086" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="515.1677" y="127.3972" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--ok-accent)">Cost Model</text>
-  <text x="515.1677" y="156" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Estimate I/O cost</text>
-  <text x="515.1677" y="181.4246" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Estimate CPU cost</text>
+  <rect x="386.3086" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.1677" y="127.3972" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cost Model</text>
+  <text x="515.1677" y="156" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Estimate I/O cost</text>
+  <text x="515.1677" y="181.4246" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Estimate CPU cost</text>
   <line x1="644.0268" y1="143.2877" x2="724.5637" y2="143.2877" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="732.6174" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="861.4765" y="127.3972" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--warn-accent)">Plan Comparison</text>
-  <text x="861.4765" y="156" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Evaluate alternatives</text>
-  <text x="861.4765" y="181.4246" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--text)">Pick lowest cost</text>
+  <rect x="732.6174" y="87.6712" width="257.7181" height="111.2329" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="861.4765" y="127.3972" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Plan Comparison</text>
+  <text x="861.4765" y="156" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Evaluate alternatives</text>
+  <text x="861.4765" y="181.4246" text-anchor="middle" font-size="16.5919" fill="var(--text)" font-family="Arial, sans-serif">Pick lowest cost</text>
   <line x1="990.3355" y1="143.2877" x2="1038.6577" y2="143.2877" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="1046.7114" y="87.6712" width="193.2886" height="111.2329" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2.8805" />
-  <text x="1143.3557" y="135.3425" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--bg)">Best Plan</text>
-  <text x="1143.3557" y="167.1232" text-anchor="middle" font-family="Arial" font-size="16.5919" fill="var(--primary-accent)">Optimal execution</text>
-  <text x="635.9731" y="262.4657" text-anchor="middle" font-family="Arial" font-size="22.6254" font-weight="bold" fill="var(--text)">Example: Join Reorder Decision</text>
-  <rect x="88.3221" y="302.1918" width="451.0067" height="286.0274" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="313.8255" y="341.9178" text-anchor="middle" font-family="Arial" font-size="21.117" font-weight="bold" fill="var(--danger-accent)">Plan A: Orders JOIN Customers</text>
-  <rect x="152.7516" y="365.7534" width="322.1477" height="55.6165" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="313.8255" y="402.3014" text-anchor="middle" font-family="Arial" font-size="18.1003" fill="var(--danger-accent)">Join(1M x 10K) = Sort Merge</text>
-  <rect x="152.7516" y="437.2603" width="322.1477" height="55.6165" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="313.8255" y="473.8082" text-anchor="middle" font-family="Arial" font-size="18.1003" fill="var(--danger-accent)">Shuffle: 2 x large</text>
-  <text x="313.8255" y="556.4384" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--danger-accent)">Cost: 850</text>
-  <rect x="732.6174" y="302.1918" width="451.0067" height="286.0274" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.1208" y="341.9178" text-anchor="middle" font-family="Arial" font-size="21.117" font-weight="bold" fill="var(--ok-accent)">Plan B: Broadcast Join</text>
-  <rect x="797.0469" y="365.7534" width="322.1477" height="55.6165" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.1208" y="402.3014" text-anchor="middle" font-family="Arial" font-size="18.1003" fill="var(--ok-accent)">Broadcast(10K) + Hash Join</text>
-  <rect x="797.0469" y="437.2603" width="322.1477" height="55.6165" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.1208" y="473.8082" text-anchor="middle" font-family="Arial" font-size="18.1003" fill="var(--ok-accent)">No shuffle needed</text>
-  <text x="958.1208" y="556.4384" text-anchor="middle" font-family="Arial" font-size="19.6086" font-weight="bold" fill="var(--ok-accent)">Cost: 120 (chosen)</text>
-  <text x="635.9731" y="620" text-anchor="middle" font-family="Arial" font-size="18.1003" fill="var(--text)">CBO uses table/column statistics to pick optimal join strategy</text>
+  <text x="1143.3557" y="135.3425" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Best Plan</text>
+  <text x="1143.3557" y="167.1232" text-anchor="middle" font-size="16.5919" fill="var(--primary-accent)" font-family="Arial, sans-serif">Optimal execution</text>
+  <text x="635.9731" y="262.4657" text-anchor="middle" font-size="22.6254" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Example: Join Reorder Decision</text>
+  <rect x="88.3221" y="302.1918" width="451.0067" height="286.0274" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="313.8255" y="341.9178" text-anchor="middle" font-size="21.117" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Plan A: Orders JOIN Customers</text>
+  <rect x="152.7516" y="365.7534" width="322.1477" height="55.6165" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="313.8255" y="402.3014" text-anchor="middle" font-size="18.1003" fill="var(--danger-accent)" font-family="Arial, sans-serif">Join(1M x 10K) = Sort Merge</text>
+  <rect x="152.7516" y="437.2603" width="322.1477" height="55.6165" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="313.8255" y="473.8082" text-anchor="middle" font-size="18.1003" fill="var(--danger-accent)" font-family="Arial, sans-serif">Shuffle: 2 x large</text>
+  <text x="313.8255" y="556.4384" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Cost: 850</text>
+  <rect x="732.6174" y="302.1918" width="451.0067" height="286.0274" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.1208" y="341.9178" text-anchor="middle" font-size="21.117" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Plan B: Broadcast Join</text>
+  <rect x="797.0469" y="365.7534" width="322.1477" height="55.6165" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.1208" y="402.3014" text-anchor="middle" font-size="18.1003" fill="var(--ok-accent)" font-family="Arial, sans-serif">Broadcast(10K) + Hash Join</text>
+  <rect x="797.0469" y="437.2603" width="322.1477" height="55.6165" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.1208" y="473.8082" text-anchor="middle" font-size="18.1003" fill="var(--ok-accent)" font-family="Arial, sans-serif">No shuffle needed</text>
+  <text x="958.1208" y="556.4384" text-anchor="middle" font-size="19.6086" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cost: 120 (chosen)</text>
+  <text x="635.9731" y="620" text-anchor="middle" font-size="18.1003" fill="var(--text)" font-family="Arial, sans-serif">CBO uses table/column statistics to pick optimal join strategy</text>
 </svg>

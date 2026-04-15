@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,62 +75,53 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-dash" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="712.7273" y="40" text-anchor="middle" font-size="26.2739" font-weight="bold" fill="var(--text)">Kafka Partition Replication</text>
-  <rect x="40" y="159.1781" width="218.1818" height="63.5616" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="149.091" y="198.9041" text-anchor="middle" font-size="19.7054" fill="var(--text)">Producer</text>
-  <rect x="476.3637" y="143.2877" width="290.909" height="87.3972" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="621.8182" y="178.2466" text-anchor="middle" font-size="21.3475" font-weight="bold" fill="var(--text)">Leader</text>
-  <text x="621.8182" y="206.8493" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)">Broker 1</text>
-  <rect x="949.0909" y="79.7261" width="290.909" height="87.3972" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1094.5454" y="114.685" text-anchor="middle" font-size="21.3475" fill="var(--text)">Follower</text>
-  <text x="1094.5454" y="143.2877" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)">Broker 2</text>
-  <rect x="949.0909" y="222.7398" width="290.909" height="87.3972" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1094.5454" y="257.6987" text-anchor="middle" font-size="21.3475" fill="var(--text)">Follower</text>
-  <text x="1094.5454" y="286.3014" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)">Broker 3</text>
-  <rect x="40" y="333.9726" width="218.1818" height="63.5616" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="149.091" y="373.6986" text-anchor="middle" font-size="19.7054" fill="var(--text)">Consumer</text>
+  <text x="712.7273" y="40" text-anchor="middle" font-size="26.2739" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Kafka Partition Replication</text>
+  <rect x="40" y="159.1781" width="218.1818" height="63.5616" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="149.091" y="198.9041" text-anchor="middle" font-size="19.7054" fill="var(--text)" font-family="Arial, sans-serif">Producer</text>
+  <rect x="476.3637" y="143.2877" width="290.909" height="87.3972" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="621.8182" y="178.2466" text-anchor="middle" font-size="21.3475" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Leader</text>
+  <text x="621.8182" y="206.8493" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)" font-family="Arial, sans-serif">Broker 1</text>
+  <rect x="949.0909" y="79.7261" width="290.909" height="87.3972" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1094.5454" y="114.685" text-anchor="middle" font-size="21.3475" fill="var(--text)" font-family="Arial, sans-serif">Follower</text>
+  <text x="1094.5454" y="143.2877" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)" font-family="Arial, sans-serif">Broker 2</text>
+  <rect x="949.0909" y="222.7398" width="290.909" height="87.3972" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1094.5454" y="257.6987" text-anchor="middle" font-size="21.3475" fill="var(--text)" font-family="Arial, sans-serif">Follower</text>
+  <text x="1094.5454" y="286.3014" text-anchor="middle" font-size="18.0633" fill="var(--text-muted)" font-family="Arial, sans-serif">Broker 3</text>
+  <rect x="40" y="333.9726" width="218.1818" height="63.5616" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="149.091" y="373.6986" text-anchor="middle" font-size="19.7054" fill="var(--text)" font-family="Arial, sans-serif">Consumer</text>
   <line x1="258.1818" y1="190.959" x2="472.7272" y2="186.1918" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="349.0909" y="171.8905" text-anchor="middle" font-size="18.0633" fill="var(--primary-accent)">Write</text>
+  <text x="349.0909" y="171.8905" text-anchor="middle" font-size="18.0633" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write</text>
   <line x1="767.2727" y1="159.1781" x2="945.4545" y2="127.3973" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="867.2727" y="124.2192" font-size="18.0633" fill="var(--info-accent)">Replicate</text>
+  <text x="867.2727" y="124.2192" font-size="18.0633" fill="var(--info-accent)" font-family="Arial, sans-serif">Replicate</text>
   <line x1="767.2727" y1="206.8493" x2="945.4545" y2="254.5206" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="867.2727" y="251.3424" font-size="18.0633" fill="var(--info-accent)">Replicate</text>
+  <text x="867.2727" y="251.3424" font-size="18.0633" fill="var(--info-accent)" font-family="Arial, sans-serif">Replicate</text>
   <line x1="258.1818" y1="365.7534" x2="530.9091" y2="233.8631" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="349.0909" y="318.0822" text-anchor="middle" font-size="18.0633" fill="var(--ok-accent)">Read</text>
-  <rect x="476.3637" y="429.3151" width="763.6363" height="95.3424" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="9.1897 4.5949" filter="url(#shadow)"/>
-  <text x="858.1818" y="461.096" text-anchor="middle" font-size="21.3475" font-weight="bold" fill="var(--ok-accent)">In-Sync Replicas (ISR)</text>
-  <text x="858.1818" y="505.5891" text-anchor="middle" font-size="19.7054" fill="var(--text)">Leader (Broker 1) + Follower (Broker 2) + Follower (Broker 3)</text>
+  <text x="349.0909" y="318.0822" text-anchor="middle" font-size="18.0633" fill="var(--ok-accent)" font-family="Arial, sans-serif">Read</text>
+  <rect x="476.3637" y="429.3151" width="763.6363" height="95.3424" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="9.1897 4.5949" filter="url(#shadow)"/>
+  <text x="858.1818" y="461.096" text-anchor="middle" font-size="21.3475" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">In-Sync Replicas (ISR)</text>
+  <text x="858.1818" y="505.5891" text-anchor="middle" font-size="19.7054" fill="var(--text)" font-family="Arial, sans-serif">Leader (Broker 1) + Follower (Broker 2) + Follower (Broker 3)</text>
   <line x1="621.8182" y1="230.6849" x2="712.7273" y2="426.137" stroke="var(--text-faint)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
   <line x1="1094.5454" y1="167.1233" x2="985.4545" y2="426.137" stroke="var(--text-faint)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
   <line x1="1094.5454" y1="310.137" x2="1003.6363" y2="426.137" stroke="var(--text-faint)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
-  <text x="712.7273" y="588.2192" text-anchor="middle" font-size="18.0633" fill="var(--text-faint)" font-style="italic">Consumers read only from the leader; followers replicate for fault tolerance.</text>
-  <text x="712.7273" y="620" text-anchor="middle" font-size="18.0633" fill="var(--text-faint)" font-style="italic">ISR tracks which replicas are caught up with the leader.</text>
+  <text x="712.7273" y="588.2192" text-anchor="middle" font-size="18.0633" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Consumers read only from the leader; followers replicate for fault tolerance.</text>
+  <text x="712.7273" y="620" text-anchor="middle" font-size="18.0633" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">ISR tracks which replicas are caught up with the leader.</text>
 </svg>

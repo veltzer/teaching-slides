@@ -1,84 +1,139 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="30.807319" font-weight="bold" fill="var(--text)">6-Transistor SRAM Cell</text>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <text x="640" y="40" text-anchor="middle" font-size="30.807319" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">6-Transistor SRAM Cell</text>
 
-  <rect x="40" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--primary-text)">Pull-up (PMOS)</text>
+  <rect x="40" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="124.363636" text-anchor="middle" font-size="24.645855" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Pull-up (PMOS)</text>
   <rect x="80" y="156" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="150" y="206.618182" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">P1</text>
+  <text x="150" y="206.618182" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">P1</text>
   <rect x="240" y="156" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="310" y="206.618182" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">P2</text>
-  <text x="230" y="287.818182" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)">Pulls node toward VDD</text>
+  <text x="310" y="206.618182" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">P2</text>
+  <text x="230" y="287.818182" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)" font-family="Arial, sans-serif">Pulls node toward VDD</text>
   <rect x="80" y="314.181818" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="150" y="364.8" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">N1</text>
+  <text x="150" y="364.8" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">N1</text>
   <rect x="240" y="314.181818" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="310" y="364.8" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">N2</text>
-  <text x="230" y="446" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)">Pull-down (NMOS)</text>
+  <text x="310" y="364.8" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">N2</text>
+  <text x="230" y="446" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)" font-family="Arial, sans-serif">Pull-down (NMOS)</text>
   <rect x="80" y="472.363636" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="150" y="522.981818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">N3</text>
+  <text x="150" y="522.981818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">N3</text>
   <rect x="240" y="472.363636" width="140" height="84.363636" rx="6.161464" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="310" y="522.981818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)">N4</text>
-  <text x="230" y="598.909091" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)">Access transistors</text>
+  <text x="310" y="522.981818" text-anchor="middle" font-size="22.592034" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">N4</text>
+  <text x="230" y="598.909091" text-anchor="middle" font-size="18.484391" fill="var(--primary-text)" font-family="Arial, sans-serif">Access transistors</text>
 
-  <rect x="440" y="71.636364" width="400" height="548.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--ok-text)">Cross-Coupled Latch</text>
-  <text x="640" y="187.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Two inverters back-to-back</text>
-  <text x="640" y="229.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Holds one bit as long as</text>
-  <text x="640" y="266.727273" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">power stays applied</text>
-  <text x="640" y="330" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Word Line selects row</text>
-  <text x="640" y="372.181818" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">BL / BL_bar read or write</text>
-  <text x="640" y="435.454545" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Differential sensing for</text>
-  <text x="640" y="472.363636" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">fast, noise-immune reads</text>
-  <text x="640" y="535.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">Used for L1, L2, L3 caches</text>
-  <text x="640" y="577.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)">and CPU register files</text>
+  <rect x="440" y="71.636364" width="400" height="548.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Cross-Coupled Latch</text>
+  <text x="640" y="187.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">Two inverters back-to-back</text>
+  <text x="640" y="229.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">Holds one bit as long as</text>
+  <text x="640" y="266.727273" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">power stays applied</text>
+  <text x="640" y="330" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">Word Line selects row</text>
+  <text x="640" y="372.181818" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">BL / BL_bar read or write</text>
+  <text x="640" y="435.454545" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">Differential sensing for</text>
+  <text x="640" y="472.363636" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">fast, noise-immune reads</text>
+  <text x="640" y="535.636364" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">Used for L1, L2, L3 caches</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-size="20.538213" fill="var(--ok-text)" font-family="Arial, sans-serif">and CPU register files</text>
 
-  <rect x="860" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--warn-text)">Tradeoffs</text>
-  <text x="1050" y="198.181818" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">Fast: sub-nanosecond</text>
-  <text x="1050" y="235.090909" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">access latency</text>
-  <text x="1050" y="298.363636" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">No refresh cycle needed</text>
-  <text x="1050" y="335.272727" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">static, not dynamic</text>
-  <text x="1050" y="398.545455" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">Expensive: 6 transistors</text>
-  <text x="1050" y="435.454545" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">per bit vs DRAM's one</text>
-  <text x="1050" y="498.727273" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">Large die area</text>
-  <text x="1050" y="535.636364" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">High leakage power</text>
-  <text x="1050" y="593.636364" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)">Volatile on power-off</text>
+  <rect x="860" y="71.636364" width="380" height="548.363636" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="134.909091" text-anchor="middle" font-size="26.699677" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Tradeoffs</text>
+  <text x="1050" y="198.181818" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">Fast: sub-nanosecond</text>
+  <text x="1050" y="235.090909" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">access latency</text>
+  <text x="1050" y="298.363636" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">No refresh cycle needed</text>
+  <text x="1050" y="335.272727" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">static, not dynamic</text>
+  <text x="1050" y="398.545455" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">Expensive: 6 transistors</text>
+  <text x="1050" y="435.454545" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">per bit vs DRAM's one</text>
+  <text x="1050" y="498.727273" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">Large die area</text>
+  <text x="1050" y="535.636364" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">High leakage power</text>
+  <text x="1050" y="593.636364" text-anchor="middle" font-size="20.538213" fill="var(--warn-text)" font-family="Arial, sans-serif">Volatile on power-off</text>
 </svg>

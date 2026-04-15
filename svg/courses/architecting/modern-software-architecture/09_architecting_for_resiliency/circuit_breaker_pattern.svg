@@ -1,120 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect width="847.1699" height="439.9904" fill="var(--bg)" rx="6" x="40" y="40"/>
-  <rect x="508.192" y="260.995" width="139.913" height="139.913" rx="14" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="0.903" filter="url(#shadow)"/>
-  <text x="578.1485" y="321.7845" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--ok-accent)">CLOSED</text>
-  <text x="578.1485" y="338.284" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text)">Normal operation</text>
-  <text x="578.1485" y="350.5062" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">Requests pass through</text>
-  <rect x="1024.44" y="260.995" width="139.913" height="139.913" rx="14" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="0.903" filter="url(#shadow)"/>
-  <text x="1094.3929" y="321.7845" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)">OPEN</text>
-  <text x="1094.3929" y="338.284" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text)">Circuit tripped</text>
-  <text x="1094.3929" y="350.5062" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">Requests rejected fast</text>
-  <rect x="766.314" y="444.324" width="139.913" height="139.913" rx="14" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="0.903" filter="url(#shadow)"/>
-  <text x="836.2707" y="502.0583" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)">HALF-OPEN</text>
-  <text x="836.2707" y="519.169" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text)">Probing recovery</text>
-  <text x="836.2707" y="531.3911" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">One probe request allowed</text>
+  <rect x="508.192" y="260.995" width="139.913" height="139.913" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="0.903" filter="url(#shadow)"/>
+  <text x="578.1485" y="321.7845" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">CLOSED</text>
+  <text x="578.1485" y="338.284" text-anchor="middle" font-size="15.6319" fill="var(--text)" font-family="Arial, sans-serif">Normal operation</text>
+  <text x="578.1485" y="350.5062" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">Requests pass through</text>
+  <rect x="1024.44" y="260.995" width="139.913" height="139.913" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="0.903" filter="url(#shadow)"/>
+  <text x="1094.3929" y="321.7845" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">OPEN</text>
+  <text x="1094.3929" y="338.284" text-anchor="middle" font-size="15.6319" fill="var(--text)" font-family="Arial, sans-serif">Circuit tripped</text>
+  <text x="1094.3929" y="350.5062" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">Requests rejected fast</text>
+  <rect x="766.314" y="444.324" width="139.913" height="139.913" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="0.903" filter="url(#shadow)"/>
+  <text x="836.2707" y="502.0583" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">HALF-OPEN</text>
+  <text x="836.2707" y="519.169" text-anchor="middle" font-size="15.6319" fill="var(--text)" font-family="Arial, sans-serif">Probing recovery</text>
+  <text x="836.2707" y="531.3911" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">One probe request allowed</text>
   <path d="M 650.9521 312.6181 Q 836.2707 251.5083 1021.5893 312.6181" fill="none" stroke="var(--danger-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
-  <text x="836.2707" y="280.8409" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)">Failure threshold exceeded</text>
-  <text x="836.2707" y="293.0628" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">(e.g. 5 failures in 10 s)</text>
+  <text x="836.2707" y="280.8409" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failure threshold exceeded</text>
+  <text x="836.2707" y="293.0628" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. 5 failures in 10 s)</text>
   <path d="M 1081.1557 396.9496 Q 1061.3003 465.3924 907.7506 502.0583" fill="none" stroke="var(--warn-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
-  <text x="1048.0631" y="459.2816" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)">Timeout expires</text>
-  <text x="1048.0631" y="471.5035" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">(e.g. 30 s cooldown)</text>
+  <text x="1048.0631" y="459.2816" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Timeout expires</text>
+  <text x="1048.0631" y="471.5035" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. 30 s cooldown)</text>
   <path d="M 766.7763 502.0583 Q 664.1893 465.3924 586.0907 398.1718" fill="none" stroke="var(--ok-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
-  <text x="637.7152" y="459.2816" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--ok-accent)">Probe succeeds</text>
-  <text x="637.7152" y="471.5035" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">→ reset &amp; re-close</text>
+  <text x="637.7152" y="459.2816" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Probe succeeds</text>
+  <text x="637.7152" y="471.5035" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">→ reset &amp; re-close</text>
   <path d="M 905.7651 502.0583 Q 1008.352 477.6145 1029.5312 398.1718" fill="none" stroke="var(--danger-border)" stroke-width="0.602" stroke-dasharray="2.107 1.2041" marker-end="url(#arrow)" />
-  <text x="1001.7335" y="502.0583" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)">Probe fails</text>
-  <text x="1001.7335" y="514.2804" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">→ trip again</text>
+  <text x="1001.7335" y="502.0583" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Probe fails</text>
+  <text x="1001.7335" y="514.2804" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">→ trip again</text>
   <rect x="432.5413" y="590.6674" width="807.4587" height="29.3326" rx="6" fill="var(--surface)" />
-  <text x="836.2707" y="602.8896" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" font-weight="bold" fill="var(--text)">Purpose: prevent cascade failures by failing fast instead of queueing requests to a broken service</text>
-  <text x="836.2707" y="615.1114" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.6319" fill="var(--text-muted)">Implementations: Resilience4j (Java) · Polly (.NET) · Hystrix (legacy) · Istio service mesh</text>
+  <text x="836.2707" y="602.8896" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Purpose: prevent cascade failures by failing fast instead of queueing requests to a broken service</text>
+  <text x="836.2707" y="615.1114" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">Implementations: Resilience4j (Java) · Polly (.NET) · Hystrix (legacy) · Istio service mesh</text>
 </svg>

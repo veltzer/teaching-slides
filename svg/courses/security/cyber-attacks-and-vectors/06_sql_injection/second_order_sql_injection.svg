@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,55 +75,52 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,21.1765 6.7879,0" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="621.5385" y="80.4242" font-size="25.8576" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Second-Order SQL Injection</text>
-  <text x="58.4615" y="122.6061" font-size="22.4099" font-weight="bold" fill="var(--text)">Step 1: Register username: admin'--</text>
-  <rect x="58.4615" y="136.6667" width="184.6154" height="63.2727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="150.7692" y="177.091" font-size="20.6861" fill="var(--text)" text-anchor="middle">Attacker</text>
-  <line x1="243.0769" y1="168.3031" x2="272.6154" y2="168.3031" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="276.3077" y="136.6667" width="203.0769" height="63.2727" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="377.8462" y="177.091" font-size="20.6861" fill="var(--text)" text-anchor="middle">Sign Up Form</text>
-  <line x1="479.3846" y1="168.3031" x2="508.923" y2="168.3031" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="512.6153" y="136.6667" width="221.5385" height="63.2727" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="623.3846" y="168.3031" font-size="20.6861" fill="var(--text)" text-anchor="middle">Database</text>
-  <text x="623.3846" y="189.394" font-size="18.9623" fill="var(--ok-accent)" text-anchor="middle">Stored!</text>
-  <text x="58.4615" y="250.9091" font-size="22.4099" font-weight="bold" fill="var(--text)">Step 2: Password reset uses stored username</text>
-  <rect x="58.4615" y="264.9698" width="184.6154" height="63.2727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="150.7692" y="305.3939" font-size="20.6861" fill="var(--text)" text-anchor="middle">Attacker</text>
-  <line x1="243.0769" y1="296.6061" x2="272.6154" y2="296.6061" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="276.3077" y="264.9698" width="203.0769" height="63.2727" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="377.8462" y="296.6061" font-size="20.6861" fill="var(--text)" text-anchor="middle">Reset Password</text>
-  <text x="377.8462" y="317.697" font-size="18.9623" fill="var(--text-faint)" text-anchor="middle">uses stored name</text>
-  <line x1="479.3846" y1="296.6061" x2="508.923" y2="296.6061" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="512.6153" y="264.9698" width="221.5385" height="63.2727" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="623.3846" y="296.6061" font-size="20.6861" fill="var(--danger-accent)" text-anchor="middle">Database</text>
-  <text x="623.3846" y="317.697" font-size="18.9623" fill="var(--danger-accent)" text-anchor="middle">Injection!</text>
-  <rect x="58.4615" y="373.9395" width="1144.6154" height="98.4243" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="76.9231" y="409.091" font-size="22.4099" fill="var(--text)" font-family="monospace">UPDATE users SET password='newpass'</text>
-  <text x="76.9231" y="440.7273" font-size="22.4099" fill="var(--text)" font-family="monospace">WHERE username='admin'--'</text>
-  <rect x="58.4615" y="496.9697" width="1144.6154" height="105.4546" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="621.5385" y="537.394" font-size="22.4099" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">⚠ Resets ADMIN's password — not the attacker's!</text>
-  <text x="621.5385" y="576.0607" font-size="20.6861" fill="var(--text-muted)" text-anchor="middle">The -- comment causes the closing quote to be ignored, modifying a different row.</text>
+  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="621.5385" y="80.4242" font-size="25.8576" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Second-Order SQL Injection</text>
+  <text x="58.4615" y="122.6061" font-size="22.4099" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 1: Register username: admin'--</text>
+  <rect x="58.4615" y="136.6667" width="184.6154" height="63.2727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="150.7692" y="177.091" font-size="20.6861" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Attacker</text>
+  <line x1="243.0769" y1="168.3031" x2="272.6154" y2="168.3031" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="276.3077" y="136.6667" width="203.0769" height="63.2727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="377.8462" y="177.091" font-size="20.6861" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Sign Up Form</text>
+  <line x1="479.3846" y1="168.3031" x2="508.923" y2="168.3031" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="512.6153" y="136.6667" width="221.5385" height="63.2727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="623.3846" y="168.3031" font-size="20.6861" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Database</text>
+  <text x="623.3846" y="189.394" font-size="18.9623" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Stored!</text>
+  <text x="58.4615" y="250.9091" font-size="22.4099" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 2: Password reset uses stored username</text>
+  <rect x="58.4615" y="264.9698" width="184.6154" height="63.2727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="150.7692" y="305.3939" font-size="20.6861" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Attacker</text>
+  <line x1="243.0769" y1="296.6061" x2="272.6154" y2="296.6061" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="276.3077" y="264.9698" width="203.0769" height="63.2727" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="377.8462" y="296.6061" font-size="20.6861" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Reset Password</text>
+  <text x="377.8462" y="317.697" font-size="18.9623" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">uses stored name</text>
+  <line x1="479.3846" y1="296.6061" x2="508.923" y2="296.6061" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="512.6153" y="264.9698" width="221.5385" height="63.2727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="623.3846" y="296.6061" font-size="20.6861" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Database</text>
+  <text x="623.3846" y="317.697" font-size="18.9623" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Injection!</text>
+  <rect x="58.4615" y="373.9395" width="1144.6154" height="98.4243" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="76.9231" y="409.091" font-size="22.4099" fill="var(--text)" font-family="Courier New, monospace">UPDATE users SET password='newpass'</text>
+  <text x="76.9231" y="440.7273" font-size="22.4099" fill="var(--text)" font-family="Courier New, monospace">WHERE username='admin'--'</text>
+  <rect x="58.4615" y="496.9697" width="1144.6154" height="105.4546" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="621.5385" y="537.394" font-size="22.4099" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">⚠ Resets ADMIN's password — not the attacker's!</text>
+  <text x="621.5385" y="576.0607" font-size="20.6861" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">The -- comment causes the closing quote to be ignored, modifying a different row.</text>
 </svg>

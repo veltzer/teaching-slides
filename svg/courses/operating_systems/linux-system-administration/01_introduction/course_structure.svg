@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,46 +97,43 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="40" width="208.264463" height="580" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="9.560247" />
-  <rect x="40" y="40" width="208.264463" height="96.666467" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="117.333269" width="208.264463" height="19.333436" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="144.132231" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Core System</text>
-  <text x="144.132231" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Boot process</text>
-  <text x="144.132231" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">systemd</text>
-  <text x="144.132231" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Filesystem</text>
-  <text x="144.132231" y="358.999796" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Device Mapper</text>
+  <rect x="40" y="40" width="208.264463" height="96.666467" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="117.333269" width="208.264463" height="19.333436" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="144.132231" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Core System</text>
+  <text x="144.132231" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Boot process</text>
+  <text x="144.132231" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">systemd</text>
+  <text x="144.132231" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Filesystem</text>
+  <text x="144.132231" y="358.999796" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Device Mapper</text>
   <rect x="276.033058" y="40" width="208.264463" height="580" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="9.560247" />
-  <rect x="276.033058" y="40" width="208.264463" height="96.666467" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="276.033058" y="117.333269" width="208.264463" height="19.333436" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="380.165289" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Storage</text>
-  <text x="380.165289" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">LVM / RAID</text>
-  <text x="380.165289" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Backup strategies</text>
-  <text x="380.165289" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Multipath I/O</text>
+  <rect x="276.033058" y="40" width="208.264463" height="96.666467" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="276.033058" y="117.333269" width="208.264463" height="19.333436" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380.165289" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Storage</text>
+  <text x="380.165289" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">LVM / RAID</text>
+  <text x="380.165289" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Backup strategies</text>
+  <text x="380.165289" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Multipath I/O</text>
   <rect x="512.066116" y="40" width="208.264463" height="580" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="9.560247" />
-  <rect x="512.066116" y="40" width="208.264463" height="96.666467" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="512.066116" y="117.333269" width="208.264463" height="19.333436" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="616.198347" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Security</text>
-  <text x="616.198347" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">PAM</text>
-  <text x="616.198347" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">LDAP / NSS</text>
-  <text x="616.198347" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">User management</text>
+  <rect x="512.066116" y="40" width="208.264463" height="96.666467" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="512.066116" y="117.333269" width="208.264463" height="19.333436" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="616.198347" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Security</text>
+  <text x="616.198347" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">PAM</text>
+  <text x="616.198347" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">LDAP / NSS</text>
+  <text x="616.198347" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">User management</text>
   <rect x="748.099174" y="40" width="208.264463" height="580" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="9.560247" />
-  <rect x="748.099174" y="40" width="208.264463" height="96.666467" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="748.099174" y="117.333269" width="208.264463" height="19.333436" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="852.231405" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Networking</text>
-  <text x="852.231405" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Namespaces</text>
-  <text x="852.231405" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">PXE boot</text>
-  <text x="852.231405" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Traffic shaping</text>
+  <rect x="748.099174" y="40" width="208.264463" height="96.666467" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="748.099174" y="117.333269" width="208.264463" height="19.333436" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="852.231405" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Networking</text>
+  <text x="852.231405" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Namespaces</text>
+  <text x="852.231405" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">PXE boot</text>
+  <text x="852.231405" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Traffic shaping</text>
   <rect x="984.132231" y="40" width="255.867769" height="580" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="9.560247" />
-  <rect x="984.132231" y="40" width="255.867769" height="96.666467" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="984.132231" y="117.333269" width="255.867769" height="19.333436" fill="var(--primary-fill)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1112.066116" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="sans-serif">Monitoring</text>
-  <text x="1112.066116" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Prometheus / Grafana</text>
-  <text x="1112.066116" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Change management</text>
-  <text x="1112.066116" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="sans-serif">Maintenance</text>
+  <rect x="984.132231" y="40" width="255.867769" height="96.666467" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="984.132231" y="117.333269" width="255.867769" height="19.333436" fill="url(#grad-primary)" rx="9.560247" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1112.066116" y="101.866712" text-anchor="middle" font-size="24.924362" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Monitoring</text>
+  <text x="1112.066116" y="213.999976" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Prometheus / Grafana</text>
+  <text x="1112.066116" y="262.333329" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Change management</text>
+  <text x="1112.066116" y="310.666682" text-anchor="middle" font-size="19.385474" fill="var(--text)" font-family="Arial, sans-serif">Maintenance</text>
   <line x1="248.264463" y1="329.99988" x2="276.033058" y2="329.99988" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="484.297521" y1="329.99988" x2="512.066116" y2="329.99988" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <line x1="720.330473" y1="329.99988" x2="748.099174" y2="329.99988" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />

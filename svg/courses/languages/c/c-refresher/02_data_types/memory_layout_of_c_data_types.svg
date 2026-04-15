@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,52 +97,49 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="40" y="40" font-size="16.275901" font-weight="bold" fill="var(--text-muted)">Address</text>
-  <text x="40" y="86.80707" font-size="13.224257" fill="var(--text-faint)">0x1000</text>
+  <text x="40" y="40" font-size="16.275901" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Address</text>
+  <text x="40" y="86.80707" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1000</text>
   <rect x="162.033898" y="68.491282" width="91.525424" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="207.79661" y="92.912291" text-anchor="middle" font-size="14.241355" fill="var(--text)">char</text>
-  <text x="268.813451" y="92.912291" font-size="13.224257" fill="var(--text-muted)">1 byte</text>
-  <text x="40" y="133.614141" font-size="13.224257" fill="var(--text-faint)">0x1002</text>
+  <text x="207.79661" y="92.912291" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">char</text>
+  <text x="268.813451" y="92.912291" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">1 byte</text>
+  <text x="40" y="133.614141" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1002</text>
   <rect x="162.033898" y="115.298352" width="183.050847" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="253.559322" y="139.719361" text-anchor="middle" font-size="14.241355" fill="var(--text)">short</text>
-  <text x="360.338875" y="139.719361" font-size="13.224257" fill="var(--text-muted)">2 bytes</text>
-  <text x="40" y="180.421085" font-size="13.224257" fill="var(--text-faint)">0x1004</text>
+  <text x="253.559322" y="139.719361" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">short</text>
+  <text x="360.338875" y="139.719361" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">2 bytes</text>
+  <text x="40" y="180.421085" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1004</text>
   <rect x="162.033898" y="162.105296" width="325.42362" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="324.745763" y="186.526305" text-anchor="middle" font-size="14.241355" fill="var(--text)">int</text>
-  <text x="502.711864" y="186.526305" font-size="13.224257" fill="var(--text-muted)">4 bytes</text>
-  <text x="40" y="227.228155" font-size="13.224257" fill="var(--text-faint)">0x1008</text>
+  <text x="324.745763" y="186.526305" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">int</text>
+  <text x="502.711864" y="186.526305" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">4 bytes</text>
+  <text x="40" y="227.228155" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1008</text>
   <rect x="162.033898" y="208.912367" width="569.491525" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="446.779661" y="233.333375" text-anchor="middle" font-size="14.241355" fill="var(--text)">long (64-bit)</text>
-  <text x="746.779661" y="233.333375" font-size="13.224257" fill="var(--text-muted)">8 bytes</text>
-  <text x="40" y="274.035225" font-size="13.224257" fill="var(--text-faint)">0x1010</text>
+  <text x="446.779661" y="233.333375" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">long (64-bit)</text>
+  <text x="746.779661" y="233.333375" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">8 bytes</text>
+  <text x="40" y="274.035225" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1010</text>
   <rect x="162.033898" y="255.719437" width="325.42362" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="324.745763" y="280.140446" text-anchor="middle" font-size="14.241355" fill="var(--text)">float</text>
-  <text x="502.711864" y="280.140446" font-size="13.224257" fill="var(--text-muted)">4 bytes</text>
-  <text x="40" y="320.842043" font-size="13.224257" fill="var(--text-faint)">0x1014</text>
+  <text x="324.745763" y="280.140446" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">float</text>
+  <text x="502.711864" y="280.140446" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">4 bytes</text>
+  <text x="40" y="320.842043" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x1014</text>
   <rect x="162.033898" y="302.526255" width="569.491525" height="36.631576" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="446.779661" y="326.94739" text-anchor="middle" font-size="14.241355" fill="var(--text)">double</text>
-  <text x="746.779661" y="326.94739" font-size="13.224257" fill="var(--text-muted)">8 bytes</text>
-  <text x="40" y="367.649113" font-size="13.224257" fill="var(--text-faint)">0x101C</text>
-  <rect x="162.033898" y="349.333325" width="569.491525" height="36.631576" rx="7.023346" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="446.779661" y="373.75446" text-anchor="middle" font-size="14.241355" fill="var(--text)">pointer (void *)</text>
-  <text x="746.779661" y="373.75446" font-size="13.224257" fill="var(--text-muted)">8 bytes (64-bit)</text>
-  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.023346" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640" y="451.08776" text-anchor="middle" font-size="19.327662" font-weight="bold" fill="var(--text)">Struct Padding Example</text>
-  <text x="70.508475" y="481.614115" font-size="14.241355" fill="var(--text-muted)">struct { char a; int b; char c; }</text>
+  <text x="446.779661" y="326.94739" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">double</text>
+  <text x="746.779661" y="326.94739" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">8 bytes</text>
+  <text x="40" y="367.649113" font-size="13.224257" fill="var(--text-faint)" font-family="Arial, sans-serif">0x101C</text>
+  <rect x="162.033898" y="349.333325" width="569.491525" height="36.631576" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="446.779661" y="373.75446" text-anchor="middle" font-size="14.241355" fill="var(--text)" font-family="Arial, sans-serif">pointer (void *)</text>
+  <text x="746.779661" y="373.75446" font-size="13.224257" fill="var(--text-muted)" font-family="Arial, sans-serif">8 bytes (64-bit)</text>
+  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.023346" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="451.08776" text-anchor="middle" font-size="19.327662" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Struct Padding Example</text>
+  <text x="70.508475" y="481.614115" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">struct { char a; int b; char c; }</text>
   <rect x="70.508475" y="495.85963" width="76.271186" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="108.135593" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)">a (1B)</text>
-  <rect x="149.830508" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
-  <text x="234.237288" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)">pad (3B)</text>
+  <text x="108.135593" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">a (1B)</text>
+  <rect x="149.830508" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
+  <text x="234.237288" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)" font-family="Arial, sans-serif">pad (3B)</text>
   <rect x="320.677966" y="495.85963" width="213.559322" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="427.457627" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)">b (4B)</text>
+  <text x="427.457627" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">b (4B)</text>
   <rect x="537.288136" y="495.85963" width="76.271186" height="32.561303" rx="7.023346" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="575.932203" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)">c (1B)</text>
-  <rect x="616.610061" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
-  <text x="701.016949" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)">pad (3B)</text>
-  <text x="802.711864" y="517.228092" font-size="14.241355" fill="var(--text-muted)">Total: 12 bytes (not 6!)</text>
-  <text x="70.508475" y="594.561518" font-size="14.241355" fill="var(--text-muted)">Alignment: each field aligned to its size boundary. Use __attribute__((packed)) to disable.</text>
+  <text x="575.932203" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--text)" font-family="Arial, sans-serif">c (1B)</text>
+  <rect x="616.610061" y="495.85963" width="167.79661" height="32.561303" rx="7.023346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="4.4444 2.6667" filter="url(#shadow)"/>
+  <text x="701.016949" y="517.228092" text-anchor="middle" font-size="13.224257" fill="var(--danger-accent)" font-family="Arial, sans-serif">pad (3B)</text>
+  <text x="802.711864" y="517.228092" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">Total: 12 bytes (not 6!)</text>
+  <text x="70.508475" y="594.561518" font-size="14.241355" fill="var(--text-muted)" font-family="Arial, sans-serif">Alignment: each field aligned to its size boundary. Use __attribute__((packed)) to disable.</text>
 </svg>

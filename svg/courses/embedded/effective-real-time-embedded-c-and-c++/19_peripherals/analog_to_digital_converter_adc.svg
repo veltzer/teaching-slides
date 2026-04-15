@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,23 +97,20 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
-  <text x="290.87108" y="40" text-anchor="middle" font-family="sans-serif" font-size="18.662375" fill="var(--text-muted)">Analog Signal (continuous)</text>
+  <text x="290.87108" y="40" text-anchor="middle" font-size="18.662375" fill="var(--text-muted)" font-family="Arial, sans-serif">Analog Signal (continuous)</text>
   <path d="M 40 393.758877 Q 123.623693 188.085117 207.247387 332.05666 T 374.494774 208.65248 T 541.74216 352.624151" stroke="var(--primary-border)" stroke-width="2.6667" fill="none" />
   <line x1="40" y1="393.758877" x2="562.648084" y2="393.758877" stroke="var(--border)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="40" y1="404.042622" x2="40" y2="85.248174" stroke="var(--border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <text x="573.101045" y="398.90075" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">t</text>
-  <text x="44.181185" y="80.106428" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">V</text>
-  <rect x="583.554007" y="167.517754" width="209.059233" height="185.106397" rx="7.158335" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="688.083512" y="258.014101" text-anchor="middle" font-family="sans-serif" font-size="26.956738" font-weight="bold" fill="var(--bg)">ADC</text>
-  <text x="688.083512" y="288.86521" text-anchor="middle" font-family="sans-serif" font-size="16.588725" fill="var(--primary-accent)">sample &amp; hold</text>
-  <text x="688.083512" y="313.54602" text-anchor="middle" font-family="sans-serif" font-size="16.588725" fill="var(--primary-accent)">quantize</text>
+  <text x="573.101045" y="398.90075" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">t</text>
+  <text x="44.181185" y="80.106428" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">V</text>
+  <rect x="583.554007" y="167.517754" width="209.059233" height="185.106397" rx="7.158335" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="688.083512" y="258.014101" text-anchor="middle" font-size="26.956738" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">ADC</text>
+  <text x="688.083512" y="288.86521" text-anchor="middle" font-size="16.588725" fill="var(--primary-accent)" font-family="Arial, sans-serif">sample &amp; hold</text>
+  <text x="688.083512" y="313.54602" text-anchor="middle" font-size="16.588725" fill="var(--primary-accent)" font-family="Arial, sans-serif">quantize</text>
   <line x1="541.74216" y1="260.070952" x2="581.463415" y2="260.070952" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
   <line x1="794.703833" y1="260.070952" x2="834.425087" y2="260.070952" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="1001.672474" y="40" text-anchor="middle" font-family="sans-serif" font-size="18.662375" fill="var(--text-muted)">Digital Values (discrete)</text>
+  <text x="1001.672474" y="40" text-anchor="middle" font-size="18.662375" fill="var(--text-muted)" font-family="Arial, sans-serif">Digital Values (discrete)</text>
   <rect x="839.651456" y="311.489424" width="29.268293" height="82.269453" rx="7.158335" fill="var(--primary-accent)" />
   <rect x="886.689784" y="270.35457" width="29.268293" height="123.404307" rx="7.158335" fill="var(--primary-accent)" />
   <rect x="933.728111" y="301.205679" width="29.268293" height="92.553198" rx="7.158335" fill="var(--primary-accent)" />
@@ -124,18 +121,18 @@
   <rect x="1168.919749" y="290.922061" width="29.268293" height="102.836944" rx="7.158335" fill="var(--primary-accent)" />
   <line x1="834.425087" y1="404.042622" x2="1231.637631" y2="404.042622" stroke="var(--border)" stroke-width="1.3333" marker-end="url(#arrow)" />
   <line x1="834.425087" y1="404.042622" x2="834.425087" y2="85.248174" stroke="var(--border)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <text x="1240" y="409.184368" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">n</text>
-  <text x="838.60616" y="80.106428" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">bits</text>
+  <text x="1240" y="409.184368" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">n</text>
+  <text x="838.60616" y="80.106428" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">bits</text>
   <rect x="186.341463" y="476.028458" width="919.860627" height="143.971542" rx="7.158335" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="646.271777" y="506.879566" text-anchor="middle" font-family="sans-serif" font-size="18.662375" font-weight="bold" fill="var(--text)">Key ADC Parameters</text>
+  <text x="646.271777" y="506.879566" text-anchor="middle" font-size="18.662375" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key ADC Parameters</text>
   <line x1="207.247387" y1="517.163056" x2="1085.296167" y2="517.163056" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="332.682927" y="543.900845" text-anchor="middle" font-family="sans-serif" font-size="16.588725" fill="var(--text-muted)" font-weight="bold">Resolution</text>
-  <text x="667.1777" y="543.900845" text-anchor="middle" font-family="sans-serif" font-size="16.588725" fill="var(--text-muted)" font-weight="bold">Sample Rate</text>
-  <text x="980.766439" y="543.900845" text-anchor="middle" font-family="sans-serif" font-size="16.588725" fill="var(--text-muted)" font-weight="bold">Reference</text>
-  <text x="332.682927" y="570.638379" text-anchor="middle" font-family="monospace" font-size="16.588725" fill="var(--primary-accent)">8 / 10 / 12 / 16 bit</text>
-  <text x="667.1777" y="570.638379" text-anchor="middle" font-family="monospace" font-size="16.588725" fill="var(--text-muted)">kSPS – MSPS</text>
-  <text x="980.766439" y="570.638379" text-anchor="middle" font-family="monospace" font-size="16.588725" fill="var(--text-muted)">VREF+ / VREF-</text>
-  <text x="332.682927" y="595.31919" text-anchor="middle" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">2ⁿ distinct levels</text>
-  <text x="667.1777" y="595.31919" text-anchor="middle" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">Nyquist: fs &gt; 2 × fsignal</text>
-  <text x="980.766439" y="595.31919" text-anchor="middle" font-family="sans-serif" font-size="14.515075" fill="var(--text-faint)">sets full-scale voltage</text>
+  <text x="332.682927" y="543.900845" text-anchor="middle" font-size="16.588725" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Resolution</text>
+  <text x="667.1777" y="543.900845" text-anchor="middle" font-size="16.588725" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Sample Rate</text>
+  <text x="980.766439" y="543.900845" text-anchor="middle" font-size="16.588725" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Reference</text>
+  <text x="332.682927" y="570.638379" text-anchor="middle" font-size="16.588725" fill="var(--primary-accent)" font-family="Courier New, monospace">8 / 10 / 12 / 16 bit</text>
+  <text x="667.1777" y="570.638379" text-anchor="middle" font-size="16.588725" fill="var(--text-muted)" font-family="Courier New, monospace">kSPS – MSPS</text>
+  <text x="980.766439" y="570.638379" text-anchor="middle" font-size="16.588725" fill="var(--text-muted)" font-family="Courier New, monospace">VREF+ / VREF-</text>
+  <text x="332.682927" y="595.31919" text-anchor="middle" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">2ⁿ distinct levels</text>
+  <text x="667.1777" y="595.31919" text-anchor="middle" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">Nyquist: fs &gt; 2 × fsignal</text>
+  <text x="980.766439" y="595.31919" text-anchor="middle" font-size="14.515075" fill="var(--text-faint)" font-family="Arial, sans-serif">sets full-scale voltage</text>
 </svg>

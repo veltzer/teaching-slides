@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,94 +97,91 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="40" y="49.354659" width="165.853659" height="112.258113" rx="6.595901" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="122.926829" y="79.290287" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--text)" text-anchor="middle">Wordlist</text>
-  <text x="122.926829" y="97.999954" font-family="monospace" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">password</text>
-  <text x="122.926829" y="114.838665" font-family="monospace" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">123456</text>
-  <text x="122.926829" y="131.677376" font-family="monospace" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">admin</text>
-  <text x="122.926829" y="148.516087" font-family="monospace" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">rockyou.txt</text>
+  <text x="122.926829" y="79.290287" font-size="13.374618" font-weight="bold" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Wordlist</text>
+  <text x="122.926829" y="97.999954" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">password</text>
+  <text x="122.926829" y="114.838665" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">123456</text>
+  <text x="122.926829" y="131.677376" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">admin</text>
+  <text x="122.926829" y="148.516087" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">rockyou.txt</text>
   <line x1="205.853659" y1="105.483774" x2="264.390244" y2="105.483774" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="264.390244" y="49.354659" width="195.121951" height="112.258113" rx="6.595901" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="264.390244" y="49.354659" width="195.121951" height="112.258113" rx="6.595901" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="264.390244" y="49.354659" width="195.121951" height="33.677422" rx="6.595901" fill="var(--danger-accent)" />
   <rect x="264.390244" y="71.806351" width="195.121951" height="11.225846" fill="var(--danger-accent)" rx="6.595901"/>
-  <text x="361.95122" y="71.806351" font-family="Arial,sans-serif" font-size="14.330034" font-weight="bold" fill="var(--bg)" text-anchor="middle">Attack Tool</text>
-  <text x="361.95122" y="101.741864" font-family="Arial,sans-serif" font-size="12.419421" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Hydra</text>
-  <text x="361.95122" y="120.45153" font-family="Arial,sans-serif" font-size="12.419421" fill="var(--text-muted)" text-anchor="middle">Burp Intruder</text>
-  <text x="361.95122" y="137.290241" font-family="Arial,sans-serif" font-size="12.419421" fill="var(--text-muted)" text-anchor="middle">Medusa / wfuzz</text>
-  <text x="361.95122" y="154.128952" font-family="Arial,sans-serif" font-size="10.993168" fill="var(--text-faint)" text-anchor="middle">parallel threading</text>
+  <text x="361.95122" y="71.806351" font-size="14.330034" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Attack Tool</text>
+  <text x="361.95122" y="101.741864" font-size="12.419421" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Hydra</text>
+  <text x="361.95122" y="120.45153" font-size="12.419421" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Burp Intruder</text>
+  <text x="361.95122" y="137.290241" font-size="12.419421" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Medusa / wfuzz</text>
+  <text x="361.95122" y="154.128952" font-size="10.993168" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">parallel threading</text>
   <line x1="459.512195" y1="105.483774" x2="518.04878" y2="105.483774" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="488.780488" y="96.128999" font-family="Arial,sans-serif" font-size="10.993168" fill="var(--danger-accent)" text-anchor="middle">HTTP POST</text>
-  <text x="488.780488" y="114.838665" font-family="Arial,sans-serif" font-size="10.993168" fill="var(--danger-accent)" text-anchor="middle">requests</text>
-  <rect x="518.04878" y="49.354659" width="214.634146" height="112.258113" rx="6.595901" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="518.04878" y="49.354659" width="214.634146" height="33.677422" rx="6.595901" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="518.04878" y="71.806351" width="214.634146" height="11.225846" fill="var(--primary-fill)" rx="6.595901" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="625.365854" y="71.806351" font-family="Arial,sans-serif" font-size="14.330034" font-weight="bold" fill="var(--bg)" text-anchor="middle">Login Form</text>
-  <text x="625.365854" y="103.612819" font-family="monospace" font-size="11.464115" fill="var(--text)" text-anchor="middle">POST /login HTTP/1.1</text>
-  <text x="625.365854" y="120.45153" font-family="monospace" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle">username=admin</text>
-  <text x="625.365854" y="137.290241" font-family="monospace" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle">password=§FUZZ§</text>
-  <text x="625.365854" y="154.128952" font-family="monospace" font-size="10.993168" fill="var(--text-faint)" text-anchor="middle">Content-Type: application/x-www-form...</text>
+  <text x="488.780488" y="96.128999" font-size="10.993168" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">HTTP POST</text>
+  <text x="488.780488" y="114.838665" font-size="10.993168" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">requests</text>
+  <rect x="518.04878" y="49.354659" width="214.634146" height="112.258113" rx="6.595901" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="518.04878" y="49.354659" width="214.634146" height="33.677422" rx="6.595901" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="518.04878" y="71.806351" width="214.634146" height="11.225846" fill="url(#grad-primary)" rx="6.595901" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="625.365854" y="71.806351" font-size="14.330034" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Login Form</text>
+  <text x="625.365854" y="103.612819" font-size="11.464115" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">POST /login HTTP/1.1</text>
+  <text x="625.365854" y="120.45153" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">username=admin</text>
+  <text x="625.365854" y="137.290241" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle" font-family="Courier New, monospace">password=§FUZZ§</text>
+  <text x="625.365854" y="154.128952" font-size="10.993168" fill="var(--text-faint)" text-anchor="middle" font-family="Courier New, monospace">Content-Type: application/x-www-form...</text>
   <line x1="732.682927" y1="86.774107" x2="791.219512" y2="68.064441" stroke="var(--ok-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <line x1="732.682927" y1="124.193556" x2="791.219512" y2="142.903106" stroke="var(--danger-border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="791.219512" y="40" width="195.121951" height="65.48389" rx="6.595901" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="888.780488" y="64.322531" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">HTTP 302 / 200</text>
-  <text x="888.780488" y="83.032081" font-family="Arial,sans-serif" font-size="12.419421" fill="var(--text)" text-anchor="middle">Login successful!</text>
-  <text x="888.780488" y="98.935489" font-family="Arial,sans-serif" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">session cookie set</text>
-  <rect x="791.219512" y="114.838665" width="195.121951" height="65.48389" rx="6.595901" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="888.780488" y="139.161196" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">HTTP 200 (error)</text>
-  <text x="888.780488" y="157.870978" font-family="Arial,sans-serif" font-size="12.419421" fill="var(--text)" text-anchor="middle">Invalid credentials</text>
-  <text x="888.780488" y="173.774154" font-family="Arial,sans-serif" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle">→ try next password</text>
-  <rect x="791.219512" y="189.677329" width="195.121951" height="56.128999" rx="6.595901" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="888.780488" y="212.128906" font-family="Arial,sans-serif" font-size="12.419421" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">HTTP 429 / 403</text>
-  <text x="888.780488" y="230.838688" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle">Account locked / rate limited</text>
+  <rect x="791.219512" y="40" width="195.121951" height="65.48389" rx="6.595901" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.780488" y="64.322531" font-size="13.374618" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">HTTP 302 / 200</text>
+  <text x="888.780488" y="83.032081" font-size="12.419421" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Login successful!</text>
+  <text x="888.780488" y="98.935489" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">session cookie set</text>
+  <rect x="791.219512" y="114.838665" width="195.121951" height="65.48389" rx="6.595901" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.780488" y="139.161196" font-size="13.374618" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">HTTP 200 (error)</text>
+  <text x="888.780488" y="157.870978" font-size="12.419421" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Invalid credentials</text>
+  <text x="888.780488" y="173.774154" font-size="10.993168" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">→ try next password</text>
+  <rect x="791.219512" y="189.677329" width="195.121951" height="56.128999" rx="6.595901" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.780488" y="212.128906" font-size="12.419421" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">HTTP 429 / 403</text>
+  <text x="888.780488" y="230.838688" font-size="11.464115" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Account locked / rate limited</text>
   <line x1="732.682927" y1="161.612772" x2="791.219512" y2="213.064441" stroke="var(--warn-border)" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
   <rect x="1005.853659" y="40" width="234.146341" height="84.193556" rx="6.595901" fill="var(--text)" />
-  <text x="1122.926725" y="60.580505" font-family="Arial,sans-serif" font-size="11.464115" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Hydra example:</text>
-  <text x="1015.609756" y="79.290287" font-family="monospace" font-size="10.993168" fill="var(--ok-accent)">hydra -l admin \</text>
-  <text x="1015.609756" y="93.322508" font-family="monospace" font-size="10.993168" fill="var(--ok-accent)">  -P rockyou.txt \</text>
-  <text x="1015.609756" y="107.354845" font-family="monospace" font-size="10.993168" fill="var(--ok-accent)">  http-post-form \</text>
-  <text x="1015.609756" y="121.387065" font-family="monospace" font-size="10.993168" fill="var(--ok-accent)">  "/login:u=^U^&amp;p=^P^:Invalid"</text>
+  <text x="1122.926725" y="60.580505" font-size="11.464115" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Hydra example:</text>
+  <text x="1015.609756" y="79.290287" font-size="10.993168" fill="var(--ok-accent)" font-family="Courier New, monospace">hydra -l admin \</text>
+  <text x="1015.609756" y="93.322508" font-size="10.993168" fill="var(--ok-accent)" font-family="Courier New, monospace">  -P rockyou.txt \</text>
+  <text x="1015.609756" y="107.354845" font-size="10.993168" fill="var(--ok-accent)" font-family="Courier New, monospace">  http-post-form \</text>
+  <text x="1015.609756" y="121.387065" font-size="10.993168" fill="var(--ok-accent)" font-family="Courier New, monospace">  "/login:u=^U^&amp;p=^P^:Invalid"</text>
   <rect x="40" y="283.225776" width="1190.243798" height="336.774224" rx="6.595901" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="635.121951" y="311.290218" font-family="Arial,sans-serif" font-size="16.240756" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Defense Mechanisms</text>
-  <rect x="59.512195" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="186.341463" y="351.516157" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Account Lockout</text>
-  <text x="79.02439" y="373.032197" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Lock after N failed attempts</text>
-  <text x="79.02439" y="391.741864" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Require CAPTCHA after 3 fails</text>
-  <text x="79.02439" y="410.451646" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Progressive delays (1s, 2s, 4s...)</text>
-  <text x="79.02439" y="432.903222" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--danger-accent)">Risk: DoS via deliberate lockouts</text>
-  <text x="79.02439" y="449.741933" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">→ Use soft lock + alert</text>
-  <rect x="332.682927" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="459.512195" y="351.516157" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Rate Limiting</text>
-  <text x="352.195122" y="373.032197" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Limit by IP: 10 req/min</text>
-  <text x="352.195122" y="391.741864" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Return 429 Too Many Requests</text>
-  <text x="352.195122" y="410.451646" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Retry-After header</text>
-  <text x="352.195122" y="429.161196" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">Nginx: limit_req_zone</text>
-  <text x="352.195122" y="447.870862" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--danger-accent)">Bypass: rotate IPs, slow scan</text>
-  <rect x="605.853659" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="732.682927" y="351.516157" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Multi-Factor Auth</text>
-  <text x="625.365854" y="373.032197" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• TOTP (Google Authenticator)</text>
-  <text x="625.365854" y="391.741864" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Hardware key (YubiKey)</text>
-  <text x="625.365854" y="410.451646" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• SMS OTP (weaker, SIM-swap risk)</text>
-  <text x="625.365854" y="429.161196" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Push notifications</text>
-  <text x="625.365854" y="447.870862" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--ok-accent)">Most effective single control</text>
-  <rect x="879.02439" y="328.128929" width="321.95122" height="130.967663" rx="6.595901" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="1040" y="351.516157" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Detection &amp; Monitoring</text>
-  <text x="898.536585" y="373.032197" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Alert on: X failures from same IP</text>
-  <text x="898.536585" y="391.741864" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Alert on: sequential username scan</text>
-  <text x="898.536585" y="410.451646" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Log all failed login attempts</text>
-  <text x="898.536585" y="429.161196" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">• Geo-anomaly detection</text>
-  <text x="898.536585" y="447.870862" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">SIEM / Splunk / Wazuh</text>
-  <rect x="59.512195" y="479.677329" width="1151.219512" height="112.258113" rx="6.595901" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="635.121951" y="503.064557" font-family="Arial,sans-serif" font-size="13.374618" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Common Bypass Techniques (know to defend)</text>
-  <text x="79.02439" y="524.580598" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">IP rotation:</text>
-  <text x="171.707317" y="524.580598" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">Use proxies / Tor to avoid per-IP lockouts</text>
-  <text x="79.02439" y="543.290264" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">Password spraying:</text>
-  <text x="200.97561" y="543.290264" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">Try 1 password across many accounts (avoids lockout per-user)</text>
-  <text x="79.02439" y="562.000046" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">Credential stuffing:</text>
-  <text x="200.97561" y="562.000046" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">Use leaked username:password pairs from other breaches</text>
-  <text x="79.02439" y="580.709597" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text)">Slow scan:</text>
-  <text x="152.195122" y="580.709597" font-family="Arial,sans-serif" font-size="11.464115" fill="var(--text-muted)">1 attempt per minute stays below rate-limit threshold</text>
+  <text x="635.121951" y="311.290218" font-size="16.240756" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Defense Mechanisms</text>
+  <rect x="59.512195" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="186.341463" y="351.516157" font-size="13.374618" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">Account Lockout</text>
+  <text x="79.02439" y="373.032197" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Lock after N failed attempts</text>
+  <text x="79.02439" y="391.741864" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Require CAPTCHA after 3 fails</text>
+  <text x="79.02439" y="410.451646" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Progressive delays (1s, 2s, 4s...)</text>
+  <text x="79.02439" y="432.903222" font-size="11.464115" fill="var(--danger-accent)" font-family="Arial, sans-serif">Risk: DoS via deliberate lockouts</text>
+  <text x="79.02439" y="449.741933" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">→ Use soft lock + alert</text>
+  <rect x="332.682927" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="459.512195" y="351.516157" font-size="13.374618" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">Rate Limiting</text>
+  <text x="352.195122" y="373.032197" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Limit by IP: 10 req/min</text>
+  <text x="352.195122" y="391.741864" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Return 429 Too Many Requests</text>
+  <text x="352.195122" y="410.451646" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Retry-After header</text>
+  <text x="352.195122" y="429.161196" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">Nginx: limit_req_zone</text>
+  <text x="352.195122" y="447.870862" font-size="11.464115" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bypass: rotate IPs, slow scan</text>
+  <rect x="605.853659" y="328.128929" width="253.658537" height="130.967663" rx="6.595901" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="732.682927" y="351.516157" font-size="13.374618" font-weight="bold" fill="var(--info-accent)" text-anchor="middle" font-family="Arial, sans-serif">Multi-Factor Auth</text>
+  <text x="625.365854" y="373.032197" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• TOTP (Google Authenticator)</text>
+  <text x="625.365854" y="391.741864" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Hardware key (YubiKey)</text>
+  <text x="625.365854" y="410.451646" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• SMS OTP (weaker, SIM-swap risk)</text>
+  <text x="625.365854" y="429.161196" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Push notifications</text>
+  <text x="625.365854" y="447.870862" font-size="11.464115" fill="var(--ok-accent)" font-family="Arial, sans-serif">Most effective single control</text>
+  <rect x="879.02439" y="328.128929" width="321.95122" height="130.967663" rx="6.595901" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="351.516157" font-size="13.374618" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Arial, sans-serif">Detection &amp; Monitoring</text>
+  <text x="898.536585" y="373.032197" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Alert on: X failures from same IP</text>
+  <text x="898.536585" y="391.741864" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Alert on: sequential username scan</text>
+  <text x="898.536585" y="410.451646" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Log all failed login attempts</text>
+  <text x="898.536585" y="429.161196" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">• Geo-anomaly detection</text>
+  <text x="898.536585" y="447.870862" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">SIEM / Splunk / Wazuh</text>
+  <rect x="59.512195" y="479.677329" width="1151.219512" height="112.258113" rx="6.595901" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635.121951" y="503.064557" font-size="13.374618" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Common Bypass Techniques (know to defend)</text>
+  <text x="79.02439" y="524.580598" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">IP rotation:</text>
+  <text x="171.707317" y="524.580598" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">Use proxies / Tor to avoid per-IP lockouts</text>
+  <text x="79.02439" y="543.290264" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">Password spraying:</text>
+  <text x="200.97561" y="543.290264" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">Try 1 password across many accounts (avoids lockout per-user)</text>
+  <text x="79.02439" y="562.000046" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">Credential stuffing:</text>
+  <text x="200.97561" y="562.000046" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">Use leaked username:password pairs from other breaches</text>
+  <text x="79.02439" y="580.709597" font-size="11.464115" fill="var(--text)" font-family="Arial, sans-serif">Slow scan:</text>
+  <text x="152.195122" y="580.709597" font-size="11.464115" fill="var(--text-muted)" font-family="Arial, sans-serif">1 attempt per minute stays below rate-limit threshold</text>
 </svg>

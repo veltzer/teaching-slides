@@ -1,96 +1,96 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="76.25" width="257.1429" height="543.75" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5714" y="40" text-anchor="middle" font-size="23.2666" font-weight="bold">Program</text>
-  <rect x="40" y="130.625" width="257.1429" height="72.5" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5714" y="175.9375" text-anchor="middle" fill="var(--bg)" font-size="18.2809">main()</text>
-  <rect x="40" y="221.25" width="257.1429" height="72.5" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5714" y="266.5625" text-anchor="middle" fill="var(--bg)" font-size="18.2809">calls: printf()</text>
-  <rect x="40" y="311.875" width="257.1429" height="72.5" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5714" y="357.1875" text-anchor="middle" fill="var(--bg)" font-size="18.2809">calls: custom_func()</text>
-  <rect x="468.5714" y="76.25" width="257.1429" height="271.875" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="597.1429" y="40" text-anchor="middle" font-size="23.2666" font-weight="bold">libc.so</text>
+  <rect x="40" y="76.25" width="257.1429" height="543.75" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="168.5714" y="40" text-anchor="middle" font-size="23.2666" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Program</text>
+  <rect x="40" y="130.625" width="257.1429" height="72.5" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="168.5714" y="175.9375" text-anchor="middle" fill="var(--bg)" font-size="18.2809" font-family="Arial, sans-serif">main()</text>
+  <rect x="40" y="221.25" width="257.1429" height="72.5" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="168.5714" y="266.5625" text-anchor="middle" fill="var(--bg)" font-size="18.2809" font-family="Arial, sans-serif">calls: printf()</text>
+  <rect x="40" y="311.875" width="257.1429" height="72.5" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="168.5714" y="357.1875" text-anchor="middle" fill="var(--bg)" font-size="18.2809" font-family="Arial, sans-serif">calls: custom_func()</text>
+  <rect x="468.5714" y="76.25" width="257.1429" height="271.875" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="597.1429" y="40" text-anchor="middle" font-size="23.2666" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">libc.so</text>
   <rect x="468.5714" y="130.625" width="257.1429" height="72.5" fill="var(--danger-accent)" stroke="var(--text)" stroke-width="1.6" rx="6"/>
-  <text x="597.1429" y="175.9375" text-anchor="middle" fill="var(--bg)" font-size="18.2809">printf()</text>
-  <rect x="468.5714" y="402.5" width="257.1429" height="217.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="597.1429" y="366.25" text-anchor="middle" font-size="23.2666" font-weight="bold">libcustom.so</text>
-  <rect x="468.5714" y="456.875" width="257.1429" height="72.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="597.1429" y="502.1875" text-anchor="middle" fill="var(--bg)" font-size="18.2809">custom_func()</text>
-  <line x1="297.1429" y1="257.5" x2="468.5714" y2="166.875" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow6)" />
-  <line x1="297.1429" y1="348.125" x2="468.5714" y2="493.125" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow6)" />
-  <rect x="897.1429" y="257.5" width="342.8571" height="181.25" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1068.5714" y="221.25" text-anchor="middle" font-size="23.2666" font-weight="bold">Symbol Table</text>
-  <text x="914.2857" y="311.875" font-size="16.619">printf → libc.so:0x1234</text>
-  <text x="914.2857" y="348.125" font-size="16.619">custom_func → libcustom:0x5678</text>
-  <text x="914.2857" y="384.375" font-size="16.619">main → program:0x4000</text>
+  <text x="597.1429" y="175.9375" text-anchor="middle" fill="var(--bg)" font-size="18.2809" font-family="Arial, sans-serif">printf()</text>
+  <rect x="468.5714" y="402.5" width="257.1429" height="217.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="597.1429" y="366.25" text-anchor="middle" font-size="23.2666" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">libcustom.so</text>
+  <rect x="468.5714" y="456.875" width="257.1429" height="72.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="597.1429" y="502.1875" text-anchor="middle" fill="var(--bg)" font-size="18.2809" font-family="Arial, sans-serif">custom_func()</text>
+  <line x1="297.1429" y1="257.5" x2="468.5714" y2="166.875" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="297.1429" y1="348.125" x2="468.5714" y2="493.125" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="897.1429" y="257.5" width="342.8571" height="181.25" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1068.5714" y="221.25" text-anchor="middle" font-size="23.2666" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Symbol Table</text>
+  <text x="914.2857" y="311.875" font-size="16.619" font-family="Arial, sans-serif" fill="var(--warn-text)">printf → libc.so:0x1234</text>
+  <text x="914.2857" y="348.125" font-size="16.619" font-family="Arial, sans-serif" fill="var(--warn-text)">custom_func → libcustom:0x5678</text>
+  <text x="914.2857" y="384.375" font-size="16.619" font-family="Arial, sans-serif" fill="var(--warn-text)">main → program:0x4000</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -98,26 +98,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow6" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
   </defs>
 </svg>

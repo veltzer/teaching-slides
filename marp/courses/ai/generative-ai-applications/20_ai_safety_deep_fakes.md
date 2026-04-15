@@ -424,12 +424,6 @@ Recommended next steps for deepening your skills:
 
 ---
 
-## Thank You!
-
-![thank_you](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/thank_you.svg)
-
----
-
 ## Guardrails Frameworks
 
 ```python

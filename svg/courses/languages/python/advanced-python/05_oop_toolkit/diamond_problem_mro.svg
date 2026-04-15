@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,64 +97,58 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="inherit" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="1,1 11,6 1,11" fill="#ffffff" stroke="#555555" stroke-width="1.5" />
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <rect x="243.389831" y="40" width="203.389831" height="70.000002" rx="6.962536" fill="var(--text)" />
-  <text x="345.084746" y="72.000022" text-anchor="middle" font-family="monospace" font-size="20.168842" font-weight="bold" fill="var(--bg)">Base</text>
-  <text x="345.084746" y="93.999991" text-anchor="middle" font-family="monospace" font-size="14.11805" fill="var(--text-faint)">def greet(self)</text>
-  <line x1="314.576271" y1="111.999988" x2="192.542373" y2="192.000044" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <text x="345.084746" y="72.000022" text-anchor="middle" font-size="20.168842" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Base</text>
+  <text x="345.084746" y="93.999991" text-anchor="middle" font-size="14.11805" fill="var(--text-faint)" font-family="Courier New, monospace">def greet(self)</text>
+  <line x1="314.576271" y1="111.999988" x2="192.542373" y2="192.000044" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="80.677966" y="194.00003" width="223.728814" height="70.000002" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="192.542373" y="225.999928" text-anchor="middle" font-family="monospace" font-size="20.168842" font-weight="bold" fill="var(--text)">Left</text>
-  <text x="192.542373" y="248.000021" text-anchor="middle" font-family="monospace" font-size="14.11805" fill="var(--text-muted)">def greet(self)</text>
-  <line x1="375.59322" y1="111.999988" x2="497.627119" y2="192.000044" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <text x="192.542373" y="225.999928" text-anchor="middle" font-size="20.168842" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">Left</text>
+  <text x="192.542373" y="248.000021" text-anchor="middle" font-size="14.11805" fill="var(--text-muted)" font-family="Courier New, monospace">def greet(self)</text>
+  <line x1="375.59322" y1="111.999988" x2="497.627119" y2="192.000044" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
   <rect x="385.762712" y="194.00003" width="223.728814" height="70.000002" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="497.627119" y="225.999928" text-anchor="middle" font-family="monospace" font-size="20.168842" font-weight="bold" fill="var(--text)">Right</text>
-  <text x="497.627119" y="248.000021" text-anchor="middle" font-family="monospace" font-size="14.11805" fill="var(--text-muted)">def greet(self)</text>
-  <line x1="192.542373" y1="266.000018" x2="314.576271" y2="345.999949" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
-  <line x1="497.627119" y1="266.000018" x2="375.59322" y2="345.999949" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
-  <rect x="192.542373" y="348.000059" width="305.084746" height="70.000002" rx="6.962536" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="345.084746" y="379.999957" text-anchor="middle" font-family="monospace" font-size="20.168842" font-weight="bold" fill="var(--bg)">Bottom</text>
-  <text x="345.084746" y="402.00005" text-anchor="middle" font-family="monospace" font-size="14.11805" fill="var(--primary-accent)">class Bottom(Left, Right)</text>
-  <text x="345.084746" y="475.9999" text-anchor="middle" font-family="sans-serif" font-size="18.151911" fill="var(--danger-accent)">Bottom().greet() → which greet() wins?</text>
+  <text x="497.627119" y="225.999928" text-anchor="middle" font-size="20.168842" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">Right</text>
+  <text x="497.627119" y="248.000021" text-anchor="middle" font-size="14.11805" fill="var(--text-muted)" font-family="Courier New, monospace">def greet(self)</text>
+  <line x1="192.542373" y1="266.000018" x2="314.576271" y2="345.999949" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <line x1="497.627119" y1="266.000018" x2="375.59322" y2="345.999949" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="192.542373" y="348.000059" width="305.084746" height="70.000002" rx="6.962536" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="345.084746" y="379.999957" text-anchor="middle" font-size="20.168842" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Bottom</text>
+  <text x="345.084746" y="402.00005" text-anchor="middle" font-size="14.11805" fill="var(--primary-accent)" font-family="Courier New, monospace">class Bottom(Left, Right)</text>
+  <text x="345.084746" y="475.9999" text-anchor="middle" font-size="18.151911" fill="var(--danger-accent)" font-family="Arial, sans-serif">Bottom().greet() → which greet() wins?</text>
   <rect x="711.186441" y="40" width="528.813559" height="580" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="975.59322" y="72.000022" text-anchor="middle" font-family="sans-serif" font-size="18.151911" font-weight="bold" fill="var(--text)">Python C3 MRO — search order</text>
-  <rect x="731.525424" y="87.999909" width="132.20339" height="55.999977" rx="6.962536" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="797.627119" y="122.000042" text-anchor="middle" font-family="monospace" font-size="18.151911" font-weight="bold" fill="var(--bg)">Bottom</text>
+  <text x="975.59322" y="72.000022" text-anchor="middle" font-size="18.151911" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Python C3 MRO — search order</text>
+  <rect x="731.525424" y="87.999909" width="132.20339" height="55.999977" rx="6.962536" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="797.627119" y="122.000042" text-anchor="middle" font-size="18.151911" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Bottom</text>
   <line x1="865.762712" y1="115.99996" x2="902.372881" y2="115.99996" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="884.067797" y="108.000016" text-anchor="middle" font-family="sans-serif" font-size="12.101352" fill="var(--primary-accent)">1st</text>
+  <text x="884.067797" y="108.000016" text-anchor="middle" font-size="12.101352" fill="var(--primary-accent)" font-family="Arial, sans-serif">1st</text>
   <rect x="904.40678" y="87.999909" width="132.20339" height="55.999977" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="970.508475" y="122.000042" text-anchor="middle" font-family="monospace" font-size="18.151911" font-weight="bold" fill="var(--text)">Left</text>
+  <text x="970.508475" y="122.000042" text-anchor="middle" font-size="18.151911" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">Left</text>
   <line x1="1038.644068" y1="115.99996" x2="1075.254237" y2="115.99996" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="1056.949153" y="108.000016" text-anchor="middle" font-family="sans-serif" font-size="12.101352" fill="var(--primary-accent)">2nd</text>
+  <text x="1056.949153" y="108.000016" text-anchor="middle" font-size="12.101352" fill="var(--primary-accent)" font-family="Arial, sans-serif">2nd</text>
   <rect x="1077.288136" y="87.999909" width="132.20339" height="55.999977" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1143.389831" y="122.000042" text-anchor="middle" font-family="monospace" font-size="18.151911" font-weight="bold" fill="var(--text)">Right</text>
+  <text x="1143.389831" y="122.000042" text-anchor="middle" font-size="18.151911" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">Right</text>
   <line x1="1143.389831" y1="145.999996" x2="1143.389831" y2="176.000033" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="1163.728814" y="168.000089" font-family="sans-serif" font-size="12.101352" fill="var(--primary-accent)">3rd</text>
+  <text x="1163.728814" y="168.000089" font-size="12.101352" fill="var(--primary-accent)" font-family="Arial, sans-serif">3rd</text>
   <rect x="1006.101695" y="177.999894" width="132.20339" height="55.999977" rx="6.962536" fill="var(--text)" />
-  <text x="1072.20339" y="212.000027" text-anchor="middle" font-family="monospace" font-size="18.151911" font-weight="bold" fill="var(--bg)">Base</text>
+  <text x="1072.20339" y="212.000027" text-anchor="middle" font-size="18.151911" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Base</text>
   <line x1="1006.101695" y1="205.999945" x2="969.491525" y2="205.999945" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="987.79661" y="198.000001" text-anchor="middle" font-family="sans-serif" font-size="12.101352" fill="var(--primary-accent)">4th</text>
+  <text x="987.79661" y="198.000001" text-anchor="middle" font-size="12.101352" fill="var(--primary-accent)" font-family="Arial, sans-serif">4th</text>
   <rect x="731.525424" y="177.999894" width="132.20339" height="55.999977" rx="6.962536" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="797.627119" y="212.000027" text-anchor="middle" font-family="monospace" font-size="18.151911" fill="var(--text-faint)">object</text>
+  <text x="797.627119" y="212.000027" text-anchor="middle" font-size="18.151911" fill="var(--text-faint)" font-family="Courier New, monospace">object</text>
   <line x1="865.762712" y1="205.999945" x2="902.372881" y2="205.999945" stroke="var(--text-faint)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="884.067797" y="198.000001" text-anchor="middle" font-family="sans-serif" font-size="12.101352" fill="var(--text-faint)">5th</text>
+  <text x="884.067797" y="198.000001" text-anchor="middle" font-size="12.101352" fill="var(--text-faint)" font-family="Arial, sans-serif">5th</text>
   <rect x="731.525424" y="276.000071" width="488.135593" height="79.999932" rx="6.962536" fill="var(--bg)" stroke="var(--border)" stroke-width="1.3333" />
-  <text x="975.59322" y="302.000012" text-anchor="middle" font-family="sans-serif" font-size="15.126573" font-weight="bold" fill="var(--text)">Verify in Python:</text>
-  <text x="751.864407" y="327.999952" font-family="monospace" font-size="15.126573" fill="var(--primary-accent)">print(Bottom.__mro__)</text>
-  <text x="751.864407" y="348.000059" font-family="monospace" font-size="13.109759" fill="var(--text-muted)"># (Bottom, Left, Right, Base, object)</text>
-  <rect x="731.525424" y="374" width="488.135593" height="199.999953" rx="6.962536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="975.59322" y="399.99994" text-anchor="middle" font-family="sans-serif" font-size="15.126573" font-weight="bold" fill="var(--primary-accent)">super() follows MRO — cooperative inheritance</text>
-  <text x="751.864407" y="426.000005" font-family="monospace" font-size="13.109759" fill="var(--text)">class Left(Base):</text>
-  <text x="751.864407" y="445.999988" font-family="monospace" font-size="13.109759" fill="var(--text)">    def greet(self):</text>
-  <text x="751.864407" y="465.999846" font-family="monospace" font-size="13.109759" fill="var(--primary-accent)">        super().greet()  # calls Right.greet next!</text>
-  <text x="751.864407" y="485.999953" font-family="monospace" font-size="13.109759" fill="var(--text)">        print("Left")</text>
-  <text x="751.864407" y="513.99988" font-family="sans-serif" font-size="13.109759" fill="var(--text-faint)">Each class calls super() → chain follows MRO order</text>
-  <text x="751.864407" y="533.999987" font-family="sans-serif" font-size="13.109759" fill="var(--text-faint)">Base.greet() called exactly once</text>
-  <rect x="40" y="510.000032" width="630.508475" height="43.999938" rx="6.962536" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="355.254237" y="537.000028" text-anchor="middle" font-family="sans-serif" font-size="16.134981" fill="var(--primary-accent)">Rule: Python uses C3 linearization — Left always before Right (left-to-right in class def)</text>
+  <text x="975.59322" y="302.000012" text-anchor="middle" font-size="15.126573" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Verify in Python:</text>
+  <text x="751.864407" y="327.999952" font-size="15.126573" fill="var(--primary-accent)" font-family="Courier New, monospace">print(Bottom.__mro__)</text>
+  <text x="751.864407" y="348.000059" font-size="13.109759" fill="var(--text-muted)" font-family="Courier New, monospace"># (Bottom, Left, Right, Base, object)</text>
+  <rect x="731.525424" y="374" width="488.135593" height="199.999953" rx="6.962536" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="975.59322" y="399.99994" text-anchor="middle" font-size="15.126573" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">super() follows MRO — cooperative inheritance</text>
+  <text x="751.864407" y="426.000005" font-size="13.109759" fill="var(--text)" font-family="Courier New, monospace">class Left(Base):</text>
+  <text x="751.864407" y="445.999988" font-size="13.109759" fill="var(--text)" font-family="Courier New, monospace">    def greet(self):</text>
+  <text x="751.864407" y="465.999846" font-size="13.109759" fill="var(--primary-accent)" font-family="Courier New, monospace">        super().greet()  # calls Right.greet next!</text>
+  <text x="751.864407" y="485.999953" font-size="13.109759" fill="var(--text)" font-family="Courier New, monospace">        print("Left")</text>
+  <text x="751.864407" y="513.99988" font-size="13.109759" fill="var(--text-faint)" font-family="Arial, sans-serif">Each class calls super() → chain follows MRO order</text>
+  <text x="751.864407" y="533.999987" font-size="13.109759" fill="var(--text-faint)" font-family="Arial, sans-serif">Base.greet() called exactly once</text>
+  <rect x="40" y="510.000032" width="630.508475" height="43.999938" rx="6.962536" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="355.254237" y="537.000028" text-anchor="middle" font-size="16.134981" fill="var(--primary-accent)" font-family="Arial, sans-serif">Rule: Python uses C3 linearization — Left always before Right (left-to-right in class def)</text>
 </svg>

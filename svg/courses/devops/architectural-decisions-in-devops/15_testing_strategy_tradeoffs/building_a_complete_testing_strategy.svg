@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,58 +75,55 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrow_cs" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 18 L 19.8621 9 z" fill="#333" />
-    </marker>
   </defs>
-  <text x="618.5715" y="40" text-anchor="middle" font-size="28.1493" font-weight="bold">Testing Strategy Across the Pipeline</text>
-  <rect x="40" y="84.6153" width="214.2857" height="386.6666" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="147.143" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold">Pre-commit</text>
-  <text x="147.143" y="203.5897" text-anchor="middle" font-size="21.6533">Lint</text>
-  <text x="147.143" y="248.2051" text-anchor="middle" font-size="21.6533">Type check</text>
-  <text x="147.143" y="292.8205" text-anchor="middle" font-size="21.6533">Secrets scan</text>
-  <rect x="286.4286" y="84.6153" width="214.2857" height="386.6666" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="393.5716" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold">CI Build</text>
-  <text x="393.5716" y="203.5897" text-anchor="middle" font-size="21.6533">Unit tests</text>
-  <text x="393.5716" y="248.2051" text-anchor="middle" font-size="21.6533">SAST</text>
-  <text x="393.5716" y="292.8205" text-anchor="middle" font-size="21.6533">Contract tests</text>
-  <rect x="532.8572" y="84.6153" width="214.2857" height="386.6666" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="640.0001" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold">CI Test</text>
-  <text x="640.0001" y="203.5897" text-anchor="middle" font-size="21.6533">Integration</text>
-  <text x="640.0001" y="248.2051" text-anchor="middle" font-size="21.6533">API tests</text>
-  <text x="640.0001" y="292.8205" text-anchor="middle" font-size="21.6533">DAST</text>
-  <rect x="779.2857" y="84.6153" width="214.2857" height="386.6666" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="886.4286" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold">Staging</text>
-  <text x="886.4286" y="203.5897" text-anchor="middle" font-size="21.6533">E2E tests</text>
-  <text x="886.4286" y="248.2051" text-anchor="middle" font-size="21.6533">Perf tests</text>
-  <text x="886.4286" y="292.8205" text-anchor="middle" font-size="21.6533">Chaos tests</text>
-  <rect x="1025.7143" y="84.6153" width="214.2857" height="386.6666" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1132.8572" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold">Production</text>
-  <text x="1132.8572" y="203.5897" text-anchor="middle" font-size="21.6533">Synthetics</text>
-  <text x="1132.8572" y="248.2051" text-anchor="middle" font-size="21.6533">Canary analysis</text>
-  <text x="1132.8572" y="292.8205" text-anchor="middle" font-size="21.6533">Observability</text>
-  <line x1="254.2858" y1="277.9487" x2="286.4286" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow_cs)" />
-  <line x1="500.7144" y1="277.9487" x2="532.8572" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow_cs)" />
-  <line x1="747.1429" y1="277.9487" x2="779.2857" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow_cs)" />
-  <line x1="993.5715" y1="277.9487" x2="1025.7143" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow_cs)" />
-  <text x="618.5715" y="560.5128" text-anchor="middle" font-size="21.6533" fill="var(--text)">Confidence increases ----&gt;</text>
-  <text x="618.5715" y="620" text-anchor="middle" font-size="21.6533" fill="var(--text)">&lt;--- Speed decreases</text>
+  <text x="618.5715" y="40" text-anchor="middle" font-size="28.1493" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Testing Strategy Across the Pipeline</text>
+  <rect x="40" y="84.6153" width="214.2857" height="386.6666" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="147.143" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Pre-commit</text>
+  <text x="147.143" y="203.5897" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--ok-text)">Lint</text>
+  <text x="147.143" y="248.2051" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--ok-text)">Type check</text>
+  <text x="147.143" y="292.8205" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--ok-text)">Secrets scan</text>
+  <rect x="286.4286" y="84.6153" width="214.2857" height="386.6666" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="393.5716" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">CI Build</text>
+  <text x="393.5716" y="203.5897" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--primary-text)">Unit tests</text>
+  <text x="393.5716" y="248.2051" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--primary-text)">SAST</text>
+  <text x="393.5716" y="292.8205" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--primary-text)">Contract tests</text>
+  <rect x="532.8572" y="84.6153" width="214.2857" height="386.6666" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="640.0001" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">CI Test</text>
+  <text x="640.0001" y="203.5897" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">Integration</text>
+  <text x="640.0001" y="248.2051" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">API tests</text>
+  <text x="640.0001" y="292.8205" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">DAST</text>
+  <rect x="779.2857" y="84.6153" width="214.2857" height="386.6666" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="886.4286" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Staging</text>
+  <text x="886.4286" y="203.5897" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">E2E tests</text>
+  <text x="886.4286" y="248.2051" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">Perf tests</text>
+  <text x="886.4286" y="292.8205" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--warn-text)">Chaos tests</text>
+  <rect x="1025.7143" y="84.6153" width="214.2857" height="386.6666" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1132.8572" y="144.1025" text-anchor="middle" font-size="23.8186" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">Production</text>
+  <text x="1132.8572" y="203.5897" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--danger-text)">Synthetics</text>
+  <text x="1132.8572" y="248.2051" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--danger-text)">Canary analysis</text>
+  <text x="1132.8572" y="292.8205" text-anchor="middle" font-size="21.6533" font-family="Arial, sans-serif" fill="var(--danger-text)">Observability</text>
+  <line x1="254.2858" y1="277.9487" x2="286.4286" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="500.7144" y1="277.9487" x2="532.8572" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="747.1429" y1="277.9487" x2="779.2857" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="993.5715" y1="277.9487" x2="1025.7143" y2="277.9487" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="618.5715" y="560.5128" text-anchor="middle" font-size="21.6533" fill="var(--text)" font-family="Arial, sans-serif">Confidence increases ----&gt;</text>
+  <text x="618.5715" y="620" text-anchor="middle" font-size="21.6533" fill="var(--text)" font-family="Arial, sans-serif">&lt;--- Speed decreases</text>
 </svg>

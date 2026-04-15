@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -98,42 +98,42 @@
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
   </defs>
-  <rect x="40" y="40" width="531.147541" height="344.375025" rx="6.518574" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="305.57377" y="70.812516" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--danger-accent)">Traditional: Binary root/non-root</text>
+  <rect x="40" y="40" width="531.147541" height="344.375025" rx="6.518574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305.57377" y="70.812516" text-anchor="middle" font-size="18.882788" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Traditional: Binary root/non-root</text>
   <rect x="69.508197" y="88.937505" width="472.131148" height="108.750049" rx="6.518574" fill="var(--danger-accent)" />
-  <text x="305.57377" y="132.437435" text-anchor="middle" font-family="sans-serif" font-size="20.771002" font-weight="bold" fill="var(--bg)">root (uid=0)</text>
-  <text x="305.57377" y="157.812488" text-anchor="middle" font-family="sans-serif" font-size="14.162037" fill="var(--danger-accent)">ALL privileges — bind port 80, load modules,</text>
-  <text x="305.57377" y="175.937477" text-anchor="middle" font-family="sans-serif" font-size="14.162037" fill="var(--danger-accent)">raw sockets, kill any process, …</text>
+  <text x="305.57377" y="132.437435" text-anchor="middle" font-size="20.771002" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">root (uid=0)</text>
+  <text x="305.57377" y="157.812488" text-anchor="middle" font-size="14.162037" fill="var(--danger-accent)" font-family="Arial, sans-serif">ALL privileges — bind port 80, load modules,</text>
+  <text x="305.57377" y="175.937477" text-anchor="middle" font-size="14.162037" fill="var(--danger-accent)" font-family="Arial, sans-serif">raw sockets, kill any process, …</text>
   <rect x="69.508197" y="217.625032" width="472.131148" height="72.499958" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="305.57377" y="259.312586" text-anchor="middle" font-family="sans-serif" font-size="20.771002" font-weight="bold" fill="var(--text-faint)">non-root</text>
-  <text x="305.57377" y="277.437576" text-anchor="middle" font-family="sans-serif" font-size="14.162037" fill="var(--text-faint)">NO privileges — can do almost nothing privileged</text>
-  <text x="305.57377" y="330.000056" text-anchor="middle" font-family="sans-serif" font-size="15.106144" fill="var(--danger-accent)" font-weight="bold">Problem: all-or-nothing</text>
-  <text x="305.57377" y="351.750134" text-anchor="middle" font-family="sans-serif" font-size="13.217821" fill="var(--text-muted)">Containers running as root have full host access</text>
-  <rect x="620.327869" y="40" width="619.672131" height="525.625144" rx="6.518574" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="930.163934" y="70.812516" text-anchor="middle" font-family="sans-serif" font-size="18.882788" font-weight="bold" fill="var(--ok-accent)">Capabilities: Fine-grained privileges</text>
+  <text x="305.57377" y="259.312586" text-anchor="middle" font-size="20.771002" font-weight="bold" fill="var(--text-faint)" font-family="Arial, sans-serif">non-root</text>
+  <text x="305.57377" y="277.437576" text-anchor="middle" font-size="14.162037" fill="var(--text-faint)" font-family="Arial, sans-serif">NO privileges — can do almost nothing privileged</text>
+  <text x="305.57377" y="330.000056" text-anchor="middle" font-size="15.106144" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Problem: all-or-nothing</text>
+  <text x="305.57377" y="351.750134" text-anchor="middle" font-size="13.217821" fill="var(--text-muted)" font-family="Arial, sans-serif">Containers running as root have full host access</text>
+  <rect x="620.327869" y="40" width="619.672131" height="525.625144" rx="6.518574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930.163934" y="70.812516" text-anchor="middle" font-size="18.882788" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Capabilities: Fine-grained privileges</text>
   <rect x="647.868852" y="83.49993" width="560.655738" height="108.750049" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="699.016393" y="108.874982" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)">Network</text>
-  <text x="699.016393" y="128.812572" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">NET_BIND_SERVICE  — bind ports &lt; 1024</text>
-  <text x="699.016393" y="146.937562" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">NET_RAW           — raw/packet sockets (⚠ risky)</text>
-  <text x="699.016393" y="165.062438" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">NET_ADMIN         — network config (⚠ risky)</text>
-  <text x="1131.803174" y="139.687611" text-anchor="middle" font-family="sans-serif" font-size="20.771002" fill="var(--ok-accent)">🟢</text>
+  <text x="699.016393" y="108.874982" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Network</text>
+  <text x="699.016393" y="128.812572" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">NET_BIND_SERVICE  — bind ports &lt; 1024</text>
+  <text x="699.016393" y="146.937562" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">NET_RAW           — raw/packet sockets (⚠ risky)</text>
+  <text x="699.016393" y="165.062438" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">NET_ADMIN         — network config (⚠ risky)</text>
+  <text x="1131.803174" y="139.687611" text-anchor="middle" font-size="20.771002" fill="var(--ok-accent)" font-family="Arial, sans-serif">🟢</text>
   <rect x="647.868852" y="203.125018" width="560.655738" height="108.750049" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="699.016393" y="228.50007" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--warn-accent)">System</text>
-  <text x="699.016393" y="248.437547" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">SYS_ADMIN         — many ops (⚠⚠ very risky)</text>
-  <text x="699.016393" y="266.562537" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">SYS_PTRACE        — debug other processes</text>
-  <text x="699.016393" y="284.687526" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">SYS_MODULE        — load kernel modules (⚠⚠)</text>
-  <text x="1131.803174" y="259.312586" text-anchor="middle" font-family="sans-serif" font-size="20.771002" fill="var(--danger-accent)">🔴</text>
+  <text x="699.016393" y="228.50007" font-size="14.162037" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">System</text>
+  <text x="699.016393" y="248.437547" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">SYS_ADMIN         — many ops (⚠⚠ very risky)</text>
+  <text x="699.016393" y="266.562537" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">SYS_PTRACE        — debug other processes</text>
+  <text x="699.016393" y="284.687526" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">SYS_MODULE        — load kernel modules (⚠⚠)</text>
+  <text x="1131.803174" y="259.312586" text-anchor="middle" font-size="20.771002" fill="var(--danger-accent)" font-family="Arial, sans-serif">🔴</text>
   <rect x="647.868852" y="322.749993" width="560.655738" height="90.62506" rx="6.518574" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="699.016393" y="348.125046" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)">Process</text>
-  <text x="699.016393" y="368.062635" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">KILL              — send signals to any process</text>
-  <text x="699.016393" y="386.187512" font-family="monospace" font-size="12.273823" fill="var(--text-muted)">SETUID / SETGID   — change user/group id</text>
-  <text x="1131.803174" y="364.437547" text-anchor="middle" font-family="sans-serif" font-size="20.771002" fill="var(--warn-accent)">🟡</text>
-  <rect x="647.868852" y="426.062467" width="560.655738" height="108.750049" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="930.163934" y="451.437519" text-anchor="middle" font-family="sans-serif" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)">Docker: drop all, add only what's needed</text>
-  <text x="667.540984" y="473.187597" font-family="monospace" font-size="12.273823" fill="var(--text)">--cap-drop ALL --cap-add NET_BIND_SERVICE</text>
-  <text x="667.540984" y="491.312474" font-family="monospace" font-size="12.273823" fill="var(--text)">securityContext:</text>
-  <text x="667.540984" y="509.437576" font-family="monospace" font-size="12.273823" fill="var(--text)">  capabilities:</text>
-  <text x="667.540984" y="525.750077" font-family="monospace" font-size="12.273823" fill="var(--primary-accent)">    drop: ["ALL"]   add: ["NET_BIND_SERVICE"]</text>
-  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="605.499986" text-anchor="middle" font-family="sans-serif" font-size="15.106144" fill="var(--primary-accent)">Default Docker containers run with ~14 capabilities. Drop ALL and add back only what the app needs.</text>
+  <text x="699.016393" y="348.125046" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Process</text>
+  <text x="699.016393" y="368.062635" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">KILL              — send signals to any process</text>
+  <text x="699.016393" y="386.187512" font-size="12.273823" fill="var(--text-muted)" font-family="Courier New, monospace">SETUID / SETGID   — change user/group id</text>
+  <text x="1131.803174" y="364.437547" text-anchor="middle" font-size="20.771002" fill="var(--warn-accent)" font-family="Arial, sans-serif">🟡</text>
+  <rect x="647.868852" y="426.062467" width="560.655738" height="108.750049" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930.163934" y="451.437519" text-anchor="middle" font-size="14.162037" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Docker: drop all, add only what's needed</text>
+  <text x="667.540984" y="473.187597" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">--cap-drop ALL --cap-add NET_BIND_SERVICE</text>
+  <text x="667.540984" y="491.312474" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">securityContext:</text>
+  <text x="667.540984" y="509.437576" font-size="12.273823" fill="var(--text)" font-family="Courier New, monospace">  capabilities:</text>
+  <text x="667.540984" y="525.750077" font-size="12.273823" fill="var(--primary-accent)" font-family="Courier New, monospace">    drop: ["ALL"]   add: ["NET_BIND_SERVICE"]</text>
+  <rect x="40" y="581.937533" width="1199.999895" height="38.062467" rx="6.518574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="605.499986" text-anchor="middle" font-size="15.106144" fill="var(--primary-accent)" font-family="Arial, sans-serif">Default Docker containers run with ~14 capabilities. Drop ALL and add back only what the app needs.</text>
 </svg>

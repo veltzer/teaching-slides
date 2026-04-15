@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -110,24 +110,24 @@
   <text x="758.965517" y="113.818136" font-family="Arial, sans-serif" font-size="10.954486" fill="var(--ok-accent)">Reader</text>
 
   <!-- Compute layer -->
-  <rect x="40" y="121.487558" width="1200" height="134.214888" rx="6.482456" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="121.487558" width="1200" height="134.214888" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="71.034483" y="145.454449" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--primary-accent)">Compute Layer (Instances)</text>
 
   <!-- Primary Writer -->
-  <rect x="81.37931" y="159.834669" width="206.896552" height="76.694222" rx="6.482456" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="81.37931" y="159.834669" width="206.896552" height="76.694222" rx="6.482456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="184.827586" y="190.512358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.937847" font-weight="bold" fill="var(--bg)">Primary Writer</text>
   <text x="184.827586" y="215.43798" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--primary-accent)">Read/Write</text>
 
   <!-- Read Replicas -->
-  <rect x="371.034483" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="371.034483" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="464.137931" y="190.512358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--bg)">Read Replica 1</text>
   <text x="464.137931" y="212.561999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--ok-accent)">Read Only</text>
 
-  <rect x="619.310345" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="619.310345" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="712.413793" y="190.512358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--bg)">Read Replica 2</text>
   <text x="712.413793" y="212.561999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--ok-accent)">Read Only</text>
 
-  <rect x="867.586207" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="867.586207" y="159.834669" width="186.206897" height="76.694222" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="960.689655" y="190.512358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--bg)">Read Replica 3</text>
   <text x="960.689655" y="212.561999" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--ok-accent)">Read Only</text>
 
@@ -143,41 +143,41 @@
   <text x="640" y="282.545424" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--text-muted)">Shared storage - no replication between instances</text>
 
   <!-- Shared Storage Layer -->
-  <rect x="40" y="303.636335" width="1200" height="191.735555" rx="6.482456" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="303.636335" width="1200" height="191.735555" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="71.034483" y="332.396668" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--warn-accent)">Distributed Storage Layer (Auto-scaling, 128 TB max)</text>
 
   <!-- 3 AZ boxes inside storage -->
   <rect x="81.37931" y="351.570223" width="351.724138" height="124.628111" rx="6.482456" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
   <text x="257.241379" y="375.537115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" font-weight="bold" fill="var(--warn-accent)">AZ 1</text>
   <!-- 2 copies -->
-  <rect x="112.413793" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="112.413793" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="174.482759" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 1</text>
-  <rect x="267.586207" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="267.586207" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="329.655172" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 2</text>
 
   <rect x="464.137931" y="351.570223" width="351.724138" height="124.628111" rx="6.482456" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
   <text x="640" y="375.537115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" font-weight="bold" fill="var(--warn-accent)">AZ 2</text>
-  <rect x="495.172414" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="495.172414" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="557.241379" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 3</text>
-  <rect x="650.344828" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="650.344828" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="712.413793" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 4</text>
 
   <rect x="846.896552" y="351.570223" width="351.724138" height="124.628111" rx="6.482456" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
   <text x="1022.758621" y="375.537115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.94622" font-weight="bold" fill="var(--warn-accent)">AZ 3</text>
-  <rect x="877.931034" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="877.931034" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="940" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 5</text>
-  <rect x="1033.103448" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1033.103448" y="389.917334" width="124.137931" height="38.347111" rx="6.482456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1095.172414" y="413.884226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" font-weight="bold" fill="var(--bg)">Copy 6</text>
 
   <!-- 6 copies note -->
   <text x="640" y="512.628089" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--warn-accent)">6 copies of data across 3 AZs - tolerates loss of 2 copies for writes, 3 for reads</text>
 
   <!-- Continuous backup to S3 -->
-  <rect x="40" y="543.305778" width="1200" height="76.694222" rx="6.482456" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="543.305778" width="1200" height="76.694222" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="184.827586" y="573.983467" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--ok-accent)">Continuous Backup to S3</text>
   <text x="184.827586" y="598.909089" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.950299" fill="var(--text-muted)">Automatic, incremental</text>
 
-  <rect x="495.172414" y="552.892556" width="186.206897" height="47.933889" rx="6.482456" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="495.172414" y="552.892556" width="186.206897" height="47.933889" rx="6.482456" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="588.275862" y="581.652889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.942034" font-weight="bold" fill="var(--bg)">Amazon S3</text>
 
   <!-- Backtrack note -->

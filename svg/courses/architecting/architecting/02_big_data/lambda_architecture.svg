@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,48 +75,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#999" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="24.5538" font-weight="bold" fill="var(--text)">Lambda Architecture</text>
-  <rect x="40" y="244.2253" width="194.5946" height="65.3521" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="137.2972" y="285.0704" text-anchor="middle" fill="var(--text)">Data Stream</text>
-  <rect x="396.7567" y="113.5211" width="210.8108" height="65.3521" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.1621" y="154.3662" text-anchor="middle" fill="var(--text)">Batch Layer</text>
-  <rect x="396.7567" y="374.9295" width="210.8108" height="65.3521" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.1621" y="415.7747" text-anchor="middle" fill="var(--text)">Speed Layer</text>
-  <rect x="753.5134" y="113.5211" width="194.5946" height="65.3521" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="850.8108" y="154.3662" text-anchor="middle" fill="var(--text)">Batch Views</text>
-  <rect x="753.5134" y="374.9295" width="210.8108" height="65.3521" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="858.9189" y="407.6056" text-anchor="middle" font-size="18.4153" fill="var(--text)">Real-time Views</text>
-  <rect x="1012.9729" y="236.0563" width="210.8108" height="73.5212" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1118.3783" y="280.169" text-anchor="middle" font-weight="bold" fill="var(--text)">Serving Layer</text>
-  <rect x="1012.9729" y="391.2676" width="210.8108" height="57.1831" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1118.3783" y="427.2113" text-anchor="middle" fill="var(--text)">Queries</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="24.5538" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lambda Architecture</text>
+  <rect x="40" y="244.2253" width="194.5946" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="137.2972" y="285.0704" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Data Stream</text>
+  <rect x="396.7567" y="113.5211" width="210.8108" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="502.1621" y="154.3662" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Batch Layer</text>
+  <rect x="396.7567" y="374.9295" width="210.8108" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="502.1621" y="415.7747" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Speed Layer</text>
+  <rect x="753.5134" y="113.5211" width="194.5946" height="65.3521" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="850.8108" y="154.3662" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Batch Views</text>
+  <rect x="753.5134" y="374.9295" width="210.8108" height="65.3521" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="858.9189" y="407.6056" text-anchor="middle" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">Real-time Views</text>
+  <rect x="1012.9729" y="236.0563" width="210.8108" height="73.5212" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1118.3783" y="280.169" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Serving Layer</text>
+  <rect x="1012.9729" y="391.2676" width="210.8108" height="57.1831" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1118.3783" y="427.2113" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Queries</text>
   <rect x="396.7567" y="227.8873" width="210.8108" height="57.1831" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="502.1621" y="263.831" text-anchor="middle" fill="var(--text-muted)">Master Dataset</text>
+  <text x="502.1621" y="263.831" text-anchor="middle" fill="var(--text-muted)" font-family="Arial, sans-serif">Master Dataset</text>
   <line x1="234.5946" y1="257.2958" x2="393.5135" y2="154.3662" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="234.5946" y1="293.2394" x2="393.5135" y2="399.4366" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="607.5675" y1="146.1971" x2="750.2702" y2="146.1971" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
@@ -126,7 +120,7 @@
   <line x1="1118.3783" y1="309.5774" x2="1118.3783" y2="388" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
   <line x1="502.1621" y1="178.8733" x2="502.1621" y2="224.6197" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrow)" />
   <rect x="40" y="505.6338" width="1200" height="114.3662" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="546.4788" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)">Lambda Architecture processes data through two parallel paths:</text>
-  <text x="639.9999" y="579.1549" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)">Batch Layer (high latency, complete accuracy) and Speed Layer (low latency, approximate).</text>
-  <text x="639.9999" y="611.8309" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)">The Serving Layer merges both views to answer queries.</text>
+  <text x="639.9999" y="546.4788" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)" font-family="Arial, sans-serif">Lambda Architecture processes data through two parallel paths:</text>
+  <text x="639.9999" y="579.1549" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)" font-family="Arial, sans-serif">Batch Layer (high latency, complete accuracy) and Speed Layer (low latency, approximate).</text>
+  <text x="639.9999" y="611.8309" text-anchor="middle" font-size="18.4153" fill="var(--text-muted)" font-family="Arial, sans-serif">The Serving Layer merges both views to answer queries.</text>
 </svg>

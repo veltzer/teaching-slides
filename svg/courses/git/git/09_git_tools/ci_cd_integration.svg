@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,54 +75,51 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="cicd_arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 14.9333 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="225.6" width="132.2034" height="185.6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="105.0847" y="341.6" text-anchor="middle" font-size="26.0133" font-weight="bold">Git</text>
-  <line x1="172.2033" y1="318.4" x2="212.8813" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#cicd_arrow)" />
-  <rect x="223.0508" y="202.4" width="162.7119" height="232" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="304.4067" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold">Code</text>
-  <text x="304.4067" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)">commit/push</text>
-  <line x1="385.7626" y1="318.4" x2="426.4406" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#cicd_arrow)" />
-  <rect x="436.6102" y="202.4" width="162.7119" height="232" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="517.9661" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold">Build</text>
-  <text x="517.9661" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)">compile</text>
-  <line x1="599.322" y1="318.4" x2="640" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#cicd_arrow)" />
-  <rect x="650.1695" y="202.4" width="162.7119" height="232" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="731.5254" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold">Test</text>
-  <text x="731.5254" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)">unit/integ</text>
-  <line x1="812.8813" y1="318.4" x2="853.5593" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#cicd_arrow)" />
-  <rect x="863.7288" y="202.4" width="162.7119" height="232" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="945.0847" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold">Stage</text>
-  <text x="945.0847" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)">pre-prod</text>
-  <line x1="1026.4406" y1="318.4" x2="1067.1186" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#cicd_arrow)" />
-  <rect x="1077.2881" y="202.4" width="162.7119" height="232" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1158.644" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold">Deploy</text>
-  <text x="1158.644" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)">production</text>
-  <text x="640" y="40" text-anchor="middle" font-size="28.3781" fill="var(--text)" font-weight="bold">CI/CD Pipeline</text>
+  <rect x="40" y="225.6" width="132.2034" height="185.6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="105.0847" y="341.6" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">Git</text>
+  <line x1="172.2033" y1="318.4" x2="212.8813" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="223.0508" y="202.4" width="162.7119" height="232" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="304.4067" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Code</text>
+  <text x="304.4067" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)" font-family="Arial, sans-serif">commit/push</text>
+  <line x1="385.7626" y1="318.4" x2="426.4406" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="436.6102" y="202.4" width="162.7119" height="232" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="517.9661" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Build</text>
+  <text x="517.9661" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)" font-family="Arial, sans-serif">compile</text>
+  <line x1="599.322" y1="318.4" x2="640" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="650.1695" y="202.4" width="162.7119" height="232" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="731.5254" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Test</text>
+  <text x="731.5254" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)" font-family="Arial, sans-serif">unit/integ</text>
+  <line x1="812.8813" y1="318.4" x2="853.5593" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="863.7288" y="202.4" width="162.7119" height="232" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="945.0847" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Stage</text>
+  <text x="945.0847" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)" font-family="Arial, sans-serif">pre-prod</text>
+  <line x1="1026.4406" y1="318.4" x2="1067.1186" y2="318.4" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="1077.2881" y="202.4" width="162.7119" height="232" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1158.644" y="304.48" text-anchor="middle" font-size="26.0133" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Deploy</text>
+  <text x="1158.644" y="378.72" text-anchor="middle" font-size="23.6484" fill="var(--text-muted)" font-family="Arial, sans-serif">production</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.3781" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">CI/CD Pipeline</text>
   <line x1="223.0508" y1="86.4" x2="1239.9999" y2="86.4" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="8.5333" />
-  <text x="223.0508" y="620" text-anchor="middle" font-size="23.6484" fill="var(--primary-accent)">Continuous Integration</text>
+  <text x="223.0508" y="620" text-anchor="middle" font-size="23.6484" fill="var(--primary-accent)" font-family="Arial, sans-serif">Continuous Integration</text>
   <line x1="223.0508" y1="550.4" x2="812.8813" y2="550.4" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1026.4406" y="620" text-anchor="middle" font-size="23.6484" fill="var(--ok-accent)">Continuous Delivery</text>
+  <text x="1026.4406" y="620" text-anchor="middle" font-size="23.6484" fill="var(--ok-accent)" font-family="Arial, sans-serif">Continuous Delivery</text>
   <line x1="863.7288" y1="550.4" x2="1239.9999" y2="550.4" stroke="var(--ok-border)" stroke-width="2" />
 </svg>

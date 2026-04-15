@@ -1,105 +1,116 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
-  <rect x="40" y="76.2501" width="500.0001" height="543.7499" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290" y="40" text-anchor="middle" font-size="25.1307" font-weight="bold">Application Layer</text>
-  <rect x="80.0001" y="112.5" width="420" height="72.5" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="290" y="157.8125" text-anchor="middle" fill="var(--bg)" font-size="19.7456">User Application</text>
+  <!-- palette: resources/palette_diagram.yaml -->
+  <rect x="40" y="76.2501" width="500.0001" height="543.7499" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="290" y="40" text-anchor="middle" font-size="25.1307" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Application Layer</text>
+  <rect x="80.0001" y="112.5" width="420" height="72.5" fill="url(#grad-primary)" rx="6" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="290" y="157.8125" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">User Application</text>
   <rect x="80.0001" y="203.1252" width="420" height="72.5" fill="var(--primary-accent)" rx="6" />
-  <text x="290" y="248.4376" text-anchor="middle" fill="var(--bg)" font-size="19.7456">Socket API</text>
-  <rect x="739.9999" y="76.2501" width="500.0001" height="543.7499" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="989.9998" y="40" text-anchor="middle" font-size="25.1307" font-weight="bold">Kernel Space</text>
-  <rect x="780" y="112.5" width="420" height="72.5" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="989.9998" y="157.8125" text-anchor="middle" fill="var(--bg)" font-size="19.7456">Socket Layer</text>
-  <rect x="780" y="203.1252" width="420" height="72.5" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="989.9998" y="248.4376" text-anchor="middle" fill="var(--bg)" font-size="19.7456">TCP/UDP Layer</text>
+  <text x="290" y="248.4376" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">Socket API</text>
+  <rect x="739.9999" y="76.2501" width="500.0001" height="543.7499" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="989.9998" y="40" text-anchor="middle" font-size="25.1307" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Kernel Space</text>
+  <rect x="780" y="112.5" width="420" height="72.5" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="989.9998" y="157.8125" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">Socket Layer</text>
+  <rect x="780" y="203.1252" width="420" height="72.5" fill="url(#grad-ok)" rx="6" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="989.9998" y="248.4376" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">TCP/UDP Layer</text>
   <rect x="780" y="293.7499" width="420" height="72.5" fill="var(--ok-accent)" rx="6" />
-  <text x="989.9998" y="339.0625" text-anchor="middle" fill="var(--bg)" font-size="19.7456">IP Layer</text>
+  <text x="989.9998" y="339.0625" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">IP Layer</text>
   <rect x="780" y="384.3751" width="420" height="72.5" fill="var(--ok-accent)" rx="6" />
-  <text x="989.9998" y="429.6875" text-anchor="middle" fill="var(--bg)" font-size="19.7456">Network Driver</text>
+  <text x="989.9998" y="429.6875" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">Network Driver</text>
   <rect x="780" y="474.9999" width="420" height="72.5" fill="var(--ok-accent)" rx="6" />
-  <text x="989.9998" y="520.3125" text-anchor="middle" fill="var(--bg)" font-size="19.7456">Network Hardware</text>
+  <text x="989.9998" y="520.3125" text-anchor="middle" fill="var(--bg)" font-size="19.7456" font-family="Arial, sans-serif">Network Hardware</text>
   <path d="M 499.9998 239.3751 L 780 239.3751" stroke="var(--text)" stroke-width="2.0524" marker-end="url(#arrow)" />
-  <text x="640.0002" y="221.25" text-anchor="middle" font-size="17.9506">System Calls</text>
+  <text x="640.0002" y="221.25" text-anchor="middle" font-size="17.9506" font-family="Arial, sans-serif" fill="var(--text)">System Calls</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
+</defs>
 </svg>

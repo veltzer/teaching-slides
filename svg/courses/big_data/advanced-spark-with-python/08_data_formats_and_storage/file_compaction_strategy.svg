@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,56 +75,53 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 12.7059 L 15.0588 6.3529 z" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1819" y="76.2499" font-family="sans-serif" font-size="23.9612" fill="var(--info-accent)" text-anchor="start" font-weight="bold">Compaction Scheduling</text>
-  <text x="58.1819" y="112.5" font-family="sans-serif" font-size="20.5381" fill="var(--text)" text-anchor="start">Micro-batch writes (every 1 min) → 1440 files/day:</text>
-  <rect x="72.7274" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="87.2728" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">2KB</text>
-  <rect x="170.9091" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="185.4546" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">3KB</text>
-  <rect x="269.091" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="283.6364" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">1KB</text>
-  <rect x="367.2729" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="381.8183" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">2KB</text>
-  <rect x="465.4546" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="480.0001" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">4KB</text>
-  <rect x="563.6365" y="130.6249" width="109.091" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="578.1819" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">...</text>
-  <rect x="680.0001" y="130.6249" width="90.909" height="50.75" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="694.5456" y="165.0624" font-family="sans-serif" font-size="18.8267" fill="var(--text)" text-anchor="start">3KB</text>
-  <line x1="640.0001" y1="203.125" x2="640.0001" y2="257.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="654.5455" y="239.3749" font-family="sans-serif" font-size="18.8267" fill="var(--text-muted)" text-anchor="start">Scheduled compaction (daily at 2 AM)</text>
-  <rect x="76.3637" y="266.5625" width="1127.2727" height="68.875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="94.5455" y="295.5624" font-family="sans-serif" font-size="20.5381" fill="var(--text)" text-anchor="start">Read all files for yesterday's partition, write as fewer larger files</text>
-  <line x1="640.0001" y1="339.0624" x2="640.0001" y2="402.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="58.1819" y="438.7499" font-family="sans-serif" font-size="20.5381" fill="var(--text)" text-anchor="start" font-weight="bold">After compaction:</text>
-  <rect x="72.7274" y="456.8749" width="327.2727" height="72.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="163.6364" y="502.1875" font-family="sans-serif" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">128 MB</text>
-  <rect x="436.3638" y="456.8749" width="327.2727" height="72.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="527.2728" y="502.1875" font-family="sans-serif" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">128 MB</text>
-  <rect x="800.0001" y="456.8749" width="327.2727" height="72.5" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="890.9091" y="502.1875" font-family="sans-serif" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">90 MB</text>
-  <text x="58.1819" y="565.6249" font-family="sans-serif" font-size="20.5381" fill="var(--ok-accent)" text-anchor="start">3 files per day  (vs 1440)</text>
+  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="58.1819" y="76.2499" font-size="23.9612" fill="var(--info-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Compaction Scheduling</text>
+  <text x="58.1819" y="112.5" font-size="20.5381" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Micro-batch writes (every 1 min) → 1440 files/day:</text>
+  <rect x="72.7274" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="87.2728" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">2KB</text>
+  <rect x="170.9091" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="185.4546" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">3KB</text>
+  <rect x="269.091" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="283.6364" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">1KB</text>
+  <rect x="367.2729" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="381.8183" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">2KB</text>
+  <rect x="465.4546" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="480.0001" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">4KB</text>
+  <rect x="563.6365" y="130.6249" width="109.091" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="578.1819" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">...</text>
+  <rect x="680.0001" y="130.6249" width="90.909" height="50.75" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="694.5456" y="165.0624" font-size="18.8267" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">3KB</text>
+  <line x1="640.0001" y1="203.125" x2="640.0001" y2="257.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="654.5455" y="239.3749" font-size="18.8267" fill="var(--text-muted)" text-anchor="start" font-family="Arial, sans-serif">Scheduled compaction (daily at 2 AM)</text>
+  <rect x="76.3637" y="266.5625" width="1127.2727" height="68.875" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="94.5455" y="295.5624" font-size="20.5381" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Read all files for yesterday's partition, write as fewer larger files</text>
+  <line x1="640.0001" y1="339.0624" x2="640.0001" y2="402.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="58.1819" y="438.7499" font-size="20.5381" fill="var(--text)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">After compaction:</text>
+  <rect x="72.7274" y="456.8749" width="327.2727" height="72.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="163.6364" y="502.1875" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">128 MB</text>
+  <rect x="436.3638" y="456.8749" width="327.2727" height="72.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="527.2728" y="502.1875" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">128 MB</text>
+  <rect x="800.0001" y="456.8749" width="327.2727" height="72.5" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="890.9091" y="502.1875" font-size="22.2498" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">90 MB</text>
+  <text x="58.1819" y="565.6249" font-size="20.5381" fill="var(--ok-accent)" text-anchor="start" font-family="Arial, sans-serif">3 files per day  (vs 1440)</text>
 </svg>

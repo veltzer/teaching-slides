@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -128,30 +128,30 @@
   </defs>
   <rect width="1200" height="580" fill="url(#bg)" rx="6" x="40" y="40"/>
   <rect x="415" y="83.5" width="450" height="58" rx="6" fill="url(#g-app)" opacity="0.9" />
-  <text x="640" y="119.75" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Application</text>
+  <text x="640" y="119.75" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Application</text>
   <rect x="415" y="153.1" width="450" height="58" rx="6" fill="url(#g-pres)" opacity="0.9" />
-  <text x="640" y="189.35" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Presentation</text>
+  <text x="640" y="189.35" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Presentation</text>
   <rect x="415" y="222.7" width="450" height="58" rx="6" fill="url(#g-sess)" opacity="0.9" />
-  <text x="640" y="258.95" text-anchor="middle" font-size="19.4662" fill="var(--text)" font-weight="bold">Session</text>
+  <text x="640" y="258.95" text-anchor="middle" font-size="19.4662" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Session</text>
   <rect x="415" y="292.3" width="450" height="58" rx="6" fill="url(#g-trans)" opacity="0.9" />
-  <text x="640" y="328.55" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Transport</text>
+  <text x="640" y="328.55" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Transport</text>
   <rect x="415" y="361.9" width="450" height="58" rx="6" fill="url(#g-net)" opacity="0.9" />
-  <text x="640" y="398.15" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Network</text>
+  <text x="640" y="398.15" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Network</text>
   <rect x="415" y="431.5" width="450" height="58" rx="6" fill="url(#g-link)" opacity="0.9" />
-  <text x="640" y="467.75" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Data Link</text>
+  <text x="640" y="467.75" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Data Link</text>
   <rect x="415" y="501.1" width="450" height="58" rx="6" fill="url(#g-phys)" opacity="0.9" />
-  <text x="640" y="537.35" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold">Physical</text>
-  <text x="385" y="119.75" text-anchor="end" font-size="15.2948" fill="var(--text-faint)">HTTP, FTP, DNS</text>
-  <text x="385" y="328.55" text-anchor="end" font-size="15.2948" fill="var(--text-faint)">TCP / UDP</text>
-  <text x="385" y="398.15" text-anchor="end" font-size="15.2948" fill="var(--text-faint)">IP, ICMP</text>
-  <text x="385" y="537.35" text-anchor="end" font-size="15.2948" fill="var(--text-faint)">Ethernet, Wi-Fi</text>
-  <text x="895" y="119.75" font-size="15.2948" fill="var(--text-faint)">Layer 7</text>
-  <text x="895" y="189.35" font-size="15.2948" fill="var(--text-faint)">Layer 6</text>
-  <text x="895" y="258.95" font-size="15.2948" fill="var(--text-faint)">Layer 5</text>
-  <text x="895" y="328.55" font-size="15.2948" fill="var(--text-faint)">Layer 4</text>
-  <text x="895" y="398.15" font-size="15.2948" fill="var(--text-faint)">Layer 3</text>
-  <text x="895" y="467.75" font-size="15.2948" fill="var(--text-faint)">Layer 2</text>
-  <text x="895" y="537.35" font-size="15.2948" fill="var(--text-faint)">Layer 1</text>
+  <text x="640" y="537.35" text-anchor="middle" font-size="19.4662" fill="var(--bg)" font-weight="bold" font-family="Arial, sans-serif">Physical</text>
+  <text x="385" y="119.75" text-anchor="end" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">HTTP, FTP, DNS</text>
+  <text x="385" y="328.55" text-anchor="end" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">TCP / UDP</text>
+  <text x="385" y="398.15" text-anchor="end" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">IP, ICMP</text>
+  <text x="385" y="537.35" text-anchor="end" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Ethernet, Wi-Fi</text>
+  <text x="895" y="119.75" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 7</text>
+  <text x="895" y="189.35" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 6</text>
+  <text x="895" y="258.95" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 5</text>
+  <text x="895" y="328.55" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 4</text>
+  <text x="895" y="398.15" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 3</text>
+  <text x="895" y="467.75" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 2</text>
+  <text x="895" y="537.35" font-size="15.2948" fill="var(--text-faint)" font-family="Arial, sans-serif">Layer 1</text>
   <rect x="160" y="156" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5" />
   <rect x="1030" y="446" width="90" height="43.5" rx="6" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.5" />
   <rect x="190" y="475" width="75" height="36.25" rx="6" fill="none" stroke="var(--border)" stroke-width="1" opacity="0.4" />

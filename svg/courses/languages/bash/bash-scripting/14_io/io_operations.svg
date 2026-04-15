@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -101,17 +101,17 @@
   <!-- Top: three standard streams -->
   <rect x="40" y="40" width="340" height="81.403509" rx="6.566261" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="210" y="68.491228" font-family="Arial, sans-serif" font-size="16.139761" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">stdin  (fd 0)</text>
-  <text x="210" y="90.877193" font-family="monospace" font-size="14.122277" fill="var(--text)" text-anchor="middle">keyboard / file / pipe</text>
+  <text x="210" y="90.877193" font-size="14.122277" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">keyboard / file / pipe</text>
   <text x="210" y="111.22807" font-family="Arial, sans-serif" font-size="13.11359" fill="var(--text-muted)" text-anchor="middle">default: terminal input</text>
 
   <rect x="470" y="40" width="340" height="81.403509" rx="6.566261" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="68.491228" font-family="Arial, sans-serif" font-size="16.139761" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">stdout  (fd 1)</text>
-  <text x="640" y="90.877193" font-family="monospace" font-size="14.122277" fill="var(--text)" text-anchor="middle">terminal / file / pipe</text>
+  <text x="640" y="90.877193" font-size="14.122277" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">terminal / file / pipe</text>
   <text x="640" y="111.22807" font-family="Arial, sans-serif" font-size="13.11359" fill="var(--text-muted)" text-anchor="middle">default: terminal output</text>
 
   <rect x="900" y="40" width="340" height="81.403509" rx="6.566261" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1070" y="68.491228" font-family="Arial, sans-serif" font-size="16.139761" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">stderr  (fd 2)</text>
-  <text x="1070" y="90.877193" font-family="monospace" font-size="14.122277" fill="var(--text)" text-anchor="middle">terminal / file</text>
+  <text x="1070" y="90.877193" font-size="14.122277" fill="var(--text)" text-anchor="middle" font-family="Courier New, monospace">terminal / file</text>
   <text x="1070" y="111.22807" font-family="Arial, sans-serif" font-size="13.11359" fill="var(--text-muted)" text-anchor="middle">errors and diagnostics</text>
 
   <!-- Arrows from streams down to process -->
@@ -120,55 +120,55 @@
   <line x1="1070" y1="121.403509" x2="1070" y2="177.368477" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Process box -->
-  <rect x="380" y="177.368477" width="520" height="66.140295" rx="6.566261" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="380" y="177.368477" width="520" height="66.140295" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="205.859705" font-family="Arial, sans-serif" font-size="18.157245" fill="var(--bg)" text-anchor="middle" font-weight="bold">Script / Process</text>
   <text x="640" y="230.280758" font-family="Arial, sans-serif" font-size="14.122277" fill="var(--primary-accent)" text-anchor="middle">reads from stdin, writes to stdout/stderr</text>
 
   <!-- OUTPUT methods section -->
-  <rect x="40" y="284.210526" width="580" height="335.789474" rx="6.566261" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="284.210526" width="580" height="335.789474" rx="6.566261" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="330" y="312.701754" font-family="Arial, sans-serif" font-size="17.148448" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Output Commands</text>
 
-  <text x="60" y="340.175495" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">echo</text>
-  <text x="60" y="360.526372" font-family="monospace" font-size="13.11359" fill="var(--text)">echo "Hello, World!"</text>
-  <text x="60" y="378.842049" font-family="monospace" font-size="13.11359" fill="var(--text)">echo -n "no newline"</text>
+  <text x="60" y="340.175495" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">echo</text>
+  <text x="60" y="360.526372" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">echo "Hello, World!"</text>
+  <text x="60" y="378.842049" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">echo -n "no newline"</text>
   <text x="60" y="397.157951" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">simple output, adds newline</text>
 
   <line x1="60" y1="411.403453" x2="590" y2="411.403453" stroke="var(--ok-border)" stroke-width="1"/>
 
-  <text x="60" y="434.807018" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">printf</text>
-  <text x="60" y="455.157895" font-family="monospace" font-size="13.11359" fill="var(--text)">printf "Name: %s\n" "$name"</text>
-  <text x="60" y="475.508772" font-family="monospace" font-size="13.11359" fill="var(--text)">printf "%05d\n" 42</text>
+  <text x="60" y="434.807018" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">printf</text>
+  <text x="60" y="455.157895" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">printf "Name: %s\n" "$name"</text>
+  <text x="60" y="475.508772" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">printf "%05d\n" 42</text>
   <text x="60" y="493.824561" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">formatted output, portable</text>
 
   <line x1="60" y1="508.070175" x2="590" y2="508.070175" stroke="var(--ok-border)" stroke-width="1"/>
 
-  <text x="60" y="531.47374" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">echo to stderr</text>
-  <text x="60" y="551.824618" font-family="monospace" font-size="13.11359" fill="var(--text)">echo "Error!" &gt;&amp;2</text>
-  <text x="60" y="572.175495" font-family="monospace" font-size="13.11359" fill="var(--text)">printf "Warn: %s\n" "$msg" &gt;&amp;2</text>
+  <text x="60" y="531.47374" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">echo to stderr</text>
+  <text x="60" y="551.824618" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">echo "Error!" &gt;&amp;2</text>
+  <text x="60" y="572.175495" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">printf "Warn: %s\n" "$msg" &gt;&amp;2</text>
   <text x="60" y="590.491172" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">write errors to fd 2</text>
   <text x="60" y="607.789474" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">keeps stdout clean</text>
 
   <!-- INPUT methods section -->
-  <rect x="660" y="284.210526" width="580" height="335.789474" rx="6.566261" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="284.210526" width="580" height="335.789474" rx="6.566261" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="950" y="312.701754" font-family="Arial, sans-serif" font-size="17.148448" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Input Commands</text>
 
-  <text x="680" y="340.175495" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">read</text>
-  <text x="680" y="360.526372" font-family="monospace" font-size="13.11359" fill="var(--text)">read -r line         # one line</text>
-  <text x="680" y="380.877249" font-family="monospace" font-size="13.11359" fill="var(--text)">read -r -p "Name: " n</text>
-  <text x="680" y="401.228126" font-family="monospace" font-size="13.11359" fill="var(--text)">read -r -s password  # silent</text>
+  <text x="680" y="340.175495" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">read</text>
+  <text x="680" y="360.526372" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">read -r line         # one line</text>
+  <text x="680" y="380.877249" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">read -r -p "Name: " n</text>
+  <text x="680" y="401.228126" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">read -r -s password  # silent</text>
   <text x="680" y="419.543804" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">reads from stdin into variable</text>
 
   <line x1="680" y1="433.78953" x2="1210" y2="433.78953" stroke="var(--primary-border)" stroke-width="1"/>
 
-  <text x="680" y="457.192982" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">here-doc</text>
-  <text x="680" y="477.54386" font-family="monospace" font-size="13.11359" fill="var(--text)">cat &lt;&lt;EOF</text>
-  <text x="680" y="497.894737" font-family="monospace" font-size="13.11359" fill="var(--text)">  line one</text>
-  <text x="680" y="518.245614" font-family="monospace" font-size="13.11359" fill="var(--text)">  line two</text>
-  <text x="680" y="538.596491" font-family="monospace" font-size="13.11359" fill="var(--text)">EOF</text>
+  <text x="680" y="457.192982" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">here-doc</text>
+  <text x="680" y="477.54386" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">cat &lt;&lt;EOF</text>
+  <text x="680" y="497.894737" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">  line one</text>
+  <text x="680" y="518.245614" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">  line two</text>
+  <text x="680" y="538.596491" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">EOF</text>
   <text x="680" y="556.912281" font-family="Arial, sans-serif" font-size="12.104794" fill="var(--text-muted)">inline multi-line input</text>
 
   <line x1="680" y1="571.157895" x2="1210" y2="571.157895" stroke="var(--primary-border)" stroke-width="1"/>
 
-  <text x="680" y="589.473684" font-family="monospace" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold">here-string</text>
-  <text x="680" y="609.824561" font-family="monospace" font-size="13.11359" fill="var(--text)">grep "word" &lt;&lt;&lt; "$var"</text>
+  <text x="680" y="589.473684" font-size="14.122277" fill="var(--primary-accent)" font-weight="bold" font-family="Courier New, monospace">here-string</text>
+  <text x="680" y="609.824561" font-size="13.11359" fill="var(--text)" font-family="Courier New, monospace">grep "word" &lt;&lt;&lt; "$var"</text>
 </svg>

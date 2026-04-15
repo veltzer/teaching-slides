@@ -29,11 +29,21 @@ RECT_RE = re.compile(r'<rect\b([^/>]*)/\s*>')
 DEFS_RE = re.compile(r'<defs\b.*?</defs>', re.DOTALL)
 ATTR_RE = re.compile(r'\b([\w-]+)="([^"]*)"')
 FILTER_ATTR_RE = re.compile(r'\s*filter="[^"]*"')
-FILTER_DEF = (
-    '<filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">'
-    '<feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>'
-    '</filter>'
-)
+def _filter_def() -> str:
+    """Build the shadow filter def from the palette so it reflects current values."""
+    data = yaml.safe_load(PALETTE.read_text(encoding="utf-8"))
+    f = data.get("filters", {}).get("shadow", {})
+    dx = f.get("dx", 0)
+    dy = f.get("dy", 2)
+    sd = f.get("stdDeviation", 3)
+    flood = f.get("flood-color", "#00000022")
+    return (
+        f'<filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">'
+        f'<feDropShadow dx="{dx}" dy="{dy}" stdDeviation="{sd}" flood-color="{flood}"/>'
+        f'</filter>'
+    )
+
+FILTER_DEF = _filter_def()
 
 
 def load_policy() -> tuple[bool, str, set[str]]:
@@ -51,6 +61,8 @@ def load_policy() -> tuple[bool, str, set[str]]:
         for name in group:
             if name.endswith("-fill"):
                 family_fills.add(f"var(--{name})")
+                # Gradient form of the same family — treat it identically.
+                family_fills.add(f"url(#grad-{name[:-len('-fill')]})")
     return enabled, apply_to, family_fills
 
 
@@ -83,15 +95,18 @@ def transform(text: str, apply_to: str, family_fills: set[str]) -> tuple[str, in
             continue
         body = m.group(1)
         attrs = dict(ATTR_RE.findall(body))
-        has_filter = "filter" in attrs and "url(#shadow)" in attrs["filter"]
+        existing_filter = attrs.get("filter", "").strip()
+        has_shadow = existing_filter == "url(#shadow)"
         want = needs_shadow(attrs, apply_to, family_fills)
 
-        if want and not has_filter:
-            new_body = body.rstrip()
+        if want and not has_shadow:
+            # Replace any existing filter attribute (e.g. url(#shadow-sm))
+            # so we don't end up with duplicate filter= attributes.
+            new_body = FILTER_ATTR_RE.sub("", body).rstrip()
             new_body += ' filter="url(#shadow)"'
             out.append(f"<rect{new_body}/>")
             added += 1
-        elif has_filter and not want:
+        elif has_shadow and not want:
             new_body = FILTER_ATTR_RE.sub("", body)
             new_body = re.sub(r"\s+/\s*$", "", new_body)
             out.append(f"<rect{new_body}/>")

@@ -1,101 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif" style="background:var(--bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --primary-accent: #243b59;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+  </defs>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <polygon points="640,62.3077 40,564.2308 1240,564.2308" fill="var(--primary-fill)" stroke="var(--text)" stroke-width="3.3684" />
-  <text x="640" y="385.7692" text-anchor="middle" font-size="33.6992" fill="var(--text)">CIA Triad</text>
-  <text x="640" y="40" text-anchor="middle" font-size="31.2922" font-weight="bold" fill="var(--text)">Confidentiality</text>
-  <text x="40" y="620" text-anchor="middle" font-size="31.2922" font-weight="bold" fill="var(--text)">Integrity</text>
-  <text x="1240" y="620" text-anchor="middle" font-size="31.2922" font-weight="bold" fill="var(--text)">Availability</text>
+  <!-- Triangle fills the full usable area; labels sit INSIDE so the fit
+       script can't stretch text past the slide edges. -->
+  <polygon points="640,40 40,620 1240,620"
+           fill="url(#grad-primary)" stroke="var(--primary-border)"
+           stroke-width="3" filter="url(#shadow)"/>
+
+  <!-- Confidentiality — moved down so the text fits inside the triangle.
+       Triangle width at y=280 is ~497px; font-size 30 "Confidentiality"
+       is ~260px wide, leaves safe margin on both sides. -->
+  <text x="640" y="280" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="30" font-weight="bold" fill="var(--primary-text)">Confidentiality</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="18" fill="var(--primary-text)">keep secrets secret</text>
+
+  <!-- Center label -->
+  <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="48" font-weight="bold" fill="var(--primary-text)">CIA Triad</text>
+
+  <!-- Integrity — lower-left interior; triangle width at y=560 is ~1076px,
+       so x=350 still sits well inside the left edge of the triangle. -->
+  <text x="350" y="570" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28" font-weight="bold" fill="var(--primary-text)">Integrity</text>
+  <text x="350" y="600" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="16" fill="var(--primary-text)">data unchanged</text>
+
+  <!-- Availability — lower-right interior -->
+  <text x="930" y="570" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="28" font-weight="bold" fill="var(--primary-text)">Availability</text>
+  <text x="930" y="600" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="16" fill="var(--primary-text)">service reachable</text>
 </svg>

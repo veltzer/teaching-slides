@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,65 +97,62 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
   </defs>
   <line x1="69.508199" y1="46.932226" x2="1230.164038" y2="46.932226" stroke="var(--border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="1238.032787" y="53.864453" font-family="sans-serif" font-size="17.056575" fill="var(--primary-accent)">time</text>
-  <text x="40" y="42.310599" font-family="sans-serif" font-size="13.858559" fill="var(--text-faint)">t=</text>
+  <text x="1238.032787" y="53.864453" font-size="17.056575" fill="var(--primary-accent)" font-family="Arial, sans-serif">time</text>
+  <text x="40" y="42.310599" font-size="13.858559" fill="var(--text-faint)" font-family="Arial, sans-serif">t=</text>
   <line x1="108.852465" y1="40" x2="108.852465" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="108.852465" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">0</text>
+  <text x="108.852465" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">0</text>
   <line x1="256.393462" y1="40" x2="256.393462" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="256.393462" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">1</text>
+  <text x="256.393462" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">1</text>
   <line x1="403.934458" y1="40" x2="403.934458" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="403.934458" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">2</text>
+  <text x="403.934458" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">2</text>
   <line x1="551.475455" y1="40" x2="551.475455" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="551.475455" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">3</text>
+  <text x="551.475455" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">3</text>
   <line x1="699.016451" y1="40" x2="699.016451" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="699.016451" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">4</text>
+  <text x="699.016451" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">4</text>
   <line x1="846.557448" y1="40" x2="846.557448" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="846.557448" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">5</text>
+  <text x="846.557448" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">5</text>
   <line x1="994.098444" y1="40" x2="994.098444" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="994.098444" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">6</text>
+  <text x="994.098444" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">6</text>
   <line x1="1141.639441" y1="40" x2="1141.639441" y2="56.175195" stroke="var(--text-faint)" stroke-width="1.3333" />
-  <text x="1141.639441" y="72.35039" text-anchor="middle" font-family="monospace" font-size="13.858559" fill="var(--text-faint)">7</text>
-  <text x="640.000052" y="90.836613" text-anchor="middle" font-family="sans-serif" font-size="14.924442" fill="var(--text-faint)">batch interval = 1s</text>
-  <text x="40" y="133.585701" font-family="sans-serif" font-size="15.99057" font-weight="bold" fill="var(--text)">Input</text>
-  <text x="40" y="156.693122" font-family="sans-serif" font-size="13.858559" fill="var(--text-muted)">DStream</text>
+  <text x="1141.639441" y="72.35039" text-anchor="middle" font-size="13.858559" fill="var(--text-faint)" font-family="Courier New, monospace">7</text>
+  <text x="640.000052" y="90.836613" text-anchor="middle" font-size="14.924442" fill="var(--text-faint)" font-family="Arial, sans-serif">batch interval = 1s</text>
+  <text x="40" y="133.585701" font-size="15.99057" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Input</text>
+  <text x="40" y="156.693122" font-size="13.858559" fill="var(--text-muted)" font-family="Arial, sans-serif">DStream</text>
   <rect x="108.852465" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="177.70493" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[0]</text>
+  <text x="177.70493" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[0]</text>
   <rect x="256.393462" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="325.245822" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[1]</text>
+  <text x="325.245822" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[1]</text>
   <rect x="403.934458" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="472.786923" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[2]</text>
+  <text x="472.786923" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[2]</text>
   <rect x="551.475455" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="620.32792" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[3]</text>
+  <text x="620.32792" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[3]</text>
   <rect x="699.016451" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="767.868811" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[4]</text>
+  <text x="767.868811" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[4]</text>
   <rect x="846.557448" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="915.409913" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[5]</text>
+  <text x="915.409913" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[5]</text>
   <rect x="994.098444" y="110.477993" width="137.70493" height="57.76884" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1062.950909" y="145.139268" text-anchor="middle" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">RDD[6]</text>
-  <text x="40" y="243.346597" font-family="sans-serif" font-size="15.99057" font-weight="bold" fill="var(--text)">Window</text>
-  <text x="40" y="266.454162" font-family="sans-serif" font-size="13.858559" fill="var(--text-muted)">3s / slide 1s</text>
-  <rect x="108.852465" y="220.239032" width="432.786923" height="57.76884" rx="7.360221" fill="var(--primary-fill)" opacity="0.7" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="325.245822" y="254.900451" text-anchor="middle" font-family="sans-serif" font-size="14.924442" fill="var(--bg)">w1: RDD[0]+[1]+[2]</text>
-  <rect x="256.393462" y="296.494096" width="432.786923" height="57.76884" rx="7.360221" fill="var(--primary-fill)" opacity="0.7" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="472.786923" y="331.155514" text-anchor="middle" font-family="sans-serif" font-size="14.924442" fill="var(--bg)">w2: RDD[1]+[2]+[3]</text>
-  <rect x="403.934458" y="372.749159" width="432.786923" height="57.76884" rx="7.360221" fill="var(--primary-fill)" opacity="0.7" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="620.32792" y="407.410435" text-anchor="middle" font-family="sans-serif" font-size="14.924442" fill="var(--bg)">w3: RDD[2]+[3]+[4]</text>
+  <text x="1062.950909" y="145.139268" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">RDD[6]</text>
+  <text x="40" y="243.346597" font-size="15.99057" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Window</text>
+  <text x="40" y="266.454162" font-size="13.858559" fill="var(--text-muted)" font-family="Arial, sans-serif">3s / slide 1s</text>
+  <rect x="108.852465" y="220.239032" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="325.245822" y="254.900451" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w1: RDD[0]+[1]+[2]</text>
+  <rect x="256.393462" y="296.494096" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="472.786923" y="331.155514" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w2: RDD[1]+[2]+[3]</text>
+  <rect x="403.934458" y="372.749159" width="432.786923" height="57.76884" rx="7.360221" fill="url(#grad-primary)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620.32792" y="407.410435" text-anchor="middle" font-size="14.924442" fill="var(--bg)" font-family="Arial, sans-serif">w3: RDD[2]+[3]+[4]</text>
   <line x1="108.852465" y1="462.868676" x2="256.393462" y2="462.868676" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="182.622963" y="483.665498" text-anchor="middle" font-family="sans-serif" font-size="14.924442" fill="var(--primary-accent)">slide = 1s</text>
+  <text x="182.622963" y="483.665498" text-anchor="middle" font-size="14.924442" fill="var(--primary-accent)" font-family="Arial, sans-serif">slide = 1s</text>
   <line x1="256.393462" y1="462.868676" x2="403.934458" y2="462.868676" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <rect x="40" y="509.083661" width="609.836119" height="110.916339" rx="7.360221" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="344.918059" y="539.123739" text-anchor="middle" font-family="sans-serif" font-size="15.99057" font-weight="bold" fill="var(--text)">Code</text>
-  <text x="59.672133" y="566.852788" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">windowed = stream.window(</text>
-  <text x="59.672133" y="592.270951" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">    windowDuration=3,   # seconds</text>
-  <text x="59.672133" y="617.689401" font-family="monospace" font-size="14.924442" fill="var(--primary-accent)">    slideDuration=1)</text>
-  <rect x="679.344213" y="509.083661" width="560.655787" height="110.916339" rx="7.360221" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="959.672212" y="539.123739" text-anchor="middle" font-family="sans-serif" font-size="15.99057" font-weight="bold" fill="var(--primary-accent)">Key parameters</text>
-  <text x="699.016451" y="566.852788" font-family="sans-serif" font-size="14.924442" fill="var(--text-muted)">windowDuration: how much history to include</text>
-  <text x="699.016451" y="592.270951" font-family="sans-serif" font-size="14.924442" fill="var(--text-muted)">slideDuration: how often result is computed</text>
-  <text x="699.016451" y="617.689401" font-family="sans-serif" font-size="14.924442" fill="var(--text-muted)">Both must be multiples of the batch interval</text>
+  <text x="344.918059" y="539.123739" text-anchor="middle" font-size="15.99057" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Code</text>
+  <text x="59.672133" y="566.852788" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">windowed = stream.window(</text>
+  <text x="59.672133" y="592.270951" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">    windowDuration=3,   # seconds</text>
+  <text x="59.672133" y="617.689401" font-size="14.924442" fill="var(--primary-accent)" font-family="Courier New, monospace">    slideDuration=1)</text>
+  <rect x="679.344213" y="509.083661" width="560.655787" height="110.916339" rx="7.360221" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="959.672212" y="539.123739" text-anchor="middle" font-size="15.99057" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Key parameters</text>
+  <text x="699.016451" y="566.852788" font-size="14.924442" fill="var(--text-muted)" font-family="Arial, sans-serif">windowDuration: how much history to include</text>
+  <text x="699.016451" y="592.270951" font-size="14.924442" fill="var(--text-muted)" font-family="Arial, sans-serif">slideDuration: how often result is computed</text>
+  <text x="699.016451" y="617.689401" font-size="14.924442" fill="var(--text-muted)" font-family="Arial, sans-serif">Both must be multiples of the batch interval</text>
 </svg>

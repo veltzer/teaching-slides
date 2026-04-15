@@ -1,63 +1,150 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Core Design Principles</text>
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Core Design Principles</text>
 
-  <rect x="40" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Shared Rings</text>
-  <text x="185" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Submission ring</text>
-  <text x="185" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Completion ring</text>
-  <text x="185" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">mmap'd memory</text>
-  <text x="185" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">User and kernel</text>
-  <text x="185" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">read same pages</text>
-  <text x="185" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Lock-free queue</text>
-  <text x="185" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Head / tail indices</text>
-  <text x="185" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Atomic updates</text>
-  <text x="185" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Cache-friendly</text>
-  <text x="185" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">memory layout</text>
+  <rect x="40" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Shared Rings</text>
+  <text x="185" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Submission ring</text>
+  <text x="185" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Completion ring</text>
+  <text x="185" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">mmap'd memory</text>
+  <text x="185" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">User and kernel</text>
+  <text x="185" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">read same pages</text>
+  <text x="185" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Lock-free queue</text>
+  <text x="185" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Head / tail indices</text>
+  <text x="185" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Atomic updates</text>
+  <text x="185" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">Cache-friendly</text>
+  <text x="185" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)" font-family="Arial, sans-serif">memory layout</text>
 
-  <rect x="350" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="495" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)">Batched SQEs</text>
-  <text x="495" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Queue many ops</text>
-  <text x="495" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">One io_uring_enter</text>
-  <text x="495" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Amortize syscalls</text>
-  <text x="495" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Link chains</text>
-  <text x="495" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Drain barriers</text>
-  <text x="495" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Fixed buffers</text>
-  <text x="495" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Registered fds</text>
-  <text x="495" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Skip per-op setup</text>
-  <text x="495" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Huge throughput</text>
-  <text x="495" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">on modern SSDs</text>
+  <rect x="350" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Batched SQEs</text>
+  <text x="495" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Queue many ops</text>
+  <text x="495" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">One io_uring_enter</text>
+  <text x="495" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Amortize syscalls</text>
+  <text x="495" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Link chains</text>
+  <text x="495" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Drain barriers</text>
+  <text x="495" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Fixed buffers</text>
+  <text x="495" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Registered fds</text>
+  <text x="495" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Skip per-op setup</text>
+  <text x="495" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">Huge throughput</text>
+  <text x="495" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)" font-family="Arial, sans-serif">on modern SSDs</text>
 
-  <rect x="660" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="805" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Polled Mode</text>
-  <text x="805" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">SQPOLL thread</text>
-  <text x="805" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Kernel spins</text>
-  <text x="805" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Zero syscalls</text>
-  <text x="805" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">on the hot path</text>
-  <text x="805" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">IOPOLL for NVMe</text>
-  <text x="805" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Skip interrupts</text>
-  <text x="805" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Trade CPU, gain latency</text>
-  <text x="805" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Best for steady load</text>
-  <text x="805" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Idle thread parks</text>
-  <text x="805" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">automatically</text>
+  <rect x="660" y="77.247706" width="290" height="542.752294" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Polled Mode</text>
+  <text x="805" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">SQPOLL thread</text>
+  <text x="805" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Kernel spins</text>
+  <text x="805" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Zero syscalls</text>
+  <text x="805" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">on the hot path</text>
+  <text x="805" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">IOPOLL for NVMe</text>
+  <text x="805" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Skip interrupts</text>
+  <text x="805" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Trade CPU, gain latency</text>
+  <text x="805" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Best for steady load</text>
+  <text x="805" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">Idle thread parks</text>
+  <text x="805" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)" font-family="Arial, sans-serif">automatically</text>
 
-  <rect x="970" y="77.247706" width="270" height="542.752294" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1105" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--info-text)">Unified API</text>
-  <text x="1105" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Files and sockets</text>
-  <text x="1105" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">Same opcodes</text>
-  <text x="1105" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">read / write / accept</text>
-  <text x="1105" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">send / recv / timeout</text>
-  <text x="1105" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">openat / statx</text>
-  <text x="1105" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">New ops added often</text>
-  <text x="1105" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">since Linux 5.1</text>
-  <text x="1105" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">liburing in C</text>
-  <text x="1105" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">bindings grow</text>
-  <text x="1105" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--info-text)">across languages</text>
+  <rect x="970" y="77.247706" width="270" height="542.752294" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="125.137615" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">Unified API</text>
+  <text x="1105" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">Files and sockets</text>
+  <text x="1105" y="210.275229" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">Same opcodes</text>
+  <text x="1105" y="268.807339" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">read / write / accept</text>
+  <text x="1105" y="311.376147" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">send / recv / timeout</text>
+  <text x="1105" y="348.623853" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">openat / statx</text>
+  <text x="1105" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">New ops added often</text>
+  <text x="1105" y="449.724771" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">since Linux 5.1</text>
+  <text x="1105" y="508.256881" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">liburing in C</text>
+  <text x="1105" y="561.46789" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">bindings grow</text>
+  <text x="1105" y="598.715596" text-anchor="middle" font-size="15.474157" fill="var(--info-text)" font-family="Arial, sans-serif">across languages</text>
 </svg>

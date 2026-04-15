@@ -1,123 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#28a745" />
-    </marker>
+
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="21.4739" font-weight="bold" fill="var(--text)">ML Pipeline Integration with Data Lake</text>
+  <text x="640" y="40" text-anchor="middle" font-size="21.4739" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ML Pipeline Integration with Data Lake</text>
   <rect x="40" y="80.8451" width="279.0697" height="392.1123" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.7449 1.3724" />
-  <text x="179.5349" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--primary-accent)">Data Lake</text>
-  <rect x="67.907" y="138.0285" width="223.2558" height="57.1832" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="179.5349" y="173.9718" text-anchor="middle" font-size="18.7707" fill="var(--text)">Raw Data</text>
-  <rect x="67.907" y="227.8873" width="223.2558" height="57.1832" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="179.5349" y="263.831" text-anchor="middle" font-size="18.7707" fill="var(--text)">Feature Store</text>
-  <rect x="67.907" y="317.7465" width="223.2558" height="57.1832" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="179.5349" y="353.6902" text-anchor="middle" font-size="18.7707" fill="var(--text)">Model Registry</text>
+  <text x="179.5349" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Lake</text>
+  <rect x="67.907" y="138.0285" width="223.2558" height="57.1832" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="179.5349" y="173.9718" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Raw Data</text>
+  <rect x="67.907" y="227.8873" width="223.2558" height="57.1832" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="179.5349" y="263.831" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Feature Store</text>
+  <rect x="67.907" y="317.7465" width="223.2558" height="57.1832" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="179.5349" y="353.6902" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Model Registry</text>
   <rect x="388.8372" y="80.8451" width="488.3721" height="228.7322" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.7449 1.3724" />
-  <text x="633.0231" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--danger-accent)">ML Pipeline</text>
-  <rect x="409.7675" y="146.1974" width="139.5349" height="57.1832" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.5349" y="182.1409" text-anchor="middle" font-size="18.7707" fill="var(--text)">Data Prep</text>
-  <rect x="570.2323" y="146.1974" width="139.5349" height="57.1832" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="175.6057" text-anchor="middle" font-size="18.7707" fill="var(--text)">Feature</text>
-  <text x="640" y="195.2115" text-anchor="middle" font-size="18.7707" fill="var(--text)">Engineering</text>
-  <rect x="409.7675" y="227.8873" width="139.5349" height="57.1832" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.5349" y="260.5633" text-anchor="middle" font-size="18.7707" fill="var(--text)">Model Training</text>
-  <rect x="570.2323" y="227.8873" width="139.5349" height="57.1832" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="254.0281" text-anchor="middle" font-size="18.7707" fill="var(--text)">Model</text>
-  <text x="640" y="273.6339" text-anchor="middle" font-size="18.7707" fill="var(--text)">Evaluation</text>
+  <text x="633.0231" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">ML Pipeline</text>
+  <rect x="409.7675" y="146.1974" width="139.5349" height="57.1832" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.5349" y="182.1409" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Data Prep</text>
+  <rect x="570.2323" y="146.1974" width="139.5349" height="57.1832" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="175.6057" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Feature</text>
+  <text x="640" y="195.2115" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Engineering</text>
+  <rect x="409.7675" y="227.8873" width="139.5349" height="57.1832" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.5349" y="260.5633" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Model Training</text>
+  <rect x="570.2323" y="227.8873" width="139.5349" height="57.1832" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="254.0281" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Model</text>
+  <text x="640" y="273.6339" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Evaluation</text>
   <line x1="549.3024" y1="173.9718" x2="567.4418" y2="173.9718" stroke="var(--primary-border)" stroke-width="0.5146" marker-end="url(#arrow)" />
   <line x1="479.5349" y1="203.3805" x2="479.5349" y2="224.6198" stroke="var(--primary-border)" stroke-width="0.5146" marker-end="url(#arrow)" />
   <line x1="549.3024" y1="255.6618" x2="567.4418" y2="255.6618" stroke="var(--primary-border)" stroke-width="0.5146" marker-end="url(#arrow)" />
   <rect x="946.9767" y="80.8451" width="279.0697" height="228.7322" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.7449 1.3724" />
-  <text x="1086.5116" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--ok-accent)">Deployment</text>
-  <rect x="981.8604" y="146.1974" width="209.3022" height="57.1832" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1086.5116" y="182.1409" text-anchor="middle" font-size="18.7707" fill="var(--text)">Model Serving</text>
-  <rect x="981.8604" y="227.8873" width="209.3022" height="57.1832" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1086.5116" y="263.831" text-anchor="middle" font-size="18.7707" fill="var(--text)">Predictions</text>
+  <text x="1086.5116" y="116.7888" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Deployment</text>
+  <rect x="981.8604" y="146.1974" width="209.3022" height="57.1832" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1086.5116" y="182.1409" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Model Serving</text>
+  <rect x="981.8604" y="227.8873" width="209.3022" height="57.1832" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1086.5116" y="263.831" text-anchor="middle" font-size="18.7707" fill="var(--text)" font-family="Arial, sans-serif">Predictions</text>
   <line x1="1086.5116" y1="203.3805" x2="1086.5116" y2="224.6198" stroke="var(--ok-border)" stroke-width="0.5146" marker-end="url(#arrow-ok)" />
   <line x1="291.1627" y1="165.8028" x2="406.9766" y2="165.8028" stroke="var(--primary-border)" stroke-width="0.5146" marker-end="url(#arrow)" />
   <path d="M 640 203.3805 Q 612.0932 219.7184 291.1627 255.6618" fill="none" stroke="var(--warn-border)" stroke-width="0.5146" marker-end="url(#arrow)" />
@@ -125,9 +131,9 @@
   <path d="M 709.7673 255.6618 Q 779.5347 325.9154 291.1627 345.5212" fill="none" stroke="var(--ok-border)" stroke-width="0.5146" marker-end="url(#arrow-ok)" />
   <line x1="291.1627" y1="345.5212" x2="979.0698" y2="173.9718" stroke="var(--ok-border)" stroke-width="0.5146" marker-end="url(#arrow-ok)" />
   <path d="M 1086.5116 285.0705 Q 1086.5116 423.9437 179.5349 407.6057 Q 95.8139 407.6057 95.8139 178.8732" fill="none" stroke="var(--danger-border)" stroke-width="0.5146" stroke-dasharray="1.7155 1.0293" marker-end="url(#arrow)" />
-  <text x="570.2323" y="440.2816" text-anchor="middle" font-size="18.7707" fill="var(--danger-accent)">Feedback Loop</text>
+  <text x="570.2323" y="440.2816" text-anchor="middle" font-size="18.7707" fill="var(--danger-accent)" font-family="Arial, sans-serif">Feedback Loop</text>
   <rect x="40" y="505.6338" width="1200" height="114.3662" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="541.5775" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--text)">ML Pipeline Flow</text>
-  <text x="640" y="574.2534" text-anchor="middle" font-size="18.7707" fill="var(--text-muted)">Raw Data -&gt; Data Prep -&gt; Feature Engineering -&gt; Feature Store -&gt; Training -&gt; Evaluation -&gt; Model Registry -&gt; Serving</text>
-  <text x="640" y="603.6619" text-anchor="middle" font-size="18.7707" fill="var(--text-muted)">Predictions feed back into the data lake for continuous model improvement.</text>
+  <text x="640" y="541.5775" text-anchor="middle" font-size="18.7707" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ML Pipeline Flow</text>
+  <text x="640" y="574.2534" text-anchor="middle" font-size="18.7707" fill="var(--text-muted)" font-family="Arial, sans-serif">Raw Data -&gt; Data Prep -&gt; Feature Engineering -&gt; Feature Store -&gt; Training -&gt; Evaluation -&gt; Model Registry -&gt; Serving</text>
+  <text x="640" y="603.6619" text-anchor="middle" font-size="18.7707" fill="var(--text-muted)" font-family="Arial, sans-serif">Predictions feed back into the data lake for continuous model improvement.</text>
 </svg>

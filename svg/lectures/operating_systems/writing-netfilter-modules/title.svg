@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,9 +97,6 @@
       <stop offset="0%" style="stop-color:#0d1117" />
       <stop offset="100%" style="stop-color:#1a1a2e" />
     </linearGradient>
-    <marker id="arrowB" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,0 12.8,5.4 0,10.8" fill="#4a90e2" />
-    </marker>
   </defs>
   <rect width="1200" height="579.9998" fill="url(#bg)" rx="6" x="40" y="40"/>
   <g opacity="0.06" stroke="var(--bg)" stroke-width="0.7111">
@@ -115,29 +112,29 @@
   <line x1="130.0001" y1="330.0002" x2="1149.9999" y2="330.0002" stroke="var(--text)" stroke-width="2" opacity="0.5" />
   <g opacity="0.7">
     <rect x="159.9998" y="312.6002" width="52.5002" height="34.8002" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
-    <rect x="165.9999" y="318.4003" width="15" height="8.7002" rx="6" fill="var(--primary-fill)" opacity="0.5" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="183.9998" y="318.4003" width="22.4998" height="23.1999" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="165.9999" y="318.4003" width="15" height="8.7002" rx="6" fill="url(#grad-primary)" opacity="0.5" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="183.9998" y="318.4003" width="22.4998" height="23.1999" rx="6" fill="url(#grad-primary)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   </g>
   <g transform="translate(200, 200)">
     <circle r="22.2473" fill="var(--danger-fill)" opacity="0.2" stroke="var(--danger-border)" stroke-width="2.8444" />
-    <text y="98.0006" text-anchor="middle" fill="var(--danger-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">PRE_ROUTING</text>
+    <text y="98.0006" text-anchor="middle" fill="var(--danger-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">PRE_ROUTING</text>
     <line x1="40" y1="16.8002" x2="40" y2="-32.4999" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5.6889 4.2667" />
-    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="var(--danger-fill)" opacity="0.15" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text y="-48.4497" text-anchor="middle" fill="var(--danger-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">hook fn</text>
+    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="url(#grad-danger)" opacity="0.15" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text y="-48.4497" text-anchor="middle" fill="var(--danger-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">hook fn</text>
   </g>
   <g transform="translate(400, 200)">
     <circle r="22.2473" fill="var(--warn-fill)" opacity="0.2" stroke="var(--warn-border)" stroke-width="2.8444" />
-    <text y="98.0006" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">FORWARD</text>
+    <text y="98.0006" text-anchor="middle" fill="var(--warn-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">FORWARD</text>
     <line x1="40" y1="16.8002" x2="40" y2="-32.4999" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5.6889 4.2667" />
-    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="var(--warn-fill)" opacity="0.15" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text y="-48.4497" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">hook fn</text>
+    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="url(#grad-warn)" opacity="0.15" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text y="-48.4497" text-anchor="middle" fill="var(--warn-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">hook fn</text>
   </g>
   <g transform="translate(600, 200)">
     <circle r="22.2473" fill="var(--ok-fill)" opacity="0.2" stroke="var(--ok-border)" stroke-width="2.8444" />
-    <text y="98.0006" text-anchor="middle" fill="var(--ok-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">POST_ROUTING</text>
+    <text y="98.0006" text-anchor="middle" fill="var(--ok-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">POST_ROUTING</text>
     <line x1="40" y1="16.8002" x2="40" y2="-32.4999" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5.6889 4.2667" />
-    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="var(--ok-fill)" opacity="0.15" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-    <text y="-48.4497" text-anchor="middle" fill="var(--ok-accent)" font-family="monospace" font-size="19.1822" opacity="0.7">hook fn</text>
+    <rect x="2.4995" y="-68.7494" width="75" height="28.9998" rx="6" fill="url(#grad-ok)" opacity="0.15" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text y="-48.4497" text-anchor="middle" fill="var(--ok-accent)" font-size="19.1822" opacity="0.7" font-family="Courier New, monospace">hook fn</text>
   </g>
   <polygon points="272.4997,321.3001 287.5001,330.0002 272.4997,338.7002" fill="var(--primary-fill)" opacity="0.5" />
   <polygon points="520.0001,321.3001 535.0001,330.0002 520.0001,338.7002" fill="var(--primary-fill)" opacity="0.5" />
@@ -145,9 +142,9 @@
   <polygon points="1074.9999,321.3001 1089.9999,330.0002 1074.9999,338.7002" fill="var(--primary-fill)" opacity="0.5" />
   <g transform="translate(150, 290)" opacity="0.35">
     <rect x="40" y="40" width="750.0005" height="101.5002" rx="6" fill="var(--code-bg)" stroke="var(--text)" stroke-width="1.4222" />
-    <text x="62.4998" y="69.0003" fill="var(--info-accent)" font-family="monospace" font-size="19.1822">static unsigned int</text>
-    <text x="62.4998" y="92.2002" fill="var(--primary-accent)" font-family="monospace" font-size="19.1822">hook_func(void *priv, struct sk_buff *skb,</text>
-    <text x="62.4998" y="115.4003" fill="var(--warn-accent)" font-family="monospace" font-size="19.1822">  const struct nf_hook_state *state)</text>
+    <text x="62.4998" y="69.0003" fill="var(--info-accent)" font-size="19.1822" font-family="Courier New, monospace">static unsigned int</text>
+    <text x="62.4998" y="92.2002" fill="var(--primary-accent)" font-size="19.1822" font-family="Courier New, monospace">hook_func(void *priv, struct sk_buff *skb,</text>
+    <text x="62.4998" y="115.4003" fill="var(--warn-accent)" font-size="19.1822" font-family="Courier New, monospace">  const struct nf_hook_state *state)</text>
   </g>
   <g transform="translate(690, 60)" opacity="0.4">
     <path d="M 40 -3.4994 L 77.5 13.9004 L 77.5 54.5005 Q 77.5 83.5004 40 98.0006 Q 2.4995 83.5004 2.4995 54.5005 L 2.4995 13.9004 Z" fill="none" stroke="var(--danger-border)" stroke-width="2.8444" />

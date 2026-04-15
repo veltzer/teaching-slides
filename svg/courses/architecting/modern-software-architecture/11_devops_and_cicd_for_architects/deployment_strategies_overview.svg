@@ -1,88 +1,142 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="90" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)">Deployment Strategies</text>
-  <text x="640" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)">Trade downtime, risk, and cost</text>
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="90" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">Deployment Strategies</text>
+  <text x="640" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)" font-family="Arial, sans-serif">Trade downtime, risk, and cost</text>
 
   <line x1="640" y1="160" x2="640" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="220" width="230" height="400" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="155" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Recreate</text>
-  <text x="155" y="350" text-anchor="middle" font-size="16" fill="var(--danger-text)">Stop old</text>
-  <text x="155" y="380" text-anchor="middle" font-size="16" fill="var(--danger-text)">Start new</text>
-  <text x="155" y="440" text-anchor="middle" font-size="16" fill="var(--danger-text)">Downtime</text>
-  <text x="155" y="500" text-anchor="middle" font-size="16" fill="var(--danger-text)">Simplest</text>
-  <text x="155" y="560" text-anchor="middle" font-size="16" fill="var(--danger-text)">Batch jobs</text>
+  <rect x="40" y="220" width="230" height="400" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="155" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Recreate</text>
+  <text x="155" y="350" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">Stop old</text>
+  <text x="155" y="380" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">Start new</text>
+  <text x="155" y="440" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">Downtime</text>
+  <text x="155" y="500" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">Simplest</text>
+  <text x="155" y="560" text-anchor="middle" font-size="16" fill="var(--danger-text)" font-family="Arial, sans-serif">Batch jobs</text>
 
-  <rect x="280" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="395" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Rolling</text>
-  <text x="395" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Update</text>
-  <text x="395" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">pods in waves</text>
-  <text x="395" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)">Zero downtime</text>
-  <text x="395" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">Mixed versions</text>
-  <text x="395" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">K8s default</text>
+  <rect x="280" y="220" width="230" height="400" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Rolling</text>
+  <text x="395" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Update</text>
+  <text x="395" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">pods in waves</text>
+  <text x="395" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Zero downtime</text>
+  <text x="395" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Mixed versions</text>
+  <text x="395" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">K8s default</text>
 
-  <rect x="520" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="635" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Blue/Green</text>
-  <text x="635" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Two stacks</text>
-  <text x="635" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">switch router</text>
-  <text x="635" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)">Instant swap</text>
-  <text x="635" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">2x capacity</text>
-  <text x="635" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">Easy rollback</text>
+  <rect x="520" y="220" width="230" height="400" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Blue/Green</text>
+  <text x="635" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Two stacks</text>
+  <text x="635" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">switch router</text>
+  <text x="635" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Instant swap</text>
+  <text x="635" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">2x capacity</text>
+  <text x="635" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)" font-family="Arial, sans-serif">Easy rollback</text>
 
-  <rect x="760" y="220" width="230" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="875" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Canary</text>
-  <text x="875" y="350" text-anchor="middle" font-size="16" fill="var(--warn-text)">1% → 10%</text>
-  <text x="875" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)">→ 50% → 100%</text>
-  <text x="875" y="440" text-anchor="middle" font-size="16" fill="var(--warn-text)">Limit blast</text>
-  <text x="875" y="500" text-anchor="middle" font-size="16" fill="var(--warn-text)">Watch metrics</text>
-  <text x="875" y="560" text-anchor="middle" font-size="16" fill="var(--warn-text)">Auto-rollback</text>
+  <rect x="760" y="220" width="230" height="400" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="875" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Canary</text>
+  <text x="875" y="350" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">1% → 10%</text>
+  <text x="875" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">→ 50% → 100%</text>
+  <text x="875" y="440" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">Limit blast</text>
+  <text x="875" y="500" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">Watch metrics</text>
+  <text x="875" y="560" text-anchor="middle" font-size="16" fill="var(--warn-text)" font-family="Arial, sans-serif">Auto-rollback</text>
 
-  <rect x="1000" y="220" width="240" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">A/B Test</text>
-  <text x="1120" y="350" text-anchor="middle" font-size="16" fill="var(--info-text)">Route by user</text>
-  <text x="1120" y="380" text-anchor="middle" font-size="16" fill="var(--info-text)">compare KPI</text>
-  <text x="1120" y="440" text-anchor="middle" font-size="16" fill="var(--info-text)">Product intent</text>
-  <text x="1120" y="500" text-anchor="middle" font-size="16" fill="var(--info-text)">not infra</text>
-  <text x="1120" y="560" text-anchor="middle" font-size="16" fill="var(--info-text)">Measure lift</text>
+  <rect x="1000" y="220" width="240" height="400" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1120" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">A/B Test</text>
+  <text x="1120" y="350" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">Route by user</text>
+  <text x="1120" y="380" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">compare KPI</text>
+  <text x="1120" y="440" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">Product intent</text>
+  <text x="1120" y="500" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">not infra</text>
+  <text x="1120" y="560" text-anchor="middle" font-size="16" fill="var(--info-text)" font-family="Arial, sans-serif">Measure lift</text>
 </svg>

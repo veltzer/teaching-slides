@@ -1,121 +1,124 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" style="background:var(--bg)">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#dc3545" />
-    </marker>
+
   </defs>
-  <text x="639.9997" y="40" text-anchor="middle" font-size="25.3302" font-weight="bold" fill="var(--text)">Database Caching Patterns</text>
-  <rect x="40" y="169.8506" width="205.7143" height="86.5672" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="142.857" y="221.7909" text-anchor="middle" font-size="20.5807" fill="var(--text)">Application</text>
+  <text x="639.9997" y="40" text-anchor="middle" font-size="25.3302" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Database Caching Patterns</text>
+  <rect x="40" y="169.8506" width="205.7143" height="86.5672" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="142.857" y="221.7909" text-anchor="middle" font-size="20.5807" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
   <polygon points="468.5712,213.1342 588.5712,152.5373 708.5713,213.1342 588.5712,273.7314" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.6104" />
-  <text x="588.5712" y="207.9403" text-anchor="middle" font-size="17.4146" fill="var(--text)">Query</text>
-  <text x="588.5712" y="232.1791" text-anchor="middle" font-size="17.4146" fill="var(--text)">Cache?</text>
+  <text x="588.5712" y="207.9403" text-anchor="middle" font-size="17.4146" fill="var(--text)" font-family="Arial, sans-serif">Query</text>
+  <text x="588.5712" y="232.1791" text-anchor="middle" font-size="17.4146" fill="var(--text)" font-family="Arial, sans-serif">Cache?</text>
   <line x1="245.7141" y1="213.1342" x2="465.1426" y2="213.1342" stroke="var(--primary-border)" stroke-width="1.3085" marker-end="url(#arrow)" />
-  <rect x="845.714" y="91.9401" width="240.0001" height="77.9105" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="965.7142" y="138.6864" text-anchor="middle" font-size="18.9975" fill="var(--text)">Return Cached</text>
+  <rect x="845.714" y="91.9401" width="240.0001" height="77.9105" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="965.7142" y="138.6864" text-anchor="middle" font-size="18.9975" fill="var(--text)" font-family="Arial, sans-serif">Return Cached</text>
   <line x1="708.5713" y1="183.7015" x2="842.2854" y2="135.2239" stroke="var(--ok-border)" stroke-width="1.3085" marker-end="url(#arrow-ok)" />
-  <text x="759.9996" y="138.6864" font-size="17.4146" fill="var(--ok-accent)">Hit</text>
-  <rect x="845.714" y="230.4478" width="240.0001" height="77.9105" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="965.7142" y="277.1939" text-anchor="middle" font-size="18.9975" fill="var(--text)">Database</text>
+  <text x="759.9996" y="138.6864" font-size="17.4146" fill="var(--ok-accent)" font-family="Arial, sans-serif">Hit</text>
+  <rect x="845.714" y="230.4478" width="240.0001" height="77.9105" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="965.7142" y="277.1939" text-anchor="middle" font-size="18.9975" fill="var(--text)" font-family="Arial, sans-serif">Database</text>
   <line x1="708.5713" y1="230.4478" x2="842.2854" y2="265.0745" stroke="var(--danger-border)" stroke-width="1.3085" marker-end="url(#arrow-danger)" />
-  <text x="759.9996" y="265.0745" font-size="17.4146" fill="var(--danger-accent)">Miss</text>
-  <rect x="845.714" y="360.2983" width="240.0001" height="77.9105" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="965.7142" y="407.0447" text-anchor="middle" font-size="18.9975" fill="var(--text)">Update Cache</text>
+  <text x="759.9996" y="265.0745" font-size="17.4146" fill="var(--danger-accent)" font-family="Arial, sans-serif">Miss</text>
+  <rect x="845.714" y="360.2983" width="240.0001" height="77.9105" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="965.7142" y="407.0447" text-anchor="middle" font-size="18.9975" fill="var(--text)" font-family="Arial, sans-serif">Update Cache</text>
   <line x1="965.7142" y1="308.3581" x2="965.7142" y2="356.8357" stroke="var(--primary-border)" stroke-width="1.2079" marker-end="url(#arrow)" />
   <path d="M 845.714 398.388 Q 588.5712 446.8656 588.5712 277.1939" fill="none" stroke="var(--warn-border)" stroke-width="1.2079" stroke-dasharray="4.0261 2.4156" marker-end="url(#arrow)" />
-  <rect x="125.7141" y="377.6119" width="240.0001" height="77.9105" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="245.7141" y="412.2386" text-anchor="middle" font-size="17.4146" fill="var(--text)">Cache</text>
-  <text x="245.7141" y="438.2088" text-anchor="middle" font-size="17.4146" fill="var(--text)">Invalidation</text>
+  <rect x="125.7141" y="377.6119" width="240.0001" height="77.9105" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245.7141" y="412.2386" text-anchor="middle" font-size="17.4146" fill="var(--text)" font-family="Arial, sans-serif">Cache</text>
+  <text x="245.7141" y="438.2088" text-anchor="middle" font-size="17.4146" fill="var(--text)" font-family="Arial, sans-serif">Invalidation</text>
   <line x1="142.857" y1="256.4178" x2="202.8569" y2="374.1492" stroke="var(--danger-border)" stroke-width="1.2079" stroke-dasharray="4.0261 2.4156" marker-end="url(#arrow-danger)" />
   <path d="M 365.7141 412.2386 Q 451.4285 412.2386 468.5712 273.7314" fill="none" stroke="var(--danger-border)" stroke-width="1.2079" stroke-dasharray="4.0261 2.4156" marker-end="url(#arrow-danger)" />
   <rect x="40" y="516.1194" width="1200" height="103.8806" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9997" y="554.2089" text-anchor="middle" font-size="18.9975" font-weight="bold" fill="var(--text)">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</text>
-  <text x="639.9997" y="588.8357" text-anchor="middle" font-size="17.4146" fill="var(--text-muted)">Cache invalidation ensures stale data is removed when underlying data changes.</text>
+  <text x="639.9997" y="554.2089" text-anchor="middle" font-size="18.9975" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</text>
+  <text x="639.9997" y="588.8357" text-anchor="middle" font-size="17.4146" fill="var(--text-muted)" font-family="Arial, sans-serif">Cache invalidation ensures stale data is removed when underlying data changes.</text>
 </svg>

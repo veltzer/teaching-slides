@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -97,9 +97,6 @@
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <stop offset="0%" stop-color="#000000" />
       <stop offset="100%" stop-color="#212121" />
@@ -111,19 +108,19 @@
   </defs>
   <rect width="1200" height="580" fill="url(#bg)" rx="6" x="40" y="40"/>
   <rect x="550" y="112.5" width="180" height="50.75" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="2.6667" opacity="0.8" />
-  <text x="595" y="144.7223" font-family="monospace" font-size="15.6425" fill="var(--warn-accent)" opacity="0.9">make all</text>
+  <text x="595" y="144.7223" font-size="15.6425" fill="var(--warn-accent)" opacity="0.9" font-family="Courier New, monospace">make all</text>
   <rect x="310" y="228.5" width="150" height="43.5" rx="6" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="2.1333" opacity="0.7" />
-  <text x="339.9999" y="255.8889" font-family="monospace" font-size="13.9044" fill="var(--ok-accent)" opacity="0.8">main.o</text>
+  <text x="339.9999" y="255.8889" font-size="13.9044" fill="var(--ok-accent)" opacity="0.8" font-family="Courier New, monospace">main.o</text>
   <rect x="820" y="228.5" width="150" height="43.5" rx="6" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="2.1333" opacity="0.7" />
-  <text x="852.8125" y="255.8889" font-family="monospace" font-size="13.9044" fill="var(--ok-accent)" opacity="0.8">util.o</text>
+  <text x="852.8125" y="255.8889" font-size="13.9044" fill="var(--ok-accent)" opacity="0.8" font-family="Courier New, monospace">util.o</text>
   <rect x="190" y="344.5" width="135" height="40.2777" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="1.4222" opacity="0.6" />
-  <text x="212.5" y="371.0833" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7">main.c</text>
+  <text x="212.5" y="371.0833" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7" font-family="Courier New, monospace">main.c</text>
   <rect x="430" y="344.5" width="135" height="40.2777" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="1.4222" opacity="0.6" />
-  <text x="456.25" y="371.0833" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7">main.h</text>
+  <text x="456.25" y="371.0833" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7" font-family="Courier New, monospace">main.h</text>
   <rect x="715" y="344.5" width="135" height="40.2777" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="1.4222" opacity="0.6" />
-  <text x="744.9999" y="371.0833" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7">util.c</text>
+  <text x="744.9999" y="371.0833" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7" font-family="Courier New, monospace">util.c</text>
   <rect x="955" y="344.5" width="135" height="40.2777" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="1.4222" opacity="0.6" />
-  <text x="985" y="371.0833" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7">util.h</text>
+  <text x="985" y="371.0833" font-size="13.9044" fill="var(--warn-accent)" opacity="0.7" font-family="Courier New, monospace">util.h</text>
   <line x1="640" y1="163.25" x2="385" y2="228.5" stroke="var(--warn-border)" stroke-width="2" opacity="0.5" />
   <line x1="640" y1="163.25" x2="895" y2="228.5" stroke="var(--warn-border)" stroke-width="2" opacity="0.5" />
   <line x1="355" y1="272" x2="257.5" y2="344.5" stroke="var(--ok-border)" stroke-width="1.4222" opacity="0.4" />
@@ -131,9 +128,9 @@
   <line x1="865" y1="272" x2="782.5" y2="344.5" stroke="var(--ok-border)" stroke-width="1.4222" opacity="0.4" />
   <line x1="925" y1="272" x2="1022.5" y2="344.5" stroke="var(--ok-border)" stroke-width="1.4222" opacity="0.4" />
   <rect x="460" y="436.3333" width="360" height="99.8889" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="2.1333" opacity="0.7" />
-  <text x="482.5" y="463.7223" font-family="monospace" font-size="13.9044" fill="var(--ok-accent)" opacity="0.7">all:</text>
-  <text x="482.5" y="483.0556" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.6">	$(CC) -o $@ $^</text>
-  <text x="482.5" y="502.3889" font-family="monospace" font-size="13.9044" fill="var(--ok-accent)" opacity="0.7">%.o: %.c</text>
-  <text x="482.5" y="521.7223" font-family="monospace" font-size="13.9044" fill="var(--warn-accent)" opacity="0.6">	$(CC) -c $&lt;</text>
+  <text x="482.5" y="463.7223" font-size="13.9044" fill="var(--ok-accent)" opacity="0.7" font-family="Courier New, monospace">all:</text>
+  <text x="482.5" y="483.0556" font-size="13.9044" fill="var(--warn-accent)" opacity="0.6" font-family="Courier New, monospace">	$(CC) -o $@ $^</text>
+  <text x="482.5" y="502.3889" font-size="13.9044" fill="var(--ok-accent)" opacity="0.7" font-family="Courier New, monospace">%.o: %.c</text>
+  <text x="482.5" y="521.7223" font-size="13.9044" fill="var(--warn-accent)" opacity="0.6" font-family="Courier New, monospace">	$(CC) -c $&lt;</text>
   <rect x="415" y="579.7223" width="450" height="4.0277" rx="6" fill="url(#accent)" opacity="0.6" />
 </svg>

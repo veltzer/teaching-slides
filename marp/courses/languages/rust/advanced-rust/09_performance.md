@@ -722,7 +722,21 @@ fn main() {
 ---
 ## Cache Optimization Guidelines
 
-![cache_optimization_guidelines](svg/courses/languages/rust/advanced-rust/09_performance/cache_optimization_guidelines.svg)
+1. 1. **Sequential access beats random access**
+    - `Vec<T>` >> `LinkedList<T>` for iteration
+1. 1. **Keep hot data together**
+    - SoA layout: few fields, many items
+    - AoS layout: all fields, few items
+1. 1. **Minimize struct size**
+    - Less data per cache line = more items per line
+    - Use `#[repr(C)]` or reorder fields
+1. 1. **Avoid pointer chasing**
+    - `Vec<T>` instead of `Vec<Box<T>>`
+    - Flatten nested structures when possible
+1. 1. **Use indices instead of pointers for graphs/trees**
+    - Store nodes in a `Vec`, reference by index (arena pattern)
+
+*Cache line = 64 bytes on x86. L1 ~1 ns, L2 ~5 ns, L3 ~20 ns, DRAM ~100 ns.*
 
 ---
 ## Arena Allocation for Cache Locality

@@ -4,70 +4,70 @@
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
+        --surface: #c4cdd6;
+        --border: #6b7280;
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
+        --shadow: #00000044;
         --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --info-accent: #2f253b;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
 
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
 
     <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
 
     <!-- Arrow markers -->
@@ -75,19 +75,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
@@ -111,86 +111,86 @@
     </linearGradient>
   </defs>
   <!-- Title banner -->
-  <rect x="40" y="40" width="1200" height="50.945946" rx="6.443098" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="71.351351" font-family="sans-serif" font-size="21.775846" font-weight="bold" fill="var(--bg)" text-anchor="middle">Understanding time Output: real vs user vs sys</text>
+  <rect x="40" y="40" width="1200" height="50.945946" rx="6.443098" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="71.351351" font-size="21.775846" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Understanding time Output: real vs user vs sys</text>
 
   <!-- Timeline diagram area -->
   <rect x="40" y="110.540541" width="1200" height="333.108108" rx="6.443098" fill="var(--bg)"/>
 
   <!-- Time axis -->
   <line x1="150" y1="404.459459" x2="1210" y2="404.459459" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="150" y="424.054054" font-family="sans-serif" font-size="12.867619" fill="var(--text-faint)" text-anchor="middle">t=0</text>
-  <text x="1190" y="424.054054" font-family="sans-serif" font-size="12.867619" fill="var(--text-faint)" text-anchor="middle">t=end</text>
+  <text x="150" y="424.054054" font-size="12.867619" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">t=0</text>
+  <text x="1190" y="424.054054" font-size="12.867619" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">t=end</text>
   <!-- tick marks -->
   <line x1="150" y1="399.560757" x2="150" y2="409.358162" stroke="var(--text-faint)" stroke-width="1.5"/>
   <line x1="1190" y1="399.560757" x2="1190" y2="409.358162" stroke="var(--text-faint)" stroke-width="1.5"/>
 
   <!-- Row label column -->
-  <text x="140" y="171.283784" font-family="sans-serif" font-size="15.837028" font-weight="bold" fill="var(--primary-accent)" text-anchor="end">real</text>
-  <text x="140" y="257.5" font-family="sans-serif" font-size="15.837028" font-weight="bold" fill="var(--ok-accent)" text-anchor="end">user</text>
-  <text x="140" y="343.716216" font-family="sans-serif" font-size="15.837028" font-weight="bold" fill="var(--warn-accent)" text-anchor="end">sys</text>
+  <text x="140" y="171.283784" font-size="15.837028" font-weight="bold" fill="var(--primary-accent)" text-anchor="end" font-family="Arial, sans-serif">real</text>
+  <text x="140" y="257.5" font-size="15.837028" font-weight="bold" fill="var(--ok-accent)" text-anchor="end" font-family="Arial, sans-serif">user</text>
+  <text x="140" y="343.716216" font-size="15.837028" font-weight="bold" fill="var(--warn-accent)" text-anchor="end" font-family="Arial, sans-serif">sys</text>
 
   <!-- real time bar: full width -->
   <rect x="150" y="147.77027" width="1040" height="43.108108" rx="6.443098" fill="url(#grad-real)" opacity="0.85"/>
-  <text x="670" y="174.223027" font-family="sans-serif" font-size="13.857386" font-weight="bold" fill="var(--bg)" text-anchor="middle">Wall clock time (stopwatch from start to finish)</text>
+  <text x="670" y="174.223027" font-size="13.857386" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Wall clock time (stopwatch from start to finish)</text>
   <!-- real braces -->
   <line x1="150" y1="198.716216" x2="1190" y2="198.716216" stroke="var(--primary-border)" stroke-width="1.5" stroke-dasharray="4,4"/>
 
   <!-- user time segments -->
   <!-- segment 1: 150-480 -->
   <rect x="150" y="233.986486" width="330" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="315" y="260.439243" font-family="sans-serif" font-size="11.877744" fill="var(--bg)" text-anchor="middle">CPU (user code)</text>
+  <text x="315" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user code)</text>
   <!-- gap: IO wait -->
   <rect x="480" y="233.986486" width="200" height="43.108108" rx="6.443098" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="580" y="260.439243" font-family="sans-serif" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle">I/O wait</text>
+  <text x="580" y="260.439243" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">I/O wait</text>
   <!-- segment 2: 680-900 -->
   <rect x="680" y="233.986486" width="220" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="790" y="260.439243" font-family="sans-serif" font-size="11.877744" fill="var(--bg)" text-anchor="middle">CPU (user code)</text>
+  <text x="790" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user code)</text>
   <!-- gap2 -->
   <rect x="900" y="233.986486" width="130" height="43.108108" rx="6.443098" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="965" y="260.439243" font-family="sans-serif" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle">I/O wait</text>
+  <text x="965" y="260.439243" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">I/O wait</text>
   <!-- segment 3: 1030-1190 -->
   <rect x="1030" y="233.986486" width="160" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="1110" y="260.439243" font-family="sans-serif" font-size="11.877744" fill="var(--bg)" text-anchor="middle">CPU (user)</text>
+  <text x="1110" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user)</text>
 
   <!-- sys time segments -->
   <!-- at 300, brief sys call -->
   <rect x="300" y="320.202703" width="80" height="43.108108" rx="6.443098" fill="url(#grad-sys)" opacity="0.85"/>
-  <text x="340" y="345.675676" font-family="sans-serif" font-size="10.887977" fill="var(--bg)" text-anchor="middle">kernel</text>
+  <text x="340" y="345.675676" font-size="10.887977" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">kernel</text>
   <!-- at 560, sys call during io -->
   <rect x="560" y="320.202703" width="60" height="43.108108" rx="6.443098" fill="url(#grad-sys)" opacity="0.85"/>
-  <text x="590" y="345.675676" font-family="sans-serif" font-size="10.887977" fill="var(--bg)" text-anchor="middle">sys</text>
+  <text x="590" y="345.675676" font-size="10.887977" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sys</text>
   <!-- at 820 -->
   <rect x="820" y="320.202703" width="100" height="43.108108" rx="6.443098" fill="url(#grad-sys)" opacity="0.85"/>
-  <text x="870" y="345.675676" font-family="sans-serif" font-size="10.887977" fill="var(--bg)" text-anchor="middle">kernel</text>
+  <text x="870" y="345.675676" font-size="10.887977" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">kernel</text>
   <!-- at 1070 -->
   <rect x="1070" y="320.202703" width="60" height="43.108108" rx="6.443098" fill="url(#grad-sys)" opacity="0.85"/>
-  <text x="1100" y="345.675676" font-family="sans-serif" font-size="10.887977" fill="var(--bg)" text-anchor="middle">sys</text>
+  <text x="1100" y="345.675676" font-size="10.887977" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">sys</text>
 
   <!-- Relationship notes / legend -->
   <rect x="40" y="463.243243" width="580" height="156.756757" rx="6.443098" fill="var(--bg)"/>
   <rect x="40" y="463.243243" width="580" height="39.189189" rx="6.443098" fill="var(--primary-accent)"/>
   <rect x="40" y="490.675676" width="580" height="11.756757" fill="var(--primary-accent)" rx="6.443098"/>
-  <text x="330" y="488.716216" font-family="sans-serif" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle">Key Relationships</text>
-  <text x="65" y="522.027027" font-family="monospace" font-size="13.857386" fill="var(--text)">real</text>
-  <text x="120" y="522.027027" font-family="sans-serif" font-size="12.867619" fill="var(--text-muted)"> = total elapsed wall time (always ≥ user + sys)</text>
-  <text x="65" y="543.581081" font-family="monospace" font-size="13.857386" fill="var(--text)">user</text>
-  <text x="120" y="543.581081" font-family="sans-serif" font-size="12.867619" fill="var(--text-muted)"> = time your code ran on CPU in user mode</text>
-  <text x="65" y="565.135135" font-family="monospace" font-size="13.857386" fill="var(--text)">sys</text>
-  <text x="120" y="565.135135" font-family="sans-serif" font-size="12.867619" fill="var(--text-muted)">  = time kernel ran on behalf of your code</text>
-  <text x="65" y="586.689189" font-family="monospace" font-size="12.867619" fill="var(--danger-accent)">I/O wait</text>
-  <text x="135" y="586.689189" font-family="sans-serif" font-size="12.867619" fill="var(--text-muted)"> = the gap — real - (user + sys)</text>
-  <text x="65" y="606.283784" font-family="sans-serif" font-size="11.877744" fill="var(--text-faint)">multi-core: real can be &lt; user + sys (parallel execution)</text>
+  <text x="330" y="488.716216" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Key Relationships</text>
+  <text x="65" y="522.027027" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">real</text>
+  <text x="120" y="522.027027" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = total elapsed wall time (always ≥ user + sys)</text>
+  <text x="65" y="543.581081" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">user</text>
+  <text x="120" y="543.581081" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = time your code ran on CPU in user mode</text>
+  <text x="65" y="565.135135" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">sys</text>
+  <text x="120" y="565.135135" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif">  = time kernel ran on behalf of your code</text>
+  <text x="65" y="586.689189" font-size="12.867619" fill="var(--danger-accent)" font-family="Courier New, monospace">I/O wait</text>
+  <text x="135" y="586.689189" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = the gap — real - (user + sys)</text>
+  <text x="65" y="606.283784" font-size="11.877744" fill="var(--text-faint)" font-family="Arial, sans-serif">multi-core: real can be &lt; user + sys (parallel execution)</text>
 
   <!-- Right side: example output and scenarios -->
   <rect x="650" y="463.243243" width="590" height="156.756757" rx="6.443098" fill="var(--code-bg)"/>
   <rect x="650" y="463.243243" width="590" height="39.189189" rx="6.443098" fill="var(--ok-accent)"/>
   <rect x="650" y="490.675676" width="590" height="11.756757" fill="var(--ok-accent)" rx="6.443098"/>
-  <text x="945" y="488.716216" font-family="sans-serif" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle">Example Scenarios</text>
-  <text x="675" y="520.067568" font-family="monospace" font-size="11.877744" fill="var(--text-muted)"># CPU-bound:   real ≈ user + sys</text>
-  <text x="675" y="537.702703" font-family="monospace" font-size="11.877744" fill="var(--primary-accent)">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
-  <text x="675" y="557.297297" font-family="monospace" font-size="11.877744" fill="var(--text-muted)"># I/O-bound:   real >> user + sys</text>
-  <text x="675" y="574.932432" font-family="monospace" font-size="11.877744" fill="var(--primary-accent)">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
-  <text x="675" y="594.527027" font-family="monospace" font-size="11.877744" fill="var(--text-muted)"># Parallel:    real &lt; user + sys</text>
-  <text x="675" y="612.162162" font-family="monospace" font-size="11.877744" fill="var(--primary-accent)">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
+  <text x="945" y="488.716216" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Example Scenarios</text>
+  <text x="675" y="520.067568" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># CPU-bound:   real ≈ user + sys</text>
+  <text x="675" y="537.702703" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
+  <text x="675" y="557.297297" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># I/O-bound:   real >> user + sys</text>
+  <text x="675" y="574.932432" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
+  <text x="675" y="594.527027" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># Parallel:    real &lt; user + sys</text>
+  <text x="675" y="612.162162" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
 </svg>
