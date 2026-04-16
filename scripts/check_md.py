@@ -14,6 +14,7 @@ Checks:
   --numbering   Check for sequential numbered lists (should use 1. 1. 1.)
   --svg-content Check that slides with SVG images have no other content on the same slide
   --inline-svg  Flag inline <svg>...</svg> elements in markdown (forbidden — SVGs must be external files)
+  --title-svg   Check that every 00_title.md has a corresponding svg/.../title.svg
 
 Usage:
     check_md.py --links --labels file1.md file2.md ...
@@ -244,6 +245,33 @@ def _check_inline_svg(path: Path, text: str, text_no_code: str, lines: list[str]
     return errors
 
 
+def _check_title_svg(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Check that every course/lecture has a corresponding svg/.../title.svg.
+
+    Courses: marp/courses/DOMAIN/COURSE/00_title.md -> svg/courses/DOMAIN/COURSE/title.svg
+    Lectures: marp/lectures/DOMAIN/LECTURE.md -> svg/lectures/DOMAIN/LECTURE/title.svg
+    """
+    parts = path.parts
+    if len(parts) < 3 or parts[0] != "marp":
+        return []
+
+    # Course title slides: marp/courses/DOMAIN/COURSE/00_title.md
+    if parts[1] == "courses" and path.name == "00_title.md" and len(parts) >= 5:
+        svg_path = _ROOT / "svg" / Path(*parts[1:-1]) / "title.svg"
+        if not svg_path.exists():
+            return [f"{path}: missing title SVG: {svg_path}"]
+
+    # Lecture slides: marp/lectures/DOMAIN/LECTURE.md (single file per lecture)
+    # Only check the first slide file we encounter per lecture
+    if parts[1] == "lectures" and path.suffix == ".md" and len(parts) == 4:
+        lecture_name = path.stem
+        svg_path = _ROOT / "svg" / "lectures" / parts[2] / lecture_name / "title.svg"
+        if not svg_path.exists():
+            return [f"{path}: missing title SVG: {svg_path}"]
+
+    return []
+
+
 # ── Main ──
 
 def _collect_files(paths: list[str]) -> list[Path]:
@@ -286,12 +314,14 @@ def main() -> None:
                         help='Check that slides with SVG images have no other content')
     parser.add_argument('--inline-svg', action='store_true', dest='inline_svg',
                         help='Flag inline <svg>...</svg> elements in markdown (SVGs must be external files)')
+    parser.add_argument('--title-svg', action='store_true', dest='title_svg',
+                        help='Check that every 00_title.md has a corresponding svg/.../title.svg')
     args = parser.parse_args()
 
     # Default: all checks enabled
     flags = [args.links, args.labels, args.fences, args.urls,
              args.whitespace, args.slides, args.images, args.numbering,
-             args.svg_content, args.inline_svg]
+             args.svg_content, args.inline_svg, args.title_svg]
     explicit = any(flags)
     checks = []
     if args.links or not explicit:
@@ -314,6 +344,8 @@ def main() -> None:
         checks.append(_check_svg_content)
     if args.inline_svg or not explicit:
         checks.append(_check_inline_svg)
+    if args.title_svg or not explicit:
+        checks.append(_check_title_svg)
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []

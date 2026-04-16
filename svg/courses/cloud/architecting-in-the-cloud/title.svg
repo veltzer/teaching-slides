@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+  <!-- Cloud architecture decorative elements -->
+  <g>
+    <!-- Top tier: Global Load Balancer -->
+    <rect x="540" y="220" width="200" height="60" rx="6" fill="var(--primary-border)" opacity="0.7"/>
+    <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)" opacity="0.8">Load Balancer</text>
+
+    <!-- Lines from top tier to middle tier -->
+    <line x1="590" y1="280" x2="310" y2="340" stroke="var(--primary-border)" stroke-width="2" opacity="0.4"/>
+    <line x1="640" y1="280" x2="640" y2="340" stroke="var(--primary-border)" stroke-width="2" opacity="0.4"/>
+    <line x1="690" y1="280" x2="970" y2="340" stroke="var(--primary-border)" stroke-width="2" opacity="0.4"/>
+
+    <!-- Middle tier: Application Services -->
+    <rect x="220" y="340" width="180" height="55" rx="6" fill="var(--ok-border)" opacity="0.6"/>
+    <text x="310" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)" opacity="0.8">Compute</text>
+
+    <rect x="550" y="340" width="180" height="55" rx="6" fill="var(--ok-border)" opacity="0.6"/>
+    <text x="640" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)" opacity="0.8">Containers</text>
+
+    <rect x="880" y="340" width="180" height="55" rx="6" fill="var(--ok-border)" opacity="0.6"/>
+    <text x="970" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)" opacity="0.8">Serverless</text>
+
+    <!-- Lines from middle tier to bottom tier -->
+    <line x1="310" y1="395" x2="420" y2="470" stroke="var(--ok-border)" stroke-width="2" opacity="0.4"/>
+    <line x1="640" y1="395" x2="640" y2="470" stroke="var(--ok-border)" stroke-width="2" opacity="0.4"/>
+    <line x1="970" y1="395" x2="860" y2="470" stroke="var(--ok-border)" stroke-width="2" opacity="0.4"/>
+
+    <!-- Bottom tier: Data Services -->
+    <rect x="310" y="470" width="160" height="50" rx="6" fill="var(--warn-border)" opacity="0.5"/>
+    <text x="390" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)" opacity="0.8">Database</text>
+
+    <rect x="560" y="470" width="160" height="50" rx="6" fill="var(--warn-border)" opacity="0.5"/>
+    <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)" opacity="0.8">Cache</text>
+
+    <rect x="810" y="470" width="160" height="50" rx="6" fill="var(--warn-border)" opacity="0.5"/>
+    <text x="890" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)" opacity="0.8">Storage</text>
+
+    <!-- Decorative dots -->
+    <circle cx="150" cy="260" r="4" fill="var(--primary-border)" opacity="0.3"/>
+    <circle cx="1130" cy="280" r="3" fill="var(--primary-border)" opacity="0.3"/>
+    <circle cx="170" cy="500" r="3" fill="var(--ok-border)" opacity="0.3"/>
+    <circle cx="1110" cy="490" r="4" fill="var(--warn-border)" opacity="0.3"/>
+
+    <!-- Bottom accent bar -->
+    <rect x="415" y="550" width="450" height="4" rx="2" fill="var(--primary-border)" opacity="0.5"/>
+  </g>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Architecting In The Cloud</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Designing Resilient Cloud Systems</text>
+</svg>

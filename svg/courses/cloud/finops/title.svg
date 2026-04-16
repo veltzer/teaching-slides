@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+  <!-- FinOps bar chart: cost optimization theme -->
+  <!-- Baseline axis -->
+  <line x1="250" y1="550" x2="1030" y2="550" stroke="var(--border)" stroke-width="2" opacity="0.4"/>
+  <!-- Tall bars (original cost) with reduced opacity -->
+  <rect x="310" y="250" width="70" height="300" rx="4" fill="var(--danger-fill)" opacity="0.25"/>
+  <rect x="440" y="280" width="70" height="270" rx="4" fill="var(--danger-fill)" opacity="0.25"/>
+  <rect x="570" y="230" width="70" height="320" rx="4" fill="var(--danger-fill)" opacity="0.25"/>
+  <rect x="700" y="310" width="70" height="240" rx="4" fill="var(--danger-fill)" opacity="0.25"/>
+  <rect x="830" y="270" width="70" height="280" rx="4" fill="var(--danger-fill)" opacity="0.25"/>
+  <!-- Shorter bars (optimized cost) overlaid -->
+  <rect x="310" y="390" width="70" height="160" rx="4" fill="url(#grad-ok)" opacity="0.8"/>
+  <rect x="440" y="370" width="70" height="180" rx="4" fill="url(#grad-ok)" opacity="0.8"/>
+  <rect x="570" y="350" width="70" height="200" rx="4" fill="url(#grad-ok)" opacity="0.8"/>
+  <rect x="700" y="410" width="70" height="140" rx="4" fill="url(#grad-ok)" opacity="0.8"/>
+  <rect x="830" y="380" width="70" height="170" rx="4" fill="url(#grad-ok)" opacity="0.8"/>
+  <!-- Downward arrow indicating cost reduction -->
+  <line x1="640" y1="210" x2="640" y2="200" stroke="var(--ok-fill)" stroke-width="2" opacity="0.5"/>
+  <!-- Dollar sign decorative elements -->
+  <text x="345" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)" opacity="0.7">$</text>
+  <text x="475" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)" opacity="0.7">$</text>
+  <text x="605" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)" opacity="0.7">$</text>
+  <text x="735" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)" opacity="0.7">$</text>
+  <text x="865" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)" opacity="0.7">$</text>
+  <!-- Trend line showing cost going down -->
+  <polyline points="345,240 475,270 605,220 735,300 865,260" fill="none" stroke="var(--warn-fill)" stroke-width="3" opacity="0.5" stroke-dasharray="8,4"/>
+  <polyline points="345,380 475,360 605,340 735,400 865,370" fill="none" stroke="var(--ok-fill)" stroke-width="3" opacity="0.6"/>
+  <!-- Small decorative circles -->
+  <circle cx="180" cy="300" r="3" fill="var(--primary-fill)" opacity="0.3"/>
+  <circle cx="220" cy="450" r="2.5" fill="var(--primary-accent)" opacity="0.3"/>
+  <circle cx="1060" cy="320" r="3" fill="var(--primary-fill)" opacity="0.3"/>
+  <circle cx="1100" cy="480" r="2.5" fill="var(--primary-accent)" opacity="0.3"/>
+  <!-- Accent bar at bottom -->
+  <rect x="415" y="580" width="450" height="4" rx="2" fill="url(#grad-ok)" opacity="0.6"/>
+  <!-- Title text -->
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">FinOps</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Cloud Financial Management</text>
+</svg>
