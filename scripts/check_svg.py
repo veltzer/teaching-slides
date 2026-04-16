@@ -544,6 +544,91 @@ def _check_title(tree: ET.ElementTree) -> list[str]:
             return ["contains a <title> element (headings should be outside SVG)"]
     return []
 
+
+def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
+    """For title.svg files, verify canonical title text element.
+
+    Reads the title-text spec from palette_intro.yaml and checks that
+    exactly one <text> element exists with the required attributes,
+    positioned at x=640 y=120 as a direct child of the root <svg>.
+    """
+    if path.name != "title.svg":
+        return []
+
+    errors: list[str] = []
+    root = tree.getroot()
+
+    # Load expected attributes from palette
+    intro_palette = Path("resources/palette_intro.yaml")
+    if intro_palette.exists():
+        with open(intro_palette, encoding="utf-8") as f:
+            palette = yaml.safe_load(f)
+        spec = palette.get("title-text", {})
+    else:
+        spec = {
+            "font-family": "Arial, sans-serif",
+            "font-size": 39,
+            "font-weight": "bold",
+            "fill": "var(--surface)",
+            "text-anchor": "middle",
+        }
+
+    expected_ff = spec.get("font-family", "Arial, sans-serif")
+    expected_fs = str(spec.get("font-size", 39))
+    expected_fw = spec.get("font-weight", "bold")
+    expected_fill = spec.get("fill", "var(--surface)")
+    expected_ta = spec.get("text-anchor", "middle")
+
+    # Find matching title text elements as direct children of root
+    ns = f"{{{_SVG_NS}}}"
+    matches = []
+    for child in root:
+        tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
+        if tag != "text":
+            continue
+        ff = child.get("font-family", "")
+        fs = child.get("font-size", "")
+        fw = child.get("font-weight", "")
+        fill = child.get("fill", "")
+        ta = child.get("text-anchor", "")
+
+        if (ff == expected_ff and fs == expected_fs
+                and fw == expected_fw and fill == expected_fill
+                and ta == expected_ta):
+            matches.append(child)
+
+    if len(matches) == 0:
+        errors.append(
+            f"title.svg missing canonical title text"
+            f" (need font-family=\"{expected_ff}\""
+            f" font-size=\"{expected_fs}\""
+            f" font-weight=\"{expected_fw}\""
+            f" fill=\"{expected_fill}\""
+            f" text-anchor=\"{expected_ta}\")"
+        )
+        return errors
+
+    if len(matches) > 1:
+        errors.append(
+            f"title.svg has {len(matches)} canonical title text elements"
+            " (expected exactly 1)"
+        )
+
+    for elem in matches:
+        x = elem.get("x", "")
+        y = elem.get("y", "")
+        if x != "640":
+            errors.append(
+                f"title text x=\"{x}\" should be \"640\""
+            )
+        if y != "120":
+            errors.append(
+                f"title text y=\"{y}\" should be \"120\""
+            )
+
+    return errors
+
+
 def main() -> None:
     if not Path(".git").exists():
         print("Error: script must be run from the root of the repository", file=sys.stderr)
@@ -586,6 +671,8 @@ def main() -> None:
                         help='Validate <text>/<tspan> font-family against palette typography')
     parser.add_argument('--gradients', action='store_true',
                         help='Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill')
+    parser.add_argument('--title-text', action='store_true', dest='title_text',
+                        help='Validate title.svg files have canonical title text element')
     args = parser.parse_args()
 
     if not args.paths:
@@ -595,7 +682,7 @@ def main() -> None:
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
             args.namespace, args.bounds, args.title, args.colors, args.words,
             args.fill, args.fit, args.no_circles, args.shadows, args.typography,
-            args.gradients]
+            args.gradients, args.title_text]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
