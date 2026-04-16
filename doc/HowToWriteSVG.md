@@ -72,12 +72,28 @@ amateurish next to its well-filled neighbours.
 
 ## Colors: use the palette, always
 
-All SVGs share a single color palette defined in `resources/palette_diagram.yaml`
-(and `resources/palette_intro.yaml` for title slides). The palette uses
-**semantic role names only** — never appearance-based names like "vivid",
-"pale", "bright", or "soft". Role names describe WHAT a color is used for,
-not what it LOOKS LIKE. This lets us retune the whole visual theme by
-editing hex values in one YAML file; every SVG follows automatically.
+Each SVG declares its type via a `<metadata>` element, which determines
+which palette YAML is used:
+
+```xml
+<metadata>
+  <type>regular</type>    <!-- uses resources/palette_diagram.yaml -->
+</metadata>
+
+<metadata>
+  <type>title</type>      <!-- uses resources/palette_intro.yaml -->
+</metadata>
+```
+
+If no `<metadata><type>` is present, the SVG defaults to `regular`.
+`scripts/install_palette.py` reads this metadata and installs the
+matching `<defs>` block.
+
+Both palettes use **semantic role names only** — never appearance-based
+names like "vivid", "pale", "bright", or "soft". Role names describe
+WHAT a color is used for, not what it LOOKS LIKE. This lets us retune
+the whole visual theme by editing hex values in one YAML file; every SVG
+follows automatically.
 
 ### The role set
 
@@ -369,5 +385,5 @@ you look.
 - `scripts/check_svg.py --colors` — enforce palette compliance
 - `scripts/check_md.py --images` — verify all image references resolve
 - `scripts/svg_fix.py --aspect-ratio` — normalize viewBox to 1280x720
-- `scripts/install_palette.py` — push canonical palette defs into every SVG
+- `scripts/install_palette.py` — push canonical palette defs into every SVG (reads `<metadata><type>` to select palette)
 - `rsconstruct build --verbose -j10` — full build (runs `check_md.py`)

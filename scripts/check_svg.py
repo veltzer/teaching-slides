@@ -187,7 +187,12 @@ _NON_COLOR_VALUES = {"none", "currentcolor", "inherit", "transparent"}
 _DEFS_TAGS = {"stop", "feDropShadow"}
 
 _DEFAULT_PALETTE = Path("resources/palette_diagram.yaml")
-_PALETTE_COMMENT_RE = re.compile(r'<!--\s*palette:\s*(\S+)\s*-->')
+_INTRO_PALETTE = Path("resources/palette_intro.yaml")
+_PALETTES: dict[str, Path] = {
+    "regular": _DEFAULT_PALETTE,
+    "title": _INTRO_PALETTE,
+}
+_SVG_NS = "http://www.w3.org/2000/svg"
 
 
 def _load_palette_names(palette_path: Path) -> set[str]:
@@ -215,27 +220,37 @@ def _load_palette_names(palette_path: Path) -> set[str]:
     return _PALETTE_CACHE[key]
 
 
-def _palette_for_svg(svg_path: Path) -> Path:
-    """Return the palette file for an SVG by reading its <!-- palette: ... --> comment.
-
-    Falls back to the default diagram palette if no comment is found.
-    """
+def _svg_type_from_file(svg_path: Path) -> str:
+    """Read <metadata><type> from an SVG file. Returns 'regular' if absent."""
     try:
-        text = svg_path.read_text(encoding="utf-8")
-        m = _PALETTE_COMMENT_RE.search(text)
-        if m:
-            return Path(m.group(1))
-    except OSError:
+        tree = ET.parse(svg_path)
+        root = tree.getroot()
+        for meta in root.iter(f"{{{_SVG_NS}}}metadata", "metadata"):
+            for child in meta:
+                t = child.tag
+                local = t.split("}", 1)[1] if "}" in t else t
+                if local == "type" and child.text:
+                    return child.text.strip()
+    except Exception:
         pass
-    return _DEFAULT_PALETTE
+    return "regular"
+
+
+def _palette_for_svg(svg_path: Path) -> Path:
+    """Return the palette file for an SVG by reading its <metadata><type>.
+
+    Falls back to the default diagram palette if no metadata is found.
+    """
+    svg_type = _svg_type_from_file(svg_path)
+    return _PALETTES.get(svg_type, _DEFAULT_PALETTE)
 
 
 def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[str]:
     """Flag SVGs that use colors not expressed as var(--name) from the palette.
 
-    Reads the <!-- palette: path --> comment inside the SVG to determine
+    Reads the <metadata><type> element inside the SVG to determine
     which palette YAML to validate against. Falls back to palette_diagram.yaml
-    if no comment is present.
+    if no metadata is present.
     Raw hex values and named CSS colors are rejected.
 
     Exception: elements inside <defs> (gradient stops, marker paths, filter

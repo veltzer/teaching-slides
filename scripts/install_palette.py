@@ -7,11 +7,25 @@
 """
 Install the canonical palette into every SVG under svg/.
 
+Each SVG declares its type via a <metadata><type> element:
+
+    <metadata>
+      <type>regular</type>    — uses palette_diagram.yaml (default)
+    </metadata>
+
+    <metadata>
+      <type>title</type>      — uses palette_intro.yaml
+    </metadata>
+
+The type determines which palette YAML is used to build the <defs> block.
+If no <metadata><type> element is present, the SVG defaults to "regular".
+
 For each SVG:
-  1. Rebuilds the <defs> block from the palette YAML (via svg_lib)
-  2. Converts raw hex color values in attributes to var(--name) references
-  3. Renames old gradient/marker IDs to canonical ones
-  4. Ensures xmlns, viewBox, and background style on root
+  1. Reads <metadata><type> to select the palette
+  2. Rebuilds the <defs> block from the selected palette YAML (via svg_lib)
+  3. Converts raw hex color values in attributes to var(--name) references
+  4. Renames old gradient/marker IDs to canonical ones
+  5. Ensures xmlns, viewBox, and background style on root
 
 Uses svg_lib.SvgFile for tree operations + deterministic serialization.
 
@@ -26,7 +40,7 @@ import re
 import sys
 from pathlib import Path
 
-from svg_lib import SvgFile, load_palette, DEFAULT_PALETTE
+from svg_lib import SvgFile, load_palette, PALETTES
 
 SVG_ROOT = Path("svg")
 
@@ -134,14 +148,15 @@ def _convert_colors(svg: SvgFile, hex_to_name: dict[str, str]) -> None:
                     svg.changed = True
 
 
-def process_file(path: Path, palette_path: Path,
-                 hex_to_name: dict[str, str], apply: bool) -> bool:
+def process_file(path: Path, hex_to_name_map: dict[str, dict[str, str]],
+                 apply: bool) -> bool:
     """Process one SVG. Returns True if the file changed."""
     try:
-        svg = SvgFile.load(path, palette_path=palette_path)
+        svg = SvgFile.load(path)
     except Exception:
         return False
 
+    hex_to_name = hex_to_name_map.get(svg.svg_type, hex_to_name_map["regular"])
     _apply_renames(svg)
     _convert_colors(svg, hex_to_name)
 
@@ -165,17 +180,16 @@ def main() -> None:
                         help="SVG files (default: all under svg/)")
     parser.add_argument("--apply", action="store_true",
                         help="Write changes (default is dry-run)")
-    parser.add_argument("--palette", type=Path, default=DEFAULT_PALETTE,
-                        help=f"Palette YAML (default: {DEFAULT_PALETTE})")
     args = parser.parse_args()
 
-    palette_path = args.palette
-    if not palette_path.exists():
-        print(f"Error: {palette_path} not found", file=sys.stderr)
-        sys.exit(1)
-
-    data = load_palette(palette_path)
-    hex_to_name = _build_hex_to_name(data)
+    # Build hex-to-name mapping for each palette type
+    hex_to_name_map: dict[str, dict[str, str]] = {}
+    for svg_type, palette_path in PALETTES.items():
+        if not palette_path.exists():
+            print(f"Error: {palette_path} not found", file=sys.stderr)
+            sys.exit(1)
+        data = load_palette(palette_path)
+        hex_to_name_map[svg_type] = _build_hex_to_name(data)
 
     svg_files = ([Path(p) for p in args.paths] if args.paths
                  else sorted(SVG_ROOT.rglob("*.svg")))
@@ -185,7 +199,7 @@ def main() -> None:
 
     for path in svg_files:
         try:
-            if process_file(path, palette_path, hex_to_name, args.apply):
+            if process_file(path, hex_to_name_map, args.apply):
                 changed.append(path)
         except Exception as exc:
             errors.append((path, exc))

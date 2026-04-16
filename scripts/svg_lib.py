@@ -38,6 +38,12 @@ SVG_NS = "http://www.w3.org/2000/svg"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_PALETTE = ROOT_DIR / "resources" / "palette_diagram.yaml"
+INTRO_PALETTE = ROOT_DIR / "resources" / "palette_intro.yaml"
+
+PALETTES: dict[str, Path] = {
+    "regular": DEFAULT_PALETTE,
+    "title": INTRO_PALETTE,
+}
 
 # Regex to match the full <defs>...</defs> block including surrounding whitespace.
 _DEFS_BLOCK_RE = re.compile(
@@ -47,6 +53,9 @@ _PALETTE_COMMENT_RE = re.compile(
     r"[ \t]*<!--\s*palette:\s*\S+\s*-->[ \t]*\n?"
 )
 _SVG_OPEN_RE = re.compile(r"(<svg\b[^>]*>)\n?")
+_METADATA_BLOCK_RE = re.compile(
+    r"[ \t]*<metadata\b[^>]*>.*?</metadata>[ \t]*\n?", re.DOTALL
+)
 
 
 # ── Palette loading ──
@@ -137,9 +146,26 @@ def build_defs_string(palette_path: Path = DEFAULT_PALETTE) -> str:
     return "\n".join(lines)
 
 
-def build_palette_comment(palette_path: Path = DEFAULT_PALETTE) -> str:
-    rel = palette_path.relative_to(ROOT_DIR)
-    return f"  <!-- palette: {rel} -->"
+def build_metadata_string(svg_type: str = "regular") -> str:
+    """Build the canonical <metadata> block declaring the SVG type."""
+    return f"  <metadata>\n    <type>{svg_type}</type>\n  </metadata>"
+
+
+def svg_type_from_tree(root) -> str:
+    """Read <metadata><type> from an lxml tree. Returns 'regular' if absent."""
+    ns = f"{{{SVG_NS}}}"
+    for meta in root.iter(f"{ns}metadata", "metadata"):
+        for child in meta:
+            t = child.tag
+            local = t.split("}", 1)[1] if "}" in t else t
+            if local == "type" and child.text:
+                return child.text.strip()
+    return "regular"
+
+
+def palette_for_type(svg_type: str) -> Path:
+    """Return the palette path for a given SVG type."""
+    return PALETTES.get(svg_type, DEFAULT_PALETTE)
 
 
 # ── Helpers ──
@@ -179,13 +205,16 @@ class SvgFile:
         self.changed = False
         self._original_text = original_text
         self._palette_path = palette_path
+        self.svg_type = svg_type_from_tree(root)
 
     @classmethod
     def load(cls, path: Path,
-             palette_path: Path = DEFAULT_PALETTE) -> "SvgFile":
+             palette_path: Path | None = None) -> "SvgFile":
         text = path.read_text(encoding="utf-8")
         parser = etree.XMLParser(remove_blank_text=False)
         root = etree.fromstring(text.encode(), parser)
+        if palette_path is None:
+            palette_path = palette_for_type(svg_type_from_tree(root))
         return cls(path, root, text, palette_path)
 
     def content_elements(self, elem_tag: str | None = None):
@@ -214,12 +243,13 @@ class SvgFile:
                 yield elem, parent_map.get(elem)
 
     def serialize(self) -> str:
-        """Serialize the tree, then splice canonical defs + palette comment.
+        """Serialize the tree, then splice canonical metadata + defs.
 
         1. lxml serializes the tree (preserves content formatting).
-        2. The <defs> block is replaced with the canonical string.
-        3. The palette comment is ensured.
-        4. Root attrs (xmlns, viewBox, style) are ensured.
+        2. The <metadata> block is replaced/inserted with the canonical type.
+        3. The <defs> block is replaced with the canonical string.
+        4. Any legacy palette comment is removed.
+        5. Root attrs (xmlns, viewBox, style) are ensured.
         """
         # Ensure root attributes on the tree before serialization
         vb = self.root.get("viewBox")
@@ -243,37 +273,29 @@ class SvgFile:
         if not text.endswith("\n"):
             text += "\n"
 
+        # Remove any legacy palette comment
+        text = _PALETTE_COMMENT_RE.sub("", text)
+
+        # Splice canonical metadata
+        meta_str = build_metadata_string(self.svg_type)
+
+        if _METADATA_BLOCK_RE.search(text):
+            text = _METADATA_BLOCK_RE.sub(meta_str + "\n", text, count=1)
+        else:
+            # Insert metadata after <svg> opening tag
+            text = _SVG_OPEN_RE.sub(r"\1\n" + meta_str + "\n", text, count=1)
+
         # Splice canonical defs
         defs_str = build_defs_string(self._palette_path)
-        comment_str = build_palette_comment(self._palette_path)
 
-        # Replace existing defs block with canonical
         if _DEFS_BLOCK_RE.search(text):
             text = _DEFS_BLOCK_RE.sub(defs_str + "\n", text, count=1)
         else:
-            # No defs — insert after palette comment or after <svg>
-            if _PALETTE_COMMENT_RE.search(text):
-                text = _PALETTE_COMMENT_RE.sub(
-                    comment_str + "\n" + defs_str + "\n",
-                    text, count=1,
-                )
-                return text  # comment already handled
-            else:
-                text = _SVG_OPEN_RE.sub(
-                    r"\1\n" + comment_str + "\n" + defs_str + "\n",
-                    text, count=1,
-                )
-                return text
-
-        # Ensure palette comment
-        if _PALETTE_COMMENT_RE.search(text):
-            text = _PALETTE_COMMENT_RE.sub(
-                comment_str + "\n", text, count=1
-            )
-        else:
-            text = _SVG_OPEN_RE.sub(
-                r"\1\n" + comment_str + "\n",
-                text, count=1,
+            # Insert defs after metadata
+            text = text.replace(
+                meta_str + "\n",
+                meta_str + "\n" + defs_str + "\n",
+                1,
             )
 
         return text
