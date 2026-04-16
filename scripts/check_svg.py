@@ -742,7 +742,7 @@ def main() -> None:
     parser.add_argument('--words', action='store_true',
                         help=f'Flag SVGs whose <text>/<tspan> content exceeds {MAX_WORD_COUNT} words total')
     parser.add_argument('--fill', action='store_true',
-                        help=f'Flag SVGs whose content bbox fills less than {MIN_FILL_PCT:.0f}% of the 1200x580 usable area')
+                        help=f'Flag SVGs whose content bbox fills less than {MIN_FILL_PCT:.0f}%% of the 1200x580 usable area')
     parser.add_argument('--fit', action='store_true',
                         help='Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]')
     parser.add_argument('--no-circles', action='store_true', dest='no_circles',
