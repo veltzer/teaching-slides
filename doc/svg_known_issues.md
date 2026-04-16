@@ -8,24 +8,25 @@ highest to lowest severity. Append new findings as we discover them.
 - **ns0: namespace prefix on root element.** 2,031 SVGs had their root
   rewritten as `<ns0:svg xmlns:ns0="...">`, which broke CSS variable
   resolution (the `<style>` block targets `svg`, not `ns0:svg`). Everything
-  using `fill="var(--palette-color)"` rendered as solid black. Fixed by
-  `scripts/fix_svg_namespace.py`. See `doc/HowToWriteSVG.md` for prevention.
+  using `fill="var(--palette-color)"` rendered as solid black. Fixed via a
+  bulk rewrite; `check_svg.py --namespace` now rejects any future
+  regression. See `doc/HowToWriteSVG.md` for prevention.
 
-- **ElementTree-based scripts would reintroduce the ns0 bug.**
-  `scripts/auto_fix_bounds.py` and `scripts/auto_fix_fonts.py` both use
-  `xml.etree.ElementTree` to parse and rewrite SVG files, but neither
-  called `ET.register_namespace("", "http://www.w3.org/2000/svg")` before
-  writing. That's almost certainly how the original ns0 damage happened.
-  Both scripts now register the namespace at module load time.
+- **ElementTree-based scripts would reintroduce the ns0 bug.** The old
+  `auto_fix_bounds.py` / `auto_fix_fonts.py` scripts used
+  `xml.etree.ElementTree` without calling
+  `ET.register_namespace("", "http://www.w3.org/2000/svg")` before writing,
+  which is almost certainly how the original ns0 damage happened. Those
+  scripts have been retired; modern replacements (`fit_svg_to_slide.py`,
+  `svg_fix_fonts.py`) either avoid ElementTree or register the namespace.
 
-- **Content below y=630.** `scripts/auto_fix_bounds.py` run across the
-  whole repo (with the namespace-safe fix above). 15 files rescaled to fit
-  within the usable y<=640 area.
+- **Content below y=630.** Historical: one-off rescale run fixed 15 files.
+  Ongoing enforcement is via `check_svg.py --bounds` + `fit_svg_to_slide.py`.
 
 - **Oversized custom arrow markers.** 1,228 SVGs used per-file-named
   markers (`id="arrowhead"`, `id="ah12b"`, `id="arrowd0_..."`, etc.) with
   dimensions ranging from 11x11 up to 21x36, rendering as oversized
-  triangles. Fixed by `scripts/fix_svg_markers.py` which caps any non-
+  triangles. Fixed by `scripts/svg_fix_markers.py` which caps any non-
   palette marker to 10x10 / refX=9 / refY=5 while leaving the marker id,
   fill color, and polygon/path shape untouched. Idempotent.
 
@@ -89,5 +90,5 @@ content is clustered in a corner or fills only 30-40% of the frame. Seen in:
   (content is sized well horizontally but heavy top-loaded; lower half empty)
 
 **Suggested fix:** rescale coordinates so content fills the usable area
-(roughly x: 40..1240, y: 40..620). `scripts/rescale_svgs.py` may already do
-this — worth checking whether it handles these cases.
+(roughly x: 40..1240, y: 40..620). `scripts/fit_svg_to_slide.py` handles
+this; it now produces exactly-fitted output.

@@ -9,7 +9,7 @@ Idempotent. If a style attribute already exists with a background declaration
 it is left alone. If style exists without background, the background is
 prepended. If style is absent it is added.
 
-Usage: fix_svg_root_bg.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_root_bg.py [--dry-run] svg/**/*.svg
 """
 
 import argparse

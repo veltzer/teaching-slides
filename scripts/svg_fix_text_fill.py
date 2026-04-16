@@ -14,7 +14,7 @@ script infers the correct fill:
 
 Idempotent — skips elements that already have a fill attribute.
 
-Usage: fix_svg_text_fill.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_text_fill.py [--dry-run] svg/**/*.svg
 """
 
 import argparse

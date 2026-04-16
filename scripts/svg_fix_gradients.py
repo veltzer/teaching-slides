@@ -13,7 +13,7 @@ Family names are discovered from the palette: every group except
 
 Idempotent.
 
-Usage: fix_svg_gradients.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_gradients.py [--dry-run] svg/**/*.svg
 """
 
 import argparse

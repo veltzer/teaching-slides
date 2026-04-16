@@ -26,7 +26,7 @@ polygon markers, which didn't help when the polygon was malformed
 
 Idempotent.
 
-Usage: fix_svg_markers.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_markers.py [--dry-run] svg/**/*.svg
 """
 
 from __future__ import annotations

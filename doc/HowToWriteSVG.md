@@ -25,7 +25,7 @@ used in our Marp-rendered slides.
 
 - Every SVG must use exactly `viewBox="0 0 1280 720"` (16:9, matches Marp
   slide dimensions). Do NOT use 1280x640 — that 2:1 aspect ratio makes Marp
-  distort or mis-center the image. Use `scripts/fix_svg_aspect_ratio.py` to
+  distort or mis-center the image. Use `scripts/svg_fix_aspect_ratio.py` to
   convert existing SVGs. The `check_svg.py --dimensions` check enforces this.
 - SVG content must not extend below **y=630**. Marp renders the slide's `##`
   heading at the top of the page, pushing the image down; the bottom ~80px
@@ -58,9 +58,6 @@ amateurish next to its well-filled neighbours.
 - **The fill ratio** is `content bbox area / (1200 × 580)`. Aim for ≥ 90%.
   Below 40% is a failure and the build will reject it. Values in the
   40–70% band are acceptable but worth improving.
-- Inspect with `scripts/stats_svg_bbox.py` — shows per-file fill%, offsets
-  from center, and top offenders. Use `--fill-below 40` to list the
-  under-filled files.
 - `scripts/fit_svg_to_slide.py` is idempotent and exact: it centers content
   on integer pixels and re-runs are no-ops. Run after authoring an SVG.
 - `scripts/check_svg.py --fill` enforces the minimum fill ratio.
@@ -123,9 +120,9 @@ push the canonical `<defs>` block into every SVG.
 
 ## Shape primitives: one canonical way to draw
 
-Colors aren't the only thing that must be uniform. Every rect, circle, and
-line in every SVG must share the same visual primitives. Use `scripts/
-normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
+Colors aren't the only thing that must be uniform. Every rect and line in
+every SVG must share the same visual primitives. The individual `svg_fix_*`
+scripts enforce these (shadows, gradients, fonts, markers, etc.).
 
 ### Rects (boxes)
 
@@ -153,7 +150,7 @@ normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
   `url(#arrow-info)`, `url(#arrow-white)`.
 - All palette markers are 10x10. No oversized arrowheads — don't define
   per-file `<marker>` elements with larger dimensions.
-  `scripts/fix_svg_markers.py` caps any stray custom markers.
+  `scripts/svg_fix_markers.py` caps any stray custom markers.
 
 ## Do not use circles in drawings
 
@@ -274,12 +271,7 @@ Enforced by `scripts/check_svg.py --words`.
 
 - Aim much lower when you can — the median diagram in this repo is around
   30 words. Under 30 is ideal; under 15 is great.
-- Count with `scripts/stats_svg_words.py` (histogram + top offenders +
-  `--over N` listing).
-- The check is currently opt-in (not in the default check set) because a
-  backlog of existing SVGs still exceeds the limit. When authoring or
-  rewriting an SVG, run `scripts/check_svg.py --words FILE` before you
-  commit.
+- Enforced by `scripts/check_svg.py --words` (on by default, max 100).
 
 ### What to cut
 
@@ -354,10 +346,10 @@ Symptom: your diagrams render as black boxes on a black background in the
 actual Marp output. This affected 2,031 files (61% of all SVGs) before it
 was caught in April 2026.
 
-**Fix:** run `scripts/fix_svg_namespace.py`. It strips the `ns0:` prefix
-from every affected SVG (root declaration and all child elements) while
-leaving all palette references intact. The script is idempotent and safe to
-re-run.
+**Fix:** the repo was scrubbed of `ns0:` prefixes in April 2026, and
+`check_svg.py --namespace` now rejects any SVG whose root is missing
+`xmlns="http://www.w3.org/2000/svg"` or lives in a non-SVG namespace — so
+the bug cannot reappear silently.
 
 **Prevention:** when generating or editing SVGs programmatically, configure
 the XML serializer to use the default namespace, not a prefixed one. After
@@ -376,8 +368,6 @@ you look.
 - `scripts/check_svg.py --dimensions --fonts` — enforce viewBox and font-size
 - `scripts/check_svg.py --colors` — enforce palette compliance
 - `scripts/check_md.py --images` — verify all image references resolve
-- `scripts/find_unused_svgs.py` — list SVGs no slide references
-- `scripts/fix_svg_aspect_ratio.py` — normalize viewBox to 1280x720
-- `scripts/fix_svg_namespace.py` — strip ns0: prefix (see above)
+- `scripts/svg_fix_aspect_ratio.py` — normalize viewBox to 1280x720
 - `scripts/install_palette.py` — push canonical palette defs into every SVG
 - `rsconstruct build --verbose -j10` — full build (runs `check_md.py`)

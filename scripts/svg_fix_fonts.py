@@ -14,7 +14,7 @@ Rules per element:
 
 Idempotent. Run after authoring or to re-skin the typography in one pass.
 
-Usage: fix_svg_fonts.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_fonts.py [--dry-run] svg/**/*.svg
 """
 
 import argparse

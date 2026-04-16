@@ -13,7 +13,7 @@ in a non-neutral group.
 
 Rects inside <defs> are ignored. The script is idempotent.
 
-Usage: fix_svg_shadows.py [--dry-run] svg/**/*.svg
+Usage: svg_fix_shadows.py [--dry-run] svg/**/*.svg
 """
 
 import argparse

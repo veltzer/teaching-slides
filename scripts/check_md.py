@@ -13,6 +13,7 @@ Checks:
   --images      Check that image references point to existing local files
   --numbering   Check for sequential numbered lists (should use 1. 1. 1.)
   --svg-content Check that slides with SVG images have no other content on the same slide
+  --inline-svg  Flag inline <svg>...</svg> elements in markdown (forbidden — SVGs must be external files)
 
 Usage:
     check_md.py --links --labels file1.md file2.md ...
@@ -216,6 +217,33 @@ def _check_svg_content(path: Path, text: str, text_no_code: str, lines: list[str
     return errors
 
 
+_INLINE_SVG_RE = re.compile(r'<svg\b[^>]*>', re.IGNORECASE)
+_FENCE_OPEN_RE = re.compile(r'^[ \t]{0,3}```')
+
+
+def _check_inline_svg(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Flag inline <svg>…</svg> blocks in markdown that sit OUTSIDE fenced
+    code blocks. Fenced examples (e.g. XSS payloads in a ```html block) are
+    legitimate teaching content and are skipped.
+
+    SVGs meant as diagrams must live in svg/ and be referenced with ![...](...svg).
+    """
+    errors: list[str] = []
+    in_fence = False
+    for i, line in enumerate(lines, 1):
+        if _FENCE_OPEN_RE.match(line):
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        if _INLINE_SVG_RE.search(line):
+            errors.append(
+                f"{path}:{i}: inline <svg> element in markdown — "
+                f"SVGs must live in svg/ and be referenced with ![](...)"
+            )
+    return errors
+
+
 # ── Main ──
 
 def _collect_files(paths: list[str]) -> list[Path]:
@@ -256,12 +284,14 @@ def main() -> None:
                         help='Check for sequential numbered lists (should use 1. 1. 1.)')
     parser.add_argument('--svg-content', action='store_true',
                         help='Check that slides with SVG images have no other content')
+    parser.add_argument('--inline-svg', action='store_true', dest='inline_svg',
+                        help='Flag inline <svg>...</svg> elements in markdown (SVGs must be external files)')
     args = parser.parse_args()
 
     # Default: all checks enabled
     flags = [args.links, args.labels, args.fences, args.urls,
              args.whitespace, args.slides, args.images, args.numbering,
-             args.svg_content]
+             args.svg_content, args.inline_svg]
     explicit = any(flags)
     checks = []
     if args.links or not explicit:
@@ -282,6 +312,8 @@ def main() -> None:
         checks.append(_check_numbering)
     if args.svg_content or not explicit:
         checks.append(_check_svg_content)
+    if args.inline_svg or not explicit:
+        checks.append(_check_inline_svg)
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []
