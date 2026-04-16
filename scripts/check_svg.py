@@ -547,39 +547,23 @@ def _check_title(tree: ET.ElementTree) -> list[str]:
     return []
 
 
-def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
-    """For title-type SVGs, verify canonical title text element.
-
-    Only called for title-type SVGs (caller checks metadata type).
-    Reads the title-text spec from palette_intro.yaml and checks that
-    exactly one <text> element exists with the required attributes,
-    positioned at x=640 y=120 as a direct child of the root <svg>.
-    """
-    errors: list[str] = []
-    root = tree.getroot()
-
-    # Load expected attributes from palette
+def _load_intro_palette() -> dict:
+    """Load and cache the intro palette YAML."""
     intro_palette = Path("resources/palette_intro.yaml")
     if intro_palette.exists():
         with open(intro_palette, encoding="utf-8") as f:
-            palette = yaml.safe_load(f)
-        spec = palette.get("title-text", {})
-    else:
-        spec = {
-            "font-family": "Arial, sans-serif",
-            "font-size": 39,
-            "font-weight": "bold",
-            "fill": "var(--surface)",
-            "text-anchor": "middle",
-        }
+            return yaml.safe_load(f)
+    return {}
 
+
+def _find_text_matches(root, spec: dict, check_weight: bool = True) -> list:
+    """Find <text> elements that are direct children of root matching spec."""
     expected_ff = spec.get("font-family", "Arial, sans-serif")
     expected_fs = str(spec.get("font-size", 39))
-    expected_fw = spec.get("font-weight", "bold")
     expected_fill = spec.get("fill", "var(--surface)")
     expected_ta = spec.get("text-anchor", "middle")
+    expected_fw = spec.get("font-weight", "")
 
-    # Find matching title text elements as direct children of root
     matches = []
     for child in root:
         tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
@@ -587,43 +571,94 @@ def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
             continue
         ff = child.get("font-family", "")
         fs = child.get("font-size", "")
-        fw = child.get("font-weight", "")
         fill = child.get("fill", "")
         ta = child.get("text-anchor", "")
 
-        if (ff == expected_ff and fs == expected_fs
-                and fw == expected_fw and fill == expected_fill
-                and ta == expected_ta):
-            matches.append(child)
+        if ff != expected_ff or fs != expected_fs or fill != expected_fill or ta != expected_ta:
+            continue
+        if check_weight and child.get("font-weight", "") != expected_fw:
+            continue
+        matches.append(child)
+    return matches
+
+
+def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
+    """For title-type SVGs, verify canonical title and subtitle text.
+
+    Only called for title-type SVGs (caller checks metadata type).
+    Reads the title-text and subtitle-text specs from palette_intro.yaml
+    and checks that exactly one of each exists as direct children of <svg>
+    with the required attributes and positions.
+    """
+    errors: list[str] = []
+    root = tree.getroot()
+    palette = _load_intro_palette()
+
+    # --- Title check ---
+    title_spec = palette.get("title-text", {
+        "font-family": "Arial, sans-serif",
+        "font-size": 39,
+        "font-weight": "bold",
+        "fill": "var(--surface)",
+        "text-anchor": "middle",
+    })
+
+    matches = _find_text_matches(root, title_spec, check_weight=True)
 
     if len(matches) == 0:
         errors.append(
-            f"title slide missing canonical title text"
-            f" (need font-family=\"{expected_ff}\""
-            f" font-size=\"{expected_fs}\""
-            f" font-weight=\"{expected_fw}\""
-            f" fill=\"{expected_fill}\""
-            f" text-anchor=\"{expected_ta}\")"
+            "title slide missing canonical title text"
+            f" (need font-family=\"{title_spec.get('font-family')}\""
+            f" font-size=\"{title_spec.get('font-size')}\""
+            f" font-weight=\"{title_spec.get('font-weight')}\""
+            f" fill=\"{title_spec.get('fill')}\""
+            f" text-anchor=\"{title_spec.get('text-anchor')}\")"
         )
-        return errors
+    else:
+        if len(matches) > 1:
+            errors.append(
+                f"title slide has {len(matches)} canonical title text elements"
+                " (expected exactly 1)"
+            )
+        for elem in matches:
+            x = elem.get("x", "")
+            y = elem.get("y", "")
+            if x != str(title_spec.get("x", "640")):
+                errors.append(f"title text x=\"{x}\" should be \"{title_spec.get('x', 640)}\"")
+            if y != str(title_spec.get("y", "120")):
+                errors.append(f"title text y=\"{y}\" should be \"{title_spec.get('y', 120)}\"")
 
-    if len(matches) > 1:
+    # --- Subtitle check ---
+    sub_spec = palette.get("subtitle-text", {
+        "font-family": "Arial, sans-serif",
+        "font-size": 21,
+        "fill": "var(--text-faint)",
+        "text-anchor": "middle",
+    })
+
+    sub_matches = _find_text_matches(root, sub_spec, check_weight=False)
+
+    if len(sub_matches) == 0:
         errors.append(
-            f"title slide has {len(matches)} canonical title text elements"
-            " (expected exactly 1)"
+            "title slide missing subtitle text"
+            f" (need font-family=\"{sub_spec.get('font-family')}\""
+            f" font-size=\"{sub_spec.get('font-size')}\""
+            f" fill=\"{sub_spec.get('fill')}\""
+            f" text-anchor=\"{sub_spec.get('text-anchor')}\")"
         )
-
-    for elem in matches:
-        x = elem.get("x", "")
-        y = elem.get("y", "")
-        if x != "640":
+    else:
+        if len(sub_matches) > 1:
             errors.append(
-                f"title text x=\"{x}\" should be \"640\""
+                f"title slide has {len(sub_matches)} subtitle text elements"
+                " (expected exactly 1)"
             )
-        if y != "120":
-            errors.append(
-                f"title text y=\"{y}\" should be \"120\""
-            )
+        for elem in sub_matches:
+            x = elem.get("x", "")
+            y = elem.get("y", "")
+            if x != str(sub_spec.get("x", "640")):
+                errors.append(f"subtitle text x=\"{x}\" should be \"{sub_spec.get('x', 640)}\"")
+            if y != str(sub_spec.get("y", "163")):
+                errors.append(f"subtitle text y=\"{y}\" should be \"{sub_spec.get('y', 163)}\"")
 
     return errors
 
