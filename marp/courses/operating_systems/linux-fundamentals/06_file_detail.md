@@ -16,7 +16,6 @@ audience:
 ---
 
 ## Seven File Types in UNIX
-
 ![seven_file_types_in_unix](svg/courses/operating_systems/linux-fundamentals/06_file_detail/seven_file_types_in_unix.svg)
 
 ---
@@ -65,7 +64,6 @@ Common types:
 ---
 
 ## Directories (d)
-
 ![directories_d](svg/courses/operating_systems/linux-fundamentals/06_file_detail/directories_d.svg)
 
 ---
@@ -109,7 +107,6 @@ ls -l /dev/null   # Null device
 ---
 
 ## Symbolic Links (l)
-
 ![symbolic_links_l](svg/courses/operating_systems/linux-fundamentals/06_file_detail/symbolic_links_l.svg)
 
 ---
@@ -154,7 +151,6 @@ cat < mypipe
 ---
 
 ## The INODE Concept
-
 ![the_inode_concept](svg/courses/operating_systems/linux-fundamentals/06_file_detail/the_inode_concept.svg)
 
 ---
@@ -199,7 +195,6 @@ Example output:
 ---
 
 ## Hard Links vs Symbolic Links
-
 ![hard_links_vs_symbolic_links](svg/courses/operating_systems/linux-fundamentals/06_file_detail/hard_links_vs_symbolic_links.svg)
 
 ---
@@ -300,7 +295,6 @@ ln -s /absolute/path/target.txt abslink.txt
 ---
 
 ## File System Layout
-
 ![file_system_layout](svg/courses/operating_systems/linux-fundamentals/06_file_detail/file_system_layout.svg)
 
 ---

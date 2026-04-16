@@ -138,7 +138,6 @@ Advanced setups use multiple agents collaborating:
 1. **Planning agent**: breaks the task into subtasks using a stronger model
 1. **Execution agents**: each subtask runs in parallel with a faster model
 1. **Review agent**: validates outputs and merges results
-
 **Use cases**:
 - Large-scale refactors across many files simultaneously
 - Generating tests for multiple modules in parallel
@@ -289,7 +288,6 @@ The **observe-diagnose-retry** loop:
 1. Agent reads the error output and reasons about the cause
 1. Agent edits the code and retries the tool
 1. Loop continues until the test passes or a retry limit is hit
-
 - Good agents cap retries to avoid infinite loops
 
 ---

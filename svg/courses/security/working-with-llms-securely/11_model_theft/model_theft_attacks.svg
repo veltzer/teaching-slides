@@ -28,106 +28,118 @@
         --danger-border: #7d3f38;
         --danger-text: #ffffff;
         --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
-    </linearGradient>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="27.644805915717" font-weight="bold" fill="var(--primary-accent)">LLM Model Theft: Attacks and Defenses</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.644805915717" font-weight="bold" fill="var(--primary-accent)">LLM Model Theft: Attacks and Defenses</text>
 
   <!-- LEFT: Attacks column header -->
-  <text x="310" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.720918933777" font-weight="bold" fill="var(--danger-accent)">Attack Vectors</text>
+  <text x="310" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.720918933777" font-weight="bold" fill="var(--danger-accent)">Attack Vectors</text>
 
-  <rect x="40" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">Weight Theft</text>
-  <text x="310" y="182" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="16" fill="var(--danger-text)">direct file copy via leaked credentials</text>
+  <rect x="40" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">Weight Theft</text>
+  <text x="310" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">direct file copy via leaked credentials</text>
 
-  <rect x="40" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">API Extraction</text>
-  <text x="310" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--danger-text)">query → distill → surrogate clone</text>
-  <text x="310" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--danger-text)">that mimics the target</text>
+  <rect x="40" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--danger-text)">API Extraction</text>
+  <text x="310" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--danger-text)">query → distill → surrogate clone</text>
+  <text x="310" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--danger-text)">that mimics the target</text>
 
-  <rect x="40" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Membership Inference</text>
-  <text x="310" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--warn-text)">determine if a record was in</text>
-  <text x="310" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--warn-text)">training data (PII risk)</text>
+  <rect x="40" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Membership Inference</text>
+  <text x="310" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--warn-text)">determine if a record was in</text>
+  <text x="310" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--warn-text)">training data (PII risk)</text>
 
-  <rect x="40" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="310" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Hyperparameter Extraction</text>
-  <text x="310" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--warn-text)">probe API to recover layers,</text>
-  <text x="310" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--warn-text)">embeddings, activations</text>
+  <rect x="40" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--warn-text)">Hyperparameter Extraction</text>
+  <text x="310" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--warn-text)">probe API to recover layers,</text>
+  <text x="310" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--warn-text)">embeddings, activations</text>
 
   <!-- RIGHT: Defenses column header -->
-  <text x="970" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.720918933777" font-weight="bold" fill="var(--ok-accent)">Defenses</text>
+  <text x="970" y="83.865546218487" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.720918933777" font-weight="bold" fill="var(--ok-accent)">Defenses</text>
 
-  <rect x="700" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="970" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Rate Limit + Throttle</text>
-  <text x="970" y="171.596638655462" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">per-key quotas, detect probing,</text>
-  <text x="970" y="193.042016806723" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">CAPTCHA at high volume</text>
+  <rect x="700" y="103.361344537815" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="137.478991596639" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Rate Limit + Throttle</text>
+  <text x="970" y="171.596638655462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">per-key quotas, detect probing,</text>
+  <text x="970" y="193.042016806723" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">CAPTCHA at high volume</text>
 
-  <rect x="700" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="970" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Output Filtering</text>
-  <text x="970" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">hide raw logits, add noise,</text>
-  <text x="970" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">truncate tokens</text>
+  <rect x="700" y="225.210084033613" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="259.327731092437" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Output Filtering</text>
+  <text x="970" y="293.445378151261" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">hide raw logits, add noise,</text>
+  <text x="970" y="314.890756302521" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">truncate tokens</text>
 
-  <rect x="700" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="970" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Watermarking</text>
-  <text x="970" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">covert signals survive distillation,</text>
-  <text x="970" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--ok-text)">prove theft in court</text>
+  <rect x="700" y="347.058823529412" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="381.176470588235" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--ok-text)">Watermarking</text>
+  <text x="970" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">covert signals survive distillation,</text>
+  <text x="970" y="436.739495798319" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--ok-text)">prove theft in court</text>
 
-  <rect x="700" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="970" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.746289939798" font-weight="bold" fill="var(--primary-text)">Monitoring + Honeypots</text>
-  <text x="970" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--primary-text)">flag high input diversity,</text>
-  <text x="970" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" fill="var(--primary-text)">detect grid-search patterns</text>
+  <rect x="700" y="468.90756302521" width="540" height="107.226890756303" rx="9.873144969899" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="503.025210084034" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.746289939798" font-weight="bold" fill="var(--primary-text)">Monitoring + Honeypots</text>
+  <text x="970" y="537.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--primary-text)">flag high input diversity,</text>
+  <text x="970" y="558.588235294118" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" fill="var(--primary-text)">detect grid-search patterns</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.797031951838" font-style="italic" fill="var(--text-muted)">OWASP LLM10 — no single control is enough; layer all defenses</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797031951838" font-style="italic" fill="var(--text-muted)">OWASP LLM10 — no single control is enough; layer all defenses</text>
 </svg>

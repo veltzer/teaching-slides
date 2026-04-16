@@ -24,89 +24,108 @@
         --warn-border: #9c6e2e;
         --warn-text: #ffffff;
         --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
         --info-fill: #7c6a8e;
         --info-border: #574a68;
         --info-text: #ffffff;
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
 
-  <text x="660.689655172414" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="36.155691703426" font-weight="bold" fill="var(--primary-accent)">Docker Architecture</text>
+  <text x="660.689655172414" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="36.155691703426" font-weight="bold" fill="var(--primary-accent)">Docker Architecture</text>
 
   <!-- Linear 4-stage pipeline: uniform size, horizontally laid out -->
   <!-- Each box: 260x220, rx=10. Stack vertically centered at y=330. -->
   <!-- x starts at 40, 320, 600, 880, 1160 — that's 5 positions, we use 4. -->
   <!-- Actually: 280+20 gap * 4 = 1200, start 40: 40, 340, 640, 940 -->
 
-  <rect x="40" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="174.48275862069" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="29.376499509034" font-weight="bold" fill="var(--primary-text)">Docker CLI</text>
-  <text x="174.48275862069" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--primary-text)">user-facing</text>
-  <text x="174.48275862069" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--primary-text)">REST API calls</text>
+  <rect x="40" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="174.48275862069" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.376499509034" font-weight="bold" fill="var(--primary-text)">Docker CLI</text>
+  <text x="174.48275862069" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--primary-text)">user-facing</text>
+  <text x="174.48275862069" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--primary-text)">REST API calls</text>
 
-  <rect x="350.344827586207" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
-        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="484.827586206897" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="29.376499509034" font-weight="bold" fill="var(--info-text)">Docker Daemon</text>
-  <text x="484.827586206897" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--info-text)">dockerd</text>
-  <text x="484.827586206897" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--info-text)">manages objects</text>
+  <rect x="350.344827586207" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="484.827586206897" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.376499509034" font-weight="bold" fill="var(--info-text)">Docker Daemon</text>
+  <text x="484.827586206897" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--info-text)">dockerd</text>
+  <text x="484.827586206897" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--info-text)">manages objects</text>
 
-  <rect x="660.689655172414" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="795.172413793103" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="29.376499509034" font-weight="bold" fill="var(--ok-text)">containerd</text>
-  <text x="795.172413793103" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--ok-text)">container</text>
-  <text x="795.172413793103" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--ok-text)">lifecycle</text>
+  <rect x="660.689655172414" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.172413793103" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.376499509034" font-weight="bold" fill="var(--ok-text)">containerd</text>
+  <text x="795.172413793103" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--ok-text)">container</text>
+  <text x="795.172413793103" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--ok-text)">lifecycle</text>
 
-  <rect x="971.034482758621" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="1105.51724137931" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="29.376499509034" font-weight="bold" fill="var(--warn-text)">runc</text>
-  <text x="1105.51724137931" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--warn-text)">OCI runtime</text>
-  <text x="1105.51724137931" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--warn-text)">spawns process</text>
+  <rect x="971.034482758621" y="237.446808510638" width="268.965517241379" height="271.489361702128" rx="11.298653657321" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105.51724137931" y="348.510638297872" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.376499509034" font-weight="bold" fill="var(--warn-text)">runc</text>
+  <text x="1105.51724137931" y="410.212765957447" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--warn-text)">OCI runtime</text>
+  <text x="1105.51724137931" y="447.234042553191" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--warn-text)">spawns process</text>
 
   <!-- Arrows between adjacent boxes, centered at y=330 -->
-  <line x1="314.137931034483" y1="373.191489361702" x2="345.172413793103" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
-  <line x1="624.48275862069" y1="373.191489361702" x2="655.51724137931" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
-  <line x1="934.827586206897" y1="373.191489361702" x2="965.862068965517" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
+  <line x1="314.137931034483" y1="373.191489361702" x2="345.172413793103" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="624.48275862069" y1="373.191489361702" x2="655.51724137931" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="934.827586206897" y1="373.191489361702" x2="965.862068965517" y2="373.191489361702" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Bottom note -->
-  <text x="660.689655172414" y="620" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="22.597307314641" fill="var(--text-muted)">Each layer narrows the abstraction: user intent → API → runtime → kernel process.</text>
+  <text x="660.689655172414" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.597307314641" fill="var(--text-muted)">Each layer narrows the abstraction: user intent → API → runtime → kernel process.</text>
 </svg>

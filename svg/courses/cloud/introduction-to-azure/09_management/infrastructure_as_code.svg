@@ -24,102 +24,115 @@
         --warn-border: #9c6e2e;
         --warn-text: #ffffff;
         --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
         --info-fill: #7c6a8e;
         --info-border: #574a68;
         --info-text: #ffffff;
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
 
-  <text x="694.545454545455" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="32.177195353642" font-weight="bold" fill="var(--primary-accent)">Infrastructure as Code Pipeline</text>
+  <text x="694.545454545455" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.177195353642" font-weight="bold" fill="var(--primary-accent)">Infrastructure as Code Pipeline</text>
 
   <!-- Top row: 4 uniform-size pipeline stages, evenly spaced -->
   <!-- Each box: width=260, height=160. Row centerline y=230. -->
   <!-- Centers at x=170, 440, 710, 980 (spacing 270, start 40..300) -->
 
-  <rect x="40" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="181.818181818182" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="27.886902639823" font-weight="bold" fill="var(--primary-text)">Author</text>
-  <text x="181.818181818182" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--primary-text)">write the</text>
-  <text x="181.818181818182" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--primary-text)">template</text>
+  <rect x="40" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="181.818181818182" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.886902639823" font-weight="bold" fill="var(--primary-text)">Author</text>
+  <text x="181.818181818182" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--primary-text)">write the</text>
+  <text x="181.818181818182" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--primary-text)">template</text>
 
-  <rect x="345.454545454545" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547"
-        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="487.272727272727" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="27.886902639823" font-weight="bold" fill="var(--info-text)">ARM / Bicep</text>
-  <text x="487.272727272727" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--info-text)">JSON or DSL</text>
-  <text x="487.272727272727" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--info-text)">declarative</text>
+  <rect x="345.454545454545" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="487.272727272727" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.886902639823" font-weight="bold" fill="var(--info-text)">ARM / Bicep</text>
+  <text x="487.272727272727" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--info-text)">JSON or DSL</text>
+  <text x="487.272727272727" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--info-text)">declarative</text>
 
-  <rect x="650.909090909091" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="792.727272727273" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="27.886902639823" font-weight="bold" fill="var(--warn-text)">Validate</text>
-  <text x="792.727272727273" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--warn-text)">what-if check</text>
-  <text x="792.727272727273" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--warn-text)">dry run</text>
+  <rect x="650.909090909091" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="792.727272727273" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.886902639823" font-weight="bold" fill="var(--warn-text)">Validate</text>
+  <text x="792.727272727273" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--warn-text)">what-if check</text>
+  <text x="792.727272727273" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--warn-text)">dry run</text>
 
-  <rect x="956.363636363636" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="1098.181818181818" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="27.886902639823" font-weight="bold" fill="var(--ok-text)">Deploy</text>
-  <text x="1098.181818181818" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--ok-text)">Resource</text>
-  <text x="1098.181818181818" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.451463569095" fill="var(--ok-text)">Manager</text>
+  <rect x="956.363636363636" y="134.909090909091" width="283.636363636364" height="168.727272727273" rx="10.725731784547" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1098.181818181818" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.886902639823" font-weight="bold" fill="var(--ok-text)">Deploy</text>
+  <text x="1098.181818181818" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--ok-text)">Resource</text>
+  <text x="1098.181818181818" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.451463569095" fill="var(--ok-text)">Manager</text>
 
   <!-- Arrows between top-row boxes (straight horizontal at y=230) -->
-  <line x1="329.090909090909" y1="219.272727272727" x2="340" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
-  <line x1="634.545454545455" y1="219.272727272727" x2="645.454545454545" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
-  <line x1="940" y1="219.272727272727" x2="950.909090909091" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
+  <line x1="329.090909090909" y1="219.272727272727" x2="340" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="634.545454545455" y1="219.272727272727" x2="645.454545454545" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="940" y1="219.272727272727" x2="950.909090909091" y2="219.272727272727" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Arrow down from Deploy to Azure Resources -->
-  <line x1="1098.181818181818" y1="308.909090909091" x2="1098.181818181818" y2="430.181818181818" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
+  <line x1="1098.181818181818" y1="308.909090909091" x2="1098.181818181818" y2="430.181818181818" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
   <line x1="1098.181818181818" y1="430.181818181818" x2="694.545454545455" y2="430.181818181818" stroke="var(--text)" stroke-width="2.5"/>
-  <line x1="694.545454545455" y1="430.181818181818" x2="694.545454545455" y2="461.818181818182" stroke="var(--text)" stroke-width="2.5"
-        marker-end="url(#arrow)"/>
+  <line x1="694.545454545455" y1="430.181818181818" x2="694.545454545455" y2="461.818181818182" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Azure Resources target -->
-  <rect x="149.090909090909" y="472.363636363636" width="1090.909090909091" height="147.636363636364" rx="10.725731784547"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="694.545454545455" y="525.090909090909" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="30.032048996733" font-weight="bold" fill="var(--primary-text)">Azure Resources</text>
-  <text x="694.545454545455" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.596609926004" fill="var(--primary-text)">VMs  ·  Storage  ·  Networks  ·  Databases</text>
-  <text x="694.545454545455" y="604.181818181818" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.306317212185" font-style="italic" fill="var(--primary-text)">provisioned from the template</text>
+  <rect x="149.090909090909" y="472.363636363636" width="1090.909090909091" height="147.636363636364" rx="10.725731784547" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="694.545454545455" y="525.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.032048996733" font-weight="bold" fill="var(--primary-text)">Azure Resources</text>
+  <text x="694.545454545455" y="572.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.596609926004" fill="var(--primary-text)">VMs  ·  Storage  ·  Networks  ·  Databases</text>
+  <text x="694.545454545455" y="604.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.306317212185" font-style="italic" fill="var(--primary-text)">provisioned from the template</text>
 </svg>

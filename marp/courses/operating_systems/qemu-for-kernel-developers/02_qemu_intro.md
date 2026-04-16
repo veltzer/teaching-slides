@@ -41,7 +41,6 @@ QEMU vs Other Virtualization Solutions
 - QEMU's unique features for kernel developers
 
 ---
-
 QEMU Architecture Overview
 
 ---
@@ -104,7 +103,6 @@ QEMU Installation
 - Verifying installation
 
 ---
-
 Basic QEMU Usage
 
 ---

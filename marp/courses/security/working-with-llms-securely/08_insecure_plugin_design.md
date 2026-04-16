@@ -9,6 +9,7 @@ category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+
 ---
 
 # LLM07: Insecure Plugin Design

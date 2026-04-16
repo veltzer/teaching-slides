@@ -13,9 +13,7 @@ audience:
 # Device Tree
 
 ---
-
 ## What is Device Tree?
-
 1. Hardware description in a tree structure
 1. Separates hardware config from kernel code
 1. Human-readable text format

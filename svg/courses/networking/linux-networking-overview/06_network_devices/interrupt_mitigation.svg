@@ -92,11 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <text x="690.46729" y="40" text-anchor="middle" font-size="29.566639" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Interrupt Mitigation: IRQ to NAPI Polling</text>
   <rect x="40" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
@@ -112,9 +107,9 @@
   <rect x="995.514019" y="111.491284" width="244.485981" height="193.717667" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.851391" filter="url(#shadow)"/>
   <text x="1117.757009" y="189.900724" text-anchor="middle" font-size="23.880792" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Re-enable IRQ</text>
   <text x="1117.757009" y="256.77957" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">napi_complete()</text>
-  <line x1="284.485981" y1="208.350046" x2="358.504673" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="602.990654" y1="208.350046" x2="677.009346" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="921.495327" y1="208.350046" x2="995.514019" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="284.485981" y1="208.350046" x2="358.504673" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="602.990654" y1="208.350046" x2="677.009346" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="921.495327" y1="208.350046" x2="995.514019" y2="208.350046" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="211.588785" y="406.680008" width="957.757009" height="213.319992" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.851391" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
   <text x="690.46729" y="492.008177" text-anchor="middle" font-size="23.880792" fill="var(--text)" font-family="Arial, sans-serif">Benefit: Process multiple packets per interrupt (budget)</text>
   <text x="690.46729" y="565.805322" text-anchor="middle" font-size="19.332088" fill="var(--text-muted)" font-family="Arial, sans-serif">Reduces CPU overhead from per-packet interrupt handling</text>

@@ -16,87 +16,113 @@
         --primary-border: #3d5a7d;
         --primary-text: #ffffff;
         --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
         --warn-fill: #c8924a;
         --warn-border: #9c6e2e;
         --warn-text: #ffffff;
         --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
         --info-fill: #7c6a8e;
         --info-border: #574a68;
         --info-text: #ffffff;
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="33.475420439255" font-weight="bold" fill="var(--primary-accent)">QEMU-based Development</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.475420439255" font-weight="bold" fill="var(--primary-accent)">QEMU-based Development</text>
 
   <!-- Host resource column (left) -->
-  <rect x="40" y="182.264150943396" width="260" height="372.075471698113" rx="10.461068887267"
-        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="170" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.014351551988" font-weight="bold" fill="var(--info-text)">Host System</text>
-  <rect x="70" y="253.396226415094" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)"
-        stroke="var(--info-border)" stroke-width="2"/>
-  <text x="170" y="293.88679245283" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" fill="var(--text)">Network</text>
-  <rect x="70" y="335.471698113208" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)"
-        stroke="var(--info-border)" stroke-width="2"/>
-  <text x="170" y="375.962264150943" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" fill="var(--text)">Storage</text>
-  <rect x="70" y="417.547169811321" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)"
-        stroke="var(--info-border)" stroke-width="2"/>
-  <text x="170" y="458.037735849057" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" fill="var(--text)">Display</text>
-  <text x="170" y="526.981132075472" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="14.645496442174" font-style="italic" fill="var(--info-text)">real hardware resources</text>
+  <rect x="40" y="182.264150943396" width="260" height="372.075471698113" rx="10.461068887267" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--info-text)">Host System</text>
+  <rect x="70" y="253.396226415094" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="170" y="293.88679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" fill="var(--text)">Network</text>
+  <rect x="70" y="335.471698113208" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="170" y="375.962264150943" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" fill="var(--text)">Storage</text>
+  <rect x="70" y="417.547169811321" width="200" height="65.660377358491" rx="8.368855109814" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="170" y="458.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" fill="var(--text)">Display</text>
+  <text x="170" y="526.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" font-style="italic" fill="var(--info-text)">real hardware resources</text>
 
   <!-- Arrows bridging to QEMU -->
-  <line x1="270" y1="286.22641509434" x2="460" y2="335.471698113208" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
-  <line x1="270" y1="368.301886792453" x2="460" y2="368.301886792453" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
-  <line x1="270" y1="450.377358490566" x2="460" y2="401.132075471698" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
+  <line x1="270" y1="286.22641509434" x2="460" y2="335.471698113208" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="270" y1="368.301886792453" x2="460" y2="368.301886792453" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="270" y1="450.377358490566" x2="460" y2="401.132075471698" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- QEMU + Guest (right) -->
-  <rect x="470" y="182.264150943396" width="770" height="372.075471698113" rx="10.461068887267"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="855" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.014351551988" font-weight="bold" fill="var(--primary-text)">QEMU emulator</text>
+  <rect x="470" y="182.264150943396" width="770" height="372.075471698113" rx="10.461068887267" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855" y="226.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--primary-text)">QEMU emulator</text>
 
   <!-- Guest Linux inside QEMU -->
-  <rect x="530" y="258.867924528302" width="650" height="251.698113207547" rx="8.368855109814"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="855" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.014351551988" font-weight="bold" fill="var(--warn-text)">Guest Linux</text>
-  <text x="855" y="351.88679245283" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20.922137774535" fill="var(--warn-text)">ARM / x86 / MIPS / PowerPC</text>
-  <text x="855" y="395.660377358491" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20.922137774535" fill="var(--warn-text)">your Yocto image</text>
-  <text x="855" y="444.905660377359" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" fill="var(--warn-text)">kernel + root filesystem</text>
-  <text x="855" y="483.207547169811" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" fill="var(--warn-text)">runs as if on real target</text>
+  <rect x="530" y="258.867924528302" width="650" height="251.698113207547" rx="8.368855109814" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855" y="302.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014351551988" font-weight="bold" fill="var(--warn-text)">Guest Linux</text>
+  <text x="855" y="351.88679245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" fill="var(--warn-text)">ARM / x86 / MIPS / PowerPC</text>
+  <text x="855" y="395.660377358491" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" fill="var(--warn-text)">your Yocto image</text>
+  <text x="855" y="444.905660377359" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" fill="var(--warn-text)">kernel + root filesystem</text>
+  <text x="855" y="483.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" fill="var(--warn-text)">runs as if on real target</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="18.829923997081" font-style="italic" fill="var(--text-muted)">QEMU virtualizes the target CPU and maps host resources into the guest — no physical board required.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-style="italic" fill="var(--text-muted)">QEMU virtualizes the target CPU and maps host resources into the guest — no physical board required.</text>
 </svg>

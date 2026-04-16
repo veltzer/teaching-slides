@@ -16,7 +16,6 @@ audience:
 ---
 
 ## Logging In and Out
-
 ![logging_in_and_out](svg/courses/operating_systems/linux-fundamentals/02_basics/logging_in_and_out.svg)
 
 ---
@@ -33,7 +32,6 @@ Ctrl+D    # EOF (same as exit)
 ---
 
 ## Password Management
-
 ```bash
 # Change your password
 passwd
@@ -52,7 +50,6 @@ chage -d 0 username
 ---
 
 ## Command Structure
-
 Basic syntax:
 ```bash
 command [options] [arguments]
@@ -104,7 +101,6 @@ mv old.txt new.txt
 ---
 
 ## Getting Help
-
 ```bash
 # View manual page
 man ls
@@ -125,7 +121,6 @@ type ls
 ---
 
 ## Control Characters
-
 ![control_characters](svg/courses/operating_systems/linux-fundamentals/02_basics/control_characters.svg)
 
 ---
@@ -144,7 +139,6 @@ Common control characters:
 ---
 
 ## Command Line Editing
-
 ![command_line_editing](svg/courses/operating_systems/linux-fundamentals/02_basics/command_line_editing.svg)
 
 ---
@@ -187,7 +181,6 @@ mv backup_notes.txt ../notes_backup.txt
 ---
 
 ## Common Mistakes and Solutions
-
 ![common_mistakes_and_solutions](svg/courses/operating_systems/linux-fundamentals/02_basics/common_mistakes_and_solutions.svg)
 
 ---

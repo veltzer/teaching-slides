@@ -92,70 +92,43 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="39.047482" font-weight="bold" fill="var(--primary-accent)">Delta Lake Medallion Architecture</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="39.047482" font-weight="bold" fill="var(--primary-accent)">Delta Lake Medallion Architecture</text>
 
   <!-- Bronze tier -->
-  <rect x="40" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
-        fill="var(--warn-accent)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="226.206897" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="43.386092" font-weight="bold" fill="var(--warn-text)">BRONZE</text>
-  <text x="226.206897" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.86235" fill="var(--warn-text)">Raw Data</text>
-  <text x="226.206897" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Ingestion</text>
-  <text x="226.206897" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Historical record</text>
-  <text x="226.206897" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Unvalidated</text>
-  <text x="226.206897" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.523741" font-style="italic" fill="var(--warn-text)">As-received from sources</text>
+  <rect x="40" y="130.980392" width="372.413793" height="432.156863" rx="15.185132" fill="var(--warn-accent)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="226.206897" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="43.386092" font-weight="bold" fill="var(--warn-text)">BRONZE</text>
+  <text x="226.206897" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.86235" fill="var(--warn-text)">Raw Data</text>
+  <text x="226.206897" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Ingestion</text>
+  <text x="226.206897" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Historical record</text>
+  <text x="226.206897" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Unvalidated</text>
+  <text x="226.206897" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.523741" font-style="italic" fill="var(--warn-text)">As-received from sources</text>
 
   <!-- Silver tier -->
-  <rect x="453.793103" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
-        fill="var(--border)" stroke="var(--text)" stroke-width="2"/>
-  <text x="640" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="43.386092" font-weight="bold" fill="var(--bg)">SILVER</text>
-  <text x="640" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.86235" fill="var(--bg)">Refined Data</text>
-  <text x="640" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--bg)">• Cleaned</text>
-  <text x="640" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--bg)">• Deduplicated</text>
-  <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--bg)">• Validated</text>
-  <text x="640" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.523741" font-style="italic" fill="var(--bg)">Joined &amp; conformed</text>
+  <rect x="453.793103" y="130.980392" width="372.413793" height="432.156863" rx="15.185132" fill="var(--border)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="43.386092" font-weight="bold" fill="var(--bg)">SILVER</text>
+  <text x="640" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.86235" fill="var(--bg)">Refined Data</text>
+  <text x="640" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--bg)">• Cleaned</text>
+  <text x="640" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--bg)">• Deduplicated</text>
+  <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--bg)">• Validated</text>
+  <text x="640" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.523741" font-style="italic" fill="var(--bg)">Joined &amp; conformed</text>
 
   <!-- Gold tier -->
-  <rect x="867.586207" y="130.980392" width="372.413793" height="432.156863" rx="15.185132"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.793103" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="43.386092" font-weight="bold" fill="var(--warn-text)">GOLD</text>
-  <text x="1053.793103" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="23.86235" fill="var(--warn-text)">Business Data</text>
-  <text x="1053.793103" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Aggregated</text>
-  <text x="1053.793103" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Feature engineered</text>
-  <text x="1053.793103" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--warn-text)">• Analytics-ready</text>
-  <text x="1053.793103" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.523741" font-style="italic" fill="var(--warn-text)">Consumed by BI &amp; ML</text>
+  <rect x="867.586207" y="130.980392" width="372.413793" height="432.156863" rx="15.185132" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103" y="199.215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="43.386092" font-weight="bold" fill="var(--warn-text)">GOLD</text>
+  <text x="1053.793103" y="244.705882" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.86235" fill="var(--warn-text)">Business Data</text>
+  <text x="1053.793103" y="335.686275" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Aggregated</text>
+  <text x="1053.793103" y="381.176471" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Feature engineered</text>
+  <text x="1053.793103" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--warn-text)">• Analytics-ready</text>
+  <text x="1053.793103" y="506.27451" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.523741" font-style="italic" fill="var(--warn-text)">Consumed by BI &amp; ML</text>
 
   <!-- Flow arrows between tiers -->
-  <line x1="417.586207" y1="347.058824" x2="448.62069" y2="347.058824" stroke="var(--text)" stroke-width="3"
-        marker-end="url(#arrow)"/>
-  <line x1="831.37931" y1="347.058824" x2="862.413793" y2="347.058824" stroke="var(--text)" stroke-width="3"
-        marker-end="url(#arrow)"/>
-  <text x="433.103448" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.185132" fill="var(--text-muted)">clean</text>
-  <text x="846.896552" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="15.185132" fill="var(--text-muted)">aggregate</text>
+  <line x1="417.586207" y1="347.058824" x2="448.62069" y2="347.058824" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="831.37931" y1="347.058824" x2="862.413793" y2="347.058824" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="433.103448" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.185132" fill="var(--text-muted)">clean</text>
+  <text x="846.896552" y="324.313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.185132" fill="var(--text-muted)">aggregate</text>
 
   <!-- Bottom legend -->
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.693046" fill="var(--text-muted)">Each tier is a Delta Lake table; data flows left to right with increasing quality &amp; semantics.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.693046" fill="var(--text-muted)">Each tier is a Delta Lake table; data flows left to right with increasing quality &amp; semantics.</text>
 </svg>

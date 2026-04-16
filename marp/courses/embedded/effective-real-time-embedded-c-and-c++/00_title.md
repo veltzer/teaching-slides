@@ -10,6 +10,7 @@ duration_hours: 32
 audience:
   - audiences:embedded-engineers
   - audiences:developers
+
 ---
 # Effective Real Time Embedded C And C++
 ## Mark Veltzer

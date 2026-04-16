@@ -9,6 +9,7 @@ category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+
 ---
 
 # Man-in-the-Middle Attacks: Intercepting Communications

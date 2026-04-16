@@ -92,39 +92,33 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="81.37931" y="69.491571" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="105.864512" text-anchor="middle" font-size="20.168845" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Strategy</text>
-  <rect x="354.482759" y="69.491571" width="856.551724" height="58.98302" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="782.758621" y="105.864512" text-anchor="middle" font-size="20.168845" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Description</text>
-  <rect x="81.37931" y="136.339189" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="172.711886" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bump / Arena</text>
-  <rect x="354.482759" y="136.339189" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="172.711886" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Linear allocation, bulk free</text>
-  <rect x="81.37931" y="203.186562" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="239.559504" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pool</text>
-  <rect x="354.482759" y="203.186562" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="239.559504" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Fixed-size blocks, O(1) alloc/free</text>
-  <rect x="81.37931" y="270.033936" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="306.406877" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Free List</text>
-  <rect x="354.482759" y="270.033936" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="306.406877" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Variable size, linked free blocks</text>
-  <rect x="81.37931" y="336.881554" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="373.254373" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Slab</text>
-  <rect x="354.482759" y="336.881554" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="373.254373" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Caches of same-type objects</text>
-  <rect x="81.37931" y="403.728927" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="440.101869" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Buddy</text>
-  <rect x="354.482759" y="403.728927" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="440.101869" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Power-of-2 splitting / coalescing</text>
-  <rect x="81.37931" y="470.576423" width="264.827586" height="58.98302" rx="6.962537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="213.793103" y="506.949365" text-anchor="middle" font-size="19.160322" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">jemalloc</text>
-  <rect x="354.482759" y="470.576423" width="856.551724" height="58.98302" rx="6.962537" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="389.655172" y="506.949365" font-size="19.160322" fill="var(--text)" font-family="Arial, sans-serif">Thread-local caches, size classes</text>
+  <rect x="40" y="40" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="85.854768532935" text-anchor="middle" font-size="23.340048136508" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Strategy</text>
+  <rect x="330.109890728575" y="40" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785.054945364288" y="85.854768532935" text-anchor="middle" font-size="23.340048136508" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Description</text>
+  <rect x="40" y="124.273692643332" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="170.12815356948" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bump / Arena</text>
+  <rect x="330.109890728575" y="124.273692643332" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="170.12815356948" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Linear allocation, bulk free</text>
+  <rect x="40" y="208.547076419194" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="254.401846212813" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Pool</text>
+  <rect x="330.109890728575" y="208.547076419194" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="254.401846212813" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Fixed-size blocks, O(1) alloc/free</text>
+  <rect x="40" y="292.820461455739" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="338.675229988674" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Free List</text>
+  <rect x="330.109890728575" y="292.820461455739" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="338.675229988674" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Variable size, linked free blocks</text>
+  <rect x="40" y="377.094154099072" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="422.948768828613" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Slab</text>
+  <rect x="330.109890728575" y="377.094154099072" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="422.948768828613" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Caches of same-type objects</text>
+  <rect x="40" y="461.367537874933" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="507.222307668552" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Buddy</text>
+  <rect x="330.109890728575" y="461.367537874933" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="507.222307668552" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Power-of-2 splitting / coalescing</text>
+  <rect x="40" y="545.641076714872" width="281.318680952918" height="74.358923285128" rx="8.057275899151" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180.659340476459" y="591.495846508491" text-anchor="middle" font-size="22.172952283138" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">jemalloc</text>
+  <rect x="330.109890728575" y="545.641076714872" width="909.890109271425" height="74.358923285128" rx="8.057275899151" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="367.472527229334" y="591.495846508491" font-size="22.172952283138" fill="var(--text)" font-family="Arial, sans-serif">Thread-local caches, size classes</text>
 </svg>

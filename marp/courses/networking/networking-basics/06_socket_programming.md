@@ -12,9 +12,7 @@ audience:
 ## Building Networked Applications
 
 ---
-
 ## What is a Socket?
-
 - A socket is an endpoint for network communication
 - Provides a file-descriptor-like interface for sending/receiving data
 - Originated in BSD Unix (1983) -- the "Berkeley Sockets API"
@@ -48,6 +46,11 @@ audience:
 
 ## UDP Communication (no connection)
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
+
+---
+## Socket API: System Call Flow
+### TCP Connection Lifecycle
+### UDP Communication (no connection)
 
 ---
 
@@ -444,9 +447,7 @@ while inputs:
 ```
 
 ---
-
 ## select vs poll vs epoll
-
 | Feature | select | poll | epoll |
 |---------|--------|------|-------|
 | Max FDs | 1024 (FD_SETSIZE) | Unlimited | Unlimited |

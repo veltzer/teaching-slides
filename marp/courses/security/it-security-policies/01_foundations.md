@@ -8,6 +8,7 @@ category: security
 audience:
   - audiences:managers
   - audiences:it-staff
+
 ---
 
 # Foundation of Information Security

@@ -32,11 +32,9 @@ Without persistence, all data is lost when Redis restarts!
 ![redis_persistence_options](svg/courses/databases/redis/06_persistence/redis_persistence_options.svg)
 
 ---
-
 ## RDB (Redis Database) Snapshots
 
 Point-in-time snapshots of the dataset:
-
 - Creates a single compact binary file
 - Snapshot represents Redis data at one moment
 - Usually scheduled at specific intervals
@@ -50,7 +48,6 @@ Point-in-time snapshots of the dataset:
 ![rdb_redis_database_snapshots](svg/courses/databases/redis/06_persistence/rdb_redis_database_snapshots.svg)
 
 ---
-
 ## How RDB Snapshots Work
 
 ![how_rdb_snapshots_work](svg/courses/databases/redis/06_persistence/how_rdb_snapshots_work.svg)
@@ -131,11 +128,9 @@ Background saving started
 - Potential stalls during fork on low memory
 
 ---
-
 ## AOF (Append-Only File)
 
 Log of all write operations that modify data:
-
 - Logs every write operation as it occurs
 - Higher durability than RDB
 - Can be compacted/rewritten to save space
@@ -176,7 +171,6 @@ auto-aof-rewrite-min-size 64mb
 ![aof_sync_options](svg/courses/databases/redis/06_persistence/aof_sync_options.svg)
 
 ---
-
 ## AOF Rewriting
 
 AOF files grow continuously and need compaction:
@@ -242,7 +236,6 @@ How it works:
 - Better durability than pure RDB
 
 ---
-
 ## Hybrid Persistence File Structure
 
 ![hybrid_persistence_file_structure](svg/courses/databases/redis/06_persistence/hybrid_persistence_file_structure.svg)
@@ -307,7 +300,6 @@ aof_last_cow_size:0
 ```
 
 ---
-
 ## Persistence and Memory Usage
 
 Copy-On-Write (COW) mechanism:
@@ -350,7 +342,6 @@ Minimize impact on main Redis process:
     - Separate Redis data from OS/swap
 
 ---
-
 ## Backup Strategies
 
 ![backup_strategies](svg/courses/databases/redis/06_persistence/backup_strategies.svg)
@@ -429,7 +420,6 @@ $ redis-check-rdb dump.rdb
 Note: RDB files cannot be fixed - must restore from backup
 
 ---
-
 ## Point-in-Time Recovery
 
 Combining RDB and AOF for point-in-time recovery:
@@ -441,7 +431,6 @@ Combining RDB and AOF for point-in-time recovery:
 ![point_in_time_recovery](svg/courses/databases/redis/06_persistence/point_in_time_recovery.svg)
 
 ---
-
 ## Redis Persistence in Replicated Setup
 
 ![redis_persistence_in_replicated_setup](svg/courses/databases/redis/06_persistence/redis_persistence_in_replicated_setup.svg)
@@ -455,7 +444,6 @@ Combining RDB and AOF for point-in-time recovery:
 - Use dedicated backup replicas
 
 ---
-
 ## Persistence for Replication
 
 RDB's role in replication:
@@ -475,7 +463,6 @@ RDB's role in replication:
 - Partial resynchronization uses in-memory backlog
 
 ---
-
 ## Persistence in Redis Cluster
 
 Redis Cluster persistence considerations:
@@ -520,7 +507,6 @@ Monitor:
 - Disk I/O (writes per second)
 
 ---
-
 ## Typical Performance Impact
 
 ![typical_performance_impact](svg/courses/databases/redis/06_persistence/typical_performance_impact.svg)

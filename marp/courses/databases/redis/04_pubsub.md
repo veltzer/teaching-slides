@@ -274,7 +274,6 @@ Since Redis Pub/Sub offers no persistence:
 ![message_acknowledgment_pattern](svg/courses/databases/redis/04_pubsub/message_acknowledgment_pattern.svg)
 
 ---
-
 ## Sentinel Events with Pub/Sub
 
 Use Redis Pub/Sub for Redis Sentinel events:
@@ -286,7 +285,6 @@ Use Redis Pub/Sub for Redis Sentinel events:
 ![sentinel_events_with_pub_sub](svg/courses/databases/redis/04_pubsub/sentinel_events_with_pub_sub.svg)
 
 ---
-
 ## Introduction to Redis Streams
 
 Streams (introduced in Redis 5.0):

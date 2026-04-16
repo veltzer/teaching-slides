@@ -92,11 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect width="847.1699" height="439.9904" fill="var(--bg)" rx="6" x="40" y="40"/>
   <rect x="508.192" y="260.995" width="139.913" height="139.913" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="0.903" filter="url(#shadow)"/>
@@ -111,19 +106,19 @@
   <text x="836.2707" y="502.0583" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">HALF-OPEN</text>
   <text x="836.2707" y="519.169" text-anchor="middle" font-size="15.6319" fill="var(--text)" font-family="Arial, sans-serif">Probing recovery</text>
   <text x="836.2707" y="531.3911" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">One probe request allowed</text>
-  <path d="M 650.9521 312.6181 Q 836.2707 251.5083 1021.5893 312.6181" fill="none" stroke="var(--danger-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
+  <path d="M 650.9521 312.6181 Q 836.2707 251.5083 1021.5893 312.6181" fill="none" stroke="var(--danger-border)" stroke-width="0.7526" marker-end="url(#arrow)"/>
   <text x="836.2707" y="280.8409" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failure threshold exceeded</text>
   <text x="836.2707" y="293.0628" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. 5 failures in 10 s)</text>
-  <path d="M 1081.1557 396.9496 Q 1061.3003 465.3924 907.7506 502.0583" fill="none" stroke="var(--warn-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
+  <path d="M 1081.1557 396.9496 Q 1061.3003 465.3924 907.7506 502.0583" fill="none" stroke="var(--warn-border)" stroke-width="0.7526" marker-end="url(#arrow)"/>
   <text x="1048.0631" y="459.2816" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Timeout expires</text>
   <text x="1048.0631" y="471.5035" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. 30 s cooldown)</text>
-  <path d="M 766.7763 502.0583 Q 664.1893 465.3924 586.0907 398.1718" fill="none" stroke="var(--ok-border)" stroke-width="0.7526" marker-end="url(#arrow)" />
+  <path d="M 766.7763 502.0583 Q 664.1893 465.3924 586.0907 398.1718" fill="none" stroke="var(--ok-border)" stroke-width="0.7526" marker-end="url(#arrow)"/>
   <text x="637.7152" y="459.2816" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Probe succeeds</text>
   <text x="637.7152" y="471.5035" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">→ reset &amp; re-close</text>
-  <path d="M 905.7651 502.0583 Q 1008.352 477.6145 1029.5312 398.1718" fill="none" stroke="var(--danger-border)" stroke-width="0.602" stroke-dasharray="2.107 1.2041" marker-end="url(#arrow)" />
+  <path d="M 905.7651 502.0583 Q 1008.352 477.6145 1029.5312 398.1718" fill="none" stroke="var(--danger-border)" stroke-width="0.602" stroke-dasharray="2.107 1.2041" marker-end="url(#arrow)"/>
   <text x="1001.7335" y="502.0583" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Probe fails</text>
   <text x="1001.7335" y="514.2804" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">→ trip again</text>
-  <rect x="432.5413" y="590.6674" width="807.4587" height="29.3326" rx="6" fill="var(--surface)" />
+  <rect x="432.5413" y="590.6674" width="807.4587" height="29.3326" rx="6" fill="var(--surface)"/>
   <text x="836.2707" y="602.8896" text-anchor="middle" font-size="15.6319" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Purpose: prevent cascade failures by failing fast instead of queueing requests to a broken service</text>
   <text x="836.2707" y="615.1114" text-anchor="middle" font-size="15.6319" fill="var(--text-muted)" font-family="Arial, sans-serif">Implementations: Resilience4j (Java) · Polly (.NET) · Hystrix (legacy) · Istio service mesh</text>
 </svg>

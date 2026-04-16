@@ -92,27 +92,22 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="40" width="1200" height="71.262807" rx="6.757139" fill="var(--code-bg)" />
+  <rect x="40" y="40" width="1200" height="71.262807" rx="6.757139" fill="var(--code-bg)"/>
   <text x="59.354839" y="83.549561" font-size="21.531173" fill="var(--ok-accent)" font-family="Courier New, monospace">Input:  echo "hello world" &gt; output.txt</text>
-  <rect x="40" y="129.078509" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="129.078509" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="59.354839" y="173.617763" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">Step 1: Tokenize</text>
   <text x="320.645161" y="173.617763" font-size="20.552514" fill="var(--text)" font-family="Courier New, monospace">→  [echo]  ["hello world"]  [&gt;]  [output.txt]</text>
   <text x="59.354839" y="204.300333" font-size="15.658994" fill="var(--text-muted)" font-family="Courier New, monospace">Split input into tokens by whitespace and operators</text>
-  <rect x="40" y="230.03407" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="230.03407" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="59.354839" y="274.573325" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">Step 2: Alias expansion</text>
   <text x="320.645161" y="274.573325" font-size="20.552514" fill="var(--text)" font-family="Courier New, monospace">→  echo is not an alias — no change</text>
   <text x="59.354839" y="305.256018" font-size="15.658994" fill="var(--text-muted)" font-family="Courier New, monospace">Replace alias names with their definition text</text>
-  <rect x="40" y="330.989754" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="330.989754" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="59.354839" y="375.529009" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">Step 3: Parameter expansion</text>
   <text x="320.645161" y="375.529009" font-size="20.552514" fill="var(--text)" font-family="Courier New, monospace">→  expand $VAR, $(cmd), $((math))</text>
   <text x="59.354839" y="406.211702" font-size="15.658994" fill="var(--text-muted)" font-family="Courier New, monospace">Substitute variable values and command substitutions</text>
-  <rect x="40" y="431.945439" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="431.945439" width="1200" height="87.099" rx="6.757139" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="59.354839" y="476.484693" font-size="21.531173" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">Step 4: Glob expansion</text>
   <text x="320.645161" y="476.484693" font-size="20.552514" fill="var(--text)" font-family="Courier New, monospace">→  *.txt expanded to matching filenames</text>
   <text x="59.354839" y="507.167263" font-size="15.658994" fill="var(--text-muted)" font-family="Courier New, monospace">Match patterns like *, ?, [...] against the filesystem</text>

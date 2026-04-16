@@ -92,19 +92,18 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="25.5866" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Multi-stage Build Flow</text>
   <rect x="40" y="82.963" width="364.2857" height="250.6173" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="222.1428" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Stage 1: Build</text>
   <text x="222.1428" y="219.0124" text-anchor="middle" font-size="21.3221" font-family="Arial, sans-serif" fill="var(--warn-text)">FROM node:18 AS build</text>
   <text x="222.1428" y="272.716" text-anchor="middle" font-size="21.3221" font-family="Arial, sans-serif" fill="var(--warn-text)">npm install + compile</text>
-  <line x1="404.2856" y1="208.2716" x2="468.5714" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="404.2856" y1="208.2716" x2="468.5714" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="468.5714" y="82.963" width="342.8571" height="250.6173" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="640" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">COPY --from=build</text>
   <text x="640" y="219.0124" text-anchor="middle" font-size="21.3221" font-family="Arial, sans-serif" fill="var(--info-text)">Only artifacts</text>
   <text x="640" y="272.716" text-anchor="middle" font-size="21.3221" font-family="Arial, sans-serif" fill="var(--info-text)">No dev dependencies</text>
-  <line x1="811.4286" y1="208.2716" x2="875.7143" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="811.4286" y1="208.2716" x2="875.7143" y2="208.2716" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="875.7143" y="82.963" width="364.2857" height="250.6173" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1057.8572" y="154.5679" text-anchor="middle" font-size="23.4544" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Stage 2: Runtime</text>
   <text x="1057.8572" y="219.0124" text-anchor="middle" font-size="21.3221" font-family="Arial, sans-serif" fill="var(--ok-text)">FROM node:18-alpine</text>

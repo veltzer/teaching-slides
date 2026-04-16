@@ -27,7 +27,6 @@ Introduction to QEMU Device Models
 - Importance for kernel developers
 
 ---
-
 QEMU Device Model Architecture
 
 ---

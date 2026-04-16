@@ -18,5 +18,4 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
-
 ![title](svg/courses/devops/welcome-to-the-world-of-devops/title.svg)

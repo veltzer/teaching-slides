@@ -59,7 +59,7 @@ colors:
     info-accent: "#2f253b"        # deep plum
 
 # Gradients are now actively used (rects with family fills get gradient
-# treatment via svg_fix_gradients.py).
+# treatment via svg_fix.py --gradients).
 gradients:
   grad-primary:
     direction: vertical
@@ -113,7 +113,7 @@ filters:
     flood-color: "#00000044"      # was #00000022 — deeper opacity
 
 # Visual effects applied uniformly across all SVGs. Enforced by
-# check_svg.py --shadows; svg_fix_shadows.py rewrites files to comply.
+# check_svg.py --shadows; svg_fix.py --shadows rewrites files to comply.
 effects:
   rect-shadow:
     enabled: true                 # whether shadow filter is used at all
@@ -131,8 +131,8 @@ effects:
 
 # Canonical typography. Every <text>/<tspan> in every SVG must use one of
 # these two font stacks (enforced by check_svg.py --typography; rewritten
-# by svg_fix_fonts.py). To re-skin the deck typographically, change these
-# values and re-run svg_fix_fonts.py.
+# by svg_fix.py --fonts). To re-skin the deck typographically, change these
+# values and re-run svg_fix.py --fonts.
 typography:
   sans: "Arial, sans-serif"
   mono: "Courier New, monospace"

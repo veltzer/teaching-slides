@@ -294,7 +294,6 @@ execute_process(
 - Only the last command's stdout is captured
 
 ---
-
 ## Cross-Compilation Overview
 
 ![cross_compilation_overview](svg/courses/build_systems/cmake/08_miscellaneous_and_advanced/cross_compilation_overview.svg)

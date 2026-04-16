@@ -19,6 +19,9 @@ audience:
 
 ## Common Error Categories
 
+---
+## Error Handling and Debugging
+
 ![common_error_categories](svg/courses/devops/terraform/13_error_handling/common_error_categories.svg)
 
 ---
@@ -520,7 +523,7 @@ terraform apply -target=aws_instance.web
 #   - Working around dependency issues
 
 # Warning: Targeted apply can leave state inconsistent
-# Always do a full plan afterwards
+## Always do a full plan afterwards
 ```
 
 ---

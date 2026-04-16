@@ -17,16 +17,16 @@ highest to lowest severity. Append new findings as we discover them.
   `xml.etree.ElementTree` without calling
   `ET.register_namespace("", "http://www.w3.org/2000/svg")` before writing,
   which is almost certainly how the original ns0 damage happened. Those
-  scripts have been retired; modern replacements (`fit_svg_to_slide.py`,
-  `svg_fix_fonts.py`) either avoid ElementTree or register the namespace.
+  scripts have been retired; modern replacements (`svg_fix.py --fit`,
+  `svg_fix.py --fonts`) either avoid ElementTree or register the namespace.
 
 - **Content below y=630.** Historical: one-off rescale run fixed 15 files.
-  Ongoing enforcement is via `check_svg.py --bounds` + `fit_svg_to_slide.py`.
+  Ongoing enforcement is via `check_svg.py --bounds` + `svg_fix.py --fit`.
 
 - **Oversized custom arrow markers.** 1,228 SVGs used per-file-named
   markers (`id="arrowhead"`, `id="ah12b"`, `id="arrowd0_..."`, etc.) with
   dimensions ranging from 11x11 up to 21x36, rendering as oversized
-  triangles. Fixed by `scripts/svg_fix_markers.py` which caps any non-
+  triangles. Fixed by `scripts/svg_fix.py --markers` which caps any non-
   palette marker to 10x10 / refX=9 / refY=5 while leaving the marker id,
   fill color, and polygon/path shape untouched. Idempotent.
 
@@ -90,5 +90,5 @@ content is clustered in a corner or fills only 30-40% of the frame. Seen in:
   (content is sized well horizontally but heavy top-loaded; lower half empty)
 
 **Suggested fix:** rescale coordinates so content fills the usable area
-(roughly x: 40..1240, y: 40..620). `scripts/fit_svg_to_slide.py` handles
+(roughly x: 40..1240, y: 40..620). `scripts/svg_fix.py --fit` handles
 this; it now produces exactly-fitted output.

@@ -15,9 +15,7 @@ audience:
 ## Encryption, Firewalls, and VPNs
 
 ---
-
 ## Why Network Security Matters
-
 - Data in transit is vulnerable to interception, modification, and impersonation
 - Every packet crosses multiple networks and devices you do not control
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
@@ -779,7 +777,10 @@ notAfter=Mar 14 23:59:59 2025 GMT
 ---
 
 ## Zero Trust Network Architecture
+![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
+---
+## Zero Trust Network Architecture
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
 **Principles:**
 1. **Never trust, always verify** -- authenticate and authorize every request

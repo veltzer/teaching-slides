@@ -210,6 +210,10 @@ instructions: |
 
 ## Building Complex Workflows from Simple Skills
 
+---
+
+## Skill Composition and Chaining
+
 ![building_complex_workflows_from_simple_skills](svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/building_complex_workflows_from_simple_skills.svg)
 
 ---
@@ -229,7 +233,6 @@ chain:
   - skill: create-pr
     params: { draft: false }
 ```
-
 - Each step receives context from the previous one
 - `on_fail` controls flow: `abort`, `skip`, or `warn`
 
@@ -458,6 +461,10 @@ claude skills override review --local
 
 ## Project-Level vs User-Level vs Team-Level
 
+---
+
+## Skill Inheritance and Overrides
+
 ![project_level_vs_user_level_vs_team_level](svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/project_level_vs_user_level_vs_team_level.svg)
 
 ---
@@ -468,7 +475,6 @@ claude skills override review --local
 - User-level skills provide personal defaults across all projects
 - Team-level skills target role-specific workflows
 - Override any inherited skill with a local definition
-
 ```yaml
 # .claude/skills/review.yaml (project override)
 extends: shared/review
@@ -509,6 +515,10 @@ claude skills audit --check-versions
 ---
 
 ## Automating Actions Around Tool Calls
+
+---
+
+## Hooks: Pre and Post-Execution
 
 ![automating_actions_around_tool_calls](svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/automating_actions_around_tool_calls.svg)
 

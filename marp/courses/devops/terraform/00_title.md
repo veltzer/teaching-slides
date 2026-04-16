@@ -29,5 +29,4 @@ audience:
 - Advocate for DevOps automation
 
 ---
-
 ![title](svg/courses/devops/terraform/title.svg)

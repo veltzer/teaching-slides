@@ -27,7 +27,6 @@ QEMU Tracing Framework
 - Analyzing trace output for kernel debugging
 
 ---
-
 QEMU Tracing Architecture
 
 ---

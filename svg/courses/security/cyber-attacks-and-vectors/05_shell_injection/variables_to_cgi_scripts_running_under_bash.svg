@@ -4,17 +4,17 @@
   <text x="640.0001" y="99.706" text-anchor="middle" font-size="33.46" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Shellshock Attack Flow</text>
   <rect x="103.158" y="133.8236" width="273.6843" height="68.2353" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="240.0001" y="176.4707" text-anchor="middle" font-size="24.1656" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Attacker</text>
-  <line x1="376.8421" y1="167.9412" x2="503.1579" y2="167.9412" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="376.8421" y1="167.9412" x2="503.1579" y2="167.9412" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="692.6316" y="167.9412" text-anchor="middle" font-size="22.3067" fill="var(--text-muted)" font-family="Arial, sans-serif">HTTP Request with malicious header</text>
-  <line x1="640.0001" y1="185.0001" x2="640.0001" y2="236.1765" stroke="var(--text)" stroke-width="2" />
+  <line x1="640.0001" y1="185.0001" x2="640.0001" y2="236.1765" stroke="var(--text)" stroke-width="2"/>
   <rect x="103.158" y="236.1765" width="1031.5789" height="85.2941" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="275.4118" text-anchor="middle" font-size="24.1656" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Web Server (Apache/nginx with CGI)</text>
   <text x="640.0001" y="304.4118" text-anchor="middle" font-size="20.4478" fill="var(--text-muted)" font-family="Arial, sans-serif">Passes headers as env variables</text>
-  <line x1="640.0001" y1="321.4706" x2="640.0001" y2="372.6471" stroke="var(--text)" stroke-width="2" />
+  <line x1="640.0001" y1="321.4706" x2="640.0001" y2="372.6471" stroke="var(--text)" stroke-width="2"/>
   <rect x="103.158" y="372.6471" width="1031.5789" height="85.2941" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="411.8825" text-anchor="middle" font-size="22.3067" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Bash Shell: env USER_AGENT='() { :;}; malicious'</text>
   <text x="640.0001" y="440.8824" text-anchor="middle" font-size="20.4478" fill="var(--text-muted)" font-family="Arial, sans-serif">Bash parses function AND executes trailing command</text>
-  <line x1="640.0001" y1="457.9413" x2="640.0001" y2="509.1177" stroke="var(--text)" stroke-width="2" />
+  <line x1="640.0001" y1="457.9413" x2="640.0001" y2="509.1177" stroke="var(--text)" stroke-width="2"/>
   <rect x="103.158" y="509.1177" width="1031.5789" height="68.2353" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="551.7648" text-anchor="middle" font-size="24.1656" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Malicious command runs with web server privileges</text>
   <defs>
@@ -109,6 +109,5 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
 </svg>

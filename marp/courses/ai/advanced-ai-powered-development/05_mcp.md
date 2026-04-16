@@ -136,7 +136,6 @@ Host (Claude Code)
 - Every registered tool's **schema** consumes tokens in the system prompt
 - 20 tools with detailed schemas can use 2,000+ tokens before any user message
 - Strategies to manage context cost:
-
 1. **Dynamic tool registration** -- only register tools relevant to the current task
 1. **Tool grouping** -- combine related fine-grained tools into one coarser tool
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
@@ -211,7 +210,6 @@ def service_health(name: str) -> str:
 - Reusable prompt templates exposed by servers
 - Accept arguments, return structured messages
 - Example: a `code-review` prompt that formats a diff for review
-
 ## Sampling
 - Lets the **server** request an LLM completion from the host
 - Enables agentic patterns where tools need reasoning mid-execution
@@ -371,7 +369,6 @@ npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-github
 1. **GitHub MCP server** -- run `git blame` on the relevant file to find the commit
 1. **Filesystem MCP server** -- read the code, apply the fix, run tests
 1. **GitHub MCP server** -- create a branch, commit, and open a pull request
-
 - Each step uses a **different MCP server** -- the AI orchestrates them
 - The developer reviews and approves at each stage
 - Total time: minutes instead of hours of manual context-switching

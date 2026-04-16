@@ -92,11 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="28.448282" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Modeling Performance Impact</text>
   <rect x="40" y="86.245882" width="321.428571" height="192.690995" rx="7.014799" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -114,16 +109,16 @@
   <text x="1079.2856" y="203.787303" text-anchor="middle" font-size="17.272188" fill="var(--text-muted)" font-family="Arial, sans-serif">Inner documents</text>
   <text x="1079.2856" y="234.617891" text-anchor="middle" font-size="17.272188" fill="var(--text-muted)" font-family="Arial, sans-serif">Accurate but slow</text>
   <text x="1079.2856" y="265.448479" text-anchor="middle" font-size="22.352188" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">★★</text>
-  <line x1="40" y1="356.013226" x2="1240" y2="356.013226" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="40" y1="356.013226" x2="1240" y2="356.013226" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="640" y="394.551401" text-anchor="middle" font-size="18.288164" fill="var(--text-muted)" font-family="Arial, sans-serif">Fast → Slow</text>
   <rect x="40" y="423.455092" width="1200" height="50.099675" rx="7.014799" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200.714171" y="456.212577" text-anchor="middle" font-size="16.256094" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Denormalized</text>
   <text x="640" y="456.212577" text-anchor="middle" font-size="16.256094" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Parent-Child</text>
   <text x="1079.2856" y="456.212577" text-anchor="middle" font-size="16.256094" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Nested</text>
-  <rect x="40" y="473.554768" width="1200" height="48.172659" rx="7.014799" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="473.554768" width="1200" height="48.172659" rx="7.014799" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="200.714171" y="504.385355" text-anchor="middle" font-size="15.240117" fill="var(--text)" font-family="Arial, sans-serif">Large doc size</text>
   <text x="640" y="504.385355" text-anchor="middle" font-size="15.240117" fill="var(--text)" font-family="Arial, sans-serif">Same shard required</text>
   <text x="1079.2856" y="504.385355" text-anchor="middle" font-size="15.240117" fill="var(--text)" font-family="Arial, sans-serif">Hidden inner docs</text>
-  <rect x="40" y="566.046531" width="1200" height="53.953469" rx="7.014799" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="566.046531" width="1200" height="53.953469" rx="7.014799" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="598.803896" text-anchor="middle" font-size="16.256094" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prefer denormalization in ES. Only use nested/parent-child when data updates frequently and independently.</text>
 </svg>

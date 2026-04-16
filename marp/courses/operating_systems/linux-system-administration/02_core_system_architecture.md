@@ -15,13 +15,10 @@ audience:
 ---
 
 ## Linux Filesystem Hierarchy Standard (FHS)
-
 ![linux_filesystem_hierarchy_standard_fhs](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
 
 ---
-
 ## Linux Filesystem Hierarchy Standard (FHS)
-
 - `/bin`, `/sbin` - essential binaries
 - `/etc` - system configuration
 - `/var` - variable data (logs, mail, spool)
@@ -102,13 +99,10 @@ df -i
 ---
 
 ## The Boot Process Overview
-
 ![the_boot_process_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
 
 ---
-
 ## The Boot Process Overview
-
 1. Firmware (BIOS/UEFI) performs POST and finds boot device
 1. Bootloader (`GRUB2`) loads kernel and `initramfs`
 1. Kernel initializes hardware and mounts root filesystem
@@ -812,13 +806,10 @@ systemctl list-sockets
 ---
 
 ## Socket Activation Benefits
-
 ![socket_activation_benefits](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
 
 ---
-
 ## Socket Activation Benefits
-
 - Faster boot: services start only when needed
 - No port conflicts: `systemd` holds sockets during restarts
 - Zero-downtime restarts: connections queue while service restarts
@@ -1135,6 +1126,11 @@ The device mapper (`dm`) is a kernel framework for mapping block devices. It und
 
 ## Device Mapper Overview
 
+![device_mapper_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
+
+---
+## Device Mapper Overview
+The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
 ```bash
 # List device mapper devices
 dmsetup ls

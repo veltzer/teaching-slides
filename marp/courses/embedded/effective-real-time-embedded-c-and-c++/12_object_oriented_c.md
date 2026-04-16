@@ -7,6 +7,7 @@ category: embedded
 audience:
   - audiences:embedded-engineers
   - audiences:developers
+
 ---
 # Object Oriented C
 

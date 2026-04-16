@@ -92,21 +92,21 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
+  </defs>
   <rect x="40" y="40" width="1200" height="580" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.0001" y="76.25" text-anchor="middle" font-size="20.8103" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Exactly-Once Guarantee Flow (Micro-batch N)</text>
   <rect x="106.6667" y="100.4166" width="1066.6668" height="66.4583" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="124.5834" font-size="16.9083" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 1: Read offsets from checkpoint</text>
   <text x="140" y="148.75" font-size="15.6077" fill="var(--text)" font-family="Arial, sans-serif">Last committed: topic=events, partition=0, offset=1000</text>
-  <line x1="640.0001" y1="166.875" x2="640.0001" y2="191.0417" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="640.0001" y1="166.875" x2="640.0001" y2="191.0417" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="106.6667" y="191.0417" width="1066.6668" height="66.4583" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="215.2084" font-size="16.9083" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 2: Fetch data from source</text>
   <text x="140" y="239.375" font-size="15.6077" fill="var(--text)" font-family="Arial, sans-serif">Read offsets 1001-1500 from Kafka</text>
-  <line x1="640.0001" y1="257.5" x2="640.0001" y2="281.6667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="640.0001" y1="257.5" x2="640.0001" y2="281.6667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="106.6667" y="281.6667" width="1066.6668" height="66.4583" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="305.8334" font-size="16.9083" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 3: Process and write to sink</text>
   <text x="140" y="330" font-size="15.6077" fill="var(--text)" font-family="Arial, sans-serif">Write 500 records to Delta Lake</text>
-  <line x1="640.0001" y1="348.125" x2="640.0001" y2="372.2917" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="640.0001" y1="348.125" x2="640.0001" y2="372.2917" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="106.6667" y="372.2917" width="1066.6668" height="66.4583" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="396.4583" font-size="16.9083" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 4: Commit offsets to checkpoint</text>
   <text x="140" y="420.625" font-size="15.6077" fill="var(--text)" font-family="Arial, sans-serif">Update: offset=1500 (atomic)</text>

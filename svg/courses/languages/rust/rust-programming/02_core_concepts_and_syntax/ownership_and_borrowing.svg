@@ -92,39 +92,34 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="40" y="40" width="570.491853" height="298.969135" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="325.245822" y="71.890064" text-anchor="middle" font-size="19.801342" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Ownership</text>
-  <rect x="59.672133" y="89.82821" width="531.147587" height="99.656419" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="59.672133" y="89.82821" width="531.147587" height="99.656419" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="325.245822" y="115.73881" text-anchor="middle" font-size="15.840982" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Move</text>
   <text x="79.344266" y="137.663306" font-size="14.85095" fill="var(--text)" font-family="Courier New, monospace">let s1 = String::from("hi");</text>
   <text x="79.344266" y="159.587555" font-size="14.85095" fill="var(--text)" font-family="Courier New, monospace">let s2 = s1;  // moved</text>
   <text x="79.344266" y="179.518938" font-size="14.85095" fill="var(--danger-accent)" font-family="Courier New, monospace">// s1 invalid</text>
-  <rect x="59.672133" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="59.672133" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="177.70493" y="225.360797" text-anchor="middle" font-size="12.870884" fill="var(--text-muted)" font-family="Arial, sans-serif">s1 (ptr/len/cap)</text>
   <text x="177.70493" y="247.285293" text-anchor="middle" font-size="12.870884" fill="var(--danger-accent)" font-family="Courier New, monospace">→ INVALID</text>
-  <rect x="315.40986" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="315.40986" y="203.436548" width="236.065594" height="115.601328" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="433.442657" y="225.360797" text-anchor="middle" font-size="12.870884" fill="var(--text-muted)" font-family="Arial, sans-serif">s2 (ptr/len/cap)</text>
   <text x="433.442657" y="247.285293" text-anchor="middle" font-size="12.870884" fill="var(--primary-accent)" font-family="Courier New, monospace">→ owns heap</text>
   <text x="433.442657" y="279.175233" text-anchor="middle" font-size="11.880851" fill="var(--text-muted)" font-family="Arial, sans-serif">Heap: "hello"</text>
   <text x="433.442657" y="301.09973" text-anchor="middle" font-size="11.880851" fill="var(--text-faint)" font-family="Arial, sans-serif">freed on drop</text>
-  <line x1="177.70493" y1="247.285293" x2="315.40986" y2="247.285293" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)" />
+  <line x1="177.70493" y1="247.285293" x2="315.40986" y2="247.285293" stroke="var(--danger-border)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)"/>
   <rect x="659.672185" y="40" width="580.327815" height="298.969135" rx="6.83567" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="949.836145" y="71.890064" text-anchor="middle" font-size="19.801342" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Borrowing (&amp;)</text>
-  <rect x="679.344213" y="89.82821" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="679.344213" y="89.82821" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="949.836145" y="115.73881" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Immutable: many readers</text>
   <text x="699.016451" y="139.656419" font-size="13.860803" fill="var(--text)" font-family="Courier New, monospace">let s = String::from("hi");</text>
   <text x="699.016451" y="161.580792" font-size="13.860803" fill="var(--ok-accent)" font-family="Courier New, monospace">&amp;s; &amp;s; // OK</text>
-  <rect x="679.344213" y="193.470856" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="679.344213" y="193.470856" width="540.983654" height="89.690728" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="949.836145" y="219.381456" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Mutable: one writer</text>
   <text x="699.016451" y="243.298942" font-size="13.860803" fill="var(--text)" font-family="Courier New, monospace">let mut s = String::from("hi");</text>
   <text x="699.016451" y="265.223439" font-size="13.860803" fill="var(--warn-accent)" font-family="Courier New, monospace">&amp;mut s; // one</text>
-  <rect x="40" y="360.893507" width="1200" height="199.312715" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="360.893507" width="1200" height="199.312715" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.000052" y="390.790458" text-anchor="middle" font-size="17.821162" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rules</text>
   <rect x="59.672133" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="226.885262" y="430.652976" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">1: Owner</text>
@@ -132,13 +127,13 @@
   <text x="79.344266" y="476.494835" font-size="13.860803" fill="var(--primary-accent)" font-family="Arial, sans-serif">Drop owner → freed.</text>
   <text x="79.344266" y="498.419332" font-size="13.860803" fill="var(--primary-accent)" font-family="Arial, sans-serif">No double-free.</text>
   <text x="79.344266" y="520.343704" font-size="13.860803" fill="var(--primary-accent)" font-family="Arial, sans-serif">No leaks.</text>
-  <rect x="433.442657" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="433.442657" y="404.742253" width="334.426259" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="600.655787" y="430.652976" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2: Borrows</text>
   <text x="453.11479" y="454.570586" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">Many &amp;T (read)</text>
   <text x="453.11479" y="476.494835" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">OR one &amp;mut T,</text>
   <text x="453.11479" y="498.419332" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">never both.</text>
   <text x="453.11479" y="520.343704" font-size="13.860803" fill="var(--text-faint)" font-family="Arial, sans-serif">No data races.</text>
-  <rect x="807.213182" y="404.742253" width="413.11479" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="807.213182" y="404.742253" width="413.11479" height="129.55337" rx="6.83567" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1013.770577" y="430.652976" text-anchor="middle" font-size="14.85095" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3: Lifetimes</text>
   <text x="826.885315" y="454.570586" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">Refs cannot outlive</text>
   <text x="826.885315" y="476.494835" font-size="13.860803" fill="var(--text-muted)" font-family="Arial, sans-serif">their data.</text>

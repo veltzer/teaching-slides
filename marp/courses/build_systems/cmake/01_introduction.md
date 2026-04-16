@@ -77,7 +77,6 @@ audience:
 | IDE support | Excellent | Basic | Good | Good |
 
 ---
-
 ## The CMake Pipeline
 
 ![the_cmake_pipeline](svg/courses/build_systems/cmake/01_introduction/the_cmake_pipeline.svg)

@@ -92,17 +92,12 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="433.103448" y="40" width="413.793103" height="70.947954" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="69.266125" font-size="18.198679" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">std::error::Error</text>
   <text x="640" y="95" font-size="12.451792" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">trait Error: Debug + Display + source()</text>
-  <line x1="557.241379" y1="110.947954" x2="319.310345" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <line x1="722.758621" y1="110.947954" x2="960.689545" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <line x1="557.241379" y1="110.947954" x2="319.310345" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="722.758621" y1="110.947954" x2="960.689545" y2="204.954181" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <rect x="40" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="204.954181" width="537.931034" height="40.795151" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="231.559609" width="537.931034" height="14.189613" fill="url(#grad-ok)" rx="6.613092" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -112,14 +107,14 @@
   <text x="68.965517" y="295" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">anyhow::Error wraps any error</text>
   <text x="68.965517" y="320" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">? auto converts; .context adds info</text>
   <text x="68.965517" y="345" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">RUST_BACKTRACE=1 for traces</text>
-  <rect x="62.758621" y="368.134564" width="492.413793" height="120.611654" fill="var(--text)" rx="6.613092" />
+  <rect x="62.758621" y="368.134564" width="492.413793" height="120.611654" fill="var(--text)" rx="6.613092"/>
   <text x="81.37931" y="390" font-size="11.493995" fill="var(--ok-accent)" font-family="Courier New, monospace">use anyhow::{Result, Context};</text>
   <text x="81.37931" y="415" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">fn read(p: &amp;str) -&gt; Result&lt;Config&gt; {</text>
   <text x="81.37931" y="435" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  let s = fs::read_to_string(p)</text>
   <text x="81.37931" y="455" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">    .context("reading")?;</text>
   <text x="81.37931" y="475" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">  Ok(toml::from_str(&amp;s)?) }</text>
   <rect x="702.068966" y="204.954181" width="537.931034" height="301.529026" fill="url(#grad-warn)" rx="6.613092" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="702.068966" y="204.954181" width="537.931034" height="40.795151" fill="var(--warn-accent)" rx="6.613092" />
+  <rect x="702.068966" y="204.954181" width="537.931034" height="40.795151" fill="var(--warn-accent)" rx="6.613092"/>
   <rect x="702.068966" y="231.559609" width="537.931034" height="14.189613" fill="var(--warn-accent)" rx="6.613092"/>
   <text x="751.724138" y="231.559609" font-size="19.156585" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">thiserror</text>
   <text x="1144.827586" y="229.786031" font-size="12.451792" fill="var(--warn-accent)" text-anchor="end" font-family="Arial, sans-serif">thiserror = "1.0"</text>
@@ -128,7 +123,7 @@
   <text x="726.896552" y="310" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">Generates impl</text>
   <text x="726.896552" y="330" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">#[error("...")] Display</text>
   <text x="726.896552" y="350" font-size="12.451792" fill="var(--text)" font-family="Arial, sans-serif">#[from] auto-From</text>
-  <rect x="724.827586" y="368.134564" width="492.413793" height="120.611654" fill="var(--text)" rx="6.613092" />
+  <rect x="724.827586" y="368.134564" width="492.413793" height="120.611654" fill="var(--text)" rx="6.613092"/>
   <text x="743.448276" y="390" font-size="11.493995" fill="var(--warn-accent)" font-family="Courier New, monospace">#[derive(Debug, Error)]</text>
   <text x="743.448276" y="415" font-size="11.493995" fill="var(--bg)" font-family="Courier New, monospace">pub enum MyError {</text>
   <text x="743.448276" y="435" font-size="11.493995" fill="var(--warn-accent)" font-family="Courier New, monospace">  #[error("io: {0}")]</text>
@@ -137,10 +132,10 @@
   <rect x="184.827586" y="531.314947" width="910.344828" height="88.685053" fill="url(#grad-primary)" rx="6.613092" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="554.373109" font-size="14.367384" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">? Operator Flow</text>
   <text x="267.586207" y="585" font-size="12.451792" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Result&lt;T,E&gt;</text>
-  <line x1="350.344828" y1="584.525913" x2="433.103448" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <line x1="350.344828" y1="584.525913" x2="433.103448" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>
   <text x="484.827586" y="585" font-size="12.451792" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Ok(v) → v</text>
-  <line x1="536.551724" y1="584.525913" x2="619.310345" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <line x1="536.551724" y1="584.525913" x2="619.310345" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>
   <text x="681.3792" y="585" font-size="12.451792" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">Err → From::from</text>
-  <line x1="751.724138" y1="584.525913" x2="834.482759" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <line x1="751.724138" y1="584.525913" x2="834.482759" y2="584.525913" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)"/>
   <text x="929.655172" y="585" font-size="12.451792" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">early return Err</text>
 </svg>

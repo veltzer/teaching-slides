@@ -381,18 +381,15 @@ redis-cli MEMORY STATS
 ```
 
 ---
-
 ## Automatic Key Management
 
 Key expiration and eviction:
-
 1. **Explicit expiration**:
    ```bash
    EXPIRE key seconds
    EXPIREAT key timestamp
    SETEX key seconds value
    ```
-
 1. **Implicit eviction**:
     - When `maxmemory` limit is reached
     - According to `maxmemory-policy`
@@ -435,7 +432,6 @@ MEMORY DOCTOR
 ```
 
 ---
-
 ## Monitoring Redis in Production
 
 Key metrics to monitor:

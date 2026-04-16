@@ -16,7 +16,6 @@ audience:
 ---
 
 ## Basic File System Structure
-
 ![basic_file_system_structure](svg/courses/operating_systems/linux-fundamentals/03_filesystem/basic_file_system_structure.svg)
 
 ---
@@ -54,7 +53,6 @@ Key Directories:
 ---
 
 ## Understanding Paths
-
 ![understanding_paths](svg/courses/operating_systems/linux-fundamentals/03_filesystem/understanding_paths.svg)
 
 ---
@@ -101,7 +99,6 @@ cd -
 ---
 
 ## Home Directories
-
 ![home_directories](svg/courses/operating_systems/linux-fundamentals/03_filesystem/home_directories.svg)
 
 ---
@@ -205,7 +202,6 @@ echo $HOME
 ---
 
 ## Common Path Operations
-
 ![common_path_operations](svg/courses/operating_systems/linux-fundamentals/03_filesystem/common_path_operations.svg)
 
 ---

@@ -186,7 +186,6 @@ and session management.
 - Commit message
 
 ---
-
 ## Object Relationships
 
 How the three structures connect:

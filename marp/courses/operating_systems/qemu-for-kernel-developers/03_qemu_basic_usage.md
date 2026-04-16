@@ -26,7 +26,6 @@ QEMU Command Line Basics
 - Common options: -m (memory), -smp (CPUs), -kernel, -append
 
 ---
-
 Kernel Boot Process in QEMU
 
 ---
@@ -90,7 +89,6 @@ Network Device Emulation
 - Advanced networking with tap devices
 
 ---
-
 Virtual Network Configuration
 
 ---

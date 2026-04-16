@@ -269,7 +269,6 @@ rg "catch|rescue|except|on_error" --type-add 'src:*.{ts,py,rb}'
 - Ask the AI to locate all three for any symbol before making changes
 - Verify that test files actually cover the code path you are modifying
 - Use a consistent prompt pattern to avoid missing related files
-
 ```misc
 Navigation workflow:
 1. "Find the definition of OrderService.submitOrder()"
@@ -402,7 +401,6 @@ Workflow:
 - Start with read paths before migrating writes
 - Use feature flags to toggle between old and new implementations
 - Monitor error rates and latency at each cutover stage
-
 ```misc
 Strangler Fig implementation with AI assistance:
 1. Ask AI to identify the public API surface of the target module

@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -156,6 +166,6 @@
   <!-- Bottom summary -->
   <rect x="40" y="501.851851851852" width="1200" height="118.148148148148" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="539.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.919573407621" font-weight="bold" fill="var(--bg)">Tuning Tips</text>
-  <text x="640" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--bg)">ANALYZE TABLE -> stats for CBO</text>
+  <text x="640" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--bg)">ANALYZE TABLE -&gt; stats for CBO</text>
   <text x="640" y="598.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.757295747452" fill="var(--bg)">read EXPLAIN bottom-up; enable AQE</text>
 </svg>

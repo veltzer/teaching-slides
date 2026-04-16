@@ -92,14 +92,9 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="425.714286" y="40" width="428.571429" height="176.949181" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="425.714286" y="40" width="428.571429" height="43.25419" rx="7.085777" fill="var(--primary-accent)" />
+  <rect x="425.714286" y="40" width="428.571429" height="43.25419" rx="7.085777" fill="var(--primary-accent)"/>
   <rect x="425.714286" y="77.355803" width="428.571429" height="5.898265" fill="var(--primary-accent)" rx="7.085777"/>
   <text x="640" y="69.491449" text-anchor="middle" font-size="22.578357" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">Sensor</text>
   <text x="640" y="104.881285" text-anchor="middle" font-size="16.42058" fill="var(--primary-accent)" font-family="Courier New, monospace">+ id : uint8_t</text>
@@ -107,8 +102,8 @@
   <text x="640" y="152.067774" text-anchor="middle" font-size="16.42058" fill="var(--primary-accent)" font-family="Courier New, monospace">+ calibrate() : void</text>
   <text x="640" y="177.627046" text-anchor="middle" font-size="14.367949" fill="var(--primary-accent)" font-style="italic" font-family="Arial, sans-serif">«abstract base»</text>
   <text x="640" y="199.254263" text-anchor="middle" font-size="14.367949" fill="var(--primary-accent)" font-family="Arial, sans-serif">interface: read(), calibrate()</text>
-  <line x1="489.999886" y1="218.915148" x2="275.714286" y2="305.423772" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="40" y="307.389739" width="471.428571" height="176.949181" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <line x1="489.999886" y1="218.915148" x2="275.714286" y2="305.423772" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
+  <rect x="40" y="307.389739" width="471.428571" height="176.949181" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="40" y="307.389739" width="471.428571" height="43.25419" rx="7.085777" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="344.745785" width="471.428571" height="5.898265" fill="url(#grad-primary)" rx="7.085777" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="275.714286" y="336.88131" text-anchor="middle" font-size="22.578357" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">TempSensor</text>
@@ -117,9 +112,9 @@
   <text x="275.714286" y="417.491547" text-anchor="middle" font-size="16.42058" fill="var(--primary-accent)" font-family="Courier New, monospace">+ read() : float  «override»</text>
   <text x="275.714286" y="441.08473" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">+ set_offset(f) : void</text>
   <text x="275.714286" y="466.644002" text-anchor="middle" font-size="14.367949" fill="var(--text-faint)" font-family="Arial, sans-serif">returns °C from ADC reading</text>
-  <line x1="790" y1="218.915148" x2="1004.285714" y2="305.423772" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="768.571429" y="307.389739" width="471.428571" height="176.949181" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="768.571429" y="307.389739" width="471.428571" height="43.25419" rx="7.085777" fill="var(--surface)" />
+  <line x1="790" y1="218.915148" x2="1004.285714" y2="305.423772" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
+  <rect x="768.571429" y="307.389739" width="471.428571" height="176.949181" rx="7.085777" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="768.571429" y="307.389739" width="471.428571" height="43.25419" rx="7.085777" fill="var(--surface)"/>
   <rect x="768.571429" y="344.745785" width="471.428571" height="5.898265" fill="var(--surface)" rx="7.085777"/>
   <text x="1004.285714" y="336.88131" text-anchor="middle" font-size="22.578357" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">PressureSensor</text>
   <text x="1004.285714" y="370.305057" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">- spi_port : SPI_t*</text>
@@ -127,7 +122,7 @@
   <text x="1004.285714" y="417.491547" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">+ read() : float  «override»</text>
   <text x="1004.285714" y="441.08473" text-anchor="middle" font-size="16.42058" fill="var(--text-muted)" font-family="Courier New, monospace">+ set_range(f) : void</text>
   <text x="1004.285714" y="466.644002" text-anchor="middle" font-size="14.367949" fill="var(--text-faint)" font-family="Arial, sans-serif">returns hPa via SPI read</text>
-  <line x1="82.857143" y1="551.186538" x2="168.571429" y2="551.186538" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <line x1="82.857143" y1="551.186538" x2="168.571429" y2="551.186538" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)"/>
   <text x="190" y="557.084803" font-size="16.42058" fill="var(--text-muted)" font-family="Arial, sans-serif">Inheritance (IS-A)</text>
   <text x="640" y="620" text-anchor="middle" font-size="16.42058" fill="var(--text-faint)" font-family="Arial, sans-serif">In embedded C: simulate with function pointer tables (vtables) inside structs</text>
 </svg>

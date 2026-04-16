@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -85,42 +95,42 @@
   </defs>
 
   <rect x="40" y="40" width="373" height="270" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-text)">&#10004;</text>
+  <text x="226" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-text)">✔</text>
   <text x="226" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Multi-AZ</text>
   <text x="226" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">No single point</text>
   <text x="226" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Auto failover</text>
   <text x="226" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Replicated data</text>
 
   <rect x="453" y="40" width="373" height="270" rx="8" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--ok-text)">&#10004;</text>
+  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--ok-text)">✔</text>
   <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Scalable</text>
   <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Auto-scaling</text>
   <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Horizontal first</text>
   <text x="640" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Serverless</text>
 
   <rect x="867" y="40" width="373" height="270" rx="8" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--warn-text)">&#10004;</text>
+  <text x="1053" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--warn-text)">✔</text>
   <text x="1053" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Stateless</text>
   <text x="1053" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Sessions external</text>
   <text x="1053" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Files in S3</text>
   <text x="1053" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">No local state</text>
 
   <rect x="40" y="350" width="373" height="270" rx="8" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--danger-text)">&#10004;</text>
+  <text x="226" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--danger-text)">✔</text>
   <text x="226" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Security</text>
   <text x="226" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">WAF + SG layers</text>
   <text x="226" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">IAM least privilege</text>
   <text x="226" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Encryption everywhere</text>
 
   <rect x="453" y="350" width="373" height="270" rx="8" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--info-text)">&#10004;</text>
+  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--info-text)">✔</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Cost Aware</text>
   <text x="640" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Budget alerts</text>
   <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Reserved / Spot</text>
   <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tagging + review</text>
 
   <rect x="867" y="350" width="373" height="270" rx="8" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-text)">&#10004;</text>
+  <text x="1053" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-text)">✔</text>
   <text x="1053" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">DR Ready</text>
   <text x="1053" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">RPO / RTO set</text>
   <text x="1053" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Backups tested</text>

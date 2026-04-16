@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -102,7 +112,7 @@
   <text x="240" y="222.882882882883" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">ServiceAccount</text>
   <text x="240" y="249.009009009009" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">OIDC</text>
   <text x="240" y="275.135135135135" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">Webhook</text>
-  <text x="320" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">&#8594; username</text>
+  <text x="320" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">→ username</text>
   <text x="320" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.245018917301" fill="var(--primary-text)">401 if bad</text>
 
   <line x1="420" y1="113.153153153153" x2="455" y2="113.153153153153" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -115,7 +125,7 @@
   <text x="480" y="196.756756756757" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--ok-text)">Role + Binding</text>
   <text x="480" y="222.882882882883" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--ok-text)">ClusterRole</text>
   <text x="480" y="259.459459459459" font-family="Arial, sans-serif" font-size="12.267293364328" font-weight="bold" fill="var(--ok-text)">ABAC / Webhook</text>
-  <text x="565" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--ok-text)">&#8594; allow / deny</text>
+  <text x="565" y="322.162162162162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--ok-text)">→ allow / deny</text>
   <text x="565" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.245018917301" fill="var(--ok-text)">403 if denied</text>
 
   <line x1="670" y1="113.153153153153" x2="705" y2="113.153153153153" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -147,8 +157,8 @@
   <!-- RBAC quick ref -->
   <rect x="40" y="395.315315315315" width="1200" height="224.684684684685" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="431.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--info-text)">RBAC Reference</text>
-  <text x="60" y="478.918918918919" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">Role &#8594; namespace permissions</text>
-  <text x="60" y="510.27027027027" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">ClusterRole &#8594; cluster-wide</text>
-  <text x="60" y="541.621621621622" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">RoleBinding &#8594; bind in namespace</text>
-  <text x="60" y="572.972972972973" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">Subject &#8594; User | Group | SA</text>
+  <text x="60" y="478.918918918919" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">Role → namespace permissions</text>
+  <text x="60" y="510.27027027027" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">ClusterRole → cluster-wide</text>
+  <text x="60" y="541.621621621622" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">RoleBinding → bind in namespace</text>
+  <text x="60" y="572.972972972973" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">Subject → User | Group | SA</text>
 </svg>

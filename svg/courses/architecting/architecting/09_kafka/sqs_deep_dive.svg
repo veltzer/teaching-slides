@@ -92,7 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
   <text x="702.6865" y="40" text-anchor="middle" font-size="26.252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Amazon SQS Architecture</text>
   <rect x="40" y="200.6414" width="214.9254" height="76.0933" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -108,15 +107,15 @@
   <text x="1016.1192" y="305.481" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer N</text>
   <rect x="434.0297" y="437.3761" width="322.388" height="84.5481" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="595.2237" y="488.105" text-anchor="middle" font-size="21.2509" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead Letter Queue</text>
-  <line x1="254.9254" y1="237.8426" x2="394.6268" y2="234.4606" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="720.597" y1="200.6414" x2="896.1194" y2="129.621" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="720.597" y1="234.4606" x2="896.1194" y2="212.4781" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="720.597" y1="268.2797" x2="896.1194" y2="297.0262" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <path d="M 1016.1192 158.3673 Q 1240 158.3673 1240 234.4606 Q 1240 335.9184 702.6865 335.9184 Q 613.1342 335.9184 613.1342 305.481" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)" />
+  <line x1="254.9254" y1="237.8426" x2="394.6268" y2="234.4606" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="200.6414" x2="896.1194" y2="129.621" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="234.4606" x2="896.1194" y2="212.4781" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="268.2797" x2="896.1194" y2="297.0262" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <path d="M 1016.1192 158.3673 Q 1240 158.3673 1240 234.4606 Q 1240 335.9184 702.6865 335.9184 Q 613.1342 335.9184 613.1342 305.481" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)"/>
   <text x="1240" y="268.2797" font-size="21.2509" fill="var(--text-faint)" font-family="Arial, sans-serif">Visibility Timeout</text>
-  <path d="M 1016.1192 242.9155 Q 1204.1791 242.9155 1204.1791 268.2797 Q 1204.1791 352.828 684.7758 352.828 Q 622.0895 352.828 622.0895 305.481" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" />
+  <path d="M 1016.1192 242.9155 Q 1204.1791 242.9155 1204.1791 268.2797 Q 1204.1791 352.828 684.7758 352.828 Q 622.0895 352.828 622.0895 305.481" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none"/>
   <text x="1204.1791" y="352.828" font-size="21.2509" fill="var(--ok-accent)" font-family="Arial, sans-serif">Delete Message</text>
-  <line x1="559.4028" y1="302.0991" x2="595.2237" y2="433.9942" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <line x1="559.4028" y1="302.0991" x2="595.2237" y2="433.9942" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
   <text x="487.7611" y="386.6472" font-size="21.2509" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failed messages</text>
   <text x="702.6865" y="589.5627" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">SQS uses visibility timeout to prevent duplicate processing.</text>
   <text x="702.6865" y="620" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Failed messages move to the Dead Letter Queue after max retries.</text>

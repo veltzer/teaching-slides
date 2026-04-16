@@ -27,7 +27,6 @@ Importance of Block Devices in Kernel Development
 - I/O scheduler optimization
 
 ---
-
 QEMU Block Device Models
 
 ---
@@ -99,7 +98,6 @@ Configuring Block Devices in QEMU
 - Best practices for kernel testing scenarios
 
 ---
-
 QEMU Block Layer Architecture
 
 ---

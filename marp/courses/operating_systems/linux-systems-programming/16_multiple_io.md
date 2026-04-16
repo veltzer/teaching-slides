@@ -119,7 +119,6 @@ int ready = epoll_wait(epfd, events, 10, timeout);
 ---
 
 ## Edge vs Level Triggered
-
 ![edge_vs_level_triggered](svg/courses/operating_systems/linux-systems-programming/16_multiple_io/edge_vs_level_triggered.svg)
 
 ---

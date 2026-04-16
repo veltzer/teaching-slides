@@ -92,36 +92,31 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
-  <line x1="644.958678" y1="40" x2="644.958678" y2="620" stroke="var(--border)" stroke-width="1.6" stroke-dasharray="7.1111 7.1111" />
+  <line x1="644.958678" y1="40" x2="644.958678" y2="620" stroke="var(--border)" stroke-width="1.6" stroke-dasharray="7.1111 7.1111"/>
   <text x="40" y="65.133402" font-size="23.498841" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Synchronous (Blocking):</text>
   <rect x="40" y="84.466723" width="277.68595" height="77.333285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="178.842975" y="131.833366" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Start Task A</text>
-  <line x1="178.842975" y1="161.800008" x2="178.842975" y2="179.20001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="178.842975" y1="161.800008" x2="178.842975" y2="179.20001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="40" y="184.99997" width="277.68595" height="77.333285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="178.842975" y="232.366733" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Wait for A ⏳</text>
-  <line x1="178.842975" y1="262.333375" x2="178.842975" y2="279.733377" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="178.842975" y1="262.333375" x2="178.842975" y2="279.733377" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="40" y="285.533457" width="277.68595" height="77.333285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="178.842975" y="332.89998" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Start Task B</text>
-  <line x1="178.842975" y1="362.866742" x2="178.842975" y2="380.266743" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="178.842975" y1="362.866742" x2="178.842975" y2="380.266743" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="40" y="386.066704" width="277.68595" height="77.333285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="178.842975" y="433.433467" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Wait for B ⏳</text>
   <text x="40" y="513.666673" font-size="19.58248" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Total: Time A + Time B</text>
   <text x="674.710744" y="65.133402" font-size="23.498841" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Asynchronous (Non-blocking):</text>
   <rect x="674.710744" y="84.466723" width="277.68595" height="77.333285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="813.553719" y="131.833366" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Start Task A</text>
-  <line x1="813.553719" y1="161.800008" x2="813.553719" y2="179.20001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="813.553719" y1="161.800008" x2="813.553719" y2="179.20001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="674.710744" y="184.99997" width="277.68595" height="77.333285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="813.553719" y="232.366733" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Start Task B</text>
-  <line x1="813.553719" y1="262.333375" x2="813.553719" y2="279.733377" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="813.553719" y1="262.333375" x2="813.553719" y2="279.733377" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="674.710744" y="285.533457" width="277.68595" height="77.333285" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.760117" filter="url(#shadow)"/>
   <text x="813.553719" y="332.89998" font-size="21.540661" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">React on complete</text>
   <text x="674.710744" y="436.333387" font-size="19.58248" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Total: Max(Time A, Time B)</text>
-  <rect x="49.917355" y="562.000036" width="1190.082645" height="54.133324" rx="6.760117" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="49.917355" y="562.000036" width="1190.082645" height="54.133324" rx="6.760117" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="644.958678" y="594.866718" text-anchor="middle" font-size="17.624187" fill="var(--primary-accent)" font-family="Arial, sans-serif">Async shines for I/O-bound tasks: network, disk, database - not CPU-bound work</text>
 </svg>

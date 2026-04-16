@@ -22,7 +22,6 @@ audience:
 ---
 
 ## The ps Command
-
 ![the_ps_command](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_ps_command.svg)
 
 ---
@@ -71,7 +70,6 @@ TIME  - CPU time used
 ---
 
 ## Finding Process IDs
-
 ![finding_process_ids](svg/courses/operating_systems/linux-fundamentals/09_process_management/finding_process_ids.svg)
 
 ---
@@ -93,7 +91,6 @@ ps -o ppid= -p PID
 ---
 
 ## Sending Signals (kill)
-
 ![sending_signals_kill](svg/courses/operating_systems/linux-fundamentals/09_process_management/sending_signals_kill.svg)
 
 ---
@@ -131,7 +128,6 @@ kill -CONT PID
 ---
 
 ## Monitoring with top
-
 ![monitoring_with_top](svg/courses/operating_systems/linux-fundamentals/09_process_management/monitoring_with_top.svg)
 
 ---
@@ -169,7 +165,6 @@ Key sections:
 ---
 
 ## Dealing with Zombies
-
 ![dealing_with_zombies](svg/courses/operating_systems/linux-fundamentals/09_process_management/dealing_with_zombies.svg)
 
 ---
@@ -189,7 +184,6 @@ kill -9 PARENT_PID
 ---
 
 ## The Shell and Jobs
-
 ![the_shell_and_jobs](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_shell_and_jobs.svg)
 
 ---
@@ -211,7 +205,6 @@ bg %1
 ---
 
 ## Process Priorities (nice)
-
 ![process_priorities_nice](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_priorities_nice.svg)
 
 ---
@@ -280,7 +273,6 @@ watch -n 1 'free -m'
 ---
 
 ## Process Troubleshooting
-
 ![process_troubleshooting](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_troubleshooting.svg)
 
 ---

@@ -19,6 +19,9 @@ audience:
 
 ## Packer Use Case Overview
 
+---
+## Packer Use Cases
+
 ![packer_use_case_overview](svg/courses/devops/terraform/15_packer_use_cases/packer_use_case_overview.svg)
 
 ---
@@ -704,7 +707,7 @@ provisioner "shell" {
 ## Goss Test File
 
 ```yaml
-# tests/goss.yaml
+## tests/goss.yaml
 package:
   nginx:
     installed: true

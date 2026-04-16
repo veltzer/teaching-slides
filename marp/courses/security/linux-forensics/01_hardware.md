@@ -7,6 +7,7 @@ level: advanced
 category: security
 audience:
   - audiences:security-professionals
+
 ---
 
 # Computer Hardware Fundamentals for Forensics

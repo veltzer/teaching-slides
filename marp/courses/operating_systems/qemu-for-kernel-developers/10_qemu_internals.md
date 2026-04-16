@@ -27,7 +27,6 @@ QEMU Project Structure
 - Build system overview
 
 ---
-
 QEMU Source Code Architecture
 
 ---
@@ -70,7 +69,6 @@ TCG Intermediate Representation
 - Optimization passes in TCG
 
 ---
-
 TCG Code Generation Process
 
 ---

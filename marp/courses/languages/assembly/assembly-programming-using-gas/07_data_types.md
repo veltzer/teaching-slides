@@ -8,6 +8,7 @@ level: advanced
 category: language
 audience:
   - audiences:developers
+
 ---
 # Data Types and Data Movement
 

@@ -92,28 +92,23 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="40" y="40" width="535.714222" height="162.807091" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="307.857168" y="92.912188" text-anchor="middle" font-size="27.147602" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Code Reuse</text>
   <text x="307.857168" y="127.508705" text-anchor="middle" font-size="17.750406" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write once, use for any type</text>
   <text x="307.857168" y="153.964799" text-anchor="middle" font-size="15.662073" fill="var(--primary-accent)" font-family="Courier New, monospace">RingBuffer&lt;uint8_t, 64&gt;</text>
   <text x="307.857168" y="178.385819" text-anchor="middle" font-size="15.662073" fill="var(--primary-accent)" font-family="Courier New, monospace">RingBuffer&lt;SensorReading, 8&gt;</text>
-  <rect x="704.285778" y="40" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="704.285778" y="40" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="972.142832" y="92.912188" text-anchor="middle" font-size="27.147602" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Type Safety</text>
   <text x="972.142832" y="127.508705" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Compiler checks types — no void* casts</text>
   <text x="972.142832" y="153.964799" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Courier New, monospace">buf.push(42);     // OK: uint8_t</text>
   <text x="972.142832" y="178.385819" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Courier New, monospace">buf.push(3.14f);  // error</text>
-  <rect x="40" y="233.333207" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="233.333207" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="307.857168" y="286.245647" text-anchor="middle" font-size="27.147602" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Performance</text>
   <text x="307.857168" y="320.842165" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Fully inlined and optimized</text>
   <text x="307.857168" y="347.298259" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">per instantiation</text>
   <text x="307.857168" y="373.754353" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Arial, sans-serif">as fast as hand-written code</text>
-  <rect x="704.285778" y="233.333207" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="704.285778" y="233.333207" width="535.714222" height="162.807091" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="972.142832" y="286.245647" text-anchor="middle" font-size="27.147602" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Compile-Time</text>
   <text x="972.142832" y="320.842165" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Size as template parameter</text>
   <text x="972.142832" y="347.298259" text-anchor="middle" font-size="15.662073" fill="var(--text-faint)" font-family="Courier New, monospace">template&lt;size_t N&gt;</text>
@@ -121,7 +116,7 @@
   <rect x="168.571441" y="440.912314" width="942.857233" height="71.22811" rx="7.209019" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640.000057" y="473.473757" text-anchor="middle" font-size="22.971057" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Zero runtime overhead!</text>
   <text x="640.000057" y="499.929851" text-anchor="middle" font-size="17.750406" fill="var(--text-muted)" font-family="Arial, sans-serif">Templates are resolved entirely at compile time — no indirect calls, no type erasure</text>
-  <rect x="168.571441" y="544.701741" width="942.857233" height="75.298259" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="168.571441" y="544.701741" width="942.857233" height="75.298259" rx="7.209019" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640.000057" y="571.158088" text-anchor="middle" font-size="18.794512" fill="var(--text)" font-family="Courier New, monospace">template&lt;typename T, size_t N&gt;</text>
   <text x="640.000057" y="595.579107" text-anchor="middle" font-size="18.794512" fill="var(--text)" font-family="Courier New, monospace">class RingBuffer { T buf[N]; ... };</text>
   <text x="640.000057" y="613.894903" text-anchor="middle" font-size="14.617847" fill="var(--text-faint)" font-family="Arial, sans-serif">statically allocated — perfect for embedded (no heap needed)</text>

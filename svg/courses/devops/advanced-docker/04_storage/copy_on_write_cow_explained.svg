@@ -92,32 +92,27 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <text x="1240" y="40" text-anchor="middle" font-size="41.799299" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Copy-on-Write (CoW) Explained</text>
   <text x="40" y="88.864531" font-size="32.842258" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Read operation:</text>
   <rect x="40" y="103.736225" width="1069.930071" height="63.736225" rx="10.306903" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="574.965034" y="141.977986" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Upper (R/W)</text>
   <text x="1208.531469" y="141.977986" font-size="23.885216" fill="var(--text-muted)" font-family="Arial, sans-serif">file not found - look in lower</text>
-  <rect x="40" y="173.846164" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="173.846164" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="574.965034" y="212.087925" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Lower (RO)</text>
   <text x="1208.531469" y="212.087925" font-size="23.885216" fill="var(--primary-accent)" font-family="Arial, sans-serif">file found here, read directly</text>
   <text x="40" y="277.948809" font-size="32.842258" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Write operation (existing file):</text>
   <rect x="40" y="292.820635" width="1069.930071" height="63.736225" rx="10.306903" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="574.965034" y="331.062396" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Upper (R/W)</text>
   <text x="1208.531469" y="331.062396" font-size="23.885216" fill="var(--primary-accent)" font-family="Arial, sans-serif">file copied here, then modified</text>
-  <rect x="40" y="362.930442" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="362.930442" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="574.965034" y="401.172203" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Lower (RO)</text>
   <text x="1208.531469" y="401.172203" font-size="23.885216" fill="var(--text-muted)" font-family="Arial, sans-serif">original unchanged</text>
   <text x="40" y="471.282143" font-size="32.842258" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Delete operation:</text>
   <rect x="40" y="486.153836" width="1069.930071" height="63.736225" rx="10.306903" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="574.965034" y="524.395597" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Upper (R/W)</text>
   <text x="1208.531469" y="524.395597" font-size="23.885216" fill="var(--danger-accent)" font-family="Arial, sans-serif">whiteout file created</text>
-  <rect x="40" y="556.263775" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="556.263775" width="1069.930071" height="63.736225" rx="10.306903" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="574.965034" y="594.505537" text-anchor="middle" font-size="29.856691" fill="var(--text)" font-family="Arial, sans-serif">Lower (RO)</text>
   <text x="1208.531469" y="594.505537" font-size="23.885216" fill="var(--text-muted)" font-family="Arial, sans-serif">original still exists but hidden</text>
 </svg>

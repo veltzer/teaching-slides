@@ -9,6 +9,7 @@ category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+
 ---
 
 # Account Takeover: Protecting Your Digital Identities

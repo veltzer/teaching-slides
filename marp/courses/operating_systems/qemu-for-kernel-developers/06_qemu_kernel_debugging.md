@@ -27,7 +27,6 @@ Importance of Kernel Debugging
 - Improving kernel performance and stability
 
 ---
-
 QEMU Debugging Architecture
 
 ---

@@ -27,7 +27,6 @@ Introduction to Virtualization
 - Importance for kernel developers
 
 ---
-
 QEMU/KVM Architecture
 
 ---

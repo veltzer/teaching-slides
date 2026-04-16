@@ -1011,6 +1011,7 @@ spec:
               topologyKey: kubernetes.io/hostname
 
 ---
+
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:

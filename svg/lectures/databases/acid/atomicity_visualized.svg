@@ -28,91 +28,106 @@
         --danger-border: #7d3f38;
         --danger-text: #ffffff;
         --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#bd7d75"/><stop offset="100%" stop-color="#7d3f38"/>
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M1,2 L11,6 L1,10 Z" fill="#555555"/>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="31.919710595936" font-weight="bold" fill="var(--primary-accent)">Atomicity: all-or-nothing</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.919710595936" font-weight="bold" fill="var(--primary-accent)">Atomicity: all-or-nothing</text>
 
   <!-- Vertical spine: Start -> Op1 -> Op2 -> Decision -->
-  <rect x="484.827586206897" y="83.77358490566" width="310.344827586207" height="65.660377358491" rx="8.511922825583"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="640" y="124.264150943396" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">Start Transaction</text>
+  <rect x="484.827586206897" y="83.77358490566" width="310.344827586207" height="65.660377358491" rx="8.511922825583" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="124.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">Start Transaction</text>
 
-  <line x1="640" y1="149.433962264151" x2="640" y2="193.207547169811" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
+  <line x1="640" y1="149.433962264151" x2="640" y2="193.207547169811" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="402.068965517241" y="204.150943396226" width="475.862068965517" height="65.660377358491" rx="8.511922825583"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="640" y="244.641509433962" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.279807063957" fill="var(--primary-text)">Operation 1 — withdraw $100</text>
+  <rect x="402.068965517241" y="204.150943396226" width="475.862068965517" height="65.660377358491" rx="8.511922825583" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="244.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" fill="var(--primary-text)">Operation 1 — withdraw $100</text>
 
-  <line x1="640" y1="269.811320754717" x2="640" y2="313.584905660377" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
+  <line x1="640" y1="269.811320754717" x2="640" y2="313.584905660377" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="402.068965517241" y="324.528301886792" width="475.862068965517" height="65.660377358491" rx="8.511922825583"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="640" y="365.018867924528" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.279807063957" fill="var(--primary-text)">Operation 2 — deposit $100</text>
+  <rect x="402.068965517241" y="324.528301886792" width="475.862068965517" height="65.660377358491" rx="8.511922825583" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="365.018867924528" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" fill="var(--primary-text)">Operation 2 — deposit $100</text>
 
-  <line x1="640" y1="390.188679245283" x2="640" y2="433.962264150943" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
+  <line x1="640" y1="390.188679245283" x2="640" y2="433.962264150943" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Decision diamond -->
-  <polygon points="640,444.905660377358 805.51724137931,532.452830188679 640,620 474.48275862069,532.452830188679"
-           fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"
-           filter="url(#shadow)"/>
-  <text x="640" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.151826357562" font-weight="bold" fill="var(--warn-text)">All operations</text>
-  <text x="640" y="548.867924528302" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.151826357562" font-weight="bold" fill="var(--warn-text)">succeeded?</text>
+  <polygon points="640,444.905660377358 805.51724137931,532.452830188679 640,620 474.48275862069,532.452830188679" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="521.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--warn-text)">All operations</text>
+  <text x="640" y="548.867924528302" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--warn-text)">succeeded?</text>
 
   <!-- No branch (left) -->
-  <line x1="474.48275862069" y1="532.452830188679" x2="371.034482758621" y2="532.452830188679" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
-  <text x="422.758620689655" y="516.037735849057" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.151826357562" font-weight="bold" fill="var(--danger-accent)">No</text>
-  <rect x="40" y="499.622641509434" width="331.034482758621" height="65.660377358491" rx="8.511922825583"
-        fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="205.51724137931" y="540.11320754717" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.279807063957" font-weight="bold" fill="var(--danger-text)">ROLLBACK</text>
-  <text x="205.51724137931" y="598.11320754717" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="17.023845651166" fill="var(--text-muted)">no changes persisted</text>
+  <line x1="474.48275862069" y1="532.452830188679" x2="371.034482758621" y2="532.452830188679" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="422.758620689655" y="516.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--danger-accent)">No</text>
+  <rect x="40" y="499.622641509434" width="331.034482758621" height="65.660377358491" rx="8.511922825583" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="540.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--danger-text)">ROLLBACK</text>
+  <text x="205.51724137931" y="598.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.023845651166" fill="var(--text-muted)">no changes persisted</text>
 
   <!-- Yes branch (right) -->
-  <line x1="805.51724137931" y1="532.452830188679" x2="908.965517241379" y2="532.452830188679" stroke="var(--text)" stroke-width="2"
-        marker-end="url(#arrow)"/>
-  <text x="857.241379310345" y="516.037735849057" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="19.151826357562" font-weight="bold" fill="var(--ok-accent)">Yes</text>
-  <rect x="908.965517241379" y="499.622641509434" width="331.034482758621" height="65.660377358491" rx="8.511922825583"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"
-        filter="url(#shadow)"/>
-  <text x="1074.48275862069" y="540.11320754717" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">COMMIT</text>
-  <text x="1074.48275862069" y="598.11320754717" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="17.023845651166" fill="var(--text-muted)">all changes saved</text>
+  <line x1="805.51724137931" y1="532.452830188679" x2="908.965517241379" y2="532.452830188679" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="857.241379310345" y="516.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.151826357562" font-weight="bold" fill="var(--ok-accent)">Yes</text>
+  <rect x="908.965517241379" y="499.622641509434" width="331.034482758621" height="65.660377358491" rx="8.511922825583" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="540.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">COMMIT</text>
+  <text x="1074.48275862069" y="598.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.023845651166" fill="var(--text-muted)">all changes saved</text>
 </svg>

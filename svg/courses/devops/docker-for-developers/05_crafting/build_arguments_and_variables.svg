@@ -92,7 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
   <rect x="40" y="40" width="364.2857" height="281.2121" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="222.1428" y="120.8485" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">ARG (Build-time)</text>
@@ -104,14 +103,14 @@
   <text x="639.9999" y="180.6061" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--info-text)">ENV APP_ENV=prod</text>
   <text x="639.9999" y="240.3637" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Persists in image</text>
   <text x="639.9999" y="293.0909" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Overridable: -e flag</text>
-  <line x1="404.2856" y1="180.6061" x2="453.5713" y2="180.6061" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="404.2856" y1="180.6061" x2="453.5713" y2="180.6061" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="429.9998" y="156.0001" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">set</text>
   <rect x="875.7142" y="40" width="364.2857" height="281.2121" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="1057.8571" y="120.8485" text-anchor="middle" font-size="23.2402" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">ARG + ENV</text>
   <text x="1057.8571" y="180.6061" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--ok-text)">ARG VERSION</text>
   <text x="1057.8571" y="240.3637" text-anchor="middle" font-size="21.1274" font-family="Arial, sans-serif" fill="var(--ok-text)">ENV VER=$VERSION</text>
   <text x="1057.8571" y="293.0909" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Promotes to runtime</text>
-  <rect x="40" y="391.5152" width="1200" height="228.4848" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" stroke-dasharray="8.428 6.321" />
+  <rect x="40" y="391.5152" width="1200" height="228.4848" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" stroke-dasharray="8.428 6.321"/>
   <text x="639.9999" y="472.3637" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Build: docker build --build-arg VERSION=2.0 .</text>
   <text x="639.9999" y="532.1212" text-anchor="middle" font-size="21.1274" fill="var(--text-muted)" font-family="Arial, sans-serif">Run:   docker run -e APP_ENV=staging myapp</text>
   <text x="639.9999" y="591.8788" text-anchor="middle" font-size="21.1274" fill="var(--danger-accent)" font-family="Arial, sans-serif">Warning: ARG values visible in image history - never use for secrets</text>

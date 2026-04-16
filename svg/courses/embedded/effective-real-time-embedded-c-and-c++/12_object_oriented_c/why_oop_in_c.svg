@@ -92,28 +92,23 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="40" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="307.857168" y="106.5928" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Code Reuse</text>
   <text x="307.857168" y="140.963067" text-anchor="middle" font-size="18.236805" fill="var(--primary-accent)" font-family="Arial, sans-serif">Driver works for UART1, UART2, UART3</text>
   <text x="307.857168" y="166.7408" text-anchor="middle" font-size="18.236805" fill="var(--primary-accent)" font-family="Arial, sans-serif">without copy-paste</text>
   <text x="307.857168" y="192.518667" text-anchor="middle" font-size="16.091248" fill="var(--primary-accent)" font-family="Courier New, monospace">uart_init(&amp;uart1, ...);</text>
-  <rect x="704.285778" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="704.285778" y="40" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="972.142832" y="106.5928" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Modularity</text>
   <text x="972.142832" y="140.963067" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Each peripheral is a self-contained</text>
   <text x="972.142832" y="166.7408" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">struct with its own state</text>
   <text x="972.142832" y="192.518667" text-anchor="middle" font-size="16.091248" fill="var(--text-faint)" font-family="Courier New, monospace">struct UART { reg, baud, ... };</text>
-  <rect x="40" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="307.857168" y="321.407467" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Abstraction</text>
   <text x="307.857168" y="355.777867" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Caller doesn't know register details</text>
   <text x="307.857168" y="381.5556" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">just calls the API</text>
   <text x="307.857168" y="407.333333" text-anchor="middle" font-size="16.091248" fill="var(--text-faint)" font-family="Courier New, monospace">uart_send(&amp;uart1, buf, len);</text>
-  <rect x="704.285778" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="704.285778" y="254.814933" width="535.714222" height="171.851867" rx="7.406561" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="972.142832" y="321.407467" text-anchor="middle" font-size="30.037062" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Maintainability</text>
   <text x="972.142832" y="355.777867" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">Change implementation without</text>
   <text x="972.142832" y="381.5556" text-anchor="middle" font-size="18.236805" fill="var(--text-muted)" font-family="Arial, sans-serif">touching callers</text>

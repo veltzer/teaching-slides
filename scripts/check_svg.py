@@ -301,22 +301,14 @@ def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[st
 
 def _check_fill(path: Path) -> list[str]:
     """Flag SVGs whose drawing bbox fills less than MIN_FILL_PCT of the
-    usable area (1200x580). Under-filled SVGs waste slide space; most end
-    up that way through a broken prior edit, not by design."""
-    # Lazy-import to avoid paying the cost when --fill isn't used.
-    import importlib.util
-    spec = importlib.util.spec_from_file_location(
-        "fit_svg_to_slide",
-        Path(__file__).resolve().parent / "fit_svg_to_slide.py",
-    )
-    fit = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(fit)
+    usable area (1200x580)."""
+    from svg_lib import compute_bbox
     try:
         content = path.read_text(encoding="utf-8", errors="replace")
     except OSError:
         return []
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
-    bbox = fit.compute_bbox(outside)
+    bbox = compute_bbox(outside)
     if bbox is None:
         return ["no drawable content (bbox is empty)"]
     x0, y0, x1, y1 = bbox
@@ -334,22 +326,16 @@ def _check_fill(path: Path) -> list[str]:
 def _check_fit(path: Path) -> list[str]:
     """Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620].
 
-    Run scripts/fit_svg_to_slide.py to fix."""
-    import importlib.util
-    spec = importlib.util.spec_from_file_location(
-        "fit_svg_to_slide",
-        Path(__file__).resolve().parent / "fit_svg_to_slide.py",
-    )
-    fit = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(fit)
+    Run scripts/svg_fix.py --fit to fix."""
+    from svg_lib import compute_bbox
     try:
         content = path.read_text(encoding="utf-8", errors="replace")
     except OSError:
         return []
     outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
-    bbox = fit.compute_bbox(outside)
+    bbox = compute_bbox(outside)
     if bbox is None:
-        return []  # no drawable content — let _check_fill handle it
+        return []
     x0, y0, x1, y1 = bbox
     w = x1 - x0
     h = y1 - y0
@@ -362,7 +348,7 @@ def _check_fit(path: Path) -> list[str]:
         return [
             f"content not fitted: bbox ({x0:.1f},{y0:.1f})+{w:.1f}x{h:.1f}"
             f" != target ({target_x0:.0f},{target_y0:.0f})+{target_w:.0f}x{target_h:.0f}"
-            f" — run scripts/fit_svg_to_slide.py"
+            f" — run scripts/svg_fix.py --fit"
         ]
     return []
 

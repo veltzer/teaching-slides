@@ -9,6 +9,7 @@ category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+
 ---
 
 # Ransomware: Understanding and Defending Against Digital Extortion

@@ -333,7 +333,6 @@ SCAN cursor [MATCH pattern] [COUNT count]
 ```
 
 ---
-
 ## Key Naming Conventions
 
 Best practices:
@@ -352,7 +351,6 @@ Best practices:
 ![key_naming_conventions](svg/courses/databases/redis/01_intro/key_naming_conventions.svg)
 
 ---
-
 ## Redis Persistence
 
 ![redis_persistence](svg/courses/databases/redis/01_intro/redis_persistence.svg)

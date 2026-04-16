@@ -12,7 +12,6 @@ audience:
 # Caching with Redis
 
 ---
-
 ## What is Caching?
 
 - Temporarily storing frequently accessed data in fast storage
@@ -45,7 +44,6 @@ audience:
 ![cache_patterns](svg/courses/databases/redis/03_caching/cache_patterns.svg)
 
 ---
-
 ## Cache-Aside Pattern
 
 Application is responsible for cache interactions:
@@ -83,7 +81,6 @@ def get_user(user_id):
 ```
 
 ---
-
 ## Write-Through Pattern
 
 Every write goes to cache and database:
@@ -117,7 +114,6 @@ def update_user(user_id, user_data):
 ```
 
 ---
-
 ## Write-Behind Pattern
 
 Writes go to cache first, then asynchronously to database:
@@ -156,7 +152,6 @@ def update_user_write_behind(user_id, user_data):
 ```
 
 ---
-
 ## Read-Through Pattern
 
 Cache handles database interaction on miss:
@@ -168,7 +163,6 @@ Cache handles database interaction on miss:
 ![read_through_pattern](svg/courses/databases/redis/03_caching/read_through_pattern.svg)
 
 ---
-
 ## Refresh-Ahead Pattern
 
 Cache proactively refreshes before expiration:
@@ -222,7 +216,6 @@ EXPIRE session:123 3600
 ```
 
 ---
-
 ## Cache Eviction Policies
 
 Redis memory limits and eviction:
@@ -234,7 +227,6 @@ Redis memory limits and eviction:
 ![cache_eviction_policies](svg/courses/databases/redis/03_caching/cache_eviction_policies.svg)
 
 ---
-
 ## LRU vs LFU Eviction
 
 ![lru_vs_lfu_eviction](svg/courses/databases/redis/03_caching/lru_vs_lfu_eviction.svg)
@@ -300,7 +292,6 @@ def setup_cache_invalidation_listener():
 ```
 
 ---
-
 ## Cache Stampede Problem
 
 - When many requests try to rebuild cache simultaneously
@@ -378,7 +369,6 @@ def get_with_lock(key, rebuild_func, lock_timeout=5, retry_count=3):
 ```
 
 ---
-
 ## Distributed Caching Architecture
 
 Multiple application instances using shared Redis cache:
@@ -408,7 +398,6 @@ Multiple application instances using shared Redis cache:
     - Balance between consistency and performance
 
 ---
-
 ## Cache Hit Ratio Monitoring
 
 ![cache_hit_ratio_monitoring](svg/courses/databases/redis/03_caching/cache_hit_ratio_monitoring.svg)
@@ -460,7 +449,6 @@ Strategies for large objects:
     - Redis keeps metadata only
 
 ---
-
 ## Caching Small Objects: Hashes
 
 Using Redis hashes for small objects:
@@ -597,7 +585,6 @@ def invalidate_by_tag(tag):
 ```
 
 ---
-
 ## Implementing a Tiered Cache
 
 ![implementing_a_tiered_cache](svg/courses/databases/redis/03_caching/implementing_a_tiered_cache.svg)

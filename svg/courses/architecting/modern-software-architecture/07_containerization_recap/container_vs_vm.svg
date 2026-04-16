@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -148,6 +158,6 @@
 
   <!-- Comparison -->
   <rect x="40" y="545" width="1200" height="75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">VM: minutes, full isolation, GBs &#8226; Container: ms, shared kernel, MBs</text>
+  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">VM: minutes, full isolation, GBs • Container: ms, shared kernel, MBs</text>
   <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Density: tens vs hundreds per host</text>
 </svg>

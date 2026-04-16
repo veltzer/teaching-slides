@@ -716,7 +716,6 @@ ip netns exec red ping 10.0.0.2
 ---
 
 ## Network Namespaces Diagram
-
 ![network_namespaces_diagram](svg/courses/operating_systems/linux-system-administration/06_network_services/network_namespaces_diagram.svg)
 
 ---

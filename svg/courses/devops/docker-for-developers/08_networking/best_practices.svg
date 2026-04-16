@@ -24,73 +24,101 @@
         --warn-border: #9c6e2e;
         --warn-text: #ffffff;
         --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
         --info-fill: #7c6a8e;
         --info-border: #574a68;
         --info-text: #ffffff;
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7493b3"/><stop offset="100%" stop-color="#3d5a7d"/>
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#94b384"/><stop offset="100%" stop-color="#5a7a4d"/>
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dba868"/><stop offset="100%" stop-color="#9c6e2e"/>
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9384a5"/><stop offset="100%" stop-color="#574a68"/>
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
   </defs>
 
   <!-- Center: topic -->
-  <rect x="460" y="200" width="360" height="160" rx="14"
-        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="32" font-weight="bold" fill="var(--info-text)">Network</text>
-  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="26" fill="var(--info-text)">Best Practices</text>
+  <rect x="460" y="200" width="360" height="160" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--info-text)">Network</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="var(--info-text)">Best Practices</text>
 
   <!-- Four corner practices -->
-  <rect x="40" y="40" width="320" height="160" rx="14"
-        fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="200" y="100" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="26" font-weight="bold" fill="var(--primary-text)">Custom Networks</text>
-  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--primary-text)">Avoid the default</text>
-  <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--primary-text)">bridge network</text>
+  <rect x="40" y="40" width="320" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Custom Networks</text>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Avoid the default</text>
+  <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">bridge network</text>
 
-  <rect x="920" y="40" width="320" height="160" rx="14"
-        fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1080" y="100" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="26" font-weight="bold" fill="var(--info-text)">Least Privilege</text>
-  <text x="1080" y="140" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--info-text)">Expose the minimum</text>
-  <text x="1080" y="170" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--info-text)">number of ports</text>
+  <rect x="920" y="40" width="320" height="160" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">Least Privilege</text>
+  <text x="1080" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">Expose the minimum</text>
+  <text x="1080" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--info-text)">number of ports</text>
 
-  <rect x="40" y="460" width="320" height="160" rx="14"
-        fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="200" y="520" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="26" font-weight="bold" fill="var(--ok-text)">Isolation</text>
-  <text x="200" y="560" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--ok-text)">Separate networks per</text>
-  <text x="200" y="590" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--ok-text)">application or tier</text>
+  <rect x="40" y="460" width="320" height="160" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Isolation</text>
+  <text x="200" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">Separate networks per</text>
+  <text x="200" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">application or tier</text>
 
-  <rect x="920" y="460" width="320" height="160" rx="14"
-        fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1080" y="520" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="26" font-weight="bold" fill="var(--warn-text)">Use DNS Names</text>
-  <text x="1080" y="560" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--warn-text)">Reach services by name,</text>
-  <text x="1080" y="590" text-anchor="middle" font-family="Arial, sans-serif"
-        font-size="20" fill="var(--warn-text)">not by IP address</text>
+  <rect x="920" y="460" width="320" height="160" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">Use DNS Names</text>
+  <text x="1080" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Reach services by name,</text>
+  <text x="1080" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">not by IP address</text>
 
   <!-- Connectors from corners to center -->
   <line x1="360" y1="120" x2="465" y2="205" stroke="var(--text)" stroke-width="2"/>

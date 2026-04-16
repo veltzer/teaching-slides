@@ -9,6 +9,7 @@ category: security
 audience:
   - audiences:developers
   - audiences:security-professionals
+
 ---
 
 # Identifying Entry Points & Server-Side Technologies

@@ -92,17 +92,12 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="40" y="40" width="1200" height="101.754435" rx="7.209017" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="61.428571" y="78.666776" font-size="17.750401" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">BEFORE:</text>
   <text x="61.428571" y="109.193132" font-size="17.750401" fill="var(--text)" font-family="Courier New, monospace">SELECT * FROM orders WHERE status = 'pending'</text>
   <text x="1132.857143" y="99.017638" text-anchor="middle" fill="var(--danger-accent)" font-size="20.882839" font-weight="bold" font-family="Arial, sans-serif">2.5s</text>
-  <line x1="640" y1="151.929929" x2="640" y2="192.631526" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <line x1="640" y1="151.929929" x2="640" y2="192.631526" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="661.428571" y="179.403611" font-size="15.662069" fill="var(--primary-accent)" font-family="Arial, sans-serif">optimized</text>
   <rect x="40" y="202.80702" width="1200" height="178.070261" rx="7.209017" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="61.428571" y="239.438596" font-size="17.750401" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">AFTER:</text>
@@ -111,7 +106,7 @@
   <text x="82.857143" y="322.877243" font-size="16.706175" fill="var(--text)" font-family="Courier New, monospace">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
   <text x="61.428571" y="360.526293" font-size="16.706175" fill="var(--text)" font-family="Courier New, monospace">) SELECT * FROM pending_orders;</text>
   <text x="1132.857143" y="304.561454" text-anchor="middle" fill="var(--ok-accent)" font-size="20.882839" font-weight="bold" font-family="Arial, sans-serif">0.08s</text>
-  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="416.491257" width="1200" height="203.508743" rx="7.209017" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="455.157907" text-anchor="middle" fill="var(--primary-accent)" font-size="22.971051" font-weight="bold" font-family="Arial, sans-serif">Optimizations Applied</text>
   <rect x="72.142857" y="472.456221" width="257.142857" height="122.105296" rx="7.209017" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="200.714171" y="502.982577" text-anchor="middle" fill="var(--primary-accent)" font-size="16.706175" font-weight="bold" font-family="Arial, sans-serif">Partial Index</text>

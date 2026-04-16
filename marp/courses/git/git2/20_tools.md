@@ -750,6 +750,8 @@ if __name__ == '__main__':
 
 ![tool_selection_criteria](svg/courses/git/git2/20_tools/tool_selection_criteria.svg)
 
+![tool_selection_criteria](svg/courses/git/git2/20_tools/tool_selection_criteria.svg)
+
 ---
 
 ## Tool Performance Comparison

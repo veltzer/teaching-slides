@@ -266,7 +266,6 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 - Define an **allow-list** of permitted tools per session or user role
 - Sensitive tools (shell, file write) require explicit user approval
 - Enforce **least-privilege**: only expose tools the task actually needs
-
 ## Sandboxed Execution
 - Run shell tools inside containers or VMs with restricted access
 - Apply filesystem scoping: tools can only read/write within a project root
@@ -484,6 +483,10 @@ async def stream_shell(command: str):
 ---
 
 ## System Components
+
+---
+
+## Production Architecture for Tool-Use Systems
 
 ![system_components](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)
 

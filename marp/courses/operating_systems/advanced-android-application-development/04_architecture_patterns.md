@@ -137,7 +137,6 @@ public class GetUserUseCase {
 ---
 
 ## Event Handling Pattern
-
 ![event_handling_pattern](svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/event_handling_pattern.svg)
 
 ---

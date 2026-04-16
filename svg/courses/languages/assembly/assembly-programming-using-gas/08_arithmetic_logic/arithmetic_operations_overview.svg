@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -91,7 +101,7 @@
   <text x="185" y="149.72972972973" text-anchor="middle" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--primary-text)">addl %ebx, %eax</text>
   <text x="185" y="186.306306306306" text-anchor="middle" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">dest = dest + src</text>
   <text x="185" y="228.108108108108" text-anchor="middle" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--primary-text)">subl src, dest</text>
-  <text x="185" y="264.684684684685" text-anchor="middle" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">10 + 5 &#8594; 15</text>
+  <text x="185" y="264.684684684685" text-anchor="middle" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">10 + 5 → 15</text>
 
   <rect x="340" y="66.126126126126" width="290" height="271.711711711712" rx="6.133646682164" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--ok-text)">MUL / IMUL</text>
@@ -116,8 +126,8 @@
 
   <!-- Flags -->
   <rect x="40" y="358.738738738739" width="1200" height="104.504504504504" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--text)">EFLAGS: ZF (zero)  &#8226;  CF (unsigned overflow)  &#8226;  OF (signed overflow)</text>
-  <text x="640" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">SF (negative)  &#8226;  PF (parity)  &#8226;  AF (BCD carry)</text>
+  <text x="640" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--text)">EFLAGS: ZF (zero)  •  CF (unsigned overflow)  •  OF (signed overflow)</text>
+  <text x="640" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" fill="var(--text-muted)">SF (negative)  •  PF (parity)  •  AF (BCD carry)</text>
 
   <!-- Setup code -->
   <rect x="40" y="484.144144144144" width="1200" height="135.855855855856" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>

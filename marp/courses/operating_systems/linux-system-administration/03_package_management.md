@@ -30,7 +30,6 @@ Without package management:
 ---
 
 ## Package Management Ecosystem
-
 ![package_management_ecosystem](svg/courses/operating_systems/linux-system-administration/03_package_management/package_management_ecosystem.svg)
 
 ---
@@ -819,7 +818,6 @@ ls -lh /var/cache/apt-cacher-ng/
 ---
 
 ## `apt` Caching Proxy Diagram
-
 ![apt_caching_proxy_diagram](svg/courses/operating_systems/linux-system-administration/03_package_management/apt_caching_proxy_diagram.svg)
 
 ---
@@ -1041,7 +1039,6 @@ Never remove essential packages on a production system.
 ---
 
 ## Package Lifecycle
-
 ![package_lifecycle](svg/courses/operating_systems/linux-system-administration/03_package_management/package_lifecycle.svg)
 
 ---

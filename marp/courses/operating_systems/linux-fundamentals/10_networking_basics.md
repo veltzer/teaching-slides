@@ -22,7 +22,6 @@ audience:
 ---
 
 ## The Client/Server Model
-
 ![the_client_server_model](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/the_client_server_model.svg)
 
 ---
@@ -38,7 +37,6 @@ Common examples:
 ---
 
 ## Network Interface Configuration
-
 ![network_interface_configuration](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_interface_configuration.svg)
 
 ---
@@ -79,7 +77,6 @@ ip route add default via 192.168.1.1
 ---
 
 ## Interface Management
-
 ![interface_management](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/interface_management.svg)
 
 ---
@@ -100,7 +97,6 @@ ip link show eth0
 ---
 
 ## Network Statistics (netstat)
-
 ![network_statistics_netstat](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_statistics_netstat.svg)
 
 ---
@@ -124,7 +120,6 @@ netstat -r
 ---
 
 ## SSH (Secure Shell)
-
 ![ssh_secure_shell](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_secure_shell.svg)
 
 ---
@@ -144,7 +139,6 @@ ssh user@remote.host 'ls -l'
 ---
 
 ## SSH Configuration and Keys
-
 ![ssh_configuration_and_keys](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_configuration_and_keys.svg)
 
 ---
@@ -167,7 +161,6 @@ Host server1
 ---
 
 ## Remote File Transfer
-
 ![remote_file_transfer](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/remote_file_transfer.svg)
 
 ---
@@ -206,7 +199,6 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 ---
 
 ## Trust Relationships
-
 ![trust_relationships](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/trust_relationships.svg)
 
 ---
@@ -226,7 +218,6 @@ Configuration files:
 ---
 
 ## Network Troubleshooting
-
 ![network_troubleshooting](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_troubleshooting.svg)
 
 ---
@@ -296,7 +287,6 @@ rsync -avz --progress /local/dir/ \
 ---
 
 ## Best Practices
-
 ![best_practices](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/best_practices.svg)
 
 ---

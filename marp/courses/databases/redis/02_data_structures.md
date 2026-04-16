@@ -26,7 +26,6 @@ audience:
     - `Z...` for Sorted Sets
 
 ---
-
 ## String Operations Recap
 
 Strings are the most basic Redis data type:
@@ -112,7 +111,6 @@ Use cases:
 - Real-time analytics
 
 ---
-
 ## List Operations Recap
 
 Lists are linked lists of string values:
@@ -178,7 +176,6 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 ![implementing_a_task_queue_with_redis_lists](svg/courses/databases/redis/02_data_structures/implementing_a_task_queue_with_redis_lists.svg)
 
 ---
-
 ## Set Operations Recap
 
 Sets are unordered collections of unique strings:
@@ -253,7 +250,6 @@ SRANDMEMBER key [count]        # Get random members
 ![implementing_tag_filtering_with_redis_sets](svg/courses/databases/redis/02_data_structures/implementing_tag_filtering_with_redis_sets.svg)
 
 ---
-
 ## Sorted Set Operations Recap
 
 Sorted sets are sets with scores (ordering values):
@@ -325,7 +321,6 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 ![implementing_a_leaderboard_with_redis_sorted_sets](svg/courses/databases/redis/02_data_structures/implementing_a_leaderboard_with_redis_sorted_sets.svg)
 
 ---
-
 ## Hash Operations Recap
 
 Hashes are maps of field-value pairs:
@@ -448,13 +443,11 @@ GEOSEARCH key [FROMMEMBER member | FROMLONLAT longitude latitude] [BYRADIUS radi
 ```
 
 ---
-
 ## Bitmaps Introduction
 
 Bitmaps (implemented using strings):
 - String operations treating strings as bit arrays
 - Very memory efficient
-
 Basic operations:
 ```bash
 SETBIT key offset value                 # Set bit at offset
@@ -462,7 +455,6 @@ GETBIT key offset                       # Get bit at offset
 BITCOUNT key [start end]                # Count set bits
 BITOP operation destkey key [key ...]   # Bitwise operations
 ```
-
 Use case: User online status tracking
 
 ---
@@ -502,7 +494,6 @@ Data structure efficiency (for 1 million items):
 1. **Key design**: Shorter keys save memory
 
 ---
-
 ## Data Structure Patterns: Composite Keys
 
 Using multiple data structures together:

@@ -46,6 +46,12 @@ audience:
 - A single failure propagates through the entire call chain
 
 ---
+
+## The Cascade Effect Diagram
+
+![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
+
+---
 ## Resiliency Patterns Overview
 
 ![resiliency_patterns_overview](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_patterns_overview.svg)

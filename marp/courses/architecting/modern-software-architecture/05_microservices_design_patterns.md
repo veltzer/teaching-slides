@@ -120,9 +120,12 @@ audience:
 - Examples: `Netflix Eureka` with `Ribbon`
 
 ---
-## Server-Side Service Discovery
+## Client-Side Service Discovery Diagram
 
-![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
+![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
+
+---
+## Server-Side Service Discovery
 
 ---
 ## Server-Side Discovery Details
@@ -130,6 +133,11 @@ audience:
 - Load balancer queries the registry
 - Client does not need to know about discovery
 - Examples: `AWS ALB`, `Kubernetes Services`
+
+---
+## Server-Side Service Discovery Diagram
+
+![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
 
 ---
 ## Service Registry Tools

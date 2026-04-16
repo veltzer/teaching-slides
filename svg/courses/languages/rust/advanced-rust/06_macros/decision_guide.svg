@@ -34,33 +34,43 @@
         --info-accent: #2f253b;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#7493b3"/>
       <stop offset="100%" stop-color="#3d5a7d"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#c4cdd6"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#94b384"/>
       <stop offset="100%" stop-color="#5a7a4d"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dba868"/>
       <stop offset="100%" stop-color="#9c6e2e"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#bd7d75"/>
       <stop offset="100%" stop-color="#7d3f38"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#9384a5"/>
       <stop offset="100%" stop-color="#574a68"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -88,19 +98,19 @@
 
   <rect x="40" y="65.663716814159" width="1200" height="174.513274336283" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="106.725663716814" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--primary-text)">Use GENERICS</text>
-  <text x="80" y="147.787610619469" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">&#8226; Same interface, different types</text>
-  <text x="80" y="178.58407079646" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">&#8226; Type checking at call sites</text>
-  <text x="80" y="209.380530973451" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">&#8226; Fits trait bounds</text>
+  <text x="80" y="147.787610619469" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">• Same interface, different types</text>
+  <text x="80" y="178.58407079646" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">• Type checking at call sites</text>
+  <text x="80" y="209.380530973451" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--primary-text)">• Fits trait bounds</text>
 
   <rect x="40" y="255.575221238938" width="1200" height="174.513274336283" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="296.637168141593" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--ok-text)">Use DECLARATIVE MACROS</text>
-  <text x="80" y="337.699115044248" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">&#8226; Reduce boilerplate</text>
-  <text x="80" y="368.495575221239" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">&#8226; Variadic arguments</text>
-  <text x="80" y="399.29203539823" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">&#8226; DSL-like syntax</text>
+  <text x="80" y="337.699115044248" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">• Reduce boilerplate</text>
+  <text x="80" y="368.495575221239" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">• Variadic arguments</text>
+  <text x="80" y="399.29203539823" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--ok-text)">• DSL-like syntax</text>
 
   <rect x="40" y="445.486725663717" width="1200" height="174.513274336283" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="486.548672566372" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--warn-text)">Use PROC MACROS</text>
-  <text x="80" y="527.610619469027" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">&#8226; Derive traits</text>
-  <text x="80" y="558.407079646018" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">&#8226; Transform definitions</text>
-  <text x="80" y="589.203539823009" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">&#8226; Compile-time validation</text>
+  <text x="80" y="527.610619469027" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">• Derive traits</text>
+  <text x="80" y="558.407079646018" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">• Transform definitions</text>
+  <text x="80" y="589.203539823009" font-family="Arial, sans-serif" font-size="16.21099812402" fill="var(--warn-text)">• Compile-time validation</text>
 </svg>

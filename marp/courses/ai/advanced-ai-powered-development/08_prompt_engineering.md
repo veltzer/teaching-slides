@@ -149,6 +149,10 @@ Error: KeyError: 'users'
 
 ## How Sampling Affects Output
 
+---
+
+## Temperature, Top-p, and Sampling Parameters
+
 ![how_sampling_affects_output](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
 
 ---
@@ -297,6 +301,10 @@ review = client.chat.completions.create(
 ---
 
 ## Breaking Complex Tasks into Stages
+
+---
+
+## Prompt Chaining and Multi-Stage Pipelines
 
 ![breaking_complex_tasks_into_stages](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
 
@@ -540,6 +548,10 @@ response = client.messages.create(
 ---
 
 ## Building a Prompt Evaluation Loop
+
+---
+
+## Evaluating and Iterating on Prompts
 
 ![building_a_prompt_evaluation_loop](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
 

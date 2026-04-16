@@ -92,28 +92,23 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <rect x="40" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="186.08697" y="123.407224" text-anchor="middle" font-size="27.771327" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">bytes 0–15</text>
   <text x="186.08697" y="161.902694" text-anchor="middle" font-size="20.828562" fill="var(--primary-accent)" font-family="Arial, sans-serif">16 bytes</text>
   <text x="186.08697" y="193.982199" text-anchor="middle" font-size="17.357113" fill="var(--primary-accent)" font-family="Arial, sans-serif">← CPU reads here</text>
-  <rect x="342.608724" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="342.608724" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="488.695694" y="123.407224" text-anchor="middle" font-size="27.771327" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">bytes 16–31</text>
   <text x="488.695694" y="161.902694" text-anchor="middle" font-size="20.828562" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bytes</text>
-  <rect x="645.217447" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="645.217447" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="791.304418" y="123.407224" text-anchor="middle" font-size="27.771327" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">bytes 32–47</text>
   <text x="791.304418" y="161.902694" text-anchor="middle" font-size="20.828562" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bytes</text>
-  <rect x="947.82606" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="947.82606" y="40" width="292.17394" height="179.645899" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1093.913141" y="123.407224" text-anchor="middle" font-size="27.771327" font-weight="bold" fill="var(--text)" font-family="Courier New, monospace">bytes 48–63</text>
   <text x="1093.913141" y="161.902694" text-anchor="middle" font-size="20.828562" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bytes</text>
-  <line x1="40" y1="245.309758" x2="1240" y2="245.309758" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <line x1="40" y1="237.610696" x2="40" y2="253.008821" stroke="var(--primary-border)" stroke-width="1.7778" />
-  <line x1="1240" y1="237.610696" x2="1240" y2="253.008821" stroke="var(--primary-border)" stroke-width="1.7778" />
+  <line x1="40" y1="245.309758" x2="1240" y2="245.309758" stroke="var(--primary-border)" stroke-width="1.7778"/>
+  <line x1="40" y1="237.610696" x2="40" y2="253.008821" stroke="var(--primary-border)" stroke-width="1.7778"/>
+  <line x1="1240" y1="237.610696" x2="1240" y2="253.008821" stroke="var(--primary-border)" stroke-width="1.7778"/>
   <text x="640.000056" y="290.221193" text-anchor="middle" font-size="25.457116" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">One cache line fetch = 64 bytes from memory</text>
   <rect x="40" y="347.964558" width="542.608746" height="153.982359" rx="7.98922" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="311.304373" y="391.592896" text-anchor="middle" font-size="23.142906" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spatial Locality (good)</text>
@@ -125,7 +120,7 @@
   <text x="937.391388" y="430.088525" text-anchor="middle" font-size="19.671457" fill="var(--text-muted)" font-family="Arial, sans-serif">Two cores write different fields</text>
   <text x="937.391388" y="463.451287" text-anchor="middle" font-size="19.671457" fill="var(--text-muted)" font-family="Arial, sans-serif">in the same cache line</text>
   <text x="937.391388" y="489.115146" text-anchor="middle" font-size="17.357113" fill="var(--text-faint)" font-family="Arial, sans-serif">Line bounces between cores → slow</text>
-  <rect x="165.217403" y="553.274317" width="918.260955" height="66.725683" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="165.217403" y="553.274317" width="918.260955" height="66.725683" rx="7.98922" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="624.34788" y="591.769946" text-anchor="middle" font-size="20.828562" fill="var(--text)" font-family="Courier New, monospace">Align hot data to 64-byte boundaries: __attribute__((aligned(64)))</text>
   <text x="624.34788" y="614.867292" text-anchor="middle" font-size="17.357113" fill="var(--text-faint)" font-family="Arial, sans-serif">Typical cache line size on ARM Cortex-M: 32 bytes; on Cortex-A: 64 bytes</text>
 </svg>

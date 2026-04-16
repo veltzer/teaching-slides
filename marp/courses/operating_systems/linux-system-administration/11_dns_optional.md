@@ -15,7 +15,6 @@ audience:
 ---
 
 ## DNS Concepts
-
 ![dns_concepts](svg/courses/operating_systems/linux-system-administration/11_dns_optional/dns_concepts.svg)
 
 ---

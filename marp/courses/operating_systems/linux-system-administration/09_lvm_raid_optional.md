@@ -15,7 +15,6 @@ audience:
 ---
 
 ## LVM Architecture
-
 ![lvm_architecture](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_architecture.svg)
 
 ---
@@ -318,7 +317,6 @@ Cache modes: `writethrough` (safe) or `writeback` (fast).
 ---
 
 ## LVM on Top of RAID
-
 ![lvm_on_top_of_raid](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_on_top_of_raid.svg)
 
 ---

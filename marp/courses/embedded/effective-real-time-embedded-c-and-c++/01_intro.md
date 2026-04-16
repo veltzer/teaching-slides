@@ -9,6 +9,7 @@ category: embedded
 audience:
   - audiences:embedded-engineers
   - audiences:developers
+
 ---
 # Effective Real Time Embedded C and C++
 

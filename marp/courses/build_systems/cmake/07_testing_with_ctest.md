@@ -296,7 +296,6 @@ set_tests_properties(test_query PROPERTIES
 - `FIXTURES_CLEANUP` runs after all tests requiring the fixture
 
 ---
-
 ## Fixtures - Multiple Tests Sharing a Fixture
 
 ```cmake
@@ -304,7 +303,6 @@ set_tests_properties(setup_db PROPERTIES
     FIXTURES_SETUP Database)
 set_tests_properties(cleanup_db PROPERTIES
     FIXTURES_CLEANUP Database)
-
 set_tests_properties(
     test_insert test_query test_delete
     PROPERTIES FIXTURES_REQUIRED Database

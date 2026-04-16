@@ -92,7 +92,6 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
   </defs>
   <text x="640" y="40" text-anchor="middle" font-size="24.48" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cache-Aside Pattern</text>
   <rect x="40" y="217.8667" width="227.0271" height="77.3333" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -112,18 +111,18 @@
   <text x="1085.946" y="338.5067" text-anchor="middle" font-size="16.83" fill="var(--text-muted)" font-family="Arial, sans-serif">2. Query database</text>
   <text x="1085.946" y="363.2533" text-anchor="middle" font-size="16.83" fill="var(--text-muted)" font-family="Arial, sans-serif">3. Update cache</text>
   <text x="1085.946" y="388" text-anchor="middle" font-size="16.83" fill="var(--text-muted)" font-family="Arial, sans-serif">4. Return data</text>
-  <line x1="267.0271" y1="233.3333" x2="507.0271" y2="148.2667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="267.0271" y1="233.3333" x2="507.0271" y2="148.2667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="364.3244" y="179.2" text-anchor="middle" font-size="16.83" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Check</text>
-  <line x1="510.2703" y1="117.3333" x2="270.2702" y2="230.24" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.96 4.48" marker-end="url(#arrow-ok)" />
+  <line x1="510.2703" y1="117.3333" x2="270.2702" y2="230.24" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.96 4.48" marker-end="url(#arrow-ok)"/>
   <text x="348.1081" y="152.9067" text-anchor="middle" font-size="16.83" fill="var(--ok-accent)" font-family="Arial, sans-serif">Hit: Return</text>
-  <line x1="267.0271" y1="279.7333" x2="507.0271" y2="364.8" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)" />
+  <line x1="267.0271" y1="279.7333" x2="507.0271" y2="364.8" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
   <text x="364.3244" y="341.6" text-anchor="middle" font-size="16.83" fill="var(--danger-accent)" font-family="Arial, sans-serif">2. Query DB</text>
-  <line x1="510.2703" y1="395.7333" x2="270.2702" y2="287.4667" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.96 4.48" marker-end="url(#arrow-ok)" />
+  <line x1="510.2703" y1="395.7333" x2="270.2702" y2="287.4667" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="8.96 4.48" marker-end="url(#arrow-ok)"/>
   <text x="356.2162" y="372.5333" text-anchor="middle" font-size="16.83" fill="var(--ok-accent)" font-family="Arial, sans-serif">Return data</text>
-  <line x1="153.5135" y1="217.8667" x2="153.5135" y2="132.8" stroke="var(--warn-border)" stroke-width="2" />
-  <line x1="153.5135" y1="132.8" x2="507.0271" y2="132.8" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="153.5135" y1="217.8667" x2="153.5135" y2="132.8" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="153.5135" y1="132.8" x2="507.0271" y2="132.8" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="315.6757" y="121.9733" text-anchor="middle" font-size="16.83" fill="var(--danger-accent)" font-family="Arial, sans-serif">3. Update cache</text>
-  <rect x="40" y="496.2667" width="875.6757" height="123.7333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="40" y="496.2667" width="875.6757" height="123.7333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="477.8379" y="534.9333" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">The application checks the cache first. On a hit, data is returned immediately.</text>
   <text x="477.8379" y="565.8667" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">On a miss, the application queries the database, updates the cache,</text>
   <text x="477.8379" y="596.8" text-anchor="middle" font-size="18.36" fill="var(--text-muted)" font-family="Arial, sans-serif">then returns the data. The cache is populated lazily on demand.</text>

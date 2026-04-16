@@ -92,45 +92,40 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
   </defs>
   <text x="81.25" y="281.6667" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)" transform="rotate(-90 44 300)" font-family="Arial, sans-serif">Higher addresses</text>
-  <line x1="44.074703" y1="46.315875" x2="44.074703" y2="614.736814" stroke="var(--border)" stroke-width="1.3333" />
-  <polygon points="44.074703,41.052689 40,54.736999 48.149406,54.736999" fill="var(--text-faint)" />
-  <polygon points="44.074703,620 40,606.315821 48.149406,606.315821" fill="var(--text-faint)" />
+  <line x1="44.074703" y1="46.315875" x2="44.074703" y2="614.736814" stroke="var(--border)" stroke-width="1.3333"/>
+  <polygon points="44.074703,41.052689 40,54.736999 48.149406,54.736999" fill="var(--text-faint)"/>
+  <polygon points="44.074703,620 40,606.315821 48.149406,606.315821" fill="var(--text-faint)"/>
   <text x="81.25" y="491.1111" text-anchor="middle" font-size="12.1663" fill="var(--text-muted)" transform="rotate(-90 44 560)" font-family="Arial, sans-serif">Lower addresses</text>
   <text x="160.203735" y="40" text-anchor="middle" font-size="15.532705" fill="var(--text-muted)" font-family="Arial, sans-serif">Stack grows downward ↓</text>
-  <rect x="262.071307" y="46.315875" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="46.315875" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="77.894729" text-anchor="middle" font-size="15.532705" fill="var(--text-faint)" font-family="Arial, sans-serif">caller's stack frame (above)</text>
-  <rect x="262.071307" y="103.157969" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="103.157969" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="134.736823" text-anchor="middle" font-size="17.603788" fill="var(--text-muted)" font-family="Courier New, monospace">arg2   → EBP+12</text>
   <text x="873.27674" y="134.736823" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">pushed 2nd</text>
-  <rect x="262.071307" y="160.000063" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="160.000063" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="191.578917" text-anchor="middle" font-size="17.603788" fill="var(--text-muted)" font-family="Courier New, monospace">arg1   → EBP+8</text>
   <text x="873.27674" y="191.578917" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">pushed 1st (cdecl)</text>
-  <rect x="262.071307" y="216.842157" width="570.458404" height="50.526349" rx="7.149472" fill="var(--text)" />
+  <rect x="262.071307" y="216.842157" width="570.458404" height="50.526349" rx="7.149472" fill="var(--text)"/>
   <text x="547.300509" y="248.421011" text-anchor="middle" font-size="17.603788" fill="var(--bg)" font-family="Courier New, monospace">return addr → EBP+4</text>
   <text x="873.27674" y="248.421011" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">pushed by CALL</text>
   <rect x="262.071307" y="273.684251" width="570.458404" height="50.526349" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="547.300509" y="305.263105" text-anchor="middle" font-size="17.603788" font-weight="bold" fill="var(--bg)" font-family="Courier New, monospace">saved EBP → EBP+0</text>
   <text x="873.27674" y="305.263105" font-size="14.497104" fill="var(--primary-accent)" font-family="Arial, sans-serif">push %ebp; mov %esp,%ebp</text>
-  <rect x="262.071307" y="330.526345" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="330.526345" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="362.105199" text-anchor="middle" font-size="17.603788" fill="var(--primary-accent)" font-family="Courier New, monospace">local1  → EBP-4</text>
   <text x="873.27674" y="362.105199" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">sub $N, %esp</text>
-  <rect x="262.071307" y="387.368439" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="387.368439" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="418.947293" text-anchor="middle" font-size="17.603788" fill="var(--primary-accent)" font-family="Courier New, monospace">local2  → EBP-8</text>
-  <rect x="262.071307" y="444.210532" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="262.071307" y="444.210532" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="547.300509" y="475.789386" text-anchor="middle" font-size="17.603788" fill="var(--text-muted)" font-family="Courier New, monospace">saved EBX/ESI/EDI</text>
   <text x="873.27674" y="475.789386" font-size="14.497104" fill="var(--text-faint)" font-family="Arial, sans-serif">callee-saved regs</text>
-  <rect x="262.071307" y="501.052626" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667" />
+  <rect x="262.071307" y="501.052626" width="570.458404" height="50.526349" rx="7.149472" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="5.3333 2.6667"/>
   <text x="547.300509" y="532.63148" text-anchor="middle" font-size="15.532705" fill="var(--text-faint)" font-family="Arial, sans-serif">↑ ESP (top of stack)</text>
-  <line x1="233.548387" y1="298.94736" x2="262.071307" y2="298.94736" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <line x1="233.548387" y1="298.94736" x2="262.071307" y2="298.94736" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
   <text x="170.390492" y="304.210677" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--primary-accent)" font-family="Courier New, monospace">EBP →</text>
-  <line x1="233.548387" y1="526.315736" x2="262.071307" y2="526.315736" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="233.548387" y1="526.315736" x2="262.071307" y2="526.315736" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="170.390492" y="531.579052" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">ESP →</text>
   <rect x="893.650255" y="216.842157" width="346.349745" height="221.052631" rx="7.149472" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1066.825127" y="244.210645" text-anchor="middle" font-size="15.532705" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prologue:</text>

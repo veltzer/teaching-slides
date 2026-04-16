@@ -25,7 +25,7 @@ used in our Marp-rendered slides.
 
 - Every SVG must use exactly `viewBox="0 0 1280 720"` (16:9, matches Marp
   slide dimensions). Do NOT use 1280x640 — that 2:1 aspect ratio makes Marp
-  distort or mis-center the image. Use `scripts/svg_fix_aspect_ratio.py` to
+  distort or mis-center the image. Use `scripts/svg_fix.py --aspect-ratio` to
   convert existing SVGs. The `check_svg.py --dimensions` check enforces this.
 - SVG content must not extend below **y=630**. Marp renders the slide's `##`
   heading at the top of the page, pushing the image down; the bottom ~80px
@@ -51,14 +51,14 @@ amateurish next to its well-filled neighbours.
 - **Design the content to fill the full 1200×580** from the start. Use a
   layout that matches the topic (4-column comparison, flow with arrows,
   left/right split, 2×2 grid, etc.) and stretch it to the edges.
-- **Do not rely on fit_svg_to_slide.py to rescue a tiny diagram.** The fit
+- **Do not rely on svg_fix.py --fit to rescue a tiny diagram.** The fit
   script stretches content to fit, but extreme scale ratios (>1.5×) trigger
   a uniform-scale fallback that leaves letterbox space — see "Why circles
   don't stretch like rects" below.
 - **The fill ratio** is `content bbox area / (1200 × 580)`. Aim for ≥ 90%.
   Below 40% is a failure and the build will reject it. Values in the
   40–70% band are acceptable but worth improving.
-- `scripts/fit_svg_to_slide.py` is idempotent and exact: it centers content
+- `scripts/svg_fix.py --fit` is idempotent and exact: it centers content
   on integer pixels and re-runs are no-ops. Run after authoring an SVG.
 - `scripts/check_svg.py --fill` enforces the minimum fill ratio.
 
@@ -121,7 +121,7 @@ push the canonical `<defs>` block into every SVG.
 ## Shape primitives: one canonical way to draw
 
 Colors aren't the only thing that must be uniform. Every rect and line in
-every SVG must share the same visual primitives. The individual `svg_fix_*`
+every SVG must share the same visual primitives. The individual `svg_fix.py`
 scripts enforce these (shadows, gradients, fonts, markers, etc.).
 
 ### Rects (boxes)
@@ -150,7 +150,7 @@ scripts enforce these (shadows, gradients, fonts, markers, etc.).
   `url(#arrow-info)`, `url(#arrow-white)`.
 - All palette markers are 10x10. No oversized arrowheads — don't define
   per-file `<marker>` elements with larger dimensions.
-  `scripts/svg_fix_markers.py` caps any stray custom markers.
+  `scripts/svg_fix.py --markers` caps any stray custom markers.
 
 ## Do not use circles in drawings
 
@@ -169,7 +169,7 @@ skips files named `title.svg`.
 
 ## Why circles don't stretch like rects
 
-When you run `scripts/fit_svg_to_slide.py`, every diagram gets stretched so
+When you run `scripts/svg_fix.py --fit`, every diagram gets stretched so
 its content bounding box fills the usable area exactly (`x ∈ [40, 1240]`,
 `y ∈ [40, 620]`). That works beautifully for diagrams built from rectangles
 and text. But **circles don't stretch correctly under non-uniform scaling**,
@@ -368,6 +368,6 @@ you look.
 - `scripts/check_svg.py --dimensions --fonts` — enforce viewBox and font-size
 - `scripts/check_svg.py --colors` — enforce palette compliance
 - `scripts/check_md.py --images` — verify all image references resolve
-- `scripts/svg_fix_aspect_ratio.py` — normalize viewBox to 1280x720
+- `scripts/svg_fix.py --aspect-ratio` — normalize viewBox to 1280x720
 - `scripts/install_palette.py` — push canonical palette defs into every SVG
 - `rsconstruct build --verbose -j10` — full build (runs `check_md.py`)
