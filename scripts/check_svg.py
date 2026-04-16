@@ -556,6 +556,54 @@ def _load_intro_palette() -> dict:
     return {}
 
 
+def _check_title_bg_rect(tree: ET.ElementTree) -> list[str]:
+    """For title-type SVGs, verify the background rect has canonical attributes.
+
+    Only called for title-type SVGs (caller checks metadata type).
+    The first <rect> child of the root must match the background-rect spec
+    from palette_intro.yaml.
+    """
+    errors: list[str] = []
+    root = tree.getroot()
+    palette = _load_intro_palette()
+
+    spec = palette.get("background-rect", {
+        "width": 1200, "height": 580, "x": 40, "y": 40,
+        "fill": "var(--code-bg)", "rx": 6,
+    })
+
+    # Find the first <rect> direct child of root
+    first_rect = None
+    for child in root:
+        tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
+        if tag == "rect":
+            first_rect = child
+            break
+
+    if first_rect is None:
+        errors.append("title slide missing background rect")
+        return errors
+
+    checks = {
+        "width": str(spec.get("width", 1200)),
+        "height": str(spec.get("height", 580)),
+        "x": str(spec.get("x", 40)),
+        "y": str(spec.get("y", 40)),
+        "fill": spec.get("fill", "var(--code-bg)"),
+        "rx": str(spec.get("rx", 6)),
+    }
+
+    for attr, expected in checks.items():
+        actual = first_rect.get(attr, "")
+        if actual != expected:
+            errors.append(
+                f"title background rect {attr}=\"{actual}\""
+                f" should be \"{expected}\""
+            )
+
+    return errors
+
+
 def _find_text_matches(root, spec: dict, check_weight: bool = True) -> list:
     """Find <text> elements that are direct children of root matching spec."""
     expected_ff = spec.get("font-family", "Arial, sans-serif")
@@ -794,6 +842,7 @@ def main() -> None:
             if is_title:
                 if do_title_text:
                     errors.extend(_check_title_text(tree, path))
+                    errors.extend(_check_title_bg_rect(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
