@@ -20,6 +20,7 @@ Checks:
   --shadows     Validate <rect> shadow filter usage against palette effects.rect-shadow
   --typography  Validate <text>/<tspan> font-family against palette typography
   --gradients   Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill
+  --title-text  Validate title-type SVGs have canonical title text element
 
 Usage:
     check_svg.py file1.svg file2.svg ...
@@ -225,7 +226,10 @@ def _svg_type_from_file(svg_path: Path) -> str:
     try:
         tree = ET.parse(svg_path)
         root = tree.getroot()
-        for meta in root.iter(f"{{{_SVG_NS}}}metadata", "metadata"):
+        for meta in root.iter():
+            meta_tag = meta.tag.split("}")[-1] if "}" in meta.tag else meta.tag
+            if meta_tag != "metadata":
+                continue
             for child in meta:
                 t = child.tag
                 local = t.split("}", 1)[1] if "}" in t else t
@@ -518,15 +522,13 @@ def _check_typography(tree: ET.ElementTree) -> list[str]:
     return errors
 
 
-def _check_no_circles(tree: ET.ElementTree, path: Path) -> list[str]:
+def _check_no_circles(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain <circle> elements.
 
     Circles are locked to a 1:1 aspect ratio and don't stretch correctly
     under the fit-to-slide pass. Use <rect> (with rx for rounded corners)
-    or <ellipse> instead. Title slides (title.svg) are exempt — they are
-    decorative and often use circles intentionally."""
-    if path.name == 'title.svg':
-        return []
+    or <ellipse> instead. Title slides are exempt (handled at the
+    caller level) — they are decorative and often use circles intentionally."""
     count = 0
     for elem in tree.iter():
         if elem.tag.split('}')[-1] == 'circle':
@@ -546,15 +548,13 @@ def _check_title(tree: ET.ElementTree) -> list[str]:
 
 
 def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
-    """For title.svg files, verify canonical title text element.
+    """For title-type SVGs, verify canonical title text element.
 
+    Only called for title-type SVGs (caller checks metadata type).
     Reads the title-text spec from palette_intro.yaml and checks that
     exactly one <text> element exists with the required attributes,
     positioned at x=640 y=120 as a direct child of the root <svg>.
     """
-    if path.name != "title.svg":
-        return []
-
     errors: list[str] = []
     root = tree.getroot()
 
@@ -580,7 +580,6 @@ def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
     expected_ta = spec.get("text-anchor", "middle")
 
     # Find matching title text elements as direct children of root
-    ns = f"{{{_SVG_NS}}}"
     matches = []
     for child in root:
         tag = child.tag.split("}")[-1] if "}" in child.tag else child.tag
@@ -599,7 +598,7 @@ def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
 
     if len(matches) == 0:
         errors.append(
-            f"title.svg missing canonical title text"
+            f"title slide missing canonical title text"
             f" (need font-family=\"{expected_ff}\""
             f" font-size=\"{expected_fs}\""
             f" font-weight=\"{expected_fw}\""
@@ -610,7 +609,7 @@ def _check_title_text(tree: ET.ElementTree, path: Path) -> list[str]:
 
     if len(matches) > 1:
         errors.append(
-            f"title.svg has {len(matches)} canonical title text elements"
+            f"title slide has {len(matches)} canonical title text elements"
             " (expected exactly 1)"
         )
 
@@ -672,7 +671,7 @@ def main() -> None:
     parser.add_argument('--gradients', action='store_true',
                         help='Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill')
     parser.add_argument('--title-text', action='store_true', dest='title_text',
-                        help='Validate title.svg files have canonical title text element')
+                        help='Validate title-type SVGs have canonical title text element')
     args = parser.parse_args()
 
     if not args.paths:
@@ -700,32 +699,36 @@ def main() -> None:
     do_shadows = args.shadows or not explicit
     do_typography = args.typography or not explicit
     do_gradients = args.gradients or not explicit
+    do_title_text = args.title_text or not explicit
 
     failures = 0
     for path_str in args.paths:
         path = Path(path_str)
         errors: list[str] = []
+        is_title = _svg_type_from_file(path) == "title"
 
+        # Checks that apply to ALL SVGs (regular and title)
         if do_size:
             errors.extend(_check_size(path))
 
-        if do_words:
-            errors.extend(_check_words(path))
-
-        if do_fill:
-            errors.extend(_check_fill(path))
-
-        if do_fit:
-            errors.extend(_check_fit(path))
+        # Checks that apply ONLY to regular (non-title) SVGs
+        if not is_title:
+            if do_words:
+                errors.extend(_check_words(path))
+            if do_fill:
+                errors.extend(_check_fill(path))
+            if do_fit:
+                errors.extend(_check_fit(path))
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_namespace or do_bounds or do_title or do_colors or do_no_circles or do_shadows or do_typography or do_gradients:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_namespace or do_bounds or do_title or do_colors or do_no_circles or do_shadows or do_typography or do_gradients or do_title_text:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
 
         if tree is not None:
+            # Checks that apply to ALL SVGs
             if do_elements:
                 errors.extend(_check_elements(tree))
             if do_fonts:
@@ -734,20 +737,28 @@ def main() -> None:
                 errors.extend(_check_dimensions(tree))
             if do_namespace:
                 errors.extend(_check_namespace(tree))
-            if do_bounds:
-                errors.extend(_check_bounds(tree))
             if do_title:
                 errors.extend(_check_title(tree))
             if do_colors:
                 errors.extend(_check_colors(tree, svg_path=path))
-            if do_no_circles:
-                errors.extend(_check_no_circles(tree, path))
-            if do_shadows:
-                errors.extend(_check_shadows(tree))
-            if do_typography:
-                errors.extend(_check_typography(tree))
-            if do_gradients:
-                errors.extend(_check_gradients(tree))
+
+            # Checks that apply ONLY to regular (non-title) SVGs
+            if not is_title:
+                if do_bounds:
+                    errors.extend(_check_bounds(tree))
+                if do_no_circles:
+                    errors.extend(_check_no_circles(tree))
+                if do_shadows:
+                    errors.extend(_check_shadows(tree))
+                if do_typography:
+                    errors.extend(_check_typography(tree))
+                if do_gradients:
+                    errors.extend(_check_gradients(tree))
+
+            # Checks that apply ONLY to title SVGs
+            if is_title:
+                if do_title_text:
+                    errors.extend(_check_title_text(tree, path))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
