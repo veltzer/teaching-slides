@@ -49,9 +49,6 @@ PALETTES: dict[str, Path] = {
 _DEFS_BLOCK_RE = re.compile(
     r"[ \t]*<defs\b[^>]*>.*?</defs>[ \t]*\n?", re.DOTALL
 )
-_PALETTE_COMMENT_RE = re.compile(
-    r"[ \t]*<!--\s*palette:\s*\S+\s*-->[ \t]*\n?"
-)
 _SVG_OPEN_RE = re.compile(r"(<svg\b[^>]*>)\n?")
 _METADATA_BLOCK_RE = re.compile(
     r"[ \t]*<metadata\b[^>]*>.*?</metadata>[ \t]*\n?", re.DOTALL
@@ -272,9 +269,6 @@ class SvgFile:
         )
         if not text.endswith("\n"):
             text += "\n"
-
-        # Remove any legacy palette comment
-        text = _PALETTE_COMMENT_RE.sub("", text)
 
         # Splice canonical metadata
         meta_str = build_metadata_string(self.svg_type)

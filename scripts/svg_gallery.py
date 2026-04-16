@@ -25,7 +25,7 @@ import socketserver
 import sys
 import threading
 import urllib.parse
-import webbrowser
+import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SVG_DIR = ROOT / "svg"
@@ -312,7 +312,13 @@ def main() -> None:
         url = f"http://127.0.0.1:{args.port}/"
         print(f"serving {len(paths)} slides at {url}", file=sys.stderr)
         print(f"queue file: {QUEUE}  (Ctrl-C to stop)", file=sys.stderr)
-        threading.Timer(0.3, lambda: webbrowser.open(url)).start()
+        def _open_browser():
+            subprocess.Popen(
+                ["google-chrome", "--incognito", "--new-window",
+                 "--user-data-dir=/tmp/chrome-incognito-svg-gallery", url],
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+        threading.Timer(0.3, _open_browser).start()
         try:
             srv.serve_forever()
         except KeyboardInterrupt:
