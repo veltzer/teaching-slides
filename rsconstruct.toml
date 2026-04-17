@@ -1,6 +1,3 @@
-[dependencies]
-pip = ["PyYAML", "lxml"]
-
 [processor.tera]
 dep_inputs = [
     "config/project.lua",
@@ -28,6 +25,9 @@ max_jobs = 10
 output_dir = "_site/marp"
 
 [processor.ruff]
+src_dirs = ["scripts"]
+
+[processor.requirements]
 src_dirs = ["scripts"]
 
 [processor.markdownlint]
