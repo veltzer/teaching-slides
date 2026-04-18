@@ -82,7 +82,6 @@ content is clustered in a corner or fills only 30-40% of the frame. Seen in:
 
 - `svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/monitoring_architecture.svg`
   (also a placeholder, above)
-- `svg/courses/ai/developing-using-ai-short/08_quality/input_validation.svg`
 - `svg/courses/databases/redis/04_pubsub/pub_sub_use_case_cache_invalidation.svg`
 - `svg/courses/security/web-application-hacking/17_server_hardening/why_hardening_matters.svg`
 - `svg/courses/big_data/apache-spark-with-python/06_yarn/core_components.svg`
