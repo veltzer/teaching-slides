@@ -260,7 +260,7 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 
 ---
 
-## Security, Sandboxing, and Permissions
+## Security: Allow-Lists and Least-Privilege
 
 ## Permission Models
 - Define an **allow-list** of permitted tools per session or user role
@@ -492,7 +492,7 @@ async def stream_shell(command: str):
 
 ---
 
-## Production Architecture for Tool-Use Systems
+## Production Architecture: Components
 
 ## Key Concerns
 - **API Gateway**: rate limiting, request validation, routing

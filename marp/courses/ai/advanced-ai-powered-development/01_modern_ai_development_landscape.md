@@ -53,7 +53,7 @@ audience:
 
 ---
 
-## Model Architecture Basics for Developers
+## Transformers: Core Concepts
 
 - Modern AI coding tools are built on the `transformer` architecture
 - Key concept: **self-attention** lets the model weigh relationships between all tokens
@@ -171,7 +171,7 @@ Workflow:
 
 ---
 
-## Category 5: Autonomous Coding Agents
+## Autonomous Agents: Definition
 
 - **Examples**: `Devin`, `OpenHands`, `SWE-Agent`, `Claude Code` in headless mode
 - Operate with minimal human supervision
@@ -193,7 +193,7 @@ Workflow:
 
 ---
 
-## How Context Selection Actually Works
+## Context Selection: Why RAG
 
 - Agentic tools cannot send your entire codebase in every request
 - They use **RAG** (Retrieval-Augmented Generation) to select relevant files
@@ -254,7 +254,7 @@ Workflow:
 
 ---
 
-## The Lost-in-the-Middle Problem
+## Lost-in-the-Middle: What It Means
 
 - Models perform best on information at the **beginning** and **end** of the context
 - Information buried in the middle is often ignored or poorly recalled
@@ -311,7 +311,7 @@ Choosing a model depends on your task:
 
 ---
 
-## The Prompt-to-Output Pipeline
+## Prompt-to-Output Pipeline: Why It Matters
 
 - Understanding the full pipeline helps you debug unexpected results
 
@@ -515,7 +515,7 @@ Choosing a model depends on your task:
 
 ---
 
-## Industry Adoption Patterns and Case Studies
+## Industry Adoption: Overview
 
 - Enterprise AI tool adoption follows a predictable pattern:
 

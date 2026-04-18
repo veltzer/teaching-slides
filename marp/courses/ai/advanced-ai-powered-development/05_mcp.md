@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## The Problem MCP Solves
+## MCP: The Integration Problem
 
 - Every AI tool integration was a custom, one-off implementation
 - N AI hosts times M tools = N*M integration effort
@@ -131,7 +131,7 @@ Host (Claude Code)
 
 ---
 
-## Context Window Management for MCP
+## MCP Context: Token Cost of Tools
 
 - Every registered tool's **schema** consumes tokens in the system prompt
 - 20 tools with detailed schemas can use 2,000+ tokens before any user message
@@ -149,7 +149,7 @@ Host (Claude Code)
 
 ---
 
-## Context Window Management for MCP
+## MCP Context: Audit Tool Count
 
 - Audit your tool count regularly -- fewer, well-designed tools outperform many narrow ones
 
@@ -204,7 +204,7 @@ def service_health(name: str) -> str:
 
 ---
 
-## MCP Capability: Prompts and Sampling
+## Prompts and Sampling: Definitions
 
 ## Prompts
 - Reusable prompt templates exposed by servers
@@ -223,7 +223,7 @@ def service_health(name: str) -> str:
 
 ---
 
-## MCP Capability: Prompts and Sampling
+## Prompts and Sampling: Why Stateless
 
 - Sampling keeps the server stateless while enabling multi-step reasoning
 
@@ -362,7 +362,7 @@ npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-github
 
 ---
 
-## End-to-End Workflow: Bug Triage with MCP
+## Bug Triage with MCP: Steps
 
 1. **Jira MCP server** -- fetch the bug ticket details and reproduction steps
 1. **Postgres MCP server** -- query error logs matching the ticket's time window
@@ -702,7 +702,7 @@ async def test_get_status():
 
 ---
 
-## Central Tool Registries
+## Central Tool Registries: Purpose
 
 - Organizations can maintain a registry of approved MCP servers
 - Standardize tool versions and configurations across teams
@@ -715,7 +715,7 @@ async def test_get_status():
 
 ---
 
-## Central Tool Registries
+## Central Tool Registries: Distribution
 
 - Distribute via internal package registry (`npm`, `PyPI`, or container images)
 - Pin server versions to prevent unexpected behavior changes

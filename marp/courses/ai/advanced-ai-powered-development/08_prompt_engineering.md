@@ -157,7 +157,7 @@ Error: KeyError: 'users'
 
 ---
 
-## Temperature, Top-p, and Sampling Parameters
+## Sampling Parameters: Key Settings
 
 ## Key Parameters
 - **`temperature`**: controls randomness; lower = more focused
@@ -310,7 +310,7 @@ review = client.chat.completions.create(
 
 ---
 
-## Prompt Chaining and Multi-Stage Pipelines
+## Prompt Chaining: Why Use Stages
 
 1. Each stage gets a focused prompt with a single responsibility
 1. Output of stage N becomes input of stage N+1
@@ -557,7 +557,7 @@ response = client.messages.create(
 
 ---
 
-## Evaluating and Iterating on Prompts
+## Prompt Evaluation: Workflow
 
 1. Build a test set: 20-50 representative inputs with expected outputs
 1. Score with automated metrics: exact match, BLEU, or LLM-as-judge

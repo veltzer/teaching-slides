@@ -38,7 +38,7 @@ From chatbots to autonomous coding partners
 
 ---
 
-## Chatbot vs Agent
+## Chatbot vs Agent: Key Difference
 
 - An agent **observes**, **reasons**, **acts**, and **loops** until the task is done
 - A chatbot only responds to what you explicitly ask
@@ -51,7 +51,7 @@ From chatbots to autonomous coding partners
 
 ---
 
-## The Agent Loop
+## Agent Loop: How Iteration Works
 
 - The loop continues until the agent determines the task is complete
 - Each iteration adds context from tool outputs to the next reasoning step
@@ -121,7 +121,7 @@ Modern agents combine planning with a **tool-use loop**:
 
 ---
 
-## Multi-Agent and Orchestrated Workflows
+## Multi-Agent Workflows: Introduction
 
 Advanced setups use multiple agents collaborating:
 
@@ -133,7 +133,7 @@ Advanced setups use multiple agents collaborating:
 
 ---
 
-## Multi-Agent and Orchestrated Workflows
+## Multi-Agent Workflows: Roles and Use Cases
 
 1. **Planning agent**: breaks the task into subtasks using a stronger model
 1. **Execution agents**: each subtask runs in parallel with a faster model
@@ -281,7 +281,7 @@ Agent steps:
 
 ---
 
-## How Agents Handle Errors and Self-Correct
+## Error Recovery: Observe-Diagnose-Retry Loop
 
 The **observe-diagnose-retry** loop:
 1. Agent runs a tool (e.g., `npm test`) and it fails
@@ -469,7 +469,7 @@ claude -p "refactor to async/await" src/legacy/*.js
 
 ---
 
-## Context Window Management and Token Budgets
+## Token Budgets: The Constraint
 
 Agents must work within finite context windows:
 
@@ -481,7 +481,7 @@ Agents must work within finite context windows:
 
 ---
 
-## Context Window Management and Token Budgets
+## Token Budgets: Strategies
 
 **Strategies agents use to stay within budget**:
 1. **Repo maps**: compact outline of files and symbols (Aider approach)

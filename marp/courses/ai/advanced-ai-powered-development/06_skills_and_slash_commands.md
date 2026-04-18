@@ -218,7 +218,7 @@ instructions: |
 
 ---
 
-## Skill Composition and Chaining
+## Skill Chaining: Example
 
 ```yaml
 name: ship-it
@@ -469,7 +469,7 @@ claude skills override review --local
 
 ---
 
-## Skill Inheritance and Overrides
+## Skill Inheritance: Resolution Order
 
 - Resolution order: project > team > user (most specific wins)
 - User-level skills provide personal defaults across all projects
@@ -524,7 +524,7 @@ claude skills audit --check-versions
 
 ---
 
-## Hooks: Pre and Post-Execution
+## Hooks: Configuration Example
 
 ```yaml
 # .claude/hooks.yaml

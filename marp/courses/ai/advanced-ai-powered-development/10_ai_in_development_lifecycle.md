@@ -52,7 +52,7 @@ criteria:
 
 ---
 
-## AI-Assisted Planning: Architecture Exploration
+## Architecture Exploration: Capabilities
 
 - AI proposes multiple architecture options with tradeoff analysis
 - Evaluates against non-functional requirements (latency, scale, cost)
@@ -404,7 +404,7 @@ applitools:
 
 ---
 
-## AI in CI/CD: Automated PR Checks
+## Automated PR Checks: Risk Scoring
 
 - AI assigns a **risk score** to each PR based on:
     - Files changed (config, auth, payments = high risk)
@@ -554,7 +554,7 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 ---
 
-## Measuring AI Impact on Development Velocity
+## Measuring AI Impact: Before/After
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
@@ -566,7 +566,7 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 ---
 
-## Measuring AI Impact on Development Velocity
+## Measuring AI Impact: Pitfalls to Avoid
 
 - Measure at team level, not individual level, to avoid gaming
 - Track developer satisfaction alongside productivity metrics
@@ -705,7 +705,7 @@ sub_tasks:
 
 ---
 
-## Continuous AI Integration Patterns
+## CI Integration Patterns: Three Models
 
 - **Pattern 1: Gate-based** - AI runs as a required CI check before merge
 - **Pattern 2: Advisory** - AI posts suggestions as non-blocking comments
@@ -750,7 +750,7 @@ portal:
 
 ---
 
-## Putting It All Together
+## Putting It All Together: Key Principles
 
 - AI is not a single tool but a **layer** across the entire lifecycle
 - Each phase benefits from AI while keeping humans in the decision loop

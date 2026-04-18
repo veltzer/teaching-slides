@@ -258,7 +258,7 @@ def enrich_chunk(chunk: dict, file_path: str) -> dict:
 
 ---
 
-## Graph RAG for Code
+## Graph RAG: Motivation
 
 Enhance retrieval by leveraging code dependency graphs:
 
@@ -270,7 +270,7 @@ Enhance retrieval by leveraging code dependency graphs:
 
 ---
 
-## Graph RAG for Code
+## Graph RAG: Implementation Details
 
 - When a query matches `UserService`, also retrieve its dependencies
 - Walk the import/call graph 1-2 hops to gather related context
@@ -414,7 +414,7 @@ def rag_pipeline(query: str, collection, reranker, llm):
 
 ---
 
-## Context Window Budgeting Diagram
+## Context Window Budgeting: Allocation Rules
 
 **Budget allocation rules**:
 1. Reserve 10-15% for system prompt and instructions

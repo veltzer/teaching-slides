@@ -25,7 +25,7 @@ audience:
 
 ---
 
-## What Is an Agent?
+## Agents: Core Definition
 
 - An LLM-powered system that can **plan**, **act**, and **observe** in a loop
 - Goes beyond single prompt-response: maintains goals across multiple steps
@@ -99,7 +99,7 @@ async def parallel_review(code: str):
 
 ---
 
-## Multi-Agent Communication Patterns
+## Multi-Agent Communication: Overview
 
 - Agents can collaborate through different coordination strategies
 
@@ -111,7 +111,7 @@ async def parallel_review(code: str):
 
 ---
 
-## Multi-Agent Communication Patterns
+## Multi-Agent Communication: Pattern Examples
 
 - **Peer-to-peer**: agents pass messages directly via `handoffs`
 - **Shared blackboard**: agents read/write to a common state store
@@ -665,7 +665,7 @@ def test_golden(mock_read_file):
 
 ---
 
-## Monitoring Agents in Production
+## Production Monitoring: What to Track
 
 - **Log every tool call**: inputs, outputs, latency, token usage
 - **Trace conversations**: link multi-turn exchanges with a trace ID

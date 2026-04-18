@@ -281,7 +281,7 @@ Both expose an OpenAI-compatible API for tool integration.
 
 ---
 
-## Privacy-Sensitive Development Workflows
+## Privacy-Sensitive Workflows: The Need
 
 - Some codebases cannot leave the corporate network
 - Local models enable AI assistance without data exfiltration
@@ -603,7 +603,7 @@ Integrate into CI to run weekly; alert when scores drop below threshold.
 
 ---
 
-## AI Development Maturity Model
+## Maturity Model: Why Stages Matter
 
 - Organizations progress through predictable stages of AI adoption
 - Knowing your stage helps prioritize the right investments
@@ -616,7 +616,7 @@ Integrate into CI to run weekly; alert when scores drop below threshold.
 
 ---
 
-## AI Development Maturity Model
+## Maturity Model: Building on Foundations
 
 Each level requires the foundations of the previous one.
 
@@ -640,7 +640,7 @@ Mitigations:
 
 ---
 
-## Building Internal AI Development Platforms
+## Internal AI Platforms: Core Services
 
 - Centralize model access, prompt management, and observability
 - Provide guardrails as a service rather than per-team enforcement
