@@ -96,63 +96,62 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--primary-accent)">resource vs data</text>
 
   <!-- resource column -->
-  <rect x="40" y="70.796460176991" width="590" height="472.212389380531" rx="8.10549906201" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="101.592920353982" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--bg)">resource - creates</text>
-  <text x="335" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Terraform owns the lifecycle</text>
+  <rect x="40" y="40" width="590" height="498.691588785047" rx="8.32965650973" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="72.523364485981" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274325" font-weight="bold" fill="var(--bg)">resource - creates</text>
+  <text x="335" y="99.6261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Terraform owns the lifecycle</text>
 
-  <rect x="60" y="147.787610619469" width="550" height="112.920353982301" rx="6.079124296508" fill="var(--code-bg)"/>
-  <text x="80" y="171.398230088496" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">resource "aws_instance" "web" {</text>
-  <text x="80" y="193.982300884956" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">  ami           = "ami-0c55b1..."</text>
-  <text x="80" y="216.566371681416" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">  instance_type = "t3.micro"</text>
-  <text x="80" y="239.150442477876" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">}</text>
+  <rect x="60" y="121.308411214953" width="550" height="119.252336448598" rx="6.247242382298" fill="var(--code-bg)"/>
+  <text x="80" y="146.242990654206" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">resource "aws_instance" "web" {</text>
+  <text x="80" y="170.093457943926" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">  ami           = "ami-0c55b1..."</text>
+  <text x="80" y="193.943925233645" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">  instance_type = "t3.micro"</text>
+  <text x="80" y="217.794392523364" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">}</text>
 
-  <text x="60" y="291.504424778761" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">State interaction</text>
-  <text x="60" y="317.16814159292" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Stored in terraform.tfstate</text>
-  <text x="60" y="340.778761061947" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">plan diffs desired vs actual</text>
-  <text x="60" y="364.389380530973" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">destroy removes real object</text>
+  <text x="60" y="273.084112149533" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">State interaction</text>
+  <text x="60" y="300.18691588785" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Stored in terraform.tfstate</text>
+  <text x="60" y="325.121495327103" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">plan diffs desired vs actual</text>
+  <text x="60" y="350.056074766355" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">destroy removes real object</text>
 
   <!-- Lifecycle mini-flow -->
-  <text x="60" y="404.424778761062" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">Lifecycle</text>
-  <rect x="60" y="419.823008849558" width="110" height="30.796460176991" rx="4.052749531005" fill="var(--ok-accent)"/>
-  <text x="115" y="440.353982300885" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">create</text>
-  <line x1="175" y1="435.221238938053" x2="205" y2="435.221238938053" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
-  <rect x="210" y="419.823008849558" width="110" height="30.796460176991" rx="4.052749531005" fill="var(--primary-accent)"/>
-  <text x="265" y="440.353982300885" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">update</text>
-  <line x1="325" y1="435.221238938053" x2="355" y2="435.221238938053" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
-  <rect x="360" y="419.823008849558" width="110" height="30.796460176991" rx="4.052749531005" fill="var(--danger-accent)"/>
-  <text x="415" y="440.353982300885" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">destroy</text>
+  <text x="60" y="392.336448598131" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">Lifecycle</text>
+  <rect x="60" y="408.598130841122" width="110" height="32.523364485981" rx="4.164828254865" fill="var(--ok-accent)"/>
+  <text x="115" y="430.280373831776" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">create</text>
+  <line x1="175" y1="424.859813084112" x2="205" y2="424.859813084112" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <rect x="210" y="408.598130841122" width="110" height="32.523364485981" rx="4.164828254865" fill="var(--primary-accent)"/>
+  <text x="265" y="430.280373831776" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">update</text>
+  <line x1="325" y1="424.859813084112" x2="355" y2="424.859813084112" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <rect x="360" y="408.598130841122" width="110" height="32.523364485981" rx="4.164828254865" fill="var(--danger-accent)"/>
+  <text x="415" y="430.280373831776" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">destroy</text>
 
-  <text x="60" y="491.681415929204" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">Use when</text>
-  <text x="60" y="517.345132743363" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Creating new infrastructure</text>
+  <text x="60" y="484.485981308412" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">Use when</text>
+  <text x="60" y="511.588785046729" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Creating new infrastructure</text>
 
   <!-- data column -->
-  <rect x="650" y="70.796460176991" width="590" height="472.212389380531" rx="8.10549906201" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="101.592920353982" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--bg)">data - reads</text>
-  <text x="945" y="127.256637168142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Read-only query to provider</text>
+  <rect x="650" y="40" width="590" height="498.691588785047" rx="8.32965650973" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="72.523364485981" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274325" font-weight="bold" fill="var(--bg)">data - reads</text>
+  <text x="945" y="99.6261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Read-only query to provider</text>
 
-  <rect x="670" y="147.787610619469" width="550" height="133.451327433628" rx="6.079124296508" fill="var(--code-bg)"/>
-  <text x="690" y="171.398230088496" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">data "aws_ami" "amzn" {</text>
-  <text x="690" y="193.982300884956" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">  most_recent = true</text>
-  <text x="690" y="216.566371681416" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">  owners      = ["amazon"]</text>
-  <text x="690" y="239.150442477876" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">}</text>
-  <text x="690" y="265.840707964602" font-family="Courier New, monospace" font-size="13.171435975767" fill="var(--bg)">ami = data.aws_ami.amzn.id</text>
+  <rect x="670" y="121.308411214953" width="550" height="140.934579439252" rx="6.247242382298" fill="var(--code-bg)"/>
+  <text x="690" y="146.242990654206" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">data "aws_ami" "amzn" {</text>
+  <text x="690" y="170.093457943926" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">  most_recent = true</text>
+  <text x="690" y="193.943925233645" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">  owners      = ["amazon"]</text>
+  <text x="690" y="217.794392523364" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">}</text>
+  <text x="690" y="245.981308411215" font-family="Courier New, monospace" font-size="13.535691828312" fill="var(--bg)">ami = data.aws_ami.amzn.id</text>
 
-  <text x="670" y="312.035398230089" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">State interaction</text>
-  <text x="670" y="337.699115044248" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Not stored in tfstate</text>
-  <text x="670" y="361.309734513274" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Refetched every plan</text>
-  <text x="670" y="384.920353982301" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Never destroyed</text>
+  <text x="670" y="294.766355140188" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">State interaction</text>
+  <text x="670" y="321.869158878505" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Not stored in tfstate</text>
+  <text x="670" y="346.803738317757" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Refetched every plan</text>
+  <text x="670" y="371.738317757009" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Never destroyed</text>
 
-  <text x="670" y="419.823008849558" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">Common sources</text>
-  <text x="670" y="445.486725663717" font-family="Courier New, monospace" font-size="12.158248593015" fill="var(--bg)">aws_ami, aws_availability_zones</text>
-  <text x="670" y="466.017699115044" font-family="Courier New, monospace" font-size="12.158248593015" fill="var(--bg)">aws_vpc, aws_iam_policy_document</text>
+  <text x="670" y="408.598130841122" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">Common sources</text>
+  <text x="670" y="435.700934579439" font-family="Courier New, monospace" font-size="12.494484764595" fill="var(--bg)">aws_ami, aws_availability_zones</text>
+  <text x="670" y="457.383177570093" font-family="Courier New, monospace" font-size="12.494484764595" fill="var(--bg)">aws_vpc, aws_iam_policy_document</text>
 
-  <text x="670" y="501.946902654867" font-family="Arial, sans-serif" font-size="14.184623358518" font-weight="bold" fill="var(--bg)">Use when</text>
-  <text x="670" y="525.557522123894" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--bg)">Referencing existing infra</text>
+  <text x="670" y="495.327102803738" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--bg)">Use when</text>
+  <text x="670" y="520.261682242991" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--bg)">Referencing existing infra</text>
 
   <!-- Footer rule -->
-  <rect x="40" y="563.53982300885" width="1200" height="56.46017699115" rx="8.10549906201" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.197810741269" font-weight="bold" fill="var(--text)">resource mutates, data observes</text>
+  <rect x="40" y="560.373831775701" width="1200" height="59.626168224299" rx="8.32965650973" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="592.897196261683" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.618105955744" font-weight="bold" fill="var(--text)">resource mutates, data observes</text>
 </svg>

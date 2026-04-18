@@ -2,37 +2,36 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <text x="628.6792" y="40" text-anchor="middle" font-size="30.7624" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Hardware Interrupt Flow</text>
-  <text x="198.4906" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">1. Device asserts</text>
-  <text x="198.4906" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">interrupt signal</text>
-  <text x="628.6792" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">2. Interrupt controller</text>
-  <text x="628.6792" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">routes it</text>
-  <text x="1036.2264" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">3. CPU saves state</text>
-  <text x="1036.2264" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">and jumps to ISR</text>
-  <rect x="40" y="144.5901" width="294.3397" height="104.5901" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="187.1698" y="192.1312" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Device</text>
-  <text x="187.1698" y="226.3606" text-anchor="middle" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. NIC)</text>
-  <rect x="470.1886" y="144.5901" width="316.9811" height="104.5901" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="628.6792" y="192.1312" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">APIC</text>
-  <text x="628.6792" y="226.3606" text-anchor="middle" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">(Advanced PIC)</text>
-  <rect x="877.7358" y="144.5901" width="339.6227" height="199.6721" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1047.5472" y="188.3279" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CPU</text>
-  <text x="923.0189" y="226.3606" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RIP</text>
-  <text x="923.0189" y="254.8853" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RFLAGS</text>
-  <text x="923.0189" y="283.4098" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RSP</text>
-  <text x="923.0189" y="311.9344" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">Jump to ISR</text>
-  <line x1="334.3396" y1="195.9344" x2="465.6603" y2="195.9344" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="402.2641" y="182.623" font-size="19.2265" fill="var(--warn-accent)" font-family="Arial, sans-serif">IRQ</text>
-  <line x1="787.1698" y1="195.9344" x2="873.2075" y2="195.9344" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="832.4528" y="182.623" font-size="19.2265" fill="var(--primary-accent)" font-family="Arial, sans-serif">INT</text>
-  <line x1="1047.5472" y1="344.2623" x2="1047.5472" y2="410.8196" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="855.0944" y="410.8196" width="384.9056" height="209.1804" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1047.5472" y="458.3606" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ISR</text>
-  <text x="1047.5472" y="492.5901" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">(Interrupt Service</text>
-  <text x="1047.5472" y="521.1147" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)" font-family="Arial, sans-serif">Routine)</text>
-  <text x="900.3773" y="562.9508" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">Handle event</text>
-  <text x="900.3773" y="591.4754" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">ACK to APIC</text>
-  <text x="900.3773" y="620" font-size="19.2265" fill="var(--text-muted)" font-family="Arial, sans-serif">IRET</text>
+  <text x="198.4906" y="40" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">1. Device asserts</text>
+  <text x="198.4906" y="66.928559757653" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">interrupt signal</text>
+  <text x="628.6792" y="40" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">2. Interrupt controller</text>
+  <text x="628.6792" y="66.928559757653" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">routes it</text>
+  <text x="1036.2264" y="40" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">3. CPU saves state</text>
+  <text x="1036.2264" y="66.928559757653" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">and jumps to ISR</text>
+  <rect x="40" y="102.14277155612" width="294.3397" height="113.928505293365" rx="6.262131180487" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="187.1698" y="153.92861422194" text-anchor="middle" font-size="26.086472965112" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Device</text>
+  <text x="187.1698" y="191.214211798467" text-anchor="middle" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">(e.g. NIC)</text>
+  <rect x="470.1886" y="102.14277155612" width="316.9811" height="113.928505293365" rx="6.262131180487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="628.6792" y="153.92861422194" text-anchor="middle" font-size="26.086472965112" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">APIC</text>
+  <text x="628.6792" y="191.214211798467" text-anchor="middle" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">(Advanced PIC)</text>
+  <rect x="877.7358" y="102.14277155612" width="339.6227" height="217.499972767856" rx="6.262131180487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047.5472" y="149.785733737245" text-anchor="middle" font-size="26.086472965112" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CPU</text>
+  <text x="923.0189" y="191.214211798467" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RIP</text>
+  <text x="923.0189" y="222.285760969389" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RFLAGS</text>
+  <text x="923.0189" y="253.357092283162" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">Save RSP</text>
+  <text x="923.0189" y="284.428532525509" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">Jump to ISR</text>
+  <line x1="334.3396" y1="158.07138577806" x2="465.6603" y2="158.07138577806" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="402.2641" y="143.571467474491" font-size="20.066477523604" fill="var(--warn-accent)" font-family="Arial, sans-serif">IRQ</text>
+  <line x1="787.1698" y1="158.07138577806" x2="873.2075" y2="158.07138577806" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="832.4528" y="143.571467474491" font-size="20.066477523604" fill="var(--primary-accent)" font-family="Arial, sans-serif">INT</text>
+  <line x1="1047.5472" y1="319.642853252551" x2="1047.5472" y2="392.14277155612" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="855.0944" y="392.14277155612" width="384.9056" height="227.85722844388" rx="6.262131180487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047.5472" y="443.928505293365" text-anchor="middle" font-size="26.086472965112" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">ISR</text>
+  <text x="1047.5472" y="481.214211798467" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">(Interrupt Service</text>
+  <text x="1047.5472" y="512.285652040814" text-anchor="middle" font-size="22.073073091538" fill="var(--text-muted)" font-family="Arial, sans-serif">Routine)</text>
+  <text x="900.3773" y="557.857119515305" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">Handle event</text>
+  <text x="900.3773" y="588.928559757653" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">ACK to APIC</text>
+  <text x="900.3773" y="620" font-size="20.066477523604" fill="var(--text-muted)" font-family="Arial, sans-serif">IRET</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

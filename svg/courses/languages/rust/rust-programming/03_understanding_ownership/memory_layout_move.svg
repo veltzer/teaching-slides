@@ -95,29 +95,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="688" y="40" text-anchor="middle" font-size="26.0531" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Move Semantics: let s2 = s1;</text>
-  <text x="280" y="106.2857" text-anchor="middle" font-size="23.882" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Before Move</text>
-  <rect x="40" y="139.4285" width="216" height="149.1428" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="148" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">s1 (stack)</text>
-  <text x="148" y="248.8" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--danger-text)">ptr | len:5 | cap:5</text>
-  <rect x="304.0001" y="139.4285" width="192" height="149.1428" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="400" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap</text>
-  <text x="400" y="248.8" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
-  <line x1="256.0001" y1="212.3429" x2="304.0001" y2="212.3429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1096.0001" y="106.2857" text-anchor="middle" font-size="23.882" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">After Move</text>
-  <rect x="760.0001" y="139.4285" width="216" height="149.1428" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" stroke-dasharray="7.9844 5.9883" filter="url(#shadow)"/>
-  <text x="868" y="195.7714" text-anchor="middle" font-size="21.7109" fill="var(--text-faint)" font-family="Arial, sans-serif">s1 (invalid)</text>
-  <text x="868" y="248.8" text-anchor="middle" font-size="21.7109" fill="var(--text-faint)" font-family="Arial, sans-serif">-- moved --</text>
-  <rect x="1024" y="139.4285" width="216" height="149.1428" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1132.0001" y="195.7714" text-anchor="middle" font-size="21.7109" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">s2 (stack)</text>
-  <text x="1132.0001" y="248.8" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--primary-text)">ptr | len:5 | cap:5</text>
-  <rect x="1024" y="338.2857" width="216" height="116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1132.0001" y="388" text-anchor="middle" font-size="21.7109" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap</text>
-  <text x="1132.0001" y="431.0857" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
-  <line x1="1132.0001" y1="288.5714" x2="1132.0001" y2="338.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="556.0001" y1="212.3429" x2="736.0001" y2="212.3429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="11.9766 5.9883"/>
-  <text x="647.2001" y="189.1429" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--text)">move</text>
-  <rect x="208" y="504" width="959.9999" height="116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="688" y="560.3428" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--warn-text)">Ownership transfers from s1 to s2. s1 is invalidated (no double free).</text>
-  <text x="688" y="606.7428" text-anchor="middle" font-size="21.7109" font-family="Arial, sans-serif" fill="var(--warn-text)">Only one owner at a time -- no shallow copy like C++</text>
+  <text x="280" y="40" text-anchor="middle" font-size="25.376040760399" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Before Move</text>
+  <rect x="40" y="77.419289282" width="216" height="168.387027575444" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="148" y="141.032239125911" text-anchor="middle" font-size="23.069118304369" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">s1 (stack)</text>
+  <text x="148" y="200.903237460978" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--danger-text)">ptr | len:5 | cap:5</text>
+  <rect x="304.0001" y="77.419289282" width="192" height="168.387027575444" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="400" y="141.032239125911" text-anchor="middle" font-size="23.069118304369" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap</text>
+  <text x="400" y="200.903237460978" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
+  <line x1="256.0001" y1="159.741996670134" x2="304.0001" y2="159.741996670134" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1096.0001" y="40" text-anchor="middle" font-size="25.376040760399" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">After Move</text>
+  <rect x="760.0001" y="77.419289282" width="216" height="168.387027575444" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.375355688904" stroke-dasharray="7.9844 5.9883" filter="url(#shadow)"/>
+  <text x="868" y="141.032239125911" text-anchor="middle" font-size="23.069118304369" fill="var(--text-faint)" font-family="Arial, sans-serif">s1 (invalid)</text>
+  <text x="868" y="200.903237460978" text-anchor="middle" font-size="23.069118304369" fill="var(--text-faint)" font-family="Arial, sans-serif">-- moved --</text>
+  <rect x="1024" y="77.419289282" width="216" height="168.387027575444" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="1132.0001" y="141.032239125911" text-anchor="middle" font-size="23.069118304369" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">s2 (stack)</text>
+  <text x="1132.0001" y="200.903237460978" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--primary-text)">ptr | len:5 | cap:5</text>
+  <rect x="1024" y="301.935476586889" width="216" height="130.967738293444" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="1132.0001" y="358.064523413111" text-anchor="middle" font-size="23.069118304369" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap</text>
+  <text x="1132.0001" y="406.709667221644" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
+  <line x1="1132.0001" y1="245.806429760667" x2="1132.0001" y2="301.935476586889" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="556.0001" y1="159.741996670134" x2="736.0001" y2="159.741996670134" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="11.9766 5.9883"/>
+  <text x="647.2001" y="133.548449011445" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--text)">move</text>
+  <rect x="208" y="489.032261706556" width="959.9999" height="130.967738293444" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="688" y="552.645098647244" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--warn-text)">Ownership transfers from s1 to s2. s1 is invalidated (no double free).</text>
+  <text x="688" y="605.032193964622" text-anchor="middle" font-size="23.069118304369" font-family="Arial, sans-serif" fill="var(--warn-text)">Only one owner at a time -- no shallow copy like C++</text>
 </svg>

@@ -95,21 +95,20 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="28.687549" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Aggregation Cost (Low to High)</text>
-  <rect x="125.714286" y="204.594672" width="300" height="156.756767" rx="7.073797" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="275.714286" y="288.851332" text-anchor="middle" font-size="28.687549" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Metrics</text>
-  <text x="275.714286" y="328.040615" text-anchor="middle" font-size="17.417458" fill="var(--text-muted)" font-family="Arial, sans-serif">avg, min, max, sum</text>
-  <text x="275.714286" y="410.337829" text-anchor="middle" font-size="16.392818" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Cheap - O(1) per shard</text>
-  <rect x="489.999886" y="145.810808" width="300" height="215.54063" rx="7.073797" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="243.783711" text-anchor="middle" font-size="28.687549" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Terms</text>
-  <text x="640" y="282.972994" text-anchor="middle" font-size="17.417458" fill="var(--text-muted)" font-family="Arial, sans-serif">top-N buckets</text>
-  <text x="640" y="410.337829" text-anchor="middle" font-size="16.392818" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Medium - scales with cardinality</text>
-  <rect x="854.285714" y="67.432364" width="321.428571" height="293.918953" rx="7.073797" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1015" y="184.99997" text-anchor="middle" font-size="28.687549" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Cardinality</text>
-  <text x="1015" y="228.108144" text-anchor="middle" font-size="17.417458" fill="var(--text-muted)" font-family="Arial, sans-serif">unique count (HLL)</text>
-  <text x="1015" y="410.337829" text-anchor="middle" font-size="16.392818" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Expensive - HyperLogLog algorithm</text>
-  <line x1="104.285714" y1="488.716152" x2="1197.142857" y2="488.716152" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640" y="527.905435" text-anchor="middle" font-size="18.441979" fill="var(--text-muted)" font-family="Arial, sans-serif">Low Cost → High Cost</text>
-  <rect x="40" y="565.13515" width="1200" height="54.86485" rx="7.073797" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="598.445973" text-anchor="middle" font-size="16.392818" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use precision_threshold on cardinality aggs. Enable doc_values on fields used in aggs.</text>
+  <rect x="125.714286" y="183.971766453582" width="300" height="164.538997466728" rx="7.24726041388" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="275.714286" y="272.4113702526" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Metrics</text>
+  <text x="275.714286" y="313.546215399412" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">avg, min, max, sum</text>
+  <text x="275.714286" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Cheap - O(1) per shard</text>
+  <rect x="489.999886" y="122.269562236902" width="300" height="226.241200633763" rx="7.24726041388" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="225.106355486951" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--text-muted)" font-family="Arial, sans-serif">Terms</text>
+  <text x="640" y="266.241200633763" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">top-N buckets</text>
+  <text x="640" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Medium - scales with cardinality</text>
+  <rect x="854.285714" y="40" width="321.428571" height="308.510635863589" rx="7.24726041388" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015" y="163.404280376638" text-anchor="middle" font-size="29.391024118865" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Cardinality</text>
+  <text x="1015" y="208.652570886363" text-anchor="middle" font-size="17.844568323607" fill="var(--text-muted)" font-family="Arial, sans-serif">unique count (HLL)</text>
+  <text x="1015" y="399.929095992151" text-anchor="middle" font-size="16.794802135734" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Expensive - HyperLogLog algorithm</text>
+  <line x1="104.285714" y1="482.198531221977" x2="1197.142857" y2="482.198531221977" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="523.333376368789" text-anchor="middle" font-size="18.894212593366" fill="var(--text-muted)" font-family="Arial, sans-serif">Low Cost → High Cost</text>
+  <rect x="40" y="562.4113702526" width="1200" height="57.5886297474" rx="7.24726041388" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="597.375917723853" text-anchor="middle" font-size="16.794802135734" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use precision_threshold on cardinality aggs. Enable doc_values on fields used in aggs.</text>
 </svg>

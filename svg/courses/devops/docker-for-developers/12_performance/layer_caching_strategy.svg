@@ -95,22 +95,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="840" y="40" text-anchor="middle" font-size="28.2652" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Dockerfile Layer Order for Caching</text>
-  <rect x="40" y="79.322" width="742.8571" height="98.305" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="411.4286" y="144.8588" text-anchor="middle" font-size="23.5544" font-family="Arial, sans-serif" fill="var(--ok-text)">FROM node:18-alpine</text>
-  <text x="1240" y="144.8588" font-size="23.5544" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cached (rarely changes)</text>
-  <rect x="40" y="194.0113" width="742.8571" height="98.305" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="411.4286" y="259.5481" text-anchor="middle" font-size="23.5544" font-family="Arial, sans-serif" fill="var(--ok-text)">COPY package*.json ./</text>
-  <text x="1240" y="259.5481" font-size="23.5544" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cached (deps stable)</text>
-  <rect x="40" y="308.7005" width="742.8571" height="98.305" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="411.4286" y="374.2373" text-anchor="middle" font-size="23.5544" font-family="Arial, sans-serif" fill="var(--primary-text)">RUN npm install</text>
-  <text x="1240" y="374.2373" font-size="23.5544" fill="var(--primary-accent)" font-family="Arial, sans-serif">Cached if deps unchanged</text>
-  <rect x="40" y="423.3898" width="742.8571" height="98.305" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="411.4286" y="488.9265" text-anchor="middle" font-size="23.5544" font-family="Arial, sans-serif" fill="var(--warn-text)">COPY . .</text>
-  <text x="1240" y="488.9265" font-size="23.5544" fill="var(--warn-accent)" font-family="Arial, sans-serif">Invalidated on code change</text>
-  <rect x="40" y="538.0791" width="742.8571" height="81.9209" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="411.4286" y="593.7853" text-anchor="middle" font-size="23.5544" font-family="Arial, sans-serif" fill="var(--danger-text)">RUN npm run build</text>
-  <text x="1240" y="593.7853" font-size="23.5544" fill="var(--danger-accent)" font-family="Arial, sans-serif">Rebuilds every time</text>
-  <line x1="868.5713" y1="112.0905" x2="868.5713" y2="587.2317" stroke="var(--text)" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899"/>
-  <text x="925.7143" y="79.322" font-size="23.5544" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Cache status</text>
+  <rect x="40" y="40" width="742.8571" height="105.45444793389" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.21435269332" filter="url(#shadow)"/>
+  <text x="411.4286" y="110.303108319554" text-anchor="middle" font-size="24.395891513258" font-family="Arial, sans-serif" fill="var(--ok-text)">FROM node:18-alpine</text>
+  <text x="1240" y="110.303108319554" font-size="24.395891513258" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cached (rarely changes)</text>
+  <rect x="40" y="163.0303322865" width="742.8571" height="105.45444793389" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.21435269332" filter="url(#shadow)"/>
+  <text x="411.4286" y="233.333440606054" text-anchor="middle" font-size="24.395891513258" font-family="Arial, sans-serif" fill="var(--ok-text)">COPY package*.json ./</text>
+  <text x="1240" y="233.333440606054" font-size="24.395891513258" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cached (deps stable)</text>
+  <rect x="40" y="286.060557300279" width="742.8571" height="105.45444793389" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.21435269332" filter="url(#shadow)"/>
+  <text x="411.4286" y="356.363665619833" text-anchor="middle" font-size="24.395891513258" font-family="Arial, sans-serif" fill="var(--primary-text)">RUN npm install</text>
+  <text x="1240" y="356.363665619833" font-size="24.395891513258" fill="var(--primary-accent)" font-family="Arial, sans-serif">Cached if deps unchanged</text>
+  <rect x="40" y="409.090889586778" width="742.8571" height="105.45444793389" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.21435269332" filter="url(#shadow)"/>
+  <text x="411.4286" y="479.393890633612" text-anchor="middle" font-size="24.395891513258" font-family="Arial, sans-serif" fill="var(--warn-text)">COPY . .</text>
+  <text x="1240" y="479.393890633612" font-size="24.395891513258" fill="var(--warn-accent)" font-family="Arial, sans-serif">Invalidated on code change</text>
+  <rect x="40" y="532.121221873278" width="742.8571" height="87.878778126722" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.21435269332" filter="url(#shadow)"/>
+  <text x="411.4286" y="591.878778126722" text-anchor="middle" font-size="24.395891513258" font-family="Arial, sans-serif" fill="var(--danger-text)">RUN npm run build</text>
+  <text x="1240" y="591.878778126722" font-size="24.395891513258" fill="var(--danger-accent)" font-family="Arial, sans-serif">Rebuilds every time</text>
+  <line x1="868.5713" y1="75.151661432498" x2="868.5713" y2="584.848553112943" stroke="var(--text)" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899"/>
+  <text x="925.7143" y="40" font-size="24.395891513258" fill="var(--text-muted)" font-weight="bold" font-family="Arial, sans-serif">Cache status</text>
 </svg>

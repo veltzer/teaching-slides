@@ -95,24 +95,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.999946" y="40" text-anchor="middle" font-size="23.526643" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Schema Evolution Decision Tree</text>
-  <text x="40" y="81.640907" font-size="20.585842" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Is the change backward-compatible?</text>
-  <rect x="40" y="99.487064" width="1200" height="81.79489" rx="7.060182" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="129.230661" font-size="19.115442" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Adding a new column?</text>
-  <text x="75.999856" y="158.974257" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">Yes → Use mergeSchema (safe)</text>
-  <rect x="40" y="196.153752" width="1200" height="96.666688" rx="7.060182" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="225.897349" font-size="19.115442" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Renaming a column?</text>
-  <text x="75.999856" y="255.640945" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">Yes → Add new column + backfill + drop old</text>
-  <text x="75.999856" y="277.948771" font-size="16.174523" fill="var(--text)" font-family="Arial, sans-serif">(never rename in-place)</text>
-  <rect x="40" y="307.692239" width="1200" height="96.666688" rx="7.060182" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="337.435963" font-size="19.115442" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Changing column type?</text>
-  <text x="75.999856" y="367.17956" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">Widening (int→long): mergeSchema</text>
-  <text x="75.999856" y="393.948668" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">Narrowing (long→int): overwrite</text>
-  <rect x="40" y="419.230725" width="1200" height="96.666688" rx="7.060182" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="448.974321" font-size="19.115442" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Removing a column?</text>
-  <text x="75.999856" y="478.718046" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">Yes → Drop column + rewrite</text>
-  <text x="75.999856" y="501.025743" font-size="16.174523" fill="var(--text)" font-family="Arial, sans-serif">(consumers may break)</text>
-  <rect x="40" y="545.641009" width="1200" height="74.358991" rx="7.060182" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.999946" y="582.820505" text-anchor="middle" font-size="19.115442" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Best practice: version your schemas</text>
-  <text x="639.999946" y="608.10269" text-anchor="middle" font-size="17.645041" fill="var(--text)" font-family="Arial, sans-serif">and validate before processing.</text>
+  <text x="40" y="40" font-size="21.367150331398" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Is the change backward-compatible?</text>
+  <rect x="40" y="59.226518497757" width="1200" height="88.121547154772" rx="7.328141844333" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="91.270718148713" font-size="19.840943249498" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Adding a new column?</text>
+  <text x="75.999856" y="123.314916722322" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">Yes → Use mergeSchema (safe)</text>
+  <rect x="40" y="163.370164939334" width="1200" height="104.143646441577" rx="7.328141844333" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="195.41436459029" font-size="19.840943249498" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Renaming a column?</text>
+  <text x="75.999856" y="227.458563163899" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">Yes → Add new column + backfill + drop old</text>
+  <text x="75.999856" y="251.491851071976" font-size="16.788405569209" fill="var(--text)" font-family="Arial, sans-serif">(never rename in-place)</text>
+  <rect x="40" y="283.535911745063" width="1200" height="104.143646441577" rx="7.328141844333" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="315.580248219194" font-size="19.840943249498" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Changing column type?</text>
+  <text x="75.999856" y="347.62444787015" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">Widening (int→long): mergeSchema</text>
+  <text x="75.999856" y="376.464088254937" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">Narrowing (long→int): overwrite</text>
+  <rect x="40" y="403.701657473444" width="1200" height="104.143646441577" rx="7.328141844333" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="435.745856047053" font-size="19.840943249498" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Removing a column?</text>
+  <text x="75.999856" y="467.790193598532" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">Yes → Drop column + rewrite</text>
+  <text x="75.999856" y="491.823342528738" font-size="16.788405569209" fill="var(--text)" font-family="Arial, sans-serif">(consumers may break)</text>
+  <rect x="40" y="539.88950248863" width="1200" height="80.11049751137" rx="7.328141844333" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.999946" y="579.944751782989" text-anchor="middle" font-size="19.840943249498" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Best practice: version your schemas</text>
+  <text x="639.999946" y="607.182458902018" text-anchor="middle" font-size="18.314735129643" fill="var(--text)" font-family="Arial, sans-serif">and validate before processing.</text>
 </svg>

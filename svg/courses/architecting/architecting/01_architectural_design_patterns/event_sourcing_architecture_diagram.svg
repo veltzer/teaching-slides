@@ -95,38 +95,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="632.9411" y="40" text-anchor="middle" font-size="21.5998" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Event Sourcing Architecture</text>
-  <rect x="40" y="195.2113" width="169.4118" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="124.7058" y="236.0563" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
-  <rect x="322.3529" y="195.2113" width="183.5295" height="65.3521" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="414.1176" y="236.0563" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Event Store</text>
-  <rect x="618.8235" y="97.183" width="169.4118" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="703.5293" y="138.0281" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Projection</text>
-  <rect x="618.8235" y="293.2394" width="183.5295" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="710.5882" y="334.0845" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Event Processor</text>
-  <rect x="901.1764" y="97.183" width="169.4118" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="985.8823" y="138.0281" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Query Service</text>
-  <rect x="901.1764" y="293.2394" width="169.4118" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="985.8823" y="334.0845" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Read Store</text>
-  <rect x="1112.9412" y="97.183" width="127.0588" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1176.4705" y="138.0281" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
-  <rect x="322.3529" y="423.9436" width="183.5295" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="414.1176" y="464.7887" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Audit / History</text>
-  <line x1="209.4116" y1="227.8873" x2="319.5293" y2="227.8873" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="265.8823" y="216.4507" text-anchor="middle" font-size="14.8497" fill="var(--primary-accent)" font-family="Arial, sans-serif">Emit Events</text>
-  <line x1="505.8822" y1="203.3802" x2="615.9999" y2="142.9295" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="548.2353" y="159.2675" text-anchor="middle" font-size="14.8497" fill="var(--primary-accent)" font-family="Arial, sans-serif">Replay</text>
-  <line x1="505.8822" y1="252.3943" x2="615.9999" y2="312.845" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="548.2353" y="298.1408" text-anchor="middle" font-size="14.8497" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stream</text>
-  <line x1="788.2351" y1="129.8591" x2="898.3529" y2="129.8591" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="844.7058" y="118.4225" text-anchor="middle" font-size="14.8497" fill="var(--ok-accent)" font-family="Arial, sans-serif">State</text>
-  <line x1="802.3528" y1="325.9155" x2="898.3529" y2="325.9155" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="851.7646" y="314.4788" text-anchor="middle" font-size="14.8497" fill="var(--ok-accent)" font-family="Arial, sans-serif">Update</text>
-  <line x1="1070.5881" y1="129.8591" x2="1110.1176" y2="129.8591" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1091.7646" y="118.4225" text-anchor="middle" font-size="13.4998" fill="var(--primary-accent)" font-family="Arial, sans-serif">Query</text>
-  <line x1="414.1176" y1="260.5634" x2="414.1176" y2="420.676" stroke="var(--text-faint)" stroke-width="1.9961" stroke-dasharray="6.6537 3.9922" marker-end="url(#arrow)"/>
-  <text x="449.4116" y="358.5915" text-anchor="start" font-size="14.8497" fill="var(--text-faint)" font-family="Arial, sans-serif">Audit Log</text>
-  <rect x="40" y="538.3099" width="1200" height="81.6901" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="639.9999" y="574.2535" text-anchor="middle" font-size="16.1998" fill="var(--text-muted)" font-family="Arial, sans-serif">Events are the source of truth. The Event Store persists all events, which are replayed to build projections</text>
-  <text x="639.9999" y="603.662" text-anchor="middle" font-size="16.1998" fill="var(--text-muted)" font-family="Arial, sans-serif">and processed to update read stores. Full audit history is maintained automatically.</text>
+  <rect x="40" y="148.750124804664" width="169.4118" height="72.49997226563" rx="6.319611734014" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="124.7058" y="194.062538134758" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
+  <rect x="322.3529" y="148.750124804664" width="183.5295" height="72.49997226563" rx="6.319611734014" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="414.1176" y="194.062538134758" text-anchor="middle" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Event Store</text>
+  <rect x="618.8235" y="40" width="169.4118" height="72.49997226563" rx="6.319611734014" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="703.5293" y="85.312524267574" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Projection</text>
+  <rect x="618.8235" y="257.50002773437" width="183.5295" height="72.49997226563" rx="6.319611734014" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710.5882" y="302.812552001943" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Event Processor</text>
+  <rect x="901.1764" y="40" width="169.4118" height="72.49997226563" rx="6.319611734014" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="985.8823" y="85.312524267574" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Query Service</text>
+  <rect x="901.1764" y="257.50002773437" width="169.4118" height="72.49997226563" rx="6.319611734014" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="985.8823" y="302.812552001943" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Read Store</text>
+  <rect x="1112.9412" y="40" width="127.0588" height="72.49997226563" rx="6.319611734014" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1176.4705" y="85.312524267574" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Client</text>
+  <rect x="322.3529" y="402.49997226563" width="183.5295" height="72.49997226563" rx="6.319611734014" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="414.1176" y="447.812496533204" text-anchor="middle" fill="var(--text)" font-family="Arial, sans-serif">Audit / History</text>
+  <line x1="209.4116" y1="185.00005546874" x2="319.5293" y2="185.00005546874" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="265.8823" y="172.312579736313" text-anchor="middle" font-size="15.640723061097" fill="var(--primary-accent)" font-family="Arial, sans-serif">Emit Events</text>
+  <line x1="505.8822" y1="157.812496533204" x2="615.9999" y2="90.750013867185" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="548.2353" y="108.874979199223" text-anchor="middle" font-size="15.640723061097" fill="var(--primary-accent)" font-family="Arial, sans-serif">Replay</text>
+  <line x1="505.8822" y1="212.187503466796" x2="615.9999" y2="279.249986132815" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="548.2353" y="262.937517333981" text-anchor="middle" font-size="15.640723061097" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stream</text>
+  <line x1="788.2351" y1="76.250041601555" x2="898.3529" y2="76.250041601555" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="844.7058" y="63.562565869128" text-anchor="middle" font-size="15.640723061097" fill="var(--ok-accent)" font-family="Arial, sans-serif">State</text>
+  <line x1="802.3528" y1="293.750069335924" x2="898.3529" y2="293.750069335924" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="851.7646" y="281.062482666019" text-anchor="middle" font-size="15.640723061097" fill="var(--ok-accent)" font-family="Arial, sans-serif">Update</text>
+  <line x1="1070.5881" y1="76.250041601555" x2="1110.1176" y2="76.250041601555" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1091.7646" y="63.562565869128" text-anchor="middle" font-size="14.218915747806" fill="var(--primary-accent)" font-family="Arial, sans-serif">Query</text>
+  <line x1="414.1176" y1="221.250097070294" x2="414.1176" y2="398.874979199223" stroke="var(--text-faint)" stroke-width="1.9961" stroke-dasharray="6.6537 3.9922" marker-end="url(#arrow)"/>
+  <text x="449.4116" y="330" text-anchor="start" font-size="15.640723061097" fill="var(--text-faint)" font-family="Arial, sans-serif">Audit Log</text>
+  <rect x="40" y="529.375062402332" width="1200" height="90.624937597668" rx="6.319611734014" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="639.9999" y="569.249986132815" text-anchor="middle" font-size="17.062741028113" fill="var(--text-muted)" font-family="Arial, sans-serif">Events are the source of truth. The Event Store persists all events, which are replayed to build projections</text>
+  <text x="639.9999" y="601.875034667962" text-anchor="middle" font-size="17.062741028113" fill="var(--text-muted)" font-family="Arial, sans-serif">and processed to update read stores. Full audit history is maintained automatically.</text>
 </svg>
