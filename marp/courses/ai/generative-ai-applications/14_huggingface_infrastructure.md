@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## The HuggingFace Ecosystem
+## The HuggingFace Ecosystem (2)
 
 ![huggingface_ecosystem](svg/courses/ai/generative-ai-applications/14_huggingface_infrastructure/huggingface_ecosystem.svg)
 

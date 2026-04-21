@@ -1124,7 +1124,7 @@ The device mapper (`dm`) is a kernel framework for mapping block devices. It und
 
 ---
 
-## Device Mapper Overview
+## Device Mapper Overview (2)
 
 ![device_mapper_overview](svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
 

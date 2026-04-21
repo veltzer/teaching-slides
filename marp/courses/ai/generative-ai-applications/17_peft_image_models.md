@@ -27,7 +27,7 @@ Why customize? To generate images of **your specific** concepts:
 
 ---
 
-## Customizing Image Models
+## Customizing Image Models (2)
 
 ![customizing_image_models_2](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_2.svg)
 

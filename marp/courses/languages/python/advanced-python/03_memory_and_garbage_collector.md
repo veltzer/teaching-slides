@@ -240,7 +240,7 @@ print(sys.getsizeof(2**100)) # Larger due to value size
 
 ---
 
-## Object Size in Memory: Size of Common Types
+## Object Size in Memory: Size of Common Types (2)
 
 ## Strings
 - Fixed overhead plus character storage
@@ -260,7 +260,7 @@ print(sys.getsizeof("🐍"))    # Unicode character
 
 ---
 
-## Object Size in Memory: Size of Common Types
+## Object Size in Memory: Size of Common Types (3)
 
 ## Lists
 - Fixed overhead (typically 64-80 bytes)
@@ -286,7 +286,7 @@ print(sys.getsizeof(many_items))
 
 ---
 
-## Object Size in Memory: Size of Common Types
+## Object Size in Memory: Size of Common Types (4)
 
 ## Dictionaries
 - Significant overhead (typically 232+ bytes)
@@ -465,7 +465,7 @@ print(f"NumPy array: {sys.getsizeof(np_array) / (1024 * 1024):.2f} MB")
 
 ---
 
-## Reducing Memory Footprint: Specialized Libraries
+## Reducing Memory Footprint: Specialized Libraries (2)
 
 ## Arrays Module
 - Homogeneous numeric arrays
@@ -488,7 +488,7 @@ print(f"Array size: {sys.getsizeof(int_array)} bytes")
 
 ---
 
-## Reducing Memory Footprint: Specialized Libraries
+## Reducing Memory Footprint: Specialized Libraries (3)
 
 ## Collections
 - `collections.namedtuple` for small, immutable records

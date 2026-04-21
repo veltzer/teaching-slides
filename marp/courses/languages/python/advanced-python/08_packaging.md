@@ -284,7 +284,7 @@ python -m build --wheel
 ```
 
 ---
-## Modern Packaging: Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools (2)
 
 ## poetry
 - Complete package management
@@ -308,7 +308,7 @@ poetry publish
 ```
 
 ---
-## Modern Packaging: Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools (3)
 
 ## flit
 - Simplest way to package Python modules
@@ -329,7 +329,7 @@ flit publish
 ```
 
 ---
-## Modern Packaging: Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools (4)
 
 ## hatch
 - Modern Python project manager
@@ -570,7 +570,7 @@ pip install --index-url http://localhost:8080/simple/ mypackage
 ```
 
 ---
-## Private Package Repositories: PyPI Server Options
+## Private Package Repositories: PyPI Server Options (2)
 
 ## Artifactory/Nexus/DevPi
 - Enterprise-grade package repositories
@@ -648,7 +648,7 @@ pyinstaller --onefile --windowed --icon=myicon.ico myscript.py
 ```
 
 ---
-## Binary Distributions: Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions (2)
 
 ## cx_Freeze
 - Creates standalone executables
@@ -679,7 +679,7 @@ setup(
 ```
 
 ---
-## Binary Distributions: Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions (3)
 
 ## py2exe/py2app
 - Windows-specific (py2exe)
@@ -709,7 +709,7 @@ setup(
 ```
 
 ---
-## Binary Distributions: Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions (4)
 
 ## Docker Containers
 - Package application with Python runtime
@@ -969,7 +969,7 @@ make html
 ```
 
 ---
-## Documenting Your Module: Documentation Tools
+## Documenting Your Module: Documentation Tools (2)
 
 ## MkDocs
 - Simpler alternative to Sphinx

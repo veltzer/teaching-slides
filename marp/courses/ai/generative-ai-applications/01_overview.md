@@ -92,7 +92,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ---
 
-## The Generative AI Landscape
+## The Generative AI Landscape (2)
 
 ![generative_ai_landscape](svg/courses/ai/generative-ai-applications/01_overview/generative_ai_landscape.svg)
 

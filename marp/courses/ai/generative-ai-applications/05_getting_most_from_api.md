@@ -27,7 +27,7 @@ audience:
 
 ---
 
-## The OpenAI API — Architecture
+## The OpenAI API — Architecture (2)
 
 ![openai_api_architecture](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/openai_api_architecture.svg)
 
