@@ -113,7 +113,7 @@ result = spark.sql("""
 ```
 
 ---
-## Complex SQL Operations
+## Complex SQL Operations: Joins and Nested Queries
 
 ```python
 # Joins
@@ -130,7 +130,7 @@ result = spark.sql("""
 ```
 
 ---
-## Complex SQL Operations
+## Complex SQL Operations: Window Functions
 
 ```python
 # Window Functions

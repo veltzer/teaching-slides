@@ -32,11 +32,7 @@ audience:
 - Extreme lock-in: deeply integrated PaaS (App Engine, Elastic Beanstalk)
 - Assess each workload individually
 
----
-
 <!-- SVG placeholder: lock-in spectrum diagram from low to extreme with service examples -->
-
-## The Lock-In Spectrum
 
 ---
 

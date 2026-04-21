@@ -634,7 +634,7 @@ $ sudo arp -s 192.168.1.1 aa:bb:cc:dd:ee:ff
 
 ---
 
-## Common Network Attacks (continued)
+## Common Attacks: DNS, SYN Flood, Port Scan
 
 ### 3. DNS Spoofing / Cache Poisoning
 
@@ -672,7 +672,7 @@ $ sudo ss -tlnp    # Check what's listening
 
 ---
 
-## Common Network Attacks (continued)
+## Common Attacks: DNS Amplification
 
 ### 6. DNS Amplification DDoS
 

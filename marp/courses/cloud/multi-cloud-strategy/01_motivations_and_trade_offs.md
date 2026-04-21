@@ -32,11 +32,7 @@ audience:
 - Hybrid addresses data locality and legacy systems
 - Multi-cloud addresses vendor risk and best-of-breed needs
 
----
-
 <!-- SVG placeholder: diagram showing multi-cloud vs hybrid cloud topology -->
-
-## Multi-Cloud vs Hybrid Cloud
 
 ---
 
