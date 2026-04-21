@@ -95,50 +95,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="27.2627" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark Error Handling Patterns</text>
-  <rect x="40" y="75.3658" width="259.4595" height="77.8049" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7297" y="107.9024" text-anchor="middle" font-size="19.6898" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">OOM Errors</text>
-  <text x="169.7297" y="136.1951" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Memory overflow</text>
-  <rect x="331.8918" y="75.3658" width="259.4595" height="77.8049" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="461.6216" y="107.9024" text-anchor="middle" font-size="19.6898" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data Skew</text>
-  <text x="461.6216" y="136.1951" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Uneven partitions</text>
-  <rect x="623.7837" y="75.3658" width="259.4595" height="77.8049" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="753.5135" y="107.9024" text-anchor="middle" font-size="19.6898" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Serialization</text>
-  <text x="753.5135" y="136.1951" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Pickle / Kryo errors</text>
-  <rect x="915.6757" y="75.3658" width="324.3243" height="77.8049" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8379" y="107.9024" text-anchor="middle" font-size="19.6898" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Task Failures</text>
-  <text x="1077.8379" y="136.1951" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Network / disk / timeout</text>
-  <line x1="169.7297" y1="153.1707" x2="169.7297" y2="202.6829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="461.6216" y1="153.1707" x2="461.6216" y2="202.6829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="753.5135" y1="153.1707" x2="753.5135" y2="202.6829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1077.8379" y1="153.1707" x2="1077.8379" y2="202.6829" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="202.6829" width="259.4595" height="91.9513" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7297" y="235.2195" text-anchor="middle" font-size="18.1751" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Increase memory</text>
-  <text x="169.7297" y="260.6829" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">offHeap.enabled</text>
-  <text x="169.7297" y="283.3171" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Repartition data</text>
-  <rect x="331.8918" y="202.6829" width="259.4595" height="91.9513" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="461.6216" y="235.2195" text-anchor="middle" font-size="18.1751" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Salting keys</text>
-  <text x="461.6216" y="260.6829" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">AQE skew join</text>
-  <text x="461.6216" y="283.3171" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Broadcast join</text>
-  <rect x="623.7837" y="202.6829" width="259.4595" height="91.9513" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="753.5135" y="235.2195" text-anchor="middle" font-size="18.1751" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use Kryo serializer</text>
-  <text x="753.5135" y="260.6829" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Register classes</text>
-  <text x="753.5135" y="283.3171" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Avoid closures</text>
-  <rect x="915.6757" y="202.6829" width="324.3243" height="91.9513" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8379" y="235.2195" text-anchor="middle" font-size="18.1751" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Retry config</text>
-  <text x="1077.8379" y="260.6829" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">maxRetries = 4</text>
-  <text x="1077.8379" y="283.3171" text-anchor="middle" font-size="16.6606" fill="var(--text)" font-family="Arial, sans-serif">Speculation mode</text>
-  <rect x="72.4324" y="351.2195" width="1135.1352" height="113.1707" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="386.5854" text-anchor="middle" font-size="21.2043" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Application-Level Error Handling</text>
-  <rect x="104.8648" y="407.8049" width="243.2432" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4865" y="436.0976" text-anchor="middle" font-size="16.6606" fill="var(--danger-accent)" font-family="Arial, sans-serif">try/except blocks</text>
-  <rect x="380.5405" y="407.8049" width="243.2432" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="502.1621" y="436.0976" text-anchor="middle" font-size="16.6606" fill="var(--danger-accent)" font-family="Arial, sans-serif">Accumulator errors</text>
-  <rect x="656.2162" y="407.8049" width="243.2432" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="777.8378" y="436.0976" text-anchor="middle" font-size="16.6606" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead letter queue</text>
-  <rect x="931.8919" y="407.8049" width="243.2432" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="436.0976" text-anchor="middle" font-size="16.6606" fill="var(--danger-accent)" font-family="Arial, sans-serif">Checkpointing</text>
-  <rect x="72.4324" y="506.8293" width="1135.1352" height="56.5854" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="542.1951" text-anchor="middle" font-size="19.6898" fill="var(--primary-accent)" font-family="Arial, sans-serif">Log Analysis (Spark UI) | Metrics Alerts | Error Rate Dashboards | Auto-restart policies</text>
-  <text x="640" y="620" text-anchor="middle" font-size="18.1751" fill="var(--text-muted)" font-family="Arial, sans-serif">Resilient Spark applications handle failures gracefully at every level</text>
+  <rect x="40" y="40" width="259.4595" height="82.857158070499" rx="6.191741157425" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.7297" y="74.649362820036" text-anchor="middle" font-size="20.319024173578" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">OOM Errors</text>
+  <text x="169.7297" y="104.779248163263" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Memory overflow</text>
+  <rect x="331.8918" y="40" width="259.4595" height="82.857158070499" rx="6.191741157425" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="461.6216" y="74.649362820036" text-anchor="middle" font-size="20.319024173578" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data Skew</text>
+  <text x="461.6216" y="104.779248163263" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Uneven partitions</text>
+  <rect x="623.7837" y="40" width="259.4595" height="82.857158070499" rx="6.191741157425" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="753.5135" y="74.649362820036" text-anchor="middle" font-size="20.319024173578" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Serialization</text>
+  <text x="753.5135" y="104.779248163263" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Pickle / Kryo errors</text>
+  <rect x="915.6757" y="40" width="324.3243" height="82.857158070499" rx="6.191741157425" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1077.8379" y="74.649362820036" text-anchor="middle" font-size="20.319024173578" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Task Failures</text>
+  <text x="1077.8379" y="104.779248163263" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Network / disk / timeout</text>
+  <line x1="169.7297" y1="122.857158070499" x2="169.7297" y2="175.584430797772" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="461.6216" y1="122.857158070499" x2="461.6216" y2="175.584430797772" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="753.5135" y1="122.857158070499" x2="753.5135" y2="175.584430797772" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1077.8379" y1="122.857158070499" x2="1077.8379" y2="175.584430797772" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="175.584430797772" width="259.4595" height="97.922153988861" rx="6.191741157425" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.7297" y="210.233793617808" text-anchor="middle" font-size="18.755919118386" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Increase memory</text>
+  <text x="169.7297" y="237.350658478663" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">offHeap.enabled</text>
+  <text x="169.7297" y="261.454609350643" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Repartition data</text>
+  <rect x="331.8918" y="175.584430797772" width="259.4595" height="97.922153988861" rx="6.191741157425" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="461.6216" y="210.233793617808" text-anchor="middle" font-size="18.755919118386" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Salting keys</text>
+  <text x="461.6216" y="237.350658478663" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">AQE skew join</text>
+  <text x="461.6216" y="261.454609350643" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Broadcast join</text>
+  <rect x="623.7837" y="175.584430797772" width="259.4595" height="97.922153988861" rx="6.191741157425" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="753.5135" y="210.233793617808" text-anchor="middle" font-size="18.755919118386" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use Kryo serializer</text>
+  <text x="753.5135" y="237.350658478663" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Register classes</text>
+  <text x="753.5135" y="261.454609350643" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Avoid closures</text>
+  <rect x="915.6757" y="175.584430797772" width="324.3243" height="97.922153988861" rx="6.191741157425" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1077.8379" y="210.233793617808" text-anchor="middle" font-size="18.755919118386" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Retry config</text>
+  <text x="1077.8379" y="237.350658478663" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">maxRetries = 4</text>
+  <text x="1077.8379" y="261.454609350643" text-anchor="middle" font-size="17.193020454566" fill="var(--text)" font-family="Arial, sans-serif">Speculation mode</text>
+  <rect x="72.4324" y="333.76624897959" width="1135.1352" height="120.519434879411" rx="6.191741157425" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="371.428632281998" text-anchor="middle" font-size="21.881922837399" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Application-Level Error Handling</text>
+  <rect x="104.8648" y="394.026019666044" width="243.2432" height="45.194881261588" rx="6.191741157425" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4865" y="424.15590500927" text-anchor="middle" font-size="17.193020454566" fill="var(--danger-accent)" font-family="Arial, sans-serif">try/except blocks</text>
+  <rect x="380.5405" y="394.026019666044" width="243.2432" height="45.194881261588" rx="6.191741157425" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="502.1621" y="424.15590500927" text-anchor="middle" font-size="17.193020454566" fill="var(--danger-accent)" font-family="Arial, sans-serif">Accumulator errors</text>
+  <rect x="656.2162" y="394.026019666044" width="243.2432" height="45.194881261588" rx="6.191741157425" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="777.8378" y="424.15590500927" text-anchor="middle" font-size="17.193020454566" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead letter queue</text>
+  <rect x="931.8919" y="394.026019666044" width="243.2432" height="45.194881261588" rx="6.191741157425" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="424.15590500927" text-anchor="middle" font-size="17.193020454566" fill="var(--danger-accent)" font-family="Arial, sans-serif">Checkpointing</text>
+  <rect x="72.4324" y="499.480565120589" width="1135.1352" height="60.259770686453" rx="6.191741157425" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="537.142841929501" text-anchor="middle" font-size="20.319024173578" fill="var(--primary-accent)" font-family="Arial, sans-serif">Log Analysis (Spark UI) | Metrics Alerts | Error Rate Dashboards | Auto-restart policies</text>
+  <text x="640" y="620" text-anchor="middle" font-size="18.755919118386" fill="var(--text-muted)" font-family="Arial, sans-serif">Resilient Spark applications handle failures gracefully at every level</text>
 </svg>

@@ -95,50 +95,49 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="26.6558" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Vector Processing: Scalar vs Vector</text>
-  <rect x="40" y="71.3514" width="1200" height="156.7568" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="80.678" y="107.4054" font-size="21.6578" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Scalar operation (one element at a time):</text>
-  <text x="101.0169" y="141.8919" font-size="18.3257" fill="var(--text)" font-family="Courier New, monospace">A[0] = B[0] + C[0]  cycle 1</text>
-  <text x="101.0169" y="166.9731" font-size="18.3257" fill="var(--text)" font-family="Courier New, monospace">A[1] = B[1] + C[1]  cycle 2</text>
-  <text x="609.4915" y="141.8919" font-size="18.3257" fill="var(--text)" font-family="Courier New, monospace">A[2] = B[2] + C[2]  cycle 3</text>
-  <text x="609.4915" y="166.9731" font-size="18.3257" fill="var(--text)" font-family="Courier New, monospace">A[3] = B[3] + C[3]  cycle 4</text>
-  <text x="1056.9491" y="154.4324" font-size="19.9918" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Total: 4 cycles</text>
-  <rect x="40" y="259.4595" width="1200" height="360.5405" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="80.678" y="295.5135" font-size="21.6578" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Vector operation (multiple elements at once):</text>
-  <rect x="141.695" y="314.3243" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="263.7289" y="348.8108" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[0]</text>
-  <rect x="385.7628" y="314.3243" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="507.7967" y="348.8108" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[1]</text>
-  <rect x="629.8305" y="314.3243" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="751.8644" y="348.8108" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[2]</text>
-  <rect x="873.8982" y="314.3243" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="995.9322" y="348.8108" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[3]</text>
-  <text x="1158.644" y="348.8108" font-size="16.6599" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 1</text>
-  <text x="263.7289" y="392.7027" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
-  <text x="507.7967" y="392.7027" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
-  <text x="751.8644" y="392.7027" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
-  <text x="995.9322" y="392.7027" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
-  <rect x="141.695" y="405.2432" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="263.7289" y="439.7298" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[0]</text>
-  <rect x="385.7628" y="405.2432" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="507.7967" y="439.7298" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[1]</text>
-  <rect x="629.8305" y="405.2432" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="751.8644" y="439.7298" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[2]</text>
-  <rect x="873.8982" y="405.2432" width="244.0678" height="54.8649" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="995.9322" y="439.7298" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[3]</text>
-  <text x="1158.644" y="439.7298" font-size="16.6599" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 2</text>
-  <text x="263.7289" y="483.6217" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
-  <text x="507.7967" y="483.6217" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
-  <text x="751.8644" y="483.6217" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
-  <text x="995.9322" y="483.6217" text-anchor="middle" font-size="23.3237" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
-  <rect x="141.695" y="496.1623" width="244.0678" height="54.8649" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="263.7289" y="530.6487" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[0]</text>
-  <rect x="385.7628" y="496.1623" width="244.0678" height="54.8649" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="507.7967" y="530.6487" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[1]</text>
-  <rect x="629.8305" y="496.1623" width="244.0678" height="54.8649" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="751.8644" y="530.6487" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[2]</text>
-  <rect x="873.8982" y="496.1623" width="244.0678" height="54.8649" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="995.9322" y="530.6487" text-anchor="middle" font-size="16.6599" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[3]</text>
-  <text x="1158.644" y="530.6487" font-size="16.6599" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 3</text>
-  <text x="640.0001" y="588.6486" text-anchor="middle" font-size="21.6578" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Total: 1 cycle (4x speedup!)</text>
+  <rect x="40" y="40" width="1200" height="165.714346122454" rx="6.169047433086" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80.678" y="78.114231951016" font-size="22.267999249383" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Scalar operation (one element at a time):</text>
+  <text x="101.0169" y="114.571392326527" font-size="18.842018757418" fill="var(--text)" font-family="Courier New, monospace">A[0] = B[0] + C[0]  cycle 1</text>
+  <text x="101.0169" y="141.085806106131" font-size="18.842018757418" fill="var(--text)" font-family="Courier New, monospace">A[1] = B[1] + C[1]  cycle 2</text>
+  <text x="609.4915" y="114.571392326527" font-size="18.842018757418" fill="var(--text)" font-family="Courier New, monospace">A[2] = B[2] + C[2]  cycle 3</text>
+  <text x="609.4915" y="141.085806106131" font-size="18.842018757418" fill="var(--text)" font-family="Courier New, monospace">A[3] = B[3] + C[3]  cycle 4</text>
+  <text x="1056.9491" y="127.828493502034" font-size="20.555060412129" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Total: 4 cycles</text>
+  <rect x="40" y="238.857151918368" width="1200" height="381.142848081632" rx="6.169047433086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80.678" y="276.971383869384" font-size="22.267999249383" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Vector operation (multiple elements at once):</text>
+  <rect x="141.695" y="296.857088489791" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="263.7289" y="333.314248865303" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[0]</text>
+  <rect x="385.7628" y="296.857088489791" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="507.7967" y="333.314248865303" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[1]</text>
+  <rect x="629.8305" y="296.857088489791" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="751.8644" y="333.314248865303" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[2]</text>
+  <rect x="873.8982" y="296.857088489791" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="995.9322" y="333.314248865303" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">B[3]</text>
+  <text x="1158.644" y="333.314248865303" font-size="17.129285555079" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 1</text>
+  <text x="263.7289" y="379.714261551018" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
+  <text x="507.7967" y="379.714261551018" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
+  <text x="751.8644" y="379.714261551018" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
+  <text x="995.9322" y="379.714261551018" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">+</text>
+  <rect x="141.695" y="392.971362726525" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="263.7289" y="429.428628816332" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[0]</text>
+  <rect x="385.7628" y="392.971362726525" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="507.7967" y="429.428628816332" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[1]</text>
+  <rect x="629.8305" y="392.971362726525" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="751.8644" y="429.428628816332" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[2]</text>
+  <rect x="873.8982" y="392.971362726525" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="995.9322" y="429.428628816332" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">C[3]</text>
+  <text x="1158.644" y="429.428628816332" font-size="17.129285555079" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 2</text>
+  <text x="263.7289" y="475.828641502047" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
+  <text x="507.7967" y="475.828641502047" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
+  <text x="751.8644" y="475.828641502047" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
+  <text x="995.9322" y="475.828641502047" text-anchor="middle" font-size="23.980835269179" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">=</text>
+  <rect x="141.695" y="489.085848391849" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="263.7289" y="525.542903053065" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[0]</text>
+  <rect x="385.7628" y="489.085848391849" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="507.7967" y="525.542903053065" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[1]</text>
+  <rect x="629.8305" y="489.085848391849" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="751.8644" y="525.542903053065" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[2]</text>
+  <rect x="873.8982" y="489.085848391849" width="244.0678" height="58.000042285718" rx="6.169047433086" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="995.9322" y="525.542903053065" text-anchor="middle" font-size="17.129285555079" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">A[3]</text>
+  <text x="1158.644" y="525.542903053065" font-size="17.129285555079" fill="var(--text-muted)" font-family="Arial, sans-serif">Vector Reg 3</text>
+  <text x="640.0001" y="586.857088489791" text-anchor="middle" font-size="22.267999249383" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Total: 1 cycle (4x speedup!)</text>
 </svg>

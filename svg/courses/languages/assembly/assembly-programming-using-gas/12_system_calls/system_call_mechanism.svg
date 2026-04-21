@@ -96,38 +96,37 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945761708923" font-weight="bold" fill="var(--primary-accent)">System Call Mechanism</text>
 
-  <rect x="40" y="72.222222222222" width="560" height="225.555555555556" rx="8.291003602746" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="320" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--primary-text)">USER SPACE</text>
-  <text x="320" y="147.407407407407" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--primary-text)">EAX = syscall number</text>
-  <text x="320" y="179.62962962963" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--primary-text)">EBX, ECX, EDX = args</text>
-  <text x="320" y="211.851851851852" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--primary-text)">ESI, EDI = args 4, 5</text>
-  <text x="320" y="260.185185185185" text-anchor="middle" font-family="Courier New, monospace" font-size="18.654758106178" font-weight="bold" fill="var(--primary-text)">int $0x80</text>
+  <rect x="40" y="40" width="560" height="238.823529411765" rx="8.531372323694" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--primary-text)">USER SPACE</text>
+  <text x="320" y="119.607843137255" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">EAX = syscall number</text>
+  <text x="320" y="153.725490196079" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">EBX, ECX, EDX = args</text>
+  <text x="320" y="187.843137254902" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--primary-text)">ESI, EDI = args 4, 5</text>
+  <text x="320" y="239.019607843137" text-anchor="middle" font-family="Courier New, monospace" font-size="19.195587728312" font-weight="bold" fill="var(--primary-text)">int $0x80</text>
 
-  <rect x="40" y="340.740740740741" width="560" height="279.259259259259" rx="8.291003602746" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="320" y="378.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--danger-text)">KERNEL SPACE</text>
-  <text x="320" y="415.925925925926" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--danger-text)">syscall_table[EAX]</text>
-  <text x="320" y="458.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">Dispatches to handler</text>
-  <text x="320" y="496.481481481482" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">Returns via EAX</text>
-  <text x="320" y="534.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">EAX &gt;= 0: success</text>
-  <text x="320" y="566.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">EAX &lt; 0: -errno</text>
+  <rect x="40" y="324.313725490196" width="560" height="295.686274509804" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="364.117647058823" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--danger-text)">KERNEL SPACE</text>
+  <text x="320" y="403.921568627451" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--danger-text)">syscall_table[EAX]</text>
+  <text x="320" y="449.411764705883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--danger-text)">Dispatches to handler</text>
+  <text x="320" y="489.21568627451" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--danger-text)">Returns via EAX</text>
+  <text x="320" y="529.019607843137" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--danger-text)">EAX &gt;= 0: success</text>
+  <text x="320" y="563.137254901961" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--danger-text)">EAX &lt; 0: -errno</text>
 
-  <line x1="320" y1="297.777777777778" x2="320" y2="335.37037037037" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="290" y1="335.37037037037" x2="290" y2="297.777777777778" stroke="var(--ok-border)" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrow-ok)"/>
+  <line x1="320" y1="278.823529411765" x2="320" y2="318.627450980392" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="290" y1="318.627450980392" x2="290" y2="278.823529411765" stroke="var(--ok-border)" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrow-ok)"/>
 
-  <rect x="640" y="72.222222222222" width="600" height="547.777777777778" rx="8.291003602746" fill="var(--surface)" stroke="var(--border)"/>
-  <text x="940" y="109.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--text)">Common x86 Syscalls</text>
-  <text x="680" y="158.148148148148" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">1  sys_exit     EBX=code</text>
-  <text x="680" y="195.740740740741" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">2  sys_fork</text>
-  <text x="680" y="233.333333333333" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">3  sys_read     fd, buf, count</text>
-  <text x="680" y="270.925925925926" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">4  sys_write    fd, buf, count</text>
-  <text x="680" y="308.518518518519" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">5  sys_open     name, flags, mode</text>
-  <text x="680" y="346.111111111111" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">6  sys_close    fd</text>
-  <text x="680" y="383.703703703704" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">7  sys_waitpid</text>
-  <text x="680" y="421.296296296296" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">20 sys_getpid</text>
-  <text x="680" y="458.888888888889" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--text)">45 sys_brk</text>
-  <text x="680" y="534.074074074074" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--text-muted)">Trap switches to ring 0</text>
-  <text x="680" y="566.296296296296" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--text-muted)">Kernel validates args</text>
-  <text x="680" y="598.518518518519" font-family="Courier New, monospace" font-size="13.472880854462" fill="var(--text-muted)">cmp $0, %eax; jl error</text>
+  <rect x="640" y="40" width="600" height="580" rx="8.531372323694" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="940" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--text)">Common x86 Syscalls</text>
+  <text x="680" y="130.980392156863" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">1  sys_exit     EBX=code</text>
+  <text x="680" y="170.784313725491" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">2  sys_fork</text>
+  <text x="680" y="210.588235294117" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">3  sys_read     fd, buf, count</text>
+  <text x="680" y="250.392156862745" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">4  sys_write    fd, buf, count</text>
+  <text x="680" y="290.196078431373" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">5  sys_open     name, flags, mode</text>
+  <text x="680" y="330" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">6  sys_close    fd</text>
+  <text x="680" y="369.803921568628" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">7  sys_waitpid</text>
+  <text x="680" y="409.607843137255" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">20 sys_getpid</text>
+  <text x="680" y="449.411764705883" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--text)">45 sys_brk</text>
+  <text x="680" y="529.019607843137" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--text-muted)">Trap switches to ring 0</text>
+  <text x="680" y="563.137254901961" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--text-muted)">Kernel validates args</text>
+  <text x="680" y="597.254901960785" font-family="Courier New, monospace" font-size="13.863480026003" fill="var(--text-muted)">cmp $0, %eax; jl error</text>
 </svg>

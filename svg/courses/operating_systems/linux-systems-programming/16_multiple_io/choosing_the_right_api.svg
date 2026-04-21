@@ -96,40 +96,39 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.383207" font-weight="bold" fill="var(--text)">Choosing the Right I/O API</text>
 
-  <rect x="40" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">Few connections</text>
-  <text x="230" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">up to ~100</text>
-  <rect x="70" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="230" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">Blocking I/O</text>
-  <text x="230" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">simplest code</text>
-  <text x="230" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">one thread per fd</text>
-  <text x="230" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">no syscall overhead</text>
-  <text x="230" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">limits at thread cost</text>
-  <text x="230" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">ssh, small daemons</text>
+  <rect x="40" y="40" width="380" height="518.297872532368" rx="6.66524772076" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="107.872341229289" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.660991944952" font-weight="bold" fill="var(--bg)">Few connections</text>
+  <text x="230" y="157.234043428927" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.773994629968" fill="var(--bg)">up to ~100</text>
+  <rect x="70" y="200.425531866908" width="320" height="86.382979131281" rx="6.66524772076" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="230" y="255.957446700543" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.439243412641" font-weight="bold" fill="var(--text)">Blocking I/O</text>
+  <text x="230" y="348.510638465822" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">simplest code</text>
+  <text x="230" y="385.531915397465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">one thread per fd</text>
+  <text x="230" y="422.553191201449" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">no syscall overhead</text>
+  <text x="230" y="459.574468133092" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">limits at thread cost</text>
+  <text x="230" y="521.276595600724" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.441371300545" fill="var(--bg)">ssh, small daemons</text>
 
-  <rect x="450" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">Moderate load</text>
-  <text x="640" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">hundreds of fds</text>
-  <rect x="480" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">select / poll</text>
-  <text x="640" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">portable everywhere</text>
-  <text x="640" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">O(n) scan per call</text>
-  <text x="640" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">level-triggered</text>
-  <text x="640" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">legacy-compatible</text>
-  <text x="640" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">cross-platform tools</text>
+  <rect x="450" y="40" width="380" height="518.297872532368" rx="6.66524772076" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="107.872341229289" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.660991944952" font-weight="bold" fill="var(--bg)">Moderate load</text>
+  <text x="640" y="157.234043428927" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.773994629968" fill="var(--bg)">hundreds of fds</text>
+  <rect x="480" y="200.425531866908" width="320" height="86.382979131281" rx="6.66524772076" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="255.957446700543" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.439243412641" font-weight="bold" fill="var(--text)">select / poll</text>
+  <text x="640" y="348.510638465822" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">portable everywhere</text>
+  <text x="640" y="385.531915397465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">O(n) scan per call</text>
+  <text x="640" y="422.553191201449" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">level-triggered</text>
+  <text x="640" y="459.574468133092" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">legacy-compatible</text>
+  <text x="640" y="521.276595600724" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.441371300545" fill="var(--bg)">cross-platform tools</text>
 
-  <rect x="860" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">High performance</text>
-  <text x="1050" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">10k+ connections</text>
-  <rect x="890" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1050" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">epoll / io_uring</text>
-  <text x="1050" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">O(1) ready set</text>
-  <text x="1050" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">edge-triggered mode</text>
-  <text x="1050" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">io_uring: zero syscalls</text>
-  <text x="1050" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">Linux-specific</text>
-  <text x="1050" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">nginx, Redis, databases</text>
+  <rect x="860" y="40" width="380" height="518.297872532368" rx="6.66524772076" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="107.872341229289" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.660991944952" font-weight="bold" fill="var(--bg)">High performance</text>
+  <text x="1050" y="157.234043428927" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.773994629968" fill="var(--bg)">10k+ connections</text>
+  <rect x="890" y="200.425531866908" width="320" height="86.382979131281" rx="6.66524772076" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="255.957446700543" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.439243412641" font-weight="bold" fill="var(--text)">epoll / io_uring</text>
+  <text x="1050" y="348.510638465822" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">O(1) ready set</text>
+  <text x="1050" y="385.531915397465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">edge-triggered mode</text>
+  <text x="1050" y="422.553191201449" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">io_uring: zero syscalls</text>
+  <text x="1050" y="459.574468133092" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.663119832856" fill="var(--bg)">Linux-specific</text>
+  <text x="1050" y="521.276595600724" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.441371300545" fill="var(--bg)">nginx, Redis, databases</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--text-muted)">Start simple. Move right only when measurements justify it.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.773994629968" fill="var(--text-muted)">Start simple. Move right only when measurements justify it.</text>
 </svg>

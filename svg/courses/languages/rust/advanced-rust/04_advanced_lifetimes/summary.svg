@@ -95,36 +95,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="29.2338" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Advanced Lifetimes Cheatsheet</text>
-  <rect x="40" y="65.5883" width="1200" height="554.4117" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="80.6779" y="91.1764" width="345.7626" height="44.353" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="121.8824" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Elision rule 1</text>
-  <text x="467.1186" y="121.8824" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">each param gets own lifetime</text>
-  <rect x="80.6779" y="144.0588" width="345.7626" height="44.353" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="174.7647" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Elision rule 2</text>
-  <text x="467.1186" y="174.7647" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">single input -&gt; all outputs</text>
-  <rect x="80.6779" y="196.9412" width="345.7626" height="44.353" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="227.647" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Elision rule 3</text>
-  <text x="467.1186" y="227.647" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">&amp;self lifetime -&gt; all outputs</text>
-  <rect x="80.6779" y="249.8236" width="345.7626" height="44.353" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="280.5294" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">'static</text>
-  <text x="467.1186" y="280.5294" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">no non-static borrows (or string lits)</text>
-  <rect x="80.6779" y="302.7059" width="345.7626" height="44.353" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="333.4118" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">T: 'a</text>
-  <text x="467.1186" y="333.4118" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">all refs in T outlive 'a</text>
-  <rect x="80.6779" y="355.5882" width="345.7626" height="44.353" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="386.2941" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">for&lt;'a&gt;</text>
-  <text x="467.1186" y="386.2941" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">works for ALL lifetimes</text>
-  <rect x="80.6779" y="408.4706" width="345.7626" height="44.353" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="439.1764" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Covariant</text>
-  <text x="467.1186" y="439.1764" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">longer life usable as shorter</text>
-  <rect x="80.6779" y="461.3529" width="345.7626" height="44.353" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="492.0588" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Invariant</text>
-  <text x="467.1186" y="492.0588" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">exact lifetime match required</text>
-  <rect x="80.6779" y="514.2353" width="345.7626" height="44.353" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="544.9411" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Self-ref</text>
-  <text x="467.1186" y="544.9411" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">use indices, Pin, or ouroboros</text>
-  <rect x="80.6779" y="567.1176" width="345.7626" height="44.353" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5593" y="597.8236" text-anchor="middle" font-size="20.0983" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Reborrowing</text>
-  <text x="467.1186" y="597.8236" font-size="20.0983" fill="var(--text)" font-family="Arial, sans-serif">&amp;mut *r creates shorter-lived &amp;mut</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6.136900101603" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="80.6779" y="66.769092355013" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="98.892296104141" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Elision rule 1</text>
+  <text x="467.1186" y="98.892296104141" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">each param gets own lifetime</text>
+  <rect x="80.6779" y="122.092224965671" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="154.215324099401" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Elision rule 2</text>
+  <text x="467.1186" y="154.215324099401" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">single input -&gt; all outputs</text>
+  <rect x="80.6779" y="177.415357576328" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="209.538352094662" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Elision rule 3</text>
+  <text x="467.1186" y="209.538352094662" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">&amp;self lifetime -&gt; all outputs</text>
+  <rect x="80.6779" y="232.738490186986" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="264.861484705319" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">'static</text>
+  <text x="467.1186" y="264.861484705319" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">no non-static borrows (or string lits)</text>
+  <rect x="80.6779" y="288.061518182246" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="320.184617315977" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">T: 'a</text>
+  <text x="467.1186" y="320.184617315977" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">all refs in T outlive 'a</text>
+  <rect x="80.6779" y="343.384546177507" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="375.507645311237" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">for&lt;'a&gt;</text>
+  <text x="467.1186" y="375.507645311237" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">works for ALL lifetimes</text>
+  <rect x="80.6779" y="398.707678788164" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="430.830673306498" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Covariant</text>
+  <text x="467.1186" y="430.830673306498" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">longer life usable as shorter</text>
+  <rect x="80.6779" y="454.030706783425" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="486.153805917155" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Invariant</text>
+  <text x="467.1186" y="486.153805917155" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">exact lifetime match required</text>
+  <rect x="80.6779" y="509.353839394082" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="541.476833912416" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Self-ref</text>
+  <text x="467.1186" y="541.476833912416" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">use indices, Pin, or ouroboros</text>
+  <rect x="80.6779" y="564.676867389343" width="345.7626" height="46.400066953854" rx="6.136900101603" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="253.5593" y="596.80007113847" text-anchor="middle" font-size="20.556876552007" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Reborrowing</text>
+  <text x="467.1186" y="596.80007113847" font-size="20.556876552007" fill="var(--text)" font-family="Arial, sans-serif">&amp;mut *r creates shorter-lived &amp;mut</text>
 </svg>

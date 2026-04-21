@@ -95,31 +95,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="629.0909" y="40" text-anchor="middle" font-size="24.4932" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Stack Layout During Buffer Overflow</text>
-  <rect x="40" y="72.2222" width="501.8183" height="547.7778" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="127" text-anchor="middle" font-size="22.4521" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Normal Stack</text>
-  <rect x="94.5454" y="152.7778" width="392.7273" height="70.8889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="201.1111" text-anchor="middle" font-size="20.411" font-family="Arial, sans-serif" fill="var(--ok-text)">Local Variables</text>
-  <rect x="94.5454" y="223.6667" width="392.7273" height="70.8889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="272" text-anchor="middle" font-size="20.411" font-family="Arial, sans-serif" fill="var(--ok-text)">Buffer[64]</text>
-  <rect x="94.5454" y="294.5555" width="392.7273" height="70.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="342.8889" text-anchor="middle" font-size="20.411" font-family="Arial, sans-serif" fill="var(--warn-text)">Saved Frame Pointer</text>
-  <rect x="94.5454" y="365.4444" width="392.7273" height="70.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="413.7777" text-anchor="middle" font-size="20.411" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Return Address</text>
-  <rect x="94.5454" y="436.3333" width="392.7273" height="70.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="290.9091" y="484.6666" text-anchor="middle" font-size="20.411" font-family="Arial, sans-serif" fill="var(--info-text)">Function Arguments</text>
-  <text x="290.9091" y="571.6666" text-anchor="middle" font-size="20.411" fill="var(--text-muted)" font-family="Arial, sans-serif">Stack grows downward</text>
-  <rect x="672.7273" y="72.2222" width="567.2727" height="547.7778" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="127" text-anchor="middle" font-size="22.4521" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Overflowed Stack</text>
-  <rect x="727.2728" y="152.7778" width="458.1818" height="70.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="201.1111" text-anchor="middle" font-size="20.411" fill="var(--danger-accent)" font-family="Arial, sans-serif">AAAA AAAA AAAA...</text>
-  <rect x="727.2728" y="223.6667" width="458.1818" height="70.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="272" text-anchor="middle" font-size="20.411" fill="var(--danger-accent)" font-family="Arial, sans-serif">AAAA (overflow)</text>
-  <rect x="727.2728" y="294.5555" width="458.1818" height="70.8889" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="342.8889" text-anchor="middle" font-size="20.411" fill="var(--danger-accent)" font-family="Arial, sans-serif">Overwritten!</text>
-  <rect x="727.2728" y="365.4444" width="458.1818" height="70.8889" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="413.7777" text-anchor="middle" font-size="20.411" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">0xDEADBEEF (hijacked)</text>
-  <rect x="727.2728" y="436.3333" width="458.1818" height="70.8889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.3636" y="484.6666" text-anchor="middle" font-size="20.411" font-family="Arial, sans-serif" fill="var(--info-text)">Function Arguments</text>
-  <text x="956.3636" y="571.6666" text-anchor="middle" font-size="20.411" fill="var(--danger-accent)" font-family="Arial, sans-serif">Attacker controls execution</text>
+  <rect x="40" y="40" width="501.8183" height="580" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="98.00002117647" text-anchor="middle" font-size="23.103019832248" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Normal Stack</text>
+  <rect x="94.5454" y="125.294161245673" width="392.7273" height="75.058832249135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="176.470594463668" text-anchor="middle" font-size="21.002745302043" font-family="Arial, sans-serif" fill="var(--ok-text)">Local Variables</text>
+  <rect x="94.5454" y="200.352993494808" width="392.7273" height="75.058832249135" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="251.529426712802" text-anchor="middle" font-size="21.002745302043" font-family="Arial, sans-serif" fill="var(--ok-text)">Buffer[64]</text>
+  <rect x="94.5454" y="275.411719861594" width="392.7273" height="75.058832249135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="326.588258961937" text-anchor="middle" font-size="21.002745302043" font-family="Arial, sans-serif" fill="var(--warn-text)">Saved Frame Pointer</text>
+  <rect x="94.5454" y="350.470552110728" width="392.7273" height="75.058832249135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="401.646985328723" text-anchor="middle" font-size="21.002745302043" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Return Address</text>
+  <rect x="94.5454" y="425.529384359863" width="392.7273" height="75.058832249135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="290.9091" y="476.705817577857" text-anchor="middle" font-size="21.002745302043" font-family="Arial, sans-serif" fill="var(--info-text)">Function Arguments</text>
+  <text x="290.9091" y="568.823460899657" text-anchor="middle" font-size="21.002745302043" fill="var(--text-muted)" font-family="Arial, sans-serif">Stack grows downward</text>
+  <rect x="672.7273" y="40" width="567.2727" height="580" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="98.00002117647" text-anchor="middle" font-size="23.103019832248" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Overflowed Stack</text>
+  <rect x="727.2728" y="125.294161245673" width="458.1818" height="75.058832249135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="176.470594463668" text-anchor="middle" font-size="21.002745302043" fill="var(--danger-accent)" font-family="Arial, sans-serif">AAAA AAAA AAAA...</text>
+  <rect x="727.2728" y="200.352993494808" width="458.1818" height="75.058832249135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="251.529426712802" text-anchor="middle" font-size="21.002745302043" fill="var(--danger-accent)" font-family="Arial, sans-serif">AAAA (overflow)</text>
+  <rect x="727.2728" y="275.411719861594" width="458.1818" height="75.058832249135" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="326.588258961937" text-anchor="middle" font-size="21.002745302043" fill="var(--danger-accent)" font-family="Arial, sans-serif">Overwritten!</text>
+  <rect x="727.2728" y="350.470552110728" width="458.1818" height="75.058832249135" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="401.646985328723" text-anchor="middle" font-size="21.002745302043" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">0xDEADBEEF (hijacked)</text>
+  <rect x="727.2728" y="425.529384359863" width="458.1818" height="75.058832249135" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.173948939898" filter="url(#shadow)"/>
+  <text x="956.3636" y="476.705817577857" text-anchor="middle" font-size="21.002745302043" font-family="Arial, sans-serif" fill="var(--info-text)">Function Arguments</text>
+  <text x="956.3636" y="568.823460899657" text-anchor="middle" font-size="21.002745302043" fill="var(--danger-accent)" font-family="Arial, sans-serif">Attacker controls execution</text>
 </svg>

@@ -96,27 +96,26 @@
     </marker>
   </defs>
 
-  <text x="547.692308" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.092369" font-weight="bold" fill="var(--text)">Stack Layout and Canary Protection</text>
 
-  <rect x="40" y="92.727273" width="646.153846" height="105.454545" rx="6.618474" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="363.076923" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Return Address</text>
+  <rect x="40" y="40" width="646.153846" height="115.99999956" rx="6.941514094379" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="363.076923" y="109.599999736" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.079893360168" font-weight="bold" fill="var(--bg)">Return Address</text>
 
-  <rect x="40" y="208.727273" width="646.153846" height="105.454545" rx="6.618474" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="363.076923" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Stack Canary</text>
+  <rect x="40" y="167.600000066" width="646.153846" height="115.99999956" rx="6.941514094379" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="363.076923" y="237.199999802" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.079893360168" font-weight="bold" fill="var(--bg)">Stack Canary</text>
 
-  <rect x="40" y="324.727273" width="646.153846" height="105.454545" rx="6.618474" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="363.076923" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Local Variables</text>
+  <rect x="40" y="295.200000132" width="646.153846" height="115.99999956" rx="6.941514094379" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="363.076923" y="364.799999868" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.079893360168" font-weight="bold" fill="var(--bg)">Local Variables</text>
 
-  <rect x="40" y="440.727273" width="646.153846" height="105.454545" rx="6.618474" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="363.076923" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Buffer (overflow source)</text>
+  <rect x="40" y="422.800000198" width="646.153846" height="115.99999956" rx="6.941514094379" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="363.076923" y="492.399999934" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.079893360168" font-weight="bold" fill="var(--bg)">Buffer (overflow source)</text>
 
-  <rect x="732.307692" y="208.727273" width="507.692308" height="210.909091" rx="6.618474" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="986.153846" y="250.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.855421" font-weight="bold" fill="var(--text)">Canary check</text>
-  <text x="986.153846" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">Compiler inserts a random value</text>
-  <text x="986.153846" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">before the saved return address.</text>
-  <text x="986.153846" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">Overflow corrupts the canary;</text>
-  <text x="986.153846" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">mismatch aborts via __stack_chk_fail.</text>
+  <rect x="732.307692" y="167.600000066" width="507.692308" height="232.00000022" rx="6.941514094379" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="986.153846" y="213.99999989" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824541234329" font-weight="bold" fill="var(--text)">Canary check</text>
+  <text x="986.153846" y="260.399999714" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196866220218" fill="var(--text-muted)">Compiler inserts a random value</text>
+  <text x="986.153846" y="295.200000132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196866220218" fill="var(--text-muted)">before the saved return address.</text>
+  <text x="986.153846" y="341.599999956" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196866220218" fill="var(--text-muted)">Overflow corrupts the canary;</text>
+  <text x="986.153846" y="376.400000374" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196866220218" fill="var(--text-muted)">mismatch aborts via __stack_chk_fail.</text>
 
-  <text x="363.076923" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.855421" font-weight="bold" fill="var(--text)">Stack grows downward — overflow climbs up</text>
-  <line x1="363.076923" y1="620" x2="363.076923" y2="556.727273" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="363.076923" y="585.199999582" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824541234329" font-weight="bold" fill="var(--text)">Stack grows downward — overflow climbs up</text>
+  <line x1="363.076923" y1="620" x2="363.076923" y2="550.400000264" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

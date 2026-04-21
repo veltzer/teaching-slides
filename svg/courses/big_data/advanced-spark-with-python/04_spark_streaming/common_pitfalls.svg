@@ -96,47 +96,46 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945761708923" font-weight="bold" fill="var(--primary-accent)">Streaming Pitfalls</text>
 
-  <rect x="40" y="72.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--danger-text)">No Watermark on Join</text>
-  <text x="235" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">State grows unbounded</text>
-  <text x="235" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">OOM eventually</text>
-  <text x="235" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--danger-text)">Fix:</text>
-  <text x="235" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Watermark both streams</text>
+  <rect x="40" y="40" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--danger-text)">No Watermark on Join</text>
+  <text x="235" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">State grows unbounded</text>
+  <text x="235" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">OOM eventually</text>
+  <text x="235" y="244.705882352942" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--danger-text)">Fix:</text>
+  <text x="235" y="278.823529411765" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Watermark both streams</text>
 
-  <rect x="445" y="72.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--danger-text)">Complete Mode + State</text>
-  <text x="640" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Emits full table</text>
-  <text x="640" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Driver OOM</text>
-  <text x="640" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--danger-text)">Fix:</text>
-  <text x="640" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Use update or append</text>
+  <rect x="445" y="40" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--danger-text)">Complete Mode + State</text>
+  <text x="640" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Emits full table</text>
+  <text x="640" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Driver OOM</text>
+  <text x="640" y="244.705882352942" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--danger-text)">Fix:</text>
+  <text x="640" y="278.823529411765" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Use update or append</text>
 
-  <rect x="850" y="72.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="115.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--danger-text)">foreachBatch Effects</text>
-  <text x="1045" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Non-idempotent writes</text>
-  <text x="1045" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Duplicates on retry</text>
-  <text x="1045" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--danger-text)">Fix:</text>
-  <text x="1045" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--danger-text)">Idempotent writes</text>
+  <rect x="850" y="40" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="85.490196078431" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--danger-text)">foreachBatch Effects</text>
+  <text x="1045" y="130.980392156863" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Non-idempotent writes</text>
+  <text x="1045" y="165.098039215686" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Duplicates on retry</text>
+  <text x="1045" y="244.705882352942" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--danger-text)">Fix:</text>
+  <text x="1045" y="278.823529411765" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--danger-text)">Idempotent writes</text>
 
-  <rect x="40" y="362.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="405.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">No Checkpoint</text>
-  <text x="235" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Progress lost on restart</text>
-  <text x="235" y="480.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Reprocesses data</text>
-  <text x="235" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">Fix:</text>
-  <text x="235" y="582.407407407407" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--warn-text)">checkpointLocation</text>
+  <rect x="40" y="347.058823529412" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="392.549019607843" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--warn-text)">No Checkpoint</text>
+  <text x="235" y="438.039215686274" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Progress lost on restart</text>
+  <text x="235" y="472.156862745098" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Reprocesses data</text>
+  <text x="235" y="546.078431372549" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--warn-text)">Fix:</text>
+  <text x="235" y="580.196078431372" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--warn-text)">checkpointLocation</text>
 
-  <rect x="445" y="362.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="405.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">Tiny Triggers</text>
-  <text x="640" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Scheduling overhead</text>
-  <text x="640" y="480.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Poor throughput</text>
-  <text x="640" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">Fix:</text>
-  <text x="640" y="582.407407407407" text-anchor="middle" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--warn-text)">processingTime &gt;= 10s</text>
+  <rect x="445" y="347.058823529412" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="392.549019607843" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--warn-text)">Tiny Triggers</text>
+  <text x="640" y="438.039215686274" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Scheduling overhead</text>
+  <text x="640" y="472.156862745098" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Poor throughput</text>
+  <text x="640" y="546.078431372549" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--warn-text)">Fix:</text>
+  <text x="640" y="580.196078431372" text-anchor="middle" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--warn-text)">processingTime &gt;= 10s</text>
 
-  <rect x="850" y="362.222222222222" width="390" height="257.777777777778" rx="8.291003602746" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="405.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">collect() in batch</text>
-  <text x="1045" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Pulls to driver</text>
-  <text x="1045" y="480.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--warn-text)">Driver OOM</text>
-  <text x="1045" y="550.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--warn-text)">Fix:</text>
-  <text x="1045" y="582.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Write from DataFrame</text>
+  <rect x="850" y="347.058823529412" width="390" height="272.941176470588" rx="8.531372323694" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="392.549019607843" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.195587728312" font-weight="bold" fill="var(--warn-text)">collect() in batch</text>
+  <text x="1045" y="438.039215686274" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Pulls to driver</text>
+  <text x="1045" y="472.156862745098" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Driver OOM</text>
+  <text x="1045" y="546.078431372549" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.062744647388" font-weight="bold" fill="var(--warn-text)">Fix:</text>
+  <text x="1045" y="580.196078431372" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" fill="var(--warn-text)">Write from DataFrame</text>
 </svg>

@@ -95,56 +95,55 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="29.8907" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark SQL Optimization Checklist</text>
-  <rect x="40" y="68.2927" width="378.9474" height="551.7073" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="229.4737" y="103.6585" text-anchor="middle" font-size="20.9234" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Layer</text>
-  <rect x="63.6842" y="124.878" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="153.1707" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use Parquet/ORC format</text>
-  <rect x="63.6842" y="181.4634" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="209.7561" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Enable compression (Snappy)</text>
-  <rect x="63.6842" y="238.0487" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="266.3414" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Partition by common filters</text>
-  <rect x="63.6842" y="294.6341" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="322.9269" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Collect table statistics</text>
-  <rect x="63.6842" y="351.2195" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="379.5122" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Right-size file counts</text>
-  <rect x="63.6842" y="407.8049" width="331.5789" height="42.4391" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="87.3685" y="436.0976" font-size="17.9344" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use explicit schemas</text>
-  <rect x="450.5263" y="68.2927" width="378.9474" height="551.7073" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="103.6585" text-anchor="middle" font-size="20.9234" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Query Layer</text>
-  <rect x="474.2105" y="124.878" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="153.1707" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Select specific columns</text>
-  <rect x="474.2105" y="181.4634" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="209.7561" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Filter early (pushdown)</text>
-  <rect x="474.2105" y="238.0487" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="266.3414" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use broadcast joins</text>
-  <rect x="474.2105" y="294.6341" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="322.9269" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Avoid UDFs if possible</text>
-  <rect x="474.2105" y="351.2195" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="379.5122" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cache repeated queries</text>
-  <rect x="474.2105" y="407.8049" width="331.5789" height="42.4391" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="497.8948" y="436.0976" font-size="17.9344" fill="var(--ok-accent)" font-family="Arial, sans-serif">Match types in filters</text>
-  <rect x="861.0526" y="68.2927" width="378.9474" height="551.7073" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1050.5264" y="103.6585" text-anchor="middle" font-size="20.9234" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Infrastructure</text>
-  <rect x="884.7369" y="124.878" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="153.1707" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Enable AQE</text>
-  <rect x="884.7369" y="181.4634" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="209.7561" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Enable CBO</text>
-  <rect x="884.7369" y="238.0487" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="266.3414" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Tune shuffle partitions</text>
-  <rect x="884.7369" y="294.6341" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="322.9269" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Configure memory fraction</text>
-  <rect x="884.7369" y="351.2195" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="379.5122" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Monitor Spark UI metrics</text>
-  <rect x="884.7369" y="407.8049" width="331.5789" height="42.4391" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="908.4211" y="436.0976" font-size="17.9344" fill="var(--warn-accent)" font-family="Arial, sans-serif">Review explain() output</text>
-  <text x="229.4737" y="506.8293" text-anchor="middle" font-size="17.9344" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Impact: High</text>
-  <text x="229.4737" y="535.122" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">Format + partitioning</text>
-  <text x="229.4737" y="557.7561" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">give biggest gains</text>
-  <text x="640.0001" y="506.8293" text-anchor="middle" font-size="17.9344" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Impact: Medium</text>
-  <text x="640.0001" y="535.122" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">Query patterns affect</text>
-  <text x="640.0001" y="557.7561" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">plan quality</text>
-  <text x="1050.5264" y="506.8293" text-anchor="middle" font-size="17.9344" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Impact: Varies</text>
-  <text x="1050.5264" y="535.122" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">Config tuning needs</text>
-  <text x="1050.5264" y="557.7561" text-anchor="middle" font-size="16.4399" fill="var(--text)" font-family="Arial, sans-serif">workload testing</text>
+  <rect x="40" y="40" width="378.9474" height="580" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="229.4737" y="77.179431919788" text-anchor="middle" font-size="21.453190501721" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Data Layer</text>
+  <rect x="63.6842" y="99.487112097302" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="129.230720710058" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use Parquet/ORC format</text>
+  <rect x="63.6842" y="158.974329322813" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="188.717937935568" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Enable compression (Snappy)</text>
+  <rect x="63.6842" y="218.461441420115" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="248.205050032871" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Partition by common filters</text>
+  <rect x="63.6842" y="277.948658645626" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="307.69237238659" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Collect table statistics</text>
+  <rect x="63.6842" y="337.435875871137" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="367.179484483892" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Right-size file counts</text>
+  <rect x="63.6842" y="396.923093096647" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="87.3685" y="426.666701709403" font-size="18.388507591216" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use explicit schemas</text>
+  <rect x="450.5263" y="40" width="378.9474" height="580" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="77.179431919788" text-anchor="middle" font-size="21.453190501721" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Query Layer</text>
+  <rect x="474.2105" y="99.487112097302" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="129.230720710058" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Select specific columns</text>
+  <rect x="474.2105" y="158.974329322813" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="188.717937935568" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Filter early (pushdown)</text>
+  <rect x="474.2105" y="218.461441420115" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="248.205050032871" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use broadcast joins</text>
+  <rect x="474.2105" y="277.948658645626" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="307.69237238659" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Avoid UDFs if possible</text>
+  <rect x="474.2105" y="337.435875871137" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="367.179484483892" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cache repeated queries</text>
+  <rect x="474.2105" y="396.923093096647" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="497.8948" y="426.666701709403" font-size="18.388507591216" fill="var(--ok-accent)" font-family="Arial, sans-serif">Match types in filters</text>
+  <rect x="861.0526" y="40" width="378.9474" height="580" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050.5264" y="77.179431919788" text-anchor="middle" font-size="21.453190501721" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Infrastructure</text>
+  <rect x="884.7369" y="99.487112097302" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="129.230720710058" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Enable AQE</text>
+  <rect x="884.7369" y="158.974329322813" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="188.717937935568" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Enable CBO</text>
+  <rect x="884.7369" y="218.461441420115" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="248.205050032871" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Tune shuffle partitions</text>
+  <rect x="884.7369" y="277.948658645626" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="307.69237238659" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Configure memory fraction</text>
+  <rect x="884.7369" y="337.435875871137" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="367.179484483892" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Monitor Spark UI metrics</text>
+  <rect x="884.7369" y="396.923093096647" width="331.5789" height="44.615465483237" rx="6.151922871537" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="908.4211" y="426.666701709403" font-size="18.388507591216" fill="var(--warn-accent)" font-family="Arial, sans-serif">Review explain() output</text>
+  <text x="229.4737" y="501.025670677187" text-anchor="middle" font-size="18.388507591216" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Impact: High</text>
+  <text x="229.4737" y="530.769279289942" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">Format + partitioning</text>
+  <text x="229.4737" y="554.564103103221" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">give biggest gains</text>
+  <text x="640.0001" y="501.025670677187" text-anchor="middle" font-size="18.388507591216" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Impact: Medium</text>
+  <text x="640.0001" y="530.769279289942" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">Query patterns affect</text>
+  <text x="640.0001" y="554.564103103221" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">plan quality</text>
+  <text x="1050.5264" y="501.025670677187" text-anchor="middle" font-size="18.388507591216" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Impact: Varies</text>
+  <text x="1050.5264" y="530.769279289942" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">Config tuning needs</text>
+  <text x="1050.5264" y="554.564103103221" text-anchor="middle" font-size="16.856166135964" fill="var(--text)" font-family="Arial, sans-serif">workload testing</text>
 </svg>

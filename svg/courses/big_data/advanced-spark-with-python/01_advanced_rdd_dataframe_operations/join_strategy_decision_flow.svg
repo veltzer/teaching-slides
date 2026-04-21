@@ -2,10 +2,9 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="33.1654" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Join Strategy Decision Flow</text>
-  <rect x="465.8064" y="77.4193" width="348.3871" height="74.8387" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="124.1935" text-anchor="middle" font-size="23.9528" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Join Request</text>
-  <line x1="639.9999" y1="152.258" x2="639.9999" y2="208.3871" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="465.8064" y="40" width="348.3871" height="79.999981569562" rx="6.203447003983" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="90.000001843044" text-anchor="middle" font-size="24.764987566169" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Join Request</text>
+  <line x1="639.9999" y1="119.999981569562" x2="639.9999" y2="180.000047919139" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -99,27 +98,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="465.8064" y="217.7419" width="348.3871" height="74.8387" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="264.5162" text-anchor="middle" font-size="23.9528" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Table size?</text>
-  <line x1="504.5161" y1="292.5806" x2="214.1935" y2="376.7742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="639.9999" y1="292.5806" x2="639.9999" y2="376.7742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="775.4838" y1="292.5806" x2="1065.8064" y2="376.7742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="69.0322" y="386.129" width="290.3226" height="65.4839" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="214.1935" y="429.1613" text-anchor="middle" font-size="22.1103" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&lt; 10 MB</text>
-  <rect x="494.8386" y="386.129" width="290.3226" height="65.4839" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="429.1613" text-anchor="middle" font-size="22.1103" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">10 MB - 1 GB</text>
-  <rect x="920.6452" y="386.129" width="290.3226" height="65.4839" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1065.8064" y="429.1613" text-anchor="middle" font-size="22.1103" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&gt; 1 GB</text>
-  <line x1="214.1935" y1="451.6129" x2="214.1935" y2="507.742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="639.9999" y1="451.6129" x2="639.9999" y2="507.742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1065.8064" y1="451.6129" x2="1065.8064" y2="507.742" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="517.0968" width="348.3871" height="102.9032" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="214.1935" y="563.871" text-anchor="middle" font-size="23.9528" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Broadcast Hash Join</text>
-  <text x="214.1935" y="601.2904" text-anchor="middle" font-size="20.2677" fill="var(--text-muted)" font-family="Arial, sans-serif">No shuffle | O(n)</text>
-  <rect x="465.8064" y="517.0968" width="348.3871" height="102.9032" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="563.871" text-anchor="middle" font-size="23.9528" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Shuffle Hash Join</text>
-  <text x="639.9999" y="601.2904" text-anchor="middle" font-size="20.2677" fill="var(--text-muted)" font-family="Arial, sans-serif">Shuffle | O(n+m)</text>
-  <rect x="891.6129" y="517.0968" width="348.3871" height="102.9032" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1065.8064" y="563.871" text-anchor="middle" font-size="23.9528" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Sort-Merge Join</text>
-  <text x="1065.8064" y="601.2904" text-anchor="middle" font-size="20.2677" fill="var(--text-muted)" font-family="Arial, sans-serif">Shuffle+Sort | O(nlogn)</text>
+  <rect x="465.8064" y="190.000005529131" width="348.3871" height="79.999981569562" rx="6.203447003983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="240.000114268716" text-anchor="middle" font-size="24.764987566169" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Table size?</text>
+  <line x1="504.5161" y1="269.999987098693" x2="214.1935" y2="360.000033174789" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="639.9999" y1="269.999987098693" x2="639.9999" y2="360.000033174789" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="775.4838" y1="269.999987098693" x2="1065.8064" y2="360.000033174789" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="69.0322" y="369.999990784781" width="290.3226" height="70.00002395957" rx="6.203447003983" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="214.1935" y="416.000030963136" text-anchor="middle" font-size="22.860012382029" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&lt; 10 MB</text>
+  <rect x="494.8386" y="369.999990784781" width="290.3226" height="70.00002395957" rx="6.203447003983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="416.000030963136" text-anchor="middle" font-size="22.860012382029" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">10 MB - 1 GB</text>
+  <rect x="920.6452" y="369.999990784781" width="290.3226" height="70.00002395957" rx="6.203447003983" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1065.8064" y="416.000030963136" text-anchor="middle" font-size="22.860012382029" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&gt; 1 GB</text>
+  <line x1="214.1935" y1="440.000014744351" x2="214.1935" y2="500.000081093928" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="639.9999" y1="440.000014744351" x2="639.9999" y2="500.000081093928" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1065.8064" y1="440.000014744351" x2="1065.8064" y2="500.000081093928" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="510.00003870392" width="348.3871" height="109.99996129608" rx="6.203447003983" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="214.1935" y="560.000040546964" text-anchor="middle" font-size="24.764987566169" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Broadcast Hash Join</text>
+  <text x="214.1935" y="600.000084780015" text-anchor="middle" font-size="20.954933807106" fill="var(--text-muted)" font-family="Arial, sans-serif">No shuffle | O(n)</text>
+  <rect x="465.8064" y="510.00003870392" width="348.3871" height="109.99996129608" rx="6.203447003983" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="560.000040546964" text-anchor="middle" font-size="24.764987566169" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Shuffle Hash Join</text>
+  <text x="639.9999" y="600.000084780015" text-anchor="middle" font-size="20.954933807106" fill="var(--text-muted)" font-family="Arial, sans-serif">Shuffle | O(n+m)</text>
+  <rect x="891.6129" y="510.00003870392" width="348.3871" height="109.99996129608" rx="6.203447003983" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1065.8064" y="560.000040546964" text-anchor="middle" font-size="24.764987566169" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Sort-Merge Join</text>
+  <text x="1065.8064" y="600.000084780015" text-anchor="middle" font-size="20.954933807106" fill="var(--text-muted)" font-family="Arial, sans-serif">Shuffle+Sort | O(nlogn)</text>
 </svg>

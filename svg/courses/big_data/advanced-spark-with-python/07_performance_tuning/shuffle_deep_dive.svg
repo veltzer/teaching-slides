@@ -95,37 +95,36 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.5697" font-weight="bold" fill="var(--primary-accent)">Writer Side (Map stage)</text>
-  <rect x="40" y="51.7002" width="1200" height="250.7205" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="82.8571" y="80.1152" font-family="Arial, sans-serif" font-size="19.9436" font-weight="bold" fill="var(--text)">Executor</text>
-  <rect x="82.8571" y="93.487" width="235.7143" height="58.5015" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2.6301"/>
-  <text x="200.7143" y="130.2593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Task (process)</text>
-  <line x1="318.5714" y1="121.902" x2="404.2856" y2="121.902" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="414.9999" y="93.487" width="428.5714" height="58.5015" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2.6301"/>
-  <text x="629.2857" y="118.559" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Sort by partition key</text>
-  <text x="629.2857" y="140.2882" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text-muted)">+ spill to disk</text>
-  <line x1="511.4285" y1="151.9884" x2="254.2856" y2="202.1325" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="629.2857" y1="151.9884" x2="629.2857" y2="202.1325" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="747.1428" y1="151.9884" x2="1004.2857" y2="202.1325" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="125.7142" y="210.4899" width="257.1429" height="58.5015" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="254.2856" y="247.2622" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Part 0 file</text>
-  <rect x="500.7143" y="210.4899" width="257.1429" height="58.5015" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="629.2857" y="247.2622" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Part 1 file</text>
-  <rect x="875.7143" y="210.4899" width="257.1429" height="58.5015" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1004.2857" y="247.2622" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Part 2 file</text>
-  <text x="639.9999" y="344.2075" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.5697" font-weight="bold" fill="var(--ok-accent)">Reader Side (Reduce stage)</text>
-  <rect x="40" y="360.9222" width="1200" height="259.0778" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="82.8571" y="391.0086" font-family="Arial, sans-serif" font-size="19.9436" font-weight="bold" fill="var(--text)">Executor (for Partition 0)</text>
-  <text x="639.9999" y="424.438" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.9436" fill="var(--text-muted)">Fetch Part 0 from all map executors</text>
-  <rect x="147.1428" y="441.1528" width="235.7143" height="58.5015" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
-  <text x="264.9999" y="466.2248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Exec 0 Part 0</text>
-  <rect x="447.1427" y="441.1528" width="235.7143" height="58.5015" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
-  <text x="564.9999" y="466.2248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Exec 1 Part 0</text>
-  <rect x="747.1428" y="441.1528" width="235.7143" height="58.5015" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
-  <text x="865" y="466.2248" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1306" fill="var(--text)">Exec 2 Part 0</text>
-  <line x1="264.9999" y1="499.6542" x2="564.9999" y2="544.7839" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="564.9999" y1="499.6542" x2="564.9999" y2="544.7839" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="865" y1="499.6542" x2="564.9999" y2="544.7839" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="404.2856" y="553.1413" width="321.4285" height="50.1441" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="564.9999" y="586.5706" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.9436" fill="var(--text)">Merge + Sort</text>
+  <rect x="40" y="40" width="1200" height="255.882352941176" rx="6.061449560078" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="82.8571" y="69.000010205881" font-family="Arial, sans-serif" font-size="20.147854241063" font-weight="bold" fill="var(--text)">Executor</text>
+  <rect x="82.8571" y="82.647109852933" width="235.7143" height="59.705933382345" rx="6.061449560078" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2.6301"/>
+  <text x="200.7143" y="120.176480794116" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Task (process)</text>
+  <line x1="318.5714" y1="111.647120058814" x2="404.2856" y2="111.647120058814" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="414.9999" y="82.647109852933" width="428.5714" height="59.705933382345" rx="6.061449560078" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2.6301"/>
+  <text x="629.2857" y="108.235294117647" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Sort by partition key</text>
+  <text x="629.2857" y="130.411856558809" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text-muted)">+ spill to disk</text>
+  <line x1="511.4285" y1="142.352941176471" x2="254.2856" y2="193.529411764706" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="629.2857" y1="142.352941176471" x2="629.2857" y2="193.529411764706" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="747.1428" y1="142.352941176471" x2="1004.2857" y2="193.529411764706" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="125.7142" y="202.058874558816" width="257.1429" height="59.705933382345" rx="6.061449560078" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="254.2856" y="239.588245499998" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Part 0 file</text>
+  <rect x="500.7143" y="202.058874558816" width="257.1429" height="59.705933382345" rx="6.061449560078" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="629.2857" y="239.588245499998" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Part 1 file</text>
+  <rect x="875.7143" y="202.058874558816" width="257.1429" height="59.705933382345" rx="6.061449560078" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1004.2857" y="239.588245499998" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Part 2 file</text>
+  <text x="639.9999" y="338.52946279411" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.811091282696" font-weight="bold" fill="var(--ok-accent)">Reader Side (Reduce stage)</text>
+  <rect x="40" y="355.588286323521" width="1200" height="264.411713676478" rx="6.061449560078" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="82.8571" y="386.294107441178" font-family="Arial, sans-serif" font-size="20.147854241063" font-weight="bold" fill="var(--text)">Executor (for Partition 0)</text>
+  <text x="639.9999" y="420.411754500002" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.147854241063" fill="var(--text-muted)">Fetch Part 0 from all map executors</text>
+  <rect x="147.1428" y="437.470680088221" width="235.7143" height="59.705933382345" rx="6.061449560078" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
+  <text x="264.9999" y="463.058864352935" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Exec 0 Part 0</text>
+  <rect x="447.1427" y="437.470680088221" width="235.7143" height="59.705933382345" rx="6.061449560078" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
+  <text x="564.9999" y="463.058864352935" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Exec 1 Part 0</text>
+  <rect x="747.1428" y="437.470680088221" width="235.7143" height="59.705933382345" rx="6.061449560078" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2.6301"/>
+  <text x="865" y="463.058864352935" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.316286232326" fill="var(--text)">Exec 2 Part 0</text>
+  <line x1="264.9999" y1="497.176511411758" x2="564.9999" y2="543.235345147051" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="564.9999" y1="497.176511411758" x2="564.9999" y2="543.235345147051" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="865" y1="497.176511411758" x2="564.9999" y2="543.235345147051" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="404.2856" y="551.764807941161" width="321.4285" height="51.176470588235" rx="6.061449560078" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="564.9999" y="585.882352941176" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.147854241063" fill="var(--text)">Merge + Sort</text>
 </svg>

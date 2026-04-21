@@ -95,31 +95,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="25.1381" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread-per-Connection vs Event-Driven Model</text>
-  <rect x="40" y="80.4651" width="547.0588" height="539.5349" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="313.5294" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Apache (Thread-per-Connection)</text>
-  <rect x="75.2941" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="145.8824" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
-  <text x="145.8824" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #1</text>
-  <text x="145.8824" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
-  <rect x="234.1177" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="304.7059" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
-  <text x="304.7059" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #2</text>
-  <text x="304.7059" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
-  <rect x="392.9412" y="152.4031" width="141.1765" height="179.845" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="463.5295" y="197.3643" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
-  <text x="463.5295" y="237.8295" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">Conn #3</text>
-  <text x="463.5295" y="278.2946" text-anchor="middle" font-size="19.7514" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
-  <text x="313.5294" y="395.1938" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)" font-family="Arial, sans-serif">3 slots consumed by 3 slow connections</text>
-  <text x="313.5294" y="435.6589" text-anchor="middle" font-size="19.7514" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Thread pool exhausted → server unresponsive</text>
-  <rect x="622.353" y="80.4651" width="617.647" height="539.5349" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="931.1765" y="129.9225" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Nginx (Event-Driven)</text>
-  <rect x="657.647" y="152.4031" width="511.7647" height="224.8062" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="913.5294" y="201.8605" text-anchor="middle" font-size="21.547" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Event Loop</text>
-  <text x="675.2941" y="251.3178" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#1</text>
-  <text x="675.2941" y="282.7907" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#2</text>
-  <text x="675.2941" y="314.2636" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#3</text>
-  <text x="675.2941" y="345.7364" text-anchor="start" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">… Conn#N</text>
-  <text x="931.1765" y="431.1628" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)" font-family="Arial, sans-serif">Thousands of slow conns handled</text>
-  <text x="931.1765" y="467.1318" text-anchor="middle" font-size="19.7514" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">by a single worker thread</text>
+  <rect x="40" y="40" width="547.0588" height="580" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="313.5294" y="93.166703395832" text-anchor="middle" font-size="22.340404754976" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Apache (Thread-per-Connection)</text>
+  <rect x="75.2941" y="117.333347666666" width="141.1765" height="193.333369166666" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="145.8824" y="165.666636208334" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="145.8824" y="209.166724895832" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">Conn #1</text>
+  <text x="145.8824" y="252.666706083332" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <rect x="234.1177" y="117.333347666666" width="141.1765" height="193.333369166666" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="304.7059" y="165.666636208334" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="304.7059" y="209.166724895832" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">Conn #2</text>
+  <text x="304.7059" y="252.666706083332" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <rect x="392.9412" y="117.333347666666" width="141.1765" height="193.333369166666" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="463.5295" y="165.666636208334" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Thread</text>
+  <text x="463.5295" y="209.166724895832" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">Conn #3</text>
+  <text x="463.5295" y="252.666706083332" text-anchor="middle" font-size="20.47868707836" fill="var(--text)" font-family="Arial, sans-serif">BLOCKED</text>
+  <text x="313.5294" y="378.333342291666" text-anchor="middle" font-size="20.47868707836" fill="var(--danger-accent)" font-family="Arial, sans-serif">3 slots consumed by 3 slow connections</text>
+  <text x="313.5294" y="421.833323479167" text-anchor="middle" font-size="20.47868707836" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Thread pool exhausted → server unresponsive</text>
+  <rect x="622.353" y="40" width="617.647" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="931.1765" y="93.166703395832" text-anchor="middle" font-size="22.340404754976" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Nginx (Event-Driven)</text>
+  <rect x="657.647" y="117.333347666666" width="511.7647" height="241.666657708334" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.220932312148" filter="url(#shadow)"/>
+  <text x="913.5294" y="170.500051062498" text-anchor="middle" font-size="22.340404754976" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">Event Loop</text>
+  <text x="675.2941" y="223.666646958334" text-anchor="start" font-size="20.47868707836" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#1</text>
+  <text x="675.2941" y="257.5000134375" text-anchor="start" font-size="20.47868707836" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#2</text>
+  <text x="675.2941" y="291.333379916665" text-anchor="start" font-size="20.47868707836" fill="var(--ok-accent)" font-family="Arial, sans-serif">Conn#3</text>
+  <text x="675.2941" y="325.166638895834" text-anchor="start" font-size="20.47868707836" fill="var(--ok-accent)" font-family="Arial, sans-serif">… Conn#N</text>
+  <text x="931.1765" y="417.000016125" text-anchor="middle" font-size="20.47868707836" fill="var(--ok-accent)" font-family="Arial, sans-serif">Thousands of slow conns handled</text>
+  <text x="931.1765" y="455.666689958333" text-anchor="middle" font-size="20.47868707836" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">by a single worker thread</text>
 </svg>

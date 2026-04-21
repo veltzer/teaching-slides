@@ -96,47 +96,46 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="29.7798" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lock-Free Queue Operations</text>
-  <rect x="40" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="109.8796" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CAS Loop</text>
-  <text x="64.3243" y="144.8193" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">loop {</text>
-  <text x="80.5405" y="169.976" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">  old = tail.load(Acquire);</text>
-  <text x="80.5405" y="195.1327" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">  node = Node::new(v);</text>
-  <text x="80.5405" y="220.2892" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">  match tail.compare_exchange(</text>
-  <text x="96.7568" y="245.4458" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">    old, node, ...)</text>
-  <text x="80.5405" y="270.6025" font-size="14.8899" fill="var(--ok-accent)" font-family="Arial, sans-serif">  { Ok =&gt; break,</text>
-  <text x="80.5405" y="295.7591" font-size="14.8899" fill="var(--danger-accent)" font-family="Arial, sans-serif">    Err =&gt; continue }</text>
-  <rect x="672.4324" y="74.9399" width="567.5675" height="237.5904" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.2161" y="109.8796" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Enqueue Operation</text>
-  <rect x="704.8648" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="753.5134" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)" font-family="Arial, sans-serif">A</text>
-  <line x1="802.1621" y1="161.5904" x2="850.8108" y2="161.5904" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="867.027" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="915.6757" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)" font-family="Arial, sans-serif">B</text>
-  <line x1="964.3242" y1="161.5904" x2="1012.9729" y2="161.5904" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="1029.1891" y="137.8314" width="97.2972" height="48.9157" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1077.8378" y="168.5784" text-anchor="middle" font-size="14.8899" fill="var(--text)" font-family="Arial, sans-serif">C</text>
-  <text x="1077.8378" y="207.7109" font-size="14.8899" fill="var(--warn-accent)" font-family="Arial, sans-serif">tail</text>
-  <rect x="1029.1891" y="221.6868" width="97.2972" height="48.9157" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5.7528 2.8764" filter="url(#shadow)"/>
-  <text x="1077.8378" y="252.4339" text-anchor="middle" font-size="14.8899" fill="var(--ok-accent)" font-family="Arial, sans-serif">D</text>
-  <line x1="1077.8378" y1="186.747" x2="1077.8378" y2="221.6868" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1110.2702" y="214.6989" font-size="14.8899" fill="var(--ok-accent)" font-family="Arial, sans-serif">CAS</text>
-  <text x="704.8648" y="298.5543" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Read tail, create node, CAS tail.next, update tail</text>
-  <rect x="40" y="347.4699" width="567.5675" height="139.759" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="382.4097" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">ABA Problem</text>
-  <text x="64.3243" y="414.5543" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">T1 reads A, pauses</text>
-  <text x="64.3243" y="439.7109" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">T2: A→B→A (same pointer)</text>
-  <text x="64.3243" y="464.8675" font-size="14.8899" fill="var(--danger-accent)" font-family="Arial, sans-serif">T1 CAS succeeds, state changed</text>
-  <rect x="672.4324" y="347.4699" width="567.5675" height="139.759" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="956.2161" y="382.4097" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">ABA Solutions</text>
-  <text x="696.7567" y="414.5543" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">- Tagged pointers</text>
-  <text x="696.7567" y="439.7109" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">- Epoch reclamation</text>
-  <text x="696.7567" y="464.8675" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">- Hazard pointers</text>
-  <rect x="40" y="515.1807" width="1200" height="104.8193" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="550.1205" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Memory Ordering</text>
-  <text x="185.9459" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Relaxed: counters</text>
-  <text x="445.4054" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Acq/Rel: locks</text>
-  <text x="753.5134" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">AcqRel: CAS</text>
-  <text x="1029.1891" y="585.0603" text-anchor="middle" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">SeqCst: safest</text>
-  <text x="640" y="613.0122" text-anchor="middle" font-size="14.8899" fill="var(--danger-accent)" font-family="Arial, sans-serif">When in doubt, use SeqCst</text>
+  <rect x="40" y="40" width="567.5675" height="252.820619230797" rx="6.189321628002" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="323.7838" y="77.179433974345" text-anchor="middle" font-size="21.503560132168" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">CAS Loop</text>
+  <text x="64.3243" y="114.35886794869" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">loop {</text>
+  <text x="80.5405" y="141.128183846148" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">  old = tail.load(Acquire);</text>
+  <text x="80.5405" y="167.897499743606" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">  node = Node::new(v);</text>
+  <text x="80.5405" y="194.666602820496" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">  match tail.compare_exchange(</text>
+  <text x="96.7568" y="221.43581230767" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">    old, node, ...)</text>
+  <text x="80.5405" y="248.205128205128" font-size="15.359730018132" fill="var(--ok-accent)" font-family="Arial, sans-serif">  { Ok =&gt; break,</text>
+  <text x="80.5405" y="274.974337692302" font-size="15.359730018132" fill="var(--danger-accent)" font-family="Arial, sans-serif">    Err =&gt; continue }</text>
+  <rect x="672.4324" y="40" width="567.5675" height="252.820619230797" rx="6.189321628002" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.2161" y="77.179433974345" text-anchor="middle" font-size="21.503560132168" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Enqueue Operation</text>
+  <rect x="704.8648" y="106.923023717935" width="97.2972" height="52.051335256424" rx="6.189321628002" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="753.5134" y="139.64099371794" text-anchor="middle" font-size="15.359730018132" fill="var(--text)" font-family="Arial, sans-serif">A</text>
+  <line x1="802.1621" y1="132.205043076901" x2="850.8108" y2="132.205043076901" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="867.027" y="106.923023717935" width="97.2972" height="52.051335256424" rx="6.189321628002" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="915.6757" y="139.64099371794" text-anchor="middle" font-size="15.359730018132" fill="var(--text)" font-family="Arial, sans-serif">B</text>
+  <line x1="964.3242" y1="132.205043076901" x2="1012.9729" y2="132.205043076901" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1029.1891" y="106.923023717935" width="97.2972" height="52.051335256424" rx="6.189321628002" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1077.8378" y="139.64099371794" text-anchor="middle" font-size="15.359730018132" fill="var(--text)" font-family="Arial, sans-serif">C</text>
+  <text x="1077.8378" y="181.281998076909" font-size="15.359730018132" fill="var(--warn-accent)" font-family="Arial, sans-serif">tail</text>
+  <rect x="1029.1891" y="196.153792948704" width="97.2972" height="52.051335256424" rx="6.189321628002" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5.7528 2.8764" filter="url(#shadow)"/>
+  <text x="1077.8378" y="228.871869358994" text-anchor="middle" font-size="15.359730018132" fill="var(--ok-accent)" font-family="Arial, sans-serif">D</text>
+  <line x1="1077.8378" y1="158.974252564075" x2="1077.8378" y2="196.153792948704" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1110.2702" y="188.717948717949" font-size="15.359730018132" fill="var(--ok-accent)" font-family="Arial, sans-serif">CAS</text>
+  <text x="704.8648" y="277.948717948718" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Read tail, create node, CAS tail.next, update tail</text>
+  <rect x="40" y="329.999946794858" width="567.5675" height="148.717948717949" rx="6.189321628002" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="323.7838" y="367.179487179487" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">ABA Problem</text>
+  <text x="64.3243" y="401.384647307701" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">T1 reads A, pauses</text>
+  <text x="64.3243" y="428.153856794875" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">T2: A→B→A (same pointer)</text>
+  <text x="64.3243" y="454.923066282048" font-size="15.359730018132" fill="var(--danger-accent)" font-family="Arial, sans-serif">T1 CAS succeeds, state changed</text>
+  <rect x="672.4324" y="329.999946794858" width="567.5675" height="148.717948717949" rx="6.189321628002" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="956.2161" y="367.179487179487" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">ABA Solutions</text>
+  <text x="696.7567" y="401.384647307701" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">- Tagged pointers</text>
+  <text x="696.7567" y="428.153856794875" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">- Epoch reclamation</text>
+  <text x="696.7567" y="454.923066282048" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">- Hazard pointers</text>
+  <rect x="40" y="508.461485256396" width="1200" height="111.538514743603" rx="6.189321628002" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="545.641025641026" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Memory Ordering</text>
+  <text x="185.9459" y="582.820566025655" text-anchor="middle" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Relaxed: counters</text>
+  <text x="445.4054" y="582.820566025655" text-anchor="middle" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Acq/Rel: locks</text>
+  <text x="753.5134" y="582.820566025655" text-anchor="middle" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">AcqRel: CAS</text>
+  <text x="1029.1891" y="582.820566025655" text-anchor="middle" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">SeqCst: safest</text>
+  <text x="640" y="612.564262179528" text-anchor="middle" font-size="15.359730018132" fill="var(--danger-accent)" font-family="Arial, sans-serif">When in doubt, use SeqCst</text>
 </svg>

@@ -96,73 +96,72 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093454119" font-weight="bold" fill="var(--primary-accent)">Understanding Spark Partitioning</text>
 
-  <rect x="40" y="71.926605504587" width="256" height="180.917431192661" rx="6.189662883026" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="168" y="109.174311926605" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.600599129581" font-weight="bold" fill="var(--primary-text)">Source Data</text>
-  <text x="168" y="146.422018348624" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--primary-text)">(A,1) (B,2) (C,3)</text>
-  <text x="168" y="173.02752293578" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--primary-text)">(A,4) (D,5) (B,6)</text>
-  <text x="168" y="199.633027522936" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--primary-text)">(C,7) (A,8) (D,9)</text>
-  <text x="168" y="231.559633027523" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--primary-text)">...</text>
+  <rect x="40" y="51.047619047619" width="256" height="187.809523809524" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="168" y="89.714285714285" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.970454366865" font-weight="bold" fill="var(--primary-text)">Source Data</text>
+  <text x="168" y="128.380952380952" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--primary-text)">(A,1) (B,2) (C,3)</text>
+  <text x="168" y="156" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--primary-text)">(A,4) (D,5) (B,6)</text>
+  <text x="168" y="183.619047619048" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--primary-text)">(C,7) (A,8) (D,9)</text>
+  <text x="168" y="216.761904761905" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--primary-text)">...</text>
 
-  <line x1="296" y1="162.385321100917" x2="376" y2="162.385321100917" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="296" y1="144.95238095238" x2="376" y2="144.95238095238" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="384" y="103.853211009174" width="208" height="117.064220183486" rx="6.189662883026" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="488" y="141.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.600599129581" font-weight="bold" fill="var(--warn-text)">Hash</text>
-  <text x="488" y="173.02752293578" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--warn-text)">hash(key) %</text>
-  <text x="488" y="199.633027522936" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--warn-text)">numPartitions</text>
+  <rect x="384" y="84.190476190476" width="208" height="121.523809523809" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="488" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.970454366865" font-weight="bold" fill="var(--warn-text)">Hash</text>
+  <text x="488" y="156" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--warn-text)">hash(key) %</text>
+  <text x="488" y="183.619047619048" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--warn-text)">numPartitions</text>
 
-  <line x1="592" y1="130.45871559633" x2="696" y2="98.532110091743" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="592" y1="151.743119266055" x2="696" y2="204.954128440367" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="592" y1="173.02752293578" x2="696" y2="311.376146788991" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="592" y1="194.311926605505" x2="696" y2="417.798165137615" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="111.809523809523" x2="696" y2="78.666666666666" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="133.904761904762" x2="696" y2="189.142857142857" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="156" x2="696" y2="299.619047619048" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="592" y1="178.095238095238" x2="696" y2="410.095238095238" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="704" y="61.284403669725" width="240" height="95.779816513761" rx="6.189662883026" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="824" y="93.211009174312" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--ok-text)">Partition 0</text>
-  <text x="824" y="123.009174311927" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--ok-text)">(A,1)(A,4)(A,8)</text>
-  <text x="824" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--ok-text)">hash%4=0</text>
+  <rect x="704" y="40" width="240" height="99.428571428571" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824" y="73.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--ok-text)">Partition 0</text>
+  <text x="824" y="104.076190476191" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--ok-text)">(A,1)(A,4)(A,8)</text>
+  <text x="824" y="128.380952380952" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--ok-text)">hash%4=0</text>
 
-  <rect x="704" y="173.02752293578" width="240" height="95.779816513761" rx="6.189662883026" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="824" y="204.954128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--primary-text)">Partition 1</text>
-  <text x="824" y="234.752293577982" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--primary-text)">(B,2)(B,6)(B,10)</text>
-  <text x="824" y="258.165137614679" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">hash%4=1</text>
+  <rect x="704" y="156" width="240" height="99.428571428571" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824" y="189.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--primary-text)">Partition 1</text>
+  <text x="824" y="220.076190476191" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--primary-text)">(B,2)(B,6)(B,10)</text>
+  <text x="824" y="244.380952380952" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--primary-text)">hash%4=1</text>
 
-  <rect x="704" y="284.770642201835" width="240" height="95.779816513761" rx="6.189662883026" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="824" y="316.697247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--danger-text)">Partition 2</text>
-  <text x="824" y="346.495412844037" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--danger-text)">(C,3)(C,7)(C,11)</text>
-  <text x="824" y="369.908256880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--danger-text)">hash%4=2</text>
+  <rect x="704" y="272" width="240" height="99.428571428571" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824" y="305.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--danger-text)">Partition 2</text>
+  <text x="824" y="336.076190476191" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--danger-text)">(C,3)(C,7)(C,11)</text>
+  <text x="824" y="360.380952380952" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--danger-text)">hash%4=2</text>
 
-  <rect x="704" y="396.51376146789" width="240" height="95.779816513761" rx="6.189662883026" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="824" y="428.440366972477" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--warn-text)">Partition 3</text>
-  <text x="824" y="458.238532110092" text-anchor="middle" font-family="Courier New, monospace" font-size="15.474157207564" fill="var(--warn-text)">(D,5)(D,9)...</text>
-  <text x="824" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--warn-text)">hash%4=3</text>
+  <rect x="704" y="388" width="240" height="99.428571428571" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824" y="421.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--warn-text)">Partition 3</text>
+  <text x="824" y="452.076190476191" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" fill="var(--warn-text)">(D,5)(D,9)...</text>
+  <text x="824" y="476.380952380952" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--warn-text)">hash%4=3</text>
 
-  <line x1="944" y1="109.174311926605" x2="1024" y2="109.174311926605" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="944" y1="220.917431192661" x2="1024" y2="220.917431192661" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="944" y1="332.660550458716" x2="1024" y2="332.660550458716" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="944" y1="444.403669724771" x2="1024" y2="444.403669724771" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="944" y1="89.714285714285" x2="1024" y2="89.714285714285" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="944" y1="205.714285714286" x2="1024" y2="205.714285714286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="944" y1="321.714285714286" x2="1024" y2="321.714285714286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="944" y1="437.714285714286" x2="1024" y2="437.714285714286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1032" y="77.247706422018" width="208" height="63.853211009174" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136" y="116.623853211009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" fill="var(--info-text)">Worker 1</text>
-  <rect x="1032" y="188.990825688073" width="208" height="63.853211009174" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136" y="228.366972477064" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" fill="var(--info-text)">Worker 2</text>
-  <rect x="1032" y="300.733944954128" width="208" height="63.853211009174" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136" y="340.110091743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" fill="var(--info-text)">Worker 3</text>
-  <rect x="1032" y="412.477064220183" width="208" height="63.853211009174" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1136" y="451.853211009174" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" fill="var(--info-text)">Worker 4</text>
+  <rect x="1032" y="56.571428571428" width="208" height="66.285714285714" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136" y="97.447619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" fill="var(--info-text)">Worker 1</text>
+  <rect x="1032" y="172.571428571428" width="208" height="66.285714285714" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136" y="213.447619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" fill="var(--info-text)">Worker 2</text>
+  <rect x="1032" y="288.571428571428" width="208" height="66.285714285714" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136" y="329.447619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" fill="var(--info-text)">Worker 3</text>
+  <rect x="1032" y="404.571428571428" width="208" height="66.285714285714" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136" y="445.447619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" fill="var(--info-text)">Worker 4</text>
 
-  <rect x="40" y="274.128440366972" width="272" height="79.816513761468" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="176" y="306.05504587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--info-text)">Hash</text>
-  <text x="176" y="335.853211009174" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">hash(key) % N</text>
+  <rect x="40" y="260.95238095238" width="272" height="82.857142857143" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="176" y="294.095238095238" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--info-text)">Hash</text>
+  <text x="176" y="325.028571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--info-text)">hash(key) % N</text>
 
-  <rect x="40" y="369.908256880734" width="272" height="79.816513761468" rx="6.189662883026" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="176" y="401.834862385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--info-text)">Range</text>
-  <text x="176" y="431.633027522936" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">sorted ranges</text>
+  <rect x="40" y="360.380952380952" width="272" height="82.857142857143" rx="6.306459273747" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="176" y="393.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--info-text)">Range</text>
+  <text x="176" y="424.457142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--info-text)">sorted ranges</text>
 
-  <rect x="40" y="465.688073394495" width="272" height="79.816513761468" rx="6.189662883026" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="176" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.537378168572" font-weight="bold" fill="var(--warn-text)">Custom</text>
-  <text x="176" y="527.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--warn-text)">User-defined</text>
+  <rect x="40" y="459.809523809523" width="272" height="82.857142857143" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="176" y="492.952380952381" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.868301275616" font-weight="bold" fill="var(--warn-text)">Custom</text>
+  <text x="176" y="523.885714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">User-defined</text>
 
-  <text x="640" y="588.073394495413" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" font-weight="bold" fill="var(--primary-accent)">Same keys land in same partition</text>
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" fill="var(--text-muted)">Co-located data reduces shuffle</text>
+  <text x="640" y="586.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.919377821241" font-weight="bold" fill="var(--primary-accent)">Same keys land in same partition</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.817224729992" fill="var(--text-muted)">Co-located data reduces shuffle</text>
 </svg>

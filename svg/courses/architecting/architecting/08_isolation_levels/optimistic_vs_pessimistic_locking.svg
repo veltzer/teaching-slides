@@ -95,38 +95,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="22.779" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Optimistic vs Pessimistic Locking</text>
-  <rect x="40" y="76.2499" width="562.0251" height="405.9999" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.3632 1.1816"/>
-  <text x="321.0128" y="112.5" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pessimistic Locking</text>
-  <rect x="169.1141" y="141.5" width="303.7975" height="58" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.0128" y="170.5" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Lock First</text>
-  <text x="321.0128" y="189.3499" text-anchor="middle" font-size="20.4959" fill="var(--text-muted)" font-family="Arial, sans-serif">Acquire exclusive lock</text>
-  <line x1="321.0128" y1="199.4999" x2="321.0128" y2="218.3499" stroke="var(--danger-border)" stroke-width="0.4431" marker-end="url(#arrow-danger)"/>
-  <rect x="169.1141" y="221.2498" width="303.7975" height="58" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.0128" y="257.4999" text-anchor="middle" font-size="20.4959" fill="var(--text)" font-family="Arial, sans-serif">2. Perform Operation</text>
-  <line x1="321.0128" y1="279.2498" x2="321.0128" y2="298.1" stroke="var(--danger-border)" stroke-width="0.4431" marker-end="url(#arrow-danger)"/>
-  <rect x="169.1141" y="300.9999" width="303.7975" height="58" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.0128" y="337.2498" text-anchor="middle" font-size="20.4959" fill="var(--text)" font-family="Arial, sans-serif">3. Release Lock</text>
-  <rect x="115.9493" y="387.9999" width="410.1267" height="50.7501" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="321.0128" y="419.9" text-anchor="middle" font-size="20.4959" fill="var(--danger-accent)" font-family="Arial, sans-serif">Blocks other transactions while locked</text>
-  <rect x="677.9747" y="76.2499" width="562.0251" height="405.9999" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.3632 1.1816"/>
-  <text x="958.9874" y="112.5" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimistic Locking</text>
-  <rect x="807.0886" y="141.5" width="303.7975" height="58" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.9874" y="170.5" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Read Version</text>
-  <text x="958.9874" y="189.3499" text-anchor="middle" font-size="20.4959" fill="var(--text-muted)" font-family="Arial, sans-serif">No lock acquired</text>
-  <line x1="958.9874" y1="199.4999" x2="958.9874" y2="218.3499" stroke="var(--ok-border)" stroke-width="0.4431" marker-end="url(#arrow)"/>
-  <rect x="807.0886" y="221.2498" width="303.7975" height="58" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.9874" y="257.4999" text-anchor="middle" font-size="20.4959" fill="var(--text)" font-family="Arial, sans-serif">2. Perform Operation</text>
-  <line x1="958.9874" y1="279.2498" x2="958.9874" y2="298.1" stroke="var(--ok-border)" stroke-width="0.4431" marker-end="url(#arrow)"/>
-  <rect x="807.0886" y="300.9999" width="303.7975" height="58" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.9874" y="329.9999" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Check Version + Update</text>
-  <path d="M 1110.8861 329.9999 Q 1194.4305 329.9999 1194.4305 170.5 Q 1194.4305 141.5 1113.9242 141.5" fill="none" stroke="var(--danger-border)" stroke-width="0.4431" stroke-dasharray="1.477 0.8862" marker-end="url(#arrow-danger)"/>
-  <text x="1221.7721" y="243.0001" font-size="20.4959" fill="var(--danger-accent)" font-family="Arial, sans-serif">Retry on</text>
-  <text x="1221.7721" y="261.8499" font-size="20.4959" fill="var(--danger-accent)" font-family="Arial, sans-serif">mismatch</text>
-  <rect x="753.924" y="387.9999" width="410.1267" height="50.7501" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="958.9874" y="419.9" text-anchor="middle" font-size="20.4959" fill="var(--ok-accent)" font-family="Arial, sans-serif">No blocking, retry on conflict</text>
-  <rect x="40" y="518.4998" width="1200" height="101.5002" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="639.9999" y="551.8498" text-anchor="middle" font-size="20.4959" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">When to Use</text>
-  <text x="321.0128" y="583.7499" text-anchor="middle" font-size="20.4959" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pessimistic: High contention, critical data</text>
-  <text x="958.9874" y="583.7499" text-anchor="middle" font-size="20.4959" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimistic: Low contention, read-heavy workloads</text>
+  <rect x="40" y="40" width="562.0251" height="433.06648035559" rx="6.196772784114" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.3632 1.1816"/>
+  <text x="321.0128" y="78.666766222204" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pessimistic Locking</text>
+  <rect x="169.1141" y="109.600093866649" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="321.0128" y="140.533421511095" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Lock First</text>
+  <text x="321.0128" y="160.639977813337" text-anchor="middle" font-size="21.168072550986" fill="var(--text-muted)" font-family="Arial, sans-serif">Acquire exclusive lock</text>
+  <line x1="321.0128" y1="171.466642488893" x2="321.0128" y2="191.573305457783" stroke="var(--danger-border)" stroke-width="0.4431" marker-end="url(#arrow-danger)"/>
+  <rect x="169.1141" y="194.66653155558" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="321.0128" y="233.333297777784" text-anchor="middle" font-size="21.168072550986" fill="var(--text)" font-family="Arial, sans-serif">2. Perform Operation</text>
+  <line x1="321.0128" y1="256.533186844471" x2="321.0128" y2="276.640063146655" stroke="var(--danger-border)" stroke-width="0.4431" marker-end="url(#arrow-danger)"/>
+  <rect x="169.1141" y="279.733289244453" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="321.0128" y="318.399842133362" text-anchor="middle" font-size="21.168072550986" fill="var(--text)" font-family="Arial, sans-serif">3. Release Lock</text>
+  <rect x="115.9493" y="372.533272177789" width="410.1267" height="54.133430044427" rx="6.196772784114" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="321.0128" y="406.560039253326" text-anchor="middle" font-size="21.168072550986" fill="var(--danger-accent)" font-family="Arial, sans-serif">Blocks other transactions while locked</text>
+  <rect x="677.9747" y="40" width="562.0251" height="433.06648035559" rx="6.196772784114" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="2.3632 1.1816"/>
+  <text x="958.9874" y="78.666766222204" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimistic Locking</text>
+  <rect x="807.0886" y="109.600093866649" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.9874" y="140.533421511095" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Read Version</text>
+  <text x="958.9874" y="160.639977813337" text-anchor="middle" font-size="21.168072550986" fill="var(--text-muted)" font-family="Arial, sans-serif">No lock acquired</text>
+  <line x1="958.9874" y1="171.466642488893" x2="958.9874" y2="191.573305457783" stroke="var(--ok-border)" stroke-width="0.4431" marker-end="url(#arrow)"/>
+  <rect x="807.0886" y="194.66653155558" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.9874" y="233.333297777784" text-anchor="middle" font-size="21.168072550986" fill="var(--text)" font-family="Arial, sans-serif">2. Perform Operation</text>
+  <line x1="958.9874" y1="256.533186844471" x2="958.9874" y2="276.640063146655" stroke="var(--ok-border)" stroke-width="0.4431" marker-end="url(#arrow)"/>
+  <rect x="807.0886" y="279.733289244453" width="303.7975" height="61.866655288891" rx="6.196772784114" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.9874" y="310.666616888898" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Check Version + Update</text>
+  <path d="M 1110.8861 310.666616888898 Q 1194.4305 310.666616888898 1194.4305 140.533421511095 Q 1194.4305 109.600093866649 1113.9242 109.600093866649" fill="none" stroke="var(--danger-border)" stroke-width="0.4431" stroke-dasharray="1.477 0.8862" marker-end="url(#arrow-danger)"/>
+  <text x="1221.7721" y="217.866847288856" font-size="21.168072550986" fill="var(--danger-accent)" font-family="Arial, sans-serif">Retry on</text>
+  <text x="1221.7721" y="237.973296924451" font-size="21.168072550986" fill="var(--danger-accent)" font-family="Arial, sans-serif">mismatch</text>
+  <rect x="753.924" y="372.533272177789" width="410.1267" height="54.133430044427" rx="6.196772784114" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="958.9874" y="406.560039253326" text-anchor="middle" font-size="21.168072550986" fill="var(--ok-accent)" font-family="Arial, sans-serif">No blocking, retry on conflict</text>
+  <rect x="40" y="511.733139911147" width="1200" height="108.266860088853" rx="6.196772784114" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="639.9999" y="547.306466702259" text-anchor="middle" font-size="21.168072550986" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">When to Use</text>
+  <text x="321.0128" y="581.333233777796" text-anchor="middle" font-size="21.168072550986" fill="var(--danger-accent)" font-family="Arial, sans-serif">Pessimistic: High contention, critical data</text>
+  <text x="958.9874" y="581.333233777796" text-anchor="middle" font-size="21.168072550986" fill="var(--ok-accent)" font-family="Arial, sans-serif">Optimistic: Low contention, read-heavy workloads</text>
 </svg>

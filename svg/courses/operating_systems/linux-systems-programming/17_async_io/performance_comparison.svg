@@ -96,41 +96,40 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Async I/O Comparison</text>
 
-  <rect x="40" y="71.636363636364" width="290" height="548.363636363636" rx="8.21528508884" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="185" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--danger-text)">POSIX AIO</text>
-  <text x="185" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--danger-text)">Avoid</text>
-  <text x="185" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">glibc user threads</text>
-  <text x="185" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">No real parallelism</text>
-  <text x="185" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Signals on complete</text>
-  <text x="185" y="351.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Limited fd types</text>
-  <text x="185" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--danger-text)">~10k IOPS</text>
+  <rect x="40" y="40" width="290" height="580" rx="8.44894167246" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--danger-text)">POSIX AIO</text>
+  <text x="185" y="134.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" font-weight="bold" fill="var(--danger-text)">Avoid</text>
+  <text x="185" y="201.730769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">glibc user threads</text>
+  <text x="185" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">No real parallelism</text>
+  <text x="185" y="290.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">Signals on complete</text>
+  <text x="185" y="335.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--danger-text)">Limited fd types</text>
+  <text x="185" y="452.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.010118763033" font-weight="bold" fill="var(--danger-text)">~10k IOPS</text>
 
-  <rect x="340" y="71.636363636364" width="290" height="548.363636363636" rx="8.21528508884" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--warn-text)">libaio</text>
-  <text x="485" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--warn-text)">O_DIRECT niche</text>
-  <text x="485" y="224.545454545455" text-anchor="middle" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--warn-text)">io_submit / getevents</text>
-  <text x="485" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Kernel queues</text>
-  <text x="485" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Sync for buffered</text>
-  <text x="485" y="351.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Database use</text>
-  <text x="485" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-text)">~100k IOPS</text>
+  <rect x="340" y="40" width="290" height="580" rx="8.44894167246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--warn-text)">libaio</text>
+  <text x="485" y="134.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" font-weight="bold" fill="var(--warn-text)">O_DIRECT niche</text>
+  <text x="485" y="201.730769230769" text-anchor="middle" font-family="Courier New, monospace" font-size="14.785647926803" fill="var(--warn-text)">io_submit / getevents</text>
+  <text x="485" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Kernel queues</text>
+  <text x="485" y="290.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Sync for buffered</text>
+  <text x="485" y="335.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--warn-text)">Database use</text>
+  <text x="485" y="452.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.010118763033" font-weight="bold" fill="var(--warn-text)">~100k IOPS</text>
 
-  <rect x="640" y="71.636363636364" width="290" height="548.363636363636" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--primary-text)">epoll</text>
-  <text x="785" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--primary-text)">Sockets</text>
-  <text x="785" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Readiness notify</text>
-  <text x="785" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Edge or level</text>
-  <text x="785" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">100k+ fds</text>
-  <text x="785" y="351.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--primary-text)">Nginx, Redis</text>
-  <text x="785" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">~1M events/s</text>
+  <rect x="640" y="40" width="290" height="580" rx="8.44894167246" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--primary-text)">epoll</text>
+  <text x="785" y="134.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" font-weight="bold" fill="var(--primary-text)">Sockets</text>
+  <text x="785" y="201.730769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">Readiness notify</text>
+  <text x="785" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">Edge or level</text>
+  <text x="785" y="290.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">100k+ fds</text>
+  <text x="785" y="335.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--primary-text)">Nginx, Redis</text>
+  <text x="785" y="452.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.010118763033" font-weight="bold" fill="var(--primary-text)">~1M events/s</text>
 
-  <rect x="940" y="71.636363636364" width="300" height="548.363636363636" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--ok-text)">io_uring</text>
-  <text x="1090" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.430570177679" font-weight="bold" fill="var(--ok-text)">Fastest (5.1+)</text>
-  <text x="1090" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Shared rings</text>
-  <text x="1090" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Zero-syscall path</text>
-  <text x="1090" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Files + sockets</text>
-  <text x="1090" y="351.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Linked ops</text>
-  <text x="1090" y="461.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">~2M+ IOPS</text>
+  <rect x="940" y="40" width="300" height="580" rx="8.44894167246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="90.192307692307" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.234589599263" font-weight="bold" fill="var(--ok-text)">io_uring</text>
+  <text x="1090" y="134.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.897883344918" font-weight="bold" fill="var(--ok-text)">Fastest (5.1+)</text>
+  <text x="1090" y="201.730769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Shared rings</text>
+  <text x="1090" y="246.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Zero-syscall path</text>
+  <text x="1090" y="290.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Files + sockets</text>
+  <text x="1090" y="335.576923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--ok-text)">Linked ops</text>
+  <text x="1090" y="452.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.010118763033" font-weight="bold" fill="var(--ok-text)">~2M+ IOPS</text>
 </svg>

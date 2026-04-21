@@ -95,30 +95,29 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="667.027" y="40" text-anchor="middle" font-size="24.6581" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cache Invalidation via Pub/Sub</text>
-  <rect x="40" y="105.9091" width="237.8378" height="118.6364" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="158.919" y="153.3636" text-anchor="middle" font-size="22.6033" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Write Service</text>
-  <text x="158.919" y="192.9091" text-anchor="middle" font-size="20.5484" fill="var(--text-muted)" font-family="Arial, sans-serif">updates DB</text>
-  <rect x="494.0541" y="92.7272" width="281.081" height="145" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="634.5946" y="150.7272" text-anchor="middle" font-size="22.6033" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Redis Pub/Sub</text>
-  <text x="634.5946" y="192.9091" text-anchor="middle" font-size="20.5484" font-family="Arial, sans-serif" fill="var(--warn-text)">cache:invalidate</text>
-  <rect x="1002.1622" y="66.3636" width="237.8378" height="92.2727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1121.0811" y="124.3636" text-anchor="middle" font-size="20.5484" font-family="Arial, sans-serif" fill="var(--ok-text)">App Server 1</text>
-  <rect x="1002.1622" y="179.7273" width="237.8378" height="92.2727" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1121.0811" y="237.7273" text-anchor="middle" font-size="20.5484" font-family="Arial, sans-serif" fill="var(--ok-text)">App Server 2</text>
-  <line x1="277.8379" y1="163.9091" x2="489.7298" y2="163.9091" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="385.946" y="145.4545" text-anchor="middle" font-size="20.5484" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. PUBLISH</text>
-  <line x1="775.1352" y1="137.5454" x2="997.8378" y2="111.1818" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="775.1352" y1="179.7273" x2="997.8378" y2="224.5455" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="883.2433" y="119.0909" text-anchor="middle" font-size="20.5484" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. notify</text>
-  <rect x="1012.973" y="303.6364" width="216.2162" height="92.2727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1121.0811" y="343.1818" text-anchor="middle" font-size="20.5484" fill="var(--danger-accent)" font-family="Arial, sans-serif">Local Cache</text>
-  <text x="1121.0811" y="377.4545" text-anchor="middle" font-size="22.6033" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">DEL key</text>
-  <line x1="1121.0811" y1="271.9999" x2="1121.0811" y2="298.3636" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1196.7568" y="295.7273" font-size="20.5484" fill="var(--danger-accent)" font-family="Arial, sans-serif">3.</text>
-  <rect x="83.2433" y="369.5454" width="735.1351" height="250.4546" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
-  <text x="126.4866" y="427.5455" font-size="20.5484" fill="var(--text)" font-family="Arial, sans-serif">1. Write service updates DB and publishes invalidation</text>
-  <text x="126.4866" y="475" font-size="20.5484" fill="var(--text)" font-family="Arial, sans-serif">2. Redis delivers to all subscribed app servers</text>
-  <text x="126.4866" y="522.4545" font-size="20.5484" fill="var(--text)" font-family="Arial, sans-serif">3. Each server evicts stale key from local cache</text>
-  <text x="126.4866" y="580.4545" font-size="20.5484" fill="var(--text-muted)" font-family="Arial, sans-serif">Result: all caches stay consistent without polling</text>
+  <rect x="40" y="81.428616326528" width="237.8378" height="124.285744217685" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.141195586949" filter="url(#shadow)"/>
+  <text x="158.919" y="131.142851156463" text-anchor="middle" font-size="23.135214368413" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Write Service</text>
+  <text x="158.919" y="172.571467482991" text-anchor="middle" font-size="21.031957233142" fill="var(--text-muted)" font-family="Arial, sans-serif">updates DB</text>
+  <rect x="494.0541" y="67.619007709753" width="281.081" height="151.904751927438" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.141195586949" filter="url(#shadow)"/>
+  <text x="634.5946" y="128.380908480729" text-anchor="middle" font-size="23.135214368413" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Redis Pub/Sub</text>
+  <text x="634.5946" y="172.571467482991" text-anchor="middle" font-size="21.031957233142" font-family="Arial, sans-serif" fill="var(--warn-text)">cache:invalidate</text>
+  <rect x="1002.1622" y="40" width="237.8378" height="96.666631746034" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.141195586949" filter="url(#shadow)"/>
+  <text x="1121.0811" y="100.761900770975" text-anchor="middle" font-size="21.031957233142" font-family="Arial, sans-serif" fill="var(--ok-text)">App Server 1</text>
+  <rect x="1002.1622" y="158.761963628114" width="237.8378" height="96.666631746034" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.141195586949" filter="url(#shadow)"/>
+  <text x="1121.0811" y="219.523864399089" text-anchor="middle" font-size="21.031957233142" font-family="Arial, sans-serif" fill="var(--ok-text)">App Server 2</text>
+  <line x1="277.8379" y1="142.190517097503" x2="489.7298" y2="142.190517097503" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="385.946" y="122.857127891157" text-anchor="middle" font-size="21.031957233142" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. PUBLISH</text>
+  <line x1="775.1352" y1="114.571404625852" x2="997.8378" y2="86.952396916099" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="775.1352" y1="158.761963628114" x2="997.8378" y2="205.714360544213" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="883.2433" y="95.238120181404" text-anchor="middle" font-size="21.031957233142" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. notify</text>
+  <rect x="1012.973" y="288.57148843537" width="216.2162" height="96.666631746034" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.141195586949" filter="url(#shadow)"/>
+  <text x="1121.0811" y="330" text-anchor="middle" font-size="21.031957233142" fill="var(--danger-accent)" font-family="Arial, sans-serif">Local Cache</text>
+  <text x="1121.0811" y="365.904730975059" text-anchor="middle" font-size="23.135214368413" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">DEL key</text>
+  <line x1="1121.0811" y1="255.42849061225" x2="1121.0811" y2="283.047603083901" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1196.7568" y="280.285765170065" font-size="21.031957233142" fill="var(--danger-accent)" font-family="Arial, sans-serif">3.</text>
+  <rect x="83.2433" y="357.619007709753" width="735.1351" height="262.380992290247" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.141195586949"/>
+  <text x="126.4866" y="418.381013242626" font-size="21.031957233142" fill="var(--text)" font-family="Arial, sans-serif">1. Write service updates DB and publishes invalidation</text>
+  <text x="126.4866" y="468.095248072562" font-size="21.031957233142" fill="var(--text)" font-family="Arial, sans-serif">2. Redis delivers to all subscribed app servers</text>
+  <text x="126.4866" y="517.809482902497" font-size="21.031957233142" fill="var(--text)" font-family="Arial, sans-serif">3. Each server evicts stale key from local cache</text>
+  <text x="126.4866" y="578.571383673472" font-size="21.031957233142" fill="var(--text-muted)" font-family="Arial, sans-serif">Result: all caches stay consistent without polling</text>
 </svg>

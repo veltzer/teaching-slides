@@ -95,30 +95,29 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="24.6179" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Channel Types: Message Passing</text>
-  <rect x="40" y="89.7143" width="257.1429" height="182.2858" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="168.5713" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Producer (tx)</text>
-  <text x="168.5713" y="199.0857" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--primary-text)">tx.send(msg)</text>
-  <text x="168.5713" y="242.1714" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--primary-text)">can clone tx</text>
-  <rect x="511.4285" y="89.7143" width="257.1429" height="182.2858" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="639.9999" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Channel</text>
-  <text x="639.9999" y="199.0857" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--warn-text)">FIFO queue</text>
-  <text x="639.9999" y="242.1714" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--warn-text)">buffered/unbuffered</text>
-  <rect x="982.8571" y="89.7143" width="257.1429" height="182.2858" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1111.4285" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Consumer (rx)</text>
-  <text x="1111.4285" y="199.0857" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">rx.recv()</text>
-  <text x="1111.4285" y="242.1714" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--ok-text)">blocks until msg</text>
-  <line x1="297.1428" y1="179.2" x2="511.4285" y2="179.2" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="404.2856" y="156.0001" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--text)">send</text>
-  <line x1="768.5714" y1="179.2" x2="982.8571" y2="179.2" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="875.7143" y="156.0001" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--text)">recv</text>
-  <rect x="40" y="321.7143" width="578.5715" height="132.5714" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="329.2856" y="374.7428" text-anchor="middle" font-size="20.5149" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">mpsc (multi-producer, single-consumer)</text>
-  <text x="329.2856" y="427.7715" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--info-text)">Multiple tx clones, one rx. Ownership transferred on send.</text>
-  <rect x="661.4285" y="321.7143" width="578.5715" height="132.5714" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="950.7143" y="374.7428" text-anchor="middle" font-size="20.5149" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">sync_channel (bounded)</text>
-  <text x="950.7143" y="427.7715" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--danger-text)">Fixed buffer size. send() blocks when full.</text>
-  <rect x="211.4285" y="504" width="857.1429" height="116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="639.9999" y="553.7143" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--primary-text)">Message ownership is moved through the channel</text>
-  <text x="639.9999" y="600.1143" text-anchor="middle" font-size="20.5149" font-family="Arial, sans-serif" fill="var(--primary-text)">Sender cannot use value after send -- compiler enforced</text>
+  <rect x="40" y="40" width="257.1429" height="199.375099121096" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="168.5713" y="105.249954882811" text-anchor="middle" font-size="21.454996261925" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Producer (tx)</text>
+  <text x="168.5713" y="159.624971972655" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--primary-text)">tx.send(msg)</text>
+  <text x="168.5713" y="206.749957617186" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--primary-text)">can clone tx</text>
+  <rect x="511.4285" y="40" width="257.1429" height="199.375099121096" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="639.9999" y="105.249954882811" text-anchor="middle" font-size="21.454996261925" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Channel</text>
+  <text x="639.9999" y="159.624971972655" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--warn-text)">FIFO queue</text>
+  <text x="639.9999" y="206.749957617186" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--warn-text)">buffered/unbuffered</text>
+  <rect x="982.8571" y="40" width="257.1429" height="199.375099121096" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="1111.4285" y="105.249954882811" text-anchor="middle" font-size="21.454996261925" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Consumer (rx)</text>
+  <text x="1111.4285" y="159.624971972655" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--ok-text)">rx.recv()</text>
+  <text x="1111.4285" y="206.749957617186" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--ok-text)">blocks until msg</text>
+  <line x1="297.1428" y1="137.874987011718" x2="511.4285" y2="137.874987011718" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="404.2856" y="112.500095703128" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--text)">send</text>
+  <line x1="768.5714" y1="137.874987011718" x2="982.8571" y2="137.874987011718" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="875.7143" y="112.500095703128" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--text)">recv</text>
+  <rect x="40" y="293.750006835938" width="578.5715" height="144.999972656249" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="329.2856" y="351.749930273436" text-anchor="middle" font-size="21.454996261925" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">mpsc (multi-producer, single-consumer)</text>
+  <text x="329.2856" y="409.750072460939" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--info-text)">Multiple tx clones, one rx. Ownership transferred on send.</text>
+  <rect x="661.4285" y="293.750006835938" width="578.5715" height="144.999972656249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="950.7143" y="351.749930273436" text-anchor="middle" font-size="21.454996261925" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">sync_channel (bounded)</text>
+  <text x="950.7143" y="409.750072460939" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--danger-text)">Fixed buffer size. send() blocks when full.</text>
+  <rect x="211.4285" y="493.124996582031" width="857.1429" height="126.875003417969" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="639.9999" y="547.500013671875" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--primary-text)">Message ownership is moved through the channel</text>
+  <text x="639.9999" y="598.250015039063" text-anchor="middle" font-size="21.454996261925" font-family="Arial, sans-serif" fill="var(--primary-text)">Sender cannot use value after send -- compiler enforced</text>
 </svg>

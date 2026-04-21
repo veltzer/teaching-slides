@@ -95,24 +95,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640.000052" y="40" text-anchor="middle" font-size="24.820515" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Threading and the GIL</text>
-  <rect x="40" y="73.354638" width="334.426259" height="194.568758" rx="6.591063" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="207.213129" y="184.536802" font-size="26.729836" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">CPU-bound task</text>
-  <text x="207.213129" y="221.597485" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Heavy computation</text>
-  <text x="207.213129" y="247.540032" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Number crunching</text>
-  <line x1="374.426259" y1="170.638959" x2="423.606591" y2="170.638959" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="427.541017" y="73.354638" width="393.442657" height="194.568758" rx="6.591063" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="624.262346" y="170.638959" font-size="24.820515" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">multiprocessing</text>
-  <text x="624.262346" y="203.067258" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Bypasses GIL entirely</text>
-  <text x="624.262346" y="230.862713" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">True parallelism</text>
-  <rect x="40" y="314.249307" width="334.426259" height="194.568758" rx="6.591063" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="207.213129" y="420.798742" font-size="26.729836" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">I/O-bound task</text>
-  <text x="207.213129" y="457.85954" font-size="17.18345" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Network, disk, DB</text>
-  <line x1="374.426259" y1="411.533744" x2="423.606591" y2="411.533744" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="427.541017" y="314.249307" width="570.491853" height="194.568758" rx="6.591063" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="712.786944" y="411.533744" font-size="24.820515" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">threading  or  asyncio</text>
-  <text x="712.786944" y="443.961813" font-size="16.228845" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">GIL released during I/O waits</text>
-  <rect x="40" y="545.878634" width="1200" height="74.121366" rx="6.591063" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640.000052" y="575.527341" text-anchor="middle" font-size="17.18345" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">GIL: Global Interpreter Lock</text>
-  <text x="640.000052" y="605.175819" text-anchor="middle" font-size="15.274129" fill="var(--text-muted)" font-family="Arial, sans-serif">Allows only one thread to execute Python bytecode at a time. Released during I/O system calls.</text>
+  <rect x="40" y="40" width="334.426259" height="206.440752057456" rx="6.78916909739" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="207.213129" y="157.966161615399" font-size="27.533248665581" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">CPU-bound task</text>
+  <text x="207.213129" y="197.288174814881" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Heavy computation</text>
+  <text x="207.213129" y="224.813657158588" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Number crunching</text>
+  <line x1="374.426259" y1="143.220314489744" x2="423.606591" y2="143.220314489744" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="427.541017" y="40" width="393.442657" height="206.440752057456" rx="6.78916909739" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="624.262346" y="143.220314489744" font-size="25.566539633943" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">multiprocessing</text>
+  <text x="624.262346" y="177.627289701582" font-size="16.716631742154" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Bypasses GIL entirely</text>
+  <text x="624.262346" y="207.118738857973" font-size="16.716631742154" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">True parallelism</text>
+  <rect x="40" y="295.59332930003" width="334.426259" height="206.440752057456" rx="6.78916909739" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="207.213129" y="408.644086876932" font-size="27.533248665581" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">I/O-bound task</text>
+  <text x="207.213129" y="447.966222093365" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Network, disk, DB</text>
+  <line x1="374.426259" y1="398.813766867741" x2="423.606591" y2="398.813766867741" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="427.541017" y="295.59332930003" width="570.491853" height="206.440752057456" rx="6.78916909739" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="712.786944" y="398.813766867741" font-size="25.566539633943" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">threading  or  asyncio</text>
+  <text x="712.786944" y="433.220498045678" font-size="16.716631742154" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">GIL released during I/O waits</text>
+  <rect x="40" y="541.355973601035" width="1200" height="78.644026398965" rx="6.78916909739" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640.000052" y="572.813754559945" text-anchor="middle" font-size="17.699929089822" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">GIL: Global Interpreter Lock</text>
+  <text x="640.000052" y="604.271292545971" text-anchor="middle" font-size="15.733220058184" fill="var(--text-muted)" font-family="Arial, sans-serif">Allows only one thread to execute Python bytecode at a time. Released during I/O system calls.</text>
 </svg>

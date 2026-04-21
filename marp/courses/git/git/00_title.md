@@ -4,7 +4,7 @@ tags:
   - concepts:version-control
 level: intermediate
 category: version-control
-duration_hours: 24
+duration_hours: 56
 audience:
   - audiences:developers
   - audiences:sysadmins

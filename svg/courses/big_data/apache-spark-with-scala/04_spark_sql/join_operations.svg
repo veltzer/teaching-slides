@@ -96,59 +96,58 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80025990755" font-weight="bold" fill="var(--text)">Join Strategies in Spark SQL</text>
 
-  <rect x="40" y="66.851851851852" width="390" height="257.777777777778" rx="6.218252702059" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="104.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--ok-text)">Broadcast Hash</text>
-  <text x="235" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">Small side shipped</text>
-  <text x="235" y="168.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">No shuffle, fastest</text>
-  <text x="235" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">When: one side small</text>
-  <text x="235" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">(autoBroadcastThreshold)</text>
-  <text x="235" y="287.037037037037" text-anchor="middle" font-family="Courier New, monospace" font-size="13.472880854462" fill="var(--ok-text)">df.join(broadcast(s), "id")</text>
+  <rect x="40" y="40" width="390" height="270.291262135923" rx="6.367392662651" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--ok-text)">Broadcast Hash</text>
+  <text x="235" y="118.834951456311" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">Small side shipped</text>
+  <text x="235" y="146.990291262136" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">No shuffle, fastest</text>
+  <text x="235" y="192.038834951456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">When: one side small</text>
+  <text x="235" y="220.194174757282" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--ok-text)">(autoBroadcastThreshold)</text>
+  <text x="235" y="270.873786407767" text-anchor="middle" font-family="Courier New, monospace" font-size="13.796017435745" fill="var(--ok-text)">df.join(broadcast(s), "id")</text>
 
-  <rect x="445" y="66.851851851852" width="390" height="257.777777777778" rx="6.218252702059" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="104.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--primary-text)">Shuffle Hash</text>
-  <text x="640" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">Both sides shuffled</text>
-  <text x="640" y="168.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">Hashtable on smaller</text>
-  <text x="640" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">When: fits per executor</text>
-  <text x="640" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">No sorting, in-memory</text>
-  <text x="640" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">Rarely picked</text>
+  <rect x="445" y="40" width="390" height="270.291262135923" rx="6.367392662651" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--primary-text)">Shuffle Hash</text>
+  <text x="640" y="118.834951456311" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">Both sides shuffled</text>
+  <text x="640" y="146.990291262136" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">Hashtable on smaller</text>
+  <text x="640" y="192.038834951456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">When: fits per executor</text>
+  <text x="640" y="220.194174757282" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">No sorting, in-memory</text>
+  <text x="640" y="270.873786407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--primary-text)">Rarely picked</text>
 
-  <rect x="850" y="66.851851851852" width="390" height="257.777777777778" rx="6.218252702059" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="104.444444444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--warn-text)">Sort-Merge (default)</text>
-  <text x="1045" y="142.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Shuffled then sorted</text>
-  <text x="1045" y="168.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Merge-scan rows</text>
-  <text x="1045" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">When: both large</text>
-  <text x="1045" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Memory-safe, spillable</text>
-  <text x="1045" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Predictable, scalable</text>
+  <rect x="850" y="40" width="390" height="270.291262135923" rx="6.367392662651" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="79.417475728155" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--warn-text)">Sort-Merge (default)</text>
+  <text x="1045" y="118.834951456311" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Shuffled then sorted</text>
+  <text x="1045" y="146.990291262136" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Merge-scan rows</text>
+  <text x="1045" y="192.038834951456" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">When: both large</text>
+  <text x="1045" y="220.194174757282" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Memory-safe, spillable</text>
+  <text x="1045" y="270.873786407767" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--warn-text)">Predictable, scalable</text>
 
   <!-- Bottom join types -->
-  <text x="640" y="367.592592592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758106178" font-weight="bold" fill="var(--text)">Join types</text>
+  <text x="640" y="355.339805825243" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.102177987955" font-weight="bold" fill="var(--text)">Join types</text>
 
-  <rect x="70" y="394.444444444444" width="180" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">inner</text>
-  <text x="160" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Key matches</text>
-  <text x="160" y="517.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">both sides</text>
+  <rect x="70" y="383.495145631067" width="180" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">inner</text>
+  <text x="160" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">Key matches</text>
+  <text x="160" y="513.009708737864" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">both sides</text>
 
-  <rect x="270" y="394.444444444444" width="180" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="360" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">left_outer</text>
-  <text x="360" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">All left</text>
-  <text x="360" y="517.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">+ right matches</text>
+  <rect x="270" y="383.495145631067" width="180" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">left_outer</text>
+  <text x="360" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">All left</text>
+  <text x="360" y="513.009708737864" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">+ right matches</text>
 
-  <rect x="470" y="394.444444444444" width="180" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="560" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">right_outer</text>
-  <text x="560" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Mirror of left</text>
+  <rect x="470" y="383.495145631067" width="180" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="560" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">right_outer</text>
+  <text x="560" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">Mirror of left</text>
 
-  <rect x="670" y="394.444444444444" width="180" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="760" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">full_outer</text>
-  <text x="760" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">All rows</text>
-  <text x="760" y="517.962962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">both sides</text>
+  <rect x="670" y="383.495145631067" width="180" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">full_outer</text>
+  <text x="760" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">All rows</text>
+  <text x="760" y="513.009708737864" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">both sides</text>
 
-  <rect x="870" y="394.444444444444" width="180" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="960" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">left_semi</text>
-  <text x="960" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Left w/ match</text>
+  <rect x="870" y="383.495145631067" width="180" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">left_semi</text>
+  <text x="960" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">Left w/ match</text>
 
-  <rect x="1070" y="394.444444444444" width="150" height="225.555555555556" rx="6.218252702059" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1145" y="432.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">left_anti</text>
-  <text x="1145" y="491.111111111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Left w/o match</text>
+  <rect x="1070" y="383.495145631067" width="150" height="236.504854368933" rx="6.367392662651" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1145" y="422.912621359223" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.97971376707" font-weight="bold" fill="var(--info-text)">left_anti</text>
+  <text x="1145" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.796017435745" fill="var(--info-text)">Left w/o match</text>
 </svg>

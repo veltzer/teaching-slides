@@ -96,56 +96,55 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592033994309" font-weight="bold" fill="var(--text)">System V IPC Architecture</text>
 
   <!-- Kernel namespace -->
-  <rect x="390" y="87.454545454545" width="500" height="137.090909090909" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="124.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">Kernel IPC Namespace</text>
-  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Global object table, integer key</text>
-  <text x="640" y="182.363636363636" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--info-text)">key = ftok("/tmp/app", 42)</text>
-  <text x="640" y="208.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--info-text)">ipcs -a lists objects</text>
+  <rect x="390" y="40" width="500" height="149.306930693069" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="80.19801980198" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--info-text)">Kernel IPC Namespace</text>
+  <text x="640" y="114.653465346535" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--info-text)">Global object table, integer key</text>
+  <text x="640" y="143.366336633663" text-anchor="middle" font-family="Courier New, monospace" font-size="13.931942072123" fill="var(--info-text)">key = ftok("/tmp/app", 42)</text>
+  <text x="640" y="172.079207920793" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.860254220421" fill="var(--info-text)">ipcs -a lists objects</text>
 
   <!-- Processes -->
-  <rect x="40" y="119.090909090909" width="170" height="73.818181818182" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="125" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Process A</text>
-  <text x="125" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">writer</text>
+  <rect x="40" y="74.455445544555" width="170" height="80.396039603961" rx="6.430127110211" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="125" y="108.91089108911" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.003629923825" font-weight="bold" fill="var(--text)">Process A</text>
+  <text x="125" y="137.623762376238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.860254220421" fill="var(--text-muted)">writer</text>
 
-  <rect x="1070" y="119.090909090909" width="170" height="73.818181818182" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1155" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--text)">Process B</text>
-  <text x="1155" y="177.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--text-muted)">reader</text>
+  <rect x="1070" y="74.455445544555" width="170" height="80.396039603961" rx="6.430127110211" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1155" y="108.91089108911" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.003629923825" font-weight="bold" fill="var(--text)">Process B</text>
+  <text x="1155" y="137.623762376238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.860254220421" fill="var(--text-muted)">reader</text>
 
-  <line x1="210" y1="156" x2="388" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="890" y1="156" x2="1068" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="210" y1="114.653465346535" x2="388" y2="114.653465346535" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="890" y1="114.653465346535" x2="1068" y2="114.653465346535" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Message Queues -->
-  <rect x="60" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="245" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--primary-text)">Message Queues</text>
-  <text x="80" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgget(key, IPC_CREAT|0666)</text>
-  <text x="80" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgsnd(id, &amp;msg, size, 0)</text>
-  <text x="80" y="414.363636363636" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgrcv(id, &amp;msg, size, type, 0)</text>
-  <text x="80" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Typed messages</text>
-  <text x="80" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">Persistent</text>
-  <text x="80" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--primary-text)">msgctl(id, IPC_RMID, NULL)</text>
+  <rect x="60" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--primary-text)">Message Queues</text>
+  <text x="80" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgget(key, IPC_CREAT|0666)</text>
+  <text x="80" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgsnd(id, &amp;msg, size, 0)</text>
+  <text x="80" y="396.039603960396" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgrcv(id, &amp;msg, size, type, 0)</text>
+  <text x="80" y="441.980198019803" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--primary-text)">Typed messages</text>
+  <text x="80" y="476.435643564356" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--primary-text)">Persistent</text>
+  <text x="80" y="528.118811881189" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--primary-text)">msgctl(id, IPC_RMID, NULL)</text>
 
   <!-- Semaphores -->
-  <rect x="455" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--info-text)">Semaphore Sets</text>
-  <text x="475" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semget(key, nsems, 0666)</text>
-  <text x="475" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semop(id, &amp;sops, nsops)</text>
-  <text x="475" y="424.909090909091" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">op = -1 → wait</text>
-  <text x="475" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">op = +1 → signal</text>
-  <text x="475" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--info-text)">Atomic in set</text>
-  <text x="475" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--info-text)">semctl(id, 0, IPC_RMID)</text>
+  <rect x="455" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--info-text)">Semaphore Sets</text>
+  <text x="475" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semget(key, nsems, 0666)</text>
+  <text x="475" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semop(id, &amp;sops, nsops)</text>
+  <text x="475" y="407.524752475248" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--info-text)">op = -1 → wait</text>
+  <text x="475" y="441.980198019803" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--info-text)">op = +1 → signal</text>
+  <text x="475" y="476.435643564356" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--info-text)">Atomic in set</text>
+  <text x="475" y="528.118811881189" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--info-text)">semctl(id, 0, IPC_RMID)</text>
 
   <!-- Shared Memory -->
-  <rect x="850" y="272" width="370" height="316.363636363636" rx="8.21528508884" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1035" y="308.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-text)">Shared Memory</text>
-  <text x="870" y="351.090909090909" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmget(key, size, 0666)</text>
-  <text x="870" y="388" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">ptr = shmat(id, NULL, 0)</text>
-  <text x="870" y="414.363636363636" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmdt(ptr)</text>
-  <text x="870" y="456.545454545455" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Zero-copy, fastest</text>
-  <text x="870" y="488.181818181818" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--ok-text)">Combine with sems</text>
-  <text x="870" y="535.636363636364" font-family="Courier New, monospace" font-size="12.322927633259" fill="var(--ok-text)">shmctl(id, IPC_RMID, NULL)</text>
+  <rect x="850" y="240.990099009901" width="370" height="344.554455445544" rx="8.573502813615" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="281.188118811882" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.290381330632" font-weight="bold" fill="var(--ok-text)">Shared Memory</text>
+  <text x="870" y="327.128712871287" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">shmget(key, size, 0666)</text>
+  <text x="870" y="367.326732673268" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">ptr = shmat(id, NULL, 0)</text>
+  <text x="870" y="396.039603960396" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">shmdt(ptr)</text>
+  <text x="870" y="441.980198019803" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--ok-text)">Zero-copy, fastest</text>
+  <text x="870" y="476.435643564356" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--ok-text)">Combine with sems</text>
+  <text x="870" y="528.118811881189" font-family="Courier New, monospace" font-size="12.860254220421" fill="var(--ok-text)">shmctl(id, IPC_RMID, NULL)</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Kernel-managed; persist until IPC_RMID or reboot</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.931942072123" fill="var(--text-muted)">Kernel-managed; persist until IPC_RMID or reboot</text>
 </svg>

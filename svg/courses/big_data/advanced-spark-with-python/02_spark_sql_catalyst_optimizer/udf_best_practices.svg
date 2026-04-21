@@ -95,38 +95,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="30.6923" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">UDF Best Practices</text>
-  <rect x="477.8378" y="72.6761" width="324.3243" height="65.3521" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2.9553"/>
-  <text x="640" y="113.5211" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Need custom logic?</text>
-  <rect x="445.4054" y="187.0423" width="389.1891" height="65.3521" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="227.8874" text-anchor="middle" font-size="19.9499" fill="var(--warn-accent)" font-family="Arial, sans-serif">Built-in function available?</text>
-  <line x1="640" y1="138.0282" x2="640" y2="187.0423" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="964.3243" y="187.0423" width="275.6757" height="65.3521" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1102.1621" y="227.8874" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use Built-in (10-1000x)</text>
-  <line x1="834.5946" y1="219.7184" x2="964.3243" y2="219.7184" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="899.4594" y="208.2817" font-size="16.8808" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes</text>
-  <rect x="445.4054" y="309.5774" width="389.1891" height="65.3521" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="350.4226" text-anchor="middle" font-size="19.9499" fill="var(--warn-accent)" font-family="Arial, sans-serif">Can use Pandas/Arrow?</text>
-  <line x1="640" y1="252.3944" x2="640" y2="309.5774" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="656.2162" y="289.9719" font-size="16.8808" fill="var(--danger-accent)" font-family="Arial, sans-serif">No</text>
-  <rect x="964.3243" y="309.5774" width="275.6757" height="65.3521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1102.1621" y="350.4226" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pandas UDF (3-100x)</text>
-  <line x1="834.5946" y1="342.2535" x2="964.3243" y2="342.2535" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="899.4594" y="330.8169" font-size="16.8808" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes</text>
-  <rect x="445.4054" y="432.1127" width="389.1891" height="65.3521" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="472.9577" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Python UDF (1x baseline)</text>
-  <line x1="640" y1="374.9296" x2="640" y2="432.1127" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="656.2162" y="412.507" font-size="16.8808" fill="var(--danger-accent)" font-family="Arial, sans-serif">No</text>
-  <rect x="40" y="187.0423" width="356.7568" height="310.4226" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="218.3784" y="227.8874" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Tips</text>
-  <text x="64.3243" y="268.7324" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Keep UDFs simple</text>
-  <text x="64.3243" y="304.676" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Avoid global state</text>
-  <text x="64.3243" y="340.6198" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Handle nulls explicitly</text>
-  <text x="64.3243" y="376.5634" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Use type hints</text>
-  <text x="64.3243" y="412.507" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Test independently</text>
-  <text x="64.3243" y="448.4507" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Minimize serialization</text>
-  <text x="64.3243" y="484.3944" font-size="18.4153" fill="var(--text)" font-family="Arial, sans-serif">- Prefer SQL expressions</text>
-  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="582.4225" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Performance Priority: Built-in Functions &gt; Pandas UDF &gt; Python UDF</text>
-  <text x="640" y="608.5633" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Built-ins are optimized by Catalyst; UDFs are opaque black boxes</text>
+  <rect x="477.8378" y="40" width="324.3243" height="69.253723435063" rx="6.176508461473" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2.9553"/>
+  <text x="640" y="83.283510915566" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Need custom logic?</text>
+  <rect x="445.4054" y="161.194042503899" width="389.1891" height="69.253723435063" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="204.477659389623" text-anchor="middle" font-size="20.536787692589" fill="var(--warn-accent)" font-family="Arial, sans-serif">Built-in function available?</text>
+  <line x1="640" y1="109.253723435063" x2="640" y2="161.194042503899" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="964.3243" y="161.194042503899" width="275.6757" height="69.253723435063" rx="6.176508461473" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1102.1621" y="204.477659389623" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Use Built-in (10-1000x)</text>
+  <line x1="834.5946" y1="195.82095720651" x2="964.3243" y2="195.82095720651" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="899.4594" y="183.701468179994" font-size="17.377400672738" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes</text>
+  <rect x="445.4054" y="291.044681220754" width="389.1891" height="69.253723435063" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="334.328404076635" text-anchor="middle" font-size="20.536787692589" fill="var(--warn-accent)" font-family="Arial, sans-serif">Can use Pandas/Arrow?</text>
+  <line x1="640" y1="230.447765938962" x2="640" y2="291.044681220754" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="656.2162" y="270.268701951441" font-size="17.377400672738" fill="var(--danger-accent)" font-family="Arial, sans-serif">No</text>
+  <rect x="964.3243" y="291.044681220754" width="275.6757" height="69.253723435063" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1102.1621" y="334.328404076635" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Pandas UDF (3-100x)</text>
+  <line x1="834.5946" y1="325.671595923365" x2="964.3243" y2="325.671595923365" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="899.4594" y="313.552212867006" font-size="17.377400672738" fill="var(--ok-accent)" font-family="Arial, sans-serif">Yes</text>
+  <rect x="445.4054" y="420.895531877925" width="389.1891" height="69.253723435063" rx="6.176508461473" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="464.17904279349" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Python UDF (1x baseline)</text>
+  <line x1="640" y1="360.298510625975" x2="640" y2="420.895531877925" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="656.2162" y="400.119340668295" font-size="17.377400672738" fill="var(--danger-accent)" font-family="Arial, sans-serif">No</text>
+  <rect x="40" y="161.194042503899" width="356.7568" height="328.955318779246" rx="6.176508461473" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="218.3784" y="204.477659389623" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Tips</text>
+  <text x="64.3243" y="247.761170305189" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Keep UDFs simple</text>
+  <text x="64.3243" y="285.850659910886" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Avoid global state</text>
+  <text x="64.3243" y="323.9403614569" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Handle nulls explicitly</text>
+  <text x="64.3243" y="362.029851062598" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Use type hints</text>
+  <text x="64.3243" y="400.119340668295" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Test independently</text>
+  <text x="64.3243" y="438.208936244151" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Minimize serialization</text>
+  <text x="64.3243" y="476.298531820006" font-size="18.95704271176" fill="var(--text)" font-family="Arial, sans-serif">- Prefer SQL expressions</text>
+  <rect x="40" y="542.089574381824" width="1200" height="77.910425618176" rx="6.176508461473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="580.179063987522" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Performance Priority: Built-in Functions &gt; Pandas UDF &gt; Python UDF</text>
+  <text x="640" y="607.880510973484" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Built-ins are optimized by Catalyst; UDFs are opaque black boxes</text>
 </svg>

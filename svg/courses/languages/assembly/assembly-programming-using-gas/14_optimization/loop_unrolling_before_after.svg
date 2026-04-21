@@ -96,39 +96,38 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.198779106895" font-weight="bold" fill="var(--primary-accent)">Loop Unrolling</text>
 
-  <rect x="40" y="72.830188679245" width="590" height="547.169811320755" rx="8.368855109814" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="116.603773584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--danger-text)">BEFORE</text>
-  <text x="60" y="160.377358490566" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">mov $100, %ecx</text>
-  <text x="60" y="193.207547169811" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">lea src, %esi</text>
-  <text x="60" y="226.037735849057" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">lea dst, %edi</text>
-  <text x="60" y="264.339622641509" font-family="Courier New, monospace" font-size="14.645496442174" font-weight="bold" fill="var(--danger-text)">.loop:</text>
-  <text x="60" y="297.169811320755" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  mov (%esi), %eax</text>
-  <text x="60" y="330" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  mov %eax, (%edi)</text>
-  <text x="60" y="362.830188679245" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  add $4, %esi</text>
-  <text x="60" y="395.660377358491" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  add $4, %edi</text>
-  <text x="60" y="428.490566037736" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  dec %ecx</text>
-  <text x="60" y="461.320754716981" font-family="Courier New, monospace" font-size="14.645496442174" fill="var(--danger-text)">  jnz .loop</text>
-  <text x="335" y="516.037735849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219628" font-weight="bold" fill="var(--danger-text)">100 iter × 6 = 600 insn</text>
-  <text x="335" y="554.339622641509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--danger-text)">Up to 100 branch penalties</text>
+  <rect x="40" y="40" width="590" height="580" rx="8.616263691415" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="86.400000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.540659228539" font-weight="bold" fill="var(--danger-text)">BEFORE</text>
+  <text x="60" y="132.8" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">mov $100, %ecx</text>
+  <text x="60" y="167.6" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">lea src, %esi</text>
+  <text x="60" y="202.400000000001" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">lea dst, %edi</text>
+  <text x="60" y="243" font-family="Courier New, monospace" font-size="15.078461459976" font-weight="bold" fill="var(--danger-text)">.loop:</text>
+  <text x="60" y="277.8" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  mov (%esi), %eax</text>
+  <text x="60" y="312.6" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  mov %eax, (%edi)</text>
+  <text x="60" y="347.4" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  add $4, %esi</text>
+  <text x="60" y="382.200000000001" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  add $4, %edi</text>
+  <text x="60" y="417" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  dec %ecx</text>
+  <text x="60" y="451.8" font-family="Courier New, monospace" font-size="15.078461459976" fill="var(--danger-text)">  jnz .loop</text>
+  <text x="335" y="509.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.232527382831" font-weight="bold" fill="var(--danger-text)">100 iter × 6 = 600 insn</text>
+  <text x="335" y="550.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.078461459976" fill="var(--danger-text)">Up to 100 branch penalties</text>
 
-  <rect x="650" y="72.830188679245" width="590" height="547.169811320755" rx="8.368855109814" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="116.603773584906" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.922137774535" font-weight="bold" fill="var(--ok-text)">AFTER (4x)</text>
-  <text x="670" y="160.377358490566" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">mov $25, %ecx</text>
-  <text x="670" y="198.679245283019" font-family="Courier New, monospace" font-size="13.599389553447" font-weight="bold" fill="var(--ok-text)">.loop:</text>
-  <text x="670" y="226.037735849057" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov (%esi), %eax</text>
-  <text x="670" y="247.924528301887" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov %eax, (%edi)</text>
-  <text x="670" y="275.283018867925" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov 4(%esi), %eax</text>
-  <text x="670" y="297.169811320755" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov %eax, 4(%edi)</text>
-  <text x="670" y="324.528301886792" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov 8(%esi), %eax</text>
-  <text x="670" y="346.415094339623" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov %eax, 8(%edi)</text>
-  <text x="670" y="373.77358490566" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov 12(%esi), %eax</text>
-  <text x="670" y="395.660377358491" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  mov %eax, 12(%edi)</text>
-  <text x="670" y="423.018867924528" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  add $16, %esi</text>
-  <text x="670" y="450.377358490566" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  add $16, %edi</text>
-  <text x="670" y="477.735849056604" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--ok-text)">  dec %ecx ; jnz .loop</text>
-  <text x="945" y="526.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219628" font-weight="bold" fill="var(--ok-text)">25 × 11 = 275 insn</text>
-  <text x="945" y="565.283018867925" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--ok-text)">Only 25 branches</text>
-  <text x="945" y="598.11320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" font-style="italic" fill="var(--ok-text)">Trade: larger code</text>
+  <rect x="650" y="40" width="590" height="580" rx="8.616263691415" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="86.400000000001" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.540659228539" font-weight="bold" fill="var(--ok-text)">AFTER (4x)</text>
+  <text x="670" y="132.8" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">mov $25, %ecx</text>
+  <text x="670" y="173.4" font-family="Courier New, monospace" font-size="14.001428498549" font-weight="bold" fill="var(--ok-text)">.loop:</text>
+  <text x="670" y="202.400000000001" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov (%esi), %eax</text>
+  <text x="670" y="225.6" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov %eax, (%edi)</text>
+  <text x="670" y="254.600000000001" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov 4(%esi), %eax</text>
+  <text x="670" y="277.8" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov %eax, 4(%edi)</text>
+  <text x="670" y="306.8" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov 8(%esi), %eax</text>
+  <text x="670" y="330.000000000001" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov %eax, 8(%edi)</text>
+  <text x="670" y="359" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov 12(%esi), %eax</text>
+  <text x="670" y="382.200000000001" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  mov %eax, 12(%edi)</text>
+  <text x="670" y="411.2" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  add $16, %esi</text>
+  <text x="670" y="440.2" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  add $16, %edi</text>
+  <text x="670" y="469.2" font-family="Courier New, monospace" font-size="14.001428498549" fill="var(--ok-text)">  dec %ecx ; jnz .loop</text>
+  <text x="945" y="521.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.232527382831" font-weight="bold" fill="var(--ok-text)">25 × 11 = 275 insn</text>
+  <text x="945" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.078461459976" fill="var(--ok-text)">Only 25 branches</text>
+  <text x="945" y="596.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.001428498549" font-style="italic" fill="var(--ok-text)">Trade: larger code</text>
 </svg>

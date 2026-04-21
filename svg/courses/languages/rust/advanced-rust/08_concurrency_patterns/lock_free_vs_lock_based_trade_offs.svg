@@ -95,60 +95,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="27.1148" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lock-Free vs Lock-Based Trade-offs</text>
-  <rect x="40" y="68.642" width="338.0281" height="57.284" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="209.0141" y="104.4444" text-anchor="middle" font-size="21.0893" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Property</text>
-  <rect x="378.0282" y="68.642" width="405.6338" height="57.284" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="580.8452" y="104.4444" text-anchor="middle" font-size="21.0893" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lock-Based</text>
-  <rect x="783.662" y="68.642" width="456.338" height="57.284" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1011.8311" y="104.4444" text-anchor="middle" font-size="21.0893" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Lock-Free</text>
-  <rect x="40" y="133.0864" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="133.0864" width="405.6338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="133.0864" width="456.338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="164.5926" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Simplicity</text>
-  <text x="394.9296" y="164.5926" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Easy to reason about</text>
-  <text x="800.5633" y="164.5926" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Complex, subtle bugs</text>
-  <rect x="40" y="190.3704" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="190.3704" width="405.6338" height="50.1235" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="190.3704" width="456.338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="221.8766" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Contention</text>
-  <text x="394.9296" y="221.8766" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Threads block</text>
-  <text x="800.5633" y="221.8766" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Threads retry (spin)</text>
-  <rect x="40" y="247.6544" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="247.6544" width="405.6338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="247.6544" width="456.338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="279.1605" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Priority inversion</text>
-  <text x="394.9296" y="279.1605" font-size="18.0765" fill="var(--danger-accent)" font-family="Arial, sans-serif">Possible</text>
-  <text x="800.5633" y="279.1605" font-size="18.0765" fill="var(--ok-accent)" font-family="Arial, sans-serif">Not possible</text>
-  <rect x="40" y="304.9382" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="304.9382" width="405.6338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="304.9382" width="456.338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="336.4445" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Deadlock</text>
-  <text x="394.9296" y="336.4445" font-size="18.0765" fill="var(--danger-accent)" font-family="Arial, sans-serif">Possible</text>
-  <text x="800.5633" y="336.4445" font-size="18.0765" fill="var(--ok-accent)" font-family="Arial, sans-serif">Not possible</text>
-  <rect x="40" y="362.2222" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="362.2222" width="405.6338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="362.2222" width="456.338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="393.7284" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Progress guarantee</text>
-  <text x="394.9296" y="393.7284" font-size="18.0765" fill="var(--danger-accent)" font-family="Arial, sans-serif">None (can deadlock)</text>
-  <text x="800.5633" y="393.7284" font-size="18.0765" fill="var(--ok-accent)" font-family="Arial, sans-serif">At least one progresses</text>
-  <rect x="40" y="419.5062" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="419.5062" width="405.6338" height="50.1235" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="783.662" y="419.5062" width="456.338" height="50.1235" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="56.9015" y="451.0124" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Perf (low contention)</text>
-  <text x="394.9296" y="451.0124" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Good</text>
-  <text x="800.5633" y="451.0124" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Similar or better</text>
-  <rect x="40" y="476.7902" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="476.7902" width="405.6338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="476.7902" width="456.338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="508.2963" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Perf (high contention)</text>
-  <text x="394.9296" y="508.2963" font-size="18.0765" fill="var(--danger-accent)" font-family="Arial, sans-serif">Degrades quickly</text>
-  <text x="800.5633" y="508.2963" font-size="18.0765" fill="var(--ok-accent)" font-family="Arial, sans-serif">Degrades gracefully</text>
-  <rect x="40" y="534.074" width="338.0281" height="50.1235" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="378.0282" y="534.074" width="405.6338" height="50.1235" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="783.662" y="534.074" width="456.338" height="50.1235" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="56.9015" y="565.5803" font-size="18.0765" fill="var(--text)" font-family="Arial, sans-serif">Memory reclamation</text>
-  <text x="394.9296" y="565.5803" font-size="18.0765" fill="var(--ok-accent)" font-family="Arial, sans-serif">Trivial</text>
-  <text x="800.5633" y="565.5803" font-size="18.0765" fill="var(--danger-accent)" font-family="Arial, sans-serif">Hard (ABA problem)</text>
-  <text x="640" y="620" text-anchor="middle" font-size="18.0765" fill="var(--text-muted)" font-style="italic" font-family="Arial, sans-serif">Prefer Mutex/RwLock unless profiling shows lock contention is a real bottleneck.</text>
+  <rect x="40" y="40" width="338.0281" height="60.259794906395" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="209.0141" y="77.662266621687" text-anchor="middle" font-size="21.630139550501" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Property</text>
+  <rect x="378.0282" y="40" width="405.6338" height="60.259794906395" rx="6.153871266614" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="580.8452" y="77.662266621687" text-anchor="middle" font-size="21.630139550501" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Lock-Based</text>
+  <rect x="783.662" y="40" width="456.338" height="60.259794906395" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1011.8311" y="77.662266621687" text-anchor="middle" font-size="21.630139550501" font-weight="bold" fill="var(--bg)" font-family="Arial, sans-serif">Lock-Free</text>
+  <rect x="40" y="107.792164074884" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="107.792164074884" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="107.792164074884" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="140.935051273401" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Simplicity</text>
+  <text x="394.9296" y="140.935051273401" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Easy to reason about</text>
+  <text x="800.5633" y="140.935051273401" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Complex, subtle bugs</text>
+  <rect x="40" y="168.051958981279" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="168.051958981279" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="168.051958981279" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="201.194846179796" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Contention</text>
+  <text x="394.9296" y="201.194846179796" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Threads block</text>
+  <text x="800.5633" y="201.194846179796" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Threads retry (spin)</text>
+  <rect x="40" y="228.311753887674" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="228.311753887674" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="228.311753887674" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="261.454535891381" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Priority inversion</text>
+  <text x="394.9296" y="261.454535891381" font-size="18.540075658492" fill="var(--danger-accent)" font-family="Arial, sans-serif">Possible</text>
+  <text x="800.5633" y="261.454535891381" font-size="18.540075658492" fill="var(--ok-accent)" font-family="Arial, sans-serif">Not possible</text>
+  <rect x="40" y="288.571338404449" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="288.571338404449" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="288.571338404449" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="321.714330797776" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Deadlock</text>
+  <text x="394.9296" y="321.714330797776" font-size="18.540075658492" fill="var(--danger-accent)" font-family="Arial, sans-serif">Possible</text>
+  <text x="800.5633" y="321.714330797776" font-size="18.540075658492" fill="var(--ok-accent)" font-family="Arial, sans-serif">Not possible</text>
+  <rect x="40" y="348.831133310843" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="348.831133310843" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="348.831133310843" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="381.974020509361" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Progress guarantee</text>
+  <text x="394.9296" y="381.974020509361" font-size="18.540075658492" fill="var(--danger-accent)" font-family="Arial, sans-serif">None (can deadlock)</text>
+  <text x="800.5633" y="381.974020509361" font-size="18.540075658492" fill="var(--ok-accent)" font-family="Arial, sans-serif">At least one progresses</text>
+  <rect x="40" y="409.090928217238" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="409.090928217238" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="783.662" y="409.090928217238" width="456.338" height="52.727320543095" rx="6.153871266614" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="56.9015" y="442.233815415755" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Perf (low contention)</text>
+  <text x="394.9296" y="442.233815415755" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Good</text>
+  <text x="800.5633" y="442.233815415755" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Similar or better</text>
+  <rect x="40" y="469.350723123633" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="469.350723123633" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="469.350723123633" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="502.49350512734" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Perf (high contention)</text>
+  <text x="394.9296" y="502.49350512734" font-size="18.540075658492" fill="var(--danger-accent)" font-family="Arial, sans-serif">Degrades quickly</text>
+  <text x="800.5633" y="502.49350512734" font-size="18.540075658492" fill="var(--ok-accent)" font-family="Arial, sans-serif">Degrades gracefully</text>
+  <rect x="40" y="529.610307640408" width="338.0281" height="52.727320543095" rx="6.153871266614" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="378.0282" y="529.610307640408" width="405.6338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="783.662" y="529.610307640408" width="456.338" height="52.727320543095" rx="6.153871266614" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56.9015" y="562.753300033735" font-size="18.540075658492" fill="var(--text)" font-family="Arial, sans-serif">Memory reclamation</text>
+  <text x="394.9296" y="562.753300033735" font-size="18.540075658492" fill="var(--ok-accent)" font-family="Arial, sans-serif">Trivial</text>
+  <text x="800.5633" y="562.753300033735" font-size="18.540075658492" fill="var(--danger-accent)" font-family="Arial, sans-serif">Hard (ABA problem)</text>
+  <text x="640" y="620" text-anchor="middle" font-size="18.540075658492" fill="var(--text-muted)" font-style="italic" font-family="Arial, sans-serif">Prefer Mutex/RwLock unless profiling shows lock contention is a real bottleneck.</text>
 </svg>

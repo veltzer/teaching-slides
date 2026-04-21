@@ -96,43 +96,42 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.290122420528" font-weight="bold" fill="var(--text)">Execution Model: Job → Stages → Tasks</text>
 
-  <rect x="40" y="65.663716814159" width="300" height="359.29203539823" rx="6.079124296508" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--primary-text)">Application</text>
-  <text x="190" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">One SparkContext</text>
-  <text x="190" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--primary-text)">One executor set</text>
-  <text x="190" y="270.973451327434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--primary-text)">contains many Jobs</text>
+  <rect x="40" y="40" width="300" height="375.925925925926" rx="6.21825270206" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--primary-text)">Application</text>
+  <text x="190" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">One SparkContext</text>
+  <text x="190" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">One executor set</text>
+  <text x="190" y="254.814814814815" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-style="italic" fill="var(--primary-text)">contains many Jobs</text>
 
-  <line x1="340" y1="240.176991150443" x2="378" y2="240.176991150443" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="222.592592592593" x2="378" y2="222.592592592593" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="380" y="65.663716814159" width="300" height="359.29203539823" rx="6.079124296508" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="530" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--ok-text)">Job</text>
-  <text x="530" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">One per action</text>
-  <text x="530" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">DAGScheduler splits</text>
-  <text x="530" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--ok-text)">at shuffle boundaries</text>
-  <text x="530" y="301.769911504425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--ok-text)">contains Stages</text>
+  <rect x="380" y="40" width="300" height="375.925925925926" rx="6.21825270206" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--ok-text)">Job</text>
+  <text x="530" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">One per action</text>
+  <text x="530" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">DAGScheduler splits</text>
+  <text x="530" y="217.222222222223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">at shuffle boundaries</text>
+  <text x="530" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-style="italic" fill="var(--ok-text)">contains Stages</text>
 
-  <line x1="680" y1="240.176991150443" x2="718" y2="240.176991150443" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="680" y1="222.592592592593" x2="718" y2="222.592592592593" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="720" y="65.663716814159" width="260" height="359.29203539823" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="850" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--warn-text)">Stage</text>
-  <text x="850" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">Between shuffles</text>
-  <text x="850" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">Narrow, pipelined</text>
-  <text x="850" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--warn-text)">Runs sequentially</text>
-  <text x="850" y="301.769911504425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.184623358518" font-style="italic" fill="var(--warn-text)">contains Tasks</text>
+  <rect x="720" y="40" width="260" height="375.925925925926" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="850" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--warn-text)">Stage</text>
+  <text x="850" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Between shuffles</text>
+  <text x="850" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Narrow, pipelined</text>
+  <text x="850" y="217.222222222223" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--warn-text)">Runs sequentially</text>
+  <text x="850" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-style="italic" fill="var(--warn-text)">contains Tasks</text>
 
-  <line x1="980" y1="240.176991150443" x2="1018" y2="240.176991150443" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="222.592592592593" x2="1018" y2="222.592592592593" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1020" y="65.663716814159" width="220" height="359.29203539823" rx="6.079124296508" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1130" y="116.991150442478" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.263747655025" font-weight="bold" fill="var(--info-text)">Task</text>
-  <text x="1130" y="173.451327433628" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">One per partition</text>
-  <text x="1130" y="204.247787610619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">Runs on one core</text>
-  <text x="1130" y="235.044247787611" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--info-text)">Retries on fail</text>
+  <rect x="1020" y="40" width="220" height="375.925925925926" rx="6.21825270206" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509006864" font-weight="bold" fill="var(--info-text)">Task</text>
+  <text x="1130" y="152.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">One per partition</text>
+  <text x="1130" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Runs on one core</text>
+  <text x="1130" y="217.222222222223" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Retries on fail</text>
 
-  <rect x="40" y="455.752212389381" width="1200" height="164.247787610619" rx="6.079124296508" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="491.681415929204" text-anchor="middle" font-family="Courier New, monospace" font-size="15.197810741269" font-weight="bold" fill="var(--text)">rdd.filter(...).map(...).groupByKey().count()</text>
-  <text x="640" y="527.610619469027" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">count → one Job; groupByKey (wide) splits into two Stages</text>
-  <text x="640" y="558.407079646018" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">Stage 1: filter+map. Stage 2: groupByKey+count</text>
-  <text x="640" y="594.336283185841" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.171435975767" fill="var(--text-muted)">One task per partition per stage</text>
+  <rect x="40" y="448.148148148149" width="1200" height="171.851851851851" rx="6.21825270206" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="485.740740740741" text-anchor="middle" font-family="Courier New, monospace" font-size="15.545631755148" font-weight="bold" fill="var(--text)">rdd.filter(...).map(...).groupByKey().count()</text>
+  <text x="640" y="523.333333333334" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--text-muted)">count → one Job; groupByKey (wide) splits into two Stages</text>
+  <text x="640" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--text-muted)">Stage 1: filter+map. Stage 2: groupByKey+count</text>
+  <text x="640" y="593.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--text-muted)">One task per partition per stage</text>
 </svg>

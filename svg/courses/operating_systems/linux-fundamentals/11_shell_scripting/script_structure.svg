@@ -96,48 +96,47 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579135622711" font-weight="bold" fill="var(--primary-accent)">Shell Script Structure</text>
 
   <!-- Left: code example -->
-  <rect x="40" y="76.576576576577" width="560" height="543.423423423423" rx="10.222744470273" fill="var(--text)"/>
-  <text x="60" y="113.153153153153" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--danger-accent)">#!/usr/bin/env bash</text>
-  <text x="60" y="149.72972972973" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--text-muted)"># backup.sh</text>
-  <text x="60" y="196.756756756757" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--warn-accent)">readonly BACKUP_DIR=/var/bk</text>
-  <text x="60" y="228.108108108108" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--warn-accent)">readonly MAX_KEEP=7</text>
-  <text x="60" y="275.135135135135" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--bg)">SRC="${1:-/home}"</text>
-  <text x="60" y="306.486486486487" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--bg)">TS=$(date +%Y%m%d)</text>
-  <text x="60" y="353.513513513514" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--primary-accent)">do_backup() {</text>
-  <text x="60" y="384.864864864865" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--bg)">  local src="$1"</text>
-  <text x="60" y="416.216216216216" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--bg)">  tar -czf "$BACKUP_DIR/$TS.tgz" "$src"</text>
-  <text x="60" y="447.567567567568" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--primary-accent)">}</text>
-  <text x="60" y="494.594594594595" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--danger-accent)">for dir in /home /etc; do</text>
-  <text x="60" y="525.945945945946" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--bg)">  do_backup "$dir"</text>
-  <text x="60" y="557.297297297297" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--danger-accent)">done</text>
-  <text x="60" y="599.099099099099" font-family="Courier New, monospace" font-size="14.311842258383" fill="var(--danger-accent)">exit 0</text>
+  <rect x="40" y="40" width="560" height="580" rx="10.561177090573" fill="var(--text)"/>
+  <text x="60" y="79.038461538461" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--danger-accent)">#!/usr/bin/env bash</text>
+  <text x="60" y="118.076923076923" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--text-muted)"># backup.sh</text>
+  <text x="60" y="168.269230769231" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--warn-accent)">readonly BACKUP_DIR=/var/bk</text>
+  <text x="60" y="201.730769230769" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--warn-accent)">readonly MAX_KEEP=7</text>
+  <text x="60" y="251.923076923077" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--bg)">SRC="${1:-/home}"</text>
+  <text x="60" y="285.384615384616" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--bg)">TS=$(date +%Y%m%d)</text>
+  <text x="60" y="335.576923076923" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--primary-accent)">do_backup() {</text>
+  <text x="60" y="369.038461538462" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--bg)">  local src="$1"</text>
+  <text x="60" y="402.5" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--bg)">  tar -czf "$BACKUP_DIR/$TS.tgz" "$src"</text>
+  <text x="60" y="435.961538461539" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--primary-accent)">}</text>
+  <text x="60" y="486.153846153847" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--danger-accent)">for dir in /home /etc; do</text>
+  <text x="60" y="519.615384615385" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--bg)">  do_backup "$dir"</text>
+  <text x="60" y="553.076923076923" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--danger-accent)">done</text>
+  <text x="60" y="597.692307692308" font-family="Courier New, monospace" font-size="14.785647926804" fill="var(--danger-accent)">exit 0</text>
 
   <!-- Right: 5 callout cards -->
-  <rect x="620" y="76.576576576577" width="620" height="94.054054054054" rx="8.178195576219" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="105.837837837838" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--primary-text)">Shebang</text>
-  <text x="640" y="134.054054054054" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--primary-text)">#!/usr/bin/env bash</text>
-  <text x="640" y="158.09009009009" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--primary-text)">Must be first line</text>
+  <rect x="620" y="40" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="71.230769230769" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--primary-text)">Shebang</text>
+  <text x="640" y="101.346153846153" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--primary-text)">#!/usr/bin/env bash</text>
+  <text x="640" y="127" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-text)">Must be first line</text>
 
-  <rect x="620" y="181.081081081081" width="620" height="94.054054054054" rx="8.178195576219" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="210.342342342342" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--warn-text)">Constants</text>
-  <text x="640" y="238.558558558559" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--warn-text)">readonly NAME=value</text>
-  <text x="640" y="262.594594594595" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--warn-text)">UPPERCASE convention</text>
+  <rect x="620" y="151.538461538461" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="182.76923076923" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--warn-text)">Constants</text>
+  <text x="640" y="212.884615384616" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--warn-text)">readonly NAME=value</text>
+  <text x="640" y="238.538461538462" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-text)">UPPERCASE convention</text>
 
-  <rect x="620" y="285.585585585586" width="620" height="94.054054054054" rx="8.178195576219" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="314.846846846847" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--ok-text)">Variables &amp; Args</text>
-  <text x="640" y="343.063063063063" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--ok-text)">$1 $@ $# $? ${VAR:-default}</text>
-  <text x="640" y="367.099099099099" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">local limits scope</text>
+  <rect x="620" y="263.076923076923" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="294.307692307692" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--ok-text)">Variables &amp; Args</text>
+  <text x="640" y="324.423076923077" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--ok-text)">$1 $@ $# $? ${VAR:-default}</text>
+  <text x="640" y="350.076923076923" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-text)">local limits scope</text>
 
-  <rect x="620" y="390.09009009009" width="620" height="94.054054054054" rx="8.178195576219" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="419.351351351351" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--info-text)">Functions</text>
-  <text x="640" y="447.567567567568" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--info-text)">name() { ... ; return N ; }</text>
-  <text x="640" y="471.603603603604" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--info-text)">Define before use</text>
+  <rect x="620" y="374.615384615384" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="405.846153846153" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--info-text)">Functions</text>
+  <text x="640" y="435.961538461539" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--info-text)">name() { ... ; return N ; }</text>
+  <text x="640" y="461.615384615385" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">Define before use</text>
 
-  <rect x="620" y="494.594594594595" width="620" height="94.054054054054" rx="8.178195576219" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="523.855855855856" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--danger-text)">Control Flow</text>
-  <text x="640" y="552.072072072072" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">if / for / while / case</text>
-  <text x="640" y="576.108108108108" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--danger-text)">exit 0 success, 1-255 error</text>
+  <rect x="620" y="486.153846153847" width="620" height="100.384615384615" rx="8.448941672459" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="517.384615384615" font-family="Arial, sans-serif" font-size="15.841765635861" font-weight="bold" fill="var(--danger-text)">Control Flow</text>
+  <text x="640" y="547.5" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--danger-text)">if / for / while / case</text>
+  <text x="640" y="573.153846153846" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--danger-text)">exit 0 success, 1-255 error</text>
 </svg>

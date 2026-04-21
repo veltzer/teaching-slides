@@ -95,28 +95,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="27.0523" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Stage 3: RLHF</text>
-  <rect x="40" y="67.9518" width="1200" height="181.6868" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="102.8916" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Step 1: Collect Comparison Data</text>
-  <text x="639.9999" y="137.8313" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">Prompt: "Write a haiku about coding"</text>
-  <rect x="105.4544" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="367.2726" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Response A (better)</text>
-  <text x="367.2726" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">"Fingers on the keys / Logic</text>
-  <text x="367.2726" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">flows like a river / Bug found..."</text>
-  <rect x="672.7272" y="151.8072" width="523.6364" height="76.8675" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="934.5454" y="179.759" text-anchor="middle" font-size="18.5985" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Response B (worse)</text>
-  <text x="934.5454" y="204.9156" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">"Code code code today / I</text>
-  <text x="934.5454" y="221.6868" text-anchor="middle" font-size="16.9077" fill="var(--text-muted)" font-family="Arial, sans-serif">like to write the code..."</text>
-  <line x1="639.9999" y1="249.6385" x2="639.9999" y2="291.5663" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="149.0909" y="291.5663" width="981.8182" height="83.8554" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="326.506" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 2: Train Reward Model</text>
-  <text x="639.9999" y="358.6506" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">reward_model(prompt, response) -&gt; scalar score</text>
-  <line x1="639.9999" y1="375.4217" x2="639.9999" y2="417.3494" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="149.0909" y="417.3494" width="981.8182" height="83.8554" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="452.2891" text-anchor="middle" font-size="21.98" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 3: Optimize with PPO</text>
-  <text x="639.9999" y="484.4337" text-anchor="middle" font-size="18.5985" fill="var(--text-muted)" font-family="Arial, sans-serif">Maximize reward while staying close to SFT model</text>
-  <line x1="639.9999" y1="501.2048" x2="639.9999" y2="536.1446" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="639.9999" y="568.2891" text-anchor="middle" font-size="21.98" fill="var(--text)" font-family="Arial, sans-serif">Human ranks: A &gt; B</text>
-  <rect x="258.1816" y="578.0723" width="763.6363" height="41.9277" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="606.0241" text-anchor="middle" font-size="20.2892" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Result: Aligned, safe, helpful model</text>
+  <rect x="40" y="40" width="1200" height="190.88612914597" rx="6.150023114985" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="76.708903316776" text-anchor="middle" font-size="22.529584677894" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Step 1: Collect Comparison Data</text>
+  <text x="639.9999" y="113.417701570261" text-anchor="middle" font-size="19.063534150674" fill="var(--text-muted)" font-family="Arial, sans-serif">Prompt: "Write a haiku about coding"</text>
+  <rect x="105.4544" y="128.101241884314" width="523.6364" height="80.759524258932" rx="6.150023114985" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="367.2726" y="157.468322512418" text-anchor="middle" font-size="19.063534150674" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Response A (better)</text>
+  <text x="367.2726" y="183.898674065054" text-anchor="middle" font-size="17.330457636872" fill="var(--text-muted)" font-family="Arial, sans-serif">"Fingers on the keys / Logic</text>
+  <text x="367.2726" y="201.519048517865" text-anchor="middle" font-size="17.330457636872" fill="var(--text-muted)" font-family="Arial, sans-serif">flows like a river / Bug found..."</text>
+  <rect x="672.7272" y="128.101241884314" width="523.6364" height="80.759524258932" rx="6.150023114985" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="934.5454" y="157.468322512418" text-anchor="middle" font-size="19.063534150674" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Response B (worse)</text>
+  <text x="934.5454" y="183.898674065054" text-anchor="middle" font-size="17.330457636872" fill="var(--text-muted)" font-family="Arial, sans-serif">"Code code code today / I</text>
+  <text x="934.5454" y="201.519048517865" text-anchor="middle" font-size="17.330457636872" fill="var(--text-muted)" font-family="Arial, sans-serif">like to write the code..."</text>
+  <line x1="639.9999" y1="230.88602408268" x2="639.9999" y2="274.936750088126" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="149.0909" y="274.936750088126" width="981.8182" height="88.101241884314" rx="6.150023114985" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="311.645548341612" text-anchor="middle" font-size="22.529584677894" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Step 2: Train Reward Model</text>
+  <text x="639.9999" y="345.417722582919" text-anchor="middle" font-size="19.063534150674" fill="var(--text-muted)" font-family="Arial, sans-serif">reward_model(prompt, response) -&gt; scalar score</text>
+  <line x1="639.9999" y1="363.03799197244" x2="639.9999" y2="407.088612914597" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="149.0909" y="407.088612914597" width="981.8182" height="88.101241884314" rx="6.150023114985" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="443.797411168083" text-anchor="middle" font-size="22.529584677894" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Step 3: Optimize with PPO</text>
+  <text x="639.9999" y="477.56958540939" text-anchor="middle" font-size="19.063534150674" fill="var(--text-muted)" font-family="Arial, sans-serif">Maximize reward while staying close to SFT model</text>
+  <line x1="639.9999" y1="495.189854798911" x2="639.9999" y2="531.898758115686" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="639.9999" y="565.670827293704" text-anchor="middle" font-size="22.529584677894" fill="var(--text)" font-family="Arial, sans-serif">Human ranks: A &gt; B</text>
+  <rect x="258.1816" y="575.949379057843" width="763.6363" height="44.050620942157" rx="6.150023114985" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="605.316459685948" text-anchor="middle" font-size="20.796508164092" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Result: Aligned, safe, helpful model</text>
 </svg>

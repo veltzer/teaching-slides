@@ -96,51 +96,50 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855266519" font-weight="bold" fill="var(--text)">Spark Partition Sizing</text>
 
-  <rect x="40" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Too Few</text>
-  <text x="235" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Idle cores</text>
-  <text x="235" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Giant tasks, OOM</text>
-  <text x="235" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Heavy spill</text>
-  <text x="235" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--danger-text)">Slow recovery</text>
-  <text x="235" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--danger-text)">fix: repartition(N)</text>
+  <rect x="40" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--danger-text)">Too Few</text>
+  <text x="235" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Idle cores</text>
+  <text x="235" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Giant tasks, OOM</text>
+  <text x="235" y="194.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Heavy spill</text>
+  <text x="235" y="227.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--danger-text)">Slow recovery</text>
+  <text x="235" y="283.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-style="italic" fill="var(--danger-text)">fix: repartition(N)</text>
 
-  <rect x="445" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Goldilocks</text>
-  <text x="640" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">128-256 MB each</text>
-  <text x="640" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">2-10 sec per task</text>
-  <text x="640" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">2-4x total cores</text>
-  <text x="640" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--ok-text)">Fits in memory</text>
-  <text x="640" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--ok-text)">AQE targets this</text>
+  <rect x="445" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--ok-text)">Goldilocks</text>
+  <text x="640" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">128-256 MB each</text>
+  <text x="640" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">2-10 sec per task</text>
+  <text x="640" y="194.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">2-4x total cores</text>
+  <text x="640" y="227.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--ok-text)">Fits in memory</text>
+  <text x="640" y="283.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-style="italic" fill="var(--ok-text)">AQE targets this</text>
 
-  <rect x="850" y="66.363636363636" width="390" height="295.272727272727" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="108.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Too Many</text>
-  <text x="1045" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Scheduler overhead</text>
-  <text x="1045" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Tiny tasks</text>
-  <text x="1045" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Many small files</text>
-  <text x="1045" y="245.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--warn-text)">Shuffle explosion</text>
-  <text x="1045" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" font-style="italic" fill="var(--warn-text)">fix: coalesce(N)</text>
+  <rect x="850" y="40" width="390" height="309.333333333333" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="84.190476190477" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--warn-text)">Too Many</text>
+  <text x="1045" y="128.380952380953" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Scheduler overhead</text>
+  <text x="1045" y="161.523809523809" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Tiny tasks</text>
+  <text x="1045" y="194.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Many small files</text>
+  <text x="1045" y="227.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" fill="var(--warn-text)">Shuffle explosion</text>
+  <text x="1045" y="283.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" font-style="italic" fill="var(--warn-text)">fix: coalesce(N)</text>
 
-  <text x="640" y="409.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--text)">Tuning Knobs</text>
+  <text x="640" y="399.047619047619" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.02153091249" font-weight="bold" fill="var(--text)">Tuning Knobs</text>
 
-  <rect x="80" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="220" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--primary-accent)">shuffle.partitions</text>
-  <text x="220" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 200</text>
-  <text x="220" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">2-4x cores</text>
+  <rect x="80" y="421.142857142857" width="280" height="198.857142857143" rx="6.306459273747" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="459.809523809524" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" font-weight="bold" fill="var(--primary-accent)">shuffle.partitions</text>
+  <text x="220" y="498.476190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">Default 200</text>
+  <text x="220" y="531.619047619048" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">2-4x cores</text>
 
-  <rect x="380" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="520" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--info-accent)">maxPartitionBytes</text>
-  <text x="520" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 128 MB</text>
-  <text x="520" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Input split size</text>
+  <rect x="380" y="421.142857142857" width="280" height="198.857142857143" rx="6.306459273747" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="520" y="459.809523809524" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" font-weight="bold" fill="var(--info-accent)">maxPartitionBytes</text>
+  <text x="520" y="498.476190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">Default 128 MB</text>
+  <text x="520" y="531.619047619048" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">Input split size</text>
 
-  <rect x="680" y="430.181818181818" width="280" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="820" y="467.090909090909" text-anchor="middle" font-family="Courier New, monospace" font-size="15.403659541574" font-weight="bold" fill="var(--ok-accent)">repartition / coalesce</text>
-  <text x="820" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">repartition shuffles</text>
-  <text x="820" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">coalesce merges</text>
+  <rect x="680" y="421.142857142857" width="280" height="198.857142857143" rx="6.306459273747" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="820" y="459.809523809524" text-anchor="middle" font-family="Courier New, monospace" font-size="15.766148184367" font-weight="bold" fill="var(--ok-accent)">repartition / coalesce</text>
+  <text x="820" y="498.476190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">repartition shuffles</text>
+  <text x="820" y="531.619047619048" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">coalesce merges</text>
 
-  <rect x="980" y="430.181818181818" width="220" height="189.818181818182" rx="6.16146381663" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1090" y="467.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" font-weight="bold" fill="var(--warn-accent)">AQE</text>
-  <text x="1090" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Default 3.2+</text>
-  <text x="1090" y="535.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Auto coalesces</text>
+  <rect x="980" y="421.142857142857" width="220" height="198.857142857143" rx="6.306459273747" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1090" y="459.809523809524" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.766148184367" font-weight="bold" fill="var(--warn-accent)">AQE</text>
+  <text x="1090" y="498.476190476191" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">Default 3.2+</text>
+  <text x="1090" y="531.619047619048" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.663995093118" fill="var(--text-muted)">Auto coalesces</text>
 </svg>

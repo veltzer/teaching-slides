@@ -95,30 +95,29 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-<text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.772793" font-weight="bold" fill="var(--text)">Docker Layer Caching: When Layers Rebuild</text>
-<rect x="40" y="77.111517" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="121.645338" font-size="22.653902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">FROM ubuntu:22.04</text>
-<text x="70" y="159.817185" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--ok-text)">base layer rarely changes</text>
-<rect x="1060" y="100.438757" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-<text x="1140" y="136.489945" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--ok-accent)">cached</text>
-<rect x="40" y="187.38574" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="231.919561" font-size="22.653902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">RUN apt-get update &amp;&amp; apt-get install -y python3</text>
-<text x="70" y="270.091408" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--ok-text)">stable system packages</text>
-<rect x="1060" y="210.71298" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-<text x="1140" y="246.764168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--ok-accent)">cached</text>
-<rect x="40" y="297.659963" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="342.193784" font-size="22.653902" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">COPY requirements.txt .</text>
-<text x="70" y="380.365631" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--warn-text)">trigger: requirements.txt modified</text>
-<rect x="1060" y="320.987203" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
-<text x="1140" y="357.038391" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--warn-accent)">changed</text>
-<rect x="40" y="407.934186" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="452.468007" font-size="22.653902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">RUN pip install -r requirements.txt</text>
-<text x="70" y="490.639854" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--danger-text)">all downstream invalidated</text>
-<rect x="1060" y="431.261426" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
-<text x="1140" y="467.312614" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>
-<rect x="40" y="518.20841" width="1200" height="101.79159" rx="6.178337" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-<text x="70" y="562.74223" font-size="22.653902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">COPY . .</text>
-<text x="70" y="600.914077" font-family="Arial, sans-serif" font-size="18.535011" fill="var(--danger-text)">source copy always rebuilds here</text>
-<rect x="1060" y="541.535649" width="160" height="55.137112" rx="6.178337" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
-<text x="1140" y="577.586837" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.653902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>
+<rect x="40" y="40" width="1200" height="108.749999399048" rx="6.38602002312" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="87.578125137718" font-size="23.415406406902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">FROM ubuntu:22.04</text>
+<text x="70" y="128.359375713631" font-family="Arial, sans-serif" font-size="19.15806006936" fill="var(--ok-text)">base layer rarely changes</text>
+<rect x="1060" y="64.921875530006" width="160" height="58.906250475754" rx="6.38602002312" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+<text x="1140" y="103.437500183624" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.415406406902" font-weight="bold" fill="var(--ok-accent)">cached</text>
+<rect x="40" y="157.812499883148" width="1200" height="108.749999399048" rx="6.38602002312" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="205.390625020866" font-size="23.415406406902" font-weight="bold" fill="var(--ok-text)" font-family="Courier New, monospace">RUN apt-get update &amp;&amp; apt-get install -y python3</text>
+<text x="70" y="246.171875596779" font-family="Arial, sans-serif" font-size="19.15806006936" fill="var(--ok-text)">stable system packages</text>
+<rect x="1060" y="182.734375413155" width="160" height="58.906250475754" rx="6.38602002312" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+<text x="1140" y="221.250000066772" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.415406406902" font-weight="bold" fill="var(--ok-accent)">cached</text>
+<rect x="40" y="275.624999766296" width="1200" height="108.749999399048" rx="6.38602002312" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="323.203124904015" font-size="23.415406406902" font-weight="bold" fill="var(--warn-text)" font-family="Courier New, monospace">COPY requirements.txt .</text>
+<text x="70" y="363.984375479927" font-family="Arial, sans-serif" font-size="19.15806006936" fill="var(--warn-text)">trigger: requirements.txt modified</text>
+<rect x="1060" y="300.546875296303" width="160" height="58.906250475754" rx="6.38602002312" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+<text x="1140" y="339.062499949921" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.415406406902" font-weight="bold" fill="var(--warn-accent)">changed</text>
+<rect x="40" y="393.437499649445" width="1200" height="108.749999399048" rx="6.38602002312" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="441.015624787163" font-size="23.415406406902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">RUN pip install -r requirements.txt</text>
+<text x="70" y="481.796875363075" font-family="Arial, sans-serif" font-size="19.15806006936" fill="var(--danger-text)">all downstream invalidated</text>
+<rect x="1060" y="418.359375179451" width="160" height="58.906250475754" rx="6.38602002312" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
+<text x="1140" y="456.874999833069" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.415406406902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>
+<rect x="40" y="511.250000600952" width="1200" height="108.749999399048" rx="6.38602002312" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+<text x="70" y="558.828124670311" font-size="23.415406406902" font-weight="bold" fill="var(--danger-text)" font-family="Courier New, monospace">COPY . .</text>
+<text x="70" y="599.609375246223" font-family="Arial, sans-serif" font-size="19.15806006936" fill="var(--danger-text)">source copy always rebuilds here</text>
+<rect x="1060" y="536.171875062599" width="160" height="58.906250475754" rx="6.38602002312" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
+<text x="1140" y="574.687499716217" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.415406406902" font-weight="bold" fill="var(--danger-accent)">rebuild</text>
 </svg>

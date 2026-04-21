@@ -95,38 +95,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.684" font-weight="bold" fill="var(--text)">Model Merging: Combining Expertise</text>
-  <rect x="40" y="79.726" width="259.4595" height="79.4521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7297" y="114.6849" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--text)">Model A</text>
-  <text x="169.7297" y="143.2877" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Fine-tuned for coding</text>
-  <rect x="348.1081" y="79.726" width="259.4595" height="79.4521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="477.8378" y="114.6849" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--text)">Model B</text>
-  <text x="477.8378" y="143.2877" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Creative writing</text>
-  <rect x="656.2162" y="79.726" width="259.4595" height="79.4521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785.9459" y="114.6849" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--text)">Model C</text>
-  <text x="785.9459" y="143.2877" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Fine-tuned for math</text>
-  <line x1="169.7297" y1="159.1781" x2="477.8378" y2="206.8493" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="477.8378" y1="159.1781" x2="477.8378" y2="206.8493" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="785.9459" y1="159.1781" x2="477.8378" y2="206.8493" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640" y="246.5753" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4735" font-weight="bold" fill="var(--text)">Merging Methods</text>
-  <rect x="40" y="270.411" width="567.5676" height="87.3973" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="64.3243" y="302.1918" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--ok-accent)">1. Linear Merge</text>
-  <text x="64.3243" y="329.2055" font-size="17.6577" fill="var(--text-muted)" font-family="Courier New, monospace">W_merged = a*W_A + b*W_B + c*W_C</text>
-  <text x="64.3243" y="349.863" font-family="Arial, sans-serif" font-size="16.0525" fill="var(--text-muted)">Simple but effective</text>
-  <rect x="640" y="270.411" width="600" height="87.3973" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="664.3243" y="302.1918" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--ok-accent)">2. SLERP</text>
-  <text x="664.3243" y="329.2055" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Spherical Linear Interpolation</text>
-  <text x="664.3243" y="349.863" font-family="Arial, sans-serif" font-size="16.0525" fill="var(--text-muted)">Interpolate on the hypersphere; best for 2-model merges</text>
-  <rect x="40" y="381.6438" width="567.5676" height="87.3973" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="64.3243" y="413.4247" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--danger-accent)">3. TIES (Trim, Elect Sign, Merge)</text>
-  <text x="64.3243" y="440.4384" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Only merge significant changes</text>
-  <text x="64.3243" y="461.0959" font-family="Arial, sans-serif" font-size="16.0525" fill="var(--text-muted)">Reduces interference between models</text>
-  <rect x="640" y="381.6438" width="600" height="87.3973" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="664.3243" y="413.4247" font-family="Arial, sans-serif" font-size="19.263" font-weight="bold" fill="var(--danger-accent)">4. DARE (Drop And REscale)</text>
-  <text x="664.3243" y="440.4384" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Randomly drop changes, rescale rest</text>
-  <text x="664.3243" y="461.0959" font-family="Arial, sans-serif" font-size="16.0525" fill="var(--text-muted)">Works well with 3+ models</text>
-  <line x1="640" y1="484.9315" x2="640" y2="540.5479" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="315.6757" y="540.5479" width="648.6486" height="79.4521" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="580.274" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8682" font-weight="bold" fill="var(--primary-accent)">Merged Model</text>
-  <text x="640" y="608.8767" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6577" fill="var(--text-muted)">Coding + Creative Writing + Math expertise combined</text>
+  <rect x="40" y="40" width="259.4595" height="85.294161851209" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.7297" y="77.529405449827" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--text)">Model A</text>
+  <text x="169.7297" y="108.235350951554" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Fine-tuned for coding</text>
+  <rect x="348.1081" y="40" width="259.4595" height="85.294161851209" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="477.8378" y="77.529405449827" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--text)">Model B</text>
+  <text x="477.8378" y="108.235350951554" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Creative writing</text>
+  <rect x="656.2162" y="40" width="259.4595" height="85.294161851209" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="785.9459" y="77.529405449827" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--text)">Model C</text>
+  <text x="785.9459" y="108.235350951554" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Fine-tuned for math</text>
+  <line x1="169.7297" y1="125.294161851209" x2="477.8378" y2="176.470594550173" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="477.8378" y1="125.294161851209" x2="477.8378" y2="176.470594550173" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="785.9459" y1="125.294161851209" x2="477.8378" y2="176.470594550173" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="219.117621799309" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.28507692222" font-weight="bold" fill="var(--text)">Merging Methods</text>
+  <rect x="40" y="244.705945501727" width="567.5676" height="93.823567301036" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="64.3243" y="278.823567301036" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--ok-accent)">1. Linear Merge</text>
+  <text x="64.3243" y="307.823567301036" font-size="18.295365776114" fill="var(--text-muted)" font-family="Courier New, monospace">W_merged = a*W_A + b*W_B + c*W_C</text>
+  <text x="64.3243" y="330" font-family="Arial, sans-serif" font-size="16.632197801586" fill="var(--text-muted)">Simple but effective</text>
+  <rect x="640" y="244.705945501727" width="600" height="93.823567301036" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="664.3243" y="278.823567301036" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--ok-accent)">2. SLERP</text>
+  <text x="664.3243" y="307.823567301036" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Spherical Linear Interpolation</text>
+  <text x="664.3243" y="330" font-family="Arial, sans-serif" font-size="16.632197801586" fill="var(--text-muted)">Interpolate on the hypersphere; best for 2-model merges</text>
+  <rect x="40" y="364.117621799309" width="567.5676" height="93.823567301036" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="64.3243" y="398.235350951554" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--danger-accent)">3. TIES (Trim, Elect Sign, Merge)</text>
+  <text x="64.3243" y="427.235350951554" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Only merge significant changes</text>
+  <text x="64.3243" y="449.411783650518" font-family="Arial, sans-serif" font-size="16.632197801586" fill="var(--text-muted)">Reduces interference between models</text>
+  <rect x="640" y="364.117621799309" width="600" height="93.823567301036" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="664.3243" y="398.235350951554" font-family="Arial, sans-serif" font-size="19.958637361903" font-weight="bold" fill="var(--danger-accent)">4. DARE (Drop And REscale)</text>
+  <text x="664.3243" y="427.235350951554" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Randomly drop changes, rescale rest</text>
+  <text x="664.3243" y="449.411783650518" font-family="Arial, sans-serif" font-size="16.632197801586" fill="var(--text-muted)">Works well with 3+ models</text>
+  <line x1="640" y1="475" x2="640" y2="534.705838148791" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="315.6757" y="534.705838148791" width="648.6486" height="85.294161851209" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="577.352972750864" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.621805336431" font-weight="bold" fill="var(--primary-accent)">Merged Model</text>
+  <text x="640" y="608.058810899655" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.295365776114" fill="var(--text-muted)">Coding + Creative Writing + Math expertise combined</text>
 </svg>

@@ -95,47 +95,46 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="29.7798" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Concurrent Data Structures</text>
-  <rect x="40" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Mutex&lt;T&gt;</text>
-  <text x="64.3243" y="137.8314" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Exclusive</text>
-  <text x="64.3243" y="162.988" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">lock()</text>
-  <text x="64.3243" y="188.1446" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">RAII</text>
-  <text x="64.3243" y="213.3013" font-size="14.8899" fill="var(--danger-accent)" font-family="Arial, sans-serif">Deadlocks</text>
-  <text x="64.3243" y="241.2531" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Writes</text>
-  <rect x="453.5135" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">RwLock&lt;T&gt;</text>
-  <text x="477.8378" y="137.8314" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">N readers, 1 writer</text>
-  <text x="477.8378" y="162.988" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">read()</text>
-  <text x="477.8378" y="188.1446" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">write()</text>
-  <text x="477.8378" y="213.3013" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Slower</text>
-  <text x="477.8378" y="241.2531" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Reads</text>
-  <rect x="867.027" y="74.9399" width="372.9729" height="181.6867" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="109.8796" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Atomics</text>
-  <text x="891.3513" y="137.8314" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">AtomicBool, AtomicUsize</text>
-  <text x="891.3513" y="162.988" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Lock-free</text>
-  <text x="891.3513" y="188.1446" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">load, store, CAS</text>
-  <text x="891.3513" y="213.3013" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Relaxed..SeqCst</text>
-  <text x="891.3513" y="241.2531" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">For flags</text>
-  <rect x="40" y="291.5663" width="372.9729" height="139.759" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Arc&lt;T&gt;</text>
-  <text x="64.3243" y="358.6507" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Atomic refcount</text>
-  <text x="64.3243" y="383.8072" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Shared across threads</text>
-  <text x="64.3243" y="408.9639" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Arc&lt;Mutex&gt; = mutable</text>
-  <rect x="453.5135" y="291.5663" width="372.9729" height="139.759" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">DashMap&lt;K, V&gt;</text>
-  <text x="477.8378" y="358.6507" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Concurrent HashMap</text>
-  <text x="477.8378" y="383.8072" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Sharded</text>
-  <text x="477.8378" y="408.9639" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Faster than Mutex&lt;HashMap&gt;</text>
-  <rect x="867.027" y="291.5663" width="372.9729" height="139.759" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="326.5061" text-anchor="middle" font-size="19.3568" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">crossbeam</text>
-  <text x="891.3513" y="358.6507" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">SegQueue: lock-free</text>
-  <text x="891.3513" y="383.8072" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">ArrayQueue: bounded</text>
-  <text x="891.3513" y="408.9639" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Epoch GC</text>
-  <rect x="40" y="466.2651" width="1200" height="153.7349" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="501.2049" text-anchor="middle" font-size="20.8458" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Guide</text>
-  <text x="64.3243" y="536.1446" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Counter/flag -&gt; Atomic</text>
-  <text x="64.3243" y="561.3012" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">State -&gt; Arc&lt;Mutex&gt; or Arc&lt;RwLock&gt;</text>
-  <text x="64.3243" y="586.4579" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Map -&gt; DashMap</text>
-  <text x="64.3243" y="611.6145" font-size="14.8899" fill="var(--text-muted)" font-family="Arial, sans-serif">Queue -&gt; crossbeam</text>
+  <rect x="40" y="40" width="372.9729" height="193.333333333333" rx="6.189321628002" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="77.179433974345" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Mutex&lt;T&gt;</text>
+  <text x="64.3243" y="106.923023717935" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Exclusive</text>
+  <text x="64.3243" y="133.692233205109" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">lock()</text>
+  <text x="64.3243" y="160.461442692283" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">RAII</text>
+  <text x="64.3243" y="187.230758589741" font-size="15.359730018132" fill="var(--danger-accent)" font-family="Arial, sans-serif">Deadlocks</text>
+  <text x="64.3243" y="216.974348333331" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Writes</text>
+  <rect x="453.5135" y="40" width="372.9729" height="193.333333333333" rx="6.189321628002" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="77.179433974345" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">RwLock&lt;T&gt;</text>
+  <text x="477.8378" y="106.923023717935" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">N readers, 1 writer</text>
+  <text x="477.8378" y="133.692233205109" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">read()</text>
+  <text x="477.8378" y="160.461442692283" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">write()</text>
+  <text x="477.8378" y="187.230758589741" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Slower</text>
+  <text x="477.8378" y="216.974348333331" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Reads</text>
+  <rect x="867.027" y="40" width="372.9729" height="193.333333333333" rx="6.189321628002" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="77.179433974345" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Atomics</text>
+  <text x="891.3513" y="106.923023717935" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">AtomicBool, AtomicUsize</text>
+  <text x="891.3513" y="133.692233205109" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Lock-free</text>
+  <text x="891.3513" y="160.461442692283" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">load, store, CAS</text>
+  <text x="891.3513" y="187.230758589741" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Relaxed..SeqCst</text>
+  <text x="891.3513" y="216.974348333331" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">For flags</text>
+  <rect x="40" y="270.512767307679" width="372.9729" height="148.717948717949" rx="6.189321628002" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="307.692307692308" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Arc&lt;T&gt;</text>
+  <text x="64.3243" y="341.897467820521" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Atomic refcount</text>
+  <text x="64.3243" y="368.666570897411" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Shared across threads</text>
+  <text x="64.3243" y="395.435886794869" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Arc&lt;Mutex&gt; = mutable</text>
+  <rect x="453.5135" y="270.512767307679" width="372.9729" height="148.717948717949" rx="6.189321628002" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="307.692307692308" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">DashMap&lt;K, V&gt;</text>
+  <text x="477.8378" y="341.897467820521" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Concurrent HashMap</text>
+  <text x="477.8378" y="368.666570897411" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Sharded</text>
+  <text x="477.8378" y="395.435886794869" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Faster than Mutex&lt;HashMap&gt;</text>
+  <rect x="867.027" y="270.512767307679" width="372.9729" height="148.717948717949" rx="6.189321628002" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="307.692307692308" text-anchor="middle" font-size="19.967576814819" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">crossbeam</text>
+  <text x="891.3513" y="341.897467820521" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">SegQueue: lock-free</text>
+  <text x="891.3513" y="368.666570897411" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">ArrayQueue: bounded</text>
+  <text x="891.3513" y="395.435886794869" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Epoch GC</text>
+  <rect x="40" y="456.410256410256" width="1200" height="163.589743589744" rx="6.189321628002" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="493.589796794886" text-anchor="middle" font-size="21.503560132168" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Guide</text>
+  <text x="64.3243" y="530.769230769231" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Counter/flag -&gt; Atomic</text>
+  <text x="64.3243" y="557.538440256405" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">State -&gt; Arc&lt;Mutex&gt; or Arc&lt;RwLock&gt;</text>
+  <text x="64.3243" y="584.307756153863" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Map -&gt; DashMap</text>
+  <text x="64.3243" y="611.076965641037" font-size="15.359730018132" fill="var(--text-muted)" font-family="Arial, sans-serif">Queue -&gt; crossbeam</text>
 </svg>

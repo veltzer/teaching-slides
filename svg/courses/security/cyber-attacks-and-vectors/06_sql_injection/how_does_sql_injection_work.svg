@@ -2,28 +2,27 @@
   <metadata>
     <type>regular</type>
   </metadata>
-  <text x="629.4736" y="40" text-anchor="middle" font-size="24.401" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">SQL Injection Attack Flow</text>
-  <rect x="40" y="89.7143" width="231.579" height="165.7143" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="155.7894" y="162.6286" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Attacker</text>
-  <text x="155.7894" y="215.6571" text-anchor="middle" font-size="20.3341" fill="var(--danger-accent)" font-family="Arial, sans-serif">' OR '1'='1</text>
-  <rect x="376.842" y="89.7143" width="273.6841" height="165.7143" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="513.6842" y="156.0001" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Web App</text>
-  <text x="513.6842" y="215.6571" text-anchor="middle" font-size="20.3341" fill="var(--warn-accent)" font-family="Arial, sans-serif">No input validation</text>
-  <rect x="755.7895" y="89.7143" width="252.6316" height="165.7143" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="882.1053" y="156.0001" text-anchor="middle" font-size="20.3341" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">SQL Engine</text>
-  <text x="882.1053" y="215.6571" text-anchor="middle" font-size="20.3341" fill="var(--danger-accent)" font-family="Arial, sans-serif">Executes malicious</text>
-  <rect x="1071.5789" y="89.7143" width="168.4211" height="165.7143" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1155.7894" y="162.6286" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Database</text>
-  <text x="1155.7894" y="215.6571" text-anchor="middle" font-size="20.3341" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data leaked</text>
-  <line x1="271.5788" y1="172.5715" x2="372.6315" y2="172.5715" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="650.5263" y1="172.5715" x2="751.5789" y2="172.5715" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1008.4211" y1="172.5715" x2="1067.3684" y2="172.5715" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="208.4209" y="321.7143" width="842.1053" height="132.5714" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.4736" y="378.0572" text-anchor="middle" font-size="20.3341" fill="var(--warn-accent)" font-family="Arial, sans-serif">SELECT * FROM users WHERE name='' OR '1'='1' --'</text>
-  <text x="629.4736" y="427.7715" text-anchor="middle" font-size="20.3341" fill="var(--danger-accent)" font-family="Arial, sans-serif">Unsanitized input becomes part of SQL query</text>
-  <rect x="208.4209" y="487.4286" width="842.1053" height="132.5714" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.4736" y="543.7714" text-anchor="middle" font-size="20.3341" fill="var(--ok-accent)" font-family="Arial, sans-serif">SELECT * FROM users WHERE name=? (parameterized)</text>
-  <text x="629.4736" y="593.4857" text-anchor="middle" font-size="20.3341" fill="var(--ok-accent)" font-family="Arial, sans-serif">Safe: input treated as data, not code</text>
+  <rect x="40" y="40" width="231.579" height="181.250020507813" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="155.7894" y="119.750017773438" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">Attacker</text>
+  <text x="155.7894" y="177.749941210936" text-anchor="middle" font-size="21.265911093381" fill="var(--danger-accent)" font-family="Arial, sans-serif">' OR '1'='1</text>
+  <rect x="376.842" y="40" width="273.6841" height="181.250020507813" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="513.6842" y="112.500095703128" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Web App</text>
+  <text x="513.6842" y="177.749941210936" text-anchor="middle" font-size="21.265911093381" fill="var(--warn-accent)" font-family="Arial, sans-serif">No input validation</text>
+  <rect x="755.7895" y="40" width="252.6316" height="181.250020507813" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="882.1053" y="112.500095703128" text-anchor="middle" font-size="21.265911093381" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">SQL Engine</text>
+  <text x="882.1053" y="177.749941210936" text-anchor="middle" font-size="21.265911093381" fill="var(--danger-accent)" font-family="Arial, sans-serif">Executes malicious</text>
+  <rect x="1071.5789" y="40" width="168.4211" height="181.250020507813" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="1155.7894" y="119.750017773438" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Database</text>
+  <text x="1155.7894" y="177.749941210936" text-anchor="middle" font-size="21.265911093381" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data leaked</text>
+  <line x1="271.5788" y1="130.625064941408" x2="372.6315" y2="130.625064941408" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650.5263" y1="130.625064941408" x2="751.5789" y2="130.625064941408" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1008.4211" y1="130.625064941408" x2="1067.3684" y2="130.625064941408" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="208.4209" y="293.750006835938" width="842.1053" height="144.999972656249" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="629.4736" y="355.375055371095" text-anchor="middle" font-size="21.265911093381" fill="var(--warn-accent)" font-family="Arial, sans-serif">SELECT * FROM users WHERE name='' OR '1'='1' --'</text>
+  <text x="629.4736" y="409.750072460939" text-anchor="middle" font-size="21.265911093381" fill="var(--danger-accent)" font-family="Arial, sans-serif">Unsanitized input becomes part of SQL query</text>
+  <rect x="208.4209" y="475.000027343751" width="842.1053" height="144.999972656249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="629.4736" y="536.624966503905" text-anchor="middle" font-size="21.265911093381" fill="var(--ok-accent)" font-family="Arial, sans-serif">SELECT * FROM users WHERE name=? (parameterized)</text>
+  <text x="629.4736" y="590.99998359375" text-anchor="middle" font-size="21.265911093381" fill="var(--ok-accent)" font-family="Arial, sans-serif">Safe: input treated as data, not code</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

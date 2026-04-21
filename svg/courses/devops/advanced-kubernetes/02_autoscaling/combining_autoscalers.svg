@@ -96,33 +96,32 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="22.490038" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Combining Autoscalers: HPA + Cluster Autoscaler</text>
 
-  <rect x="40" y="60.900901" width="1200" height="83.603604" rx="6.133647" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="97.477477" text-anchor="middle" font-size="19.423214" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">1. Traffic spike</text>
-  <text x="640" y="125.693694" text-anchor="middle" font-size="15.334117" fill="var(--danger-text)" font-family="Arial, sans-serif">CPU or custom metric crosses the HPA target value</text>
+  <rect x="40" y="40" width="1200" height="86.728972389204" rx="6.247242706574" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="77.943924642239" text-anchor="middle" font-size="19.782933709703" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">1. Traffic spike</text>
+  <text x="640" y="107.214953497895" text-anchor="middle" font-size="15.618106257174" fill="var(--danger-text)" font-family="Arial, sans-serif">CPU or custom metric crosses the HPA target value</text>
 
-  <line x1="640" y1="149.72973" x2="640" y2="181.081081" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="132.149532904184" x2="640" y2="164.672897031444" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="186.306306" width="1200" height="83.603604" rx="6.133647" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="222.882883" text-anchor="middle" font-size="19.423214" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. HPA scales pods</text>
-  <text x="640" y="251.099099" text-anchor="middle" font-size="15.334117" fill="var(--ok-text)" font-family="Arial, sans-serif">Deployment replicas increase to absorb the load</text>
+  <rect x="40" y="170.093457546423" width="1200" height="86.728972389204" rx="6.247242706574" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="208.037383226046" text-anchor="middle" font-size="19.782933709703" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">2. HPA scales pods</text>
+  <text x="640" y="237.308411044318" text-anchor="middle" font-size="15.618106257174" fill="var(--ok-text)" font-family="Arial, sans-serif">Deployment replicas increase to absorb the load</text>
 
-  <line x1="640" y1="275.135135" x2="640" y2="306.486486" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="262.242990450607" x2="640" y2="294.766354577867" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="311.711712" width="1200" height="83.603604" rx="6.133647" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="348.288288" text-anchor="middle" font-size="19.423214" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">3. Pods go Pending</text>
-  <text x="640" y="376.504505" text-anchor="middle" font-size="15.334117" fill="var(--warn-text)" font-family="Arial, sans-serif">Scheduler has no node with room — event FailedScheduling</text>
+  <rect x="40" y="300.18691613023" width="1200" height="86.728972389204" rx="6.247242706574" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="338.130840772469" text-anchor="middle" font-size="19.782933709703" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">3. Pods go Pending</text>
+  <text x="640" y="367.401869628125" text-anchor="middle" font-size="15.618106257174" fill="var(--warn-text)" font-family="Arial, sans-serif">Scheduler has no node with room — event FailedScheduling</text>
 
-  <line x1="640" y1="400.540541" x2="640" y2="431.891892" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="392.336449034413" x2="640" y2="424.859813161673" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="437.117117" width="1200" height="83.603604" rx="6.133647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="473.693694" text-anchor="middle" font-size="19.423214" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">4. Cluster Autoscaler adds nodes</text>
-  <text x="640" y="501.90991" text-anchor="middle" font-size="15.334117" fill="var(--primary-text)" font-family="Arial, sans-serif">Sees pending pods, scales the matching node group up</text>
+  <rect x="40" y="430.280373676653" width="1200" height="86.728972389204" rx="6.247242706574" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="468.224299356276" text-anchor="middle" font-size="19.782933709703" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">4. Cluster Autoscaler adds nodes</text>
+  <text x="640" y="497.495327174548" text-anchor="middle" font-size="15.618106257174" fill="var(--primary-text)" font-family="Arial, sans-serif">Sees pending pods, scales the matching node group up</text>
 
-  <line x1="640" y1="525.945946" x2="640" y2="536.396396" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="522.429906580837" x2="640" y2="533.271027610796" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="541.621622" width="1200" height="78.378378" rx="6.133647" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="576.108108" text-anchor="middle" font-size="19.423214" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">5. Pods scheduled, spike absorbed</text>
-  <text x="640" y="604.324324" text-anchor="middle" font-size="15.334117" fill="var(--info-text)" font-family="Arial, sans-serif">On cooldown both scalers shrink back down</text>
+  <rect x="40" y="538.691589163158" width="1200" height="81.308410836842" rx="6.247242706574" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="574.467289599406" text-anchor="middle" font-size="19.782933709703" font-weight="bold" fill="var(--info-text)" font-family="Arial, sans-serif">5. Pods scheduled, spike absorbed</text>
+  <text x="640" y="603.738317417678" text-anchor="middle" font-size="15.618106257174" fill="var(--info-text)" font-family="Arial, sans-serif">On cooldown both scalers shrink back down</text>
 </svg>

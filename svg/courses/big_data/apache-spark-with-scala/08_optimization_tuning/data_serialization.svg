@@ -96,52 +96,51 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753497810938" font-weight="bold" fill="var(--text)">Spark Data Serialization</text>
 
-  <rect x="40" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="235" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--danger-text)">Java Serialization</text>
-  <text x="235" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Default fallback</text>
-  <text x="235" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Reflection-based</text>
-  <text x="235" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Slow, bulky</text>
-  <text x="235" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--danger-text)">Avoid in shuffles</text>
-  <text x="235" y="303.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--danger-text)">spark.serializer=Java</text>
+  <rect x="40" y="40" width="390" height="290" rx="6.336706254345" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.178471890205" font-weight="bold" fill="var(--danger-text)">Java Serialization</text>
+  <text x="235" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--danger-text)">Default fallback</text>
+  <text x="235" y="162.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--danger-text)">Reflection-based</text>
+  <text x="235" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--danger-text)">Slow, bulky</text>
+  <text x="235" y="229.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--danger-text)">Avoid in shuffles</text>
+  <text x="235" y="285.384615384616" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--danger-text)">spark.serializer=Java</text>
 
-  <rect x="445" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--ok-text)">Kryo Serialization</text>
-  <text x="640" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">10x faster, 2-5x smaller</text>
-  <text x="640" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Register classes</text>
-  <text x="640" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--ok-text)">Recommended for RDDs</text>
-  <text x="640" y="250.909090909091" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">requireRegistration=true</text>
-  <text x="640" y="303.636363636364" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--ok-text)">spark.serializer=Kryo</text>
+  <rect x="445" y="40" width="390" height="290" rx="6.336706254345" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.178471890205" font-weight="bold" fill="var(--ok-text)">Kryo Serialization</text>
+  <text x="640" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--ok-text)">10x faster, 2-5x smaller</text>
+  <text x="640" y="162.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--ok-text)">Register classes</text>
+  <text x="640" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--ok-text)">Recommended for RDDs</text>
+  <text x="640" y="229.615384615384" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--ok-text)">requireRegistration=true</text>
+  <text x="640" y="285.384615384616" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--ok-text)">spark.serializer=Kryo</text>
 
-  <rect x="850" y="71.636363636364" width="390" height="274.181818181818" rx="6.16146381663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="113.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--primary-text)">Tungsten Encoders</text>
-  <text x="1045" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Dataset / DataFrame</text>
-  <text x="1045" y="187.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Binary UnsafeRow</text>
-  <text x="1045" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Off-heap, cache-friendly</text>
-  <text x="1045" y="250.909090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Prefer Dataset[T]</text>
-  <text x="1045" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--primary-text)">automatic</text>
+  <rect x="850" y="40" width="390" height="290" rx="6.336706254345" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="84.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.178471890205" font-weight="bold" fill="var(--primary-text)">Tungsten Encoders</text>
+  <text x="1045" y="129.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--primary-text)">Dataset / DataFrame</text>
+  <text x="1045" y="162.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--primary-text)">Binary UnsafeRow</text>
+  <text x="1045" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--primary-text)">Off-heap, cache-friendly</text>
+  <text x="1045" y="229.615384615384" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.841765635861" fill="var(--primary-text)">Prefer Dataset[T]</text>
+  <text x="1045" y="285.384615384616" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--primary-text)">automatic</text>
 
-  <rect x="40" y="377.454545454545" width="1200" height="242.545454545455" rx="6.16146381663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.565123358204" font-weight="bold" fill="var(--text)">When Serialization Happens</text>
+  <rect x="40" y="363.461538461538" width="1200" height="256.538461538462" rx="6.336706254345" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="402.499999999999" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.178471890205" font-weight="bold" fill="var(--text)">When Serialization Happens</text>
 
-  <rect x="80" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="220" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--warn-accent)">Shuffle Writes</text>
-  <text x="220" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">groupBy, join</text>
-  <text x="220" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">biggest cost</text>
+  <rect x="80" y="430.384615384615" width="280" height="167.307692307692" rx="6.336706254345" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="220" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.954001053976" font-weight="bold" fill="var(--warn-accent)">Shuffle Writes</text>
+  <text x="220" y="508.461538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">groupBy, join</text>
+  <text x="220" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">biggest cost</text>
 
-  <rect x="380" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="520" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--info-accent)">Broadcasts</text>
-  <text x="520" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Once per executor</text>
-  <text x="520" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Small lookups</text>
+  <rect x="380" y="430.384615384615" width="280" height="167.307692307692" rx="6.336706254345" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="520" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.954001053976" font-weight="bold" fill="var(--info-accent)">Broadcasts</text>
+  <text x="520" y="508.461538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Once per executor</text>
+  <text x="520" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Small lookups</text>
 
-  <rect x="680" y="440.727272727273" width="280" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="820" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--ok-accent)">Task Closures</text>
-  <text x="820" y="514.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">Lambdas shipped</text>
-  <text x="820" y="546.181818181818" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--text-muted)">NotSerializableException</text>
+  <rect x="680" y="430.384615384615" width="280" height="167.307692307692" rx="6.336706254345" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="820" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.954001053976" font-weight="bold" fill="var(--ok-accent)">Task Closures</text>
+  <text x="820" y="508.461538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">Lambdas shipped</text>
+  <text x="820" y="541.923076923077" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--text-muted)">NotSerializableException</text>
 
-  <rect x="980" y="440.727272727273" width="220" height="158.181818181818" rx="6.16146381663" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1090" y="477.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457480813784" font-weight="bold" fill="var(--primary-accent)">Caching</text>
-  <text x="1090" y="514.545454545455" text-anchor="middle" font-family="Courier New, monospace" font-size="13.349838269364" fill="var(--text-muted)">MEMORY_ONLY_SER</text>
-  <text x="1090" y="546.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" fill="var(--text-muted)">CPU for RAM</text>
+  <rect x="980" y="430.384615384615" width="220" height="167.307692307692" rx="6.336706254345" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1090" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.954001053976" font-weight="bold" fill="var(--primary-accent)">Caching</text>
+  <text x="1090" y="508.461538461539" text-anchor="middle" font-family="Courier New, monospace" font-size="13.729530217746" fill="var(--text-muted)">MEMORY_ONLY_SER</text>
+  <text x="1090" y="541.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.785647926803" fill="var(--text-muted)">CPU for RAM</text>
 </svg>

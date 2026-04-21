@@ -95,24 +95,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="673.9622" y="40" text-anchor="middle" font-size="25.305" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Memory Layout: &amp;s1 borrows String s1</text>
-  <text x="175.849" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Stack</text>
-  <rect x="40" y="139.4285" width="271.6982" height="99.4285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="175.849" y="202.4" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">s1: { ptr, len, cap }</text>
-  <rect x="40" y="238.8572" width="271.6982" height="82.8571" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="175.849" y="295.2" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--info-text)">&amp;s1: ptr to s1</text>
-  <text x="787.1698" y="106.2857" text-anchor="middle" font-size="23.1963" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Heap</text>
-  <rect x="606.0378" y="139.4285" width="362.2642" height="116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="787.1698" y="189.1429" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello" (5 bytes)</text>
-  <text x="787.1698" y="232.2285" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--ok-text)">heap-allocated buffer</text>
-  <line x1="311.6981" y1="189.1429" x2="606.0378" y2="189.1429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="9.9805 5.9883"/>
-  <text x="458.8678" y="165.9429" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--text)">s1.ptr</text>
-  <line x1="175.849" y1="238.8572" x2="175.849" y2="189.1429" stroke="var(--text)" stroke-width="1.9961" marker-end="url(#arrow)" stroke-dasharray="5.9883 3.9922"/>
-  <text x="221.132" y="222.2858" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">&amp;s1 points to s1</text>
-  <rect x="40" y="388" width="566.0378" height="99.4285" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="323.0188" y="447.6571" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--warn-text)">Reference = pointer to the stack variable</text>
-  <rect x="673.9622" y="388" width="566.0378" height="99.4285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="956.9812" y="447.6571" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--danger-text)">No heap copy, no ownership transfer</text>
-  <rect x="221.132" y="537.1429" width="905.6604" height="82.8571" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="673.9622" y="593.4857" text-anchor="middle" font-size="21.0875" font-family="Arial, sans-serif" fill="var(--primary-text)">Reference is an extra level of indirection: &amp;s1 -&gt; s1 -&gt; heap</text>
+  <text x="175.849" y="40" text-anchor="middle" font-size="24.647443861085" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Stack</text>
+  <rect x="40" y="77.419289282" width="271.6982" height="112.257980749222" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="175.849" y="148.5161421436" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--primary-text)">s1: { ptr, len, cap }</text>
+  <rect x="40" y="189.677495837667" width="271.6982" height="93.548336108222" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="175.849" y="253.290332778356" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--info-text)">&amp;s1: ptr to s1</text>
+  <text x="787.1698" y="40" text-anchor="middle" font-size="24.647443861085" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Heap</text>
+  <rect x="606.0378" y="77.419289282" width="362.2642" height="130.967738293444" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="787.1698" y="133.548449011445" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello" (5 bytes)</text>
+  <text x="787.1698" y="182.193479916755" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--ok-text)">heap-allocated buffer</text>
+  <line x1="311.6981" y1="133.548449011445" x2="606.0378" y2="133.548449011445" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="9.9805 5.9883"/>
+  <text x="458.8678" y="107.354901352756" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--text)">s1.ptr</text>
+  <line x1="175.849" y1="189.677495837667" x2="175.849" y2="133.548449011445" stroke="var(--text)" stroke-width="1.9961" marker-end="url(#arrow)" stroke-dasharray="5.9883 3.9922"/>
+  <text x="221.132" y="170.967851196667" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--primary-text)">&amp;s1 points to s1</text>
+  <rect x="40" y="358.064523413111" width="566.0378" height="112.257980749222" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="323.0188" y="425.419311862644" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--warn-text)">Reference = pointer to the stack variable</text>
+  <rect x="673.9622" y="358.064523413111" width="566.0378" height="112.257980749222" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="956.9812" y="425.419311862644" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--danger-text)">No heap copy, no ownership transfer</text>
+  <rect x="221.132" y="526.451663891778" width="905.6604" height="93.548336108222" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="673.9622" y="590.064500832467" text-anchor="middle" font-size="22.406718848292" font-family="Arial, sans-serif" fill="var(--primary-text)">Reference is an extra level of indirection: &amp;s1 -&gt; s1 -&gt; heap</text>
 </svg>

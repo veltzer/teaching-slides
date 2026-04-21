@@ -95,23 +95,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="23.7155" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Slowloris Attack: Incomplete HTTP Headers</text>
-  <text x="234.1177" y="81.4287" text-anchor="middle" font-size="22.0215" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Attacker</text>
-  <text x="1045.8824" y="81.4287" text-anchor="middle" font-size="22.0215" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">Server</text>
-  <line x1="234.1177" y1="104.026" x2="234.1177" y2="601.1689" stroke="var(--text-faint)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239"/>
-  <line x1="1045.8824" y1="104.026" x2="1045.8824" y2="601.1689" stroke="var(--text-faint)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239"/>
-  <line x1="269.4118" y1="149.2209" x2="1010.5883" y2="149.2209" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640.0001" y="130.3897" text-anchor="middle" font-size="18.6336" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">GET / HTTP/1.1\r\n  Host: target.com\r\n  (no blank line)</text>
-  <text x="1081.1765" y="156.7533" text-anchor="start" font-size="18.6336" fill="var(--danger-accent)" font-family="Arial, sans-serif">Connection #1 held open…</text>
-  <line x1="269.4118" y1="252.7923" x2="1010.5883" y2="252.7923" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640.0001" y="233.9611" text-anchor="middle" font-size="18.6336" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">… 10 sec later …  X-Header-1: value\r\n</text>
-  <text x="1081.1765" y="260.3247" text-anchor="start" font-size="18.6336" fill="var(--danger-accent)" font-family="Arial, sans-serif">Still waiting…</text>
-  <line x1="269.4118" y1="356.3636" x2="1010.5883" y2="356.3636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640.0001" y="337.5326" text-anchor="middle" font-size="18.6336" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">… 10 sec later …  X-Header-2: value\r\n</text>
-  <text x="1081.1765" y="363.8961" text-anchor="start" font-size="18.6336" fill="var(--danger-accent)" font-family="Arial, sans-serif">Still waiting…</text>
-  <line x1="269.4118" y1="459.9351" x2="1010.5883" y2="459.9351" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640.0001" y="441.1039" text-anchor="middle" font-size="18.6336" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">(repeat for hundreds of connections simultaneously)</text>
-  <text x="1081.1765" y="467.4676" text-anchor="start" font-size="18.6336" fill="var(--danger-accent)" font-family="Arial, sans-serif">All slots consumed!</text>
-  <rect x="40" y="567.2728" width="1200" height="52.7272" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="640.0001" y="601.1689" text-anchor="middle" font-size="20.3276" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Attacker keeps connections alive by drip-feeding headers — never completes the request</text>
+  <text x="234.1177" y="40" text-anchor="middle" font-size="22.852793285381" fill="var(--danger-accent)" font-weight="bold" font-family="Arial, sans-serif">Attacker</text>
+  <text x="1045.8824" y="40" text-anchor="middle" font-size="22.852793285381" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">Server</text>
+  <line x1="234.1177" y1="64.335559655704" x2="234.1177" y2="599.720349004858" stroke="var(--text-faint)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239"/>
+  <line x1="1045.8824" y1="64.335559655704" x2="1045.8824" y2="599.720349004858" stroke="var(--text-faint)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239"/>
+  <line x1="269.4118" y1="113.007002044112" x2="1010.5883" y2="113.007002044112" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640.0001" y="92.727243356636" text-anchor="middle" font-size="19.337002881841" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">GET / HTTP/1.1\r\n  Host: target.com\r\n  (no blank line)</text>
+  <text x="1081.1765" y="121.118819365235" text-anchor="start" font-size="19.337002881841" fill="var(--danger-accent)" font-family="Arial, sans-serif">Connection #1 held open…</text>
+  <line x1="269.4118" y1="224.545459440561" x2="1010.5883" y2="224.545459440561" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640.0001" y="204.265700753085" text-anchor="middle" font-size="19.337002881841" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">… 10 sec later …  X-Header-1: value\r\n</text>
+  <text x="1081.1765" y="232.657276761684" text-anchor="start" font-size="19.337002881841" fill="var(--danger-accent)" font-family="Arial, sans-serif">Still waiting…</text>
+  <line x1="269.4118" y1="336.083809144676" x2="1010.5883" y2="336.083809144676" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640.0001" y="315.804265841867" text-anchor="middle" font-size="19.337002881841" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">… 10 sec later …  X-Header-2: value\r\n</text>
+  <text x="1081.1765" y="344.195734158133" text-anchor="start" font-size="19.337002881841" fill="var(--danger-accent)" font-family="Arial, sans-serif">Still waiting…</text>
+  <line x1="269.4118" y1="447.622374233458" x2="1010.5883" y2="447.622374233458" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640.0001" y="427.342615545982" text-anchor="middle" font-size="19.337002881841" fill="var(--text)" font-style="italic" font-family="Arial, sans-serif">(repeat for hundreds of connections simultaneously)</text>
+  <text x="1081.1765" y="455.734299246915" text-anchor="start" font-size="19.337002881841" fill="var(--danger-accent)" font-family="Arial, sans-serif">All slots consumed!</text>
+  <rect x="40" y="563.216847982802" width="1200" height="56.783152017198" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.226495003169" filter="url(#shadow)"/>
+  <text x="640.0001" y="599.720349004858" text-anchor="middle" font-size="21.094949971069" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Attacker keeps connections alive by drip-feeding headers — never completes the request</text>
 </svg>

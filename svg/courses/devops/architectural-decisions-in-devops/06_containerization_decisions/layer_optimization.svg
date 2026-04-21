@@ -95,26 +95,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="630.7693" y="40" text-anchor="middle" font-size="29.112" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">Layer Optimization: Before vs After</text>
-  <rect x="40" y="90.4348" width="553.8461" height="529.5652" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="140.8696" text-anchor="middle" font-size="23.6535" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Before (5 layers, 450 MB)</text>
-  <rect x="76.9232" y="178.6956" width="480.0001" height="75.6523" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="229.1304" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get update</text>
-  <rect x="76.9232" y="266.9566" width="480.0001" height="75.6523" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="317.3914" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get install gcc</text>
-  <rect x="76.9232" y="355.2174" width="480.0001" height="75.6523" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="405.6522" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN pip install deps</text>
-  <rect x="76.9232" y="443.4782" width="480.0001" height="75.6523" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="493.913" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get remove gcc</text>
-  <rect x="76.9232" y="531.7392" width="480.0001" height="63.0435" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="316.9232" y="574.6087" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--warn-text)">gcc still in earlier layer!</text>
-  <rect x="686.1539" y="90.4348" width="553.8461" height="529.5652" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="963.077" y="140.8696" text-anchor="middle" font-size="23.6535" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">After (2 layers, 120 MB)</text>
-  <rect x="723.0771" y="178.6956" width="480.0001" height="201.7391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="963.077" y="254.3478" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--ok-text)">RUN apt-get update &amp;&amp;</text>
-  <text x="963.077" y="292.1739" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--ok-text)">apt-get install gcc &amp;&amp;</text>
-  <text x="963.077" y="329.9999" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--ok-text)">pip install deps &amp;&amp; apt-get remove gcc</text>
-  <rect x="723.0771" y="405.6522" width="480.0001" height="88.2608" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="963.077" y="461.1305" text-anchor="middle" font-size="18.195" font-family="Arial, sans-serif" fill="var(--ok-text)">COPY app /app</text>
-  <text x="963.077" y="556.9565" text-anchor="middle" font-size="21.834" fill="var(--ok-accent)" font-family="Arial, sans-serif">gcc removed in same layer = gone</text>
+  <rect x="40" y="40" width="553.8461" height="580" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="95.238116099774" text-anchor="middle" font-size="24.754245287042" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Before (5 layers, 450 MB)</text>
+  <rect x="76.9232" y="136.666593650791" width="480.0001" height="82.857283673474" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="191.904709750565" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get update</text>
+  <rect x="76.9232" y="233.333406349209" width="480.0001" height="82.857283673474" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="288.571522448983" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get install gcc</text>
+  <rect x="76.9232" y="330" width="480.0001" height="82.857283673474" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="385.238116099774" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN pip install deps</text>
+  <rect x="76.9232" y="426.666593650791" width="480.0001" height="82.857283673474" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="481.904709750565" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--warn-text)">RUN apt-get remove gcc</text>
+  <rect x="76.9232" y="523.333406349209" width="480.0001" height="69.047645124717" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="316.9232" y="570.285717414966" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--warn-text)">gcc still in earlier layer!</text>
+  <rect x="686.1539" y="40" width="553.8461" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="963.077" y="95.238116099774" text-anchor="middle" font-size="24.754245287042" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">After (2 layers, 120 MB)</text>
+  <rect x="723.0771" y="136.666593650791" width="480.0001" height="220.952354875283" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="963.077" y="219.523767800452" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--ok-text)">RUN apt-get update &amp;&amp;</text>
+  <text x="963.077" y="260.952354875283" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--ok-text)">apt-get install gcc &amp;&amp;</text>
+  <text x="963.077" y="302.3808324263" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--ok-text)">pip install deps &amp;&amp; apt-get remove gcc</text>
+  <rect x="723.0771" y="385.238116099774" width="480.0001" height="96.666593650791" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.279217524774" filter="url(#shadow)"/>
+  <text x="963.077" y="446.000065714288" text-anchor="middle" font-size="19.041727143878" font-family="Arial, sans-serif" fill="var(--ok-text)">COPY app /app</text>
+  <text x="963.077" y="550.952354875283" text-anchor="middle" font-size="22.850072572654" fill="var(--ok-accent)" font-family="Arial, sans-serif">gcc removed in same layer = gone</text>
 </svg>

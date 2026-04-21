@@ -95,30 +95,29 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="702.6865" y="40" text-anchor="middle" font-size="26.252" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Amazon SQS Architecture</text>
-  <rect x="40" y="200.6414" width="214.9254" height="76.0933" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="147.4626" y="246.2972" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Producer</text>
-  <rect x="398.2087" y="166.8222" width="322.388" height="135.277" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="559.4028" y="226.0058" text-anchor="middle" font-size="22.9707" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SQS Queue</text>
-  <text x="559.4028" y="259.8251" text-anchor="middle" font-size="21.2509" fill="var(--text-muted)" font-family="Arial, sans-serif">Messages in flight</text>
-  <rect x="899.7013" y="99.1837" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="136.3848" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer 1</text>
-  <rect x="899.7013" y="183.7318" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="220.9327" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer 2</text>
-  <rect x="899.7013" y="268.2797" width="232.8357" height="59.1837" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1016.1192" y="305.481" text-anchor="middle" font-size="21.2509" fill="var(--text)" font-family="Arial, sans-serif">Consumer N</text>
-  <rect x="434.0297" y="437.3761" width="322.388" height="84.5481" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="595.2237" y="488.105" text-anchor="middle" font-size="21.2509" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead Letter Queue</text>
-  <line x1="254.9254" y1="237.8426" x2="394.6268" y2="234.4606" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
-  <line x1="720.597" y1="200.6414" x2="896.1194" y2="129.621" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
-  <line x1="720.597" y1="234.4606" x2="896.1194" y2="212.4781" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
-  <line x1="720.597" y1="268.2797" x2="896.1194" y2="297.0262" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
-  <path d="M 1016.1192 158.3673 Q 1240 158.3673 1240 234.4606 Q 1240 335.9184 702.6865 335.9184 Q 613.1342 335.9184 613.1342 305.481" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)"/>
-  <text x="1240" y="268.2797" font-size="21.2509" fill="var(--text-faint)" font-family="Arial, sans-serif">Visibility Timeout</text>
-  <path d="M 1016.1192 242.9155 Q 1204.1791 242.9155 1204.1791 268.2797 Q 1204.1791 352.828 684.7758 352.828 Q 622.0895 352.828 622.0895 305.481" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none"/>
-  <text x="1204.1791" y="352.828" font-size="21.2509" fill="var(--ok-accent)" font-family="Arial, sans-serif">Delete Message</text>
-  <line x1="559.4028" y1="302.0991" x2="595.2237" y2="433.9942" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
-  <text x="487.7611" y="386.6472" font-size="21.2509" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failed messages</text>
-  <text x="702.6865" y="589.5627" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">SQS uses visibility timeout to prevent duplicate processing.</text>
-  <text x="702.6865" y="620" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Failed messages move to the Dead Letter Queue after max retries.</text>
+  <rect x="40" y="152.986989846516" width="214.9254" height="84.740270225797" rx="6.331738397404" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="147.4626" y="203.830951527439" text-anchor="middle" font-size="22.425856584898" fill="var(--text)" font-family="Arial, sans-serif">Producer</text>
+  <rect x="398.2087" y="115.324697018891" width="322.388" height="150.649394037783" rx="6.331738397404" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="559.4028" y="181.233709467234" text-anchor="middle" font-size="24.240743867541" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">SQS Queue</text>
+  <text x="559.4028" y="218.896113658501" text-anchor="middle" font-size="22.425856584898" fill="var(--text-muted)" font-family="Arial, sans-serif">Messages in flight</text>
+  <rect x="899.7013" y="40" width="232.8357" height="65.909123811985" rx="6.331738397404" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="81.428499837659" text-anchor="middle" font-size="22.425856584898" fill="var(--text)" font-family="Arial, sans-serif">Consumer 1</text>
+  <rect x="899.7013" y="134.155843432704" width="232.8357" height="65.909123811985" rx="6.331738397404" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="175.584120543078" text-anchor="middle" font-size="22.425856584898" fill="var(--text)" font-family="Arial, sans-serif">Consumer 2</text>
+  <rect x="899.7013" y="228.311464138123" width="232.8357" height="65.909123811985" rx="6.331738397404" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1016.1192" y="269.740186703066" text-anchor="middle" font-size="22.425856584898" fill="var(--text)" font-family="Arial, sans-serif">Consumer N</text>
+  <rect x="434.0297" y="416.623373730815" width="322.388" height="94.155843432704" rx="6.331738397404" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="595.2237" y="473.116924335893" text-anchor="middle" font-size="22.425856584898" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dead Letter Queue</text>
+  <line x1="254.9254" y1="194.415601047817" x2="394.6268" y2="190.649282674141" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="152.986989846516" x2="896.1194" y2="73.896085817591" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="190.649282674141" x2="896.1194" y2="166.168770063456" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <line x1="720.597" y1="228.311464138123" x2="896.1194" y2="260.32461349616" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <path d="M 1016.1192 105.909012448343 Q 1240 105.909012448343 1240 190.649282674141 Q 1240 303.636383884299 702.6865 303.636383884299 Q 613.1342 303.636383884299 613.1342 269.740186703066" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)"/>
+  <text x="1240" y="228.311464138123" font-size="22.425856584898" fill="var(--text-faint)" font-family="Arial, sans-serif">Visibility Timeout</text>
+  <path d="M 1016.1192 200.064967244689 Q 1204.1791 200.064967244689 1204.1791 228.311464138123 Q 1204.1791 322.467530298111 684.7758 322.467530298111 Q 622.0895 322.467530298111 622.0895 269.740186703066" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none"/>
+  <text x="1204.1791" y="322.467530298111" font-size="22.425856584898" fill="var(--ok-accent)" font-family="Arial, sans-serif">Delete Message</text>
+  <line x1="559.4028" y1="265.973979693032" x2="595.2237" y2="412.85716672078" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)"/>
+  <text x="487.7611" y="360.129823125736" font-size="22.425856584898" fill="var(--danger-accent)" font-family="Arial, sans-serif">Failed messages</text>
+  <text x="702.6865" y="586.103914182409" text-anchor="middle" font-size="22.425856584898" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">SQS uses visibility timeout to prevent duplicate processing.</text>
+  <text x="702.6865" y="620" text-anchor="middle" font-size="22.425856584898" fill="var(--text-faint)" font-style="italic" font-family="Arial, sans-serif">Failed messages move to the Dead Letter Queue after max retries.</text>
 </svg>

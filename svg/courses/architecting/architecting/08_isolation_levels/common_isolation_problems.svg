@@ -95,40 +95,39 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="24.8176" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Common Isolation Problems</text>
-  <rect x="40" y="86.4" width="366.6666" height="201.0667" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="223.3334" y="125.0667" text-anchor="middle" font-size="20.1643" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dirty Read</text>
-  <text x="223.3334" y="159.0933" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Transaction reads data</text>
-  <text x="223.3334" y="183.84" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">written by another</text>
-  <text x="223.3334" y="208.5867" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">uncommitted transaction.</text>
-  <text x="223.3334" y="245.7067" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">If that txn rolls back,</text>
-  <text x="223.3334" y="267.36" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">the data was never valid!</text>
-  <rect x="456.6667" y="86.4" width="366.6666" height="201.0667" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="125.0667" text-anchor="middle" font-size="20.1643" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Non-Repeatable Read</text>
-  <text x="640" y="159.0933" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Same query in the same</text>
-  <text x="640" y="183.84" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">transaction returns</text>
-  <text x="640" y="208.5867" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">different values.</text>
-  <text x="640" y="245.7067" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">Another txn modified</text>
-  <text x="640" y="267.36" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">the row between reads.</text>
-  <rect x="873.3334" y="86.4" width="366.6666" height="201.0667" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1056.6666" y="125.0667" text-anchor="middle" font-size="20.1643" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Phantom Read</text>
-  <text x="1056.6666" y="159.0933" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Same query returns</text>
-  <text x="1056.6666" y="183.84" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">different set of rows.</text>
-  <text x="1056.6666" y="208.5867" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">New rows appeared!</text>
-  <text x="1056.6666" y="245.7067" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">Another txn inserted</text>
-  <text x="1056.6666" y="267.36" text-anchor="middle" font-size="15.511" fill="var(--danger-accent)" font-family="Arial, sans-serif">rows matching the query.</text>
-  <text x="640" y="341.6" text-anchor="middle" font-size="20.1643" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Effects</text>
-  <line x1="223.3334" y1="287.4667" x2="223.3334" y2="372.5333" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
-  <line x1="640" y1="287.4667" x2="640" y2="372.5333" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
-  <line x1="1056.6666" y1="287.4667" x2="1056.6666" y2="372.5333" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
-  <rect x="73.3334" y="380.2667" width="300" height="61.8667" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="223.3334" y="418.9333" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Data Inconsistency</text>
-  <rect x="490" y="380.2667" width="300" height="61.8667" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="418.9333" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Invalid Results</text>
-  <rect x="906.6666" y="380.2667" width="300" height="61.8667" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1056.6666" y="418.9333" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Lost Updates</text>
-  <rect x="40" y="496.2667" width="1200" height="123.7333" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="534.9333" text-anchor="middle" font-size="20.1643" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Solution: Use Appropriate Isolation Levels</text>
-  <text x="640" y="570.5066" text-anchor="middle" font-size="17.0622" fill="var(--text)" font-family="Arial, sans-serif">Read Uncommitted -&gt; Read Committed -&gt; Repeatable Read -&gt; Serializable</text>
-  <text x="640" y="601.44" text-anchor="middle" font-size="17.0622" fill="var(--text-muted)" font-family="Arial, sans-serif">Higher isolation = fewer problems, but lower concurrency and performance.</text>
+  <rect x="40" y="40" width="366.6666" height="218.550760869565" rx="6.255432421712" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.3334" y="82.02902173913" text-anchor="middle" font-size="21.022735996855" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dirty Read</text>
+  <text x="223.3334" y="119.014456521739" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Transaction reads data</text>
+  <text x="223.3334" y="145.913043478261" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">written by another</text>
+  <text x="223.3334" y="172.811630434783" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">uncommitted transaction.</text>
+  <text x="223.3334" y="213.159456521739" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">If that txn rolls back,</text>
+  <text x="223.3334" y="236.695652173913" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">the data was never valid!</text>
+  <rect x="456.6667" y="40" width="366.6666" height="218.550760869565" rx="6.255432421712" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="82.02902173913" text-anchor="middle" font-size="21.022735996855" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Non-Repeatable Read</text>
+  <text x="640" y="119.014456521739" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Same query in the same</text>
+  <text x="640" y="145.913043478261" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">transaction returns</text>
+  <text x="640" y="172.811630434783" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">different values.</text>
+  <text x="640" y="213.159456521739" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">Another txn modified</text>
+  <text x="640" y="236.695652173913" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">the row between reads.</text>
+  <rect x="873.3334" y="40" width="366.6666" height="218.550760869565" rx="6.255432421712" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1056.6666" y="82.02902173913" text-anchor="middle" font-size="21.022735996855" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Phantom Read</text>
+  <text x="1056.6666" y="119.014456521739" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Same query returns</text>
+  <text x="1056.6666" y="145.913043478261" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">different set of rows.</text>
+  <text x="1056.6666" y="172.811630434783" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">New rows appeared!</text>
+  <text x="1056.6666" y="213.159456521739" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">Another txn inserted</text>
+  <text x="1056.6666" y="236.695652173913" text-anchor="middle" font-size="16.171335382196" fill="var(--danger-accent)" font-family="Arial, sans-serif">rows matching the query.</text>
+  <text x="640" y="317.391304347826" text-anchor="middle" font-size="21.022735996855" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Effects</text>
+  <line x1="223.3334" y1="258.550760869565" x2="223.3334" y2="351.014456521739" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <line x1="640" y1="258.550760869565" x2="640" y2="351.014456521739" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <line x1="1056.6666" y1="258.550760869565" x2="1056.6666" y2="351.014456521739" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow-danger)"/>
+  <rect x="73.3334" y="359.420326086956" width="300" height="67.246413043478" rx="6.255432421712" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.3334" y="401.449239130435" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Data Inconsistency</text>
+  <rect x="490" y="359.420326086956" width="300" height="67.246413043478" rx="6.255432421712" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="401.449239130435" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Invalid Results</text>
+  <rect x="906.6666" y="359.420326086956" width="300" height="67.246413043478" rx="6.255432421712" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1056.6666" y="401.449239130435" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Lost Updates</text>
+  <rect x="40" y="485.507282608696" width="1200" height="134.492717391304" rx="6.255432421712" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="527.536195652174" text-anchor="middle" font-size="21.022735996855" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Solution: Use Appropriate Isolation Levels</text>
+  <text x="640" y="566.202826086957" text-anchor="middle" font-size="17.788573177623" fill="var(--text)" font-family="Arial, sans-serif">Read Uncommitted -&gt; Read Committed -&gt; Repeatable Read -&gt; Serializable</text>
+  <text x="640" y="599.826086956522" text-anchor="middle" font-size="17.788573177623" fill="var(--text-muted)" font-family="Arial, sans-serif">Higher isolation = fewer problems, but lower concurrency and performance.</text>
 </svg>

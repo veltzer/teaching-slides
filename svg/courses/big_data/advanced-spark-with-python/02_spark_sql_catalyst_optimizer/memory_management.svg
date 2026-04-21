@@ -95,37 +95,36 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="30.6923" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark SQL Memory Management</text>
-  <rect x="40" y="72.6761" width="1200" height="547.3239" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="113.5211" text-anchor="middle" font-size="23.0192" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">JVM Heap (spark.executor.memory)</text>
-  <rect x="72.4325" y="138.0282" width="194.5946" height="457.4647" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="169.7298" y="178.8732" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Reserved</text>
-  <text x="169.7298" y="211.5493" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">300 MB</text>
-  <text x="169.7298" y="244.2253" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">System use</text>
-  <rect x="299.4595" y="138.0282" width="648.6486" height="457.4647" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="623.7838" y="178.8732" text-anchor="middle" font-size="21.4846" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Unified Memory (spark.memory.fraction = 0.6)</text>
-  <rect x="323.7838" y="203.3803" width="291.8919" height="359.4366" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="469.7298" y="244.2253" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Execution</text>
-  <text x="469.7298" y="276.9014" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Shuffles</text>
-  <text x="469.7298" y="309.5774" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Joins</text>
-  <text x="469.7298" y="342.2535" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Sorts</text>
-  <text x="469.7298" y="374.9296" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Aggregations</text>
-  <line x1="631.8919" y1="252.3944" x2="631.8919" y2="530.1408" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="7.3882 4.4329"/>
-  <text x="631.8919" y="244.2253" text-anchor="middle" font-size="15.3461" fill="var(--warn-accent)" font-family="Arial, sans-serif">dynamic</text>
-  <line x1="615.6757" y1="391.2676" x2="648.1081" y2="391.2676" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="599.4595" y1="383.0986" x2="615.6757" y2="391.2676" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="599.4595" y1="399.4366" x2="615.6757" y2="391.2676" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="648.1081" y1="391.2676" x2="664.3243" y2="383.0986" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="648.1081" y1="391.2676" x2="664.3243" y2="399.4366" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="640" y="203.3803" width="283.7838" height="359.4366" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.0811" y="244.2253" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Storage</text>
-  <text x="781.0811" y="276.9014" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Cached tables</text>
-  <text x="781.0811" y="309.5774" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Broadcast vars</text>
-  <text x="781.0811" y="342.2535" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Unroll memory</text>
-  <rect x="980.5405" y="138.0282" width="235.1352" height="457.4647" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1097.2972" y="178.8732" text-anchor="middle" font-size="19.9499" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">User Memory</text>
-  <text x="1097.2972" y="219.7184" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">UDF data</text>
-  <text x="1097.2972" y="252.3944" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">Internal metadata</text>
-  <text x="1097.2972" y="285.0705" text-anchor="middle" font-size="16.8808" fill="var(--text)" font-family="Arial, sans-serif">RDD dependencies</text>
-  <text x="1097.2972" y="334.0845" text-anchor="middle" font-size="16.8808" fill="var(--text-faint)" font-family="Arial, sans-serif">(1 - fraction)</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6.176508461473" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="83.283510915566" text-anchor="middle" font-size="23.696380596056" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">JVM Heap (spark.executor.memory)</text>
+  <rect x="72.4325" y="109.253723435063" width="194.5946" height="484.77606404544" rx="6.176508461473" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="169.7298" y="152.537234350629" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Reserved</text>
+  <text x="169.7298" y="187.164149053239" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">300 MB</text>
+  <text x="169.7298" y="221.790957785691" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">System use</text>
+  <rect x="299.4595" y="109.253723435063" width="648.6486" height="484.77606404544" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="623.7838" y="152.537234350629" text-anchor="middle" font-size="22.116635615226" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Unified Memory (spark.memory.fraction = 0.6)</text>
+  <rect x="323.7838" y="178.507446870126" width="291.8919" height="380.895531877925" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="469.7298" y="221.790957785691" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Execution</text>
+  <text x="469.7298" y="256.417872488302" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Shuffles</text>
+  <text x="469.7298" y="291.044681220754" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Joins</text>
+  <text x="469.7298" y="325.671595923365" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Sorts</text>
+  <text x="469.7298" y="360.298510625975" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Aggregations</text>
+  <line x1="631.8919" y1="230.447765938962" x2="631.8919" y2="524.77606404544" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="7.3882 4.4329"/>
+  <text x="631.8919" y="221.790957785691" text-anchor="middle" font-size="15.797552750101" fill="var(--warn-accent)" font-family="Arial, sans-serif">dynamic</text>
+  <line x1="615.6757" y1="377.611914992201" x2="648.1081" y2="377.611914992201" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="599.4595" y1="368.955212809088" x2="615.6757" y2="377.611914992201" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="599.4595" y1="386.268617175314" x2="615.6757" y2="377.611914992201" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="648.1081" y1="377.611914992201" x2="664.3243" y2="368.955212809088" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="648.1081" y1="377.611914992201" x2="664.3243" y2="386.268617175314" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="178.507446870126" width="283.7838" height="380.895531877925" rx="6.176508461473" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="781.0811" y="221.790957785691" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Storage</text>
+  <text x="781.0811" y="256.417872488302" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Cached tables</text>
+  <text x="781.0811" y="291.044681220754" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Broadcast vars</text>
+  <text x="781.0811" y="325.671595923365" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Unroll memory</text>
+  <rect x="980.5405" y="109.253723435063" width="235.1352" height="484.77606404544" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1097.2972" y="152.537234350629" text-anchor="middle" font-size="20.536787692589" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">User Memory</text>
+  <text x="1097.2972" y="195.82095720651" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">UDF data</text>
+  <text x="1097.2972" y="230.447765938962" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">Internal metadata</text>
+  <text x="1097.2972" y="265.074680641573" text-anchor="middle" font-size="17.377400672738" fill="var(--text)" font-family="Arial, sans-serif">RDD dependencies</text>
+  <text x="1097.2972" y="317.014893740251" text-anchor="middle" font-size="17.377400672738" fill="var(--text-faint)" font-family="Arial, sans-serif">(1 - fraction)</text>
 </svg>

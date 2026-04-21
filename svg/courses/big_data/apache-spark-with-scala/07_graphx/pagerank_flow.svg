@@ -96,32 +96,31 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.514591494905" font-weight="bold" fill="var(--text)">PageRank Iteration</text>
 
-  <rect x="40" y="93.703703703704" width="372.413793103448" height="279.259259259259" rx="8.432740427116" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.206896551724" y="136.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--primary-text)">1. Send</text>
-  <text x="226.206896551724" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865480854231" fill="var(--primary-text)">Each vertex splits rank</text>
-  <text x="226.206896551724" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865480854231" fill="var(--primary-text)">across outgoing edges</text>
-  <text x="226.206896551724" y="270.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865480854231" fill="var(--primary-text)">send(v→u) = rank(v)/outDeg(v)</text>
-  <text x="226.206896551724" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--primary-text)">Dangling nodes lose rank</text>
+  <rect x="40" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.206896551724" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--primary-text)">1. Send</text>
+  <text x="226.206896551724" y="140.612244897959" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">Each vertex splits rank</text>
+  <text x="226.206896551724" y="170.204081632653" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">across outgoing edges</text>
+  <text x="226.206896551724" y="235.306122448979" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--primary-text)">send(v→u) = rank(v)/outDeg(v)</text>
+  <text x="226.206896551724" y="300.408163265306" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--primary-text)">Dangling nodes lose rank</text>
 
-  <rect x="453.793103448276" y="93.703703703704" width="372.413793103448" height="279.259259259259" rx="8.432740427116" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="136.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--ok-text)">2. Aggregate</text>
-  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865480854231" fill="var(--ok-text)">Sum incoming fragments</text>
-  <text x="640" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.865480854231" fill="var(--ok-text)">inbox(u) = Σ send(v→u)</text>
-  <text x="640" y="287.037037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--ok-text)">aggregateMessages API</text>
-  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--ok-text)">One shuffle per iteration</text>
+  <rect x="453.793103448276" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--ok-text)">2. Aggregate</text>
+  <text x="640" y="140.612244897959" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--ok-text)">Sum incoming fragments</text>
+  <text x="640" y="193.877551020408" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.705066725519" fill="var(--ok-text)">inbox(u) = Σ send(v→u)</text>
+  <text x="640" y="253.061224489796" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--ok-text)">aggregateMessages API</text>
+  <text x="640" y="300.408163265306" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--ok-text)">One shuffle per iteration</text>
 
-  <rect x="867.586206896552" y="93.703703703704" width="372.413793103448" height="279.259259259259" rx="8.432740427116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.793103448276" y="136.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.190036174568" font-weight="bold" fill="var(--warn-text)">3. Update</text>
-  <text x="1053.793103448276" y="190.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--warn-text)">rank' = (1-d)/N + d·inbox</text>
-  <text x="1053.793103448276" y="244.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--warn-text)">d = damping ≈ 0.85</text>
-  <text x="1053.793103448276" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--warn-text)">Converge when Δ &lt; tol</text>
-  <text x="1053.793103448276" y="335.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--warn-text)">~20-40 iterations</text>
+  <rect x="867.586206896552" y="40" width="372.413793103448" height="307.755102040816" rx="8.85253336276" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103448276" y="87.34693877551" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.344466747589" font-weight="bold" fill="var(--warn-text)">3. Update</text>
+  <text x="1053.793103448276" y="146.530612244897" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">rank' = (1-d)/N + d·inbox</text>
+  <text x="1053.793103448276" y="205.714285714285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">d = damping ≈ 0.85</text>
+  <text x="1053.793103448276" y="258.979591836734" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">Converge when Δ &lt; tol</text>
+  <text x="1053.793103448276" y="306.326530612244" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--warn-text)">~20-40 iterations</text>
 
-  <rect x="40" y="426.666666666667" width="1200" height="193.333333333333" rx="8.432740427116" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="464.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.081851067789" font-weight="bold" fill="var(--text)">GraphX API</text>
-  <text x="71.034482758621" y="507.222222222222" font-family="Courier New, monospace" font-size="15.811388300842" fill="var(--text)">graph.pageRank(tol = 0.0001).vertices</text>
-  <text x="71.034482758621" y="544.814814814815" font-family="Courier New, monospace" font-size="15.811388300842" fill="var(--text)">graph.staticPageRank(numIter = 20).vertices</text>
-  <text x="71.034482758621" y="593.148148148148" font-family="Arial, sans-serif" font-size="15.811388300842" fill="var(--text-muted)">Static variant: fixed iterations, cheaper and deterministic</text>
+  <rect x="40" y="406.938775510204" width="1200" height="213.061224489796" rx="8.85253336276" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="448.367346938775" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.131333406899" font-weight="bold" fill="var(--text)">GraphX API</text>
+  <text x="71.034482758621" y="495.714285714285" font-family="Courier New, monospace" font-size="16.598500055175" fill="var(--text)">graph.pageRank(tol = 0.0001).vertices</text>
+  <text x="71.034482758621" y="537.142857142857" font-family="Courier New, monospace" font-size="16.598500055175" fill="var(--text)">graph.staticPageRank(numIter = 20).vertices</text>
+  <text x="71.034482758621" y="590.408163265306" font-family="Arial, sans-serif" font-size="16.598500055175" fill="var(--text-muted)">Static variant: fixed iterations, cheaper and deterministic</text>
 </svg>

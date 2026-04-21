@@ -96,59 +96,58 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.534586728656" font-weight="bold" fill="var(--text)">Single Responsibility</text>
 
-  <rect x="40" y="66.126126126126" width="490" height="512.072072072072" rx="10.222744470273" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--danger-text)">Before: One big class</text>
-  <rect x="70" y="123.603603603604" width="430" height="433.693693693694" rx="8.178195576219" fill="var(--danger-accent)"/>
-  <text x="285" y="154.954954954955" text-anchor="middle" font-family="Courier New, monospace" font-size="17.378665599465" font-weight="bold" fill="var(--danger-text)">UserManager</text>
-  <line x1="70" y1="165.405405405405" x2="500" y2="165.405405405405" stroke="var(--danger-border)" stroke-width="1"/>
-  <text x="90" y="196.756756756757" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">string name, email;</text>
-  <text x="90" y="222.882882882883" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">string password_hash;</text>
-  <text x="90" y="264.684684684685" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">bool login(...);</text>
-  <text x="90" y="290.810810810811" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">void logout();</text>
-  <text x="90" y="332.612612612613" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">void save_to_db();</text>
-  <text x="90" y="358.738738738739" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">void load_from_db();</text>
-  <text x="90" y="400.540540540541" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">void send_welcome();</text>
-  <text x="90" y="426.666666666667" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">void send_reset();</text>
-  <text x="90" y="468.468468468468" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">bool validate_email();</text>
-  <text x="90" y="494.594594594595" font-family="Courier New, monospace" font-size="13.289567811355" fill="var(--danger-text)">bool validate_pass();</text>
-  <text x="285" y="536.396396396396" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--danger-text)">Hard to test</text>
+  <rect x="40" y="40" width="490" height="536.226415094339" rx="10.461068887267" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="285" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--danger-text)">Before: One big class</text>
+  <rect x="70" y="100.188679245284" width="430" height="454.150943396227" rx="8.368855109814" fill="var(--danger-accent)"/>
+  <text x="285" y="133.018867924528" text-anchor="middle" font-family="Courier New, monospace" font-size="17.783817108355" font-weight="bold" fill="var(--danger-text)">UserManager</text>
+  <line x1="70" y1="143.962264150943" x2="500" y2="143.962264150943" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="90" y="176.792452830189" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">string name, email;</text>
+  <text x="90" y="204.150943396227" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">string password_hash;</text>
+  <text x="90" y="247.924528301887" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">bool login(...);</text>
+  <text x="90" y="275.283018867925" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">void logout();</text>
+  <text x="90" y="319.056603773585" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">void save_to_db();</text>
+  <text x="90" y="346.415094339623" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">void load_from_db();</text>
+  <text x="90" y="390.188679245283" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">void send_welcome();</text>
+  <text x="90" y="417.547169811321" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">void send_reset();</text>
+  <text x="90" y="461.320754716981" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">bool validate_email();</text>
+  <text x="90" y="488.679245283019" font-family="Courier New, monospace" font-size="13.599389553447" fill="var(--danger-text)">bool validate_pass();</text>
+  <text x="285" y="532.452830188679" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--danger-text)">Hard to test</text>
 
-  <line x1="535" y1="280.36036036036" x2="595" y2="280.36036036036" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <text x="565" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--primary-accent)">SRP</text>
+  <line x1="535" y1="264.339622641509" x2="595" y2="264.339622641509" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="565" y="253.396226415095" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.645496442174" fill="var(--primary-accent)">SRP</text>
 
-  <rect x="600" y="66.126126126126" width="640" height="512.072072072072" rx="10.222744470273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="920" y="102.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--ok-text)">After: One responsibility each</text>
+  <rect x="600" y="40" width="640" height="536.226415094339" rx="10.461068887267" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="920" y="78.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.829923997081" font-weight="bold" fill="var(--ok-text)">After: One responsibility each</text>
 
-  <rect x="620" y="123.603603603604" width="290" height="135.855855855856" rx="8.178195576219" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="765" y="154.954954954955" text-anchor="middle" font-family="Courier New, monospace" font-size="15.33411670541" font-weight="bold" fill="var(--primary-text)">User</text>
-  <line x1="620" y1="165.405405405405" x2="910" y2="165.405405405405" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="635" y="194.666666666667" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--primary-text)">string name, email;</text>
-  <text x="635" y="219.747747747748" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--primary-text)">data only</text>
+  <rect x="620" y="100.188679245284" width="290" height="142.264150943396" rx="8.368855109814" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="765" y="133.018867924528" text-anchor="middle" font-family="Courier New, monospace" font-size="15.691603330901" font-weight="bold" fill="var(--primary-text)">User</text>
+  <line x1="620" y1="143.962264150943" x2="910" y2="143.962264150943" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="635" y="174.603773584906" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--primary-text)">string name, email;</text>
+  <text x="635" y="200.867924528302" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--primary-text)">data only</text>
 
-  <rect x="925" y="123.603603603604" width="300" height="135.855855855856" rx="8.178195576219" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1075" y="154.954954954955" text-anchor="middle" font-family="Courier New, monospace" font-size="15.33411670541" font-weight="bold" fill="var(--text)">UserAuthenticator</text>
-  <line x1="925" y1="165.405405405405" x2="1225" y2="165.405405405405" stroke="var(--border)" stroke-width="1"/>
-  <text x="940" y="194.666666666667" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">bool login(...)</text>
-  <text x="940" y="219.747747747748" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--text-muted)">auth only</text>
+  <rect x="925" y="100.188679245284" width="300" height="142.264150943396" rx="8.368855109814" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1075" y="133.018867924528" text-anchor="middle" font-family="Courier New, monospace" font-size="15.691603330901" font-weight="bold" fill="var(--text)">UserAuthenticator</text>
+  <line x1="925" y1="143.962264150943" x2="1225" y2="143.962264150943" stroke="var(--border)" stroke-width="1"/>
+  <text x="940" y="174.603773584906" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--text)">bool login(...)</text>
+  <text x="940" y="200.867924528302" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--text-muted)">auth only</text>
 
-  <rect x="620" y="285.585585585586" width="290" height="135.855855855856" rx="8.178195576219" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="765" y="316.936936936937" text-anchor="middle" font-family="Courier New, monospace" font-size="15.33411670541" font-weight="bold" fill="var(--text)">UserRepository</text>
-  <line x1="620" y1="327.387387387387" x2="910" y2="327.387387387387" stroke="var(--border)" stroke-width="1"/>
-  <text x="635" y="356.648648648649" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">void save(User&amp;)</text>
-  <text x="635" y="381.72972972973" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--text-muted)">DB only</text>
+  <rect x="620" y="269.811320754717" width="290" height="142.264150943396" rx="8.368855109814" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="765" y="302.641509433962" text-anchor="middle" font-family="Courier New, monospace" font-size="15.691603330901" font-weight="bold" fill="var(--text)">UserRepository</text>
+  <line x1="620" y1="313.584905660377" x2="910" y2="313.584905660377" stroke="var(--border)" stroke-width="1"/>
+  <text x="635" y="344.22641509434" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--text)">void save(User&amp;)</text>
+  <text x="635" y="370.490566037736" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--text-muted)">DB only</text>
 
-  <rect x="925" y="285.585585585586" width="300" height="135.855855855856" rx="8.178195576219" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1075" y="316.936936936937" text-anchor="middle" font-family="Courier New, monospace" font-size="15.33411670541" font-weight="bold" fill="var(--text)">EmailService</text>
-  <line x1="925" y1="327.387387387387" x2="1225" y2="327.387387387387" stroke="var(--border)" stroke-width="1"/>
-  <text x="940" y="356.648648648649" font-family="Courier New, monospace" font-size="12.267293364328" fill="var(--text)">void welcome(...)</text>
-  <text x="940" y="381.72972972973" font-family="Arial, sans-serif" font-size="12.267293364328" fill="var(--text-muted)">email only</text>
+  <rect x="925" y="269.811320754717" width="300" height="142.264150943396" rx="8.368855109814" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1075" y="302.641509433962" text-anchor="middle" font-family="Courier New, monospace" font-size="15.691603330901" font-weight="bold" fill="var(--text)">EmailService</text>
+  <line x1="925" y1="313.584905660377" x2="1225" y2="313.584905660377" stroke="var(--border)" stroke-width="1"/>
+  <text x="940" y="344.22641509434" font-family="Courier New, monospace" font-size="12.553282664721" fill="var(--text)">void welcome(...)</text>
+  <text x="940" y="370.490566037736" font-family="Arial, sans-serif" font-size="12.553282664721" fill="var(--text-muted)">email only</text>
 
-  <rect x="620" y="447.567567567568" width="605" height="114.954954954955" rx="8.178195576219" fill="var(--ok-accent)"/>
-  <text x="920" y="478.918918918919" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" font-weight="bold" fill="var(--ok-text)">Benefits</text>
-  <text x="640" y="510.27027027027" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">One reason to change</text>
-  <text x="640" y="536.396396396396" font-family="Arial, sans-serif" font-size="13.289567811355" fill="var(--ok-text)">Test with mocks</text>
+  <rect x="620" y="439.433962264151" width="605" height="120.377358490566" rx="8.368855109814" fill="var(--ok-accent)"/>
+  <text x="920" y="472.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.737710219627" font-weight="bold" fill="var(--ok-text)">Benefits</text>
+  <text x="640" y="505.094339622641" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--ok-text)">One reason to change</text>
+  <text x="640" y="532.452830188679" font-family="Arial, sans-serif" font-size="13.599389553447" fill="var(--ok-text)">Test with mocks</text>
 
-  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.33411670541" font-weight="bold" fill="var(--text)">SRP: one reason to change</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603330901" font-weight="bold" fill="var(--text)">SRP: one reason to change</text>
 </svg>

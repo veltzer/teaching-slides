@@ -96,29 +96,28 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.091264" font-weight="bold" fill="var(--text)">Edge vs Level Triggered</text>
 
-  <rect x="40" y="93.703704" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="40" y="93.703704" width="300" height="247.037037" rx="6.218253" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--primary-text)">Level</text>
-  <text x="190" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--primary-text)">Triggered</text>
-  <text x="190" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">default mode</text>
+  <rect x="40" y="40" width="1200" height="272.244898071637" rx="6.527805833922" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="300" height="272.244898071637" rx="6.527805833922" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="134.693877685964" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.463092841855" font-weight="bold" fill="var(--primary-text)">Level</text>
+  <text x="190" y="182.040816528946" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.583416451985" fill="var(--primary-text)">Triggered</text>
+  <text x="190" y="241.224489256143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.231545896037" fill="var(--primary-text)">default mode</text>
 
-  <text x="370" y="142.037037" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">Data available → notify repeatedly</text>
-  <text x="370" y="185" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Keeps firing as long as the fd is readable.</text>
-  <text x="370" y="217.222222" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Safe with blocking reads and partial drains.</text>
-  <text x="370" y="260.185185" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--text)">Good for: select, poll, straightforward code</text>
-  <text x="370" y="297.777778" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Cost: may wake you many times per event.</text>
+  <text x="370" y="93.26530578509" font-family="Arial, sans-serif" font-size="18.495449337889" font-weight="bold" fill="var(--text)">Data available → notify repeatedly</text>
+  <text x="370" y="140.612244628072" font-family="Arial, sans-serif" font-size="16.319514059915" fill="var(--text-muted)">Keeps firing as long as the fd is readable.</text>
+  <text x="370" y="176.122448484798" font-family="Arial, sans-serif" font-size="16.319514059915" fill="var(--text-muted)">Safe with blocking reads and partial drains.</text>
+  <text x="370" y="223.46938732778" font-family="Arial, sans-serif" font-size="16.319514059915" font-weight="bold" fill="var(--text)">Good for: select, poll, straightforward code</text>
+  <text x="370" y="264.897959228655" font-family="Arial, sans-serif" font-size="15.231545896037" fill="var(--text-muted)">Cost: may wake you many times per event.</text>
 
-  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="40" y="372.962963" width="300" height="247.037037" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--ok-text)">Edge</text>
-  <text x="190" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--ok-text)">Triggered</text>
-  <text x="190" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">EPOLLET</text>
+  <rect x="40" y="347.755101928363" width="1200" height="272.244898071637" rx="6.527805833922" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="347.755101928363" width="300" height="272.244898071637" rx="6.527805833922" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="442.448979614327" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.463092841855" font-weight="bold" fill="var(--ok-text)">Edge</text>
+  <text x="190" y="489.795918457309" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.583416451985" fill="var(--ok-text)">Triggered</text>
+  <text x="190" y="548.979592286547" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.231545896037" fill="var(--ok-text)">EPOLLET</text>
 
-  <text x="370" y="421.296296" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">State change → notify once</text>
-  <text x="370" y="464.259259" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Fires on the transition to ready, then silent.</text>
-  <text x="370" y="496.481481" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Must drain fully with nonblocking I/O.</text>
-  <text x="370" y="539.444444" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--text)">Good for: epoll at scale, low syscall overhead</text>
-  <text x="370" y="577.037037" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Cost: forget a read loop and events are lost.</text>
+  <text x="370" y="401.020407713453" font-family="Arial, sans-serif" font-size="18.495449337889" font-weight="bold" fill="var(--text)">State change → notify once</text>
+  <text x="370" y="448.367346556435" font-family="Arial, sans-serif" font-size="16.319514059915" fill="var(--text-muted)">Fires on the transition to ready, then silent.</text>
+  <text x="370" y="483.877550413161" font-family="Arial, sans-serif" font-size="16.319514059915" fill="var(--text-muted)">Must drain fully with nonblocking I/O.</text>
+  <text x="370" y="531.224489256143" font-family="Arial, sans-serif" font-size="16.319514059915" font-weight="bold" fill="var(--text)">Good for: epoll at scale, low syscall overhead</text>
+  <text x="370" y="572.653061157018" font-family="Arial, sans-serif" font-size="15.231545896037" fill="var(--text-muted)">Cost: forget a read loop and events are lost.</text>
 </svg>

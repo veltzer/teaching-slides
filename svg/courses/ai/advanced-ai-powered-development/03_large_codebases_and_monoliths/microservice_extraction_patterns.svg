@@ -95,68 +95,67 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="642.690583" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.996963" font-weight="bold" fill="var(--primary-accent)">Strangler Fig: Microservice Extraction Pattern</text>
 
   <!-- Phase labels -->
-  <text x="196.053812" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.414515" font-weight="bold" fill="var(--danger-accent)">Phase 1: Before</text>
-  <text x="642.690583" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.414515" font-weight="bold" fill="var(--warn-accent)">Phase 2: Transition</text>
-  <text x="1089.327354" y="85.789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.414515" font-weight="bold" fill="var(--ok-accent)">Phase 3: After</text>
+  <text x="196.053812" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.187485348272" font-weight="bold" fill="var(--danger-accent)">Phase 1: Before</text>
+  <text x="642.690583" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.187485348272" font-weight="bold" fill="var(--warn-accent)">Phase 2: Transition</text>
+  <text x="1089.327354" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.187485348272" font-weight="bold" fill="var(--ok-accent)">Phase 3: After</text>
 
   <!-- Phase 1: Monolith -->
-  <rect x="40" y="107.593985" width="312.107623" height="348.87218" rx="8.665654" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="196.053812" y="151.203008" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.664136" font-weight="bold" fill="var(--danger-text)">Monolith</text>
-  <text x="196.053812" y="200.263158" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">auth module</text>
-  <text x="196.053812" y="238.421053" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">payments module</text>
-  <text x="196.053812" y="276.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">billing module</text>
-  <text x="196.053812" y="314.736842" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--danger-text)">notifications</text>
-  <text x="196.053812" y="369.24812" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.164895" font-style="italic" fill="var(--danger-text)">~2M LOC</text>
-  <text x="196.053812" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.164895" font-style="italic" fill="var(--danger-text)">shared deploy</text>
+  <rect x="40" y="63.673469099708" width="312.107623" height="378.775509938192" rx="9.02940474719" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="196.053812" y="111.02040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.57351290995" font-weight="bold" fill="var(--danger-text)">Monolith</text>
+  <text x="196.053812" y="164.285714130612" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--danger-text)">auth module</text>
+  <text x="196.053812" y="205.714285869388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--danger-text)">payments module</text>
+  <text x="196.053812" y="247.142856522449" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--danger-text)">billing module</text>
+  <text x="196.053812" y="288.571428261225" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--danger-text)">notifications</text>
+  <text x="196.053812" y="347.755101553353" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.80145882857" font-style="italic" fill="var(--danger-text)">~2M LOC</text>
+  <text x="196.053812" y="395.102040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.80145882857" font-style="italic" fill="var(--danger-text)">shared deploy</text>
 
   <!-- Arrow to Phase 2 -->
-  <line x1="357.488789" y1="282.030075" x2="416.681614" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="357.488789" y1="253.061224068805" x2="416.681614" y2="253.061224068805" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Phase 2: Shrinking monolith + proxy + new service -->
-  <rect x="422.06278" y="107.593985" width="139.910314" height="348.87218" rx="8.665654" fill="url(#grad-danger)" fill-opacity="0.5" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="492.017937" y="145.75188" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--danger-text)">Monolith</text>
-  <text x="492.017937" y="173.007519" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" font-style="italic" fill="var(--danger-text)">(shrinking)</text>
-  <text x="492.017937" y="216.616541" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">payments</text>
-  <text x="492.017937" y="247.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">billing</text>
-  <text x="492.017937" y="277.669173" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--danger-text)">notifications</text>
+  <rect x="422.06278" y="63.673469099708" width="139.910314" height="378.775509938192" rx="9.02940474719" fill="url(#grad-danger)" fill-opacity="0.5" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="492.017937" y="105.102040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" font-weight="bold" fill="var(--danger-text)">Monolith</text>
+  <text x="492.017937" y="134.693877484548" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.544107120785" font-style="italic" fill="var(--danger-text)">(shrinking)</text>
+  <text x="492.017937" y="182.040815683965" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--danger-text)">payments</text>
+  <text x="492.017937" y="215.183673074985" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--danger-text)">billing</text>
+  <text x="492.017937" y="248.326530466006" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--danger-text)">notifications</text>
 
-  <rect x="572.735426" y="238.421053" width="139.910314" height="109.022556" rx="8.665654" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="642.690583" y="276.578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--warn-text)">Proxy / Facade</text>
-  <text x="642.690583" y="303.834586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" fill="var(--warn-text)">AI-generated</text>
-  <text x="642.690583" y="325.639098" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.998481" fill="var(--warn-text)">adapter</text>
+  <rect x="572.735426" y="205.714285869388" width="139.910314" height="118.367346584257" rx="9.02940474719" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642.690583" y="247.142856522449" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" font-weight="bold" fill="var(--warn-text)">Proxy / Facade</text>
+  <text x="642.690583" y="276.734693168513" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.544107120785" fill="var(--warn-text)">AI-generated</text>
+  <text x="642.690583" y="300.408163353936" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.544107120785" fill="var(--warn-text)">adapter</text>
 
-  <rect x="723.408072" y="107.593985" width="139.910314" height="261.654135" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="793.363229" y="151.203008" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" font-weight="bold" fill="var(--ok-text)">New Service</text>
-  <text x="793.363229" y="194.81203" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">auth module</text>
-  <text x="793.363229" y="227.518797" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">(extracted)</text>
-  <text x="793.363229" y="271.12782" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">own deploy</text>
-  <text x="793.363229" y="303.834586" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">own DB</text>
+  <rect x="723.408072" y="63.673469099708" width="139.910314" height="284.081632453644" rx="9.02940474719" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="793.363229" y="111.02040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" font-weight="bold" fill="var(--ok-text)">New Service</text>
+  <text x="793.363229" y="158.367346584257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">auth module</text>
+  <text x="793.363229" y="193.877550776676" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">(extracted)</text>
+  <text x="793.363229" y="241.224490061808" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">own deploy</text>
+  <text x="793.363229" y="276.734693168513" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">own DB</text>
 
-  <line x1="561.973094" y1="282.030075" x2="572.735426" y2="282.030075" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="712.64574" y1="238.421053" x2="723.408072" y2="238.421053" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="561.973094" y1="253.061224068805" x2="572.735426" y2="253.061224068805" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="712.64574" y1="205.714285869388" x2="723.408072" y2="205.714285869388" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Arrow to Phase 3 -->
-  <line x1="874.080717" y1="282.030075" x2="933.273543" y2="282.030075" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="874.080717" y1="253.061224068805" x2="933.273543" y2="253.061224068805" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arrow)"/>
 
   <!-- Phase 3: Independent services -->
-  <rect x="938.654709" y="107.593985" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1089.327354" y="145.75188" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Auth Service</text>
-  <text x="1089.327354" y="178.458647" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
+  <rect x="938.654709" y="63.673469099708" width="301.345291" height="112.448980123615" rx="9.02940474719" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1089.327354" y="105.102040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.058809494379" font-weight="bold" fill="var(--ok-text)">Auth Service</text>
+  <text x="1089.327354" y="140.612245030904" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">independent deploy + DB</text>
 
-  <rect x="938.654709" y="227.518797" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1089.327354" y="265.676692" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Payments Service</text>
-  <text x="1089.327354" y="298.383459" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
+  <rect x="938.654709" y="193.877550776676" width="301.345291" height="112.448980123615" rx="9.02940474719" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1089.327354" y="235.306122515452" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.058809494379" font-weight="bold" fill="var(--ok-text)">Payments Service</text>
+  <text x="1089.327354" y="270.816326707872" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">independent deploy + DB</text>
 
-  <rect x="938.654709" y="347.443609" width="301.345291" height="103.571429" rx="8.665654" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1089.327354" y="385.601504" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.331308" font-weight="bold" fill="var(--ok-text)">Billing Service</text>
-  <text x="1089.327354" y="418.308271" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.081688" fill="var(--ok-text)">independent deploy + DB</text>
+  <rect x="938.654709" y="324.081632453644" width="301.345291" height="112.448980123615" rx="9.02940474719" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1089.327354" y="365.51020419242" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.058809494379" font-weight="bold" fill="var(--ok-text)">Billing Service</text>
+  <text x="1089.327354" y="401.02040838484" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.672782974677" fill="var(--ok-text)">independent deploy + DB</text>
 
   <!-- Bottom steps note -->
-  <rect x="40" y="483.721805" width="1200" height="136.278195" rx="8.665654" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="642.690583" y="521.879699" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.497722" font-weight="bold" fill="var(--info-text)">AI-Assisted Strangler Fig Steps</text>
-  <text x="642.690583" y="560.037594" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--info-text)">1. identify public API surface  2. generate proxy service  3. migrate endpoints one-by-one</text>
-  <text x="642.690583" y="592.744361" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.248102" fill="var(--info-text)">4. write data-sync logic  5. complete migration  6. retire proxy</text>
+  <rect x="40" y="472.040816769679" width="1200" height="147.959183230321" rx="9.02940474719" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642.690583" y="513.469387422741" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.316161202165" font-weight="bold" fill="var(--info-text)">AI-Assisted Strangler Fig Steps</text>
+  <text x="642.690583" y="554.897959161516" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--info-text)">1. identify public API surface  2. generate proxy service  3. migrate endpoints one-by-one</text>
+  <text x="642.690583" y="590.408163353936" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930134682463" fill="var(--info-text)">4. write data-sync logic  5. complete migration  6. retire proxy</text>
 </svg>

@@ -96,30 +96,29 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.316497186031" font-weight="bold" fill="var(--primary-accent)">Authorization Bypass Patterns</text>
 
-  <rect x="40" y="65.663716814159" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="96.46017699115" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">1. Horizontal Escalation</text>
-  <text x="70" y="124.176991150442" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">/api/orders/USER_B_ORDER_ID</text>
-  <text x="70" y="150.867256637168" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: verify ownership every request</text>
+  <rect x="40" y="40" width="1200" height="107.407407407407" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="72.222222222222" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--danger-text)">1. Horizontal Escalation</text>
+  <text x="70" y="101.222222222222" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--danger-text)">/api/orders/USER_B_ORDER_ID</text>
+  <text x="70" y="129.148148148148" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">Fix: verify ownership every request</text>
 
-  <rect x="40" y="178.58407079646" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="209.380530973451" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">2. Vertical Escalation</text>
-  <text x="70" y="237.097345132743" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--warn-text)">/admin/users (URL change)</text>
-  <text x="70" y="263.787610619469" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Fix: RBAC every endpoint</text>
+  <rect x="40" y="158.148148148148" width="1200" height="107.407407407407" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="190.37037037037" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--warn-text)">2. Vertical Escalation</text>
+  <text x="70" y="219.37037037037" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--warn-text)">/admin/users (URL change)</text>
+  <text x="70" y="247.296296296296" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Fix: RBAC every endpoint</text>
 
-  <rect x="40" y="291.504424778761" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="322.300884955752" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">3. Method-Based Bypass</text>
-  <text x="70" y="350.017699115044" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">GET 403 | POST 200</text>
-  <text x="70" y="376.70796460177" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: authorize any HTTP method</text>
+  <rect x="40" y="276.296296296296" width="1200" height="107.407407407407" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="308.518518518518" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--danger-text)">3. Method-Based Bypass</text>
+  <text x="70" y="337.518518518518" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--danger-text)">GET 403 | POST 200</text>
+  <text x="70" y="365.444444444445" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">Fix: authorize any HTTP method</text>
 
-  <rect x="40" y="404.424778761062" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="435.221238938053" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--warn-text)">4. Parameter Bypass</text>
-  <text x="70" y="462.938053097345" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--warn-text)">POST {"role": "admin"}</text>
-  <text x="70" y="489.628318584071" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--warn-text)">Fix: whitelist fields per role</text>
+  <rect x="40" y="394.444444444445" width="1200" height="107.407407407407" rx="6.21825270206" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="426.666666666667" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--warn-text)">4. Parameter Bypass</text>
+  <text x="70" y="455.666666666667" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--warn-text)">POST {"role": "admin"}</text>
+  <text x="70" y="483.592592592593" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--warn-text)">Fix: whitelist fields per role</text>
 
-  <rect x="40" y="517.345132743363" width="1200" height="102.654867256637" rx="6.079124296508" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="70" y="548.141592920354" font-family="Arial, sans-serif" font-size="17.224185506772" font-weight="bold" fill="var(--danger-text)">5. Path Traversal Bypass</text>
-  <text x="70" y="575.858407079646" font-family="Courier New, monospace" font-size="14.184623358518" fill="var(--danger-text)">/ADMIN/users | /admin/./users</text>
-  <text x="70" y="602.548672566372" font-family="Arial, sans-serif" font-size="14.184623358518" fill="var(--danger-text)">Fix: normalize before check</text>
+  <rect x="40" y="512.592592592593" width="1200" height="107.407407407407" rx="6.21825270206" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="70" y="544.814814814815" font-family="Arial, sans-serif" font-size="17.618382655835" font-weight="bold" fill="var(--danger-text)">5. Path Traversal Bypass</text>
+  <text x="70" y="573.814814814815" font-family="Courier New, monospace" font-size="14.509256304805" fill="var(--danger-text)">/ADMIN/users | /admin/./users</text>
+  <text x="70" y="601.740740740741" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--danger-text)">Fix: normalize before check</text>
 </svg>

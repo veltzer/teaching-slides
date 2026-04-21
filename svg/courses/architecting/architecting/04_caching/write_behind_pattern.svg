@@ -95,29 +95,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="623.3333" y="40" text-anchor="middle" font-size="24.976" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Write-Behind (Write-Back) Pattern</text>
-  <rect x="40" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="140" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
-  <rect x="373.3334" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="473.3334" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Cache</text>
-  <rect x="706.6666" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="806.6666" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Queue</text>
-  <rect x="1040" y="221.7911" width="200" height="86.5672" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1139.9999" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)" font-family="Arial, sans-serif">Database</text>
-  <line x1="240" y1="252.9553" x2="370" y2="252.9553" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="306.6667" y="239.1046" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Write</text>
-  <line x1="370" y1="287.5821" x2="243.3334" y2="287.5821" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="306.6667" y="322.209" text-anchor="middle" font-size="17.171" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. Confirm</text>
-  <line x1="573.3333" y1="265.0747" x2="703.3333" y2="265.0747" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="639.9999" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--danger-accent)" font-family="Arial, sans-serif">3. Queue</text>
-  <rect x="690" y="360.2985" width="233.3334" height="60.597" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="806.6666" y="398.388" text-anchor="middle" font-size="17.171" fill="var(--text)" font-family="Arial, sans-serif">Async processing</text>
-  <line x1="806.6666" y1="308.3582" x2="806.6666" y2="356.8359" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6.0049 4.5037"/>
-  <line x1="906.6666" y1="265.0747" x2="1036.6666" y2="265.0747" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="973.3333" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)" font-family="Arial, sans-serif">4. Write (later)</text>
-  <rect x="40" y="481.4926" width="1199.9999" height="138.5074" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="623.3333" y="516.1195" text-anchor="middle" font-size="18.7319" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Characteristics</text>
-  <text x="81.6667" y="550.7464" font-size="17.171" fill="var(--text-muted)" font-family="Arial, sans-serif">- Immediate response to app (write confirmed at cache level)</text>
-  <text x="81.6667" y="581.9106" font-size="17.171" fill="var(--text-muted)" font-family="Arial, sans-serif">- Database updated asynchronously via queue (eventual consistency)</text>
-  <text x="81.6667" y="611.3434" font-size="17.171" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Risk: data loss if cache/queue fails before DB write</text>
+  <rect x="40" y="40" width="200" height="126.087026181484" rx="7.241187049123" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="115.652186578452" text-anchor="middle" font-size="24.490901464642" fill="var(--text)" font-family="Arial, sans-serif">Application</text>
+  <rect x="373.3334" y="40" width="200" height="126.087026181484" rx="7.241187049123" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="473.3334" y="115.652186578452" text-anchor="middle" font-size="24.490901464642" fill="var(--text)" font-family="Arial, sans-serif">Cache</text>
+  <rect x="706.6666" y="40" width="200" height="126.087026181484" rx="7.241187049123" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="806.6666" y="115.652186578452" text-anchor="middle" font-size="24.490901464642" fill="var(--text)" font-family="Arial, sans-serif">Queue</text>
+  <rect x="1040" y="40" width="200" height="126.087026181484" rx="7.241187049123" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1139.9999" y="115.652186578452" text-anchor="middle" font-size="24.490901464642" fill="var(--text)" font-family="Arial, sans-serif">Database</text>
+  <line x1="240" y1="85.39134107751" x2="370" y2="85.39134107751" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="306.6667" y="65.217492627613" text-anchor="middle" font-size="20.723070470082" fill="var(--primary-accent)" font-family="Arial, sans-serif">1. Write</text>
+  <line x1="370" y1="135.826035028348" x2="243.3334" y2="135.826035028348" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="306.6667" y="186.260874631381" text-anchor="middle" font-size="20.723070470082" fill="var(--ok-accent)" font-family="Arial, sans-serif">2. Confirm</text>
+  <line x1="573.3333" y1="103.043513090742" x2="703.3333" y2="103.043513090742" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="639.9999" y="77.826020463129" text-anchor="middle" font-size="20.723070470082" fill="var(--danger-accent)" font-family="Arial, sans-serif">3. Queue</text>
+  <rect x="690" y="241.739067107742" width="233.3334" height="88.260860066161" rx="7.241187049123" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="806.6666" y="297.217259584103" text-anchor="middle" font-size="20.723070470082" fill="var(--text)" font-family="Arial, sans-serif">Async processing</text>
+  <line x1="806.6666" y1="166.08688052929" x2="806.6666" y2="236.695714234413" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6.0049 4.5037"/>
+  <line x1="906.6666" y1="103.043513090742" x2="1036.6666" y2="103.043513090742" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="973.3333" y="77.826020463129" text-anchor="middle" font-size="20.723070470082" fill="var(--primary-accent)" font-family="Arial, sans-serif">4. Write (later)</text>
+  <rect x="40" y="418.260932892258" width="1199.9999" height="201.739067107742" rx="7.241187049123" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="623.3333" y="468.695772495291" text-anchor="middle" font-size="22.606865280911" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Key Characteristics</text>
+  <text x="81.6667" y="519.130612098323" font-size="20.723070470082" fill="var(--text-muted)" font-family="Arial, sans-serif">- Immediate response to app (write confirmed at cache level)</text>
+  <text x="81.6667" y="564.521953175833" font-size="20.723070470082" fill="var(--text-muted)" font-family="Arial, sans-serif">- Database updated asynchronously via queue (eventual consistency)</text>
+  <text x="81.6667" y="607.391472164484" font-size="20.723070470082" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Risk: data loss if cache/queue fails before DB write</text>
 </svg>

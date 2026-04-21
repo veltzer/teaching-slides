@@ -96,43 +96,42 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Synchronous vs Asynchronous I/O</text>
 
   <!-- Synchronous panel -->
-  <rect x="40" y="82.962963" width="580" height="537.037037" rx="8.291004" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="330" y="125.925926" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Synchronous</text>
+  <rect x="40" y="40" width="580" height="580" rx="8.616264104551" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="86.4000000432" text-anchor="middle" font-size="25.848791274423" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Synchronous</text>
 
-  <rect x="80" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330" y="206.481481" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">read(fd, buf, n)</text>
+  <rect x="80" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="173.3999994492" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">read(fd, buf, n)</text>
 
-  <rect x="80" y="254.814815" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="330" y="301" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">Thread BLOCKS in kernel until data ready</text>
+  <rect x="80" y="225.6000001728" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="275.47999997624" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Thread BLOCKS in kernel until data ready</text>
 
-  <rect x="80" y="351.481481" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="330" y="397.666667" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">CPU idle while disk / network works</text>
+  <rect x="80" y="329.99999946" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="379.88000034344" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">CPU idle while disk / network works</text>
 
-  <rect x="80" y="448.148148" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="330" y="494.333333" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">Simple control flow, linear code</text>
+  <rect x="80" y="434.3999998272" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="484.27999963064" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Simple control flow, linear code</text>
 
-  <rect x="80" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="330" y="583.481481" text-anchor="middle" font-size="18.654758" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Poor concurrency scaling</text>
+  <rect x="80" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="580.55999947728" text-anchor="middle" font-size="19.38659319601" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">Poor concurrency scaling</text>
 
   <!-- Asynchronous panel -->
-  <rect x="660" y="82.962963" width="580" height="537.037037" rx="8.291004" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="950" y="125.925926" text-anchor="middle" font-size="24.873011" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Asynchronous</text>
+  <rect x="660" y="40" width="580" height="580" rx="8.616264104551" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="86.4000000432" text-anchor="middle" font-size="25.848791274423" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Asynchronous</text>
 
-  <rect x="700" y="158.148148" width="500" height="75.185185" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="206.481481" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">aio_read / io_uring_submit</text>
+  <rect x="700" y="121.1999998056" width="500" height="81.1999998056" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="173.3999994492" text-anchor="middle" font-size="23.694725248285" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">aio_read / io_uring_submit</text>
 
-  <rect x="700" y="254.814815" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="950" y="301" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">Returns immediately, kernel queues op</text>
+  <rect x="700" y="225.6000001728" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950" y="275.47999997624" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Returns immediately, kernel queues op</text>
 
-  <rect x="700" y="351.481481" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="950" y="397.666667" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">Thread does other work in parallel</text>
+  <rect x="700" y="329.99999946" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950" y="379.88000034344" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Thread does other work in parallel</text>
 
-  <rect x="700" y="448.148148" width="500" height="75.185185" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="950" y="494.333333" text-anchor="middle" font-size="18.654758" fill="var(--text)" font-family="Arial, sans-serif">Completion via callback, signal, or poll</text>
+  <rect x="700" y="434.3999998272" width="500" height="81.1999998056" rx="6.462198078413" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950" y="484.27999963064" text-anchor="middle" font-size="19.38659319601" fill="var(--text)" font-family="Arial, sans-serif">Completion via callback, signal, or poll</text>
 
-  <rect x="700" y="544.814815" width="500" height="59.074074" rx="6.218253" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="583.481481" text-anchor="middle" font-size="18.654758" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Scales to many in-flight operations</text>
+  <rect x="700" y="538.8000001944" width="500" height="63.7999999244" rx="6.462198078413" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="580.55999947728" text-anchor="middle" font-size="19.38659319601" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">Scales to many in-flight operations</text>
 </svg>

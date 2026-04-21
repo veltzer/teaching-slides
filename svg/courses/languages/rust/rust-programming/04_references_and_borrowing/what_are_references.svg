@@ -95,29 +95,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="650.9091" y="40" text-anchor="middle" font-size="24.8407" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">References: Borrowing Without Ownership</text>
-  <rect x="40" y="106.2857" width="261.8183" height="182.2858" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="170.909" y="162.6286" text-anchor="middle" font-size="20.7006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">&amp;s (reference)</text>
-  <text x="170.909" y="209.0286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--primary-text)">borrows s1</text>
-  <text x="170.909" y="255.4286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--primary-text)">read-only access</text>
-  <rect x="476.3636" y="106.2857" width="305.4546" height="182.2858" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.0909" y="162.6286" text-anchor="middle" font-size="20.7006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">s1: String (owner)</text>
-  <text x="629.0909" y="209.0286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--info-text)">ptr | len:5 | cap:5</text>
-  <text x="629.0909" y="255.4286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--info-text)">still valid after borrow</text>
-  <rect x="956.3637" y="106.2857" width="283.6363" height="182.2858" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1098.1819" y="162.6286" text-anchor="middle" font-size="20.7006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap Data</text>
-  <text x="1098.1819" y="209.0286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
-  <text x="1098.1819" y="255.4286" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--ok-text)">not copied</text>
-  <line x1="301.8181" y1="195.7714" x2="476.3636" y2="195.7714" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="389.0908" y="175.8857" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--text)">points to</text>
-  <line x1="781.8182" y1="195.7714" x2="956.3637" y2="195.7714" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="869.0909" y="175.8857" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--text)">owns</text>
-  <rect x="105.4545" y="354.8571" width="480.0001" height="116" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="345.4545" y="404.5714" text-anchor="middle" font-size="20.7006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">&amp;T = immutable borrow</text>
-  <text x="345.4545" y="450.9714" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--warn-text)">Many readers allowed</text>
-  <rect x="672.7273" y="354.8571" width="480.0001" height="116" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="912.7273" y="404.5714" text-anchor="middle" font-size="20.7006" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">&amp;mut T = mutable borrow</text>
-  <text x="912.7273" y="450.9714" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--danger-text)">Only ONE writer allowed</text>
-  <rect x="214.5454" y="520.5715" width="872.7273" height="99.4285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="650.9091" y="586.8572" text-anchor="middle" font-size="20.7006" font-family="Arial, sans-serif" fill="var(--primary-text)">References never own data -- the original owner keeps ownership</text>
+  <rect x="40" y="40" width="261.8183" height="205.806542663889" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="170.909" y="103.612949843911" text-anchor="middle" font-size="21.995614662286" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">&amp;s (reference)</text>
+  <text x="170.909" y="156.000045161289" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--primary-text)">borrows s1</text>
+  <text x="170.909" y="208.387140478667" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--primary-text)">read-only access</text>
+  <rect x="476.3636" y="40" width="305.4546" height="205.806542663889" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="629.0909" y="103.612949843911" text-anchor="middle" font-size="21.995614662286" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">s1: String (owner)</text>
+  <text x="629.0909" y="156.000045161289" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--info-text)">ptr | len:5 | cap:5</text>
+  <text x="629.0909" y="208.387140478667" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--info-text)">still valid after borrow</text>
+  <rect x="956.3637" y="40" width="283.6363" height="205.806542663889" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="1098.1819" y="103.612949843911" text-anchor="middle" font-size="21.995614662286" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Heap Data</text>
+  <text x="1098.1819" y="156.000045161289" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--ok-text)">"hello"</text>
+  <text x="1098.1819" y="208.387140478667" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--ok-text)">not copied</text>
+  <line x1="301.8181" y1="141.032239125911" x2="476.3636" y2="141.032239125911" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="389.0908" y="118.580642976067" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--text)">points to</text>
+  <line x1="781.8182" y1="141.032239125911" x2="956.3637" y2="141.032239125911" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="869.0909" y="118.580642976067" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--text)">owns</text>
+  <rect x="105.4545" y="320.645121227889" width="480.0001" height="130.967738293444" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="345.4545" y="376.774168054111" text-anchor="middle" font-size="21.995614662286" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">&amp;T = immutable borrow</text>
+  <text x="345.4545" y="429.161263371489" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--warn-text)">Many readers allowed</text>
+  <rect x="672.7273" y="320.645121227889" width="480.0001" height="130.967738293444" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="912.7273" y="376.774168054111" text-anchor="middle" font-size="21.995614662286" font-weight="bold" font-family="Arial, sans-serif" fill="var(--danger-text)">&amp;mut T = mutable borrow</text>
+  <text x="912.7273" y="429.161263371489" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--danger-text)">Only ONE writer allowed</text>
+  <rect x="214.5454" y="507.742019250778" width="872.7273" height="112.257980749222" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.375355688904" filter="url(#shadow)"/>
+  <text x="650.9091" y="582.580710718" text-anchor="middle" font-size="21.995614662286" font-family="Arial, sans-serif" fill="var(--primary-text)">References never own data -- the original owner keeps ownership</text>
 </svg>

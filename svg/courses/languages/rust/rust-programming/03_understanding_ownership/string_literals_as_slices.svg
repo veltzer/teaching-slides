@@ -95,29 +95,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="629.4736" y="40" text-anchor="middle" font-size="24.401" font-weight="bold" font-family="Arial, sans-serif" fill="var(--text)">String Literal &amp;str vs String Memory Layout</text>
-  <rect x="40" y="89.7143" width="252.6316" height="165.7143" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="166.3157" y="149.3714" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">s: &amp;str</text>
-  <text x="166.3157" y="195.7714" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--primary-text)">ptr | len: 13</text>
-  <text x="166.3157" y="235.5429" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--primary-text)">(fat pointer)</text>
-  <rect x="418.9473" y="89.7143" width="421.0527" height="132.5714" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.4736" y="149.3714" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Static / Read-Only Memory</text>
-  <text x="629.4736" y="199.0857" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--ok-text)">"Hello, world!"</text>
-  <line x1="292.6315" y1="172.5715" x2="418.9473" y2="172.5715" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="321.7143" width="252.6316" height="165.7143" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="166.3157" y="381.3715" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">s: String</text>
-  <text x="166.3157" y="427.7715" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--info-text)">ptr | len | cap</text>
-  <text x="166.3157" y="467.5428" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--info-text)">(owned, growable)</text>
-  <rect x="418.9473" y="321.7143" width="421.0527" height="132.5714" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.4736" y="381.3715" text-anchor="middle" font-size="20.3341" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Heap-allocated buffer</text>
-  <text x="629.4736" y="431.0857" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--warn-text)">[ H | e | l | l | o | ... ]</text>
-  <line x1="292.6315" y1="404.5714" x2="418.9473" y2="404.5714" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="903.1579" y="89.7143" width="336.8421" height="132.5714" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1071.5789" y="149.3714" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--danger-text)">&amp;str: borrowed, no Drop</text>
-  <text x="1071.5789" y="195.7714" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--danger-text)">compiled into binary</text>
-  <rect x="903.1579" y="321.7143" width="336.8421" height="132.5714" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="1071.5789" y="381.3715" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--danger-text)">String: owned, Drop frees</text>
-  <text x="1071.5789" y="427.7715" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--danger-text)">heap memory on scope exit</text>
-  <rect x="208.4209" y="537.1429" width="842.1053" height="82.8571" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="629.4736" y="593.4857" text-anchor="middle" font-size="20.3341" font-family="Arial, sans-serif" fill="var(--primary-text)">Prefer &amp;str for function params; use String when you need ownership</text>
+  <rect x="40" y="40" width="252.6316" height="181.250020507813" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="166.3157" y="105.249954882811" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--primary-text)">s: &amp;str</text>
+  <text x="166.3157" y="155.999956249999" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--primary-text)">ptr | len: 13</text>
+  <text x="166.3157" y="199.500035546876" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--primary-text)">(fat pointer)</text>
+  <rect x="418.9473" y="40" width="421.0527" height="144.999972656249" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="629.4736" y="105.249954882811" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--ok-text)">Static / Read-Only Memory</text>
+  <text x="629.4736" y="159.624971972655" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--ok-text)">"Hello, world!"</text>
+  <line x1="292.6315" y1="130.625064941408" x2="418.9473" y2="130.625064941408" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="293.750006835938" width="252.6316" height="181.250020507813" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="166.3157" y="359.000071093752" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--info-text)">s: String</text>
+  <text x="166.3157" y="409.750072460939" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--info-text)">ptr | len | cap</text>
+  <text x="166.3157" y="453.249933007811" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--info-text)">(owned, growable)</text>
+  <rect x="418.9473" y="293.750006835938" width="421.0527" height="144.999972656249" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="629.4736" y="359.000071093752" text-anchor="middle" font-size="21.265911093381" font-weight="bold" font-family="Arial, sans-serif" fill="var(--warn-text)">Heap-allocated buffer</text>
+  <text x="629.4736" y="413.374978808593" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--warn-text)">[ H | e | l | l | o | ... ]</text>
+  <line x1="292.6315" y1="384.374962402343" x2="418.9473" y2="384.374962402343" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="903.1579" y="40" width="336.8421" height="144.999972656249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="1071.5789" y="105.249954882811" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--danger-text)">&amp;str: borrowed, no Drop</text>
+  <text x="1071.5789" y="155.999956249999" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--danger-text)">compiled into binary</text>
+  <rect x="903.1579" y="293.750006835938" width="336.8421" height="144.999972656249" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="1071.5789" y="359.000071093752" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--danger-text)">String: owned, Drop frees</text>
+  <text x="1071.5789" y="409.750072460939" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--danger-text)">heap memory on scope exit</text>
+  <rect x="208.4209" y="529.375044433595" width="842.1053" height="90.624955566405" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.274950283528" filter="url(#shadow)"/>
+  <text x="629.4736" y="590.99998359375" text-anchor="middle" font-size="21.265911093381" font-family="Arial, sans-serif" fill="var(--primary-text)">Prefer &amp;str for function params; use String when you need ownership</text>
 </svg>

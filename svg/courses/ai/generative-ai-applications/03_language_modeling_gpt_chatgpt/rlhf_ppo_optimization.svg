@@ -95,20 +95,19 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="29.415" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">RLHF PPO Optimization Loop</text>
-  <rect x="203.6364" y="72.6761" width="872.7274" height="310.4225" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="118.4227" text-anchor="middle" font-size="23.8997" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">PPO (Proximal Policy Optimization)</text>
-  <text x="640.0001" y="162.5352" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">1. Sample prompt from dataset</text>
-  <text x="640.0001" y="200.1126" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">2. Generate response with policy</text>
-  <text x="640.0001" y="237.6903" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">3. Score with reward model</text>
-  <text x="640.0001" y="275.2676" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">4. Compute advantage</text>
-  <text x="640.0001" y="312.8451" text-anchor="middle" font-size="22.061" fill="var(--text)" font-family="Arial, sans-serif">5. Update policy (with KL penalty)</text>
-  <path d="M 1076.3636 187.0423 Q 1174.5454 187.0423 1174.5454 252.3945 Q 1174.5454 317.7465 1076.3636 317.7465" fill="none" stroke="var(--primary-border)" stroke-width="0.904" stroke-dasharray="2.26 1.356"/>
-  <text x="1218.1819" y="260.5635" text-anchor="middle" font-size="20.8044" fill="var(--primary-accent)" font-family="Arial, sans-serif">repeat</text>
-  <rect x="40" y="432.1127" width="1200" height="81.6903" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="468.0565" text-anchor="middle" font-size="22.061" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Objective: maximize E[reward(prompt, response)]</text>
-  <text x="640.0001" y="497.4648" text-anchor="middle" font-size="22.061" fill="var(--danger-accent)" font-family="Arial, sans-serif">subject to KL(policy || sft_model) &lt; delta</text>
-  <rect x="40" y="546.4789" width="1200" height="73.5211" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640.0001" y="579.155" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
-  <text x="640.0001" y="605.2959" text-anchor="middle" font-size="20.8044" fill="var(--danger-accent)" font-family="Arial, sans-serif">that score high on reward model but are actually low quality</text>
+  <rect x="203.6364" y="40" width="872.7274" height="328.955212809088" rx="6.176508461473" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="88.477744165749" text-anchor="middle" font-size="24.602783212777" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">PPO (Proximal Policy Optimization)</text>
+  <text x="640.0001" y="135.223829984402" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">1. Sample prompt from dataset</text>
+  <text x="640.0001" y="175.044660026723" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">2. Generate response with policy</text>
+  <text x="640.0001" y="214.865807979516" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">3. Score with reward model</text>
+  <text x="640.0001" y="254.686532051679" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">4. Compute advantage</text>
+  <text x="640.0001" y="294.507468064157" text-anchor="middle" font-size="22.709992194758" fill="var(--text)" font-family="Arial, sans-serif">5. Update policy (with KL penalty)</text>
+  <path d="M 1076.3636 161.194042503899 Q 1174.5454 161.194042503899 1174.5454 230.44787190912 Q 1174.5454 299.701489374025 1076.3636 299.701489374025" fill="none" stroke="var(--primary-border)" stroke-width="0.904" stroke-dasharray="2.26 1.356"/>
+  <text x="1218.1819" y="239.104574092233" text-anchor="middle" font-size="21.416425439311" fill="var(--primary-accent)" font-family="Arial, sans-serif">repeat</text>
+  <rect x="40" y="420.895531877925" width="1200" height="86.567339741605" rx="6.176508461473" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="458.985233423938" text-anchor="middle" font-size="22.709992194758" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Objective: maximize E[reward(prompt, response)]</text>
+  <text x="640.0001" y="490.149255312988" text-anchor="middle" font-size="22.709992194758" fill="var(--danger-accent)" font-family="Arial, sans-serif">subject to KL(policy || sft_model) &lt; delta</text>
+  <rect x="40" y="542.089574381824" width="1200" height="77.910425618176" rx="6.176508461473" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640.0001" y="576.716489084434" text-anchor="middle" font-size="21.416425439311" fill="var(--danger-accent)" font-family="Arial, sans-serif">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
+  <text x="640.0001" y="604.418042040554" text-anchor="middle" font-size="21.416425439311" fill="var(--danger-accent)" font-family="Arial, sans-serif">that score high on reward model but are actually low quality</text>
 </svg>

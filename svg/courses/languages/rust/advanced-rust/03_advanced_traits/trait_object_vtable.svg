@@ -95,38 +95,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="28.3124" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Trait Object VTable</text>
-  <rect x="40" y="79.5454" width="389.1892" height="131.8182" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="234.5945" y="112.5" text-anchor="middle" font-size="19.8187" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&amp;dyn Draw (Fat Pointer)</text>
-  <rect x="64.3243" y="132.2727" width="162.1621" height="46.1364" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="145.4054" y="161.2727" text-anchor="middle" font-size="15.5718" fill="var(--text)" font-family="Arial, sans-serif">data ptr</text>
-  <rect x="242.7027" y="132.2727" width="162.1621" height="46.1364" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="161.2727" text-anchor="middle" font-size="15.5718" fill="var(--text)" font-family="Arial, sans-serif">vtable ptr</text>
-  <text x="234.5945" y="198.1818" text-anchor="middle" font-size="14.1562" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bytes (2 x usize)</text>
-  <rect x="558.9189" y="72.9545" width="324.3244" height="145" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="721.0811" y="105.9091" text-anchor="middle" font-size="18.4031" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Concrete Data</text>
-  <text x="583.2432" y="134.909" font-size="15.5718" fill="var(--text-muted)" font-family="Arial, sans-serif">Circle {</text>
-  <text x="599.4595" y="158.6364" font-size="15.5718" fill="var(--text-muted)" font-family="Arial, sans-serif">  radius: 5.0,</text>
-  <text x="599.4595" y="182.3636" font-size="15.5718" fill="var(--text-muted)" font-family="Arial, sans-serif">  x: 10, y: 20</text>
-  <text x="583.2432" y="206.0909" font-size="15.5718" fill="var(--text-muted)" font-family="Arial, sans-serif">}</text>
-  <line x1="226.4864" y1="154.6817" x2="558.9189" y2="132.2727" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="558.9189" y="264.0909" width="648.6487" height="263.6364" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="297.0455" text-anchor="middle" font-size="19.8187" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">VTable (static, one per type+trait)</text>
-  <rect x="583.2432" y="316.8182" width="600" height="36.9091" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="341.8637" text-anchor="middle" font-size="15.5718" fill="var(--text)" font-family="Arial, sans-serif">drop_in_place: fn(*mut Circle)</text>
-  <rect x="583.2432" y="360.3182" width="600" height="36.9091" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="385.3636" text-anchor="middle" font-size="15.5718" fill="var(--text)" font-family="Arial, sans-serif">size: 24 bytes</text>
-  <rect x="583.2432" y="403.8182" width="600" height="36.9091" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="428.8636" text-anchor="middle" font-size="15.5718" fill="var(--text)" font-family="Arial, sans-serif">align: 8 bytes</text>
-  <rect x="583.2432" y="447.3182" width="600" height="36.9091" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="472.3637" text-anchor="middle" font-size="15.5718" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">draw: fn(&amp;Circle) -- trait method</text>
-  <rect x="583.2432" y="490.8182" width="600" height="23.7272" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="883.2432" y="509.2727" text-anchor="middle" font-size="14.1562" fill="var(--text-muted)" font-family="Arial, sans-serif">... more trait methods ...</text>
-  <line x1="323.7838" y1="178.4091" x2="558.9189" y2="330" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="40" y="554.0909" width="551.3514" height="65.9091" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315.6757" y="580.4545" text-anchor="middle" font-size="16.9875" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Static Dispatch (impl Trait)</text>
-  <text x="315.6757" y="604.1818" text-anchor="middle" font-size="14.1562" fill="var(--text-muted)" font-family="Arial, sans-serif">Monomorphized, inlined, zero-cost</text>
-  <rect x="640" y="554.0909" width="600" height="65.9091" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="580.4545" text-anchor="middle" font-size="16.9875" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Dynamic Dispatch (dyn Trait)</text>
-  <text x="940" y="604.1818" text-anchor="middle" font-size="14.1562" fill="var(--text-muted)" font-family="Arial, sans-serif">VTable lookup, no inlining, runtime flexibility</text>
+  <rect x="40" y="46.98794158804" width="389.1892" height="139.75904380897" rx="6.178079922381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="234.5945" y="81.927755552326" text-anchor="middle" font-size="20.406918759614" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">&amp;dyn Draw (Fat Pointer)</text>
+  <rect x="64.3243" y="102.891580316445" width="162.1621" height="48.915697140366" rx="6.178079922381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="145.4054" y="133.638565713455" text-anchor="middle" font-size="16.033970822554" fill="var(--text)" font-family="Arial, sans-serif">data ptr</text>
+  <rect x="242.7027" y="102.891580316445" width="162.1621" height="48.915697140366" rx="6.178079922381" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="323.7838" y="133.638565713455" text-anchor="middle" font-size="16.033970822554" fill="var(--text)" font-family="Arial, sans-serif">vtable ptr</text>
+  <text x="234.5945" y="172.77110222093" text-anchor="middle" font-size="14.576355832867" fill="var(--text-muted)" font-family="Arial, sans-serif">16 bytes (2 x usize)</text>
+  <rect x="558.9189" y="40" width="324.3244" height="153.73492698505" rx="6.178079922381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="721.0811" y="74.939813964286" text-anchor="middle" font-size="18.949303769927" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Concrete Data</text>
+  <text x="583.2432" y="105.686693337209" font-size="16.033970822554" fill="var(--text-muted)" font-family="Arial, sans-serif">Circle {</text>
+  <text x="599.4595" y="130.843452692692" font-size="16.033970822554" fill="var(--text-muted)" font-family="Arial, sans-serif">  radius: 5.0,</text>
+  <text x="599.4595" y="156" font-size="16.033970822554" fill="var(--text-muted)" font-family="Arial, sans-serif">  x: 10, y: 20</text>
+  <text x="583.2432" y="181.156653331396" font-size="16.033970822554" fill="var(--text-muted)" font-family="Arial, sans-serif">}</text>
+  <line x1="226.4864" y1="126.650518101328" x2="558.9189" y2="102.891580316445" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="558.9189" y="242.650624125416" width="648.6487" height="279.51808761794" rx="6.178079922381" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="277.590438089702" text-anchor="middle" font-size="20.406918759614" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">VTable (static, one per type+trait)</text>
+  <rect x="583.2432" y="298.554262853821" width="600" height="39.132536507475" rx="6.178079922381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="325.108525707642" text-anchor="middle" font-size="16.033970822554" fill="var(--text)" font-family="Arial, sans-serif">drop_in_place: fn(*mut Circle)</text>
+  <rect x="583.2432" y="344.674740949336" width="600" height="39.132536507475" rx="6.178079922381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="371.22889777907" text-anchor="middle" font-size="16.033970822554" fill="var(--text)" font-family="Arial, sans-serif">size: 24 bytes</text>
+  <rect x="583.2432" y="390.795219044851" width="600" height="39.132536507475" rx="6.178079922381" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="417.349375874584" text-anchor="middle" font-size="16.033970822554" fill="var(--text)" font-family="Arial, sans-serif">align: 8 bytes</text>
+  <rect x="583.2432" y="436.915697140366" width="600" height="39.132536507475" rx="6.178079922381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="463.469959994187" text-anchor="middle" font-size="16.033970822554" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">draw: fn(&amp;Circle) -- trait method</text>
+  <rect x="583.2432" y="483.036175235881" width="600" height="25.156547307308" rx="6.178079922381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="883.2432" y="502.602390477574" text-anchor="middle" font-size="14.576355832867" fill="var(--text-muted)" font-family="Arial, sans-serif">... more trait methods ...</text>
+  <line x1="323.7838" y1="151.807277456811" x2="558.9189" y2="312.530146029901" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="40" y="550.120478095515" width="551.3514" height="69.879521904485" rx="6.178079922381" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315.6757" y="578.072244447674" text-anchor="middle" font-size="17.49168878024" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Static Dispatch (impl Trait)</text>
+  <text x="315.6757" y="603.22889777907" text-anchor="middle" font-size="14.576355832867" fill="var(--text-muted)" font-family="Arial, sans-serif">Monomorphized, inlined, zero-cost</text>
+  <rect x="640" y="550.120478095515" width="600" height="69.879521904485" rx="6.178079922381" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="578.072244447674" text-anchor="middle" font-size="17.49168878024" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Dynamic Dispatch (dyn Trait)</text>
+  <text x="940" y="603.22889777907" text-anchor="middle" font-size="14.576355832867" fill="var(--text-muted)" font-family="Arial, sans-serif">VTable lookup, no inlining, runtime flexibility</text>
 </svg>

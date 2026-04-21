@@ -96,46 +96,45 @@
     </marker>
   </defs>
 
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--primary-accent)">Assembly Best Practices</text>
 
-  <rect x="40" y="82.181818181818" width="385" height="237.272727272727" rx="10.269106361049" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="232" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--primary-text)">Documentation</text>
-  <text x="60" y="156" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Comment each instruction</text>
-  <text x="60" y="187.636363636364" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Note register usage</text>
-  <text x="60" y="219.272727272727" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Document ABI clobbers</text>
-  <text x="60" y="250.909090909091" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Describe stack layout</text>
-  <text x="60" y="282.545454545455" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--primary-text)">Descriptive labels</text>
+  <rect x="40" y="40" width="385" height="255.882352941176" rx="10.664215404617" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="232" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">Documentation</text>
+  <text x="60" y="119.607843137255" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--primary-text)">Comment each instruction</text>
+  <text x="60" y="153.725490196079" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--primary-text)">Note register usage</text>
+  <text x="60" y="187.843137254902" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--primary-text)">Document ABI clobbers</text>
+  <text x="60" y="221.960784313726" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--primary-text)">Describe stack layout</text>
+  <text x="60" y="256.07843137255" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--primary-text)">Descriptive labels</text>
 
-  <rect x="447" y="82.181818181818" width="385" height="237.272727272727" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">ABI (x86-64)</text>
-  <text x="467" y="156" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">args: rdi rsi rdx rcx r8 r9</text>
-  <text x="467" y="187.636363636364" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">return: rax</text>
-  <text x="467" y="219.272727272727" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">caller-save: rax rcx r8-r11</text>
-  <text x="467" y="250.909090909091" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">callee-save: rbx rbp r12-r15</text>
-  <text x="467" y="282.545454545455" font-family="Courier New, monospace" font-size="14.376748905469" fill="var(--ok-text)">stack: 16-byte aligned</text>
+  <rect x="447" y="40" width="385" height="255.882352941176" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">ABI (x86-64)</text>
+  <text x="467" y="119.607843137255" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">args: rdi rsi rdx rcx r8 r9</text>
+  <text x="467" y="153.725490196079" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">return: rax</text>
+  <text x="467" y="187.843137254902" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">caller-save: rax rcx r8-r11</text>
+  <text x="467" y="221.960784313726" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">callee-save: rbx rbp r12-r15</text>
+  <text x="467" y="256.07843137255" font-family="Courier New, monospace" font-size="14.929901566464" fill="var(--ok-text)">stack: 16-byte aligned</text>
 
-  <rect x="854" y="82.181818181818" width="386" height="237.272727272727" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1047" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--warn-text)">Testing</text>
-  <text x="874" y="156" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">C harness + assert</text>
-  <text x="874" y="187.636363636364" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">gdb step-through</text>
-  <text x="874" y="219.272727272727" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">Valgrind memory</text>
-  <text x="874" y="250.909090909091" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">perf cycle profile</text>
-  <text x="874" y="282.545454545455" font-family="Arial, sans-serif" font-size="15.403659541574" fill="var(--warn-text)">objdump -d verify</text>
+  <rect x="854" y="40" width="386" height="255.882352941176" rx="10.664215404617" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1047" y="79.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--warn-text)">Testing</text>
+  <text x="874" y="119.607843137255" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">C harness + assert</text>
+  <text x="874" y="153.725490196079" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">gdb step-through</text>
+  <text x="874" y="187.843137254902" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">Valgrind memory</text>
+  <text x="874" y="221.960784313726" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">perf cycle profile</text>
+  <text x="874" y="256.07843137255" font-family="Arial, sans-serif" font-size="15.996323106926" fill="var(--warn-text)">objdump -d verify</text>
 
   <!-- Decision framework -->
-  <rect x="40" y="351.090909090909" width="590" height="268.909090909091" rx="10.269106361049" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--danger-text)">Prefer C</text>
-  <text x="60" y="424.909090909091" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">General application logic</text>
-  <text x="60" y="461.818181818182" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">-O2 output fast enough</text>
-  <text x="60" y="498.727272727273" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">Cross-platform needs</text>
-  <text x="60" y="535.636363636364" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--danger-text)">Large maintained codebase</text>
-  <text x="60" y="577.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" font-style="italic" fill="var(--danger-text)">Check -S output first</text>
+  <rect x="40" y="330" width="590" height="290" rx="10.664215404617" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="335" y="369.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--danger-text)">Prefer C</text>
+  <text x="60" y="409.607843137255" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--danger-text)">General application logic</text>
+  <text x="60" y="449.411764705883" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--danger-text)">-O2 output fast enough</text>
+  <text x="60" y="489.21568627451" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--danger-text)">Cross-platform needs</text>
+  <text x="60" y="529.019607843138" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--danger-text)">Large maintained codebase</text>
+  <text x="60" y="574.509803921569" font-family="Arial, sans-serif" font-size="14.929901566464" font-style="italic" fill="var(--danger-text)">Check -S output first</text>
 
-  <rect x="650" y="351.090909090909" width="590" height="268.909090909091" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="945" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--ok-text)">Prefer Assembly</text>
-  <text x="670" y="424.909090909091" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">No C runtime (bootloader)</text>
-  <text x="670" y="461.818181818182" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Special instructions (AES-NI)</text>
-  <text x="670" y="498.727272727273" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Exact cycle timing</text>
-  <text x="670" y="535.636363636364" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--ok-text)">Constant-time crypto</text>
-  <text x="670" y="577.818181818182" font-family="Arial, sans-serif" font-size="14.376748905469" font-style="italic" fill="var(--ok-text)">Isolate in .s file</text>
+  <rect x="650" y="330" width="590" height="290" rx="10.664215404617" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="369.803921568628" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">Prefer Assembly</text>
+  <text x="670" y="409.607843137255" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">No C runtime (bootloader)</text>
+  <text x="670" y="449.411764705883" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">Special instructions (AES-NI)</text>
+  <text x="670" y="489.21568627451" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">Exact cycle timing</text>
+  <text x="670" y="529.019607843138" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--ok-text)">Constant-time crypto</text>
+  <text x="670" y="574.509803921569" font-family="Arial, sans-serif" font-size="14.929901566464" font-style="italic" fill="var(--ok-text)">Isolate in .s file</text>
 </svg>

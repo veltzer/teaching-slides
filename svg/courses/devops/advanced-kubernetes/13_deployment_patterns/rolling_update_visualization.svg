@@ -95,68 +95,67 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="24.1678" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Rolling Update (maxSurge: 1, maxUnavailable: 1, replicas: 4)</text>
-  <rect x="40" y="64.507" width="1200" height="98.0281" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="61.4285" y="93.9155" font-size="19.3343" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 1: Create 1 new (surge), terminate 1 old</text>
-  <rect x="61.4285" y="105.3521" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.4285" y="133.1267" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="232.8571" y="105.3521" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="307.8571" y="133.1267" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="404.2857" y="105.3521" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.2857" y="133.1267" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="575.7142" y="105.3521" width="150" height="40.8451" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650.7143" y="133.1267" text-anchor="middle" font-size="16.1118" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
-  <rect x="747.1428" y="105.3521" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="822.1428" y="133.1267" text-anchor="middle" font-size="16.1118" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
-  <rect x="40" y="178.8732" width="1200" height="98.0281" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="61.4285" y="208.2816" font-size="19.3343" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 2: v2 ready, create next, terminate old</text>
-  <rect x="61.4285" y="219.7183" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.4285" y="247.493" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="232.8571" y="219.7183" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="307.8571" y="247.493" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="404.2857" y="219.7183" width="150" height="40.8451" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.2857" y="247.493" text-anchor="middle" font-size="16.1118" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
-  <rect x="575.7142" y="219.7183" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650.7143" y="247.493" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="747.1428" y="219.7183" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="822.1428" y="247.493" text-anchor="middle" font-size="16.1118" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
-  <rect x="40" y="293.2395" width="1200" height="98.0281" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="61.4285" y="322.6479" font-size="19.3343" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 3: Continue rolling</text>
-  <rect x="61.4285" y="334.0844" width="150" height="40.8451" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.4285" y="361.8591" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
-  <rect x="232.8571" y="334.0844" width="150" height="40.8451" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="307.8571" y="361.8591" text-anchor="middle" font-size="16.1118" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
-  <rect x="404.2857" y="334.0844" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.2857" y="361.8591" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="575.7142" y="334.0844" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650.7143" y="361.8591" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="747.1428" y="334.0844" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="822.1428" y="361.8591" text-anchor="middle" font-size="16.1118" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
-  <rect x="40" y="407.6056" width="1200" height="98.0281" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="61.4285" y="437.0141" font-size="19.3343" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 4: Almost done</text>
-  <rect x="61.4285" y="448.4507" width="150" height="40.8451" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.4285" y="476.2254" text-anchor="middle" font-size="16.1118" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
-  <rect x="232.8571" y="448.4507" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="307.8571" y="476.2254" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="404.2857" y="448.4507" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.2857" y="476.2254" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="575.7142" y="448.4507" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650.7143" y="476.2254" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="747.1428" y="448.4507" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="822.1428" y="476.2254" text-anchor="middle" font-size="16.1118" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
-  <rect x="40" y="521.9719" width="1200" height="98.0281" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="61.4285" y="551.3803" font-size="19.3343" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 5: Final state</text>
-  <rect x="61.4285" y="562.8169" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="136.4285" y="590.5915" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="232.8571" y="562.8169" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="307.8571" y="590.5915" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="404.2857" y="562.8169" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="479.2857" y="590.5915" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="575.7142" y="562.8169" width="150" height="40.8451" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="650.7143" y="590.5915" text-anchor="middle" font-size="16.1118" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
-  <rect x="918.5714" y="538.3098" width="300" height="81.6902" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="939.9999" y="554.6478" width="25.7143" height="19.6057" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="976.4286" y="570.9859" font-size="16.1118" fill="var(--text-muted)" font-family="Arial, sans-serif">v1 (old)</text>
-  <rect x="939.9999" y="580.7888" width="25.7143" height="19.6057" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="976.4286" y="597.1268" font-size="16.1118" fill="var(--text-muted)" font-family="Arial, sans-serif">v2 (new)</text>
+  <rect x="40" y="40" width="1200" height="102.352861332186" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.4285" y="70.705931487886" font-size="19.756188193591" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 1: Create 1 new (surge), terminate 1 old</text>
+  <rect x="61.4285" y="82.647086461936" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.4285" y="111.647034256057" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="232.8571" y="82.647086461936" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.8571" y="111.647034256057" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="404.2857" y="82.647086461936" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.2857" y="111.647034256057" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="575.7142" y="82.647086461936" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.7143" y="111.647034256057" text-anchor="middle" font-size="16.46337094891" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
+  <rect x="747.1428" y="82.647086461936" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.1428" y="111.647034256057" text-anchor="middle" font-size="16.46337094891" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
+  <rect x="40" y="159.411758564014" width="1200" height="102.352861332186" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.4285" y="190.117585640143" font-size="19.756188193591" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 2: v2 ready, create next, terminate old</text>
+  <rect x="61.4285" y="202.05884502595" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.4285" y="231.058897231828" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="232.8571" y="202.05884502595" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.8571" y="231.058897231828" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="404.2857" y="202.05884502595" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.2857" y="231.058897231828" text-anchor="middle" font-size="16.46337094891" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
+  <rect x="575.7142" y="202.05884502595" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.7143" y="231.058897231828" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="747.1428" y="202.05884502595" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.1428" y="231.058897231828" text-anchor="middle" font-size="16.46337094891" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
+  <rect x="40" y="278.823621539785" width="1200" height="102.352861332186" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.4285" y="309.529448615914" font-size="19.756188193591" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 3: Continue rolling</text>
+  <rect x="61.4285" y="321.470499178207" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.4285" y="350.470551384086" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v1</text>
+  <rect x="232.8571" y="321.470499178207" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.8571" y="350.470551384086" text-anchor="middle" font-size="16.46337094891" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
+  <rect x="404.2857" y="321.470499178207" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.2857" y="350.470551384086" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="575.7142" y="321.470499178207" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.7143" y="350.470551384086" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="747.1428" y="321.470499178207" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.1428" y="350.470551384086" text-anchor="middle" font-size="16.46337094891" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
+  <rect x="40" y="398.235275692043" width="1200" height="102.352861332186" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.4285" y="428.941207179928" font-size="19.756188193591" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 4: Almost done</text>
+  <rect x="61.4285" y="440.882362153979" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.4285" y="469.882414359857" text-anchor="middle" font-size="16.46337094891" fill="var(--danger-accent)" font-family="Arial, sans-serif">TERM</text>
+  <rect x="232.8571" y="440.882362153979" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.8571" y="469.882414359857" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="404.2857" y="440.882362153979" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.2857" y="469.882414359857" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="575.7142" y="440.882362153979" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.7143" y="469.882414359857" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="747.1428" y="440.882362153979" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.1428" y="469.882414359857" text-anchor="middle" font-size="16.46337094891" fill="var(--ok-accent)" font-family="Arial, sans-serif">v2 INIT</text>
+  <rect x="40" y="517.647138667814" width="1200" height="102.352861332186" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="61.4285" y="548.352965743943" font-size="19.756188193591" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Step 5: Final state</text>
+  <rect x="61.4285" y="560.294120717993" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.4285" y="589.294068512115" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="232.8571" y="560.294120717993" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.8571" y="589.294068512115" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="404.2857" y="560.294120717993" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="479.2857" y="589.294068512115" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="575.7142" y="560.294120717993" width="150" height="42.647086461936" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.7143" y="589.294068512115" text-anchor="middle" font-size="16.46337094891" fill="var(--bg)" font-family="Arial, sans-serif">v2</text>
+  <rect x="918.5714" y="534.705827076129" width="300" height="85.294172923871" rx="6.130924272487" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="939.9999" y="551.7646198962" width="25.7143" height="20.470655795843" rx="6.130924272487" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="976.4286" y="568.823517128029" font-size="16.46337094891" fill="var(--text-muted)" font-family="Arial, sans-serif">v1 (old)</text>
+  <rect x="939.9999" y="579.058897231828" width="25.7143" height="20.470655795843" rx="6.130924272487" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="976.4286" y="596.1176900519" font-size="16.46337094891" fill="var(--text-muted)" font-family="Arial, sans-serif">v2 (new)</text>
 </svg>

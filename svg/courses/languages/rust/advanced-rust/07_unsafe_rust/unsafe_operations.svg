@@ -95,34 +95,33 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="28.4748" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Unsafe Operations in Rust</text>
-  <rect x="40" y="73.3333" width="1200" height="53.3334" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="106.6667" text-anchor="middle" font-size="19.9323" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Five Unsafe Superpowers</text>
-  <rect x="40" y="146.6666" width="567.5675" height="93.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="177.3334" text-anchor="middle" font-size="17.0848" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Dereference Raw Pointers</text>
-  <text x="64.3243" y="206.6666" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { *raw_ptr = 42; }</text>
-  <text x="64.3243" y="226.6667" font-size="14.2373" fill="var(--danger-accent)" font-family="Arial, sans-serif">May be null, dangling, or unaligned</text>
-  <rect x="656.2162" y="146.6666" width="583.7837" height="93.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="948.1081" y="177.3334" text-anchor="middle" font-size="17.0848" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2. Call Unsafe Functions</text>
-  <text x="680.5406" y="206.6666" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { dangerous_fn(); }</text>
-  <text x="680.5406" y="226.6667" font-size="14.2373" fill="var(--danger-accent)" font-family="Arial, sans-serif">Function has preconditions caller must ensure</text>
-  <rect x="40" y="260" width="567.5675" height="93.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323.7838" y="290.6667" text-anchor="middle" font-size="17.0848" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Access Mutable Statics</text>
-  <text x="64.3243" y="320" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">static mut COUNTER: u32 = 0;</text>
-  <text x="64.3243" y="340" font-size="14.2373" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data races possible with threads</text>
-  <rect x="656.2162" y="260" width="583.7837" height="93.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="948.1081" y="290.6667" text-anchor="middle" font-size="17.0848" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">4. Implement Unsafe Traits</text>
-  <text x="680.5406" y="320" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe impl Send for MyType {}</text>
-  <text x="680.5406" y="340" font-size="14.2373" fill="var(--danger-accent)" font-family="Arial, sans-serif">Promises invariants compiler can't verify</text>
-  <rect x="315.6757" y="373.3333" width="648.6486" height="93.3333" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="404" text-anchor="middle" font-size="17.0848" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">5. Access Union Fields</text>
-  <text x="340" y="433.3333" font-size="14.2373" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { my_union.field1 }</text>
-  <text x="340" y="453.3334" font-size="14.2373" fill="var(--danger-accent)" font-family="Arial, sans-serif">Wrong field = misinterpreted bytes</text>
-  <rect x="40" y="493.3333" width="1200" height="126.6667" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="526.6667" text-anchor="middle" font-size="19.9323" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">What unsafe Does NOT Disable</text>
-  <text x="218.3784" y="560" text-anchor="middle" font-size="15.6611" fill="var(--text-muted)" font-family="Arial, sans-serif">Borrow checker</text>
-  <text x="477.8378" y="560" text-anchor="middle" font-size="15.6611" fill="var(--text-muted)" font-family="Arial, sans-serif">Type checking</text>
-  <text x="737.2973" y="560" text-anchor="middle" font-size="15.6611" fill="var(--text-muted)" font-family="Arial, sans-serif">Lifetime checking</text>
-  <text x="1029.1891" y="560" text-anchor="middle" font-size="15.6611" fill="var(--text-muted)" font-family="Arial, sans-serif">Bounds checking</text>
-  <text x="639.9999" y="600" text-anchor="middle" font-size="15.6611" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">unsafe only unlocks the 5 superpowers above - everything else still enforced!</text>
+  <rect x="40" y="40" width="1200" height="56.585433135035" rx="6.180220030246" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="75.365922233785" text-anchor="middle" font-size="20.530999951477" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Five Unsafe Superpowers</text>
+  <rect x="40" y="117.804837938729" width="567.5675" height="99.024348839979" rx="6.180220030246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="323.7838" y="150.341562784051" text-anchor="middle" font-size="17.59797052879" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Dereference Raw Pointers</text>
+  <text x="64.3243" y="181.463370642477" font-size="14.664941106103" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { *raw_ptr = 42; }</text>
+  <text x="64.3243" y="202.682987641281" font-size="14.664941106103" fill="var(--danger-accent)" font-family="Arial, sans-serif">May be null, dangling, or unaligned</text>
+  <rect x="656.2162" y="117.804837938729" width="583.7837" height="99.024348839979" rx="6.180220030246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="948.1081" y="150.341562784051" text-anchor="middle" font-size="17.59797052879" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2. Call Unsafe Functions</text>
+  <text x="680.5406" y="181.463370642477" font-size="14.664941106103" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { dangerous_fn(); }</text>
+  <text x="680.5406" y="202.682987641281" font-size="14.664941106103" fill="var(--danger-accent)" font-family="Arial, sans-serif">Function has preconditions caller must ensure</text>
+  <rect x="40" y="238.048803777512" width="567.5675" height="99.024348839979" rx="6.180220030246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="323.7838" y="270.585422525279" text-anchor="middle" font-size="17.59797052879" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">3. Access Mutable Statics</text>
+  <text x="64.3243" y="301.70733648126" font-size="14.664941106103" fill="var(--text-muted)" font-family="Arial, sans-serif">static mut COUNTER: u32 = 0;</text>
+  <text x="64.3243" y="322.926847382509" font-size="14.664941106103" fill="var(--danger-accent)" font-family="Arial, sans-serif">Data races possible with threads</text>
+  <rect x="656.2162" y="238.048803777512" width="583.7837" height="99.024348839979" rx="6.180220030246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="948.1081" y="270.585422525279" text-anchor="middle" font-size="17.59797052879" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">4. Implement Unsafe Traits</text>
+  <text x="680.5406" y="301.70733648126" font-size="14.664941106103" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe impl Send for MyType {}</text>
+  <text x="680.5406" y="322.926847382509" font-size="14.664941106103" fill="var(--danger-accent)" font-family="Arial, sans-serif">Promises invariants compiler can't verify</text>
+  <rect x="315.6757" y="358.29266351874" width="648.6486" height="99.024348839979" rx="6.180220030246" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="390.829282266507" text-anchor="middle" font-size="17.59797052879" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">5. Access Union Fields</text>
+  <text x="340" y="421.951196222488" font-size="14.664941106103" fill="var(--text-muted)" font-family="Arial, sans-serif">unsafe { my_union.field1 }</text>
+  <text x="340" y="443.170813221292" font-size="14.664941106103" fill="var(--danger-accent)" font-family="Arial, sans-serif">Wrong field = misinterpreted bytes</text>
+  <rect x="40" y="485.609728926236" width="1200" height="134.390271073764" rx="6.180220030246" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="520.975651160021" text-anchor="middle" font-size="20.530999951477" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">What unsafe Does NOT Disable</text>
+  <text x="218.3784" y="556.341467296252" text-anchor="middle" font-size="16.13150731928" fill="var(--text-muted)" font-family="Arial, sans-serif">Borrow checker</text>
+  <text x="477.8378" y="556.341467296252" text-anchor="middle" font-size="16.13150731928" fill="var(--text-muted)" font-family="Arial, sans-serif">Type checking</text>
+  <text x="737.2973" y="556.341467296252" text-anchor="middle" font-size="16.13150731928" fill="var(--text-muted)" font-family="Arial, sans-serif">Lifetime checking</text>
+  <text x="1029.1891" y="556.341467296252" text-anchor="middle" font-size="16.13150731928" fill="var(--text-muted)" font-family="Arial, sans-serif">Bounds checking</text>
+  <text x="639.9999" y="598.780489098751" text-anchor="middle" font-size="16.13150731928" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">unsafe only unlocks the 5 superpowers above - everything else still enforced!</text>
 </svg>

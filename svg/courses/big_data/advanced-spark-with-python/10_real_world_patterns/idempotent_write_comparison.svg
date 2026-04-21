@@ -95,24 +95,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.999946" y="40" text-anchor="middle" font-size="22.024815" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Idempotent Write Comparison</text>
-  <rect x="40" y="59.550453" width="1200" height="156.404525" rx="6.609493" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="92.134729" font-size="19.27174" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dynamic Partition Overwrite (Parquet)</text>
-  <text x="99.999941" y="118.20215" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Works with plain Parquet</text>
-  <text x="99.999941" y="141.662829" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Simple configuration</text>
-  <text x="99.999941" y="165.12362" font-size="16.518666" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Not atomic (partial writes possible)</text>
-  <text x="99.999941" y="188.584186" font-size="16.518666" fill="var(--danger-accent)" font-family="Arial, sans-serif">- No concurrent write safety</text>
-  <rect x="40" y="228.988688" width="1200" height="156.404525" rx="6.609493" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="261.572964" font-size="19.27174" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">replaceWhere (Delta Lake)</text>
-  <text x="99.999941" y="287.640385" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Atomic (all or nothing)</text>
-  <text x="99.999941" y="311.101064" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Concurrent-safe (optimistic locking)</text>
-  <text x="99.999941" y="334.561742" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Predicate validated at write time</text>
-  <text x="99.999941" y="358.022534" font-size="16.518666" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Requires Delta Lake</text>
-  <rect x="40" y="398.426923" width="1200" height="143.370814" rx="6.609493" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="75.999856" y="431.011199" font-size="19.27174" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">DELETE + INSERT (Delta Lake)</text>
-  <text x="99.999941" y="457.07862" font-size="16.518666" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Explicit, easy to understand</text>
-  <text x="99.999941" y="480.539299" font-size="16.518666" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Two operations (not atomic together)</text>
-  <text x="99.999941" y="503.999978" font-size="16.518666" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Slightly slower (two transactions)</text>
-  <rect x="40" y="561.348303" width="1200" height="58.651697" rx="6.609493" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.999946" y="597.842805" text-anchor="middle" font-size="17.895203" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Recommendation: Use replaceWhere with Delta</text>
+  <rect x="40" y="40" width="1200" height="161.860465381017" rx="6.72378599923" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="73.720930244592" font-size="19.604991728231" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dynamic Partition Overwrite (Parquet)</text>
+  <text x="99.999941" y="100.697674647242" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Works with plain Parquet</text>
+  <text x="99.999941" y="124.976744713115" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Simple configuration</text>
+  <text x="99.999941" y="149.255930685943" font-size="16.804310886895" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Not atomic (partial writes possible)</text>
+  <text x="99.999941" y="173.534883809978" font-size="16.804310886895" fill="var(--danger-accent)" font-family="Arial, sans-serif">- No concurrent write safety</text>
+  <rect x="40" y="215.3488370649" width="1200" height="161.860465381017" rx="6.72378599923" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="249.069767309492" font-size="19.604991728231" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">replaceWhere (Delta Lake)</text>
+  <text x="99.999941" y="276.046511712142" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Atomic (all or nothing)</text>
+  <text x="99.999941" y="300.325581778015" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Concurrent-safe (optimistic locking)</text>
+  <text x="99.999941" y="324.604650809005" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Predicate validated at write time</text>
+  <text x="99.999941" y="348.883837816716" font-size="16.804310886895" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Requires Delta Lake</text>
+  <rect x="40" y="390.6976741298" width="1200" height="148.37209266225" rx="6.72378599923" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75.999856" y="424.418604374392" font-size="19.604991728231" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">DELETE + INSERT (Delta Lake)</text>
+  <text x="99.999941" y="451.395348777042" font-size="16.804310886895" fill="var(--ok-accent)" font-family="Arial, sans-serif">+ Explicit, easy to understand</text>
+  <text x="99.999941" y="475.674418842915" font-size="16.804310886895" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Two operations (not atomic together)</text>
+  <text x="99.999941" y="499.953488908788" font-size="16.804310886895" fill="var(--danger-accent)" font-family="Arial, sans-serif">- Slightly slower (two transactions)</text>
+  <rect x="40" y="559.302325352758" width="1200" height="60.697674647242" rx="6.72378599923" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.999946" y="597.069884044353" text-anchor="middle" font-size="18.204651307563" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Recommendation: Use replaceWhere with Delta</text>
 </svg>

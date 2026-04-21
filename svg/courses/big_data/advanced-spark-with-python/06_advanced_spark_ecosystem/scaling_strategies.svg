@@ -95,42 +95,41 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" font-size="27.242" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Spark Scaling Strategies</text>
-  <rect x="40" y="79.726" width="372.973" height="270.137" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="119.4521" text-anchor="middle" font-size="22.7017" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Vertical Scaling</text>
-  <text x="226.4864" y="151.2329" text-anchor="middle" font-size="18.1613" fill="var(--text)" font-family="Arial, sans-serif">(Scale Up)</text>
-  <rect x="72.4324" y="175.0685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="206.8493" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">More memory per executor</text>
-  <rect x="72.4324" y="230.685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="262.4657" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">More cores per node</text>
-  <rect x="72.4324" y="286.3013" width="308.1082" height="47.6712" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="226.4864" y="318.0822" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">Faster storage (NVMe)</text>
-  <rect x="453.5134" y="79.726" width="372.973" height="270.137" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="119.4521" text-anchor="middle" font-size="22.7017" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Horizontal Scaling</text>
-  <text x="639.9999" y="151.2329" text-anchor="middle" font-size="18.1613" fill="var(--text)" font-family="Arial, sans-serif">(Scale Out)</text>
-  <rect x="485.9459" y="175.0685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="206.8493" text-anchor="middle" font-size="16.6479" fill="var(--ok-accent)" font-family="Arial, sans-serif">More executor instances</text>
-  <rect x="485.9459" y="230.685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="262.4657" text-anchor="middle" font-size="16.6479" fill="var(--ok-accent)" font-family="Arial, sans-serif">Add worker nodes</text>
-  <rect x="485.9459" y="286.3013" width="308.1082" height="47.6712" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="318.0822" text-anchor="middle" font-size="16.6479" fill="var(--ok-accent)" font-family="Arial, sans-serif">Partition across cluster</text>
-  <rect x="867.027" y="79.726" width="372.973" height="270.137" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="119.4521" text-anchor="middle" font-size="22.7017" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Auto Scaling</text>
-  <text x="1053.5135" y="151.2329" text-anchor="middle" font-size="18.1613" fill="var(--text)" font-family="Arial, sans-serif">(Dynamic)</text>
-  <rect x="899.4594" y="175.0685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="206.8493" text-anchor="middle" font-size="16.6479" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dynamic allocation</text>
-  <rect x="899.4594" y="230.685" width="308.1082" height="47.6712" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="262.4657" text-anchor="middle" font-size="16.6479" fill="var(--danger-accent)" font-family="Arial, sans-serif">K8s autoscaler (HPA)</text>
-  <rect x="899.4594" y="286.3013" width="308.1082" height="47.6712" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1053.5135" y="318.0822" text-anchor="middle" font-size="16.6479" fill="var(--danger-accent)" font-family="Arial, sans-serif">Spot/preemptible nodes</text>
-  <rect x="72.4324" y="405.4794" width="1135.1351" height="87.3972" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="639.9999" y="440.4384" text-anchor="middle" font-size="21.1883" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cost vs Performance Trade-offs</text>
-  <text x="639.9999" y="475.3973" text-anchor="middle" font-size="18.1613" fill="var(--text)" font-family="Arial, sans-serif">Vertical: Higher cost/node, simpler | Horizontal: Lower cost/node, complex | Auto: Optimal cost, requires tuning</text>
-  <rect x="72.4324" y="524.6575" width="340.5406" height="63.5616" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="242.7027" y="564.3835" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">Start small, measure</text>
-  <rect x="445.4053" y="524.6575" width="389.1892" height="63.5616" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="639.9999" y="564.3835" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prefer horizontal for big data</text>
-  <rect x="867.027" y="524.6575" width="340.5406" height="63.5616" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1037.2972" y="564.3835" text-anchor="middle" font-size="16.6479" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use auto-scaling in cloud</text>
-  <text x="639.9999" y="620" text-anchor="middle" font-size="18.1613" fill="var(--text-muted)" font-family="Arial, sans-serif">Combine strategies based on workload patterns and budget constraints</text>
+  <rect x="40" y="40" width="372.973" height="290" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="82.647134602072" text-anchor="middle" font-size="23.521517821664" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Vertical Scaling</text>
+  <text x="226.4864" y="116.764756401382" text-anchor="middle" font-size="18.817152090574" fill="var(--text)" font-family="Arial, sans-serif">(Scale Up)</text>
+  <rect x="72.4324" y="142.352972750863" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="176.470594550173" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">More memory per executor</text>
+  <rect x="72.4324" y="202.05891825259" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="236.176432698964" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">More cores per node</text>
+  <rect x="72.4324" y="261.764649048446" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.4864" y="295.882378200691" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">Faster storage (NVMe)</text>
+  <rect x="453.5134" y="40" width="372.973" height="290" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="82.647134602072" text-anchor="middle" font-size="23.521517821664" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Horizontal Scaling</text>
+  <text x="639.9999" y="116.764756401382" text-anchor="middle" font-size="18.817152090574" fill="var(--text)" font-family="Arial, sans-serif">(Scale Out)</text>
+  <rect x="485.9459" y="142.352972750863" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="176.470594550173" text-anchor="middle" font-size="17.249099254385" fill="var(--ok-accent)" font-family="Arial, sans-serif">More executor instances</text>
+  <rect x="485.9459" y="202.05891825259" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="236.176432698964" text-anchor="middle" font-size="17.249099254385" fill="var(--ok-accent)" font-family="Arial, sans-serif">Add worker nodes</text>
+  <rect x="485.9459" y="261.764649048446" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="295.882378200691" text-anchor="middle" font-size="17.249099254385" fill="var(--ok-accent)" font-family="Arial, sans-serif">Partition across cluster</text>
+  <rect x="867.027" y="40" width="372.973" height="290" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="82.647134602072" text-anchor="middle" font-size="23.521517821664" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">Auto Scaling</text>
+  <text x="1053.5135" y="116.764756401382" text-anchor="middle" font-size="18.817152090574" fill="var(--text)" font-family="Arial, sans-serif">(Dynamic)</text>
+  <rect x="899.4594" y="142.352972750863" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="176.470594550173" text-anchor="middle" font-size="17.249099254385" fill="var(--danger-accent)" font-family="Arial, sans-serif">Dynamic allocation</text>
+  <rect x="899.4594" y="202.05891825259" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="236.176432698964" text-anchor="middle" font-size="17.249099254385" fill="var(--danger-accent)" font-family="Arial, sans-serif">K8s autoscaler (HPA)</text>
+  <rect x="899.4594" y="261.764649048446" width="308.1082" height="51.176432698964" rx="6.216675708426" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.5135" y="295.882378200691" text-anchor="middle" font-size="17.249099254385" fill="var(--danger-accent)" font-family="Arial, sans-serif">Spot/preemptible nodes</text>
+  <rect x="72.4324" y="389.705838148791" width="1135.1351" height="93.8234599481" rx="6.216675708426" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="639.9999" y="427.235350951554" text-anchor="middle" font-size="21.953464985475" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Cost vs Performance Trade-offs</text>
+  <text x="639.9999" y="464.764756401382" text-anchor="middle" font-size="18.817152090574" fill="var(--text)" font-family="Arial, sans-serif">Vertical: Higher cost/node, simpler | Horizontal: Lower cost/node, complex | Auto: Optimal cost, requires tuning</text>
+  <rect x="72.4324" y="517.647027249136" width="340.5406" height="68.235243598618" rx="6.216675708426" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="242.7027" y="560.294054498273" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">Start small, measure</text>
+  <rect x="445.4053" y="517.647027249136" width="389.1892" height="68.235243598618" rx="6.216675708426" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="639.9999" y="560.294054498273" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">Prefer horizontal for big data</text>
+  <rect x="867.027" y="517.647027249136" width="340.5406" height="68.235243598618" rx="6.216675708426" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1037.2972" y="560.294054498273" text-anchor="middle" font-size="17.249099254385" fill="var(--primary-accent)" font-family="Arial, sans-serif">Use auto-scaling in cloud</text>
+  <text x="639.9999" y="620" text-anchor="middle" font-size="18.817152090574" fill="var(--text-muted)" font-family="Arial, sans-serif">Combine strategies based on workload patterns and budget constraints</text>
 </svg>
