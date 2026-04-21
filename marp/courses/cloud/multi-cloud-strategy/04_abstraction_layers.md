@@ -34,12 +34,6 @@ audience:
 
 ---
 
-<!-- SVG placeholder: diagram showing abstraction layer sitting above three cloud providers -->
-
-## Abstraction Layer Architecture
-
----
-
 ## Terraform: The Multi-Cloud Standard
 - HashiCorp Configuration Language (HCL)
 - Provider plugins for every major cloud

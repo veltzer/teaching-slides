@@ -634,10 +634,6 @@ const releaseTests = {
 
 ---
 
-## Performance Monitoring
-
----
-
 ## Testing Completion
 
 ![performance_monitoring](svg/courses/ai/developing-using-ai/09_workflows/performance_monitoring.svg)

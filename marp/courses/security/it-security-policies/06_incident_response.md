@@ -129,10 +129,6 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## Disaster Recovery: `RTO` and `RPO`
-
----
-
 ## Disaster Recovery
 
 ![rto_and_rpo_explained](svg/courses/security/it-security-policies/06_incident_response/rto_and_rpo_explained.svg)
@@ -157,10 +153,6 @@ Trust your instincts - **if something feels wrong, report it**
     - **1** copy off-site (cloud)
 - Verify that your backups are working periodically
 - Know how to restore from backup if needed
-
----
-
-## Ransomware: The Growing Threat
 
 ---
 

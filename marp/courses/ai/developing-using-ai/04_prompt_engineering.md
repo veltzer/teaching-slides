@@ -650,10 +650,6 @@ Team standards: {guidelines}
 
 ---
 
-## Context Window Management
-
----
-
 ## Prompt Templates Library
 
 ![context_window_management](svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)

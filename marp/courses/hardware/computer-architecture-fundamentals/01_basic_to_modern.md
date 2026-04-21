@@ -23,9 +23,6 @@ audience:
 1. Modern Architecture Patterns
 
 ---
-## Part 1: System Architecture Basics
-
----
 ## What is Computer Architecture?
 - Design and organization of computing systems
 - Hardware and software integration
@@ -46,9 +43,6 @@ audience:
 - Logical boundaries
 - Security perimeters
 - Network segments
-
----
-## Part 2: Data Management
 
 ---
 ## Data Duplication
@@ -79,9 +73,6 @@ audience:
 - Spatial locality
 - Data placement strategies
 - Access patterns
-
----
-## Part 3: Performance & Scaling
 
 ---
 ## Load Balancing
@@ -129,9 +120,6 @@ audience:
 - Prioritization
 
 ---
-## Part 4: Reliability & Redundancy
-
----
 ## High Availability Basics
 - Availability calculations
 - SLA definitions
@@ -173,9 +161,6 @@ audience:
 - Site redundancy
 
 ---
-## Part 5: Security Fundamentals
-
----
 ## Basic Encryption
 - Symmetric encryption
 - Asymmetric encryption
@@ -202,9 +187,6 @@ audience:
 - Network security
 - Application security
 - Data security
-
----
-## Part 6: Modern Architecture Patterns
 
 ---
 ## Microservices

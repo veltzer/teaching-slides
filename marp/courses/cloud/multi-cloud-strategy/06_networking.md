@@ -34,12 +34,6 @@ audience:
 
 ---
 
-<!-- SVG placeholder: diagram of cross-cloud connectivity options with latency and cost comparison -->
-
-## Connectivity Options Comparison
-
----
-
 ## Site-to-Site VPN
 - IPsec tunnels between cloud VPCs/VNets
 - AWS: Virtual Private Gateway or Transit Gateway
@@ -226,12 +220,6 @@ resource "google_compute_vpn_tunnel" "to_aws" {
 - Transit: dedicated transit network connecting all clouds
 - Segmented: isolated workloads with minimal cross-cloud traffic
 - Choose based on traffic patterns and latency requirements
-
----
-
-<!-- SVG placeholder: hub-and-spoke vs mesh network topology diagrams -->
-
-## Network Topology Patterns
 
 ---
 

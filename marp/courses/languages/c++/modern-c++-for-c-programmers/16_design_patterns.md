@@ -102,10 +102,6 @@ Different patterns solve different types of problems
 
 ---
 
-## CREATIONAL PATTERNS
-
----
-
 ## Factory Pattern
 
 Encapsulate object creation logic
@@ -562,10 +558,6 @@ public:
 
 int Monostate::sharedState = 0;
 ```
-
----
-
-## STRUCTURAL PATTERNS
 
 ---
 
@@ -1078,10 +1070,6 @@ Choose based on whether you need runtime flexibility or compilation benefits
 ## Bridge vs Cheshire Cat
 
 ![bridge_vs_cheshire_cat](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/bridge_vs_cheshire_cat.svg)
-
----
-
-## BEHAVIORAL PATTERNS
 
 ---
 

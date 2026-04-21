@@ -142,10 +142,6 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ---
 
-## Spam Filtering: How It Works
-
----
-
 ## Spam Filtering
 
 ![how_it_works](svg/courses/security/it-security-policies/03_email_security/how_it_works.svg)

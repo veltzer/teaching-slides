@@ -208,10 +208,6 @@ instructions: |
 
 ---
 
-## Building Complex Workflows from Simple Skills
-
----
-
 ## Skill Composition and Chaining
 
 ![building_complex_workflows_from_simple_skills](svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/building_complex_workflows_from_simple_skills.svg)
@@ -459,10 +455,6 @@ claude skills override review --local
 
 ---
 
-## Project-Level vs User-Level vs Team-Level
-
----
-
 ## Skill Inheritance and Overrides
 
 ![project_level_vs_user_level_vs_team_level](svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/project_level_vs_user_level_vs_team_level.svg)
@@ -511,10 +503,6 @@ deprecated_params:
 # Check for outdated skills in the project
 claude skills audit --check-versions
 ```
-
----
-
-## Automating Actions Around Tool Calls
 
 ---
 

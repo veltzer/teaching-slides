@@ -14,9 +14,6 @@ audience:
 # Advanced Spark with Python
 
 ---
-## Advanced RDD and DataFrame Operations
-
----
 ## Chapter topics
 * Advanced transformations and actions
 * Custom partitioning strategies

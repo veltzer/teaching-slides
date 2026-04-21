@@ -125,9 +125,6 @@ audience:
 ![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
 
 ---
-## Server-Side Service Discovery
-
----
 ## Server-Side Discovery Details
 
 - Load balancer queries the registry

@@ -482,10 +482,6 @@ async def stream_shell(command: str):
 
 ---
 
-## System Components
-
----
-
 ## Production Architecture for Tool-Use Systems
 
 ![system_components](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)

@@ -109,10 +109,6 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## Firewall Basics
 
----
-
-## Firewall Basics
-
 ![what_is_a_firewall](svg/courses/security/it-security-policies/05_network_security/what_is_a_firewall.svg)
 
 ---

@@ -10,6 +10,7 @@ Checks:
   --urls        Check for external URLs in image references (should be local)
   --whitespace  Check for trailing whitespace and consecutive blank lines
   --slides      Check for empty slides (consecutive --- separators)
+  --dead-slides Check for dead slides (heading only, no body content)
   --images      Check that image references point to existing local files
   --numbering   Check for sequential numbered lists (should use 1. 1. 1.)
   --svg-content Check that slides with SVG images have no other content on the same slide
@@ -152,6 +153,88 @@ def _check_slides(path: Path, text: str, text_no_code: str, lines: list[str]) ->
             only_blanks = True
         elif stripped != '':
             only_blanks = False
+    return errors
+
+
+def _split_slides(lines: list[str]) -> list[tuple[int, list[str]]]:
+    """Split lines into (start_line_1based, slide_lines) pairs.
+
+    Handles YAML front matter (two leading --- fences) by skipping past it.
+    Slide separators are bare `---` lines between slides.
+    """
+    i = 0
+    # Skip YAML front matter if present
+    if lines and lines[0].strip() == '---':
+        i = 1
+        while i < len(lines) and lines[i].strip() != '---':
+            i += 1
+        i += 1  # past closing ---
+    slides: list[tuple[int, list[str]]] = []
+    cur: list[str] = []
+    cur_start = i + 1  # 1-based line number of first line of current slide
+    for j in range(i, len(lines)):
+        if lines[j].strip() == '---':
+            slides.append((cur_start, cur))
+            cur = []
+            cur_start = j + 2
+        else:
+            cur.append(lines[j])
+    if cur:
+        slides.append((cur_start, cur))
+    return slides
+
+
+def _check_dead_slides(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Flag `## `-titled slides with no body content (heading only).
+
+    Skips:
+      - Slides whose only heading is level-1 (`# `). These are legitimate
+        chapter-title divider slides per the course convention.
+      - The first slide of 00_title.md (the title slide with author/email).
+    """
+    errors: list[str] = []
+    is_title_file = path.name == '00_title.md'
+    slides = _split_slides(lines)
+    for idx, (start, slide_lines) in enumerate(slides):
+        if is_title_file and idx == 0:
+            continue
+        has_h1 = False      # slide contains a `# ` level-1 heading
+        h2_line_no = None   # line of first `## ` heading
+        has_body = False
+        in_fence = False
+        for offset, ln in enumerate(slide_lines):
+            stripped = ln.strip()
+            if _FENCE_OPEN_RE.match(ln):
+                in_fence = not in_fence
+                has_body = True
+                continue
+            if in_fence:
+                has_body = True
+                continue
+            if not stripped:
+                continue
+            if stripped.startswith('<!--') and stripped.endswith('-->'):
+                continue
+            if stripped.startswith('# '):
+                has_h1 = True
+                continue
+            if stripped.startswith('## '):
+                if h2_line_no is None:
+                    h2_line_no = start + offset
+                    continue
+                has_body = True
+                continue
+            if _HEADING_RE.match(ln):
+                # h3+ heading acts as body
+                has_body = True
+                continue
+            has_body = True
+        # Only flag slides that have a `## ` but no `# ` and no body — the
+        # pattern `# Chapter / ## Subtitle` is a legitimate divider slide.
+        if h2_line_no is not None and not has_body and not has_h1:
+            errors.append(
+                f"{path}:{h2_line_no}: dead slide (heading only, no body content)"
+            )
     return errors
 
 
@@ -306,6 +389,8 @@ def main() -> None:
                         help='Check for trailing whitespace and consecutive blank lines')
     parser.add_argument('--slides', action='store_true',
                         help='Check for empty slides (consecutive --- separators)')
+    parser.add_argument('--dead-slides', action='store_true', dest='dead_slides',
+                        help='Check for dead slides (heading only, no body content)')
     parser.add_argument('--images', action='store_true',
                         help='Check that image references point to existing local files')
     parser.add_argument('--numbering', action='store_true',
@@ -320,7 +405,8 @@ def main() -> None:
 
     # Default: all checks enabled
     flags = [args.links, args.labels, args.fences, args.urls,
-             args.whitespace, args.slides, args.images, args.numbering,
+             args.whitespace, args.slides, args.dead_slides,
+             args.images, args.numbering,
              args.svg_content, args.inline_svg, args.title_svg]
     explicit = any(flags)
     checks = []
@@ -336,6 +422,8 @@ def main() -> None:
         checks.append(_check_whitespace)
     if args.slides or not explicit:
         checks.append(_check_slides)
+    if args.dead_slides or not explicit:
+        checks.append(_check_dead_slides)
     if args.images or not explicit:
         checks.append(_check_images)
     if args.numbering or not explicit:

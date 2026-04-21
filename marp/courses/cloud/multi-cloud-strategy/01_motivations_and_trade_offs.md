@@ -99,12 +99,6 @@ audience:
 
 ---
 
-<!-- SVG placeholder: chart comparing complexity growth with number of cloud providers -->
-
-## Complexity Growth with Provider Count
-
----
-
 ## Benefits vs Risks
 
 ![risks](svg/courses/cloud/multi-cloud-strategy/01_motivations/multi_cloud_risks.svg)

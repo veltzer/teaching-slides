@@ -54,10 +54,6 @@ audience:
 
 ---
 
-## **Part 1: Understanding Key Differences**
-
----
-
 ## **Difference 1: `print` Statement vs. Function**
 
 * **Python 2:** `print "Hello"` (statement)
@@ -293,10 +289,6 @@ print >> sys.stderr, "Error!"
 
 ---
 
-## **Part 2: Planning Your Port**
-
----
-
 ## **Step 1: Assess Your Codebase**
 
 * **Size and Complexity:** How much code needs porting?
@@ -362,10 +354,6 @@ print >> sys.stderr, "Error!"
 * **Team Training:** If needed, get the team up to speed on Python 3 differences.
 * **Allocate Time:** Porting takes time and effort; don't underestimate it.
 * **Designate a Lead/Champion:** Someone to drive the porting effort.
-
----
-
-## **Part 3: Tools for Porting**
 
 ---
 
@@ -470,10 +458,6 @@ six.print_("Hello", "world", sep="-", end="!\n")
 * **Flake8:** (Combines PyFlakes, pycodestyle, McCabe)
     * Excellent for catching syntax errors and style issues.
 * Integrate linters into your CI/CD pipeline.
-
----
-
-## **Part 4: The Porting Process - Step-by-Step**
 
 ---
 
@@ -643,10 +627,6 @@ def process_data(text_data: str): # Expect unicode string
 
 ---
 
-## **Part 5: Common Pitfalls & Challenges**
-
----
-
 ## **Pitfall 1: Underestimating the Effort**
 
 * Porting can be more time-consuming than expected, especially for large, old, or complex codebases.
@@ -698,10 +678,6 @@ def process_data(text_data: str): # Expect unicode string
 
 ---
 
-## **Part 6: Best Practices for a Smooth Transition**
-
----
-
 ## **Best Practice 1: Write New Code with Python 3 in Mind**
 
 * Even if you're still on Python 2, start writing new code that is easily portable or already Python 2/3 compatible.
@@ -743,10 +719,6 @@ def process_data(text_data: str): # Expect unicode string
 * Allows for continuous integration and deployment.
 * Reduces risk compared to a "big bang" approach.
 * Requires a codebase that can run in a hybrid Py2/Py3 environment (using `six` or similar).
-
----
-
-## **Part 7: Beyond the Port: Embracing Python 3**
 
 ---
 

@@ -58,12 +58,6 @@ audience:
 
 ---
 
-<!-- SVG placeholder: diagram showing Kubernetes portable layer vs provider-specific layer -->
-
-## Kubernetes Portability Boundaries
-
----
-
 ## Portable Deployment Example
 
 ```yaml

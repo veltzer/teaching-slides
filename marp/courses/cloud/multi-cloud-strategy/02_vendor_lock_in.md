@@ -90,12 +90,6 @@ audience:
 
 ---
 
-<!-- SVG placeholder: matrix of lock-in vectors rated by severity across AWS, Azure, GCP -->
-
-## Lock-In Assessment Matrix
-
----
-
 ## Data Gravity
 - Data attracts compute — not the other way around
 - Moving petabytes between clouds takes weeks or months

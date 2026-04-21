@@ -611,10 +611,6 @@ def get_user_with_orders_nosql():
 
 ---
 
-## Decision Making Frameworks
-
----
-
 ## Trade-off Analysis
 
 ![decision_making_frameworks](svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)

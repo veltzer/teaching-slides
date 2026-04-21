@@ -144,10 +144,6 @@ Error: KeyError: 'users'
 
 ---
 
-## How Sampling Affects Output
-
----
-
 ## Temperature, Top-p, and Sampling Parameters
 
 ![how_sampling_affects_output](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
@@ -294,10 +290,6 @@ review = client.chat.completions.create(
 - OpenAI models prefer markdown-structured prompts
 - Google's Gemini supports inline media natively in prompts
 - Always test the same prompt across providers before committing
-
----
-
-## Breaking Complex Tasks into Stages
 
 ---
 
@@ -541,10 +533,6 @@ response = client.messages.create(
 1. Use shorter models (`gpt-4o-mini`, `claude-haiku`) for classification tasks
 1. Batch similar requests to maximize cache hit rates
 1. Monitor per-prompt cost with token logging middleware
-
----
-
-## Building a Prompt Evaluation Loop
 
 ---
 

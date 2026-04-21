@@ -190,9 +190,6 @@ pub enum AppError {
 - Callers need to match on errors
 
 ---
-## JSON Processing
-
----
 ## `serde_json` Overview
 
 ```toml

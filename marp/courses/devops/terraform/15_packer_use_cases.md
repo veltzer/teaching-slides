@@ -16,10 +16,6 @@ audience:
 # Packer Use Cases
 
 ---
-
-## Packer Use Case Overview
-
----
 ## Packer Use Cases
 
 ![packer_use_case_overview](svg/courses/devops/terraform/15_packer_use_cases/packer_use_case_overview.svg)

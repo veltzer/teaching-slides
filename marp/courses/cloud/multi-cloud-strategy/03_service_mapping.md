@@ -123,12 +123,6 @@ gcloud compute instances create web-server \
 
 ---
 
-<!-- SVG placeholder: container services comparison table across providers -->
-
-## Container Services Comparison
-
----
-
 ## Serverless: Functions as a Service
 - AWS: Lambda (pioneer, largest ecosystem)
 - Azure: Functions (strong .NET integration)
@@ -208,12 +202,6 @@ gcloud storage buckets create gs://my-bucket-name \
 
 ---
 
-<!-- SVG placeholder: VPC architecture comparison across three providers -->
-
-## VPC Architecture Comparison
-
----
-
 ## Load Balancing
 - AWS: ALB (L7), NLB (L4), Classic LB (legacy)
 - Azure: Application Gateway (L7), Load Balancer (L4)
@@ -263,12 +251,6 @@ gcloud storage buckets create gs://my-bucket-name \
 - Azure has exclusive OpenAI API access
 - GCP leads in custom model training infrastructure
 - AI services are high lock-in — model APIs change frequently
-
----
-
-<!-- SVG placeholder: comprehensive service mapping table across all three providers -->
-
-## Complete Service Mapping Reference
 
 ---
 
