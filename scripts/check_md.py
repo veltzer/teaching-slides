@@ -16,6 +16,8 @@ Checks:
   --svg-content Check that slides with SVG images have no other content on the same slide
   --inline-svg  Flag inline <svg>...</svg> elements in markdown (forbidden — SVGs must be external files)
   --title-svg   Check that every 00_title.md has a corresponding svg/.../title.svg
+  --table-width Flag markdown tables with more than MAX_TABLE_COLUMNS columns
+  --slide-length Flag slides with more than MAX_SLIDE_LINES non-blank body lines
 
 Usage:
     check_md.py --links --labels file1.md file2.md ...
@@ -47,6 +49,9 @@ _IMAGE_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
 _SVG_IMAGE_RE = re.compile(r'!\[.*?\]\(.*?\.svg\)')
 _HEADING_RE = re.compile(r'^#{1,6}\s')
 _NUMBERED_LIST_RE = re.compile(r'^(\s*)([2-9]\d*)\. ')
+
+MAX_TABLE_COLUMNS = 6
+MAX_SLIDE_LINES = 40
 
 
 # ── Helpers ──
@@ -269,6 +274,75 @@ def _check_numbering(path: Path, text: str, text_no_code: str, lines: list[str])
     return errors
 
 
+def _check_slide_length(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Flag slides with more than MAX_SLIDE_LINES non-blank body lines.
+
+    Body excludes blank lines and heading lines (#..). Code-fence content counts
+    toward the limit since it still renders and consumes vertical space.
+    """
+    errors: list[str] = []
+    slides = _split_slides(lines)
+    for start, slide_lines in slides:
+        in_fence = False
+        count = 0
+        heading_line_no = None
+        for offset, ln in enumerate(slide_lines):
+            stripped = ln.strip()
+            if re.match(r'^[ \t]{0,3}```', ln):
+                in_fence = not in_fence
+                count += 1
+                continue
+            if in_fence:
+                count += 1
+                continue
+            if not stripped:
+                continue
+            if stripped.startswith('#'):
+                if heading_line_no is None:
+                    heading_line_no = start + offset
+                continue
+            count += 1
+        if count > MAX_SLIDE_LINES:
+            report_line = heading_line_no if heading_line_no is not None else start
+            errors.append(
+                f"{path}:{report_line}: slide has {count} body lines "
+                f"(max {MAX_SLIDE_LINES}) — split into smaller slides"
+            )
+    return errors
+
+
+def _check_table_width(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Flag markdown tables whose header row has more than MAX_TABLE_COLUMNS columns."""
+    errors: list[str] = []
+    in_code = False
+    for line_no, line in enumerate(lines, 1):
+        stripped = line.strip()
+        if stripped.startswith('```'):
+            in_code = not in_code
+            continue
+        if in_code:
+            continue
+        # A table header line starts and ends with `|` and the NEXT non-blank
+        # non-code line is the `---` separator. Detect header via the separator
+        # below: a line like `|---|---|---|`.
+        if not (stripped.startswith('|') and stripped.endswith('|')):
+            continue
+        # Look at the next line to see if it's a separator
+        if line_no >= len(lines):
+            continue
+        next_line = lines[line_no].strip() if line_no < len(lines) else ''
+        if not re.match(r'^\|[\s:|-]+\|$', next_line):
+            continue
+        # Count columns: split on unescaped pipes, drop leading/trailing empties.
+        cells = [c for c in stripped.strip('|').split('|')]
+        if len(cells) > MAX_TABLE_COLUMNS:
+            errors.append(
+                f"{path}:{line_no}: table has {len(cells)} columns "
+                f"(max {MAX_TABLE_COLUMNS})"
+            )
+    return errors
+
+
 def _check_svg_content(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
     raw_slides = re.split(r'\n---\n', text)
@@ -401,13 +475,18 @@ def main() -> None:
                         help='Flag inline <svg>...</svg> elements in markdown (SVGs must be external files)')
     parser.add_argument('--title-svg', action='store_true', dest='title_svg',
                         help='Check that every 00_title.md has a corresponding svg/.../title.svg')
+    parser.add_argument('--table-width', action='store_true', dest='table_width',
+                        help=f'Flag tables with more than {MAX_TABLE_COLUMNS} columns')
+    parser.add_argument('--slide-length', action='store_true', dest='slide_length',
+                        help=f'Flag slides with more than {MAX_SLIDE_LINES} body lines')
     args = parser.parse_args()
 
     # Default: all checks enabled
     flags = [args.links, args.labels, args.fences, args.urls,
              args.whitespace, args.slides, args.dead_slides,
              args.images, args.numbering,
-             args.svg_content, args.inline_svg, args.title_svg]
+             args.svg_content, args.inline_svg, args.title_svg,
+             args.table_width, args.slide_length]
     explicit = any(flags)
     checks = []
     if args.links or not explicit:
@@ -434,6 +513,10 @@ def main() -> None:
         checks.append(_check_inline_svg)
     if args.title_svg or not explicit:
         checks.append(_check_title_svg)
+    if args.table_width or not explicit:
+        checks.append(_check_table_width)
+    if args.slide_length or not explicit:
+        checks.append(_check_slide_length)
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []
