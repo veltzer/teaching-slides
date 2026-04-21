@@ -72,7 +72,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 ---
 
-## Kaminsky Attack (2008)
+## Kaminsky Attack (2008): Overview
 
 The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
 
@@ -125,7 +125,7 @@ dig example.com +dnssec +short
 
 ---
 
-## DNSSEC: How It Works
+## DNSSEC: How It Works: Example
 
 ```bash
 # Verify DNSSEC for a domain

@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## 1. Introduction to Azure Boards
+## 1. Introduction to Azure Boards: Details
 
 - Azure Boards is Microsoft's agile project management tool within Azure DevOps
 - Helps teams plan, track, and discuss work across the entire development process

@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## DNS Concepts
+## DNS Concepts: Details
 
 - DNS translates domain names to IP addresses
 - Hierarchical, distributed database

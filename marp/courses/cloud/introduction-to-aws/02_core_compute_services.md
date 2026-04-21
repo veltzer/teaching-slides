@@ -33,7 +33,7 @@ audience:
 
 ---
 
-## EC2 Instance Lifecycle
+## EC2 Instance Lifecycle: Details
 1. Launch (from an AMI)
 1. Pending (booting up)
 1. Running (billing starts)

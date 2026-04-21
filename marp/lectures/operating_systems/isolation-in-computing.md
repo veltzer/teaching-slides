@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## What is Isolation?
+## What is Isolation?: Details
 
 Isolation is the fundamental principle of separating components to prevent unwanted interaction
 Key benefits:
@@ -110,7 +110,7 @@ int secret = 100;
 
 ---
 
-## Memory Protection Unit (MPU)
+## Memory Protection Unit (MPU): Overview
 
 Hardware enforces memory boundaries
 
@@ -122,7 +122,7 @@ Hardware enforces memory boundaries
 
 ---
 
-## Protection Rings
+## Protection Rings: Overview
 
 CPU privilege levels enforce isolation
 
@@ -190,7 +190,7 @@ echo 50000 > /sys/fs/cgroup/cpu/myapp/cpu.cfs_quota_us
 
 ---
 
-## Docker Isolation
+## Docker Isolation: Overview
 
 Docker builds on Linux kernel features for container isolation
 
@@ -261,7 +261,7 @@ docker run --memory="512m" --cpus="0.5" myapp
 
 ---
 
-## Kubernetes Isolation
+## Kubernetes Isolation: Overview
 
 K8s adds orchestration-level isolation
 
@@ -373,7 +373,7 @@ rules:
 
 ---
 
-## Virtual Machines - Strong Isolation
+## Virtual Machines - Strong Isolation: Overview
 
 VMs provide hardware-level isolation
 
@@ -395,7 +395,7 @@ Modern CPUs provide isolation support
 
 ---
 
-## Microservices Architecture
+## Microservices Architecture: Overview
 
 Isolation through service boundaries
 
@@ -478,7 +478,7 @@ Multi-tenancy in cloud platforms
 
 ---
 
-## Zero Trust Architecture
+## Zero Trust Architecture: Overview
 
 Never trust, always verify
 

@@ -32,7 +32,7 @@ audience:
 
 ---
 
-## Memory Acquisition Methods
+## Memory Acquisition Methods: Comparison
 
 | Method          | Pros                      | Cons                      |
 |----------------|---------------------------|---------------------------|
@@ -818,7 +818,7 @@ echo "[*] Analysis complete: $OUT"
 
 ---
 
-## Comparing Memory and Disk Evidence
+## Comparing Memory and Disk Evidence: Details
 
 - Disk analysis shows persistent state
 - Memory analysis shows runtime state

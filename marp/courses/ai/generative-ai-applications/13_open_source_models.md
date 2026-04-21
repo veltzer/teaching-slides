@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## Why Open Source Models?
+## Why Open Source Models?: Comparison
 
 | Advantage | Explanation |
 |-----------|-------------|
@@ -381,7 +381,7 @@ async def chat(request: ChatRequest):
 ![model_merging_combining_expertise](svg/courses/ai/generative-ai-applications/13_open_source_models/model_merging_combining_expertise.svg)
 
 ---
-## Model Merging — Combining Expertise
+## Model Merging — Combining Expertise: Example
 
 ```python
 # Using mergekit
@@ -390,7 +390,7 @@ async def chat(request: ChatRequest):
 
 ---
 
-## Speculative Decoding
+## Speculative Decoding: Overview
 
 Use a small model to speed up a large model:
 

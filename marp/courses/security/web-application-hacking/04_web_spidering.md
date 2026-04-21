@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## What is Web Spidering?
+## What is Web Spidering?: Details
 
 - Automated crawling of web applications
 - Follows links to discover pages and resources

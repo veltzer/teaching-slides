@@ -141,7 +141,7 @@ public class GetUserUseCase {
 
 ---
 
-## Event Handling Pattern
+## Event Handling Pattern: Example
 
 ```java
 public class UserEvents {

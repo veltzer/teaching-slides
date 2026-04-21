@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Understanding CPU Optimization
+## Understanding CPU Optimization: Details
 
 - Compiler optimization is crucial for performance
 - CPU-specific tuning can provide significant speedups

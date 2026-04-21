@@ -272,7 +272,7 @@ let hw = &s[..];         // whole string
 ```
 
 ---
-## String Literals as Slices
+## String Literals as Slices: Example
 
 ```rust
 let s: &str = "Hello, world!";

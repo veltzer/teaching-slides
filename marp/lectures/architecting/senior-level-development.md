@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Script everything
+## Script everything: Details
 
 * This means even things you do once every year
 * The practice will make you better at it

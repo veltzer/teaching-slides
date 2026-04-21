@@ -238,7 +238,7 @@ app.get('/dns', (req, res) => {
 
 ---
 
-## Shellshock Deep Dive (CVE-2014-6271)
+## Shellshock Deep Dive (CVE-2014-6271): Example
 
 ```bash
 # The Shellshock vulnerability allowed code execution
@@ -400,7 +400,7 @@ unshare --mount --pid --fork --mount-proc /bin/bash
 
 ---
 
-## Detection Techniques
+## Detection Techniques: Example
 
 ```bash
 # Monitor for command injection attempts in web logs

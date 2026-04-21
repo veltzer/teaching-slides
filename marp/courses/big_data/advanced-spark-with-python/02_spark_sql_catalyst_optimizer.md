@@ -463,7 +463,7 @@ query.explain(mode="cost")
 ```
 
 ---
-## Predicate Pushdown: Before vs After
+## Predicate Pushdown: Before vs After: Example
 
 ```python
 # Query: filter after join (what you write)

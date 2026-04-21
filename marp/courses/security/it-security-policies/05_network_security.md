@@ -39,7 +39,7 @@ audience:
 
 ---
 
-## `HTTPS` - What the Padlock Means
+## `HTTPS` - What the Padlock Means: Details
 
 - `HTTPS` encrypts data between your browser and the website
 - Without it, anyone on the same network can read your traffic
@@ -113,7 +113,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ---
 
-## Firewall Basics
+## Firewall Basics: Details
 
 - A firewall is a security guard for network traffic
 - It allows approved connections and blocks suspicious ones

@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## Linux Boot Sequence
+## Linux Boot Sequence: Details
 
 1. BIOS/UEFI initialization
 1. Bootloader (GRUB) loads kernel
@@ -41,7 +41,7 @@ audience:
 
 ---
 
-## Old SysV Init System
+## Old SysV Init System: Details
 
 Traditional runlevels:
 - 0: Halt
@@ -59,7 +59,7 @@ Traditional runlevels:
 
 ---
 
-## systemd Introduction
+## systemd Introduction: Details
 
 Key features:
 - Service management
@@ -76,7 +76,7 @@ Key features:
 
 ---
 
-## systemd Units
+## systemd Units: Example
 
 Common unit types:
 ```bash
@@ -116,7 +116,7 @@ systemctl disable nginx.service
 
 ---
 
-## Service Management
+## Service Management: Example
 
 Common operations:
 ```bash
@@ -158,7 +158,7 @@ WantedBy=multi-user.target
 
 ---
 
-## Service File Sections
+## Service File Sections: Example
 
 Common options:
 ```ini
@@ -258,7 +258,7 @@ exit 0
 
 ---
 
-## Systemd Targets
+## Systemd Targets: Example
 
 Target management:
 ```bash
@@ -277,7 +277,7 @@ systemctl isolate graphical.target
 
 ---
 
-## Troubleshooting Boot Issues
+## Troubleshooting Boot Issues: Example
 
 Debug commands:
 ```bash

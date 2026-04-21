@@ -51,7 +51,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 ```
 
 ---
-## Core Git Ideas
+## Core Git Ideas: Details
 
 **Three fundamental concepts:**
 
@@ -186,7 +186,7 @@ and session management.
 - Commit message
 
 ---
-## Object Relationships
+## Object Relationships: Overview
 
 How the three structures connect:
 
@@ -530,7 +530,7 @@ size-pack 856      # KB in pack files
 ```
 
 ---
-## Delta Compression
+## Delta Compression: Details
 
 How `Git` stores similar objects efficiently:
 
@@ -718,7 +718,7 @@ git cat-file -p 557db03
 - `update-ref`: Update references
 
 ---
-## Understanding Merge Mechanics
+## Understanding Merge Mechanics: Details
 
 What happens during a three-way merge:
 

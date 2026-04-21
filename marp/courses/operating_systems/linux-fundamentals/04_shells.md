@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## Why Use a Shell
+## Why Use a Shell: Details
 
 The shell is your interface to the system:
 - Command interpretation
@@ -43,7 +43,7 @@ The shell is your interface to the system:
 
 ---
 
-## Shell Variables: Bourne Family (sh/ksh/bash)
+## Shell Variables: Bourne Family (sh/ksh/bash): Example
 
 ```bash
 # Setting variables
@@ -121,7 +121,7 @@ set files = `ls`
 
 ---
 
-## Glob Patterns
+## Glob Patterns: Example
 
 Examples:
 ```bash
@@ -141,7 +141,7 @@ ls [a-z]*.txt
 
 ---
 
-## Input/Output Redirection
+## Input/Output Redirection: Example
 
 Examples:
 ```bash
@@ -196,7 +196,7 @@ unalias ll
 
 ---
 
-## Pipes
+## Pipes: Example
 
 Examples:
 ```bash
@@ -251,7 +251,7 @@ history
 
 ---
 
-## Session Initialization
+## Session Initialization: Example
 
 Files for Bourne Family:
 ```bash

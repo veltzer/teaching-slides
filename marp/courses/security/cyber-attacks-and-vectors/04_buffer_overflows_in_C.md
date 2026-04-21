@@ -175,7 +175,7 @@ void secure_heap(const char *input) {
 
 ---
 
-## Format String Vulnerability
+## Format String Vulnerability: Example
 
 ```c
 #include <stdio.h>
@@ -253,7 +253,7 @@ void secure_integer(size_t count, size_t element_size) {
 
 ---
 
-## Heartbleed (CVE-2014-0160) Deep Dive
+## Heartbleed (CVE-2014-0160) Deep Dive: Overview
 
 The bug: Server trusts client-specified length without bounds checking.
 
@@ -311,7 +311,7 @@ gcc -Wall -Wextra -Werror \
 
 ---
 
-## How ASLR Works
+## How ASLR Works: Example
 
 ```bash
 # Check ASLR status on Linux

@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## Container Concepts
+## Container Concepts: Details
 
 - Containers share the host kernel (unlike VMs)
 - Isolated via `namespaces` and `cgroups`
@@ -598,7 +598,7 @@ Use cases:
 - Support `Apple Silicon` development alongside production `AMD64`
 
 ---
-## Container Orchestration Overview
+## Container Orchestration Overview: Overview
 
 Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `Kubernetes` for large-scale.
 

@@ -223,7 +223,7 @@ perf stat ./target/release/my_app
 ```
 
 ---
-## Flamegraphs
+## Flamegraphs: Example
 
 ```bash
 # Install flamegraph tool
@@ -243,7 +243,7 @@ cargo flamegraph --bin my_app
 ![stack_depth_call_chain](svg/courses/languages/rust/advanced-rust/09_performance/stack_depth_call_chain.svg)
 
 ---
-## Flamegraphs
+## Flamegraphs: Example (2)
 
 ```bash
 # For specific binary with arguments
@@ -487,7 +487,7 @@ fn main() {
 ```
 
 ---
-## Using mimalloc
+## Using mimalloc: Example
 
 ```toml
 # Cargo.toml
@@ -947,7 +947,7 @@ fn main() {
 Cross-crate optimization
 
 ---
-## Configuring LTO
+## Configuring LTO: Example
 
 ```toml
 # Cargo.toml

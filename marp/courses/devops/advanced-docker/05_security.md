@@ -364,7 +364,7 @@ docker trust sign myregistry.com/myapp:1.0
 ![content_trust_key_management](svg/courses/devops/advanced-docker/05_security/content_trust_key_management.svg)
 
 ---
-## Content Trust - Key Management
+## Content Trust - Key Management: Example
 
 ```bash
 # Key storage location

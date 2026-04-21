@@ -25,7 +25,7 @@ audience:
 
 ---
 
-## What is Logstash?
+## What is Logstash?: Details
 
 1. **Data Processing Pipeline** that ingests data from multiple sources
 1. **Transforms** and **enriches** data in real-time
@@ -52,7 +52,7 @@ audience:
 
 ---
 
-## Logstash Architecture
+## Logstash Architecture: Details
 
 **Core Components:**
 1. **Input Plugins** - Collect data from sources
@@ -455,7 +455,7 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 
 ---
 
-## Log Aggregation Architecture
+## Log Aggregation Architecture: Details
 
 **Benefits:**
 1. Centralized logging
@@ -586,7 +586,7 @@ output {
 
 ---
 
-## Scaling Logstash
+## Scaling Logstash: Overview
 
 **Horizontal Scaling:**
 
@@ -598,7 +598,7 @@ output {
 
 ---
 
-## Scaling Logstash
+## Scaling Logstash: Details
 
 **Vertical Scaling:**
 1. Increase CPU cores

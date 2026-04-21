@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Introduction to Scala
+## Introduction to Scala: Details
 
 - Multi-paradigm programming language
 - Runs on JVM

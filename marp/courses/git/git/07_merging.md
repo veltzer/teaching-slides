@@ -267,7 +267,7 @@ git pull origin main
 ```
 
 ---
-## Pull with Rebase
+## Pull with Rebase: Example
 
 Use `--rebase` to maintain linear history:
 

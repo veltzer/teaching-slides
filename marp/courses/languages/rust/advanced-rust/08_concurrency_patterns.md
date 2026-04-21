@@ -33,7 +33,7 @@ Channels, Shared State, Data Parallelism, and Advanced Patterns
 Message passing for safe concurrency
 
 ---
-## std::sync::mpsc Basics
+## std::sync::mpsc Basics: Example
 
 ```rust
 use std::sync::mpsc;
@@ -186,7 +186,7 @@ fn main() {
 ![crossbeam_vs_std_sync_mpsc](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/crossbeam_vs_std_sync_mpsc.svg)
 
 ---
-## Channel Patterns: Fan-Out / Fan-In
+## Channel Patterns: Fan-Out / Fan-In: Example
 
 ```rust
 use std::sync::mpsc;
@@ -576,7 +576,7 @@ fn main() {
 Effortless parallel iterators
 
 ---
-## Rayon Basics: par_iter
+## Rayon Basics: par_iter: Example
 
 ```rust
 // Cargo.toml: rayon = "1.10"

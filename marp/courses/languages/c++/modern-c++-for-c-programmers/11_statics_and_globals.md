@@ -844,7 +844,7 @@ namespace GoodLibrary {
 ```
 
 ---
-## Memory Layout of Static Variables
+## Memory Layout of Static Variables: Overview
 
 Understanding where static variables are stored.
 

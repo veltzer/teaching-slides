@@ -20,7 +20,7 @@ audience:
 
 ---
 
-## Your First Shell Script
+## Your First Shell Script: Example
 
 Basic script:
 ```bash
@@ -73,7 +73,7 @@ exit 0
 
 ---
 
-## Variables
+## Variables: Example
 
 Variable examples:
 ```bash
@@ -97,7 +97,7 @@ read -p "Enter name: " user_name
 
 ---
 
-## Command Line Arguments
+## Command Line Arguments: Example
 
 Argument handling:
 ```bash
@@ -143,7 +143,7 @@ let "count--"
 
 ---
 
-## Exit Status and Error Handling
+## Exit Status and Error Handling: Example
 
 Error handling:
 ```bash
@@ -168,7 +168,7 @@ fi
 
 ---
 
-## Expressions and Operators
+## Expressions and Operators: Example
 
 Examples:
 ```bash
@@ -242,7 +242,7 @@ esac
 
 ---
 
-## Loops
+## Loops: Example
 
 Examples:
 ```bash

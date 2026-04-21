@@ -56,13 +56,13 @@ Timeline of Generative AI
 
 ---
 
-## Categories of Generative Models
+## Categories of Generative Models: Overview
 
 Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 ---
 
-## The Transformer — Foundation of Modern GenAI
+## The Transformer — Foundation of Modern GenAI: Overview
 
 Published in 2017: "Attention Is All You Need"
 
@@ -74,7 +74,7 @@ Published in 2017: "Attention Is All You Need"
 
 ---
 
-## Self-Attention Mechanism — Intuition
+## Self-Attention Mechanism — Intuition: Overview
 
 Every token asks: "Which other tokens should I pay attention to?"
 
@@ -111,7 +111,7 @@ def self_attention(Q, K, V):
 
 ---
 
-## Multi-Head Attention
+## Multi-Head Attention: Overview
 
 Instead of one attention function, use multiple "heads" in parallel:
 
@@ -121,7 +121,7 @@ Instead of one attention function, use multiple "heads" in parallel:
 ![multi_head_attention](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/multi_head_attention.svg)
 
 ---
-## Multi-Head Attention
+## Multi-Head Attention: Details
 
 Each head can learn different relationship patterns:
 - Head 1: syntactic relationships
@@ -184,7 +184,7 @@ for t in tokens:
 
 ---
 
-## Tokenization Methods
+## Tokenization Methods: Comparison
 
 | Method | Description | Used By |
 |--------|-------------|---------|
@@ -232,7 +232,7 @@ for text in examples:
 
 ---
 
-## Encoder vs. Decoder vs. Encoder-Decoder
+## Encoder vs. Decoder vs. Encoder-Decoder: Overview
 
 **Modern generative models are almost all decoder-only.**
 
@@ -297,7 +297,7 @@ def temperature_sample(logits, temperature=1.0):
 
 ---
 
-## Emergence — Surprising Capabilities at Scale
+## Emergence — Surprising Capabilities at Scale: Overview
 
 Some abilities only appear when models reach sufficient size:
 
@@ -307,13 +307,13 @@ Some abilities only appear when models reach sufficient size:
 ![emergence_surprising_capabilities_at_scale](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/emergence_surprising_capabilities_at_scale.svg)
 
 ---
-## Emergence — Surprising Capabilities at Scale
+## Emergence — Surprising Capabilities at Scale: Overview (2)
 
 This is called **emergent behavior** — capabilities that cannot be predicted by extrapolating from smaller models.
 
 ---
 
-## Scaling Laws
+## Scaling Laws: Overview
 
 Research shows predictable relationships between model size and performance:
 
@@ -323,7 +323,7 @@ Research shows predictable relationships between model size and performance:
 ![scaling_laws](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/scaling_laws.svg)
 
 ---
-## Scaling Laws
+## Scaling Laws: Overview (2)
 
 **Chinchilla law:** Optimal training uses ~20 tokens per parameter.
 
@@ -371,7 +371,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 
 ---
 
-## Context Windows — How Much Can a Model "See"?
+## Context Windows — How Much Can a Model "See"?: Comparison
 
 | Model | Context Window | Equivalent |
 |-------|---------------|------------|
@@ -547,7 +547,7 @@ tokens = tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
 
 ---
 
-## The Mixture-of-Experts (MoE) Architecture
+## The Mixture-of-Experts (MoE) Architecture: Overview
 
 Used by `Mixtral`, `GPT-4` (rumored), and `Switch Transformer`:
 

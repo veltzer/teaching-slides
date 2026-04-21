@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## Order of Volatility
+## Order of Volatility: Details
 
 - Collect volatile data first - it disappears on power loss
 - RFC 3227 defines the order of volatility

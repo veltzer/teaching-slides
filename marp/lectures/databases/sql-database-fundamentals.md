@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What Are SQL Databases?
+## What Are SQL Databases?: Details
 
 - Relational Database Management Systems (RDBMS)
 - Structured data in tables with rows and columns
@@ -55,7 +55,7 @@ The foundation of SQL database guarantees:
 
 ---
 
-## Atomicity
+## Atomicity: Overview
 
 All or nothing - no partial transactions
 
@@ -169,7 +169,7 @@ Trade-off: Performance vs Consistency
 
 ---
 
-## SQL Databases and CAP Theorem
+## SQL Databases and CAP Theorem: Overview
 
 Traditional SQL: CA systems (single node)
 
@@ -221,7 +221,7 @@ Why SQL databases struggle with distribution:
 
 ---
 
-## Master-Slave Replication
+## Master-Slave Replication: Overview
 
 Writes to master, reads from slaves
 
@@ -255,7 +255,7 @@ Writes to master, reads from slaves
 
 ---
 
-## Multi-Master Replication
+## Multi-Master Replication: Overview
 
 Conflict resolution required
 
@@ -328,7 +328,7 @@ Attempting to get best of both worlds:
 
 ---
 
-## NewSQL and CAP
+## NewSQL and CAP: Overview
 
 Usually CP with high availability
 
@@ -358,7 +358,7 @@ For CAP considerations:
 
 ---
 
-## Connection Pooling
+## Connection Pooling: Overview
 
 Reduces connection overhead
 
@@ -384,7 +384,7 @@ Reduces connection overhead
 
 ---
 
-## Federation Pattern
+## Federation Pattern: Overview
 
 Split by functional areas
 

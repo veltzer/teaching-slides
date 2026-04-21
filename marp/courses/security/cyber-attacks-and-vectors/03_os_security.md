@@ -94,7 +94,7 @@ setfacl -b /var/log/application.log
 
 ---
 
-## PAM (Pluggable Authentication Modules)
+## PAM (Pluggable Authentication Modules): Example
 
 PAM controls authentication on Linux systems:
 ```bash
@@ -162,7 +162,7 @@ sysctl -p
 
 ---
 
-## CIS Benchmarks
+## CIS Benchmarks: Overview
 
 The Center for Internet Security provides hardening baselines:
 
@@ -174,7 +174,7 @@ The Center for Internet Security provides hardening baselines:
 
 ---
 
-## CIS Benchmarks
+## CIS Benchmarks: Example
 
 Tools for automated compliance checking:
 - **OpenSCAP**: Open-source compliance scanner
@@ -301,7 +301,7 @@ ls -la /var/run/docker.sock
 
 ---
 
-## Brute Force and Credential Attacks
+## Brute Force and Credential Attacks: Example
 
 ```bash
 # Detecting brute force attempts in auth logs

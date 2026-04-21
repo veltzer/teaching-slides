@@ -53,7 +53,7 @@ url = s3.generate_presigned_url(
 
 ---
 
-## Pre-Signed URL Flow
+## Pre-Signed URL Flow: Details
 1. Client requests download from application
 1. Application generates pre-signed URL (valid for N minutes)
 1. Application returns URL to client

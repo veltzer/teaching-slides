@@ -720,7 +720,7 @@ ip netns exec red ping 10.0.0.2
 
 ---
 
-## Network Namespaces Diagram
+## Network Namespaces Diagram: Example
 
 ```bash
 # Run a process inside a namespace
@@ -764,7 +764,7 @@ network:
 
 ---
 
-## Traffic Shaping with tc
+## Traffic Shaping with tc: Overview
 
 `tc` (traffic control) manages bandwidth and latency on interfaces.
 
@@ -776,7 +776,7 @@ network:
 
 ---
 
-## Traffic Shaping with tc
+## Traffic Shaping with tc: Example
 
 ```bash
 # Limit bandwidth to 1Mbit on eth0
@@ -961,7 +961,7 @@ networkctl status eth0
 
 ---
 
-## Network Boot (PXE)
+## Network Boot (PXE): Overview
 
 `PXE` (Preboot Execution Environment) allows machines to boot from the network using DHCP and TFTP.
 
@@ -973,7 +973,7 @@ networkctl status eth0
 
 ---
 
-## Network Boot (PXE)
+## Network Boot (PXE): Example
 
 ```bash
 # Install TFTP server

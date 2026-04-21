@@ -196,7 +196,7 @@ result = pipe(
 ![controlnet_fine_grained_control](svg/courses/ai/generative-ai-applications/16_image_generation/controlnet_fine_grained_control.svg)
 
 ---
-## ControlNet — Fine-Grained Control
+## ControlNet — Fine-Grained Control: Example
 
 ```python
 from diffusers import ControlNetModel, StableDiffusionControlNetPipeline
@@ -267,7 +267,7 @@ response = requests.post(
 ![noise_schedulers_compared](svg/courses/ai/generative-ai-applications/16_image_generation/noise_schedulers_compared.svg)
 
 ---
-## Noise Schedulers Compared
+## Noise Schedulers Compared: Example
 
 ```python
 from diffusers import (

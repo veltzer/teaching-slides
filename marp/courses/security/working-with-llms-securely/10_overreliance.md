@@ -168,7 +168,7 @@ def grounded_response(user_query):
 
 ---
 
-## Mitigation: Human Review Gates
+## Mitigation: Human Review Gates: Overview
 
 Critical outputs should always pass through human review
 

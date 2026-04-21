@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What Are ACID Guarantees?
+## What Are ACID Guarantees?: Details
 
 ACID is an acronym that stands for:
 - Atomicity

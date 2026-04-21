@@ -31,7 +31,7 @@ Browser uses:  93.184.216.34 to establish TCP connection
 
 ---
 
-## The DNS Hierarchy
+## The DNS Hierarchy: Overview
 
 DNS is organized as an inverted tree structure with the root at the top.
 
@@ -43,7 +43,7 @@ DNS is organized as an inverted tree structure with the root at the top.
 
 ---
 
-## The DNS Hierarchy
+## The DNS Hierarchy: Details
 
 Each level is called a "zone" and is managed by different organizations:
 - **Root zone**: managed by ICANN, served by 13 root server clusters (a.root-servers.net through m.root-servers.net)
@@ -133,7 +133,7 @@ $ dig google.com A +short
 
 ---
 
-## CNAME Records
+## CNAME Records: Overview
 
 CNAME (Canonical Name) creates an alias from one domain name to another.
 
@@ -145,7 +145,7 @@ CNAME (Canonical Name) creates an alias from one domain name to another.
 
 ---
 
-## CNAME Records
+## CNAME Records: Example
 
 ```bash
 $ dig www.example.com
@@ -160,7 +160,7 @@ example.com.        3600    IN    A       93.184.216.34
 
 ---
 
-## MX Records
+## MX Records: Example
 
 MX (Mail Exchange) records direct email for a domain to the correct mail servers.
 ```bash
@@ -180,7 +180,7 @@ The number before the server name is the **priority** (lower = higher priority).
 
 ---
 
-## MX Records
+## MX Records: Overview
 
 If mail1 is unreachable, the sender automatically tries mail2, then mail3.
 
@@ -218,7 +218,7 @@ $ dig example.com TXT +short
 
 ---
 
-## NS Records
+## NS Records: Example
 
 NS (Name Server) records delegate a DNS zone to specific authoritative name servers.
 ```bash
@@ -324,7 +324,7 @@ _sip._tcp.example.com. 3600 IN SRV 20 0  5060 sip3.example.com.
 
 ---
 
-## Recursive vs Iterative Resolution
+## Recursive vs Iterative Resolution: Overview
 
 DNS resolution can happen in two modes:
 **Recursive Resolution** -- the resolver does all the work:
@@ -337,7 +337,7 @@ DNS resolution can happen in two modes:
 
 ---
 
-## Recursive vs Iterative Resolution
+## Recursive vs Iterative Resolution: Example
 
 **Iterative Resolution** -- each server returns the next server to ask:
 ```misc
@@ -352,7 +352,7 @@ In practice, your computer uses recursive resolution (asking your configured DNS
 
 ---
 
-## DNS Resolution: Step by Step
+## DNS Resolution: Step by Step: Overview
 
 What happens when you type `www.example.com` in your browser:
 
@@ -364,7 +364,7 @@ What happens when you type `www.example.com` in your browser:
 
 ---
 
-## DNS Resolution: Step by Step
+## DNS Resolution: Step by Step: Example
 
 ```bash
 # Trace the full resolution path
@@ -608,7 +608,7 @@ $ host -t NS example.com
 
 ---
 
-## DNSSEC: Securing DNS
+## DNSSEC: Securing DNS: Overview
 
 DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to prevent tampering.
 **The problem DNSSEC solves:**
@@ -621,7 +621,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 
 ---
 
-## DNSSEC: Securing DNS
+## DNSSEC: Securing DNS: Example
 
 **DNSSEC record types:**
 - **RRSIG**: Contains the signature for a record set
@@ -781,7 +781,7 @@ _sip._tcp  IN  SRV  10 60 5060 sip.example.com.
 
 ---
 
-## DNS Load Balancing Techniques
+## DNS Load Balancing Techniques: Example
 
 ### Round-Robin DNS
 Multiple A records for the same name -- clients get different IPs in rotation:
@@ -804,7 +804,7 @@ Returns different IP addresses based on the client's geographic location:
 
 ---
 
-## DNS Load Balancing Techniques
+## DNS Load Balancing Techniques: Overview
 
 Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 

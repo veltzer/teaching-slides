@@ -593,7 +593,7 @@ find /var/spool/at -type f -exec ls -la {} \;
 
 ---
 
-## The Linux Boot Process
+## The Linux Boot Process: Example
 
 ```bash
 # View boot configuration

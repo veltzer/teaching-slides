@@ -19,7 +19,7 @@ audience:
 - Enables better resource utilization in Python applications
 
 ---
-## Concurrency vs. Parallelism in Python
+## Concurrency vs. Parallelism in Python: Details
 
 - Concurrency: dealing with multiple tasks at once
 - Parallelism: executing multiple tasks simultaneously
@@ -42,7 +42,7 @@ audience:
 - Key consideration when choosing concurrency approach
 
 ---
-## Python Concurrency Models
+## Python Concurrency Models: Details
 
 - Threading: lightweight, shares memory, affected by GIL
 - Multiprocessing: separate processes, bypasses GIL, higher overhead
@@ -150,7 +150,7 @@ for t in threads:
 ```
 
 ---
-## Thread Lifecycle in Python
+## Thread Lifecycle in Python: Details
 
 - New: thread object created
 - Runnable: thread started with `start()`
@@ -570,7 +570,7 @@ if __name__ == "__main__":  # Required for Windows
 ```
 
 ---
-## Process vs Thread Memory Model
+## Process vs Thread Memory Model: Details
 
 - Processes have separate memory spaces
 - Threads share memory within a process

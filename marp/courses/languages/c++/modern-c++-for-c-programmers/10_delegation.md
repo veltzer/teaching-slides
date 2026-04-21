@@ -374,7 +374,7 @@ public:
 ```
 
 ---
-## The Diamond Problem
+## The Diamond Problem: Overview
 
 Multiple inheritance can lead to ambiguity.
 

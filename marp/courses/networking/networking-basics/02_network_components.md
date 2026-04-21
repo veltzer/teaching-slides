@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Load Balancer
+## Load Balancer: Details
 
 - Distributes incoming network traffic across multiple servers
 - Ensures no single server becomes overwhelmed
@@ -53,7 +53,7 @@ audience:
 
 ---
 
-## Proxy Server
+## Proxy Server: Details
 
 - Acts as an intermediary between clients and servers
 - Can provide anonymity, security, and caching
@@ -67,7 +67,7 @@ audience:
 
 ---
 
-## Reverse Proxy
+## Reverse Proxy: Details
 
 - Sits in front of web servers and forwards client requests
 - Provides benefits like load balancing, SSL termination, and caching
@@ -105,7 +105,7 @@ server {
 
 ---
 
-## NAT (Network Address Translation)
+## NAT (Network Address Translation): Details
 
 - Modifies network address information in packet headers
 - Allows multiple devices to share a single public IP address

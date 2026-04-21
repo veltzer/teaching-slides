@@ -100,7 +100,7 @@ audience:
 
 ---
 
-## Encryption Techniques
+## Encryption Techniques: Details
 
 - AES-256 for file encryption (fast, symmetric)
 - RSA-2048/4096 for key encryption (slow, asymmetric)

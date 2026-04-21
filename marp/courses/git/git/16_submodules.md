@@ -52,7 +52,7 @@ main-project/
 ```
 
 ---
-## Why Use Submodules?
+## Why Use Submodules?: Details
 
 Benefits and trade-offs of submodules:
 

@@ -273,7 +273,7 @@ def show_comments():
 
 ---
 
-## Content Security Policy (CSP) In Depth
+## Content Security Policy (CSP) In Depth: Example
 
 ```bash
 # Strict CSP that prevents most XSS

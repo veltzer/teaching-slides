@@ -393,7 +393,7 @@ systemctl restart rsyslog
 
 ---
 
-## Automated Monitoring: Prometheus and Grafana
+## Automated Monitoring: Prometheus and Grafana: Details
 
 - `Prometheus` scrapes metrics from targets
 - `Grafana` visualizes metrics with dashboards
@@ -1137,7 +1137,7 @@ sha256sum -c /root/config-checksums.txt
 
 ---
 
-## Change Management Workflow
+## Change Management Workflow: Details
 
 Key principles:
 1. All changes tracked in version control (IaC)

@@ -228,7 +228,7 @@ audience:
 
 ---
 
-## Network Address Translation (NAT)
+## Network Address Translation (NAT): Details
 
 **Benefits:**
 - IP address conservation

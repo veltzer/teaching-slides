@@ -90,7 +90,7 @@ audience:
 
 ---
 
-## Data Gravity
+## Data Gravity: Details
 - Data attracts compute — not the other way around
 - Moving petabytes between clouds takes weeks or months
 - Egress costs make frequent data movement expensive

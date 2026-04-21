@@ -70,7 +70,7 @@ pip install diffusers accelerate
 
 ---
 
-## What is Generative AI?
+## What is Generative AI?: Overview
 
 **Generative AI** = AI systems that create new content
 
@@ -80,7 +80,7 @@ pip install diffusers accelerate
 ![what_is_generative_ai](svg/courses/ai/generative-ai-applications/01_overview/what_is_generative_ai.svg)
 
 ---
-## What is Generative AI?
+## What is Generative AI?: Overview (2)
 
 Unlike **discriminative** models (classify existing data), generative models **produce** new data.
 
@@ -98,7 +98,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ---
 
-## Why Generative AI Matters Now
+## Why Generative AI Matters Now: Details
 
 Three converging factors enabled the current explosion:
 1. **Scale of data** — Trillions of tokens from the internet

@@ -161,7 +161,7 @@ def update_user():
 
 ---
 
-## Server-Side Request Forgery (SSRF) via APIs
+## Server-Side Request Forgery (SSRF) via APIs: Example
 
 ```python
 # SECURE: URL validation for SSRF prevention

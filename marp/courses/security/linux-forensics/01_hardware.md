@@ -115,7 +115,7 @@ lscpu | grep "Byte Order"
 
 ---
 
-## Hard Disk Drive (HDD) Anatomy
+## Hard Disk Drive (HDD) Anatomy: Details
 
 - Platters spin at 5400-15000 RPM
 - Read/write heads float nanometers above surface
@@ -124,7 +124,7 @@ lscpu | grep "Byte Order"
 
 ---
 
-## HDD Geometry: CHS Addressing
+## HDD Geometry: CHS Addressing: Details
 
 - **Cylinder**: concentric tracks at same position on all platters
 - **Head**: which platter surface (top/bottom)
@@ -138,7 +138,7 @@ lscpu | grep "Byte Order"
 
 ---
 
-## HDD Geometry: CHS Addressing
+## HDD Geometry: CHS Addressing: Details (2)
 
 - Modern drives use LBA (Logical Block Addressing) instead of CHS
 - LBA numbers sectors sequentially from 0
@@ -165,7 +165,7 @@ sudo fdisk -l /dev/sda
 
 ---
 
-## Solid State Drives (SSD)
+## Solid State Drives (SSD): Details
 
 - No moving parts - uses NAND flash memory
 - Data stored in cells as electrical charges
@@ -369,7 +369,7 @@ sudo fdisk -l /dev/sda | grep "Disklabel type"
 
 ---
 
-## GPT Structure
+## GPT Structure: Details
 
 - Each partition has a unique GUID
 - Backup header allows recovery if primary is corrupted
@@ -425,7 +425,7 @@ sudo sfdisk -T
 
 ---
 
-## Logical Volume Manager (LVM)
+## Logical Volume Manager (LVM): Example
 
 ```bash
 # List physical volumes, volume groups, logical volumes

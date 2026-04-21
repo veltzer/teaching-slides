@@ -117,7 +117,7 @@ aws ce get-savings-plans-coverage \
 
 ---
 
-## Break-Even Analysis
+## Break-Even Analysis: Details
 - Calculate when savings exceed commitment cost
 - All Upfront 1-year: break-even ~7-9 months
 - No Upfront 1-year: savings from day one

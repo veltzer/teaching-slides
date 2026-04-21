@@ -110,7 +110,7 @@ git log --author="Jane" --since="1 month ago" --grep="feature"
 ```
 
 ---
-## Git Log with Visual Elements
+## Git Log with Visual Elements: Example
 
 Create informative visual representations:
 

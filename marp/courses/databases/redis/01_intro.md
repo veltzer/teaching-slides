@@ -333,7 +333,7 @@ SCAN cursor [MATCH pattern] [COUNT count]
 ```
 
 ---
-## Key Naming Conventions
+## Key Naming Conventions: Details
 
 Best practices:
 - Use namespaces: `object-type:id:field`

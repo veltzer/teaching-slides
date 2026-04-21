@@ -141,7 +141,7 @@ sarah/api-optimization
 - Keep names descriptive but concise
 
 ---
-## Development vs Production Branches
+## Development vs Production Branches: Details
 
 **Development branch (`develop`):**
 - Integration branch for features

@@ -209,7 +209,7 @@ aws sns publish \
 
 ---
 
-## Visibility Timeout
+## Visibility Timeout: Details
 - After a consumer receives a message, it becomes invisible
 - Consumer has a window to process and delete
 - If not deleted, message reappears for another consumer

@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## What is the Spark UI?
+## What is the Spark UI?: Details
 
 1. Web-based monitoring interface
 1. Built-in with Apache Spark

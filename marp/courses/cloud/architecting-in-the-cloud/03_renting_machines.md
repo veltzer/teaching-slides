@@ -302,7 +302,7 @@ aws ec2 create-image \
 
 ---
 
-## Golden Image vs Bootstrap
+## Golden Image vs Bootstrap: Details
 - Golden image: everything pre-installed, fast launch
 - Bootstrap: install at launch via user data, slow but flexible
 - Hybrid: golden image + light bootstrap for configuration

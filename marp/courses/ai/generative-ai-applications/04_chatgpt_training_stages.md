@@ -121,7 +121,7 @@ config = {
 
 ---
 
-## Stage 1: Distributed Training Strategies
+## Stage 1: Distributed Training Strategies: Overview
 
 Training a 175B parameter model requires sophisticated parallelism:
 
@@ -139,7 +139,7 @@ Training a 175B parameter model requires sophisticated parallelism:
 
 ---
 
-## Stage 1: What the Model Learns
+## Stage 1: What the Model Learns: Overview
 
 As pre-training progresses, capabilities emerge in stages:
 

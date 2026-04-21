@@ -53,7 +53,7 @@ git stash pop                # Restore saved work
 ```
 
 ---
-## Understanding the Stash
+## Understanding the Stash: Details
 
 Git stash is a stack-based temporary storage:
 

@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## Customizing Image Models
+## Customizing Image Models: Overview
 
 Why customize? To generate images of **your specific** concepts:
 
@@ -108,7 +108,7 @@ image = pipe("a photo of sks dog riding a skateboard").images[0]
 
 ---
 
-## Prior Preservation Loss
+## Prior Preservation Loss: Overview
 
 Prevents the model from forgetting how to draw the class in general:
 
@@ -120,7 +120,7 @@ Prevents the model from forgetting how to draw the class in general:
 
 ---
 
-## Textual Inversion
+## Textual Inversion: Overview
 
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
@@ -130,7 +130,7 @@ Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 ![textual_inversion](svg/courses/ai/generative-ai-applications/17_peft_image_models/textual_inversion.svg)
 
 ---
-## Textual Inversion
+## Textual Inversion: Example
 
 ```misc
 Model weights:  FROZEN (no changes)

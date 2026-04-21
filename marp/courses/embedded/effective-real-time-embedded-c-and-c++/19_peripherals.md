@@ -12,7 +12,7 @@ audience:
 # Peripherals
 
 ---
-## Overview of Embedded Peripherals
+## Overview of Embedded Peripherals: Details
 
 Embedded systems interact with the physical world through peripherals:
 - **GPIO**: General Purpose Input/Output pins
@@ -129,7 +129,7 @@ void updateOutput(GPIO_TypeDef* gpio, uint16_t mask, uint16_t value) {
 ```
 
 ---
-## Universal Asynchronous Receiver-Transmitter (UART)
+## Universal Asynchronous Receiver-Transmitter (UART): Details
 
 UART provides serial communication:
 - **Asynchronous**: No clock line needed
@@ -272,7 +272,7 @@ UARTStatus uartReceiveByteWithErrorCheck(uint8_t* data) {
 ```
 
 ---
-## Analog-to-Digital Converter (ADC)
+## Analog-to-Digital Converter (ADC): Details
 
 ADC converts analog voltages to digital values:
 - **Resolution**: 8, 10, 12, 16 bits typical
@@ -432,7 +432,7 @@ void DMA1_Channel1_IRQHandler() {
 ```
 
 ---
-## Serial Peripheral Interface (SPI)
+## Serial Peripheral Interface (SPI): Details
 
 SPI provides high-speed synchronous communication:
 - **Full duplex**: Simultaneous TX and RX
@@ -566,7 +566,7 @@ bool spiSendByteNonBlocking(uint8_t data) {
 ```
 
 ---
-## Inter-Integrated Circuit (I2C)
+## Inter-Integrated Circuit (I2C): Details
 
 I2C provides multi-master, multi-slave communication:
 - **Two wires**: SDA (data) and SCL (clock)
@@ -762,7 +762,7 @@ I2CStatus i2cReadData(uint8_t address, uint8_t* data, uint16_t size) {
 ```
 
 ---
-## Direct Memory Access (DMA)
+## Direct Memory Access (DMA): Details
 
 DMA enables data transfer without CPU intervention:
 - **Memory-to-Memory**: Copy data between memory locations

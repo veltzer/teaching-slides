@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## Troubleshooting Methodology
+## Troubleshooting Methodology: Details
 
 1. **Identify** the problem: what exactly fails? For whom? Since when?
 1. **Isolate** the layer: work bottom-up (physical → link → network → transport → app)
@@ -372,7 +372,7 @@ The sequence above shows: TCP handshake (SYN, SYN-ACK, ACK), then data exchange 
 
 ---
 
-## Wireshark Basics
+## Wireshark Basics: Overview
 
 Wireshark provides a graphical interface for packet analysis, with powerful filtering and protocol decoding.
 
@@ -432,7 +432,7 @@ tcp.port == 80 || tcp.port == 443
 
 ---
 
-## Useful Wireshark Features
+## Useful Wireshark Features: Example
 
 ```bash
 # Capture with tcpdump, analyze in Wireshark

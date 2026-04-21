@@ -296,7 +296,7 @@ resource "aws_instance" "web" {
 ```
 
 ---
-## Connection via Bastion Host
+## Connection via Bastion Host: Example
 
 ```hcl
 connection {

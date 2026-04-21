@@ -90,7 +90,7 @@ public:
 
 ---
 
-## Pattern Categories
+## Pattern Categories: Overview
 
 Different patterns solve different types of problems
 
@@ -1061,7 +1061,7 @@ void Widget::configure(const std::string& config) { pImpl->configure(config); }
 
 ---
 
-## Bridge vs Cheshire Cat
+## Bridge vs Cheshire Cat: Overview
 
 Choose based on whether you need runtime flexibility or compilation benefits
 
@@ -2051,7 +2051,7 @@ public:
 
 ---
 
-## When to Use Each Pattern
+## When to Use Each Pattern: Overview
 
 Choose patterns based on actual problems, not theoretical perfection
 
@@ -2145,7 +2145,7 @@ public:
 
 ---
 
-## Proxy Pattern Variations
+## Proxy Pattern Variations: Overview
 
 Different proxy types serve different purposes
 

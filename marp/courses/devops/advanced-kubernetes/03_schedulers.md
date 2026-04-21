@@ -144,7 +144,7 @@ matchExpressions:
 ```
 
 ---
-## Pod Affinity - Co-locate Pods
+## Pod Affinity - Co-locate Pods: Example
 
 Place pods near related pods:
 ```yaml
@@ -167,7 +167,7 @@ spec:
 ![pod_affinity_co_locate_pods](svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
 
 ---
-## Pod Anti-Affinity - Spread Pods
+## Pod Anti-Affinity - Spread Pods: Example
 
 Keep pods away from each other:
 ```yaml

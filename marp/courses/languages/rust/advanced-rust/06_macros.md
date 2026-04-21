@@ -451,7 +451,7 @@ Compile-time code generation with Rust code
 
 ---
 
-## Types of Procedural Macros
+## Types of Procedural Macros: Overview
 
 All proc macros must be in a separate crate with `proc-macro = true`.
 

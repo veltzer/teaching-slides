@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Outline
+## Outline: Details
 
 1. Introduction to Netfilter
 1. Netfilter Hook Points

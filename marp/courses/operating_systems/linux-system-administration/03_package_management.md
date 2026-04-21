@@ -34,7 +34,7 @@ Without package management:
 
 ---
 
-## Package Management Ecosystem
+## Package Management Ecosystem: Details
 
 - `apt`/`dnf` are high-level: resolve dependencies, manage repos
 - `dpkg`/`rpm` are low-level: install/remove individual packages
@@ -822,7 +822,7 @@ ls -lh /var/cache/apt-cacher-ng/
 
 ---
 
-## `apt` Caching Proxy Diagram
+## `apt` Caching Proxy Diagram: Details
 
 - First client downloads the package from the internet
 - Subsequent clients get the cached copy instantly
@@ -1043,7 +1043,7 @@ Never remove essential packages on a production system.
 
 ---
 
-## Package Lifecycle
+## Package Lifecycle: Details
 
 - **Available**: in repository, not installed
 - **Downloaded**: `.deb` cached in `/var/cache/apt/archives/`

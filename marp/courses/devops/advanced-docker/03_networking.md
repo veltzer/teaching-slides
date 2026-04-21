@@ -168,7 +168,7 @@ docker run -d -p 8000-8010:8000-8010 myapp
 ```
 
 ---
-## Host Network Mode
+## Host Network Mode: Example
 
 ```bash
 # Container shares host's network stack directly
@@ -305,7 +305,7 @@ docker run -d --network macvlan-net \
 
 ---
 
-## `Macvlan` Network Architecture
+## `Macvlan` Network Architecture: Overview
 
 **Limitation:** Host cannot communicate with `macvlan` containers directly (use `macvlan` sub-interface to work around).
 
@@ -408,7 +408,7 @@ done
 ```
 
 ---
-## Swarm Service Discovery - VIP Mode
+## Swarm Service Discovery - VIP Mode: Example
 
 ```bash
 # Create a service (default VIP mode)

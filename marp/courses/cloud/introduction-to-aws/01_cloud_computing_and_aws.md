@@ -136,7 +136,7 @@ audience:
 
 ---
 
-## AWS Global Infrastructure
+## AWS Global Infrastructure: Details
 - Regions: geographic areas with data centers
 - Availability Zones: isolated data centers within a region
 - Edge Locations: content delivery endpoints
@@ -275,7 +275,7 @@ Resources:
 
 ---
 
-## Shared Responsibility Model
+## Shared Responsibility Model: Details
 - AWS manages security **of** the cloud
 - Customer manages security **in** the cloud
 - Shared controls (patch management, configuration)

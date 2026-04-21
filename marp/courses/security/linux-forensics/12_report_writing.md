@@ -733,7 +733,7 @@ After Testimony:
 
 ---
 
-## Incident Response Report vs Legal Report
+## Incident Response Report vs Legal Report: Details
 
 - Same investigation may produce both types
 - IR report feeds into forensic report

@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## What is DevOps?
+## What is DevOps?: Overview
 
 DevOps is a set of practices combining software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently and reliably.
 
@@ -89,7 +89,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ---
 
-## Measuring DevOps Success
+## Measuring DevOps Success: Details
 
 ### Key Performance Indicators (KPIs)
 - Deployment Frequency

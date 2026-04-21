@@ -664,7 +664,7 @@ for t in threads:
 ```
 
 ---
-## Threading - The GIL
+## Threading - The GIL: Details
 
 - CPython has the Global Interpreter Lock (GIL)
 - Only one thread executes Python bytecode at a time

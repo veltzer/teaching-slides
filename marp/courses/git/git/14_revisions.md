@@ -78,7 +78,7 @@ Understanding what different revision expressions refer to:
 - Content-addressable by hash
 
 ---
-## Branch References
+## Branch References: Example
 
 Branch names are the most common revision type:
 
@@ -206,7 +206,7 @@ git show v1.0.0~1         # 1 commit before tag v1.0.0
 - Most common relative reference
 
 ---
-## Relative References with Caret (^)
+## Relative References with Caret (^): Example
 
 Navigate merge commit parents with caret notation:
 
@@ -385,7 +385,7 @@ git log HEAD~5..HEAD -- *.py
 - Works with relative and absolute paths
 
 ---
-## Range Specifications
+## Range Specifications: Example
 
 Specify ranges of commits:
 

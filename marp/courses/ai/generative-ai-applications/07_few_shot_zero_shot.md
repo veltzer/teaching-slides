@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## What is In-Context Learning?
+## What is In-Context Learning?: Overview
 
 `LLM`s can learn new tasks from examples provided in the prompt — no retraining needed:
 
@@ -156,7 +156,7 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 ![choosing_examples_quality_matters](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/choosing_examples_quality_matters.svg)
 
 ---
-## Choosing Examples — Quality Matters
+## Choosing Examples — Quality Matters: Example
 
 ```python
 # Bad: All examples are positive

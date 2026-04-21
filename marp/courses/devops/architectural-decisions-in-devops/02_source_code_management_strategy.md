@@ -141,7 +141,7 @@ bazel query \
 ![dependency_management](svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/dependency_management.svg)
 
 ---
-## Dependency Management
+## Dependency Management: Details
 
 - Each repo declares its own dependency versions
 - `Dependabot` or `Renovate` automates version bumps

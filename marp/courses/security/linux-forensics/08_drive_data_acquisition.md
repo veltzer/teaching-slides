@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## Acquisition Principles
+## Acquisition Principles: Details
 
 - **Never** work directly on original evidence
 - Use write blockers (hardware or software)

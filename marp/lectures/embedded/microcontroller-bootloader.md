@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What is a Bootloader?
+## What is a Bootloader?: Details
 
 A **bootloader** is the first piece of code that runs when a microcontroller starts up.
 **Primary Functions:**

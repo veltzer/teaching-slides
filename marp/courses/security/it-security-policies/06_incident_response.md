@@ -94,7 +94,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## No-Blame Culture
+## No-Blame Culture: Details
 
 - **You will not be punished** for reporting a security incident
 - The biggest risk is NOT reporting
@@ -135,7 +135,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## Disaster Recovery
+## Disaster Recovery: Details
 
 - `RPO` (Recovery Point Objective): how much data can we afford to lose?
 - `RTO` (Recovery Time Objective): how quickly must we restore operations?
@@ -162,7 +162,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## Ransomware: The Growing Threat
+## Ransomware: The Growing Threat: Details
 
 - Average ransom payment: over $1 million
 - Average downtime: 22 days

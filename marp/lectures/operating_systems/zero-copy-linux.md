@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What is Zero-Copy?
+## What is Zero-Copy?: Details
 
 1. A technique where the CPU does **not** copy data between memory regions
 1. Traditional I/O involves multiple copies:
@@ -47,7 +47,7 @@ audience:
 
 ---
 
-## Traditional I/O Path: The Problem
+## Traditional I/O Path: The Problem: Example
 
 Reading a file and sending it over a network socket:
 ```c
@@ -162,7 +162,7 @@ sendfile(sock_fd, file_fd, &offset, file_size);
 
 ---
 
-## sendfile(): How It Works
+## sendfile(): How It Works: Overview
 
 *With scatter-gather DMA, only buffer descriptors (pointers + lengths) are passed to the socket buffer.
 

@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## What is Fine-Tuning?
+## What is Fine-Tuning?: Overview
 
 Adapting a pre-trained model to your specific task by continuing training on your own data:
 
@@ -25,7 +25,7 @@ Adapting a pre-trained model to your specific task by continuing training on you
 ![what_is_fine_tuning](svg/courses/ai/generative-ai-applications/09_fine_tuning/what_is_fine_tuning.svg)
 
 ---
-## What is Fine-Tuning?
+## What is Fine-Tuning?: Details
 
 **When to fine-tune vs. when to use prompting:**
 - Prompting: Quick iteration, small tasks, flexible

@@ -33,7 +33,7 @@ audience:
 But understanding *why* and *when* is crucial for effective `Git` workflows and team collaboration.
 
 ---
-## What is Rebasing?
+## What is Rebasing?: Example
 
 Rebasing rewrites commit history by moving commits to a new base:
 
@@ -183,7 +183,7 @@ squash j1k2l3m Fix validation bug
 **Result:** Single commit with combined changes and new message.
 
 ---
-## Rebase vs Merge: Team Workflow Impact
+## Rebase vs Merge: Team Workflow Impact: Details
 
 **Merge-based workflow:**
 - Natural reflection of development process

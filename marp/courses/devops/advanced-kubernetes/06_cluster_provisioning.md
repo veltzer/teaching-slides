@@ -121,7 +121,7 @@ worker-2   Ready    <none>          1m    v1.29.0
 ```
 
 ---
-## Adding Control Plane Nodes (HA)
+## Adding Control Plane Nodes (HA): Example
 
 ```bash
 # On first control plane, get certificate key
@@ -195,7 +195,7 @@ sudo vi /etc/kubernetes/manifests/etcd.yaml
 
 ---
 
-## `Cluster API` (`CAPI`) Overview
+## `Cluster API` (`CAPI`) Overview: Overview
 
 Declarative `Kubernetes`-style `APIs` to create, configure, and manage clusters:
 

@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Understanding Data Skew 🔄
+## Understanding Data Skew 🔄: Details
 
 - **Definition**: Uneven distribution of data across partitions
 - **Symptoms**:

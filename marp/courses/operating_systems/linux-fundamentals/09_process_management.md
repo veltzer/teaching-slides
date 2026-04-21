@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## The ps Command
+## The ps Command: Example
 
 Basic usage:
 ```bash
@@ -74,7 +74,7 @@ TIME  - CPU time used
 
 ---
 
-## Finding Process IDs
+## Finding Process IDs: Example
 
 Different methods:
 ```bash
@@ -95,7 +95,7 @@ ps -o ppid= -p PID
 
 ---
 
-## Sending Signals (kill)
+## Sending Signals (kill): Example
 
 Common signals:
 ```bash
@@ -132,7 +132,7 @@ kill -CONT PID
 
 ---
 
-## Monitoring with top
+## Monitoring with top: Example
 
 Interactive commands:
 ```misc
@@ -169,7 +169,7 @@ Key sections:
 
 ---
 
-## Dealing with Zombies
+## Dealing with Zombies: Example
 
 Identifying zombies:
 ```bash
@@ -188,7 +188,7 @@ kill -9 PARENT_PID
 
 ---
 
-## The Shell and Jobs
+## The Shell and Jobs: Example
 
 Job control:
 ```bash
@@ -209,7 +209,7 @@ bg %1
 
 ---
 
-## Process Priorities (nice)
+## Process Priorities (nice): Example
 
 Managing priorities:
 ```bash
@@ -277,7 +277,7 @@ watch -n 1 'free -m'
 
 ---
 
-## Process Troubleshooting
+## Process Troubleshooting: Example
 
 Common commands:
 ```bash

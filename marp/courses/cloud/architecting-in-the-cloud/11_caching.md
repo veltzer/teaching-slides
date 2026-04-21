@@ -123,7 +123,7 @@ def get_user(user_id):
 
 ---
 
-## Cache-Aside Pattern
+## Cache-Aside Pattern: Details
 1. Application checks cache for data
 1. Cache hit: return data
 1. Cache miss: query database
@@ -210,7 +210,7 @@ def get_user(user_id):
 
 ---
 
-## ElastiCache Architecture
+## ElastiCache Architecture: Details
 - Cluster mode: shard data across nodes
 - Replication: primary + replicas per shard
 - Multi-AZ for high availability

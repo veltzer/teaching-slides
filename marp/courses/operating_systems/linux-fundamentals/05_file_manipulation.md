@@ -60,7 +60,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 
 ---
 
-## Viewing File Contents
+## Viewing File Contents: Example
 
 Examples:
 ```bash
@@ -110,7 +110,7 @@ mv old_dir new_dir
 
 ---
 
-## Disk Usage Commands
+## Disk Usage Commands: Example
 
 Examples:
 ```bash
@@ -195,7 +195,7 @@ sort file.txt | uniq -d
 
 ---
 
-## Finding Files
+## Finding Files: Example
 
 Examples:
 ```bash

@@ -101,7 +101,7 @@ pytest>=7.0
 - `>=,<` range of versions
 
 ---
-## Virtual Environments - Why?
+## Virtual Environments - Why?: Details
 
 - Different projects may need different package versions
 - System Python should not be cluttered

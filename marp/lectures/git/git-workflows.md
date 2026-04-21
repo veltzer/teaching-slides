@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What This Talk Covers
+## What This Talk Covers: Details
 
 - Different philosophical approaches to using Git
 - Team collaboration strategies
@@ -134,7 +134,7 @@ Working directly on the main branch with minimal or no branching
 
 ---
 
-## Git Flow Model
+## Git Flow Model: Overview
 
 Multiple branch types for different purposes
 

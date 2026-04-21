@@ -603,7 +603,7 @@ resource "aws_instance" "web" {
 ![image_pipeline_best_practices](svg/courses/devops/terraform/15_packer_use_cases/image_pipeline_best_practices.svg)
 
 ---
-## Image Pipeline Best Practices
+## Image Pipeline Best Practices: Details
 
 - Build images in layers
 - Base image updated monthly for security patches

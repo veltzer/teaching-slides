@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What Are NoSQL Databases?
+## What Are NoSQL Databases?: Details
 
 - Not Only SQL databases
 - Designed for specific data models
@@ -63,7 +63,7 @@ audience:
 
 ---
 
-## Document Stores: Core Concepts
+## Document Stores: Core Concepts: Overview
 
 Self-contained data units with nested structures
 
@@ -95,7 +95,7 @@ Self-contained data units with nested structures
 
 ---
 
-## Key-Value Stores: Core Model
+## Key-Value Stores: Core Model: Overview
 
 Simplest NoSQL model - pure associative arrays
 
@@ -156,7 +156,7 @@ That's essentially it - simplicity is the strength
 
 ---
 
-## The CAP Theorem
+## The CAP Theorem: Overview
 
 Pick two (but you must pick P in distributed systems)
 
@@ -211,7 +211,7 @@ In distributed systems:
 
 ---
 
-## CP Systems
+## CP Systems: Overview
 
 Example behaviors: Banking systems, inventory management
 
@@ -223,7 +223,7 @@ Example behaviors: Banking systems, inventory management
 
 ---
 
-## AP Systems
+## AP Systems: Overview
 
 Example behaviors: Social media feeds, caching systems
 

@@ -20,7 +20,7 @@ audience:
 
 ---
 
-## Seven File Types in UNIX
+## Seven File Types in UNIX: Example
 
 First character in ls -l output indicates type:
 ```bash
@@ -68,7 +68,7 @@ Common types:
 
 ---
 
-## Directories (d)
+## Directories (d): Example
 
 ```bash
 # Create directory
@@ -111,7 +111,7 @@ ls -l /dev/null   # Null device
 
 ---
 
-## Symbolic Links (l)
+## Symbolic Links (l): Example
 
 ```bash
 # Create symbolic link
@@ -155,7 +155,7 @@ cat < mypipe
 
 ---
 
-## The INODE Concept
+## The INODE Concept: Details
 
 Inode contains:
 - File type
@@ -199,7 +199,7 @@ Example output:
 
 ---
 
-## Hard Links vs Symbolic Links
+## Hard Links vs Symbolic Links: Example
 
 Creating Links:
 ```bash
@@ -299,7 +299,7 @@ ln -s /absolute/path/target.txt abslink.txt
 
 ---
 
-## File System Layout
+## File System Layout: Details
 
 Key components:
 - Superblock: File system metadata

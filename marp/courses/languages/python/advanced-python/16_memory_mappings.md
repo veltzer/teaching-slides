@@ -18,7 +18,7 @@ audience:
 - Enables efficient I/O and inter-process communication
 
 ---
-## Virtual Memory Fundamentals
+## Virtual Memory Fundamentals: Details
 
 - Abstraction that provides each process with its own address space
 - Decouples logical addresses from physical addresses
@@ -48,7 +48,7 @@ audience:
 - Page faults and handlers
 
 ---
-## Page Tables
+## Page Tables: Details
 
 - Data structures that map virtual addresses to physical addresses
 - Organized hierarchically in modern systems
@@ -90,7 +90,7 @@ audience:
 - Shared vs. Private mappings
 
 ---
-## File-Backed Mappings
+## File-Backed Mappings: Details
 
 - Maps a file directly into memory
 - Reads happen on demand (page faults)
@@ -122,7 +122,7 @@ audience:
   1. No updates to the backing file
 
 ---
-## Copy-on-Write (CoW)
+## Copy-on-Write (CoW): Details
 
 - Optimization technique for memory mappings
 - Mappings share physical pages until write occurs
@@ -162,7 +162,7 @@ audience:
 - Real-time data processing
 
 ---
-## Implementation in Linux
+## Implementation in Linux: Details
 
 - VMA (Virtual Memory Area) structures
 - Page fault handler

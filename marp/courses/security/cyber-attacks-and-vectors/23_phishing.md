@@ -255,7 +255,7 @@ cat suspicious_email.eml | grep -E "^(From|To|Subject|Received|Return-Path|Reply
 
 ---
 
-## DMARC, DKIM, and SPF
+## DMARC, DKIM, and SPF: Example
 
 ```bash
 # Check SPF record
@@ -399,7 +399,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 
 ---
 
-## Security Awareness Training
+## Security Awareness Training: Comparison
 
 ### Effective Training Program Elements
 | Component                    | Frequency       | Purpose                         |

@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## What is AI Safety?
+## What is AI Safety?: Overview
 
 The field of ensuring AI systems behave as intended and don't cause harm:
 
@@ -53,7 +53,7 @@ The ALIGNMENT PROBLEM:
 
 ---
 
-## Alignment Techniques — Summary
+## Alignment Techniques — Summary: Comparison
 
 | Technique | Description | Used By |
 |-----------|-------------|---------|

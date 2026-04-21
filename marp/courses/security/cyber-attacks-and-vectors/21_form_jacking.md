@@ -145,7 +145,7 @@ setInterval(function() {
 
 ---
 
-## Content Security Policy (CSP) as Defense
+## Content Security Policy (CSP) as Defense: Example
 
 ```http
 # HTTP Header: Content-Security-Policy

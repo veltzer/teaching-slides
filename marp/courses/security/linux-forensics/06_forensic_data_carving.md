@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## What is Data Carving?
+## What is Data Carving?: Details
 
 - Scans raw data for file signatures (headers/footers)
 - Ignores filesystem structure entirely

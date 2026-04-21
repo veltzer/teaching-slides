@@ -32,7 +32,7 @@ audience:
 
 ---
 
-## How `LLM` Plugins Work
+## How `LLM` Plugins Work: Overview
 
 The `LLM` decides **which plugin** to call and **what parameters** to pass
 

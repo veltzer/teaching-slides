@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Overview
+## Overview: Details
 
 1. Single Responsibility Principle (SRP)
 1. Open/Closed Principle (OCP)

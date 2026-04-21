@@ -26,7 +26,7 @@ audience:
 
 ---
 
-## The Client/Server Model
+## The Client/Server Model: Details
 
 Common examples:
 - Web servers (HTTP)
@@ -41,7 +41,7 @@ Common examples:
 
 ---
 
-## Network Interface Configuration
+## Network Interface Configuration: Example
 
 Using ifconfig:
 ```bash
@@ -81,7 +81,7 @@ ip route add default via 192.168.1.1
 
 ---
 
-## Interface Management
+## Interface Management: Example
 
 Basic commands:
 ```bash
@@ -101,7 +101,7 @@ ip link show eth0
 
 ---
 
-## Network Statistics (netstat)
+## Network Statistics (netstat): Example
 
 Common options:
 ```bash
@@ -124,7 +124,7 @@ netstat -r
 
 ---
 
-## SSH (Secure Shell)
+## SSH (Secure Shell): Example
 
 Basic usage:
 ```bash
@@ -143,7 +143,7 @@ ssh user@remote.host 'ls -l'
 
 ---
 
-## SSH Configuration and Keys
+## SSH Configuration and Keys: Example
 
 Key management:
 ```bash
@@ -165,7 +165,7 @@ Host server1
 
 ---
 
-## Remote File Transfer
+## Remote File Transfer: Example
 
 Examples:
 ```bash
@@ -203,7 +203,7 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 
 ---
 
-## Trust Relationships
+## Trust Relationships: Example
 
 Configuration files:
 ```bash
@@ -222,7 +222,7 @@ Configuration files:
 
 ---
 
-## Network Troubleshooting
+## Network Troubleshooting: Example
 
 Common commands:
 ```bash
@@ -291,7 +291,7 @@ rsync -avz --progress /local/dir/ \
 
 ---
 
-## Best Practices
+## Best Practices: Details
 
 Key points:
 - Always use encrypted protocols

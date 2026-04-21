@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What is Linux I/O?
+## What is Linux I/O?: Details
 
 1. **Input/Output (I/O)** - Communication between CPU and external devices
 1. Linux treats everything as a file

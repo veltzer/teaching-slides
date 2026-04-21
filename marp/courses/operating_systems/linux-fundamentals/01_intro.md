@@ -69,7 +69,7 @@ audience:
 
 ---
 
-## Process Lifecycle
+## Process Lifecycle: Details
 
 ### Zombie Processes
 - Terminated but not yet cleaned up
@@ -106,7 +106,7 @@ int main() {
 
 ---
 
-## Basic Security Model
+## Basic Security Model: Details
 
 ### Key Security Features
 - File system permissions
@@ -137,7 +137,7 @@ chmod 777 /some/system/file  # Succeeds
 
 ---
 
-## File System Security
+## File System Security: Example
 
 Example permission setting:
 ```bash
@@ -153,7 +153,7 @@ chown user:group file.txt
 
 ---
 
-## Process Isolation
+## Process Isolation: Details
 
 - Each process has its own:
     - Memory space

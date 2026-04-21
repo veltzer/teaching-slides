@@ -20,7 +20,7 @@ audience:
 
 ---
 
-## The Evolution of Networking
+## The Evolution of Networking: Details
 
 Key trends driving modern networking:
 - **Cloud computing**: networks must be dynamic and programmable
@@ -31,7 +31,7 @@ Key trends driving modern networking:
 
 ---
 
-## Software-Defined Networking (SDN)
+## Software-Defined Networking (SDN): Overview
 
 SDN separates the **control plane** (decision-making) from the **data plane** (packet forwarding).
 
@@ -43,7 +43,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 
 ---
 
-## Software-Defined Networking (SDN)
+## Software-Defined Networking (SDN): Details
 
 **Benefits of SDN:**
 - Centralized network management and visibility
@@ -58,7 +58,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 
 ---
 
-## SDN Architecture
+## SDN Architecture: Comparison
 
 **SDN controllers:**
 | Controller | Language | Use Case |
@@ -69,7 +69,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 | Ryu | Python | Lightweight, prototyping |
 
 ---
-## Network Virtualization
+## Network Virtualization: Comparison
 Network virtualization creates logical networks on top of physical infrastructure.
 **Key technologies:**
 | Technology | Description |
@@ -116,7 +116,7 @@ $ docker network inspect bridge
 
 ---
 
-## Docker Bridge Network
+## Docker Bridge Network: Overview
 
 The default networking mode. Docker creates a virtual bridge (`docker0`) and assigns private IPs.
 
@@ -128,7 +128,7 @@ The default networking mode. Docker creates a virtual bridge (`docker0`) and ass
 
 ---
 
-## Docker Bridge Network
+## Docker Bridge Network: Example
 
 ```bash
 # Create a custom bridge network
@@ -142,7 +142,7 @@ $ docker exec web ping api    # Works! Docker DNS resolves "api"
 
 ---
 
-## Docker Overlay Network
+## Docker Overlay Network: Overview
 
 Overlay networks enable communication between containers across multiple Docker hosts (Swarm).
 
@@ -154,7 +154,7 @@ Overlay networks enable communication between containers across multiple Docker 
 
 ---
 
-## Docker Overlay Network
+## Docker Overlay Network: Example
 
 ```bash
 # Initialize Docker Swarm
@@ -166,7 +166,7 @@ $ docker service create --name web --network myoverlay --replicas 3 nginx
 ```
 
 ---
-## Kubernetes Networking Model
+## Kubernetes Networking Model: Details
 Kubernetes networking has these fundamental requirements:
 1. Every Pod gets its own IP address
 1. All Pods can communicate with each other without NAT
@@ -212,7 +212,7 @@ $ kubectl exec web-1 -- ping -c 3 10.0.2.3
 
 ---
 
-## Kubernetes Services
+## Kubernetes Services: Overview
 
 Services provide stable network endpoints for dynamic Pods.
 
@@ -224,7 +224,7 @@ Services provide stable network endpoints for dynamic Pods.
 
 ---
 
-## Kubernetes Services
+## Kubernetes Services: Example
 
 **Service types:**
 | Type | Scope | Use Case |
@@ -250,7 +250,7 @@ spec:
 
 ---
 
-## Kubernetes Ingress
+## Kubernetes Ingress: Overview
 
 Ingress provides HTTP/HTTPS routing to services, supporting virtual hosts and path-based routing.
 
@@ -262,7 +262,7 @@ Ingress provides HTTP/HTTPS routing to services, supporting virtual hosts and pa
 
 ---
 
-## Kubernetes Ingress
+## Kubernetes Ingress: Example
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -294,7 +294,7 @@ spec:
 ```
 
 ---
-## Kubernetes Network Policies
+## Kubernetes Network Policies: Example
 Network Policies control traffic flow between Pods (like a firewall for Pods).
 ```yaml
 # Allow only specific Pods to access the database
@@ -326,7 +326,7 @@ spec:
 
 ---
 
-## Service Mesh Concepts
+## Service Mesh Concepts: Overview
 
 A service mesh is a dedicated infrastructure layer for service-to-service communication.
 
@@ -338,7 +338,7 @@ A service mesh is a dedicated infrastructure layer for service-to-service commun
 
 ---
 
-## Service Mesh Concepts
+## Service Mesh Concepts: Comparison
 
 **Popular service meshes:**
 | Mesh | Sidecar Proxy | Key Feature |
@@ -355,7 +355,7 @@ A service mesh is a dedicated infrastructure layer for service-to-service commun
 
 ---
 
-## CDN Architecture
+## CDN Architecture: Overview
 
 A CDN (Content Delivery Network) caches content at edge locations worldwide to reduce latency.
 
@@ -367,7 +367,7 @@ A CDN (Content Delivery Network) caches content at edge locations worldwide to r
 
 ---
 
-## CDN Architecture
+## CDN Architecture: Details
 
 **How CDNs work:**
 1. User requests `cdn.example.com/image.png`
@@ -421,7 +421,7 @@ $ curl -X POST "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache" 
 
 ---
 
-## WebSocket Protocol
+## WebSocket Protocol: Overview
 
 WebSocket provides full-duplex communication over a single TCP connection, unlike HTTP's request-response model.
 
@@ -433,7 +433,7 @@ WebSocket provides full-duplex communication over a single TCP connection, unlik
 
 ---
 
-## WebSocket Protocol
+## WebSocket Protocol: Example
 
 **WebSocket handshake (HTTP upgrade):**
 ```http
@@ -509,7 +509,7 @@ Hello, World!
 
 ---
 
-## gRPC: Modern RPC Framework
+## gRPC: Modern RPC Framework: Overview
 
 gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more efficient than REST/JSON for service-to-service communication.
 
@@ -521,7 +521,7 @@ gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more
 
 ---
 
-## gRPC: Modern RPC Framework
+## gRPC: Modern RPC Framework: Example
 
 **Protocol Buffers definition:**
 ```protobuf
@@ -572,7 +572,7 @@ message UserResponse {
 
 ---
 
-## HTTP/3 and QUIC
+## HTTP/3 and QUIC: Overview
 
 HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 
@@ -584,7 +584,7 @@ HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 
 ---
 
-## HTTP/3 and QUIC
+## HTTP/3 and QUIC: Example
 
 **QUIC advantages:**
 - **Faster connection establishment**: 1-RTT (or 0-RTT on reconnect)
@@ -602,7 +602,7 @@ $ curl -v --http3 https://cloudflare.com 2>&1 | grep "using HTTP"
 
 ---
 
-## eBPF: Programmable Networking in the Kernel
+## eBPF: Programmable Networking in the Kernel: Overview
 
 eBPF (extended Berkeley Packet Filter) allows running custom programs in the Linux kernel without modifying kernel source.
 
@@ -614,7 +614,7 @@ eBPF (extended Berkeley Packet Filter) allows running custom programs in the Lin
 
 ---
 
-## eBPF: Programmable Networking in the Kernel
+## eBPF: Programmable Networking in the Kernel: Details
 
 **eBPF in networking:**
 - **Cilium**: Kubernetes CNI that uses eBPF for networking and security (replaces iptables)
@@ -668,7 +668,7 @@ resource "aws_security_group" "web" {
 
 ---
 
-## DNS-Based Service Discovery
+## DNS-Based Service Discovery: Overview
 
 Modern architectures use DNS for dynamic service discovery.
 
@@ -680,7 +680,7 @@ Modern architectures use DNS for dynamic service discovery.
 
 ---
 
-## DNS-Based Service Discovery
+## DNS-Based Service Discovery: Example
 
 ```bash
 # Consul DNS interface
@@ -699,7 +699,7 @@ web-service.default.svc.cluster.local. 30 IN A 10.96.0.100
 
 ---
 
-## Observability: Network Monitoring
+## Observability: Network Monitoring: Overview
 
 Modern networks require comprehensive observability.
 
@@ -711,7 +711,7 @@ Modern networks require comprehensive observability.
 
 ---
 
-## Observability: Network Monitoring
+## Observability: Network Monitoring: Example
 
 ```yaml
 # Prometheus blackbox_exporter: probe network endpoints

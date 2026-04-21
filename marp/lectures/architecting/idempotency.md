@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What is Idempotency?
+## What is Idempotency?: Overview
 
 **Idempotent**: An operation that can be performed multiple times with the same result
 > "No matter how many times you call it, the outcome is the same"
@@ -48,7 +48,7 @@ Without idempotency: chaos and data corruption
 
 ---
 
-## Real-World Example: Payment Processing
+## Real-World Example: Payment Processing: Overview
 
 **With idempotency**: Second click is safe, only one $100 charge
 

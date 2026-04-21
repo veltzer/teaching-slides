@@ -35,7 +35,7 @@ audience:
 
 ---
 
-## Data Classification Levels
+## Data Classification Levels: Comparison
 
 | Level | Label | Examples | Handling |
 |-------|-------|----------|----------|
@@ -64,7 +64,7 @@ audience:
 
 ---
 
-## Encryption Basics
+## Encryption Basics: Details
 
 - Scrambling data so only authorized parties can read it
 
@@ -76,7 +76,7 @@ audience:
 
 ---
 
-## Encryption Basics
+## Encryption Basics: Details (2)
 
 - Without the key, encrypted data is unreadable
 - Even if stolen, encrypted data is useless to the attacker
@@ -196,7 +196,7 @@ audience:
 
 ---
 
-## Data Retention and Disposal
+## Data Retention and Disposal: Details
 
 - Follow the company retention schedule
 - Do not keep data "just in case"

@@ -59,7 +59,7 @@ audience:
 
 ---
 
-## How Slowloris Works
+## How Slowloris Works: Details
 
 - The attacker sends partial HTTP headers, never completing the request
 - Periodically sends additional header bytes to keep connections alive
@@ -174,7 +174,7 @@ def slowloris_attack():
 
 ---
 
-## Slow POST (R.U.D.Y.) Attack
+## Slow POST (R.U.D.Y.) Attack: Details
 
 - Declares a large Content-Length but sends the body extremely slowly
 - Server must keep the connection open to receive the full body
@@ -229,7 +229,7 @@ curl http://localhost/server-status?auto | \
 
 ---
 
-## Apache vs Nginx Resilience
+## Apache vs Nginx Resilience: Comparison
 
 | Feature                    | Apache (prefork/worker) | Nginx                    |
 |----------------------------|------------------------|--------------------------|
@@ -362,7 +362,7 @@ nft add rule inet filter input \
 
 ---
 
-## Reverse Proxy as a Defense Layer
+## Reverse Proxy as a Defense Layer: Details
 
 - Place an event-driven reverse proxy (Nginx, HAProxy) in front of Apache
 - The proxy absorbs slow connections efficiently

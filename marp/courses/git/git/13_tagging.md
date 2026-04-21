@@ -50,7 +50,7 @@ git checkout v1.0.0               # Return to this version anytime
 ```
 
 ---
-## Lightweight vs Annotated Tags
+## Lightweight vs Annotated Tags: Details
 
 Git supports two types of tags with different characteristics:
 

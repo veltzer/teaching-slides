@@ -98,7 +98,7 @@ provider "kubernetes" {
 
 ---
 
-## The 6 R's of Migration
+## The 6 R's of Migration: Details
 1. Rehost: lift and shift
 1. Replatform: lift and reshape
 1. Repurchase: switch to SaaS

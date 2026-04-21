@@ -18,7 +18,7 @@ audience:
 
 ---
 
-## What is XSS?
+## What is XSS?: Overview
 
 `Cross-Site Scripting` (`XSS`) occurs when an application includes untrusted data in a web page without proper validation or escaping, allowing attackers to execute scripts in the victim's browser.
 

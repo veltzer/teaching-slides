@@ -144,7 +144,7 @@ uint8_t c = a + b;  // Overflow! Result is 44
 ```
 
 ---
-## Structure Layout
+## Structure Layout: Example
 
 ```c
 struct Example {

@@ -263,7 +263,7 @@ Resources:
 
 ---
 
-## Architecture Review Checklist
+## Architecture Review Checklist: Details
 - Is the architecture multi-AZ? Multi-Region if needed?
 - Are all components scalable?
 - Is state externalized (databases, caches, queues)?
@@ -318,7 +318,7 @@ Resources:
 
 ---
 
-## Edge Computing
+## Edge Computing: Details
 - Run compute close to end users
 - CloudFront Functions, Lambda@Edge
 - Azure Edge Zones, GCP Distributed Cloud

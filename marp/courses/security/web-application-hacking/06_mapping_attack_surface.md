@@ -278,7 +278,7 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ---
 
-## Common Web Application Architectures
+## Common Web Application Architectures: Details
 
 - Architecture type affects attack strategy
 - Microservices have more inter-service trust boundaries

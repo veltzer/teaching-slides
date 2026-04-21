@@ -20,7 +20,7 @@ audience:
 
 ---
 
-## Logging In and Out
+## Logging In and Out: Example
 
 Common commands:
 ```bash
@@ -31,7 +31,7 @@ Ctrl+D    # EOF (same as exit)
 
 ---
 
-## Password Management
+## Password Management: Example
 ```bash
 # Change your password
 passwd
@@ -49,7 +49,7 @@ chage -d 0 username
 
 ---
 
-## Command Structure
+## Command Structure: Example
 Basic syntax:
 ```bash
 command [options] [arguments]
@@ -100,7 +100,7 @@ mv old.txt new.txt
 
 ---
 
-## Getting Help
+## Getting Help: Example
 ```bash
 # View manual page
 man ls
@@ -125,7 +125,7 @@ type ls
 
 ---
 
-## Control Characters
+## Control Characters: Comparison
 
 Common control characters:
 | Key      | Function          |
@@ -143,7 +143,7 @@ Common control characters:
 
 ---
 
-## Command Line Editing
+## Command Line Editing: Example
 
 Navigation shortcuts:
 ```bash
@@ -185,7 +185,7 @@ mv backup_notes.txt ../notes_backup.txt
 
 ---
 
-## Common Mistakes and Solutions
+## Common Mistakes and Solutions: Example
 
 Solutions:
 ```bash

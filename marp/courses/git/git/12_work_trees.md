@@ -52,7 +52,7 @@ git stash pop               # Restore work
 ```
 
 ---
-## What Are Git Worktrees?
+## What Are Git Worktrees?: Details
 
 Worktrees allow multiple working directories for a single repository:
 

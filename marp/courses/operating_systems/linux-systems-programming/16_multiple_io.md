@@ -123,7 +123,7 @@ int ready = epoll_wait(epfd, events, 10, timeout);
 
 ---
 
-## Edge vs Level Triggered
+## Edge vs Level Triggered: Details
 
 1. **Level** - Notify while condition is true
 1. **Edge** - Notify when condition changes

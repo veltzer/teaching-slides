@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Why Data Formats Matter
+## Why Data Formats Matter: Details
 
 - Every application reads and writes data
 - Choosing the right format affects performance, readability, and interoperability

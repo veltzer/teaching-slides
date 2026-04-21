@@ -32,7 +32,7 @@ Without persistence, all data is lost when Redis restarts!
 ![redis_persistence_options](svg/courses/databases/redis/06_persistence/redis_persistence_options.svg)
 
 ---
-## RDB (Redis Database) Snapshots
+## RDB (Redis Database) Snapshots: Details
 
 Point-in-time snapshots of the dataset:
 - Creates a single compact binary file
@@ -128,7 +128,7 @@ Background saving started
 - Potential stalls during fork on low memory
 
 ---
-## AOF (Append-Only File)
+## AOF (Append-Only File): Details
 
 Log of all write operations that modify data:
 - Logs every write operation as it occurs
@@ -171,7 +171,7 @@ auto-aof-rewrite-min-size 64mb
 ![aof_sync_options](svg/courses/databases/redis/06_persistence/aof_sync_options.svg)
 
 ---
-## AOF Rewriting
+## AOF Rewriting: Overview
 
 AOF files grow continuously and need compaction:
 
@@ -300,7 +300,7 @@ aof_last_cow_size:0
 ```
 
 ---
-## Persistence and Memory Usage
+## Persistence and Memory Usage: Overview
 
 Copy-On-Write (COW) mechanism:
 
@@ -420,7 +420,7 @@ $ redis-check-rdb dump.rdb
 Note: RDB files cannot be fixed - must restore from backup
 
 ---
-## Point-in-Time Recovery
+## Point-in-Time Recovery: Overview
 
 Combining RDB and AOF for point-in-time recovery:
 
@@ -444,7 +444,7 @@ Combining RDB and AOF for point-in-time recovery:
 - Use dedicated backup replicas
 
 ---
-## Persistence for Replication
+## Persistence for Replication: Overview
 
 RDB's role in replication:
 
@@ -463,7 +463,7 @@ RDB's role in replication:
 - Partial resynchronization uses in-memory backlog
 
 ---
-## Persistence in Redis Cluster
+## Persistence in Redis Cluster: Overview
 
 Redis Cluster persistence considerations:
 

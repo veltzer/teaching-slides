@@ -295,7 +295,7 @@ ip addr show
 ![network_namespace_veth_pairs](svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
 
 ---
-## Network Namespace - veth Pairs
+## Network Namespace - veth Pairs: Example
 
 ```bash
 # See veth pairs
@@ -552,7 +552,7 @@ cat /proc/$PID/environ | tr '\0' '\n'
 ![container_filesystem_overlayfs](svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
 
 ---
-## Container Filesystem - OverlayFS
+## Container Filesystem - OverlayFS: Example
 
 ```bash
 # View overlay mount details

@@ -1074,7 +1074,7 @@ hypotheses = [
 
 ---
 
-## Solution Exploration
+## Solution Exploration: Overview
 
 AI provides multiple approaches:
 

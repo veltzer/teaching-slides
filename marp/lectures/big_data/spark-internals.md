@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Slide 2: Logical Planning
+## Slide 2: Logical Planning: Details
 
 ### Query Analysis
 * SQL queries are parsed into an Abstract Syntax Tree (AST)

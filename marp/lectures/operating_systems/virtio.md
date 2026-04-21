@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## What is Virtio
+## What is Virtio: Details
 
 - Standard for virtual device interfaces
 - Efficient I/O virtualization

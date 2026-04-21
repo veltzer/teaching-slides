@@ -353,7 +353,7 @@ Content-Length: 1234
 
 ---
 
-## HTTP Status Codes for Pentesters
+## HTTP Status Codes for Pentesters: Overview
 
 > A `403` vs `404` difference reveals resource existence
 
@@ -403,7 +403,7 @@ testssl.sh target.com
 
 ---
 
-## Proxy Architecture
+## Proxy Architecture: Details
 
 - Proxies allow inspection and modification of traffic
 - Multiple proxy layers can complicate testing

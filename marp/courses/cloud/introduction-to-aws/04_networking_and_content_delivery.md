@@ -150,7 +150,7 @@ aws ec2 create-subnet \
 
 ---
 
-## Security Groups vs NACLs
+## Security Groups vs NACLs: Details
 - Security Groups: instance-level, stateful, allow only
 - NACLs: subnet-level, stateless, allow and deny
 - Use Security Groups as primary defense

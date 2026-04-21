@@ -60,7 +60,7 @@ audience:
 
 ---
 
-## Aurora Architecture
+## Aurora Architecture: Details
 - Shared distributed storage layer
 - 6 copies of data across 3 AZs
 - Self-healing: automatically repairs corruption
@@ -293,7 +293,7 @@ resource "aws_db_proxy" "app" {
 
 ---
 
-## Read/Write Splitting
+## Read/Write Splitting: Details
 - Write to primary database
 - Read from read replicas
 - Application or proxy routes queries

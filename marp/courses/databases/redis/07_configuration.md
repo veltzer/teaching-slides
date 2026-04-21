@@ -381,7 +381,7 @@ redis-cli MEMORY STATS
 ```
 
 ---
-## Automatic Key Management
+## Automatic Key Management: Example
 
 Key expiration and eviction:
 1. **Explicit expiration**:
@@ -432,7 +432,7 @@ MEMORY DOCTOR
 ```
 
 ---
-## Monitoring Redis in Production
+## Monitoring Redis in Production: Overview
 
 Key metrics to monitor:
 

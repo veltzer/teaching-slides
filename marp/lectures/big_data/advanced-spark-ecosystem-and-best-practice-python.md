@@ -23,7 +23,7 @@ audience:
 
 ---
 
-## Agenda
+## Agenda: Details
 
 - Spark on Kubernetes and Cloud Platforms
 - Integration with Delta Lake for ACID Transactions
@@ -117,7 +117,7 @@ spark-submit \
 
 ---
 
-## What is Delta Lake?
+## What is Delta Lake?: Details
 
 - Open-source storage layer for Spark
 - Brings ACID transactions to Spark
@@ -295,7 +295,7 @@ spark.history.fs.logDirectory hdfs://namenode:8021/spark-logs
 
 ---
 
-## Integrating Spark with Prometheus & Grafana
+## Integrating Spark with Prometheus & Grafana: Example
 
 ```properties
 # In spark-defaults.conf
@@ -495,7 +495,7 @@ spark.read \
 
 ---
 
-## Data Pipeline Design Patterns
+## Data Pipeline Design Patterns: Details
 
 - **Bronze-Silver-Gold** architecture
     - Bronze: Raw ingestion layer

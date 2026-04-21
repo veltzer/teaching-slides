@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Notebook Types
+## Notebook Types: Details
 
 1. Apache Zeppelin
 1. Jupyter Notebooks

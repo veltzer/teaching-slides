@@ -131,7 +131,7 @@ v.data.f = 3.14;
 ![struct_memory_layout_and_padding](svg/courses/languages/c/c-refresher/06_structs/struct_memory_layout_and_padding.svg)
 
 ---
-## Struct Memory Layout and Padding
+## Struct Memory Layout and Padding: Example
 
 Reorder fields to minimize padding:
 

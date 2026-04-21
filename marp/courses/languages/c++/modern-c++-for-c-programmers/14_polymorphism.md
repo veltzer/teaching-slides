@@ -78,7 +78,7 @@ Database* db = new MySQLDatabase();  // OK: concrete implementation
 ![benefits_of_polymorphism](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/benefits_of_polymorphism.svg)
 
 ---
-## Benefits of Polymorphism
+## Benefits of Polymorphism: Details
 
 1. Write once, use with multiple types
 1. Easy to add new implementations
@@ -107,7 +107,7 @@ Performance considerations:
 **Rule**: Use polymorphism when flexibility outweighs performance costs
 
 ---
-## Virtual Function Mechanics
+## Virtual Function Mechanics: Overview
 
 Each object with virtual functions contains a pointer to its class's virtual table
 
@@ -153,7 +153,7 @@ protected:
 ![template_method_benefits](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/template_method_benefits.svg)
 
 ---
-## Template Method Benefits
+## Template Method Benefits: Details
 
 1. Eliminates code duplication
 1. Enforces consistent algorithm structure
@@ -247,7 +247,7 @@ SmartPtr<Shape> shape = circle;  // Safe upcast
 ![conversion_safety](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/conversion_safety.svg)
 
 ---
-## Conversion Safety
+## Conversion Safety: Overview
 
 Upward conversions (derived to base) are always safe
 Sideways conversions require runtime checks
@@ -308,7 +308,7 @@ class MyClass : public Counter<MyClass> {
 **Advantages**: No virtual function overhead, type safety at compile time
 
 ---
-## CRTP vs Virtual Functions
+## CRTP vs Virtual Functions: Overview
 
 Choose based on requirements: flexibility vs performance
 
@@ -371,7 +371,7 @@ void processShape(Shape* shape) {
 **Important**: Only works with polymorphic types (classes with virtual functions)
 
 ---
-## Static vs Dynamic Cast
+## Static vs Dynamic Cast: Overview
 
 Use `dynamic_cast` for safe downcasting, `static_cast` when you're certain
 
@@ -592,7 +592,7 @@ double calculate(Operation& op, double x, double y) {
 ```
 
 ---
-## Performance Considerations
+## Performance Considerations: Overview
 
 Consider performance vs flexibility trade-offs in critical code paths
 

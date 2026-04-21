@@ -45,7 +45,7 @@ audience:
 ![the_classic_environment_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/the_classic_environment_pipeline.svg)
 
 ---
-## The Classic Environment Pipeline
+## The Classic Environment Pipeline: Details
 
 - Code flows through progressively more production-like environments
 - Each stage acts as a quality gate
@@ -181,7 +181,7 @@ spec:
 
 ---
 
-## Ephemeral Environment Lifecycle
+## Ephemeral Environment Lifecycle: Details
 
 - Entire lifecycle is automated and tied to the PR workflow
 
@@ -392,7 +392,7 @@ jobs:
 
 ---
 
-## Configuration Drift Visualization
+## Configuration Drift Visualization: Details
 
 - Without active management, every environment drifts away from production
 
@@ -530,7 +530,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 
 ---
 
-## Data Anonymization Pipeline
+## Data Anonymization Pipeline: Details
 
 - Automate the pipeline so non-prod data stays fresh and safe
 

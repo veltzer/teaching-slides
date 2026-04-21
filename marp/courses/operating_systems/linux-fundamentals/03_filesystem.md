@@ -20,7 +20,7 @@ audience:
 
 ---
 
-## Basic File System Structure
+## Basic File System Structure: Details
 
 Key Directories:
 - `/bin`: Essential commands
@@ -57,7 +57,7 @@ Key Directories:
 
 ---
 
-## Understanding Paths
+## Understanding Paths: Example
 
 Examples:
 ```bash
@@ -103,7 +103,7 @@ cd -
 
 ---
 
-## Home Directories
+## Home Directories: Example
 
 Access methods:
 ```bash
@@ -206,7 +206,7 @@ echo $HOME
 
 ---
 
-## Common Path Operations
+## Common Path Operations: Example
 
 Examples:
 ```bash

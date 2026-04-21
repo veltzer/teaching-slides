@@ -31,7 +31,7 @@ audience:
 1. Gustafson's Law
 
 ---
-## Why Parallelism?
+## Why Parallelism?: Overview
 
 Single-core CPU performance hit a wall around 2005. Clock speeds stopped
 increasing due to power and thermal limits. The only path forward is
@@ -43,13 +43,13 @@ parallelism: doing more work simultaneously.
 ![why_parallelism](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/why_parallelism.svg)
 
 ---
-## Why Parallelism?
+## Why Parallelism?: Overview (2)
 
 The shift from "faster cores" to "more cores" fundamentally changed how
 software must be written.
 
 ---
-## Flynn's Taxonomy
+## Flynn's Taxonomy: Overview
 
 Michael Flynn (1966) classified computer architectures by how many
 instruction streams and data streams they process simultaneously.
@@ -60,7 +60,7 @@ instruction streams and data streams they process simultaneously.
 ![flynn_s_taxonomy](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/flynn_s_taxonomy.svg)
 
 ---
-## Flynn's Taxonomy
+## Flynn's Taxonomy: Comparison
 
 | Category | Instructions | Data | Examples |
 |----------|-------------|------|----------|
@@ -70,7 +70,7 @@ instruction streams and data streams they process simultaneously.
 | MIMD | Multiple | Multiple | Multi-core, clusters |
 
 ---
-## SISD: Single Instruction, Single Data
+## SISD: Single Instruction, Single Data: Overview
 
 The traditional von Neumann architecture. One instruction stream operates
 on one data element at a time.
@@ -81,14 +81,14 @@ on one data element at a time.
 ![sisd_single_instruction_single_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/sisd_single_instruction_single_data.svg)
 
 ---
-## SISD: Single Instruction, Single Data
+## SISD: Single Instruction, Single Data: Overview (2)
 
 Historical examples: early Intel 8086, Motorola 68000.
 Modern CPUs are technically SISD at the core level but incorporate
 SIMD extensions internally.
 
 ---
-## SIMD: Single Instruction, Multiple Data
+## SIMD: Single Instruction, Multiple Data: Overview
 
 One instruction operates on multiple data elements simultaneously.
 This is the foundation of vector processing and GPU computing.
@@ -99,13 +99,13 @@ This is the foundation of vector processing and GPU computing.
 ![simd_single_instruction_multiple_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/simd_single_instruction_multiple_data.svg)
 
 ---
-## SIMD: Single Instruction, Multiple Data
+## SIMD: Single Instruction, Multiple Data: Overview (2)
 
 Implementations: SSE (4 floats), AVX (8 floats), AVX-512 (16 floats),
 ARM NEON (4 floats), GPU warps (32 threads).
 
 ---
-## MISD: Multiple Instructions, Single Data
+## MISD: Multiple Instructions, Single Data: Overview
 
 Multiple instruction streams operate on the same data stream.
 This is the rarest category and mainly theoretical.
@@ -116,7 +116,7 @@ This is the rarest category and mainly theoretical.
 ![misd_multiple_instructions_single_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/misd_multiple_instructions_single_data.svg)
 
 ---
-## MISD: Multiple Instructions, Single Data
+## MISD: Multiple Instructions, Single Data: Details
 
 **Practical uses:**
 - Fault-tolerant systems: run the same computation with different
@@ -128,7 +128,7 @@ Most textbooks consider MISD largely theoretical with very few
 real-world implementations.
 
 ---
-## MIMD: Multiple Instructions, Multiple Data
+## MIMD: Multiple Instructions, Multiple Data: Overview
 
 Multiple independent processors execute different instructions on
 different data. This is the most common parallel architecture today.
@@ -139,7 +139,7 @@ different data. This is the most common parallel architecture today.
 ![mimd_multiple_instructions_multiple_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/mimd_multiple_instructions_multiple_data.svg)
 
 ---
-## MIMD: Multiple Instructions, Multiple Data
+## MIMD: Multiple Instructions, Multiple Data: Details
 
 **Examples:**
 - Multi-core CPUs (each core runs its own thread)
@@ -149,7 +149,7 @@ different data. This is the most common parallel architecture today.
 MIMD is the dominant paradigm for general-purpose computing.
 
 ---
-## Multi-Core Processors
+## Multi-Core Processors: Overview
 
 A multi-core processor integrates multiple independent CPU cores
 on a single die (chip). Each core has its own L1/L2 caches.
@@ -218,7 +218,7 @@ both threads compete for the same execution units, caches, and bandwidth.
 ![smt_architecture_details](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/smt_architecture_details.svg)
 
 ---
-## SMT: Architecture Details
+## SMT: Architecture Details: Overview
 
 **Duplicated per thread**: register file, instruction pointer, TLB entries
 **Shared between threads**: ALU, FPU, caches, branch predictor, scheduler
@@ -281,7 +281,7 @@ Access latency: ~100 ns from any core (uniform)
 **Disadvantages**: bus becomes bottleneck, does not scale beyond ~8 cores
 
 ---
-## NUMA: Non-Uniform Memory Access
+## NUMA: Non-Uniform Memory Access: Overview
 
 In NUMA systems, each processor has local memory that is faster to
 access. Accessing another processor's memory is slower.
@@ -359,7 +359,7 @@ void *buf = numa_alloc_onnode(size, node_id);
 ```
 
 ---
-## GPU Architecture Overview
+## GPU Architecture Overview: Overview
 
 GPUs are massively parallel processors designed for throughput, not
 single-thread latency. They contain thousands of simple cores.
@@ -370,7 +370,7 @@ single-thread latency. They contain thousands of simple cores.
 ![gpu_architecture_overview](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/gpu_architecture_overview.svg)
 
 ---
-## Streaming Multiprocessors (SMs)
+## Streaming Multiprocessors (SMs): Overview
 
 Each SM is a self-contained processing block. A modern GPU has
 dozens to over a hundred SMs.
@@ -381,7 +381,7 @@ dozens to over a hundred SMs.
 ![streaming_multiprocessors_sms](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/streaming_multiprocessors_sms.svg)
 
 ---
-## Streaming Multiprocessors (SMs)
+## Streaming Multiprocessors (SMs): Overview (2)
 
 Each SM can manage hundreds of threads simultaneously.
 
@@ -392,7 +392,7 @@ Each SM can manage hundreds of threads simultaneously.
 
 ---
 
-## Warp Scheduling
+## Warp Scheduling: Overview
 
 A **warp** is a group of 32 threads that execute in lockstep on an SM.
 All threads in a warp execute the same instruction at the same time
@@ -404,7 +404,7 @@ All threads in a warp execute the same instruction at the same time
 ![warp_scheduling](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/warp_scheduling.svg)
 
 ---
-## Warp Scheduling
+## Warp Scheduling: Overview (2)
 
 **Key insight**: GPUs hide memory latency by switching between warps,
 not by using caches. When one warp waits for memory, another runs
@@ -419,7 +419,7 @@ both paths must execute serially. This wastes throughput.
 ![cpu_vs_gpu_architecture_comparison](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/cpu_vs_gpu_architecture_comparison.svg)
 
 ---
-## CPU vs GPU: Architecture Comparison
+## CPU vs GPU: Architecture Comparison: Comparison
 
 | Feature | CPU | GPU |
 |---------|-----|-----|
@@ -432,7 +432,7 @@ both paths must execute serially. This wastes throughput.
 | Best for | Serial, branchy code | Massively parallel data |
 
 ---
-## Vector Processing
+## Vector Processing: Overview
 
 Vector processors operate on arrays of data with a single instruction.
 This is the SIMD paradigm at the instruction level.
@@ -443,7 +443,7 @@ This is the SIMD paradigm at the instruction level.
 ![vector_processing](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/vector_processing.svg)
 
 ---
-## SIMD Instructions: SSE, AVX, AVX-512
+## SIMD Instructions: SSE, AVX, AVX-512: Comparison
 
 x86 CPUs include progressively wider SIMD instruction sets:
 
@@ -543,7 +543,7 @@ void add_neon(float *a, float *b, float *c, int n) {
 ```
 
 ---
-## Interconnects Between Cores
+## Interconnects Between Cores: Overview
 
 Cores must communicate to maintain cache coherence and share data.
 The interconnect topology determines communication speed.
@@ -556,7 +556,7 @@ The interconnect topology determines communication speed.
 ![interconnects_between_cores_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_1.svg)
 
 ---
-## Interconnects Between Cores
+## Interconnects Between Cores: Overview (2)
 
 Simple but becomes a bottleneck with more cores.
 
@@ -568,13 +568,13 @@ Simple but becomes a bottleneck with more cores.
 ![interconnects_between_cores_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_2.svg)
 
 ---
-## Interconnects Between Cores
+## Interconnects Between Cores: Overview (3)
 
 Each core connects to two neighbors. Messages travel around the ring.
 Latency increases with core count (must traverse more hops).
 
 ---
-## Interconnects: Mesh and Crossbar
+## Interconnects: Mesh and Crossbar: Overview
 
 **Mesh (used in Intel Xeon, AMD EPYC):**
 
@@ -584,7 +584,7 @@ Latency increases with core count (must traverse more hops).
 ![interconnects_mesh_and_crossbar_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_1.svg)
 
 ---
-## Interconnects: Mesh and Crossbar
+## Interconnects: Mesh and Crossbar: Overview (2)
 
 Each core connects to 4 neighbors (N/S/E/W). Scales much better than
 a ring. Maximum hops = rows + columns - 2.
@@ -597,12 +597,12 @@ a ring. Maximum hops = rows + columns - 2.
 ![interconnects_mesh_and_crossbar_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_2.svg)
 
 ---
-## Interconnects: Mesh and Crossbar
+## Interconnects: Mesh and Crossbar: Overview (3)
 
 Any-to-any connection. Low latency but expensive (O(N^2) switches).
 
 ---
-## Interconnect Comparison
+## Interconnect Comparison: Comparison
 
 | Topology | Latency | Bandwidth | Scalability | Cost | Used In |
 |----------|---------|-----------|-------------|------|---------|
@@ -690,7 +690,7 @@ avoid patterns that stress it, like false sharing).
 | M -> I | Snoop write (RWITM) | Flush dirty data, invalidate |
 
 ---
-## False Sharing
+## False Sharing: Overview
 
 False sharing occurs when two cores modify different variables that
 happen to reside on the same cache line. The coherence protocol
@@ -702,7 +702,7 @@ bounces the line back and forth even though there is no true sharing.
 ![false_sharing](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/false_sharing.svg)
 
 ---
-## False Sharing
+## False Sharing: Example
 
 **Bad code (false sharing):**
 
@@ -757,7 +757,7 @@ The **Forward** state selects one cache to respond to snoop requests,
 avoiding multiple caches all trying to respond simultaneously.
 
 ---
-## Amdahl's Law
+## Amdahl's Law: Overview
 
 Amdahl's Law gives the theoretical maximum speedup of a program when
 parallelizing only a fraction of it.
@@ -768,7 +768,7 @@ parallelizing only a fraction of it.
 ![amdahl_s_law](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/amdahl_s_law.svg)
 
 ---
-## Amdahl's Law
+## Amdahl's Law: Comparison
 
 **Example**: If 90% of a program is parallelizable (P = 0.9):
 
@@ -865,7 +865,7 @@ Gustafson:  Fixed time, scale problem with processors
 ```
 
 ---
-## Practical Parallelism: Putting It All Together
+## Practical Parallelism: Putting It All Together: Comparison
 
 | Parallelism Level | Mechanism | Programmer Visible? |
 |-------------------|-----------|-------------------|

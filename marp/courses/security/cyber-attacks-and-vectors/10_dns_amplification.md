@@ -63,7 +63,7 @@ dig . NS +trace
 
 ---
 
-## Why Amplification Works: Query vs Response Size
+## Why Amplification Works: Query vs Response Size: Example
 
 ```bash
 # Small query (~44 bytes):
@@ -123,7 +123,7 @@ dig @your-dns-ip example.com
 
 ---
 
-## BCP38: Ingress Filtering (Source Address Validation)
+## BCP38: Ingress Filtering (Source Address Validation): Overview
 
 If all ISPs implemented BCP38, IP spoofing-based amplification would be impossible.
 

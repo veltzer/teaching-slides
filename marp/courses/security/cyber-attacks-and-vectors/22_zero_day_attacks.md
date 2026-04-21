@@ -97,7 +97,7 @@ audience:
 
 ---
 
-## The CVE Process
+## The CVE Process: Comparison
 
 ### CVSS Severity Ratings
 | Score    | Severity | Example                                  |
@@ -122,7 +122,7 @@ audience:
 
 ---
 
-## Responsible Disclosure
+## Responsible Disclosure: Details
 
 - Google Project Zero standard: 90-day disclosure deadline
 - If vendor does not patch within 90 days, vulnerability is published
@@ -267,7 +267,7 @@ sudo yum updateinfo list security
 
 ---
 
-## Virtual Patching
+## Virtual Patching: Example
 
 ```bash
 # Example: Virtual patch for Log4Shell using ModSecurity

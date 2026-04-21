@@ -32,7 +32,7 @@ audience:
 
 ---
 
-## The Core Problem
+## The Core Problem: Overview
 
 `LLM` output is **untrusted data** — treat it like user input
 

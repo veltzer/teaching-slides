@@ -119,7 +119,7 @@ The trigger ("Project-X") activates the poisoned behavior
 
 ---
 
-## Mitigation: Data Provenance
+## Mitigation: Data Provenance: Overview
 
 Maintain a **data lineage** for all training data
 
@@ -149,7 +149,7 @@ Automated checks catch obvious poisoning attempts
 
 ---
 
-## Mitigation: Data Sanitization Pipeline
+## Mitigation: Data Sanitization Pipeline: Overview
 
 Each stage removes potential poisoned samples
 

@@ -39,7 +39,7 @@ Every new shape or renderer doubles the number of classes
 
 ---
 
-## Bridge Structure
+## Bridge Structure: Overview
 
 The Abstraction delegates to the Implementor — both can vary independently
 

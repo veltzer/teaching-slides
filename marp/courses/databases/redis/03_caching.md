@@ -12,7 +12,7 @@ audience:
 # Caching with Redis
 
 ---
-## What is Caching?
+## What is Caching?: Details
 
 - Temporarily storing frequently accessed data in fast storage
 - Reduces load on primary data source
@@ -44,7 +44,7 @@ audience:
 ![cache_patterns](svg/courses/databases/redis/03_caching/cache_patterns.svg)
 
 ---
-## Cache-Aside Pattern
+## Cache-Aside Pattern: Overview
 
 Application is responsible for cache interactions:
 
@@ -81,7 +81,7 @@ def get_user(user_id):
 ```
 
 ---
-## Write-Through Pattern
+## Write-Through Pattern: Overview
 
 Every write goes to cache and database:
 
@@ -114,7 +114,7 @@ def update_user(user_id, user_data):
 ```
 
 ---
-## Write-Behind Pattern
+## Write-Behind Pattern: Overview
 
 Writes go to cache first, then asynchronously to database:
 
@@ -152,7 +152,7 @@ def update_user_write_behind(user_id, user_data):
 ```
 
 ---
-## Read-Through Pattern
+## Read-Through Pattern: Overview
 
 Cache handles database interaction on miss:
 
@@ -163,7 +163,7 @@ Cache handles database interaction on miss:
 ![read_through_pattern](svg/courses/databases/redis/03_caching/read_through_pattern.svg)
 
 ---
-## Refresh-Ahead Pattern
+## Refresh-Ahead Pattern: Overview
 
 Cache proactively refreshes before expiration:
 
@@ -216,7 +216,7 @@ EXPIRE session:123 3600
 ```
 
 ---
-## Cache Eviction Policies
+## Cache Eviction Policies: Overview
 
 Redis memory limits and eviction:
 
@@ -292,7 +292,7 @@ def setup_cache_invalidation_listener():
 ```
 
 ---
-## Cache Stampede Problem
+## Cache Stampede Problem: Details
 
 - When many requests try to rebuild cache simultaneously
 - Occurs when popular keys expire or are invalidated
@@ -369,7 +369,7 @@ def get_with_lock(key, rebuild_func, lock_timeout=5, retry_count=3):
 ```
 
 ---
-## Distributed Caching Architecture
+## Distributed Caching Architecture: Overview
 
 Multiple application instances using shared Redis cache:
 
@@ -449,7 +449,7 @@ Strategies for large objects:
     - Redis keeps metadata only
 
 ---
-## Caching Small Objects: Hashes
+## Caching Small Objects: Hashes: Overview
 
 Using Redis hashes for small objects:
 

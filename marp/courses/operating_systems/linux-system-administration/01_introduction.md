@@ -118,7 +118,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 - All exercises assume `Ubuntu` 24.04 unless stated otherwise
 
 ---
-## Linux Distributions Landscape
+## Linux Distributions Landscape: Overview
 
 This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
 

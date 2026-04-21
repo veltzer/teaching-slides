@@ -59,7 +59,7 @@ audience:
 
 ---
 
-## Credential Stuffing Attacks
+## Credential Stuffing Attacks: Details
 
 **Defense against credential stuffing:**
 - Rate limiting login attempts per IP and per account
@@ -211,7 +211,7 @@ def verify_token(token):
 
 ---
 
-## Password Storage
+## Password Storage: Comparison
 
 ### Why bcrypt/Argon2 are Preferred
 | Algorithm  | Speed (hashes/sec) | Memory Usage | Resistant To        |
@@ -336,7 +336,7 @@ except Exception:
 
 ---
 
-## OAuth Misconfigurations
+## OAuth Misconfigurations: Example
 
 ```python
 # Secure OAuth implementation checklist
@@ -363,7 +363,7 @@ OAUTH_CONFIG = {
 
 ---
 
-## Insecure Password Reset Flows
+## Insecure Password Reset Flows: Example
 
 ```python
 import secrets

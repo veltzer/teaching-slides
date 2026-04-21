@@ -25,7 +25,7 @@ audience:
 
 ---
 
-## Script Kiddies
+## Script Kiddies: Details
 
 - Use pre-built tools and scripts without deep understanding
 - Often motivated by curiosity or desire for notoriety
@@ -49,7 +49,7 @@ audience:
 
 ---
 
-## Cyber Criminals
+## Cyber Criminals: Details
 
 - Financially motivated, operate like businesses
 - Range from individuals to large organized crime syndicates
@@ -132,7 +132,7 @@ audience:
 
 ---
 
-## Target Value Assessment
+## Target Value Assessment: Overview
 
 Organizations should understand why they are targets:
 
@@ -160,7 +160,7 @@ Organizations should understand why they are targets:
 
 ---
 
-## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
+## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin): Overview
 
 Breaking the chain at any stage prevents the attack from succeeding.
 
@@ -229,7 +229,7 @@ An alternative model to the Kill Chain that describes adversary behavior:
 
 ---
 
-## Digital Forensics Process
+## Digital Forensics Process: Details
 
 Key forensic tools:
 - **Volatility**: Memory forensics framework

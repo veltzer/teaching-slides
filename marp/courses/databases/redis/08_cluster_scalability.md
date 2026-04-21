@@ -80,7 +80,7 @@ Scaling strategies:
 - Drawbacks: Additional network hop, maintenance
 
 ---
-## Introduction to Redis Cluster
+## Introduction to Redis Cluster: Details
 
 Redis Cluster is the official Redis distributed solution:
 - Native, server-side sharding
@@ -97,7 +97,7 @@ Redis Cluster is the official Redis distributed solution:
 ![introduction_to_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
 
 ---
-## Redis Cluster Data Sharding
+## Redis Cluster Data Sharding: Details
 
 Redis Cluster uses a hash slot approach:
 - 16,384 hash slots distributed across masters
@@ -112,7 +112,7 @@ Redis Cluster uses a hash slot approach:
 ![redis_cluster_data_sharding](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
 
 ---
-## Redis Cluster Topology
+## Redis Cluster Topology: Overview
 
 Minimum recommended configuration:
 
@@ -365,7 +365,7 @@ Important: Never remove a master with assigned slots!
     ```
 
 ---
-## Redis Cluster Availability
+## Redis Cluster Availability: Overview
 
 Cluster fails when:
 
@@ -564,7 +564,7 @@ Key areas for optimization:
     - Rebalance as needed
 
 ---
-## Disaster Recovery for Redis Cluster
+## Disaster Recovery for Redis Cluster: Overview
 
 DR strategies for Redis Cluster:
 

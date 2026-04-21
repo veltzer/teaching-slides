@@ -803,7 +803,7 @@ exiftool -all= photo.jpg  # Strips all metadata
 
 ---
 
-## File Clusters and Slack Space
+## File Clusters and Slack Space: Example
 
 - Slack space = unused portion of allocated cluster
 - May contain remnants of previously deleted files

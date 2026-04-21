@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Injection Testing Methodology
+## Injection Testing Methodology: Example
 
 ```misc
 For EACH entry point discovered:

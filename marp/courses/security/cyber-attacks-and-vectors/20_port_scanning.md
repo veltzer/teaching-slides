@@ -42,7 +42,7 @@ audience:
 
 ---
 
-## Port States
+## Port States: Details
 
 - **Open**: Useful for attackers -- exploitable services
 - **Closed**: Host is alive but no service on this port
@@ -90,7 +90,7 @@ nmap 192.168.1.0/24
 
 ---
 
-## Nmap Scan Types
+## Nmap Scan Types: Overview
 
 ### TCP SYN Scan (Half-Open Scan)
 
@@ -102,7 +102,7 @@ nmap 192.168.1.0/24
 
 ---
 
-## Nmap Scan Types
+## Nmap Scan Types: Example
 
 ```bash
 # SYN scan (requires root, stealthy)
@@ -222,7 +222,7 @@ nmap -sV --version-intensity 5 192.168.1.1
 
 ---
 
-## OS Fingerprinting
+## OS Fingerprinting: Example
 
 ```bash
 # OS detection

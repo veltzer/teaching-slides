@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## RPO and RTO
+## RPO and RTO: Details
 - RPO (Recovery Point Objective): how much data can you lose?
 - RTO (Recovery Time Objective): how long can you be down?
 - RPO = 0: no data loss (synchronous replication)
@@ -39,7 +39,7 @@ audience:
 
 ---
 
-## DR Strategies Spectrum
+## DR Strategies Spectrum: Details
 1. Backup and Restore: lowest cost, highest RTO
 1. Pilot Light: minimal always-on footprint
 1. Warm Standby: scaled-down running copy

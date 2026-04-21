@@ -11,7 +11,7 @@ audience:
 # Input/Output Using Stream Classes
 
 ---
-## Common Background of I/O Streams
+## Common Background of I/O Streams: Details
 
 C++ provides a comprehensive I/O system based on streams
 - Stream: sequence of characters flowing from source to destination
@@ -24,7 +24,7 @@ C++ provides a comprehensive I/O system based on streams
 ![common_background_of_i_o_streams](svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/common_background_of_i_o_streams.svg)
 
 ---
-## Stream Hierarchy Overview
+## Stream Hierarchy Overview: Details
 
 All stream classes derive from common base classes
 - `ios_base`: platform-independent base functionality
@@ -694,7 +694,7 @@ public:
 ```
 
 ---
-## Stream Buffer Classes Overview
+## Stream Buffer Classes Overview: Details
 
 Stream buffers manage the actual I/O operations:
 - `streambuf`: abstract base class

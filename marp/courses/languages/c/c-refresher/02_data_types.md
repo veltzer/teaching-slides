@@ -289,7 +289,7 @@ int main(void) {
 
 ---
 
-## Integer Promotion Rules
+## Integer Promotion Rules: Overview
 
 When integers of different types are mixed in expressions, C promotes them:
 

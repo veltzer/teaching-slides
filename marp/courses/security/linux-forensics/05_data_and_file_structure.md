@@ -181,7 +181,7 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ---
 
-## File System Metadata vs File Content
+## File System Metadata vs File Content: Details
 
 - Deleting a file removes the directory entry and marks inode as free
 - Data blocks are NOT overwritten immediately
@@ -195,7 +195,7 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ---
 
-## Inode Structure in `ext4`
+## Inode Structure in `ext4`: Example
 
 ```bash
 # View inode information

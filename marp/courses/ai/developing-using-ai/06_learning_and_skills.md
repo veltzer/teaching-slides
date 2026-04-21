@@ -471,7 +471,7 @@ def problem_solving_framework(problem):
 
 ---
 
-## Solution Exploration
+## Solution Exploration: Overview
 
 Multiple approaches to problems:
 
@@ -551,7 +551,7 @@ function debounce4(func, delay) {
 
 ---
 
-## Trade-off Analysis
+## Trade-off Analysis: Example
 
 Understanding design decisions:
 ```python
@@ -1073,7 +1073,7 @@ Learning from experience:
 
 ---
 
-## Learning Metrics
+## Learning Metrics: Overview
 
 Tracking your progress:
 

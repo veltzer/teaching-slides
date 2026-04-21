@@ -303,7 +303,7 @@ async function fetchData() {
 
 ---
 
-## Library Comparisons
+## Library Comparisons: Overview
 
 Making informed decisions:
 
@@ -450,7 +450,7 @@ function debounce(func, wait) {
 
 ---
 
-## Pattern Implementation
+## Pattern Implementation: Overview
 
 Implementing design patterns:
 

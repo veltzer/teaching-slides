@@ -38,7 +38,7 @@ audience:
 
 ---
 
-## TCP Three-Way Handshake Review
+## TCP Three-Way Handshake Review: Details
 
 **Key points:**
 - Step 1: Client sends SYN with initial sequence number
@@ -396,7 +396,7 @@ for i in range(1000):
 
 ---
 
-## SYN Proxy (Hardware Firewalls)
+## SYN Proxy (Hardware Firewalls): Details
 
 - Firewall completes the three-way handshake on behalf of the server
 - Only forwards the connection to the server if the client completes the handshake

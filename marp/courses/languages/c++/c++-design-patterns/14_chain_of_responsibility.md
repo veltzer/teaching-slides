@@ -42,7 +42,7 @@ void handleRequest(Request& req) {
 
 ---
 
-## Chain of Responsibility Structure
+## Chain of Responsibility Structure: Overview
 
 Each handler decides whether to process the request or pass it to the next handler
 

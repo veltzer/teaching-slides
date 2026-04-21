@@ -65,7 +65,7 @@ resource "google_compute_instance" "web_server" {
 ```
 
 ---
-## What are Providers?
+## What are Providers?: Details
 
 - Plugins that Terraform uses to interact with APIs
 - Each provider manages a specific set of resource types
@@ -310,7 +310,7 @@ resource "aws_instance" "web" {
 - Format: `resource_type.resource_name.attribute`
 
 ---
-## Implicit Dependencies
+## Implicit Dependencies: Example
 
 ```hcl
 resource "aws_vpc" "main" {

@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## What is an AI Agent?
+## What is an AI Agent?: Overview
 
 An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
@@ -31,7 +31,7 @@ An `LLM` that can **observe**, **reason**, and **act** in a loop:
 ![what_is_an_ai_agent](svg/courses/ai/generative-ai-applications/10_agents_and_memory/what_is_an_ai_agent.svg)
 
 ---
-## What is an AI Agent?
+## What is an AI Agent?: Overview (2)
 
 **Key difference from simple chatbots:** Agents can take **multiple steps** and use **external tools** to accomplish tasks.
 
@@ -196,7 +196,7 @@ def plan_and_execute(task):
 
 ---
 
-## The Memory Problem
+## The Memory Problem: Example
 
 `LLM`s have no persistent memory — each API call starts fresh:
 ```misc
@@ -322,7 +322,7 @@ relevant = memory.retrieve("What does Alice do for work?")
 
 ---
 
-## RAG — Retrieval-Augmented Generation
+## RAG — Retrieval-Augmented Generation: Overview
 
 Combine vector memory with generation for knowledge-grounded responses:
 
@@ -443,7 +443,7 @@ class EntityMemory:
 
 ---
 
-## Multi-Agent Systems
+## Multi-Agent Systems: Overview
 
 Multiple specialized agents collaborating:
 
@@ -453,7 +453,7 @@ Multiple specialized agents collaborating:
 ![multi_agent_systems](svg/courses/ai/generative-ai-applications/10_agents_and_memory/multi_agent_systems.svg)
 
 ---
-## Multi-Agent Systems
+## Multi-Agent Systems: Example
 
 ```python
 def orchestrator(task):

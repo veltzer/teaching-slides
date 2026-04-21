@@ -41,7 +41,7 @@ audience:
 
 ---
 
-## The FinOps Lifecycle
+## The FinOps Lifecycle: Details
 1. Inform: visibility and allocation
 1. Optimize: rates and usage
 1. Operate: continuous improvement
@@ -128,7 +128,7 @@ audience:
 
 ---
 
-## FinOps Maturity Model
+## FinOps Maturity Model: Details
 - Crawl: basic visibility, reactive
 - Walk: proactive optimization, team engagement
 - Run: automated, real-time, embedded in culture

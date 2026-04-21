@@ -46,7 +46,7 @@ Memory recommendations:
 - Swap: 2x RAM size
 
 ---
-## Storage Optimization
+## Storage Optimization: Overview
 SSD vs HDD performance:
 
 ---

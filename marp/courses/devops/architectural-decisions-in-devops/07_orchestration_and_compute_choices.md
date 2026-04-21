@@ -34,7 +34,7 @@ audience:
 ![the_compute_spectrum](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
 
 ---
-## The Compute Spectrum
+## The Compute Spectrum: Details
 
 - Moving right trades **control** for **convenience**
 - Each step reduces operational burden but increases abstraction
@@ -183,7 +183,7 @@ NOT justified:
 ![cluster_strategy_cluster_per_team](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
 
 ---
-## Cluster Strategy: Cluster Per Team
+## Cluster Strategy: Cluster Per Team: Details
 
 - Full blast radius isolation between teams
 - Higher cost: each cluster has its own control plane
@@ -367,7 +367,7 @@ Tools for self-management:
 ![cold_start_what_happens](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
 
 ---
-## Cold Start: What Happens
+## Cold Start: What Happens: Details
 
 - Cold starts happen when no idle instance exists
 - Frequency depends on traffic patterns and provider

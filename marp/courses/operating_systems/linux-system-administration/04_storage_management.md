@@ -373,7 +373,7 @@ filefrag /path/to/file       # ext4 fragmentation
 
 ---
 
-## Backup Strategies
+## Backup Strategies: Details
 
 - **Full**: complete copy, slow but simple to restore
 - **Differential**: changes since last full, moderate speed
@@ -900,7 +900,7 @@ lsblk --discard
 
 ---
 
-## Multipath I/O
+## Multipath I/O: Overview
 
 Multipath I/O (`dm-multipath`) provides redundant paths to SAN storage for high availability.
 
@@ -912,7 +912,7 @@ Multipath I/O (`dm-multipath`) provides redundant paths to SAN storage for high 
 
 ---
 
-## Multipath I/O
+## Multipath I/O: Example
 
 ```bash
 # Install multipath tools

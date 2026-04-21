@@ -44,7 +44,7 @@ audience:
 
 ---
 
-## The CIA Triad
+## The CIA Triad: Overview
 
 The three pillars of information security:
 
@@ -164,6 +164,6 @@ The three pillars of information security:
 
 ---
 
-## Key Takeaway
+## Key Takeaway: Details
 
 - The rest of today: practical steps to protect yourself and the company

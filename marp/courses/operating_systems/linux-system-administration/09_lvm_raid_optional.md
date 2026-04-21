@@ -19,7 +19,7 @@ audience:
 
 ---
 
-## LVM Architecture
+## LVM Architecture: Details
 
 Three layers:
 - **PV** (Physical Volumes) - actual disks/partitions
@@ -321,7 +321,7 @@ Cache modes: `writethrough` (safe) or `writeback` (fast).
 
 ---
 
-## LVM on Top of RAID
+## LVM on Top of RAID: Example
 
 ```bash
 # Create RAID arrays first

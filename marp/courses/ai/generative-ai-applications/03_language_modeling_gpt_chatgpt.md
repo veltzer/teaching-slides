@@ -146,7 +146,7 @@ loss = loss_fn(
 
 ---
 
-## Pre-Training Data
+## Pre-Training Data: Overview
 
 What GPT models are trained on:
 
@@ -156,7 +156,7 @@ What GPT models are trained on:
 ![pre_training_data](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/pre_training_data.svg)
 
 ---
-## Pre-Training Data
+## Pre-Training Data: Details
 
 **Data quality matters enormously:**
 - Deduplication reduces memorization
@@ -383,7 +383,7 @@ response = client.chat.completions.create(
 ![temperature_vs_top_p_when_to_use_which](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/temperature_vs_top_p_when_to_use_which.svg)
 
 ---
-## Temperature vs. Top-p — When to Use Which
+## Temperature vs. Top-p — When to Use Which: Example
 
 ```python
 # Deterministic (always same output)
@@ -429,7 +429,7 @@ The model uses **chain-of-thought at inference time**, trading compute for accur
 
 ---
 
-## Model Distillation
+## Model Distillation: Overview
 
 Smaller models can learn from larger ones:
 
@@ -439,7 +439,7 @@ Smaller models can learn from larger ones:
 ![model_distillation](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/model_distillation.svg)
 
 ---
-## Model Distillation
+## Model Distillation: Overview (2)
 
 Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
 
@@ -569,7 +569,7 @@ class SwiGLU(nn.Module):
 ![kv_cache_speeding_up_inference](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/kv_cache_speeding_up_inference.svg)
 
 ---
-## KV Cache — Speeding Up Inference
+## KV Cache — Speeding Up Inference: Example
 
 ```python
 # KV cache in practice
@@ -620,7 +620,7 @@ def apply_rope(x, positions, dim):
 
 ---
 
-## Group Query Attention (GQA)
+## Group Query Attention (GQA): Overview
 
 Memory-efficient attention used in `LLaMA 2/3`, `Mistral`:
 

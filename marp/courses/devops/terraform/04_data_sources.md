@@ -42,7 +42,7 @@ output "result" {
 
 ---
 
-## Data Source vs Resource
+## Data Source vs Resource: Comparison
 
 | Feature | Resource | Data Source |
 |---------|----------|-------------|

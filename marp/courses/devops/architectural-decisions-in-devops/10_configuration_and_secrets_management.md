@@ -51,7 +51,7 @@ RUN npm run build
 ```
 
 ---
-## Immutable Deployments with Baked Config
+## Immutable Deployments with Baked Config: Details
 
 - Each environment gets its own built artifact
 - Rolling back means deploying a previous artifact, not changing config
@@ -415,7 +415,7 @@ def lambda_handler(event, context):
 ```
 
 ---
-## Secrets in CI/CD Pipelines
+## Secrets in CI/CD Pipelines: Details
 
 - CI/CD systems need secrets for deployments, testing, and artifact publishing
 - Secrets must never appear in logs, artifacts, or build outputs

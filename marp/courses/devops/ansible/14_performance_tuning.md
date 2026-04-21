@@ -61,7 +61,7 @@ callback_whitelist = timer, profile_tasks, profile_roles
 ```
 
 ---
-## Forks: Parallelism Control
+## Forks: Parallelism Control: Example
 
 ```ini
 # ansible.cfg

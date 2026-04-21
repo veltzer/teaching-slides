@@ -15,7 +15,7 @@ audience:
 ## Encryption, Firewalls, and VPNs
 
 ---
-## Why Network Security Matters
+## Why Network Security Matters: Details
 - Data in transit is vulnerable to interception, modification, and impersonation
 - Every packet crosses multiple networks and devices you do not control
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
@@ -29,7 +29,7 @@ audience:
 
 ---
 
-## Symmetric vs Asymmetric Encryption
+## Symmetric vs Asymmetric Encryption: Overview
 
 Two fundamental approaches to encryption, both used in network security.
 **Symmetric Encryption** -- same key for encryption and decryption:
@@ -42,7 +42,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 ---
 
-## Symmetric vs Asymmetric Encryption
+## Symmetric vs Asymmetric Encryption: Comparison
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -54,7 +54,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 ---
 
-## Asymmetric Encryption
+## Asymmetric Encryption: Overview
 
 Uses a key pair: public key (shared freely) and private key (kept secret).
 
@@ -66,7 +66,7 @@ Uses a key pair: public key (shared freely) and private key (kept secret).
 
 ---
 
-## Asymmetric Encryption
+## Asymmetric Encryption: Comparison
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -76,7 +76,7 @@ Uses a key pair: public key (shared freely) and private key (kept secret).
 
 ---
 
-## How TLS Uses Both
+## How TLS Uses Both: Overview
 
 TLS combines symmetric and asymmetric encryption for the best of both worlds:
 
@@ -88,7 +88,7 @@ TLS combines symmetric and asymmetric encryption for the best of both worlds:
 
 ---
 
-## How TLS Uses Both
+## How TLS Uses Both: Details
 
 1. Asymmetric crypto establishes a shared secret (session key)
 1. Symmetric crypto (AES/ChaCha20) encrypts all subsequent data
@@ -121,7 +121,7 @@ $ openssl s_client -connect example.com:443 -tls1_3
 
 ---
 
-## TLS 1.2 Handshake
+## TLS 1.2 Handshake: Overview
 
 The TLS 1.2 handshake requires 2 round trips before data can flow:
 
@@ -133,13 +133,13 @@ The TLS 1.2 handshake requires 2 round trips before data can flow:
 
 ---
 
-## TLS 1.2 Handshake
+## TLS 1.2 Handshake: Overview (2)
 
 Total: 2 round trips (2-RTT) before first data byte
 
 ---
 
-## TLS 1.3 Handshake
+## TLS 1.3 Handshake: Overview
 
 TLS 1.3 reduces the handshake to just 1 round trip:
 
@@ -151,7 +151,7 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 
 ---
 
-## TLS 1.3 Handshake
+## TLS 1.3 Handshake: Details
 
 **TLS 1.3 improvements:**
 - 1-RTT handshake (vs 2-RTT in TLS 1.2)
@@ -162,7 +162,7 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 
 ---
 
-## Certificates and PKI
+## Certificates and PKI: Overview
 
 **PKI** (Public Key Infrastructure) is the trust framework that makes TLS work.
 
@@ -174,7 +174,7 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 
 ---
 
-## Certificates and PKI
+## Certificates and PKI: Details
 
 **Certificate chain verification:**
 1. Server sends its certificate + intermediate CA certificates
@@ -247,7 +247,7 @@ notAfter=Mar 31 23:59:59 2024 GMT
 
 ---
 
-## Firewalls: Concept
+## Firewalls: Concept: Overview
 
 A firewall controls network traffic based on predefined rules.
 
@@ -259,7 +259,7 @@ A firewall controls network traffic based on predefined rules.
 
 ---
 
-## Firewalls: Concept
+## Firewalls: Concept: Comparison
 
 **Types of firewalls:**
 | Type | Layer | Description |
@@ -271,7 +271,7 @@ A firewall controls network traffic based on predefined rules.
 
 ---
 
-## iptables Basics
+## iptables Basics: Overview
 
 `iptables` is the traditional Linux firewall tool (uses Netfilter framework).
 **Chains and tables:**
@@ -284,7 +284,7 @@ A firewall controls network traffic based on predefined rules.
 
 ---
 
-## iptables Basics
+## iptables Basics: Example
 
 ```bash
 # View current rules
@@ -433,7 +433,7 @@ $ sudo systemctl enable nftables
 
 ---
 
-## VPN Overview
+## VPN Overview: Overview
 
 A VPN (Virtual Private Network) creates an encrypted tunnel between two points over an untrusted network.
 
@@ -445,7 +445,7 @@ A VPN (Virtual Private Network) creates an encrypted tunnel between two points o
 
 ---
 
-## VPN Overview
+## VPN Overview: Details
 
 **VPN use cases:**
 - Remote access to corporate networks
@@ -455,7 +455,7 @@ A VPN (Virtual Private Network) creates an encrypted tunnel between two points o
 
 ---
 
-## IPSec VPN
+## IPSec VPN: Overview
 
 IPSec operates at the network layer (L3), encrypting IP packets.
 **Two modes:**
@@ -468,7 +468,7 @@ IPSec operates at the network layer (L3), encrypting IP packets.
 
 ---
 
-## IPSec VPN
+## IPSec VPN: Example
 
 **IPSec protocols:**
 - **ESP** (Encapsulating Security Payload): encryption + authentication
@@ -562,7 +562,7 @@ $ sudo systemctl enable wg-quick@wg0
 
 ---
 
-## Network Segmentation
+## Network Segmentation: Overview
 
 Dividing a network into isolated segments limits the blast radius of security breaches.
 
@@ -574,7 +574,7 @@ Dividing a network into isolated segments limits the blast radius of security br
 
 ---
 
-## Network Segmentation
+## Network Segmentation: Details
 
 **Segmentation benefits:**
 - Limits lateral movement by attackers
@@ -584,7 +584,7 @@ Dividing a network into isolated segments limits the blast radius of security br
 
 ---
 
-## DMZ (Demilitarized Zone)
+## DMZ (Demilitarized Zone): Overview
 
 A DMZ is a network segment that sits between the public internet and the internal network, hosting public-facing services.
 
@@ -596,7 +596,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ---
 
-## DMZ (Demilitarized Zone)
+## DMZ (Demilitarized Zone): Details
 
 **DMZ rules:**
 - Internet can reach DMZ services (ports 80, 443, 25, 53)
@@ -606,7 +606,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ---
 
-## Common Network Attacks
+## Common Network Attacks: Overview
 
 ### 1. Man-in-the-Middle (MITM)
 
@@ -618,7 +618,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ---
 
-## Common Network Attacks
+## Common Network Attacks: Example
 
 **Mitigations:** TLS with certificate validation, certificate pinning, HSTS
 ### 2. ARP Spoofing
@@ -684,7 +684,7 @@ $ sudo ss -tlnp    # Check what's listening
 
 ---
 
-## Common Network Attacks (continued)
+## Common Network Attacks (continued): Example
 
 **Mitigation:** Disable open resolvers, BCP38 (ingress filtering), rate limiting
 ### 7. SSL Stripping
@@ -780,7 +780,7 @@ notAfter=Mar 14 23:59:59 2025 GMT
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
 ---
-## Zero Trust Network Architecture
+## Zero Trust Network Architecture: Details
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
 **Principles:**
 1. **Never trust, always verify** -- authenticate and authorize every request
@@ -795,7 +795,7 @@ The traditional "castle and moat" model (trust everything inside the network) is
 
 ---
 
-## Zero Trust Network Architecture
+## Zero Trust Network Architecture: Details (2)
 
 **Implementation components:**
 - Identity-aware proxy (BeyondCorp, Tailscale)

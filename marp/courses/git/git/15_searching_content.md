@@ -170,7 +170,7 @@ git grep "config" $(git rev-list --since="1 month ago" --all)
 - Commit ranges
 
 ---
-## Git Grep with Rev-List
+## Git Grep with Rev-List: Example
 
 Powerful combination for historical searches:
 

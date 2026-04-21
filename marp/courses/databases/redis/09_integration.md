@@ -12,7 +12,7 @@ audience:
 # Integrating Redis with Applications
 
 ---
-## Why Redis in Modern Applications
+## Why Redis in Modern Applications: Details
 
 Redis enhances application architecture:
 - **Performance acceleration**: Microsecond response times
@@ -58,7 +58,7 @@ When choosing a Redis client:
     - Documentation quality
 
 ---
-## Connection Management
+## Connection Management: Overview
 
 Best practices for Redis connections:
 
@@ -165,7 +165,7 @@ public class RedisConnectionPool {
 ```
 
 ---
-## Data Serialization
+## Data Serialization: Overview
 
 Converting application data for Redis storage:
 

@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Overview of Spark Reports
+## Overview of Spark Reports: Details
 
 1. Data processing outputs
 1. Analysis results

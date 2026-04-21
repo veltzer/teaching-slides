@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Understanding the Catalyst Optimizer
+## Understanding the Catalyst Optimizer: Overview
 
 Catalyst is Spark's query optimization framework that transforms queries into efficient execution plans
 

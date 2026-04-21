@@ -473,7 +473,7 @@ interface TeamStandards {
 
 ---
 
-## Review Processes
+## Review Processes: Overview
 
 Code review workflow:
 
@@ -514,7 +514,7 @@ class UserAuth:
 
 ---
 
-## Design Pattern Implementation
+## Design Pattern Implementation: Overview
 
 Ensuring correct pattern usage:
 
@@ -638,7 +638,7 @@ class QualityMetrics:
 
 ---
 
-## Feedback Loops
+## Feedback Loops: Overview
 
 Continuous learning from metrics:
 
@@ -680,7 +680,7 @@ automation:
 
 ---
 
-## Best Practice Evolution
+## Best Practice Evolution: Overview
 
 Adapting standards over time:
 
@@ -825,7 +825,7 @@ quality_gates:
 
 ---
 
-## Risk Management: Edge Case Handling
+## Risk Management: Edge Case Handling: Overview
 
 Comprehensive edge case coverage:
 
@@ -951,7 +951,7 @@ Maintaining documentation standards:
 
 ---
 
-## Knowledge Sharing
+## Knowledge Sharing: Overview
 
 Spreading best practices:
 

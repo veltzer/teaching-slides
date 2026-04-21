@@ -54,7 +54,7 @@ AI can address these systematically.
 
 ---
 
-## Knowledge Sharing Fundamentals
+## Knowledge Sharing Fundamentals: Overview
 
 AI serves as a knowledge multiplier and translator between team members.
 

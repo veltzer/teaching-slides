@@ -26,7 +26,7 @@ Advanced Kubernetes Course - Day 1, Module 1
 - Designing for failure
 
 ---
-## What Makes an App Resilient?
+## What Makes an App Resilient?: Details
 
 - **Self-healing**: Automatically recovers from failures
 - **Scalable**: Handles varying load gracefully
@@ -119,7 +119,7 @@ selector:
 
 ---
 
-## How `ReplicaSets` Handle Failures
+## How `ReplicaSets` Handle Failures: Overview
 
 The reconciliation loop runs continuously.
 
@@ -337,7 +337,7 @@ spec:
 | Memory exceeded | N/A | OOMKilled |
 
 ---
-## Understanding CPU Units
+## Understanding CPU Units: Example
 
 ```misc
 1 CPU = 1000m (millicores)
@@ -458,7 +458,7 @@ spec:
 ```
 
 ---
-## Readiness Probes
+## Readiness Probes: Example
 
 Determines if a container is **ready to receive traffic**. If it fails, the pod is removed from `Service` endpoints.
 ```yaml

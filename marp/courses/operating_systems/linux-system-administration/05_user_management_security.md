@@ -224,7 +224,7 @@ ls -la /data/shared
 
 ---
 
-## PAM (Pluggable Authentication Modules)
+## PAM (Pluggable Authentication Modules): Overview
 
 PAM module types: `auth`, `account`, `password`, `session`.
 Configuration files in `/etc/pam.d/`.
@@ -794,7 +794,7 @@ ss -tlnp
 
 ---
 
-## LDAP/NSS Overview
+## LDAP/NSS Overview: Example
 
 `NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
 ```bash

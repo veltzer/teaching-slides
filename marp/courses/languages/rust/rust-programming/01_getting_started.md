@@ -17,7 +17,7 @@ audience:
 ![bg right:40% 80%](svg/courses/languages/rust/rust-programming/01_getting_started/rust_logo.svg)
 
 ---
-## What is Rust
+## What is Rust: Details
 
 - Systems programming language
 - Focuses on safety, concurrency, and performance
@@ -112,7 +112,7 @@ rustup component list
 ![development_environment](svg/courses/languages/rust/rust-programming/01_getting_started/development_environment.svg)
 
 ---
-## Development Environment
+## Development Environment: Details
 
 ### Recommended Setup
 - VS Code

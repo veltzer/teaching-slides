@@ -231,7 +231,7 @@ int main(void) {
 ```
 
 ---
-## Dangling Pointer
+## Dangling Pointer: Example
 
 ```c
 #include <stdio.h>
@@ -586,7 +586,7 @@ int main(void) {
 ![custom_allocator_overview](svg/courses/languages/c/c-refresher/11_dynamic_memory/custom_allocator_overview.svg)
 
 ---
-## Custom Allocator Overview
+## Custom Allocator Overview: Details
 
 When to use each:
 - **Arena**: short-lived, batch-freed allocations (parsers, per-request)

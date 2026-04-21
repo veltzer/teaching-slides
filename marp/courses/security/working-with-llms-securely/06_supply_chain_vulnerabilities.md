@@ -174,7 +174,7 @@ Pin versions, verify hashes, and audit regularly
 
 ---
 
-## Mitigation: Software Bill of Materials (`SBOM`)
+## Mitigation: Software Bill of Materials (`SBOM`): Overview
 
 An `SBOM` enables rapid response to newly discovered vulnerabilities
 

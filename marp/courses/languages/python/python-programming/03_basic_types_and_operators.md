@@ -341,7 +341,7 @@ print(path)
 ```
 
 ---
-## String Indexing
+## String Indexing: Example
 
 - Zero-based indexing
 - Negative indexing from the end

@@ -24,7 +24,7 @@ public:
 
 ---
 
-## Association Lifetime Models
+## Association Lifetime Models: Overview
 
 Different lifetime models require different association strategies
 
@@ -164,7 +164,7 @@ void demonstrateUniquePtr() {
 
 ---
 
-## unique_ptr Benefits
+## unique_ptr Benefits: Overview
 
 `unique_ptr` eliminates common memory management errors
 
@@ -313,7 +313,7 @@ public:
 
 ---
 
-## shared_ptr Reference Counting
+## shared_ptr Reference Counting: Overview
 
 Object is destroyed when reference count reaches zero
 
@@ -438,7 +438,7 @@ public:
 
 ---
 
-## weak_ptr Lock Patterns
+## weak_ptr Lock Patterns: Overview
 
 Always check the result of `lock()` before using the object
 
@@ -901,7 +901,7 @@ auto ptr = shared.get(); delete ptr;                 // Manual delete
 
 ---
 
-## Performance Comparison
+## Performance Comparison: Overview
 
 Choose the right smart pointer based on your performance and safety needs
 

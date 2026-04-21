@@ -54,7 +54,7 @@ audience:
 
 ---
 
-## Registrar Account Attacks
+## Registrar Account Attacks: Details
 
 - Weak passwords and lack of MFA on registrar accounts are the primary attack vector
 - Once inside, attacker can change nameservers, transfer the domain, or modify contact info
@@ -112,7 +112,7 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 
 ---
 
-## Expired Domain Takeover
+## Expired Domain Takeover: Example
 
 **Why expired domains are valuable to attackers:**
 - May still have backlinks and SEO authority
@@ -134,7 +134,7 @@ whois example.com | grep -i "expir"
 
 ---
 
-## Subdomain Takeover
+## Subdomain Takeover: Comparison
 
 **Vulnerable services for subdomain takeover:**
 | Service          | DNS Record Type | Fingerprint (when unclaimed)     |
@@ -244,7 +244,7 @@ whois example.com | grep -i "status"
 
 ---
 
-## DNSSEC: DNS Security Extensions
+## DNSSEC: DNS Security Extensions: Example
 
 ```bash
 # Check if a domain has DNSSEC enabled

@@ -136,7 +136,7 @@ spec:
 ![traffic_shifting_canary_release](svg/courses/devops/advanced-kubernetes/08_service_mesh/traffic_shifting_canary_release.svg)
 
 ---
-## Traffic Shifting - Canary Release
+## Traffic Shifting - Canary Release: Example
 
 ```bash
 # Shift traffic gradually

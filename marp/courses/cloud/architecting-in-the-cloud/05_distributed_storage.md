@@ -42,7 +42,7 @@ audience:
 
 ---
 
-## Object Storage Architecture
+## Object Storage Architecture: Details
 - Flat namespace with key-based access
 - Metadata attached to each object
 - Eventual consistency for some operations (mostly consistent now)
@@ -75,7 +75,7 @@ audience:
 
 ---
 
-## Storage Tiers
+## Storage Tiers: Details
 - Hot: frequently accessed, highest cost
 - Warm: infrequent access, lower cost
 - Cold: archive, very low cost, retrieval time

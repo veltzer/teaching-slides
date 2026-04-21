@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## The Problem: Full Fine-Tuning is Expensive
+## The Problem: Full Fine-Tuning is Expensive: Overview
 
 **PEFT** solves this by training only a tiny fraction of parameters.
 
@@ -33,7 +33,7 @@ audience:
 
 ---
 
-## LoRA — Low-Rank Adaptation
+## LoRA — Low-Rank Adaptation: Example
 
 The key insight: weight updates during fine-tuning have low rank.
 ```misc
@@ -63,7 +63,7 @@ LoRA:
 
 ---
 
-## LoRA — How It Works During Forward Pass
+## LoRA — How It Works During Forward Pass: Overview
 
 At inference, you can merge: W_new = W + B·A (no extra latency!)
 
@@ -271,7 +271,7 @@ QLoRA (4-bit base):
 
 ---
 
-## Prompt Tuning
+## Prompt Tuning: Overview
 
 Instead of modifying model weights, learn **virtual tokens** prepended to the input:
 

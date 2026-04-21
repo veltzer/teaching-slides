@@ -94,7 +94,7 @@ audience:
 
 ---
 
-## Aurora Architecture
+## Aurora Architecture: Details
 - Shared distributed storage layer
 - 6 copies of data across 3 AZs
 - Self-healing storage

@@ -59,7 +59,7 @@ audience:
 
 ---
 
-## Tailgating Prevention
+## Tailgating Prevention: Details
 
 - "I'm sorry, could you badge in? It's company policy."
 - This is not rude - it is responsible
@@ -99,7 +99,7 @@ audience:
 
 ---
 
-## Software and Update Security
+## Software and Update Security: Details
 
 - Install updates promptly when notified
 - Updates patch known security vulnerabilities
@@ -227,7 +227,7 @@ audience:
 
 ---
 
-## The Three Things to Remember
+## The Three Things to Remember: Overview
 
 Security is a team effort. Every good decision you make protects not just you, but everyone in the organization.
 

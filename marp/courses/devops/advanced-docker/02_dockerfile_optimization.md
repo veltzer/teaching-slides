@@ -363,7 +363,7 @@ CMD ["main.py"]
 
 ---
 
-## Layer Caching - How It Works
+## Layer Caching - How It Works: Overview
 
 **Rule:** Once a layer cache is invalidated, all subsequent layers rebuild.
 
@@ -656,7 +656,7 @@ docker history --format "{{.Size}}\t{{.CreatedBy}}" myapp:latest
 ```
 
 ---
-## `dive` - Image Layer Explorer
+## `dive` - Image Layer Explorer: Example
 
 ```bash
 # Install dive

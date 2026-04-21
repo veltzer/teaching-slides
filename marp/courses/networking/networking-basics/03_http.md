@@ -15,7 +15,7 @@ audience:
 
 ---
 
-## What is HTTP
+## What is HTTP: Details
 
 - HTTP: Hypertext Transfer Protocol
 - Foundation of data exchange on the Web
@@ -98,7 +98,7 @@ $ curl -v http://example.com/
 
 ---
 
-## HTTP/1.0 (1996)
+## HTTP/1.0 (1996): Details
 
 - First standardized version
 - One request-response pair per TCP connection
@@ -113,7 +113,7 @@ $ curl -v http://example.com/
 
 ---
 
-## HTTP/1.1 (1997)
+## HTTP/1.1 (1997): Details
 
 - **Persistent connections**: reuse TCP connection for multiple requests
 - **Pipelining**: send multiple requests without waiting for responses
@@ -151,7 +151,7 @@ $ curl -v http://example.com/
 
 ---
 
-## HTTP/2 (2015)
+## HTTP/2 (2015): Details
 
 - Binary protocol (not text-based)
 - Multiplexing (multiple requests/responses over single connection)
@@ -173,7 +173,7 @@ $ curl -v http://example.com/
 
 ---
 
-## HTTP/3 (2022)
+## HTTP/3 (2022): Details
 
 - Based on QUIC protocol (Quick UDP Internet Connections)
 - Replaces TCP with UDP

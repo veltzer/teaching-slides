@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## Core Concepts
+## Core Concepts: Details
 
 1. Datasets: Typed distributed collections
 1. DataFrames: Untyped distributed collections

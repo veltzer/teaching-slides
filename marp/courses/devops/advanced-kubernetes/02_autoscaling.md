@@ -280,7 +280,7 @@ Recommendation:
 
 ---
 
-## `Cluster Autoscaler`
+## `Cluster Autoscaler`: Overview
 
 Automatically adjusts the number of nodes in a cluster:
 

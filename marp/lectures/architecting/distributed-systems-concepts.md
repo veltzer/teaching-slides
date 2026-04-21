@@ -22,7 +22,7 @@ audience:
 
 ---
 
-## What Is a Distributed System?
+## What Is a Distributed System?: Details
 
 A collection of independent computers that appears to users as a single coherent system
 - Multiple autonomous computers
@@ -67,7 +67,7 @@ A collection of independent computers that appears to users as a single coherent
 
 ---
 
-## Fallacy 1: Network Reliability
+## Fallacy 1: Network Reliability: Overview
 
 Messages can be lost, duplicated, or reordered
 
@@ -101,7 +101,7 @@ Messages can be lost, duplicated, or reordered
 
 ---
 
-## Time and Ordering
+## Time and Ordering: Overview
 
 In distributed systems, there's no global clock
 
@@ -113,7 +113,7 @@ In distributed systems, there's no global clock
 
 ---
 
-## Logical Clocks
+## Logical Clocks: Overview
 
 Lamport timestamps establish partial ordering:
 
@@ -125,7 +125,7 @@ Lamport timestamps establish partial ordering:
 
 ---
 
-## Vector Clocks
+## Vector Clocks: Overview
 
 Track causality across all nodes:
 
@@ -137,7 +137,7 @@ Track causality across all nodes:
 
 ---
 
-## Consensus Problem
+## Consensus Problem: Overview
 
 Getting distributed nodes to agree on a value
 
@@ -182,7 +182,7 @@ Implications:
 
 ---
 
-## Byzantine Fault Tolerance
+## Byzantine Fault Tolerance: Overview
 
 When nodes can be malicious:
 
@@ -255,7 +255,7 @@ All replicas execute same operations in same order:
 
 ---
 
-## Saga Pattern
+## Saga Pattern: Overview
 
 Long-running transactions as series of local transactions:
 
@@ -267,7 +267,7 @@ Long-running transactions as series of local transactions:
 
 ---
 
-## Idempotency
+## Idempotency: Overview
 
 Operations that can be applied multiple times:
 
@@ -285,7 +285,7 @@ Operations that can be applied multiple times:
 
 ---
 
-## Distributed Caching
+## Distributed Caching: Overview
 
 Cache invalidation is hard!
 
@@ -309,7 +309,7 @@ Cache invalidation is hard!
 
 ---
 
-## Circuit Breaker Pattern
+## Circuit Breaker Pattern: Overview
 
 Prevent cascading failures
 

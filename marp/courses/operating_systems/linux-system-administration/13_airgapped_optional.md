@@ -24,7 +24,7 @@ audience:
     - Increased documentation burden
 
 ---
-## Air-Gap Architecture
+## Air-Gap Architecture: Overview
 
 Red lines represent the air gap - no network connection crosses this boundary.
 

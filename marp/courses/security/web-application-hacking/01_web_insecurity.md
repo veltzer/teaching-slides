@@ -94,7 +94,7 @@ audience:
 
 ---
 
-## Responsible Disclosure
+## Responsible Disclosure: Details
 
 - Typical disclosure timeline: **90 days**
 - Bug bounty programs provide structured reporting
@@ -108,7 +108,7 @@ audience:
 
 ---
 
-## The CIA Triad in Web Context
+## The CIA Triad in Web Context: Details
 
 - **Confidentiality**: Prevent unauthorized data access (`SQL injection`, data leaks)
 - **Integrity**: Prevent unauthorized data modification (`XSS`, `CSRF`)
@@ -149,7 +149,7 @@ audience:
 
 ---
 
-## Defense in Depth
+## Defense in Depth: Details
 
 - No single control is sufficient
 - Layers of defense create redundancy
@@ -162,7 +162,7 @@ audience:
 
 ---
 
-## Web Application Architecture Overview
+## Web Application Architecture Overview: Details
 
 - Each tier introduces potential attack vectors
 - Trust boundaries exist between each component

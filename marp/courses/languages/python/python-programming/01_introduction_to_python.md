@@ -124,7 +124,7 @@ import this
 - There should be one obvious way to do it
 
 ---
-## Python is Interpreted
+## Python is Interpreted: Details
 
 - Python code is compiled to bytecode (`.pyc` files)
 - Bytecode is executed by the Python Virtual Machine (PVM)

@@ -113,7 +113,7 @@ fn main() {
 
 ---
 
-## Vtable Layout
+## Vtable Layout: Overview
 
 A trait object is a fat pointer: data pointer + vtable pointer (2 x usize).
 

@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## What is `io_uring`?
+## What is `io_uring`?: Details
 
 1. Modern asynchronous I/O interface for Linux
 1. Introduced in Linux kernel 5.1 (2019)
@@ -41,7 +41,7 @@ audience:
 
 ---
 
-## Core Design Principles
+## Core Design Principles: Details
 
 1. Shared memory rings between kernel and userspace
 1. Submission Queue (SQ) and Completion Queue (CQ)
@@ -271,7 +271,7 @@ io_uring_queue_init_params(64, &ring, &params);
 
 ---
 
-## Real-World Performance Numbers
+## Real-World Performance Numbers: Details
 
 1. Up to 2x improvement in IOPS
 1. Reduced CPU usage by 30-50%

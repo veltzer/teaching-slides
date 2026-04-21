@@ -21,7 +21,7 @@ audience:
 
 ---
 
-## UNIX Accounts
+## UNIX Accounts: Details
 
 Key components:
 - Username (human readable)
@@ -74,7 +74,7 @@ wc -l /etc/passwd
 
 ---
 
-## The `/etc/shadow` File
+## The `/etc/shadow` File: Example
 
 Structure:
 ```misc
@@ -159,7 +159,7 @@ chmod 754 file.txt
 
 ---
 
-## How File Access is Determined
+## How File Access is Determined: Details
 
 Access check order:
 1. Is user the owner?
@@ -206,7 +206,7 @@ chmod 400 file.txt
 
 ---
 
-## Special Permissions
+## Special Permissions: Example
 
 Examples:
 ```bash
@@ -229,7 +229,7 @@ chmod 1755 directory
 
 ---
 
-## The umask Command
+## The umask Command: Example
 
 Common umask values:
 ```bash
@@ -302,7 +302,7 @@ groups john
 
 ---
 
-## Advanced Security Topics
+## Advanced Security Topics: Example
 
 Example with ACLs:
 ```bash

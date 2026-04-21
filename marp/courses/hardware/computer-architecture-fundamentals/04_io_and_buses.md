@@ -29,7 +29,7 @@ audience:
 1. Device Drivers Overview
 
 ---
-## I/O Architecture Overview
+## I/O Architecture Overview: Overview
 
 The I/O subsystem connects the CPU and memory to the outside world:
 peripherals, storage, network, and user devices.
@@ -40,7 +40,7 @@ peripherals, storage, network, and user devices.
 ![i_o_architecture_overview](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/i_o_architecture_overview.svg)
 
 ---
-## Bus Fundamentals
+## Bus Fundamentals: Comparison
 
 A bus is a communication system that transfers data between components.
 
@@ -62,7 +62,7 @@ A bus is a communication system that transfers data between components.
 ![bus_fundamentals](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/bus_fundamentals.svg)
 
 ---
-## PCIe: PCI Express
+## PCIe: PCI Express: Details
 
 PCIe is the primary high-speed bus in modern computers, used for GPUs,
 NVMe SSDs, network cards, and more.
@@ -131,7 +131,7 @@ PCIe BARs (Base Address Registers) tell the OS where device memory and
 registers are mapped in the physical address space (MMIO).
 
 ---
-## USB Architecture
+## USB Architecture: Overview
 
 USB (Universal Serial Bus) is a tiered-star topology for connecting
 peripherals:
@@ -142,7 +142,7 @@ peripherals:
 ![usb_architecture](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/usb_architecture.svg)
 
 ---
-## USB Architecture
+## USB Architecture: Details
 
 **Key design choices:**
 - Host-controlled: all transfers are initiated by the host
@@ -169,7 +169,7 @@ USB4 is based on the Thunderbolt 3 protocol and can tunnel PCIe and
 DisplayPort signals through a USB-C cable.
 
 ---
-## USB Transfer Types
+## USB Transfer Types: Comparison
 
 USB defines four transfer types for different use cases:
 
@@ -186,7 +186,7 @@ USB defines four transfer types for different use cases:
 ![usb_transfer_types](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/usb_transfer_types.svg)
 
 ---
-## SATA and NVMe
+## SATA and NVMe: Overview
 
 Two storage interfaces with very different architectures:
 
@@ -196,7 +196,7 @@ Two storage interfaces with very different architectures:
 ![sata_and_nvme](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/sata_and_nvme.svg)
 
 ---
-## SATA and NVMe
+## SATA and NVMe: Comparison
 
 | Feature | SATA (AHCI) | NVMe |
 |---------|-------------|------|
@@ -240,7 +240,7 @@ With interrupt:
 - **Exceptions**: caused by CPU errors (divide by zero, page fault)
 
 ---
-## Hardware Interrupt Flow
+## Hardware Interrupt Flow: Overview
 
 When a hardware device needs attention, this happens:
 
@@ -250,7 +250,7 @@ When a hardware device needs attention, this happens:
 ![hardware_interrupt_flow](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/hardware_interrupt_flow.svg)
 
 ---
-## Hardware Interrupt Flow
+## Hardware Interrupt Flow: Overview (2)
 
 The APIC (Advanced Programmable Interrupt Controller) manages priorities
 and routes interrupts to the correct CPU core in multi-core systems.
@@ -442,7 +442,7 @@ The device reads descriptors, performs DMA to/from the buffers,
 and marks descriptors as complete.
 
 ---
-## DMA: Scatter-Gather
+## DMA: Scatter-Gather: Overview
 
 Modern DMA controllers support scatter-gather, which allows a single
 DMA operation to transfer data to/from multiple non-contiguous memory
@@ -454,7 +454,7 @@ regions:
 ![dma_scatter_gather](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/dma_scatter_gather.svg)
 
 ---
-## DMA: Scatter-Gather
+## DMA: Scatter-Gather: Overview (2)
 
 This avoids copying data into contiguous buffers, saving CPU time
 and memory bandwidth. Essential for network stacks (packet headers
@@ -525,7 +525,7 @@ echo "none" > /sys/block/nvme0n1/queue/scheduler
 ```
 
 ---
-## Linux I/O Schedulers
+## Linux I/O Schedulers: Comparison
 
 | Scheduler | Best For | Strategy |
 |-----------|----------|----------|
@@ -542,7 +542,7 @@ echo "none" > /sys/block/nvme0n1/queue/scheduler
 ![linux_i_o_schedulers](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/linux_i_o_schedulers.svg)
 
 ---
-## Device Drivers: Overview
+## Device Drivers: Overview: Overview
 
 Device drivers are kernel modules that translate OS requests into
 hardware-specific operations:

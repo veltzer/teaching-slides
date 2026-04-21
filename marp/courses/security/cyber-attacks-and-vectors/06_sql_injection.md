@@ -27,7 +27,7 @@ audience:
 ![how_does_sql_injection_work](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/how_does_sql_injection_work.svg)
 
 ---
-## How Does SQL Injection Work?
+## How Does SQL Injection Work?: Details
 1. User input is not properly sanitized
 1. Malicious SQL code is injected into application queries
 1. Injected code is executed by the database

@@ -625,7 +625,7 @@ Performance gain: [estimate]
 
 ---
 
-## Prompt Templates Library
+## Prompt Templates Library: Example
 
 Building reusable templates:
 ```markdown

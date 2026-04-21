@@ -108,7 +108,7 @@ kubectl apply -f hello-service.yaml
 ![knative_concepts](svg/courses/devops/advanced-kubernetes/15_serverless_knative/knative_concepts.svg)
 
 ---
-## `Knative` Concepts
+## `Knative` Concepts: Details
 
 - **Configuration**: Desired state of the workload
 - **Revision**: Immutable snapshot (like a git commit)
@@ -337,7 +337,7 @@ spec:
 
 ---
 
-## Event-Driven Architecture
+## Event-Driven Architecture: Overview
 
 All services scale to zero when no events are flowing.
 
@@ -607,6 +607,6 @@ Key takeaways:
 
 ---
 
-## Course Wrap-Up
+## Course Wrap-Up: Overview
 
 > Thank you!

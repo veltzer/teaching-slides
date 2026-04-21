@@ -24,7 +24,7 @@ audience:
 
 ---
 
-## Vertical vs Horizontal Scaling
+## Vertical vs Horizontal Scaling: Details
 - Vertical (scale up): bigger machine, more CPU/RAM
 - Horizontal (scale out): more machines
 - Vertical has a ceiling (largest instance available)
@@ -175,7 +175,7 @@ aws autoscaling put-scaling-policy \
 
 ---
 
-## Multi-Region Architecture
+## Multi-Region Architecture: Details
 - Deploy to multiple Regions for global reach
 - DNS-based routing (Route 53, Cloud DNS)
 - Active-active or active-passive

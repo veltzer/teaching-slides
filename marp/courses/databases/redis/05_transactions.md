@@ -27,7 +27,7 @@ HSET user:123 visits 10 name "John"  # Atomic - all fields are set or none
 ```
 
 ---
-## Need for Transactions
+## Need for Transactions: Overview
 
 Single atomic commands aren't always enough:
 
@@ -38,7 +38,7 @@ Single atomic commands aren't always enough:
 ![need_for_transactions](svg/courses/databases/redis/05_transactions/need_for_transactions.svg)
 
 ---
-## What are Redis Transactions?
+## What are Redis Transactions?: Details
 
 Redis transactions allow executing multiple commands as a single atomic operation:
 - All commands execute sequentially
@@ -406,7 +406,7 @@ Scripts execute with high privileges:
     - Helps with replication and clustering
 
 ---
-## Script Replication and Clustering
+## Script Replication and Clustering: Overview
 
 Scripts work differently in distributed Redis:
 

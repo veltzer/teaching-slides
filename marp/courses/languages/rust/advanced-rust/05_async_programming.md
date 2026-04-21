@@ -94,7 +94,7 @@ async fn main() {
 
 ---
 
-## The Waker Mechanism
+## The Waker Mechanism: Overview
 
 The waker tells the executor: "this future is ready to make progress, poll it again."
 
