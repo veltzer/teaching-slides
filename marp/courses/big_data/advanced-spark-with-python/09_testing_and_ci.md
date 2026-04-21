@@ -1073,4 +1073,19 @@ def test_compute_user_totals_single_user(spark):
 ---
 ## Summary: Testing and CI/CD
 
-![summary_testing_and_ci_cd](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/summary_testing_and_ci_cd.svg)
+**Testing Strategy:**
+* Separate pure logic from Spark operations
+* Test pure Python functions without Spark
+* Use `local[2]` SparkSession for unit tests
+* Use `chispa` for DataFrame equality
+* Test edge cases: empty, nulls, special chars
+
+**Fixtures:**
+* Session-scoped SparkSession (create once)
+* Function-scoped DataFrames (fresh per test)
+* `conftest.py` for shared fixtures
+
+**CI/CD:**
+* Lint (pylint), format (black), type (mypy)
+* Unit tests first, integration tests second
+* Java 11+ required for Spark in CI

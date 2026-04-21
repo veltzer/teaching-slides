@@ -1201,4 +1201,19 @@ if __name__ == "__main__":
 ---
 ## Summary: Real-World Patterns
 
-![summary_real_world_patterns](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/summary_real_world_patterns.svg)
+**Pipeline Design:**
+* Use Bronze/Silver/Gold layered architecture
+* Separate extract, transform, load concerns
+* Make every step idempotent (safe to re-run)
+
+**Data Management:**
+* SCD Type 1 for simple overwrites
+* SCD Type 2 for full history tracking
+* Use Delta Lake `MERGE` for all upsert patterns
+* Handle schema evolution with `mergeSchema`
+
+**Data Quality:**
+* Validate at each layer boundary
+* Check nulls, ranges, uniqueness, referential
+* Fail fast on critical violations
+* Use Great Expectations for complex rules

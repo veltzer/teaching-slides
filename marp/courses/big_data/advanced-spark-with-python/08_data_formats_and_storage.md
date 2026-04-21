@@ -760,11 +760,11 @@ orders.write \
 ```
 
 **Problems:**
-- Slow reads: metadata overhead per file
-- HDFS/S3 listing bottleneck
-- NameNode memory pressure (HDFS)
-- High API cost (S3)
-- Poor predicate pushdown (stats per file)
+* Slow reads: metadata overhead per file
+* HDFS/S3 listing bottleneck
+* NameNode memory pressure (HDFS)
+* High API cost (S3)
+* Poor predicate pushdown (stats per file)
 
 ---
 ## Solving the Small File Problem
@@ -918,18 +918,18 @@ history.select(
 ## Summary: Data Formats and Storage
 
 **Formats:**
-- Parquet: default for analytics, columnar
-- ORC: alternative for Hive-centric stacks
-- Avro: row-based, streaming, schema evolution
-- Delta / Iceberg: ACID on top of Parquet
+* Parquet: default for analytics, columnar
+* ORC: alternative for Hive-centric stacks
+* Avro: row-based, streaming, schema evolution
+* Delta / Iceberg: ACID on top of Parquet
 
 **Optimization:**
-- Predicate pushdown: filter at storage layer
-- Projection pushdown: read only needed columns
-- Z-ordering: co-locate data for better pruning
-- Compression: ZSTD best overall balance
+* Predicate pushdown: filter at storage layer
+* Projection pushdown: read only needed columns
+* Z-ordering: co-locate data for better pruning
+* Compression: ZSTD best overall balance
 
 **Storage Management:**
-- Partition by query pattern (low cardinality)
-- Bucket by join key (high cardinality)
-- Compact small files regularly
+* Partition by query pattern (low cardinality)
+* Bucket by join key (high cardinality)
+* Compact small files regularly

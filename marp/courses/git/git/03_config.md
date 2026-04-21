@@ -125,7 +125,20 @@ git config --show-origin user.email
 
 ## Color Configuration
 
-![color_configuration](svg/courses/git/git/03_config/color_configuration.svg)
+```misc
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+    modified:   README.md
+
+Changes not staged for commit:
+    modified:   app.js
+
+Untracked files:
+    test.txt
+```
 
 ---
 
@@ -496,7 +509,23 @@ git clean -fx     # Ignored and untracked
 
 ## Whitespace Configuration
 
-![whitespace_configuration](svg/courses/git/git/03_config/whitespace_configuration.svg)
+```python
+def hello():
+····print("Hello")
+trailing space
+····
+tab after space
+    return
+```
+
+```bash
+# Configure Git to highlight these:
+git config core.whitespace \
+  trailing-space,space-before-tab,indent-with-non-tab
+
+# Show whitespace errors:
+git diff --check
+```
 
 ---
 

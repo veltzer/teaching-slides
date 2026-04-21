@@ -109,11 +109,6 @@ rustup component list
 ---
 ## Development Environment
 
-![development_environment](svg/courses/languages/rust/rust-programming/01_getting_started/development_environment.svg)
-
----
-## Development Environment: Details
-
 ### Recommended Setup
 - VS Code
 - rust-analyzer extension

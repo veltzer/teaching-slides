@@ -105,7 +105,10 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## No-Blame Culture
 
-![no_blame_culture](svg/courses/security/it-security-policies/06_incident_response/no_blame_culture.svg)
+> **"The only wrong thing to do is nothing."**
+
+- Report early. Report everything.
+- We will figure it out together.
 
 ---
 

@@ -160,7 +160,9 @@ The three pillars of information security:
 
 ## Key Takeaway
 
-![key_takeaway](svg/courses/security/it-security-policies/01_foundations/key_takeaway.svg)
+**Security is NOT just an IT problem.**
+
+Every employee is both a potential vulnerability AND a powerful line of defense.
 
 ---
 

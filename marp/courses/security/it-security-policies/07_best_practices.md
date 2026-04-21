@@ -223,7 +223,9 @@ audience:
 
 ## The Three Things to Remember
 
-![the_three_things_to_remember](svg/courses/security/it-security-policies/07_best_practices/the_three_things_to_remember.svg)
+1. **THINK** before you click, share, or connect.
+1. **REPORT** anything suspicious immediately.
+1. **PROTECT** your credentials, devices, and data.
 
 ---
 

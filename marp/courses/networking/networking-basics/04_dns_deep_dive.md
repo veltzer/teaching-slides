@@ -800,7 +800,14 @@ Returns different IP addresses based on the client's geographic location:
 
 ## DNS Load Balancing Techniques
 
-![geodns](svg/courses/networking/networking-basics/04_dns_deep_dive/geodns.svg)
+**GeoDNS routing example:**
+
+```misc
+GeoDNS Server
+  US client  →  1.2.3.4  (US data center)
+  EU client  →  5.6.7.8  (EU data center)
+  AS client  →  9.0.1.2  (Asia data center)
+```
 
 ---
 

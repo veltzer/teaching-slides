@@ -414,7 +414,21 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 
 ## Security Awareness Training
 
-![effective_training_program_elements](svg/courses/security/cyber-attacks-and-vectors/23_phishing/effective_training_program_elements.svg)
+Phishing simulation best practices:
+
+**DO:**
+- Use realistic but safe simulations
+- Provide immediate education when someone clicks
+- Track metrics over time (click rate, report rate)
+- Reward reporting (positive reinforcement)
+- Escalate difficulty gradually
+
+**DON'T:**
+- Publicly shame or punish employees who click
+- Use simulations to fire people
+- Make simulations too easy (builds false confidence)
+- Run simulations without executive buy-in
+- Ignore the data (track trends, adjust program)
 
 ---
 ## Technical Defenses
