@@ -912,7 +912,17 @@ git config --global alias.recent-branches \
 
 ## Configuration Checklist
 
-![configuration_checklist](svg/courses/git/git/03_config/configuration_checklist.svg)
+- ☐ Set user.name and user.email
+- ☐ Configure preferred editor
+- ☐ Set up SSH keys
+- ☐ Create essential aliases
+- ☐ Configure credential helper
+- ☐ Set up global .gitignore
+- ☐ Configure line endings
+- ☐ Enable colors
+- ☐ Set default branch name
+- ☐ Configure pull strategy
+- ☐ Optional: Set up GPG signing
 
 ---
 

@@ -95,25 +95,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="58.1819" y="66.3636" font-size="19.7638" fill="var(--info-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline] Guidelines</text>
-  <rect x="50.9091" y="90.0909" width="1178.1818" height="110.7273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="65.4547" y="113.8181" font-size="16.9405" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline] — USE FOR:</text>
-  <text x="65.4547" y="129.6364" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Small library functions (cross-crate inlining)</text>
-  <text x="65.4547" y="153.3636" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Wrapper / delegation</text>
-  <text x="65.4547" y="177.0909" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Hot-path functions (profiled)</text>
-  <rect x="50.9091" y="208.7272" width="1178.1818" height="110.7273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="65.4547" y="232.4545" font-size="16.9405" fill="var(--warn-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline(always)] — USE FOR:</text>
-  <text x="65.4547" y="248.2727" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Tiny functions (1–3 lines) that must be fast</text>
-  <text x="65.4547" y="272" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Inner-loop hot paths</text>
-  <text x="65.4547" y="295.7273" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Only if benchmarks prove it</text>
-  <rect x="50.9091" y="327.3637" width="1178.1818" height="110.7273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="65.4547" y="351.0909" font-size="16.9405" fill="var(--primary-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline(never)] — USE FOR:</text>
-  <text x="65.4547" y="366.9091" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Error paths (keep hot path small)</text>
-  <text x="65.4547" y="390.6363" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Functions you want in profiler output</text>
-  <text x="65.4547" y="414.3636" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Large functions called many times (code bloat)</text>
-  <rect x="50.9091" y="445.9999" width="1178.1818" height="86.9999" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
-  <text x="65.4547" y="469.7272" font-size="16.9405" fill="var(--danger-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">DO NOT USE when:</text>
-  <text x="65.4547" y="485.5454" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• On every function (hurts compile time, bloats binary)</text>
-  <text x="65.4547" y="509.2727" font-size="15.5288" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Without profiling data</text>
+  <text x="47.407481595794" y="40" font-size="22.237179511164" fill="var(--info-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline] Guidelines</text>
+  <rect x="40" y="69.491569663905" width="1200" height="137.627200804395" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.750881767018" filter="url(#shadow)"/>
+  <text x="54.814963191589" y="98.983015033981" font-size="19.060552095694" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline] — USE FOR:</text>
+  <text x="54.814963191589" y="118.644185770414" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Small library functions (cross-crate inlining)</text>
+  <text x="54.814963191589" y="148.13563114049" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Wrapper / delegation</text>
+  <text x="54.814963191589" y="177.627200804395" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Hot-path functions (profiled)</text>
+  <rect x="40" y="216.949169395773" width="1200" height="137.627200804395" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.750881767018" filter="url(#shadow)"/>
+  <text x="54.814963191589" y="246.440739059679" font-size="19.060552095694" fill="var(--warn-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline(always)] — USE FOR:</text>
+  <text x="54.814963191589" y="266.101785502282" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Tiny functions (1–3 lines) that must be fast</text>
+  <text x="54.814963191589" y="295.593355166187" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Inner-loop hot paths</text>
+  <text x="54.814963191589" y="325.084924830092" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Only if benchmarks prove it</text>
+  <rect x="40" y="364.407017715299" width="1200" height="137.627200804395" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.750881767018" filter="url(#shadow)"/>
+  <text x="54.814963191589" y="393.898463085376" font-size="19.060552095694" fill="var(--primary-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">#[inline(never)] — USE FOR:</text>
+  <text x="54.814963191589" y="413.559509527979" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Error paths (keep hot path small)</text>
+  <text x="54.814963191589" y="443.050954898055" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Functions you want in profiler output</text>
+  <text x="54.814963191589" y="472.542524561961" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Large functions called many times (code bloat)</text>
+  <rect x="40" y="511.864493153339" width="1200" height="108.135506846661" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.750881767018" filter="url(#shadow)"/>
+  <text x="54.814963191589" y="541.356062817244" font-size="19.060552095694" fill="var(--danger-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">DO NOT USE when:</text>
+  <text x="54.814963191589" y="561.017109259847" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• On every function (hurts compile time, bloats binary)</text>
+  <text x="54.814963191589" y="590.508678923753" font-size="17.472182130611" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">• Without profiling data</text>
 </svg>

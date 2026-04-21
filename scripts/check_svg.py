@@ -17,6 +17,7 @@ Checks:
   --fill        Flag SVGs whose bbox fills < MIN_FILL_PCT of the usable area
   --fit         Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]
   --no-circles  Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)
+  --no-border   Flag SVGs whose first non-defs <rect> spans the full usable area (40,40)+1200x580
   --shadows     Validate <rect> shadow filter usage against palette effects.rect-shadow
   --typography  Validate <text>/<tspan> font-family against palette typography
   --gradients   Validate <rect> family fills (solid vs gradient) against palette effects.rect-fill
@@ -538,6 +539,44 @@ def _check_no_circles(tree: ET.ElementTree) -> list[str]:
     return []
 
 
+def _check_no_border(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs whose first non-defs <rect> spans the full usable area.
+
+    A rect at x=40, y=40, width=1200, height=580 acts as a visible border
+    around the whole diagram. The slide edge is the natural frame; adding
+    another rect duplicates it."""
+    root = tree.getroot()
+
+    def walk(node, inside_defs):
+        for child in node:
+            tag = child.tag.split('}')[-1]
+            if tag == 'defs':
+                yield from walk(child, True)
+                continue
+            if inside_defs:
+                yield from walk(child, inside_defs)
+                continue
+            yield child
+            yield from walk(child, inside_defs)
+
+    for elem in walk(root, False):
+        tag = elem.tag.split('}')[-1]
+        if tag != 'rect':
+            continue
+        try:
+            x = float(elem.get('x', ''))
+            y = float(elem.get('y', ''))
+            w = float(elem.get('width', ''))
+            h = float(elem.get('height', ''))
+        except ValueError:
+            return []
+        if (abs(x - 40) < 1 and abs(y - 40) < 1
+                and abs(w - 1200) < 1 and abs(h - 580) < 1):
+            return ["contains full-slide border <rect> (x=40,y=40,w=1200,h=580) — remove it, the slide edge is the frame"]
+        return []  # first rect is not a border — OK
+    return []
+
+
 def _check_title(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
@@ -747,6 +786,8 @@ def main() -> None:
                         help='Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]')
     parser.add_argument('--no-circles', action='store_true', dest='no_circles',
                         help='Flag SVGs that contain <circle> elements (use <rect>/<ellipse> instead)')
+    parser.add_argument('--no-border', action='store_true', dest='no_border',
+                        help='Flag SVGs whose first non-defs <rect> spans the full usable area (40,40)+1200x580')
     parser.add_argument('--shadows', action='store_true',
                         help='Validate <rect> shadow filter usage against palette effects.rect-shadow')
     parser.add_argument('--typography', action='store_true',
@@ -763,7 +804,8 @@ def main() -> None:
     # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
             args.namespace, args.bounds, args.title, args.colors, args.words,
-            args.fill, args.fit, args.no_circles, args.shadows, args.typography,
+            args.fill, args.fit, args.no_circles, args.no_border,
+            args.shadows, args.typography,
             args.gradients, args.title_text]
     explicit = any(flags)
     do_size = args.size or not explicit
@@ -779,6 +821,7 @@ def main() -> None:
     do_fill = args.fill or not explicit
     do_fit = args.fit or not explicit
     do_no_circles = args.no_circles or not explicit
+    do_no_border = args.no_border or not explicit
     do_shadows = args.shadows or not explicit
     do_typography = args.typography or not explicit
     do_gradients = args.gradients or not explicit
@@ -805,7 +848,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_namespace or do_bounds or do_title or do_colors or do_no_circles or do_shadows or do_typography or do_gradients or do_title_text:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_namespace or do_bounds or do_title or do_colors or do_no_circles or do_no_border or do_shadows or do_typography or do_gradients or do_title_text:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -831,6 +874,8 @@ def main() -> None:
                     errors.extend(_check_bounds(tree))
                 if do_no_circles:
                     errors.extend(_check_no_circles(tree))
+                if do_no_border:
+                    errors.extend(_check_no_border(tree))
                 if do_shadows:
                     errors.extend(_check_shadows(tree))
                 if do_typography:

@@ -747,7 +747,24 @@ orders.write \
 ---
 ## The Small File Problem
 
-![the_small_file_problem](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/the_small_file_problem.svg)
+**Cause**: streaming or frequent appends create many tiny files
+
+```tree
+/data/events/date=2024-06-15/
+├── part-00000.parquet  (2 KB)
+├── part-00001.parquet  (3 KB)
+├── part-00002.parquet  (1 KB)
+├── part-00003.parquet  (4 KB)
+├── ... (10,000 tiny files)
+└── part-09999.parquet  (2 KB)
+```
+
+**Problems:**
+- Slow reads: metadata overhead per file
+- HDFS/S3 listing bottleneck
+- NameNode memory pressure (HDFS)
+- High API cost (S3)
+- Poor predicate pushdown (stats per file)
 
 ---
 ## Solving the Small File Problem
@@ -900,4 +917,19 @@ history.select(
 ---
 ## Summary: Data Formats and Storage
 
-![summary_data_formats_and_storage](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/summary_data_formats_and_storage.svg)
+**Formats:**
+- Parquet: default for analytics, columnar
+- ORC: alternative for Hive-centric stacks
+- Avro: row-based, streaming, schema evolution
+- Delta / Iceberg: ACID on top of Parquet
+
+**Optimization:**
+- Predicate pushdown: filter at storage layer
+- Projection pushdown: read only needed columns
+- Z-ordering: co-locate data for better pruning
+- Compression: ZSTD best overall balance
+
+**Storage Management:**
+- Partition by query pattern (low cardinality)
+- Bucket by join key (high cardinality)
+- Compact small files regularly

@@ -95,42 +95,41 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" rx="6.115766297252" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <rect x="80.6779" y="62.597298701299" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="89.714285714286" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">5 superpowers</text>
-  <text x="467.1187" y="89.714285714286" font-size="15.956543916721" fill="var(--text)" font-family="Arial, sans-serif">raw ptrs, unsafe fn, static mut, unsafe traits, union fields</text>
-  <rect x="80.6779" y="109.298701298701" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="136.415584415584" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Raw pointers</text>
-  <text x="467.1187" y="136.415584415584" font-size="17.552249273112" fill="var(--text)" font-family="Courier New, monospace">*const T, *mut T</text>
-  <text x="792.5424" y="136.415584415584" font-size="15.956543916721" fill="var(--text-muted)" font-family="Arial, sans-serif">(no borrow check)</text>
-  <rect x="80.6779" y="155.999896103896" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="183.116883116883" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cell&lt;T&gt;</text>
-  <text x="467.1187" y="183.116883116883" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">Copy-based interior mutability</text>
-  <rect x="80.6779" y="202.701298701299" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="229.818181818182" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">RefCell&lt;T&gt;</text>
-  <text x="467.1187" y="229.818181818182" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">runtime borrow checking</text>
-  <rect x="80.6779" y="249.402597402597" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="276.519480519481" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">UnsafeCell&lt;T&gt;</text>
-  <text x="467.1187" y="276.519480519481" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">foundation of interior mutability</text>
-  <rect x="80.6779" y="296.103896103896" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="323.220779220779" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(C)</text>
-  <text x="467.1187" y="323.220779220779" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">C-compatible layout</text>
-  <rect x="80.6779" y="342.805090909091" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="369.922181818182" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(packed)</text>
-  <text x="467.1187" y="369.922181818182" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">no padding</text>
-  <rect x="80.6779" y="389.506493506493" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="416.62348051948" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(align(N))</text>
-  <text x="467.1187" y="416.62348051948" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">minimum alignment</text>
-  <rect x="80.6779" y="436.207792207792" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="463.324675324675" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">transmute</text>
-  <text x="467.1187" y="463.324675324675" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">reinterpret bits as another type</text>
-  <rect x="80.6779" y="482.909194805195" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="510.025974025974" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">MaybeUninit</text>
-  <text x="467.1187" y="510.025974025974" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">safe uninitialized memory handling</text>
-  <rect x="80.6779" y="529.61038961039" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="556.727376623377" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">SAFETY comment</text>
-  <text x="467.1187" y="556.727376623377" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">document why unsafe code is sound</text>
-  <rect x="80.6779" y="576.311792207792" width="345.7627" height="39.168935064935" rx="6.115766297252" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="253.5594" y="603.428571428571" text-anchor="middle" font-size="17.552249273112" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Miri</text>
-  <text x="467.1187" y="603.428571428571" font-size="17.552249273112" fill="var(--text)" font-family="Arial, sans-serif">runtime UB detector</text>
+  <rect x="40" y="40" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="68.446959439842" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">5 superpowers</text>
+  <text x="691.428691836719" y="68.446959439842" font-size="21.21915070322" fill="var(--text)" font-family="Arial, sans-serif">raw ptrs, unsafe fn, static mut, unsafe traits, union fields</text>
+  <rect x="40" y="88.991906985676" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="117.438757433754" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Raw pointers</text>
+  <text x="691.428691836719" y="117.438757433754" font-size="23.341133546868" fill="var(--text)" font-family="Courier New, monospace">*const T, *mut T</text>
+  <text x="1240" y="117.438757433754" font-size="21.21915070322" fill="var(--text-muted)" font-family="Arial, sans-serif">(no borrow check)</text>
+  <rect x="40" y="137.983595987825" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="166.430555427667" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Cell&lt;T&gt;</text>
+  <text x="691.428691836719" y="166.430555427667" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">Copy-based interior mutability</text>
+  <rect x="40" y="186.975502973502" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="215.42235342158" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">RefCell&lt;T&gt;</text>
+  <text x="691.428691836719" y="215.42235342158" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">runtime borrow checking</text>
+  <rect x="40" y="235.967300967414" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="264.414151415493" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">UnsafeCell&lt;T&gt;</text>
+  <text x="691.428691836719" y="264.414151415493" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">foundation of interior mutability</text>
+  <rect x="40" y="284.959098961327" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="313.405949409405" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(C)</text>
+  <text x="691.428691836719" y="313.405949409405" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">C-compatible layout</text>
+  <rect x="40" y="333.950787963476" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="362.397856395083" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(packed)</text>
+  <text x="691.428691836719" y="362.397856395083" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">no padding</text>
+  <rect x="40" y="382.942694949152" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="411.389654388994" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">repr(align(N))</text>
+  <text x="691.428691836719" y="411.389654388994" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">minimum alignment</text>
+  <rect x="40" y="431.934492943065" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="460.381343391143" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">transmute</text>
+  <text x="691.428691836719" y="460.381343391143" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">reinterpret bits as another type</text>
+  <rect x="40" y="480.926399928742" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="509.373141385056" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">MaybeUninit</text>
+  <text x="691.428691836719" y="509.373141385056" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">safe uninitialized memory handling</text>
+  <rect x="40" y="529.918088930891" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="558.365048370733" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">SAFETY comment</text>
+  <text x="691.428691836719" y="558.365048370733" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">document why unsafe code is sound</text>
+  <rect x="40" y="578.909995916567" width="582.857046530625" height="41.090004083433" rx="8.132799145251" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="331.428776122422" y="607.356737372881" text-anchor="middle" font-size="23.341133546868" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Miri</text>
+  <text x="691.428691836719" y="607.356737372881" font-size="23.341133546868" fill="var(--text)" font-family="Arial, sans-serif">runtime UB detector</text>
 </svg>

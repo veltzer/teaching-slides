@@ -95,21 +95,20 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect x="40" y="40" width="1200" height="580" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.134848345825" filter="url(#shadow)"/>
-  <text x="61.1765" y="84.48858706095" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">1.</text>
-  <text x="119.4117" y="84.48858706095" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">Attacker queries resolver for random.example.com</text>
-  <text x="119.4117" y="114.147610253097" text-anchor="start" font-size="18.610266952006" fill="var(--text-muted)" font-family="Arial, sans-serif">(a subdomain that does NOT exist in cache)</text>
-  <text x="61.1765" y="160.284042794421" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">2.</text>
-  <text x="119.4117" y="160.284042794421" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">Resolver sends query to authoritative server for example.com</text>
-  <text x="61.1765" y="206.420475335744" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">3.</text>
-  <text x="119.4117" y="206.420475335744" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">Before real response arrives, attacker floods resolver with</text>
-  <text x="119.4117" y="236.079498527892" text-anchor="start" font-size="18.610266952006" fill="var(--text-muted)" font-family="Arial, sans-serif">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
-  <text x="61.1765" y="282.215826523759" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">4.</text>
-  <text x="119.4117" y="282.215826523759" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">If forged response arrives FIRST and ID matches:</text>
-  <text x="119.4117" y="311.874954261363" text-anchor="start" font-size="18.610266952006" fill="var(--text-muted)" font-family="Arial, sans-serif">Resolver caches:  example.com NS  →  EVIL_IP</text>
-  <text x="61.1765" y="358.01128225723" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">5.</text>
-  <text x="119.4117" y="358.01128225723" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">ALL future queries for *.example.com are redirected to attacker!</text>
-  <text x="61.1765" y="404.147714798553" text-anchor="start" font-size="21.993840309673" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Key:</text>
-  <text x="119.4117" y="404.147714798553" text-anchor="start" font-size="20.30205363084" fill="var(--text)" font-family="Arial, sans-serif">Attacker retries with different random subdomains until one succeeds</text>
-  <text x="119.4117" y="433.806842536157" text-anchor="start" font-size="18.610266952006" fill="var(--text-muted)" font-family="Arial, sans-serif">— thousands of attempts possible per second</text>
+  <text x="40" y="40" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">1.</text>
+  <text x="1240" y="40" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">Attacker queries resolver for random.example.com</text>
+  <text x="1240" y="89.245160199382" text-anchor="start" font-size="108.8563569041" fill="var(--text-muted)" font-family="Arial, sans-serif">(a subdomain that does NOT exist in cache)</text>
+  <text x="40" y="165.849032039877" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">2.</text>
+  <text x="1240" y="165.849032039877" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">Resolver sends query to authoritative server for example.com</text>
+  <text x="40" y="242.45290388037" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">3.</text>
+  <text x="1240" y="242.45290388037" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">Before real response arrives, attacker floods resolver with</text>
+  <text x="1240" y="291.698064079754" text-anchor="start" font-size="108.8563569041" fill="var(--text-muted)" font-family="Arial, sans-serif">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
+  <text x="40" y="368.301762335375" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">4.</text>
+  <text x="1240" y="368.301762335375" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">If forged response arrives FIRST and ID matches:</text>
+  <text x="1240" y="417.54709611963" text-anchor="start" font-size="108.8563569041" fill="var(--text-muted)" font-family="Arial, sans-serif">Resolver caches:  example.com NS  →  EVIL_IP</text>
+  <text x="40" y="494.150794375252" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">5.</text>
+  <text x="1240" y="494.150794375252" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">ALL future queries for *.example.com are redirected to attacker!</text>
+  <text x="40" y="570.754666215745" text-anchor="start" font-size="128.647769353114" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">Key:</text>
+  <text x="1240" y="570.754666215745" text-anchor="start" font-size="118.75206312861" fill="var(--text)" font-family="Arial, sans-serif">Attacker retries with different random subdomains until one succeeds</text>
+  <text x="1240" y="620" text-anchor="start" font-size="108.8563569041" fill="var(--text-muted)" font-family="Arial, sans-serif">— thousands of attempts possible per second</text>
 </svg>
