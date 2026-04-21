@@ -22,9 +22,8 @@ audience:
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Numbers
 
-## Numbers
 - Integers: `42`, `-7`, `0`
 - Floating point: `3.14`, `-0.001`, `2e10`
 - Complex numbers: `3+4j`
@@ -38,9 +37,8 @@ z = x + y  # 8.14
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Booleans
 
-## Booleans
 - Values: `True`, `False`
 - Operations: `and`, `or`, `not`
 - Conversion: `bool()`
@@ -53,9 +51,8 @@ can_proceed = is_valid and not is_complete
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Strings
 
-## Strings
 - Immutable sequences of characters
 - Created with: `'single'`, `"double"`, `'''triple'''`, `"""triple"""`
 - Methods: `.strip()`, `.split()`, `.join()`, `.format()`, f-strings
@@ -68,9 +65,8 @@ message = f"Hello {name} {version}!"
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Lists
 
-## Lists
 - Mutable sequences
 - Created with: `[]`, `list()`
 - Operations: `append()`, `extend()`, `insert()`, `pop()`, `remove()`
@@ -84,9 +80,8 @@ numbers[1:3] = [10, 20]  # [1, 10, 20, 4, 5, 6]
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Tuples
 
-## Tuples
 - Immutable sequences
 - Created with: `()`, `tuple()`
 - Often used for multiple return values
@@ -100,9 +95,8 @@ coordinates = (*point, 5)  # (3, 4, 5)
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Dictionaries
 
-## Dictionaries
 - Key-value mappings
 - Created with: `{}`, `dict()`
 - Fast lookups by key
@@ -116,9 +110,8 @@ age = user.get("age", 0)  # Default if key not found
 
 ---
 
-## Python Basic Types
+## Python Basic Types: Sets
 
-## Sets
 - Unordered collections of unique elements
 - Created with: `{1, 2, 3}`, `set()`
 - Operations: `.add()`, `.remove()`, union `|`, intersection `&`
@@ -131,9 +124,8 @@ combined = unique_numbers | more_numbers  # {1, 2, 3, 4, 5}
 
 ---
 
-## Python Basic Types
+## Python Basic Types: None
 
-## None
 - Represents absence of a value
 - Default return value for functions
 - Testing with `is None`, not `== None`
@@ -149,9 +141,8 @@ if result is None:
 
 ---
 
-## Python Iterators
+## Python Iterators: What Are Iterators?
 
-## What Are Iterators?
 - Objects implementing the iterator protocol
 - Support the iteration concept in Python
 - Protocol requires `__iter__()` and `__next__()` methods
@@ -167,9 +158,8 @@ next(iterator)  # Raises StopIteration
 
 ---
 
-## Python Iterators
+## Python Iterators: Common Iterables
 
-## Common Iterables
 - Lists, tuples, strings, dictionaries, sets
 - File objects
 - Custom objects implementing the iterator protocol
@@ -185,9 +175,8 @@ for line in open("file.txt"):  # File is iterable
 
 ---
 
-## Python Iterators
+## Python Iterators: Iterator Consumption
 
-## Iterator Consumption
 - Iterators are consumed as you use them
 - Cannot be "reset" without creating a new iterator
 - Use `list()` to materialize an iterator's contents
@@ -201,9 +190,8 @@ print(list(iter_nums))  # [] - already consumed
 
 ---
 
-## Python Iterators
+## Python Iterators: Creating Custom Iterators
 
-## Creating Custom Iterators
 - Implement both `__iter__()` and `__next__()`
 - `__iter__()` returns self for iterators
 - `__next__()` returns next value or raises StopIteration
@@ -225,9 +213,8 @@ class CountDown:
 
 ---
 
-## Python Iterators
+## Python Iterators: Generators
 
-## Generators
 - Functions that use `yield` instead of `return`
 - Create iterators automatically
 - Maintain state between calls
@@ -246,9 +233,7 @@ for num in count_up_to(5):
 
 ---
 
-## Python Iterators
-
-## Iterator Tools
+## Python Iterators: Iterator Tools
 
 ## The itertools Module
 - Efficient iterator algebra
@@ -265,9 +250,8 @@ repeated = list(itertools.repeat("x", 3))  # ["x", "x", "x"]
 
 ---
 
-## type() vs isinstance()
+## type() vs isinstance(): Understanding Type Checking
 
-## Understanding Type Checking
 - `type()` returns the exact type of an object
 - `isinstance()` checks if object belongs to a type or its subclasses
 - `isinstance()` supports checking against multiple types
@@ -288,9 +272,8 @@ isinstance(obj, Parent)  # True - checks inheritance
 
 ---
 
-## type() vs isinstance()
+## type() vs isinstance(): When to Use Each
 
-## When to Use Each
 - Use `isinstance()` for most type checking
     - Respects inheritance
     - More flexible
@@ -301,9 +284,8 @@ isinstance(obj, Parent)  # True - checks inheritance
 
 ---
 
-## type() vs isinstance()
+## type() vs isinstance(): Type Checking with Abstract Base Classes
 
-## Type Checking with Abstract Base Classes
 - Import from `collections.abc`
 - Check against protocols, not implementations
 - More aligned with Python's duck typing philosophy
@@ -319,9 +301,8 @@ isinstance(42, Sequence)  # False
 
 ---
 
-## type() vs isinstance()
+## type() vs isinstance(): Common Pitfalls
 
-## Common Pitfalls
 - Using `==` for type checking (use `is` with types)
 - Not accounting for inheritance
 - Too rigid type checking (against Python's dynamic nature)
@@ -342,9 +323,8 @@ if isinstance(x, collections.abc.Sequence) and not isinstance(x, str):
 
 ---
 
-## Python Memory Model
+## Python Memory Model: Everything is an Object
 
-## Everything is an Object
 - Even types are objects
 - Objects have identity, type, and value
 - Variables are references to objects
@@ -358,9 +338,8 @@ print(a)  # [1, 2, 3, 4]
 
 ---
 
-## Python Memory Model
+## Python Memory Model: Object Identity
 
-## Object Identity
 - `id()` function returns unique object identifier
 - `is` operator compares object identity
 - Different from value equality (`==`)
@@ -378,9 +357,8 @@ x is y  # May be True due to integer interning
 
 ---
 
-## Common Beginner Mistakes
+## Common Beginner Mistakes: Mutable Default Arguments
 
-## Mutable Default Arguments
 - Default arguments are evaluated once at function definition
 - Mutable defaults persist between calls
 
@@ -400,9 +378,8 @@ def add_item(item, items=None):
 
 ---
 
-## Common Beginner Mistakes
+## Common Beginner Mistakes: Late Binding Closures
 
-## Late Binding Closures
 - Closure variables are bound at execution time, not definition
 - Can cause unexpected behavior in loops
 

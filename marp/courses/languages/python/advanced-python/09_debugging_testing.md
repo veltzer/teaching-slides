@@ -39,9 +39,8 @@ def caLc_average(vals):
 ```
 
 ---
-## Debugging Techniques
+## Debugging Techniques: Print Debugging
 
-## Print Debugging
 - Simplest form of debugging
 - Add print statements to track execution
 - View variable values at different points
@@ -65,9 +64,8 @@ def calculate_total(items):
 ```
 
 ---
-## Debugging Techniques
+## Debugging Techniques: Logging
 
-## Logging
 - More sophisticated than print statements
 - Configurable output levels
 - Can be enabled/disabled as needed
@@ -100,9 +98,8 @@ def calculate_total(items):
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: Python Debugger (pdb)
 
-## Python Debugger (pdb)
 - Built-in Python debugger
 - Interactive command-line interface
 - Set breakpoints and step through code
@@ -129,9 +126,8 @@ def complex_function(data):
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: pdb Commands
 
-## pdb Commands
 - `l` (list): Show current line in context
 - `n` (next): Execute current line, proceed to next
 - `s` (step): Step into function called on current line
@@ -143,9 +139,8 @@ def complex_function(data):
 - `h` (help): Show command help
 
 ---
-## Python Debuggers
+## Python Debuggers: breakpoint() Function
 
-## breakpoint() Function
 - Added in Python 3.7
 - Built-in function to enter the debugger
 - Uses environment variable to select debugger
@@ -171,9 +166,8 @@ def complex_calculation(data):
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: IPython and ipdb
 
-## IPython and ipdb
 - Enhanced interactive debugger
 - Better display of variables
 - Tab completion
@@ -202,9 +196,8 @@ def problematic_function():
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: pudb
 
-## pudb
 - Visual, console-based debugger
 - TUI (Text User Interface)
 - Shows code, variables, stack simultaneously
@@ -232,9 +225,8 @@ def analyze_data(data):
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: IDE Debuggers
 
-## IDE Debuggers
 - Visual Studio Code, PyCharm, etc.
 - Graphical debugging interface
 - Set breakpoints with a click
@@ -245,9 +237,8 @@ def analyze_data(data):
 - Debug configurations
 
 ---
-## Python Debuggers
+## Python Debuggers: Remote Debugging
 
-## Remote Debugging
 - Debug code running in a different process
 - Connect to running application
 - Useful for web applications, microservices
@@ -273,9 +264,8 @@ def function_to_debug():
 ```
 
 ---
-## Python Debuggers
+## Python Debuggers: Post-Mortem Debugging
 
-## Post-Mortem Debugging
 - Analyze program after it crashes
 - Examine stack trace and variables
 - Understand what led to the exception
@@ -302,9 +292,8 @@ if __name__ == "__main__":
 ```
 
 ---
-## Using Assertions Correctly
+## Using Assertions Correctly: What Are Assertions?
 
-## What Are Assertions?
 - Runtime checks for program correctness
 - Validate assumptions and invariants
 - Crash early when assumptions are violated
@@ -328,9 +317,8 @@ def binary_search(sorted_list, item):
 ```
 
 ---
-## Using Assertions Correctly
+## Using Assertions Correctly: When to Use Assertions
 
-## When to Use Assertions
 - Checking internal invariants
 - Validating function preconditions
 - Verifying postconditions and invariants
@@ -357,9 +345,8 @@ class Rectangle:
 ```
 
 ---
-## Using Assertions Correctly
+## Using Assertions Correctly: When Not to Use Assertions
 
-## When Not to Use Assertions
 - Validating user input
 - Handling expected error conditions
 - Checking for events that should trigger exceptions
@@ -380,9 +367,8 @@ def process_user_data(data):
 ```
 
 ---
-## Using Assertions Correctly
+## Using Assertions Correctly: Advanced Assertion Techniques
 
-## Advanced Assertion Techniques
 - Use with classes to enforce contracts
 - Validate complex data structures
 - Create self-documenting code
@@ -406,9 +392,8 @@ class DataProcessor:
 ```
 
 ---
-## Type Hints
+## Type Hints: Introduction to Type Hints
 
-## Introduction to Type Hints
 - Added in Python 3.5 (PEP 484)
 - Static type annotations
 - Not enforced at runtime
@@ -434,9 +419,8 @@ def process_item(item_id: int, details: dict[str, str]) -> bool:
 ```
 
 ---
-## Type Hints
+## Type Hints: Basic Type Annotations
 
-## Basic Type Annotations
 - Primitive types: `int`, `float`, `str`, `bool`
 - Container types: `list`, `dict`, `tuple`, `set`
 - Generic types: `List[T]`, `Dict[K, V]`, `Set[T]`
@@ -461,9 +445,8 @@ def find_user(user_id: int, details: bool = False) -> Optional[Dict[str, Any]]:
 ```
 
 ---
-## Type Hints
+## Type Hints: Advanced Type Annotations
 
-## Advanced Type Annotations
 - Type aliases
 - Callable types
 - TypeVar for generics
@@ -502,9 +485,8 @@ def open_file(path: str, mode: Mode) -> None:
 ```
 
 ---
-## Type Hints
+## Type Hints: Class and Method Type Hints
 
-## Class and Method Type Hints
 - Annotations for class methods
 - Self parameter doesn't need annotation
 - Return type annotations
@@ -534,9 +516,8 @@ class User:
 ```
 
 ---
-## Type Hints
+## Type Hints: Type Checking with mypy
 
-## Type Checking with mypy
 - Static type checker for Python
 - Analyzes code without running it
 - Identifies type inconsistencies
@@ -564,9 +545,8 @@ mypy --strict script.py
 ```
 
 ---
-## Type Hints
+## Type Hints: Type Checking in IDEs
 
-## Type Checking in IDEs
 - Real-time type checking
 - Error highlighting
 - Autocompletion based on types
@@ -595,9 +575,8 @@ person.name = 42
 ```
 
 ---
-## Linting Tools
+## Linting Tools: What is Linting?
 
-## What is Linting?
 - Static code analysis
 - Identify stylistic issues
 - Find potential bugs
@@ -606,9 +585,8 @@ person.name = 42
 - Run before code execution
 
 ---
-## Linting Tools
+## Linting Tools: pylint
 
-## pylint
 - Comprehensive Python linter
 - Checks for errors, enforces coding standards
 - Evaluates code complexity
@@ -637,9 +615,8 @@ pylint --generate-rcfile > .pylintrc
 ```
 
 ---
-## Linting Tools
+## Linting Tools: flake8
 
-## flake8
 - Lightweight, fast linter
 - Combines PyFlakes, pycodestyle, McCabe
 - Checks for errors and style issues
@@ -665,9 +642,8 @@ flake8 mypackage/
 ```
 
 ---
-## Linting Tools
+## Linting Tools: black
 
-## black
 - Code formatter, not a traditional linter
 - "Uncompromising" Python code formatter
 - Enforces consistent style
@@ -697,9 +673,8 @@ black --check script.py
 ```
 
 ---
-## Linting Tools
+## Linting Tools: isort
 
-## isort
 - Sorts and formats imports
 - Groups imports by type
 - Removes unused imports
@@ -723,9 +698,8 @@ isort --check script.py
 ```
 
 ---
-## Linting Tools
+## Linting Tools: Combining Linting Tools
 
-## Combining Linting Tools
 - Use multiple tools for comprehensive checks
 - Automate with pre-commit hooks
 - Standardize across team
@@ -755,9 +729,8 @@ repos:
 ```
 
 ---
-## Testing Fundamentals
+## Testing Fundamentals: Testing Pyramid
 
-## Testing Pyramid
 - Unit tests: Test individual components
 - Integration tests: Test component interactions
 - End-to-end tests: Test entire system
@@ -770,9 +743,8 @@ repos:
 ![testing_pyramid](svg/courses/languages/python/advanced-python/09_debugging_testing/testing_pyramid.svg)
 
 ---
-## Testing Fundamentals
+## Testing Fundamentals: Test-Driven Development (TDD)
 
-## Test-Driven Development (TDD)
 - Write test before implementation
 - Red-Green-Refactor cycle
 - Design from the user perspective
@@ -801,9 +773,8 @@ def calculate_total(items):
 ```
 
 ---
-## Testing Fundamentals
+## Testing Fundamentals: Testing Vocabulary
 
-## Testing Vocabulary
 - Test case: Specific test scenario
 - Test suite: Collection of test cases
 - Test fixture: Setup/teardown environment
@@ -813,9 +784,8 @@ def calculate_total(items):
 - Test coverage: Measure of code exercised by tests
 
 ---
-## Testing with unittest
+## Testing with unittest: The unittest Framework
 
-## The unittest Framework
 - Standard library testing framework
 - Inspired by JUnit (Java)
 - Class-based test organization
@@ -843,9 +813,8 @@ if __name__ == '__main__':
 ```
 
 ---
-## Testing with unittest
+## Testing with unittest: unittest Assertions
 
-## unittest Assertions
 - `assertEqual(a, b)` - Check if a == b
 - `assertNotEqual(a, b)` - Check if a != b
 - `assertTrue(x)` - Check if bool(x) is True
@@ -859,9 +828,8 @@ if __name__ == '__main__':
 - `assertRaises(exc, fun, *args, **kwds)` - Check if fun(*args, **kwds) raises exc
 
 ---
-## Testing with unittest
+## Testing with unittest: Test Fixtures with unittest
 
-## Test Fixtures with unittest
 - `setUp()`: Prepare for each test
 - `tearDown()`: Clean up after each test
 - `setUpClass()`: One-time setup for class
@@ -902,9 +870,8 @@ class TestFileOperations(unittest.TestCase):
 ```
 
 ---
-## Testing with unittest
+## Testing with unittest: Running unittest Tests
 
-## Running unittest Tests
 - Run a single test file
 - Discover and run all tests
 - Filter tests to run
@@ -929,9 +896,8 @@ python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ---
-## Testing with pytest
+## Testing with pytest: Introduction to pytest
 
-## Introduction to pytest
 - Popular third-party testing framework
 - Simple, elegant syntax
 - Powerful fixture system
@@ -957,9 +923,8 @@ def test_string_methods():
 ```
 
 ---
-## Testing with pytest
+## Testing with pytest: pytest Fixtures
 
-## pytest Fixtures
 - Function for setting up test resources
 - Declarative dependency injection
 - Support for setup/teardown via yield
@@ -992,9 +957,8 @@ def test_read_file(temp_file):
 ```
 
 ---
-## Testing with pytest
+## Testing with pytest: pytest Advanced Features
 
-## pytest Advanced Features
 - Parameterized tests
 - Marking tests (skip, xfail, etc.)
 - Filtering tests to run
@@ -1027,9 +991,8 @@ def test_linux_only():
 ```
 
 ---
-## Testing with pytest
+## Testing with pytest: Running pytest Tests
 
-## Running pytest Tests
 - Automatic test discovery
 - Verbose and quiet modes
 - Filter by test name or marker
@@ -1063,9 +1026,8 @@ pytest --durations=5
 ```
 
 ---
-## Mocking
+## Mocking: Introduction to Mocking
 
-## Introduction to Mocking
 - Replace parts of the system with mock objects
 - Verify interactions with dependencies
 - Simulate various conditions (errors, etc.)
@@ -1088,9 +1050,8 @@ def test_get_user_name():
 ```
 
 ---
-## Mocking
+## Mocking: Patching with Mock
 
-## Patching with Mock
 - Replace objects during tests
 - Patch functions, classes, or modules
 - Use as decorator or context manager
@@ -1128,9 +1089,8 @@ def test_get_user_data_context():
 ```
 
 ---
-## Mocking
+## Mocking: Mock Assertions and Verification
 
-## Mock Assertions and Verification
 - Verify call counts
 - Check call arguments
 - Inspect call history
@@ -1162,9 +1122,8 @@ assert mock_service.other_method.called
 ```
 
 ---
-## Mocking
+## Mocking: MagicMock and spec
 
-## MagicMock and spec
 - `MagicMock` supports magic methods
 - `spec` validates attribute access
 - `autospec` copies the API of the mocked object
@@ -1194,9 +1153,8 @@ mock_func(1, 2)  # Works
 ```
 
 ---
-## Mocking
+## Mocking: Side Effects with Mocks
 
-## Side Effects with Mocks
 - Return different values on successive calls
 - Raise exceptions
 - Call custom functions
@@ -1230,9 +1188,8 @@ print(custom_mock(5))  # 10
 ```
 
 ---
-## Test Organization
+## Test Organization: Project Test Structure
 
-## Project Test Structure
 - Common test organization patterns
 - Test discovery considerations
 - Package vs. module testing
@@ -1256,9 +1213,8 @@ project/
 ```
 
 ---
-## Test Organization
+## Test Organization: Test Naming Conventions
 
-## Test Naming Conventions
 - Files: `test_*.py` or `*_test.py`
 - Functions: `test_*`
 - Classes: `Test*`
@@ -1292,9 +1248,8 @@ class TestUserAuthentication:
 ```
 
 ---
-## Test Organization
+## Test Organization: Shared Test Fixtures
 
-## Shared Test Fixtures
 - Reuse setup/teardown code
 - Share fixtures across test modules
 - Reduce duplication
@@ -1326,9 +1281,8 @@ def test_user(database_connection):
 ```
 
 ---
-## Test Organization
+## Test Organization: Test Categories and Markers
 
-## Test Categories and Markers
 - Group tests by category
 - Enable selective test running
 - Mark tests with metadata
@@ -1361,9 +1315,8 @@ def test_expected_to_fail():
 ```
 
 ---
-## Test Organization
+## Test Organization: tox: Testing in Multiple Environments
 
-## tox: Testing in Multiple Environments
 - Test with multiple Python versions
 - Automated test environments
 - Standardized testing workflow
@@ -1392,9 +1345,8 @@ commands =
 ```
 
 ---
-## Code Coverage
+## Code Coverage: Introduction to Code Coverage
 
-## Introduction to Code Coverage
 - Measure which code is executed by tests
 - Identify untested code
 - Set quality targets
@@ -1405,9 +1357,8 @@ commands =
     - Statement coverage: statements executed
 
 ---
-## Code Coverage
+## Code Coverage: coverage.py
 
-## coverage.py
 - Standard Python coverage tool
 - Measures line coverage
 - Generate HTML, XML, and console reports
@@ -1438,9 +1389,8 @@ coverage html
 ```
 
 ---
-## Code Coverage
+## Code Coverage: pytest-cov
 
-## pytest-cov
 - pytest plugin for coverage.py
 - Simplifies coverage with pytest
 - Same reporting options
@@ -1462,9 +1412,8 @@ pytest --cov=mypackage --cov-fail-under=80
 ```
 
 ---
-## Code Coverage
+## Code Coverage: Coverage Configuration
 
-## Coverage Configuration
 - .coveragerc file
 - Control what to measure
 - Exclude files or lines
@@ -1494,9 +1443,8 @@ directory = coverage_html_report
 ```
 
 ---
-## Code Coverage
+## Code Coverage: Understanding Coverage Reports
 
-## Understanding Coverage Reports
 - Interpreting coverage numbers
 - High coverage ≠ good tests
 - Uncovered lines vs. important code
@@ -1550,9 +1498,8 @@ jobs:
 ```
 
 ---
-## Practical Example
+## Practical Example: Complete Testing Example
 
-## Complete Testing Example
 ```python
 # src/mypackage/calculator.py
 class Calculator:
@@ -1603,9 +1550,8 @@ class TestCalculator:
 ```
 
 ---
-## Practical Example
+## Practical Example: Complete Debugging and Linting
 
-## Complete Debugging and Linting
 ```bash
 # Example dev workflow commands
 

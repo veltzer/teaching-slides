@@ -54,9 +54,8 @@ print(type(instance))  # <class '__main__.DynamicClass'>
 
 ---
 
-## Python's Class System
+## Python's Class System: Class Creation Process
 
-## Class Creation Process
 1. Python encounters a `class` statement
 1. Executes the class body to create a namespace dictionary
 1. Calls the metaclass to create the class object
@@ -84,9 +83,8 @@ MyClass = type('MyClass', (), namespace)
 
 ---
 
-## Python's Class System
+## Python's Class System: `type` as a Class Factory
 
-## `type` as a Class Factory
 - `type` is a metaclass - a class that creates classes
 - `type(name, bases, dict)` creates a new class
 - `name`: Name of the class
@@ -117,9 +115,8 @@ print(p.species)     # Homo sapiens
 
 ---
 
-## What are Metaclasses?
+## What are Metaclasses?: Metaclass Definition
 
-## Metaclass Definition
 - A metaclass is a class whose instances are classes
 - The metaclass of a class determines how that class is constructed
 - The default metaclass for all classes is `type`
@@ -144,9 +141,8 @@ class MyClass(metaclass=type):  # This is the default
 
 ---
 
-## What are Metaclasses?
+## What are Metaclasses?: When to Use Metaclasses
 
-## When to Use Metaclasses
 - Framework development
 - API design
 - Class validation
@@ -167,9 +163,8 @@ and don't need an explanation about why).
 
 ---
 
-## What are Metaclasses?
+## What are Metaclasses?: The Metaclass Hierarchy
 
-## The Metaclass Hierarchy
 - `type` is the default metaclass
 - Custom metaclasses typically inherit from `type`
 - A class's metaclass is determined by:
@@ -204,9 +199,8 @@ class OtherBase(metaclass=OtherMeta):
 
 ---
 
-## Creating Your First Metaclass
+## Creating Your First Metaclass: Basic Metaclass Structure
 
-## Basic Metaclass Structure
 - Inherit from `type`
 - Override `__new__` and/or `__init__`
 - `__new__` creates the class
@@ -240,9 +234,8 @@ instance = MyClass()  # No output from metaclass
 
 ---
 
-## Creating Your First Metaclass
+## Creating Your First Metaclass: Understanding the Parameters
 
-## Understanding the Parameters
 - `mcs`: The metaclass itself
 - `name`: Name of the class being created
 - `bases`: Tuple of the class's base classes
@@ -276,9 +269,8 @@ class MyClass(metaclass=InspectiveMeta):
 
 ---
 
-## Creating Your First Metaclass
+## Creating Your First Metaclass: `__new__` vs `__init__`
 
-## `__new__` vs `__init__`
 - `__new__`: Called to create the class object
     - Can modify the class namespace before creation
     - Can create an entirely different class
@@ -308,9 +300,8 @@ print(MyClass.added_by_init) # from __init__
 
 ---
 
-## Creating Your First Metaclass
+## Creating Your First Metaclass: Class Decorators vs Metaclasses
 
-## Class Decorators vs Metaclasses
 - Both can modify classes
 - Class decorators are simpler and more limited
 - Metaclasses have access to class creation process
@@ -353,9 +344,8 @@ print(hasattr(MetaclassedChild, 'new_method'))  # True
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Method Registration
 
-## Method Registration
 - Automatically register methods that match a pattern
 - Create method registries for plugins/callbacks
 - Organize methods by category
@@ -399,9 +389,8 @@ es.trigger('hover')  # Hover event handler
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Attribute Validation
 
-## Attribute Validation
 - Enforce constraints on class attributes
 - Type checking class variables
 - Format validation
@@ -437,9 +426,8 @@ class Configuration(metaclass=ValidateAttributes):
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Automatic Property Creation
 
-## Automatic Property Creation
 - Generate properties from attributes
 - Apply validation to all properties
 - Automatic getter/setter logic
@@ -489,9 +477,8 @@ print(p._name)  # Alice
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Singleton Pattern
 
-## Singleton Pattern
 - Ensure only one instance of a class exists
 - Return existing instance if already created
 - Common design pattern in many applications
@@ -522,9 +509,8 @@ print(conn1 is conn2)  # True
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Abstract Base Classes
 
-## Abstract Base Classes
 - Enforce implementation of required methods
 - Prevent instantiation of incomplete classes
 - Provide interface contracts
@@ -566,9 +552,8 @@ car.drive()  # Car engine started \n Driving
 
 ---
 
-## Practical Metaclass Uses
+## Practical Metaclass Uses: Custom Container Types
 
-## Custom Container Types
 - Override container behavior
 - Implement specialized collections
 - Bridge between Python and other systems
@@ -607,9 +592,8 @@ print(len(evens))  # 10000000000
 
 ---
 
-## Metaclass Mechanisms
+## Metaclass Mechanisms: The `__prepare__` Method
 
-## The `__prepare__` Method
 - Called before class body execution
 - Returns a dictionary-like object for namespace
 - Can use custom mapping types for namespace
@@ -649,9 +633,8 @@ class MyClass(metaclass=OrderedMeta):
 
 ---
 
-## Metaclass Mechanisms
+## Metaclass Mechanisms: The `__call__` Method
 
-## The `__call__` Method
 - Called when the class is "called" to create an instance
 - Controls instance creation and initialization
 - Can implement special instantiation logic
@@ -693,9 +676,8 @@ obj = MyClass(42)
 
 ---
 
-## Metaclass Mechanisms
+## Metaclass Mechanisms: Class Inheritance with Metaclasses
 
-## Class Inheritance with Metaclasses
 - Metaclasses are inherited by subclasses
 - Derived class uses base class's metaclass unless specified
 - Metaclass methods apply to the whole hierarchy
@@ -727,9 +709,8 @@ print(GrandChild.meta_created)  # True
 
 ---
 
-## Metaclass Mechanisms
+## Metaclass Mechanisms: Multiple Metaclasses
 
-## Multiple Metaclasses
 - A class can only have one metaclass
 - Multiple inheritance can cause metaclass conflicts
 - Needs a compatible metaclass hierarchy
@@ -774,9 +755,8 @@ class NoConflict2(Base1, Base3):
 
 ---
 
-## Metaclass Mechanisms
+## Metaclass Mechanisms: Instance Creation Flow
 
-## Instance Creation Flow
 1. `type.__call__` invokes class's `__new__`
 1. `__new__` creates the instance object
 1. `__init__` initializes the instance
@@ -814,9 +794,8 @@ obj = MyClass(42)
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: Domain-Specific Languages
 
-## Domain-Specific Languages
 - Custom syntax for specific domains
 - More readable and expressive than general code
 - Built on top of the host language
@@ -839,9 +818,8 @@ class User(Model):
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: A Simple ORM Example
 
-## A Simple ORM Example
 - Define fields as class attributes
 - Metaclass converts field definitions to properties
 - Handles validation, serialization, etc.
@@ -882,9 +860,8 @@ class Integer(Field):
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: Model Metaclass
 
-## Model Metaclass
 - Collects field definitions
 - Sets up field attributes
 - Creates database connection
@@ -931,9 +908,8 @@ class Model(metaclass=ModelMeta):
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: Using the ORM
 
-## Using the ORM
 - Clean, declarative syntax
 - Strong validation
 - Easy to understand structure
@@ -968,9 +944,8 @@ except TypeError as e:
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: State Machine DSL Example
 
-## State Machine DSL Example
 - Define states and transitions
 - Metaclass creates the state behavior
 - Clean representation of complex logic
@@ -1026,9 +1001,8 @@ class StateMachine(metaclass=StateMachineMeta):
 
 ---
 
-## Creating DSLs with Metaclasses
+## Creating DSLs with Metaclasses: Using the State Machine DSL
 
-## Using the State Machine DSL
 - Clean representation of states
 - Self-enforcing state constraints
 - Easy to understand and modify
@@ -1064,9 +1038,8 @@ light.transition('change')  # Transitioning from 'yellow' to 'red' \n Red light 
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: Django Models
 
-## Django Models
 - One of the most popular Python ORMs
 - Uses metaclasses for field registration
 - Declarative model definition
@@ -1095,9 +1068,8 @@ article.save()  # Inserts into database
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: SQLAlchemy Declarative
 
-## SQLAlchemy Declarative
 - Powerful Python ORM
 - Uses metaclasses for declarative models
 - Maps classes to database tables
@@ -1134,9 +1106,8 @@ session.commit()
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: Pydantic Models
 
-## Pydantic Models
 - Data validation and settings management
 - Uses metaclasses for field processing
 - Type checking and conversion
@@ -1171,9 +1142,8 @@ print(user.json())  # JSON representation
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: Enum Metaclass
 
-## Enum Metaclass
 - Python's standard library
 - Creates enum classes
 - Manages enum member creation
@@ -1208,9 +1178,8 @@ print(Color['RED'])  # Color.RED (by name)
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: ABCs in Collections
 
-## ABCs in Collections
 - Python's collections.abc module
 - Abstract base classes for containers
 - Virtual subclasses with __subclasshook__
@@ -1244,9 +1213,8 @@ print(isinstance(MySequence(), Sequence))  # True
 
 ---
 
-## Examples from Third-Party Libraries
+## Examples from Third-Party Libraries: Attrs and Dataclasses
 
-## Attrs and Dataclasses
 - Automated class building
 - Metaclass-like functionality
 - Field definitions and processing
@@ -1282,9 +1250,8 @@ print(p2)  # DataPoint(x=3, y=4)
 
 ---
 
-## Best Practices
+## Best Practices: When to Use Metaclasses
 
-## When to Use Metaclasses
 - Only when simpler approaches won't work
 - For library and framework development
 - When you need to control class creation
@@ -1308,9 +1275,8 @@ Metaclasses should be your last resort, not your first approach.
 
 ---
 
-## Best Practices
+## Best Practices: Common Pitfalls
 
-## Common Pitfalls
 - Overcomplicating simple problems
 - Making code hard to understand
 - Creating unexpected behavior
@@ -1343,9 +1309,8 @@ class BetterSolution:
 
 ---
 
-## Best Practices
+## Best Practices: Metaclass Debugging
 
-## Metaclass Debugging
 - Meta-level code is often harder to debug
 - Print statements in metaclass methods
 - Inspect the class creation process

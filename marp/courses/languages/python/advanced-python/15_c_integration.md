@@ -25,9 +25,8 @@ audience:
 
 ---
 
-## Why Integrate C with Python?
+## Why Integrate C with Python?: Common Motivations
 
-## Common Motivations
 - Performance optimization for bottlenecks
 - Access to C libraries and system features
 - Memory management control
@@ -49,9 +48,8 @@ def compute_intensive_function(data, iterations):
 
 ---
 
-## Why Integrate C with Python?
+## Why Integrate C with Python?: Performance Comparison
 
-## Performance Comparison
 - Python: High-level, easy to write, slower execution
 - C: Low-level, more complex, faster execution
 - Integration combines the best of both worlds
@@ -72,9 +70,8 @@ Potential speedup: ~60x
 
 ---
 
-## Why Integrate C with Python?
+## Why Integrate C with Python?: When C Integration Makes Sense
 
-## When C Integration Makes Sense
 - CPU-bound bottlenecks identified through profiling
 - Algorithms with heavy numerical computation
 - Bit-level operations and manipulations
@@ -84,9 +81,8 @@ Potential speedup: ~60x
 
 ---
 
-## Why Integrate C with Python?
+## Why Integrate C with Python?: When C Integration Doesn't Make Sense
 
-## When C Integration Doesn't Make Sense
 - I/O-bound tasks (network, disk)
 - Simple algorithms with low computational intensity
 - Where code readability and maintenance is critical
@@ -117,9 +113,8 @@ Potential speedup: ~60x
 
 ---
 
-## The Python C API
+## The Python C API: What is the Python C API?
 
-## What is the Python C API?
 - Low-level interface to Python interpreter
 - Allows C code to interact with Python objects
 - Provides functions for creating and manipulating Python objects
@@ -145,9 +140,8 @@ static PyObject* c_function(PyObject* self, PyObject* args) {
 
 ---
 
-## The Python C API
+## The Python C API: Python C API Core Components
 
-## Python C API Core Components
 - Python Objects (`PyObject*`)
 - Reference counting
 - Type system and conversion functions
@@ -168,9 +162,8 @@ Py_DECREF(py_list);  // Must be balanced to avoid memory leaks
 
 ---
 
-## Creating a C Extension
+## Creating a C Extension: Basic Extension Module Structure
 
-## Basic Extension Module Structure
 - Header includes
 - Function implementations
 - Method table
@@ -209,9 +202,8 @@ PyMODINIT_FUNC PyInit_hello(void) {
 
 ---
 
-## Creating a C Extension
+## Creating a C Extension: Extension with Parameters
 
-## Extension with Parameters
 - Parse arguments with `PyArg_ParseTuple`
 - Process data in C
 - Return Python objects
@@ -240,9 +232,8 @@ static PyObject* add_integers(PyObject* self, PyObject* args) {
 
 ---
 
-## Creating a C Extension
+## Creating a C Extension: Building Extensions with setup.py
 
-## Building Extensions with setup.py
 - Uses distutils or setuptools
 - Defines C source files
 - Handles compilation details
@@ -273,9 +264,8 @@ pip install -e .
 
 ---
 
-## Creating a C Extension
+## Creating a C Extension: Extension Module Layout
 
-## Extension Module Layout
 - Single C file for simple modules
 - Multiple C files for complex modules
 - Header files for shared declarations
@@ -293,9 +283,8 @@ mymodule/
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: PyObject and Reference Counting
 
-## PyObject and Reference Counting
 - All Python objects are represented as `PyObject*`
 - Reference counting manages memory
 - Must increment/decrement reference counts
@@ -324,9 +313,8 @@ Py_DECREF(list);                 // Object is freed
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: Borrowed vs. New References
 
-## Borrowed vs. New References
 - **Borrowed reference**: Pointer to an object you don't own
 - **New reference**: Pointer to an object you own (must Py_DECREF)
 - API functions may return either type
@@ -353,9 +341,8 @@ Py_DECREF(list);
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: Converting Python to C Types
 
-## Converting Python to C Types
 - Each Python type has conversion functions
 - Extract C values from Python objects
 - Check for errors during conversion
@@ -383,9 +370,8 @@ int c_bool = PyObject_IsTrue(py_bool);
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: Creating Python Objects from C Types
 
-## Creating Python Objects from C Types
 - Build Python objects from C values
 - Create complex structures (lists, tuples, dicts)
 - Check for allocation failures
@@ -410,9 +396,8 @@ PyDict_SetItemString(py_dict, "key", PyLong_FromLong(42));  // Increments refere
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: PyArg_ParseTuple Format Codes
 
-## PyArg_ParseTuple Format Codes
 - `i` - int
 - `l` - long
 - `d` - double
@@ -444,9 +429,8 @@ static PyObject* example_function(PyObject* self, PyObject* args) {
 
 ---
 
-## Working with Python Objects
+## Working with Python Objects: Py_BuildValue Format Codes
 
-## Py_BuildValue Format Codes
 - Similar to PyArg_ParseTuple, but for returning values
 - Creates Python objects from C values
 - Builds tuples for multi-value returns
@@ -474,9 +458,8 @@ return Py_BuildValue("");  // or Py_RETURN_NONE;
 
 ---
 
-## Error Handling in C Extensions
+## Error Handling in C Extensions: Setting and Checking Errors
 
-## Setting and Checking Errors
 - Set exceptions with PyErr_SetString/PyErr_SetObject
 - Check for errors with PyErr_Occurred
 - Return NULL from functions when errors occur
@@ -506,9 +489,8 @@ PyErr_Clear();
 
 ---
 
-## Error Handling in C Extensions
+## Error Handling in C Extensions: Common Exception Types
 
-## Common Exception Types
 - `PyExc_Exception`: Base exception
 - `PyExc_ValueError`: Invalid argument value
 - `PyExc_TypeError`: Invalid argument type
@@ -539,9 +521,8 @@ if (index >= size) {
 
 ---
 
-## Error Handling in C Extensions
+## Error Handling in C Extensions: Exception Handling in C
 
-## Exception Handling in C
 - C doesn't have built-in exceptions
 - Use error status codes and NULL returns
 - Check errors after each API call
@@ -584,9 +565,8 @@ static PyObject* error_handling_example(PyObject* self, PyObject* args) {
 
 ---
 
-## Building and Installing Extensions
+## Building and Installing Extensions: Setuptools Configuration
 
-## Setuptools Configuration
 - More advanced than distutils
 - Better dependency handling
 - Development mode with `pip install -e .`
@@ -618,9 +598,8 @@ setup(
 
 ---
 
-## Building and Installing Extensions
+## Building and Installing Extensions: Cross-Platform Considerations
 
-## Cross-Platform Considerations
 - Different compilers (MSVC on Windows, GCC/Clang on Unix)
 - Platform-specific headers and libraries
 - Conditional compilation for OS-specific code
@@ -658,9 +637,8 @@ setup(name='MyModule', ext_modules=[module])
 
 ---
 
-## Building and Installing Extensions
+## Building and Installing Extensions: Using a C Compiler on Different Platforms
 
-## Using a C Compiler on Different Platforms
 - Windows: Visual C++ (MSVC) - version must match Python's compiler
 - Linux: GCC or Clang
 - macOS: Clang (usually via XCode tools)
@@ -684,9 +662,8 @@ CC=x86_64-w64-mingw32-gcc python setup.py build_ext
 
 ---
 
-## Alternative Approach: ctypes
+## Alternative Approach: ctypes: What is ctypes?
 
-## What is ctypes?
 - Standard library module for calling C functions
 - No compilation needed for Python side
 - Loads existing shared libraries (.dll, .so, .dylib)
@@ -717,9 +694,8 @@ print(f"Length: {length}")  # 6
 
 ---
 
-## Alternative Approach: ctypes
+## Alternative Approach: ctypes: Data Types in ctypes
 
-## Data Types in ctypes
 - Primitives: c_int, c_double, c_char, c_bool, etc.
 - Pointers: POINTER(type), c_char_p, c_void_p
 - Arrays: (c_int * 10)(), create_string_buffer()
@@ -749,9 +725,8 @@ print(f"Point: ({p.x}, {p.y})")
 
 ---
 
-## Alternative Approach: ctypes
+## Alternative Approach: ctypes: Creating Your Own Shared Library
 
-## Creating Your Own Shared Library
 - Write C functions with proper exports
 - Compile as shared library (.so, .dll, .dylib)
 - Load and use with ctypes in Python
@@ -798,9 +773,8 @@ print(f"5 + 3 = {result}")  # 8
 
 ---
 
-## Alternative Approach: ctypes
+## Alternative Approach: ctypes: Callbacks with ctypes
 
-## Callbacks with ctypes
 - Pass Python functions to C code
 - Define function prototype with CFUNCTYPE
 - Enables bidirectional integration
@@ -838,9 +812,8 @@ print([arr[i] for i in range(5)])  # [1, 2, 3, 4, 5]
 
 ---
 
-## Alternative Approach: CFFI
+## Alternative Approach: CFFI: What is CFFI?
 
-## What is CFFI?
 - C Foreign Function Interface for Python
 - Simpler API than ctypes in many cases
 - Supports both API and ABI compatibility modes
@@ -880,9 +853,8 @@ print(f"3 + 4 = {result}")  # 7
 
 ---
 
-## Alternative Approach: CFFI
+## Alternative Approach: CFFI: CFFI API Mode
 
-## CFFI API Mode
 - Compiles C extension module at build time
 - Can include and process header files
 - Higher performance than ABI mode
@@ -924,9 +896,8 @@ print(f"Distance: {dist}")  # 5.0
 
 ---
 
-## Alternative Approach: CFFI
+## Alternative Approach: CFFI: Working with Structures in CFFI
 
-## Working with Structures in CFFI
 - Define structure layouts in C syntax
 - Access fields naturally in Python
 - Convert between Python objects and C structures
@@ -997,9 +968,8 @@ lib.free_person(person)
 
 ---
 
-## Alternative Approach: Cython
+## Alternative Approach: Cython: What is Cython?
 
-## What is Cython?
 - Programming language combining Python and C
 - Python syntax with optional static typing
 - Compiles to efficient C code
@@ -1039,9 +1009,8 @@ setup(
 
 ---
 
-## Alternative Approach: Cython
+## Alternative Approach: Cython: Cython Type Declarations
 
-## Cython Type Declarations
 - `cdef` declares C variables and functions
 - `cpdef` creates functions callable from both Python and C
 - Type declarations improve performance
@@ -1070,9 +1039,8 @@ cpdef double calculate(double x, double y):
 
 ---
 
-## Alternative Approach: Cython
+## Alternative Approach: Cython: Calling C Functions from Cython
 
-## Calling C Functions from Cython
 - External C functions must be declared with `cdef extern`
 - Can include C header files
 - Call C functions directly with native types
@@ -1102,9 +1070,8 @@ def vector_angle(double x, double y):
 
 ---
 
-## Alternative Approach: Cython
+## Alternative Approach: Cython: Using NumPy with Cython
 
-## Using NumPy with Cython
 - Efficient array operations
 - Access NumPy arrays directly from C
 - Avoid Python overhead for loops
@@ -1232,9 +1199,8 @@ result = example.add(3, 4)  # 7
 
 ---
 
-## Performance Considerations
+## Performance Considerations: The Global Interpreter Lock (GIL)
 
-## The Global Interpreter Lock (GIL)
 - Python allows only one thread to execute Python code at a time
 - C extensions can release the GIL during computation
 - Critical for true multi-threaded performance
@@ -1264,9 +1230,8 @@ static PyObject* intensive_calculation(PyObject* self, PyObject* args) {
 
 ---
 
-## Performance Considerations
+## Performance Considerations: Memory Management Strategies
 
-## Memory Management Strategies
 - Balance between Python and C memory management
 - Use Python's memory allocators for consistent behavior
 - Consider specialized allocators for performance-critical sections
@@ -1294,9 +1259,8 @@ PyMem_Free(buffer);
 
 ---
 
-## Performance Considerations
+## Performance Considerations: Profiling C Extensions
 
-## Profiling C Extensions
 - Identify bottlenecks in both Python and C code
 - Use specific profiling tools for C code (e.g., valgrind)
 - Check reference counting and memory leaks
@@ -1336,9 +1300,8 @@ valgrind --tool=memcheck python -c "import my_extension; my_extension.test()"
 
 ---
 
-## Practical Example: Image Processing
+## Practical Example: Image Processing: Simple Image Processing Extension
 
-## Simple Image Processing Extension
 ```c
 // image_processing.c
 #include <Python.h>
@@ -1431,9 +1394,8 @@ PyMODINIT_FUNC PyInit_image_processing(void) {
 
 ---
 
-## Practical Example: Image Processing
+## Practical Example: Image Processing: Setup and Usage for Image Extension
 
-## Setup and Usage for Image Extension
 ```python
 # setup.py
 from setuptools import setup, Extension

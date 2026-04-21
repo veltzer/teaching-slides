@@ -183,9 +183,7 @@ According to Stack Overflow Developer Survey:
 ![snapshots_not_differences_2](svg/courses/git/git/01_introduction/snapshots_not_differences_2.svg)
 
 ---
-## Snapshots, Not Differences
-
-## If files don't change, Git just links to the previous identical file
+## Snapshots, Not Differences: If files don't change, Git just links to the previous identical file
 
 ---
 

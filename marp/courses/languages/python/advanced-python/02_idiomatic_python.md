@@ -23,9 +23,8 @@ audience:
 
 ---
 
-## What is Idiomatic Python?
+## What is Idiomatic Python?: Pythonic Code
 
-## Pythonic Code
 - Clear, readable, and maintainable
 - Follows community conventions
 - Leverages Python's built-in features
@@ -34,9 +33,8 @@ audience:
 
 ---
 
-## What is Idiomatic Python?
+## What is Idiomatic Python?: Recognizing Non-Idiomatic Code
 
-## Recognizing Non-Idiomatic Code
 - Resembles code from other languages (C, Java, etc.)
 - Unnecessarily verbose
 - Reinvents built-in functionality
@@ -57,9 +55,8 @@ audience:
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Choosing the Right Container
 
-## Choosing the Right Container
 - Lists: Ordered, mutable sequence of items
 - Tuples: Immutable sequence of related items
 - Sets: Unordered collection of unique items
@@ -69,9 +66,8 @@ audience:
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Lists: When to Use
 
-## Lists: When to Use
 - When order matters
 - When items need to be modified
 - For homogeneous collections
@@ -87,9 +83,8 @@ first_two = names[:2]
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Tuples: When to Use
 
-## Tuples: When to Use
 - For immutable sequences
 - To group related values
 - As dictionary keys (when needed)
@@ -106,9 +101,8 @@ locations = {(40.7128, -74.0060): "New York City"}
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Sets: When to Use
 
-## Sets: When to Use
 - When uniqueness matters
 - For membership testing
 - For mathematical set operations
@@ -126,9 +120,8 @@ unique_to_a = users_a - users_b
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Dictionaries: When to Use
 
-## Dictionaries: When to Use
 - For key-value associations
 - For lookups by key
 - For storing object properties
@@ -151,9 +144,8 @@ squares = {x: x**2 for x in range(10)}
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Frozen Structures
 
-## Frozen Structures
 - Immutable versions of mutable collections
 - Better for caching, hashing, and thread safety
 - Less prone to accidental mutation
@@ -172,9 +164,8 @@ print(p.x, p.y)  # 10 20
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Named Tuples
 
-## Named Tuples
 - Immutable, field-accessible records
 - More memory-efficient than classes
 - Self-documenting with field names
@@ -196,9 +187,8 @@ name, id_num, gpa = alice
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Data Classes (Python 3.7+)
 
-## Data Classes (Python 3.7+)
 - Class-based data containers
 - Automatically generated methods
 - Mutable by default, can be frozen
@@ -221,9 +211,8 @@ print(p.distance_from_origin())  # 5.0
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Specialized Collections
 
-## Specialized Collections
 - `collections.defaultdict`: Dict with default factory
 - `collections.Counter`: Dict for counting hashable objects
 - `collections.deque`: Double-ended queue
@@ -232,9 +221,8 @@ print(p.distance_from_origin())  # 5.0
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: DefaultDict
 
-## DefaultDict
 - Dictionary with default values for missing keys
 - No more KeyError or repetitive .get() with defaults
 - Default value is determined by a factory function
@@ -256,9 +244,8 @@ print(by_letter["z"])  # [] (empty list, no KeyError)
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Counter
 
-## Counter
 - Dictionary subclass for counting hashable objects
 - Has specialized methods for counter operations
 - Good for histograms, frequency analysis
@@ -277,9 +264,8 @@ print(color_count.most_common(2))  # [('blue', 3), ('red', 2)]
 
 ---
 
-## Idiomatic Data Structures
+## Idiomatic Data Structures: Deque
 
-## Deque
 - Double-ended queue
 - Efficient appends and pops from both ends
 - Thread-safe, memory-efficient
@@ -300,9 +286,8 @@ print(list(history))  # ["command2", "command3", "command4"]
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: List Comprehensions
 
-## List Comprehensions
 - Concise way to create lists
 - Replace map/filter with clearer syntax
 - Can include conditionals
@@ -321,9 +306,8 @@ squares = [x**2 for x in range(10) if x % 2 == 0]
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Dictionary Comprehensions
 
-## Dictionary Comprehensions
 - Create dictionaries concisely
 - Transform keys and values in one expression
 - Filter with conditionals
@@ -341,9 +325,8 @@ word_lengths = {word: len(word) for word in words if len(word) > 2}
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Set Comprehensions
 
-## Set Comprehensions
 - Create sets directly from iterables
 - Apply transformations and filters
 
@@ -359,9 +342,8 @@ unique_lengths = {len(word) for word in words}
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Generator Expressions
 
-## Generator Expressions
 - Like list comprehensions but lazy (on-demand)
 - More memory-efficient for large sequences
 - Use parentheses instead of brackets
@@ -378,9 +360,8 @@ sum(x**2 for x in range(1000000))  # Parentheses can be omitted here
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: String Formatting
 
-## String Formatting
 - f-strings (Python 3.6+)
 - str.format() method
 - Avoid + concatenation for complex strings
@@ -401,9 +382,8 @@ greeting = f"Hello, {name}! You are {age} years old."
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Advanced f-strings (Python 3.8+)
 
-## Advanced f-strings (Python 3.8+)
 - Self-documenting expressions with = specifier
 - Format specifiers for precision, alignment
 - Multiline f-strings
@@ -423,9 +403,7 @@ print(f"{age:03d}")   # Zero-padded, 3 digits
 
 ---
 
-## Correct Use of Basic Features
-
-## Correct Iteration
+## Correct Use of Basic Features: Correct Iteration
 
 ## Range vs. Direct Iteration
 - Iterate directly over containers when possible
@@ -448,9 +426,8 @@ for i, name in enumerate(names):
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Enumerate
 
-## Enumerate
 - Get index and value in one operation
 - Can specify start index (default is 0)
 - More readable than manual indexing
@@ -466,9 +443,8 @@ position = {name: i for i, name in enumerate(names)}
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Zip
 
-## Zip
 - Combine multiple iterables in parallel
 - Stops at the shortest iterable
 - Use `zip_longest` from itertools for different behavior
@@ -487,9 +463,8 @@ name_to_score = dict(zip(names, scores))
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Unpacking
 
-## Unpacking
 - Destructure sequences into individual variables
 - Works with any sequence type
 - Use * for capturing multiple values
@@ -508,9 +483,8 @@ print(last)    # 5
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Multiple Assignment
 
-## Multiple Assignment
 - Assign to multiple variables at once
 - Swap values without temporary variable
 - Create and assign tuples implicitly
@@ -531,9 +505,8 @@ name, age, role = get_user_info()
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Membership Testing
 
-## Membership Testing
 - Use `in` operator for membership tests
 - Works with lists, tuples, strings, dicts, sets
 - Most efficient with sets and dicts (O(1))
@@ -556,9 +529,8 @@ if key in my_dict:
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: Truthiness Testing
 
-## Truthiness Testing
 - Use implicit boolean conversion
 - Empty containers, 0, None, and False are falsy
 - Everything else is truthy
@@ -581,9 +553,8 @@ if count:
 
 ---
 
-## Correct Use of Basic Features
+## Correct Use of Basic Features: The Walrus Operator (Python 3.8+)
 
-## The Walrus Operator (Python 3.8+)
 - Assignment expressions with :=
 - Assign and test in a single expression
 - Avoid duplicate computation
@@ -604,9 +575,8 @@ results = [transform(x) for x in data if (y := condition(x))]
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Collections Module
 
-## Collections Module
 - Specialized container datatypes
 - Extend functionality of built-in containers
 - More efficient for specific use cases
@@ -627,9 +597,8 @@ taxonomy["Animals"]["Mammals"]["Cats"] = ["Lion", "Tiger"]
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Itertools Module
 
-## Itertools Module
 - Functions for efficient iteration
 - Create iterators for efficient looping
 - Combinatoric generators
@@ -653,9 +622,8 @@ for x in itertools.chain([1, 2], [3, 4]):
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Functools Module
 
-## Functools Module
 - Higher-order functions and operations on callable objects
 - Partial function application
 - Function caching
@@ -677,9 +645,8 @@ hex_to_int = functools.partial(base_converter, base=16)
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Operator Module
 
-## Operator Module
 - Function equivalents of Python's operators
 - Useful with functional programming tools
 - Cleaner alternative to lambdas in many cases
@@ -698,9 +665,8 @@ sum(map(operator.attrgetter("salary"), employees))  # With operator
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Pathlib Module (Python 3.4+)
 
-## Pathlib Module (Python 3.4+)
 - Object-oriented filesystem paths
 - Replaces os.path with a cleaner API
 - Methods for common operations
@@ -723,9 +689,8 @@ python_files = list(data_dir.glob("**/*.py"))
 
 ---
 
-## Correct Use of Basic Libraries
+## Correct Use of Basic Libraries: Context Managers (with statement)
 
-## Context Managers (with statement)
 - Automatic resource management
 - Ensures cleanup code runs
 - Built-in for files, locks, etc.
@@ -743,9 +708,8 @@ with open("input.txt") as infile, open("output.txt", "w") as outfile:
 
 ---
 
-## Idiomatic Error Handling
+## Idiomatic Error Handling: Try-Except
 
-## Try-Except
 - Easier to ask forgiveness than permission (EAFP)
 - Handle exceptions, not prevent them
 - Be specific about which exceptions to catch
@@ -768,9 +732,8 @@ except FileNotFoundError:
 
 ---
 
-## Idiomatic Error Handling
+## Idiomatic Error Handling: Else and Finally
 
-## Else and Finally
 - `else`: Runs when no exception occurs
 - `finally`: Always runs, regardless of exceptions
 - Separate normal flow from error handling
@@ -791,9 +754,8 @@ finally:
 
 ---
 
-## Replacing Common Patterns
+## Replacing Common Patterns: Dictionary Get with Default
 
-## Dictionary Get with Default
 - Use get() with default instead of checking existence
 - More concise, avoids repetition
 
@@ -810,9 +772,8 @@ value = my_dict.get(key, default_value)
 
 ---
 
-## Replacing Common Patterns
+## Replacing Common Patterns: Dictionary Update Patterns
 
-## Dictionary Update Patterns
 - Use dictionary methods for updates
 - More concise than conditionals
 
@@ -836,9 +797,8 @@ counter[key] += 1  # Already handles missing keys
 
 ---
 
-## Replacing Common Patterns
+## Replacing Common Patterns: Sorting
 
-## Sorting
 - Use `sorted()` with key function
 - Use `list.sort()` for in-place sorting
 - Customize with key parameter
@@ -859,9 +819,8 @@ sorted(words, key=str.lower)
 
 ---
 
-## Replacing Common Patterns
+## Replacing Common Patterns: Grouping Data
 
-## Grouping Data
 - Use defaultdict or itertools.groupby
 - Create hierarchical structures easily
 
@@ -881,9 +840,8 @@ for dept, group in itertools.groupby(people, key=lambda p: p.department):
 
 ---
 
-## Replacing Common Patterns
+## Replacing Common Patterns: Flattening Lists
 
-## Flattening Lists
 - Use chain or comprehensions
 - Avoid nested loops
 
@@ -905,9 +863,8 @@ flat = [item for sublist in nested for item in sublist]
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Data Processing Pipeline
 
-## Example: Data Processing Pipeline
 ```python
 def process_data(filename):
     from collections import Counter
@@ -932,9 +889,8 @@ def process_data(filename):
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Custom Data Container
 
-## Example: Custom Data Container
 ```python
 from dataclasses import dataclass
 from typing import List, Optional

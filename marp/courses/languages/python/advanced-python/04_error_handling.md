@@ -25,9 +25,8 @@ audience:
 
 ---
 
-## Python's Exception Philosophy
+## Python's Exception Philosophy: The EAFP Principle
 
-## The EAFP Principle
 - "Easier to Ask Forgiveness than Permission"
 - A core Python programming principle
 - Prefer try/except over if-checking
@@ -50,9 +49,8 @@ except KeyError:
 
 ---
 
-## Python's Exception Philosophy
+## Python's Exception Philosophy: Why EAFP is Preferred
 
-## Why EAFP is Preferred
 - Avoids race conditions
 - One-step instead of two-step process
 - More readable in complex conditions
@@ -61,9 +59,8 @@ except KeyError:
 
 ---
 
-## Exception Basics Review
+## Exception Basics Review: Exception Types
 
-## Exception Types
 - Python has a rich hierarchy of built-in exceptions
 - All exceptions inherit from `BaseException`
 - Most custom exceptions inherit from `Exception`
@@ -90,9 +87,8 @@ BaseException
 
 ---
 
-## Exception Basics Review
+## Exception Basics Review: Try-Except Block Structure
 
-## Try-Except Block Structure
 - Standard exception handling structure
 - Can include `except`, `else`, and `finally` clauses
 - Handle specific exceptions with type matching
@@ -122,9 +118,8 @@ finally:
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: Be Specific About Exceptions
 
-## Be Specific About Exceptions
 - Catch only exceptions you can handle
 - Avoid bare `except:` clauses
 - Target specific exception types
@@ -148,9 +143,8 @@ except IOError as e:
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: The Exception Hierarchy Advantage
 
-## The Exception Hierarchy Advantage
 - Catch specific exceptions when you need detailed handling
 - Catch parent classes for common handling
 - Use hierarchy to simplify error handling
@@ -169,9 +163,8 @@ except ArithmeticError:  # Catches all arithmetic errors
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: Keep Try Blocks Focused
 
-## Keep Try Blocks Focused
 - Include only code that might raise the target exception
 - Move non-error-prone code to the `else` block
 - Helps identify exactly what failed
@@ -199,9 +192,8 @@ else:
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: Using the Finally Block
 
-## Using the Finally Block
 - Guarantees execution of cleanup code
 - Runs whether exception occurs or not
 - Even runs when `return`, `break`, or `continue` occurs
@@ -224,9 +216,8 @@ def read_file_content(filename):
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: Context Managers (with statement)
 
-## Context Managers (with statement)
 - Elegant pattern for resource management
 - Automatic cleanup even during exceptions
 - Handles both normal and error cases
@@ -248,9 +239,8 @@ with open('file.txt', 'w') as f:
 
 ---
 
-## Correct Exception Handling
+## Correct Exception Handling: Re-raising Exceptions
 
-## Re-raising Exceptions
 - Process exception but still propagate it
 - Preserves original traceback
 - Can be used for logging or partial recovery
@@ -266,9 +256,8 @@ except AuthenticationError as e:
 
 ---
 
-## The raise from Syntax
+## The raise from Syntax: Exception Chaining
 
-## Exception Chaining
 - Added in Python 3
 - Explicitly chain exceptions
 - Shows causal relationship between exceptions
@@ -289,9 +278,8 @@ except ValueError as e:
 
 ---
 
-## The raise from Syntax
+## The raise from Syntax: Why Use Exception Chaining
 
-## Why Use Exception Chaining
 - Provides better context for debugging
 - Maintains both high-level and low-level error info
 - Adds meaning to technical exceptions
@@ -307,9 +295,8 @@ def get_user_by_id(user_id):
 
 ---
 
-## The raise from Syntax
+## The raise from Syntax: Suppressing Chained Exceptions
 
-## Suppressing Chained Exceptions
 - Use `raise ... from None` to suppress the original
 - Useful when original exception is not relevant
 - Simplifies error reporting
@@ -325,9 +312,8 @@ except (FileNotFoundError, JSONDecodeError) as e:
 
 ---
 
-## Writing Custom Exceptions
+## Writing Custom Exceptions: Creating Basic Exceptions
 
-## Creating Basic Exceptions
 - Inherit from Exception class
 - Add custom attributes and methods
 - Provide meaningful error messages
@@ -353,9 +339,8 @@ raise ValidationError("Value must be positive", "amount")
 
 ---
 
-## Writing Custom Exceptions
+## Writing Custom Exceptions: Building Exception Hierarchies
 
-## Building Exception Hierarchies
 - Create base exception for your module/application
 - Define specific exceptions for different error types
 - Establish meaningful relationships between exceptions
@@ -379,9 +364,8 @@ class QueryError(DatabaseError):
 
 ---
 
-## Writing Custom Exceptions
+## Writing Custom Exceptions: Adding Contextual Information
 
-## Adding Contextual Information
 - Include relevant data in exception objects
 - Helps with debugging and error handling
 - Makes exceptions more informative
@@ -406,9 +390,8 @@ class APIError(Exception):
 
 ---
 
-## Writing Custom Exceptions
+## Writing Custom Exceptions: Exception Best Practices
 
-## Exception Best Practices
 - Make exception names descriptive and specific
 - End class names with "Error" or "Exception"
 - Document exceptions in function docstrings
@@ -434,9 +417,8 @@ def transfer_funds(source_account, dest_account, amount):
 
 ---
 
-## Advanced Exception Techniques
+## Advanced Exception Techniques: Exception Handling with Decorators
 
-## Exception Handling with Decorators
 - Centralize error handling logic
 - Apply consistent handling to multiple functions
 - Separate business logic from error handling
@@ -467,9 +449,8 @@ def process_data(data):
 
 ---
 
-## Advanced Exception Techniques
+## Advanced Exception Techniques: Retry Pattern
 
-## Retry Pattern
 - Automatically retry failed operations
 - Perfect for transient errors (network, etc.)
 - Implement backoff strategies for reliability
@@ -509,9 +490,8 @@ def fetch_data(url):
 
 ---
 
-## Advanced Exception Techniques
+## Advanced Exception Techniques: Contextlib for Custom Context Managers
 
-## Contextlib for Custom Context Managers
 - `contextlib.contextmanager` simplifies context manager creation
 - Turn generator functions into context managers
 - Cleaner than implementing `__enter__` and `__exit__`
@@ -542,9 +522,8 @@ with transaction(Session()) as session:
 
 ---
 
-## Advanced Exception Techniques
+## Advanced Exception Techniques: Nested Exception Handling
 
-## Nested Exception Handling
 - Structure complex error handling with nested blocks
 - Handle different levels of abstraction
 - Maintain error context at each level
@@ -575,9 +554,8 @@ def process_user_data(user_id):
 
 ---
 
-## Assertions in Python
+## Assertions in Python: Purpose of Assertions
 
-## Purpose of Assertions
 - Verify program correctness during development
 - Document assumptions in code
 - Catch programming errors early
@@ -595,9 +573,8 @@ def calculate_average(numbers):
 
 ---
 
-## Assertions in Python
+## Assertions in Python: When to Use Assertions
 
-## When to Use Assertions
 - Checking internal invariants
 - Verifying preconditions in non-public methods
 - Documenting assumptions in your code
@@ -615,9 +592,8 @@ def binary_search(sorted_list, item):
 
 ---
 
-## Assertions in Python
+## Assertions in Python: When Not to Use Assertions
 
-## When Not to Use Assertions
 - Validating user input
 - Checking for runtime errors
 - Handling expected error conditions
@@ -639,9 +615,8 @@ def process_user_data(data):
 
 ---
 
-## Assertions in Python
+## Assertions in Python: Assertions vs. Exceptions
 
-## Assertions vs. Exceptions
 - Assertions are for developer errors
 - Exceptions are for runtime errors
 - Assertions can be disabled
@@ -663,9 +638,8 @@ def divide_values(a, b):
 
 ---
 
-## Debugging with Exceptions
+## Debugging with Exceptions: Understanding Tracebacks
 
-## Understanding Tracebacks
 - Python's traceback shows exception path
 - Read from bottom to top for chronology
 - Contains function calls, file names, line numbers
@@ -684,9 +658,8 @@ KeyError: 'key'
 
 ---
 
-## Debugging with Exceptions
+## Debugging with Exceptions: Enhancing Tracebacks
 
-## Enhancing Tracebacks
 - Add context to exceptions with `raise from`
 - Use custom exceptions with descriptive messages
 - Include relevant data in exception objects
@@ -712,9 +685,8 @@ except Exception as e:
 
 ---
 
-## Debugging with Exceptions
+## Debugging with Exceptions: The traceback Module
 
-## The traceback Module
 - Programmatically work with tracebacks
 - Extract, format, and print exception information
 - Capture tracebacks for logging
@@ -739,9 +711,8 @@ except Exception as e:
 
 ---
 
-## Exception Handling Patterns
+## Exception Handling Patterns: The Guard Pattern
 
-## The Guard Pattern
 - Protect non-critical functionality
 - Prevent exceptions from non-essential features
 - Keep main program running despite errors
@@ -764,9 +735,8 @@ def apply_plugins(data):
 
 ---
 
-## Exception Handling Patterns
+## Exception Handling Patterns: The Circuit Breaker Pattern
 
-## The Circuit Breaker Pattern
 - Prevent repeated calls to failing systems
 - Automatically "trip" after consecutive failures
 - Allow occasional retry attempts
@@ -814,9 +784,8 @@ class CircuitBreaker:
 
 ---
 
-## Exception Handling Patterns
+## Exception Handling Patterns: The Bubble-Up Pattern
 
-## The Bubble-Up Pattern
 - Handle exceptions at the appropriate level
 - Let exceptions bubble up to where they can be handled
 - Avoid premature exception catching
@@ -853,9 +822,8 @@ def display_user_profile(user_id):
 
 ---
 
-## Exception Handling Patterns
+## Exception Handling Patterns: The Unified Handler Pattern
 
-## The Unified Handler Pattern
 - Central exception handling for an application
 - Consistent error reporting and logging
 - Simplifies individual functions

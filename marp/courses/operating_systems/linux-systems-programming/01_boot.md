@@ -553,9 +553,8 @@ hexdump -C module.ko | tail
 
 ---
 
-## GRUB with Secure Boot
+## GRUB with Secure Boot: Shim Bootloader:
 
-## Shim Bootloader:
 - **First-stage bootloader**
 - Signed by Microsoft
 - Loads GRUB

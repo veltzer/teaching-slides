@@ -48,9 +48,8 @@ Common Python Web Technology Stack:
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Introduction to Flask
 
-## Introduction to Flask
 - Lightweight web framework
 - "Micro" framework (minimalist core)
 - Highly extensible
@@ -79,9 +78,8 @@ if __name__ == '__main__':
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Routing
 
-## Flask Routing
 - Map URLs to view functions
 - Route parameters
 - HTTP methods (GET, POST, etc.)
@@ -121,9 +119,8 @@ def login():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Request Handling
 
-## Flask Request Handling
 - Access request data
 - Form handling
 - File uploads
@@ -163,9 +160,8 @@ def api_data():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Responses
 
-## Flask Responses
 - Return strings, dictionaries, tuples
 - HTML, JSON, files, streams
 - Custom status codes
@@ -209,9 +205,8 @@ def redirect_example():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Templating with Jinja2
 
-## Templating with Jinja2
 - HTML templates with dynamic content
 - Template inheritance
 - Variable substitution
@@ -253,9 +248,8 @@ def user_list():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Application Structure
 
-## Flask Application Structure
 - Organizing routes and views
 - Blueprints for modular applications
 - Application factory pattern
@@ -299,9 +293,8 @@ def create_app(config_name='default'):
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Database Integration
 
-## Database Integration
 - SQLAlchemy ORM
 - Flask-SQLAlchemy extension
 - Database migrations
@@ -344,9 +337,8 @@ with app.app_context():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Authentication
 
-## Flask Authentication
 - User authentication
 - Password hashing
 - Session management
@@ -399,9 +391,8 @@ def dashboard():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: RESTful APIs with Flask
 
-## RESTful APIs with Flask
 - API design principles
 - Resource-based routing
 - JSON responses
@@ -458,9 +449,8 @@ def create_item():
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Flask Extensions Ecosystem
 
-## Flask Extensions Ecosystem
 - Common extensions for Flask
 - Authentication, authorization
 - Forms and validation
@@ -504,9 +494,8 @@ admin.add_view(ModelView(User, db.session))
 
 ---
 
-## Web Servers with Flask
+## Web Servers with Flask: Deploying Flask Applications
 
-## Deploying Flask Applications
 - Development vs. production environments
 - WSGI servers (Gunicorn, uWSGI)
 - Reverse proxies (Nginx, Apache)
@@ -553,9 +542,8 @@ server {
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: Introduction to Requests
 
-## Introduction to Requests
 - HTTP client library for Python
 - Simple and intuitive API
 - Handles complex HTTP operations
@@ -590,9 +578,8 @@ print(response.text[:100])  # Print first 100 chars
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: HTTP Methods with Requests
 
-## HTTP Methods with Requests
 - GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD
 - Query parameters
 - Request body (form data, JSON)
@@ -632,9 +619,8 @@ response = requests.get('https://httpbin.org/delay/2', timeout=5)
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: Working with Sessions
 
-## Working with Sessions
 - Persistent connections
 - Cookie persistence
 - Default headers
@@ -677,9 +663,8 @@ session.close()
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: Error Handling and Exceptions
 
-## Error Handling and Exceptions
 - Handle different HTTP status codes
 - Catch connection errors
 - Implement retries
@@ -738,9 +723,8 @@ except Exception as e:
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: Working with Authentication
 
-## Working with Authentication
 - Basic authentication
 - Digest authentication
 - Token-based authentication
@@ -800,9 +784,8 @@ response = oauth.get('https://example.com/api/data')
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: File Uploads and Downloads
 
-## File Uploads and Downloads
 - Upload files to servers
 - Download files and save locally
 - Progress monitoring
@@ -849,9 +832,8 @@ with open('large_file.zip', 'wb') as f:
 
 ---
 
-## Web Clients with Requests
+## Web Clients with Requests: Advanced Requests Features
 
-## Advanced Requests Features
 - Custom adapters
 - Transport adapters
 - Connection pooling
@@ -903,9 +885,8 @@ response = session.get('https://httpbin.org/get')
 
 ---
 
-## Web Scraping with BeautifulSoup
+## Web Scraping with BeautifulSoup: Introduction to Web Scraping
 
-## Introduction to Web Scraping
 - Extract data from websites
 - Parse HTML and XML
 - Navigate web document structure
@@ -945,9 +926,8 @@ for quote in quotes[:3]:
 
 ---
 
-## Web Scraping with BeautifulSoup
+## Web Scraping with BeautifulSoup: Navigating the DOM
 
-## Navigating the DOM
 - Find elements by tag name, class, id
 - CSS selectors
 - Element attributes
@@ -1018,9 +998,8 @@ print(f"Number of children: {len(children)}")
 
 ---
 
-## Web Scraping with BeautifulSoup
+## Web Scraping with BeautifulSoup: Extracting Data
 
-## Extracting Data
 - Get text content
 - Get attributes
 - Extract links and URLs
@@ -1074,9 +1053,8 @@ if tables:
 
 ---
 
-## Web Scraping with BeautifulSoup
+## Web Scraping with BeautifulSoup: Common Scraping Challenges
 
-## Common Scraping Challenges
 - Dynamic content (JavaScript)
 - Authentication
 - Rate limiting
@@ -1154,9 +1132,8 @@ def scrape_authenticated_page(login_url, target_url, username, password):
 
 ---
 
-## Web Scraping with BeautifulSoup
+## Web Scraping with BeautifulSoup: Web Scraping Ethics and Best Practices
 
-## Web Scraping Ethics and Best Practices
 - Respect robots.txt
 - Implement rate limiting
 - Identify your scraper (User-Agent)
@@ -1239,9 +1216,8 @@ if soup:
 
 ---
 
-## Web Scraping with Scrapy
+## Web Scraping with Scrapy: Introduction to Scrapy
 
-## Introduction to Scrapy
 - Full-featured web scraping framework
 - High-level, organized architecture
 - Asynchronous networking
@@ -1300,9 +1276,8 @@ class QuotesSpider(scrapy.Spider):
 
 ---
 
-## Web Scraping with Scrapy
+## Web Scraping with Scrapy: Scrapy Selectors
 
-## Scrapy Selectors
 - CSS selectors
 - XPath selectors
 - Element extraction
@@ -1359,9 +1334,8 @@ class ProductSpider(scrapy.Spider):
 
 ---
 
-## Web Scraping with Scrapy
+## Web Scraping with Scrapy: Spider Types and Crawling Strategies
 
-## Spider Types and Crawling Strategies
 - Basic Spider
 - CrawlSpider for following links
 - SitemapSpider for sitemap parsing
@@ -1427,9 +1401,8 @@ class SitemapProductSpider(SitemapSpider):
 
 ---
 
-## Web Scraping with Scrapy
+## Web Scraping with Scrapy: Items and Item Pipelines
 
-## Items and Item Pipelines
 - Define structured data with Item classes
 - Process extracted data with Pipelines
 - Clean and validate data
@@ -1525,9 +1498,8 @@ class DatabaseStorePipeline:
 
 ---
 
-## Web Scraping with Scrapy
+## Web Scraping with Scrapy: Middlewares and Settings
 
-## Middlewares and Settings
 - Request and response processing
 - User-agent rotation
 - Proxy management
@@ -1604,9 +1576,8 @@ HTTPCACHE_DIR = 'httpcache'
 
 ---
 
-## HTML Parsing with lxml
+## HTML Parsing with lxml: Introduction to lxml
 
-## Introduction to lxml
 - Fast XML and HTML parser
 - XPath and CSS selector support
 - Compliant with web standards
@@ -1650,9 +1621,8 @@ print(f"Links (CSS): {links}")
 
 ---
 
-## HTML Parsing with lxml
+## HTML Parsing with lxml: Working with XML
 
-## Working with XML
 - Parse and create XML documents
 - XML namespaces
 - Validation against schemas
@@ -1723,9 +1693,8 @@ print(f"Validation result: {valid}")
 
 ---
 
-## HTML Parsing with lxml
+## HTML Parsing with lxml: HTML Cleaning and Transformation
 
-## HTML Cleaning and Transformation
 - Sanitize HTML
 - Remove unwanted tags
 - Fix malformed HTML
@@ -1804,9 +1773,8 @@ print(modified_html)
 
 ---
 
-## HTML Parsing with lxml
+## HTML Parsing with lxml: Performance Optimization
 
-## Performance Optimization
 - Efficient DOM traversal
 - Memory management
 - Incremental parsing
@@ -1896,9 +1864,8 @@ print(f"lxml is {bs_lxml_time/lxml_time:.2f}x faster than BeautifulSoup (lxml)")
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Introduction to Selenium
 
-## Introduction to Selenium
 - Automate browser interactions
 - Simulate user behavior
 - Test web applications
@@ -1954,9 +1921,8 @@ finally:
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Selenium Element Selection
 
-## Selenium Element Selection
 - Find elements by ID, class, tag, CSS, XPath
 - Work with single or multiple elements
 - Element properties and attributes
@@ -2023,9 +1989,8 @@ finally:
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Interacting with Pages
 
-## Interacting with Pages
 - Click elements
 - Enter text
 - Submit forms
@@ -2120,9 +2085,8 @@ finally:
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Working with Windows and Frames
 
-## Working with Windows and Frames
 - Switch between browser windows
 - Work with iframes
 - Handle popups
@@ -2214,9 +2178,8 @@ finally:
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Selenium for Web Testing
 
-## Selenium for Web Testing
 - Test case organization
 - Assertions
 - Page Object Model
@@ -2325,9 +2288,8 @@ if __name__ == "__main__":
 
 ---
 
-## Testing Web Applications with Selenium
+## Testing Web Applications with Selenium: Selenium in CI/CD Pipelines
 
-## Selenium in CI/CD Pipelines
 - Integration with CI systems
 - Headless browser testing
 - Cross-browser testing

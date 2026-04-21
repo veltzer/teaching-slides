@@ -18,9 +18,8 @@ audience:
 - Best practices for large systems
 
 ---
-## Why Use Logging?
+## Why Use Logging?: Limitations of Print Statements
 
-## Limitations of Print Statements
 - Hard to control verbosity
 - All or nothing output
 - Cannot easily route to different destinations
@@ -49,9 +48,8 @@ def process_data(data):
 ```
 
 ---
-## Why Use Logging?
+## Why Use Logging?: Benefits of Proper Logging
 
-## Benefits of Proper Logging
 - Different severity levels
 - Configurable verbosity
 - Multiple output destinations
@@ -85,9 +83,8 @@ def process_data(data):
 ```
 
 ---
-## The Python logging Module
+## The Python logging Module: Basic Logging
 
-## Basic Logging
 - Standard library module
 - Available in all Python installations
 - Multi-level logging system
@@ -116,9 +113,8 @@ logging.critical("This is a critical message")  # Will show
 ```
 
 ---
-## The Python logging Module
+## The Python logging Module: Logging Levels
 
-## Logging Levels
 - **DEBUG (10)** - Detailed information, typically for diagnostics
 - **INFO (20)** - Confirmation that things are working as expected
 - **WARNING (30)** - Something unexpected happened, but the program still works
@@ -143,9 +139,8 @@ logger.log(logging.INFO, "Another info message")
 ```
 
 ---
-## The Python logging Module
+## The Python logging Module: Creating Loggers
 
-## Creating Loggers
 - `getLogger(name)` creates or retrieves a logger
 - Typically use `__name__` as logger name
 - Hierarchical organization based on dot notation
@@ -172,9 +167,8 @@ print(db_logger.parent.name)  # 'myapp'
 ```
 
 ---
-## The Python logging Module
+## The Python logging Module: Logger Hierarchy
 
-## Logger Hierarchy
 - Loggers form a tree structure
 - Child loggers inherit settings from parents
 - Messages propagate up the hierarchy
@@ -202,9 +196,8 @@ app_logger.setLevel(logging.INFO)  # All child loggers inherit INFO level
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: Basic Configuration
 
-## Basic Configuration
 - `basicConfig()` sets up root logger
 - Simple way to start logging
 - Limited to a single handler
@@ -235,9 +228,8 @@ logging.getLogger('').addHandler(console)
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: Using Handlers
 
-## Using Handlers
 - Handlers send log records to destinations
 - Multiple handlers can be attached to a logger
 - Each handler can have its own level and formatter
@@ -274,9 +266,8 @@ logger.addHandler(error_handler)
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: Using Formatters
 
-## Using Formatters
 - Formatters control log message appearance
 - Define timestamp, level, logger name format
 - Consistent formatting across handlers
@@ -310,9 +301,8 @@ json_handler.setFormatter(json_formatter)
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: Format Specification Attributes
 
-## Format Specification Attributes
 - `%(asctime)s` - Human-readable time
 - `%(created)f` - Time when record was created (Unix timestamp)
 - `%(filename)s` - Filename from which logging was invoked
@@ -329,9 +319,8 @@ json_handler.setFormatter(json_formatter)
 - `%(thread)d` - Thread ID
 
 ---
-## Configuring Logging
+## Configuring Logging: Dictionary Configuration
 
-## Dictionary Configuration
 - Configure entire logging system at once
 - Declarative rather than imperative
 - Can be loaded from JSON or YAML files
@@ -384,9 +373,8 @@ logger.info("Application configured with dictConfig")
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: File-Based Configuration
 
-## File-Based Configuration
 - Store configuration in external files
 - Multiple configurations for different environments
 - Easy to update without code changes
@@ -429,9 +417,8 @@ with open('logging.yaml', 'r') as f:
 ```
 
 ---
-## Configuring Logging
+## Configuring Logging: Example YAML Configuration File
 
-## Example YAML Configuration File
 ```yaml
 version: 1
 formatters:
@@ -471,9 +458,8 @@ root:
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: Best Practices
 
-## Best Practices
 - Use module-level loggers with `__name__`
 - Use appropriate log levels consistently
 - Include contextual information
@@ -518,9 +504,8 @@ def process_order(order_id, items):
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: Log Level Guidelines
 
-## Log Level Guidelines
 - **DEBUG** - Detailed diagnostic information
     - Variable values, function call parameters, SQL queries
     - Internal state changes, loop iterations
@@ -547,9 +532,8 @@ def process_order(order_id, items):
     - Unrecoverable errors requiring immediate attention
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: What to Log
 
-## What to Log
 - Application lifecycle events (start, stop)
 - Authentication events (login, logout, failures)
 - Input validation failures
@@ -575,9 +559,8 @@ logger.info("Application shutdown complete")
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: What NOT to Log
 
-## What NOT to Log
 - Passwords and access tokens
 - Personal identifiable information (PII)
 - Credit card numbers
@@ -600,9 +583,8 @@ logger.debug(f"Processing payment for order {order_id}")
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: Using LoggerAdapter for Context
 
-## Using LoggerAdapter for Context
 - Add context without modifying log messages
 - Pass extra data to all log calls
 - Particularly useful for request IDs, user IDs
@@ -636,9 +618,8 @@ def handle_request(request):
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: Logging Exceptions
 
-## Logging Exceptions
 - Use `logger.exception()` for exceptions
 - Always includes traceback
 - Level is automatically ERROR
@@ -675,9 +656,8 @@ def risky_operation():
 ```
 
 ---
-## Using Logging Correctly
+## Using Logging Correctly: Logging in Large Systems
 
-## Logging in Large Systems
 - Use hierarchical logger structure
 - Align with package/module structure
 - Consistent level usage across components
@@ -710,9 +690,8 @@ logging.getLogger('myapp.api').setLevel(logging.DEBUG)   # More verbose
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Custom Log Levels
 
-## Custom Log Levels
 - Define your own log levels
 - Useful for specific application needs
 - Integrate with existing log levels
@@ -750,9 +729,8 @@ logger.verbose("Somewhat detailed message")
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Custom Formatters
 
-## Custom Formatters
 - Format log messages in specific ways
 - Handle complex formatting needs
 - Format as JSON for log aggregation
@@ -797,9 +775,8 @@ logger.addHandler(json_handler)
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Colored Console Logging
 
-## Colored Console Logging
 - Make console logs more readable
 - Color-code by log level
 - Stand out for warnings and errors
@@ -849,9 +826,8 @@ logger.addHandler(console)
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Custom Handlers
 
-## Custom Handlers
 - Send logs to custom destinations
 - Implement specific handling logic
 - Create handlers for databases, APIs, queues
@@ -909,9 +885,8 @@ class HttpHandler(logging.Handler):
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Filters
 
-## Filters
 - Control which log records get processed
 - Different from log levels
 - Based on content, context, or specific conditions
@@ -956,9 +931,8 @@ logger.info("User password changed to 'secret123'")  # Will be redacted
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Redirecting Logs to syslog
 
-## Redirecting Logs to syslog
 - Send logs to system logging service
 - Centralized logging on Unix-like systems
 - Standard system integration
@@ -997,9 +971,8 @@ logger.error("Database connection failed")
 ```
 
 ---
-## Advanced Logging Techniques
+## Advanced Logging Techniques: Rotating Log Files
 
-## Rotating Log Files
 - Prevent log files from growing too large
 - Rotate based on size or time
 - Keep a limited number of backup files
@@ -1039,9 +1012,8 @@ logger.addHandler(time_handler)
 ```
 
 ---
-## Collecting Logs
+## Collecting Logs: Log Aggregation
 
-## Log Aggregation
 - Collect logs from multiple sources
 - Centralize log storage and analysis
 - Scale with application growth
@@ -1054,9 +1026,8 @@ logger.addHandler(time_handler)
 ![log_aggregation](svg/courses/languages/python/advanced-python/13_logging/log_aggregation.svg)
 
 ---
-## Collecting Logs
+## Collecting Logs: Popular Log Aggregation Tools
 
-## Popular Log Aggregation Tools
 - Elastic Stack (Elasticsearch, Logstash, Kibana)
 - Graylog
 - Splunk
@@ -1091,9 +1062,8 @@ logger.info("This log will be sent to Logstash")
 ```
 
 ---
-## Collecting Logs
+## Collecting Logs: Structured Logging
 
-## Structured Logging
 - Add structure to log messages
 - Easier to parse and analyze
 - Better for log aggregation
@@ -1128,9 +1098,8 @@ log_structured(logger, logging.INFO, "User logged in", user_id=12345,
 ```
 
 ---
-## Collecting Logs
+## Collecting Logs: Distributed Tracing
 
-## Distributed Tracing
 - Track requests across multiple services
 - Correlate logs from different components
 - Use correlation IDs to link related logs
@@ -1178,9 +1147,8 @@ formatter = logging.Formatter('%(asctime)s - [%(trace_id)s] - %(message)s')
 ```
 
 ---
-## Flushing Logs
+## Flushing Logs: Ensuring Logs Are Written
 
-## Ensuring Logs Are Written
 - Logs may be buffered
 - Critical to flush in exceptional cases
 - Ensure logs are written before crash
@@ -1223,9 +1191,8 @@ def critical_operation():
 ```
 
 ---
-## Flushing Logs
+## Flushing Logs: Working with File Buffers
 
-## Working with File Buffers
 - File buffers can delay writing
 - Critical for crash recovery
 - Balance performance and durability
@@ -1261,9 +1228,8 @@ critical_logger.critical("This message is written immediately")
 ```
 
 ---
-## Flushing Logs
+## Flushing Logs: QueueHandler and QueueListener
 
-## QueueHandler and QueueListener
 - Non-blocking logging for performance
 - Process logs in separate thread
 - Avoid blocking on I/O operations
@@ -1308,9 +1274,8 @@ listener.stop()  # Flushes logs and stops the listener thread
 ```
 
 ---
-## Best Practices for Large Systems
+## Best Practices for Large Systems: Organizing Logging in Large Applications
 
-## Organizing Logging in Large Applications
 - Component-based logger hierarchy
 - Configuration in central location
 - Consistent formatting across components
@@ -1343,9 +1308,8 @@ def setup_logging(
 ```
 
 ---
-## Best Practices for Large Systems
+## Best Practices for Large Systems: Performance Considerations
 
-## Performance Considerations
 - Logging impacts application performance
 - Minimize string formatting in hot paths
 - Use lazy evaluation for expensive operations
@@ -1377,9 +1341,8 @@ def better_logging(user_data):
 ```
 
 ---
-## Best Practices for Large Systems
+## Best Practices for Large Systems: Thread Safety and Concurrency
 
-## Thread Safety and Concurrency
 - Logging module is thread-safe by default
 - Be careful with custom formatters and handlers
 - Consider QueueHandler for high-concurrency
@@ -1428,9 +1391,8 @@ listener.stop()
 ```
 
 ---
-## Best Practices for Large Systems
+## Best Practices for Large Systems: Testing Logging Configuration
 
-## Testing Logging Configuration
 - Verify logging behavior in tests
 - Check log output for expected content
 - Test different logging levels

@@ -18,9 +18,8 @@ audience:
 
 ---
 
-## What Are Decorators?
+## What Are Decorators?: Introduction to Decorators
 
-## Introduction to Decorators
 - Modify or enhance functions without changing their definition
 - Apply a wrapper function using special syntax
 - Follows the "decorator" design pattern
@@ -41,9 +40,8 @@ my_function = my_decorator(my_function)
 
 ---
 
-## What Are Decorators?
+## What Are Decorators?: When to Use Decorators
 
-## When to Use Decorators
 - Add functionality that's not part of the core logic
 - Cross-cutting concerns like:
     - Timing and profiling
@@ -97,9 +95,8 @@ say_hello()
 
 ---
 
-## Creating Decorators
+## Creating Decorators: Basic Decorator Pattern
 
-## Basic Decorator Pattern
 - Create a function that takes a function as an argument
 - Define a wrapper function inside the decorator
 - The wrapper adds functionality before/after the original
@@ -136,9 +133,8 @@ print(add(2, 3))
 
 ---
 
-## Creating Decorators
+## Creating Decorators: Preserving Metadata with functools.wraps
 
-## Preserving Metadata with functools.wraps
 - Decorators hide the original function's metadata
 - This affects debugging, introspection, and documentation
 - `functools.wraps` preserves function metadata
@@ -172,9 +168,8 @@ print(example.__doc__)   # Prints "Example function docstring"
 
 ---
 
-## Creating Decorators
+## Creating Decorators: Decorators with Arguments
 
-## Decorators with Arguments
 - Create a decorator factory that returns a decorator
 - Three levels of functions:
     1. Decorator factory (takes decorator arguments)
@@ -211,9 +206,8 @@ greet("Alice")
 
 ---
 
-## Common Decorator Patterns
+## Common Decorator Patterns: Timing Decorator
 
-## Timing Decorator
 - Measure how long a function takes to execute
 - Useful for performance analysis
 - Simple but practical example
@@ -247,9 +241,8 @@ print(slow_function(1.5))
 
 ---
 
-## Common Decorator Patterns
+## Common Decorator Patterns: Logging Decorator
 
-## Logging Decorator
 - Log when functions are called
 - Record arguments and return values
 - Helpful for debugging and monitoring
@@ -288,9 +281,8 @@ calculate_sum(5, b=3)
 
 ---
 
-## Common Decorator Patterns
+## Common Decorator Patterns: Retry Decorator
 
-## Retry Decorator
 - Automatically retry a function when it fails
 - Customizable retry count and delay
 - Handle transient errors gracefully
@@ -331,9 +323,8 @@ result = unstable_network_call("example.com")
 
 ---
 
-## Common Decorator Patterns
+## Common Decorator Patterns: Memoization / Caching Decorator
 
-## Memoization / Caching Decorator
 - Cache function results based on arguments
 - Avoid redundant calculations for same inputs
 - Significant performance improvement for expensive functions
@@ -372,9 +363,8 @@ print(fibonacci(35))  # 9227465
 
 ---
 
-## Common Decorator Patterns
+## Common Decorator Patterns: Validation Decorator
 
-## Validation Decorator
 - Check function arguments before execution
 - Enforce contracts and preconditions
 - Centralize validation logic
@@ -418,9 +408,8 @@ print(greet_person("Alice", 30))  # Works fine
 
 ---
 
-## Decorators in the Standard Library
+## Decorators in the Standard Library: functools.lru_cache
 
-## functools.lru_cache
 - Least Recently Used cache decorator
 - Memoize function calls for performance
 - Configurable maximum cache size
@@ -456,9 +445,8 @@ print(fibonacci.cache_info())
 
 ---
 
-## Decorators in the Standard Library
+## Decorators in the Standard Library: functools.singledispatch
 
-## functools.singledispatch
 - Function overloading based on argument type
 - Register handlers for different types
 - Select implementation at runtime
@@ -492,9 +480,8 @@ print(process([1, 2, 3])) # Processing list with 3 items
 
 ---
 
-## Decorators in the Standard Library
+## Decorators in the Standard Library: @property Decorator
 
-## @property Decorator
 - Convert methods into properties
 - Control attribute access
 - Add validation for setting attributes
@@ -536,9 +523,8 @@ print(person.age)        # 30
 
 ---
 
-## Decorators in the Standard Library
+## Decorators in the Standard Library: @classmethod and @staticmethod
 
-## @classmethod and @staticmethod
 - Modify method behavior
 - @classmethod receives the class as first argument
 - @staticmethod doesn't receive special first argument
@@ -583,9 +569,8 @@ print(Date.is_valid_date(2023, 2, 29))  # False
 
 ---
 
-## Advanced Decorator Techniques
+## Advanced Decorator Techniques: Class Decorators
 
-## Class Decorators
 - Decorators that modify classes instead of functions
 - Apply the decorator to the class definition
 - Can modify class attributes and methods
@@ -617,9 +602,8 @@ print(person)  # Person(name='Alice', age=30)
 
 ---
 
-## Advanced Decorator Techniques
+## Advanced Decorator Techniques: Method Decorators
 
-## Method Decorators
 - Decorating methods inside classes
 - Special considerations for instance methods
 - Preserving the `self` parameter
@@ -654,9 +638,8 @@ print(calc.multiply(2, 3))   # Calling Calculator.multiply \n 6
 
 ---
 
-## Advanced Decorator Techniques
+## Advanced Decorator Techniques: Decorator Stacking
 
-## Decorator Stacking
 - Apply multiple decorators to a function
 - Decorators are applied from bottom to top
 - Each decorator wraps the result of the one below it
@@ -697,9 +680,8 @@ print(hello())
 
 ---
 
-## Advanced Decorator Techniques
+## Advanced Decorator Techniques: Stateful Decorators
 
-## Stateful Decorators
 - Decorators that maintain state between calls
 - Track function call history
 - Accumulate results
@@ -733,9 +715,8 @@ print(f"Function called {hello.count} times")  # Function called 3 times
 
 ---
 
-## Advanced Decorator Techniques
+## Advanced Decorator Techniques: Creating Decorator Libraries
 
-## Creating Decorator Libraries
 - Design reusable decorators
 - Combine decorators for complex behavior
 - Documentation and metadata

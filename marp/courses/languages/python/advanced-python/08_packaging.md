@@ -20,9 +20,8 @@ audience:
 - Documentation best practices
 
 ---
-## Python Packaging Evolution
+## Python Packaging Evolution: Historical Timeline
 
-## Historical Timeline
 - Pre-2000: Manual module distribution
 - 2000: distutils added to standard library
 - 2004: setuptools introduced as distutils enhancement
@@ -32,9 +31,8 @@ audience:
 - 2020+: Modern tools like poetry, hatch, flit
 
 ---
-## Python Packaging Evolution
+## Python Packaging Evolution: Current State
 
-## Current State
 - distutils (deprecated in Python 3.10)
 - setuptools (still widely used)
 - Modern packaging standards:
@@ -58,9 +56,8 @@ twine upload dist/*
 ```
 
 ---
-## distutils
+## distutils: Introduction to distutils
 
-## Introduction to distutils
 - Original Python packaging system
 - Part of the standard library
 - Basis for many packaging tools
@@ -82,9 +79,8 @@ setup(
 ```
 
 ---
-## distutils
+## distutils: Limitations of distutils
 
-## Limitations of distutils
 - Limited dependency management
 - No automatic dependency installation
 - Minimal metadata support
@@ -100,9 +96,8 @@ python setup.py sdist
 ```
 
 ---
-## setuptools
+## setuptools: Introduction to setuptools
 
-## Introduction to setuptools
 - Enhanced alternative to distutils
 - De facto standard for Python packaging
 - Rich feature set for package creation
@@ -128,9 +123,8 @@ setup(
 ```
 
 ---
-## setuptools
+## setuptools: Key setuptools Features
 
-## Key setuptools Features
 - Automatic package discovery
 - Dependency declaration and installation
 - Entry points for plugins/scripts
@@ -158,9 +152,8 @@ setup(
 ```
 
 ---
-## setuptools
+## setuptools: Project Structure with setuptools
 
-## Project Structure with setuptools
 - Standard layout for Python packages
 - Source vs. distribution structure
 - Package vs. module organization
@@ -187,9 +180,8 @@ mypackage/
 ```
 
 ---
-## setuptools
+## setuptools: setup.cfg Configuration
 
-## setup.cfg Configuration
 - Move setup.py configuration to setup.cfg
 - Declarative configuration
 - Cleaner and more maintainable
@@ -221,9 +213,8 @@ where = src
 ```
 
 ---
-## setuptools
+## setuptools: MANIFEST.in
 
-## MANIFEST.in
 - Controls which files are included in source distributions
 - Not needed for wheels (which use include_package_data)
 - Include non-Python files in your package
@@ -243,9 +234,8 @@ recursive-exclude * *.py[co]
 ```
 
 ---
-## Modern Packaging
+## Modern Packaging: pyproject.toml
 
-## pyproject.toml
 - New standard for Python packaging (PEP 518/621)
 - Replaces setup.py, setup.cfg, MANIFEST.in
 - Specifies build system requirements
@@ -273,9 +263,7 @@ dependencies = [
 ```
 
 ---
-## Modern Packaging
-
-## Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools
 
 ## setuptools + build
 - setuptools remains the most common build backend
@@ -296,9 +284,7 @@ python -m build --wheel
 ```
 
 ---
-## Modern Packaging
-
-## Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools
 
 ## poetry
 - Complete package management
@@ -322,9 +308,7 @@ poetry publish
 ```
 
 ---
-## Modern Packaging
-
-## Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools
 
 ## flit
 - Simplest way to package Python modules
@@ -345,9 +329,7 @@ flit publish
 ```
 
 ---
-## Modern Packaging
-
-## Modern Packaging Tools
+## Modern Packaging: Modern Packaging Tools
 
 ## hatch
 - Modern Python project manager
@@ -368,9 +350,8 @@ hatch publish
 ```
 
 ---
-## Package Formats
+## Package Formats: Source Distributions (sdist)
 
-## Source Distributions (sdist)
 - Contains source code and build instructions
 - Platform-independent
 - Requires build process on installation
@@ -389,9 +370,8 @@ python -m build --sdist
 ```
 
 ---
-## Package Formats
+## Package Formats: Wheel Distributions
 
-## Wheel Distributions
 - Pre-built distribution format
 - Faster installation (no build step)
 - Platform-specific or pure Python
@@ -410,9 +390,8 @@ python -m build --wheel
 ```
 
 ---
-## Package Formats
+## Package Formats: Wheel Anatomy
 
-## Wheel Anatomy
 - Wheel file naming convention
 - Internal structure
 - Metadata format
@@ -424,9 +403,8 @@ python -m build --wheel
 ![wheel_anatomy](svg/courses/languages/python/advanced-python/08_packaging/wheel_anatomy.svg)
 
 ---
-## Package Formats
+## Package Formats: When to Use Which Format
 
-## When to Use Which Format
 - Source distributions:
     - Distribution to other developers
     - When compilation needs local customization
@@ -444,9 +422,8 @@ twine upload dist/*  # Upload both to PyPI
 ```
 
 ---
-## Publishing Packages
+## Publishing Packages: PyPI Overview
 
-## PyPI Overview
 - Python Package Index (pypi.org)
 - Official public repository
 - Over 350,000 packages
@@ -455,9 +432,8 @@ twine upload dist/*  # Upload both to PyPI
 - Supports source and wheel distributions
 
 ---
-## Publishing Packages
+## Publishing Packages: Preparing for Publication
 
-## Preparing for Publication
 - Choose appropriate name (check availability)
 - Prepare required metadata
 - Create README and documentation
@@ -481,9 +457,8 @@ classifiers = [
 ```
 
 ---
-## Publishing Packages
+## Publishing Packages: Using twine
 
-## Using twine
 - Standard tool for uploading to PyPI
 - Securely authenticates to PyPI
 - Verifies distributions before upload
@@ -508,9 +483,8 @@ twine upload --config-file .pypirc dist/*
 ```
 
 ---
-## Publishing Packages
+## Publishing Packages: PyPI Configuration with .pypirc
 
-## PyPI Configuration with .pypirc
 - Store PyPI credentials
 - Configure multiple repositories
 - Define upload destinations
@@ -540,9 +514,8 @@ password = your_password
 ```
 
 ---
-## Publishing Packages
+## Publishing Packages: Testing Your Published Package
 
-## Testing Your Published Package
 - Install from TestPyPI first
 - Verify package structure
 - Test functionality
@@ -564,9 +537,8 @@ twine upload dist/*
 ```
 
 ---
-## Private Package Repositories
+## Private Package Repositories: Why Use a Private Repository?
 
-## Why Use a Private Repository?
 - Host proprietary code
 - Control over available packages
 - Airgapped/isolated environments
@@ -575,9 +547,7 @@ twine upload dist/*
 - Faster installations on local network
 
 ---
-## Private Package Repositories
-
-## PyPI Server Options
+## Private Package Repositories: PyPI Server Options
 
 ## PyPI-Server
 - Simple, lightweight PyPI server
@@ -600,9 +570,7 @@ pip install --index-url http://localhost:8080/simple/ mypackage
 ```
 
 ---
-## Private Package Repositories
-
-## PyPI Server Options
+## Private Package Repositories: PyPI Server Options
 
 ## Artifactory/Nexus/DevPi
 - Enterprise-grade package repositories
@@ -625,9 +593,8 @@ devpi upload
 ```
 
 ---
-## Private Package Repositories
+## Private Package Repositories: Using Private Repositories
 
-## Using Private Repositories
 - Configure pip to use private repo
 - Authenticate with credentials
 - Upload packages with twine
@@ -647,9 +614,8 @@ mypackage==1.0.0
 ```
 
 ---
-## Binary Distributions
+## Binary Distributions: Why Package as Binary?
 
-## Why Package as Binary?
 - End-user simplicity
 - Avoid installation issues
 - Include non-Python dependencies
@@ -658,9 +624,7 @@ mypackage==1.0.0
 - Consistent runtime environment
 
 ---
-## Binary Distributions
-
-## Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions
 
 ## PyInstaller
 - Bundles Python app into standalone executable
@@ -684,9 +648,7 @@ pyinstaller --onefile --windowed --icon=myicon.ico myscript.py
 ```
 
 ---
-## Binary Distributions
-
-## Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions
 
 ## cx_Freeze
 - Creates standalone executables
@@ -717,9 +679,7 @@ setup(
 ```
 
 ---
-## Binary Distributions
-
-## Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions
 
 ## py2exe/py2app
 - Windows-specific (py2exe)
@@ -749,9 +709,7 @@ setup(
 ```
 
 ---
-## Binary Distributions
-
-## Creating Binary Distributions
+## Binary Distributions: Creating Binary Distributions
 
 ## Docker Containers
 - Package application with Python runtime
@@ -779,9 +737,8 @@ CMD ["python", "app.py"]
 ```
 
 ---
-## API Design and Stability
+## API Design and Stability: Principles of Good API Design
 
-## Principles of Good API Design
 - Consistency in naming and behavior
 - Simplicity in common cases
 - Progressive disclosure of complexity
@@ -791,9 +748,8 @@ CMD ["python", "app.py"]
 - Follow Python's conventions (PEP 8)
 
 ---
-## API Design and Stability
+## API Design and Stability: API Components
 
-## API Components
 - Public functions and classes
 - Parameters and return values
 - Exceptions and error handling
@@ -823,9 +779,8 @@ def process_data(data, normalize=True, output_format="dict"):
 ```
 
 ---
-## API Design and Stability
+## API Design and Stability: Versioning and Compatibility
 
-## Versioning and Compatibility
 - Semantic versioning (MAJOR.MINOR.PATCH)
 - Explicit deprecation process
 - Transition periods for breaking changes
@@ -850,9 +805,8 @@ def new_function(arg1, arg2, arg3=None):
 ```
 
 ---
-## API Design and Stability
+## API Design and Stability: Private vs. Public API
 
-## Private vs. Public API
 - Mark private internals with underscore
 - Document what's public and what's private
 - Don't rely on implementation details
@@ -875,9 +829,8 @@ def _internal_helper():
 ```
 
 ---
-## API Design and Stability
+## API Design and Stability: Interface Contracts
 
-## Interface Contracts
 - Document parameter types and return values
 - Define error conditions and exceptions
 - Consider using Python type hints
@@ -911,9 +864,8 @@ def process_items(
 ```
 
 ---
-## Documenting Your Module
+## Documenting Your Module: Documentation Types
 
-## Documentation Types
 - API reference documentation
 - Tutorials and guides
 - Examples and recipes
@@ -923,9 +875,8 @@ def process_items(
 - FAQ and troubleshooting
 
 ---
-## Documenting Your Module
+## Documenting Your Module: Docstrings
 
-## Docstrings
 - Document modules, classes, methods, functions
 - Follow standard formats (Google, NumPy, reStructuredText)
 - Include parameters, return values, exceptions
@@ -955,9 +906,8 @@ def calculate_statistics(values, include_outliers=True):
 ```
 
 ---
-## Documenting Your Module
+## Documenting Your Module: README Files
 
-## README Files
 - First documentation users see
 - Quick start guide
 - Installation instructions
@@ -997,9 +947,7 @@ Full documentation is available at https://mypackage.readthedocs.io
 MIT License
 
 ---
-## Documenting Your Module
-
-## Documentation Tools
+## Documenting Your Module: Documentation Tools
 
 ## Sphinx
 - Standard documentation generator for Python
@@ -1021,9 +969,7 @@ make html
 ```
 
 ---
-## Documenting Your Module
-
-## Documentation Tools
+## Documenting Your Module: Documentation Tools
 
 ## MkDocs
 - Simpler alternative to Sphinx
@@ -1053,9 +999,7 @@ plugins:
 ```
 
 ---
-## Documenting Your Module
-
-## Hosting Documentation
+## Documenting Your Module: Hosting Documentation
 
 ## ReadTheDocs
 - Free hosting for open source projects
@@ -1112,9 +1056,8 @@ setup(
 ```
 
 ---
-## Practical Example: Complete Package
+## Practical Example: Complete Package: Project Structure
 
-## Project Structure
 ```tree
 mypackage/
 ├── LICENSE
@@ -1136,9 +1079,8 @@ mypackage/
 ```
 
 ---
-## Practical Example: Complete Package
+## Practical Example: Complete Package: pyproject.toml
 
-## pyproject.toml
 ```toml
 [build-system]
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
@@ -1174,9 +1116,8 @@ write_to = "src/mypackage/_version.py"
 ```
 
 ---
-## Practical Example: Complete Package
+## Practical Example: Complete Package: __init__.py
 
-## __init__.py
 ```python
 """
 MyPackage - An example Python package.
@@ -1192,9 +1133,8 @@ __all__ = ["__version__", "process_data", "calculate_statistics"]
 ```
 
 ---
-## Practical Example: Complete Package
+## Practical Example: Complete Package: Building and Publishing
 
-## Building and Publishing
 ```bash
 # Ensure build tools are installed
 pip install build twine

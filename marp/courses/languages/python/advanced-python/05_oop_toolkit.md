@@ -18,9 +18,8 @@ audience:
 
 ---
 
-## Inheritance in Python
+## Inheritance in Python: Basic Inheritance
 
-## Basic Inheritance
 - Classes can inherit from other classes
 - Access to parent's methods and attributes
 - Extend or override parent's functionality
@@ -46,9 +45,8 @@ class Employee(Person):
 
 ---
 
-## Inheritance in Python
+## Inheritance in Python: Method Resolution Order (MRO)
 
-## Method Resolution Order (MRO)
 - Determines which method is called
 - Left-to-right, depth-first search
 - C3 linearization algorithm for complex hierarchies
@@ -77,9 +75,8 @@ print(D.__mro__)   # (D, B, C, A, object)
 
 ---
 
-## Inheritance in Python
+## Inheritance in Python: Multiple Inheritance
 
-## Multiple Inheritance
 - Python supports inheriting from multiple classes
 - Combines features from all parent classes
 - MRO resolves method call conflicts
@@ -141,9 +138,8 @@ print(Bottom.__mro__)  # (Bottom, Left, Right, Base, object)
 
 ---
 
-## Functions
+## Functions: Functions as First-Class Objects
 
-## Functions as First-Class Objects
 - Functions are objects in Python
 - Can be assigned to variables
 - Passed as arguments
@@ -172,9 +168,8 @@ for func in function_list:
 
 ---
 
-## Functions
+## Functions: Inner Functions and Closures
 
-## Inner Functions and Closures
 - Functions defined inside other functions
 - Access to variables in enclosing scope
 - Retain state even after outer function completes
@@ -196,9 +191,8 @@ print(triple(5))  # 15
 
 ---
 
-## Functions
+## Functions: Nonlocal Variables
 
-## Nonlocal Variables
 - Used in nested functions
 - Modify variables in enclosing scope
 - Different from global variables
@@ -223,9 +217,8 @@ print(counter())  # 13
 
 ---
 
-## Classes
+## Classes: Class vs Instance Attributes
 
-## Class vs Instance Attributes
 - Class attributes shared by all instances
 - Instance attributes unique to each instance
 - Class attributes defined at class level
@@ -254,9 +247,8 @@ print(dog1.species)  # Canis lupus familiaris
 
 ---
 
-## Classes
+## Classes: Instance vs Class Variables
 
-## Instance vs Class Variables
 - Instance variables stored in instance (__dict__)
 - Class variables stored in class (__dict__)
 - Inheritance affects what class variables are visible
@@ -286,9 +278,8 @@ print(Counter.count)  # 3 (class variable unchanged)
 
 ---
 
-## Abstract Classes
+## Abstract Classes: Abstract Base Classes
 
-## Abstract Base Classes
 - Define interfaces without implementation
 - Created with `abc` module
 - Force subclasses to implement specific methods
@@ -327,9 +318,8 @@ print(rect.perimeter())  # 30
 
 ---
 
-## Abstract Classes
+## Abstract Classes: Practical Uses of ABCs
 
-## Practical Uses of ABCs
 - Define common interfaces
 - Enforce consistent implementations
 - Document required methods
@@ -370,9 +360,8 @@ print(processor.run([1, 2, 3, 4]))  # 10
 
 ---
 
-## Abstract Classes
+## Abstract Classes: collections.abc Module
 
-## collections.abc Module
 - Built-in abstract base classes
 - Define interfaces for common collection types
 - Includes: Sequence, Mapping, MutableMapping, Set
@@ -395,9 +384,8 @@ print(isinstance("abc", MutableSequence))      # False
 
 ---
 
-## Properties
+## Properties: Basic Properties
 
-## Basic Properties
 - Method that behaves like an attribute
 - Control access to attributes
 - Add validation, computation, side effects
@@ -427,9 +415,8 @@ print(person.email)      # john.doe@example.com
 
 ---
 
-## Properties
+## Properties: Property Getters and Setters
 
-## Property Getters and Setters
 - Control both read and write access
 - Add validation for setting values
 - Maintain API compatibility when implementation changes
@@ -474,9 +461,8 @@ print(rect.area)   # 300
 
 ---
 
-## Properties
+## Properties: Property Deleter
 
-## Property Deleter
 - Control attribute deletion
 - Complete the property interface
 - Not as commonly used as getters/setters
@@ -522,9 +508,8 @@ print(obj.data)  # Computing value... \n 42
 
 ---
 
-## Properties
+## Properties: Property vs Private Attributes
 
-## Property vs Private Attributes
 - Python uses name mangling for "private" attributes
 - Names starting with double underscore (__name)
 - Transformed to _ClassName__name
@@ -565,9 +550,8 @@ print(acct._Account__balance)  # 150 (not recommended)
 
 ---
 
-## Multiple Inheritance
+## Multiple Inheritance: Mix-ins
 
-## Mix-ins
 - Small, focused classes that provide specific functionality
 - Not meant to be instantiated alone
 - "Mixed in" to other classes via inheritance
@@ -596,9 +580,8 @@ person.log("Data updated")  # [LOG] Person: Data updated
 
 ---
 
-## Multiple Inheritance
+## Multiple Inheritance: Common Mix-in Use Cases
 
-## Common Mix-in Use Cases
 - Serialization (to JSON, XML, etc.)
 - Equality and comparison
 - Iteration capabilities
@@ -635,9 +618,8 @@ print(u1 == u3)  # False
 
 ---
 
-## Multiple Inheritance
+## Multiple Inheritance: Diamond Problem Solution
 
-## Diamond Problem Solution
 - Super() automatically follows MRO
 - Create "cooperative" multiple inheritance
 - Each class calls super() to ensure all ancestors run
@@ -676,9 +658,8 @@ print(D.__mro__)
 
 ---
 
-## Static Methods
+## Static Methods: Basic Static Methods
 
-## Basic Static Methods
 - Methods that don't need class or instance
 - Defined with @staticmethod decorator
 - No special first parameter (self or cls)
@@ -715,9 +696,8 @@ print(MathUtils.is_prime(7))     # True
 
 ---
 
-## Static Methods
+## Static Methods: When to Use Static Methods
 
-## When to Use Static Methods
 - Utility functions related to the class
 - Functionality that doesn't need instance state
 - Methods that make sense as part of the class
@@ -746,9 +726,8 @@ print(StringUtils.count_vowels("beautiful"))     # 5
 
 ---
 
-## Class Methods
+## Class Methods: Basic Class Methods
 
-## Basic Class Methods
 - Methods that operate on the class, not instances
 - Defined with @classmethod decorator
 - First parameter is the class itself (cls)
@@ -782,9 +761,8 @@ print(Student.get_count())  # 3
 
 ---
 
-## Class Methods
+## Class Methods: Alternative Constructors
 
-## Alternative Constructors
 - Factory methods for creating instances
 - Different ways to create objects
 - More descriptive than overloaded __init__
@@ -874,9 +852,8 @@ print(Sample.get_count())         # 1 - class method
 
 ---
 
-## Method Overriding
+## Method Overriding: Basic Method Overriding
 
-## Basic Method Overriding
 - Replace parent class method in subclass
 - Same method name, potentially different implementation
 - Customizes behavior for specific subclasses
@@ -913,9 +890,8 @@ for animal in animals:
 
 ---
 
-## Method Overriding
+## Method Overriding: Using super() for Extension
 
-## Using super() for Extension
 - Call the parent's method in the override
 - Extend functionality rather than replace
 - Maintain parent behavior while adding features
@@ -958,9 +934,8 @@ print(ev.start())  # 2023 Tesla Model 3 is starting silently with 75 kWh battery
 
 ---
 
-## Special Methods
+## Special Methods: Operator Overloading
 
-## Operator Overloading
 - Methods named with double underscores
 - Called automatically for built-in operations
 - Allows custom classes to behave like built-ins
@@ -997,9 +972,8 @@ print(v1 == v2)    # False
 
 ---
 
-## Special Methods
+## Special Methods: Container Special Methods
 
-## Container Special Methods
 - `__len__`: Length of container (len())
 - `__getitem__`: Access items with [] notation
 - `__setitem__`: Set items with [] notation
@@ -1040,9 +1014,8 @@ print(my_list)            # CustomList([1, 10, 3, 4])
 
 ---
 
-## Special Methods
+## Special Methods: String Representation Methods
 
-## String Representation Methods
 - `__str__`: Human-readable string (str())
 - `__repr__`: Developer-readable string (repr())
 - `__format__`: Formatted string representation (format())
@@ -1079,9 +1052,8 @@ print(f"{p:polar}")  # r=5.00, θ=0.93
 
 ---
 
-## Dynamic Method Modification
+## Dynamic Method Modification: Overwriting Methods at Runtime
 
-## Overwriting Methods at Runtime
 - Replace instance methods during execution
 - Custom behavior for specific instances
 - Requires knowledge of method binding
@@ -1118,9 +1090,8 @@ print(bob.greet())    # Hello, I'm Bob
 
 ---
 
-## Dynamic Method Modification
+## Dynamic Method Modification: Monkey Patching
 
-## Monkey Patching
 - Modify or extend classes at runtime
 - Add new methods to existing classes
 - Useful for adding functionality to third-party code
@@ -1157,9 +1128,8 @@ print(obj.double_value())  # 10
 
 ---
 
-## Dynamic Method Modification
+## Dynamic Method Modification: Method Replacement with Decorators
 
-## Method Replacement with Decorators
 - Add behavior without changing original methods
 - Apply consistently across multiple methods
 - Maintain compatibility with original interface
@@ -1213,9 +1183,8 @@ calc.multiply(4, 5)
 
 ---
 
-## Dynamic Method Modification
+## Dynamic Method Modification: Adding Methods at Runtime
 
-## Adding Methods at Runtime
 - Add entirely new methods to instances
 - Extend functionality on demand
 - Uniquely powerful feature of Python
@@ -1250,9 +1219,8 @@ bob = Person("Bob", 25)
 
 ---
 
-## Modules
+## Modules: Python Modules
 
-## Python Modules
 - Files containing Python code
 - Organize code into logical units
 - Single namespace for related functionality
@@ -1285,9 +1253,8 @@ print(circle.area())
 
 ---
 
-## Modules
+## Modules: Module Import Patterns
 
-## Module Import Patterns
 - Different ways to import modules
 - Control what gets imported
 - Manage namespace conflicts
@@ -1320,9 +1287,8 @@ except ImportError:
 
 ---
 
-## Modules
+## Modules: Module Execution
 
-## Module Execution
 - Modules execute on first import
 - Code outside functions runs at import time
 - `__name__` helps distinguish import vs direct run
@@ -1352,9 +1318,8 @@ import mymodule  # Prints: Module mymodule is being imported
 
 ---
 
-## Modules
+## Modules: Module Attributes
 
-## Module Attributes
 - `__name__`: Module's name (or "__main__" if run directly)
 - `__file__`: Path to module file
 - `__doc__`: Module's docstring
@@ -1379,9 +1344,8 @@ if __name__ == "__main__":
 
 ---
 
-## Package Basics
+## Package Basics: Python Packages
 
-## Python Packages
 - Directories containing modules
 - Organize related modules together
 - Must contain `__init__.py` (for Python < 3.3)
@@ -1411,9 +1375,8 @@ import mypackage  # May provide direct access to modules
 
 ---
 
-## Package Basics
+## Package Basics: The __init__.py File
 
-## The __init__.py File
 - Makes directory a package
 - Executed when package is imported
 - Can set up package-level variables
@@ -1446,9 +1409,8 @@ obj = mypackage.Class1()  # From module2
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Inheritance Hierarchy
 
-## Example: Inheritance Hierarchy
 ```python
 class Vehicle:
     def __init__(self, make, model, year):
@@ -1499,9 +1461,8 @@ class ElectricCar(Car):
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Mix-in Based Design
 
-## Example: Mix-in Based Design
 ```python
 class JSONSerializableMixin:
     def to_json(self):
@@ -1546,9 +1507,8 @@ class User(JSONSerializableMixin, CSVSerializableMixin, LoggableMixin, Validatio
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Class Factory
 
-## Example: Class Factory
 ```python
 def create_model_class(name, fields):
     """Create a new model class with the given fields."""
@@ -1591,9 +1551,8 @@ print(user.is_valid())  # True
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Property-Based Class
 
-## Example: Property-Based Class
 ```python
 class Temperature:
     def __init__(self, celsius=0):

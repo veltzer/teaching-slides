@@ -284,9 +284,7 @@ int main() {
 
 ---
 
-## Solving Async Problems (cont.)
-
-## Strategy 2: Signal Masking
+## Solving Async Problems (cont.): Strategy 2: Signal Masking
 
 ```c
 void critical_section() {
@@ -307,9 +305,7 @@ void critical_section() {
 
 ---
 
-## Solving Async Problems (cont.)
-
-## Strategy 3: signalfd()
+## Solving Async Problems (cont.): Strategy 3: signalfd()
 
 ```c
 #include <sys/signalfd.h>

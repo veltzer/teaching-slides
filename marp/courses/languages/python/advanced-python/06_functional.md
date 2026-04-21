@@ -26,9 +26,8 @@ audience:
 
 ---
 
-## What is Functional Programming?
+## What is Functional Programming?: Core Principles
 
-## Core Principles
 - Functions as first-class citizens
 - Pure functions without side effects
 - Immutability of data
@@ -38,9 +37,8 @@ audience:
 
 ---
 
-## What is Functional Programming?
+## What is Functional Programming?: Benefits of Functional Programming
 
-## Benefits of Functional Programming
 - Easier to reason about code
 - Better parallelization
 - More testable code
@@ -50,9 +48,8 @@ audience:
 
 ---
 
-## What is Functional Programming?
+## What is Functional Programming?: Python as a Multi-Paradigm Language
 
-## Python as a Multi-Paradigm Language
 - Python supports multiple programming styles
 - Incorporates functional concepts alongside OOP
 - Not a "pure" functional language like Haskell
@@ -75,9 +72,8 @@ result = [x * x for x in range(1, 11) if x % 2 == 0]
 
 ---
 
-## Functions as First-Class Objects
+## Functions as First-Class Objects: What Are First-Class Functions?
 
-## What Are First-Class Functions?
 - Functions can be assigned to variables
 - Functions can be passed as arguments
 - Functions can be returned from other functions
@@ -101,9 +97,8 @@ for func in function_list:
 
 ---
 
-## Functions as First-Class Objects
+## Functions as First-Class Objects: Function Attributes
 
-## Function Attributes
 - Functions are objects with attributes
 - Can add custom attributes to functions
 - Access built-in attributes like __name__, __doc__
@@ -128,9 +123,8 @@ print(multiply.version)   # 1.0
 
 ---
 
-## Higher-Order Functions
+## Higher-Order Functions: What Are Higher-Order Functions?
 
-## What Are Higher-Order Functions?
 - Functions that take other functions as arguments
 - Functions that return other functions
 - Enable abstraction over actions, not just values
@@ -161,9 +155,8 @@ print(triple(5))  # 15
 
 ---
 
-## Higher-Order Functions
+## Higher-Order Functions: Built-in Higher-Order Functions: map()
 
-## Built-in Higher-Order Functions: map()
 - Apply a function to each item in an iterable
 - Returns a map object (iterator)
 - Lazy evaluation - processes items on demand
@@ -190,9 +183,8 @@ print(list(summed))  # [11, 22, 33]
 
 ---
 
-## Higher-Order Functions
+## Higher-Order Functions: Built-in Higher-Order Functions: filter()
 
-## Built-in Higher-Order Functions: filter()
 - Select items from an iterable based on a function
 - Returns iterator of items where function returns True
 - Function should return a boolean value
@@ -222,9 +214,8 @@ print(list(palindromes))  # ["radar", "level", "madam"]
 
 ---
 
-## Higher-Order Functions
+## Higher-Order Functions: Built-in Higher-Order Functions: reduce()
 
-## Built-in Higher-Order Functions: reduce()
 - Apply a function cumulatively to all items
 - Reduces an iterable to a single value
 - Function takes two arguments (accumulator and item)
@@ -255,9 +246,8 @@ print(product)  # 1200 (10*1*2*3*4*5)
 
 ---
 
-## Lambda Functions
+## Lambda Functions: What Are Lambda Functions?
 
-## What Are Lambda Functions?
 - Anonymous functions defined with `lambda` keyword
 - Can be created without a name
 - Limited to a single expression
@@ -284,9 +274,8 @@ print(pairs)  # [(1, 'one'), (3, 'three'), (2, 'two')]
 
 ---
 
-## Lambda Functions
+## Lambda Functions: Lambda Limitations
 
-## Lambda Limitations
 - Single expression only
 - Cannot contain statements
 - Limited for complex logic
@@ -313,9 +302,8 @@ def complex_function(x):
 
 ---
 
-## Lambda Functions
+## Lambda Functions: When to Use Lambda Functions
 
-## When to Use Lambda Functions
 - With higher-order functions (map, filter, reduce)
 - As key functions (sorting, min, max)
 - In GUI callbacks
@@ -344,9 +332,8 @@ factorial = reduce(lambda x, y: x * y, numbers)
 
 ---
 
-## List Comprehensions
+## List Comprehensions: Basic List Comprehensions
 
-## Basic List Comprehensions
 - Concise way to create lists based on existing lists
 - More readable alternative to map and filter
 - Creates a new list by applying an expression
@@ -372,9 +359,8 @@ print(squared_evens_comp)  # [4, 16]
 
 ---
 
-## List Comprehensions
+## List Comprehensions: Nested List Comprehensions
 
-## Nested List Comprehensions
 - Create more complex transformations
 - Equivalent to nested loops
 - Can combine multiple iterables
@@ -403,9 +389,8 @@ print(combinations)
 
 ---
 
-## Other Comprehensions
+## Other Comprehensions: Dictionary Comprehensions
 
-## Dictionary Comprehensions
 - Create dictionaries from iterables
 - Similar syntax to list comprehensions
 - Use curly braces with key:value pairs
@@ -434,9 +419,8 @@ print(fruit_inventory)  # {'apple': 3, 'banana': 6, 'orange': 4}
 
 ---
 
-## Other Comprehensions
+## Other Comprehensions: Set Comprehensions
 
-## Set Comprehensions
 - Create sets from iterables
 - Automatically removes duplicates
 - Similar syntax to list comprehensions
@@ -464,9 +448,8 @@ print(chars)  # {'d', 'e', 'h', 'l', 'o', 'r', 'w'}
 
 ---
 
-## Other Comprehensions
+## Other Comprehensions: Generator Expressions
 
-## Generator Expressions
 - Like list comprehensions but lazy (on-demand)
 - Use parentheses instead of brackets
 - Don't create the entire result at once
@@ -497,9 +480,8 @@ with open('large_file.txt') as file:
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Understanding Iterators
 
-## Understanding Iterators
 - Objects that implement the iterator protocol
 - Must have `__iter__()` and `__next__()` methods
 - Used in for loops and comprehensions
@@ -529,9 +511,8 @@ except StopIteration:
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Custom Iterator Classes
 
-## Custom Iterator Classes
 - Implement iterator protocol directly
 - Define `__iter__` and `__next__` methods
 - Control the iteration behavior
@@ -567,9 +548,8 @@ print(next(counter))  # 1
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Generator Functions
 
-## Generator Functions
 - Functions that use `yield` instead of `return`
 - Automatically implement iterator protocol
 - Maintain state between yields
@@ -599,9 +579,8 @@ print(list(countdown(5)))  # [5, 4, 3, 2, 1]
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: The Difference Between Iterators and Generators
 
-## The Difference Between Iterators and Generators
 - Iterators: objects implementing iterator protocol
 - Generators: special iterators created with yield
 - Generators automatically implement iterator protocol
@@ -646,9 +625,8 @@ for i in iter2:
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Generator Features
 
-## Generator Features
 - State is preserved between yield statements
 - Local variables retain their values
 - Execution pauses and resumes with each next() call
@@ -676,9 +654,8 @@ except StopIteration:
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Advanced Generator Features: send(), throw(), close()
 
-## Advanced Generator Features: send(), throw(), close()
 - `send()`: Pass values back into generator
 - `throw()`: Raise exception inside generator
 - `close()`: Stop generator execution
@@ -719,9 +696,8 @@ gen.close()  # Generator exiting
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Generator Expressions vs Generator Functions
 
-## Generator Expressions vs Generator Functions
 - Generator expressions: for simple cases
 - Generator functions: for complex logic
 - Generator functions can have multiple yields
@@ -748,9 +724,8 @@ for sq in squares_func(5):
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Infinite Generators
 
-## Infinite Generators
 - Generators that never stop yielding values
 - No predefined end point
 - Must be limited externally
@@ -777,9 +752,8 @@ print(first_10_fibs)  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ---
 
-## Iterators and Generators
+## Iterators and Generators: Generator Pipelines
 
-## Generator Pipelines
 - Connect generators to process data in stages
 - Each stage transforms data from previous stage
 - Memory-efficient for processing large datasets
@@ -812,9 +786,8 @@ print(f"Total words in error lines: {total_words}")
 
 ---
 
-## The itertools Module
+## The itertools Module: Overview of itertools
 
-## Overview of itertools
 - Library of fast, memory-efficient iterator tools
 - Functions for creating and working with iterators
 - Inspired by functional programming constructs
@@ -842,9 +815,8 @@ for item in repeater:
 
 ---
 
-## The itertools Module
+## The itertools Module: Combining Iterables
 
-## Combining Iterables
 - `chain()`: Concatenate iterables
 - `zip_longest()`: Zip with fill value for uneven lengths
 - `product()`: Cartesian product
@@ -875,9 +847,8 @@ print(len(deck))  # 52 (complete deck of cards)
 
 ---
 
-## The itertools Module
+## The itertools Module: Filtering and Slicing
 
-## Filtering and Slicing
 - `islice()`: Slice iterators
 - `takewhile()`: Take items while condition is true
 - `dropwhile()`: Drop items while condition is true
@@ -909,9 +880,8 @@ print(result)  # [0, 0, 0]
 
 ---
 
-## The itertools Module
+## The itertools Module: Combinatoric Generators
 
-## Combinatoric Generators
 - `combinations()`: r-length tuples, no repeated elements
 - `permutations()`: r-length tuples, all possible orderings
 - `combinations_with_replacement()`: r-length tuples with repeated elements
@@ -944,9 +914,8 @@ print(hand)  # 5 random cards
 
 ---
 
-## The functools Module
+## The functools Module: Overview of functools
 
-## Overview of functools
 - Higher-order functions and operations on callables
 - Tools for functional programming
 - Function decoration utilities
@@ -977,9 +946,8 @@ print(fibonacci(30))  # Fast because of caching
 
 ---
 
-## The functools Module
+## The functools Module: Partial Function Application
 
-## Partial Function Application
 - `partial()`: Fix a subset of arguments
 - Creates a new function with pre-set arguments
 - Useful for callback interfaces
@@ -1015,9 +983,8 @@ error("Process failed")    # [ERROR] Process failed
 
 ---
 
-## The functools Module
+## The functools Module: Function Decoration with functools.wraps
 
-## Function Decoration with functools.wraps
 - Preserves metadata when decorating functions
 - Copies __name__, __doc__, and other attributes
 - Makes debugging and introspection easier
@@ -1051,9 +1018,8 @@ print(add.__doc__)   # Add two numbers and return the result.
 
 ---
 
-## The functools Module
+## The functools Module: Caching with lru_cache
 
-## Caching with lru_cache
 - Memoizes function calls
 - Avoids recomputation of expensive calls
 - Configurable cache size
@@ -1095,9 +1061,8 @@ print(fibonacci_fast.cache_info())
 
 ---
 
-## The functools Module
+## The functools Module: Function Composition with reduce
 
-## Function Composition with reduce
 - Powerful tool for combining functions
 - Apply operations sequentially
 - Build complex transformations
@@ -1130,9 +1095,8 @@ print(g(5))  # 72: double(square(increment(5))) = double(square(6)) = double(36)
 
 ---
 
-## Understanding Closures
+## Understanding Closures: What Are Closures?
 
-## What Are Closures?
 - Functions that remember their surrounding scope
 - Inner functions that capture outer variables
 - Retain access to variables even after outer function returns
@@ -1163,9 +1127,8 @@ print(counter1())  # 13 (counter1 maintains its own state)
 
 ---
 
-## Understanding Closures
+## Understanding Closures: How Closures Work
 
-## How Closures Work
 - Inner function captures references to variables in outer scope
 - Python creates a "cell" object for each captured variable
 - These cells are stored in the function's `__closure__` attribute
@@ -1197,9 +1160,8 @@ print(f"triple closure: {triple.__closure__[0].cell_contents}")  # 3
 
 ---
 
-## Understanding Closures
+## Understanding Closures: Variables Are Captured by Reference
 
-## Variables Are Captured by Reference
 - Closures capture references, not values
 - Changes to variables after closure creation can affect behavior
 - Closures capture the variables, not their values at definition time
@@ -1238,9 +1200,8 @@ print(m3(10))  # 30
 
 ---
 
-## The Problem of Mutable Default Arguments
+## The Problem of Mutable Default Arguments: Understanding the Issue
 
-## Understanding the Issue
 - Default argument values are evaluated once at function definition
 - Mutable defaults (lists, dicts, etc.) are created only once
 - All function calls share the same default object
@@ -1267,9 +1228,8 @@ print(append_to.__defaults__)  # ([1, 2, 3],)
 
 ---
 
-## The Problem of Mutable Default Arguments
+## The Problem of Mutable Default Arguments: The Solution: None Default
 
-## The Solution: None Default
 - Use `None` as default and create a new object in the function
 - This is a common Python idiom
 - Ensures a fresh mutable object for each call
@@ -1295,9 +1255,8 @@ print(my_list)  # [10, 20, 30] - Same list is modified
 
 ---
 
-## Applying Functional Concepts
+## Applying Functional Concepts: Pure Functions
 
-## Pure Functions
 - Always return the same result for same arguments
 - No side effects (no I/O, no global state changes)
 - Easier to test, debug, and reason about
@@ -1334,9 +1293,8 @@ print(pure_add(2, 3))  # 5 - Same inputs, same output always
 
 ---
 
-## Applying Functional Concepts
+## Applying Functional Concepts: Immutable Data Structures
 
-## Immutable Data Structures
 - Avoid modifying data in place
 - Create new objects rather than changing existing ones
 - Use tuples, frozensets, and namedtuples
@@ -1372,9 +1330,8 @@ print(result2)   # [1, 2, 3, 4] - New object
 
 ---
 
-## Advanced Functional Techniques
+## Advanced Functional Techniques: Decorators
 
-## Decorators
 - Higher-order functions that modify other functions
 - Add functionality without changing the original function
 - Common for cross-cutting concerns
@@ -1423,9 +1380,8 @@ say_hello("Alice")  # Prints "Hello, Alice!" three times
 
 ---
 
-## Advanced Functional Techniques
+## Advanced Functional Techniques: Currying and Partial Application
 
-## Currying and Partial Application
 - Transform a function that takes multiple arguments into a sequence of functions
 - Fix some arguments of a function, creating a new function
 - Specialize general functions for specific use cases
@@ -1462,9 +1418,8 @@ print(cube(3))    # 27
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Data Processing Pipeline
 
-## Example: Data Processing Pipeline
 ```python
 # Process a list of data records functionally
 
@@ -1511,9 +1466,8 @@ for user in valid_users:
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Event Stream Processing
 
-## Example: Event Stream Processing
 ```python
 # Simulate processing an event stream functionally
 

@@ -25,9 +25,8 @@ audience:
 
 ---
 
-## Challenges of AI in Large Codebases
+## Challenges of AI in Large Codebases: Context Window Limitations
 
-## Context Window Limitations
 - LLM context windows are finite (even at 200K+ tokens)
 - A monolith with 500K+ LOC cannot fit in a single prompt
 - Naive "dump everything" approaches fail silently
@@ -42,9 +41,8 @@ Ratio:    ~10% visible at any time
 
 ---
 
-## Challenges of AI in Large Codebases
+## Challenges of AI in Large Codebases: Handling Context Overflow: Symptoms and Mitigations
 
-## Handling Context Overflow: Symptoms and Mitigations
 - Repeated or contradictory suggestions signal context saturation
 - The AI starts "forgetting" instructions given earlier in the session
 - Outputs become generic instead of project-specific
@@ -66,9 +64,8 @@ Mitigations:
 
 ---
 
-## Challenges of AI in Large Codebases
+## Challenges of AI in Large Codebases: Navigating Unfamiliar Code
 
-## Navigating Unfamiliar Code
 - AI has no persistent memory of your repo structure
 - Each session starts from zero understanding
 - File naming conventions vary across teams and eras
@@ -77,9 +74,8 @@ Mitigations:
 
 ---
 
-## Challenges of AI in Large Codebases
+## Challenges of AI in Large Codebases: Implicit Conventions and Cross-Module Dependencies
 
-## Implicit Conventions and Cross-Module Dependencies
 - Coding standards that exist only in team culture
 - Unwritten rules: "we never throw from this layer"
 - Hidden coupling through shared databases or message buses
@@ -119,9 +115,8 @@ Savings strategies:
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Structured Project Documentation for AI
 
-## Structured Project Documentation for AI
 - Maintain a machine-readable project map at the repo root
 - Include module boundaries, ownership, and purpose
 - Document key entry points and hot paths
@@ -138,9 +133,8 @@ Savings strategies:
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Writing Effective `CLAUDE.md` / Rules Files
 
-## Writing Effective `CLAUDE.md` / Rules Files
 - Place at repo root and in key subdirectories
 - Specify build commands, test commands, lint rules
 - Document naming conventions and architectural constraints
@@ -159,9 +153,8 @@ Savings strategies:
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Using `.gitignore`-style Exclusions to Reduce Noise
 
-## Using `.gitignore`-style Exclusions to Reduce Noise
 - AI tools scan your repo; generated code wastes context tokens
 - Configure `.claudeignore`, `.cursorignore`, or equivalent files
 - Exclude `node_modules/`, `vendor/`, build outputs, and lock files
@@ -183,9 +176,8 @@ __pycache__/
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Modular Context Feeding
 
-## Modular Context Feeding
 - Feed only the relevant slice of the codebase per task
 - Use file trees and summaries before full source
 - Start with interfaces, then drill into implementations
@@ -200,9 +192,8 @@ Step 3: "Here are the tests that cover this service"
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Incremental Exploration Patterns
 
-## Incremental Exploration Patterns
 - Let the AI agent explore iteratively rather than front-loading
 - Use `grep`, `find`, and `ast-grep` as exploration primitives
 - Ask the AI to form hypotheses, then verify them
@@ -218,9 +209,8 @@ Prompt pattern:
 
 ---
 
-## Strategies for Effective AI Use
+## Strategies for Effective AI Use: Cross-Team Coordination for AI-Assisted Refactoring
 
-## Cross-Team Coordination for AI-Assisted Refactoring
 - Establish shared rules files across teams to enforce consistency
 - Agree on naming conventions, error patterns, and module boundaries
 - Use a central `CLAUDE.md` for org-wide constraints, local ones per team
@@ -243,9 +233,8 @@ Coordination checklist:
 
 ---
 
-## Code Navigation with AI Agents
+## Code Navigation with AI Agents: Searching by Pattern and Semantic Meaning
 
-## Searching by Pattern and Semantic Meaning
 - Regex search: fast, precise, misses renamed concepts
 - Semantic search: finds related code despite naming differences
 - Combine both: regex to anchor, semantic to expand
@@ -262,9 +251,8 @@ rg "catch|rescue|except|on_error" --type-add 'src:*.{ts,py,rb}'
 
 ---
 
-## Code Navigation with AI Agents
+## Code Navigation with AI Agents: Multi-File Navigation Workflows in Practice
 
-## Multi-File Navigation Workflows in Practice
 - Real tasks require jumping between definition, usage, and test files
 - Ask the AI to locate all three for any symbol before making changes
 - Verify that test files actually cover the code path you are modifying
@@ -302,9 +290,8 @@ Navigation workflow:
 
 ---
 
-## Code Navigation with AI Agents
+## Code Navigation with AI Agents: Detecting and Resolving Hallucinated APIs
 
-## Detecting and Resolving Hallucinated APIs
 - AI may suggest methods, classes, or imports that do not exist
 - Always verify generated calls against the actual codebase
 - Watch for plausible-looking but fabricated library functions
@@ -326,9 +313,8 @@ rg "def getOrDefault" --type py
 
 ---
 
-## Code Navigation with AI Agents
+## Code Navigation with AI Agents: Dependency Graph Visualization with AI
 
-## Dependency Graph Visualization with AI
 - Use tools like `madge`, `pydeps`, or `jdeps` to extract dependency data
 - Feed the graph output to the AI for analysis and extraction planning
 - Identify circular dependencies and tightly coupled clusters
@@ -354,9 +340,8 @@ modules that have zero inbound dependencies."
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Identifying Extraction Candidates
 
-## Identifying Extraction Candidates
 - Look for modules with low afferent coupling (few inbound deps)
 - Find code with its own data store or bounded context
 - Detect clusters of files that change together (via `git log`)
@@ -373,9 +358,8 @@ git log --format=format: --name-only --since="1 year ago" \
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Safe Incremental Refactoring Workflows
 
-## Safe Incremental Refactoring Workflows
 - Never refactor and change behavior in the same commit
 - Use the Strangler Fig pattern: wrap, then replace
 - Have the AI generate adapter layers before extracting
@@ -393,9 +377,8 @@ Workflow:
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Microservice Extraction Patterns
 
-## Microservice Extraction Patterns
 - The Strangler Fig pattern replaces monolith pieces incrementally
 - AI can generate the facade, proxy routes, and data sync layers
 - Start with read paths before migrating writes
@@ -419,9 +402,8 @@ Strangler Fig implementation with AI assistance:
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: AI-Assisted Database and Schema Refactoring
 
-## AI-Assisted Database and Schema Refactoring
 - Database changes are the riskiest part of monolith decomposition
 - AI can generate migration scripts that respect foreign key dependencies
 - Use expand-and-contract pattern for zero-downtime schema changes
@@ -443,9 +425,8 @@ ALTER TABLE orders DROP COLUMN customer_id;
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Maintaining Test Coverage During Refactoring
 
-## Maintaining Test Coverage During Refactoring
 - Ask the AI to generate characterization tests before touching code
 - Use approval/snapshot testing to lock current behavior
 - Track coverage diff per PR, not just absolute numbers
@@ -465,9 +446,8 @@ def test_calculate_tax_current_behavior():
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Testing Strategies During Decomposition
 
-## Testing Strategies During Decomposition
 - Contract tests verify that extracted services honor the original API
 - Consumer-driven contracts let each caller define expected behavior
 - Run old and new implementations in parallel to compare outputs
@@ -493,9 +473,8 @@ def test_billing_service_contract():
 
 ---
 
-## Refactoring Monoliths with AI
+## Refactoring Monoliths with AI: Managing Technical Debt with AI
 
-## Managing Technical Debt with AI
 - Ask the AI to scan for common debt indicators in a module
 - Prioritize by blast radius: debt in hot paths costs more
 - Track debt items as first-class work items, not vague wishes
@@ -544,9 +523,8 @@ and /src/shared/db. For each module:
 
 ---
 
-## AI-Assisted Code Archaeology
+## AI-Assisted Code Archaeology: Understanding Legacy Code
 
-## Understanding Legacy Code
 - Feed the AI a function and ask "what does this actually do?"
 - Have it rename variables from `x1`, `tmp2` to meaningful names
 - Ask for invariants and preconditions the code assumes
@@ -569,9 +547,8 @@ def proc(d, f, t):
 
 ---
 
-## AI-Assisted Code Archaeology
+## AI-Assisted Code Archaeology: Documenting Tribal Knowledge
 
-## Documenting Tribal Knowledge
 - Interview senior developers and feed transcripts to the AI
 - Ask the AI to reconcile code behavior with verbal descriptions
 - Generate architectural decision records (ADRs) from git history
@@ -587,9 +564,8 @@ to tiered pricing, including the rollback capability."
 
 ---
 
-## AI-Assisted Code Archaeology
+## AI-Assisted Code Archaeology: Architecture Decision Records with AI
 
-## Architecture Decision Records with AI
 - ADRs capture the context and rationale behind major decisions
 - AI can draft ADRs from commit diffs, PR descriptions, and Slack threads
 - Use a standard template: status, context, decision, consequences
@@ -621,9 +597,8 @@ during the transition period.
 
 ---
 
-## AI-Assisted Code Archaeology
+## AI-Assisted Code Archaeology: Mapping Undocumented APIs and Protocols
 
-## Mapping Undocumented APIs and Protocols
 - Point the AI at network calls, serialization code, or IPC channels
 - Ask it to infer request/response schemas from usage patterns
 - Generate OpenAPI specs from handler implementations

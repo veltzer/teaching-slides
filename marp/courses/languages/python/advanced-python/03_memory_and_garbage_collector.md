@@ -30,9 +30,8 @@ audience:
 
 ---
 
-## Python Memory Management
+## Python Memory Management: Principles
 
-## Principles
 - Everything in Python is an object
 - Objects are allocated on the heap
 - Reference counting for memory management
@@ -42,9 +41,8 @@ audience:
 
 ---
 
-## Python Memory Management
+## Python Memory Management: Levels of Memory Management
 
-## Levels of Memory Management
 1. Operating system level allocation
 1. Python memory manager (allocating/freeing blocks)
 1. Object-specific memory manager
@@ -52,9 +50,8 @@ audience:
 
 ---
 
-## Python Memory Management
+## Python Memory Management: How Objects are Stored
 
-## How Objects are Stored
 - Each object has a header (type, reference count)
 - Followed by object's data
 - Even simple values like integers are full objects
@@ -74,9 +71,8 @@ print(c is d)  # Always False (different list objects)
 
 ---
 
-## Reference Counting
+## Reference Counting: How it Works
 
-## How it Works
 - Each object maintains a count of references to it
 - When count reaches zero, object is deallocated
 - Core memory management mechanism in Python
@@ -101,9 +97,8 @@ print(sys.getrefcount(x) - 1)  # Count decreases
 
 ---
 
-## Reference Counting
+## Reference Counting: Advantages
 
-## Advantages
 - Immediate reclamation of memory
 - Predictable cleanup timing
 - Works well for most memory usage patterns
@@ -111,9 +106,8 @@ print(sys.getrefcount(x) - 1)  # Count decreases
 
 ---
 
-## Reference Counting
+## Reference Counting: Limitations
 
-## Limitations
 - Cannot detect reference cycles
 - Overhead of maintaining counts
 - Thread-safety requirements add complexity
@@ -121,9 +115,8 @@ print(sys.getrefcount(x) - 1)  # Count decreases
 
 ---
 
-## Cyclic Garbage Collection
+## Cyclic Garbage Collection: The Problem with Cycles
 
-## The Problem with Cycles
 - Reference counting fails with circular references
 - Objects can reference each other but be unreachable
 - Memory leaks would occur without additional collection
@@ -143,9 +136,8 @@ create_cycle()
 
 ---
 
-## Cyclic Garbage Collection
+## Cyclic Garbage Collection: How Python's Cyclic GC Works
 
-## How Python's Cyclic GC Works
 - Tracks potentially container objects
 - Periodically checks for reference cycles
 - Uses generational approach (3 generations)
@@ -170,9 +162,8 @@ gc.enable()
 
 ---
 
-## Cyclic Garbage Collection
+## Cyclic Garbage Collection: Generations
 
-## Generations
 - Generation 0: New objects
 - Generation 1: Objects that survived one collection
 - Generation 2: Long-lived objects
@@ -181,9 +172,8 @@ gc.enable()
 
 ---
 
-## Cyclic Garbage Collection
+## Cyclic Garbage Collection: Thresholds
 
-## Thresholds
 - Each generation has a threshold
 - When threshold is reached, collection is triggered
 - Default thresholds: (700, 10, 10)
@@ -201,9 +191,8 @@ gc.set_threshold(900, 15, 15)
 
 ---
 
-## Object Size in Memory
+## Object Size in Memory: Basic Structure
 
-## Basic Structure
 - Python object header: typically 16 bytes
 - Plus the object's data
 - Plus references to other objects
@@ -211,9 +200,8 @@ gc.set_threshold(900, 15, 15)
 
 ---
 
-## Object Size in Memory
+## Object Size in Memory: Measuring Object Size
 
-## Measuring Object Size
 - `sys.getsizeof()` gives shallow size
 - Does not include size of referenced objects
 - External libraries for deep size calculation
@@ -234,9 +222,7 @@ print(sys.getsizeof([1, 2, 3])) # List with 3 elements
 
 ---
 
-## Object Size in Memory
-
-## Size of Common Types
+## Object Size in Memory: Size of Common Types
 
 ## Integers
 - Fixed overhead plus variable storage
@@ -254,9 +240,7 @@ print(sys.getsizeof(2**100)) # Larger due to value size
 
 ---
 
-## Object Size in Memory
-
-## Size of Common Types
+## Object Size in Memory: Size of Common Types
 
 ## Strings
 - Fixed overhead plus character storage
@@ -276,9 +260,7 @@ print(sys.getsizeof("🐍"))    # Unicode character
 
 ---
 
-## Object Size in Memory
-
-## Size of Common Types
+## Object Size in Memory: Size of Common Types
 
 ## Lists
 - Fixed overhead (typically 64-80 bytes)
@@ -304,9 +286,7 @@ print(sys.getsizeof(many_items))
 
 ---
 
-## Object Size in Memory
-
-## Size of Common Types
+## Object Size in Memory: Size of Common Types
 
 ## Dictionaries
 - Significant overhead (typically 232+ bytes)
@@ -332,9 +312,8 @@ print(sys.getsizeof(large_dict))
 
 ---
 
-## Object Size in Memory
+## Object Size in Memory: Deep Size Calculation
 
-## Deep Size Calculation
 - Recursively measure all referenced objects
 - Account for shared references
 - Several third-party libraries available
@@ -363,9 +342,8 @@ def get_deep_size(obj, seen=None):
 
 ---
 
-## Object Size in Memory
+## Object Size in Memory: Using Third-Party Tools
 
-## Using Third-Party Tools
 - `pympler` package for memory profiling
 - `objgraph` for object reference visualization
 - `memory_profiler` for line-by-line memory usage
@@ -383,9 +361,8 @@ print(asizeof.asizeof(1, "hello", [1, 2, 3]))
 
 ---
 
-## How Many Python Objects?
+## How Many Python Objects?: Memory Limitations
 
-## Memory Limitations
 - Limited by system memory
 - Reference table overhead
 - OS memory fragmentation
@@ -393,9 +370,8 @@ print(asizeof.asizeof(1, "hello", [1, 2, 3]))
 
 ---
 
-## How Many Python Objects?
+## How Many Python Objects?: Practical Limits
 
-## Practical Limits
 - CPython can address up to system memory
 - Lists limited to ~536 million elements (32-bit indices)
 - Dictionaries can handle millions of entries
@@ -422,9 +398,8 @@ except MemoryError:
 
 ---
 
-## How Many Python Objects?
+## How Many Python Objects?: Memory Traps
 
-## Memory Traps
 - List comprehensions versus generator expressions
 - Large dictionaries with many small keys
 - Temporary objects in loops
@@ -433,9 +408,8 @@ except MemoryError:
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: General Strategies
 
-## General Strategies
 - Use generators instead of lists when possible
 - Process data in chunks
 - Reuse objects instead of creating new ones
@@ -444,9 +418,8 @@ except MemoryError:
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: Using Generators
 
-## Using Generators
 - Process one item at a time
 - Avoid loading everything into memory
 - Perfect for processing large datasets
@@ -470,9 +443,7 @@ def process_file_generator(filename):
 
 ---
 
-## Reducing Memory Footprint
-
-## Specialized Libraries
+## Reducing Memory Footprint: Specialized Libraries
 
 ## NumPy
 - Efficient array storage
@@ -494,9 +465,7 @@ print(f"NumPy array: {sys.getsizeof(np_array) / (1024 * 1024):.2f} MB")
 
 ---
 
-## Reducing Memory Footprint
-
-## Specialized Libraries
+## Reducing Memory Footprint: Specialized Libraries
 
 ## Arrays Module
 - Homogeneous numeric arrays
@@ -519,9 +488,7 @@ print(f"Array size: {sys.getsizeof(int_array)} bytes")
 
 ---
 
-## Reducing Memory Footprint
-
-## Specialized Libraries
+## Reducing Memory Footprint: Specialized Libraries
 
 ## Collections
 - `collections.namedtuple` for small, immutable records
@@ -549,9 +516,8 @@ print(f"Named tuple: {sys.getsizeof(p2)} bytes")
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: Copy on Write
 
-## Copy on Write
 - Share memory between objects until modification
 - Common in NumPy and Pandas operations
 - Requires explicit handling in pure Python
@@ -572,9 +538,8 @@ d[0] = 555  # Doesn't affect a
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: Flyweight Design Pattern
 
-## Flyweight Design Pattern
 - Share common data between many instances
 - Reduces redundancy for repeated data
 - Useful for large collections of similar objects
@@ -599,9 +564,8 @@ class Flyweight:
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: String Interning
 
-## String Interning
 - Python automatically interns some strings
 - Same object used for identical strings
 - Can explicitly intern with `sys.intern()`
@@ -627,9 +591,8 @@ print(d is e)  # Always True
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: Slots in Classes
 
-## Slots in Classes
 - Restricts instance attributes
 - Eliminates per-instance __dict__
 - Significantly reduces memory usage
@@ -663,9 +626,8 @@ print(f"Slotted: {sys.getsizeof(slotted)} bytes")
 
 ---
 
-## Reducing Memory Footprint
+## Reducing Memory Footprint: Using C Extensions
 
-## Using C Extensions
 - Python C API for extension modules
 - Native code for memory-intensive operations
 - Pre-existing extensions like NumPy, Pandas
@@ -682,9 +644,8 @@ matrix = np.zeros((1000, 1000), dtype=np.float32)  # 4MB, not ~8MB
 
 ---
 
-## Finding Memory Issues
+## Finding Memory Issues: Memory Profiling
 
-## Memory Profiling
 - Track memory usage over time
 - Identify leaks and excessive usage
 - Several tools available
@@ -706,9 +667,8 @@ result = memory_intensive_function()
 
 ---
 
-## Finding Memory Issues
+## Finding Memory Issues: Tracemalloc Module
 
-## Tracemalloc Module
 - Built-in memory allocation tracking
 - Added in Python 3.4
 - Traces Python memory allocations
@@ -737,9 +697,8 @@ for stat in top_stats[:5]:
 
 ---
 
-## Finding Memory Issues
+## Finding Memory Issues: Resource Module
 
-## Resource Module
 - Monitor process resources
 - Track memory usage over time
 - Works across platforms
@@ -760,9 +719,8 @@ print(f"Memory increase: {(current - baseline) / 1024:.2f} MB")
 
 ---
 
-## Finding Memory Issues
+## Finding Memory Issues: gc and objgraph
 
-## gc and objgraph
 - Analyze object references
 - Find reference cycles
 - Visualize object graphs
@@ -785,9 +743,8 @@ objgraph.show_refs(obj, filename='refs.png')
 
 ---
 
-## Common Memory Problems
+## Common Memory Problems: Memory Leaks
 
-## Memory Leaks
 - Objects never released
 - Reference cycles not collected
 - Global variables accumulating data
@@ -795,18 +752,16 @@ objgraph.show_refs(obj, filename='refs.png')
 
 ---
 
-## Common Memory Problems
+## Common Memory Problems: Memory Fragmentation
 
-## Memory Fragmentation
 - Free blocks too small for new allocations
 - Especially with mixed-size allocations
 - Can lead to higher memory usage than expected
 
 ---
 
-## Common Memory Problems
+## Common Memory Problems: Excessive Temporary Objects
 
-## Excessive Temporary Objects
 - String concatenation in loops
 - Intermediate lists in comprehensions
 - Repeated format operations
@@ -823,9 +778,8 @@ result = "".join(str(i) for i in range(1000))
 
 ---
 
-## Common Memory Problems
+## Common Memory Problems: Copying Large Data
 
-## Copying Large Data
 - Unnecessary copies of large structures
 - Function arguments without shared references
 - Deep copies when shallow would suffice
@@ -844,9 +798,8 @@ data_shallow = copy.copy(data)  # Only copies the outer list
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Processing Large Files
 
-## Example: Processing Large Files
 ```python
 def process_large_file(filename):
     """Process a file without loading it all into memory."""
@@ -871,9 +824,8 @@ def process_line(line):
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Memory-Efficient Data Class
 
-## Example: Memory-Efficient Data Class
 ```python
 class EfficientRecord:
     __slots__ = ['id', 'name', 'value']
@@ -892,9 +844,8 @@ records = [
 
 ---
 
-## Practical Examples
+## Practical Examples: Example: Chunked Processing
 
-## Example: Chunked Processing
 ```python
 def process_data_in_chunks(data_source, chunk_size=1000):
     """Process a large dataset in manageable chunks."""

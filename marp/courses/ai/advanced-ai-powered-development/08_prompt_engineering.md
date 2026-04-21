@@ -29,9 +29,8 @@ audience:
 
 ---
 
-## System Prompts and Persona Design
+## System Prompts and Persona Design: What System Prompts Control
 
-## What System Prompts Control
 - Define the model's role, tone, and constraints
 - Set behavioral boundaries before user input arrives
 - Persist across the entire conversation
@@ -48,9 +47,7 @@ deleting production data.
 
 ---
 
-## System Prompts and Persona Design
-
-## Composing Persona Layers
+## System Prompts and Persona Design: Composing Persona Layers
 
 ```misc
 SYSTEM:

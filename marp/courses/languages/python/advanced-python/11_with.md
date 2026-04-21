@@ -18,9 +18,8 @@ audience:
 
 ---
 
-## The Problem: Resource Management
+## The Problem: Resource Management: Resource Management Challenges
 
-## Resource Management Challenges
 - Proper cleanup of resources
 - Files need to be closed
 - Locks need to be released
@@ -40,9 +39,8 @@ finally:
 
 ---
 
-## The Problem: Resource Management
+## The Problem: Resource Management: Common Resource Management Issues
 
-## Common Resource Management Issues
 - Forgetting to release resources
 - Resources not released after exceptions
 - Nested resource management gets complex
@@ -66,9 +64,8 @@ finally:
 
 ---
 
-## Enter the `with` Statement
+## Enter the `with` Statement: What is the `with` Statement?
 
-## What is the `with` Statement?
 - Introduced in Python 2.5 (PEP 343)
 - Simplifies resource management
 - Ensures proper setup and cleanup
@@ -86,9 +83,8 @@ with open('data.txt', 'r') as file:
 
 ---
 
-## Enter the `with` Statement
+## Enter the `with` Statement: How the `with` Statement Works
 
-## How the `with` Statement Works
 1. Evaluates the expression after `with`
 1. Calls `__enter__()` method on the result
 1. Assigns the return value to the variable after `as`
@@ -113,9 +109,8 @@ finally:
 
 ---
 
-## Context Managers
+## Context Managers: What are Context Managers?
 
-## What are Context Managers?
 - Objects that define `__enter__` and `__exit__` methods
 - Control entry to and exit from runtime contexts
 - Provide resource acquisition and release
@@ -141,9 +136,8 @@ with MyContextManager() as mcm:
 
 ---
 
-## Context Managers
+## Context Managers: The `__enter__` Method
 
-## The `__enter__` Method
 - Called when entering the context (start of `with` block)
 - Takes no arguments besides `self`
 - Returns the object to be bound to the `as` variable
@@ -164,9 +158,8 @@ class DatabaseConnection:
 
 ---
 
-## Context Managers
+## Context Managers: The `__exit__` Method
 
-## The `__exit__` Method
 - Called when exiting the context (end of `with` block)
 - Takes exception details as arguments
 - Always called, even if an exception occurs
@@ -191,9 +184,8 @@ class DatabaseConnection:
 
 ---
 
-## Context Managers
+## Context Managers: Using Multiple Context Managers
 
-## Using Multiple Context Managers
 - Multiple context managers can be nested
 - Cleaner with multiple contexts on one line
 - Contexts are entered from left to right
@@ -215,9 +207,8 @@ with open('input.txt', 'r') as infile, open('output.txt', 'w') as outfile:
 
 ---
 
-## Built-in Context Managers
+## Built-in Context Managers: File Objects
 
-## File Objects
 - The most common context manager
 - Automatically closes files when the block exits
 - Works with all file modes (read, write, append)
@@ -239,9 +230,8 @@ with open('log.txt', 'a') as f:
 
 ---
 
-## Built-in Context Managers
+## Built-in Context Managers: Threading Locks
 
-## Threading Locks
 - Protect shared resources in threaded code
 - Automatically acquire and release locks
 - Prevents forgetting to release locks
@@ -276,9 +266,8 @@ def unsafe_increment():
 
 ---
 
-## Built-in Context Managers
+## Built-in Context Managers: The contextlib Module
 
-## The contextlib Module
 - Standard library module for context managers
 - Simplifies creating and working with context managers
 - Various helper classes and functions
@@ -307,9 +296,8 @@ with change_directory('/tmp'):
 
 ---
 
-## Built-in Context Managers
+## Built-in Context Managers: More From contextlib
 
-## More From contextlib
 - `suppress`: Suppress specific exceptions
 - `redirect_stdout` and `redirect_stderr`: Redirect output
 - `ExitStack`: Dynamically manage multiple context managers
@@ -338,9 +326,8 @@ with ExitStack() as stack:
 
 ---
 
-## Creating Context Managers
+## Creating Context Managers: Class-Based Context Managers
 
-## Class-Based Context Managers
 - Define a class with `__enter__` and `__exit__` methods
 - Full control over the context
 - Stateful context managers
@@ -372,9 +359,8 @@ with Timer("Database query") as timer:
 
 ---
 
-## Creating Context Managers
+## Creating Context Managers: Generator-Based Context Managers
 
-## Generator-Based Context Managers
 - Use `@contextmanager` decorator from contextlib
 - Create context manager from a generator function
 - Code before `yield` is the `__enter__` part
@@ -406,9 +392,8 @@ with timer("Sorting operation"):
 
 ---
 
-## Creating Context Managers
+## Creating Context Managers: Yielding Values from Generator Context Managers
 
-## Yielding Values from Generator Context Managers
 - The yielded value becomes the context variable
 - Can provide useful objects to the `with` block
 - Simplifies resource management with returns
@@ -437,9 +422,8 @@ with open_db_connection("postgresql://localhost/mydb") as conn:
 
 ---
 
-## Creating Context Managers
+## Creating Context Managers: Exception Handling in Context Managers
 
-## Exception Handling in Context Managers
 - `__exit__` receives exception information
 - Can handle or suppress exceptions
 - Great for cleanup and error recovery
@@ -471,9 +455,8 @@ class DatabaseTransaction:
 
 ---
 
-## Creating Context Managers
+## Creating Context Managers: Generator-Based Exception Handling
 
-## Generator-Based Exception Handling
 - Exceptions inside the `with` block are raised at the `yield` statement
 - Can be caught with try/except around the yield
 - More natural error handling flow
@@ -504,9 +487,8 @@ def db_transaction(connection):
 
 ---
 
-## When to Use Context Managers
+## When to Use Context Managers: Resource Management
 
-## Resource Management
 - File operations
 - Network connections
 - Database connections
@@ -533,9 +515,8 @@ with connect_to_database() as connection:
 
 ---
 
-## When to Use Context Managers
+## When to Use Context Managers: Temporary State Changes
 
-## Temporary State Changes
 - Directory changes
 - Environment variables
 - System settings
@@ -569,9 +550,8 @@ def set_env_var(name, value):
 
 ---
 
-## When to Use Context Managers
+## When to Use Context Managers: Measurement and Profiling
 
-## Measurement and Profiling
 - Timing operations
 - Tracking memory usage
 - Counting events
@@ -606,9 +586,8 @@ def track_memory_usage(name):
 
 ---
 
-## When to Use Context Managers
+## When to Use Context Managers: Transactions and Atomic Operations
 
-## Transactions and Atomic Operations
 - Database transactions
 - File writing transactions
 - API operations that need to be atomic
@@ -637,9 +616,8 @@ with transaction(db_connection) as cursor:
 
 ---
 
-## When to Use Context Managers
+## When to Use Context Managers: Indentation and Readability
 
-## Indentation and Readability
 - Group related operations visually
 - Make dependencies clear
 - Indicate resource scope
@@ -667,9 +645,8 @@ with plt.figure():
 
 ---
 
-## Third-Party Context Managers
+## Third-Party Context Managers: Database Context Managers
 
-## Database Context Managers
 - SQLAlchemy sessions
 - Django database transactions
 - MongoDB connections
@@ -693,9 +670,8 @@ with Session(engine) as session:
 
 ---
 
-## Third-Party Context Managers
+## Third-Party Context Managers: Networking Context Managers
 
-## Networking Context Managers
 - Requests sessions
 - FTP connections
 - SSH connections
@@ -725,9 +701,8 @@ with paramiko.SSHClient() as ssh:
 
 ---
 
-## Third-Party Context Managers
+## Third-Party Context Managers: Testing Context Managers
 
-## Testing Context Managers
 - pytest fixtures
 - unittest.mock patch
 - Temporary files and directories
@@ -759,9 +734,8 @@ with tempfile.TemporaryDirectory() as tmp_dir:
 
 ---
 
-## Error Handling with Context Managers
+## Error Handling with Context Managers: Common Exception Patterns
 
-## Common Exception Patterns
 - Catch exceptions to handle cleanup
 - Suppress specific exceptions only
 - Re-raise after cleanup
@@ -796,9 +770,8 @@ class FileProcessor:
 
 ---
 
-## Error Handling with Context Managers
+## Error Handling with Context Managers: Handling Nested Context Managers
 
-## Handling Nested Context Managers
 - Inner context exceptions propagate to outer contexts
 - Outer contexts can handle inner exceptions
 - All `__exit__` methods are called, innermost first
@@ -845,9 +818,8 @@ except ValueError as e:
 
 ---
 
-## Error Handling with Context Managers
+## Error Handling with Context Managers: Exception Suppression
 
-## Exception Suppression
 - Context managers can suppress exceptions
 - Returning True from `__exit__` suppresses the exception
 - Useful for specific cleanup scenarios
@@ -883,9 +855,8 @@ with suppress_specific_errors(ValueError, TypeError):
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Reusable Context Managers
 
-## Reusable Context Managers
 - Create context manager factories
 - Parameterized context managers
 - Compose multiple context managers
@@ -917,9 +888,8 @@ with tempdir(prefix="test_") as path:
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Context Manager Composition
 
-## Context Manager Composition
 - Combine multiple context managers
 - Create higher-level abstractions
 - Reduce code duplication
@@ -956,9 +926,8 @@ except ZeroDivisionError:
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Asynchronous Context Managers
 
-## Asynchronous Context Managers
 - For use with `async with` statements
 - Uses `__aenter__` and `__aexit__` methods
 - Allows awaiting asynchronous operations
@@ -997,9 +966,8 @@ asyncio.run(main())
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Async Generator Context Managers
 
-## Async Generator Context Managers
 - Combine async and generator-based context managers
 - Use `@asynccontextmanager` decorator
 - Allow asynchronous setup and teardown
@@ -1043,9 +1011,8 @@ asyncio.run(main())
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Context Variables
 
-## Context Variables
 - Thread-local-like storage for asynchronous code
 - Maintains context across asynchronous calls
 - Created with `contextvars` module (Python 3.7+)
@@ -1092,9 +1059,8 @@ asyncio.run(main())
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: ExitStack: Dynamic Context Management
 
-## ExitStack: Dynamic Context Management
 - Dynamically manage multiple context managers
 - Add or remove contexts at runtime
 - Great for variable numbers of resources
@@ -1130,9 +1096,8 @@ def process_files(file_list):
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Extending ExitStack: AsyncExitStack
 
-## Extending ExitStack: AsyncExitStack
 - Asynchronous version of ExitStack
 - For managing async context managers
 - Similar API to ExitStack
@@ -1170,9 +1135,8 @@ asyncio.run(main())
 
 ---
 
-## Advanced Context Managers
+## Advanced Context Managers: Context Manager Decorators
 
-## Context Manager Decorators
 - Convert a function into a context manager
 - Change how a function executes
 - Add setup and teardown around functions
@@ -1213,9 +1177,8 @@ with timed("Manual timing"):
 
 ---
 
-## Practical Examples
+## Practical Examples: File Processing Context Manager
 
-## File Processing Context Manager
 ```python
 class CSVProcessor:
     def __init__(self, input_file, output_file):
@@ -1266,9 +1229,8 @@ with CSVProcessor('input.csv', 'output.csv') as processor:
 
 ---
 
-## Practical Examples
+## Practical Examples: Database Transaction Context Manager
 
-## Database Transaction Context Manager
 ```python
 import sqlite3
 from contextlib import contextmanager
@@ -1316,9 +1278,8 @@ except Exception as e:
 
 ---
 
-## Practical Examples
+## Practical Examples: Resource Pool Context Manager
 
-## Resource Pool Context Manager
 ```python
 import queue
 import threading
@@ -1376,9 +1337,8 @@ for t in threads:
 
 ---
 
-## Practical Examples
+## Practical Examples: Web Request Context Manager
 
-## Web Request Context Manager
 ```python
 import time
 import uuid

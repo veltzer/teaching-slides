@@ -63,9 +63,7 @@ gcc -E source.c -o source.i
 
 ---
 
-## Compilation Stages (cont.)
-
-## 2. Compilation
+## Compilation Stages (cont.): 2. Compilation
 
 ```bash
 # Compile to assembly
@@ -84,9 +82,7 @@ main:
 
 ---
 
-## Compilation Stages (cont.)
-
-## 3. Assembly
+## Compilation Stages (cont.): 3. Assembly
 
 ```bash
 # Assemble to object file
@@ -102,9 +98,7 @@ gcc -c source.c -o source.o
 
 ---
 
-## Compilation Stages (cont.)
-
-## 4. Linking
+## Compilation Stages (cont.): 4. Linking
 
 ```bash
 # Link object files

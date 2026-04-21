@@ -19,9 +19,8 @@ audience:
 
 ---
 
-## What Are Descriptors?
+## What Are Descriptors?: Definition
 
-## Definition
 - Objects that implement the descriptor protocol
 - A way to customize attribute access in classes
 - Enable powerful control over attribute behavior
@@ -39,9 +38,8 @@ audience:
 
 ---
 
-## What Are Descriptors?
+## What Are Descriptors?: The Descriptor Protocol
 
-## The Descriptor Protocol
 - Implement at least one of these methods:
     - `__get__(self, obj, type=None)`: Called when attribute is accessed
     - `__set__(self, obj, value)`: Called when attribute is assigned
@@ -63,9 +61,8 @@ class MyDescriptor:
 
 ---
 
-## What Are Descriptors?
+## What Are Descriptors?: How Descriptors Work
 
-## How Descriptors Work
 - Descriptors are class attributes
 - When accessed through an instance, descriptor protocol is invoked
 - Python looks for descriptor methods during attribute access
@@ -93,9 +90,8 @@ del obj.descriptor   # Calls MyDescriptor.__delete__(descriptor, obj)
 
 ---
 
-## Types of Descriptors
+## Types of Descriptors: Data vs. Non-Data Descriptors
 
-## Data vs. Non-Data Descriptors
 - **Data descriptors**: Implement `__set__` and/or `__delete__`
     - Take precedence over instance attributes
     - Cannot be overridden by instance attributes
@@ -119,9 +115,8 @@ class DataDescriptor:
 
 ---
 
-## Types of Descriptors
+## Types of Descriptors: Descriptor Behaviors
 
-## Descriptor Behaviors
 - **Read-Only**: Implement `__get__` but not `__set__`
 - **Computed Values**: Generate values dynamically in `__get__`
 - **Validated Attributes**: Check values in `__set__`
@@ -144,9 +139,8 @@ class Constant:
 
 ---
 
-## Methods as Descriptors
+## Methods as Descriptors: Functions as Descriptors
 
-## Functions as Descriptors
 - Regular instance methods are descriptors
 - Implement `__get__` method only
 - `__get__` returns a bound method when accessed from instance
@@ -171,9 +165,8 @@ class BoundMethod:
 
 ---
 
-## Methods as Descriptors
+## Methods as Descriptors: Method Types
 
-## Method Types
 - **Instance Methods**: First parameter is `self`
 - **Class Methods**: First parameter is `cls`, uses `@classmethod`
 - **Static Methods**: No special first parameter, uses `@staticmethod`
@@ -197,9 +190,8 @@ class Example:
 
 ---
 
-## Properties as Descriptors
+## Properties as Descriptors: Property Basics
 
-## Property Basics
 - Built-in way to create managed attributes
 - A data descriptor that calls user-provided functions
 - Provides getter, setter, deleter, and doc options
@@ -228,9 +220,8 @@ class Person:
 
 ---
 
-## Properties as Descriptors
+## Properties as Descriptors: Property Implementation
 
-## Property Implementation
 - `property` is a class that implements the descriptor protocol
 - Creates a descriptor instance with provided functions
 - Simplified implementation:
@@ -263,9 +254,8 @@ class Property:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Basic Descriptor Structure
 
-## Basic Descriptor Structure
 - Define a class with descriptor protocol methods
 - Store descriptor instances as class variables
 - Handle attribute storage and access
@@ -297,9 +287,8 @@ class Validator:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Attribute Storage Options
 
-## Attribute Storage Options
 - **Instance `__dict__`**: Most common approach
 - **Descriptor instance**: Store values in descriptor
 - **Separate storage**: Use another object or mapping
@@ -324,9 +313,8 @@ def __set__(self, obj, value):
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: The `__set_name__` Method
 
-## The `__set_name__` Method
 - Introduced in Python 3.6
 - Automatically called when descriptor is created in class
 - Provides descriptor with its attribute name and owner class
@@ -355,9 +343,8 @@ class Person:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Type Validation Descriptor
 
-## Type Validation Descriptor
 - Enforce type constraints on attributes
 - Raise errors for invalid values
 - Provide clear error messages
@@ -391,9 +378,8 @@ class Person:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Range Validation Descriptor
 
-## Range Validation Descriptor
 - Enforce value ranges on numeric attributes
 - Combine with type validation
 - Support minimum and maximum values
@@ -429,9 +415,8 @@ class Settings:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Combining Descriptors
 
-## Combining Descriptors
 - Create descriptor factories
 - Combine multiple validation rules
 - Use composition or inheritance
@@ -479,9 +464,8 @@ class Person:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Lazy Properties
 
-## Lazy Properties
 - Compute values only when needed
 - Cache results for future access
 - Reset cache when dependencies change
@@ -519,9 +503,8 @@ class DataAnalyzer:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Unit Conversion Descriptor
 
-## Unit Conversion Descriptor
 - Automatic unit conversion
 - Store in canonical units
 - Present in user-preferred units
@@ -578,9 +561,8 @@ class Trip:
 
 ---
 
-## Writing Your Own Descriptors
+## Writing Your Own Descriptors: Log Access Descriptor
 
-## Log Access Descriptor
 - Monitor attribute access
 - Record changes to attributes
 - Audit sensitive operations
@@ -626,9 +608,8 @@ class BankAccount:
 
 ---
 
-## Real-World Applications
+## Real-World Applications: Form Validation
 
-## Form Validation
 - Validate user input in web forms
 - Apply multiple validation rules
 - Generate appropriate error messages
@@ -700,9 +681,8 @@ class RegistrationForm:
 
 ---
 
-## Real-World Applications
+## Real-World Applications: ORM Models
 
-## ORM Models
 - Object-Relational Mapping systems
 - Map class attributes to database columns
 - Enforce data types and constraints
@@ -755,9 +735,8 @@ class User(Model):
 
 ---
 
-## Real-World Applications
+## Real-World Applications: Configuration Systems
 
-## Configuration Systems
 - Define configuration parameters
 - Apply validation rules
 - Support default values
@@ -826,9 +805,8 @@ class AppConfig:
 
 ---
 
-## Examples from Third-Party Modules
+## Examples from Third-Party Modules: Django Model Fields
 
-## Django Model Fields
 - Django ORM uses descriptors for model fields
 - Each field type is a descriptor
 - Handles database conversion
@@ -853,9 +831,8 @@ class Product(models.Model):
 
 ---
 
-## Examples from Third-Party Modules
+## Examples from Third-Party Modules: SQLAlchemy ORM
 
-## SQLAlchemy ORM
 - Uses descriptors for column definitions
 - Manages relationships between tables
 - Handles database dialect differences
@@ -899,9 +876,8 @@ class Address(Base):
 
 ---
 
-## Examples from Third-Party Modules
+## Examples from Third-Party Modules: Python-attrs Library
 
-## Python-attrs Library
 - Uses descriptors for attribute management
 - Automatically generates special methods
 - Supports validation and conversion
@@ -933,9 +909,8 @@ print(p.distance_from_origin())  # 5.0
 
 ---
 
-## Examples from Third-Party Modules
+## Examples from Third-Party Modules: Pydantic
 
-## Pydantic
 - Data validation library using descriptors
 - Type annotations as validation rules
 - JSON schema generation
