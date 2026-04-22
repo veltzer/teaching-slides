@@ -185,6 +185,13 @@ typedef struct {
     uint8_t channel;
 } temp_sensor_t;
 
+```
+
+---
+
+## Inheritance in C: Methods and Constructor
+
+```c
 // "Override" methods
 static float temp_sensor_read(sensor_t* self) {
     temp_sensor_t* temp = (temp_sensor_t*)self;
@@ -271,6 +278,13 @@ typedef struct {
     uint32_t baud_rate;
 } uart_protocol_t;
 
+```
+
+---
+
+## Virtual Function Table: Implementation
+
+```c
 // UART method implementations
 static void uart_start(void* self) {
     uart_protocol_t* uart = (uart_protocol_t*)self;
@@ -536,6 +550,13 @@ struct state_t {
     const char* name;
 };
 
+```
+
+---
+
+## State Pattern: Concrete States
+
+```c
 // Concrete states
 static state_t* idle_update(state_t* self, void* context) {
     system_t* sys = (system_t*)context;
@@ -702,6 +723,13 @@ void device_process(device_t* dev);
 }
 #endif
 
+```
+
+---
+
+## Mixing C and C++: Implementation
+
+```c
 // C++ implementation
 #ifdef __cplusplus
 class DeviceImpl {

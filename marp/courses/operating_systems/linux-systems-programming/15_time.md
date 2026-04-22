@@ -308,33 +308,35 @@ void measure_right() {
 
 ---
 
-## timerfd - File Descriptor for Timers
+## timerfd - File Descriptor for Timers: Create
 
 ```c
 #include <sys/timerfd.h>
 #include <unistd.h>
 
-// Timer that works with select/poll/epoll!
 void timerfd_example() {
-    // Create timer
     int tfd = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
     if (tfd == -1) {
         perror("timerfd_create");
         return;
     }
 
-    // Configure timer: 2 second initial, 1 second interval
     struct itimerspec its = {
-        .it_value = {.tv_sec = 2, .tv_nsec = 0},      // Initial
-        .it_interval = {.tv_sec = 1, .tv_nsec = 0}    // Repeat
+        .it_value = {.tv_sec = 2, .tv_nsec = 0},
+        .it_interval = {.tv_sec = 1, .tv_nsec = 0}
     };
 
     if (timerfd_settime(tfd, 0, &its, NULL) == -1) {
         perror("timerfd_settime");
         return;
     }
+```
 
-    // Read timer expirations
+---
+
+## timerfd - File Descriptor for Timers: Read
+
+```c
     uint64_t expirations;
     ssize_t s;
 
@@ -354,34 +356,36 @@ void timerfd_example() {
 
 ---
 
-## Using timerfd with epoll
+## Using timerfd with epoll: Setup
 
 ```c
 #include <sys/epoll.h>
 #include <sys/timerfd.h>
 
 void timerfd_epoll_example() {
-    // Create epoll instance
     int epfd = epoll_create1(EPOLL_CLOEXEC);
 
-    // Create multiple timers
     int tfd1 = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
     int tfd2 = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
 
-    // Configure timers
     struct itimerspec its1 = {
         .it_value = {1, 0},
-        .it_interval = {1, 0}  // Every second
+        .it_interval = {1, 0}
     };
     struct itimerspec its2 = {
         .it_value = {2, 0},
-        .it_interval = {3, 0}  // Every 3 seconds
+        .it_interval = {3, 0}
     };
 
     timerfd_settime(tfd1, 0, &its1, NULL);
     timerfd_settime(tfd2, 0, &its2, NULL);
+```
 
-    // Add to epoll
+---
+
+## Using timerfd with epoll: Event Loop
+
+```c
     struct epoll_event ev;
     ev.events = EPOLLIN;
     ev.data.fd = tfd1;
@@ -390,7 +394,6 @@ void timerfd_epoll_example() {
     ev.data.fd = tfd2;
     epoll_ctl(epfd, EPOLL_CTL_ADD, tfd2, &ev);
 
-    // Event loop
     struct epoll_event events[10];
     while (1) {
         int nfds = epoll_wait(epfd, events, 10, -1);
@@ -448,21 +451,18 @@ void measure_short_operation() {
 
 ---
 
-## Benchmarking Best Practices
+## Benchmarking Best Practices: Measurement
 
 ```c
 #include <time.h>
 #include <stdint.h>
 #include <string.h>
 
-// Proper benchmarking function
 void benchmark_function(void (*func)(void), const char *name, int iterations) {
-    // Warm-up (fill caches, branch predictors)
     for (int i = 0; i < 1000; i++) {
         func();
     }
 
-    // Measure multiple runs for statistics
     double times[100];
 
     for (int run = 0; run < 100; run++) {
@@ -472,7 +472,6 @@ void benchmark_function(void (*func)(void), const char *name, int iterations) {
 
         for (int i = 0; i < iterations; i++) {
             func();
-            // Prevent compiler from optimizing out
             __asm__ __volatile__ ("" ::: "memory");
         }
 
@@ -482,8 +481,13 @@ void benchmark_function(void (*func)(void), const char *name, int iterations) {
                         (end.tv_nsec - start.tv_nsec) / 1e9;
         times[run] = elapsed / iterations;
     }
+```
 
-    // Calculate statistics
+---
+
+## Benchmarking Best Practices: Statistics
+
+```c
     double min = times[0], max = times[0], sum = 0;
     for (int i = 0; i < 100; i++) {
         if (times[i] < min) min = times[i];
@@ -499,7 +503,7 @@ void benchmark_function(void (*func)(void), const char *name, int iterations) {
 
 ---
 
-## Process and Thread CPU Time
+## Process and Thread CPU Time: clock() and getrusage()
 
 ```c
 #include <time.h>
@@ -507,17 +511,14 @@ void benchmark_function(void (*func)(void), const char *name, int iterations) {
 #include <unistd.h>
 
 void measure_cpu_time() {
-    // Method 1: clock() - Process CPU time
     clock_t start = clock();
 
-    // CPU intensive work
     for (volatile int i = 0; i < 100000000; i++);
 
     clock_t end = clock();
     double cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
     printf("CPU time used: %f seconds\n", cpu_time_used);
 
-    // Method 2: getrusage() - Detailed resource usage
     struct rusage usage;
     getrusage(RUSAGE_SELF, &usage);
 
@@ -526,19 +527,21 @@ void measure_cpu_time() {
     printf("System CPU time: %ld.%06ld seconds\n",
            usage.ru_stime.tv_sec, usage.ru_stime.tv_usec);
     printf("Max RSS: %ld KB\n", usage.ru_maxrss);
+```
 
-    // Method 3: clock_gettime() with process/thread clocks
+---
+
+## Process and Thread CPU Time: clock_gettime
+
+```c
     struct timespec ts;
 
-    // Process CPU time
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts);
     printf("Process CPU: %ld.%09ld seconds\n", ts.tv_sec, ts.tv_nsec);
 
-    // Current thread CPU time
     clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts);
     printf("Thread CPU: %ld.%09ld seconds\n", ts.tv_sec, ts.tv_nsec);
 
-    // Specific thread's CPU time
     pthread_t thread;
     clockid_t clock_id;
     pthread_getcpuclockid(thread, &clock_id);
@@ -554,7 +557,7 @@ void measure_cpu_time() {
 
 ---
 
-## POSIX Timers
+## POSIX Timers: Signal Handler
 
 ```c
 #include <signal.h>
@@ -571,23 +574,26 @@ void posix_timer_example() {
     struct itimerspec its;
     struct sigaction sa;
 
-    // Setup signal handler
     sa.sa_flags = SA_SIGINFO;
     sa.sa_sigaction = timer_handler;
     sigemptyset(&sa.sa_mask);
     sigaction(SIGUSR1, &sa, NULL);
 
-    // Create timer
     sev.sigev_notify = SIGEV_SIGNAL;
     sev.sigev_signo = SIGUSR1;
     sev.sigev_value.sival_ptr = &timerid;
+```
 
+---
+
+## POSIX Timers: Create and Wait
+
+```c
     if (timer_create(CLOCK_REALTIME, &sev, &timerid) == -1) {
         perror("timer_create");
         return;
     }
 
-    // Start timer: 2 second initial, 1 second repeat
     its.it_value.tv_sec = 2;
     its.it_value.tv_nsec = 0;
     its.it_interval.tv_sec = 1;
@@ -598,17 +604,15 @@ void posix_timer_example() {
         return;
     }
 
-    // Wait for timer
     sleep(5);
 
-    // Delete timer
     timer_delete(timerid);
 }
 ```
 
 ---
 
-## Calendar Time Functions
+## Calendar Time Functions: Convert
 
 ```c
 #include <time.h>
@@ -620,39 +624,35 @@ void calendar_time_examples() {
     struct tm result;
     char buffer[80];
 
-    // Get current time
     time(&rawtime);
 
-    // Convert to local time (NOT thread-safe!)
     timeinfo = localtime(&rawtime);
     printf("Local time: %s", asctime(timeinfo));
 
-    // Thread-safe version
     localtime_r(&rawtime, &result);
 
-    // Convert to UTC
     timeinfo = gmtime(&rawtime);
     printf("UTC time: %s", asctime(timeinfo));
 
-    // Thread-safe version
     gmtime_r(&rawtime, &result);
+```
 
-    // Format time string
+---
+
+## Calendar Time Functions: Format/Parse
+
+```c
     strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &result);
     printf("Formatted: %s\n", buffer);
 
-    // Parse time string
     struct tm parsed;
     strptime("2024-12-25 15:30:00", "%Y-%m-%d %H:%M:%S", &parsed);
 
-    // Convert struct tm back to time_t
     time_guessed = mktime(&parsed);
 
-    // Manipulate time
-    result.tm_hour += 24;  // Add 24 hours
-    mktime(&result);  // Normalize and update tm_wday, tm_yday
+    result.tm_hour += 24;
+    mktime(&result);
 
-    // Get day of week, day of year
     printf("Day of week: %d (0=Sunday)\n", result.tm_wday);
     printf("Day of year: %d\n", result.tm_yday);
 }
@@ -660,7 +660,7 @@ void calendar_time_examples() {
 
 ---
 
-## Timezone Handling
+## Timezone Handling: Set Timezones
 
 ```c
 #include <time.h>
@@ -668,14 +668,12 @@ void calendar_time_examples() {
 #include <stdio.h>
 
 void timezone_examples() {
-    // Set timezone environment variable
     setenv("TZ", "America/New_York", 1);
-    tzset();  // Apply timezone change
+    tzset();
 
     time_t now = time(NULL);
     printf("New York: %s", ctime(&now));
 
-    // Change to different timezone
     setenv("TZ", "Europe/London", 1);
     tzset();
     printf("London: %s", ctime(&now));
@@ -683,17 +681,21 @@ void timezone_examples() {
     setenv("TZ", "Asia/Tokyo", 1);
     tzset();
     printf("Tokyo: %s", ctime(&now));
+```
 
-    // Get timezone information
-    extern char *tzname[2];  // Standard and DST names
-    extern long timezone;     // Seconds west of UTC
-    extern int daylight;      // DST flag
+---
+
+## Timezone Handling: Info and Format
+
+```c
+    extern char *tzname[2];
+    extern long timezone;
+    extern int daylight;
 
     printf("Timezone names: %s / %s\n", tzname[0], tzname[1]);
     printf("UTC offset: %ld seconds\n", timezone);
     printf("DST active: %s\n", daylight ? "yes" : "no");
 
-    // Working with specific timezone without changing global
     time_t utc_time = time(NULL);
     struct tm *tokyo_time;
 
@@ -715,13 +717,12 @@ void timezone_examples() {
 
 ---
 
-## Deadline and Timeout Management
+## Deadline Management: Calculate and Check
 
 ```c
 #include <time.h>
 #include <errno.h>
 
-// Calculate deadline from now
 struct timespec calculate_deadline(int timeout_ms) {
     struct timespec deadline;
     clock_gettime(CLOCK_MONOTONIC, &deadline);
@@ -729,7 +730,6 @@ struct timespec calculate_deadline(int timeout_ms) {
     deadline.tv_sec += timeout_ms / 1000;
     deadline.tv_nsec += (timeout_ms % 1000) * 1000000L;
 
-    // Normalize nanoseconds
     if (deadline.tv_nsec >= 1000000000L) {
         deadline.tv_sec++;
         deadline.tv_nsec -= 1000000000L;
@@ -738,7 +738,6 @@ struct timespec calculate_deadline(int timeout_ms) {
     return deadline;
 }
 
-// Check if deadline passed
 int deadline_expired(const struct timespec *deadline) {
     struct timespec now;
     clock_gettime(CLOCK_MONOTONIC, &now);
@@ -747,18 +746,21 @@ int deadline_expired(const struct timespec *deadline) {
            (now.tv_sec == deadline->tv_sec &&
             now.tv_nsec >= deadline->tv_nsec);
 }
+```
 
-// Operation with timeout
+---
+
+## Deadline Management: Operation Loop
+
+```c
 int do_operation_with_timeout(int timeout_ms) {
     struct timespec deadline = calculate_deadline(timeout_ms);
 
     while (!deadline_expired(&deadline)) {
-        // Try operation
         if (try_operation() == SUCCESS) {
-            return 0;  // Success
+            return 0;
         }
 
-        // Calculate remaining time
         struct timespec now, remaining;
         clock_gettime(CLOCK_MONOTONIC, &now);
 
@@ -769,27 +771,25 @@ int do_operation_with_timeout(int timeout_ms) {
             remaining.tv_nsec += 1000000000L;
         }
 
-        // Sleep a bit before retry (max 10ms)
-        struct timespec sleep_time = {0, 10000000};  // 10ms
+        struct timespec sleep_time = {0, 10000000};
         if (remaining.tv_sec == 0 && remaining.tv_nsec < 10000000) {
             sleep_time = remaining;
         }
         nanosleep(&sleep_time, NULL);
     }
 
-    return -ETIMEDOUT;  // Timeout
+    return -ETIMEDOUT;
 }
 ```
 
 ---
 
-## Rate Limiting Implementation
+## Rate Limiting: Token Bucket
 
 ```c
 #include <time.h>
 #include <stdbool.h>
 
-// Token bucket rate limiter
 typedef struct {
     double tokens;
     double max_tokens;
@@ -803,16 +803,20 @@ void rate_limiter_init(RateLimiter *rl, double rate, double burst) {
     rl->tokens_per_second = rate;
     clock_gettime(CLOCK_MONOTONIC, &rl->last_update);
 }
+```
 
+---
+
+## Rate Limiting: Allow Check
+
+```c
 bool rate_limiter_allow(RateLimiter *rl, double tokens_needed) {
     struct timespec now;
     clock_gettime(CLOCK_MONOTONIC, &now);
 
-    // Calculate elapsed time since last update
     double elapsed = (now.tv_sec - rl->last_update.tv_sec) +
                     (now.tv_nsec - rl->last_update.tv_nsec) / 1e9;
 
-    // Add tokens based on elapsed time
     rl->tokens += elapsed * rl->tokens_per_second;
     if (rl->tokens > rl->max_tokens) {
         rl->tokens = rl->max_tokens;
@@ -820,7 +824,6 @@ bool rate_limiter_allow(RateLimiter *rl, double tokens_needed) {
 
     rl->last_update = now;
 
-    // Check if we have enough tokens
     if (rl->tokens >= tokens_needed) {
         rl->tokens -= tokens_needed;
         return true;
@@ -828,11 +831,16 @@ bool rate_limiter_allow(RateLimiter *rl, double tokens_needed) {
 
     return false;
 }
+```
 
-// Usage example
+---
+
+## Rate Limiting: Usage
+
+```c
 void rate_limited_operation() {
     RateLimiter rl;
-    rate_limiter_init(&rl, 10.0, 20.0);  // 10 req/sec, burst of 20
+    rate_limiter_init(&rl, 10.0, 20.0);
 
     for (int i = 0; i < 100; i++) {
         if (rate_limiter_allow(&rl, 1.0)) {
@@ -840,7 +848,7 @@ void rate_limited_operation() {
             do_operation();
         } else {
             printf("Request %d rate limited\n", i);
-            usleep(10000);  // Wait a bit
+            usleep(10000);
         }
     }
 }
@@ -848,7 +856,7 @@ void rate_limited_operation() {
 
 ---
 
-## High-Resolution Profiling
+## High-Resolution Profiling: Types
 
 ```c
 #include <time.h>
@@ -871,11 +879,16 @@ typedef struct {
     int index;
     struct timespec start;
 } ProfileHandle;
+```
 
+---
+
+## High-Resolution Profiling: Begin
+
+```c
 ProfileHandle profile_begin(const char *name) {
     ProfileHandle handle;
 
-    // Find or create entry
     handle.index = -1;
     for (int i = 0; i < profile_count; i++) {
         if (strcmp(profiles[i].name, name) == 0) {
@@ -896,14 +909,19 @@ ProfileHandle profile_begin(const char *name) {
     clock_gettime(CLOCK_MONOTONIC, &handle.start);
     return handle;
 }
+```
 
+---
+
+## High-Resolution Profiling: End
+
+```c
 void profile_end(ProfileHandle handle) {
     if (handle.index < 0) return;
 
     struct timespec end;
     clock_gettime(CLOCK_MONOTONIC, &end);
 
-    // Calculate elapsed
     struct timespec elapsed;
     elapsed.tv_sec = end.tv_sec - handle.start.tv_sec;
     elapsed.tv_nsec = end.tv_nsec - handle.start.tv_nsec;
@@ -914,15 +932,19 @@ void profile_end(ProfileHandle handle) {
 
     ProfileEntry *p = &profiles[handle.index];
 
-    // Update statistics
     p->total_time.tv_sec += elapsed.tv_sec;
     p->total_time.tv_nsec += elapsed.tv_nsec;
     if (p->total_time.tv_nsec >= 1000000000L) {
         p->total_time.tv_sec++;
         p->total_time.tv_nsec -= 1000000000L;
     }
+```
 
-    // Update min/max
+---
+
+## High-Resolution Profiling: Min/Max
+
+```c
     if (elapsed.tv_sec < p->min_time.tv_sec ||
         (elapsed.tv_sec == p->min_time.tv_sec &&
          elapsed.tv_nsec < p->min_time.tv_nsec)) {
@@ -937,7 +959,13 @@ void profile_end(ProfileHandle handle) {
 
     p->count++;
 }
+```
 
+---
+
+## High-Resolution Profiling: Report
+
+```c
 void profile_report() {
     printf("\nProfile Report:\n");
     printf("%-30s %10s %12s %12s %12s\n",
@@ -963,7 +991,7 @@ void profile_report() {
 
 ---
 
-## Leap Seconds and Time Discontinuities
+## Leap Seconds: Status Check
 
 ```c
 #include <time.h>
@@ -996,33 +1024,32 @@ void check_time_status() {
             printf("Clock not synchronized\n");
             break;
     }
+```
 
+---
+
+## Leap Seconds: Offset and Warnings
+
+```c
     printf("Time offset: %ld μs\n", tx.offset);
     printf("Frequency offset: %ld ppm\n", tx.freq / 65536);
     printf("Maximum error: %ld μs\n", tx.maxerror);
     printf("Estimated error: %ld μs\n", tx.esterror);
 
-    // Handle leap second in critical code
     if (status == TIME_INS || status == TIME_DEL) {
         printf("Warning: Leap second approaching!\n");
         printf("Use CLOCK_MONOTONIC for intervals\n");
     }
 }
 
-// Safe time comparison across leap seconds
 int safe_time_compare(time_t t1, time_t t2) {
-    // During leap second, same second can occur twice
-    // 23:59:59 -> 23:59:60 -> 00:00:00
-
-    // Check if near midnight UTC on June 30 or Dec 31
     struct tm *tm = gmtime(&t1);
     int risky = ((tm->tm_mon == 5 && tm->tm_mday == 30) ||
                  (tm->tm_mon == 11 && tm->tm_mday == 31)) &&
                 tm->tm_hour == 23 && tm->tm_min == 59;
 
     if (risky) {
-        // Use monotonic clock for intervals instead
-        return -2;  // Indicate uncertainty
+        return -2;
     }
 
     return (t1 < t2) ? -1 : (t1 > t2) ? 1 : 0;
@@ -1031,7 +1058,7 @@ int safe_time_compare(time_t t1, time_t t2) {
 
 ---
 
-## Y2038 Problem and 64-bit Time
+## Y2038 Problem: Overflow Demo
 
 ```c
 #include <time.h>
@@ -1039,38 +1066,33 @@ int safe_time_compare(time_t t1, time_t t2) {
 #include <limits.h>
 
 void test_y2038_problem() {
-    // Check size of time_t
     printf("sizeof(time_t) = %zu bytes\n", sizeof(time_t));
     printf("TIME_T_MAX = %ld\n", (long)((time_t)-1 > 0 ?
            (time_t)((1UL << (sizeof(time_t) * 8 - 1)) - 1) :
            (time_t)-1));
 
-    // 32-bit time_t overflow point
-    time_t overflow_32bit = 2147483647;  // 2^31 - 1
+    time_t overflow_32bit = 2147483647;
     printf("32-bit overflow: %s", ctime(&overflow_32bit));
-    // Output: Tue Jan 19 03:14:07 2038
 
-    // Next second causes overflow on 32-bit systems
     overflow_32bit++;
     if (sizeof(time_t) == 4) {
         printf("After overflow: %ld (negative!)\n", (long)overflow_32bit);
     }
 
-    // Modern 64-bit time_t
     if (sizeof(time_t) == 8) {
-        time_t far_future = 253402300799;  // 9999-12-31 23:59:59
+        time_t far_future = 253402300799;
         printf("64-bit can handle: %s", ctime(&far_future));
 
-        // Maximum 64-bit time
-        time_t max_time = 9223372036854775807LL;  // 2^63 - 1
-        // This is about 292 billion years in the future!
+        time_t max_time = 9223372036854775807LL;
     }
-
-    // Compile with -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64
-    // for 64-bit time on 32-bit systems
 }
+```
 
-// Future-proof time handling
+---
+
+## Y2038 Problem: Future-Proof
+
+```c
 typedef int64_t time64_t;
 
 time64_t get_time64() {
@@ -1082,7 +1104,7 @@ time64_t get_time64() {
 
 ---
 
-## Thread-Safe Time Functions
+## Thread-Safe Time Functions: Safe vs Unsafe
 
 ```c
 #include <time.h>
@@ -1092,26 +1114,26 @@ void thread_safe_time_operations() {
     time_t rawtime;
     time(&rawtime);
 
-    // NOT thread-safe (use static buffer)
-    // struct tm *info = localtime(&rawtime);  // BAD!
-    // char *str = asctime(info);              // BAD!
-    // char *str2 = ctime(&rawtime);           // BAD!
+    // NOT thread-safe: localtime, asctime, ctime
 
-    // Thread-safe alternatives
     struct tm result;
-    localtime_r(&rawtime, &result);  // GOOD
+    localtime_r(&rawtime, &result);
 
     char buffer[26];
-    asctime_r(&result, buffer);      // GOOD
-    ctime_r(&rawtime, buffer);       // GOOD
+    asctime_r(&result, buffer);
+    ctime_r(&rawtime, buffer);
+```
 
-    // Thread-specific CPU time
+---
+
+## Thread-Safe Time Functions: Thread CPU Time
+
+```c
     struct timespec thread_time;
     clock_gettime(CLOCK_THREAD_CPUTIME_ID, &thread_time);
     printf("Thread CPU time: %ld.%09ld\n",
            thread_time.tv_sec, thread_time.tv_nsec);
 
-    // Get another thread's CPU time
     pthread_t other_thread;
     clockid_t clock_id;
     if (pthread_getcpuclockid(other_thread, &clock_id) == 0) {
@@ -1119,7 +1141,6 @@ void thread_safe_time_operations() {
     }
 }
 
-// Thread-safe time formatting
 void format_time_threadsafe(time_t t, char *buf, size_t bufsize) {
     struct tm tm_result;
     localtime_r(&t, &tm_result);
@@ -1129,49 +1150,50 @@ void format_time_threadsafe(time_t t, char *buf, size_t bufsize) {
 
 ---
 
-## Common Time Bugs and Solutions
+## Common Time Bugs: Wall Clock vs Monotonic
 
 ```c
-// BUG 1: Using wall clock for intervals
 void bug1_wrong() {
     time_t start = time(NULL);
     do_work();
-    time_t elapsed = time(NULL) - start;  // Can be negative if clock changed!
+    time_t elapsed = time(NULL) - start;
 }
 
 void bug1_correct() {
     struct timespec start, end;
-    clock_gettime(CLOCK_MONOTONIC, &start);  // Use monotonic!
+    clock_gettime(CLOCK_MONOTONIC, &start);
     do_work();
     clock_gettime(CLOCK_MONOTONIC, &end);
-    // Calculate elapsed correctly
 }
 
-// BUG 2: Integer overflow with nanoseconds
 void bug2_wrong() {
-    int elapsed_ns = end_ns - start_ns;  // Overflows after 2.1 seconds!
+    int elapsed_ns = end_ns - start_ns;
 }
 
 void bug2_correct() {
-    int64_t elapsed_ns = end_ns - start_ns;  // Use 64-bit
+    int64_t elapsed_ns = end_ns - start_ns;
 }
+```
 
-// BUG 3: Not handling EINTR in sleep
+---
+
+## Common Time Bugs: EINTR and Comparison
+
+```c
 void bug3_wrong() {
     struct timespec req = {5, 0};
-    nanosleep(&req, NULL);  // Can return early on signal!
+    nanosleep(&req, NULL);
 }
 
 void bug3_correct() {
     struct timespec req = {5, 0}, rem;
     while (nanosleep(&req, &rem) == -1 && errno == EINTR) {
-        req = rem;  // Sleep remaining time
+        req = rem;
     }
 }
 
-// BUG 4: Comparing timespec incorrectly
 int bug4_wrong(struct timespec *a, struct timespec *b) {
-    return a->tv_sec == b->tv_sec && a->tv_nsec == b->tv_nsec;  // Only exact match!
+    return a->tv_sec == b->tv_sec && a->tv_nsec == b->tv_nsec;
 }
 
 int timespec_cmp(struct timespec *a, struct timespec *b) {
@@ -1185,99 +1207,92 @@ int timespec_cmp(struct timespec *a, struct timespec *b) {
 
 ---
 
-## Performance Considerations
+## Performance: Caching and Coarse Clocks
 
 ```c
-// Optimize time-related code
-
-// 1. Cache time for multiple uses
 void process_events(Event *events, int count) {
     struct timespec now;
-    clock_gettime(CLOCK_MONOTONIC, &now);  // Get once
+    clock_gettime(CLOCK_MONOTONIC, &now);
 
     for (int i = 0; i < count; i++) {
-        if (event_expired(&events[i], &now)) {  // Reuse
+        if (event_expired(&events[i], &now)) {
             handle_event(&events[i]);
         }
     }
 }
 
-// 2. Use coarse clocks when appropriate
 void log_message(const char *msg) {
     struct timespec ts;
-    // Don't need nanosecond precision for logs
-    clock_gettime(CLOCK_REALTIME_COARSE, &ts);  // ~4ms precision, faster
+    clock_gettime(CLOCK_REALTIME_COARSE, &ts);
     printf("[%ld.%03ld] %s\n", ts.tv_sec, ts.tv_nsec / 1000000, msg);
 }
 
-// 3. Batch timer operations
 typedef struct {
     int nfds;
     int timerfd[MAX_TIMERS];
     struct timespec next_expiry[MAX_TIMERS];
 } TimerManager;
+```
 
-// 4. Use appropriate precision
+---
+
+## Performance: Appropriate Precision
+
+```c
 void appropriate_precision() {
-    // Second precision
-    time_t t = time(NULL);  // Fastest
+    time_t t = time(NULL);
 
-    // Millisecond precision
     struct timeval tv;
-    gettimeofday(&tv, NULL);  // Fast (vDSO)
+    gettimeofday(&tv, NULL);
 
-    // Nanosecond precision
     struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);  // Still fast (vDSO)
-
-    // Only use what you need!
+    clock_gettime(CLOCK_MONOTONIC, &ts);
 }
 ```
 
 ---
 
-## Real-Time System Considerations
+## Real-Time System: Periodic Loop
 
 ```c
 #include <sched.h>
 #include <time.h>
 
 void realtime_timing() {
-    // Set real-time priority
     struct sched_param param = {.sched_priority = 50};
     sched_setscheduler(0, SCHED_FIFO, &param);
 
-    // Use CLOCK_MONOTONIC for deterministic behavior
-    struct timespec next_run, period = {0, 10000000};  // 10ms
+    struct timespec next_run, period = {0, 10000000};
     clock_gettime(CLOCK_MONOTONIC, &next_run);
 
     while (1) {
-        // Do real-time work
         do_realtime_work();
 
-        // Calculate next run time
         next_run.tv_nsec += period.tv_nsec;
         if (next_run.tv_nsec >= 1000000000L) {
             next_run.tv_sec++;
             next_run.tv_nsec -= 1000000000L;
         }
 
-        // Sleep until next period
         clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next_run, NULL);
     }
 }
+```
 
-// Measure jitter
+---
+
+## Real-Time System: Jitter Measurement
+
+```c
 void measure_jitter() {
     struct timespec times[1000];
-    struct timespec period = {0, 1000000};  // 1ms
+    struct timespec period = {0, 1000000};
 
     for (int i = 0; i < 1000; i++) {
         clock_gettime(CLOCK_MONOTONIC, &times[i]);
         clock_nanosleep(CLOCK_MONOTONIC, 0, &period, NULL);
     }
 
-    // Calculate jitter
     long min_delta = LONG_MAX, max_delta = 0;
     for (int i = 1; i < 1000; i++) {
         long delta = (times[i].tv_sec - times[i-1].tv_sec) * 1000000000L +

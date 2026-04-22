@@ -95,7 +95,13 @@ public:
     void setEnabled(bool e) { enabled = e; }
     bool isEnabled() const { return enabled; }
 };
+```
 
+---
+
+## Components: Checkbox
+
+```cpp
 class Checkbox : public Component {
     bool checked = false;
 public:

@@ -508,7 +508,13 @@ stats = partition_sizes.agg(
 skew_ratio = stats["max_size"] / stats["avg_size"]
 print(f"Skew ratio: {skew_ratio:.2f}")
 print(f"Ratio > 3.0 indicates significant skew")
+```
 
+---
+
+## Partition Skew: Rebalancing with Salting
+
+```python
 # Fix: Repartition with salting
 from pyspark.sql.functions import concat, lit, rand
 
@@ -614,7 +620,13 @@ raw_data = sc.parallelize([
     '{"name": "Charlie", "age": -5}',
     '{"name": "", "age": 25}',
 ], numPartitions=2)
+```
 
+---
+
+## Accumulator: Validation Function
+
+```python
 import json
 
 def validate_and_process(record):
@@ -638,7 +650,13 @@ def validate_and_process(record):
         error_count.add(1)
         error_types.add({"json_parse_error": 1})
         return None
+```
 
+---
+
+## Accumulator: Run and Report
+
+```python
 results = raw_data.map(validate_and_process).filter(lambda x: x is not None)
 valid_count = results.count()
 
@@ -679,7 +697,13 @@ data = [
 df = spark.createDataFrame(
     data, ["department", "name", "salary", "hire_date"]
 )
+```
 
+---
+
+## Window Functions: Specs and Queries
+
+```python
 # Window specs
 dept_window = Window.partitionBy("department").orderBy("salary")
 dept_rows = Window.partitionBy("department") \
@@ -811,7 +835,13 @@ filtered = events.filter(
     (F.col("event_type") == "purchase") &
     (F.col("timestamp") >= "2024-01-01")
 )
+```
 
+---
+
+## Efficient Pipeline: Projection and Aggregation
+
+```python
 # Select only needed columns (column pruning)
 projected = filtered.select(
     "user_id", "timestamp",

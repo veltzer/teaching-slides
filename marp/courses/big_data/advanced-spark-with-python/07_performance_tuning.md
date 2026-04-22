@@ -190,7 +190,13 @@ print(f"Min rows/partition:    {stats['min_rows']}")
 print(f"Max rows/partition:    {stats['max_rows']}")
 print(f"Avg rows/partition:    {stats['avg_rows']:.0f}")
 print(f"Stddev rows/partition: {stats['stddev_rows']:.0f}")
+```
 
+---
+
+## Partition Tuning: Repartition and Coalesce
+
+```python
 # Repartition for balanced parallelism
 # Target: 128MB per partition, ~1M rows per partition
 target_partitions = max(1, int(df.count() / 1_000_000))
@@ -299,7 +305,13 @@ stats = key_distribution.agg(
     F.percentile_approx("count", 0.5).alias("median_count"),
     F.percentile_approx("count", 0.99).alias("p99_count"),
 ).collect()[0]
+```
 
+---
+
+## Data Skew: Reporting and Partition Check
+
+```python
 skew_ratio = stats["max_key_count"] / stats["avg_key_count"]
 print(f"\nSkew Analysis:")
 print(f"  Total keys:     {stats['num_keys']}")
@@ -352,7 +364,13 @@ salted_large = large_df.withColumn(
     F.concat(F.col("customer_id").cast("string"),
              F.lit("_"), F.col("salt").cast("string"))
 )
+```
 
+---
+
+## Salted Join: Explode Small Table and Join
+
+```python
 # Step 2: Explode small table with all salt values
 salt_values = spark.range(0, SALT_FACTOR).toDF("salt")
 exploded_small = (
@@ -434,7 +452,13 @@ spark.conf.set(
 # Initial shuffle partition count (set high, AQE will reduce)
 spark.conf.set(
     "spark.sql.adaptive.coalescePartitions.initialPartitionNum", "2000")
+```
 
+---
+
+## AQE: Skew Join and Dynamic Pruning
+
+```python
 # === Feature 2: Skew Join Optimization ===
 # Automatically splits skewed partitions during joins
 spark.conf.set(
@@ -610,7 +634,13 @@ spark = SparkSession.builder \
 orders = spark.read.parquet("/data/orders/")
 customers = spark.read.parquet("/data/customers/")
 products = spark.read.parquet("/data/products/")
+```
 
+---
+
+## Tuning Session: Filter, Broadcast, and Project
+
+```python
 # ---- Optimization 1: Filter before join ----
 start = time.time()
 filtered_orders = orders.filter(
@@ -634,7 +664,13 @@ projected = enriched.select(
     "order_id", "customer_id", "order_date",
     "category", "price", "quantity"
 ).withColumn("revenue", F.col("price") * F.col("quantity"))
+```
 
+---
+
+## Tuning Session: Cache, Aggregate, and Write
+
+```python
 # ---- Optimization 4: Cache for multiple aggregations ----
 projected.cache()
 projected.count()

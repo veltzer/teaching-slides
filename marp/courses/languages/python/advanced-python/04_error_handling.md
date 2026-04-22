@@ -750,7 +750,13 @@ class CircuitBreaker:
         self.reset_timeout = reset_timeout
         self.last_failure_time = 0
         self.is_open = False
+```
 
+---
+
+## Circuit Breaker: The `__call__` Wrapper
+
+```python
     def __call__(self, func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -869,7 +875,7 @@ def api_endpoint(request):
 
 ## Real-World Example: API Client
 
-## Complete Error Handling Example
+## Complete Error Handling Example: Exception Hierarchy
 ```python
 class APIError(Exception):
     """Base exception for API errors."""
@@ -886,7 +892,13 @@ class AuthenticationError(APIError):
 class NotFoundError(APIError):
     """Requested resource not found."""
     pass
+```
 
+---
+
+## API Client: Class Setup
+
+```python
 class APIClient:
     def __init__(self, base_url, api_key=None):
         self.base_url = base_url
@@ -900,7 +912,13 @@ class APIClient:
 
         if self.api_key:
             headers['Authorization'] = f"Bearer {self.api_key}"
+```
 
+---
+
+## API Client: Request and HTTP Error Handling
+
+```python
         try:
             response = self.session.request(
                 method, url, headers=headers, **kwargs
@@ -922,7 +940,13 @@ class APIClient:
                         error_detail = str(e)
 
                     raise APIError(f"API error ({response.status_code}): {error_detail}") from e
+```
 
+---
+
+## API Client: JSON Parse and Connection Handling
+
+```python
             # Parse JSON response
             try:
                 return response.json()

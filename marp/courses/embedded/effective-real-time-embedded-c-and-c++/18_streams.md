@@ -965,7 +965,13 @@ void robustInput() {
         }
     }
 }
+```
 
+---
+
+## Safe File Operation
+
+```cpp
 bool safeFileOperation(const string& filename) {
     ifstream file(filename);
 
@@ -1022,7 +1028,13 @@ public:
     // Destructor automatically closes file
     ~FileManager() = default;  // unique_ptr handles cleanup
 };
+```
 
+---
+
+## RAII for Stream Management: Usage
+
+```cpp
 int main() {
     try {
         FileManager fm("output.txt");

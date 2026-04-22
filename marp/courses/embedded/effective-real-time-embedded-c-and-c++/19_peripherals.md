@@ -226,12 +226,11 @@ bool uartSendByteNonBlocking(uint8_t data) {
 
 ---
 
-## UART Error Handling
+## UART Error Handling: Flags and Enum
 
 Managing UART transmission errors:
 
 ```cpp
-// UART error flags
 #define UART_ERROR_OVERRUN  (1U << 3)
 #define UART_ERROR_NOISE    (1U << 2)
 #define UART_ERROR_FRAMING  (1U << 1)
@@ -244,17 +243,21 @@ typedef enum {
     UART_ERROR_FRAME_ERR,
     UART_ERROR_PARITY_ERR
 } UARTStatus;
+```
 
+---
+
+## UART Error Handling: Check Routine
+
+```cpp
 UARTStatus uartReceiveByteWithErrorCheck(uint8_t* data) {
-    // Wait for data
     while (!(UART1->SR & (1U << 5)));
 
-    // Check for errors
     uint32_t status = UART1->SR;
-    *data = UART1->DR;  // Reading DR clears RXNE flag
+    *data = UART1->DR;
 
     if (status & UART_ERROR_OVERRUN) {
-        UART1->SR &= ~UART_ERROR_OVERRUN;  // Clear error
+        UART1->SR &= ~UART_ERROR_OVERRUN;
         return UART_ERROR_OVERRUN_ERR;
     }
     if (status & UART_ERROR_NOISE) {
@@ -287,7 +290,7 @@ ADC converts analog voltages to digital values:
 
 ---
 
-## ADC Configuration
+## ADC Configuration: Register Layout
 
 Setting up the ADC for measurements:
 
@@ -305,29 +308,29 @@ struct ADC_TypeDef {
 };
 
 #define ADC1 ((ADC_TypeDef*)0x40012000)
+```
 
+---
+
+## ADC Configuration: Initialization
+
+```cpp
 void configureADC() {
-    // Enable ADC clock
     enableADCClock();
 
-    // Configure ADC
     ADC1->CR2 = 0;
-    ADC1->CR2 |= (1U << 0);   // Enable ADC (ADON)
+    ADC1->CR2 |= (1U << 0);   // ADON
 
-    // Set sample time for channel 0 (longest time for accuracy)
     ADC1->SMPR2 |= (7U << 0);  // 239.5 cycles for channel 0
 
-    // Configure single conversion mode
     ADC1->CR1 = 0;
     ADC1->CR2 |= (1U << 1);   // Continuous conversion
 
-    // Set sequence length to 1
-    ADC1->SQR1 = 0;  // Length = 1 conversion
+    ADC1->SQR1 = 0;
 
-    // Calibration (if supported)
-    ADC1->CR2 |= (1U << 3);   // Reset calibration
+    ADC1->CR2 |= (1U << 3);
     while (ADC1->CR2 & (1U << 3));
-    ADC1->CR2 |= (1U << 2);   // Start calibration
+    ADC1->CR2 |= (1U << 2);
     while (ADC1->CR2 & (1U << 2));
 }
 ```
@@ -380,37 +383,36 @@ void adcConfigureMultiChannel(uint8_t* channels, uint8_t count) {
 
 ---
 
-## ADC with DMA for Continuous Sampling
+## ADC with DMA: Setup
 
 Using DMA for automatic data transfer:
 
 ```cpp
-// Buffer for ADC results
 uint16_t adcBuffer[100];
 volatile bool conversionComplete = false;
 
 void configureADCWithDMA() {
-    // Configure ADC for DMA
     ADC1->CR2 |= (1U << 8);   // Enable DMA mode
     ADC1->CR2 |= (1U << 1);   // Continuous conversion
 
-    // Configure DMA
     configureDMAForADC();
 
-    // Start conversions
     ADC1->CR2 |= (1U << 30);  // Start conversion
 }
+```
 
+---
+
+## ADC with DMA: DMA Channel Setup
+
+```cpp
 void configureDMAForADC() {
-    // Enable DMA clock
     enableDMAClock();
 
-    // Configure DMA channel for ADC
-    DMA1_Channel1->CPAR = (uint32_t)&ADC1->DR;          // Peripheral address
-    DMA1_Channel1->CMAR = (uint32_t)adcBuffer;          // Memory address
-    DMA1_Channel1->CNDTR = sizeof(adcBuffer)/sizeof(uint16_t);  // Data count
+    DMA1_Channel1->CPAR = (uint32_t)&ADC1->DR;
+    DMA1_Channel1->CMAR = (uint32_t)adcBuffer;
+    DMA1_Channel1->CNDTR = sizeof(adcBuffer)/sizeof(uint16_t);
 
-    // Configure DMA
     DMA1_Channel1->CCR = 0;
     DMA1_Channel1->CCR |= (1U << 5);   // Circular mode
     DMA1_Channel1->CCR |= (1U << 7);   // Memory increment
@@ -418,14 +420,12 @@ void configureDMAForADC() {
     DMA1_Channel1->CCR |= (1U << 8);   // 16-bit peripheral size
     DMA1_Channel1->CCR |= (1U << 1);   // Transfer complete interrupt
 
-    // Enable DMA channel
     DMA1_Channel1->CCR |= (1U << 0);
 }
 
-// DMA interrupt handler
 void DMA1_Channel1_IRQHandler() {
-    if (DMA1->ISR & (1U << 1)) {  // Transfer complete
-        DMA1->IFCR |= (1U << 1);  // Clear flag
+    if (DMA1->ISR & (1U << 1)) {
+        DMA1->IFCR |= (1U << 1);
         conversionComplete = true;
     }
 }
@@ -447,7 +447,7 @@ SPI provides high-speed synchronous communication:
 
 ---
 
-## SPI Configuration
+## SPI Configuration: Registers
 
 Setting up SPI communication:
 
@@ -463,37 +463,27 @@ struct SPI_TypeDef {
 };
 
 #define SPI1 ((SPI_TypeDef*)0x40013000)
+```
 
+---
+
+## SPI Configuration: Master Setup
+
+```cpp
 void configureSPIMaster() {
-    // Enable SPI clock
     enableSPIClock();
 
-    // Configure SPI as master
     SPI1->CR1 = 0;
     SPI1->CR1 |= (1U << 2);   // Master mode
     SPI1->CR1 |= (1U << 1);   // Clock polarity = 0
-    SPI1->CR1 |= (0U << 0);   // Clock phase = 0 (sample on first edge)
+    SPI1->CR1 |= (0U << 0);   // Clock phase = 0
     SPI1->CR1 |= (3U << 3);   // Baud rate prescaler (/16)
     SPI1->CR1 |= (1U << 9);   // Software slave management
     SPI1->CR1 |= (1U << 8);   // Internal slave select
 
-    // Data frame format
     SPI1->CR1 |= (0U << 11);  // 8-bit data frame
     SPI1->CR1 |= (0U << 7);   // MSB first
 
-    // Enable SPI
-    SPI1->CR1 |= (1U << 6);
-
-    // Configure GPIO pins for SPI
-    configureSPIPins();
-}
-
-void configureSPISlave() {
-    enableSPIClock();
-
-    SPI1->CR1 = 0;
-    SPI1->CR1 &= ~(1U << 2);  // Slave mode
-    // Clock polarity and phase should match master
     SPI1->CR1 |= (1U << 6);   // Enable SPI
 
     configureSPIPins();
@@ -502,52 +492,67 @@ void configureSPISlave() {
 
 ---
 
-## SPI Data Transfer
+## SPI Configuration: Slave Setup
+
+```cpp
+void configureSPISlave() {
+    enableSPIClock();
+
+    SPI1->CR1 = 0;
+    SPI1->CR1 &= ~(1U << 2);  // Slave mode
+    SPI1->CR1 |= (1U << 6);   // Enable SPI
+
+    configureSPIPins();
+}
+```
+
+---
+
+## SPI Data Transfer: Blocking
 
 Transmitting and receiving SPI data:
 
 ```cpp
-// Basic SPI transfer (blocking)
 uint8_t spiTransferByte(uint8_t data) {
-    // Wait for TX buffer empty
     while (!(SPI1->SR & (1U << 1)));
-
-    // Send data
     SPI1->DR = data;
-
-    // Wait for RX buffer not empty
     while (!(SPI1->SR & (1U << 0)));
-
-    // Return received data
     return SPI1->DR;
 }
 
-// Multi-byte transfer
 void spiTransferBuffer(uint8_t* txBuffer, uint8_t* rxBuffer, uint16_t size) {
     for (uint16_t i = 0; i < size; i++) {
         rxBuffer[i] = spiTransferByte(txBuffer[i]);
     }
 }
+```
 
-// Chip select control
+---
+
+## SPI Data Transfer: Chip Select
+
+```cpp
 void spiSelectSlave(uint8_t slaveNumber) {
-    // Assuming active-low chip selects
-    GPIOA->BSRR = (0xFF << 16);  // Deselect all (set high)
-    GPIOA->BSRR = (1U << slaveNumber);  // Select specific slave (set low)
+    GPIOA->BSRR = (0xFF << 16);
+    GPIOA->BSRR = (1U << slaveNumber);
 }
 
 void spiDeselectAll() {
-    GPIOA->BSRR = (0xFF << 16);  // Deselect all slaves
+    GPIOA->BSRR = (0xFF << 16);
 }
 
-// Complete transaction
 void spiTransaction(uint8_t slave, uint8_t* txData, uint8_t* rxData, uint16_t size) {
     spiSelectSlave(slave);
     spiTransferBuffer(txData, rxData, size);
     spiDeselectAll();
 }
+```
 
-// Non-blocking operations
+---
+
+## SPI Data Transfer: Non-Blocking
+
+```cpp
 bool spiTxReady() {
     return (SPI1->SR & (1U << 1)) != 0;
 }
@@ -581,7 +586,7 @@ I2C provides multi-master, multi-slave communication:
 
 ---
 
-## I2C Configuration
+## I2C Configuration: Registers
 
 Setting up I2C communication:
 
@@ -599,46 +604,44 @@ struct I2C_TypeDef {
 };
 
 #define I2C1 ((I2C_TypeDef*)0x40005400)
+```
 
+---
+
+## I2C Configuration: Initialization
+
+```cpp
 void configureI2C(uint32_t clockSpeed) {
-    // Enable I2C clock
     enableI2CClock();
 
-    // Reset I2C
     I2C1->CR1 |= (1U << 15);
     I2C1->CR1 &= ~(1U << 15);
 
-    // Configure timing
     uint32_t pclk1 = getAPB1Frequency();
-    I2C1->CR2 = (pclk1 / 1000000) & 0x3F;  // APB1 frequency in MHz
+    I2C1->CR2 = (pclk1 / 1000000) & 0x3F;
 
     if (clockSpeed <= 100000) {
-        // Standard mode (100 kHz)
         I2C1->CCR = pclk1 / (clockSpeed * 2);
         I2C1->TRISE = (pclk1 / 1000000) + 1;
     } else {
-        // Fast mode (400 kHz)
         I2C1->CCR = pclk1 / (clockSpeed * 3);
-        I2C1->CCR |= (1U << 15);  // Fast mode enable
+        I2C1->CCR |= (1U << 15);
         I2C1->TRISE = ((pclk1 * 300) / 1000000000) + 1;
     }
 
-    // Enable I2C
     I2C1->CR1 |= (1U << 0);
 
-    // Configure GPIO pins for I2C
     configureI2CPins();
 }
 ```
 
 ---
 
-## I2C Master Operations
+## I2C Master Operations: Flags
 
 Implementing I2C master functionality:
 
 ```cpp
-// I2C status flags
 #define I2C_FLAG_SB     (1U << 0)   // Start bit
 #define I2C_FLAG_ADDR   (1U << 1)   // Address sent
 #define I2C_FLAG_BTF    (1U << 2)   // Byte transfer finished
@@ -651,12 +654,16 @@ typedef enum {
     I2C_ERROR_ACK_FAILURE,
     I2C_ERROR_BUS_ERROR
 } I2CStatus;
+```
 
+---
+
+## I2C Master Operations: Start and Address
+
+```cpp
 I2CStatus i2cStart() {
-    // Generate start condition
     I2C1->CR1 |= (1U << 8);
 
-    // Wait for start bit to be set
     uint32_t timeout = 10000;
     while (!(I2C1->SR1 & I2C_FLAG_SB) && timeout--);
 
@@ -664,16 +671,13 @@ I2CStatus i2cStart() {
 }
 
 I2CStatus i2cSendAddress(uint8_t address, bool read) {
-    // Send address with read/write bit
     I2C1->DR = (address << 1) | (read ? 1 : 0);
 
-    // Wait for address to be sent
     uint32_t timeout = 10000;
     while (!(I2C1->SR1 & I2C_FLAG_ADDR) && timeout--);
 
     if (timeout == 0) return I2C_ERROR_TIMEOUT;
 
-    // Clear ADDR flag by reading SR1 and SR2
     volatile uint32_t dummy = I2C1->SR1;
     dummy = I2C1->SR2;
     (void)dummy;
@@ -682,28 +686,25 @@ I2CStatus i2cSendAddress(uint8_t address, bool read) {
 }
 
 void i2cStop() {
-    I2C1->CR1 |= (1U << 9);  // Generate stop condition
+    I2C1->CR1 |= (1U << 9);
 }
 ```
 
 ---
 
-## I2C Data Transfer Functions
+## I2C Data Transfer: Byte Operations
 
 Reading and writing I2C data:
 
 ```cpp
 I2CStatus i2cWriteByte(uint8_t data) {
-    // Wait for transmit buffer empty
     uint32_t timeout = 10000;
     while (!(I2C1->SR1 & I2C_FLAG_TXE) && timeout--);
 
     if (timeout == 0) return I2C_ERROR_TIMEOUT;
 
-    // Send data
     I2C1->DR = data;
 
-    // Wait for byte transfer finished
     timeout = 10000;
     while (!(I2C1->SR1 & I2C_FLAG_BTF) && timeout--);
 
@@ -712,24 +713,27 @@ I2CStatus i2cWriteByte(uint8_t data) {
 
 I2CStatus i2cReadByte(uint8_t* data, bool sendNack) {
     if (sendNack) {
-        I2C1->CR1 &= ~(1U << 10);  // Disable ACK
+        I2C1->CR1 &= ~(1U << 10);
     } else {
-        I2C1->CR1 |= (1U << 10);   // Enable ACK
+        I2C1->CR1 |= (1U << 10);
     }
 
-    // Wait for receive buffer not empty
     uint32_t timeout = 10000;
     while (!(I2C1->SR1 & I2C_FLAG_RXNE) && timeout--);
 
     if (timeout == 0) return I2C_ERROR_TIMEOUT;
 
-    // Read data
     *data = I2C1->DR;
 
     return I2C_OK;
 }
+```
 
-// High-level write function
+---
+
+## I2C Data Transfer: High-Level Write
+
+```cpp
 I2CStatus i2cWriteData(uint8_t address, uint8_t* data, uint16_t size) {
     I2CStatus status;
 
@@ -743,8 +747,13 @@ I2CStatus i2cWriteData(uint8_t address, uint8_t* data, uint16_t size) {
     i2cStop();
     return status;
 }
+```
 
-// High-level read function
+---
+
+## I2C Data Transfer: High-Level Read
+
+```cpp
 I2CStatus i2cReadData(uint8_t address, uint8_t* data, uint16_t size) {
     I2CStatus status;
 
@@ -777,7 +786,7 @@ DMA enables data transfer without CPU intervention:
 
 ---
 
-## DMA Configuration
+## DMA Configuration: Registers
 
 Setting up DMA channels:
 
@@ -796,34 +805,34 @@ struct DMA_TypeDef {
 
 #define DMA1 ((DMA_TypeDef*)0x40020000)
 #define DMA1_Channel1 ((DMA_Channel_TypeDef*)0x40020008)
+```
 
+---
+
+## DMA Configuration: Setup Function
+
+```cpp
 void configureDMA(uint8_t channel, uint32_t peripheral, uint32_t memory,
                   uint16_t size, uint32_t direction) {
-    // Enable DMA clock
     enableDMAClock();
 
     DMA_Channel_TypeDef* dmaChannel = getDMAChannel(channel);
 
-    // Disable DMA channel
     dmaChannel->CCR &= ~(1U << 0);
 
-    // Configure addresses
     dmaChannel->CPAR = peripheral;
     dmaChannel->CMAR = memory;
     dmaChannel->CNDTR = size;
 
-    // Configure channel
     dmaChannel->CCR = 0;
-    dmaChannel->CCR |= direction;        // Transfer direction
-    dmaChannel->CCR |= (1U << 7);        // Memory increment
-    dmaChannel->CCR |= (1U << 1);        // Transfer complete interrupt
-    dmaChannel->CCR |= (1U << 2);        // Transfer error interrupt
+    dmaChannel->CCR |= direction;
+    dmaChannel->CCR |= (1U << 7);
+    dmaChannel->CCR |= (1U << 1);
+    dmaChannel->CCR |= (1U << 2);
 
-    // Enable DMA channel
     dmaChannel->CCR |= (1U << 0);
 }
 
-// DMA direction constants
 #define DMA_DIR_PERIPHERAL_TO_MEMORY  0
 #define DMA_DIR_MEMORY_TO_PERIPHERAL  (1U << 4)
 #define DMA_DIR_MEMORY_TO_MEMORY      (1U << 14)
@@ -831,37 +840,37 @@ void configureDMA(uint8_t channel, uint32_t peripheral, uint32_t memory,
 
 ---
 
-## DMA with Peripherals
+## DMA with Peripherals: UART
 
 Using DMA with UART and SPI:
 
 ```cpp
-// DMA-based UART transmission
 uint8_t txBuffer[100];
 volatile bool dmaTransmitComplete = false;
 
 void uartTransmitDMA(uint8_t* data, uint16_t size) {
-    // Copy data to DMA buffer
     memcpy(txBuffer, data, size);
 
-    // Configure DMA for UART TX
     configureDMA(4, (uint32_t)&UART1->DR, (uint32_t)txBuffer,
                  size, DMA_DIR_MEMORY_TO_PERIPHERAL);
 
-    // Enable UART DMA mode
-    UART1->CR3 |= (1U << 7);  // DMAT (DMA enable transmitter)
+    UART1->CR3 |= (1U << 7);  // DMAT
 
     dmaTransmitComplete = false;
 }
+```
 
-// DMA-based ADC with circular buffer
+---
+
+## DMA with Peripherals: ADC Circular Buffer
+
+```cpp
 #define ADC_BUFFER_SIZE 256
 uint16_t adcBuffer[ADC_BUFFER_SIZE];
 volatile uint16_t adcBufferIndex = 0;
 
 void adcStartDMACircular() {
-    // Configure DMA for ADC in circular mode
-    DMA1_Channel1->CCR &= ~(1U << 0);  // Disable channel
+    DMA1_Channel1->CCR &= ~(1U << 0);
 
     DMA1_Channel1->CPAR = (uint32_t)&ADC1->DR;
     DMA1_Channel1->CMAR = (uint32_t)adcBuffer;
@@ -870,19 +879,16 @@ void adcStartDMACircular() {
     DMA1_Channel1->CCR = 0;
     DMA1_Channel1->CCR |= (1U << 5);   // Circular mode
     DMA1_Channel1->CCR |= (1U << 7);   // Memory increment
-    DMA1_Channel1->CCR |= (1U << 10);  // 16-bit memory size
-    DMA1_Channel1->CCR |= (1U << 8);   // 16-bit peripheral size
-    DMA1_Channel1->CCR |= (1U << 2);   // Half transfer interrupt
-    DMA1_Channel1->CCR |= (1U << 1);   // Transfer complete interrupt
+    DMA1_Channel1->CCR |= (1U << 10);
+    DMA1_Channel1->CCR |= (1U << 8);
+    DMA1_Channel1->CCR |= (1U << 2);
+    DMA1_Channel1->CCR |= (1U << 1);
 
-    // Enable DMA channel
     DMA1_Channel1->CCR |= (1U << 0);
 
-    // Configure ADC for DMA
-    ADC1->CR2 |= (1U << 8);   // DMA enable
-    ADC1->CR2 |= (1U << 1);   // Continuous conversion
+    ADC1->CR2 |= (1U << 8);
+    ADC1->CR2 |= (1U << 1);
 
-    // Start ADC
     ADC1->CR2 |= (1U << 0);
 }
 ```
@@ -931,54 +937,50 @@ void nvicSetPriority(uint8_t irqNumber, uint8_t priority) {
 
 ---
 
-## Interrupt Service Routines
+## Interrupt Service Routines: Timer ISR
 
 Writing efficient interrupt handlers:
 
 ```cpp
-// Timer interrupt example
 volatile uint32_t systemTick = 0;
 volatile bool timerFlag = false;
 
 void TIM2_IRQHandler() {
-    // Check timer interrupt flag
     if (TIM2->SR & (1U << 0)) {
-        // Clear interrupt flag
         TIM2->SR &= ~(1U << 0);
 
-        // Handle interrupt
         systemTick++;
         timerFlag = true;
 
-        // Toggle LED every 1000ms
         if (systemTick % 1000 == 0) {
             GPIOA->ODR ^= (1U << 5);
         }
     }
 }
+```
 
-// UART receive interrupt
+---
+
+## Interrupt Service Routines: UART RX ISR
+
+```cpp
 #define UART_RX_BUFFER_SIZE 64
 volatile uint8_t uartRxBuffer[UART_RX_BUFFER_SIZE];
 volatile uint16_t uartRxHead = 0;
 volatile uint16_t uartRxTail = 0;
 
 void UART1_IRQHandler() {
-    // Check for receive interrupt
-    if (UART1->SR & (1U << 5)) {  // RXNE flag
-        uint8_t data = UART1->DR;  // Reading DR clears RXNE
+    if (UART1->SR & (1U << 5)) {
+        uint8_t data = UART1->DR;
 
-        // Store in circular buffer
         uint16_t nextHead = (uartRxHead + 1) % UART_RX_BUFFER_SIZE;
         if (nextHead != uartRxTail) {
             uartRxBuffer[uartRxHead] = data;
             uartRxHead = nextHead;
         }
-        // If buffer full, data is lost (overrun)
     }
 }
 
-// Function to read from UART buffer
 bool uartReceiveBuffered(uint8_t* data) {
     if (uartRxHead != uartRxTail) {
         *data = uartRxBuffer[uartRxTail];
@@ -991,13 +993,18 @@ bool uartReceiveBuffered(uint8_t* data) {
 
 ---
 
-## General Purpose Timers (TIM)
+## General Purpose Timers (TIM): Overview
 
 Hardware timers provide precise timing and PWM:
+
 - **Count modes**: Up, down, up/down counting
 - **PWM generation**: Variable duty cycle output
 - **Input capture**: Measure external signal timing
 - **Output compare**: Generate precise timing events
+
+---
+
+## General Purpose Timers: Registers
 
 ```cpp
 struct TIM_TypeDef {
@@ -1020,61 +1027,62 @@ struct TIM_TypeDef {
 };
 
 #define TIM2 ((TIM_TypeDef*)0x40000000)
+```
 
+---
+
+## General Purpose Timers: Configuration
+
+```cpp
 void configureTimer(uint32_t frequency) {
-    // Enable timer clock
     enableTimerClock();
 
-    // Configure timer for desired frequency
     uint32_t timerClock = getTimerClockFrequency();
     uint32_t prescaler = (timerClock / frequency) - 1;
 
     TIM2->PSC = prescaler;
-    TIM2->ARR = 999;  // Auto-reload value (1000 counts)
+    TIM2->ARR = 999;
 
-    // Enable update interrupt
     TIM2->DIER |= (1U << 0);
 
-    // Enable timer
     TIM2->CR1 |= (1U << 0);
 
-    // Enable NVIC interrupt
-    nvicEnableInterrupt(28);  // TIM2 IRQ number
+    nvicEnableInterrupt(28);
 }
 ```
 
 ---
 
-## PWM Generation
+## PWM Generation: Configuration
 
 Creating PWM signals with timers:
 
 ```cpp
 void configurePWM(uint8_t channel, uint16_t dutyCycle) {
-    // Configure timer for PWM mode
-    TIM2->CR1 &= ~(1U << 0);  // Disable timer
+    TIM2->CR1 &= ~(1U << 0);
 
-    // Configure PWM frequency
-    TIM2->PSC = 71;           // Prescaler for 1MHz timer clock
-    TIM2->ARR = 999;          // 1kHz PWM frequency (1MHz / 1000)
+    TIM2->PSC = 71;
+    TIM2->ARR = 999;
 
-    // Configure channel for PWM mode 1
     if (channel == 1) {
-        TIM2->CCMR1 &= ~(0x7 << 4);   // Clear OC1M bits
-        TIM2->CCMR1 |= (0x6 << 4);    // PWM mode 1
-        TIM2->CCMR1 |= (1U << 3);     // OC1PE (preload enable)
-        TIM2->CCER |= (1U << 0);      // CC1E (enable output)
-        TIM2->CCR1 = dutyCycle;       // Set duty cycle
+        TIM2->CCMR1 &= ~(0x7 << 4);
+        TIM2->CCMR1 |= (0x6 << 4);
+        TIM2->CCMR1 |= (1U << 3);
+        TIM2->CCER |= (1U << 0);
+        TIM2->CCR1 = dutyCycle;
     }
-    // Similar configuration for other channels...
 
-    // Enable timer
     TIM2->CR1 |= (1U << 0);
 
-    // Configure GPIO pin for PWM output
     configurePWMPin(channel);
 }
+```
 
+---
+
+## PWM Generation: Duty Cycle Control
+
+```cpp
 void setPWMDutyCycle(uint8_t channel, uint16_t dutyCycle) {
     switch (channel) {
         case 1: TIM2->CCR1 = dutyCycle; break;
@@ -1084,7 +1092,6 @@ void setPWMDutyCycle(uint8_t channel, uint16_t dutyCycle) {
     }
 }
 
-// Convert percentage to timer counts
 uint16_t percentageToCounts(float percentage, uint16_t maxCounts) {
     if (percentage > 100.0f) percentage = 100.0f;
     if (percentage < 0.0f) percentage = 0.0f;
@@ -1094,19 +1101,23 @@ uint16_t percentageToCounts(float percentage, uint16_t maxCounts) {
 
 ---
 
-## System Tick Timer (SysTick)
+## System Tick Timer (SysTick): Overview
 
 SysTick provides system timing for RTOS and delays:
+
 - **24-bit counter**: Counts down from reload value
 - **System clock**: Derives from CPU clock
 - **RTOS support**: Common timebase for task scheduling
 - **Delay functions**: Precise timing delays
 
+---
+
+## System Tick Timer: Configuration
+
 ```cpp
-// SysTick register definitions
-#define SYSTICK_CSR   ((volatile uint32_t*)0xE000E010)  // Control/Status
-#define SYSTICK_RVR   ((volatile uint32_t*)0xE000E014)  // Reload Value
-#define SYSTICK_CVR   ((volatile uint32_t*)0xE000E018)  // Current Value
+#define SYSTICK_CSR   ((volatile uint32_t*)0xE000E010)
+#define SYSTICK_RVR   ((volatile uint32_t*)0xE000E014)
+#define SYSTICK_CVR   ((volatile uint32_t*)0xE000E018)
 
 volatile uint32_t sysTickCounter = 0;
 
@@ -1114,23 +1125,25 @@ void configureSysTick(uint32_t frequency) {
     uint32_t systemClock = getSystemClockFrequency();
     uint32_t reloadValue = (systemClock / frequency) - 1;
 
-    // Configure SysTick
-    *SYSTICK_RVR = reloadValue & 0x00FFFFFF;  // 24-bit reload value
-    *SYSTICK_CVR = 0;                         // Clear current value
+    *SYSTICK_RVR = reloadValue & 0x00FFFFFF;
+    *SYSTICK_CVR = 0;
 
-    // Configure control register
     *SYSTICK_CSR = 0;
-    *SYSTICK_CSR |= (1U << 0);  // Enable SysTick
-    *SYSTICK_CSR |= (1U << 1);  // Enable interrupt
-    *SYSTICK_CSR |= (1U << 2);  // Use processor clock
+    *SYSTICK_CSR |= (1U << 0);
+    *SYSTICK_CSR |= (1U << 1);
+    *SYSTICK_CSR |= (1U << 2);
 }
 
-// SysTick interrupt handler
 void SysTick_Handler() {
     sysTickCounter++;
 }
+```
 
-// Delay functions
+---
+
+## System Tick Timer: Delay Functions
+
+```cpp
 void delayMs(uint32_t milliseconds) {
     uint32_t startTick = sysTickCounter;
     while ((sysTickCounter - startTick) < milliseconds);
@@ -1139,8 +1152,13 @@ void delayMs(uint32_t milliseconds) {
 uint32_t getSystemTime() {
     return sysTickCounter;
 }
+```
 
-// Non-blocking timer
+---
+
+## System Tick Timer: Non-Blocking Timer
+
+```cpp
 typedef struct {
     uint32_t startTime;
     uint32_t duration;
@@ -1166,12 +1184,11 @@ bool timerExpired(Timer_t* timer) {
 
 ---
 
-## Peripheral Integration Example
+## Peripheral Integration: State Struct
 
 Complete example integrating multiple peripherals:
 
 ```cpp
-// System state structure
 typedef struct {
     uint16_t adcValue;
     float temperature;
@@ -1181,56 +1198,57 @@ typedef struct {
 } SystemState_t;
 
 SystemState_t systemState = {0};
+```
 
-// Main system initialization
+---
+
+## Peripheral Integration: System Init
+
+```cpp
 void initializeSystem() {
-    // Initialize clocks
     initializeClocks();
 
-    // Configure peripherals
     configureGPIO();
-    configureSysTick(1000);  // 1ms tick
+    configureSysTick(1000);
     configureADC();
-    configurePWM(1, 0);      // Start with 0% duty cycle
+    configurePWM(1, 0);
     configureUART(115200);
 
-    // Enable interrupts
     nvicEnableInterrupt(ADC1_2_IRQn);
     nvicEnableInterrupt(UART1_IRQn);
 
-    // Start continuous ADC conversion
-    ADC1->CR2 |= (1U << 0);  // Start conversion
+    ADC1->CR2 |= (1U << 0);
 }
+```
 
-// Main application loop
+---
+
+## Peripheral Integration: Main Loop
+
+```cpp
 void applicationLoop() {
     static Timer_t displayTimer;
-    timerStart(&displayTimer, 100);  // Update display every 100ms
+    timerStart(&displayTimer, 100);
 
     while (1) {
-// Main application loop
-void applicationLoop() {
-    static Timer_t displayTimer;
-    timerStart(&displayTimer, 100);  // Update display every 100ms
-
-    while (1) {
-        // Read button state
         systemState.buttonPressed = readButton();
-
-        // Process ADC data (updated via interrupt)
         systemState.temperature = adcToTemperature(systemState.adcValue);
 
-        // Control PWM based on temperature
         if (systemState.temperature > 25.0f) {
-            systemState.pwmDutyCycle = 75;  // Fan at 75%
+            systemState.pwmDutyCycle = 75;
         } else if (systemState.temperature > 20.0f) {
-            systemState.pwmDutyCycle = 50;  // Fan at 50%
+            systemState.pwmDutyCycle = 50;
         } else {
-            systemState.pwmDutyCycle = 0;   // Fan off
+            systemState.pwmDutyCycle = 0;
         }
         setPWMDutyCycle(1, percentageToCounts(systemState.pwmDutyCycle, 999));
+```
 
-        // Update display periodically
+---
+
+## Peripheral Integration: Display and Button
+
+```cpp
         if (timerExpired(&displayTimer)) {
             snprintf(systemState.displayBuffer, sizeof(systemState.displayBuffer),
                     "Temp: %.1f°C, Fan: %d%%\r\n",
@@ -1239,39 +1257,40 @@ void applicationLoop() {
             timerStart(&displayTimer, 100);
         }
 
-        // Handle button press
         if (systemState.buttonPressed) {
             uartSendString("Button pressed!\r\n");
-            delayMs(200);  // Debounce
+            delayMs(200);
         }
 
-        // Low power mode when idle
-        __WFI();  // Wait for interrupt
+        __WFI();
     }
-}
-
-// ADC conversion complete interrupt
-void ADC1_2_IRQHandler() {
-    if (ADC1->SR & (1U << 1)) {  // EOC flag
-        systemState.adcValue = ADC1->DR;  // Reading DR clears EOC
-    }
-}
-
-float adcToTemperature(uint16_t adcValue) {
-    // Convert ADC reading to temperature (example calculation)
-    float voltage = (adcValue * 3.3f) / 4095.0f;  // 12-bit ADC
-    return (voltage - 0.5f) * 100.0f;  // TMP36 sensor formula
 }
 ```
 
 ---
 
-## Power Management and Low Power Modes
+## Peripheral Integration: Sensor Handlers
+
+```cpp
+void ADC1_2_IRQHandler() {
+    if (ADC1->SR & (1U << 1)) {
+        systemState.adcValue = ADC1->DR;
+    }
+}
+
+float adcToTemperature(uint16_t adcValue) {
+    float voltage = (adcValue * 3.3f) / 4095.0f;
+    return (voltage - 0.5f) * 100.0f;
+}
+```
+
+---
+
+## Power Management: Modes
 
 Optimizing power consumption in embedded systems:
 
 ```cpp
-// Power mode definitions
 typedef enum {
     POWER_RUN,
     POWER_SLEEP,
@@ -1282,28 +1301,28 @@ typedef enum {
 void enterLowPowerMode(PowerMode_t mode) {
     switch (mode) {
         case POWER_SLEEP:
-            // Sleep mode - CPU stops, peripherals continue
-            __WFI();  // Wait for interrupt
+            __WFI();
             break;
 
         case POWER_STOP:
-            // Stop mode - CPU and most peripherals stop
-            // Configure wake-up sources first
-            PWR->CR |= (1U << 0);   // Clear wake-up flag
-            SCB->SCR |= (1U << 2);  // SLEEPDEEP bit
+            PWR->CR |= (1U << 0);
+            SCB->SCR |= (1U << 2);
             __WFI();
-            SCB->SCR &= ~(1U << 2); // Clear SLEEPDEEP
-            // Restore clocks after wake-up
+            SCB->SCR &= ~(1U << 2);
             initializeClocks();
             break;
+```
 
+---
+
+## Power Management: Standby and Wake-Up
+
+```cpp
         case POWER_STANDBY:
-            // Standby mode - lowest power consumption
-            PWR->CR |= (1U << 2);   // Clear standby flag
-            PWR->CR |= (1U << 1);   // Power down deepsleep
-            SCB->SCR |= (1U << 2);  // SLEEPDEEP bit
+            PWR->CR |= (1U << 2);
+            PWR->CR |= (1U << 1);
+            SCB->SCR |= (1U << 2);
             __WFI();
-            // System will reset on wake-up
             break;
 
         default:
@@ -1312,25 +1331,19 @@ void enterLowPowerMode(PowerMode_t mode) {
 }
 
 void configureWakeUpSources() {
-    // Configure wake-up pin
-    PWR->CSR |= (1U << 8);  // Enable wake-up pin
+    PWR->CSR |= (1U << 8);
 
-    // Configure RTC wake-up (if needed)
-    // enableRTCWakeUp();
-
-    // Configure external interrupt as wake-up source
     nvicEnableInterrupt(EXTI0_IRQn);
 }
 ```
 
 ---
 
-## Error Handling and Diagnostics
+## Error Handling: Error Codes
 
 Robust error handling for peripheral operations:
 
 ```cpp
-// Error code definitions
 typedef enum {
     PERIPHERAL_OK = 0,
     PERIPHERAL_ERROR_TIMEOUT,
@@ -1339,7 +1352,6 @@ typedef enum {
     PERIPHERAL_ERROR_HARDWARE_FAULT
 } PeripheralError_t;
 
-// Error logging system
 #define MAX_ERROR_LOG 16
 typedef struct {
     uint32_t timestamp;
@@ -1350,7 +1362,13 @@ typedef struct {
 
 ErrorLog_t errorLog[MAX_ERROR_LOG];
 uint8_t errorLogIndex = 0;
+```
 
+---
+
+## Error Handling: Log and Timeout
+
+```cpp
 void logError(PeripheralError_t error, uint8_t peripheral, uint32_t data) {
     errorLog[errorLogIndex].timestamp = getSystemTime();
     errorLog[errorLogIndex].errorCode = error;
@@ -1359,7 +1377,6 @@ void logError(PeripheralError_t error, uint8_t peripheral, uint32_t data) {
 
     errorLogIndex = (errorLogIndex + 1) % MAX_ERROR_LOG;
 
-    // Send error notification
     char errorMsg[64];
     snprintf(errorMsg, sizeof(errorMsg),
             "ERROR: P%d, Code:%d, Data:0x%08lX\r\n",
@@ -1367,7 +1384,6 @@ void logError(PeripheralError_t error, uint8_t peripheral, uint32_t data) {
     uartSendString(errorMsg);
 }
 
-// Timeout-based operations
 PeripheralError_t waitForFlag(volatile uint32_t* reg, uint32_t flag,
                              uint32_t timeoutMs, bool waitForSet) {
     uint32_t startTime = getSystemTime();
@@ -1381,77 +1397,68 @@ PeripheralError_t waitForFlag(volatile uint32_t* reg, uint32_t flag,
 
     return PERIPHERAL_ERROR_TIMEOUT;
 }
+```
 
-// Hardware fault detection
+---
+
+## Error Handling: Fault Detection
+
+```cpp
 void checkHardwareFaults() {
-    // Check for clock failures
-    if (RCC->CIR & (1U << 7)) {  // CSS flag
+    if (RCC->CIR & (1U << 7)) {
         logError(PERIPHERAL_ERROR_HARDWARE_FAULT, 0xFF, RCC->CIR);
-        // Handle clock security system failure
     }
 
-    // Check peripheral-specific faults
-    if (UART1->SR & (1U << 3)) {  // Overrun error
+    if (UART1->SR & (1U << 3)) {
         logError(PERIPHERAL_ERROR_HARDWARE_FAULT, 1, UART1->SR);
-        UART1->SR &= ~(1U << 3);  // Clear error
+        UART1->SR &= ~(1U << 3);
     }
 
-    // Check DMA errors
-    if (DMA1->ISR & (1U << 3)) {  // Transfer error
+    if (DMA1->ISR & (1U << 3)) {
         logError(PERIPHERAL_ERROR_HARDWARE_FAULT, 2, DMA1->ISR);
-        DMA1->IFCR |= (1U << 3);  // Clear error
+        DMA1->IFCR |= (1U << 3);
     }
 }
 ```
 
 ---
 
-## Performance Optimization Techniques
+## Performance Optimization: GPIO and DMA
 
 Optimizing peripheral performance:
 
 ```cpp
-// Burst operations for improved efficiency
 void gpioSetMultiplePinsOptimized(GPIO_TypeDef* gpio, uint16_t pins) {
-    // Use BSRR for atomic operations
-    gpio->BSRR = pins;  // More efficient than individual bit operations
+    gpio->BSRR = pins;
 }
 
-// Efficient register access patterns
 static inline void fastRegisterWrite(volatile uint32_t* reg, uint32_t value) {
-    *reg = value;  // Direct assignment is often optimized better
+    *reg = value;
 }
 
-// DMA optimization for high-throughput applications
 void configureDMAForHighThroughput() {
-    // Use memory-to-memory mode for fast copying
-    DMA1_Channel1->CCR |= (1U << 14);  // Memory-to-memory mode
-
-    // Configure for 32-bit transfers when possible
-    DMA1_Channel1->CCR |= (2U << 8);   // 32-bit peripheral size
-    DMA1_Channel1->CCR |= (2U << 10);  // 32-bit memory size
-
-    // Enable high priority
-    DMA1_Channel1->CCR |= (3U << 12);  // Very high priority
+    DMA1_Channel1->CCR |= (1U << 14);
+    DMA1_Channel1->CCR |= (2U << 8);
+    DMA1_Channel1->CCR |= (2U << 10);
+    DMA1_Channel1->CCR |= (3U << 12);
 }
+```
 
-// Interrupt optimization
+---
+
+## Performance Optimization: ISR and Critical Sections
+
+```cpp
 void optimizedInterruptHandler() {
-    // Keep ISRs short and fast
-    // Use static variables to avoid stack overhead
     static uint32_t counter = 0;
 
-    // Clear interrupt flag immediately
     TIM2->SR &= ~(1U << 0);
 
-    // Minimal processing in ISR
     counter++;
 
-    // Set flag for main loop processing
     timerFlag = true;
 }
 
-// Compiler optimization hints
 __attribute__((always_inline))
 static inline void criticalSectionEnter() {
     __disable_irq();
@@ -1465,12 +1472,11 @@ static inline void criticalSectionExit() {
 
 ---
 
-## Debugging and Testing Peripherals
+## Debugging: Debug Macros
 
 Tools and techniques for peripheral debugging:
 
 ```cpp
-// Debug output system
 #ifdef DEBUG
 #define DEBUG_PRINT(fmt, ...) \
     do { \
@@ -1482,7 +1488,6 @@ Tools and techniques for peripheral debugging:
 #define DEBUG_PRINT(fmt, ...)
 #endif
 
-// Register dump functions
 void dumpGPIORegisters(GPIO_TypeDef* gpio) {
     DEBUG_PRINT("GPIO Registers:");
     DEBUG_PRINT("MODER:   0x%08lX", gpio->MODER);
@@ -1492,29 +1497,30 @@ void dumpGPIORegisters(GPIO_TypeDef* gpio) {
     DEBUG_PRINT("IDR:     0x%08lX", gpio->IDR);
     DEBUG_PRINT("ODR:     0x%08lX", gpio->ODR);
 }
+```
 
-// Performance measurement
+---
+
+## Debugging: Performance and Self-Test
+
+```cpp
 uint32_t measureFunctionTime(void (*func)(void)) {
     uint32_t startTime = *SYSTICK_CVR;
     func();
     uint32_t endTime = *SYSTICK_CVR;
 
-    // SysTick counts down
     return (startTime > endTime) ? (startTime - endTime) :
                                   (startTime + (*SYSTICK_RVR - endTime));
 }
 
-// Self-test functions
 bool testUARTLoopback() {
     const char testString[] = "TEST";
     bool result = true;
 
-    // Send test data
     for (int i = 0; testString[i]; i++) {
         uartSendByte(testString[i]);
     }
 
-    // Verify received data (requires loopback)
     for (int i = 0; testString[i]; i++) {
         uint8_t received = uartReceiveByte();
         if (received != testString[i]) {
@@ -1526,15 +1532,20 @@ bool testUARTLoopback() {
     DEBUG_PRINT("UART loopback test: %s", result ? "PASS" : "FAIL");
     return result;
 }
+```
 
-// Peripheral health monitoring
+---
+
+## Debugging: Health Monitoring
+
+```cpp
 typedef struct {
     uint32_t operationCount;
     uint32_t errorCount;
     uint32_t lastErrorTime;
 } PeripheralHealth_t;
 
-PeripheralHealth_t peripheralHealth[8];  // Track up to 8 peripherals
+PeripheralHealth_t peripheralHealth[8];
 
 void updatePeripheralHealth(uint8_t peripheralId, bool success) {
     if (peripheralId < 8) {
@@ -1559,60 +1570,62 @@ float getPeripheralReliability(uint8_t peripheralId) {
 
 ---
 
-## Best Practices Summary
+## Best Practices Summary: Principles
 
 Key principles for effective peripheral programming:
 
-1. **Initialize peripherals in correct order**
-   - Clocks first, then GPIO, then complex peripherals
-1. **Use appropriate data types**
-   - volatile for hardware registers
-   - const for configuration data
-1. **Handle errors gracefully**
-   - Check return values and status flags
-   - Implement timeout mechanisms
-1. **Optimize for your application**
-   - Use DMA for high-throughput applications
-   - Use interrupts for real-time response
-1. **Keep interrupt handlers short**
-   - Minimal processing in ISRs
-   - Use flags for main loop processing
-1. **Document hardware dependencies**
-   - Pin assignments and alternate functions
-   - Timing requirements and constraints
-1. **Test thoroughly**
-   - Unit tests for individual peripherals
-   - Integration tests for complete systems
-1. **Consider power consumption**
-   - Disable unused peripherals
-   - Use appropriate low-power modes
+1. 1. **Initialize peripherals in correct order**
+    - Clocks first, then GPIO, then complex peripherals
+1. 1. **Use appropriate data types**
+    - volatile for hardware registers
+    - const for configuration data
+1. 1. **Handle errors gracefully**
+    - Check return values and status flags
+    - Implement timeout mechanisms
+1. 1. **Optimize for your application**
+    - Use DMA for high-throughput applications
+    - Use interrupts for real-time response
+
+---
+
+## Best Practices Summary: More Principles
+
+1. 1. **Keep interrupt handlers short**
+    - Minimal processing in ISRs
+    - Use flags for main loop processing
+1. 1. **Document hardware dependencies**
+    - Pin assignments and alternate functions
+    - Timing requirements and constraints
+1. 1. **Test thoroughly**
+    - Unit tests for individual peripherals
+    - Integration tests for complete systems
+1. 1. **Consider power consumption**
+    - Disable unused peripherals
+    - Use appropriate low-power modes
+
+---
+
+## Best Practices Summary: Example Init
 
 ```cpp
-// Example of good peripheral initialization
 void initializePeripheralsCorrectly() {
-    // 1. Enable clocks first
     enableSystemClocks();
 
-    // 2. Configure basic peripherals
     configureGPIO();
     configureSysTick(1000);
 
-    // 3. Configure communication peripherals
     configureUART(115200);
     configureSPI();
     configureI2C(100000);
 
-    // 4. Configure complex peripherals
     configureADC();
     configureDMA();
     configureTimers();
 
-    // 5. Enable interrupts last
     nvicEnableInterrupt(UART1_IRQn);
     nvicEnableInterrupt(ADC1_2_IRQn);
     nvicEnableInterrupt(TIM2_IRQn);
 
-    // 6. Start operations
     startPeripheralOperations();
 }
 ```

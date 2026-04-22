@@ -127,33 +127,29 @@ void demonstrateFixedWidthTypes() {
 
 ---
 
-## Choosing the Right Integer Type
+## Choosing the Right Integer Type: Indices
 
 Guidelines for selecting appropriate integer types:
 
 ```cpp
-// For array indices and sizes
 void arrayOperations() {
     std::vector<int> data(100);
 
-    // Good: Use size_t for indices and sizes
     for (size_t i = 0; i < data.size(); ++i) {
         data[i] = static_cast<int>(i);
     }
 
-    // Better: Use auto with range-based for
     for (auto& value : data) {
         value *= 2;
     }
 }
 
-// For specific bit requirements
 class BitFlags {
 private:
-    uint32_t flags = 0;  // Exactly 32 bits needed
+    uint32_t flags = 0;
 
 public:
-    void setFlag(uint8_t position) {  // Position 0-31
+    void setFlag(uint8_t position) {
         if (position < 32) {
             flags |= (1U << position);
         }
@@ -163,10 +159,14 @@ public:
         return position < 32 && (flags & (1U << position)) != 0;
     }
 };
+```
 
-// For performance-critical code
+---
+
+## Choosing the Right Integer Type: Performance and C APIs
+
+```cpp
 void performanceCritical() {
-    // Use fastest types for inner loops
     int_fast32_t accumulator = 0;
 
     for (int_fast32_t i = 0; i < 1000000; ++i) {
@@ -174,22 +174,20 @@ void performanceCritical() {
     }
 }
 
-// For interfacing with C APIs
 extern "C" {
-    // C function expecting specific types
     void c_function(int32_t value, uint16_t flags);
 }
 
 void callCFunction() {
     int32_t value = 42;
     uint16_t flags = 0x1234;
-    c_function(value, flags);  // Exact types guaranteed
+    c_function(value, flags);
 }
 ```
 
 ---
 
-## Template Classes for Integer Handling
+## Template Classes: SafeInteger Class
 
 Creating flexible integer handling with templates:
 
@@ -204,7 +202,6 @@ private:
 public:
     explicit SafeInteger(IntType val = 0) : value(val) {}
 
-    // Safe addition with overflow checking
     SafeInteger operator+(const SafeInteger& other) const {
         if (value > 0 && other.value > std::numeric_limits<IntType>::max() - value) {
             throw std::overflow_error("Addition overflow");
@@ -214,8 +211,13 @@ public:
         }
         return SafeInteger(value + other.value);
     }
+```
 
-    // Safe multiplication
+---
+
+## Template Classes: Multiplication and Info
+
+```cpp
     SafeInteger operator*(const SafeInteger& other) const {
         if (value != 0 && other.value != 0) {
             if (value > std::numeric_limits<IntType>::max() / other.value ||
@@ -226,13 +228,9 @@ public:
         return SafeInteger(value * other.value);
     }
 
-    // Conversion operator
     operator IntType() const { return value; }
-
-    // Get the underlying value
     IntType get() const { return value; }
 
-    // Type information
     static constexpr size_t bitWidth() {
         return sizeof(IntType) * 8;
     }
@@ -245,14 +243,19 @@ public:
         return std::numeric_limits<IntType>::max();
     }
 };
+```
 
-// Usage examples
+---
+
+## Template Classes: Usage
+
+```cpp
 void demonstrateSafeInteger() {
     SafeInteger<int32_t> a(1000000);
     SafeInteger<int32_t> b(2000);
 
     try {
-        auto result = a * b;  // Safe multiplication
+        auto result = a * b;
         std::cout << "Result: " << result.get() << std::endl;
     } catch (const std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
@@ -265,12 +268,11 @@ void demonstrateSafeInteger() {
 
 ---
 
-## Template Class Specialization
+## Template Specialization: Primary and int8_t
 
 Specializing templates for specific integer types:
 
 ```cpp
-// Primary template
 template<typename T>
 class IntegerTraits {
 public:
@@ -279,7 +281,6 @@ public:
     static constexpr const char* typeName = "unknown";
 };
 
-// Specializations for specific types
 template<>
 class IntegerTraits<int8_t> {
 public:
@@ -294,7 +295,13 @@ public:
         return static_cast<int8_t>(value);
     }
 };
+```
 
+---
+
+## Template Specialization: uint32_t and Usage
+
+```cpp
 template<>
 class IntegerTraits<uint32_t> {
 public:
@@ -310,7 +317,6 @@ public:
     }
 };
 
-// Template function using traits
 template<typename T>
 void printIntegerInfo() {
     std::cout << "Type: " << IntegerTraits<T>::typeName << std::endl;
@@ -323,7 +329,7 @@ void demonstrateTraits() {
     printIntegerInfo<uint32_t>();
 
     try {
-        auto value = IntegerTraits<int8_t>::safeCast(200);  // Will throw
+        auto value = IntegerTraits<int8_t>::safeCast(200);
     } catch (const std::exception& e) {
         std::cout << "Caught: " << e.what() << std::endl;
     }
@@ -332,12 +338,11 @@ void demonstrateTraits() {
 
 ---
 
-## Template Class Aliasing
+## Template Class Aliasing: Bit-Based
 
 Using alias templates for convenience:
 
 ```cpp
-// Alias templates for common integer types
 template<size_t Bits>
 using SignedInt = std::conditional_t<
     Bits <= 8, int8_t,
@@ -361,30 +366,32 @@ using UnsignedInt = std::conditional_t<
         >
     >
 >;
+```
 
-// Platform-specific aliases
-using PlatformInt = int;  // Native int size
-using FastInt = int_fast32_t;  // Fast 32-bit operations
-using PointerInt = intptr_t;   // Pointer-sized integer
+---
 
-// Application-specific aliases
-using UserID = uint32_t;       // User identifier
-using Timestamp = uint64_t;    // Unix timestamp
-using FileSize = uint64_t;     // File size in bytes
-using ProcessID = uint32_t;    // Process identifier
+## Template Class Aliasing: Domain and Usage
 
-// Container size aliases
+```cpp
+using PlatformInt = int;
+using FastInt = int_fast32_t;
+using PointerInt = intptr_t;
+
+using UserID = uint32_t;
+using Timestamp = uint64_t;
+using FileSize = uint64_t;
+using ProcessID = uint32_t;
+
 template<typename Container>
 using ContainerSize = typename Container::size_type;
 
-// Usage examples
 void demonstrateAliases() {
-    SignedInt<12> small_int = 42;     // Becomes int16_t
-    UnsignedInt<24> medium_int = 100; // Becomes uint32_t
+    SignedInt<12> small_int = 42;
+    UnsignedInt<24> medium_int = 100;
 
     UserID user = 12345;
-    Timestamp now = 1640995200;  // 2022-01-01 00:00:00 UTC
-    FileSize size = 1024 * 1024; // 1 MB
+    Timestamp now = 1640995200;
+    FileSize size = 1024 * 1024;
 
     std::vector<int> data{1, 2, 3, 4, 5};
     ContainerSize<decltype(data)> count = data.size();
@@ -398,7 +405,7 @@ void demonstrateAliases() {
 
 ---
 
-## Single Point of Maintenance for Constructors
+## Single Point of Maintenance: Rectangle Class
 
 Using delegating constructors to reduce code duplication:
 
@@ -408,7 +415,6 @@ private:
     double width, height;
     std::string name;
 
-    // Private validation method
     void validate() {
         if (width <= 0 || height <= 0) {
             throw std::invalid_argument("Width and height must be positive");
@@ -416,7 +422,6 @@ private:
     }
 
 public:
-    // Primary constructor - all initialization logic here
     Rectangle(double w, double h, const std::string& n)
         : width(w), height(h), name(n) {
         validate();
@@ -424,18 +429,21 @@ public:
                   << width << " x " << height << std::endl;
     }
 
-    // Delegating constructors
     Rectangle(double w, double h) : Rectangle(w, h, "unnamed") {}
 
     Rectangle(double side) : Rectangle(side, side, "square") {}
 
     Rectangle() : Rectangle(1.0, 1.0, "unit rectangle") {}
 
-    // Copy constructor
     Rectangle(const Rectangle& other)
         : Rectangle(other.width, other.height, other.name + " (copy)") {}
+```
 
-    // Methods
+---
+
+## Single Point of Maintenance: Methods and Usage
+
+```cpp
     double area() const { return width * height; }
     double perimeter() const { return 2 * (width + height); }
 
@@ -446,11 +454,11 @@ public:
 
 void demonstrateDelegatingConstructors() {
     try {
-        Rectangle r1;                    // Uses default values
-        Rectangle r2(5.0);              // Square
-        Rectangle r3(3.0, 4.0);         // Rectangle with default name
-        Rectangle r4(2.0, 6.0, "door"); // Full specification
-        Rectangle r5(r4);               // Copy constructor
+        Rectangle r1;
+        Rectangle r2(5.0);
+        Rectangle r3(3.0, 4.0);
+        Rectangle r4(2.0, 6.0, "door");
+        Rectangle r5(r4);
 
         std::cout << "r4 area: " << r4.area() << std::endl;
     } catch (const std::exception& e) {
@@ -461,7 +469,7 @@ void demonstrateDelegatingConstructors() {
 
 ---
 
-## Argument Range Checking
+## Argument Range Checking: RangeValidator
 
 Implementing robust parameter validation:
 
@@ -495,11 +503,17 @@ public:
         return std::clamp(value, minValue, maxValue);
     }
 };
+```
 
+---
+
+## Argument Range Checking: BankAccount Class
+
+```cpp
 class BankAccount {
 private:
     uint32_t accountNumber;
-    int64_t balanceCents;  // Store as cents to avoid floating point issues
+    int64_t balanceCents;
     std::string ownerName;
 
     static RangeValidator<uint32_t> accountValidator;
@@ -515,17 +529,21 @@ public:
                   << " with balance $" << (balanceCents / 100.0) << std::endl;
     }
 
-    // Convenience constructor with validation
     BankAccount(uint32_t account, double initial_dollars, const std::string& owner)
         : BankAccount(account, static_cast<int64_t>(initial_dollars * 100), owner) {}
+```
 
+---
+
+## Argument Range Checking: Deposit/Withdraw
+
+```cpp
     void deposit(int64_t cents) {
         cents = balanceValidator.validate(cents, "Deposit amount");
         if (cents <= 0) {
             throw std::invalid_argument("Deposit amount must be positive");
         }
 
-        // Check for overflow
         if (balanceCents > balanceValidator.validate(
             std::numeric_limits<int64_t>::max() - cents, "New balance")) {
             throw std::overflow_error("Deposit would cause balance overflow");
@@ -549,7 +567,13 @@ public:
     double getBalance() const { return balanceCents / 100.0; }
     uint32_t getAccountNumber() const { return accountNumber; }
     const std::string& getOwnerName() const { return ownerName; }
+```
 
+---
+
+## Argument Range Checking: Validation and Static
+
+```cpp
 private:
     std::string validateName(const std::string& name) {
         if (name.empty() || name.length() > 100) {
@@ -567,19 +591,17 @@ private:
     };
 };
 
-// Static member definitions
 RangeValidator<uint32_t> BankAccount::accountValidator(1000, 9999999);
-RangeValidator<int64_t> BankAccount::balanceValidator(-100000000, 100000000000);  // -$1M to $1B
+RangeValidator<int64_t> BankAccount::balanceValidator(-100000000, 100000000000);
 ```
 
 ---
 
-## Custom Literals (C++11)
+## Custom Literals (C++11): Memory Sizes
 
 Creating user-defined literals for intuitive initialization:
 
 ```cpp
-// Literals for different integer bases
 constexpr uint64_t operator"" _KB(unsigned long long value) {
     return value * 1024;
 }
@@ -592,7 +614,6 @@ constexpr uint64_t operator"" _GB(unsigned long long value) {
     return value * 1024 * 1024 * 1024;
 }
 
-// Literals for time durations (extending std::chrono)
 constexpr std::chrono::milliseconds operator"" _ms(unsigned long long value) {
     return std::chrono::milliseconds(value);
 }
@@ -600,8 +621,13 @@ constexpr std::chrono::milliseconds operator"" _ms(unsigned long long value) {
 constexpr std::chrono::seconds operator"" _s(unsigned long long value) {
     return std::chrono::seconds(value);
 }
+```
 
-// Binary literal helper
+---
+
+## Custom Literals (C++11): Binary and Hex
+
+```cpp
 constexpr uint64_t operator"" _binary(const char* str) {
     uint64_t result = 0;
     while (*str) {
@@ -613,7 +639,6 @@ constexpr uint64_t operator"" _binary(const char* str) {
     return result;
 }
 
-// Hexadecimal with type safety
 template<typename T>
 struct HexValue {
     T value;
@@ -628,10 +653,14 @@ HexValue<uint32_t> operator"" _hex32(const char* str, size_t) {
 HexValue<uint64_t> operator"" _hex64(const char* str, size_t) {
     return HexValue<uint64_t>(std::stoull(str, nullptr, 16));
 }
+```
 
-// Usage examples
+---
+
+## Custom Literals (C++11): Usage
+
+```cpp
 void demonstrateCustomLiterals() {
-    // Memory sizes
     auto fileSize = 500_MB;
     auto cacheSize = 64_KB;
     auto maxMemory = 4_GB;
@@ -640,18 +669,15 @@ void demonstrateCustomLiterals() {
     std::cout << "Cache size: " << cacheSize << " bytes" << std::endl;
     std::cout << "Max memory: " << maxMemory << " bytes" << std::endl;
 
-    // Time durations
     auto timeout = 30_s;
     auto interval = 100_ms;
 
     std::cout << "Timeout: " << timeout.count() << " seconds" << std::endl;
     std::cout << "Interval: " << interval.count() << " milliseconds" << std::endl;
 
-    // Binary values
     auto flags = "10110101"_binary;
     std::cout << "Binary flags: " << std::hex << flags << std::dec << std::endl;
 
-    // Hexadecimal values
     uint32_t address = "DEADBEEF"_hex32;
     uint64_t bigValue = "123456789ABCDEF0"_hex64;
 
@@ -662,30 +688,32 @@ void demonstrateCustomLiterals() {
 
 ---
 
-## Template Parameter Deduction
+## Template Parameter Deduction: Function Templates
 
 Understanding how templates deduce types automatically:
 
 ```cpp
-// Function template with type deduction
 template<typename T>
 T maximum(T a, T b) {
     return (a > b) ? a : b;
 }
 
-// Template with multiple parameters
 template<typename T, typename U>
 auto add(T a, U b) -> decltype(a + b) {
     return a + b;
 }
 
-// C++14 auto return type deduction
 template<typename T, typename U>
 auto multiply(T a, U b) {
     return a * b;
 }
+```
 
-// Template with non-type parameters
+---
+
+## Template Parameter Deduction: FixedArray
+
+```cpp
 template<typename T, size_t N>
 class FixedArray {
 private:
@@ -710,34 +738,34 @@ public:
 
     constexpr size_t size() const { return N; }
 
-    // Iterator support
     T* begin() { return data; }
     T* end() { return data + N; }
     const T* begin() const { return data; }
     const T* end() const { return data + N; }
 };
 
-// Template argument deduction guides (C++17)
 template<typename T, typename... Args>
 FixedArray(T, Args...) -> FixedArray<T, 1 + sizeof...(Args)>;
+```
 
+---
+
+## Template Parameter Deduction: Usage
+
+```cpp
 void demonstrateDeduction() {
-    // Type deduction in action
-    auto result1 = maximum(5, 10);        // T deduced as int
-    auto result2 = maximum(3.14, 2.71);   // T deduced as double
+    auto result1 = maximum(5, 10);
+    auto result2 = maximum(3.14, 2.71);
 
-    // Mixed type operations
-    auto result3 = add(5, 3.14);          // int + double = double
-    auto result4 = multiply(2, 3.5f);     // int * float = float
+    auto result3 = add(5, 3.14);
+    auto result4 = multiply(2, 3.5f);
 
-    // Array with deduced size
     FixedArray<int, 5> array1;
     array1[0] = 10;
     array1[4] = 50;
 
-    // C++17 deduction guide (if available)
 #if __cpp_deduction_guides >= 201606
-    FixedArray array2{1, 2, 3, 4, 5};  // Deduced as FixedArray<int, 5>
+    FixedArray array2{1, 2, 3, 4, 5};
 #endif
 
     std::cout << "Maximum of 5 and 10: " << result1 << std::endl;
@@ -749,22 +777,19 @@ void demonstrateDeduction() {
 
 ---
 
-## Template Functions with Non-Argument Type Parameters
+## Template Non-Argument Params: Safe Cast
 
 Templates with explicit type parameters:
 
 ```cpp
-// Template with explicit type parameter
 template<typename ReturnType, typename InputType>
 ReturnType safe_cast(InputType value) {
     if constexpr (std::is_integral_v<InputType> && std::is_integral_v<ReturnType>) {
-        // Integer to integer conversion
         if (value < std::numeric_limits<ReturnType>::min() ||
             value > std::numeric_limits<ReturnType>::max()) {
             throw std::out_of_range("Value out of range for target type");
         }
     } else if constexpr (std::is_floating_point_v<InputType> && std::is_integral_v<ReturnType>) {
-        // Float to integer conversion
         if (std::isnan(value) || std::isinf(value)) {
             throw std::invalid_argument("Cannot convert NaN or infinity to integer");
         }
@@ -776,8 +801,13 @@ ReturnType safe_cast(InputType value) {
 
     return static_cast<ReturnType>(value);
 }
+```
 
-// Template with size parameter
+---
+
+## Template Non-Argument Params: Integer Selector
+
+```cpp
 template<size_t BitWidth>
 struct IntegerSelector {
     using type = std::conditional_t<
@@ -795,7 +825,6 @@ struct IntegerSelector {
 template<size_t BitWidth>
 using integer_t = typename IntegerSelector<BitWidth>::type;
 
-// Template function using size parameter
 template<size_t Bits>
 integer_t<Bits> createMask() {
     static_assert(Bits <= 64, "Cannot create mask with more than 64 bits");
@@ -805,8 +834,13 @@ integer_t<Bits> createMask() {
         return (integer_t<Bits>(1) << Bits) - 1;
     }
 }
+```
 
-// Template with value parameter
+---
+
+## Template Non-Argument Params: Power
+
+```cpp
 template<int Base>
 constexpr long long power(int exponent) {
     static_assert(Base != 0, "Base cannot be zero");
@@ -823,41 +857,39 @@ constexpr long long power(int exponent) {
 
     return (exponent < 0) ? 1 / result : result;
 }
+```
 
+---
+
+## Template Non-Argument Params: Usage
+
+```cpp
 void demonstrateNonArgumentParameters() {
-    // Safe casting with explicit types
     try {
-        auto result1 = safe_cast<int16_t>(42);        // int to int16_t
-        auto result2 = safe_cast<uint8_t>(255);       // int to uint8_t
-        auto result3 = safe_cast<int>(3.14);          // double to int
+        auto result1 = safe_cast<int16_t>(42);
+        auto result2 = safe_cast<uint8_t>(255);
+        auto result3 = safe_cast<int>(3.14);
 
         std::cout << "Safe cast results: " << result1 << ", "
                   << static_cast<int>(result2) << ", " << result3 << std::endl;
-
-        // This would throw an exception
-        // auto bad_cast = safe_cast<uint8_t>(1000);
-
     } catch (const std::exception& e) {
         std::cout << "Conversion error: " << e.what() << std::endl;
     }
 
-    // Using bit-width selector
-    integer_t<12> small_int = 100;   // Becomes uint16_t
-    integer_t<24> medium_int = 1000; // Becomes uint32_t
-    integer_t<48> large_int = 10000; // Becomes uint64_t
+    integer_t<12> small_int = 100;
+    integer_t<24> medium_int = 1000;
+    integer_t<48> large_int = 10000;
 
-    // Creating masks
-    auto mask8 = createMask<8>();    // 0xFF
-    auto mask16 = createMask<16>();  // 0xFFFF
-    auto mask32 = createMask<32>();  // 0xFFFFFFFF
+    auto mask8 = createMask<8>();
+    auto mask16 = createMask<16>();
+    auto mask32 = createMask<32>();
 
     std::cout << "8-bit mask: 0x" << std::hex << static_cast<int>(mask8) << std::dec << std::endl;
     std::cout << "16-bit mask: 0x" << std::hex << mask16 << std::dec << std::endl;
     std::cout << "32-bit mask: 0x" << std::hex << mask32 << std::dec << std::endl;
 
-    // Compile-time power calculations
-    constexpr auto power2_10 = power<2>(10);  // 1024
-    constexpr auto power10_3 = power<10>(3);  // 1000
+    constexpr auto power2_10 = power<2>(10);
+    constexpr auto power10_3 = power<10>(3);
 
     std::cout << "2^10 = " << power2_10 << std::endl;
     std::cout << "10^3 = " << power10_3 << std::endl;
@@ -866,7 +898,7 @@ void demonstrateNonArgumentParameters() {
 
 ---
 
-## Template Function Overloading
+## Template Function Overloading: SFINAE
 
 Overloading template functions with different constraints:
 
@@ -875,13 +907,11 @@ Overloading template functions with different constraints:
 #include <iostream>
 #include <string>
 
-// Primary template for general types
 template<typename T>
 void process(T value) {
     std::cout << "Processing general type: " << value << std::endl;
 }
 
-// Specialization for integral types
 template<typename T>
 typename std::enable_if_t<std::is_integral_v<T>>
 process(T value) {
@@ -889,15 +919,19 @@ process(T value) {
               << " (bits: " << sizeof(T) * 8 << ")" << std::endl;
 }
 
-// Specialization for floating point types
 template<typename T>
 typename std::enable_if_t<std::is_floating_point_v<T>>
 process(T value) {
     std::cout << "Processing floating point: " << std::fixed << value
               << " (precision: " << (sizeof(T) == 4 ? "single" : "double") << ")" << std::endl;
 }
+```
 
-// C++17 constexpr if version (cleaner)
+---
+
+## Template Function Overloading: constexpr if
+
+```cpp
 template<typename T>
 void process_modern(T value) {
     if constexpr (std::is_integral_v<T>) {
@@ -910,8 +944,13 @@ void process_modern(T value) {
         std::cout << "Processing other type: " << value << std::endl;
     }
 }
+```
 
-// Function overloading with different parameter counts
+---
+
+## Template Function Overloading: Variadic
+
+```cpp
 template<typename T>
 T safe_add(T a) {
     return a;
@@ -919,7 +958,6 @@ T safe_add(T a) {
 
 template<typename T>
 T safe_add(T a, T b) {
-    // Check for overflow
     if constexpr (std::is_integral_v<T> && std::is_signed_v<T>) {
         if (a > 0 && b > std::numeric_limits<T>::max() - a) {
             throw std::overflow_error("Addition overflow");
@@ -935,35 +973,44 @@ template<typename T, typename... Args>
 T safe_add(T first, Args... rest) {
     return safe_add(first, safe_add(rest...));
 }
+```
 
-// SFINAE-based overloading
+---
+
+## Template Function Overloading: Size Helpers
+
+```cpp
 template<typename Container>
 auto size_helper(const Container& c, int) -> decltype(c.size()) {
-    return c.size();  // Use member function if available
+    return c.size();
 }
 
 template<typename Container>
 auto size_helper(const Container& c, long) -> decltype(std::distance(std::begin(c), std::end(c))) {
-    return std::distance(std::begin(c), std::end(c));  // Fallback to iterator distance
+    return std::distance(std::begin(c), std::end(c));
 }
 
 template<typename Container>
 auto get_size(const Container& c) {
-    return size_helper(c, 0);  // int preferred over long
+    return size_helper(c, 0);
 }
+```
 
+---
+
+## Template Function Overloading: Demo
+
+```cpp
 void demonstrateTemplateOverloading() {
-    // Type-based overloading
-    process(42);        // Integer version
-    process(3.14);      // Floating point version
-    process("hello");   // General version
+    process(42);
+    process(3.14);
+    process("hello");
 
     std::cout << "\nModern version:" << std::endl;
     process_modern(42);
     process_modern(3.14f);
     process_modern(std::string("hello"));
 
-    // Variadic template overloading
     try {
         auto result1 = safe_add(5);
         auto result2 = safe_add(10, 20);
@@ -975,7 +1022,6 @@ void demonstrateTemplateOverloading() {
         std::cout << "Error: " << e.what() << std::endl;
     }
 
-    // SFINAE-based size detection
     std::vector<int> vec{1, 2, 3, 4, 5};
     int array[] = {1, 2, 3};
 
@@ -986,12 +1032,11 @@ void demonstrateTemplateOverloading() {
 
 ---
 
-## Template Specialization
+## Template Specialization: Primary StaticArray
 
 Full and partial template specialization:
 
 ```cpp
-// Primary template
 template<typename T, size_t N>
 class StaticArray {
 private:
@@ -1019,12 +1064,17 @@ public:
         std::cout << std::endl;
     }
 };
+```
 
-// Full specialization for bool
+---
+
+## Template Specialization: bool BitReference
+
+```cpp
 template<size_t N>
 class StaticArray<bool, N> {
 private:
-    uint8_t data[(N + 7) / 8];  // Pack bits
+    uint8_t data[(N + 7) / 8];
 
 public:
     StaticArray() { std::memset(data, 0, sizeof(data)); }
@@ -1050,7 +1100,13 @@ public:
             return (*byte & (1 << bit_pos)) != 0;
         }
     };
+```
 
+---
+
+## Template Specialization: bool Array Access
+
+```cpp
     BitReference operator[](size_t index) {
         return BitReference(&data[index / 8], index % 8);
     }
@@ -1074,8 +1130,13 @@ public:
         std::cout << std::endl;
     }
 };
+```
 
-// Partial specialization for pointers
+---
+
+## Template Specialization: Pointer Partial
+
+```cpp
 template<typename T, size_t N>
 class StaticArray<T*, N> {
 private:
@@ -1109,8 +1170,13 @@ public:
         std::cout << std::endl;
     }
 };
+```
 
-// Template specialization for specific size
+---
+
+## Template Specialization: Size 1
+
+```cpp
 template<typename T>
 class StaticArray<T, 1> {
 private:
@@ -1134,7 +1200,6 @@ public:
 
     void fill(const T& val) { value = val; }
 
-    // Additional operations for single-element arrays
     operator T&() { return value; }
     operator const T&() const { return value; }
 
@@ -1142,15 +1207,19 @@ public:
         std::cout << "StaticArray<" << typeid(T).name() << ", 1>: " << value << std::endl;
     }
 };
+```
 
+---
+
+## Template Specialization: Demo
+
+```cpp
 void demonstrateSpecialization() {
-    // Regular array
     StaticArray<int, 5> intArray;
     intArray.fill(42);
     intArray[2] = 100;
     intArray.print();
 
-    // Bool specialization (bit-packed)
     StaticArray<bool, 10> boolArray;
     boolArray.fill(false);
     boolArray[0] = true;
@@ -1158,7 +1227,6 @@ void demonstrateSpecialization() {
     boolArray[7] = true;
     boolArray.print();
 
-    // Pointer specialization
     StaticArray<int*, 3> ptrArray;
     int x = 10, y = 20;
     ptrArray[0] = &x;
@@ -1166,9 +1234,8 @@ void demonstrateSpecialization() {
     std::cout << "Non-null pointers: " << ptrArray.count_non_null() << std::endl;
     ptrArray.print();
 
-    // Single-element specialization
     StaticArray<double, 1> singleArray(3.14159);
-    double value = singleArray;  // Implicit conversion
+    double value = singleArray;
     std::cout << "Single value: " << value << std::endl;
     singleArray.print();
 }
@@ -1176,27 +1243,23 @@ void demonstrateSpecialization() {
 
 ---
 
-## Template Instantiation and Linkage
+## Template Instantiation: Calculator and power
 
 Understanding template instantiation and ODR issues:
 
 ```cpp
-// Template declaration in header
 template<typename T>
 class Calculator {
 public:
     T add(T a, T b) { return a + b; }
     T multiply(T a, T b) { return a * b; }
 
-    // Inline function - defined in header
     T subtract(T a, T b) { return a - b; }
 };
 
-// Explicit template instantiation declaration
 extern template class Calculator<int>;
 extern template class Calculator<double>;
 
-// Function template
 template<typename T>
 T power(T base, int exponent) {
     T result = T(1);
@@ -1206,11 +1269,15 @@ T power(T base, int exponent) {
     return result;
 }
 
-// Explicit instantiation declaration
 extern template int power<int>(int, int);
 extern template double power<double>(double, int);
+```
 
-// Template with static member
+---
+
+## Template Instantiation: Counter
+
+```cpp
 template<typename T>
 class Counter {
 private:
@@ -1223,28 +1290,22 @@ public:
     static int getCount() { return count; }
 };
 
-// Static member definition template
 template<typename T>
 int Counter<T>::count = 0;
 
-// Explicit instantiation of static member
 template int Counter<int>::count;
 template int Counter<double>::count;
 
-// Template linkage demonstration
 void demonstrateInstantiation() {
-    // These will use the explicitly instantiated versions
     Calculator<int> intCalc;
     Calculator<double> doubleCalc;
 
     auto result1 = intCalc.add(5, 3);
     auto result2 = doubleCalc.multiply(2.5, 4.0);
 
-    // Function template usage
-    auto result3 = power(2, 10);      // Uses explicit instantiation
-    auto result4 = power(1.5, 3);     // Uses explicit instantiation
+    auto result3 = power(2, 10);
+    auto result4 = power(1.5, 3);
 
-    // Counter usage
     Counter<int> c1, c2, c3;
     Counter<double> d1, d2;
 
@@ -1254,8 +1315,13 @@ void demonstrateInstantiation() {
     std::cout << "Int counters: " << Counter<int>::getCount() << std::endl;
     std::cout << "Double counters: " << Counter<double>::getCount() << std::endl;
 }
+```
 
-// Template with friend function
+---
+
+## Template Instantiation: Point with Friends
+
+```cpp
 template<typename T>
 class Point {
 private:
@@ -1264,11 +1330,9 @@ private:
 public:
     Point(T x_val, T y_val) : x(x_val), y(y_val) {}
 
-    // Friend function template
     template<typename U>
     friend std::ostream& operator<<(std::ostream& os, const Point<U>& point);
 
-    // Non-template friend (one friend per instantiation)
     friend Point operator+(const Point& lhs, const Point& rhs) {
         return Point(lhs.x + rhs.x, lhs.y + rhs.y);
     }
@@ -1277,7 +1341,6 @@ public:
     T getY() const { return y; }
 };
 
-// Friend function definition
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const Point<T>& point) {
     return os << "(" << point.x << ", " << point.y << ")";
@@ -1286,7 +1349,7 @@ std::ostream& operator<<(std::ostream& os, const Point<T>& point) {
 void demonstrateTemplateFriends() {
     Point<int> p1(3, 4);
     Point<int> p2(1, 2);
-    Point<int> p3 = p1 + p2;  // Uses friend operator+
+    Point<int> p3 = p1 + p2;
 
     std::cout << "Point arithmetic: " << p1 << " + " << p2 << " = " << p3 << std::endl;
 }
@@ -1294,14 +1357,13 @@ void demonstrateTemplateFriends() {
 
 ---
 
-## Namespaces for Organization
+## Namespaces: math detail
 
 Using namespaces to organize template code:
 
 ```cpp
 namespace math {
     namespace detail {
-        // Internal implementation details
         template<typename T>
         constexpr bool is_power_of_two(T value) {
             return value > 0 && (value & (value - 1)) == 0;
@@ -1317,8 +1379,15 @@ namespace math {
             return a;
         }
     }
+}
+```
 
-    // Public interface
+---
+
+## Namespaces: math Fraction Structure
+
+```cpp
+namespace math {
     template<typename T>
     class Fraction {
     private:
@@ -1342,7 +1411,13 @@ namespace math {
             }
             simplify();
         }
+```
 
+---
+
+## Namespaces: math Fraction Operators
+
+```cpp
         Fraction operator+(const Fraction& other) const {
             return Fraction(numerator * other.denominator + other.numerator * denominator,
                            denominator * other.denominator);
@@ -1364,7 +1439,15 @@ namespace math {
         T getNumerator() const { return numerator; }
         T getDenominator() const { return denominator; }
     };
+}
+```
 
+---
+
+## Namespaces: math Helpers and Constants
+
+```cpp
+namespace math {
     template<typename T>
     T gcd(T a, T b) {
         return detail::gcd_impl(std::abs(a), std::abs(b));
@@ -1375,7 +1458,6 @@ namespace math {
         return (a * b) / gcd(a, b);
     }
 
-    // Constants namespace
     namespace constants {
         template<typename T>
         constexpr T pi = T(3.14159265358979323846);
@@ -1387,7 +1469,13 @@ namespace math {
         constexpr T sqrt2 = T(1.41421356237309504880);
     }
 }
+```
 
+---
+
+## Namespaces: CircularBuffer Operations
+
+```cpp
 namespace containers {
     template<typename T, size_t Capacity>
     class CircularBuffer {
@@ -1400,7 +1488,7 @@ namespace containers {
     public:
         bool push(const T& item) {
             if (count == Capacity) {
-                return false;  // Buffer full
+                return false;
             }
 
             buffer[tail] = item;
@@ -1411,7 +1499,7 @@ namespace containers {
 
         bool pop(T& item) {
             if (count == 0) {
-                return false;  // Buffer empty
+                return false;
             }
 
             item = buffer[head];
@@ -1425,8 +1513,15 @@ namespace containers {
         size_t size() const { return count; }
         constexpr size_t capacity() const { return Capacity; }
     };
+}
+```
 
-    // Alias for common buffer sizes
+---
+
+## Namespaces: Buffer Aliases
+
+```cpp
+namespace containers {
     template<typename T>
     using SmallBuffer = CircularBuffer<T, 16>;
 
@@ -1436,9 +1531,14 @@ namespace containers {
     template<typename T>
     using LargeBuffer = CircularBuffer<T, 4096>;
 }
+```
 
+---
+
+## Namespaces: Demo
+
+```cpp
 void demonstrateNamespaces() {
-    // Using math namespace
     math::Fraction<int> f1(1, 2);
     math::Fraction<int> f2(1, 3);
     auto f3 = f1 + f2;
@@ -1453,14 +1553,11 @@ void demonstrateNamespaces() {
     std::cout << "GCD(48, 18) = " << gcd_result << std::endl;
     std::cout << "LCM(48, 18) = " << lcm_result << std::endl;
 
-    // Using constants
     auto circle_area = math::constants::pi<double> * 5.0 * 5.0;
     std::cout << "Circle area (r=5): " << circle_area << std::endl;
 
-    // Using containers namespace
     containers::SmallBuffer<int> buffer;
 
-    // Fill buffer
     for (int i = 0; i < 20; ++i) {
         if (!buffer.push(i)) {
             std::cout << "Buffer full at item " << i << std::endl;
@@ -1468,7 +1565,6 @@ void demonstrateNamespaces() {
         }
     }
 
-    // Empty buffer
     int value;
     while (buffer.pop(value)) {
         std::cout << value << " ";
@@ -1479,90 +1575,99 @@ void demonstrateNamespaces() {
 
 ---
 
-## Namespace Aliases and Using Declarations
+## Namespace Aliases: OpenGL Classes
 
 Managing complex namespace hierarchies:
 
 ```cpp
-namespace company {
-    namespace graphics {
-        namespace rendering {
-            namespace opengl {
-                class Renderer {
-                public:
-                    void render() {
-                        std::cout << "OpenGL rendering" << std::endl;
-                    }
-
-                    void setViewport(int width, int height) {
-                        std::cout << "Setting viewport: " << width << "x" << height << std::endl;
-                    }
-                };
-
-                class Texture {
-                public:
-                    void bind() {
-                        std::cout << "Binding OpenGL texture" << std::endl;
-                    }
-                };
-            }
-
-            namespace vulkan {
-                class Renderer {
-                public:
-                    void render() {
-                        std::cout << "Vulkan rendering" << std::endl;
-                    }
-
-                    void setViewport(int width, int height) {
-                        std::cout << "Setting Vulkan viewport: " << width << "x" << height << std::endl;
-                    }
-                };
-
-                class Texture {
-                public:
-                    void bind() {
-                        std::cout << "Binding Vulkan texture" << std::endl;
-                    }
-                };
-            }
+namespace company::graphics::rendering::opengl {
+    class Renderer {
+    public:
+        void render() {
+            std::cout << "OpenGL rendering" << std::endl;
         }
 
-        namespace math {
-            template<typename T>
-            struct Vector3 {
-                T x, y, z;
-
-                Vector3(T x_val = T{}, T y_val = T{}, T z_val = T{})
-                    : x(x_val), y(y_val), z(z_val) {}
-
-                Vector3 operator+(const Vector3& other) const {
-                    return Vector3(x + other.x, y + other.y, z + other.z);
-                }
-
-                T dot(const Vector3& other) const {
-                    return x * other.x + y * other.y + z * other.z;
-                }
-            };
-
-            using Vector3f = Vector3<float>;
-            using Vector3d = Vector3<double>;
-            using Vector3i = Vector3<int>;
+        void setViewport(int width, int height) {
+            std::cout << "Setting viewport: " << width << "x" << height << std::endl;
         }
-    }
+    };
+
+    class Texture {
+    public:
+        void bind() {
+            std::cout << "Binding OpenGL texture" << std::endl;
+        }
+    };
 }
+```
 
+---
+
+## Namespace Aliases: Vulkan Classes
+
+```cpp
+namespace company::graphics::rendering::vulkan {
+    class Renderer {
+    public:
+        void render() {
+            std::cout << "Vulkan rendering" << std::endl;
+        }
+
+        void setViewport(int width, int height) {
+            std::cout << "Setting Vulkan viewport: " << width << "x" << height << std::endl;
+        }
+    };
+
+    class Texture {
+    public:
+        void bind() {
+            std::cout << "Binding Vulkan texture" << std::endl;
+        }
+    };
+}
+```
+
+---
+
+## Namespace Aliases: Math Vector3
+
+```cpp
+namespace company::graphics::math {
+    template<typename T>
+    struct Vector3 {
+        T x, y, z;
+
+        Vector3(T x_val = T{}, T y_val = T{}, T z_val = T{})
+            : x(x_val), y(y_val), z(z_val) {}
+
+        Vector3 operator+(const Vector3& other) const {
+            return Vector3(x + other.x, y + other.y, z + other.z);
+        }
+
+        T dot(const Vector3& other) const {
+            return x * other.x + y * other.y + z * other.z;
+        }
+    };
+
+    using Vector3f = Vector3<float>;
+    using Vector3d = Vector3<double>;
+    using Vector3i = Vector3<int>;
+}
+```
+
+---
+
+## Namespace Aliases: Usage
+
+```cpp
 void demonstrateNamespaceAliases() {
-    // Namespace aliases for convenience
     namespace gl = company::graphics::rendering::opengl;
     namespace vk = company::graphics::rendering::vulkan;
     namespace gmath = company::graphics::math;
 
-    // Using specific types
     using OpenGLRenderer = company::graphics::rendering::opengl::Renderer;
     using Vec3f = company::graphics::math::Vector3f;
 
-    // Usage with aliases
     gl::Renderer glRenderer;
     gl::Texture glTexture;
 
@@ -1577,7 +1682,6 @@ void demonstrateNamespaceAliases() {
     vkRenderer.setViewport(1920, 1080);
     vkTexture.bind();
 
-    // Math operations
     Vec3f v1(1.0f, 2.0f, 3.0f);
     Vec3f v2(4.0f, 5.0f, 6.0f);
     auto v3 = v1 + v2;
@@ -1586,8 +1690,13 @@ void demonstrateNamespaceAliases() {
     std::cout << "Vector sum: (" << v3.x << ", " << v3.y << ", " << v3.z << ")" << std::endl;
     std::cout << "Dot product: " << dot_product << std::endl;
 }
+```
 
-// ADL (Argument-Dependent Lookup) demonstration
+---
+
+## Namespace Aliases: ADL SmartPointer
+
+```cpp
 namespace custom {
     template<typename T>
     class SmartPointer {
@@ -1619,12 +1728,18 @@ namespace custom {
         T* operator->() const { return ptr; }
         explicit operator bool() const { return ptr != nullptr; }
     };
+}
+```
 
-    // Free function in same namespace (ADL will find this)
+---
+
+## Namespace Aliases: ADL Usage
+
+```cpp
+namespace custom {
     template<typename T>
     void swap(SmartPointer<T>& a, SmartPointer<T>& b) {
         std::cout << "Using custom swap for SmartPointer" << std::endl;
-        // Implement efficient swap
         T* temp = a.ptr;
         a.ptr = b.ptr;
         b.ptr = temp;
@@ -1642,8 +1757,7 @@ void demonstrateADL() {
 
     std::cout << "Before swap: " << *ptr1 << ", " << *ptr2 << std::endl;
 
-    // ADL finds custom::swap due to argument types
-    swap(ptr1, ptr2);  // No need for custom:: prefix
+    swap(ptr1, ptr2);
 
     std::cout << "After swap: " << *ptr1 << ", " << *ptr2 << std::endl;
 }

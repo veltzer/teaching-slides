@@ -272,6 +272,15 @@ int main(void) {
         abort(); \
     } \
 } while (0)
+```
+
+---
+
+## Debug Macros: Safe Malloc and Usage
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Safe malloc */
 #define SAFE_MALLOC(ptr, size) do { \

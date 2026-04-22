@@ -363,7 +363,13 @@ spark = SparkSession.builder \
             "/opt/spark/conf/executor-pod-template.yaml") \
     .config("spark.kubernetes.node.selector.workload", "spark") \
     .getOrCreate()
+```
 
+---
+
+## Kubernetes: Executor Pod Template
+
+```python
 # Pod template for executor customization
 # executor-pod-template.yaml:
 # apiVersion: v1
@@ -432,7 +438,13 @@ spark.conf.set("spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version",
 spark.conf.set("spark.sql.parquet.output.committer.class",
     "org.apache.spark.internal.io.cloud.BindingParquetOutputCommitter")
 spark.conf.set("spark.hadoop.fs.s3a.committer.name", "magic")
+```
 
+---
+
+## AWS EMR with S3: Processing and Write
+
+```python
 # Process and write partitioned data
 processed = (
     raw_events
@@ -503,7 +515,13 @@ updates = spark.createDataFrame([
     (3, "Charlie", "charlie@example.com", "inactive", "2024-06-15"),
     (4, "Diana", "diana@example.com", "active", "2024-06-15"),
 ], ["id", "name", "email", "status", "updated_at"])
+```
 
+---
+
+## Delta Lake MERGE: Upsert Operation
+
+```python
 # MERGE operation (upsert)
 delta_table = DeltaTable.forPath(spark, "/data/delta/customers/")
 
@@ -527,7 +545,13 @@ delta_table.alias("target").merge(
         "updated_at": "source.updated_at",
     }
 ).execute()
+```
 
+---
+
+## Delta Lake: Verify and Time Travel
+
+```python
 # Verify results
 spark.read.format("delta").load("/data/delta/customers/").show()
 
@@ -588,7 +612,13 @@ runs = mlflow.search_runs(
     order_by=["metrics.rmse ASC"],
     max_results=1
 )
+```
 
+---
+
+## MLflow: Register and Promote to Staging
+
+```python
 if len(runs) > 0:
     best_run_id = runs.iloc[0]["run_id"]
 
@@ -611,7 +641,13 @@ if len(runs) > 0:
     )
     test_data = spark.read.parquet("/data/test/revenue/")
     predictions = staging_model.transform(test_data)
+```
 
+---
+
+## MLflow: Validate and Promote to Production
+
+```python
     # If validation passes, promote to Production
     from pyspark.ml.evaluation import RegressionEvaluator
     evaluator = RegressionEvaluator(
@@ -651,7 +687,13 @@ spark = SparkSession.builder \
     .config("spark.eventLog.enabled", "true") \
     .config("spark.eventLog.dir", "hdfs:///spark-events/") \
     .getOrCreate()
+```
 
+---
+
+## Application Monitoring: Executor Metrics
+
+```python
 # Custom Spark listener for job-level monitoring
 class JobMonitor:
     def __init__(self, spark):
@@ -671,7 +713,14 @@ class JobMonitor:
                 "active_tasks": len(info.activeTasks()),
             })
         return metrics
+```
 
+---
+
+## Application Monitoring: Job Wrapper
+
+```python
+class JobMonitor:
     def log_query_plan(self, df, query_name):
         """Log the physical plan for a DataFrame."""
         plan = df._jdf.queryExecution().executedPlan().toString()
@@ -743,7 +792,13 @@ my_spark_project/
 │   └── prod.yaml
 └── Dockerfile
 """
+```
 
+---
+
+## Production Structure: Base Job Class
+
+```python
 # Example base job class
 from abc import ABC, abstractmethod
 from pyspark.sql import SparkSession
@@ -763,7 +818,14 @@ class BaseSparkJob(ABC):
         import yaml
         with open(path) as f:
             return yaml.safe_load(f)
+```
 
+---
+
+## Production Structure: Abstract ETL Methods
+
+```python
+class BaseSparkJob(ABC):
     @abstractmethod
     def extract(self):
         pass

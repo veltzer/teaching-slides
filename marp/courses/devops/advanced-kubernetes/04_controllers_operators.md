@@ -307,7 +307,13 @@ type PostgreSQLStatus struct {
     // Human-readable conditions
     Conditions []metav1.Condition `json:"conditions,omitempty"`
 }
+```
 
+---
+
+## `CRD` Types: Root Object
+
+```go
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 //+kubebuilder:printcolumn:name="Version",type=string,JSONPath=`.spec.version`

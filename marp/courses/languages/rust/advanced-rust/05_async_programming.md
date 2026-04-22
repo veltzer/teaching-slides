@@ -138,7 +138,13 @@ impl Future for TimerFuture {
         }
     }
 }
+```
 
+---
+
+## Timer Future: Constructor
+
+```rust
 impl TimerFuture {
     fn new(duration: Duration) -> Self {
         let shared = Arc::new(Mutex::new(SharedState {

@@ -236,39 +236,47 @@ def optimized_bulk_index(documents, es_client):
     )
 
     try:
-        # Process in optimal batches
-        batch_size = 1000  # documents
-        batch_bytes = 0
-        batch = []
-
-        for doc in documents:
-            doc_bytes = len(json.dumps(doc))
-
-            # Check size limits
-            if (len(batch) >= batch_size or
-                batch_bytes + doc_bytes > 5_000_000):
-
-                # Send batch
-                helpers.bulk(es_client, batch)
-                batch = []
-                batch_bytes = 0
-
-            batch.append({
-                "_index": "products",
-                "_source": doc
-            })
-            batch_bytes += doc_bytes
-
-        # Send remaining
-        if batch:
-            helpers.bulk(es_client, batch)
-
+        run_batches(documents, es_client)
     finally:
         # Re-enable refresh
         es_client.indices.put_settings(
             index="products",
             body={"refresh_interval": "1s"}
         )
+```
+
+---
+
+## Bulk Indexing: Batch Processing
+
+```python
+def run_batches(documents, es_client):
+    """Process in optimal batches"""
+    batch_size = 1000  # documents
+    batch_bytes = 0
+    batch = []
+
+    for doc in documents:
+        doc_bytes = len(json.dumps(doc))
+
+        # Check size limits
+        if (len(batch) >= batch_size or
+            batch_bytes + doc_bytes > 5_000_000):
+
+            # Send batch
+            helpers.bulk(es_client, batch)
+            batch = []
+            batch_bytes = 0
+
+        batch.append({
+            "_index": "products",
+            "_source": doc
+        })
+        batch_bytes += doc_bytes
+
+    # Send remaining
+    if batch:
+        helpers.bulk(es_client, batch)
 ```
 
 ---
@@ -467,7 +475,14 @@ class SecurityBestPractices:
         )
 
         return es
+```
 
+---
+
+## Security: Field-Level Security
+
+```python
+class SecurityBestPractices:
     def implement_field_level_security(self):
         """Example of field-level security"""
 
@@ -928,6 +943,14 @@ class DisasterRecovery:
             }
         )
 
+```
+
+---
+
+## Disaster Recovery: Snapshot Policy
+
+```python
+class DisasterRecovery:
     def create_snapshot_policy(self):
         """Automated snapshot policy"""
 

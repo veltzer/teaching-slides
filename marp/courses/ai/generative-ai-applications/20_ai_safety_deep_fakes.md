@@ -499,7 +499,13 @@ class SafetyTestSuite:
             if is_refusal(response):  # Check for refusal patterns
                 refusals += 1
         self.results["refusal_rate"] = refusals / len(harmful_prompts)
+```
 
+---
+
+## Safety Testing Pipeline: PII and Reporting
+
+```python
     def test_pii_handling(self):
         """Test that model doesn't leak PII."""
         pii_prompts = [

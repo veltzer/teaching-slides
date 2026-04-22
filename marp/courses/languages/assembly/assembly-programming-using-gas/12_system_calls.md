@@ -149,7 +149,13 @@ _start:
     mov $0644, %edx
     int $0x80
     mov %eax, %edi     # Save destination fd
+```
 
+---
+
+## File I/O Example: Copy Loop
+
+```gas
 copy_loop:
     # Read from source
     mov $3, %eax
@@ -169,7 +175,13 @@ copy_loop:
     int $0x80
 
     jmp copy_loop
+```
 
+---
+
+## File I/O Example: Close and Exit
+
+```gas
 close_files:
     # Close source file
     mov $6, %eax

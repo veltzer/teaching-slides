@@ -12,6 +12,10 @@ Key benefits:
 1. **Design quality** - promote loose coupling and high cohesion
 1. **Code reusability** - abstract solutions applicable to many contexts
 
+---
+
+## Design Patterns: Strategy Base and Bubble Sort
+
 ```cpp
 // Pattern provides structure, not just code
 class SortStrategy {
@@ -37,7 +41,13 @@ public:
 
     std::string getName() const override { return "Bubble Sort"; }
 };
+```
 
+---
+
+## Design Patterns: Quick Sort Strategy
+
+```cpp
 class QuickSort : public SortStrategy {
 public:
     void sort(std::vector<int>& data) override {
@@ -69,7 +79,13 @@ private:
         return i + 1;
     }
 };
+```
 
+---
+
+## Design Patterns: Strategy Context
+
+```cpp
 class SortContext {
 private:
     std::unique_ptr<SortStrategy> strategy;
@@ -126,7 +142,13 @@ public:
         std::cout << "MySQL executing: " << query << std::endl;
     }
 };
+```
 
+---
+
+## Factory Pattern: PostgreSQL and SQLite
+
+```cpp
 class PostgreSQLDatabase : public Database {
 public:
     void connect(const std::string& connectionString) override {
@@ -215,8 +237,13 @@ public:
     virtual void render() = 0;
     virtual void onTextChange() = 0;
 };
+```
 
-// Concrete products for Windows
+---
+
+## Abstract Factory: Windows Products
+
+```cpp
 class WindowsButton : public Button {
 public:
     void render() override {
@@ -238,8 +265,13 @@ public:
         std::cout << "Windows text field changed" << std::endl;
     }
 };
+```
 
-// Concrete products for macOS
+---
+
+## Abstract Factory: macOS Products
+
+```cpp
 class MacButton : public Button {
 public:
     void render() override {
@@ -298,8 +330,13 @@ public:
         return std::make_unique<MacTextField>();
     }
 };
+```
 
-// Client code
+---
+
+## Abstract Factory: Client Code
+
+```cpp
 class Application {
 private:
     std::unique_ptr<GUIFactory> factory;
@@ -340,7 +377,13 @@ public:
                   << ", RAM=" << ram << ", Storage=" << storage << std::endl;
     }
 };
+```
 
+---
+
+## Builder Pattern: Computer Builder
+
+```cpp
 class ComputerBuilder {
 private:
     std::unique_ptr<Computer> computer = std::make_unique<Computer>();
@@ -410,7 +453,13 @@ public:
 
     void setData(const std::string& d) { data = d; }
 };
+```
 
+---
+
+## Prototype Pattern: Manager
+
+```cpp
 class PrototypeManager {
 private:
     std::map<std::string, std::unique_ptr<Prototype>> prototypes;
@@ -466,8 +515,14 @@ public:
 // Static member definitions
 std::unique_ptr<Singleton> Singleton::instance = nullptr;
 std::once_flag Singleton::init_flag;
+```
 
-// Modern C++11 thread-safe singleton (Meyer's Singleton)
+---
+
+## Singleton Pattern: Meyer's (Modern C++11)
+
+```cpp
+// Thread-safe since C++11
 class ModernSingleton {
 private:
     ModernSingleton() {
@@ -521,7 +576,13 @@ public:
         logger.log("Work performed");
     }
 };
+```
 
+---
+
+## Alternatives to Singleton: Managed Global
+
+```cpp
 // 2. Static/Global instance management
 class ResourceManager {
 private:
@@ -650,7 +711,7 @@ public:
 
 ---
 
-## Bridge Abstraction
+## Bridge Abstraction: Shape and Circle
 
 ```cpp
 // Abstraction
@@ -682,7 +743,13 @@ public:
         radius *= factor;
     }
 };
+```
 
+---
+
+## Bridge Abstraction: Line
+
+```cpp
 class Line : public Shape {
 private:
     double x1, y1, x2, y2;
@@ -835,7 +902,13 @@ protected:
 public:
     CoffeeDecorator(std::unique_ptr<Coffee> c) : coffee(std::move(c)) {}
 };
+```
 
+---
+
+## Decorator Pattern: Concrete Decorators
+
+```cpp
 class MilkDecorator : public CoffeeDecorator {
 public:
     MilkDecorator(std::unique_ptr<Coffee> c) : CoffeeDecorator(std::move(c)) {}
@@ -887,7 +960,13 @@ public:
         return "boot_data";
     }
 };
+```
 
+---
+
+## Facade Pattern: Computer Facade
+
+```cpp
 // Facade provides simple interface
 class ComputerFacade {
 private:
@@ -1114,7 +1193,13 @@ public:
 
     const std::string& getState() const { return state; }
 };
+```
 
+---
+
+## Observer Pattern: Concrete Observer
+
+```cpp
 class ConcreteObserver : public Observer {
 private:
     std::string name;
@@ -1164,8 +1249,13 @@ public:
         notify();
     }
 };
+```
 
-// Usage with lambdas
+---
+
+## Modern Observer: Lambda Usage
+
+```cpp
 void demonstrateModernObserver() {
     ModernSubject subject;
 
@@ -1201,7 +1291,6 @@ class BubbleSort : public SortStrategy {
 public:
     void sort(std::vector<int>& data) override {
         std::cout << "Performing bubble sort" << std::endl;
-        // Bubble sort implementation
         for (size_t i = 0; i < data.size(); ++i) {
             for (size_t j = 0; j < data.size() - 1 - i; ++j) {
                 if (data[j] > data[j + 1]) {
@@ -1213,7 +1302,13 @@ public:
 
     std::string getName() const override { return "Bubble Sort"; }
 };
+```
 
+---
+
+## Strategy Pattern: Quick Sort
+
+```cpp
 class QuickSort : public SortStrategy {
 public:
     void sort(std::vector<int>& data) override {
@@ -1245,7 +1340,13 @@ private:
         return i + 1;
     }
 };
+```
 
+---
+
+## Strategy Pattern: Context
+
+```cpp
 class SortContext {
 private:
     std::unique_ptr<SortStrategy> strategy;
@@ -1295,7 +1396,13 @@ public:
 
     bool getState() const { return isOn; }
 };
+```
 
+---
+
+## Command Pattern: Concrete Commands
+
+```cpp
 class LightOnCommand : public Command {
 private:
     Light& light;
@@ -1366,8 +1473,14 @@ public:
         }
     }
 };
+```
 
-// Macro command - composite pattern with commands
+---
+
+## Command Pattern: Macro Command
+
+```cpp
+// Composite pattern with commands
 class MacroCommand : public Command {
 private:
     std::vector<std::unique_ptr<Command>> commands;
@@ -1429,7 +1542,13 @@ protected:
         std::cout << "Default cleanup performed" << std::endl;
     }
 };
+```
 
+---
+
+## Template Method: CSV Processor
+
+```cpp
 class CSVProcessor : public DataProcessor {
 private:
     std::vector<std::string> data;
@@ -1497,7 +1616,13 @@ public:
 
     std::string getName() const override { return "State B"; }
 };
+```
 
+---
+
+## State Pattern: Context
+
+```cpp
 class Context {
 private:
     std::unique_ptr<State> state;
@@ -1547,7 +1672,13 @@ public:
         }
     }
 };
+```
 
+---
+
+## Chain of Responsibility: Concrete Handlers
+
+```cpp
 class ConcreteHandlerA : public Handler {
 public:
     void handleRequest(int request) override {
@@ -1609,7 +1740,13 @@ public:
     virtual ~Shape() = default;
     virtual void accept(ShapeVisitor& visitor) = 0;
 };
+```
 
+---
+
+## Visitor Pattern: Circle and Rectangle
+
+```cpp
 class Circle : public Shape {
 private:
     double radius;
@@ -1638,7 +1775,13 @@ public:
     double getWidth() const { return width; }
     double getHeight() const { return height; }
 };
+```
 
+---
+
+## Visitor Pattern: Triangle
+
+```cpp
 class Triangle : public Shape {
 private:
     double base, height;
@@ -1657,7 +1800,7 @@ public:
 
 ---
 
-## Visitor Implementations
+## Visitor Implementations: Area Calculator
 
 ```cpp
 class AreaCalculator : public ShapeVisitor {
@@ -1685,7 +1828,13 @@ public:
 
     double getTotalArea() const { return totalArea; }
 };
+```
 
+---
+
+## Visitor Implementations: Drawing Visitor and Usage
+
+```cpp
 class DrawingVisitor : public ShapeVisitor {
 public:
     void visit(Circle& circle) override {
@@ -1757,7 +1906,13 @@ public:
         return collection[position++];
     }
 };
+```
 
+---
+
+## Iterator Pattern: Collection
+
+```cpp
 template<typename T>
 class Collection {
 private:
@@ -1797,7 +1952,13 @@ public:
     Component(Mediator* m) : mediator(m) {}
     virtual ~Component() = default;
 };
+```
 
+---
+
+## Mediator Pattern: Components
+
+```cpp
 class Button : public Component {
 private:
     std::string name;
@@ -1827,7 +1988,13 @@ public:
 
     const std::string& getText() const { return text; }
 };
+```
 
+---
+
+## Mediator Pattern: Dialog
+
+```cpp
 class Dialog : public Mediator {
 private:
     std::unique_ptr<Button> submitButton;
@@ -1897,7 +2064,13 @@ public:
         std::cout << "Restored state to: " << state << std::endl;
     }
 };
+```
 
+---
+
+## Memento Pattern: Caretaker
+
+```cpp
 class Caretaker {
 private:
     std::vector<std::unique_ptr<Memento>> mementos;
@@ -1960,7 +2133,13 @@ public:
         // Do nothing - null object behavior
     }
 };
+```
 
+---
+
+## Null Object Pattern: Service Using Null Logger
+
+```cpp
 class Service {
 private:
     std::unique_ptr<Logger> logger;
@@ -2024,8 +2203,13 @@ void demonstrateModernStrategy() {
     std::vector<int> numbers = {3, 1, 4, 1, 5, 9, 2, 6};
     context.sort(numbers);
 }
+```
 
-// Template-based Factory
+---
+
+## Modern C++ Patterns: Template Factory
+
+```cpp
 template<typename Base, typename... Args>
 class GenericFactory {
 private:
@@ -2080,7 +2264,13 @@ public:
         throw std::invalid_argument("Unknown sort type");
     }
 };
+```
 
+---
+
+## Pattern Combinations: Undo/Redo Manager
+
+```cpp
 // Observer + Command for undo/redo system
 class UndoRedoManager : public Subject {
 private:
@@ -2099,7 +2289,13 @@ public:
 
         setState("Command executed");  // Notify observers
     }
+```
 
+---
+
+## Pattern Combinations: Undo and Redo Methods
+
+```cpp
     void undo() {
         if (!undoStack.empty()) {
             auto command = std::move(undoStack.top());
@@ -2120,7 +2316,13 @@ public:
         }
     }
 };
+```
 
+---
+
+## Pattern Combinations: Composite and Visitor
+
+```cpp
 // Composite + Visitor for complex hierarchies
 class DocumentElement : public Component {
 public:
@@ -2186,8 +2388,13 @@ public:
 
     void reset() { value.reset(); }
 };
+```
 
-// Usage
+---
+
+## Lazy Initialization: Usage
+
+```cpp
 class ExpensiveResource {
 public:
     ExpensiveResource() {
@@ -2231,7 +2438,13 @@ public:
         emailService.sendEmail(user, message);  // Tightly coupled
     }
 };
+```
 
+---
+
+## Dependency Inversion: Abstract Interface
+
+```cpp
 // Good: Both depend on abstraction
 class NotificationService {  // Abstraction
 public:
@@ -2331,7 +2544,13 @@ public:
         std::cout << "Paid $" << amount << " with credit card" << std::endl;
     }
 };
+```
 
+---
+
+## SOLID Principles: Liskov, Interface, Dependency
+
+```cpp
 // Liskov Substitution Principle - polymorphic substitution
 void processShapes(std::vector<std::unique_ptr<Shape>>& shapes) {
     for (auto& shape : shapes) {
@@ -2394,7 +2613,13 @@ public:
 void printHelloWorld() {
     std::cout << "Hello World" << std::endl;
 }
+```
 
+---
+
+## Anti-Patterns: God Object
+
+```cpp
 // Anti-pattern: God Object (violates SRP)
 class GodClass {
 public:
@@ -2411,7 +2636,13 @@ public:
 class FileReader { public: std::string read(const std::string& file); };
 class DataProcessor { public: std::string process(const std::string& data); };
 class DatabaseSaver { public: void save(const std::string& data); };
+```
 
+---
+
+## Anti-Patterns: Singleton Abuse
+
+```cpp
 // Anti-pattern: Singleton abuse
 class GlobalState : public Singleton<GlobalState> {
 public:
@@ -2466,7 +2697,13 @@ public:
         return true;
     }
 };
+```
 
+---
+
+## Testing with Patterns: Mocks and Test
+
+```cpp
 // Mock implementations for testing
 class MockPaymentProcessor : public PaymentProcessor {
 public:
@@ -2506,7 +2743,7 @@ void testOrderProcessing() {
 
 ## Pattern Evolution in Modern C++
 
-How C++11/14/17/20 features change pattern implementation:
+How C++11/14/17 features change pattern implementation:
 
 ```cpp
 // C++11: Move semantics and smart pointers
@@ -2536,7 +2773,13 @@ public:
         }, cmd);
     }
 };
+```
 
+---
+
+## Pattern Evolution: C++20 Concepts and Coroutines
+
+```cpp
 // C++20: Concepts for better template constraints
 template<typename T>
 concept Observable = requires(T t) {
@@ -2597,7 +2840,13 @@ public:
         // Use shared data with extrinsic state
     }
 };
+```
 
+---
+
+## Performance: Indirection and Selection
+
+```cpp
 // Smart pointer overhead
 class PerformanceCriticalClass {
 private:

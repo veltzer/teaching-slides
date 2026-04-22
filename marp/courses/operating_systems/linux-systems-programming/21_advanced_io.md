@@ -94,10 +94,9 @@ int try_lock(int fd, int type, off_t start, off_t len) {
 
 ---
 
-## Record Locking Example
+## Record Locking: Lock Helper
 
 ```c
-// Lock a specific record in a database file
 struct record {
     int id;
     char name[32];
@@ -120,21 +119,22 @@ int lock_record(int fd, int record_id, int lock_type) {
 
     return 0;
 }
+```
 
-// Read record with locking
+---
+
+## Record Locking: Read with Lock
+
+```c
 int read_record_locked(int fd, int record_id, struct record *rec) {
-    // Lock record for reading
     if (lock_record(fd, record_id, F_RDLCK) == -1) {
         return -1;
     }
 
-    // Seek to record position
     lseek(fd, record_id * sizeof(struct record), SEEK_SET);
 
-    // Read the record
     ssize_t bytes = read(fd, rec, sizeof(struct record));
 
-    // Unlock record
     lock_record(fd, record_id, F_UNLCK);
 
     return bytes == sizeof(struct record) ? 0 : -1;
@@ -227,12 +227,11 @@ int try_flock(int fd) {
 
 ---
 
-## Memory-Mapped I/O
+## Memory-Mapped I/O: map_file
 
 ```c
 #include <sys/mman.h>
 
-// Map file into memory
 void *map_file(const char *filename, size_t *size) {
     int fd = open(filename, O_RDWR);
     if (fd == -1) {
@@ -246,11 +245,16 @@ void *map_file(const char *filename, size_t *size) {
     void *mapped = mmap(NULL, st.st_size, PROT_READ | PROT_WRITE,
                        MAP_SHARED, fd, 0);
 
-    close(fd); // Can close fd after mmap
+    close(fd);
     return mapped;
 }
+```
 
-// Example: Process large file in memory
+---
+
+## Memory-Mapped I/O: Process Mapped File
+
+```c
 int process_mapped_file(const char *filename) {
     size_t size;
     char *data = map_file(filename, &size);
@@ -259,14 +263,12 @@ int process_mapped_file(const char *filename) {
         return -1;
     }
 
-    // Process data directly in memory
     for (size_t i = 0; i < size; i++) {
         if (data[i] == '\n') {
-            data[i] = ' '; // Replace newlines with spaces
+            data[i] = ' ';
         }
     }
 
-    // Changes are automatically written back
     munmap(data, size);
     return 0;
 }
@@ -394,10 +396,9 @@ int send_http_response(int sockfd, const char *header, const char *body) {
 
 ---
 
-## Advanced Vectored I/O
+## Advanced Vectored I/O: Setup
 
 ```c
-// Process large file with vectored I/O
 int process_file_vectored(const char *filename) {
     int fd = open(filename, O_RDONLY);
     if (fd == -1) {
@@ -408,19 +409,23 @@ int process_file_vectored(const char *filename) {
     const size_t buffer_size = 4096;
     struct iovec iov[num_buffers];
 
-    // Allocate buffers
     for (int i = 0; i < num_buffers; i++) {
         iov[i].iov_base = malloc(buffer_size);
         iov[i].iov_len = buffer_size;
     }
+```
 
+---
+
+## Advanced Vectored I/O: Process and Cleanup
+
+```c
     ssize_t total_read = 0;
     ssize_t bytes;
 
     while ((bytes = readv(fd, iov, num_buffers)) > 0) {
         total_read += bytes;
 
-        // Process each buffer
         ssize_t remaining = bytes;
         for (int i = 0; i < num_buffers && remaining > 0; i++) {
             size_t to_process = remaining < iov[i].iov_len ?
@@ -431,7 +436,6 @@ int process_file_vectored(const char *filename) {
         }
     }
 
-    // Cleanup
     for (int i = 0; i < num_buffers; i++) {
         free(iov[i].iov_base);
     }
@@ -443,10 +447,9 @@ int process_file_vectored(const char *filename) {
 
 ---
 
-## Asynchronous I/O Implementation
+## Asynchronous I/O: State Machine
 
 ```c
-// Async I/O state machine
 enum async_state {
     ASYNC_IDLE,
     ASYNC_READING,
@@ -463,16 +466,19 @@ struct async_operation {
     enum async_state state;
     void (*completion_callback)(struct async_operation *);
 };
+```
 
-// Simulate async read with non-blocking I/O
+---
+
+## Asynchronous I/O: Start Read
+
+```c
 int async_read_start(struct async_operation *op) {
-    // Set file descriptor to non-blocking
     int flags = fcntl(op->fd, F_GETFL);
     fcntl(op->fd, F_SETFL, flags | O_NONBLOCK);
 
     op->state = ASYNC_READING;
 
-    // Try immediate read
     ssize_t bytes = pread(op->fd, op->buffer, op->size, op->offset);
 
     if (bytes == op->size) {
@@ -482,8 +488,7 @@ int async_read_start(struct async_operation *op) {
         }
         return 0;
     } else if (bytes == -1 && errno == EAGAIN) {
-        // Would block - need to wait
-        return 1; // Operation pending
+        return 1;
     } else {
         op->state = ASYNC_ERROR;
         return -1;
@@ -499,10 +504,9 @@ int async_read_start(struct async_operation *op) {
 
 ---
 
-## Thread-per-Connection Server
+## Thread-per-Connection: Handler
 
 ```c
-// Simple threaded server
 void *handle_client(void *arg) {
     int client_fd = *(int *)arg;
     free(arg);
@@ -511,14 +515,19 @@ void *handle_client(void *arg) {
     ssize_t bytes;
 
     while ((bytes = read(client_fd, buffer, sizeof(buffer))) > 0) {
-        // Echo server
         write(client_fd, buffer, bytes);
     }
 
     close(client_fd);
     return NULL;
 }
+```
 
+---
+
+## Thread-per-Connection: Server Loop
+
+```c
 int threaded_server(int port) {
     int server_fd = create_server_socket(port);
 
@@ -532,13 +541,12 @@ int threaded_server(int port) {
             continue;
         }
 
-        // Create thread for each client
         pthread_t thread;
         int *client_fd_ptr = malloc(sizeof(int));
         *client_fd_ptr = client_fd;
 
         pthread_create(&thread, NULL, handle_client, client_fd_ptr);
-        pthread_detach(thread); // Auto-cleanup
+        pthread_detach(thread);
     }
 
     return 0;
@@ -547,10 +555,9 @@ int threaded_server(int port) {
 
 ---
 
-## Thread Pool Server
+## Thread Pool: Structure
 
 ```c
-// Thread pool with work queue
 struct work_item {
     int client_fd;
     struct work_item *next;
@@ -564,7 +571,13 @@ struct thread_pool {
     pthread_cond_t work_available;
     int shutdown;
 };
+```
 
+---
+
+## Thread Pool: Worker Thread
+
+```c
 void *worker_thread(void *arg) {
     struct thread_pool *pool = (struct thread_pool *)arg;
 
@@ -580,13 +593,11 @@ void *worker_thread(void *arg) {
             break;
         }
 
-        // Get work item
         struct work_item *item = pool->work_queue;
         pool->work_queue = item->next;
 
         pthread_mutex_unlock(&pool->queue_mutex);
 
-        // Process client
         handle_client_request(item->client_fd);
         close(item->client_fd);
         free(item);
@@ -594,7 +605,13 @@ void *worker_thread(void *arg) {
 
     return NULL;
 }
+```
 
+---
+
+## Thread Pool: Add Work
+
+```c
 int add_work(struct thread_pool *pool, int client_fd) {
     struct work_item *item = malloc(sizeof(struct work_item));
     item->client_fd = client_fd;
@@ -602,7 +619,6 @@ int add_work(struct thread_pool *pool, int client_fd) {
 
     pthread_mutex_lock(&pool->queue_mutex);
 
-    // Add to end of queue
     if (pool->work_queue == NULL) {
         pool->work_queue = item;
     } else {
@@ -622,10 +638,9 @@ int add_work(struct thread_pool *pool, int client_fd) {
 
 ---
 
-## Event-Driven Server
+## Event-Driven Server: Setup
 
 ```c
-// Event-driven server with epoll
 struct client_connection {
     int fd;
     char *read_buffer;
@@ -639,7 +654,6 @@ int event_driven_server(int port) {
     int server_fd = create_server_socket(port);
     int epoll_fd = epoll_create1(0);
 
-    // Add server socket to epoll
     struct epoll_event ev;
     ev.events = EPOLLIN;
     ev.data.fd = server_fd;
@@ -652,10 +666,8 @@ int event_driven_server(int port) {
 
         for (int i = 0; i < nfds; i++) {
             if (events[i].data.fd == server_fd) {
-                // New connection
                 handle_new_connection(server_fd, epoll_fd);
             } else {
-                // Client data
                 handle_client_event(events[i].data.fd, events[i].events);
             }
         }
@@ -663,24 +675,26 @@ int event_driven_server(int port) {
 
     return 0;
 }
+```
 
+---
+
+## Event-Driven Server: Client Event Handler
+
+```c
 void handle_client_event(int client_fd, uint32_t events) {
     if (events & EPOLLIN) {
-        // Data available for reading
         char buffer[4096];
         ssize_t bytes = read(client_fd, buffer, sizeof(buffer));
 
         if (bytes > 0) {
-            // Process and echo back
             write(client_fd, buffer, bytes);
         } else if (bytes == 0) {
-            // Client closed connection
             close(client_fd);
         }
     }
 
     if (events & (EPOLLERR | EPOLLHUP)) {
-        // Error or hang up
         close(client_fd);
     }
 }
@@ -688,10 +702,9 @@ void handle_client_event(int client_fd, uint32_t events) {
 
 ---
 
-## High-Performance Server Design
+## High-Performance Server: Worker Thread
 
 ```c
-// Multi-threaded event-driven server
 struct server_thread {
     int epoll_fd;
     int thread_id;
@@ -703,7 +716,6 @@ void *server_worker_thread(void *arg) {
     struct server_thread *worker = (struct server_thread *)arg;
     struct epoll_event events[MAX_EVENTS];
 
-    // Set CPU affinity
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
     CPU_SET(worker->thread_id, &cpuset);
@@ -730,8 +742,13 @@ void *server_worker_thread(void *arg) {
 
     return NULL;
 }
+```
 
-// Load balancing: distribute connections across threads
+---
+
+## High-Performance Server: Load Balancing
+
+```c
 int distribute_connection(int client_fd) {
     static int next_thread = 0;
     int target_thread = next_thread++ % num_worker_threads;
@@ -745,10 +762,9 @@ int distribute_connection(int client_fd) {
 
 ---
 
-## Connection State Management
+## Connection State Management: Types
 
 ```c
-// Connection state machine
 enum connection_state {
     CONN_READING_HEADER,
     CONN_READING_BODY,
@@ -767,7 +783,13 @@ struct http_connection {
     struct http_request request;
     struct http_response response;
 };
+```
 
+---
+
+## Connection State Management: Handler
+
+```c
 int handle_http_connection(struct http_connection *conn, uint32_t events) {
     switch (conn->state) {
         case CONN_READING_HEADER:
@@ -793,22 +815,21 @@ int handle_http_connection(struct http_connection *conn, uint32_t events) {
             if (events & EPOLLOUT) {
                 if (write_http_response(conn) == 0) {
                     conn->state = CONN_CLOSING;
-                    return 1; // Connection complete
+                    return 1;
                 }
             }
             break;
     }
 
-    return 0; // Continue processing
+    return 0;
 }
 ```
 
 ---
 
-## Zero-Copy in Network Servers
+## Zero-Copy in Network Servers: sendfile
 
 ```c
-// Zero-copy file serving
 int serve_static_file_zerocopy(int client_fd, const char *filepath) {
     int file_fd = open(filepath, O_RDONLY);
     if (file_fd == -1) {
@@ -818,7 +839,6 @@ int serve_static_file_zerocopy(int client_fd, const char *filepath) {
     struct stat st;
     fstat(file_fd, &st);
 
-    // Send HTTP headers
     char headers[512];
     int header_len = snprintf(headers, sizeof(headers),
                              "HTTP/1.1 200 OK\r\n"
@@ -828,7 +848,6 @@ int serve_static_file_zerocopy(int client_fd, const char *filepath) {
 
     write(client_fd, headers, header_len);
 
-    // Zero-copy file transfer
     off_t offset = 0;
     ssize_t sent = 0;
 
@@ -842,13 +861,17 @@ int serve_static_file_zerocopy(int client_fd, const char *filepath) {
     close(file_fd);
     return offset == st.st_size ? 0 : -1;
 }
+```
 
-// Combine with splice for pipe-based transfers
+---
+
+## Zero-Copy in Network Servers: splice
+
+```c
 int proxy_with_splice(int client_fd, int upstream_fd) {
     int pipe_fds[2];
     pipe(pipe_fds);
 
-    // Upstream → Pipe → Client
     ssize_t to_pipe = splice(upstream_fd, NULL, pipe_fds[1], NULL,
                             4096, SPLICE_F_MOVE | SPLICE_F_NONBLOCK);
 
@@ -869,10 +892,9 @@ int proxy_with_splice(int client_fd, int upstream_fd) {
 
 ---
 
-## Buffer Management Strategies
+## Buffer Management: Ring Buffer Structure
 
 ```c
-// Ring buffer for high-throughput servers
 struct ring_buffer {
     char *data;
     size_t size;
@@ -888,7 +910,13 @@ struct ring_buffer *create_ring_buffer(size_t size) {
     rb->head = rb->tail = rb->count = 0;
     return rb;
 }
+```
 
+---
+
+## Buffer Management: Read/Write
+
+```c
 size_t ring_buffer_write(struct ring_buffer *rb, const void *data, size_t len) {
     size_t available = rb->size - rb->count;
     size_t to_write = len < available ? len : available;
@@ -917,10 +945,9 @@ size_t ring_buffer_read(struct ring_buffer *rb, void *data, size_t len) {
 
 ---
 
-## Connection Pooling
+## Connection Pooling: Get Connection
 
 ```c
-// Connection pool for database servers
 struct connection_pool {
     struct database_connection *connections;
     int pool_size;
@@ -936,7 +963,6 @@ struct database_connection *get_connection(struct connection_pool *pool) {
         pthread_cond_wait(&pool->connection_available, &pool->pool_mutex);
     }
 
-    // Find available connection
     for (int i = 0; i < pool->pool_size; i++) {
         if (!pool->connections[i].in_use) {
             pool->connections[i].in_use = 1;
@@ -949,7 +975,13 @@ struct database_connection *get_connection(struct connection_pool *pool) {
     pthread_mutex_unlock(&pool->pool_mutex);
     return NULL;
 }
+```
 
+---
+
+## Connection Pooling: Return Connection
+
+```c
 void return_connection(struct connection_pool *pool,
                       struct database_connection *conn) {
     pthread_mutex_lock(&pool->pool_mutex);
@@ -964,10 +996,9 @@ void return_connection(struct connection_pool *pool,
 
 ---
 
-## Performance Monitoring
+## Performance Monitoring: Metrics Struct
 
 ```c
-// Server performance metrics
 struct server_metrics {
     atomic_long total_connections;
     atomic_long active_connections;
@@ -976,7 +1007,6 @@ struct server_metrics {
     atomic_long bytes_written;
     atomic_long errors;
 
-    // Timing metrics
     struct timespec start_time;
     double avg_request_time;
     double peak_request_time;
@@ -988,16 +1018,20 @@ void update_metrics(struct server_metrics *metrics,
     atomic_fetch_add(&metrics->bytes_read, bytes_in);
     atomic_fetch_add(&metrics->bytes_written, bytes_out);
 
-    // Update timing (simplified - use proper synchronization in practice)
     if (request_time > metrics->peak_request_time) {
         metrics->peak_request_time = request_time;
     }
 
-    // Rolling average
     metrics->avg_request_time =
         (metrics->avg_request_time * 0.9) + (request_time * 0.1);
 }
+```
 
+---
+
+## Performance Monitoring: Print Stats
+
+```c
 void print_server_stats(struct server_metrics *metrics) {
     printf("Server Statistics:\n");
     printf("  Active connections: %ld\n",
@@ -1013,30 +1047,25 @@ void print_server_stats(struct server_metrics *metrics) {
 
 ---
 
-## Error Handling and Recovery
+## Error Handling: Error Dispatcher
 
 ```c
-// Graceful error handling
 int handle_server_error(int error_type, void *context) {
     switch (error_type) {
         case SERVER_ERROR_MEMORY:
-            // Memory exhaustion
             cleanup_idle_connections();
             garbage_collect();
             break;
 
         case SERVER_ERROR_FD_LIMIT:
-            // File descriptor limit reached
             close_oldest_connections(10);
             break;
 
         case SERVER_ERROR_NETWORK:
-            // Network error
             reset_network_connections();
             break;
 
         case SERVER_ERROR_DISK_FULL:
-            // Disk space exhausted
             enable_emergency_mode();
             send_alerts();
             break;
@@ -1048,8 +1077,13 @@ int handle_server_error(int error_type, void *context) {
 
     return 0;
 }
+```
 
-// Circuit breaker pattern
+---
+
+## Error Handling: Circuit Breaker Struct
+
+```c
 struct circuit_breaker {
     int failure_count;
     int failure_threshold;
@@ -1057,7 +1091,13 @@ struct circuit_breaker {
     int timeout_seconds;
     enum { CLOSED, OPEN, HALF_OPEN } state;
 };
+```
 
+---
+
+## Error Handling: Circuit Breaker Open/Half-Open
+
+```c
 int circuit_breaker_call(struct circuit_breaker *cb,
                         int (*operation)(void *), void *arg) {
     time_t now = time(NULL);
@@ -1067,12 +1107,11 @@ int circuit_breaker_call(struct circuit_breaker *cb,
             if (now - cb->last_failure > cb->timeout_seconds) {
                 cb->state = HALF_OPEN;
             } else {
-                return -1; // Circuit open, fail fast
+                return -1;
             }
             break;
 
         case HALF_OPEN:
-            // Try operation
             if (operation(arg) == 0) {
                 cb->failure_count = 0;
                 cb->state = CLOSED;
@@ -1082,7 +1121,13 @@ int circuit_breaker_call(struct circuit_breaker *cb,
                 cb->last_failure = now;
                 return -1;
             }
+```
 
+---
+
+## Error Handling: Circuit Breaker Closed
+
+```c
         case CLOSED:
             if (operation(arg) == 0) {
                 return 0;
@@ -1102,10 +1147,9 @@ int circuit_breaker_call(struct circuit_breaker *cb,
 
 ---
 
-## Load Testing and Benchmarking
+## Load Testing: Worker
 
 ```c
-// Simple load testing client
 struct load_test_config {
     char *server_host;
     int server_port;
@@ -1123,11 +1167,9 @@ void *load_test_worker(void *arg) {
             continue;
         }
 
-        // Send request
         char request[] = "GET / HTTP/1.1\r\nHost: localhost\r\n\r\n";
         write(fd, request, sizeof(request) - 1);
 
-        // Read response
         char response[4096];
         read(fd, response, sizeof(response));
 
@@ -1136,7 +1178,13 @@ void *load_test_worker(void *arg) {
 
     return NULL;
 }
+```
 
+---
+
+## Load Testing: Run Test
+
+```c
 int run_load_test(struct load_test_config *config) {
     pthread_t *threads = malloc(config->concurrent_connections *
                                sizeof(pthread_t));
@@ -1144,12 +1192,10 @@ int run_load_test(struct load_test_config *config) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    // Start worker threads
     for (int i = 0; i < config->concurrent_connections; i++) {
         pthread_create(&threads[i], NULL, load_test_worker, config);
     }
 
-    // Wait for completion
     for (int i = 0; i < config->concurrent_connections; i++) {
         pthread_join(threads[i], NULL);
     }

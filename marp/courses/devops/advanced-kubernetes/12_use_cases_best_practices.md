@@ -256,7 +256,13 @@ func healthzHandler(w http.ResponseWriter, r *http.Request) {
     w.WriteHeader(http.StatusOK)
     w.Write([]byte("ok"))
 }
+```
 
+---
+
+## Readiness Handler
+
+```go
 func readyHandler(db *sql.DB) http.HandlerFunc {
     return func(w http.ResponseWriter, r *http.Request) {
         resp := HealthResponse{

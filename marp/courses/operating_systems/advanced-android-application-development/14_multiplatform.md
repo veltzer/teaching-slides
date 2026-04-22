@@ -148,7 +148,14 @@ class UserViewModel : ViewModel() {
             is UserIntent.SelectUser -> selectUser(intent.user)
         }
     }
+```
 
+---
+
+## MVI Architecture: Loading Users
+
+```kotlin
+class UserViewModel : ViewModel() {
     private fun loadUsers() = viewModelScope.launch {
         _viewState.update { it.copy(isLoading = true) }
         try {

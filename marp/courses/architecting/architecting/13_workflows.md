@@ -109,7 +109,13 @@ def transform():
 def load():
     # Load data
     pass
+```
 
+---
+
+## Airflow DAG Example: Tasks
+
+```python
 extract_task = PythonOperator(
     task_id='extract',
     python_callable=extract,

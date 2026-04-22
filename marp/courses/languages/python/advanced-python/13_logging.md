@@ -327,6 +327,10 @@ json_handler.setFormatter(json_formatter)
 - More maintainable for complex setups
 - Component-based configuration
 
+---
+
+## Dictionary Configuration: Config Dictionary
+
 ```python
 import logging
 import logging.config
@@ -363,7 +367,13 @@ config = {
         }
     }
 }
+```
 
+---
+
+## Dictionary Configuration: Applying It
+
+```python
 # Apply configuration
 logging.config.dictConfig(config)
 
@@ -487,7 +497,13 @@ def process_order(order_id, items):
         if not process_payment(order_id):
             logger.error("Payment failed for order %s", order_id)
             return False
+```
 
+---
+
+## Best Practices: Shipping and Error Handling
+
+```python
         # Ship order
         tracking = ship_order(order_id, items)
         if tracking:
@@ -766,7 +782,13 @@ class JsonFormatter(logging.Formatter):
             }
 
         return json.dumps(log_data)
+```
 
+---
+
+## Custom Formatters: Using the JSON Formatter
+
+```python
 # Use the custom formatter
 json_handler = logging.StreamHandler()
 json_handler.setFormatter(JsonFormatter())
@@ -817,7 +839,13 @@ class ColorFormatter(logging.Formatter):
 
         # Format with colors
         return super().format(record)
+```
 
+---
+
+## Colored Console Logging: Handler Setup
+
+```python
 # Create colored console handler
 console = logging.StreamHandler()
 console.setFormatter(ColorFormatter('%(levelname)s: %(message)s'))
@@ -862,7 +890,13 @@ class HttpHandler(logging.Handler):
 
         except Exception:
             self.handleError(record)
+```
 
+---
+
+## Custom Handlers: Flushing the Batch
+
+```python
     def flush(self):
         if not self.records:
             return
@@ -919,7 +953,13 @@ class SensitiveDataFilter(logging.Filter):
                 break
 
         return True  # Always include the record, but modified
+```
 
+---
+
+## Filters: Applying the Sensitive Data Filter
+
+```python
 # Apply filter to a logger
 logger = logging.getLogger(__name__)
 sensitive_filter = SensitiveDataFilter()
@@ -1124,7 +1164,13 @@ class TraceFilter(logging.Filter):
         else:
             record.trace_id = "no-trace"
         return True
+```
 
+---
+
+## Distributed Tracing: Decorator and Configuration
+
+```python
 # Decorator to set trace for a request
 def with_trace(func):
     async def wrapper(*args, **kwargs):
@@ -1252,7 +1298,13 @@ console_handler = logging.StreamHandler()
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 console_handler.setFormatter(formatter)
+```
 
+---
+
+## QueueHandler and QueueListener: Start and Shutdown
+
+```python
 # Set up the queue handler
 queue_handler = QueueHandler(log_queue)
 
@@ -1370,7 +1422,13 @@ root.setLevel(logging.INFO)
 # Set up the listener in the main thread
 listener = QueueListener(log_queue, file_handler)
 listener.start()
+```
 
+---
+
+## Thread Safety and Concurrency: Worker Threads
+
+```python
 # Worker threads log normally
 def worker(worker_id):
     logger = logging.getLogger(f"worker.{worker_id}")
@@ -1423,7 +1481,13 @@ class TestLogging(unittest.TestCase):
         # Clean up
         self.logger.removeHandler(self.handler)
         self.handler.close()
+```
 
+---
+
+## Testing Logging Configuration: Test Methods
+
+```python
     def test_debug_message(self):
         self.logger.debug("Test debug message")
         log_output = self.log_stream.getvalue()

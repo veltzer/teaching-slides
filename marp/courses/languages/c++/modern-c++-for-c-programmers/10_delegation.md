@@ -811,7 +811,12 @@ public:
         return !static_cast<const Derived&>(*this).operator<(other);
     }
 };
+```
 
+---
+## Mixin Pattern: Usage Example
+
+```cpp
 class Number : public Comparable<Number> {
 private:
     int value;

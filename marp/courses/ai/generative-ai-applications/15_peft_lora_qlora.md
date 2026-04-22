@@ -610,7 +610,13 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16,
     bnb_4bit_use_double_quant=True,
 )
+```
 
+---
+
+## Practical: QLoRA Model and Adapter Setup
+
+```python
 # 3. Load model
 model = AutoModelForCausalLM.from_pretrained(
     MODEL, quantization_config=bnb_config, device_map="auto"
@@ -624,7 +630,13 @@ lora_config = LoraConfig(
     r=16, lora_alpha=32, target_modules="all-linear",
     lora_dropout=0.05, bias="none",
 )
+```
 
+---
+
+## Practical: QLoRA Training Step
+
+```python
 # 5. Training
 dataset = load_dataset(DATASET, split="train")
 training_config = SFTConfig(

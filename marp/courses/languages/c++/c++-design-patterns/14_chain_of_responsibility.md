@@ -170,7 +170,13 @@ public:
         return Middleware::check(req);
     }
 };
+```
 
+---
+
+## Middleware: Rate Limiting
+
+```cpp
 class RateLimitMiddleware : public Middleware {
     int maxRequests;
     std::unordered_map<std::string, int> counts;

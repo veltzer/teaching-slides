@@ -302,6 +302,13 @@ spec:
         send_batch_size: 1000
       memory_limiter:
         limit_mib: 512
+```
+
+---
+
+## `OpenTelemetry` Collector: Exporters and Pipelines
+
+```yaml
     exporters:
       otlp:
         endpoint: jaeger:4317

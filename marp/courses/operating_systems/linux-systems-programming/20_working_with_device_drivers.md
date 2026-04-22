@@ -163,7 +163,13 @@ int setup_serial_port(const char *device, int baudrate) {
 
     // Disable break processing
     tty.c_iflag &= ~IGNBRK;
+```
 
+---
+
+## Serial Port Programming: Flags and Apply
+
+```c
     // No signaling chars, no echo, no canonical processing
     tty.c_lflag = 0;
 
@@ -363,7 +369,13 @@ struct framebuffer *open_framebuffer(const char *device) {
         free(fb);
         return NULL;
     }
+```
 
+---
+
+## Framebuffer: Query and Map
+
+```c
     // Get fixed screen info
     ioctl(fb->fd, FBIOGET_FSCREENINFO, &fb->finfo);
 
@@ -386,7 +398,13 @@ struct framebuffer *open_framebuffer(const char *device) {
 
     return fb;
 }
+```
 
+---
+
+## Framebuffer: Drawing Pixels
+
+```c
 void draw_pixel(struct framebuffer *fb, int x, int y, uint32_t color) {
     if (x < 0 || x >= fb->vinfo.xres || y < 0 || y >= fb->vinfo.yres) {
         return;
@@ -426,7 +444,13 @@ int setup_video_device(const char *device) {
         close(fd);
         return -1;
     }
+```
 
+---
+
+## V4L2: Setting Video Format
+
+```c
     // Set video format
     struct v4l2_format fmt = {0};
     fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -523,7 +547,13 @@ int gpio_set_direction(int pin, const char *direction) {
 
     return 0;
 }
+```
 
+---
+
+## GPIO Control: Write Value
+
+```c
 int gpio_write(int pin, int value) {
     char path[64];
     snprintf(path, sizeof(path), "/sys/class/gpio/gpio%d/value", pin);
@@ -574,7 +604,13 @@ int i2c_read_byte(int fd, uint8_t reg) {
 int i2c_write_byte(int fd, uint8_t reg, uint8_t value) {
     return i2c_smbus_write_byte_data(fd, reg, value);
 }
+```
 
+---
+
+## I2C: Temperature Sensor Example
+
+```c
 // Example: Read temperature from I2C sensor
 float read_temperature_sensor(const char *device, uint8_t addr) {
     int fd = i2c_open_device(device, addr);
@@ -632,7 +668,13 @@ struct spi_device *spi_open(const char *device) {
 
     return spi;
 }
+```
 
+---
+
+## SPI: Transfer Function
+
+```c
 int spi_transfer(struct spi_device *spi, uint8_t *tx_buf,
                 uint8_t *rx_buf, size_t len) {
     struct spi_ioc_transfer tr = {
@@ -788,7 +830,13 @@ int robust_device_operation(int fd, void *buffer, size_t size) {
         if (result == size) {
             return 0; // Success
         }
+```
 
+---
+
+## Error Handling: Errno Dispatch
+
+```c
         if (result == -1) {
             switch (errno) {
                 case EINTR:
@@ -844,7 +892,13 @@ void test_device_capabilities(const char *device) {
     printf("Type: %s\n", S_ISBLK(st.st_mode) ? "Block" :
                          S_ISCHR(st.st_mode) ? "Character" : "Unknown");
     printf("Major: %u, Minor: %u\n", major(st.st_rdev), minor(st.st_rdev));
+```
 
+---
+
+## Device Testing: Capability Probes
+
+```c
     // Test basic operations
     printf("Read support: %s\n",
            fcntl(fd, F_GETFL) & O_RDONLY ? "Yes" : "No");
@@ -858,7 +912,13 @@ void test_device_capabilities(const char *device) {
 
     close(fd);
 }
+```
 
+---
+
+## Device Testing: Benchmarking
+
+```c
 // Benchmark device performance
 void benchmark_device(const char *device, size_t block_size, int iterations) {
     int fd = open(device, O_RDONLY);
@@ -922,7 +982,13 @@ char *read_sysfs_attribute(const char *device, const char *attribute) {
     free(buffer);
     return NULL;
 }
+```
 
+---
+
+## Sysfs Interface: Write
+
+```c
 // Write to sysfs attribute
 int write_sysfs_attribute(const char *device, const char *attribute,
                          const char *value) {
@@ -968,7 +1034,13 @@ void *load_device_tree(const char *dtb_file) {
     close(fd);
     return fdt;
 }
+```
 
+---
+
+## Device Tree: Finding Device Nodes
+
+```c
 // Find device in device tree
 int find_device_node(void *fdt, const char *compatible) {
     int node = 0;

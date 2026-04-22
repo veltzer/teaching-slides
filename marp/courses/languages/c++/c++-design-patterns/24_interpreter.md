@@ -81,7 +81,13 @@ public:
         return "(" + left->toString() + " + " + right->toString() + ")";
     }
 };
+```
 
+---
+
+## Non-Terminal Expressions: Multiply
+
+```cpp
 class MultiplyExpression : public Expression {
     std::unique_ptr<Expression> left, right;
 public:
@@ -148,7 +154,13 @@ public:
         return left->interpret(ctx) && right->interpret(ctx);
     }
 };
+```
 
+---
+
+## Boolean Expressions: Or and Not
+
+```cpp
 class OrExpression : public BoolExpression {
     std::unique_ptr<BoolExpression> left, right;
 public:

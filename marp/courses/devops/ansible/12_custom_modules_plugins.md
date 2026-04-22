@@ -96,7 +96,13 @@ def run_module():
         state=state,
         message=''
     )
+```
 
+---
+
+## Basic Custom Module: Execution Logic
+
+```python
     # Check mode: report what would happen
     if module.check_mode:
         module.exit_json(**result)
@@ -183,7 +189,13 @@ def run_module():
     if os.path.exists(path):
         with open(path, 'r') as f:
             current_config = json.load(f)
+```
 
+---
+
+## File Operations Module: Diff and Write
+
+```python
     # Check if changes are needed
     if current_config == settings:
         module.exit_json(**result)
@@ -252,7 +264,13 @@ options:
 author:
     - DevOps Team (@devops)
 '''
+```
 
+---
+
+## Module Documentation: Examples and Return
+
+```python
 EXAMPLES = r'''
 - name: Create application config
   config_manager:
@@ -313,7 +331,13 @@ def run_module():
         argument_spec=module_args,
         supports_check_mode=True,
     )
+```
 
+---
+
+## API Module: Request Setup
+
+```python
     api_url = module.params['api_url']
     token = module.params['api_token']
     name = module.params['name']
@@ -333,7 +357,13 @@ def run_module():
 
     exists = info['status'] == 200
     result = dict(changed=False, name=name)
+```
 
+---
+
+## API Module: Create/Delete Logic
+
+```python
     if state == 'present' and not exists:
         result['changed'] = True
         if not module.check_mode:
@@ -447,7 +477,13 @@ class CallbackModule(CallbackBase):
     def set_options(self, task_keys=None, var_options=None, direct=None):
         super().set_options(task_keys=task_keys, var_options=var_options, direct=direct)
         self.webhook_url = self.get_option('webhook_url')
+```
 
+---
+
+## Callback Plugin: Playbook Stats Hook
+
+```python
     def v2_playbook_on_stats(self, stats):
         """Called at the end of a playbook run."""
         hosts = sorted(stats.processed.keys())

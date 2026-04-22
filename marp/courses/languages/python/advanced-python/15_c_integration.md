@@ -755,6 +755,10 @@ EXPORT double multiply(double a, double b) {
 // Compile (Windows): gcc -shared -o mylib.dll mylib.c
 ```
 
+---
+
+## Creating Your Own Shared Library: Loading from Python
+
 ```python
 # Using the compiled library
 import ctypes
@@ -921,7 +925,13 @@ ffi.cdef("""
     Person *create_person(const char *name, int age, double height);
     void free_person(Person *p);
 """)
+```
 
+---
+
+## Working with Structures in CFFI: C Implementation
+
+```python
 # Implementation
 lib = ffi.verify("""
     #include <stdio.h>
@@ -952,7 +962,13 @@ lib = ffi.verify("""
         free(p);
     }
 """)
+```
 
+---
+
+## Working with Structures in CFFI: Usage
+
+```python
 # Create and use a Person
 person = lib.create_person(b"Alice", 30, 1.75)
 lib.print_person(person)
@@ -1300,7 +1316,7 @@ valgrind --tool=memcheck python -c "import my_extension; my_extension.test()"
 
 ---
 
-## Practical Example: Image Processing: Simple Image Processing Extension
+## Practical Example: Image Processing: Grayscale Function Signature
 
 ```c
 // image_processing.c
@@ -1331,7 +1347,13 @@ static PyObject* grayscale(PyObject* self, PyObject* args) {
         PyErr_SetString(PyExc_ValueError, "Input must have 3 channels (RGB)");
         return NULL;
     }
+```
 
+---
+
+## Image Processing Extension: Conversion Loop
+
+```c
     // Create output array (height, width, 1)
     npy_intp out_dims[3] = {height, width, 1};
     output_array = (PyArrayObject*)PyArray_SimpleNew(3, out_dims, NPY_UINT8);
@@ -1364,7 +1386,13 @@ static PyObject* grayscale(PyObject* self, PyObject* args) {
 
     return PyArray_Return(output_array);
 }
+```
 
+---
+
+## Image Processing Extension: Module Initialization
+
+```c
 // Module initialization
 static PyMethodDef ImageMethods[] = {
     {"grayscale", grayscale, METH_VARARGS, "Convert RGB image to grayscale"},

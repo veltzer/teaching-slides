@@ -611,7 +611,16 @@ public:
 
         return value;
     }
+};
+```
 
+---
+
+## Endian-Safe Serialization: Byte Swap
+
+```cpp
+class EndianSafeSerializer {
+    // ... (continued)
 private:
     template<typename T>
     static T byteSwap(T value) {
@@ -917,7 +926,18 @@ public:
         T current = *reg_ptr;
         *reg_ptr = (current & ~mask) | ((value << Offset) & mask);
     }
+};
+```
 
+---
+
+## Register Template: Set and Clear Bits
+
+```cpp
+template<typename T, T Address>
+class MemoryMappedRegister {
+    // ... (continued)
+public:
     // Set specific bits
     template<size_t Offset, size_t Width>
     void setBits() {
@@ -1051,7 +1071,17 @@ public:
 
         return (bytes[byte_index] & (1u << bit_index)) != 0;
     }
+};
+```
 
+---
+
+## Cross-Platform: Field Access and Serialization
+
+```cpp
+class CrossPlatformBitfield {
+    // ... (continued)
+public:
     void setField(size_t offset, size_t width, uint32_t value) {
         // Clear existing bits
         for (size_t i = 0; i < width; ++i) {
@@ -1158,7 +1188,16 @@ public:
             std::make_unique<std::string>(value)
         );
     }
+```
 
+---
+
+## Type-Safe Union: Destructor and Copy
+
+```cpp
+class TypeSafeUnion {
+    // ... (continued)
+public:
     ~TypeSafeUnion() {
         clear();
     }
@@ -1166,7 +1205,16 @@ public:
     TypeSafeUnion(const TypeSafeUnion& other) {
         *this = other;
     }
+```
 
+---
+
+## Type-Safe Union: Copy Assignment
+
+```cpp
+class TypeSafeUnion {
+    // ... (continued)
+public:
     TypeSafeUnion& operator=(const TypeSafeUnion& other) {
         if (this != &other) {
             clear();
@@ -1198,7 +1246,16 @@ private:
         }
         type = Type::None;
     }
+};
+```
 
+---
+
+## Type-Safe Union: Get Accessor
+
+```cpp
+class TypeSafeUnion {
+    // ... (continued)
 public:
     template<typename T>
     T get() const {
@@ -1237,7 +1294,17 @@ public:
     uint16_t getYear() const { return (data >> 20) & 0xFFF; }    // 12 bits
     uint8_t getMonth() const { return (data >> 16) & 0xF; }     // 4 bits
     uint8_t getDay() const { return (data >> 11) & 0x1F; }      // 5 bits
+};
+```
 
+---
+
+## Packed Date: Setters and Comparisons
+
+```cpp
+class PackedDate {
+    // ... (continued)
+public:
     void setYear(uint16_t year) {
         if (year > 4095) throw std::out_of_range("Year too large");
         data = (data & 0x000FFFFF) | ((uint32_t(year) & 0xFFF) << 20);
@@ -1297,8 +1364,13 @@ public:
         return (data & mask) == (pattern & mask);
     }
 };
+```
 
-// Usage
+---
+
+## Debugging Bitfields: Usage
+
+```cpp
 void debugExample() {
     DebuggableBitfield bf;
     // ... set some fields ...

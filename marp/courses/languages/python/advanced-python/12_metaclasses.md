@@ -462,7 +462,13 @@ class AutoProperties(type):
             ))
 
         return cls
+```
 
+---
+
+## Automatic Property Creation: Usage
+
+```python
 class Person(metaclass=AutoProperties):
     name = "Anonymous"
     age = 0
@@ -890,7 +896,13 @@ class ModelMeta(type):
         cls._table_name = name.lower() + 's'
 
         return cls
+```
 
+---
+
+## Model Metaclass: Base Model Class
+
+```python
 class Model(metaclass=ModelMeta):
     def __init__(self, **kwargs):
         self._data = {}
@@ -974,7 +986,13 @@ class StateMachineMeta(type):
         namespace['_current_state'] = list(states.keys())[0]  # Default to first state
 
         return super().__new__(mcs, name, bases, namespace)
+```
 
+---
+
+## State Machine DSL: Base StateMachine Class
+
+```python
 class StateMachine(metaclass=StateMachineMeta):
     def get_state(self):
         return self._current_state

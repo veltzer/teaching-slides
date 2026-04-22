@@ -886,7 +886,13 @@ const loadTestScenarios = {
     pattern: "instant"
   }
 };
+```
 
+---
+
+## Scale Testing: Analyzing Results
+
+```javascript
 // AI analyzes results
 function analyzeLoadTest(results) {
   return {
@@ -956,7 +962,13 @@ spec:
       target:
         type: AverageValue
         averageValue: "1000"
+```
 
+---
+
+## Infrastructure Scaling: Scale Behavior
+
+```yaml
   behavior:
     scaleUp:
       stabilizationWindowSeconds: 0
@@ -1053,7 +1065,13 @@ class ComplianceChecker {
       dataIntegrity: true
     }
   };
+```
 
+---
+
+## Compliance and Auditing: Reports
+
+```javascript
   generateComplianceReport() {
     return {
       status: "Compliant",

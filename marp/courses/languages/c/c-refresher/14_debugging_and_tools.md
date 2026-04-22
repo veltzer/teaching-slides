@@ -532,7 +532,13 @@ build/%.o: src/%.c | build
 
 build:
     mkdir -p build
+```
 
+---
+
+## Makefile Best Practices: Test and Check Targets
+
+```makefile
 # Run tests
 test: debug
     ./$(TARGET) --test

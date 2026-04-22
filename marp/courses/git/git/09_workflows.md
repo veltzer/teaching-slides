@@ -830,6 +830,10 @@ jobs:
       run: ./deploy.sh
 ```
 
+---
+
+## Workflow Automation Tools: GitLab CI
+
 **GitLab CI/CD:**
 ```yaml
 stages:

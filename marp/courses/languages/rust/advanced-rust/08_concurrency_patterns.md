@@ -159,7 +159,12 @@ fn main() {
             tx2.send(format!("slow-{}", i)).unwrap();
         }
     });
+```
 
+---
+## Crossbeam Channels: Select Loop
+
+```rust
     // Select across multiple channels (like Go's select)
     loop {
         select! {
@@ -436,7 +441,12 @@ fn atomic_max(val: &AtomicUsize, new: usize) {
         }
     }
 }
+```
 
+---
+## Compare-and-Swap: Usage
+
+```rust
 fn main() {
     let max_val = Arc::new(AtomicUsize::new(0));
     let mut handles = vec![];
@@ -484,7 +494,12 @@ pub struct LockFreeStack<T> {
 
 unsafe impl<T: Send> Send for LockFreeStack<T> {}
 unsafe impl<T: Send> Sync for LockFreeStack<T> {}
+```
 
+---
+## Treiber Stack: push
+
+```rust
 impl<T> LockFreeStack<T> {
     pub fn new() -> Self {
         LockFreeStack {
@@ -510,7 +525,13 @@ impl<T> LockFreeStack<T> {
             }
         }
     }
+```
 
+---
+## Treiber Stack: pop
+
+```rust
+impl<T> LockFreeStack<T> {
     pub fn pop(&self) -> Option<T> {
         loop {
             let old_head = self.head.load(Ordering::Acquire);
@@ -530,7 +551,12 @@ impl<T> LockFreeStack<T> {
         }
     }
 }
+```
 
+---
+## Treiber Stack: Usage
+
+```rust
 fn main() {
     use std::sync::Arc;
     use std::thread;
@@ -771,6 +797,15 @@ fn main() {
     }).collect();
 
     for r in readers { r.join().unwrap(); }
+```
+
+---
+## Arc with Interior Mutability: Read-Only Sharing
+
+```rust
+fn main() {
+    use std::sync::Arc;
+    use std::thread;
 
     // Pattern 3: Arc<T> for read-only sharing (no lock needed)
     let shared_data = Arc::new(vec![1, 2, 3, 4, 5]);
@@ -813,7 +848,14 @@ fn main() {
 
     // Add child to parent
     parent.lock().unwrap().children.push(Arc::clone(&child));
+```
 
+---
+## Arc::new_cyclic: Accessing Weak References
+
+```rust
+fn main() {
+    // (continuing from previous slide)
     // Access parent from child
     let child_lock = child.lock().unwrap();
     if let Some(weak_parent) = &child_lock.parent {
@@ -905,7 +947,12 @@ fn lock_two<'a, T>(
         (ga, gb)
     }
 }
+```
 
+---
+## Lock Ordering Solution: Usage
+
+```rust
 fn main() {
     let lock_a = Arc::new(Mutex::new(1));
     let lock_b = Arc::new(Mutex::new(2));
@@ -957,7 +1004,12 @@ fn try_lock_both(
         thread::sleep(Duration::from_micros(100));
     }
 }
+```
 
+---
+## try_lock with Backoff: Usage
+
+```rust
 fn main() {
     let a = Arc::new(Mutex::new(1));
     let b = Arc::new(Mutex::new(2));
@@ -1088,7 +1140,12 @@ struct ThreadPool {
     workers: Vec<thread::JoinHandle<()>>,
     sender: Option<mpsc::Sender<Job>>,
 }
+```
 
+---
+## Simple Thread Pool: Constructor
+
+```rust
 impl ThreadPool {
     fn new(size: usize) -> Self {
         let (sender, receiver) = mpsc::channel::<Job>();
@@ -1121,7 +1178,13 @@ impl ThreadPool {
             sender: Some(sender),
         }
     }
+```
 
+---
+## Simple Thread Pool: execute and Drop
+
+```rust
+impl ThreadPool {
     fn execute<F: FnOnce() + Send + 'static>(&self, f: F) {
         self.sender.as_ref().unwrap().send(Box::new(f)).unwrap();
     }
@@ -1136,7 +1199,12 @@ impl Drop for ThreadPool {
         }
     }
 }
+```
 
+---
+## Simple Thread Pool: Usage
+
+```rust
 fn main() {
     let pool = ThreadPool::new(4);
 
@@ -1260,7 +1328,12 @@ enum BankMessage {
     GetBalance(mpsc::Sender<f64>),
     Shutdown,
 }
+```
 
+---
+## Actor Pattern: The Actor Loop
+
+```rust
 // The actor: owns its state, processes messages sequentially
 fn bank_account_actor(rx: mpsc::Receiver<BankMessage>) {
     let mut balance = 0.0_f64;
@@ -1290,7 +1363,12 @@ fn bank_account_actor(rx: mpsc::Receiver<BankMessage>) {
         }
     }
 }
+```
 
+---
+## Actor Pattern: Spawning Clients
+
+```rust
 fn main() {
     let (tx, rx) = mpsc::channel();
     let actor = thread::spawn(move || bank_account_actor(rx));
@@ -1309,6 +1387,14 @@ fn main() {
 
     client1.join().unwrap();
     client2.join().unwrap();
+```
+
+---
+## Actor Pattern: Balance Query and Shutdown
+
+```rust
+fn main() {
+    // (continuing from previous slide)
 
     // Query balance
     let (reply_tx, reply_rx) = mpsc::channel();
@@ -1359,7 +1445,12 @@ fn router(rx: mpsc::Receiver<RouterMessage>) {
         }
     }
 }
+```
 
+---
+## Multiple Actors: Worker and Registration
+
+```rust
 fn worker_actor(id: ActorId, rx: mpsc::Receiver<String>) {
     for msg in rx {
         println!("Actor {}: received '{}'", id, msg);
@@ -1380,6 +1471,14 @@ fn main() {
             .unwrap();
         worker_handles.push(thread::spawn(move || worker_actor(id, worker_rx)));
     }
+```
+
+---
+## Multiple Actors: Sending and Shutdown
+
+```rust
+fn main() {
+    // (continuing from previous slide)
 
     // Send messages through the router
     for i in 0..9 {

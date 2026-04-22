@@ -298,7 +298,13 @@ public:
         }
         return *this;
     }
+```
 
+---
+
+## Rule of Five: Move Operations
+
+```cpp
     // Move operations
     ResourceManager(ResourceManager&& other) noexcept :
         resource(other.resource) {

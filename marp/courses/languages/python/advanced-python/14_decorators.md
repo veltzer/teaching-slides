@@ -744,7 +744,13 @@ def timing(func):
         print(f"{func.__name__} took {end - start:.5f} seconds")
         return result
     return wrapper
+```
 
+---
+
+## Creating Decorator Libraries: Retry Decorator
+
+```python
 def retry(attempts=3):
     def decorator(func):
         @wraps(func)
@@ -765,7 +771,7 @@ def retry(attempts=3):
 
 ## Practical Examples
 
-## Complete Decorator Example
+## Complete Decorator Example: Setup and Signature
 ```python
 import time
 import functools
@@ -786,7 +792,13 @@ def logged(level=logging.INFO, name=None, message=None):
         logname = name if name else func.__module__
         log = logging.getLogger(logname)
         logmsg = message if message else func.__name__
+```
 
+---
+
+## Complete Decorator Example: Wrapper Implementation
+
+```python
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
             # Log before function execution
@@ -811,7 +823,13 @@ def logged(level=logging.INFO, name=None, message=None):
 
         return wrapper
     return decorator
+```
 
+---
+
+## Complete Decorator Example: Usage
+
+```python
 # Using the decorator
 @logged()
 def divide(a, b):

@@ -404,6 +404,16 @@ int vec_push(struct Vector *v, int value) {
     v->data[v->size++] = value;
     return 0;
 }
+```
+
+---
+## A Dynamic Array (Vector): Access and Destroy
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Vector { int *data; int size; int capacity; };
 
 int vec_get(const struct Vector *v, int index) {
     if (index < 0 || index >= v->size) {
@@ -419,6 +429,19 @@ void vec_destroy(struct Vector *v) {
         free(v);
     }
 }
+```
+
+---
+## A Dynamic Array (Vector): Usage
+
+```c
+#include <stdio.h>
+
+struct Vector;
+struct Vector *vec_create(int initial_cap);
+int vec_push(struct Vector *v, int value);
+int vec_get(const struct Vector *v, int index);
+void vec_destroy(struct Vector *v);
 
 int main(void) {
     struct Vector *v = vec_create(4);
@@ -426,8 +449,7 @@ int main(void) {
         vec_push(v, i * 10);
     }
 
-    printf("Size: %d, Capacity: %d\n", v->size, v->capacity);
-    for (int i = 0; i < v->size; i++) {
+    for (int i = 0; i < 20; i++) {
         printf("%d ", vec_get(v, i));
     }
     printf("\n");
@@ -470,7 +492,12 @@ void *pool_alloc(struct MemPool *pool) {
     }
     return NULL;  /* pool exhausted */
 }
+```
 
+---
+## Memory Pool: pool_free
+
+```c
 void pool_free(struct MemPool *pool, void *ptr) {
     if (ptr == NULL) return;
     ptrdiff_t offset = (char *)ptr - pool->memory;
@@ -480,6 +507,18 @@ void pool_free(struct MemPool *pool, void *ptr) {
         pool->allocated--;
     }
 }
+```
+
+---
+## Memory Pool: Usage
+
+```c
+#include <stdio.h>
+
+struct MemPool;
+void pool_init(struct MemPool *pool);
+void *pool_alloc(struct MemPool *pool);
+void pool_free(struct MemPool *pool, void *ptr);
 
 int main(void) {
     struct MemPool pool;
@@ -491,16 +530,14 @@ int main(void) {
     int *c = pool_alloc(&pool);
 
     *a = 10; *b = 20; *c = 30;
-    printf("a=%d, b=%d, c=%d (allocated=%d)\n",
-           *a, *b, *c, pool.allocated);
+    printf("a=%d, b=%d, c=%d\n", *a, *b, *c);
 
     pool_free(&pool, b);
-    printf("After freeing b: allocated=%d\n", pool.allocated);
 
     /* b's slot is reused */
     int *d = pool_alloc(&pool);
     *d = 40;
-    printf("d=%d (allocated=%d)\n", *d, pool.allocated);
+    printf("d=%d\n", *d);
 
     return 0;
 }
@@ -544,6 +581,15 @@ void *arena_alloc(struct Arena *a, size_t size) {
     a->offset += aligned;
     return ptr;
 }
+```
+
+---
+## Arena Allocator: Reset and Destroy
+
+```c
+#include <stdlib.h>
+
+struct Arena { char *base; size_t offset; size_t capacity; };
 
 void arena_reset(struct Arena *a) {
     a->offset = 0;  /* "free" everything instantly */
@@ -555,6 +601,22 @@ void arena_destroy(struct Arena *a) {
         free(a);
     }
 }
+```
+
+---
+## Arena Allocator: Usage
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ARENA_SIZE (1024 * 1024)
+
+struct Arena;
+struct Arena *arena_create(size_t capacity);
+void *arena_alloc(struct Arena *a, size_t size);
+void arena_reset(struct Arena *a);
+void arena_destroy(struct Arena *a);
 
 int main(void) {
     struct Arena *arena = arena_create(ARENA_SIZE);
@@ -569,11 +631,9 @@ int main(void) {
     snprintf(str, 100, "Arena allocated string");
 
     printf("x=%d, y=%d, str='%s'\n", *x, *y, str);
-    printf("Arena used: %zu / %zu bytes\n", arena->offset, arena->capacity);
 
     /* Free everything at once */
     arena_reset(arena);
-    printf("After reset: %zu bytes used\n", arena->offset);
 
     arena_destroy(arena);
     return 0;

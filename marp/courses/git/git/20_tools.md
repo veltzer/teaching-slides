@@ -153,6 +153,10 @@ gh issue list --state open
 gh issue close 456
 ```
 
+---
+
+## GitHub Actions Integration
+
 **GitHub Actions integration:**
 
 ```yaml
@@ -216,6 +220,10 @@ pipelines:
           script:
             - ./deploy.sh production
 ```
+
+---
+
+## BitBucket API Access
 
 **Bitbucket API access:**
 
@@ -283,6 +291,10 @@ deploy:
   only:
     - main
 ```
+
+---
+
+## GitLab API Integration
 
 **GitLab API integration:**
 
@@ -447,6 +459,17 @@ pipeline {
             }
         }
 
+    }
+}
+```
+
+---
+
+## Jenkinsfile: Test, Deploy, Post
+
+```groovy
+pipeline {
+    stages {
         stage('Test') {
             steps {
                 sh 'make test'
@@ -529,6 +552,10 @@ stages:
                   scripts:
                     - ./deploy.sh
 ```
+
+---
+
+## Bamboo Git Integration Features
 
 **Bamboo Git integration features:**
 - Repository polling
@@ -655,6 +682,10 @@ git lfs ls-files
 git lfs migrate import --include="*.zip"
 ```
 
+---
+
+## Specialized Git Tools: Filter-Repo
+
 **Git Filter-Repo:**
 
 ```bash
@@ -670,6 +701,10 @@ git filter-repo --subdirectory-filter src/
 # Rewrite author information
 git filter-repo --mailmap-from-file mailmap.txt
 ```
+
+---
+
+## Specialized Git Tools: Pre-commit
 
 **Pre-commit hooks framework:**
 
@@ -721,6 +756,10 @@ class GitPlatform:
             project = self.client.projects.get(repo)
             return project.issues.create({'title': title, 'description': description})
 ```
+
+---
+
+## Webhook Integration
 
 **Webhook integration:**
 
@@ -853,6 +892,10 @@ case "$1" in
         ;;
 esac
 ```
+
+---
+
+## Custom Tool Development: Python
 
 **Python Git tool:**
 

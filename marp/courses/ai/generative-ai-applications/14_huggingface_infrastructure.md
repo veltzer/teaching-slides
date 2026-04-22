@@ -441,7 +441,13 @@ def tokenize(example):
     )
 
 tokenized = dataset.map(tokenize, batched=True)
+```
 
+---
+
+## Fine-Tuning with HuggingFace Trainer: Training Loop
+
+```python
 # Training
 args = TrainingArguments(
     output_dir="./finetuned",

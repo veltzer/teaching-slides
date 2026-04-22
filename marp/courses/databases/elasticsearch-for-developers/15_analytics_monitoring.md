@@ -160,7 +160,14 @@ class ZeroResultsAnalyzer:
                 }
             }
         )
+```
 
+---
+
+## Zero Results Analysis: Suggestions
+
+```python
+class ZeroResultsAnalyzer:
     def suggest_improvements(self, zero_result_queries):
         suggestions = []
         for query in zero_result_queries:

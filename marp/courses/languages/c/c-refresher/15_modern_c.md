@@ -153,6 +153,20 @@ int main(void) {
     double: printf("%f\n", (x)),      \
     char *: printf("%s\n", (x))       \
 )
+```
+
+---
+
+## _Generic: Usage
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define type_name(x) /* ...as defined previously... */
+#define generic_abs(x) /* ... */
+#define print_val(x) /* ... */
 
 int main(void) {
     int i = -42;
@@ -203,6 +217,16 @@ struct Packet {
 /* Ensure struct has expected size (no unexpected padding) */
 _Static_assert(sizeof(struct Packet) == 8,
     "Packet struct must be exactly 8 bytes");
+```
+
+---
+
+## _Static_assert: Usage
+
+```c
+#include <stdio.h>
+
+struct Packet { /* ... */ int dummy; };
 
 int main(void) {
     /* In C23, you can use static_assert (without underscore) */
@@ -482,7 +506,18 @@ int main(void) {
     return 0;
 }
 
-#else
+#endif
+```
+
+---
+
+## nullptr: Pre-C23 Fallback
+
+```c
+#include <stdio.h>
+#include <stddef.h>
+
+#if __STDC_VERSION__ < 202311L
 
 int main(void) {
     /* Pre-C23 fallback */
@@ -533,7 +568,17 @@ int main(void) {
     return 0;
 }
 
-#else
+#endif
+```
+
+---
+
+## constexpr: Pre-C23 Alternative
+
+```c
+#include <stdio.h>
+
+#if __STDC_VERSION__ < 202311L
 
 /* Pre-C23: use #define or enum for compile-time constants */
 #define MAX_SIZE 1024
@@ -695,6 +740,18 @@ int main(void) {
         printf("Pre-standard\n");
     #endif
 
+    return 0;
+}
+```
+
+---
+
+## Compile-Time Feature Detection: Optional Features
+
+```c
+#include <stdio.h>
+
+int main(void) {
     /* Check for optional features (C11+) */
     #ifdef __STDC_NO_VLA__
         printf("VLAs: NOT supported\n");

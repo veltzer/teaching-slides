@@ -341,7 +341,13 @@ macro_rules! builder {
             struct [<$name Builder>] {
                 $( $field: Option<$ty>, )*
             }
+```
 
+---
+
+## Builder Macro: Setters and Build
+
+```rust
             impl [<$name Builder>] {
                 fn new() -> Self {
                     Self {
@@ -480,6 +486,10 @@ syn = { version = "2", features = ["full"] }
 quote = "1"
 proc-macro2 = "1"
 ```
+
+---
+
+## Proc Macro Crate: Entry Point
 
 ```rust
 // src/lib.rs
@@ -693,7 +703,13 @@ pub fn validate_derive(input: TokenStream) -> TokenStream {
         },
         _ => quote! {},
     };
+```
 
+---
+
+## Derive Macro with Attributes: Output
+
+```rust
     let expanded = quote! {
         impl #name {
             fn validate(&self) -> Result<(), Vec<String>> {
@@ -765,7 +781,13 @@ impl Parse for SqlInput {
         Ok(SqlInput { query })
     }
 }
+```
 
+---
+
+## Function-Like Procedural Macros: sql! Implementation
+
+```rust
 #[proc_macro]
 pub fn sql(input: TokenStream) -> TokenStream {
     let SqlInput { query } = parse_macro_input!(input as SqlInput);

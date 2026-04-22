@@ -438,6 +438,13 @@ templates = {
         "Question about our subscription plans",
         "How do I export my data?",
     ],
+```
+
+---
+
+## Exercise: Classifier Templates (Spam and Automated)
+
+```python
     "spam": [
         "Congratulations! You've won a free iPhone!",
         "Buy cheap medications online now!!!",

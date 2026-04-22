@@ -687,6 +687,13 @@ echo ""
 echo "--- DNS Configuration ---"
 cat /etc/resolv.conf | grep -v "^#"
 
+```
+
+---
+
+## Troubleshooting Script: Connectivity Tests
+
+```bash
 echo ""
 echo "--- Gateway Ping ---"
 GW=$(ip route | grep default | awk '{print $3}')

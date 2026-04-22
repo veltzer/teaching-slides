@@ -413,6 +413,15 @@ char *my_strcpy(char *dest, const char *src) {
         ;
     return ret;
 }
+```
+
+---
+
+## Implementing Common String Functions: strcmp
+
+```c
+#include <stdio.h>
+#include <stddef.h>
 
 /* strcmp implementation */
 int my_strcmp(const char *s1, const char *s2) {
@@ -422,6 +431,9 @@ int my_strcmp(const char *s1, const char *s2) {
     }
     return (unsigned char)*s1 - (unsigned char)*s2;
 }
+
+size_t my_strlen(const char *s);
+char *my_strcpy(char *dest, const char *src);
 
 int main(void) {
     const char *hello = "Hello";

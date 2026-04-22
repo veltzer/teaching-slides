@@ -421,7 +421,13 @@ func handleEvent(ctx context.Context,
     // Process the order...
     return nil
 }
+```
 
+---
+
+## `CloudEvents` Receiver: Main
+
+```go
 func main() {
     c, err := cloudevents.NewClientHTTP()
     if err != nil {

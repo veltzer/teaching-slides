@@ -125,7 +125,13 @@ struct TaxOptions {
     bool apply = false;
     double rate = 0;
 };
+```
 
+---
+
+## Reducing Complexity: Helper Functions
+
+```cpp
 double calculateOrderSubtotal(const Order& order) {
     return std::accumulate(order.items.begin(), order.items.end(), 0.0,
         [](double sum, const OrderItem& item) {
@@ -153,7 +159,13 @@ double applyShipping(double amount, const ShippingOptions& shipping) {
     }
     return amount;
 }
+```
 
+---
+
+## Reducing Complexity: Main Function
+
+```cpp
 void processOrder(Order& order,
                  const DiscountOptions& discount,
                  const TaxOptions& tax,
@@ -771,7 +783,13 @@ void processFileManual(const std::string& filename) {
 
     fclose(file); // Might never be reached
 }
+```
 
+---
+
+## Resource Management: RAII Approach
+
+```cpp
 // RAII approach
 class FileHandle {
 private:
@@ -850,7 +868,15 @@ public:
         }
         return data[index];
     }
+```
 
+---
+
+## Defensive Programming: Invariants
+
+```cpp
+class Vector {
+    // ... (continued)
     // Debug assertion to validate internal state
     void checkInvariant() const {
         assert(data != nullptr && "Data pointer should never be null");
@@ -888,7 +914,13 @@ TEST(MathTest, AdditionWorks) {
     EXPECT_EQ(add(-2, 3), 1);
     EXPECT_EQ(add(0, 0), 0);
 }
+```
 
+---
+
+## Testing: Parameterized Tests
+
+```cpp
 // Parameterized test
 class FactorialTest : public ::testing::TestWithParam<std::pair<int, int>> {};
 
@@ -911,7 +943,13 @@ INSTANTIATE_TEST_SUITE_P(
         std::make_pair(5, 120)
     )
 );
+```
 
+---
+
+## Testing: Fixtures
+
+```cpp
 // Fixture for more complex testing
 class VectorTest : public ::testing::Test {
 protected:

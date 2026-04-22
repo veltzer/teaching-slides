@@ -76,7 +76,13 @@ def search_database(query: str) -> str:
         if query.lower() in key.lower():
             return f"{key}: {value}"
     return "No results found"
+```
 
+---
+
+## Building a Simple Agent: Tool Definitions
+
+```python
 tools = [
     {
         "type": "function",
@@ -701,7 +707,13 @@ def agentic_rag(question, retriever, llm):
             )
             if "RELEVANT" in grade:
                 relevant_docs.append(doc)
+```
 
+---
+
+## Agentic RAG: Generating Answers
+
+```python
         if not relevant_docs:
             # No relevant docs — try web search or say "I don't know"
             return "I don't have enough information to answer that."
@@ -747,7 +759,13 @@ class AgentObserver:
             "result": str(result)[:200],
             "duration_ms": duration_ms,
         })
+```
 
+---
+
+## Observability for Agents: Summary
+
+```python
     def summary(self):
         duration = (datetime.now() - self.start_time).total_seconds()
         tool_calls = [t for t in self.trace if t["event"] == "tool_call"]

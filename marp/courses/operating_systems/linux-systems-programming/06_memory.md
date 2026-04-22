@@ -851,7 +851,13 @@ void *arena_alloc(Arena *arena, size_t size) {
     arena->used += size;
     return ptr;
 }
+```
 
+---
+
+## Memory Pool: Reset and Destroy
+
+```c
 void arena_reset(Arena *arena) {
     arena->used = 0;
     arena->free_list = NULL;

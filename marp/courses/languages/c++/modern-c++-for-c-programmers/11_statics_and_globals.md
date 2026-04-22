@@ -368,7 +368,16 @@ public:
         static ApplicationConfig instance;
         return instance;
     }
+};
+```
 
+---
+## Safe Global Variables: Accessors
+
+```cpp
+class ApplicationConfig {
+    // ... (continued)
+public:
     void setAppName(const std::string& name) {
         std::lock_guard<std::mutex> lock(configMutex);
         appName = name;
@@ -502,7 +511,12 @@ public:
         return config;
     }
 };
+```
 
+---
+## Singleton with Parameters: Usage
+
+```cpp
 // Usage
 void initializeApp() {
     ConfigurableSingleton::getInstance().initialize("production");
@@ -1052,7 +1066,12 @@ public:
     void setValue(int v) { value = v; }
     int getValue() const { return value; }
 };
+```
 
+---
+## Testing Strategies: Test Fixture
+
+```cpp
 // Test fixture
 class SingletonTest : public ::testing::Test {
 protected:
@@ -1102,7 +1121,12 @@ public:
         return "ConcreteA";
     }
 };
+```
 
+---
+## Static Polymorphism: ConcreteB and Usage
+
+```cpp
 class ConcreteB : public StaticInterface<ConcreteB> {
 public:
     void doWorkImpl() {

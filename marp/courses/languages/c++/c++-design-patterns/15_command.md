@@ -72,7 +72,13 @@ public:
         doc.deleteAt(position, text.length());
     }
 };
+```
 
+---
+
+## Command: Delete Text
+
+```cpp
 class DeleteTextCommand : public Command {
     Document& doc;
     std::string deletedText;

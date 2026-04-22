@@ -83,12 +83,10 @@ class PipelineStep(ABC):
 ```
 
 ---
-## ETL Pipeline: Concrete Implementation
+## ETL Pipeline: Extract
 
 ```python
 class BronzeToSilverOrders(PipelineStep):
-    """Process raw orders from bronze to silver layer."""
-
     def __init__(self, spark, process_date: str):
         super().__init__(spark)
         self.process_date = process_date
@@ -99,11 +97,16 @@ class BronzeToSilverOrders(PipelineStep):
             .load("/data/bronze/orders/")
             .filter(F.col("ingestion_date") == self.process_date)
         )
+```
 
+---
+
+## ETL Pipeline: Transform
+
+```python
     def transform(self, df: DataFrame) -> DataFrame:
         return (
             df
-            # Deduplicate by order_id (keep latest)
             .withColumn(
                 "row_num",
                 F.row_number().over(
@@ -113,20 +116,23 @@ class BronzeToSilverOrders(PipelineStep):
             )
             .filter(F.col("row_num") == 1)
             .drop("row_num")
-            # Clean and validate
             .filter(F.col("order_id").isNotNull())
             .filter(F.col("amount") > 0)
-            # Standardize types
             .withColumn("amount",
                         F.col("amount").cast("decimal(18,2)"))
             .withColumn("order_date",
                         F.to_date("order_date_str", "yyyy-MM-dd"))
-            # Add audit columns
             .withColumn("processed_at", F.current_timestamp())
             .withColumn("process_date",
                         F.lit(self.process_date))
         )
+```
 
+---
+
+## ETL Pipeline: Load and Run
+
+```python
     def load(self, df: DataFrame) -> None:
         (
             df.write.format("delta")
@@ -136,7 +142,6 @@ class BronzeToSilverOrders(PipelineStep):
             .save("/data/silver/orders/")
         )
 
-# Run the pipeline
 from pyspark.sql import Window
 
 spark = SparkSession.builder \
@@ -197,7 +202,7 @@ target.alias("t").merge(
 ```
 
 ---
-## SCD Type 2: Full History with MERGE
+## SCD Type 2: Setup and Identify Changes
 
 ```python
 from pyspark.sql import SparkSession
@@ -212,7 +217,6 @@ target = DeltaTable.forPath(spark, "/data/gold/dim_customer/")
 updates = spark.read.format("delta") \
     .load("/data/silver/customer_updates/")
 
-# Step 1: Identify changed records
 current = target.toDF().filter("is_current = true")
 changes = updates.alias("s").join(
     current.alias("t"),
@@ -223,11 +227,14 @@ changes = updates.alias("s").join(
     (F.col("s.city") != F.col("t.city")) |
     (F.col("s.email") != F.col("t.email"))
 ).select("s.*")
+```
 
-# Step 2: Expire old records and insert new versions
-# Using a staging approach for SCD Type 2
+---
+
+## SCD Type 2: Expire and Insert
+
+```python
 if changes.count() > 0:
-    # Expire current records that have changes
     target.alias("t").merge(
         changes.alias("s"),
         "t.customer_id = s.customer_id "
@@ -239,7 +246,6 @@ if changes.count() > 0:
         }
     ).execute()
 
-    # Insert new current versions
     new_records = changes.select(
         F.col("customer_id"),
         F.col("name"),
@@ -253,8 +259,13 @@ if changes.count() > 0:
     new_records.write.format("delta") \
         .mode("append") \
         .save("/data/gold/dim_customer/")
+```
 
-# Step 3: Insert brand new customers
+---
+
+## SCD Type 2: Insert New Customers
+
+```python
 target.alias("t").merge(
     updates.alias("s"),
     "t.customer_id = s.customer_id"
@@ -273,7 +284,7 @@ target.alias("t").merge(
 ```
 
 ---
-## SCD Type 3: Previous Value Column
+## SCD Type 3: Setup and Merge
 
 ```python
 from pyspark.sql import SparkSession
@@ -288,7 +299,6 @@ target = DeltaTable.forPath(spark, "/data/gold/dim_customer/")
 updates = spark.read.format("delta") \
     .load("/data/silver/customer_updates/")
 
-# SCD Type 3: store previous value in a separate column
 target.alias("t").merge(
     updates.alias("s"),
     "t.customer_id = s.customer_id"
@@ -302,6 +312,13 @@ target.alias("t").merge(
         "email": "s.email",
         "updated_at": F.current_timestamp(),
     }
+```
+
+---
+
+## SCD Type 3: Other Branches and Query
+
+```python
 ).whenMatchedUpdate(
     set={
         "name": "s.name",
@@ -321,7 +338,6 @@ target.alias("t").merge(
     }
 ).execute()
 
-# Query: find customers who moved
 moved = spark.sql("""
     SELECT customer_id, name, city, prev_city,
            city_changed_date
@@ -346,7 +362,7 @@ moved.show()
 | Implementation complexity | Low | High | Medium |
 
 ---
-## Data Quality: Custom Validation
+## Data Quality: Validation Types
 
 ```python
 from pyspark.sql import SparkSession, DataFrame
@@ -365,7 +381,6 @@ class ValidationResult:
 
 def check_not_null(df: DataFrame,
                    columns: List[str]) -> List[ValidationResult]:
-    """Check that specified columns have no nulls."""
     results = []
     for col in columns:
         null_count = df.filter(F.col(col).isNull()).count()
@@ -375,10 +390,15 @@ def check_not_null(df: DataFrame,
             details=f"{null_count} null values in {col}",
         ))
     return results
+```
 
+---
+
+## Data Quality: Unique and Range
+
+```python
 def check_unique(df: DataFrame,
                  columns: List[str]) -> ValidationResult:
-    """Check that column combination is unique."""
     total = df.count()
     distinct = df.select(columns).distinct().count()
     return ValidationResult(
@@ -390,7 +410,6 @@ def check_unique(df: DataFrame,
 def check_range(df: DataFrame, column: str,
                 min_val: float,
                 max_val: float) -> ValidationResult:
-    """Check that values fall within expected range."""
     out_of_range = df.filter(
         (F.col(column) < min_val) |
         (F.col(column) > max_val)
@@ -407,7 +426,6 @@ def check_referential_integrity(
     ref_df: DataFrame,
     column: str,
 ) -> ValidationResult:
-    """Check that all values exist in reference table."""
     orphans = df.join(ref_df, column, "left_anti").count()
     return ValidationResult(
         check_name=f"ref_integrity_{column}",
@@ -417,7 +435,7 @@ def check_referential_integrity(
 ```
 
 ---
-## Data Quality: Running Validations
+## Data Quality: Running Checks
 
 ```python
 from pyspark.sql import SparkSession
@@ -432,7 +450,6 @@ orders = spark.read.format("delta") \
 customers = spark.read.format("delta") \
     .load("/data/silver/customers/")
 
-# Run all checks
 results = []
 results.extend(
     check_not_null(orders, ["order_id", "customer_id", "amount"])
@@ -447,8 +464,13 @@ results.append(
     check_referential_integrity(
         orders, customers, "customer_id")
 )
+```
 
-# Report results
+---
+
+## Data Quality: Reporting
+
+```python
 passed = sum(1 for r in results if r.passed)
 failed = sum(1 for r in results if not r.passed)
 print(f"\nData Quality Report:")
@@ -460,7 +482,6 @@ for r in results:
     status = "PASS" if r.passed else "FAIL"
     print(f"  [{status}] {r.check_name}: {r.details}")
 
-# Fail the pipeline if critical checks fail
 critical_failures = [r for r in results if not r.passed]
 if critical_failures:
     raise ValueError(
@@ -470,7 +491,7 @@ if critical_failures:
 ```
 
 ---
-## Great Expectations Integration
+## Great Expectations: Context Setup
 
 ```python
 from pyspark.sql import SparkSession
@@ -482,10 +503,8 @@ spark = SparkSession.builder \
 
 df = spark.read.format("delta").load("/data/silver/orders/")
 
-# Create a Great Expectations context
 context = gx.get_context()
 
-# Create a Spark DataFrame data source
 datasource = context.data_sources.add_spark("spark_source")
 data_asset = datasource.add_dataframe_asset("orders")
 batch_definition = data_asset.add_batch_definition_whole_dataframe(
@@ -494,8 +513,13 @@ batch_definition = data_asset.add_batch_definition_whole_dataframe(
 batch = batch_definition.get_batch(
     batch_parameters={"dataframe": df}
 )
+```
 
-# Define expectations
+---
+
+## Great Expectations: Define Expectations
+
+```python
 expectations = context.suites.add(
     gx.ExpectationSuite(name="orders_suite")
 )
@@ -519,8 +543,13 @@ expectations.add_expectation(
         column="email", regex=r"^[a-zA-Z0-9+_.'-]+@.+\..+$"
     )
 )
+```
 
-# Validate
+---
+
+## Great Expectations: Validate and Check
+
+```python
 validation_definition = context.validation_definitions.add(
     gx.ValidationDefinition(
         name="orders_validation",
@@ -530,7 +559,6 @@ validation_definition = context.validation_definitions.add(
 )
 result = validation_definition.run()
 
-# Check results
 if not result.success:
     for r in result.results:
         if not r.success:
@@ -539,7 +567,7 @@ if not result.success:
 ```
 
 ---
-## Idempotent Writes: Overwrite Partition Pattern
+## Idempotent Writes: Dynamic Overwrite
 
 ```python
 from pyspark.sql import SparkSession
@@ -549,10 +577,6 @@ spark = SparkSession.builder \
     .appName("IdempotentWrites") \
     .getOrCreate()
 
-# Problem: running a pipeline twice can create duplicates
-# Solution: overwrite only the partition being processed
-
-# Method 1: Dynamic partition overwrite (Parquet)
 spark.conf.set(
     "spark.sql.sources.partitionOverwriteMode", "dynamic")
 
@@ -561,10 +585,13 @@ df.write \
     .partitionBy("order_date") \
     .mode("overwrite") \
     .parquet("/data/silver/orders/")
-# Only overwrites partitions present in df
-# Existing partitions not in df are untouched
+```
 
-# Method 2: replaceWhere (Delta Lake - preferred)
+---
+
+## Idempotent Writes: replaceWhere and DELETE
+
+```python
 process_date = "2024-06-15"
 df = spark.read.parquet(f"/data/staging/{process_date}/")
 df = df.withColumn("process_date", F.lit(process_date))
@@ -575,7 +602,6 @@ df.write.format("delta") \
             f"process_date = '{process_date}'") \
     .save("/data/silver/orders/")
 
-# Method 3: DELETE + INSERT (explicit)
 spark.sql(f"""
     DELETE FROM silver_orders
     WHERE process_date = '{process_date}'
@@ -591,7 +617,7 @@ df.write.format("delta") \
 ![idempotent_write_comparison](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/idempotent_write_comparison.svg)
 
 ---
-## Exactly-Once Semantics with Checkpointing
+## Exactly-Once: Read and Parse
 
 ```python
 from pyspark.sql import SparkSession
@@ -601,10 +627,6 @@ spark = SparkSession.builder \
     .appName("ExactlyOnceStreaming") \
     .getOrCreate()
 
-# Structured Streaming provides exactly-once via
-# checkpointing + idempotent sinks
-
-# Read from Kafka
 stream = (
     spark.readStream
     .format("kafka")
@@ -614,7 +636,6 @@ stream = (
     .load()
 )
 
-# Parse and transform
 parsed = (
     stream
     .select(
@@ -629,8 +650,13 @@ parsed = (
     .select("data.*")
     .withColumn("event_date", F.to_date("event_ts"))
 )
+```
 
-# Write with exactly-once guarantees
+---
+
+## Exactly-Once: Write Stream
+
+```python
 query = (
     parsed.writeStream
     .format("delta")
@@ -642,12 +668,6 @@ query = (
     .trigger(processingTime="1 minute")
     .start("/data/bronze/events/")
 )
-
-# Checkpoint contains:
-# - Kafka offsets processed
-# - Committed batch IDs
-# - Output file manifest
-# On restart, replay only uncommitted batches
 ```
 
 ---
@@ -661,7 +681,7 @@ query = (
 ![change_data_capture_cdc_with_debezium](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/change_data_capture_cdc_with_debezium.svg)
 
 ---
-## CDC: Processing Debezium Events
+## CDC: Read Kafka and Parse
 
 ```python
 from pyspark.sql import SparkSession
@@ -672,7 +692,6 @@ spark = SparkSession.builder \
     .appName("CDCProcessing") \
     .getOrCreate()
 
-# Read CDC events from Kafka
 cdc_stream = (
     spark.readStream
     .format("kafka")
@@ -681,7 +700,6 @@ cdc_stream = (
     .load()
 )
 
-# Parse Debezium envelope
 cdc_schema = """
     op STRING,
     before STRUCT<customer_id: INT, name: STRING,
@@ -696,13 +714,17 @@ parsed = cdc_stream.select(
         F.col("value").cast("string"), cdc_schema
     ).alias("cdc")
 ).select("cdc.*")
+```
 
+---
+
+## CDC: Batch Handler
+
+```python
 def apply_cdc_batch(batch_df, batch_id):
-    """Apply CDC changes to Delta target table."""
     if batch_df.count() == 0:
         return
 
-    # Get latest change per key (deduplicate within batch)
     latest = (
         batch_df
         .withColumn("row_num", F.row_number().over(
@@ -717,13 +739,17 @@ def apply_cdc_batch(batch_df, batch_id):
     target = DeltaTable.forPath(
         spark, "/data/bronze/customers/")
 
-    # Separate inserts/updates from deletes
     upserts = latest.filter("op IN ('c', 'u', 'r')") \
         .select("after.*")
     deletes = latest.filter("op = 'd'") \
         .select("before.customer_id")
+```
 
-    # Apply upserts
+---
+
+## CDC: Merge Upserts and Deletes
+
+```python
     if upserts.count() > 0:
         target.alias("t").merge(
             upserts.alias("s"),
@@ -732,14 +758,12 @@ def apply_cdc_batch(batch_df, batch_id):
          .whenNotMatchedInsertAll() \
          .execute()
 
-    # Apply deletes
     if deletes.count() > 0:
         target.alias("t").merge(
             deletes.alias("s"),
             "t.customer_id = s.customer_id"
         ).whenMatchedDelete().execute()
 
-# Run with foreachBatch
 from pyspark.sql import Window
 
 query = (
@@ -753,7 +777,7 @@ query = (
 ```
 
 ---
-## Schema Evolution Handling
+## Schema Evolution: mergeSchema
 
 ```python
 from pyspark.sql import SparkSession
@@ -763,34 +787,27 @@ spark = SparkSession.builder \
     .appName("SchemaEvolution") \
     .getOrCreate()
 
-# Schema evolution: source adds new columns over time
-
-# Day 1 schema: {user_id, name, email}
-# Day 30 schema: {user_id, name, email, phone}
-# Day 60 schema: {user_id, name, email, phone, address}
-
-# Method 1: mergeSchema on write (Delta Lake)
 new_data = spark.read.parquet("/data/new_batch/")
 new_data.write.format("delta") \
     .mode("append") \
     .option("mergeSchema", "true") \
     .save("/data/delta/customers/")
-# New columns are added, existing columns preserved
-# Old rows have NULL for new columns
 
-# Method 2: Global setting
 spark.conf.set(
     "spark.databricks.delta.schema.autoMerge.enabled",
     "true")
+```
 
-# Method 3: overwriteSchema (replace schema entirely)
-# CAUTION: this drops existing data compatibility
+---
+
+## Schema Evolution: Overwrite and ALTER
+
+```python
 new_data.write.format("delta") \
     .mode("overwrite") \
     .option("overwriteSchema", "true") \
     .save("/data/delta/customers/")
 
-# Method 4: Explicit schema evolution with ALTER TABLE
 spark.sql("""
     ALTER TABLE customers
     ADD COLUMNS (
@@ -799,7 +816,6 @@ spark.sql("""
     )
 """)
 
-# Check current schema
 spark.read.format("delta") \
     .load("/data/delta/customers/") \
     .printSchema()
@@ -811,7 +827,7 @@ spark.read.format("delta") \
 ![schema_evolution_strategy](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/schema_evolution_strategy.svg)
 
 ---
-## Monitoring: Spark Listeners
+## Monitoring: Metrics Listener
 
 ```python
 from pyspark.sql import SparkSession
@@ -820,8 +836,6 @@ import json
 import time
 
 class PipelineMetricsListener:
-    """Collect metrics from Spark job execution."""
-
     def __init__(self):
         self.metrics = {
             "jobs": [],
@@ -836,7 +850,6 @@ class PipelineMetricsListener:
             "num_stages": stages,
         })
 
-# Using Spark's built-in metrics
 spark = SparkSession.builder \
     .appName("Monitoring") \
     .config("spark.metrics.conf.*.sink.prometheusServlet"
@@ -847,13 +860,17 @@ spark = SparkSession.builder \
             ".path", "/metrics/prometheus") \
     .config("spark.ui.prometheus.enabled", "true") \
     .getOrCreate()
+```
 
-# After running a query, inspect metrics
+---
+
+## Monitoring: Inspect Metrics
+
+```python
 df = spark.read.parquet("/data/events/")
 result = df.groupBy("event_type").count()
 result.show()
 
-# Get query execution metrics from SQL tab
 status_store = spark.sparkContext.statusTracker
 active_jobs = status_store.getActiveJobIds()
 print(f"Active jobs: {active_jobs}")
@@ -865,7 +882,7 @@ for job_id in status_store.getJobIdsForGroup():
 ```
 
 ---
-## Monitoring: Custom Metrics and Alerting
+## Monitoring: PipelineMonitor Class
 
 ```python
 from pyspark.sql import SparkSession
@@ -877,8 +894,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 class PipelineMonitor:
-    """Monitor and report pipeline execution metrics."""
-
     def __init__(self, pipeline_name: str):
         self.pipeline_name = pipeline_name
         self.start_time = None
@@ -900,10 +915,15 @@ class PipelineMonitor:
             f"in {duration:.2f}s"
         )
         return self.metrics
+```
 
+---
+
+## Monitoring: Freshness Check
+
+```python
     def check_data_freshness(self, df, ts_column,
                               max_delay_hours=6):
-        """Alert if data is too old."""
         max_ts = df.agg(
             F.max(ts_column).alias("max_ts")
         ).collect()[0]["max_ts"]
@@ -924,10 +944,15 @@ class PipelineMonitor:
 
         logger.info(f"Data fresh. Latest: {max_ts}")
         return True
+```
 
+---
+
+## Monitoring: Row Count Check and Usage
+
+```python
     def check_row_count(self, df, min_expected,
                          max_expected=None):
-        """Alert if row count is outside expected range."""
         count = df.count()
         self.record_metric("row_count", count)
 
@@ -943,7 +968,6 @@ class PipelineMonitor:
             return False
         return True
 
-# Usage
 spark = SparkSession.builder \
     .appName("MonitoredPipeline") \
     .getOrCreate()
@@ -957,7 +981,6 @@ monitor.check_data_freshness(df, "order_date",
 monitor.check_row_count(df, min_expected=1000,
                          max_expected=10_000_000)
 
-# Process data...
 result = df.groupBy("region").agg(
     F.sum("amount").alias("total"))
 monitor.record_metric("regions_processed",
@@ -978,14 +1001,13 @@ print(json.dumps(metrics, indent=2, default=str))
 ![cost_optimization_strategies](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/cost_optimization_strategies.svg)
 
 ---
-## Cost Optimization: Practical Configuration
+## Cost Optimization: Dynamic Allocation
 
 ```python
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
     .appName("CostOptimized") \
-    # -- Dynamic allocation (scale up/down) --
     .config("spark.dynamicAllocation.enabled", "true") \
     .config("spark.dynamicAllocation"
             ".minExecutors", "2") \
@@ -995,36 +1017,29 @@ spark = SparkSession.builder \
             ".executorIdleTimeout", "60s") \
     .config("spark.dynamicAllocation"
             ".schedulerBacklogTimeout", "5s") \
-    # -- External shuffle service (required for DA) --
     .config("spark.shuffle.service.enabled", "true") \
-    # -- AQE (auto-tune) --
-    .config("spark.sql.adaptive.enabled", "true") \
-    .config("spark.sql.adaptive"
-            ".coalescePartitions.enabled", "true") \
-    # -- Efficient serialization --
-    .config("spark.serializer",
-            "org.apache.spark.serializer.KryoSerializer") \
-    # -- Compression --
-    .config("spark.sql.parquet.compression.codec", "zstd") \
-    # -- Job timeout (prevent runaway) --
-    .config("spark.network.timeout", "600s") \
     .getOrCreate()
-
-# Cost comparison example
-# Before optimization:
-#   10 x r5.2xlarge (always on) = $5.04/hr
-#   Job runs 3 hours/day
-#   Monthly: $5.04 * 24 * 30 = $3,629
-
-# After optimization:
-#   Dynamic: 2-10 x r5.2xlarge (spot at 70% discount)
-#   Job runs 2 hours/day (after tuning)
-#   Monthly: $0.504 * avg(6) * 2 * 30 = $181
-#   Savings: 95%
 ```
 
 ---
-## Full Program: Production ETL Pipeline
+
+## Cost Optimization: AQE and Compression
+
+```python
+spark = SparkSession.builder \
+    .appName("CostOptimized") \
+    .config("spark.sql.adaptive.enabled", "true") \
+    .config("spark.sql.adaptive"
+            ".coalescePartitions.enabled", "true") \
+    .config("spark.serializer",
+            "org.apache.spark.serializer.KryoSerializer") \
+    .config("spark.sql.parquet.compression.codec", "zstd") \
+    .config("spark.network.timeout", "600s") \
+    .getOrCreate()
+```
+
+---
+## Full Program: Session and Bronze Ingest
 
 ```python
 from pyspark.sql import SparkSession, Window
@@ -1050,9 +1065,14 @@ def create_spark_session():
         .config("spark.sql.shuffle.partitions", "200")
         .getOrCreate()
     )
+```
 
+---
+
+## Full Program: Bronze Ingestion
+
+```python
 def ingest_bronze(spark, process_date):
-    """Stage 1: Ingest raw data to bronze layer."""
     logger.info(f"Ingesting bronze for {process_date}")
     raw = spark.read.json(f"/data/raw/{process_date}/")
     raw = raw.withColumn("ingestion_ts",
@@ -1070,9 +1090,14 @@ def ingest_bronze(spark, process_date):
     count = raw.count()
     logger.info(f"Bronze: ingested {count} rows")
     return count
+```
 
+---
+
+## Full Program: Silver Transform
+
+```python
 def transform_silver(spark, process_date):
-    """Stage 2: Clean and deduplicate to silver."""
     logger.info(f"Transforming silver for {process_date}")
     bronze = (
         spark.read.format("delta")
@@ -1105,9 +1130,14 @@ def transform_silver(spark, process_date):
     count = silver.count()
     logger.info(f"Silver: wrote {count} rows")
     return count
+```
 
+---
+
+## Full Program: Build Gold
+
+```python
 def build_gold(spark, process_date):
-    """Stage 3: Aggregate to gold layer."""
     logger.info(f"Building gold for {process_date}")
     silver = (
         spark.read.format("delta")
@@ -1142,9 +1172,14 @@ def build_gold(spark, process_date):
     count = gold.count()
     logger.info(f"Gold: wrote {count} rows")
     return count
+```
 
+---
+
+## Full Program: Validate
+
+```python
 def validate(spark, process_date):
-    """Stage 4: Run data quality checks."""
     gold = (
         spark.read.format("delta")
         .load("/data/gold/daily_summary/")
@@ -1166,7 +1201,13 @@ def validate(spark, process_date):
         logger.warning(f"{negative} negative totals")
 
     logger.info(f"Validation passed: {count} rows OK")
+```
 
+---
+
+## Full Program: Main
+
+```python
 def main():
     process_date = sys.argv[1] if len(sys.argv) > 1 \
         else "2024-06-15"

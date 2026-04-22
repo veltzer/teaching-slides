@@ -134,6 +134,13 @@ resource "aws_route53_record" "failover_primary" {
   health_check_id = aws_route53_health_check.primary.id
 }
 
+```
+
+---
+
+## Cross-Cloud DNS Failover: Secondary
+
+```hcl
 resource "aws_route53_record" "failover_secondary" {
   zone_id = aws_route53_zone.main.zone_id
   name    = "app.example.com"

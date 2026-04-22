@@ -271,6 +271,10 @@ int    stack_size(const Stack *s);
 #endif
 ```
 
+---
+
+## Opaque Types: Implementation (create/destroy)
+
 ```c
 /* === stack.c === */
 #include "stack.h"
@@ -298,6 +302,14 @@ void stack_destroy(Stack *s) {
         free(s);
     }
 }
+```
+
+---
+
+## Opaque Types: Implementation (push/pop)
+
+```c
+#include "stack.h"
 
 bool stack_push(Stack *s, int value) {
     if (s->top >= s->capacity - 1) return false;
@@ -338,6 +350,10 @@ project/
 ├── build/               # Build artifacts (gitignored)
 └── README.md
 ```
+
+---
+
+## Project Directory Structure: Makefile
 
 Corresponding Makefile:
 

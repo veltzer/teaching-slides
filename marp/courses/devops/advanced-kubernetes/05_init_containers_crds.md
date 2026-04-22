@@ -202,6 +202,13 @@ spec:
     - cert
     - certs
   scope: Namespaced
+```
+
+---
+
+## `CRDs`: Schema Definition
+
+```yaml
   versions:
   - name: v1
     served: true

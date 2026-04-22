@@ -692,7 +692,13 @@ filter {
     }
   }
 }
+```
 
+---
+
+## Real-world Example: E-commerce Output
+
+```ruby
 output {
   if [type] == "orders" {
     elasticsearch {

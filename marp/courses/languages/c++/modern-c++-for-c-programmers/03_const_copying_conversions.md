@@ -305,7 +305,13 @@ void processObject(Base* obj) {
         std::cout << "Unknown derived type" << std::endl;
     }
 }
+```
 
+---
+
+## `dynamic_cast`: Reference Version
+
+```cpp
 // Reference version (throws std::bad_cast if fails)
 void processObjectRef(Base& obj) {
     try {
@@ -609,7 +615,13 @@ public:
             data[i] = other.data[i];
         }
     }
+```
 
+---
+
+## Copy Assignment Operator: Implementation
+
+```cpp
     // Copy assignment operator
     Array& operator=(const Array& other) {
         if (this != &other) { // Self-assignment check
@@ -667,7 +679,13 @@ public:
             data[i] = other.data[i];
         }
     }
+```
 
+---
+
+## Copy-and-Swap: Assignment and Swap
+
+```cpp
     // Copy assignment operator using copy-and-swap
     Array& operator=(Array other) { // Pass by value (creates a copy)
         swap(*this, other); // Swap with the copy

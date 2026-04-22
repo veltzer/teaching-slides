@@ -185,6 +185,10 @@ finally:
     driver.quit()
 ```
 
+---
+
+## Scraping JavaScript-Heavy Sites: Puppeteer
+
 ```javascript
 // Puppeteer (Node.js): Headless Chrome
 const puppeteer = require('puppeteer');
@@ -338,6 +342,10 @@ def search():
     return jsonify(results)
 ```
 
+---
+
+## Rate Limiting: Nginx Configuration
+
 ```nginx
 # Nginx rate limiting configuration
 http {
@@ -482,7 +490,13 @@ class EthicalScraper:
         self.robots = robotsparser.RobotFileParser()
         self.robots.set_url(f'{base_url}/robots.txt')
         self.robots.read()
+```
 
+---
+
+## Ethical Scraping: Fetch Methods
+
+```python
     def can_fetch(self, url):
         """Check if robots.txt allows scraping this URL."""
         return self.robots.can_fetch(

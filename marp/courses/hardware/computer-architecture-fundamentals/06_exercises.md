@@ -133,6 +133,10 @@ for idx in /sys/devices/system/cpu/cpu0/cache/index*; do
 done
 ```
 
+---
+
+## Exercise 3: Cache Topology Output
+
 **Expected output:**
 
 ```misc
@@ -209,7 +213,13 @@ void random_access(int *arr, int *indices, int n) {
         }
     }
 }
+```
 
+---
+
+## Exercise 4: Main Setup
+
+```c
 int main(void) {
     int *arr = malloc(ARRAY_SIZE * sizeof(int));
     int *indices = malloc(ARRAY_SIZE * sizeof(int));
@@ -233,7 +243,13 @@ int main(void) {
         indices[i] = indices[j];
         indices[j] = tmp;
     }
+```
 
+---
+
+## Exercise 4: Main Measurement
+
+```c
     double t0, t1;
 
     t0 = time_seconds();
@@ -251,6 +267,10 @@ int main(void) {
     return 0;
 }
 ```
+
+---
+
+## Exercise 4: Build and Output
 
 **Build and run:**
 
@@ -287,7 +307,13 @@ static double time_seconds(void) {
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return ts.tv_sec + ts.tv_nsec * 1e-9;
 }
+```
 
+---
+
+## Exercise 5: Measurement Loop
+
+```c
 int main(void) {
     int *arr = malloc(ARRAY_SIZE * sizeof(int));
     if (!arr) { perror("malloc"); return 1; }
@@ -324,6 +350,10 @@ int main(void) {
     return 0;
 }
 ```
+
+---
+
+## Exercise 5: Expected Pattern
 
 **Build and run:**
 
@@ -372,7 +402,13 @@ static double time_seconds(void) {
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return ts.tv_sec + ts.tv_nsec * 1e-9;
 }
+```
 
+---
+
+## Exercise 6: Pointer Chase Builder
+
+```c
 /* Create a random linked list through the array */
 void create_pointer_chase(void **arr, int n) {
     int *order = malloc(n * sizeof(int));
@@ -394,7 +430,13 @@ void create_pointer_chase(void **arr, int n) {
     arr[order[n - 1]] = &arr[order[0]];  /* close the loop */
     free(order);
 }
+```
 
+---
+
+## Exercise 6: Measurement Main
+
+```c
 int main(void) {
     printf("Array Size    Latency (ns)\n");
     printf("----------    ------------\n");
@@ -407,30 +449,7 @@ int main(void) {
 
         create_pointer_chase(arr, n);
 
-        /* Warm up */
-        void **p = arr;
-        for (int i = 0; i < n * 2; i++) {
-            p = (void **)*p;
-        }
-
-        /* Measure */
-        p = arr;
-        double t0 = time_seconds();
-        for (int i = 0; i < CHASE_COUNT; i++) {
-            p = (void **)*p;
-        }
-        double t1 = time_seconds();
-
-        /* Prevent optimization */
-        volatile void *sink = p;
-        (void)sink;
-
-        double latency_ns = (t1 - t0) / CHASE_COUNT * 1e9;
-
-        if (kb < 1024)
-            printf("%6d KB     %8.1f\n", kb, latency_ns);
-        else
-            printf("%6d MB     %8.1f\n", kb / 1024, latency_ns);
+        run_single_size(arr, n, kb);
 
         free(arr);
     }
@@ -438,6 +457,43 @@ int main(void) {
     return 0;
 }
 ```
+
+---
+
+## Exercise 6: Per-Size Measurement
+
+```c
+static void run_single_size(void **arr, int n, int kb) {
+    /* Warm up */
+    void **p = arr;
+    for (int i = 0; i < n * 2; i++) {
+        p = (void **)*p;
+    }
+
+    /* Measure */
+    p = arr;
+    double t0 = time_seconds();
+    for (int i = 0; i < CHASE_COUNT; i++) {
+        p = (void **)*p;
+    }
+    double t1 = time_seconds();
+
+    /* Prevent optimization */
+    volatile void *sink = p;
+    (void)sink;
+
+    double latency_ns = (t1 - t0) / CHASE_COUNT * 1e9;
+
+    if (kb < 1024)
+        printf("%6d KB     %8.1f\n", kb, latency_ns);
+    else
+        printf("%6d MB     %8.1f\n", kb / 1024, latency_ns);
+}
+```
+
+---
+
+## Exercise 6: Expected Output
 
 **Build and run:**
 
@@ -531,7 +587,13 @@ Measure branch prediction accuracy on sorted vs unsorted data:
 int cmp_int(const void *a, const void *b) {
     return (*(int *)a - *(int *)b);
 }
+```
 
+---
+
+## Exercise 8: Branch Prediction Main
+
+```c
 int main(int argc, char **argv) {
     int sorted = (argc > 1 && argv[1][0] == 's');
     int *data = malloc(N * sizeof(int));
@@ -563,6 +625,10 @@ int main(int argc, char **argv) {
     return 0;
 }
 ```
+
+---
+
+## Exercise 8: Run with perf
 
 **Run with perf:**
 
@@ -596,6 +662,10 @@ iTLB-loads,iTLB-load-misses \
 #          1,234  iTLB-load-misses   # 0.00% of all iTLB loads
 ```
 
+---
+
+## Exercise 9: TLB Pressure Program
+
 **Experiment: force TLB pressure with large strides:**
 
 ```c
@@ -611,7 +681,13 @@ static double time_seconds(void) {
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return ts.tv_sec + ts.tv_nsec * 1e-9;
 }
+```
 
+---
+
+## Exercise 9: TLB Main and Run
+
+```c
 int main(void) {
     char *buf = malloc(SIZE);
     if (!buf) { perror("malloc"); return 1; }
@@ -716,7 +792,13 @@ void show_maps(const char *label) {
     }
     fclose(f);
 }
+```
 
+---
+
+## Exercise 11: Main Demonstration
+
+```c
 int main(void) {
     printf("PID: %d\n", getpid());
 
@@ -816,7 +898,13 @@ static double time_seconds(void) {
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return ts.tv_sec + ts.tv_nsec * 1e-9;
 }
+```
 
+---
+
+## Exercise 13: Benchmark Function
+
+```c
 void benchmark(char *buf, long size, const char *label) {
     long count = size / STRIDE;
     volatile long sum = 0;
@@ -835,7 +923,13 @@ void benchmark(char *buf, long size, const char *label) {
     printf("%-20s: %.3f ms per iteration  (%ld pages)\n",
            label, (t1 - t0) / 10.0 * 1000.0, count);
 }
+```
 
+---
+
+## Exercise 13: Main Comparison
+
+```c
 int main(void) {
     /* Regular pages (4 KB) */
     char *regular = mmap(NULL, SIZE, PROT_READ | PROT_WRITE,
@@ -870,6 +964,10 @@ int main(void) {
     return 0;
 }
 ```
+
+---
+
+## Exercise 13: Run
 
 ```bash
 # Enable huge pages (as root)

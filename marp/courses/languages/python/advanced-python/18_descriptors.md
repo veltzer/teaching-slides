@@ -441,7 +441,13 @@ class Field:
         for validator in self.validators:
             validator(self.name, value)
         obj.__dict__[self.name] = value
+```
 
+---
+
+## Combining Descriptors: Validators and Usage
+
+```python
 def type_validator(*types):
     def validate(name, value):
         if not isinstance(value, types):
@@ -536,7 +542,13 @@ class Distance:
             return meters * 1.09361
         elif unit == 'miles':
             return meters * 0.000621371
+```
 
+---
+
+## Unit Conversion Descriptor: Setter and Usage
+
+```python
     def __set__(self, obj, value):
         # Convert from user's unit to meters
         unit = getattr(obj, 'unit', 'meters')
@@ -591,7 +603,13 @@ class LoggedAttribute:
         old_value = obj.__dict__.get(self.name, None)
         self.logging_function(f"Setting {self.name}: {old_value} -> {value}")
         obj.__dict__[self.name] = value
+```
 
+---
+
+## Log Access Descriptor: BankAccount Usage
+
+```python
 class BankAccount:
     balance = LoggedAttribute()
 
@@ -631,7 +649,13 @@ class FormField:
         if obj is None:
             return self
         return obj.__dict__.get(self.name, None)
+```
 
+---
+
+## Form Validation: Setter and Validity Check
+
+```python
     def __set__(self, obj, value):
         self.errors = []
 
@@ -652,7 +676,13 @@ class FormField:
 
     def is_valid(self, obj):
         return not self.errors
+```
 
+---
+
+## Form Validation: Validators and RegistrationForm
+
+```python
 # Example validators
 def email_validator(value):
     if '@' not in value:
@@ -713,7 +743,13 @@ class Column:
             raise TypeError(f"{self.name} must be of type {self.column_type.__name__}")
 
         obj.__dict__[self.name] = value
+```
 
+---
+
+## ORM Models: Model Base and User Class
+
+```python
 class Model:
     @classmethod
     def columns(cls):
@@ -761,7 +797,13 @@ class ConfigParam:
 
         value = obj.__dict__.get(self.name, self.default)
         return value
+```
 
+---
+
+## Configuration Systems: Setter with Type Conversion
+
+```python
     def __set__(self, obj, value):
         # Type conversion if needed
         if self.type and not isinstance(value, self.type):
@@ -775,7 +817,13 @@ class ConfigParam:
             raise ValueError(f"{self.name} must be one of: {', '.join(str(c) for c in self.choices)}")
 
         obj.__dict__[self.name] = value
+```
 
+---
+
+## Configuration Systems: AppConfig Class
+
+```python
 class AppConfig:
     debug = ConfigParam(bool, default=False, help="Enable debug mode")
     log_level = ConfigParam(str, default="INFO",

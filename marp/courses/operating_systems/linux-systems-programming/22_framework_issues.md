@@ -207,32 +207,32 @@ int child_in_pid_ns(void *arg) {
 
 ---
 
-## Network Namespace
+## Network Namespace: Setup
 
 ```c
 #include <sys/socket.h>
 #include <linux/netlink.h>
 
-// Create network namespace and configure interface
 int setup_network_namespace() {
-    // Create new network namespace
     if (unshare(CLONE_NEWNET) == -1) {
         perror("unshare CLONE_NEWNET");
         return -1;
     }
 
-    // The new namespace starts with only loopback interface
-    // and it's down - need to bring it up
     system("ip link set lo up");
 
     return 0;
 }
+```
 
-// Create virtual ethernet pair
+---
+
+## Network Namespace: Veth Pair
+
+```c
 int create_veth_pair(const char *veth1, const char *veth2) {
     char cmd[256];
 
-    // Create veth pair
     snprintf(cmd, sizeof(cmd), "ip link add %s type veth peer name %s",
              veth1, veth2);
 
@@ -243,7 +243,6 @@ int create_veth_pair(const char *veth1, const char *veth2) {
     return 0;
 }
 
-// Move interface to namespace
 int move_interface_to_namespace(const char *interface, pid_t target_pid) {
     char cmd[256];
     snprintf(cmd, sizeof(cmd), "ip link set %s netns %d",
@@ -255,26 +254,22 @@ int move_interface_to_namespace(const char *interface, pid_t target_pid) {
 
 ---
 
-## Mount Namespace
+## Mount Namespace: Demo
 
 ```c
 #include <sys/mount.h>
 
-// Mount namespace demonstration
 int mount_namespace_demo() {
-    // Create new mount namespace
     if (unshare(CLONE_NEWNS) == -1) {
         perror("unshare CLONE_NEWNS");
         return -1;
     }
 
-    // Make all mounts private (don't propagate)
     if (mount("none", "/", NULL, MS_REC | MS_PRIVATE, NULL) == -1) {
         perror("make mounts private");
         return -1;
     }
 
-    // Create and mount tmpfs
     if (mkdir("/tmp/container_tmp", 0755) == -1 && errno != EEXIST) {
         perror("mkdir");
         return -1;
@@ -287,17 +282,20 @@ int mount_namespace_demo() {
 
     printf("Mounted tmpfs in isolated namespace\n");
 
-    // Change root filesystem (chroot-like)
     setup_container_rootfs();
 
     return 0;
 }
+```
 
-// Setup minimal container root filesystem
+---
+
+## Mount Namespace: Container Rootfs
+
+```c
 int setup_container_rootfs() {
     const char *container_root = "/tmp/container_root";
 
-    // Create basic directory structure
     mkdir(container_root, 0755);
     mkdir("/tmp/container_root/bin", 0755);
     mkdir("/tmp/container_root/lib", 0755);
@@ -305,11 +303,9 @@ int setup_container_rootfs() {
     mkdir("/tmp/container_root/dev", 0755);
     mkdir("/tmp/container_root/sys", 0755);
 
-    // Bind mount essential directories
     mount("/bin", "/tmp/container_root/bin", NULL, MS_BIND, NULL);
     mount("/lib", "/tmp/container_root/lib", NULL, MS_BIND, NULL);
 
-    // Change root
     if (chroot(container_root) == -1) {
         perror("chroot");
         return -1;
@@ -317,7 +313,6 @@ int setup_container_rootfs() {
 
     chdir("/");
 
-    // Mount proc and sys in new root
     mount("proc", "/proc", "proc", 0, NULL);
     mount("sysfs", "/sys", "sysfs", 0, NULL);
 
@@ -327,19 +322,17 @@ int setup_container_rootfs() {
 
 ---
 
-## User Namespace
+## User Namespace: Demo
 
 ```c
 #include <sys/capability.h>
 
-// User namespace provides privilege isolation
 int user_namespace_demo() {
     uid_t original_uid = getuid();
     gid_t original_gid = getgid();
 
     printf("Original UID: %d, GID: %d\n", original_uid, original_gid);
 
-    // Create new user namespace
     if (unshare(CLONE_NEWUSER) == -1) {
         perror("unshare CLONE_NEWUSER");
         return -1;
@@ -347,7 +340,6 @@ int user_namespace_demo() {
 
     printf("After unshare - UID: %d, GID: %d\n", getuid(), getgid());
 
-    // Setup UID/GID mappings
     setup_uid_mapping(getpid(), 0, original_uid, 1);
     setup_gid_mapping(getpid(), 0, original_gid, 1);
 
@@ -355,7 +347,13 @@ int user_namespace_demo() {
 
     return 0;
 }
+```
 
+---
+
+## User Namespace: UID Mapping
+
+```c
 int setup_uid_mapping(pid_t pid, int inside_uid, int outside_uid, int length) {
     char path[256];
     char mapping[256];
@@ -379,12 +377,17 @@ int setup_uid_mapping(pid_t pid, int inside_uid, int outside_uid, int length) {
     close(fd);
     return 0;
 }
+```
 
+---
+
+## User Namespace: GID Mapping
+
+```c
 int setup_gid_mapping(pid_t pid, int inside_gid, int outside_gid, int length) {
     char path[256];
     char mapping[256];
 
-    // First, deny setgroups to enable gid_map writing
     snprintf(path, sizeof(path), "/proc/%d/setgroups", pid);
     int fd = open(path, O_WRONLY);
     if (fd != -1) {
@@ -421,28 +424,30 @@ int setup_gid_mapping(pid_t pid, int inside_gid, int outside_gid, int length) {
 
 ---
 
-## Cgroups v1 vs v2
+## Cgroups v1 vs v2: Detection
 
 ```c
-// Cgroup paths differ between v1 and v2
 #define CGROUP_V1_PATH "/sys/fs/cgroup"
 #define CGROUP_V2_PATH "/sys/fs/cgroup"
 
-// Check cgroup version
 int get_cgroup_version() {
     struct stat st;
 
-    // Check for cgroup2 filesystem
     if (stat("/sys/fs/cgroup/cgroup.controllers", &st) == 0) {
-        return 2; // Cgroups v2
+        return 2;
     } else if (stat("/sys/fs/cgroup/memory", &st) == 0) {
-        return 1; // Cgroups v1
+        return 1;
     }
 
-    return 0; // No cgroups or unknown
+    return 0;
 }
+```
 
-// Create cgroup (v1)
+---
+
+## Cgroups v1 vs v2: Create
+
+```c
 int create_cgroup_v1(const char *controller, const char *group_name) {
     char path[512];
     snprintf(path, sizeof(path), "/sys/fs/cgroup/%s/%s",
@@ -456,7 +461,6 @@ int create_cgroup_v1(const char *controller, const char *group_name) {
     return 0;
 }
 
-// Create cgroup (v2)
 int create_cgroup_v2(const char *group_name) {
     char path[512];
     snprintf(path, sizeof(path), "/sys/fs/cgroup/%s", group_name);
@@ -472,15 +476,13 @@ int create_cgroup_v2(const char *group_name) {
 
 ---
 
-## Memory Cgroup Control
+## Memory Cgroup: Set Limit
 
 ```c
-// Set memory limit for cgroup
 int set_memory_limit(const char *cgroup_name, long long bytes) {
     char path[512];
     char limit_str[64];
 
-    // Cgroups v1
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/memory/%s/memory.limit_in_bytes", cgroup_name);
 
@@ -501,8 +503,13 @@ int set_memory_limit(const char *cgroup_name, long long bytes) {
     close(fd);
     return 0;
 }
+```
 
-// Add process to memory cgroup
+---
+
+## Memory Cgroup: Add Process
+
+```c
 int add_process_to_memory_cgroup(const char *cgroup_name, pid_t pid) {
     char path[512];
     char pid_str[32];
@@ -526,8 +533,13 @@ int add_process_to_memory_cgroup(const char *cgroup_name, pid_t pid) {
     close(fd);
     return 0;
 }
+```
 
-// Read memory usage
+---
+
+## Memory Cgroup: Read Usage
+
+```c
 long long read_memory_usage(const char *cgroup_name) {
     char path[512];
     char buffer[64];
@@ -554,15 +566,13 @@ long long read_memory_usage(const char *cgroup_name) {
 
 ---
 
-## CPU Cgroup Control
+## CPU Cgroup: Set Quota
 
 ```c
-// Set CPU quota and period
 int set_cpu_quota(const char *cgroup_name, int quota_us, int period_us) {
     char path[512];
     char value_str[32];
 
-    // Set CPU period (cgroups v1)
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/cpu/%s/cpu.cfs_period_us", cgroup_name);
     snprintf(value_str, sizeof(value_str), "%d", period_us);
@@ -573,7 +583,6 @@ int set_cpu_quota(const char *cgroup_name, int quota_us, int period_us) {
         close(fd);
     }
 
-    // Set CPU quota
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/cpu/%s/cpu.cfs_quota_us", cgroup_name);
     snprintf(value_str, sizeof(value_str), "%d", quota_us);
@@ -592,8 +601,13 @@ int set_cpu_quota(const char *cgroup_name, int quota_us, int period_us) {
     close(fd);
     return 0;
 }
+```
 
-// Set CPU shares (relative weight)
+---
+
+## CPU Cgroup: Set Shares
+
+```c
 int set_cpu_shares(const char *cgroup_name, int shares) {
     char path[512];
     char shares_str[32];
@@ -620,16 +634,14 @@ int set_cpu_shares(const char *cgroup_name, int shares) {
 
 ---
 
-## Block I/O Cgroup Control
+## Block I/O Cgroup: Bandwidth
 
 ```c
-// Set I/O bandwidth limits
 int set_blkio_bandwidth(const char *cgroup_name, const char *device,
                        long long read_bps, long long write_bps) {
     char path[512];
     char limit_str[128];
 
-    // Set read bandwidth limit
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/blkio/%s/blkio.throttle.read_bps_device",
              cgroup_name);
@@ -641,7 +653,6 @@ int set_blkio_bandwidth(const char *cgroup_name, const char *device,
         close(fd);
     }
 
-    // Set write bandwidth limit
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/blkio/%s/blkio.throttle.write_bps_device",
              cgroup_name);
@@ -655,8 +666,13 @@ int set_blkio_bandwidth(const char *cgroup_name, const char *device,
 
     return 0;
 }
+```
 
-// Set I/O priority (weight)
+---
+
+## Block I/O Cgroup: Weight
+
+```c
 int set_blkio_weight(const char *cgroup_name, int weight) {
     char path[512];
     char weight_str[32];
@@ -683,26 +699,23 @@ int set_blkio_weight(const char *cgroup_name, int weight) {
 
 ---
 
-## Capabilities System
+## Capabilities System: Drop Except
 
 ```c
 #include <sys/capability.h>
 #include <sys/prctl.h>
 
-// Drop all capabilities except specified ones
 int drop_capabilities_except(cap_value_t *keep_caps, int num_caps) {
     cap_t caps = cap_get_proc();
     if (caps == NULL) {
         return -1;
     }
 
-    // Clear all capabilities
     if (cap_clear(caps) == -1) {
         cap_free(caps);
         return -1;
     }
 
-    // Set only the capabilities we want to keep
     if (num_caps > 0) {
         if (cap_set_flag(caps, CAP_EFFECTIVE, num_caps, keep_caps,
                         CAP_SET) == -1 ||
@@ -713,7 +726,6 @@ int drop_capabilities_except(cap_value_t *keep_caps, int num_caps) {
         }
     }
 
-    // Apply the capability set
     if (cap_set_proc(caps) == -1) {
         cap_free(caps);
         return -1;
@@ -722,41 +734,40 @@ int drop_capabilities_except(cap_value_t *keep_caps, int num_caps) {
     cap_free(caps);
     return 0;
 }
+```
 
-// Example: Keep only network capabilities
+---
+
+## Capabilities System: Network and Bounding
+
+```c
 int setup_network_capabilities() {
     cap_value_t caps[] = {
-        CAP_NET_BIND_SERVICE,  // Bind to ports < 1024
-        CAP_NET_RAW           // Use raw sockets
+        CAP_NET_BIND_SERVICE,
+        CAP_NET_RAW
     };
 
     return drop_capabilities_except(caps, 2);
 }
 
-// Set capability bounding set
 int set_capability_bounding_set(cap_value_t *caps, int num_caps) {
-    // Drop all capabilities from bounding set first
     for (int i = 0; i <= CAP_LAST_CAP; i++) {
         if (prctl(PR_CAPBSET_DROP, i, 0, 0, 0) == -1) {
-            // Some capabilities might not exist
             if (errno != EINVAL) {
                 return -1;
             }
         }
     }
 
-    // This doesn't work - bounding set can only be reduced
-    // We've already dropped all, so we're done
     return 0;
 }
 ```
 
 ---
 
-## Complete Container Creation
+## Complete Container Creation: Config
 
 ```c
-// Create a complete container with isolation
 struct container_config {
     char *hostname;
     char *root_path;
@@ -772,7 +783,6 @@ int create_container(struct container_config *config) {
     const int STACK_SIZE = 1024 * 1024;
     char *stack = malloc(STACK_SIZE);
 
-    // Create all namespaces
     int flags = CLONE_NEWPID | CLONE_NEWNET | CLONE_NEWNS |
                 CLONE_NEWUTS | CLONE_NEWIPC | CLONE_NEWUSER;
 
@@ -785,79 +795,77 @@ int create_container(struct container_config *config) {
         return -1;
     }
 
-    // Setup from parent process
     setup_container_cgroups(container_pid, config);
     setup_container_network(container_pid);
 
-    // Wait for container
     int status;
     waitpid(container_pid, &status, 0);
 
     free(stack);
     return WEXITSTATUS(status);
 }
+```
 
+---
+
+## Complete Container Creation: Init
+
+```c
 int container_init(void *arg) {
     struct container_config *config = (struct container_config *)arg;
 
-    // Set hostname
     sethostname(config->hostname, strlen(config->hostname));
 
-    // Setup user namespace mappings
     setup_uid_mapping(getpid(), 0, config->uid, 1);
     setup_gid_mapping(getpid(), 0, config->gid, 1);
 
-    // Setup mount namespace
     setup_container_mounts(config->root_path);
 
-    // Drop capabilities
     drop_capabilities_except(config->capabilities, config->num_capabilities);
 
-    // Change to non-root user
     setuid(1000);
     setgid(1000);
 
-    // Execute container process
     execl("/bin/sh", "/bin/sh", NULL);
 
-    return 1; // Should not reach here
+    return 1;
 }
 ```
 
 ---
 
-## Container Resource Setup
+## Container Resource Setup: Cgroups
 
 ```c
 int setup_container_cgroups(pid_t container_pid, struct container_config *config) {
     char cgroup_name[256];
     snprintf(cgroup_name, sizeof(cgroup_name), "container_%d", container_pid);
 
-    // Create cgroups
     create_cgroup_v1("memory", cgroup_name);
     create_cgroup_v1("cpu", cgroup_name);
     create_cgroup_v1("blkio", cgroup_name);
 
-    // Set limits
     set_memory_limit(cgroup_name, config->memory_limit);
     set_cpu_shares(cgroup_name, config->cpu_shares);
 
-    // Add container process to cgroups
     add_process_to_memory_cgroup(cgroup_name, container_pid);
     add_process_to_cpu_cgroup(cgroup_name, container_pid);
     add_process_to_blkio_cgroup(cgroup_name, container_pid);
 
     return 0;
 }
+```
 
+---
+
+## Container Resource Setup: Network and Mounts
+
+```c
 int setup_container_network(pid_t container_pid) {
-    // Create veth pair
     create_veth_pair("veth_host", "veth_container");
 
-    // Move container side to container namespace
     move_interface_to_namespace("veth_container", container_pid);
 
-    // Setup host side
     system("ip addr add 192.168.1.1/24 dev veth_host");
     system("ip link set veth_host up");
 
@@ -865,7 +873,6 @@ int setup_container_network(pid_t container_pid) {
 }
 
 int setup_container_mounts(const char *root_path) {
-    // Change root
     if (chroot(root_path) == -1) {
         perror("chroot");
         return -1;
@@ -873,7 +880,6 @@ int setup_container_mounts(const char *root_path) {
 
     chdir("/");
 
-    // Mount essential filesystems
     mount("proc", "/proc", "proc", 0, NULL);
     mount("sysfs", "/sys", "sysfs", 0, NULL);
     mount("tmpfs", "/tmp", "tmpfs", 0, "size=100M");
@@ -885,10 +891,9 @@ int setup_container_mounts(const char *root_path) {
 
 ---
 
-## Monitoring and Debugging
+## Monitoring: Cgroup Stats
 
 ```c
-// Read cgroup statistics
 struct cgroup_stats {
     long long memory_usage;
     long long memory_limit;
@@ -898,22 +903,25 @@ struct cgroup_stats {
 };
 
 int read_cgroup_stats(const char *cgroup_name, struct cgroup_stats *stats) {
-    // Memory stats
     stats->memory_usage = read_memory_usage(cgroup_name);
     stats->memory_limit = read_cgroup_value("memory", cgroup_name,
                                            "memory.limit_in_bytes");
 
-    // CPU stats
     stats->cpu_usage = read_cgroup_value("cpuacct", cgroup_name,
                                         "cpuacct.usage");
 
-    // Block I/O stats
     stats->blkio_read = read_blkio_stat(cgroup_name, "Read");
     stats->blkio_write = read_blkio_stat(cgroup_name, "Write");
 
     return 0;
 }
+```
 
+---
+
+## Monitoring: Read Value
+
+```c
 long long read_cgroup_value(const char *controller, const char *cgroup_name,
                            const char *filename) {
     char path[512];
@@ -937,8 +945,13 @@ long long read_cgroup_value(const char *controller, const char *cgroup_name,
 
     return -1;
 }
+```
 
-// List processes in cgroup
+---
+
+## Monitoring: List Processes
+
+```c
 int list_cgroup_processes(const char *cgroup_name) {
     char path[512];
     snprintf(path, sizeof(path), "/sys/fs/cgroup/memory/%s/cgroup.procs",
@@ -962,23 +975,20 @@ int list_cgroup_processes(const char *cgroup_name) {
 
 ---
 
-## Security Considerations
+## Security Considerations: Setup
 
 ```c
-// Security best practices for containers
 int secure_container_setup() {
-    // 1. Use user namespaces
     if (unshare(CLONE_NEWUSER) == -1) {
         perror("unshare user namespace");
         return -1;
     }
 
-    // 2. Drop unnecessary capabilities
     cap_value_t no_caps[] = {
-        CAP_SYS_ADMIN,    // System administration
-        CAP_SYS_MODULE,   // Load kernel modules
-        CAP_SYS_TIME,     // Set system time
-        CAP_MKNOD,        // Create device files
+        CAP_SYS_ADMIN,
+        CAP_SYS_MODULE,
+        CAP_SYS_TIME,
+        CAP_MKNOD,
     };
 
     for (int i = 0; i < 4; i++) {
@@ -987,25 +997,25 @@ int secure_container_setup() {
         }
     }
 
-    // 3. Set no-new-privs
     if (prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0) == -1) {
         perror("set no new privs");
         return -1;
     }
 
-    // 4. Set up seccomp filter (simplified)
     setup_seccomp_filter();
 
     return 0;
 }
+```
 
-// Basic seccomp filter
+---
+
+## Security Considerations: Seccomp
+
+```c
 int setup_seccomp_filter() {
-    // This is a simplified example
-    // Real implementations use libseccomp
-
     if (prctl(PR_SET_SECCOMP, SECCOMP_MODE_STRICT, 0, 0, 0) == -1) {
-        if (errno != EINVAL) { // SECCOMP might not be available
+        if (errno != EINVAL) {
             perror("seccomp");
             return -1;
         }
@@ -1017,10 +1027,9 @@ int setup_seccomp_filter() {
 
 ---
 
-## Container Runtime Integration
+## Container Runtime: Start and Stop
 
 ```c
-// Simple container runtime interface
 struct container_runtime {
     char *name;
     pid_t pid;
@@ -1042,10 +1051,8 @@ int stop_container(struct container_runtime *runtime) {
     if (runtime->state == RUNNING) {
         kill(runtime->pid, SIGTERM);
 
-        // Wait for graceful shutdown
         sleep(5);
 
-        // Force kill if still running
         if (kill(runtime->pid, 0) == 0) {
             kill(runtime->pid, SIGKILL);
         }
@@ -1053,17 +1060,21 @@ int stop_container(struct container_runtime *runtime) {
         waitpid(runtime->pid, NULL, 0);
         runtime->state = STOPPED;
 
-        // Cleanup cgroups
         cleanup_container_cgroups(runtime->name);
     }
 
     return 0;
 }
+```
 
+---
+
+## Container Runtime: Cleanup
+
+```c
 int cleanup_container_cgroups(const char *container_name) {
     char path[512];
 
-    // Remove cgroup directories
     snprintf(path, sizeof(path), "/sys/fs/cgroup/memory/%s", container_name);
     rmdir(path);
 
@@ -1079,41 +1090,41 @@ int cleanup_container_cgroups(const char *container_name) {
 
 ---
 
-## Performance Tuning
+## Performance Tuning: Optimize Cgroup
 
 ```c
-// Optimize cgroup performance
 int optimize_cgroup_performance(const char *cgroup_name) {
-    // Disable swap for memory cgroup
     char path[512];
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/memory/%s/memory.swappiness", cgroup_name);
 
     int fd = open(path, O_WRONLY);
     if (fd != -1) {
-        write(fd, "0", 1); // Disable swap
+        write(fd, "0", 1);
         close(fd);
     }
 
-    // Set memory reclaim behavior
     snprintf(path, sizeof(path),
              "/sys/fs/cgroup/memory/%s/memory.oom_control", cgroup_name);
 
     fd = open(path, O_WRONLY);
     if (fd != -1) {
-        write(fd, "1", 1); // Disable OOM killer
+        write(fd, "1", 1);
         close(fd);
     }
 
-    // Optimize CPU scheduling
-    set_cpu_shares(cgroup_name, 1024); // Normal priority
+    set_cpu_shares(cgroup_name, 1024);
 
     return 0;
 }
+```
 
-// Monitor resource pressure
+---
+
+## Performance Tuning: Monitor Pressure
+
+```c
 int monitor_resource_pressure(const char *cgroup_name) {
-    // Check memory pressure
     long long usage = read_memory_usage(cgroup_name);
     long long limit = read_cgroup_value("memory", cgroup_name,
                                        "memory.limit_in_bytes");
@@ -1126,7 +1137,6 @@ int monitor_resource_pressure(const char *cgroup_name) {
         }
     }
 
-    // Check for memory events
     long long oom_kill = read_cgroup_value("memory", cgroup_name,
                                           "memory.oom_control");
     if (oom_kill > 0) {

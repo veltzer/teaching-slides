@@ -433,7 +433,13 @@ void queue_put(Queue *q, int item) {
     pthread_cond_signal(&q->not_empty);
     pthread_mutex_unlock(&q->mutex);
 }
+```
 
+---
+
+## Condition Variable Patterns: Consumer
+
+```c
 int queue_get(Queue *q) {
     pthread_mutex_lock(&q->mutex);
 
@@ -724,7 +730,13 @@ typedef struct {
     pthread_cond_t not_full;
     int shutdown;
 } ThreadPool;
+```
 
+---
+
+## Thread Pools: Worker Function
+
+```c
 void *worker_thread(void *arg) {
     ThreadPool *pool = arg;
 

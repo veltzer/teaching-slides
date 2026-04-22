@@ -249,6 +249,10 @@ def verify_packages():
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## SBOM: Generation and Auditing Tools
+
 ```bash
 # Generate SBOM with Syft
 syft dir:./myapp -o spdx-json > sbom.spdx.json

@@ -415,6 +415,17 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 │  13. Check for data exfiltration indicators              │
 │  14. Check nomoreransom.org for decryptors               │
 │  15. Engage legal counsel and law enforcement            │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Incident Response Playbook: Recovery
+
+```python
+┌──────────────────────────────────────────────────────────┐
+│  Ransomware Incident Response (continued)                │
+├──────────────────────────────────────────────────────────┤
 │                                                          │
 │  DAY 1-7: RECOVERY                                       │
 │  16. Rebuild from clean images (do not decrypt in place) │

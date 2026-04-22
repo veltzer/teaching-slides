@@ -1358,7 +1358,13 @@ add(2, 3)
 # Output:
 # Calling add with (2, 3), {}
 # add returned 5
+```
 
+---
+
+## Decorators: With Arguments
+
+```python
 # Decorator with arguments
 def repeat(n):
     def decorator(func):
@@ -1441,7 +1447,13 @@ def has_name(user):
 
 def has_valid_email(user):
     return "@" in user["email"] and "." in user["email"]
+```
 
+---
+
+## Data Processing Pipeline: Transform and Run
+
+```python
 # Transformation function
 def normalize_user(user):
     return {
@@ -1482,7 +1494,13 @@ events = [
     {"type": "VIEW", "user_id": 456, "page": "cart", "timestamp": 1623423440},
     {"type": "PURCHASE", "user_id": 456, "amount": 125.99, "timestamp": 1623423447}
 ]
+```
 
+---
+
+## Event Stream Processing: Pure Functions
+
+```python
 # Event processors (pure functions)
 def filter_by_type(events, event_type):
     return filter(lambda e: e["type"] == event_type, events)
@@ -1503,7 +1521,13 @@ def calculate_session_duration(events):
     # Find first and last event timestamps
     timestamps = [event["timestamp"] for event in events]
     return max(timestamps) - min(timestamps)
+```
 
+---
+
+## Event Stream Processing: Build Statistics
+
+```python
 # Process the event stream
 user_sessions = get_user_sessions(events)
 

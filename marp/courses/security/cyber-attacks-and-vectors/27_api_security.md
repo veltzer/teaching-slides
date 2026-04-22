@@ -125,6 +125,10 @@ def get_orders(user_id):
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## Mass Assignment: Vulnerable vs Secure
+
 ```python
 # VULNERABLE: Accept all fields from request
 @app.route('/api/users/me', methods=['PUT'])
@@ -219,6 +223,10 @@ def is_safe_url(url):
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## Rate Limiting: Flask-Limiter Example
+
 ```python
 # Rate limiting with Flask-Limiter
 from flask_limiter import Limiter
@@ -246,7 +254,9 @@ def data():
     pass
 ```
 
-### Rate Limit Response Headers
+---
+
+## Rate Limit Response Headers
 
 ```asm
 HTTP/1.1 429 Too Many Requests
@@ -372,7 +382,9 @@ python3 jwt_tool.py <JWT_TOKEN> -M at  # All tests
 └──────────────────────────────────────────────────────────┘
 ```
 
-### Introspection Query Attack
+---
+
+## GraphQL: Introspection Query Attack
 
 ```graphql
 # Discover the entire API schema
@@ -591,7 +603,9 @@ apicheck-curl http://api.example.com/openapi.json | \
     apicheck-sensitivedata
 ```
 
-### API Security Checklist
+---
+
+## API Security Checklist
 
 ```sql
 ┌──────────────────────────────────────────────────────────┐

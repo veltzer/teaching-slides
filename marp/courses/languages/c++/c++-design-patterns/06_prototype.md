@@ -89,7 +89,13 @@ public:
         return "Circle(r=" + std::to_string(radius) + ", " + color + ")";
     }
 };
+```
 
+---
+
+## Concrete Prototypes: Rectangle
+
+```cpp
 class Rectangle : public Shape {
     double width, height;
     std::string color;

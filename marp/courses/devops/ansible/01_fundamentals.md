@@ -1170,7 +1170,13 @@ handlers:
         dest: /var/www/myapp/index.html
         owner: www-data
         group: www-data
+```
 
+---
+
+## Web Server Setup: Service and Handlers
+
+```yaml
     - name: Ensure nginx is started
       service:
         name: nginx

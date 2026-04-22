@@ -338,6 +338,19 @@ int cmp_str(const void *a, const void *b) {
     const char *sb = *(const char **)b;
     return strcmp(sa, sb);
 }
+```
+
+---
+
+## Sorting with qsort: Using the Comparators
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int cmp_int_asc(const void *a, const void *b);
+int cmp_str(const void *a, const void *b);
 
 int main(void) {
     /* Sort integers */

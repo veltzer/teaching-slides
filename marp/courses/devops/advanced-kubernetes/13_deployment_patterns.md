@@ -307,6 +307,13 @@ spec:
         args:
         - name: service-name
           value: web-canary
+```
+
+---
+
+## `Argo Rollouts` - Pod Template
+
+```yaml
   template:
     metadata:
       labels:

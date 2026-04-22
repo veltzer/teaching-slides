@@ -405,7 +405,13 @@ spark = SparkSession.builder \
     .appName("EndToEndMLPipeline") \
     .config("spark.sql.adaptive.enabled", "true") \
     .getOrCreate()
+```
 
+---
+
+## ML Pipeline: Data Loading and Split
+
+```python
 # Load and prepare data
 raw_data = spark.read.csv(
     "/data/customer_churn.csv",
@@ -460,7 +466,13 @@ encoders = [
     )
     for col in categorical_cols
 ]
+```
 
+---
+
+## Feature Engineering: Assembly and Scaling
+
+```python
 # Step 4: Assemble all features into a single vector
 assembler_inputs = (
     [f"{c}_imputed" for c in numeric_cols] +
@@ -520,7 +532,13 @@ models = {
         featuresCol="features",
     ),
 }
+```
 
+---
+
+## Model Comparison: Parameter Grids
+
+```python
 # Define parameter grids for each model
 param_grids = {
     "RandomForest": ParamGridBuilder()
@@ -545,7 +563,13 @@ evaluator = BinaryClassificationEvaluator(
     labelCol="label",
     metricName="areaUnderROC"
 )
+```
 
+---
+
+## Model Comparison: Cross-Validation Loop
+
+```python
 # Build and evaluate pipelines
 feature_stages = [imputer] + indexers + encoders + \
     [assembler, scaler, label_indexer]
@@ -643,7 +667,13 @@ class OutlierClipper(
         Params._dummy(), "upper_quantile",
         "Upper quantile for clipping", typeConverter=float
     )
+```
 
+---
+
+## Custom Transformer: Init and setParams
+
+```python
     def __init__(self, inputCol=None, outputCol=None,
                  lower_quantile=0.01, upper_quantile=0.99):
         super().__init__()
@@ -658,7 +688,13 @@ class OutlierClipper(
                   lower_quantile=0.01, upper_quantile=0.99):
         kwargs = self._input_kwargs
         return self._set(**kwargs)
+```
 
+---
+
+## Custom Transformer: _transform and Usage
+
+```python
     def _transform(self, dataset):
         input_col = self.getInputCol()
         output_col = self.getOutputCol()
@@ -710,7 +746,13 @@ streaming_input = (
     .option("startingOffsets", "latest")
     .load()
 )
+```
 
+---
+
+## Streaming ML: Event Schema
+
+```python
 # Parse JSON messages
 from pyspark.sql.types import *
 from pyspark.sql import functions as F
@@ -737,7 +779,13 @@ parsed_events = (
     )
     .select("data.*")
 )
+```
 
+---
+
+## Streaming ML: Scoring and Query
+
+```python
 # Apply model to streaming data
 def score_batch(batch_df, batch_id):
     if batch_df.count() == 0:
@@ -790,7 +838,14 @@ with mlflow.start_run(run_name="rf_v3_tuned") as run:
     ])
     model = pipeline.fit(train_data)
     predictions = model.transform(test_data)
+```
 
+---
+
+## MLflow: Metrics and Model Logging
+
+```python
+with mlflow.start_run(run_name="rf_v3_tuned") as run:
     # Evaluate and log metrics
     evaluator_auc = BinaryClassificationEvaluator(
         labelCol="label", metricName="areaUnderROC")
@@ -854,7 +909,13 @@ lr = LogisticRegression(
     featuresCol="features",
     weightCol="weight"
 )
+```
 
+---
+
+## Class Imbalance: Oversampling
+
+```python
 # Method 2: SMOTE-like oversampling
 minority = train_data.filter(F.col("churn") == "Yes")
 oversample_ratio = int(neg_count / pos_count)

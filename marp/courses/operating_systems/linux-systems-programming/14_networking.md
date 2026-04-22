@@ -186,7 +186,13 @@ int main() {
     // Listen
     listen(server_fd, BACKLOG);
     printf("Server listening on port %d\n", PORT);
+```
 
+---
+
+## Complete TCP Server: Accept Loop
+
+```c
     // Accept loop
     while (1) {
         client_fd = accept(server_fd,
@@ -314,7 +320,13 @@ int main() {
          sizeof(servaddr));
 
     socklen_t len = sizeof(cliaddr);
+```
 
+---
+
+## UDP Server: Receive Loop
+
+```c
     while (1) {
         // Receive datagram
         int n = recvfrom(sockfd, buffer, MAXLINE, 0,
@@ -446,7 +458,13 @@ void handle_multiple_clients(int server_fd) {
             perror("select");
             exit(1);
         }
+```
 
+---
+
+## select(): Handling FDs
+
+```c
         for (int fd = 0; fd <= max_fd; fd++) {
             if (FD_ISSET(fd, &read_fds)) {
                 if (fd == server_fd) {
@@ -505,7 +523,13 @@ void poll_server(int server_fd) {
             fds[nfds].events = POLLIN;
             nfds++;
         }
+```
 
+---
+
+## poll(): Handling Client Sockets
+
+```c
         // Check client sockets
         for (int i = 1; i < nfds; i++) {
             if (fds[i].revents & POLLIN) {

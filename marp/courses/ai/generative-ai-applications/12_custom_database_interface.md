@@ -66,7 +66,13 @@ def create_sample_database():
             total DECIMAL(10,2),
             order_date DATE
         );
+```
 
+---
+
+## Setting Up the Database: Sample Data
+
+```python
         -- Insert sample data
         INSERT INTO customers VALUES
             (1, 'Acme Corp', 'info@acme.com', 'Manufacturing', '2023-01-15'),

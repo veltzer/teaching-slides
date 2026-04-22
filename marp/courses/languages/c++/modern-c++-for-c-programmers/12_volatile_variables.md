@@ -164,12 +164,11 @@ public:
 
 ---
 
-## Bit Manipulation with Volatile
+## Bit Manipulation with Volatile: Class
 
 Safe bit manipulation techniques for hardware registers:
 
 ```cpp
-// Utility class for safe bit operations
 class VolatileBits {
 public:
     static void setBit(volatile uint32_t& reg, int bit) {
@@ -192,19 +191,21 @@ public:
         reg = (reg & ~mask) | (value & mask);
     }
 };
+```
 
-// Usage example
+---
+
+## Bit Manipulation with Volatile: Example
+
+```cpp
 void configureUART() {
     volatile uint32_t* const UART_CONTROL =
         reinterpret_cast<volatile uint32_t*>(0x50000000);
 
-    // Configure UART: 8 bits, no parity, 1 stop bit, enable
     VolatileBits::modifyBits(*UART_CONTROL, 0xFF, 0x83);
 
-    // Enable transmitter
     VolatileBits::setBit(*UART_CONTROL, 3);
 
-    // Enable receiver
     VolatileBits::setBit(*UART_CONTROL, 2);
 }
 ```
@@ -253,7 +254,7 @@ void demonstratePlacementNew() {
 
 ---
 
-## Placement New with Alignment
+## Placement New with Alignment: Class
 
 Ensuring proper alignment for placement new:
 
@@ -285,7 +286,13 @@ public:
             constructed = false;
         }
     }
+```
 
+---
+
+## Placement New with Alignment: Accessors
+
+```cpp
     T* get() {
         return constructed ? reinterpret_cast<T*>(storage) : nullptr;
     }
@@ -299,20 +306,17 @@ public:
     }
 };
 
-// Usage
 void demonstrateAlignedStorage() {
     AlignedStorage<Widget> storage;
 
     Widget* widget = storage.construct(100);
     std::cout << "Value: " << widget->getValue() << std::endl;
-
-    // Destructor automatically called when storage goes out of scope
 }
 ```
 
 ---
 
-## Custom New and Delete Operators
+## Custom New/Delete: Class Setup
 
 Overloading new and delete for specific classes:
 
@@ -331,8 +335,13 @@ public:
     ~MemoryTrackedClass() {
         std::cout << "MemoryTrackedClass destroyed" << std::endl;
     }
+```
 
-    // Custom new operator
+---
+
+## Custom New/Delete: Operators
+
+```cpp
     static void* operator new(size_t size) {
         std::cout << "Custom new called, size: " << size << std::endl;
 
@@ -347,7 +356,6 @@ public:
         return ptr;
     }
 
-    // Custom delete operator
     static void operator delete(void* ptr, size_t size) {
         std::cout << "Custom delete called, size: " << size << std::endl;
 
@@ -357,8 +365,13 @@ public:
             std::free(ptr);
         }
     }
+```
 
-    // Array versions
+---
+
+## Custom New/Delete: Array Operators
+
+```cpp
     static void* operator new[](size_t size) {
         std::cout << "Custom new[] called, size: " << size << std::endl;
         return std::malloc(size);
@@ -381,12 +394,11 @@ size_t MemoryTrackedClass::totalAllocated = 0;
 
 ---
 
-## Placement New for Hardware Memory
+## Placement New for Hardware: Controller Class
 
 Using placement new with memory-mapped hardware:
 
 ```cpp
-// Device memory at fixed address
 constexpr uintptr_t DEVICE_MEMORY_BASE = 0x80000000;
 constexpr size_t DEVICE_MEMORY_SIZE = 4096;
 
@@ -398,7 +410,6 @@ private:
 
 public:
     DeviceController() : command(0), status(0) {
-        // Initialize data array
         for (int i = 0; i < 10; ++i) {
             data[i] = 0;
         }
@@ -408,7 +419,13 @@ public:
     void sendCommand(uint32_t cmd) {
         command = cmd;
     }
+```
 
+---
+
+## Placement New for Hardware: Methods
+
+```cpp
     uint32_t getStatus() const {
         return status;
     }
@@ -425,10 +442,8 @@ public:
 };
 
 DeviceController* initializeDevice() {
-    // Map device memory and construct controller there
     void* deviceMemory = reinterpret_cast<void*>(DEVICE_MEMORY_BASE);
 
-    // Use placement new to construct at hardware address
     DeviceController* controller = new(deviceMemory) DeviceController();
 
     return controller;
@@ -437,7 +452,7 @@ DeviceController* initializeDevice() {
 
 ---
 
-## Memory Pool with Placement New
+## Memory Pool: Storage and Lookup
 
 Creating efficient memory pools:
 
@@ -458,7 +473,13 @@ private:
         }
         throw std::bad_alloc();
     }
+```
 
+---
+
+## Memory Pool: Allocation
+
+```cpp
 public:
     template<typename... Args>
     T* allocate(Args&&... args) {
@@ -473,12 +494,11 @@ public:
     void deallocate(T* ptr) {
         if (!ptr) return;
 
-        // Calculate index from pointer
         char* charPtr = reinterpret_cast<char*>(ptr);
         size_t index = (charPtr - storage) / sizeof(T);
 
         if (index < PoolSize && used[index]) {
-            ptr->~T();  // Call destructor
+            ptr->~T();
             used[index] = false;
             nextFree = index;
         }
@@ -489,21 +509,24 @@ public:
     bool empty() const { return used.none(); }
     bool full() const { return used.all(); }
 };
+```
 
-// Usage
+---
+
+## Memory Pool: Usage Example
+
+```cpp
 void demonstrateMemoryPool() {
     MemoryPool<Widget, 10> pool;
 
     std::vector<Widget*> widgets;
 
-    // Allocate some widgets
     for (int i = 0; i < 5; ++i) {
         widgets.push_back(pool.allocate(i * 10));
     }
 
     std::cout << "Pool size: " << pool.size() << std::endl;
 
-    // Deallocate widgets
     for (Widget* widget : widgets) {
         pool.deallocate(widget);
     }
@@ -514,7 +537,7 @@ void demonstrateMemoryPool() {
 
 ---
 
-## Allocating Without Exceptions
+## Allocating Without Exceptions: Scalar
 
 Using nothrow new for exception-free allocation:
 
@@ -525,18 +548,15 @@ class SafeAllocator {
 public:
     template<typename T, typename... Args>
     static T* allocate(Args&&... args) {
-        // Allocate without throwing exceptions
         void* memory = operator new(sizeof(T), std::nothrow);
 
         if (!memory) {
-            return nullptr;  // Allocation failed
+            return nullptr;
         }
 
         try {
-            // Construct object using placement new
             return new(memory) T(std::forward<Args>(args)...);
         } catch (...) {
-            // Constructor threw exception, clean up memory
             operator delete(memory, std::nothrow);
             return nullptr;
         }
@@ -545,16 +565,21 @@ public:
     template<typename T>
     static void deallocate(T* ptr) {
         if (ptr) {
-            ptr->~T();  // Call destructor
+            ptr->~T();
             operator delete(ptr, std::nothrow);
         }
     }
+```
 
+---
+
+## Allocating Without Exceptions: Array Allocate
+
+```cpp
     template<typename T>
     static T* allocateArray(size_t count) {
         if (count == 0) return nullptr;
 
-        // Calculate total size needed
         size_t totalSize = count * sizeof(T);
 
         void* memory = operator new(totalSize, std::nothrow);
@@ -566,14 +591,12 @@ public:
         size_t constructed = 0;
 
         try {
-            // Construct each element
             for (size_t i = 0; i < count; ++i) {
                 new(array + i) T();
                 ++constructed;
             }
             return array;
         } catch (...) {
-            // Destroy constructed elements
             for (size_t i = 0; i < constructed; ++i) {
                 array[i].~T();
             }
@@ -581,11 +604,16 @@ public:
             return nullptr;
         }
     }
+```
 
+---
+
+## Allocating Without Exceptions: Array Deallocate
+
+```cpp
     template<typename T>
     static void deallocateArray(T* array, size_t count) {
         if (array) {
-            // Destroy elements in reverse order
             for (size_t i = count; i > 0; --i) {
                 array[i - 1].~T();
             }
@@ -597,7 +625,7 @@ public:
 
 ---
 
-## Memory-Mapped File Example
+## Memory-Mapped File: Class Members
 
 Using memory mapping for file I/O:
 
@@ -621,119 +649,140 @@ private:
 #else
     int fileDescriptor = -1;
 #endif
-
-public:
-    bool open(const std::string& filename) {
-#ifdef _WIN32
-        fileHandle = CreateFileA(filename.c_str(), GENERIC_READ | GENERIC_WRITE,
-                                0, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
-
-        if (fileHandle == INVALID_HANDLE_VALUE) {
-            return false;
-        }
-
-        LARGE_INTEGER size;
-        if (!GetFileSizeEx(fileHandle, &size)) {
-            close();
-            return false;
-        }
-        fileSize = static_cast<size_t>(size.QuadPart);
-
-        mappingHandle = CreateFileMappingA(fileHandle, nullptr, PAGE_READWRITE, 0, 0, nullptr);
-        if (!mappingHandle) {
-            close();
-            return false;
-        }
-
-        mappedMemory = MapViewOfFile(mappingHandle, FILE_MAP_ALL_ACCESS, 0, 0, 0);
-#else
-        fileDescriptor = ::open(filename.c_str(), O_RDWR);
-        if (fileDescriptor == -1) {
-            return false;
-        }
-
-        struct stat st;
-        if (fstat(fileDescriptor, &st) == -1) {
-            close();
-            return false;
-        }
-        fileSize = st.st_size;
-
-        mappedMemory = mmap(nullptr, fileSize, PROT_READ | PROT_WRITE,
-                           MAP_SHARED, fileDescriptor, 0);
-        if (mappedMemory == MAP_FAILED) {
-            mappedMemory = nullptr;
-            close();
-            return false;
-        }
-#endif
-        return true;
-    }
-
-    void close() {
-        if (mappedMemory) {
-#ifdef _WIN32
-            UnmapViewOfFile(mappedMemory);
-#else
-            munmap(mappedMemory, fileSize);
-#endif
-            mappedMemory = nullptr;
-        }
-
-#ifdef _WIN32
-        if (mappingHandle != INVALID_HANDLE_VALUE) {
-            CloseHandle(mappingHandle);
-            mappingHandle = INVALID_HANDLE_VALUE;
-        }
-        if (fileHandle != INVALID_HANDLE_VALUE) {
-            CloseHandle(fileHandle);
-            fileHandle = INVALID_HANDLE_VALUE;
-        }
-#else
-        if (fileDescriptor != -1) {
-            ::close(fileDescriptor);
-            fileDescriptor = -1;
-        }
-#endif
-    }
-
-    template<typename T>
-    T* getAs() {
-        return static_cast<T*>(mappedMemory);
-    }
-
-    size_t size() const { return fileSize; }
-
-    ~MemoryMappedFile() {
-        close();
-    }
 };
 ```
 
 ---
 
-## Volatile and Atomic Operations
+## Memory-Mapped File: Open on Windows
+
+```cpp
+bool open(const std::string& filename) {
+#ifdef _WIN32
+    fileHandle = CreateFileA(filename.c_str(), GENERIC_READ | GENERIC_WRITE,
+                            0, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+
+    if (fileHandle == INVALID_HANDLE_VALUE) {
+        return false;
+    }
+
+    LARGE_INTEGER size;
+    if (!GetFileSizeEx(fileHandle, &size)) {
+        close();
+        return false;
+    }
+    fileSize = static_cast<size_t>(size.QuadPart);
+
+    mappingHandle = CreateFileMappingA(fileHandle, nullptr, PAGE_READWRITE, 0, 0, nullptr);
+    if (!mappingHandle) {
+        close();
+        return false;
+    }
+
+    mappedMemory = MapViewOfFile(mappingHandle, FILE_MAP_ALL_ACCESS, 0, 0, 0);
+```
+
+---
+
+## Memory-Mapped File: Open on POSIX
+
+```cpp
+#else
+    fileDescriptor = ::open(filename.c_str(), O_RDWR);
+    if (fileDescriptor == -1) {
+        return false;
+    }
+
+    struct stat st;
+    if (fstat(fileDescriptor, &st) == -1) {
+        close();
+        return false;
+    }
+    fileSize = st.st_size;
+
+    mappedMemory = mmap(nullptr, fileSize, PROT_READ | PROT_WRITE,
+                       MAP_SHARED, fileDescriptor, 0);
+    if (mappedMemory == MAP_FAILED) {
+        mappedMemory = nullptr;
+        close();
+        return false;
+    }
+#endif
+    return true;
+}
+```
+
+---
+
+## Memory-Mapped File: Close
+
+```cpp
+void close() {
+    if (mappedMemory) {
+#ifdef _WIN32
+        UnmapViewOfFile(mappedMemory);
+#else
+        munmap(mappedMemory, fileSize);
+#endif
+        mappedMemory = nullptr;
+    }
+
+#ifdef _WIN32
+    if (mappingHandle != INVALID_HANDLE_VALUE) {
+        CloseHandle(mappingHandle);
+        mappingHandle = INVALID_HANDLE_VALUE;
+    }
+    if (fileHandle != INVALID_HANDLE_VALUE) {
+        CloseHandle(fileHandle);
+        fileHandle = INVALID_HANDLE_VALUE;
+    }
+#else
+    if (fileDescriptor != -1) {
+        ::close(fileDescriptor);
+        fileDescriptor = -1;
+    }
+#endif
+}
+```
+
+---
+
+## Memory-Mapped File: Accessors
+
+```cpp
+template<typename T>
+T* getAs() {
+    return static_cast<T*>(mappedMemory);
+}
+
+size_t size() const { return fileSize; }
+
+~MemoryMappedFile() {
+    close();
+}
+```
+
+---
+
+## Volatile and Atomic: Basics
 
 Understanding the relationship between volatile and atomic:
 
 ```cpp
 #include <atomic>
 
-// Volatile does NOT provide atomicity
 volatile int volatileCounter = 0;
 
 void incrementVolatile() {
-    ++volatileCounter;  // NOT atomic - can have race conditions
+    ++volatileCounter;  // NOT atomic
 }
 
-// Atomic provides both volatile semantics AND atomicity
 std::atomic<int> atomicCounter{0};
 
 void incrementAtomic() {
-    ++atomicCounter;  // Atomic operation - thread safe
+    ++atomicCounter;  // thread safe
 }
 
-// For hardware registers, you might need both
 struct HardwareRegister {
     volatile std::atomic<uint32_t> control;
     volatile std::atomic<uint32_t> status;
@@ -748,8 +797,13 @@ struct HardwareRegister {
         return (status.load() & (1U << bit)) != 0;
     }
 };
+```
 
-// Memory-mapped hardware with atomic operations
+---
+
+## Volatile and Atomic: Hardware Interface
+
+```cpp
 class AtomicHardwareInterface {
 private:
     volatile std::atomic<uint32_t>* const registerBase;
@@ -778,48 +832,47 @@ public:
 
 ---
 
-## Volatile in Embedded Systems
+## Volatile in Embedded: ISR Communication
 
 Practical examples for embedded programming:
 
 ```cpp
-// Interrupt service routine communication
 volatile bool dataReady = false;
 volatile uint8_t receivedData = 0;
 
-// ISR (Interrupt Service Routine)
 extern "C" void UART_IRQHandler() {
     if (UART->STATUS & UART_RX_READY) {
-        receivedData = UART->DATA;  // Read data from hardware
-        dataReady = true;           // Signal main loop
+        receivedData = UART->DATA;
+        dataReady = true;
     }
 }
 
-// Main application loop
 void processData() {
     while (true) {
-        if (dataReady) {           // volatile ensures fresh read
+        if (dataReady) {
             uint8_t data = receivedData;
-            dataReady = false;     // Reset flag
+            dataReady = false;
 
-            // Process the data
             handleReceivedByte(data);
         }
 
-        // Do other work
         performOtherTasks();
     }
 }
 
-// Watchdog timer reset
 volatile uint32_t* const WATCHDOG_RESET =
     reinterpret_cast<volatile uint32_t*>(0x40002000);
 
 void feedWatchdog() {
-    *WATCHDOG_RESET = 0xDEADBEEF;  // Magic value to reset watchdog
+    *WATCHDOG_RESET = 0xDEADBEEF;
 }
+```
 
-// GPIO bit-banging for software protocols
+---
+
+## Volatile in Embedded: Software SPI
+
+```cpp
 class SoftwareSPI {
 private:
     volatile uint32_t* const gpioOut;
@@ -837,22 +890,18 @@ public:
         uint8_t received = 0;
 
         for (int bit = 7; bit >= 0; --bit) {
-            // Set data bit
             if (data & (1 << bit)) {
                 *gpioOut |= (1U << mosiPin);
             } else {
                 *gpioOut &= ~(1U << mosiPin);
             }
 
-            // Clock high
             *gpioOut |= (1U << clockPin);
 
-            // Read input bit
             if (*gpioIn & (1U << misoPin)) {
                 received |= (1 << bit);
             }
 
-            // Clock low
             *gpioOut &= ~(1U << clockPin);
         }
 
@@ -909,12 +958,11 @@ public:
 
 ---
 
-## Memory Barriers and Volatile
+## Memory Barriers and Volatile: Compiler Only
 
 Understanding memory ordering with volatile:
 
 ```cpp
-// Volatile provides compiler barrier, not CPU barrier
 class MemoryOrderingExample {
 private:
     volatile int flag = 0;
@@ -922,22 +970,24 @@ private:
 
 public:
     void writer() {
-        data = 42;    // Step 1: Write data
-        flag = 1;     // Step 2: Set flag
-
-        // Volatile ensures compiler doesn't reorder these
-        // But CPU might still reorder without memory barriers
+        data = 42;
+        flag = 1;
+        // Compiler won't reorder, but CPU might
     }
 
     int reader() {
-        while (flag == 0) {  // Wait for flag
-            // Volatile ensures fresh read each time
+        while (flag == 0) {
         }
-        return data;  // Read data after flag is set
+        return data;
     }
 };
+```
 
-// For true memory ordering, use atomic with memory_order
+---
+
+## Memory Barriers and Volatile: Atomic
+
+```cpp
 class ProperMemoryOrdering {
 private:
     std::atomic<int> flag{0};
@@ -945,34 +995,32 @@ private:
 
 public:
     void writer() {
-        data.store(42, std::memory_order_relaxed);     // Step 1
-        flag.store(1, std::memory_order_release);      // Step 2: Release semantics
+        data.store(42, std::memory_order_relaxed);
+        flag.store(1, std::memory_order_release);
     }
 
     int reader() {
-        while (flag.load(std::memory_order_acquire) == 0) {  // Acquire semantics
-            // Wait for flag
+        while (flag.load(std::memory_order_acquire) == 0) {
         }
-        return data.load(std::memory_order_relaxed);  // Guaranteed to see data = 42
+        return data.load(std::memory_order_relaxed);
     }
 };
 ```
 
 ---
 
-## Device Driver Example
+## Device Driver Example: Class Definition
 
 Complete example of a simple device driver:
 
 ```cpp
-// Simple LED driver for embedded system
 class LEDDriver {
 private:
     struct LEDRegisters {
-        volatile uint32_t control;     // Control register
-        volatile uint32_t brightness;  // Brightness control (0-255)
-        volatile uint32_t pattern;     // Blink pattern
-        volatile uint32_t timing;      // Timing control
+        volatile uint32_t control;
+        volatile uint32_t brightness;
+        volatile uint32_t pattern;
+        volatile uint32_t timing;
     };
 
     volatile LEDRegisters* const registers;
@@ -983,13 +1031,18 @@ private:
 public:
     LEDDriver(uintptr_t baseAddress)
         : registers(reinterpret_cast<volatile LEDRegisters*>(baseAddress)) {
-        // Initialize LED driver
-        registers->control = 0;      // Disable all features
-        registers->brightness = 0;   // Turn off
-        registers->pattern = 0;      // No pattern
-        registers->timing = 1000;    // 1 second default timing
+        registers->control = 0;
+        registers->brightness = 0;
+        registers->pattern = 0;
+        registers->timing = 1000;
     }
+```
 
+---
+
+## Device Driver Example: Enable and Brightness
+
+```cpp
     void enable(bool enabled) {
         if (enabled) {
             registers->control |= LED_ENABLE;
@@ -1018,7 +1071,13 @@ public:
     void setTiming(uint32_t milliseconds) {
         registers->timing = milliseconds;
     }
+```
 
+---
+
+## Device Driver Example: High-Level Methods
+
+```cpp
     uint32_t getStatus() const {
         return registers->control;
     }
@@ -1040,23 +1099,20 @@ public:
     }
 };
 
-// Usage in embedded application
 void initializeLEDs() {
-    LEDDriver statusLED(0x40001000);  // Memory-mapped address
+    LEDDriver statusLED(0x40001000);
 
-    // Turn on status LED
     statusLED.turnOn();
 
-    // Set up blinking pattern for activity indicator
     LEDDriver activityLED(0x40001100);
-    activityLED.setPattern(0xAAAAAAAA);  // Alternating pattern
-    activityLED.startBlinking(500);      // Blink every 500ms
+    activityLED.setPattern(0xAAAAAAAA);
+    activityLED.startBlinking(500);
 }
 ```
 
 ---
 
-## Custom Allocators with Placement New
+## Custom Allocators: StackAllocator
 
 Creating specialized allocators for different memory regions:
 
@@ -1076,7 +1132,6 @@ public:
         size_t bytes = count * sizeof(T);
         size_t alignment = alignof(T);
 
-        // Align current pointer
         char* aligned = reinterpret_cast<char*>(
             (reinterpret_cast<uintptr_t>(current) + alignment - 1) & ~(alignment - 1)
         );
@@ -1088,7 +1143,13 @@ public:
         current = aligned + bytes;
         return reinterpret_cast<T*>(aligned);
     }
+```
 
+---
+
+## Custom Allocators: StackAllocator Methods
+
+```cpp
     template<typename T, typename... Args>
     T* construct(Args&&... args) {
         T* ptr = allocate<T>();
@@ -1107,8 +1168,13 @@ public:
         return end - current;
     }
 };
+```
 
-// Pool allocator for fixed-size objects
+---
+
+## Custom Allocators: PoolAllocator Storage
+
+```cpp
 template<typename T, size_t PoolSize>
 class PoolAllocator {
 private:
@@ -1122,14 +1188,19 @@ private:
 
 public:
     PoolAllocator() {
-        // Initialize free list
         freeList = &storage[0];
         for (size_t i = 0; i < PoolSize - 1; ++i) {
             storage[i].next = &storage[i + 1];
         }
         storage[PoolSize - 1].next = nullptr;
     }
+```
 
+---
+
+## Custom Allocators: PoolAllocator Allocate
+
+```cpp
     T* allocate() {
         if (!freeList) {
             throw std::bad_alloc();
@@ -1148,7 +1219,13 @@ public:
         block->next = freeList;
         freeList = block;
     }
+```
 
+---
+
+## Custom Allocators: PoolAllocator Construct
+
+```cpp
     template<typename... Args>
     T* construct(Args&&... args) {
         T* ptr = allocate();
@@ -1169,50 +1246,49 @@ public:
 
     size_t capacity() const { return PoolSize; }
 };
+```
 
-// Usage example
+---
+
+## Custom Allocators: Demo
+
+```cpp
 void demonstrateCustomAllocators() {
     StackAllocator<1024> stackAlloc;
     PoolAllocator<Widget, 10> poolAlloc;
 
-    // Stack allocation
     auto* stackWidget = stackAlloc.construct<Widget>(42);
     std::cout << "Stack widget: " << stackWidget->getValue() << std::endl;
 
-    // Pool allocation
     auto* poolWidget = poolAlloc.construct(100);
     std::cout << "Pool widget: " << poolWidget->getValue() << std::endl;
 
-    // Cleanup
-    stackWidget->~Widget();  // Manual destructor for stack allocator
-    poolAlloc.destroy(poolWidget);  // Pool allocator handles both
+    stackWidget->~Widget();
+    poolAlloc.destroy(poolWidget);
 
-    stackAlloc.reset();  // Reset stack allocator
+    stackAlloc.reset();
 }
 ```
 
 ---
 
-## Volatile and Compiler Intrinsics
+## Compiler Intrinsics: Memory Barrier
 
 Using compiler-specific features with volatile:
 
 ```cpp
-// Compiler barriers and intrinsics
 class CompilerSpecific {
 public:
-    // Force memory barrier (compiler-specific)
     static void memoryBarrier() {
 #if defined(_MSC_VER)
-        _ReadWriteBarrier();  // MSVC
+        _ReadWriteBarrier();
 #elif defined(__GNUC__)
-        __asm__ __volatile__("" ::: "memory");  // GCC/Clang
+        __asm__ __volatile__("" ::: "memory");
 #else
         std::atomic_thread_fence(std::memory_order_seq_cst);
 #endif
     }
 
-    // Prevent optimization of specific code
     template<typename T>
     static void doNotOptimize(const T& value) {
 #if defined(__GNUC__)
@@ -1226,13 +1302,18 @@ public:
         (void)copy;
 #endif
     }
+```
 
-    // Cache control operations
+---
+
+## Compiler Intrinsics: Cache Flush
+
+```cpp
     static void flushCache(void* address, size_t size) {
 #if defined(_MSC_VER) && defined(_M_X64)
         for (char* ptr = static_cast<char*>(address);
              ptr < static_cast<char*>(address) + size;
-             ptr += 64) {  // Assuming 64-byte cache lines
+             ptr += 64) {
             _mm_clflush(ptr);
         }
 #elif defined(__GNUC__) && (defined(__x86_64__) || defined(__i386__))
@@ -1244,8 +1325,13 @@ public:
 #endif
     }
 };
+```
 
-// Hardware timestamping
+---
+
+## Compiler Intrinsics: Performance Counter
+
+```cpp
 class PerformanceCounter {
 private:
     volatile uint64_t* const counterRegister;
@@ -1255,7 +1341,7 @@ public:
         : counterRegister(reinterpret_cast<volatile uint64_t*>(address)) {}
 
     uint64_t readCounter() const {
-        return *counterRegister;  // Volatile ensures actual hardware read
+        return *counterRegister;
     }
 
     static uint64_t getCPUTimestamp() {
@@ -1274,7 +1360,7 @@ public:
 
 ---
 
-## Error Handling with Hardware Access
+## Error Handling with Hardware: Types
 
 Robust error handling for hardware operations:
 
@@ -1306,12 +1392,16 @@ public:
         : controlReg(reinterpret_cast<volatile uint32_t*>(baseAddress))
         , statusReg(reinterpret_cast<volatile uint32_t*>(baseAddress + 4))
         , dataReg(reinterpret_cast<volatile uint32_t*>(baseAddress + 8)) {}
+```
 
+---
+
+## Error Handling with Hardware: Initialize
+
+```cpp
     HardwareError initialize() {
-        // Reset device
         *controlReg = CONTROL_RESET;
 
-        // Wait for reset to complete (with timeout)
         auto timeout = std::chrono::steady_clock::now() + std::chrono::milliseconds(100);
         while ((*statusReg & STATUS_BUSY) && std::chrono::steady_clock::now() < timeout) {
             std::this_thread::sleep_for(std::chrono::microseconds(10));
@@ -1325,17 +1415,21 @@ public:
             return HardwareError::HardwareFailure;
         }
 
-        // Enable device
         *controlReg = CONTROL_ENABLE;
 
-        // Verify device is ready
         if (!(*statusReg & STATUS_READY)) {
             return HardwareError::DeviceNotReady;
         }
 
         return HardwareError::Success;
     }
+```
 
+---
+
+## Error Handling with Hardware: Write
+
+```cpp
     HardwareError writeData(uint32_t data) {
         if (!(*statusReg & STATUS_READY)) {
             return HardwareError::DeviceNotReady;
@@ -1347,7 +1441,6 @@ public:
 
         *dataReg = data;
 
-        // Wait for operation to complete
         auto timeout = std::chrono::steady_clock::now() + std::chrono::milliseconds(10);
         while ((*statusReg & STATUS_BUSY) && std::chrono::steady_clock::now() < timeout) {
             std::this_thread::sleep_for(std::chrono::microseconds(1));
@@ -1363,7 +1456,13 @@ public:
 
         return HardwareError::Success;
     }
+```
 
+---
+
+## Error Handling with Hardware: Read
+
+```cpp
     std::pair<HardwareError, uint32_t> readData() {
         if (!(*statusReg & STATUS_READY)) {
             return {HardwareError::DeviceNotReady, 0};
@@ -1398,7 +1497,7 @@ public:
 
 ---
 
-## RAII for Hardware Resources
+## RAII for Hardware: HardwareResource
 
 Using RAII to manage hardware resources safely:
 
@@ -1418,24 +1517,27 @@ public:
         release();
     }
 
-    // Non-copyable, non-movable
     HardwareResource(const HardwareResource&) = delete;
     HardwareResource& operator=(const HardwareResource&) = delete;
     HardwareResource(HardwareResource&&) = delete;
     HardwareResource& operator=(HardwareResource&&) = delete;
+```
 
+---
+
+## RAII for Hardware: Resource Methods
+
+```cpp
     void acquire() {
         if (!acquired) {
-            // Lock hardware resource
-            baseAddress[0] = 0x12345678;  // Lock code
+            baseAddress[0] = 0x12345678;
             acquired = true;
         }
     }
 
     void release() {
         if (acquired) {
-            // Unlock hardware resource
-            baseAddress[0] = 0x87654321;  // Unlock code
+            baseAddress[0] = 0x87654321;
             acquired = false;
         }
     }
@@ -1448,8 +1550,13 @@ public:
         return acquired;
     }
 };
+```
 
-// Scoped hardware lock
+---
+
+## RAII for Hardware: ScopedHardwareLock
+
+```cpp
 class ScopedHardwareLock {
 private:
     volatile uint32_t* const lockRegister;
@@ -1457,15 +1564,12 @@ private:
 
 public:
     explicit ScopedHardwareLock(volatile uint32_t* reg) : lockRegister(reg) {
-        // Acquire lock with timeout
         auto timeout = std::chrono::steady_clock::now() + std::chrono::milliseconds(100);
 
         while (std::chrono::steady_clock::now() < timeout) {
             uint32_t expected = 0;
-            // Try to acquire lock (assuming 0 = unlocked, 1 = locked)
             if (*lockRegister == 0) {
                 *lockRegister = 1;
-                // Verify we got the lock
                 if (*lockRegister == 1) {
                     locked = true;
                     break;
@@ -1481,39 +1585,37 @@ public:
 
     ~ScopedHardwareLock() {
         if (locked) {
-            *lockRegister = 0;  // Release lock
+            *lockRegister = 0;
         }
     }
 
-    // Non-copyable, non-movable
     ScopedHardwareLock(const ScopedHardwareLock&) = delete;
     ScopedHardwareLock& operator=(const ScopedHardwareLock&) = delete;
-    ScopedHardwareLock(ScopedHardwareLock&&) = delete;
-    ScopedHardwareLock& operator=(ScopedHardwareLock&&) = delete;
 };
+```
 
-// Usage
+---
+
+## RAII for Hardware: Usage
+
+```cpp
 void useHardwareResource() {
     try {
         HardwareResource resource(0x40000000);
 
         volatile uint32_t* hw = resource.get();
         if (hw) {
-            // Use hardware resource safely
             hw[1] = 0xDEADBEEF;
             uint32_t result = hw[2];
 
-            // Scoped lock for critical section
             {
                 ScopedHardwareLock lock(&hw[3]);
-                // Critical hardware operations here
                 hw[4] = result * 2;
-            }  // Lock automatically released
+            }
         }
     } catch (const std::exception& e) {
         std::cerr << "Hardware error: " << e.what() << std::endl;
     }
-    // Resource automatically released when destructor called
 }
 ```
 
@@ -1566,7 +1668,7 @@ void goodThreadSync() {
 
 ---
 
-## Debugging Volatile Variables
+## Debugging Volatile: DebugVolatile
 
 Techniques for debugging volatile-related issues:
 
@@ -1596,8 +1698,13 @@ public:
                   << " contains " << std::hex << debugRegister << std::endl;
     }
 };
+```
 
-// Volatile access tracer
+---
+
+## Debugging Volatile: VolatileTracer Class
+
+```cpp
 template<typename T>
 class VolatileTracer {
 private:
@@ -1629,24 +1736,28 @@ public:
         writeCount.store(0);
     }
 };
+```
 
-// Usage
+---
+
+## Debugging Volatile: Tracer Usage
+
+```cpp
 void demonstrateDebugging() {
     VolatileTracer<uint32_t> traced(0x12345678);
 
-    // Perform some operations
     traced = 0xDEADBEEF;
     uint32_t value1 = traced;
     uint32_t value2 = traced;
     traced = 0xCAFEBABE;
 
-    traced.printStats();  // Shows read/write counts
+    traced.printStats();
 }
 ```
 
 ---
 
-## Performance Implications
+## Performance Implications: Setup
 
 Understanding the performance cost of volatile:
 
@@ -1656,20 +1767,24 @@ public:
     static void benchmarkVolatile() {
         const size_t iterations = 10000000;
 
-        // Non-volatile test
         int normalVar = 0;
         auto start = std::chrono::high_resolution_clock::now();
 
         for (size_t i = 0; i < iterations; ++i) {
             normalVar = i;
             int temp = normalVar;
-            CompilerSpecific::doNotOptimize(temp);  // Prevent optimization
+            CompilerSpecific::doNotOptimize(temp);
         }
 
         auto end = std::chrono::high_resolution_clock::now();
         auto normalTime = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+```
 
-        // Volatile test
+---
+
+## Performance Implications: Volatile Test
+
+```cpp
         volatile int volatileVar = 0;
         start = std::chrono::high_resolution_clock::now();
 
@@ -1688,23 +1803,32 @@ public:
         std::cout << "Slowdown factor: " << static_cast<double>(volatileTime.count()) / normalTime.count() << "x" << std::endl;
     }
 };
+```
 
-// Cache effects with volatile
+---
+
+## Performance Implications: Cache Effects Setup
+
+```cpp
 class CacheEffectsDemo {
 private:
-    static constexpr size_t ARRAY_SIZE = 1024 * 1024;  // 1M elements
+    static constexpr size_t ARRAY_SIZE = 1024 * 1024;
 
 public:
     static void demonstrateCacheEffects() {
-        // Normal array
         std::vector<int> normalArray(ARRAY_SIZE, 42);
 
-        // Volatile array
         volatile int* volatileArray = new volatile int[ARRAY_SIZE];
         for (size_t i = 0; i < ARRAY_SIZE; ++i) {
             volatileArray[i] = 42;
         }
+```
 
+---
+
+## Performance Implications: Cache Timing
+
+```cpp
         auto testNormal = [&]() {
             auto start = std::chrono::high_resolution_clock::now();
             long long sum = 0;
@@ -1739,12 +1863,11 @@ public:
 
 ---
 
-## Modern Alternatives to Volatile
+## Modern Alternatives: ModernSignaling
 
 C++11+ alternatives for common volatile use cases:
 
 ```cpp
-// Instead of volatile for flags, use atomic
 class ModernSignaling {
 private:
     std::atomic<bool> stopRequested{false};
@@ -1767,8 +1890,13 @@ public:
         return dataReady.load(std::memory_order_acquire);
     }
 };
+```
 
-// Memory-mapped I/O with atomic for thread safety
+---
+
+## Modern Alternatives: AtomicHardwareRegister
+
+```cpp
 class AtomicHardwareRegister {
 private:
     std::atomic<uint32_t>* const hwRegister;
@@ -1798,8 +1926,13 @@ public:
         return (old & mask) != 0;
     }
 };
+```
 
-// Lock-free communication
+---
+
+## Modern Alternatives: LockFreeQueue Nodes
+
+```cpp
 class LockFreeQueue {
 private:
     struct Node {
@@ -1816,7 +1949,13 @@ public:
         head.store(dummy);
         tail.store(dummy);
     }
+```
 
+---
+
+## Modern Alternatives: LockFreeQueue Operations
+
+```cpp
     void enqueue(int value) {
         Node* newNode = new Node;
         newNode->data.store(value);
@@ -1830,7 +1969,7 @@ public:
         Node* next = head_node->next.load();
 
         if (next == nullptr) {
-            return false;  // Queue is empty
+            return false;
         }
 
         result = next->data.load();

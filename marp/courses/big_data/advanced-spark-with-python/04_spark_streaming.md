@@ -384,7 +384,13 @@ spark = SparkSession.builder \
             "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
     .config("spark.sql.streaming.schemaInference", "true") \
     .getOrCreate()
+```
 
+---
+
+## Kafka to Delta: Reading from Kafka
+
+```python
 # Define message schema
 message_schema = StructType([
     StructField("event_id", StringType(), False),
@@ -406,8 +412,13 @@ kafka_stream = (
     .option("kafka.sasl.mechanism", "PLAIN")
     .load()
 )
+```
 
-# Parse and transform
+---
+
+## Kafka to Delta: Parse and Transform
+
+```python
 parsed_stream = (
     kafka_stream
     .select(
@@ -434,7 +445,13 @@ parsed_stream = (
     .withColumn("event_date", F.to_date("event_timestamp"))
     .withColumn("processing_time", F.current_timestamp())
 )
+```
 
+---
+
+## Kafka to Delta: Write with Partitioning
+
+```python
 # Write to Delta Lake with partitioning
 query = (
     parsed_stream
@@ -503,7 +520,13 @@ sensor_stream = (
     )
     .select("data.*")
 )
+```
 
+---
+
+## Windowed Aggregations: Tumbling Window
+
+```python
 # Tumbling window: non-overlapping 5-minute windows
 tumbling_agg = (
     sensor_stream
@@ -534,7 +557,13 @@ sliding_agg = (
         F.avg("humidity").alias("avg_humidity"),
     )
 )
+```
 
+---
+
+## Windowed Aggregations: Session Window and Query
+
+```python
 # Session window: gap-based window (Spark 3.2+)
 session_agg = (
     sensor_stream
@@ -600,7 +629,13 @@ impressions = (
     .select("d.*")
     .withWatermark("impression_time", "2 hours")
 )
+```
 
+---
+
+## Stream-Stream Join: Clicks Stream
+
+```python
 # Stream 2: Ad clicks
 clicks_schema = StructType([
     StructField("click_id", StringType()),
@@ -619,7 +654,13 @@ clicks = (
     .select("d.*")
     .withWatermark("click_time", "3 hours")
 )
+```
 
+---
+
+## Stream-Stream Join: Join and CTR Aggregation
+
+```python
 # Stream-stream join with time constraint
 # Click must happen within 1 hour of impression
 joined = impressions.join(
@@ -677,7 +718,13 @@ from pyspark.sql.streaming import GroupState
 spark = SparkSession.builder \
     .appName("StatefulProcessing") \
     .getOrCreate()
+```
 
+---
+
+## Stateful Processing: State Schema and Init
+
+```python
 # Define state schema for user session tracking
 session_schema = StructType([
     StructField("user_id", StringType()),
@@ -710,7 +757,13 @@ def update_session_state(key, events, state):
         page_views = 0
 
     sessions_to_output = []
+```
 
+---
+
+## Stateful Processing: Event Loop
+
+```python
     for event in events:
         event_time = event["event_time"]
 
@@ -744,7 +797,13 @@ def update_session_state(key, events, state):
             event_count += 1
             if event["event_type"] == "page_view":
                 page_views += 1
+```
 
+---
+
+## Stateful Processing: Update and Return
+
+```python
     # Update state
     state.update({
         "session_start": session_start,
@@ -807,7 +866,16 @@ class MetricsListener(StreamingQueryListener):
         }
         # Send to monitoring system
         print(json.dumps(metrics, indent=2))
+```
 
+---
+
+## Streaming Monitoring: Alerts and Active Queries
+
+```python
+class MetricsListener(StreamingQueryListener):
+    def onQueryProgress(self, event):
+        progress = event.progress
         # Alert on slow processing
         if progress.inputRowsPerSecond > 0:
             ratio = (progress.processedRowsPerSecond /

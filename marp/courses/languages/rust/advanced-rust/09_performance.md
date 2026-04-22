@@ -271,6 +271,9 @@ name = "my_benchmark"
 harness = false
 ```
 
+---
+## Criterion Benchmark File
+
 ```rust
 // benches/my_benchmark.rs
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
@@ -292,7 +295,12 @@ fn fibonacci_iterative(n: u64) -> u64 {
     }
     a
 }
+```
 
+---
+## Criterion: Benchmark Function
+
+```rust
 fn bench_fibonacci(c: &mut Criterion) {
     c.bench_function("fib_recursive_20", |b| {
         b.iter(|| fibonacci(black_box(20)))
@@ -335,7 +343,12 @@ fn sum_chunks(data: &[i32]) -> i64 {
         .map(|chunk| chunk.iter().map(|&x| x as i64).sum::<i64>())
         .sum()
 }
+```
 
+---
+## Criterion: Parametrized Benchmark Group
+
+```rust
 fn bench_sums(c: &mut Criterion) {
     let sizes = [100, 1_000, 10_000, 100_000];
 
@@ -432,7 +445,12 @@ unsafe impl GlobalAlloc for CountingAllocator {
         unsafe { System.dealloc(ptr, layout) }
     }
 }
+```
 
+---
+## Global Allocator: Registration and Usage
+
+```rust
 #[global_allocator]
 static ALLOC: CountingAllocator = CountingAllocator {
     alloc_count: AtomicUsize::new(0),
@@ -563,7 +581,12 @@ fn dot_product_simd(a: &[f32], b: &[f32]) -> f32 {
 fn dot_product_scalar(a: &[f32], b: &[f32]) -> f32 {
     a.iter().zip(b.iter()).map(|(x, y)| x * y).sum()
 }
+```
 
+---
+## Portable SIMD: Driver
+
+```rust
 fn main() {
     let a: Vec<f32> = (0..1024).map(|i| i as f32).collect();
     let b: Vec<f32> = (0..1024).map(|i| (i * 2) as f32).collect();
@@ -606,7 +629,12 @@ unsafe fn add_arrays_avx2(a: &[f32], b: &[f32], out: &mut [f32]) {
     }
     // The compiler will use AVX2 instructions for this function
 }
+```
 
+---
+## Auto-Vectorization: Runtime Dispatch
+
+```rust
 fn main() {
     let a: Vec<f32> = vec![1.0; 256];
     let b: Vec<f32> = vec![2.0; 256];
@@ -696,7 +724,12 @@ fn distance_sum_soa(points: &PointsSoA) -> f32 {
     }
     sum
 }
+```
 
+---
+## AoS vs SoA Benchmark: Driver
+
+```rust
 fn main() {
     // AoS
     let aos: Vec<PointAoS> = (0..N)
@@ -775,7 +808,12 @@ impl Arena<TreeNode> {
         self.storage.iter().map(|n| n.value as i64).sum()
     }
 }
+```
 
+---
+## Arena Allocation: Usage
+
+```rust
 fn main() {
     let mut arena = Arena::new();
 
@@ -821,7 +859,12 @@ const fn fibonacci(n: usize) -> u64 {
 // Computed at compile time - zero runtime cost
 const FACT_10: u64 = factorial(10);
 const FIB_20: u64 = fibonacci(20);
+```
 
+---
+## const fn: Lookup Tables and Usage
+
+```rust
 // Can also be used in array sizes
 const TABLE_SIZE: usize = 256;
 const LOOKUP_TABLE: [u8; TABLE_SIZE] = {
@@ -870,7 +913,14 @@ impl<const ROWS: usize, const COLS: usize> Matrix<ROWS, COLS> {
     fn set(&mut self, row: usize, col: usize, val: f64) {
         self.data[row][col] = val;
     }
+}
+```
 
+---
+## Const Generics: Matrix Multiply
+
+```rust
+impl<const ROWS: usize, const COLS: usize> Matrix<ROWS, COLS> {
     // Multiply: (ROWS x COLS) * (COLS x OTHER) = (ROWS x OTHER)
     // The compiler enforces dimension compatibility!
     fn multiply<const OTHER: usize>(
@@ -890,7 +940,12 @@ impl<const ROWS: usize, const COLS: usize> Matrix<ROWS, COLS> {
         result
     }
 }
+```
 
+---
+## Const Generics: Usage
+
+```rust
 fn main() {
     let mut a = Matrix::<2, 3>::new();
     a.set(0, 0, 1.0); a.set(0, 1, 2.0); a.set(0, 2, 3.0);
@@ -1089,7 +1144,12 @@ struct Particles {
     y: Vec<f32>,
     mass: Vec<f32>,
 }
+```
 
+---
+## Performance Checklist: Const and Inline Hints
+
+```rust
 // Use const for compile-time computation
 const GRAVITY: f32 = 9.81;
 const TABLE: [f32; 256] = {
@@ -1112,7 +1172,12 @@ fn fast_path(x: f32) -> f32 {
 fn slow_error_path(msg: &str) {
     eprintln!("Error: {}", msg);
 }
+```
 
+---
+## Performance Checklist: Putting It Together
+
+```rust
 fn main() {
     let particles = Particles {
         x: vec![0.0; 10_000],

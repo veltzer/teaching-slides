@@ -249,6 +249,19 @@ void free_list(struct Node *head) {
         free(tmp);
     }
 }
+```
+
+---
+## Linked List with Structs: Usage
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node { int data; struct Node *next; };
+struct Node *prepend(struct Node *head, int value);
+void print_list(const struct Node *head);
+void free_list(struct Node *head);
 
 int main(void) {
     struct Node *list = NULL;

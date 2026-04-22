@@ -312,7 +312,13 @@ def get_inventory():
         }
 
     return inventory
+```
 
+---
+
+## Custom Inventory Script: CLI Entry Point
+
+```python
 def get_host(hostname):
     """Get variables for a specific host."""
     inventory = get_inventory()

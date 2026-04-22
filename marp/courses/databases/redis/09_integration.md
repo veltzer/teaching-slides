@@ -144,7 +144,15 @@ public class RedisConnectionPool {
         this.pool = ConnectionPoolSupport.createGenericObjectPool(
             () -> client.connect(), config);
     }
+}
+```
 
+---
+
+## Connection Pool Example (Java): Borrow/Return
+
+```java
+public class RedisConnectionPool {
     public StatefulRedisConnection<String, String> borrowConnection() {
         try {
             return pool.borrowObject();
@@ -244,7 +252,13 @@ const redis = new Redis({
   port: 6379
 });
 
-// Cache middleware
+```
+
+---
+
+## Cache Middleware (Node.js)
+
+```javascript
 const cacheMiddleware = (req, res, next) => {
   const key = `cache:${req.originalUrl}`;
 
@@ -276,7 +290,13 @@ const cacheMiddleware = (req, res, next) => {
     next();
   });
 };
+```
 
+---
+
+## Cache Usage in Express Route
+
+```javascript
 // API route with caching
 app.get('/api/products', cacheMiddleware, (req, res) => {
   // Expensive database query or API call happens here
@@ -327,8 +347,13 @@ public class RedisCacheConfig {
             .build();
     }
 }
+```
 
-// Usage in service class
+---
+
+## Cache Usage in Spring Service
+
+```java
 @Service
 public class ProductService {
 
@@ -402,7 +427,13 @@ app.use(session({
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
   }
 }));
+```
 
+---
+
+## Session Routes (Express.js)
+
+```javascript
 // Login route
 app.post('/login', (req, res) => {
   // Authenticate user (simplified)
@@ -423,7 +454,13 @@ app.get('/profile', (req, res) => {
     res.status(401).json({ error: 'Unauthorized' });
   }
 });
+```
 
+---
+
+## Session Logout (Express.js)
+
+```javascript
 // Logout route
 app.post('/logout', (req, res) => {
   req.session.destroy(err => {
@@ -460,8 +497,13 @@ public class SessionConfig {
         return new GenericJackson2JsonRedisSerializer();
     }
 }
+```
 
-// Controller using session
+---
+
+## Session Controller (Spring Boot)
+
+```java
 @RestController
 public class SessionController {
 
@@ -479,6 +521,16 @@ public class SessionController {
         response.put("success", true);
         return ResponseEntity.ok(response);
     }
+}
+```
+
+---
+
+## Session Profile/Logout (Spring Boot)
+
+```java
+@RestController
+public class SessionController {
 
     @GetMapping("/profile")
     public ResponseEntity<?> getProfile(HttpSession session) {
@@ -523,32 +575,42 @@ const rateLimit = async (req, res, next) => {
   const key = `ratelimit:${ip}:${endpoint}`;
 
   try {
-    // Increment counter
-    const count = await redis.incr(key);
-
-    // Set expiry on first request
-    if (count === 1) {
-      await redis.expire(key, windowSecs);
-    }
-
-    // Set headers
-    res.setHeader('X-RateLimit-Limit', limit);
-    res.setHeader('X-RateLimit-Remaining', Math.max(0, limit - count));
-
-    // Check if over limit
-    if (count > limit) {
-      return res.status(429).json({
-        error: 'Too Many Requests',
-        message: `Rate limit of ${limit} requests per ${windowSecs} seconds exceeded`
-      });
-    }
-
-    next();
+    await applyRateLimit(redis, key, limit, windowSecs, res, next);
   } catch (err) {
     console.error('Rate limiting error:', err);
     next(); // Continue on error
   }
 };
+```
+
+---
+
+## Rate Limit Check Logic
+
+```javascript
+async function applyRateLimit(redis, key, limit, windowSecs, res, next) {
+  // Increment counter
+  const count = await redis.incr(key);
+
+  // Set expiry on first request
+  if (count === 1) {
+    await redis.expire(key, windowSecs);
+  }
+
+  // Set headers
+  res.setHeader('X-RateLimit-Limit', limit);
+  res.setHeader('X-RateLimit-Remaining', Math.max(0, limit - count));
+
+  // Check if over limit
+  if (count > limit) {
+    return res.status(429).json({
+      error: 'Too Many Requests',
+      message: `Rate limit of ${limit} requests per ${windowSecs} seconds exceeded`
+    });
+  }
+
+  next();
+}
 
 // Apply to routes
 app.use('/api', rateLimit);
@@ -593,7 +655,13 @@ const imageQueue = new Queue('image-processing', {
     removeOnComplete: true
   }
 });
+```
 
+---
+
+## Job Queue: Producer
+
+```javascript
 // Producer: Add jobs to the queue
 async function sendWelcomeEmail(user) {
   await emailQueue.add({
@@ -626,7 +694,13 @@ async function scheduleReminder(userId, date) {
     delay: date.getTime() - Date.now() // Milliseconds from now
   });
 }
+```
 
+---
+
+## Job Queue: Consumer and Events
+
+```javascript
 // Consumer: Process jobs
 emailQueue.process(async (job) => {
   const { to, subject, template, context } = job.data;
@@ -683,7 +757,13 @@ const clients = new Map();
 
 // Subscribe to chat channels
 subClient.subscribe('chat:general');
+```
 
+---
+
+## Chat System: Redis Message Handler
+
+```javascript
 subClient.on('message', (channel, message) => {
   try {
     const data = JSON.parse(message);
@@ -702,8 +782,13 @@ subClient.on('message', (channel, message) => {
     console.error('Error processing message:', err);
   }
 });
+```
 
-// Handle WebSocket connections
+---
+
+## Chat System: WebSocket Connections
+
+```javascript
 wss.on('connection', (ws) => {
   const clientId = uuid.v4();
   const clientChannels = ['chat:general'];
@@ -714,7 +799,32 @@ wss.on('connection', (ws) => {
     channels: clientChannels
   });
 
-  // Handle incoming messages
+  handleClientMessages(ws, clientId, clientChannels);
+
+  // Handle disconnection
+  ws.on('close', () => {
+    clients.delete(clientId);
+  });
+
+  // Send welcome message
+  ws.send(JSON.stringify({
+    type: 'system',
+    message: 'Connected to chat server',
+    clientId
+  }));
+});
+
+server.listen(8080, () => {
+  console.log('Chat server listening on port 8080');
+});
+```
+
+---
+
+## Chat System: Message Handling
+
+```javascript
+function handleClientMessages(ws, clientId, clientChannels) {
   ws.on('message', (data) => {
     try {
       const message = JSON.parse(data);
@@ -740,23 +850,7 @@ wss.on('connection', (ws) => {
       console.error('Error handling message:', err);
     }
   });
-
-  // Handle disconnection
-  ws.on('close', () => {
-    clients.delete(clientId);
-  });
-
-  // Send welcome message
-  ws.send(JSON.stringify({
-    type: 'system',
-    message: 'Connected to chat server',
-    clientId
-  }));
-});
-
-server.listen(8080, () => {
-  console.log('Chat server listening on port 8080');
-});
+}
 ```
 
 ---
@@ -776,7 +870,13 @@ const redis = new Redis({
   port: 6379
 });
 
-// Add or update score
+```
+
+---
+
+## Leaderboard: Add/Update Score
+
+```javascript
 app.post('/leaderboard/scores', async (req, res) => {
   const { userId, username, score } = req.body;
 
@@ -807,8 +907,13 @@ app.post('/leaderboard/scores', async (req, res) => {
     res.status(500).json({ error: 'Failed to update score' });
   }
 });
+```
 
-// Get top scores
+---
+
+## Leaderboard: Top Scores
+
+```javascript
 app.get('/leaderboard/scores/top/:count', async (req, res) => {
   const count = parseInt(req.params.count) || 10;
 
@@ -839,14 +944,18 @@ app.get('/leaderboard/scores/top/:count', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch leaderboard' });
   }
 });
+```
 
-// Get user's rank and surrounding players
+---
+
+## Leaderboard: User Rank Lookup
+
+```javascript
 app.get('/leaderboard/users/:userId', async (req, res) => {
   const { userId } = req.params;
   const range = 5; // Get 5 users above and below
 
   try {
-    // Get user's rank
     const rank = await redis.zrevrank('leaderboard:scores', userId);
 
     if (rank === null) {
@@ -859,32 +968,12 @@ app.get('/leaderboard/users/:userId', async (req, res) => {
 
     const leaderboardSlice = await redis.zrevrange('leaderboard:scores', startRank, endRank, 'WITHSCORES');
 
-    // Get score
     const score = await redis.zscore('leaderboard:scores', userId);
 
-    // Transform results similar to previous endpoint
-    const results = [];
-    for (let i = 0; i < leaderboardSlice.length; i += 2) {
-      const id = leaderboardSlice[i];
-      const score = parseInt(leaderboardSlice[i + 1]);
-
-      // Get user details
-      const userDetails = await redis.hgetall(`user:${id}`);
-
-      results.push({
-        rank: startRank + i / 2 + 1,
-        userId: id,
-        username: userDetails.username,
-        score
-      });
-    }
+    const results = buildResults(leaderboardSlice, startRank);
 
     res.json({
-      user: {
-        userId,
-        rank: rank + 1,
-        score: parseInt(score)
-      },
+      user: { userId, rank: rank + 1, score: parseInt(score) },
       leaderboard: results
     });
   } catch (err) {
@@ -892,6 +981,31 @@ app.get('/leaderboard/users/:userId', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch user rank' });
   }
 });
+```
+
+---
+
+## Leaderboard: Results Helper
+
+```javascript
+async function buildResults(leaderboardSlice, startRank) {
+  const results = [];
+  for (let i = 0; i < leaderboardSlice.length; i += 2) {
+    const id = leaderboardSlice[i];
+    const score = parseInt(leaderboardSlice[i + 1]);
+
+    // Get user details
+    const userDetails = await redis.hgetall(`user:${id}`);
+
+    results.push({
+      rank: startRank + i / 2 + 1,
+      userId: id,
+      username: userDetails.username,
+      score
+    });
+  }
+  return results;
+}
 
 app.listen(3000, () => {
   console.log('Leaderboard service running on port 3000');

@@ -482,6 +482,14 @@ class ImageSearch:
             }
         )
 
+```
+
+---
+
+## Image Search: Search by Text
+
+```python
+class ImageSearch:
     def search_by_text(self, text_query):
         inputs = self.processor(text=text_query, return_tensors="pt")
 
@@ -761,7 +769,14 @@ class RecommendationEngine:
         )
 
         return recommendations
+```
 
+---
+
+## Recommendation Engine: Content-Based
+
+```python
+class RecommendationEngine:
     def content_based(self, product_id):
         # Get product vector
         product = self.es.get(index="products", id=product_id)

@@ -279,18 +279,25 @@ PUT _ingest/pipeline/process_logs
         "field": "agent",
         "target_field": "user_agent"
       }
-    },
-    {
-      "script": {
-        "source": """
-          if (ctx.response != null) {
-            int code = Integer.parseInt(ctx.response);
-            ctx.status_category = code < 400 ? 'success' : 'error';
-          }
-        """
-      }
     }
   ]
+}
+```
+
+---
+
+## Complex Pipeline: Status Category Script
+
+```json
+{
+  "script": {
+    "source": """
+      if (ctx.response != null) {
+        int code = Integer.parseInt(ctx.response);
+        ctx.status_category = code < 400 ? 'success' : 'error';
+      }
+    """
+  }
 }
 ```
 

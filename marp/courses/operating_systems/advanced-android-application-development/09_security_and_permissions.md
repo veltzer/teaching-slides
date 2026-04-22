@@ -47,7 +47,13 @@ public class PermissionManager {
             }
         }
     }
+```
 
+---
+
+## Runtime Permissions: Rationale Dialog
+
+```java
     private void showPermissionRationale(Activity activity) {
         new AlertDialog.Builder(activity)
             .setTitle("Camera Permission Needed")

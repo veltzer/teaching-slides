@@ -548,6 +548,10 @@ case "$branch" in
 esac
 ```
 
+---
+
+## Advanced Hook Techniques: Multi-language
+
 **Multi-language support:**
 
 ```bash
@@ -648,6 +652,10 @@ chown $USER:$USER .git/hooks/*
 chmod 755 .git/hooks/*
 ```
 
+---
+
+## Troubleshooting: Environment and Debugging
+
 **Environment problems:**
 
 ```bash
@@ -718,6 +726,10 @@ for arg in "$@"; do
 done
 ```
 
+---
+
+## Hook Security: Secure Execution
+
 **Secure execution:**
 
 ```bash
@@ -768,6 +780,10 @@ run_expensive_checks || exit 1
 # Cache successful run
 git rev-parse HEAD > "$CACHE_DIR/last-run"
 ```
+
+---
+
+## Performance Optimization: Parallel Execution
 
 **Parallel execution:**
 

@@ -1516,7 +1516,13 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
+```
 
+---
+
+## Complete Testing Example: Test Class
+
+```python
 # tests/test_calculator.py
 import pytest
 from mypackage.calculator import Calculator

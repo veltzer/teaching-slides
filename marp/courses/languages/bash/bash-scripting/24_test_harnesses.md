@@ -78,7 +78,12 @@ assert_true() {
         echo "  FAIL: $message"
     fi
 }
+```
 
+---
+## Simple Test Framework: Summary
+
+```bash
 test_summary() {
     echo ""
     echo "=========================="

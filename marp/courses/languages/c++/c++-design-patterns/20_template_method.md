@@ -158,7 +158,13 @@ protected:
         // Default: send all units to nearest enemy
     }
 };
+```
 
+---
+
+## Hooks: Concrete AI Subclasses
+
+```cpp
 class AggressiveAI : public GameAI {
 protected:
     void buildStructures() override { /* build barracks */ }

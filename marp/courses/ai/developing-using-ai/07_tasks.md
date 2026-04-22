@@ -54,7 +54,13 @@ CREATE TABLE users (
 
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_active ON users(is_active) WHERE is_active = true;
+```
 
+---
+
+## Schema Design: Products and Categories
+
+```sql
 -- Products with Categories
 CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
@@ -128,7 +134,13 @@ def upgrade():
 
     # Add indexes for performance
     op.create_index('idx_preferences_user', 'user_preferences', ['user_id'])
+```
 
+---
+
+## Migration Scripts: Data Migration and Rollback
+
+```python
     # Migrate existing users
     op.execute("""
         INSERT INTO user_preferences (user_id)
@@ -199,7 +211,7 @@ ORDER BY idx_scan DESC;
 
 ---
 
-## Performance Tuning
+## Performance Tuning: Slow Query Analysis
 
 Database optimization strategies:
 
@@ -233,7 +245,13 @@ class DatabaseOptimizer:
         }
 
         return optimization_strategies
+```
 
+---
+
+## Performance Tuning: Connection Pooling
+
+```python
     def implement_connection_pooling(self):
         """
         Connection pool configuration
@@ -302,7 +320,13 @@ interface Column<T> {
   render?: (value: T[keyof T], item: T) => React.ReactNode;
   width?: string;
 }
+```
 
+---
+
+## Data Table Component: State and Filtering
+
+```typescript
 export function DataTable<T extends Record<string, any>>({
   data,
   columns,
@@ -327,7 +351,13 @@ export function DataTable<T extends Record<string, any>>({
       )
     );
   }, [data, searchTerm]);
+```
 
+---
+
+## Data Table Component: Sort and Paginate
+
+```typescript
   // Sort data
   const sortedData = useMemo(() => {
     if (!sortConfig.key) return filteredData;
@@ -356,7 +386,13 @@ export function DataTable<T extends Record<string, any>>({
       direction: prev.key === key && prev.direction === 'asc' ? 'desc' : 'asc'
     }));
   };
+```
 
+---
+
+## Data Table Component: Header Row
+
+```typescript
   return (
     <div className={`data-table ${className}`}>
       {searchable && (
@@ -389,6 +425,14 @@ export function DataTable<T extends Record<string, any>>({
             ))}
           </tr>
         </thead>
+        // body rows below
+```
+
+---
+
+## Data Table Component: Body Rows
+
+```typescript
         <tbody>
           {paginatedData.map((item, index) => (
             <tr key={index}>
@@ -403,7 +447,13 @@ export function DataTable<T extends Record<string, any>>({
           ))}
         </tbody>
       </table>
+```
 
+---
+
+## Data Table Component: Pagination Controls
+
+```typescript
       <div className="pagination">
         <button
           onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
@@ -463,7 +513,13 @@ AI creates responsive layouts:
 @media (min-width: 1280px) {
   .container { max-width: 1280px; }
 }
+```
 
+---
+
+## Responsive Design: Grid and Typography
+
+```css
 /* Flexible grid with CSS Grid */
 .grid {
   display: grid;
@@ -497,7 +553,13 @@ p {
     width: 40%;
   }
 }
+```
 
+---
+
+## Responsive Design: Utility Classes
+
+```css
 /* Responsive utilities */
 .hide-mobile { display: none; }
 .hide-tablet { display: block; }
@@ -516,7 +578,7 @@ p {
 
 ---
 
-## Accessibility Improvements
+## Accessibility Improvements: Setup
 
 Making interfaces accessible:
 
@@ -541,7 +603,13 @@ const AccessibleForm = () => {
       >
         {announcement}
       </div>
+```
 
+---
+
+## Accessibility Improvements: Input Field
+
+```jsx
       {/* Accessible input with label */}
       <div className="form-group">
         <label htmlFor="email-input">
@@ -566,7 +634,13 @@ const AccessibleForm = () => {
           </span>
         )}
       </div>
+```
 
+---
+
+## Accessibility Improvements: Button and Navigation
+
+```jsx
       {/* Accessible button with loading state */}
       <button
         type="submit"
@@ -635,7 +709,7 @@ const AppContext = React.createContext<{
 
 ---
 
-## Script Generation
+## Script Generation: Setup
 
 AI creates automation scripts:
 
@@ -666,8 +740,13 @@ error_exit() {
     echo -e "${RED}ERROR: $1${NC}" >&2
     exit 1
 }
+```
 
-# Pre-deployment checks
+---
+
+## Script Generation: Pre-Deployment Checks
+
+```bash
 pre_deploy_checks() {
     log "Running pre-deployment checks..."
 
@@ -687,8 +766,13 @@ pre_deploy_checks() {
 
     log "Pre-deployment checks passed ✓"
 }
+```
 
-# Backup current deployment
+---
+
+## Script Generation: Backup
+
+```bash
 backup_current() {
     log "Creating backup..."
 
@@ -709,8 +793,13 @@ backup_current() {
 
     log "Backup completed: ${backup_name}"
 }
+```
 
-# Deploy new version
+---
+
+## Script Generation: Deploy
+
+```bash
 deploy() {
     log "Starting deployment for ${DEPLOY_ENV}..."
 
@@ -736,8 +825,13 @@ deploy() {
 
     log "Deployment completed successfully ✅"
 }
+```
 
-# Health check
+---
+
+## Script Generation: Health Check and Main
+
+```bash
 health_check() {
     log "Running health checks..."
 
@@ -758,7 +852,6 @@ health_check() {
     error_exit "Health check failed after ${max_attempts} attempts"
 }
 
-# Main execution
 main() {
     log "=== Starting deployment process ==="
 
@@ -775,7 +868,6 @@ main() {
         -d "{\"text\":\"✅ ${APP_NAME} deployed to ${DEPLOY_ENV}\"}"
 }
 
-# Run with error handling
 trap 'error_exit "Deployment failed at line $LINENO"' ERR
 main "$@"
 ```
@@ -788,7 +880,7 @@ main "$@"
 
 ---
 
-## CI/CD Pipelines
+## CI/CD Pipelines: Setup
 
 GitHub Actions workflow:
 
@@ -807,7 +899,13 @@ env:
   NODE_VERSION: '18'
   DOCKER_REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+```
 
+---
+
+## CI/CD Pipelines: Test Job
+
+```yaml
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -837,7 +935,13 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           file: ./coverage/lcov.info
+```
 
+---
+
+## CI/CD Pipelines: Security Scan
+
+```yaml
   security-scan:
     runs-on: ubuntu-latest
     steps:
@@ -856,7 +960,13 @@ jobs:
         uses: snyk/actions/node@master
         with:
           args: --severity-threshold=high
+```
 
+---
+
+## CI/CD Pipelines: Build and Push
+
+```yaml
   build-and-push:
     needs: [test, security-scan]
     runs-on: ubuntu-latest
@@ -885,10 +995,13 @@ jobs:
             ${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          build-args: |
-            BUILD_VERSION=${{ github.sha }}
-            BUILD_TIME=${{ github.event.head_commit.timestamp }}
+```
 
+---
+
+## CI/CD Pipelines: Deploy
+
+```yaml
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
@@ -917,13 +1030,11 @@ jobs:
 
 ---
 
-## Deployment Scripts
+## Deployment Scripts: Deployment Spec
 
 Kubernetes deployment configuration:
 
 ```yaml
-# AI creates K8s manifests:
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -941,6 +1052,13 @@ spec:
   selector:
     matchLabels:
       app: myapp
+```
+
+---
+
+## Deployment Scripts: Container Spec
+
+```yaml
   template:
     metadata:
       labels:
@@ -962,6 +1080,13 @@ spec:
             secretKeyRef:
               name: db-secret
               key: connection-string
+```
+
+---
+
+## Deployment Scripts: Resource Limits
+
+```yaml
         resources:
           requests:
             memory: "256Mi"
@@ -983,8 +1108,13 @@ spec:
             port: 3000
           initialDelaySeconds: 5
           periodSeconds: 5
+```
 
-      # Init container for database migrations
+---
+
+## Deployment Scripts: Init Container and Affinity
+
+```yaml
       initContainers:
       - name: migrate
         image: myapp:latest
@@ -996,7 +1126,6 @@ spec:
               name: db-secret
               key: connection-string
 
-      # Pod disruption budget
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -1009,9 +1138,13 @@ spec:
                   values:
                   - myapp
               topologyKey: kubernetes.io/hostname
+```
 
 ---
 
+## Deployment Scripts: HorizontalPodAutoscaler
+
+```yaml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -1046,13 +1179,11 @@ spec:
 
 ---
 
-## Infrastructure as Code
+## Infrastructure as Code: Terraform Setup
 
 Terraform configuration:
 
 ```hcl
-# AI generates Terraform infrastructure:
-
 terraform {
   required_providers {
     aws = {
@@ -1069,8 +1200,13 @@ terraform {
     dynamodb_table = "terraform-locks"
   }
 }
+```
 
-# VPC Configuration
+---
+
+## Infrastructure as Code: VPC Module
+
+```hcl
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
@@ -1087,8 +1223,13 @@ module "vpc" {
 
   tags = local.common_tags
 }
+```
 
-# EKS Cluster
+---
+
+## Infrastructure as Code: EKS Node Groups
+
+```hcl
 module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
@@ -1098,7 +1239,6 @@ module "eks" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
-  # Node groups
   eks_managed_node_groups = {
     general = {
       desired_size = 3
@@ -1128,11 +1268,15 @@ module "eks" {
       }]
     }
   }
+```
 
-  # Enable IRSA
+---
+
+## Infrastructure as Code: EKS Addons
+
+```hcl
   enable_irsa = true
 
-  # Cluster addons
   cluster_addons = {
     coredns = {
       most_recent = true
@@ -1148,8 +1292,13 @@ module "eks" {
     }
   }
 }
+```
 
-# RDS Database
+---
+
+## Infrastructure as Code: RDS Database
+
+```hcl
 resource "aws_db_instance" "postgres" {
   identifier = "${var.project_name}-db"
 
@@ -1180,8 +1329,13 @@ resource "aws_db_instance" "postgres" {
 
   tags = local.common_tags
 }
+```
 
-# ElastiCache Redis
+---
+
+## Infrastructure as Code: ElastiCache Redis
+
+```hcl
 resource "aws_elasticache_cluster" "redis" {
   cluster_id           = "${var.project_name}-cache"
   engine              = "redis"
@@ -1208,13 +1362,11 @@ resource "aws_elasticache_cluster" "redis" {
 
 ---
 
-## Platform-Specific Features
+## Platform-Specific Features: Imports
 
 React Native with platform code:
 
 ```typescript
-// AI implements platform-specific features:
-
 import {
   Platform,
   StyleSheet,
@@ -1226,9 +1378,14 @@ import {
 import * as Haptics from 'expo-haptics';
 import * as Notifications from 'expo-notifications';
 import * as Location from 'expo-location';
+```
 
+---
+
+## Platform-Specific Features: Styling
+
+```typescript
 class PlatformFeatures {
-  // Platform-specific styling
   static getStyles() {
     return StyleSheet.create({
       container: {
@@ -1252,8 +1409,13 @@ class PlatformFeatures {
       },
     });
   }
+```
 
-  // Haptic feedback
+---
+
+## Platform-Specific Features: Haptic Feedback
+
+```typescript
   static async triggerHaptic(type: 'light' | 'medium' | 'heavy') {
     if (Platform.OS === 'ios') {
       await Haptics.impactAsync(
@@ -1268,8 +1430,13 @@ class PlatformFeatures {
       );
     }
   }
+```
 
-  // Push notifications
+---
+
+## Platform-Specific Features: Push Notifications
+
+```typescript
   static async setupNotifications() {
     const { status: existingStatus } =
       await Notifications.getPermissionsAsync();
@@ -1286,7 +1453,6 @@ class PlatformFeatures {
       return;
     }
 
-    // Configure notification handler
     Notifications.setNotificationHandler({
       handleNotification: async () => ({
         shouldShowAlert: true,
@@ -1294,11 +1460,15 @@ class PlatformFeatures {
         shouldSetBadge: true,
       }),
     });
+```
 
-    // Get push token
+---
+
+## Platform-Specific Features: Android Channel
+
+```typescript
     const token = (await Notifications.getExpoPushTokenAsync()).data;
 
-    // Platform-specific configuration
     if (Platform.OS === 'android') {
       Notifications.setNotificationChannelAsync('default', {
         name: 'default',
@@ -1310,8 +1480,13 @@ class PlatformFeatures {
 
     return token;
   }
+```
 
-  // Location services
+---
+
+## Platform-Specific Features: Location Services
+
+```typescript
   static async getCurrentLocation() {
     const { status } = await Location.requestForegroundPermissionsAsync();
 
@@ -1331,8 +1506,13 @@ class PlatformFeatures {
       accuracy: location.coords.accuracy,
     };
   }
+```
 
-  // Deep linking
+---
+
+## Platform-Specific Features: Deep Linking and Share
+
+```typescript
   static async openURL(url: string) {
     const supported = await Linking.canOpenURL(url);
 
@@ -1343,7 +1523,6 @@ class PlatformFeatures {
     }
   }
 
-  // Share functionality
   static async share(content: { message: string; url?: string }) {
     try {
       const result = await Share.share({
@@ -1372,8 +1551,6 @@ class PlatformFeatures {
 Mobile-specific UI patterns:
 
 ```jsx
-// AI creates mobile UI components:
-
 import React, { useRef, useState } from 'react';
 import {
   View,
@@ -1389,18 +1566,16 @@ import {
 const { width: screenWidth } = Dimensions.get('window');
 ```
 
-## Backend Development: API Design
+---
 
-RESTful and GraphQL API patterns:
+## Backend Development: REST Routes
+
+RESTful API patterns:
 
 ```javascript
-// AI generates comprehensive API structure:
-
-// RESTful API with Express
 const express = require('express');
 const router = express.Router();
 
-// Resource-based routing
 router.route('/api/v1/users')
   .get(validateQuery, paginate, getUsers)
   .post(validateBody, authenticate, createUser);
@@ -1409,8 +1584,13 @@ router.route('/api/v1/users/:id')
   .get(validateParams, getUser)
   .put(validateBody, authorize, updateUser)
   .delete(authorize, softDeleteUser);
+```
 
-// GraphQL alternative
+---
+
+## Backend Development: GraphQL Schema
+
+```javascript
 const typeDefs = `
   type User {
     id: ID!
@@ -1433,13 +1613,11 @@ const typeDefs = `
 
 ---
 
-## Business Logic Implementation
+## Business Logic Implementation: Service
 
 Clean architecture patterns:
 
 ```python
-# AI implements domain-driven design:
-
 class OrderService:
     """Business logic layer - framework agnostic"""
 
@@ -1449,7 +1627,6 @@ class OrderService:
         self.notifier = notification_service
 
     async def place_order(self, customer_id: str, items: List[OrderItem]) -> Order:
-        # Business rules validation
         if not items:
             raise BusinessRuleViolation("Order must contain items")
 
@@ -1458,15 +1635,19 @@ class OrderService:
         if total > 10000:
             require_approval = True
 
-        # Create order aggregate
         order = Order(
             customer_id=customer_id,
             items=items,
             total=total,
             status=OrderStatus.PENDING
         )
+```
 
-        # Process payment
+---
+
+## Business Logic Implementation: Payment
+
+```python
         payment_result = await self.payment.charge(customer_id, total)
 
         if payment_result.success:
@@ -1488,16 +1669,13 @@ class OrderService:
 
 ---
 
-## Data Validation
+## Data Validation: Schema
 
 Comprehensive validation layers:
 
 ```typescript
-// AI creates validation system:
-
 import { z } from 'zod';
 
-// Schema definitions
 const UserSchema = z.object({
   email: z.string().email().toLowerCase(),
   password: z.string()
@@ -1513,8 +1691,13 @@ const UserSchema = z.object({
     notifications: z.boolean().default(true),
   }).optional(),
 });
+```
 
-// Validation middleware
+---
+
+## Data Validation: Middleware
+
+```typescript
 const validate = (schema: z.ZodSchema) => {
   return async (req, res, next) => {
     try {
@@ -1537,13 +1720,11 @@ const validate = (schema: z.ZodSchema) => {
 
 ---
 
-## Error Handling
+## Error Handling: AppError Class
 
 Robust error management system:
 
 ```javascript
-// AI implements error handling:
-
 class AppError extends Error {
   constructor(message, statusCode, isOperational = true) {
     super(message);
@@ -1552,13 +1733,17 @@ class AppError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
+```
 
-// Global error handler
+---
+
+## Error Handling: Global Handler
+
+```javascript
 const errorHandler = (err, req, res, next) => {
   let error = { ...err };
   error.message = err.message;
 
-  // Log error
   logger.error({
     error: err,
     request: req.url,
@@ -1567,20 +1752,23 @@ const errorHandler = (err, req, res, next) => {
     user: req.user?.id
   });
 
-  // Mongoose bad ObjectId
   if (err.name === 'CastError') {
     const message = 'Resource not found';
     error = new AppError(message, 404);
   }
+```
 
-  // Mongoose duplicate key
+---
+
+## Error Handling: Mongoose Errors
+
+```javascript
   if (err.code === 11000) {
     const field = Object.keys(err.keyValue)[0];
     const message = `${field} already exists`;
     error = new AppError(message, 400);
   }
 
-  // Mongoose validation error
   if (err.name === 'ValidationError') {
     const message = Object.values(err.errors).map(val => val.message).join(', ');
     error = new AppError(message, 400);
@@ -1608,13 +1796,11 @@ Backend optimization strategies:
 
 ---
 
-## DevOps and Automation
+## DevOps and Automation: App Service
 
-Infrastructure automation overview:
+Docker Compose app service:
 
 ```yaml
-# AI creates Docker Compose setup:
-
 version: '3.8'
 
 services:
@@ -1639,7 +1825,13 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+```
 
+---
+
+## DevOps and Automation: Data Services
+
+```yaml
   postgres:
     image: postgres:15-alpine
     volumes:
@@ -1657,7 +1849,13 @@ services:
       - redis_data:/data
     ports:
       - "6379:6379"
+```
 
+---
+
+## DevOps and Automation: Nginx and Volumes
+
+```yaml
   nginx:
     image: nginx:alpine
     volumes:
@@ -1721,13 +1919,11 @@ class BiometricAuthModule(reactContext: ReactApplicationContext) :
 
 ---
 
-## Testing Strategies
+## Testing Strategies: Fixture
 
 Comprehensive testing with AI:
 
 ```python
-# AI generates test suites:
-
 import pytest
 from unittest.mock import Mock, patch
 import asyncio
@@ -1739,10 +1935,15 @@ class TestOrderService:
         mock_payment = Mock()
         mock_notifier = Mock()
         return OrderService(mock_repo, mock_payment, mock_notifier)
+```
 
+---
+
+## Testing Strategies: Test Cases
+
+```python
     @pytest.mark.asyncio
     async def test_successful_order_placement(self, service):
-        # Arrange
         customer_id = "customer123"
         items = [OrderItem(product_id="prod1", quantity=2, price=50.0)]
 
@@ -1750,10 +1951,8 @@ class TestOrderService:
             lambda: PaymentResult(success=True, transaction_id="txn123")
         )())
 
-        # Act
         order = await service.place_order(customer_id, items)
 
-        # Assert
         assert order.status == OrderStatus.PAID
         assert order.total == 100.0
         service.order_repo.save.assert_called_once()
@@ -1780,30 +1979,31 @@ Auto-generated API documentation:
 
 ---
 
-## Security Best Practices
+## Security Best Practices: Rate Limiting and CORS
 
 Security implementation patterns:
 
 ```javascript
-// AI implements security measures:
-
 const securityMiddleware = {
-  // Rate limiting
   rateLimiter: rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 100,
     message: 'Too many requests'
   }),
 
-  // CORS configuration
   cors: cors({
     origin: process.env.ALLOWED_ORIGINS?.split(',') || '*',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
   }),
+```
 
-  // Helmet for security headers
+---
+
+## Security Best Practices: Helmet and Sanitization
+
+```javascript
   helmet: helmet({
     contentSecurityPolicy: {
       directives: {
@@ -1815,7 +2015,6 @@ const securityMiddleware = {
     },
   }),
 
-  // Input sanitization
   sanitize: (req, res, next) => {
     req.body = sanitizeInput(req.body);
     req.query = sanitizeInput(req.query);
@@ -1823,7 +2022,6 @@ const securityMiddleware = {
     next();
   },
 
-  // SQL injection prevention
   preventSQLi: (query) => {
     return query.replace(/['";\\]/g, '');
   }
@@ -1844,13 +2042,11 @@ Service communication patterns:
 
 ---
 
-## Event-Driven Architecture
+## Event-Driven Architecture: Event Interface
 
 Event sourcing implementation:
 
 ```typescript
-// AI implements event-driven system:
-
 interface Event {
   id: string;
   type: string;
@@ -1862,16 +2058,17 @@ interface Event {
     correlationId?: string;
   };
 }
+```
 
+---
+
+## Event-Driven Architecture: EventStore
+
+```typescript
 class EventStore {
   async append(event: Event): Promise<void> {
-    // Store event
     await this.db.events.insert(event);
-
-    // Publish to event bus
     await this.eventBus.publish(event.type, event);
-
-    // Update read model
     await this.projectionManager.handle(event);
   }
 
@@ -1887,8 +2084,13 @@ class EventStore {
       this.eventHandlers[event.type](state, event), {});
   }
 }
+```
 
-// Event handlers
+---
+
+## Event-Driven Architecture: Handlers
+
+```typescript
 const eventHandlers = {
   OrderCreated: (state, event) => ({
     ...state,
@@ -1907,33 +2109,31 @@ const eventHandlers = {
 
 ---
 
-## Serverless Development
+## Serverless Development: Handler Input
 
 Lambda function patterns:
 
 ```python
-# AI creates serverless functions:
-
 import json
 import boto3
 from datetime import datetime
 
 def lambda_handler(event, context):
-    """
-    AWS Lambda function for processing orders
-    """
     try:
-        # Parse input
         body = json.loads(event.get('body', '{}'))
 
-        # Validate input
         if not body.get('orderId'):
             return {
                 'statusCode': 400,
                 'body': json.dumps({'error': 'orderId required'})
             }
+```
 
-        # Process order
+---
+
+## Serverless Development: DynamoDB Update
+
+```python
         dynamodb = boto3.resource('dynamodb')
         table = dynamodb.Table('orders')
 
@@ -1947,8 +2147,13 @@ def lambda_handler(event, context):
             },
             ReturnValues='ALL_NEW'
         )
+```
 
-        # Send to SQS for further processing
+---
+
+## Serverless Development: SQS and Response
+
+```python
         sqs = boto3.client('sqs')
         sqs.send_message(
             QueueUrl=os.environ['QUEUE_URL'],
@@ -1972,13 +2177,11 @@ def lambda_handler(event, context):
 
 ---
 
-## Load Testing
+## Load Testing: Configuration
 
 Performance testing strategies:
 
 ```javascript
-// AI generates load testing scripts:
-
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { Rate } from 'k6/metrics';
@@ -1987,20 +2190,25 @@ const errorRate = new Rate('errors');
 
 export const options = {
   stages: [
-    { duration: '2m', target: 100 }, // Ramp up
-    { duration: '5m', target: 100 }, // Stay at 100 users
-    { duration: '2m', target: 200 }, // Ramp up
-    { duration: '5m', target: 200 }, // Stay at 200 users
-    { duration: '2m', target: 0 },   // Ramp down
+    { duration: '2m', target: 100 },
+    { duration: '5m', target: 100 },
+    { duration: '2m', target: 200 },
+    { duration: '5m', target: 200 },
+    { duration: '2m', target: 0 },
   ],
   thresholds: {
-    http_req_duration: ['p(95)<500'], // 95% of requests under 500ms
-    errors: ['rate<0.01'],            // Error rate under 1%
+    http_req_duration: ['p(95)<500'],
+    errors: ['rate<0.01'],
   },
 };
+```
 
+---
+
+## Load Testing: Test Scenarios
+
+```javascript
 export default function () {
-  // Test scenarios
   const responses = http.batch([
     ['GET', 'http://api.example.com/users'],
     ['GET', 'http://api.example.com/products'],
@@ -2035,14 +2243,11 @@ Performance optimization techniques:
 
 ---
 
-## Architecture at Scale
+## Architecture at Scale: HPA Metrics
 
 Scaling strategies for growth:
 
 ```yaml
-# AI designs scalable architecture:
-
-# Horizontal scaling with Kubernetes
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -2067,6 +2272,13 @@ spec:
       target:
         type: Utilization
         averageUtilization: 80
+```
+
+---
+
+## Architecture at Scale: HPA Behavior
+
+```yaml
   behavior:
     scaleDown:
       stabilizationWindowSeconds: 300

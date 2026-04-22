@@ -294,7 +294,13 @@ ansible-playbook -i inventories/production playbooks/deploy.yml
       service:
         name: myapp
         state: started
+```
 
+---
+
+## Rolling Deployment: Post Tasks
+
+```yaml
   post_tasks:
     - name: Health check
       uri:
@@ -396,7 +402,13 @@ tasks:
       - config/secrets.yml
       - log
       - tmp
+```
 
+---
+
+## Zero-Downtime: Switch and Cleanup
+
+```yaml
   - name: Switch current symlink
     file:
       src: "{{ current_release }}"
@@ -581,7 +593,14 @@ tasks:
         reboot_timeout: 300
         msg: "Reboot initiated by Ansible patching"
       when: reboot_required.stat.exists
+```
 
+---
+
+## Patching Pattern: Verification
+
+```yaml
+  tasks:
     - name: Verify services after reboot
       service_facts:
 

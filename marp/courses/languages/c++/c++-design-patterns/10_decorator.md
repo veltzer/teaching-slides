@@ -183,7 +183,13 @@ public:
         return decrypt(wrapped->read());
     }
 };
+```
 
+---
+
+## Stream Decorators: Compression
+
+```cpp
 class CompressionDecorator : public DataStream {
     std::unique_ptr<DataStream> wrapped;
 public:

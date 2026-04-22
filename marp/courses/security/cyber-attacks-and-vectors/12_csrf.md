@@ -220,6 +220,10 @@ def transfer():
     return 'Transfer complete'
 ```
 
+---
+
+## CSRF Token Implementation: HTML Form
+
 ```html
 <!-- Template with CSRF token -->
 <form action="/transfer" method="POST">

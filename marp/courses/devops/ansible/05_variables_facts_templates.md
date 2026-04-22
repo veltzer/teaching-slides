@@ -527,7 +527,13 @@ server {
     ssl_certificate_key /etc/ssl/private/{{ vhost.domain }}.key;
     ssl_protocols TLSv1.2 TLSv1.3;
 {% endif %}
+```
 
+---
+
+## Nginx Virtual Host Template: Locations
+
+```jinja
     root {{ vhost.document_root }};
     index index.html index.php;
 

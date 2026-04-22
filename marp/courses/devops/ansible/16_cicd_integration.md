@@ -65,6 +65,13 @@ jobs:
       - name: Run ansible-lint
         run: ansible-lint
 
+```
+
+---
+
+## GitHub Actions: Deploy Job
+
+```yaml
   deploy:
     needs: lint
     runs-on: ubuntu-latest
@@ -79,7 +86,13 @@ jobs:
 
       - name: Install Ansible
         run: pip install ansible boto3
+```
 
+---
+
+## GitHub Actions: Run Playbook
+
+```yaml
       - name: Configure SSH key
         run: |
           mkdir -p ~/.ssh
@@ -140,7 +153,13 @@ test:
     - molecule test
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+```
 
+---
+
+## GitLab CI/CD: Staging Deployment
+
+```yaml
 deploy-staging:
   stage: deploy-staging
   image: python:3.11-slim
@@ -162,6 +181,13 @@ deploy-staging:
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
+```
+
+---
+
+## GitLab CI/CD: Production Deployment
+
+```yaml
 deploy-production:
   stage: deploy-production
   image: python:3.11-slim
@@ -223,7 +249,17 @@ pipeline {
                 '''
             }
         }
+    }
+}
+```
 
+---
+
+## Jenkins Pipeline: Production Stage
+
+```groovy
+pipeline {
+    stages {
         stage('Deploy Production') {
             input {
                 message "Deploy to production?"
@@ -296,7 +332,13 @@ pipeline {
     - role: deploy
       vars:
         deploy_version: "{{ app_version }}"
+```
 
+---
+
+## Deployment Playbook: Post Tasks
+
+```yaml
   post_tasks:
     - name: Wait for application health
       uri:

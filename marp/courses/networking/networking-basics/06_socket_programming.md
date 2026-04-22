@@ -69,42 +69,39 @@ audience:
 
 ---
 
-## TCP Server in Python: Basic
+## TCP Server in Python: Setup
 
 ```python
 #!/usr/bin/env python
-"""Simple TCP echo server."""
-
 import socket
 
-# Create a TCP socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Allow address reuse (avoid "Address already in use" error)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-# Bind to address and port
 server_socket.bind(('0.0.0.0', 8080))
 
-# Start listening (backlog of 5 pending connections)
 server_socket.listen(5)
 print("Server listening on port 8080...")
+```
 
+---
+
+## TCP Server in Python: Accept Loop
+
+```python
 while True:
-    # Accept a new connection (blocks until client connects)
     client_socket, client_address = server_socket.accept()
     print(f"Connection from {client_address}")
 
     try:
         while True:
-            # Receive data (up to 4096 bytes)
             data = client_socket.recv(4096)
             if not data:
-                break  # Client disconnected
+                break
 
             print(f"Received: {data.decode()}")
 
-            # Echo the data back
             client_socket.sendall(data)
     except ConnectionResetError:
         print(f"Client {client_address} disconnected abruptly")
@@ -159,19 +156,16 @@ Connection closed
 
 ---
 
-## TCP Server: Multi-Client with Threading
+## TCP Server: Multi-Client Handler
 
-The basic server handles only one client at a time. Use threading for concurrency:
+Use threading for concurrency:
 
 ```python
 #!/usr/bin/env python
-"""Multi-threaded TCP server."""
-
 import socket
 import threading
 
 def handle_client(client_socket, client_address):
-    """Handle a single client connection."""
     print(f"[+] New connection from {client_address}")
     try:
         while True:
@@ -185,7 +179,13 @@ def handle_client(client_socket, client_address):
     finally:
         client_socket.close()
         print(f"[-] Connection from {client_address} closed")
+```
 
+---
+
+## TCP Server: Multi-Client Main Loop
+
+```python
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -195,10 +195,9 @@ def main():
 
     while True:
         client_socket, addr = server.accept()
-        # Spawn a new thread for each client
         thread = threading.Thread(target=handle_client,
                                   args=(client_socket, addr))
-        thread.daemon = True  # Thread dies when main thread dies
+        thread.daemon = True
         thread.start()
 
 if __name__ == '__main__':
@@ -207,16 +206,12 @@ if __name__ == '__main__':
 
 ---
 
-## UDP Server and Client in Python
+## UDP Server in Python
 
 UDP is connectionless -- no handshake, no guaranteed delivery, but lower overhead.
 
-**UDP Server:**
-
 ```python
 #!/usr/bin/env python
-"""Simple UDP echo server."""
-
 import socket
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -227,26 +222,23 @@ while True:
     data, client_address = server_socket.recvfrom(4096)
     print(f"Received from {client_address}: {data.decode()}")
 
-    # Send response back to the client
     server_socket.sendto(data, client_address)
 ```
 
-**UDP Client:**
+---
+
+## UDP Client in Python
 
 ```python
 #!/usr/bin/env python
-"""Simple UDP client."""
-
 import socket
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# No connect() needed for UDP -- just send directly
 message = "Hello, UDP Server!"
 client_socket.sendto(message.encode(), ('127.0.0.1', 9090))
 print(f"Sent: {message}")
 
-# Receive response (with timeout)
 client_socket.settimeout(5.0)
 try:
     data, server_address = client_socket.recvfrom(4096)
@@ -341,14 +333,12 @@ conn.close()                     # now release the fd
 
 ---
 
-## Non-Blocking I/O
+## Non-Blocking I/O: Setup
 
-By default, socket operations block (wait until complete). Non-blocking mode returns immediately.
+By default, socket operations block. Non-blocking mode returns immediately.
 
 ```python
 #!/usr/bin/env python
-"""Non-blocking socket example."""
-
 import socket
 import time
 
@@ -356,23 +346,27 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind(('0.0.0.0', 8080))
 server.listen(5)
-server.setblocking(False)  # Non-blocking mode
+server.setblocking(False)
 
 clients = []
 print("Non-blocking server on port 8080...")
+```
 
+---
+
+## Non-Blocking I/O: Event Loop
+
+```python
 while True:
-    # Try to accept new connections (non-blocking)
     try:
         client, addr = server.accept()
         client.setblocking(False)
         clients.append(client)
         print(f"New connection from {addr}")
     except BlockingIOError:
-        pass  # No pending connections, that's fine
+        pass
 
-    # Try to read from each connected client
-    for client in clients[:]:  # Copy list to allow removal
+    for client in clients[:]:
         try:
             data = client.recv(4096)
             if data:
@@ -382,26 +376,24 @@ while True:
                 clients.remove(client)
                 client.close()
         except BlockingIOError:
-            pass  # No data available yet
+            pass
         except (ConnectionResetError, BrokenPipeError):
             clients.remove(client)
             client.close()
 
-    time.sleep(0.01)  # Small sleep to prevent CPU spinning
+    time.sleep(0.01)
 ```
 
 The busy-loop above is inefficient. That is where select/poll/epoll come in.
 
 ---
 
-## select() -- I/O Multiplexing
+## select() -- Setup
 
-`select()` monitors multiple sockets and tells you which ones are ready for I/O.
+`select()` monitors multiple sockets and tells you which ones are ready.
 
 ```python
 #!/usr/bin/env python
-"""TCP server using select() for I/O multiplexing."""
-
 import socket
 import select
 
@@ -411,31 +403,32 @@ server.bind(('0.0.0.0', 8080))
 server.listen(100)
 server.setblocking(False)
 
-# Lists for select()
-inputs = [server]   # Sockets to monitor for readability
-outputs = []        # Sockets to monitor for writability
+inputs = [server]
+outputs = []
 
 print("Select-based server on port 8080...")
+```
 
+---
+
+## select() -- Event Loop
+
+```python
 while inputs:
-    # Wait until at least one socket is ready
     readable, writable, exceptional = select.select(inputs, outputs, inputs)
 
     for sock in readable:
         if sock is server:
-            # New incoming connection
             client, addr = sock.accept()
             client.setblocking(False)
             inputs.append(client)
             print(f"New connection from {addr}")
         else:
-            # Data from an existing client
             data = sock.recv(4096)
             if data:
                 print(f"Received: {data.decode()}")
-                sock.sendall(data)  # Echo back
+                sock.sendall(data)
             else:
-                # Client disconnected
                 print("Client disconnected")
                 inputs.remove(sock)
                 sock.close()
@@ -489,7 +482,13 @@ epoll.register(server.fileno(), select.EPOLLIN)
 fd_to_socket = {server.fileno(): server}
 
 print("Epoll-based server on port 8080...")
+```
 
+---
+
+## epoll Event Loop
+
+```python
 try:
     while True:
         # Wait for events (timeout = 1 second)
@@ -562,7 +561,13 @@ async def handle_client(reader, writer):
         writer.close()
         await writer.wait_closed()
         print(f"Connection from {addr} closed")
+```
 
+---
+
+## asyncio: Main Entry Point
+
+```python
 async def main():
     server = await asyncio.start_server(handle_client, '0.0.0.0', 8080)
     addr = server.sockets[0].getsockname()
@@ -601,6 +606,15 @@ def handle_request(client_socket):
     method, path, version = lines[0].split(' ')
     print(f"{method} {path} {version}")
 
+    send_response(client_socket, path)
+```
+
+---
+
+## HTTP Server: Build Response
+
+```python
+def send_response(client_socket, path):
     # Build response
     if path == '/':
         body = "<html><body><h1>Hello from raw sockets!</h1></body></html>"
@@ -622,7 +636,13 @@ def handle_request(client_socket):
     )
 
     client_socket.sendall(response.encode())
+```
 
+---
+
+## HTTP Server: Main Loop
+
+```python
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind(('0.0.0.0', 8080))
@@ -889,7 +909,13 @@ def remove_client(client_socket):
         nickname = clients.pop(client_socket)
         client_socket.close()
         broadcast(f"*** {nickname} has left the chat ***\n")
+```
 
+---
+
+## Chat: Client Handler
+
+```python
 def handle_client(client_socket, addr):
     """Handle messages from a single client."""
     client_socket.sendall(b"Enter your nickname: ")
@@ -910,7 +936,13 @@ def handle_client(client_socket, addr):
         pass
     finally:
         remove_client(client_socket)
+```
 
+---
+
+## Chat: Main and Demo
+
+```python
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -959,6 +991,13 @@ def checksum(data):
     s += s >> 16
     return ~s & 0xffff
 
+```
+
+---
+
+## Ping: Sending Requests
+
+```python
 def ping(host, count=4):
     """Send ICMP echo requests."""
     sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)
@@ -1033,6 +1072,10 @@ def robust_connect(host, port, timeout=10):
 
     return None
 ```
+
+---
+
+## Common Socket Errors
 
 **Common socket errors:**
 | Error | Meaning |

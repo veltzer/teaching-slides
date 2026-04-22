@@ -162,7 +162,13 @@ def ping():
         return f'<pre>{result.stdout}</pre>'
     except subprocess.TimeoutExpired:
         abort(504, 'Request timed out')
+```
 
+---
+
+## Secure Code: Python (DNS Lookup)
+
+```python
 # SECURE: Use library functions instead of shell commands
 @app.route('/lookup')
 def lookup():

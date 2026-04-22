@@ -209,7 +209,19 @@ int main(void) {
         printf("%s\n", str);
         free(str);
     }
+    return 0;
+}
+```
 
+---
+
+## Pointers to Pointers: 2D Arrays
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
     /* 2D dynamic array using pointer to pointer */
     int rows = 3, cols = 4;
     int **matrix = malloc(rows * sizeof(int *));

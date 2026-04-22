@@ -797,7 +797,13 @@ def inner_context():
     except Exception as e:
         print(f"Inner context caught: {e}")
         raise  # Re-raise the exception
+```
 
+---
+
+## Nested Context Managers: Usage and Output
+
+```python
 # Using nested contexts
 try:
     with outer_context() as o:
@@ -1042,7 +1048,13 @@ async def process_request(task_id):
     current_id = request_id.get()
     print(f"Task {task_id} processing request {current_id}")
     await asyncio.sleep(0.1)
+```
 
+---
+
+## Context Variables: Async Main Runner
+
+```python
 async def main():
     # Run with different request contexts
     with request_context("REQ-1"):
@@ -1201,7 +1213,13 @@ class CSVProcessor:
         self.writer = csv.writer(self.output_fd)
 
         return self
+```
 
+---
+
+## File Processing Context Manager: Exit and Usage
+
+```python
     def __exit__(self, exc_type, exc_val, exc_tb):
         # Clean up resources
         if self.input_fd:
@@ -1260,7 +1278,13 @@ def db_transaction(db_path):
     finally:
         # Close the connection in all cases
         connection.close()
+```
 
+---
+
+## Database Transaction Context Manager: Usage
+
+```python
 # Usage
 try:
     with db_transaction('example.db') as cursor:
@@ -1309,7 +1333,13 @@ class ResourcePool:
             if resource is not None:
                 print(f"Releasing resource {resource}")
                 self.resources.put(resource)
+```
 
+---
+
+## Resource Pool: Worker and Thread Usage
+
+```python
 # Usage example
 def worker(pool, worker_id):
     try:
@@ -1361,7 +1391,13 @@ def request_context(user_id=None, trace_id=None):
         'start_time': time.time(),
         'request_path': None,
     }
+```
 
+---
+
+## Web Request Context Manager: Yield and Cleanup
+
+```python
     try:
         yield _request_context.current
     finally:
@@ -1382,7 +1418,13 @@ def request_context(user_id=None, trace_id=None):
 # Function to get current request context
 def get_current_context():
     return getattr(_request_context, 'current', None)
+```
 
+---
+
+## Web Request Context Manager: Request Handlers and Usage
+
+```python
 # Example request handlers
 def handle_profile_request(user_id):
     ctx = get_current_context()

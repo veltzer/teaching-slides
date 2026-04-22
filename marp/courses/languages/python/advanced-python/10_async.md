@@ -748,7 +748,13 @@ async def main():
 
     # Cancel task2
     task2.cancel()
+```
 
+---
+
+## Working with Tasks: Awaiting Results
+
+```python
     # Wait for task results, handling cancellations
     try:
         result1 = await task1
@@ -974,7 +980,13 @@ async def tcp_echo_client():
     # Close connection
     writer.close()
     await writer.wait_closed()
+```
 
+---
+
+## Streams API: TCP Echo Server
+
+```python
 async def tcp_echo_server():
     async def handle_client(reader, writer):
         # Read data
@@ -1037,7 +1049,13 @@ async def event_example():
 
     # Run both tasks
     await asyncio.gather(waiter(), setter())
+```
 
+---
+
+## Synchronization Primitives: Main Runner
+
+```python
 async def main():
     # Lock example
     lock = asyncio.Lock()
@@ -1157,7 +1175,13 @@ def deferred_to_future(deferred):
 
     deferred.addCallbacks(on_success, on_failure)
     return future
+```
 
+---
+
+## Working with Multiple Frameworks: Async Bridge Usage
+
+```python
 # Use Twisted from asyncio
 async def fetch_with_twisted(url):
     agent = Agent(reactor)
@@ -1333,7 +1357,13 @@ async def test_fetch_data():
 async def test_fetch_data_invalid_url():
     with pytest.raises(ValueError):
         await fetch_data("invalid-url")
+```
 
+---
+
+## Testing Async Code: Concurrency and Timeouts
+
+```python
 # Test concurrent execution
 @pytest.mark.asyncio
 async def test_concurrent_fetch():
@@ -1353,7 +1383,7 @@ async def test_fetch_with_timeout():
 ---
 ## Practical Example
 
-## Complete Async Web API Client
+## Complete Async Web API Client: Class Setup
 ```python
 import asyncio
 import aiohttp
@@ -1381,7 +1411,13 @@ class APIClient:
         if self.api_key:
             headers['Authorization'] = f'Bearer {self.api_key}'
         return headers
+```
 
+---
+
+## Async Web API Client: HTTP Methods
+
+```python
     async def get(self, endpoint: str) -> Dict[str, Any]:
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         logger.debug(f"GET request to {url}")
@@ -1406,7 +1442,13 @@ class APIClient:
 
     async def create_user(self, user_data: Dict[str, Any]) -> Dict[str, Any]:
         return await self.post("users", user_data)
+```
 
+---
+
+## Async Web API Client: Main Runner
+
+```python
 async def main():
     async with APIClient("https://api.example.com", api_key="your_api_key") as client:
         # Fetch all users

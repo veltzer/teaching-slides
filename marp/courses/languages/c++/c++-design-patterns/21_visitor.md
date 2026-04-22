@@ -120,7 +120,13 @@ public:
     }
     double getTotal() const { return totalArea; }
 };
+```
 
+---
+
+## Concrete Visitors: JSON Serializer
+
+```cpp
 class JSONSerializer : public ShapeVisitor {
     std::string json = "[";
     bool first = true;

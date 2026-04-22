@@ -92,7 +92,13 @@ public:
         return "[IN REVIEW] " + doc.getContent();
     }
 };
+```
 
+---
+
+## Concrete States: Published
+
+```cpp
 class PublishedState : public DocumentState {
 public:
     void publish(Document& doc) override {

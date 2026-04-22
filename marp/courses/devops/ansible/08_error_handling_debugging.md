@@ -179,7 +179,13 @@ web02  : ok=5  changed=2  unreachable=0  failed=0
       service:
         name: myapp
         state: restarted
+```
 
+---
+
+## Block/Rescue/Always: Rescue and Always
+
+```yaml
   rescue:
     - name: Log failure
       debug:

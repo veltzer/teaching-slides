@@ -157,7 +157,13 @@ df.write \
     .option("compression", "zstd") \
     .mode("overwrite") \
     .parquet("/output/events_partitioned/")
+```
 
+---
+
+## Parquet: Row Group and Encoding Tuning
+
+```python
 # Control row group size
 spark.conf.set("spark.sql.parquet.rowGroupSize",
                str(128 * 1024 * 1024))  # 128 MB
@@ -275,7 +281,13 @@ df.write.format("avro") \
     .option("avroSchema", open("event.avsc").read()) \
     .mode("overwrite") \
     .save("/output/events_avro/")
+```
 
+---
+
+## Avro: Kafka Streaming Integration
+
+```python
 # Streaming with Avro from Kafka
 streaming_df = (
     spark.readStream
@@ -346,7 +358,13 @@ new_data = spark.read.parquet("/data/new_events/")
 new_data.write.format("delta") \
     .mode("append") \
     .save("/data/delta/events/")
+```
 
+---
+
+## Delta Lake: Partial Overwrite and Catalog
+
+```python
 # Overwrite with replaceWhere (partial overwrite)
 daily_data = spark.read.parquet("/data/daily/2024-06-15/")
 daily_data.write.format("delta") \
@@ -397,7 +415,13 @@ target.alias("target").merge(
         "updated_at": "source.updated_at",
     }
 ).execute()
+```
 
+---
+
+## Delta Lake MERGE: Delete Condition
+
+```python
 # MERGE with delete condition
 target.alias("t").merge(
     updates.alias("s"),
@@ -486,7 +510,13 @@ spark.sql("""
 spark.sql("""
     SELECT * FROM events TIMESTAMP AS OF '2024-06-01'
 """)
+```
 
+---
+
+## Delta Lake: Version Comparison and History
+
+```python
 # Compare two versions (audit / debugging)
 df_old = spark.read.format("delta") \
     .option("versionAsOf", 10).load("/data/delta/events/")
@@ -530,7 +560,13 @@ delta_table.vacuum(24)  # 24 hours - careful!
 
 # SQL syntax
 spark.sql("VACUUM events RETAIN 168 HOURS")
+```
 
+---
+
+## Delta Lake: OPTIMIZE and Z-Ordering
+
+```python
 # OPTIMIZE: compact small files
 spark.sql("OPTIMIZE events")
 
@@ -616,7 +652,13 @@ spark.sql("""
 
 # Note: days(event_ts) is "hidden partitioning"
 # Users query by event_ts, Iceberg handles partition mapping
+```
 
+---
+
+## Iceberg: Insert, Time Travel, Partition Evolution
+
+```python
 # Insert data
 spark.sql("""
     INSERT INTO my_catalog.db.events
@@ -665,7 +707,13 @@ df.write \
     .partitionBy("event_date", "region") \
     .mode("overwrite") \
     .parquet("/output/events_by_date_region/")
+```
 
+---
+
+## Partitioning: Hash and Dynamic Overwrite
+
+```python
 # Hash partitioning (manual)
 num_buckets = 32
 df_hashed = df.withColumn(
@@ -721,7 +769,13 @@ customers.write \
     .sortBy("customer_id") \
     .mode("overwrite") \
     .saveAsTable("customers_bucketed")
+```
 
+---
+
+## Bucketing: Shuffle-Free Joins
+
+```python
 # Join on bucketed tables: NO SHUFFLE needed
 # Both tables have same bucket count and key
 result = spark.sql("""
@@ -804,7 +858,13 @@ spark.conf.set(
 # Method 5: Optimized writes (Delta Lake)
 spark.conf.set(
     "spark.databricks.delta.optimizeWrite.enabled", "true")
+```
 
+---
+
+## Small Files: Scheduled Compaction Job
+
+```python
 # Method 6: Compaction job (scheduled)
 def compact_partition(table_path, partition_col, partition_val):
     """Compact a single partition of a Parquet table."""
@@ -850,7 +910,13 @@ spark = SparkSession.builder \
     .config("spark.sql.parquet.columnIndex.enabled", "true") \
     .config("spark.sql.parquet.filterPushdown", "true") \
     .getOrCreate()
+```
 
+---
+
+## Data Format Pipeline: Ingest as Delta
+
+```python
 # Stage 1: Ingest raw data (CSV/JSON to Parquet)
 schema = StructType([
     StructField("event_id", StringType(), False),
@@ -885,7 +951,13 @@ target.alias("t").merge(
 ).whenMatchedUpdateAll() \
  .whenNotMatchedInsertAll() \
  .execute()
+```
 
+---
+
+## Data Format Pipeline: Optimize and Verify
+
+```python
 # Stage 4: Optimize storage
 spark.sql("""
     OPTIMIZE delta.`/data/delta/events/`

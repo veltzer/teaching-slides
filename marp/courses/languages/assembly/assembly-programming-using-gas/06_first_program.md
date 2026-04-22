@@ -143,7 +143,13 @@ _start:
     movl $name, %ecx
     movl $50, %edx
     int $0x80
+```
 
+---
+
+## Adding User Input: Greeting Output
+
+```nasm
     # Print greeting
     movl $4, %eax
     movl $1, %ebx

@@ -214,6 +214,10 @@ git bisect bad     # Current commit is bad
 git bisect reset
 ```
 
+---
+
+## Git Bisect: Automated
+
 **Automated bisect:**
 
 ```bash

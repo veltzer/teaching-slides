@@ -57,7 +57,15 @@ android {
             versionNameSuffix "-staging"
         }
     }
+}
+```
 
+---
+
+## Build Configuration: Product Flavors
+
+```groovy
+android {
     productFlavors {
         free {
             applicationIdSuffix ".free"

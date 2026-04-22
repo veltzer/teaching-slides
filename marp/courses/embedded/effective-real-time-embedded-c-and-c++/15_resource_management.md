@@ -201,6 +201,16 @@ public:
     // 3. Copy assignment
     Buffer& operator=(const Buffer& other);
 
+};
+```
+
+---
+
+## Rule of Five: Move Operations
+
+```cpp
+class Buffer {
+public:
     // 4. Move constructor
     Buffer(Buffer&& other) noexcept
         : data(other.data), size(other.size) {
@@ -346,6 +356,13 @@ protected:
     virtual ~RefCounted() = default;
 };
 
+```
+
+---
+
+## Intrusive Smart Pointer
+
+```cpp
 template<typename T>
 class IntrusivePtr {
 private:
@@ -435,31 +452,7 @@ private:
     std::array<Block, N> blocks;
 
 public:
-    class Ptr {
-    private:
-        T* ptr{nullptr};
-        MemoryPool* pool{nullptr};
-
-    public:
-        Ptr() = default;
-        Ptr(T* p, MemoryPool* mp) : ptr(p), pool(mp) {}
-
-        ~Ptr() {
-            if (ptr && pool) {
-                pool->deallocate(ptr);
-            }
-        }
-
-        // Move only
-        Ptr(Ptr&& other) noexcept
-            : ptr(other.ptr), pool(other.pool) {
-            other.ptr = nullptr;
-            other.pool = nullptr;
-        }
-
-        T* operator->() { return ptr; }
-        T& operator*() { return *ptr; }
-    };
+    class Ptr;
 
     template<typename... Args>
     Ptr allocate(Args&&... args) {
@@ -485,6 +478,39 @@ private:
             }
         }
     }
+};
+```
+
+---
+
+## Memory Pool: Ptr Inner Class
+
+```cpp
+template<typename T, size_t N>
+class MemoryPool<T, N>::Ptr {
+private:
+    T* ptr{nullptr};
+    MemoryPool* pool{nullptr};
+
+public:
+    Ptr() = default;
+    Ptr(T* p, MemoryPool* mp) : ptr(p), pool(mp) {}
+
+    ~Ptr() {
+        if (ptr && pool) {
+            pool->deallocate(ptr);
+        }
+    }
+
+    // Move only
+    Ptr(Ptr&& other) noexcept
+        : ptr(other.ptr), pool(other.pool) {
+        other.ptr = nullptr;
+        other.pool = nullptr;
+    }
+
+    T* operator->() { return ptr; }
+    T& operator*() { return *ptr; }
 };
 ```
 
@@ -519,7 +545,13 @@ template<typename F>
 auto makeScopeGuard(F&& f) {
     return ScopeGuard<std::decay_t<F>>(std::forward<F>(f));
 }
+```
 
+---
+
+## Scope Guards: Usage
+
+```cpp
 // Usage
 void processData() {
     acquireResource();
@@ -560,7 +592,13 @@ public:
         return !__atomic_test_and_set(&locked, __ATOMIC_ACQUIRE);
     }
 };
+```
 
+---
+
+## Lock Guards: RAII Wrapper
+
+```cpp
 // RAII lock guard
 template<typename Mutex>
 class LockGuard {
@@ -615,7 +653,17 @@ public:
 
     FixedString(const FixedString& other) = default;
     FixedString& operator=(const FixedString& other) = default;
+};
+```
 
+---
+
+## String Management: Operations
+
+```cpp
+template<size_t N>
+class FixedString {
+public:
     // String operations
     FixedString& operator+=(const char* str) {
         size_t i = 0;
@@ -660,6 +708,17 @@ public:
         }
     }
 
+};
+```
+
+---
+
+## Container Resource Management: More Ops
+
+```cpp
+template<typename T, size_t N>
+class InlineVector {
+public:
     void push_back(T&& value) {
         if (count < N) {
             new(&storage[count * sizeof(T)]) T(std::move(value));
@@ -841,7 +900,15 @@ private:
     };
 
     std::array<std::unique_ptr<ResourceBase>, 32> pool;
+};
+```
 
+---
+
+## Resource Pools: Acquire Logic
+
+```cpp
+class ResourcePool {
 public:
     template<typename T, typename... Args>
     T* acquire(Args&&... args) {
@@ -887,6 +954,16 @@ private:
         std::swap(capacity, other.capacity);
     }
 
+};
+```
+
+---
+
+## Exception Safety Levels: push_back
+
+```cpp
+template<typename T>
+class SafeVector {
 public:
     void push_back(const T& value) {
         if (size == capacity) {
@@ -991,7 +1068,18 @@ public:
             }
         }
     }
+};
+#endif
+```
 
+---
+
+## Resource Lifetime Tracking: Reporting
+
+```cpp
+#ifdef DEBUG
+class ResourceTracker {
+public:
     static void report() {
         if (count > 0) {
             printf("Leaked resources:\n");

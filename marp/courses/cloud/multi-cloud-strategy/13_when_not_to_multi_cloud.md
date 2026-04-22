@@ -125,7 +125,13 @@ resource "aws_ecs_service" "api" {
     container_port   = 8080
   }
 }
+```
 
+---
+
+## Single-Cloud Architecture: DynamoDB
+
+```hcl
 resource "aws_dynamodb_table" "orders" {
   name         = "orders"
   billing_mode = "PAY_PER_REQUEST"

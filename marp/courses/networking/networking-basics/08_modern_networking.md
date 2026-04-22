@@ -492,7 +492,13 @@ async def handler(websocket, path):
     finally:
         connected_clients.remove(websocket)
         print(f"Client disconnected: {client_addr}")
+```
 
+---
+
+## WebSocket: Server Main
+
+```python
 async def main():
     async with websockets.serve(handler, "0.0.0.0", 8765):
         print("WebSocket server on ws://0.0.0.0:8765")

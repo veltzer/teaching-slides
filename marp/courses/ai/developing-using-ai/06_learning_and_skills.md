@@ -127,53 +127,47 @@ const unique5 = arr => {
 
 ---
 
-## Best Practice Learning
+## Best Practice Learning: Exceptions and Resources
 
 AI teaches industry standards:
 
 ```python
 You: "What are Python best practices for error handling?"
 
-# AI explains with examples:
-
-# 1. Be specific with exceptions
-# Bad
 try:
     process_data()
 except:
     pass
 
-# Good
 try:
     process_data()
 except (ValueError, TypeError) as e:
     logger.error(f"Data processing failed: {e}")
     raise
 
-# 2. Use context managers for resources
-# Bad
 file = open('data.txt')
 data = file.read()
 file.close()
 
-# Good
 with open('data.txt') as file:
     data = file.read()
+```
 
-# 3. Create custom exceptions
+---
+
+## Best Practice Learning: Custom and Hidden Errors
+
+```python
 class ValidationError(Exception):
     """Raised when validation fails"""
     pass
 
-# 4. Don't hide errors
-# Bad
 def divide(a, b):
     try:
         return a / b
     except ZeroDivisionError:
-        return None  # Hides the error
+        return None
 
-# Good
 def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
@@ -182,14 +176,11 @@ def divide(a, b):
 
 ---
 
-## Pattern Recognition
+## Pattern Recognition: Singleton and Observer
 
 Learning to identify patterns:
 
 ```javascript
-// AI helps recognize design patterns in code:
-
-// Pattern 1: Singleton
 class DatabaseConnection {
     constructor() {
         if (DatabaseConnection.instance) {
@@ -200,7 +191,6 @@ class DatabaseConnection {
     }
 }
 
-// Pattern 2: Observer
 class EventEmitter {
     constructor() {
         this.events = {};
@@ -219,8 +209,13 @@ class EventEmitter {
         }
     }
 }
+```
 
-// Pattern 3: Factory
+---
+
+## Pattern Recognition: Factory
+
+```javascript
 class ShapeFactory {
     createShape(type) {
         switch(type) {
@@ -240,36 +235,31 @@ class ShapeFactory {
 
 ---
 
-## Framework Mastery
+## Framework Mastery: Class to Functional
 
 Accelerated framework learning:
 
 ```typescript
-// Learning React with AI guidance:
-
-// Day 1: Components
-You: "Show me React component evolution"
-
-// AI demonstrates progression:
-
-// 1. Class Component (Legacy)
 class Welcome extends React.Component {
     render() {
         return <h1>Hello, {this.props.name}</h1>;
     }
 }
 
-// 2. Functional Component
 function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
-// 3. Arrow Function Component
 const Welcome = (props) => {
     return <h1>Hello, {props.name}</h1>;
 };
+```
 
-// 4. With Hooks (Modern)
+---
+
+## Framework Mastery: Hooks and TypeScript
+
+```typescript
 const Welcome = ({ name }) => {
     const [greeting, setGreeting] = useState(`Hello, ${name}`);
 
@@ -280,7 +270,6 @@ const Welcome = ({ name }) => {
     return <h1>{greeting}</h1>;
 };
 
-// 5. With TypeScript (Production)
 interface WelcomeProps {
     name: string;
     age?: number;
@@ -293,38 +282,35 @@ const Welcome: React.FC<WelcomeProps> = ({ name, age }) => {
 
 ---
 
-## Algorithm Understanding
+## Algorithm Understanding: Quicksort Walkthrough
 
 Deep dive into algorithms:
 
 ```python
 You: "Explain quicksort step by step with visualization"
 
-# AI provides detailed breakdown:
-
 def quicksort(arr):
     """
-    Step-by-step quicksort explanation:
-
     Initial: [64, 34, 25, 12, 22, 11, 90]
                  ^pivot
 
     Step 1: Partition around pivot (64)
     [34, 25, 12, 22, 11] | 64 | [90]
-     ← less than 64          greater →
 
     Step 2: Recursively sort left side
     [34, 25, 12, 22, 11]
          ^pivot
 
-    Step 3: Partition around 34
-    [25, 12, 22, 11] | 34 | []
-
-    Continue recursively...
-
     Final: [11, 12, 22, 25, 34, 64, 90]
     """
+```
 
+---
+
+## Algorithm Understanding: Quicksort Code
+
+```python
+def quicksort(arr):
     if len(arr) <= 1:
         return arr
 
@@ -347,21 +333,11 @@ def quicksort(arr):
 
 ---
 
-## Architecture Pattern Learning
+## Architecture Pattern Learning: Gateway and Registry
 
 Understanding architectural decisions:
 
 ```javascript
-// AI explains microservices architecture:
-
-/*
-Microservices Architecture Components:
-
-1. API Gateway
-   - Single entry point
-   - Request routing
-   - Authentication
-*/
 class APIGateway {
     route(request) {
         const service = this.getServiceForRoute(request.path);
@@ -369,35 +345,25 @@ class APIGateway {
     }
 }
 
-/*
-2. Service Discovery
-   - Dynamic service registration
-   - Health checking
-*/
 class ServiceRegistry {
     register(service) {
         this.services.set(service.name, service);
         this.healthCheck(service);
     }
 }
+```
 
-/*
-3. Individual Services
-   - Single responsibility
-   - Independent deployment
-*/
+---
+
+## Architecture Pattern Learning: Service and Broker
+
+```javascript
 class UserService {
     async getUser(id) {
-        // Isolated business logic
         return await this.db.findUser(id);
     }
 }
 
-/*
-4. Message Queue
-   - Asynchronous communication
-   - Event-driven architecture
-*/
 class MessageBroker {
     publish(event, data) {
         this.subscribers[event].forEach(sub => sub(data));
@@ -407,21 +373,14 @@ class MessageBroker {
 
 ---
 
-## Problem-Solving Approaches
+## Problem-Solving Approaches: Understand and Break Down
 
 Breaking down complex problems:
 
 ```python
-You: "How do I approach solving a complex coding problem?"
-
-# AI provides structured methodology:
-
 def problem_solving_framework(problem):
     """
     Step 1: Understand the Problem
-    - Read carefully, identify inputs/outputs
-    - Ask clarifying questions
-    - Look at examples
     """
     inputs = identify_inputs(problem)
     outputs = identify_outputs(problem)
@@ -429,32 +388,28 @@ def problem_solving_framework(problem):
 
     """
     Step 2: Break Down the Problem
-    - Divide into smaller sub-problems
-    - Identify patterns or similarities
     """
     sub_problems = decompose(problem)
 
     """
     Step 3: Design Solution
-    - Choose appropriate data structures
-    - Select algorithm approach
-    - Consider edge cases
     """
     approach = design_algorithm(sub_problems)
+```
 
+---
+
+## Problem-Solving Approaches: Implement and Test
+
+```python
+def problem_solving_framework(problem):
     """
     Step 4: Implement
-    - Start with brute force if needed
-    - Optimize iteratively
-    - Handle edge cases
     """
     solution = implement(approach)
 
     """
     Step 5: Test and Refine
-    - Test with examples
-    - Check edge cases
-    - Optimize for performance
     """
     test_solution(solution)
     optimize(solution)
@@ -483,14 +438,11 @@ Multiple approaches to problems:
 
 ---
 
-## Alternative Implementations
+## Alternative Implementations: Classic and Immediate
 
 Learning through variations:
 
 ```javascript
-// Different ways to implement a debounce function:
-
-// 1. Classic Debounce
 function debounce1(func, delay) {
     let timeoutId;
     return function(...args) {
@@ -499,7 +451,6 @@ function debounce1(func, delay) {
     };
 }
 
-// 2. With Immediate Option
 function debounce2(func, delay, immediate = false) {
     let timeoutId;
     return function(...args) {
@@ -514,8 +465,13 @@ function debounce2(func, delay, immediate = false) {
         if (callNow) func.apply(this, args);
     };
 }
+```
 
-// 3. With Cancel Method
+---
+
+## Alternative Implementations: Cancel and AbortController
+
+```javascript
 function debounce3(func, delay) {
     let timeoutId;
 
@@ -528,7 +484,6 @@ function debounce3(func, delay) {
     return debounced;
 }
 
-// 4. Using AbortController (Modern)
 function debounce4(func, delay) {
     let controller;
 
@@ -551,49 +506,49 @@ function debounce4(func, delay) {
 
 ---
 
-## Trade-off Analysis: Example
+## Trade-off Analysis: SQL vs NoSQL Summary
 
 Understanding design decisions:
+
 ```python
-# AI explains trade-offs:
 """
 Database Choice: SQL vs NoSQL
+
 SQL (PostgreSQL):
-Pros:
 - ACID compliance
 - Strong consistency
 - Complex queries with JOIN
-- Mature ecosystem
 - Schema enforcement
-Cons:
 - Vertical scaling challenges
-- Fixed schema
-- Performance with huge datasets
+
 NoSQL (MongoDB):
-Pros:
 - Horizontal scaling
 - Flexible schema
 - Fast for simple queries
-- Good for unstructured data
-Cons:
 - Eventual consistency
 - No complex relationships
-- Less mature tools
-- Potential data duplication
-Decision Framework:
+"""
+```
+
+---
+
+## Trade-off Analysis: Decision Framework
+
+```python
+"""
 Choose SQL when:
 - Need ACID transactions
 - Complex relationships
 - Structured data
 - Consistency critical
+
 Choose NoSQL when:
 - Massive scale needed
 - Flexible/evolving schema
 - Simple access patterns
 - Geographic distribution
 """
-# Code example showing both:
-# SQL approach
+
 def get_user_with_orders_sql():
     query = """
         SELECT u.*, o.*
@@ -602,7 +557,7 @@ def get_user_with_orders_sql():
         WHERE u.id = %s
     """
     return db.execute(query, [user_id])
-# NoSQL approach
+
 def get_user_with_orders_nosql():
     user = db.users.find_one({"_id": user_id})
     user['orders'] = db.orders.find({"user_id": user_id})
@@ -652,19 +607,12 @@ Building a learning routine:
 
 ---
 
-## Staying Updated
+## Staying Updated: Weekly Summary
 
 Keeping current with technology:
 
 ```python
-# AI helps track technology trends:
-
 def stay_current_workflow():
-    """
-    Weekly Technology Update Routine
-    """
-
-    # 1. Get weekly summary
     ai_prompt = """
     What are the major updates this week in:
     - JavaScript/TypeScript ecosystem
@@ -674,13 +622,18 @@ def stay_current_workflow():
     - Security vulnerabilities
     """
 
-    # 2. Evaluate relevance
     relevance_check = """
     Given my tech stack: [React, Python, PostgreSQL, AWS]
     Which updates should I prioritize?
     """
+```
 
-    # 3. Deep dive on relevant items
+---
+
+## Staying Updated: Deep Dive and Migration
+
+```python
+def stay_current_workflow():
     deep_dive = """
     Explain the React 19 update:
     - Breaking changes
@@ -689,7 +642,6 @@ def stay_current_workflow():
     - Performance implications
     """
 
-    # 4. Update projects
     migration_plan = """
     Create a migration plan for my project
     from React 18 to React 19
@@ -706,17 +658,13 @@ def stay_current_workflow():
 
 ---
 
-## New Tool Adoption
+## New Tool Adoption: Overview and Dockerfile
 
 Learning new tools efficiently:
 
 ```javascript
-// AI-assisted tool learning path:
-
-// Day 1: Overview and Setup
 You: "Give me a quick overview of Docker and help me set it up"
 
-// AI provides:
 /*
 Docker Overview:
 - Containerization platform
@@ -729,10 +677,6 @@ Setup:
 3. Run test: docker run hello-world
 */
 
-// Day 2-3: Core Concepts
-You: "Explain Docker concepts with examples"
-
-// Dockerfile example
 FROM node:14
 WORKDIR /app
 COPY package*.json ./
@@ -740,11 +684,13 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 CMD ["node", "server.js"]
+```
 
-// Day 4-5: Practical Application
-You: "Help me containerize my Express app"
+---
 
-// docker-compose.yml
+## New Tool Adoption: docker-compose
+
+```yaml
 version: '3'
 services:
   app:
@@ -759,9 +705,6 @@ services:
     image: postgres:13
     environment:
       - POSTGRES_PASSWORD=secret
-
-// Day 6-7: Advanced Topics
-// Orchestration, CI/CD, best practices
 ```
 
 ---
@@ -860,13 +803,11 @@ Organizing what you learn:
 
 ---
 
-## Personal Knowledge Base
+## Personal Knowledge Base: Class Structure
 
 Building your reference system:
 
 ```python
-# AI helps structure knowledge:
-
 class KnowledgeEntry:
     def __init__(self):
         self.metadata = {
@@ -887,7 +828,15 @@ class KnowledgeEntry:
 ## Key Concepts
 - Concept 1: explanation
 - Concept 2: explanation
+"""
+```
 
+---
+
+## Personal Knowledge Base: Template and Usage
+
+```python
+template = """
 ## Code Example
 [code example here]
 
@@ -911,7 +860,6 @@ class KnowledgeEntry:
 [Your observations and experiences]
 """
 
-# Example entry
 entry = KnowledgeEntry()
 react_hooks = entry.create_entry("React Hooks")
 save_to_knowledge_base(react_hooks)
@@ -919,38 +867,36 @@ save_to_knowledge_base(react_hooks)
 
 ---
 
-## Snippet Organization
+## Snippet Organization: Structure
 
 Managing reusable code:
 
 ```javascript
-// Organized snippet library:
-
-// 📁 Snippets/
-//   📁 JavaScript/
-//     📁 Arrays/
+// Snippets/
+//   JavaScript/
+//     Arrays/
 //       - unique.js
 //       - flatten.js
 //       - chunk.js
-//     📁 Strings/
+//     Strings/
 //       - capitalize.js
 //       - truncate.js
-//     📁 Async/
+//     Async/
 //       - retry.js
 //       - timeout.js
 //       - queue.js
+```
 
-// Example snippet with documentation:
+---
 
+## Snippet Organization: Example
+
+```javascript
 /**
  * Retry async function with exponential backoff
  * @param {Function} fn - Async function to retry
  * @param {Number} retries - Max retry attempts
  * @param {Number} delay - Initial delay in ms
- * @returns {Promise} - Result or throws final error
- *
- * @example
- * const data = await retry(fetchAPI, 3, 1000);
  */
 async function retry(fn, retries = 3, delay = 1000) {
     try {
@@ -962,8 +908,6 @@ async function retry(fn, retries = 3, delay = 1000) {
         return retry(fn, retries - 1, delay * 2);
     }
 }
-
-// Tagged for easy search: #async #retry #error-handling #exponential-backoff
 ```
 
 ---
@@ -974,24 +918,15 @@ async function retry(fn, retries = 3, delay = 1000) {
 
 ---
 
-## Pattern Documentation
+## Pattern Documentation: Repository Class
 
 Recording recurring patterns:
 
 ```python
-# Document patterns you encounter:
-
 """
 Pattern: Repository Pattern
 Category: Architecture
 Use Case: Data access abstraction
-
-Problem:
-- Direct database queries scattered throughout code
-- Hard to test business logic
-- Difficult to switch data sources
-
-Solution:
 """
 
 class UserRepository:
@@ -999,24 +934,27 @@ class UserRepository:
         self.db = db_connection
 
     def find_by_id(self, user_id):
-        """Abstracted data access"""
         return self.db.query(
             "SELECT * FROM users WHERE id = ?",
             [user_id]
         )
 
     def create(self, user_data):
-        """Centralized creation logic"""
         return self.db.insert("users", user_data)
 
     def update(self, user_id, updates):
-        """Consistent update pattern"""
         return self.db.update(
             "users",
             updates,
             {"id": user_id}
         )
+```
 
+---
+
+## Pattern Documentation: Benefits and Use Cases
+
+```python
 """
 Benefits:
 - Testable with mock repositories
@@ -1126,18 +1064,12 @@ const spacedLearning = {
 
 ---
 
-## Learning from Mistakes
+## Learning from Mistakes: Analysis
 
 Turn errors into education:
 
 ```python
-# AI helps analyze mistakes:
-
 def learn_from_error(error, code):
-    """
-    Convert errors into learning opportunities
-    """
-
     analysis = {
         "error_type": classify_error(error),
         "root_cause": find_root_cause(error, code),
@@ -1146,37 +1078,38 @@ def learn_from_error(error, code):
         "prevention": how_to_prevent_future(error),
         "related_concepts": find_related_topics(error)
     }
+```
 
-    # Example:
-    # Error: "Cannot read property 'map' of undefined"
+---
 
-    learning_output = """
-    Error Analysis:
-    - Type: TypeError - attempting operation on undefined
-    - Cause: Data not loaded before render
-    - Fix: Add conditional rendering or default value
+## Learning from Mistakes: Example Output
 
-    Code Fix:
-    // Before:
-    items.map(item => <Item />)
+```python
+learning_output = """
+Error Analysis:
+- Type: TypeError - attempting operation on undefined
+- Cause: Data not loaded before render
+- Fix: Add conditional rendering or default value
 
-    // After:
-    items?.map(item => <Item />) || <Loading />
+Code Fix:
+// Before:
+items.map(item => <Item />)
 
-    Prevention:
-    1. Always validate data exists
-    1. Use TypeScript for type safety
-    1. Implement loading states
-    1. Add error boundaries
+// After:
+items?.map(item => <Item />) || <Loading />
 
-    Related Learning:
-    - Optional chaining (?.)
-    - Nullish coalescing (??)
-    - Defensive programming
-    - React Suspense
-    """
+Prevention:
+1. Always validate data exists
+2. Use TypeScript for type safety
+3. Implement loading states
+4. Add error boundaries
 
-    return learning_output
+Related Learning:
+- Optional chaining (?.)
+- Nullish coalescing (??)
+- Defensive programming
+- React Suspense
+"""
 ```
 
 ---

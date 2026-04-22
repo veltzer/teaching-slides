@@ -241,6 +241,10 @@ audience:
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## Patch Management: Commands
+
 ```bash
 # Linux: Check for available security updates
 sudo apt list --upgradable 2>/dev/null | grep -i security

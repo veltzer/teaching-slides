@@ -412,7 +412,15 @@ table inet filter {
         # Log dropped packets
         log prefix "nft-drop: " drop
     }
+}
+```
 
+---
+
+## nftables: Forward and Output Chains
+
+```bash
+table inet filter {
     chain forward {
         type filter hook forward priority 0; policy drop;
     }
@@ -422,6 +430,10 @@ table inet filter {
     }
 }
 ```
+
+---
+
+## nftables: Apply and Enable
 
 ```bash
 # Apply configuration

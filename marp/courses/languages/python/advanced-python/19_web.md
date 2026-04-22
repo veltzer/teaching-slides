@@ -366,7 +366,13 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+```
 
+---
+
+## Flask Authentication: Routes
+
+```python
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -421,7 +427,13 @@ items = [
 def verify_password(username, password):
     if username in users and users[username] == password:
         return username
+```
 
+---
+
+## Flask REST API: Routes
+
+```python
 @app.route('/api/items', methods=['GET'])
 def get_items():
     return jsonify({'items': items})
@@ -525,6 +537,10 @@ ENV FLASK_ENV=production
 EXPOSE 8000
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:create_app()"]
 ```
+
+---
+
+## Flask Deployment: Nginx Reverse Proxy
 
 ```nginx
 # Nginx config snippet
@@ -694,7 +710,13 @@ def make_request_with_retry(url, max_retries=3):
                 continue
             else:
                 raise
+```
 
+---
+
+## Requests Error Handling: Connection and Timeout
+
+```python
         except ConnectionError:
             print(f"Connection error, retrying ({attempt+1}/{max_retries})")
             if attempt < max_retries - 1:
@@ -754,7 +776,13 @@ response = requests.get(
     auth=HTTPDigestAuth('user', 'pass')
 )
 print(f"Digest Auth: {response.status_code}")
+```
 
+---
+
+## Requests Authentication: Token and OAuth
+
+```python
 # Token Authentication (common for APIs)
 headers = {'Authorization': 'Bearer my-token-string'}
 response = requests.get('https://api.example.org/data', headers=headers)
@@ -810,7 +838,13 @@ files['file'].close()
 with open('document.pdf', 'rb') as f:
     response = requests.post('https://httpbin.org/post', files={'file': f})
     print(f"Upload response: {response.status_code}")
+```
 
+---
+
+## Requests: Streaming Downloads
+
+```python
 # Download small file
 response = requests.get('https://example.com/files/sample.pdf')
 with open('sample.pdf', 'wb') as f:
@@ -861,7 +895,13 @@ adapter = HTTPAdapter(max_retries=retry_strategy)
 session = requests.Session()
 session.mount("http://", adapter)
 session.mount("https://", adapter)
+```
 
+---
+
+## Requests Advanced: Proxies, SSL, Hooks
+
+```python
 # Using a proxy
 proxies = {
     'http': 'http://proxy.example.com:8080',
@@ -963,7 +1003,13 @@ html = """
 """
 
 soup = BeautifulSoup(html, 'html.parser')
+```
 
+---
+
+## BeautifulSoup: Finding Elements
+
+```python
 # Find by tag
 title = soup.title
 print(f"Title tag: {title}")
@@ -1030,7 +1076,13 @@ for link in soup.find_all('a'):
 print(f"Found {len(links)} links")
 for link in links[:5]:
     print(f"{link['text']}: {link['url']}")
+```
 
+---
+
+## BeautifulSoup: Extracting Tables
+
+```python
 # Extract table data
 tables = soup.find_all('table', class_='wikitable')
 if tables:
@@ -1061,6 +1113,10 @@ if tables:
 - CAPTCHA
 - Anti-scraping measures
 - Handling malformed HTML
+
+---
+
+## Scraping Challenges: Retry with Delays
 
 ```python
 import requests
@@ -1101,7 +1157,13 @@ def scrape_with_retry(url, max_retries=3):
             time.sleep(random.uniform(5, 10))
 
     return None
+```
 
+---
+
+## BeautifulSoup: Scraping Authenticated Pages
+
+```python
 # Handle sites with login required
 def scrape_authenticated_page(login_url, target_url, username, password):
     with requests.Session() as session:
@@ -1141,6 +1203,10 @@ def scrape_authenticated_page(login_url, target_url, username, password):
 - Check terms of service
 - Consider API alternatives
 
+---
+
+## Ethical Scraper: Setup
+
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -1174,7 +1240,13 @@ class EthicalScraper:
     def can_fetch(self, url):
         """Check if robots.txt allows scraping this URL"""
         return self.robot_parser.can_fetch(self.user_agent, url)
+```
 
+---
+
+## Ethical Scraper: Fetch with Cache
+
+```python
     def get_page(self, url):
         """Get a page respecting rate limits and robots.txt"""
         # Check if allowed by robots.txt
@@ -1245,7 +1317,13 @@ quotescraper/
     └── spiders/          # Directory for spiders
         └── __init__.py
 """
+```
 
+---
+
+## Scrapy: Simple Spider
+
+```python
 # Creating a simple spider
 """
 # quotescraper/spiders/quotes_spider.py
@@ -1305,7 +1383,13 @@ class ProductSpider(scrapy.Spider):
                 'price': price,
                 'url': url
             }
+```
 
+---
+
+## Scrapy Selectors: XPath and Combined
+
+```python
         # XPath selectors
         products = response.xpath('//div[@class="product"]')
         for product in products:
@@ -1334,7 +1418,7 @@ class ProductSpider(scrapy.Spider):
 
 ---
 
-## Web Scraping with Scrapy: Spider Types and Crawling Strategies
+## Web Scraping with Scrapy: Spider Types
 
 - Basic Spider
 - CrawlSpider for following links
@@ -1355,8 +1439,13 @@ class SimpleSpider(scrapy.Spider):
 
     def parse(self, response):
         yield {"url": response.url, "title": response.css("title::text").get()}
+```
 
-# CrawlSpider with Rules
+---
+
+## Scrapy: CrawlSpider with Rules
+
+```python
 class ArticleSpider(CrawlSpider):
     name = "articles"
     allowed_domains = ["example.com"]
@@ -1380,8 +1469,13 @@ class ArticleSpider(CrawlSpider):
             'content': response.css('div.content p::text').getall(),
             'date': response.css('span.date::text').get(),
         }
+```
 
-# SitemapSpider
+---
+
+## Scrapy: Sitemap Spider
+
+```python
 from scrapy.spiders import SitemapSpider
 
 class SitemapProductSpider(SitemapSpider):
@@ -1401,7 +1495,7 @@ class SitemapProductSpider(SitemapSpider):
 
 ---
 
-## Web Scraping with Scrapy: Items and Item Pipelines
+## Web Scraping with Scrapy: Items and Pipelines
 
 - Define structured data with Item classes
 - Process extracted data with Pipelines
@@ -1409,6 +1503,10 @@ class SitemapProductSpider(SitemapSpider):
 - Store to databases or files
 - Deduplication and filtering
 - Image and file downloading
+
+---
+
+## Scrapy Items: Item Class and Spider
 
 ```python
 # Define items in items.py
@@ -1444,7 +1542,13 @@ class ProductsSpider(scrapy.Spider):
             item['brand'] = product.css('span.brand::text').get()
 
             yield item
+```
 
+---
+
+## Scrapy Pipelines: Price Cleaner and Duplicates
+
+```python
 # Define pipelines in pipelines.py
 import re
 from scrapy.exceptions import DropItem
@@ -1471,7 +1575,13 @@ class DuplicatesPipeline:
             raise DropItem(f"Duplicate item found: {item['url']}")
         self.urls_seen.add(item['url'])
         return item
+```
 
+---
+
+## Scrapy Pipelines: Database Store
+
+```python
 class DatabaseStorePipeline:
     def __init__(self):
         engine = db_connect()
@@ -1507,6 +1617,10 @@ class DatabaseStorePipeline:
 - Cookie handling
 - Error handling and retries
 
+---
+
+## Scrapy Middlewares: Random User Agent
+
 ```python
 # Middleware example in middlewares.py
 import random
@@ -1536,8 +1650,14 @@ class ProxyMiddleware:
         if proxy:
             request.meta['proxy'] = proxy
         return None
+```
 
-# Settings configuration in settings.py
+---
+
+## Scrapy Settings Configuration
+
+```python
+# settings.py
 """
 # Enable middleware
 DOWNLOADER_MIDDLEWARES = {
@@ -1663,7 +1783,13 @@ ns_root = etree.fromstring(ns_xml.encode('utf-8'))
 ns = {"e": "http://example.com/ns"}
 ns_child = ns_root.find(".//e:child", namespaces=ns)
 print(f"Child with namespace: {ns_child.text}")
+```
 
+---
+
+## lxml: XML Schema Validation
+
+```python
 # XML validation with schema
 schema_text = """
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -1725,7 +1851,13 @@ dirty_html = """
 
 # Parse the HTML
 doc = html.fromstring(dirty_html)
+```
 
+---
+
+## lxml: HTML Cleaner Configuration
+
+```python
 # Create a cleaner
 cleaner = clean.Cleaner(
     scripts=True,           # Remove script tags
@@ -1751,7 +1883,13 @@ cleaner = clean.Cleaner(
 cleaned_doc = cleaner.clean_html(doc)
 cleaned_html = html.tostring(cleaned_doc, pretty_print=True).decode('utf-8')
 print(cleaned_html)
+```
 
+---
+
+## lxml: Extract and Modify HTML
+
+```python
 # Extract plain text
 plain_text = cleaned_doc.text_content()
 print(plain_text)
@@ -1811,7 +1949,13 @@ def benchmark_lxml():
 
     elapsed = time.time() - start_time
     return elapsed, len(data)
+```
 
+---
+
+## lxml Benchmarks: BeautifulSoup Comparison
+
+```python
 def benchmark_beautifulsoup():
     # Parse with BeautifulSoup
     start_time = time.time()
@@ -1849,7 +1993,13 @@ def benchmark_beautifulsoup_lxml():
 
     elapsed = time.time() - start_time
     return elapsed, len(data)
+```
 
+---
+
+## lxml Benchmarks: Run and Compare
+
+```python
 # Run benchmarks
 lxml_time, lxml_count = benchmark_lxml()
 bs_time, bs_count = benchmark_beautifulsoup()
@@ -1892,7 +2042,13 @@ chrome_options.add_argument("--window-size=1920,1080")
 # Initialize the driver
 service = Service('/path/to/chromedriver')
 driver = webdriver.Chrome(service=service, options=chrome_options)
+```
 
+---
+
+## Selenium: Navigate and Extract
+
+```python
 try:
     # Navigate to a page
     driver.get("https://example.com")
@@ -1954,7 +2110,13 @@ try:
     # Find element by tag name
     element_by_tag = driver.find_element(By.TAG_NAME, "h1")
     print(f"By tag: {element_by_tag.text}")
+```
 
+---
+
+## Selenium: CSS, XPath, and Properties
+
+```python
     # Find element by CSS selector
     element_by_css = driver.find_element(By.CSS_SELECTOR, "#site-map > div.row > div:nth-child(1) > h2")
     print(f"By CSS: {element_by_css.text}")
@@ -2029,7 +2191,13 @@ try:
     search_box = driver.find_element(By.NAME, "q")
     search_box.send_keys("selenium python")
     search_box.send_keys(Keys.RETURN)
+```
 
+---
+
+## Selenium Interaction: Select Dropdowns
+
+```python
     # Work with select dropdowns
     select_element = driver.find_element(By.ID, "dropdown")
     select = Select(select_element)
@@ -2062,7 +2230,13 @@ try:
 
     # For dismiss (cancel), use:
     # alert.dismiss()
+```
 
+---
+
+## Selenium Interaction: Scroll and Drag/Drop
+
+```python
     # Scroll page
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
@@ -2119,7 +2293,13 @@ try:
     # Switch back to the original window
     driver.switch_to.window(handles[0])
     print(f"Original window title: {driver.title}")
+```
 
+---
+
+## Selenium: Working with Frames
+
+```python
     # Navigate to a page with frames
     driver.get("https://www.example.com/frames")
 
@@ -2154,7 +2334,13 @@ try:
 
     # Refresh page
     driver.refresh()
+```
 
+---
+
+## Selenium: Cookies and Local Storage
+
+```python
     # Working with cookies
     driver.add_cookie({"name": "test_cookie", "value": "test_value"})
 
@@ -2186,6 +2372,10 @@ finally:
 - Test suites
 - Integration with test frameworks
 - Reports and screenshots
+
+---
+
+## Selenium Testing: Login Page Object
 
 ```python
 import unittest
@@ -2223,7 +2413,13 @@ class LoginPage:
         self.enter_username(username)
         self.enter_password(password)
         self.click_login()
+```
 
+---
+
+## Selenium Testing: Dashboard Page Object
+
+```python
 # Page Object for dashboard page
 class DashboardPage:
     def __init__(self, driver):
@@ -2245,7 +2441,13 @@ class DashboardPage:
 
     def logout(self):
         self.driver.find_element(*self.logout_button).click()
+```
 
+---
+
+## Selenium Testing: Test Cases
+
+```python
 # Test cases using unittest
 class LoginTests(unittest.TestCase):
     def setUp(self):
@@ -2326,9 +2528,13 @@ def get_driver_for_ci():
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     return driver
+```
 
-# Example GitHub Actions workflow for Selenium testing
-"""
+---
+
+## Selenium CI/CD: GitHub Actions Setup
+
+```yaml
 # .github/workflows/selenium-tests.yml
 name: Selenium Tests
 
@@ -2354,7 +2560,13 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
+```
 
+---
+
+## Selenium CI/CD: ChromeDriver and Tests
+
+```yaml
     - name: Install ChromeDriver
       run: |
         CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
@@ -2379,7 +2591,6 @@ jobs:
       with:
         name: test-report
         path: report.html
-"""
 ```
 
 ---

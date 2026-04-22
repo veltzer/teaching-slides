@@ -397,7 +397,13 @@ customers = spark.range(0, 10000).toDF("customer_id") \
         .when(F.col("customer_id") % 4 == 1, "South")
         .when(F.col("customer_id") % 4 == 2, "East")
         .otherwise("West"))
+```
 
+---
+
+## Catalyst Demo: Products, Views, and Stats
+
+```python
 products = spark.range(0, 500).toDF("product_id") \
     .withColumn("product_name",
         F.concat(F.lit("Product_"), F.col("product_id"))) \
@@ -519,7 +525,13 @@ def pandas_udf_func(s):
 
 # Method 3: Built-in functions (fastest)
 from pyspark.sql import functions as F
+```
 
+---
+
+## Vectorized UDF: Benchmark and Results
+
+```python
 # Benchmark all three approaches
 start = time.time()
 df.withColumn("result", python_udf("value")).count()
@@ -600,7 +612,13 @@ df = spark.read.jdbc(
 
 print(f"Partitions: {df.rdd.getNumPartitions()}")
 print(f"Row count:  {df.count()}")
+```
 
+---
+
+## JDBC: Partitioning by Date Predicates
+
+```python
 # For non-numeric partition columns, use predicates
 date_predicates = [
     "order_date >= '2024-01-01' AND order_date < '2024-04-01'",
@@ -683,7 +701,13 @@ spark.conf.set(
     "spark.sql.adaptive.coalescePartitions.minPartitionSize", "64MB")
 spark.conf.set(
     "spark.sql.adaptive.advisoryPartitionSizeInBytes", "128MB")
+```
 
+---
+
+## AQE: Skew Join and Dynamic Strategy
+
+```python
 # 2. Skew Join Optimization
 # Splits skewed partitions automatically
 spark.conf.set(
@@ -715,58 +739,68 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder \
     .appName("ComplexSQL") \
     .getOrCreate()
-
-# Register tables (assuming data is loaded)
-spark.sql("""
-    WITH monthly_revenue AS (
-        SELECT
-            customer_id,
-            DATE_TRUNC('month', order_date) AS month,
-            SUM(amount) AS monthly_total,
-            COUNT(*) AS order_count
-        FROM orders
-        GROUP BY customer_id, DATE_TRUNC('month', order_date)
-    ),
-    ranked_customers AS (
-        SELECT
-            customer_id,
-            month,
-            monthly_total,
-            order_count,
-            ROW_NUMBER() OVER (
-                PARTITION BY month
-                ORDER BY monthly_total DESC
-            ) AS rank,
-            LAG(monthly_total) OVER (
-                PARTITION BY customer_id
-                ORDER BY month
-            ) AS prev_month_total,
-            AVG(monthly_total) OVER (
-                PARTITION BY customer_id
-                ORDER BY month
-                ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
-            ) AS rolling_3m_avg
-        FROM monthly_revenue
-    )
-    SELECT
-        r.customer_id,
-        c.name,
-        c.region,
-        r.month,
-        r.monthly_total,
-        r.rank,
-        r.prev_month_total,
-        ROUND(
-            (r.monthly_total - r.prev_month_total)
-            / r.prev_month_total * 100, 2
-        ) AS growth_pct,
-        ROUND(r.rolling_3m_avg, 2) AS rolling_avg
-    FROM ranked_customers r
-    JOIN customers c ON r.customer_id = c.customer_id
-    WHERE r.rank <= 10
-    ORDER BY r.month, r.rank
-""").show(20, truncate=False)
 ```
+
+Defines the CTE with monthly revenue and ranked customers:
+
+```sql
+WITH monthly_revenue AS (
+    SELECT
+        customer_id,
+        DATE_TRUNC('month', order_date) AS month,
+        SUM(amount) AS monthly_total,
+        COUNT(*) AS order_count
+    FROM orders
+    GROUP BY customer_id, DATE_TRUNC('month', order_date)
+),
+```
+
+---
+
+## Complex SQL: ranked_customers CTE
+
+```sql
+ranked_customers AS (
+    SELECT
+        customer_id, month, monthly_total, order_count,
+        ROW_NUMBER() OVER (
+            PARTITION BY month
+            ORDER BY monthly_total DESC
+        ) AS rank,
+        LAG(monthly_total) OVER (
+            PARTITION BY customer_id
+            ORDER BY month
+        ) AS prev_month_total,
+        AVG(monthly_total) OVER (
+            PARTITION BY customer_id
+            ORDER BY month
+            ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+        ) AS rolling_3m_avg
+    FROM monthly_revenue
+)
+```
+
+---
+
+## Complex SQL: Final SELECT
+
+```sql
+SELECT
+    r.customer_id, c.name, c.region,
+    r.month, r.monthly_total, r.rank,
+    r.prev_month_total,
+    ROUND(
+        (r.monthly_total - r.prev_month_total)
+        / r.prev_month_total * 100, 2
+    ) AS growth_pct,
+    ROUND(r.rolling_3m_avg, 2) AS rolling_avg
+FROM ranked_customers r
+JOIN customers c ON r.customer_id = c.customer_id
+WHERE r.rank <= 10
+ORDER BY r.month, r.rank
+```
+
+Run via `spark.sql(query).show(20, truncate=False)`.
 
 ---
 

@@ -261,7 +261,13 @@ impl<T> RingBuffer<T> {
         old
     }
 }
+```
 
+---
+
+## Building a Safe Abstraction: Drop
+
+```rust
 impl<T> Drop for RingBuffer<T> {
     fn drop(&mut self) {
         // Drop all live elements
@@ -428,7 +434,13 @@ impl Document {
         self.content.borrow().len()
     }
 }
+```
 
+---
+
+## RefCell<T>: Runtime Borrow Checks
+
+```rust
 fn main() {
     let doc = Document::new("Notes");
     doc.append("Hello ");
@@ -890,7 +902,13 @@ impl Buffer {
         }
     }
 }
+```
 
+---
+
+## SAFETY Comments Convention: Drop
+
+```rust
 impl Drop for Buffer {
     fn drop(&mut self) {
         let layout = std::alloc::Layout::array::<u8>(self.cap).unwrap();

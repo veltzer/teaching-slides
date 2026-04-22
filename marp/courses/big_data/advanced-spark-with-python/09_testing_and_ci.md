@@ -186,7 +186,13 @@ def test_fill_missing_amounts(spark):
 
     row = result.filter("id = 2").collect()[0]
     assert row["amount"] == 0.0
+```
 
+---
+
+## Test for Cleaning Functions: Email Normalization
+
+```python
 def test_normalize_email(spark):
     data = [
         Row(id=1, email="  Alice@EXAMPLE.COM  "),
@@ -241,7 +247,13 @@ def assert_dataframe_equal(df1, df2, order_by=None):
             f"  Left:  {r1}\n"
             f"  Right: {r2}"
         )
+```
 
+---
+
+## DataFrame Assertions: Example Test
+
+```python
 def test_transformation_output(spark):
     input_data = [Row(x=1, y=2), Row(x=3, y=4)]
     expected_data = [Row(x=1, y=2, z=3), Row(x=3, y=4, z=7)]
@@ -286,7 +298,13 @@ def test_approximate_equality(spark):
         ignore_row_order=True,
         precision=0.001,
     )
+```
 
+---
+
+## chispa: Nullable and Column Comparison
+
+```python
 def test_ignore_nullable(spark):
     """Schema nullable flags often differ; ignore them."""
     data = [Row(id=1, name="Alice")]
@@ -348,7 +366,13 @@ def sample_orders(spark):
             amount=30.0, order_date=date(2024, 2, 15)),
     ]
     return spark.createDataFrame(data)
+```
 
+---
+
+## Test Fixtures: Customers and Empty DataFrames
+
+```python
 @pytest.fixture
 def sample_customers(spark):
     """Reusable sample customers DataFrame."""
@@ -443,7 +467,13 @@ class TestClassifyAmountLogic:
 
     def test_none(self):
         assert classify_amount_logic(None) == "unknown"
+```
 
+---
+
+## Testing UDFs: Phone Logic Tests
+
+```python
 class TestCleanPhoneLogic:
     def test_ten_digits(self):
         assert clean_phone_logic("5551234567") == \
@@ -462,7 +492,13 @@ class TestCleanPhoneLogic:
 
     def test_none(self):
         assert clean_phone_logic(None) is None
+```
 
+---
+
+## Testing UDFs: Within Spark (Serialization Check)
+
+```python
 # ---- Test UDFs within Spark (verify serialization) ----
 
 def test_classify_amount_udf_in_spark(spark):
@@ -538,7 +574,13 @@ def test_etl_with_mock_io(spark, tmp_path):
 
     us_row = result.filter("region = 'US'").collect()[0]
     assert us_row["sum(amount)"] == 100.0
+```
 
+---
+
+## Mocking: Mocking spark.read Directly
+
+```python
 def test_etl_with_mocked_reader(spark):
     """Mock spark.read to avoid filesystem access."""
     test_data = [
@@ -580,7 +622,13 @@ def etl_dirs(tmp_path):
     for d in dirs.values():
         os.makedirs(d, exist_ok=True)
     return dirs
+```
 
+---
+
+## Integration Test: Full Daily Pipeline
+
+```python
 def test_full_daily_pipeline(spark, etl_dirs):
     """Integration test: run the full daily pipeline."""
     # Arrange: create realistic test data
@@ -601,7 +649,14 @@ def test_full_daily_pipeline(spark, etl_dirs):
         .write.parquet(f"{etl_dirs['raw']}/orders")
     spark.createDataFrame(customers) \
         .write.parquet(f"{etl_dirs['raw']}/customers")
+```
 
+---
+
+## Integration Test: Pipeline Run and Assertions
+
+```python
+def test_full_daily_pipeline(spark, etl_dirs):
     # Act: run the pipeline
     from src.pipelines.daily_etl import DailyETL
     etl = DailyETL(spark, etl_dirs)
@@ -620,7 +675,13 @@ def test_full_daily_pipeline(spark, etl_dirs):
     bob = result.filter("name = 'Bob'").collect()[0]
     assert bob["total_amount"] == 75.0
     assert bob["order_count"] == 1
+```
 
+---
+
+## Integration Test: Pipeline Idempotency
+
+```python
 def test_pipeline_idempotent(spark, etl_dirs):
     """Running the pipeline twice produces same result."""
     orders = [
@@ -683,7 +744,13 @@ def test_single_row(spark):
     df = spark.createDataFrame(data)
     result = remove_duplicates(df, ["id"])
     assert result.count() == 1
+```
 
+---
+
+## Edge Cases: Special Characters and Large Values
+
+```python
 def test_special_characters(spark):
     data = [
         Row(id=1, name="O'Brien"),
@@ -821,7 +888,13 @@ jobs:
         with:
           path: ~/.cache/pip
           key: pip-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
+```
 
+---
+
+## CI/CD: Test and Lint Steps
+
+```yaml
       - name: Install dependencies
         run: |
           pip install --upgrade pip
@@ -1024,7 +1097,13 @@ def compute_user_totals(df):
             F.count("*").alias("event_count"),
         )
     )
+```
 
+---
+
+## Complete Test Suite: Filter Tests
+
+```python
 def test_filter_purchases(spark, sample_events):
     result = filter_purchases(sample_events)
     assert result.count() == 2
@@ -1051,7 +1130,13 @@ def test_compute_user_totals(spark, sample_events):
         ignore_row_order=True,
         ignore_nullable=True,
     )
+```
 
+---
+
+## Complete Test Suite: Single-User Aggregation
+
+```python
 def test_compute_user_totals_single_user(spark):
     data = [
         Row(event_id="e1", user_id="u1",

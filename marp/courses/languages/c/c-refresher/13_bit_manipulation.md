@@ -208,6 +208,20 @@ void print_permissions(uint32_t perms) {
     if (perms & PERM_ADMIN)   printf("ADMIN ");
     printf("(0x%02X)\n", perms);
 }
+```
+
+---
+
+## Bitmask Flags: Grant and Revoke
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+#define PERM_READ    (1U << 0)
+#define PERM_WRITE   (1U << 1)
+#define PERM_EXECUTE (1U << 2)
+void print_permissions(uint32_t perms);
 
 int main(void) {
     uint32_t user_perms = PERM_READ | PERM_WRITE;
@@ -257,6 +271,15 @@ uint32_t next_power_of_2(uint32_t v) {
     v++;
     return v;
 }
+```
+
+---
+
+## Common Bit Tricks: popcount and XOR swap
+
+```c
+#include <stdio.h>
+#include <stdint.h>
 
 /* Count number of set bits (population count) */
 int popcount(uint32_t x) {
@@ -286,6 +309,21 @@ void xor_swap(int *a, int *b) {
         *a ^= *b;
     }
 }
+```
+
+---
+
+## Common Bit Tricks: Demo
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+bool is_power_of_2(unsigned int n);
+uint32_t next_power_of_2(uint32_t v);
+int popcount(uint32_t x);
+void xor_swap(int *a, int *b);
 
 int main(void) {
     printf("Is 16 power of 2? %s\n", is_power_of_2(16) ? "yes" : "no");
@@ -330,6 +368,20 @@ struct Color565 {
     uint16_t green : 6;
     uint16_t red   : 5;
 };
+```
+
+---
+
+## Bit Fields in Structs: Usage
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+struct TCPFlags {
+    uint8_t fin:1, syn:1, rst:1, psh:1, ack:1, urg:1, ece:1, cwr:1;
+};
+struct Color565 { uint16_t blue:5; uint16_t green:6; uint16_t red:5; };
 
 int main(void) {
     struct TCPFlags flags = {0};
@@ -534,6 +586,23 @@ int bitmap_count(const struct Bitmap *bm) {
     }
     return count;
 }
+```
+
+---
+
+## Bitmap: Usage
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+#define BITMAP_SIZE 256
+#define WORD_BITS   32
+struct Bitmap { uint32_t words[BITMAP_SIZE / WORD_BITS]; };
+void bitmap_init(struct Bitmap *bm);
+void bitmap_set(struct Bitmap *bm, int bit);
+int bitmap_test(const struct Bitmap *bm, int bit);
+int bitmap_count(const struct Bitmap *bm);
 
 int main(void) {
     struct Bitmap seen;

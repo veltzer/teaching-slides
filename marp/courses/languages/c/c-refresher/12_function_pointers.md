@@ -120,6 +120,19 @@ void event_fire(struct EventSystem *sys, const char *event) {
         sys->callbacks[i](event, sys->user_data[i]);
     }
 }
+```
+
+---
+
+## Callbacks: Example Callback Functions and main
+
+```c
+#include <stdio.h>
+
+struct EventSystem;
+typedef void (*EventCallback)(const char *event, void *user_data);
+void event_register(struct EventSystem *sys, EventCallback cb, void *data);
+void event_fire(struct EventSystem *sys, const char *event);
 
 void logger(const char *event, void *data) {
     const char *prefix = (const char *)data;
@@ -182,6 +195,20 @@ int cmp_by_age(const void *a, const void *b) {
     const struct Employee *eb = (const struct Employee *)b;
     return (ea->age > eb->age) - (ea->age < eb->age);
 }
+```
+
+---
+
+## qsort with Function Pointers: Print Helper
+
+```c
+#include <stdio.h>
+
+struct Employee {
+    char name[32];
+    int salary;
+    int age;
+};
 
 void print_employees(const struct Employee *emps, int n, const char *label) {
     printf("\n--- %s ---\n", label);
@@ -190,6 +217,21 @@ void print_employees(const struct Employee *emps, int n, const char *label) {
         printf("%-20s %8d %5d\n", emps[i].name, emps[i].salary, emps[i].age);
     }
 }
+```
+
+---
+
+## qsort with Function Pointers: main
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Employee;
+int cmp_by_salary(const void *a, const void *b);
+int cmp_by_name(const void *a, const void *b);
+int cmp_by_age(const void *a, const void *b);
+void print_employees(const struct Employee *emps, int n, const char *label);
 
 int main(void) {
     struct Employee team[] = {
@@ -231,6 +273,21 @@ double op_div(double a, double b) {
     if (b == 0.0) { fprintf(stderr, "Division by zero\n"); return 0.0; }
     return a / b;
 }
+```
+
+---
+
+## Dispatch Table: main and Benefits
+
+```c
+#include <stdio.h>
+
+typedef double (*MathFunc)(double, double);
+
+double op_add(double a, double b);
+double op_sub(double a, double b);
+double op_mul(double a, double b);
+double op_div(double a, double b);
 
 int main(void) {
     /* Dispatch table: maps operator character to function */
@@ -288,6 +345,20 @@ void handle_sigterm(int sig) {
     (void)sig;
     running = 0;
 }
+```
+
+---
+
+## Signal Handlers: Registration and Loop
+
+```c
+#include <stdio.h>
+#include <signal.h>
+#include <unistd.h>
+
+extern volatile sig_atomic_t running;
+void handle_sigint(int sig);
+void handle_sigterm(int sig);
 
 int main(void) {
     /* Register signal handlers using function pointers */
@@ -346,6 +417,21 @@ int array_reduce(const int *arr, int n, ReduceFunc f, int initial) {
     }
     return acc;
 }
+```
+
+---
+
+## Generic Map/Filter/Reduce: Usage
+
+```c
+#include <stdio.h>
+
+typedef int (*MapFunc)(int);
+typedef int (*FilterFunc)(int);
+typedef int (*ReduceFunc)(int, int);
+void array_map(int *arr, int n, MapFunc f);
+int array_filter(int *arr, int n, FilterFunc pred);
+int array_reduce(const int *arr, int n, ReduceFunc f, int initial);
 
 int square(int x) { return x * x; }
 int is_even(int x) { return x % 2 == 0; }
@@ -400,6 +486,14 @@ void register_plugin(Plugin p) {
         plugins[plugin_count++] = p;
     }
 }
+```
+
+---
+
+## A Simple Plugin System: Plugin Implementations
+
+```c
+#include <stdio.h>
 
 /* --- Logger Plugin --- */
 int logger_init(void) { printf("[Logger] Initialized\n"); return 0; }
@@ -414,6 +508,22 @@ void counter_process(const char *data) {
     printf("[Counter] Message #%d: %s\n", total, data);
 }
 void counter_shutdown(void) { printf("[Counter] Total: %d messages\n", total); }
+```
+
+---
+
+## A Simple Plugin System: Driver
+
+```c
+#include <stdio.h>
+
+typedef struct Plugin Plugin;
+extern Plugin plugins[];
+extern int plugin_count;
+void register_plugin(Plugin p);
+
+int logger_init(void); void logger_process(const char *); void logger_shutdown(void);
+int counter_init(void); void counter_process(const char *); void counter_shutdown(void);
 
 int main(void) {
     /* Register plugins */
@@ -421,22 +531,16 @@ int main(void) {
     register_plugin((Plugin){"Counter", counter_init, counter_process, counter_shutdown});
 
     /* Initialize all plugins */
-    for (int i = 0; i < plugin_count; i++) {
-        plugins[i].init();
-    }
+    for (int i = 0; i < plugin_count; i++) plugins[i].init();
 
     /* Process data through all plugins */
     const char *messages[] = {"Hello", "World", "Test"};
-    for (int m = 0; m < 3; m++) {
-        for (int i = 0; i < plugin_count; i++) {
+    for (int m = 0; m < 3; m++)
+        for (int i = 0; i < plugin_count; i++)
             plugins[i].process(messages[m]);
-        }
-    }
 
     /* Shutdown all plugins */
-    for (int i = 0; i < plugin_count; i++) {
-        plugins[i].shutdown();
-    }
+    for (int i = 0; i < plugin_count; i++) plugins[i].shutdown();
 
     return 0;
 }
@@ -472,6 +576,20 @@ State handle_error(const char *input) {
     if (input[0] == 'r') return STATE_IDLE;
     return STATE_ERROR;
 }
+```
+
+---
+
+## State Machines: Dispatch Loop
+
+```c
+#include <stdio.h>
+
+typedef enum { STATE_IDLE, STATE_RUNNING, STATE_ERROR, STATE_COUNT } State;
+typedef State (*StateHandler)(const char *input);
+State handle_idle(const char *input);
+State handle_running(const char *input);
+State handle_error(const char *input);
 
 int main(void) {
     StateHandler handlers[STATE_COUNT] = {
@@ -553,6 +671,20 @@ struct Command {
     CommandFunc func;
     const char *description;
 };
+```
+
+---
+
+## Array of Function Pointers: main
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+struct Command;
+void cmd_help(void);
+void cmd_status(void);
+void cmd_quit(void);
 
 int main(void) {
     struct Command commands[] = {

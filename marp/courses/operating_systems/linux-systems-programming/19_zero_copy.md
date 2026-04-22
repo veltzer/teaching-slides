@@ -270,7 +270,13 @@ int handle_client_request(int client_fd, int file_fd) {
     // Fallback to splice if sendfile fails
     return transfer_with_splice(client_fd, file_fd, st.st_size);
 }
+```
 
+---
+
+## Zero Copy Server: Splice Transfer
+
+```c
 int transfer_with_splice(int socket_fd, int file_fd, size_t size) {
     int pipe_fds[2];
     if (pipe(pipe_fds) == -1) {

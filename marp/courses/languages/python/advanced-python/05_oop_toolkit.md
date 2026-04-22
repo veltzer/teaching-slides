@@ -498,7 +498,13 @@ class CachedProperty:
         import time
         time.sleep(0.1)
         return 42
+```
 
+---
+
+## Property Deleter: Usage
+
+```python
 obj = CachedProperty()
 print(obj.data)  # Computing value... \n 42
 print(obj.data)  # 42 (from cache)
@@ -1163,7 +1169,13 @@ class Calculator:
         result = a * b
         self.history.append(f"{a} * {b} = {result}")
         return result
+```
 
+---
+
+## Method Replacement: Applying the Decorator
+
+```python
 # Create instance
 calc = Calculator()
 
@@ -1438,7 +1450,13 @@ class Car(Vehicle):
 
     def honk(self):
         return "Beep beep!"
+```
 
+---
+
+## Inheritance Hierarchy: Motorcycle and ElectricCar
+
+```python
 class Motorcycle(Vehicle):
     def __init__(self, make, model, year, has_sidecar=False):
         super().__init__(make, model, year)
@@ -1492,7 +1510,13 @@ class ValidationMixin:
             if value is None or value == '':
                 return False
         return True
+```
 
+---
+
+## Mix-in Based Design: Combining Mixins in User
+
+```python
 class User(JSONSerializableMixin, CSVSerializableMixin, LoggableMixin, ValidationMixin):
     csv_attributes = ['id', 'username', 'email']
     required_fields = ['username', 'email']
@@ -1586,7 +1610,13 @@ class Temperature:
 
     def __str__(self):
         return f"{self._celsius}°C ({self.fahrenheit}°F, {self.kelvin}K)"
+```
 
+---
+
+## Property-Based Class: Usage
+
+```python
 # Create and use the class
 temp = Temperature(25)
 print(temp)  # 25°C (77.0°F, 298.15K)

@@ -620,6 +620,16 @@ void USART1_IRQHandler(void) {
         }
     }
 
+    handle_tx_and_errors(sr);
+}
+```
+
+---
+
+## UART Interrupts: TX and Errors
+
+```c
+static void handle_tx_and_errors(uint32_t sr) {
     // Transmit interrupt
     if ((sr & USART_SR_TXE) && (USART1->CR1 & USART_CR1_TXEIE)) {
         if (uart_tx_buf.head != uart_tx_buf.tail) {

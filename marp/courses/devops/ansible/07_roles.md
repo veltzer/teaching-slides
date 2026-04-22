@@ -505,7 +505,13 @@ postgresql_hba_entries:
     name: postgresql
     state: started
     enabled: yes
+```
 
+---
+
+## PostgreSQL Role: Databases and Users
+
+```yaml
 - name: Create databases
   become_user: postgres
   postgresql_db:

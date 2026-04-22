@@ -138,7 +138,13 @@ public class MapActivity extends AppCompatActivity
         // Add markers, polylines, etc.
         addMapMarkers();
     }
+```
 
+---
+
+## Google Maps: Adding Markers
+
+```java
     private void addMapMarkers() {
         LatLng position = new LatLng(37.7749, -122.4194);
         MarkerOptions markerOptions = new MarkerOptions()
@@ -191,7 +197,13 @@ public class GeofenceManager {
             getGeofencePendingIntent()
         );
     }
+```
 
+---
+
+## Geofencing: Pending Intent
+
+```java
     private PendingIntent getGeofencePendingIntent() {
         if (geofencePendingIntent != null) {
             return geofencePendingIntent;

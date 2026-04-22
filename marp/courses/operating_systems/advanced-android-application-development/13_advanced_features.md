@@ -168,7 +168,13 @@ public class SocialIntegration {
             "Share via"
         ));
     }
+```
 
+---
+
+## Social Integration: Deep Links
+
+```java
     public void handleDeepLink(Uri deepLinkUri) {
         String path = deepLinkUri.getPath();
         String id = deepLinkUri.getQueryParameter("id");
@@ -217,7 +223,13 @@ public class ImageClassifier {
         // Process results
         return processResults(outputArray[0]);
     }
+```
 
+---
+
+## TensorFlow Lite: Processing Results
+
+```java
     private String processResults(float[] probabilities) {
         int maxIndex = 0;
         float maxProb = 0;

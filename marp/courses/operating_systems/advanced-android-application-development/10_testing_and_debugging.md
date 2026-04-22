@@ -53,7 +53,13 @@ public class UserViewModelTest {
         assertEquals(testUser,
             viewModel.getUserLiveData().getValue());
     }
+```
 
+---
+
+## Unit Testing: Error Case
+
+```java
     @Test
     public void getUserData_Error() {
         // Arrange
@@ -104,7 +110,13 @@ public class LoginActivityTest {
         onView(withId(R.id.main_container))
             .check(matches(isDisplayed()));
     }
+```
 
+---
+
+## Espresso UI Testing: Invalid Input
+
+```java
     @Test
     public void loginButton_ClickWithInvalidInput_ShowsError() {
         // Enter invalid email
@@ -147,7 +159,13 @@ public class UserRepositoryTest {
         apiService = mock(ApiService.class);
         repository = new UserRepository(database, apiService);
     }
+```
 
+---
+
+## Integration Testing: Cache and Network
+
+```java
     @Test
     public void getUser_CacheAndNetwork() {
         // Setup test data

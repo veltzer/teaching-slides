@@ -155,7 +155,13 @@ public class UserRepository {
                         );
                     }
                 }
+```
 
+---
+
+## Repository Implementation: Failure Handler
+
+```java
                 @Override
                 public void onFailure(Call<User> call, Throwable t) {
                     result.setValue(

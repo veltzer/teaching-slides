@@ -71,6 +71,13 @@ spec:
         - name: containers
           mountPath: /var/lib/docker/containers
           readOnly: true
+```
+
+---
+
+## `DaemonSet` Specification: Volumes
+
+```yaml
       volumes:
       - name: varlog
         hostPath:
@@ -251,6 +258,13 @@ spec:
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 3
   startingDeadlineSeconds: 300
+```
+
+---
+
+## `CronJob` Job Template
+
+```yaml
   jobTemplate:
     spec:
       backoffLimit: 2

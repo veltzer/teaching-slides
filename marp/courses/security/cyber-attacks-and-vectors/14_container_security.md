@@ -168,6 +168,10 @@ spec:
       path: /                  # Host root mounted!
 ```
 
+---
+
+## Kubernetes Security: Secure Pod Spec
+
 ```yaml
 # SECURE Pod spec
 apiVersion: v1

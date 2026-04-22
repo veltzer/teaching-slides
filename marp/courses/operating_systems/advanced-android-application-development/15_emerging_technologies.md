@@ -159,7 +159,15 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
+}
+```
 
+---
+
+## Modern Build Configuration: Build Types
+
+```kotlin
+android {
     buildTypes {
         release {
             isMinifyEnabled = true

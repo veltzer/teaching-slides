@@ -698,7 +698,14 @@ ansible-playbook site.yml --list-tags
         state: present
         update_cache: yes
       tags: packages
+```
 
+---
+
+## Web Application Playbook: Application Setup
+
+```yaml
+  tasks:
     - name: Create application directory
       file:
         path: "{{ app_root }}"
@@ -721,7 +728,13 @@ ansible-playbook site.yml --list-tags
         virtualenv: "{{ venv_path }}"
         virtualenv_python: python3
       tags: deploy
+```
 
+---
+
+## Web Application Playbook: Nginx and Supervisor
+
+```yaml
     - name: Deploy nginx config
       template:
         src: templates/nginx-app.conf.j2
@@ -743,7 +756,13 @@ ansible-playbook site.yml --list-tags
         dest: /etc/supervisor/conf.d/{{ app_name }}.conf
       notify: restart app
       tags: config
+```
 
+---
+
+## Web Application Playbook: Handlers
+
+```yaml
   handlers:
     - name: reload nginx
       service:

@@ -381,7 +381,13 @@ void time_sync_update(time_sync_t* sync,
     sync->reference_time = remote_time;
     sync->offset = new_offset;
 }
+```
 
+---
+
+## Time Synchronization: Get Synced Time
+
+```c
 uint32_t get_synchronized_time(time_sync_t* sync) {
     uint32_t local = get_local_time();
     uint32_t elapsed = local - sync->local_time;
@@ -567,7 +573,13 @@ typedef struct {
     uint32_t state_entry_time;
     uint32_t timeout_ms;
 } timed_fsm_t;
+```
 
+---
+
+## Time-Based State Machines: Update
+
+```c
 void fsm_update(timed_fsm_t* fsm) {
     uint32_t elapsed = get_ms() - fsm->state_entry_time;
 

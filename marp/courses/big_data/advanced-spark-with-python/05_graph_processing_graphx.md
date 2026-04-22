@@ -362,7 +362,13 @@ vertices = spark.createDataFrame([
     ("9", "Ivy", 33, "Engineering"),
     ("10", "Jack", 27, "Marketing"),
 ], ["id", "name", "age", "department"])
+```
 
+---
+
+## Social Network: Edges and Graph Stats
+
+```python
 # Create edges (relationships)
 edges = spark.createDataFrame([
     ("1", "2", "friend"), ("1", "3", "colleague"),
@@ -425,7 +431,13 @@ cc.select("id", "name", "component").show()
 scc = g.stronglyConnectedComponents(maxIter=10)
 print("\nStrongly Connected Components:")
 scc.select("id", "name", "component").show()
+```
 
+---
+
+## PageRank: Triangles and Communities
+
+```python
 # Triangle counting
 triangles = g.triangleCount()
 print("\nTriangle Count per vertex:")
@@ -470,7 +482,13 @@ friend_of_friend = (
 
 print("Friend-of-Friend Suggestions:")
 friend_of_friend.distinct().show()
+```
 
+---
+
+## Motif Finding: Reporting Chains and Triangles
+
+```python
 # Pattern: Find reporting chains (A manages B reports_to C)
 chains = g.find("(mgr)-[e1]->(emp); (emp)-[e2]->(boss)")
 reporting_chains = (
@@ -577,7 +595,13 @@ transactions = spark.createDataFrame([
 )
 
 g = GraphFrame(accounts, transactions)
+```
 
+---
+
+## Fraud Detection: Circular Money Flows
+
+```python
 # 1. Detect circular money flows (layering)
 circular = g.find("(a)-[e1]->(b); (b)-[e2]->(c); (c)-[e3]->(a)")
 print("Circular flows (potential layering):")
@@ -608,7 +632,13 @@ suspicious_passthrough = (
 )
 print("Suspicious pass-through accounts:")
 suspicious_passthrough.show()
+```
 
+---
+
+## Fraud Detection: Risk Scoring with PageRank
+
+```python
 # 3. Risk scoring using PageRank
 # Higher PageRank = more money flowing through
 pr = g.pageRank(resetProbability=0.15, maxIter=10)

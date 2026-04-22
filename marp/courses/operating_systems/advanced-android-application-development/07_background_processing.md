@@ -47,7 +47,13 @@ public class DownloadService extends Service {
 
         return START_NOT_STICKY;
     }
+```
 
+---
+
+## Foreground Service: Notification Helpers
+
+```java
     private Notification createNotification() {
         return new NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Downloading")

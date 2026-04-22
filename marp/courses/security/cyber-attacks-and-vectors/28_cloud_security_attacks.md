@@ -105,6 +105,10 @@ python3 cloud_enum.py -k companyname -l results.txt
 }
 ```
 
+---
+
+## Securing S3 Buckets: CLI Commands
+
 ```bash
 # Block all public access at account level
 aws s3control put-public-access-block \
@@ -193,6 +197,10 @@ gsutil uniformbucketlevelaccess set on gs://my-bucket
 │     permissive access policies                           │
 └──────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## IAM Privilege Escalation: Enumeration Tools
 
 ```bash
 # Enumerate IAM permissions for current user
@@ -365,6 +373,10 @@ curl -H "Metadata: true" \
 └──────────────────────────────────────────────────────────┘
 ```
 
+---
+
+## Serverless Injection: Vulnerable Lambda
+
 ```python
 # VULNERABLE: Lambda function with OS command injection
 import subprocess
@@ -387,7 +399,13 @@ def handler(event, context):
 # Attacker: ?file=test;env
 # Reveals all environment variables including:
 # AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN
+```
 
+---
+
+## Serverless Injection: Secure Lambda
+
+```python
 # SECURE: Validate input, avoid shell execution
 import os
 
@@ -458,6 +476,10 @@ def handler(event, context):
 │     - Database row-level security bypass                 │
 └──────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## Cross-Tenant: Trust Policy Examples
 
 ```json
 // VULNERABLE: Cross-account role trust policy
@@ -580,6 +602,10 @@ checkov -d ./k8s/
 # FAILED: CKV_AWS_21 - S3 versioning not enabled
 # FAILED: CKV_AWS_145 - EBS encryption not enabled
 ```
+
+---
+
+## IaC Security: Terraform Secure Bucket
 
 ```hcl
 // Terraform: Secure S3 bucket configuration

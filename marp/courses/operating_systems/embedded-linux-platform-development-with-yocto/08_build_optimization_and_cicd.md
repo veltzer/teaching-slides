@@ -305,7 +305,17 @@ pipeline {
                 '''
             }
         }
+    }
+}
+```
 
+---
+
+## Jenkins Integration: Test and Archive Stages
+
+```groovy
+pipeline {
+    stages {
         stage('Test') {
             steps {
                 sh 'bitbake core-image-minimal -c testimage'
@@ -359,7 +369,13 @@ build_image:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
       - build/cache/
+```
 
+---
+
+## GitLab CI/CD: Test and Deploy
+
+```yaml
 test_image:
   stage: test
   dependencies:

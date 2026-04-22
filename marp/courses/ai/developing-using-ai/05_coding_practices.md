@@ -532,7 +532,13 @@ function fetchUserData(userId) {
 5. Add retry logic for transient failures
 6. Consider using async/await for readability
 */
+```
 
+---
+
+## Suggestion Generation: Improved Version
+
+```javascript
 // Improved version
 async function fetchUserData(userId) {
     if (!userId) throw new Error('userId required');
@@ -668,7 +674,13 @@ def calculate_compound_interest(
         ValueError: If principal, rate, or time are negative.
         ValueError: If rate is greater than 1.
         TypeError: If inputs are not numeric.
+```
 
+---
+
+## Documentation Practices: Examples and Notes
+
+```python
     Examples:
         >>> calculate_compound_interest(1000, 0.05, 2)
         104.94
@@ -706,7 +718,13 @@ function dijkstra(graph, start, end) {
         distances[vertex] = vertex === start ? 0 : Infinity;
         pq.enqueue(vertex, distances[vertex]);
     }
+```
 
+---
+
+## Inline Documentation: Main Loop
+
+```javascript
     while (!pq.isEmpty()) {
         // Get unvisited node with minimum distance
         const current = pq.dequeue().element;
@@ -850,7 +868,13 @@ This microservices architecture handles e-commerce operations...
 - **Message Queue**: RabbitMQ
 - **APIs**: gRPC
 - **Port**: 3002
+```
 
+---
+
+## Architecture Documents: Flow and Security
+
+```markdown
 ## Data Flow
 1. Client → API Gateway
 2. Gateway → Service
@@ -1152,7 +1176,13 @@ const rootCause = `
 Recursive function without base case in filter handler
 Each filter change triggers itself, creating infinite loop
 `;
+```
 
+---
+
+## Real-World Debugging: Applying the Fix
+
+```javascript
 // Step 3: AI provides fix
 function applyFilter(data, filter) {
     // Add recursion guard
@@ -1172,7 +1202,13 @@ function applyFilter(data, filter) {
         this.isFiltering = false;
     }
 }
+```
 
+---
+
+## Real-World Debugging: Generated Test
+
+```javascript
 // Step 4: AI generates test
 test('rapid filter changes don\'t cause stack overflow', () => {
     const component = mount(<Dashboard />);

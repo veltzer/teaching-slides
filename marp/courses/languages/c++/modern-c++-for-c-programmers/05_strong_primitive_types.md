@@ -149,7 +149,17 @@ public:
     Percent operator-(const Percent& other) const {
         return Percent(value - other.value);
     }
+};
+```
 
+---
+
+## Strong Type: Comparison and Application
+
+```cpp
+class Percent {
+    // ... (continued)
+public:
     // Comparison operators
     bool operator==(const Percent& other) const {
         return value == other.value;
@@ -197,7 +207,17 @@ public:
     int getDollars() const { return static_cast<int>(cents / 100); }
     int getCents() const { return static_cast<int>(cents % 100); }
     double getAmount() const { return cents / 100.0; }
+};
+```
 
+---
+
+## Strong Money Type: Arithmetic
+
+```cpp
+class Money {
+    // ... (continued)
+public:
     // Arithmetic operators
     Money operator+(const Money& other) const {
         Money result(0);
@@ -341,7 +361,17 @@ public:
             throw std::out_of_range("Temperature out of valid range");
         }
     }
+};
+```
 
+---
+
+## Temperature: Getters
+
+```cpp
+class Temperature {
+    // ... (continued)
+public:
     // Getters
     double getCelsius() const { return kelvin - 273.15; }
     double getFahrenheit() const { return kelvin * 9.0 / 5.0 - 459.67; }
@@ -380,7 +410,17 @@ public:
     Temperature operator*(double factor) const {
         return Temperature(kelvin * factor, Scale::Kelvin);
     }
+};
+```
 
+---
+
+## Temperature Class: Comparison Operators
+
+```cpp
+class Temperature {
+    // ... (continued)
+public:
     // Comparison operators
     bool operator==(const Temperature& other) const {
         // Consider floating-point epsilon for equality
@@ -456,8 +496,13 @@ public:
         return temp;
     }
 };
+```
 
-// Usage
+---
+
+## Strong ID Types: Usage
+
+```cpp
 struct UserTag {}; // Empty tag for type differentiation
 struct ProductTag {};
 
@@ -515,7 +560,17 @@ public:
     Quantity operator/(double scalar) const {
         return Quantity(value / scalar);
     }
+```
 
+---
+
+## Physical Quantity Types: Quantity Operations
+
+```cpp
+template<int M, int KG, int S>
+class Quantity {
+    // ... (continued)
+public:
     // Multiplication with another quantity
     template<int M2, int KG2, int S2>
     Quantity<M+M2, KG+KG2, S+S2> operator*(const Quantity<M2, KG2, S2>& other) const {
@@ -642,7 +697,15 @@ public:
             return Circle(radius_, x_, y_);
         }
     };
+```
 
+---
+
+## Named Parameter Idiom: Circle Class
+
+```cpp
+class Circle {
+public:
     static Builder create() {
         return Builder();
     }
@@ -693,6 +756,14 @@ constexpr Temperature operator""_F(long double fahrenheit) {
 constexpr Temperature operator""_K(long double kelvin) {
     return Temperature(static_cast<double>(kelvin), Temperature::Scale::Kelvin);
 }
+```
+
+---
+
+## Custom Literals: Length and Time
+
+```cpp
+namespace Units {
 
 // Length literals
 constexpr Length operator""_m(long double value) {
@@ -721,8 +792,13 @@ constexpr Time operator""_h(long double value) {
 }
 
 } // namespace Units
+```
 
-// Usage
+---
+
+## Custom Literals: Usage
+
+```cpp
 void useCustomLiterals() {
     using namespace Units;
 
@@ -811,7 +887,13 @@ public:
         return static_cast<const Derived&>(*this) > other;
     }
 };
+```
 
+---
+
+## CRTP for Strong Types: Implementation and Usage
+
+```cpp
 // Strong type implementation with CRTP
 template<typename Tag, typename ValueType>
 class StrongTypeCRTP : public StrongTypeBase<StrongTypeCRTP<Tag, ValueType>> {
@@ -872,7 +954,13 @@ public:
             typename = std::enable_if_t<!AreSimilarStrongTypes<Tag, OtherTag>::value>>
     explicit Distance(const Distance<OtherTag>& other);
 };
+```
 
+---
+
+## Preventing Implicit Conversions: Specializations
+
+```cpp
 // Specialization for miles to kilometers
 template<>
 template<>

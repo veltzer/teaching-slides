@@ -371,6 +371,13 @@ public:
     }
 };
 
+```
+
+---
+
+## Parameter-Independent Code: Refactored
+
+```cpp
 // GOOD: Factor out type-independent code
 class VectorBase {
 protected:
@@ -671,7 +678,13 @@ struct StackStorage {
         // No-op for stack storage
     }
 };
+```
 
+---
+
+## Policy-Based Design: SmartArray
+
+```cpp
 template<
     typename T,
     template<typename> class StoragePolicy = HeapStorage

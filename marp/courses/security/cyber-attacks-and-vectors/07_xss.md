@@ -248,6 +248,10 @@ def show_comments():
     return html
 ```
 
+---
+
+## Vulnerable vs Secure: Secure Version
+
 ```python
 # SECURE Flask application
 from flask import Flask, request, render_template

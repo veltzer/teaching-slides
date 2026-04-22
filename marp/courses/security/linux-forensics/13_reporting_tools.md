@@ -592,7 +592,13 @@ cat > "$REPORT" << EOF
 <table border="1">
 <tr><th>Item</th><th>SHA-256</th><th>Size</th></tr>
 EOF
+```
 
+---
+
+## Automated Report Generation: Evidence Loop
+
+```bash
 for img in "$EVIDENCE"/*.dd "$EVIDENCE"/*.lime; do
   if [ -f "$img" ]; then
     hash=$(sha256sum "$img" | awk '{print $1}')
@@ -828,6 +834,13 @@ cat > /evidence/reports/iocs.json << 'IOCEOF'
       "value": "/tmp/.hidden/toolkit.tar.gz",
       "context": "Attacker toolkit staging"
     },
+```
+
+---
+
+## Generating IOC Reports: Finalizing and Sharing
+
+```bash
     {
       "type": "filepath",
       "value": "/var/www/html/cmd.php",
