@@ -876,7 +876,6 @@ public:
 
 ```cpp
 class Vector {
-    // ... (continued)
     // Debug assertion to validate internal state
     void checkInvariant() const {
         assert(data != nullptr && "Data pointer should never be null");

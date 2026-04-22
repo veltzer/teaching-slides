@@ -620,7 +620,6 @@ public:
 
 ```cpp
 class EndianSafeSerializer {
-    // ... (continued)
 private:
     template<typename T>
     static T byteSwap(T value) {
@@ -936,7 +935,6 @@ public:
 ```cpp
 template<typename T, T Address>
 class MemoryMappedRegister {
-    // ... (continued)
 public:
     // Set specific bits
     template<size_t Offset, size_t Width>
@@ -1080,7 +1078,6 @@ public:
 
 ```cpp
 class CrossPlatformBitfield {
-    // ... (continued)
 public:
     void setField(size_t offset, size_t width, uint32_t value) {
         // Clear existing bits
@@ -1196,7 +1193,6 @@ public:
 
 ```cpp
 class TypeSafeUnion {
-    // ... (continued)
 public:
     ~TypeSafeUnion() {
         clear();
@@ -1213,7 +1209,6 @@ public:
 
 ```cpp
 class TypeSafeUnion {
-    // ... (continued)
 public:
     TypeSafeUnion& operator=(const TypeSafeUnion& other) {
         if (this != &other) {
@@ -1255,7 +1250,6 @@ private:
 
 ```cpp
 class TypeSafeUnion {
-    // ... (continued)
 public:
     template<typename T>
     T get() const {
@@ -1303,7 +1297,6 @@ public:
 
 ```cpp
 class PackedDate {
-    // ... (continued)
 public:
     void setYear(uint16_t year) {
         if (year > 4095) throw std::out_of_range("Year too large");

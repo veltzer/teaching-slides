@@ -227,12 +227,6 @@ void print_employees(const struct Employee *emps, int n, const char *label) {
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Employee;
-int cmp_by_salary(const void *a, const void *b);
-int cmp_by_name(const void *a, const void *b);
-int cmp_by_age(const void *a, const void *b);
-void print_employees(const struct Employee *emps, int n, const char *label);
-
 int main(void) {
     struct Employee team[] = {
         {"Alice",   95000, 34},
@@ -680,11 +674,6 @@ struct Command {
 ```c
 #include <stdio.h>
 #include <string.h>
-
-struct Command;
-void cmd_help(void);
-void cmd_status(void);
-void cmd_quit(void);
 
 int main(void) {
     struct Command commands[] = {

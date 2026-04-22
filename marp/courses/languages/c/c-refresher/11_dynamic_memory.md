@@ -515,11 +515,6 @@ void pool_free(struct MemPool *pool, void *ptr) {
 ```c
 #include <stdio.h>
 
-struct MemPool;
-void pool_init(struct MemPool *pool);
-void *pool_alloc(struct MemPool *pool);
-void pool_free(struct MemPool *pool, void *ptr);
-
 int main(void) {
     struct MemPool pool;
     pool_init(&pool);

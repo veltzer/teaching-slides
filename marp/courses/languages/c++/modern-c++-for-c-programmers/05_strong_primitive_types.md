@@ -158,7 +158,6 @@ public:
 
 ```cpp
 class Percent {
-    // ... (continued)
 public:
     // Comparison operators
     bool operator==(const Percent& other) const {
@@ -216,7 +215,6 @@ public:
 
 ```cpp
 class Money {
-    // ... (continued)
 public:
     // Arithmetic operators
     Money operator+(const Money& other) const {
@@ -370,7 +368,6 @@ public:
 
 ```cpp
 class Temperature {
-    // ... (continued)
 public:
     // Getters
     double getCelsius() const { return kelvin - 273.15; }
@@ -419,7 +416,6 @@ public:
 
 ```cpp
 class Temperature {
-    // ... (continued)
 public:
     // Comparison operators
     bool operator==(const Temperature& other) const {
@@ -569,7 +565,6 @@ public:
 ```cpp
 template<int M, int KG, int S>
 class Quantity {
-    // ... (continued)
 public:
     // Multiplication with another quantity
     template<int M2, int KG2, int S2>

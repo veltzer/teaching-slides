@@ -376,7 +376,6 @@ public:
 
 ```cpp
 class ApplicationConfig {
-    // ... (continued)
 public:
     void setAppName(const std::string& name) {
         std::lock_guard<std::mutex> lock(configMutex);
