@@ -671,7 +671,7 @@ class OutlierClipper(
 
 ---
 
-## Custom Transformer: Init and setParams
+## Custom Transformer: Init and `setParams`
 
 ```python
     def __init__(self, inputCol=None, outputCol=None,

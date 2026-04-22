@@ -2564,7 +2564,7 @@ jobs:
 
 ---
 
-## Selenium CI/CD: ChromeDriver and Tests
+## Selenium CI/CD: `ChromeDriver` and Tests
 
 ```yaml
     - name: Install ChromeDriver

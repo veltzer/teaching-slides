@@ -589,7 +589,7 @@ df.write \
 
 ---
 
-## Idempotent Writes: replaceWhere and DELETE
+## Idempotent Writes: `replaceWhere` and DELETE
 
 ```python
 process_date = "2024-06-15"
@@ -882,7 +882,7 @@ for job_id in status_store.getJobIdsForGroup():
 ```
 
 ---
-## Monitoring: PipelineMonitor Class
+## Monitoring: `PipelineMonitor` Class
 
 ```python
 from pyspark.sql import SparkSession

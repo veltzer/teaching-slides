@@ -1124,7 +1124,7 @@ public:
 ```
 
 ---
-## Static Polymorphism: ConcreteB and Usage
+## Static Polymorphism: `ConcreteB` and Usage
 
 ```cpp
 class ConcreteB : public StaticInterface<ConcreteB> {

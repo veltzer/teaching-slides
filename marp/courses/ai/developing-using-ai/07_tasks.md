@@ -2062,7 +2062,7 @@ interface Event {
 
 ---
 
-## Event-Driven Architecture: EventStore
+## Event-Driven Architecture: `EventStore`
 
 ```typescript
 class EventStore {

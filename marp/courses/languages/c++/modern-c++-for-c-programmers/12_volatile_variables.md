@@ -1112,7 +1112,7 @@ void initializeLEDs() {
 
 ---
 
-## Custom Allocators: StackAllocator
+## Custom Allocators: `StackAllocator`
 
 Creating specialized allocators for different memory regions:
 
@@ -1147,7 +1147,7 @@ public:
 
 ---
 
-## Custom Allocators: StackAllocator Methods
+## Custom Allocators: `StackAllocator` Methods
 
 ```cpp
     template<typename T, typename... Args>
@@ -1497,7 +1497,7 @@ public:
 
 ---
 
-## RAII for Hardware: HardwareResource
+## RAII for Hardware: `HardwareResource`
 
 Using RAII to manage hardware resources safely:
 
@@ -1554,7 +1554,7 @@ public:
 
 ---
 
-## RAII for Hardware: ScopedHardwareLock
+## RAII for Hardware: `ScopedHardwareLock`
 
 ```cpp
 class ScopedHardwareLock {
@@ -1668,7 +1668,7 @@ void goodThreadSync() {
 
 ---
 
-## Debugging Volatile: DebugVolatile
+## Debugging Volatile: `DebugVolatile`
 
 Techniques for debugging volatile-related issues:
 
@@ -1702,7 +1702,7 @@ public:
 
 ---
 
-## Debugging Volatile: VolatileTracer Class
+## Debugging Volatile: `VolatileTracer` Class
 
 ```cpp
 template<typename T>
@@ -1863,7 +1863,7 @@ public:
 
 ---
 
-## Modern Alternatives: ModernSignaling
+## Modern Alternatives: `ModernSignaling`
 
 C++11+ alternatives for common volatile use cases:
 
@@ -1894,7 +1894,7 @@ public:
 
 ---
 
-## Modern Alternatives: AtomicHardwareRegister
+## Modern Alternatives: `AtomicHardwareRegister`
 
 ```cpp
 class AtomicHardwareRegister {
@@ -1930,7 +1930,7 @@ public:
 
 ---
 
-## Modern Alternatives: LockFreeQueue Nodes
+## Modern Alternatives: `LockFreeQueue` Nodes
 
 ```cpp
 class LockFreeQueue {
@@ -1953,7 +1953,7 @@ public:
 
 ---
 
-## Modern Alternatives: LockFreeQueue Operations
+## Modern Alternatives: `LockFreeQueue` Operations
 
 ```cpp
     void enqueue(int value) {

@@ -680,7 +680,7 @@ class FormField:
 
 ---
 
-## Form Validation: Validators and RegistrationForm
+## Form Validation: Validators and `RegistrationForm`
 
 ```python
 # Example validators
@@ -821,7 +821,7 @@ class ConfigParam:
 
 ---
 
-## Configuration Systems: AppConfig Class
+## Configuration Systems: `AppConfig` Class
 
 ```python
 class AppConfig:

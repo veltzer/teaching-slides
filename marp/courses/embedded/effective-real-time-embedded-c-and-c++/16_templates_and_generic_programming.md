@@ -682,7 +682,7 @@ struct StackStorage {
 
 ---
 
-## Policy-Based Design: SmartArray
+## Policy-Based Design: `SmartArray`
 
 ```cpp
 template<

@@ -302,7 +302,7 @@ def test_approximate_equality(spark):
 
 ---
 
-## chispa: Nullable and Column Comparison
+## chispa: `Nullable` and Column Comparison
 
 ```python
 def test_ignore_nullable(spark):

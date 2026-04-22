@@ -469,7 +469,7 @@ function debounce2(func, delay, immediate = false) {
 
 ---
 
-## Alternative Implementations: Cancel and AbortController
+## Alternative Implementations: Cancel and `AbortController`
 
 ```javascript
 function debounce3(func, delay) {

@@ -124,7 +124,7 @@ public:
 
 ---
 
-## Concrete Visitors: JSON Serializer
+## Concrete Visitors: JSON `Serializer`
 
 ```cpp
 class JSONSerializer : public ShapeVisitor {

@@ -990,7 +990,7 @@ class StateMachineMeta(type):
 
 ---
 
-## State Machine DSL: Base StateMachine Class
+## State Machine DSL: Base `StateMachine` Class
 
 ```python
 class StateMachine(metaclass=StateMachineMeta):

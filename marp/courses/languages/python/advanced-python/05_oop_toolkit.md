@@ -1454,7 +1454,7 @@ class Car(Vehicle):
 
 ---
 
-## Inheritance Hierarchy: Motorcycle and ElectricCar
+## Inheritance Hierarchy: Motorcycle and `ElectricCar`
 
 ```python
 class Motorcycle(Vehicle):

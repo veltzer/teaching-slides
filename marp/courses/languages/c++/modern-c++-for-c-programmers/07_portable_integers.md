@@ -187,7 +187,7 @@ void callCFunction() {
 
 ---
 
-## Template Classes: SafeInteger Class
+## Template Classes: `SafeInteger` Class
 
 Creating flexible integer handling with templates:
 
@@ -469,7 +469,7 @@ void demonstrateDelegatingConstructors() {
 
 ---
 
-## Argument Range Checking: RangeValidator
+## Argument Range Checking: `RangeValidator`
 
 Implementing robust parameter validation:
 
@@ -711,7 +711,7 @@ auto multiply(T a, U b) {
 
 ---
 
-## Template Parameter Deduction: FixedArray
+## Template Parameter Deduction: `FixedArray`
 
 ```cpp
 template<typename T, size_t N>
@@ -1032,7 +1032,7 @@ void demonstrateTemplateOverloading() {
 
 ---
 
-## Template Specialization: Primary StaticArray
+## Template Specialization: Primary `StaticArray`
 
 Full and partial template specialization:
 
@@ -1068,7 +1068,7 @@ public:
 
 ---
 
-## Template Specialization: bool BitReference
+## Template Specialization: bool `BitReference`
 
 ```cpp
 template<size_t N>
@@ -1473,7 +1473,7 @@ namespace math {
 
 ---
 
-## Namespaces: CircularBuffer Operations
+## Namespaces: `CircularBuffer` Operations
 
 ```cpp
 namespace containers {
@@ -1694,7 +1694,7 @@ void demonstrateNamespaceAliases() {
 
 ---
 
-## Namespace Aliases: ADL SmartPointer
+## Namespace Aliases: `ADL` `SmartPointer`
 
 ```cpp
 namespace custom {
@@ -1733,7 +1733,7 @@ namespace custom {
 
 ---
 
-## Namespace Aliases: ADL Usage
+## Namespace Aliases: `ADL` Usage
 
 ```cpp
 namespace custom {

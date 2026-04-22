@@ -1316,7 +1316,7 @@ valgrind --tool=memcheck python -c "import my_extension; my_extension.test()"
 
 ---
 
-## Practical Example: Image Processing: Grayscale Function Signature
+## Practical Example: Image Processing: `Grayscale` Function Signature
 
 ```c
 // image_processing.c

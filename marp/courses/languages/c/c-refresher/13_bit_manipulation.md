@@ -275,7 +275,7 @@ uint32_t next_power_of_2(uint32_t v) {
 
 ---
 
-## Common Bit Tricks: popcount and XOR swap
+## Common Bit Tricks: `popcount` and XOR swap
 
 ```c
 #include <stdio.h>
