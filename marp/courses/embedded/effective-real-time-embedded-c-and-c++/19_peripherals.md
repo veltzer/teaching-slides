@@ -1588,7 +1588,7 @@ Key principles for effective peripheral programming:
 
 ---
 
-## Best Practices Summary: More Principles
+## Best Practices Summary: ISRs, Documentation, Testing, Power
 
 1. 1. **Keep interrupt handlers short**
     - Minimal processing in ISRs

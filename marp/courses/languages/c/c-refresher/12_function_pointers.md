@@ -129,11 +129,6 @@ void event_fire(struct EventSystem *sys, const char *event) {
 ```c
 #include <stdio.h>
 
-struct EventSystem;
-typedef void (*EventCallback)(const char *event, void *user_data);
-void event_register(struct EventSystem *sys, EventCallback cb, void *data);
-void event_fire(struct EventSystem *sys, const char *event);
-
 void logger(const char *event, void *data) {
     const char *prefix = (const char *)data;
     printf("[%s] Event: %s\n", prefix, event);

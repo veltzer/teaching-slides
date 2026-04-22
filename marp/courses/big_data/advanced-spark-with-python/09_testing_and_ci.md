@@ -1077,7 +1077,7 @@ def sample_events(spark):
 ```
 
 ---
-## Full Program: Complete Test Suite (continued)
+## Full Program: Transformations and Aggregations
 
 ```python
 # tests/unit/test_event_transformations.py

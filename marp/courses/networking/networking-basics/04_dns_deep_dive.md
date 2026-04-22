@@ -699,7 +699,7 @@ $ dig example.com
 
 ---
 
-## Common DNS Issues (continued)
+## Common DNS Issues: Slow Resolution
 
 ### Problem 2: Slow DNS resolution
 

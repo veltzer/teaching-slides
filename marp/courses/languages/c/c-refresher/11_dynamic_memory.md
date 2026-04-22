@@ -437,12 +437,6 @@ void vec_destroy(struct Vector *v) {
 ```c
 #include <stdio.h>
 
-struct Vector;
-struct Vector *vec_create(int initial_cap);
-int vec_push(struct Vector *v, int value);
-int vec_get(const struct Vector *v, int index);
-void vec_destroy(struct Vector *v);
-
 int main(void) {
     struct Vector *v = vec_create(4);
     for (int i = 0; i < 20; i++) {
@@ -606,12 +600,6 @@ void arena_destroy(struct Arena *a) {
 #include <stdlib.h>
 
 #define ARENA_SIZE (1024 * 1024)
-
-struct Arena;
-struct Arena *arena_create(size_t capacity);
-void *arena_alloc(struct Arena *a, size_t size);
-void arena_reset(struct Arena *a);
-void arena_destroy(struct Arena *a);
 
 int main(void) {
     struct Arena *arena = arena_create(ARENA_SIZE);

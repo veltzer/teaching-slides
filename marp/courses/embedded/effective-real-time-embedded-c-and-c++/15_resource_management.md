@@ -713,7 +713,7 @@ public:
 
 ---
 
-## Container Resource Management: More Ops
+## Container Resource Management: Insertion and Access
 
 ```cpp
 template<typename T, size_t N>
