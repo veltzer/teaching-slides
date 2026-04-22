@@ -58,13 +58,16 @@ Without idempotency: chaos and data corruption
 
 ## HTTP Methods and Idempotency
 
-| Method | Idempotent? | Safe? |
-|--------|-------------|-------|
-| GET    | ✅ Yes      | ✅ Yes |
-| PUT    | ✅ Yes      | ❌ No  |
-| DELETE | ✅ Yes      | ❌ No  |
-| POST   | ❌ No       | ❌ No  |
-| PATCH  | ❌ Usually No | ❌ No |
+| Method | Idempotent?  | Safe? |
+|--------|--------------|-------|
+| GET    | Yes          | Yes   |
+| HEAD   | Yes          | Yes   |
+| PUT    | Yes          | No    |
+| DELETE | Yes          | No    |
+| POST   | No           | No    |
+| PATCH  | Not required | No    |
+
+Idempotency of PATCH depends on the patch semantics (e.g., JSON Patch can be; "add 1 to counter" is not).
 
 ---
 
@@ -223,9 +226,10 @@ def create_order():
 
 ```javascript
 const express = require('express');
-const redis = require('redis');
+const { createClient } = require('redis');
 const app = express();
-const client = redis.createClient();
+const client = createClient();
+await client.connect();
 
 app.post('/api/orders', async (req, res) => {
     const idempotencyKey = req.headers['idempotency-key'];
@@ -243,9 +247,9 @@ app.post('/api/orders', async (req, res) => {
     // Process order
     const order = await processOrder(req.body);
 
-    // Cache result
-    await client.setex(`idem:${idempotencyKey}`, 86400,
-                      JSON.stringify(order));
+    // Cache result with 24-hour expiry
+    await client.set(`idem:${idempotencyKey}`, JSON.stringify(order),
+                     { EX: 86400 });
 
     res.json(order);
 });
@@ -301,21 +305,30 @@ def handle_idempotent_request(key, request_data):
 **Solution**: Use atomic operations
 
 ```python
-def atomic_idempotent_check(key, process_func):
+def atomic_idempotent_check(key, process_func, max_wait=5.0):
     # Try to acquire lock
     lock_acquired = redis_client.set(f"lock:{key}", "1", nx=True, ex=30)
 
     if lock_acquired:
         try:
+            # Double-check cache in case another worker finished while we waited
+            cached = get_cached_response(key)
+            if cached:
+                return cached
             result = process_func()
             cache_response(key, result)
             return result
         finally:
             redis_client.delete(f"lock:{key}")
-    else:
-        # Wait and check cache
+
+    # Lock held by another worker — poll for its result
+    deadline = time.monotonic() + max_wait
+    while time.monotonic() < deadline:
+        cached = get_cached_response(key)
+        if cached:
+            return cached
         time.sleep(0.1)
-        return get_cached_response(key)
+    raise TimeoutError(f"Idempotent request {key} still processing")
 ```
 
 ---

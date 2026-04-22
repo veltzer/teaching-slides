@@ -162,6 +162,31 @@ Implications:
 
 ---
 
+## CAP Theorem
+
+Eric Brewer (2000):
+
+In the presence of a **network Partition**, a distributed system must choose between **Consistency** and **Availability**.
+
+- **CP** systems — refuse requests to keep data consistent (e.g., ZooKeeper, etcd)
+- **AP** systems — serve stale data to stay up (e.g., Cassandra, Dynamo)
+- **CA** — only in a non-partitioning (single-node) world
+
+Partitions will happen. The real question is how your system responds.
+
+---
+
+## PACELC Refinement
+
+Daniel Abadi (2012) extended CAP:
+
+**If there is a Partition (P), trade Availability (A) vs Consistency (C);
+Else (E), trade Latency (L) vs Consistency (C).**
+
+Even without partitions, replication latency forces a consistency/latency trade-off. CAP only describes the rare partition case; PACELC describes the common one.
+
+---
+
 ## Consensus Algorithms
 
 **Paxos:**
@@ -213,7 +238,7 @@ All replicas execute same operations in same order:
 
 ---
 
-## Gossip Protocols
+## Gossip Protocol
 
 ![gossip_protocols](svg/lectures/architecting/distributed-systems-concepts/gossip_protocols.svg)
 

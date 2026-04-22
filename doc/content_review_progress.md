@@ -80,10 +80,10 @@ Review every course and lecture for content: fix wrong info, add where useful, i
 
 ## Lectures (34)
 
-- [ ] architecting/distributed-systems-concepts.md
-- [ ] architecting/idempotency.md
+- [x] architecting/distributed-systems-concepts.md
+- [x] architecting/idempotency.md
 - [x] architecting/senior-level-development.md
-- [ ] architecting/solid.md
+- [x] architecting/solid.md
 - [ ] big_data/advanced-spark-ecosystem-and-best-practice-python.md
 - [ ] big_data/advanced-spark-ecosystem-and-best-practice-scala.md
 - [ ] big_data/spark-internals.md
@@ -119,4 +119,13 @@ Review every course and lecture for content: fix wrong info, add where useful, i
 
 ### architecting/senior-level-development.md (2026-04-22)
 Fixed: asterisk-mismatch on microservices bullet (`*Independently Testable**` → `**...**`); `codes` → `code's`; `Micro-services` → `Microservices` for consistency; lowercase `windows` → `Windows`; `it's` → `its`; converted visible `[comment:]` lines at the end into a proper HTML comment TODO block.
+
+### architecting/solid.md (2026-04-22)
+Tightened the Additional Resources slide: replaced generic "Online courses and tutorials" / "Community discussions" with specific sources — added the original Uncle Bob book where SOLID was codified (*Agile Software Development: PPP*) and *Working Effectively with Legacy Code* by Feathers. Content is otherwise factually solid; principles, attributions, and examples check out.
+
+### architecting/distributed-systems-concepts.md (2026-04-22)
+Added two missing slides between FLP Impossibility and Consensus Algorithms: **CAP Theorem** (Brewer 2000, CP/AP/CA) and **PACELC Refinement** (Abadi 2012, latency-vs-consistency outside partitions). Both are foundational for this topic and were absent. Fixed singular/plural inconsistency: `## Gossip Protocols` → `## Gossip Protocol` to match the later pattern list. Added `abadi`, `daniel` to `.zspell-words`.
+
+### architecting/idempotency.md (2026-04-22)
+Added blank lines to the "Overview" slide so the blockquote and math line render with proper spacing. Tightened HTTP methods table: added HEAD row, dropped unicode check/cross for plain "Yes/No" (consistent across columns), changed PATCH from "Usually No" to "Not required" with a clarifying note. Modernized the Express.js example to node-redis v4 API (`createClient`, `await client.connect()`, `client.set(key, val, { EX: ttl })`) — old code mixed node-redis with ioredis-style `setex`. Rewrote the race-condition example: added the missed double-check after lock acquisition, replaced the single 100ms sleep with a bounded polling loop that raises on timeout.
 

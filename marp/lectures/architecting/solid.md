@@ -493,8 +493,8 @@ SOLID Principles:
 
 ---
 ## Additional Resources
-1. Clean Code by Robert C. Martin
-1. Design Patterns by Gang of Four
-1. Refactoring by Martin Fowler
-1. Online courses and tutorials
-1. Community discussions
+1. *Clean Code* — Robert C. Martin
+1. *Agile Software Development: Principles, Patterns, and Practices* — Robert C. Martin (the original SOLID source)
+1. *Design Patterns* — Gang of Four
+1. *Refactoring* — Martin Fowler
+1. *Working Effectively with Legacy Code* — Michael Feathers
