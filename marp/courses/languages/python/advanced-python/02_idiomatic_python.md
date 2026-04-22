@@ -892,7 +892,7 @@ def process_data(filename):
 ## Practical Examples: Example: Custom Data Container
 
 ```python
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Optional
 
 @dataclass

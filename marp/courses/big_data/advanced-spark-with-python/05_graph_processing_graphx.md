@@ -34,10 +34,14 @@ audience:
 ---
 ## Creating Graphs
 ```python
-# Create vertices and edges
-vertices = [(1, "A"), (2, "B"), (3, "C")]
-edges = [(1, 2, "connects"), (2, 3, "connects")]
-graph = GraphFrame(vertices, edges)
+# Create vertices and edges as DataFrames
+from graphframes import GraphFrame
+v = spark.createDataFrame(
+    [("1", "A"), ("2", "B"), ("3", "C")], ["id", "name"])
+e = spark.createDataFrame(
+    [("1", "2", "connects"), ("2", "3", "connects")],
+    ["src", "dst", "relationship"])
+graph = GraphFrame(v, e)
 ```
 
 ---

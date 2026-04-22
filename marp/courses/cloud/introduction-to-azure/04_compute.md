@@ -96,7 +96,7 @@ audience:
 ## VM Security
 - Disk encryption
 - Network security groups
-- Azure Security Center
+- Microsoft Defender for Cloud
 - Update management
 - Antimalware
 

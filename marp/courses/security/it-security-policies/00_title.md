@@ -14,7 +14,7 @@ audience:
   - audiences:testers
 
 ---
-# It Security Policies
+# IT Security Policies
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 

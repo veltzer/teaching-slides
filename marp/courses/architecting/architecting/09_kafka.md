@@ -157,10 +157,10 @@ audience:
 
 | System | At Most Once | At Least Once | Exactly Once |
 |--------|--------------|---------------|--------------|
-| Kafka | v | v | v (with transactions) |
-| SQS | x | v | x |
-| RabbitMQ | v | v | v (with plugins) |
-| ActiveMQ | v | v | v (with XA) |
+| Kafka | Yes | Yes | Yes (with transactions) |
+| SQS | No | Yes | No |
+| RabbitMQ | Yes | Yes | Yes (with plugins) |
+| ActiveMQ | Yes | Yes | Yes (with XA) |
 
 ---
 ## Kafka Scaling Patterns

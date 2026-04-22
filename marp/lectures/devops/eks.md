@@ -19,6 +19,8 @@ audience:
 
 ![title](svg/lectures/devops/eks/title.svg)
 
+---
+
 ## What is Amazon EKS?
 
 ![what_is_amazon_eks](svg/lectures/devops/eks/what_is_amazon_eks.svg)

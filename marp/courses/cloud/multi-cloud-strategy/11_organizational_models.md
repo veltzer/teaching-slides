@@ -14,10 +14,6 @@ audience:
 ---
 # Organizational Models for Multi-Cloud
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## People Before Technology

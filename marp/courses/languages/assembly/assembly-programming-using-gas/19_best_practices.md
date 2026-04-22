@@ -94,14 +94,14 @@ factorial:
 
 Example:
 
-```nasm
+```gas
 .globl add_numbers
 add_numbers:
-    push ebp
-    mov ebp, esp
-    mov eax, [ebp+8]   # First parameter
-    add eax, [ebp+12]  # Second parameter
-    pop ebp
+    pushl %ebp
+    movl %esp, %ebp
+    movl 8(%ebp), %eax    # First parameter
+    addl 12(%ebp), %eax   # Second parameter
+    popl %ebp
     ret
 ```
 

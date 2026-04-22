@@ -239,8 +239,8 @@ git rebase --abort
 # Standard rebase
 git rebase main
 
-# Preserve merge commits
-git rebase --preserve-merges main
+# Preserve merge commits (use --rebase-merges; --preserve-merges was removed)
+git rebase --rebase-merges main
 
 # Rebase with strategy
 git rebase -X theirs main

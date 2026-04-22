@@ -48,9 +48,9 @@ class Employee(Person):
 ## Inheritance in Python: Method Resolution Order (MRO)
 
 - Determines which method is called
-- Left-to-right, depth-first search
-- C3 linearization algorithm for complex hierarchies
-- View with `ClassName.__mro__`
+- Python 3 uses the C3 linearization algorithm
+- Preserves monotonicity and local precedence order
+- View with `ClassName.__mro__` or `ClassName.mro()`
 
 ```python
 class A:

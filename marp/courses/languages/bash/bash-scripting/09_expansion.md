@@ -171,12 +171,15 @@ echo ~/file   # /home/mark/file
 ## `$PATH` and Brace Expansion Together
 
 ```bash
-# Quickly add multiple directories to PATH
+# Brace expansion does NOT happen inside double quotes
 export PATH="${HOME}/{bin,scripts,tools}:${PATH}"
-# Wait... this does NOT work!
-# Brace expansion happens before variable expansion
+# The {bin,scripts,tools} stays LITERAL — PATH is broken!
 
-# Correct approach: spell it out
+# Without the quotes, brace expansion works:
+export PATH=${HOME}/{bin,scripts,tools}:${PATH}
+# But leaving ${HOME} unquoted is risky if it contains spaces.
+
+# Safest approach: spell it out
 export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ```
 

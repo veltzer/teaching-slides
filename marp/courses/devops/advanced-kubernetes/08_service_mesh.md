@@ -42,11 +42,11 @@ Advanced Kubernetes Course - Day 2, Module 3
 ## Installing `Istio`
 
 ```bash
-# Download istioctl
+# Download istioctl (defaults to latest; see https://istio.io/latest/docs/releases/)
 curl -L https://istio.io/downloadIstio | sh -
-export PATH=$PWD/istio-1.21.0/bin:$PATH
+export PATH=$PWD/istio-<version>/bin:$PATH
 
-# Install with demo profile
+# Install with demo profile (demo profile is for learning, not production)
 istioctl install --set profile=demo -y
 
 # Enable sidecar injection for a namespace

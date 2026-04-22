@@ -96,7 +96,7 @@ When a victim visits this URL, the malicious script will be executed in their br
 - Use the appropriate encoding function for the context (e.g., HTML, JavaScript, CSS)
 - Example in PHP:
 
-```javascript
+```php
 // Escape user input for HTML
 $userInput = htmlspecialchars($untrustedData, ENT_QUOTES, 'UTF-8');
 ```
@@ -106,12 +106,14 @@ $userInput = htmlspecialchars($untrustedData, ENT_QUOTES, 'UTF-8');
 ## Preventing XSS: Content Security Policy (CSP)
 
 - A browser security mechanism that helps mitigate XSS attacks
-- Allows developers to define a whitelist of trusted sources for resources
+- Allows developers to define an allowlist of trusted sources for resources
 - Example CSP header:
 
-Content-Security-Policy: default-src 'self'; script-src 'self' [https://trusted.example.com](https://trusted.example.com)
+```http
+Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.example.com
+```
 
-This policy allows scripts only from the same origin and [https://trusted.example.com](https://trusted.example.com)
+This policy allows scripts only from the same origin and `https://trusted.example.com`.
 
 ---
 
@@ -121,7 +123,7 @@ This policy allows scripts only from the same origin and [https://trusted.exampl
 - Helps prevent XSS attacks from stealing session cookies
 - Example in PHP:
 
-```javascript
+```php
 setcookie('SessionID', $sessionId, time() + 3600, '/', '', true, true);
 ```
 

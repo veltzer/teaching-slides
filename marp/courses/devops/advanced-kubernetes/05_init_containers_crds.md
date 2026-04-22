@@ -146,7 +146,7 @@ spec:
 
 ---
 
-## Sidecar Containers (Native in `Kubernetes` 1.28+)
+## Sidecar Containers (Alpha in `Kubernetes` 1.28, Beta in 1.29, GA in 1.33)
 
 ```yaml
 apiVersion: v1

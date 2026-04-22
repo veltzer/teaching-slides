@@ -14,10 +14,6 @@ audience:
 ---
 # Disaster Recovery in Multi-Cloud
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## Why Multi-Cloud DR?

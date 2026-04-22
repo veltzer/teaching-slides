@@ -275,7 +275,7 @@ pipeline = Pipeline(stages=[
 model.save("path/to/model")
 
 # Load model
-from pyspark.ml.model import PipelineModel
+from pyspark.ml import PipelineModel
 loaded_model = PipelineModel.load("path/to/model")
 ```
 

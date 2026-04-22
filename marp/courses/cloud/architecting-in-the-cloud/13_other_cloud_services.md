@@ -122,7 +122,7 @@ jobs:
 
 ## AI and Machine Learning
 - Pre-built AI services (vision, language, speech)
-- AWS Rekognition, Azure Cognitive Services, Google Vision
+- AWS Rekognition, Azure AI services, Google Vision
 - ML platforms: SageMaker, Azure ML, Vertex AI
 - Managed training and inference infrastructure
 - No PhD required for pre-built services
@@ -150,7 +150,7 @@ jobs:
 
 ## IoT Services
 - Device management and connectivity
-- AWS IoT Core, Azure IoT Hub, Cloud IoT Core
+- AWS IoT Core, Azure IoT Hub (GCP retired Cloud IoT Core in 2023)
 - Edge computing on devices
 - Data ingestion at massive scale
 - Integration with analytics and ML
@@ -168,7 +168,7 @@ jobs:
 
 ## Search Services
 - Managed Elasticsearch/OpenSearch
-- AWS OpenSearch, Azure Cognitive Search, Elastic Cloud
+- AWS OpenSearch, Azure AI Search, Elastic Cloud
 - Full-text search, analytics, logging
 - CloudSearch (AWS): simpler, less flexible
 - Add search to applications without managing clusters

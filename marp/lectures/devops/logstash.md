@@ -19,13 +19,13 @@ audience:
 
 ---
 
-## What is Logstash?
+## Overview
 
 ![title](svg/lectures/devops/logstash/title.svg)
 
 ---
 
-## What is Logstash?: Details
+## What is Logstash?
 
 1. **Data Processing Pipeline** that ingests data from multiple sources
 1. **Transforms** and **enriches** data in real-time
@@ -586,12 +586,6 @@ output {
 
 ---
 
-## Scaling Logstash: Overview
-
-**Horizontal Scaling:**
-
----
-
 ## Scaling Logstash
 
 ![scaling_logstash](svg/lectures/devops/logstash/scaling_logstash.svg)
@@ -600,7 +594,14 @@ output {
 
 ## Scaling Logstash: Details
 
+**Horizontal Scaling:**
+
+1. Multiple Logstash instances behind a load balancer
+1. Partition data by source or type
+1. Share a persistent queue to avoid duplication
+
 **Vertical Scaling:**
+
 1. Increase CPU cores
 1. Add more RAM
 1. Faster storage (SSD)

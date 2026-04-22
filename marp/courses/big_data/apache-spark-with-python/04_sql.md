@@ -186,9 +186,11 @@ df.write \
 ## Hive Configuration
 
 ```python
-# Create HiveContext
-from pyspark.sql import HiveContext
-hive_context = HiveContext(sc)
+# Enable Hive support on the SparkSession (Spark 2.0+)
+spark = (SparkSession.builder
+    .appName("HiveApp")
+    .enableHiveSupport()
+    .getOrCreate())
 
 # Configure Hive warehouse
 spark.sql("SET hive.metastore.warehouse.dir=/path/to/warehouse")
@@ -276,17 +278,16 @@ df.select(upper_case("name").alias("upper_name"))
 ## Custom Aggregations
 
 ```python
-from pyspark.sql.expressions import UserDefinedAggregateFunction
+# Use pandas_udf with GROUPED_AGG function type (Spark 3.x)
+from pyspark.sql.functions import pandas_udf
+from pyspark.sql.types import DoubleType
+import pandas as pd
 
-class CustomAverage(UserDefinedAggregateFunction):
-    def inputSchema(self): ...
-    def bufferSchema(self): ...
-    def dataType(self): ...
-    def deterministic(self): ...
-    def initialize(self): ...
-    def update(self): ...
-    def merge(self): ...
-    def evaluate(self): ...
+@pandas_udf(DoubleType())
+def custom_average(values: pd.Series) -> float:
+    return values.mean()
+
+df.groupBy("key").agg(custom_average("value").alias("avg_val"))
 ```
 
 ---

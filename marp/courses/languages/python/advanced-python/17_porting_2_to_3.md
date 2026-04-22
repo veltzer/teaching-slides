@@ -425,7 +425,7 @@ for k, v in six.iteritems(my_dict):
 
 # Renamed module
 from six.moves.urllib.parse import urlparse
-urlparse("[http://example.com](http://example.com)")
+urlparse("http://example.com")
 
 # Print function
 six.print_("Hello", "world", sep="-", end="!\n")

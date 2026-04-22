@@ -225,6 +225,9 @@ jobs:
 1. **Factory pattern**: generate data programmatically per test
 1. **Production snapshots**: anonymized copies of real data
 1. **Synthetic generation**: tools create realistic fake data
+
+Notes:
+
 - Fixtures are simple but become stale over time
 - Production snapshots are realistic but raise privacy concerns
 

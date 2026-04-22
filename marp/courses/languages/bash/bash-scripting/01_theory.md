@@ -151,7 +151,8 @@ User --> Shell --> Kernel --> Hardware
 | 3.0 | 2004 | Regex matching `=~` |
 | 4.0 | 2009 | Associative arrays, `&>>` |
 | 5.0 | 2019 | Various improvements |
-| 5.2 | 2022 | Latest stable release |
+| 5.2 | 2022 | Many extensions, bug fixes |
+| 5.3 | 2025 | Latest stable release |
 
 ---
 ## Check Your `bash` Version

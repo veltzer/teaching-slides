@@ -379,7 +379,7 @@ tar czf docker-trust-keys.tar.gz ~/.docker/trust/
 ## Image Scanning with `Trivy`
 
 ```bash
-# Install Trivy
+# Install Trivy (see https://aquasecurity.github.io/trivy for install docs)
 sudo apt-get install trivy
 
 # Scan an image for vulnerabilities

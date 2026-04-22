@@ -14,10 +14,6 @@ audience:
 ---
 # Identity Federation in Multi-Cloud
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## Why Identity Federation Matters
@@ -74,8 +70,8 @@ audience:
 
 ---
 
-## Azure Entra ID (Azure AD)
-- Microsoft identity platform
+## Microsoft Entra ID
+- Microsoft identity platform (formerly Azure AD)
 - Native IdP for Azure, also federates to AWS and GCP
 - Supports SAML, OIDC, and WS-Federation
 - Conditional Access policies for risk-based authentication

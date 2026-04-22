@@ -45,7 +45,7 @@ my_project/
 name = "my_project"
 version = "0.1.0"
 authors = ["Your Name <you@example.com>"]
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
@@ -234,7 +234,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
     - name: Run tests
@@ -261,9 +261,11 @@ cargo publish
 ```gitignore
 /target
 **/*.rs.bk
-Cargo.lock
 .env
 ```
+
+- Commit `Cargo.lock` for binaries and workspaces
+- Ignore `Cargo.lock` only for pure library crates
 
 ---
 
@@ -326,13 +328,17 @@ cargo build --release
 ## Benchmarking
 
 ```rust
-#[bench]
-fn bench_add(b: &mut test::Bencher) {
-    b.iter(|| {
-        // Code to benchmark
-        add(2, 2)
+// `#[bench]` is nightly-only. On stable, use the `criterion` crate.
+use criterion::{black_box, criterion_group, criterion_main, Criterion};
+
+fn bench_add(c: &mut Criterion) {
+    c.bench_function("add 2+2", |b| {
+        b.iter(|| add(black_box(2), black_box(2)))
     });
 }
+
+criterion_group!(benches, bench_add);
+criterion_main!(benches);
 ```
 
 ---

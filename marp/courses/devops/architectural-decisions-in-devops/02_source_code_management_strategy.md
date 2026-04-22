@@ -31,6 +31,9 @@ audience:
 1. Monorepo vs polyrepo architecture
 1. Branching strategies and merge policies
 1. Code ownership and review models
+
+Notes:
+
 - Each decision interacts with the others
 - There is no universal "best" approach - context matters
 

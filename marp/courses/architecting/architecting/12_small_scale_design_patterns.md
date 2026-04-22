@@ -169,7 +169,7 @@ Cons:
 
 ---
 
-## Repository Command Pattern
+## Command Pattern
 
 - Encapsulates a request as an object
 - Decouples the object that invokes the operation from the one that knows how to perform it

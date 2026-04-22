@@ -29,9 +29,9 @@ audience:
 ---
 ## Ownership Rules
 
-1. Each value has exactly one owner
-1. Only one owner at a time
-1. When owner goes out of scope, value is dropped
+1. Each value in Rust has an owner
+1. There can only be one owner at a time
+1. When the owner goes out of scope, the value is dropped
 
 ---
 ## Variable Scope Basics

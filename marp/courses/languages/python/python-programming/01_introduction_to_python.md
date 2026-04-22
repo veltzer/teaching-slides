@@ -214,7 +214,7 @@ print(x.__add__)   # even int has methods
 
 ---
 ## Python Versioning
-- Current stable: Python 3.12+
+- Current stable: Python 3.13 (3.14 released Oct 2025)
 - New minor version every year (October)
 - Each version supported for ~5 years
 - Always use the latest stable release for new projects

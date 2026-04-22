@@ -66,7 +66,7 @@ fn main() {
 - i16: -32,768 to 32,767
 - i32: -2^32 to 2^31-1
 - i64: -2^63 to 2^63-1
-- i128: -2^127 to 2i^127-1
+- i128: -2^127 to 2^127-1
 
 </div>
 <div>
@@ -142,13 +142,13 @@ fn main() {
 fn main() {
     let c = 'z';
     let z: char = 'z'; // explicit type annotation
-    let heart_eyed_cat = 'cat';
+    let heart_eyed_cat = '\u{1F63B}';
 
-    // Characters are 4 bytes
+    // Characters are 4 bytes (Unicode scalar value)
     println!("Size of char: {} bytes", std::mem::size_of::<char>());
 
-    // Unicode support
-    let kanji = 'fu';
+    // Unicode support (single scalar value per char)
+    let kanji = '漢';
 }
 ```
 

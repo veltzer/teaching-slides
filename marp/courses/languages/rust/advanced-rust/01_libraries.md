@@ -123,7 +123,7 @@ Err(anyhow!("Something went wrong: {}", reason))
 
 ```toml
 [dependencies]
-thiserror = "1.0"
+thiserror = "2"
 ```
 
 - Derive macro for custom error types
@@ -300,7 +300,7 @@ struct Config {
 
 ```toml
 [dependencies]
-reqwest = { version = "0.11", features = ["json"] }
+reqwest = { version = "0.12", features = ["json"] }
 tokio = { version = "1", features = ["full"] }
 ```
 
@@ -481,7 +481,7 @@ Tower provides composable middleware for:
 
 ```toml
 [dependencies]
-axum = "0.6"
+axum = "0.8"
 tokio = { version = "1", features = ["full"] }
 ```
 
@@ -506,11 +506,10 @@ async fn main() {
     let app = Router::new()
         .route("/", get(hello));
 
-    let addr = "127.0.0.1:3000".parse().unwrap();
-    axum::Server::bind(&addr)
-        .serve(app.into_make_service())
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await
         .unwrap();
+    axum::serve(listener, app).await.unwrap();
 }
 ```
 
@@ -524,7 +523,7 @@ use axum::{Router, routing::{get, post}};
 let app = Router::new()
     .route("/", get(index))
     .route("/users", get(list_users).post(create_user))
-    .route("/users/:id", get(get_user).delete(delete_user))
+    .route("/users/{id}", get(get_user).delete(delete_user))
     .nest("/api", api_routes())
     .fallback(not_found);
 ```

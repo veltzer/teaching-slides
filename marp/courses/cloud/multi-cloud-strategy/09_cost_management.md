@@ -14,10 +14,6 @@ audience:
 ---
 # Cost Management Across Providers
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## The Multi-Cloud Cost Challenge

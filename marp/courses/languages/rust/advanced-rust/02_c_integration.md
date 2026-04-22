@@ -330,7 +330,7 @@ fn main() {
 ```toml
 # Cargo.toml
 [build-dependencies]
-bindgen = "0.65"
+bindgen = "0.71"
 
 [dependencies]
 libc = "0.2"

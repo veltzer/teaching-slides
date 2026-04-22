@@ -103,7 +103,7 @@ audience:
 ---
 
 ## Identity Services
-- Azure Active Directory
+- Microsoft Entra ID (formerly Azure Active Directory)
 - Single sign-on
 - Multi-factor auth
 - Conditional access

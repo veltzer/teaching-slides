@@ -186,8 +186,8 @@ void safer_copy(const char* input) {
 ```c
 // CWE-190: Integer overflow
 // VULNERABLE
-size_t allocate_array(size_t count, size_t size) {
-    void* ptr = malloc(count * size);  // Overflow!
+void* allocate_array(size_t count, size_t size) {
+    void* ptr = malloc(count * size);  // count * size can overflow
     return ptr;
 }
 

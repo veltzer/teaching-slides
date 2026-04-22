@@ -33,7 +33,7 @@ audience:
 ---
 ## Python Packaging Evolution: Current State
 
-- distutils (deprecated in Python 3.10)
+- distutils (deprecated in Python 3.10, removed in 3.12)
 - setuptools (still widely used)
 - Modern packaging standards:
     - PEP 517/518: pyproject.toml-based builds
@@ -62,7 +62,7 @@ twine upload dist/*
 - Part of the standard library
 - Basis for many packaging tools
 - Simple but limited functionality
-- Deprecated as of Python 3.10
+- Deprecated in Python 3.10, removed in Python 3.12
 
 ```python
 # Basic setup.py with distutils

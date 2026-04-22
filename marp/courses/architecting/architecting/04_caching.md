@@ -72,7 +72,7 @@ from functools import lru_cache
 @lru_cache(maxsize=100)
 def get_user_data(user_id: str):
     # Expensive database operation
-    return database.query(f"SELECT * FROM users WHERE id = {user_id}")
+    return database.query("SELECT * FROM users WHERE id = %s", (user_id,))
 ```
 
 ---

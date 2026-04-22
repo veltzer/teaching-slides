@@ -293,12 +293,16 @@ impl Iterator for Counter {
 
 ---
 
-## Associated Types with Defaults
+## Associated Types with Defaults (Nightly)
+
+Associated-type defaults are still unstable (`#![feature(associated_type_defaults)]`).
 
 ```rust
+#![feature(associated_type_defaults)]
+
 trait Container {
     type Item;
-    type Error = std::io::Error; // Default associated type
+    type Error = std::io::Error; // Default associated type (nightly)
 
     fn get(&self, index: usize) -> Result<&Self::Item, Self::Error>;
     fn len(&self) -> usize;

@@ -366,10 +366,10 @@ std::generate, std::transform, std::for_each
 std::sort, std::stable_sort, std::partial_sort
 std::nth_element (average O(n))
 
-// O(n²) worst case
-std::unique (with unsorted range)
+// O(n) — but only removes *consecutive* duplicates
+std::unique (usually called after std::sort to dedupe a whole range)
 
-// O(log n) - on sorted ranges
+// O(log n) — on sorted ranges
 std::binary_search, std::lower_bound, std::upper_bound
 
 // O(1)

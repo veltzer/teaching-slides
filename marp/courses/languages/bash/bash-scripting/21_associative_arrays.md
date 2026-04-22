@@ -184,11 +184,11 @@ while IFS='=' read -r key value; do
     # Skip comments and empty lines
     [[ "$key" =~ ^[[:space:]]*# ]] && continue
     [[ -z "$key" ]] && continue
-    # Trim whitespace
-    key="${key## }"
-    key="${key%% }"
-    value="${value## }"
-    value="${value%% }"
+    # Trim surrounding whitespace
+    key="${key#"${key%%[![:space:]]*}"}"
+    key="${key%"${key##*[![:space:]]}"}"
+    value="${value#"${value%%[![:space:]]*}"}"
+    value="${value%"${value##*[![:space:]]}"}"
     config["$key"]="$value"
 done < config.ini
 

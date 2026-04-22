@@ -3,6 +3,7 @@ tags:
   - languages:c++
   - languages:c
   - languages:c++11
+  - languages:c++17
   - concepts:oop
   - concepts:design-patterns
 level: intermediate

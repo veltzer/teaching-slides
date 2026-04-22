@@ -567,11 +567,9 @@ docker run -d --memory=512m --memory-swap=512m myapp
 # Memory reservation (soft limit)
 docker run -d --memory=1g --memory-reservation=512m myapp
 
-# Kernel memory limit
-docker run -d --kernel-memory=50m myapp
-
 # OOM score adjustment (-1000 to 1000)
 docker run -d --oom-score-adj=-500 myapp  # Less likely to be killed
+# Note: --kernel-memory was removed in Docker 20.10+ (cgroups v2)
 ```
 
 ---
@@ -794,7 +792,7 @@ services:
 ## Production Compose Template
 
 ```yaml
-version: "3.8"
+# Compose v2+ ignores the top-level version key
 services:
   web:
     image: myapp:${VERSION:-latest}

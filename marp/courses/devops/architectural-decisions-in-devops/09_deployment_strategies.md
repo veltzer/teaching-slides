@@ -184,7 +184,8 @@ spec:
 1. Increase to 50%
 1. Wait 15 minutes, check metrics
 1. Promote to 100%
-- At any step, if metrics degrade, roll back to 0%
+
+At any step, if metrics degrade, roll back to 0%.
 
 ---
 ## Canary - Automated Rollout with `Flagger`
@@ -359,7 +360,8 @@ def get_checkout_page(user, cart):
 1. **Roll out** - gradually enable for more users
 1. **Evaluate** - analyze metrics and decide on permanence
 1. **Clean up** - remove the flag and dead code path
-- Every flag should have a planned removal date in the backlog
+
+Every flag should have a planned removal date in the backlog.
 
 ---
 ## Feature Flag Lifecycle Diagram

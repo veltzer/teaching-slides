@@ -246,7 +246,7 @@ gcloud storage buckets create gs://my-bucket-name \
 
 ## AI and Machine Learning
 - AWS: SageMaker, Bedrock, Rekognition, Comprehend
-- Azure: Azure ML, OpenAI Service, Cognitive Services
+- Azure: Azure ML, OpenAI Service, AI services (formerly Cognitive Services)
 - GCP: Vertex AI, Gemini API, Vision AI, Natural Language
 - Azure has exclusive OpenAI API access
 - GCP leads in custom model training infrastructure

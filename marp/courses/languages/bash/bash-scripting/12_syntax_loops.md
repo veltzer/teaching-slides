@@ -42,8 +42,9 @@ done
 
 ```bash
 # while tests the return code of any command
+# Loop as long as ping succeeds; exit when it fails
 while ping -c 1 -W 1 server.example.com > /dev/null 2>&1; do
-    echo "Server is up"
+    echo "Server is up at $(date +%T)"
     sleep 5
 done
 echo "Server is DOWN!"

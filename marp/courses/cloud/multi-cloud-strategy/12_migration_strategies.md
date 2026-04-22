@@ -14,10 +14,6 @@ audience:
 ---
 # Migration Strategies for Multi-Cloud
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## Why Migrate to Multi-Cloud?

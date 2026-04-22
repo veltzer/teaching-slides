@@ -14,10 +14,6 @@ audience:
 ---
 # Data Sovereignty and Compliance
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## What is Data Sovereignty?

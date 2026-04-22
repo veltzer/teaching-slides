@@ -139,14 +139,14 @@ int add(int a, int b) {
 }
 ```
 
-Disassembled x86 code:
-```nasm
+Disassembled x86 code (GAS / AT&T syntax):
+```gas
 add:
-    push ebp
-    mov ebp, esp
-    mov eax, [ebp+8]  ; Load a
-    add eax, [ebp+12] ; Add b
-    pop ebp
+    pushl %ebp
+    movl %esp, %ebp
+    movl 8(%ebp), %eax    # Load a
+    addl 12(%ebp), %eax   # Add b
+    popl %ebp
     ret
 ```
 

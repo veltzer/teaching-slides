@@ -14,10 +14,6 @@ audience:
 ---
 # When Not to Go Multi-Cloud
 
-## Mark Veltzer
-
-## mark.veltzer@gmail.com
-
 ---
 
 ## The Honest Question
@@ -41,7 +37,7 @@ audience:
 ## The Lowest Common Denominator Problem
 - Abstracting across clouds means using only common features
 - You lose access to each cloud's best capabilities
-- Example: DynamoDB Streams, Azure Cognitive Services, BigQuery ML
+- Example: DynamoDB Streams, Azure AI services, BigQuery ML
 - The abstraction layer becomes your real platform
 - Innovation speed drops when you cannot use native features
 

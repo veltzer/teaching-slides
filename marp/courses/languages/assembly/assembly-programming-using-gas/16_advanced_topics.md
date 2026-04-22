@@ -16,7 +16,7 @@ audience:
 
 ## SIMD and AVX Overview
 
-![SIMD and AVX vector registers and data parallelism](svg/courses/languages/assembly/assembly-programming-using-gas/16_advanced_topis/simd_avx_overview.svg)
+![SIMD and AVX vector registers and data parallelism](svg/courses/languages/assembly/assembly-programming-using-gas/16_advanced_topics/simd_avx_overview.svg)
 
 ---
 
@@ -33,12 +33,12 @@ audience:
 - Stack-based architecture
 - 8 80-bit registers (ST0-ST7)
 
-Example:
-```nasm
-fld dword ptr [x]    ; Load x into ST0
-fld dword ptr [y]    ; Load y into ST0, push previous value to ST1
-faddp                ; Add ST0 and ST1, pop
-fstp dword ptr [z]   ; Store result in z and pop
+Example (GAS / AT&T syntax):
+```gas
+flds x            # Load x into ST0
+flds y            # Load y into ST0, push previous value to ST1
+faddp             # Add ST0 and ST1, pop
+fstps z           # Store result in z and pop
 ```
 
 ---
@@ -48,11 +48,11 @@ fstp dword ptr [z]   ; Store result in z and pop
 - SIMD (Single Instruction, Multiple Data)
 - 128-bit XMM registers (XMM0-XMM15)
 
-Example:
-```nasm
-movss xmm0, [x]      ; Move single-precision float x to xmm0
-addss xmm0, [y]      ; Add single-precision float y to xmm0
-movss [z], xmm0      ; Store result in z
+Example (GAS / AT&T syntax):
+```gas
+movss x, %xmm0       # Move single-precision float x to xmm0
+addss y, %xmm0       # Add single-precision float y to xmm0
+movss %xmm0, z       # Store result in z
 ```
 
 ---
@@ -62,11 +62,11 @@ movss [z], xmm0      ; Store result in z
 - Extended SSE capabilities
 - 256-bit YMM registers
 
-Example:
-```nasm
-vmovaps ymm0, [array1]   ; Load 8 floats from array1
-vmovaps ymm1, [array2]   ; Load 8 floats from array2
-vaddps ymm2, ymm0, ymm1  ; Add 8 pairs of floats
+Example (GAS / AT&T syntax):
+```gas
+vmovaps array1, %ymm0        # Load 8 floats from array1
+vmovaps array2, %ymm1        # Load 8 floats from array2
+vaddps %ymm0, %ymm1, %ymm2   # Add 8 pairs of floats
 vmovaps [result], ymm2   ; Store 8 float results
 ```
 
@@ -138,24 +138,24 @@ pthread_mutex_lock(&mutex);
 pthread_mutex_unlock(&mutex);
 ```
 
-In assembly:
-```nasm
-lock xadd dword ptr [mutex], eax
+In assembly (GAS / AT&T syntax):
+```gas
+lock xaddl %eax, mutex
 ```
 
 ---
 
 ## Atomic Operations
 
-Example: Atomic increment
-```nasm
-lock inc dword ptr [counter]
+Example: Atomic increment (GAS / AT&T syntax)
+```gas
+lock incl counter
 ```
 
-Example: Compare and Swap
-```nasm
-mov eax, old_value
-lock cmpxchg dword ptr [address], new_value
+Example: Compare and Swap (GAS / AT&T syntax)
+```gas
+movl old_value, %eax
+lock cmpxchgl new_value, address
 ```
 
 ---

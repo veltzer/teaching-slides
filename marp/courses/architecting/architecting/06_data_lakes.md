@@ -318,8 +318,7 @@ processed.write.format("delta") \
 ## Feature Engineering Example
 
 ```python
-from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.preprocessing import StandardScaler
+from pyspark.ml.feature import VectorAssembler, StandardScaler
 
 # Create feature pipeline
 assembler = VectorAssembler(

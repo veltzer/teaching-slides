@@ -21,8 +21,8 @@ audience:
 
 ---
 
-## Azure Active Directory
-- Identity management
+## Microsoft Entra ID
+- Identity management (formerly Azure AD)
 - Authentication
 - Authorization
 - Single sign-on
@@ -105,21 +105,21 @@ audience:
 
 ---
 
-## Azure Security Center
-- Security posture
-- Threat protection
-- Regulatory compliance
-- Resource hygiene
-- Recommendations
+## Microsoft Defender for Cloud
+- Replaces the former Azure Security Center
+- Cloud Security Posture Management (CSPM)
+- Cloud Workload Protection (CWP)
+- Regulatory compliance dashboard
+- Resource hygiene recommendations
 
 ---
 
-## Microsoft Defender for Cloud
-- Threat detection
-- Security alerts
+## Defender Capabilities
+- Threat detection and alerts
 - Investigation tools
-- Automated response
-- Integration
+- Automated response playbooks
+- Integration with Microsoft Sentinel
+- Multi-cloud (AWS, GCP) coverage
 
 ---
 

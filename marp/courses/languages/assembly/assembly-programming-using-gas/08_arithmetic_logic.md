@@ -198,7 +198,7 @@ x87 FPU instructions for floating-point arithmetic:
 
 Example:
 ```gas
-    fld dword ptr [var1]
-    fadd dword ptr [var2]
-    fstp dword ptr [result]
+    flds var1
+    fadds var2
+    fstps result
 ```

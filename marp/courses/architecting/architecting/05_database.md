@@ -430,7 +430,7 @@ def get_user(user_id):
         return json.loads(user)
 
     # Fallback to database
-    user = db.query(f"SELECT * FROM users WHERE id = {user_id}")
+    user = db.query("SELECT * FROM users WHERE id = %s", (user_id,))
     redis_client.setex(f'user:{user_id}', 3600, json.dumps(user))
     return user
 ```
