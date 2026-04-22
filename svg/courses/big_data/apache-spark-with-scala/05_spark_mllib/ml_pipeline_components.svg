@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -103,7 +103,7 @@
   <text x="140" y="139.428600448977" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.447626698444" fill="var(--primary-text)">text, numbers,</text>
   <text x="140" y="172.571467265302" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.447626698444" fill="var(--primary-text)">categoricals</text>
 
-  <line x1="240" y1="122.85722346938" x2="278" y2="122.85722346938" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="240" y1="122.85722346938" x2="278" y2="122.85722346938" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Transformer -->
   <rect x="280" y="40" width="220" height="165.714221224496" rx="6.374054245598" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -111,7 +111,7 @@
   <text x="390" y="139.428600448977" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.447626698444" fill="var(--ok-text)">df → df' (transform)</text>
   <text x="390" y="172.571467265302" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--ok-text)">Tokenizer, VectorAssembler</text>
 
-  <line x1="500" y1="122.85722346938" x2="538" y2="122.85722346938" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="500" y1="122.85722346938" x2="538" y2="122.85722346938" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Estimator -->
   <rect x="540" y="40" width="220" height="165.714221224496" rx="6.374054245598" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -119,7 +119,7 @@
   <text x="650" y="139.428600448977" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.447626698444" fill="var(--warn-text)">df → Model (fit)</text>
   <text x="650" y="172.571467265302" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--warn-text)">LogisticRegression, ALS</text>
 
-  <line x1="760" y1="122.85722346938" x2="798" y2="122.85722346938" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="122.85722346938" x2="798" y2="122.85722346938" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Model -->
   <rect x="800" y="40" width="220" height="165.714221224496" rx="6.374054245598" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -127,7 +127,7 @@
   <text x="910" y="139.428600448977" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.447626698444" fill="var(--info-text)">df → predictions</text>
   <text x="910" y="172.571467265302" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--info-text)">fitted parameters baked in</text>
 
-  <line x1="1020" y1="122.85722346938" x2="1058" y2="122.85722346938" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1020" y1="122.85722346938" x2="1058" y2="122.85722346938" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Evaluator -->
   <rect x="1060" y="40" width="180" height="165.714221224496" rx="6.374054245598" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -143,25 +143,25 @@
   <text x="170" y="421.142911959178" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.734866953343" font-weight="bold" fill="var(--ok-text)">Tokenizer</text>
   <text x="170" y="454.285778775504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--ok-text)">text → words</text>
 
-  <line x1="250" y1="429.428544020411" x2="288" y2="429.428544020411" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="250" y1="429.428544020411" x2="288" y2="429.428544020411" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="290" y="371.428555306124" width="160" height="115.999977428574" rx="6.374054245598" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="370" y="421.142911959178" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.734866953343" font-weight="bold" fill="var(--ok-text)">HashingTF</text>
   <text x="370" y="454.285778775504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--ok-text)">words → features</text>
 
-  <line x1="450" y1="429.428544020411" x2="488" y2="429.428544020411" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="429.428544020411" x2="488" y2="429.428544020411" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="490" y="371.428555306124" width="200" height="115.999977428574" rx="6.374054245598" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="590" y="421.142911959178" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.734866953343" font-weight="bold" fill="var(--ok-text)">VectorAssembler</text>
   <text x="590" y="454.285778775504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--ok-text)">combine columns</text>
 
-  <line x1="690" y1="429.428544020411" x2="728" y2="429.428544020411" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="429.428544020411" x2="728" y2="429.428544020411" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="730" y="371.428555306124" width="220" height="115.999977428574" rx="6.374054245598" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="840" y="421.142911959178" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.734866953343" font-weight="bold" fill="var(--warn-text)">LogisticRegression</text>
   <text x="840" y="454.285778775504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.160280209308" fill="var(--warn-text)">Estimator: fit</text>
 
-  <line x1="950" y1="429.428544020411" x2="988" y2="429.428544020411" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="429.428544020411" x2="988" y2="429.428544020411" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="990" y="371.428555306124" width="200" height="115.999977428574" rx="6.374054245598" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="421.142911959178" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.734866953343" font-weight="bold" fill="var(--info-text)">LRModel</text>

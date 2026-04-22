@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -124,11 +124,11 @@
   <text x="1110" y="287.46666670819" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--ok-text)" font-family="Arial, sans-serif">connect()</text>
 
   <!-- 3-way handshake -->
-  <line x1="300" y1="332.761904287347" x2="980" y2="332.761904287347" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="332.761904287347" x2="980" y2="332.761904287347" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="325.02857124468" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">SYN</text>
-  <line x1="980" y1="365.904761964082" x2="300" y2="365.904761964082" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="365.904761964082" x2="300" y2="365.904761964082" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="358.171428921415" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">SYN + ACK</text>
-  <line x1="300" y1="399.047618602721" x2="980" y2="399.047618602721" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="399.047618602721" x2="980" y2="399.047618602721" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="391.314285560054" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">ACK — connection established</text>
 
   <!-- data exchange -->
@@ -137,10 +137,10 @@
   <rect x="980" y="426.666666666667" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="458.704761590367" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--primary-text)" font-family="Arial, sans-serif">send() / recv()</text>
 
-  <line x1="980" y1="498.47619059483" x2="300" y2="498.47619059483" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="498.47619059483" x2="300" y2="498.47619059483" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="490.742857552163" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">request bytes</text>
 
-  <line x1="300" y1="537.142856846258" x2="980" y2="537.142856846258" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="537.142856846258" x2="980" y2="537.142856846258" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="529.409523803592" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">response bytes</text>
 
   <!-- close -->
@@ -149,6 +149,6 @@
   <rect x="980" y="559.238095297415" width="260" height="48.609523762068" rx="6.306459394793" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1110" y="591.276190221116" text-anchor="middle" font-size="18.919378184378" font-weight="bold" fill="var(--danger-text)" font-family="Arial, sans-serif">close()</text>
 
-  <line x1="300" y1="620" x2="980" y2="620" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="620" x2="980" y2="620" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="612.266666957333" text-anchor="middle" font-size="16.81722505278" font-style="italic" fill="var(--text-muted)" font-family="Arial, sans-serif">FIN handshake (FIN / ACK / FIN / ACK)</text>
 </svg>

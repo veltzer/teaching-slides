@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -102,9 +102,9 @@
   <text x="58.7501" y="281.6667" font-size="24.8759" fill="var(--ok-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Step 2: Run representative workload</text>
   <text x="70" y="317.9167" font-size="22.9624" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Instrumented Binary + real workload</text>
   <text x="70" y="358.1944" font-size="22.9624" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">→ writes profile data to profile_data/*.profraw</text>
-  <line x1="640" y1="176.9444" x2="640" y2="241.3889" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="176.9444" x2="640" y2="241.3889" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="483.0556" width="1200" height="136.9444" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6" filter="url(#shadow)"/>
   <text x="58.7501" y="523.3333" font-size="24.8759" fill="var(--warn-accent)" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Step 3: Rebuild with profile data</text>
   <text x="70" y="559.5833" font-size="22.9624" fill="var(--text)" text-anchor="start" font-family="Arial, sans-serif">Source + profiles  →  Optimized Binary (5–20% faster)</text>
-  <line x1="640" y1="418.6111" x2="640" y2="483.0556" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="418.6111" x2="640" y2="483.0556" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 </svg>

@@ -26,7 +26,7 @@ Elision, Bounds, Variance, and Self-Referential Structs
 
 ---
 
-## Part 1: Lifetime Elision Rules
+## Lifetime Elision Rules
 
 When you can omit lifetime annotations
 
@@ -98,7 +98,7 @@ where
 
 ---
 
-## Part 2: Lifetimes in Structs
+## Lifetimes in Structs
 
 Structs that borrow data
 
@@ -225,7 +225,7 @@ fn main() {
 
 ---
 
-## Part 3: Lifetime Bounds on Generics
+## Lifetime Bounds on Generics
 
 Constraining generic type lifetimes
 
@@ -310,7 +310,7 @@ impl Cache for StringCache {
 
 ---
 
-## Part 4: Higher-Ranked Trait Bounds
+## Higher-Ranked Trait Bounds
 
 `for<'a>` - universally quantified lifetimes
 
@@ -396,7 +396,7 @@ fn find_matching<'a, M: Matcher>(items: &'a [String], matcher: &M) -> Vec<&'a st
 
 ---
 
-## Part 5: Lifetime Variance
+## Lifetime Variance
 
 How lifetimes interact with subtyping
 
@@ -488,7 +488,7 @@ struct ContravariantWrapper<T> {
 
 ---
 
-## Part 6: Self-Referential Structs
+## Self-Referential Structs
 
 The hardest lifetime problem in Rust
 
@@ -619,7 +619,7 @@ fn main() {
 
 ---
 
-## Part 7: Common Lifetime Puzzles
+## Common Lifetime Puzzles
 
 Tricky scenarios and their solutions
 

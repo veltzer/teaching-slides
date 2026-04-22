@@ -26,7 +26,7 @@ Declarative Macros, Procedural Macros, and Metaprogramming
 
 ---
 
-## Part 1: Declarative Macros
+## Declarative Macros
 
 `macro_rules!` - pattern-based code generation
 
@@ -248,7 +248,7 @@ fn main() {
 
 ---
 
-## Part 2: Macro Hygiene
+## Macro Hygiene
 
 How Rust prevents macro name collisions
 
@@ -317,7 +317,7 @@ fn main() {
 
 ---
 
-## Part 3: Practical Declarative Macros
+## Practical Declarative Macros
 
 Real-world macro_rules! patterns
 
@@ -451,7 +451,7 @@ macro_rules! enum_dispatch {
 
 ---
 
-## Part 4: Procedural Macros
+## Procedural Macros
 
 Compile-time code generation with Rust code
 
@@ -816,7 +816,7 @@ pub fn sql(input: TokenStream) -> TokenStream {
 
 ---
 
-## Part 5: Real-World Macro Examples
+## Real-World Macro Examples
 
 Patterns from popular crates
 
@@ -936,7 +936,7 @@ fn main() {
 
 ---
 
-## Part 6: When to Use Macros vs Generics
+## When to Use Macros vs Generics
 
 Choosing the right abstraction
 

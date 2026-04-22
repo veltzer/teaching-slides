@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -103,7 +103,7 @@
   <text x="135.575221" y="304.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--primary-accent)">s3:GetObject</text>
 
   <!-- Arrow to first diamond -->
-  <line x1="231.150442" y1="284.210526" x2="316.106195" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="231.150442" y1="284.210526" x2="316.106195" y2="284.210526" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Decision Diamond 1: Explicit Deny -->
   <polygon points="443.539823,202.807018 560.353982,284.210526 443.539823,365.614035 326.725664,284.210526" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2.5"/>
@@ -119,7 +119,7 @@
   <text x="443.539823" y="523.333277" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--danger-accent)">Explicit Deny</text>
 
   <!-- No from Diamond 1 -> Diamond 2 -->
-  <line x1="560.353982" y1="284.210526" x2="645.309735" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560.353982" y1="284.210526" x2="645.309735" y2="284.210526" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="602.831858" y="272" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--ok-accent)">NO</text>
 
   <!-- Decision Diamond 2: SCP Deny -->
@@ -136,7 +136,7 @@
   <text x="772.743363" y="523.333277" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.474088" fill="var(--danger-accent)">SCP Deny</text>
 
   <!-- Yes from Diamond 2 -> Diamond 3 -->
-  <line x1="889.557522" y1="284.210526" x2="963.893805" y2="284.210526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="889.557522" y1="284.210526" x2="963.893805" y2="284.210526" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="926.725664" y="272" font-family="Arial, sans-serif" font-size="14.553121" font-weight="bold" fill="var(--ok-accent)">YES</text>
 
   <!-- Decision Diamond 3: Any Allow -->

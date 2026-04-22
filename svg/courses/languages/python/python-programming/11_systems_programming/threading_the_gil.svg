@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -99,7 +99,7 @@
   <text x="207.213129" y="157.966161615399" font-size="27.533248665581" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">CPU-bound task</text>
   <text x="207.213129" y="197.288174814881" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Heavy computation</text>
   <text x="207.213129" y="224.813657158588" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Number crunching</text>
-  <line x1="374.426259" y1="143.220314489744" x2="423.606591" y2="143.220314489744" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="374.426259" y1="143.220314489744" x2="423.606591" y2="143.220314489744" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="427.541017" y="40" width="393.442657" height="206.440752057456" rx="6.78916909739" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="624.262346" y="143.220314489744" font-size="25.566539633943" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">multiprocessing</text>
   <text x="624.262346" y="177.627289701582" font-size="16.716631742154" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Bypasses GIL entirely</text>
@@ -107,7 +107,7 @@
   <rect x="40" y="295.59332930003" width="334.426259" height="206.440752057456" rx="6.78916909739" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="207.213129" y="408.644086876932" font-size="27.533248665581" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">I/O-bound task</text>
   <text x="207.213129" y="447.966222093365" font-size="17.699929089822" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Network, disk, DB</text>
-  <line x1="374.426259" y1="398.813766867741" x2="423.606591" y2="398.813766867741" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="374.426259" y1="398.813766867741" x2="423.606591" y2="398.813766867741" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="427.541017" y="295.59332930003" width="570.491853" height="206.440752057456" rx="6.78916909739" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="712.786944" y="398.813766867741" font-size="25.566539633943" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">threading  or  asyncio</text>
   <text x="712.786944" y="433.220498045678" font-size="16.716631742154" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">GIL released during I/O waits</text>

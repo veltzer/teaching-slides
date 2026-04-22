@@ -28,7 +28,7 @@ Channels, Shared State, Data Parallelism, and Advanced Patterns
 - Actor pattern with channels
 
 ---
-## Part 1: Channels
+## Channels
 
 Message passing for safe concurrency
 
@@ -226,7 +226,7 @@ fn main() {
 ![channel_patterns_fan_out_fan_in](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/channel_patterns_fan_out_fan_in.svg)
 
 ---
-## Part 2: Shared State
+## Shared State
 
 Mutex, RwLock, and Atomics
 
@@ -467,7 +467,7 @@ fn main() {
 ```
 
 ---
-## Part 3: Lock-Free Data Structures
+## Lock-Free Data Structures
 
 An introduction to lock-free programming
 
@@ -597,7 +597,7 @@ fn main() {
 ![rayon_work_stealing](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/rayon_work_stealing.svg)
 
 ---
-## Part 4: Rayon for Data Parallelism
+## Rayon for Data Parallelism
 
 Effortless parallel iterators
 
@@ -758,7 +758,7 @@ fn main() {
 ```
 
 ---
-## Part 5: Arc Patterns
+## Arc Patterns
 
 Sharing ownership across threads
 
@@ -872,7 +872,7 @@ fn main() {
 ```
 
 ---
-## Part 6: Deadlock Prevention
+## Deadlock Prevention
 
 Strategies to avoid deadlocks
 
@@ -1039,7 +1039,7 @@ fn main() {
 ![concurrent_data_structures](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/concurrent_data_structures.svg)
 
 ---
-## Part 7: Concurrent Collections
+## Concurrent Collections
 
 DashMap and friends
 
@@ -1118,7 +1118,7 @@ fn main() {
 ![dashmap_vs_mutex](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/dashmap_vs_mutex.svg)
 
 ---
-## Part 8: Thread Pools
+## Thread Pools
 
 Managing threads efficiently
 
@@ -1220,7 +1220,7 @@ fn main() {
 ```
 
 ---
-## Part 9: Scoped Threads
+## Scoped Threads
 
 Borrowing stack data in threads
 
@@ -1305,7 +1305,7 @@ fn main() {
 ![scoped_threads_vs_regular_threads](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/scoped_threads_vs_regular_threads.svg)
 
 ---
-## Part 10: Actor Pattern
+## Actor Pattern
 
 Message-driven concurrency
 

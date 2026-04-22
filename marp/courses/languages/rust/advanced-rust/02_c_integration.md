@@ -33,7 +33,7 @@ FFI, Bindgen, and `#![no_std]`
 
 ---
 
-## Part 1: Calling Rust from C
+## Calling Rust from C
 
 Exposing Rust APIs to C code
 
@@ -283,7 +283,7 @@ Never let panics cross FFI boundaries!
 
 ---
 
-## Part 2: Calling C from Rust
+## Calling C from Rust
 
 Using C libraries in Rust
 
@@ -525,7 +525,7 @@ target_link_libraries(myapp
 
 ---
 
-## Part 3: `#![no_std]` Programming
+## `#![no_std]` Programming
 
 Rust without the standard library
 

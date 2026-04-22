@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -102,7 +102,7 @@
   <text x="110" y="78.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.715071638743" font-weight="bold" fill="var(--text)">Requester</text>
   <text x="110" y="106.285714285715" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.56184200187" fill="var(--text-muted)">user / pod / SA</text>
 
-  <line x1="180" y1="84.190476190476" x2="215" y2="84.190476190476" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="180" y1="84.190476190476" x2="215" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 1. Authentication -->
   <rect x="220" y="40" width="200" height="309.333333333334" rx="6.306459273747" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -116,7 +116,7 @@
   <text x="320" y="305.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.612918547494" fill="var(--primary-text)">→ username</text>
   <text x="320" y="330.552380952381" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.56184200187" fill="var(--primary-text)">401 if bad</text>
 
-  <line x1="420" y1="84.190476190476" x2="455" y2="84.190476190476" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="84.190476190476" x2="455" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 2. Authorization -->
   <rect x="460" y="40" width="210" height="309.333333333334" rx="6.306459273747" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -129,7 +129,7 @@
   <text x="565" y="305.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.612918547494" fill="var(--ok-text)">→ allow / deny</text>
   <text x="565" y="330.552380952381" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.56184200187" fill="var(--ok-text)">403 if denied</text>
 
-  <line x1="670" y1="84.190476190476" x2="705" y2="84.190476190476" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="670" y1="84.190476190476" x2="705" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 3. Admission Control -->
   <rect x="710" y="40" width="240" height="309.333333333334" rx="6.306459273747" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -143,7 +143,7 @@
   <text x="730" y="294.095238095239" font-family="Arial, sans-serif" font-size="12.612918547494" fill="var(--warn-text)">OPA / Kyverno</text>
   <text x="830" y="330.552380952381" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.56184200187" fill="var(--warn-text)">400/422 if rejected</text>
 
-  <line x1="950" y1="84.190476190476" x2="985" y2="84.190476190476" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="84.190476190476" x2="985" y2="84.190476190476" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 4. etcd -->
   <rect x="990" y="40" width="250" height="309.333333333334" rx="6.306459273747" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>

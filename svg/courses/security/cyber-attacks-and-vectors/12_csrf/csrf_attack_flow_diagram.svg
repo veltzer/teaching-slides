@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -99,17 +99,17 @@
   <text x="40" y="79.14111404268" font-size="23.844331853075" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">1. Victim logs into bank.com (session cookie set)</text>
   <rect x="40" y="93.374194832329" width="212.903217351716" height="64.049033798795" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.544916813521" filter="url(#shadow)"/>
   <text x="146.451661095217" y="134.294600031975" font-size="22.010118916085" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Victim Browser</text>
-  <line x1="252.903217351716" y1="125.398938725559" x2="283.870897060349" y2="125.398938725559" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="252.903217351716" y1="125.398938725559" x2="283.870897060349" y2="125.398938725559" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="287.741857023928" y="93.374194832329" width="232.258122008329" height="64.049033798795" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.544916813521" filter="url(#shadow)"/>
   <text x="403.870970447451" y="134.294600031975" font-size="22.010118916085" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">bank.com</text>
-  <line x1="520.000083870974" y1="125.398938725559" x2="550.967763579606" y2="125.398938725559" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="520.000083870974" y1="125.398938725559" x2="550.967763579606" y2="125.398938725559" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="554.838723543185" y="93.374194832329" width="387.096730228925" height="64.049033798795" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.544916813521" filter="url(#shadow)"/>
   <text x="748.387036238289" y="123.619761065509" font-size="22.010118916085" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Set-Cookie: sid=abc</text>
   <text x="748.387036238289" y="146.748503161574" font-size="20.175905979096" fill="var(--ok-accent)" text-anchor="middle" font-family="Arial, sans-serif">(session established)</text>
   <text x="40" y="203.681053314002" font-size="23.844331853075" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">2. Victim visits evil.com (attacker's site)</text>
   <rect x="40" y="217.914134103651" width="212.903217351716" height="64.049033798795" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.544916813521" filter="url(#shadow)"/>
   <text x="146.451661095217" y="258.834425806381" font-size="22.010118916085" fill="var(--text)" text-anchor="middle" font-family="Arial, sans-serif">Victim Browser</text>
-  <line x1="252.903217351716" y1="249.938764499965" x2="283.870897060349" y2="249.938764499965" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="252.903217351716" y1="249.938764499965" x2="283.870897060349" y2="249.938764499965" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="287.741857023928" y="217.914134103651" width="270.967826482837" height="64.049033798795" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.544916813521" filter="url(#shadow)"/>
   <text x="423.225770265346" y="249.938764499965" font-size="22.010118916085" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">evil.com</text>
   <text x="423.225770265346" y="271.28832893598" font-size="20.175905979096" fill="var(--danger-accent)" text-anchor="middle" font-family="Arial, sans-serif">(serves hidden form)</text>

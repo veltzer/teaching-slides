@@ -20,7 +20,10 @@ Defaults match rsconstruct's pdfunite processor defaults:
 
 import argparse
 import json
+import os
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -231,6 +234,49 @@ def make_options(values: list[str]) -> str:
     return "\n".join(f'<option value="{v}">{v}</option>' for v in sorted(set(values)) if v)
 
 
+def _git(*args: str) -> str:
+    """Run git and return stripped output, or '' on failure."""
+    try:
+        return subprocess.check_output(
+            ["git", *args], stderr=subprocess.DEVNULL, text=True
+        ).strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return ""
+
+
+def build_info_html() -> str:
+    """Render a "built from commit X on date Y (workflow link)" footer line.
+
+    Values come from env vars set by CI (GITHUB_SHA, GITHUB_RUN_ID,
+    GITHUB_SERVER_URL, GITHUB_REPOSITORY) and fall back to local `git` for
+    developer builds.
+    """
+    sha = os.environ.get("GITHUB_SHA", "") or _git("rev-parse", "HEAD")
+    sha_short = sha[:12] if sha else "unknown"
+
+    build_date = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    run_id = os.environ.get("GITHUB_RUN_ID", "")
+    server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if run_id and repo:
+        run_link = (
+            f'<a href="{server}/{repo}/actions/runs/{run_id}" '
+            f'rel="noopener">run #{run_id}</a>'
+        )
+    else:
+        run_link = "local build"
+
+    commit_link = sha_short
+    if sha and repo:
+        commit_link = f'<a href="{server}/{repo}/commit/{sha}" rel="noopener">{sha_short}</a>'
+
+    return (
+        f'<p class="build-info">Built from <code>{commit_link}</code> on '
+        f'{build_date} &middot; {run_link}</p>'
+    )
+
+
 def generate_index(entries: list[dict[str, Any]]) -> str:
     """Generate the self-contained HTML index page."""
     css = (RESOURCES_DIR / "courses_index.css").read_text(encoding="utf-8")
@@ -253,6 +299,7 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
         .replace("{{TYPE_OPTIONS}}", make_options(types))
         .replace("{{TAG_OPTIONS}}", make_options(tags))
         .replace("{{AUDIENCE_OPTIONS}}", make_options(audiences))
+        .replace("{{BUILD_INFO}}", build_info_html())
     )
 
 

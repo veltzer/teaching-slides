@@ -27,7 +27,7 @@ Raw Pointers, Interior Mutability, Memory Layout, and Soundness
 
 ---
 
-## Part 1: Unsafe Superpowers
+## Unsafe Superpowers
 
 What unsafe unlocks
 
@@ -115,7 +115,7 @@ fn safe_wrapper(data: &[u8]) -> &[u8] {
 
 ---
 
-## Part 2: Raw Pointers
+## Raw Pointers
 
 `*const T` and `*mut T`
 
@@ -283,7 +283,7 @@ impl<T> Drop for RingBuffer<T> {
 
 ---
 
-## Part 3: Unsafe Functions and Traits
+## Unsafe Functions and Traits
 
 Documenting and enforcing safety contracts
 
@@ -353,7 +353,7 @@ fn allocate_zeroed<T: ZeroInit>() -> T {
 
 ---
 
-## Part 4: Interior Mutability
+## Interior Mutability
 
 Mutating data behind shared references
 
@@ -492,7 +492,7 @@ impl<T: Copy> MyCell<T> {
 
 ---
 
-## Part 5: Memory Layout and repr
+## Memory Layout and repr
 
 Controlling how types are laid out in memory
 
@@ -615,7 +615,7 @@ fn main() {
 
 ---
 
-## Part 6: transmute
+## transmute
 
 Type punning and raw conversions
 
@@ -680,7 +680,7 @@ fn main() {
 
 ---
 
-## Part 7: Unions
+## Unions
 
 C-compatible untagged unions
 
@@ -796,7 +796,7 @@ impl StringOrVec {
 
 ---
 
-## Part 8: Soundness and Safety Invariants
+## Soundness and Safety Invariants
 
 Writing correct unsafe code
 

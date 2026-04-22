@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -99,7 +99,7 @@
   <rect x="453.793103" y="40" width="331.034483" height="58.48739" rx="6.536703" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="619.310345" y="77.042013" font-family="Arial, sans-serif" font-size="20.08391" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Assess Workload</text>
   <!-- Arrow down -->
-  <line x1="619.310345" y1="98.48739" x2="619.310345" y2="147.226881" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="619.310345" y1="98.48739" x2="619.310345" y2="147.226881" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <!-- Decision 1: Cloud-specific dependencies? -->
   <polygon points="619.310345,147.226881 826.206897,225.210067 619.310345,303.193253 412.413793,225.210067" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="619.310345" y="215.462169" font-family="Arial, sans-serif" font-size="16.067106" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Cloud-specific</text>
@@ -111,7 +111,7 @@
   <text x="1126.206897" y="223.260487" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Stay</text>
   <text x="1126.206897" y="246.655443" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Keep on current cloud</text>
   <!-- Low -> next decision -->
-  <line x1="619.310345" y1="303.193253" x2="619.310345" y2="351.932744" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="619.310345" y1="303.193253" x2="619.310345" y2="351.932744" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="645.172414" y="332.436948" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--ok-accent)">Low</text>
   <!-- Decision 2: Performance sensitive? -->
   <polygon points="619.310345,351.932744 826.206897,429.91593 619.310345,507.899116 412.413793,429.91593" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
@@ -124,7 +124,7 @@
   <text x="1126.206897" y="427.966351" font-family="Arial, sans-serif" font-size="18.075508" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Replatform</text>
   <text x="1126.206897" y="451.361306" font-family="Arial, sans-serif" font-size="13.054558" fill="var(--text-faint)" text-anchor="middle">Adapt to target platform</text>
   <!-- No -> next decision -->
-  <line x1="412.413793" y1="429.91593" x2="288.275862" y2="429.91593" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="412.413793" y1="429.91593" x2="288.275862" y2="429.91593" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="350.344828" y="420.168032" font-family="Arial, sans-serif" font-size="15.062851" font-weight="bold" fill="var(--ok-accent)">No</text>
   <!-- Decision 3: Standard workload? -->
   <polygon points="164.137931,351.932744 288.275862,429.91593 164.137931,507.899116 40,429.91593" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>

@@ -16,6 +16,7 @@ Checks:
   --svg-content Check that slides with SVG images have no other content on the same slide
   --inline-svg  Flag inline <svg>...</svg> elements in markdown (forbidden — SVGs must be external files)
   --title-svg   Check that every 00_title.md has a corresponding svg/.../title.svg
+  --title-count Enforce "one title per unit": each course has exactly one 00_title.md with one H1; each lecture has exactly one H1; non-title chapters have no H1
   --table-width Flag markdown tables with more than MAX_TABLE_COLUMNS columns
   --slide-length Flag slides with more than MAX_SLIDE_LINES non-blank body lines
 
@@ -402,6 +403,61 @@ def _check_inline_svg(path: Path, text: str, text_no_code: str, lines: list[str]
     return errors
 
 
+def _check_title_count(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    """Enforce "one title per unit":
+      - Every course must have exactly one 00_title.md.
+      - Every course 00_title.md must contain exactly one `# Title` H1.
+      - Every lecture file must have exactly one `# Title` H1 at its top (inside
+        the first slide, before the first `---` separator).
+
+    Chapter-divider slides (`# Chapter`) inside non-title chapters are permitted
+    (they are a legitimate pattern for section breaks).
+
+    Code-fence contents are stripped so `# comment` in shell code doesn't count.
+    """
+    parts = path.parts
+    if len(parts) < 3 or parts[0] != "marp":
+        return []
+
+    errors: list[str] = []
+
+    # Strip YAML frontmatter (starts with --- on first line, ends with --- alone)
+    body = text_no_code
+    if body.startswith('---\n') or body.startswith('---\r\n'):
+        m = re.match(r'^---\s*\n.*?\n---\s*\n', body, re.DOTALL)
+        if m:
+            body = body[m.end():]
+
+    # First-slide H1: find H1s before the first `---` separator (slide break)
+    first_slide = re.split(r'^---\s*$', body, maxsplit=1, flags=re.MULTILINE)[0]
+    first_slide_h1_count = len(re.findall(r'^# [^#\n]', first_slide, re.MULTILINE))
+
+    # Course 00_title.md
+    if parts[1] == "courses" and path.name == "00_title.md":
+        if first_slide_h1_count != 1:
+            errors.append(
+                f"{path}: 00_title.md first slide must have exactly 1 H1, "
+                f"found {first_slide_h1_count}"
+            )
+        course_dir = path.parent
+        titles = list(course_dir.glob('00_title*.md'))
+        if len(titles) != 1:
+            errors.append(f"{course_dir}: expected exactly 1 00_title*.md file, "
+                          f"found {len(titles)}")
+        return errors
+
+    # Lecture file: first slide needs exactly one H1
+    if parts[1] == "lectures" and path.suffix == ".md":
+        if first_slide_h1_count != 1:
+            errors.append(
+                f"{path}: lecture first slide must have exactly 1 H1 title, "
+                f"found {first_slide_h1_count}"
+            )
+        return errors
+
+    return errors
+
+
 def _check_title_svg(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     """Check that every course/lecture has a corresponding svg/.../title.svg.
 
@@ -475,6 +531,8 @@ def main() -> None:
                         help='Flag inline <svg>...</svg> elements in markdown (SVGs must be external files)')
     parser.add_argument('--title-svg', action='store_true', dest='title_svg',
                         help='Check that every 00_title.md has a corresponding svg/.../title.svg')
+    parser.add_argument('--title-count', action='store_true', dest='title_count',
+                        help='Check "one title per unit": each 00_title.md and each lecture has exactly one `# Title`; non-title chapters have none')
     parser.add_argument('--table-width', action='store_true', dest='table_width',
                         help=f'Flag tables with more than {MAX_TABLE_COLUMNS} columns')
     parser.add_argument('--slide-length', action='store_true', dest='slide_length',
@@ -486,7 +544,7 @@ def main() -> None:
              args.whitespace, args.slides, args.dead_slides,
              args.images, args.numbering,
              args.svg_content, args.inline_svg, args.title_svg,
-             args.table_width, args.slide_length]
+             args.title_count, args.table_width, args.slide_length]
     explicit = any(flags)
     checks = []
     if args.links or not explicit:
@@ -513,6 +571,8 @@ def main() -> None:
         checks.append(_check_inline_svg)
     if args.title_svg or not explicit:
         checks.append(_check_title_svg)
+    if args.title_count or not explicit:
+        checks.append(_check_title_count)
     if args.table_width or not explicit:
         checks.append(_check_table_width)
     if args.slide_length or not explicit:

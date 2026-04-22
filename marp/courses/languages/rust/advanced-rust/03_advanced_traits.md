@@ -26,7 +26,7 @@ Trait Objects, Generics, Associated Types, and Dispatch
 
 ---
 
-## Part 1: Static Dispatch vs Dynamic Dispatch
+## Static Dispatch vs Dynamic Dispatch
 
 Monomorphization vs vtables
 
@@ -237,7 +237,7 @@ fn main() {
 
 ---
 
-## Part 2: Associated Types
+## Associated Types
 
 Type placeholders in trait definitions
 
@@ -389,7 +389,7 @@ impl<'w, T> LendingIterator for WindowsMut<'w, T> {
 
 ---
 
-## Part 3: Supertraits
+## Supertraits
 
 Trait inheritance hierarchies
 
@@ -486,7 +486,7 @@ No ambiguity - Rust uses explicit trait names for disambiguation.
 
 ---
 
-## Part 4: Marker Traits
+## Marker Traits
 
 `Send`, `Sync`, `Sized`, and `Unpin`
 
@@ -670,7 +670,7 @@ fn pin_example(pinned: Pin<&mut SelfRef>) {
 
 ---
 
-## Part 5: Orphan Rule and Coherence
+## Orphan Rule and Coherence
 
 Preventing conflicting trait implementations
 
@@ -766,7 +766,7 @@ impl<T: std::fmt::Display> Process for T {
 
 ---
 
-## Part 6: Blanket Implementations
+## Blanket Implementations
 
 Implementing traits for broad categories of types
 
@@ -883,7 +883,7 @@ fn main() {
 
 ---
 
-## Part 7: Advanced Trait Patterns
+## Advanced Trait Patterns
 
 Real-world patterns and idioms
 

@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -101,38 +101,38 @@
   <rect x="40" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="108.852459" y="86.136436" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.941403" font-weight="bold" fill="var(--primary-accent)">Code Repo</text>
   <text x="108.852459" y="112.500073" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-muted)">Git Push</text>
-  <line x1="177.704918" y1="92.727273" x2="207.213115" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="177.704918" y1="92.727273" x2="207.213115" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="108.852459" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">CodeCommit</text>
   <text x="108.852459" y="217.954618" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">GitHub</text>
   <!-- Stage 2: Build -->
   <rect x="217.04918" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="285.901639" y="86.136436" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.941403" font-weight="bold" fill="var(--warn-accent)">Build</text>
   <text x="285.901639" y="112.500073" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-muted)">Compile, Package</text>
-  <line x1="354.754098" y1="92.727273" x2="384.262295" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="354.754098" y1="92.727273" x2="384.262295" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="285.901639" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 3: Unit Tests -->
   <rect x="394.098361" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="462.95082" y="86.136436" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.941403" font-weight="bold" fill="var(--info-accent)">Unit Tests</text>
   <text x="462.95082" y="112.500073" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-muted)">Automated</text>
-  <line x1="531.803279" y1="92.727273" x2="561.311475" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="531.803279" y1="92.727273" x2="561.311475" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="462.95082" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 4: Stage Deploy -->
   <rect x="571.147541" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="79.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--ok-accent)">Stage</text>
   <text x="640" y="105.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--ok-accent)">Deploy</text>
-  <line x1="708.852459" y1="92.727273" x2="738.360656" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="708.852459" y1="92.727273" x2="738.360656" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="640" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">CodeDeploy</text>
   <!-- Stage 5: Integration Tests -->
   <rect x="748.196721" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="817.04918" y="79.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--info-accent)">Integration</text>
   <text x="817.04918" y="105.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--info-accent)">Tests</text>
-  <line x1="885.901639" y1="92.727273" x2="915.409836" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="885.901639" y1="92.727273" x2="915.409836" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="817.04918" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 6: Approval Gate -->
   <rect x="925.245902" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="994.098361" y="79.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--warn-accent)">Approval</text>
   <text x="994.098361" y="105.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.802784" font-weight="bold" fill="var(--warn-accent)">Gate</text>
-  <line x1="1062.95082" y1="92.727273" x2="1092.459016" y2="92.727273" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1062.95082" y1="92.727273" x2="1092.459016" y2="92.727273" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="994.098361" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.525423" fill="var(--text-faint)">Manual/Auto</text>
   <!-- Stage 7: Prod Deploy -->
   <rect x="1102.295082" y="40" width="137.704918" height="105.454545" rx="7.412078" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>

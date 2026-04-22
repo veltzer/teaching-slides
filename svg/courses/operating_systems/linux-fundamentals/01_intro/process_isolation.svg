@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -110,15 +110,15 @@
   <text x="942" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Cannot see A's file descriptors</text>
   <text x="942" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Cannot access A's memory</text>
 
-  <line x1="337" y1="270" x2="337" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="942" y1="270" x2="942" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="337" y1="270" x2="337" y2="310" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="942" y1="270" x2="942" y2="310" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="40" y="320" width="1200" height="140" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Kernel enforces isolation</text>
   <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Page tables per process, syscalls gate every resource access</text>
   <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">MMU traps invalid addresses into SIGSEGV</text>
 
-  <line x1="640" y1="470" x2="640" y2="510" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="470" x2="640" y2="510" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="40" y="520" width="1200" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Physical RAM</text>

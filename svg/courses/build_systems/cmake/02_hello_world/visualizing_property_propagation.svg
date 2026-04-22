@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -104,7 +104,7 @@
   <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">PUBLIC include/</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">PUBLIC -DUSE_MYLIB</text>
 
-  <line x1="640" y1="270" x2="640" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="270" x2="640" y2="350" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="660" y="315" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">target_link_libraries(app PUBLIC mylib)</text>
 
   <rect x="340" y="360" width="600" height="130" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -112,7 +112,7 @@
   <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">inherits include/ path</text>
   <text x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">inherits -DUSE_MYLIB</text>
 
-  <line x1="640" y1="490" x2="640" y2="570" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="490" x2="640" y2="570" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="660" y="535" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">target_link_libraries(test_app PUBLIC app)</text>
 
   <rect x="40" y="580" width="1200" height="40" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>

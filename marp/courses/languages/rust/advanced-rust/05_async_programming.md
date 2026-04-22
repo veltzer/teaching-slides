@@ -28,7 +28,7 @@ Futures, async/await, Tokio, Streams, and Patterns
 
 ---
 
-## Part 1: The Future Trait
+## The Future Trait
 
 The foundation of async Rust
 
@@ -167,7 +167,7 @@ impl TimerFuture {
 
 ---
 
-## Part 2: async/await Desugaring
+## async/await Desugaring
 
 What the compiler generates
 
@@ -239,7 +239,7 @@ async fn main() {
 
 ---
 
-## Part 3: Pin and Unpin
+## Pin and Unpin
 
 Why async needs pinning
 
@@ -335,7 +335,7 @@ async fn main() {
 
 ---
 
-## Part 4: Tokio Runtime Internals
+## Tokio Runtime Internals
 
 How the async executor works
 
@@ -408,7 +408,7 @@ async fn main() {
 
 ---
 
-## Part 5: Async I/O Patterns
+## Async I/O Patterns
 
 Real-world async programming
 
@@ -568,7 +568,7 @@ async fn do_work(id: usize) {
 
 ---
 
-## Part 6: Streams
+## Streams
 
 Async iterators
 
@@ -688,7 +688,7 @@ async fn main() {
 
 ---
 
-## Part 7: select! and join!
+## select! and join!
 
 Combining multiple futures
 
@@ -821,7 +821,7 @@ async fn main() {
 
 ---
 
-## Part 8: Cancellation Safety
+## Cancellation Safety
 
 A critical concern with select!
 
@@ -899,7 +899,7 @@ impl MessageCollector {
 
 ---
 
-## Part 9: Async Traits
+## Async Traits
 
 Using async in trait definitions
 
@@ -1005,7 +1005,7 @@ impl LocalService for LocalState {
 
 ---
 
-## Part 10: Common Async Pitfalls
+## Common Async Pitfalls
 
 Mistakes and how to avoid them
 

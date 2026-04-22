@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -113,7 +113,7 @@
   <text x="236.875" y="140.707395" font-size="13.089788" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">class Foo(Base):</text>
   <text x="236.875" y="157.491961" font-size="11.219804" fill="var(--primary-accent)" text-anchor="middle" font-family="Arial, sans-serif">class statement seen</text>
 
-  <line x1="236.875" y1="166.81672" x2="236.875" y2="191.061093" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="166.81672" x2="236.875" y2="191.061093" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 2 -->
   <rect x="96.25" y="191.061093" width="281.25" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -126,35 +126,35 @@
   <text x="485.3125" y="225.562752" font-size="10.143663" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">class Foo(metaclass=Meta)</text>
   <line x1="405.625" y1="213.440514" x2="377.5" y2="213.440514" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
 
-  <line x1="236.875" y1="235.819936" x2="236.875" y2="260.064309" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="235.819936" x2="236.875" y2="260.064309" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 3 -->
   <rect x="96.25" y="260.064309" width="281.25" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="236.875" y="279.646251" font-size="12.154847" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">metaclass.__prepare__(name, bases)</text>
   <text x="236.875" y="295.498392" font-size="10.284862" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">returns namespace dict</text>
 
-  <line x1="236.875" y1="304.823151" x2="236.875" y2="329.067524" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="304.823151" x2="236.875" y2="329.067524" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 4 -->
   <rect x="96.25" y="329.067524" width="281.25" height="44.758842" rx="6.086198" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="236.875" y="348.649569" font-size="12.154847" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">exec(class body)</text>
   <text x="236.875" y="364.501608" font-size="10.284862" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">populates namespace</text>
 
-  <line x1="236.875" y1="373.826367" x2="236.875" y2="398.07074" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="373.826367" x2="236.875" y2="398.07074" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 5 -->
   <rect x="96.25" y="398.07074" width="281.25" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="236.875" y="417.652682" font-size="12.154847" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">metaclass.__new__(mcs, name,</text>
   <text x="236.875" y="433.504823" font-size="12.154847" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">  bases, namespace)</text>
 
-  <line x1="236.875" y1="442.829582" x2="236.875" y2="467.073955" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="442.829582" x2="236.875" y2="467.073955" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step 6 -->
   <rect x="96.25" y="467.073955" width="281.25" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="236.875" y="486.656" font-size="12.154847" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">metaclass.__init__(cls, name,</text>
   <text x="236.875" y="502.508039" font-size="12.154847" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle" font-family="Courier New, monospace">  bases, namespace)</text>
 
-  <line x1="236.875" y1="511.832797" x2="236.875" y2="536.07717" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="511.832797" x2="236.875" y2="536.07717" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Result: class object -->
   <rect x="115" y="536.07717" width="243.75" height="41.028939" rx="6.086198" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -168,28 +168,28 @@
   <text x="846.25" y="140.707395" font-size="14.024729" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Courier New, monospace">Foo(arg1, arg2)</text>
   <text x="846.25" y="157.491961" font-size="11.219804" fill="var(--surface)" text-anchor="middle" font-family="Arial, sans-serif">call the class</text>
 
-  <line x1="846.25" y1="166.81672" x2="846.25" y2="191.061093" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="166.81672" x2="846.25" y2="191.061093" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step B -->
   <rect x="715" y="191.061093" width="262.5" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="846.25" y="210.643138" font-size="12.154847" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">type.__call__(cls, *args)</text>
   <text x="846.25" y="226.495177" font-size="10.284862" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">orchestrates creation</text>
 
-  <line x1="846.25" y1="235.819936" x2="846.25" y2="260.064309" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="235.819936" x2="846.25" y2="260.064309" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step C -->
   <rect x="715" y="260.064309" width="262.5" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="846.25" y="279.646251" font-size="12.154847" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">Foo.__new__(cls, *args)</text>
   <text x="846.25" y="295.498392" font-size="10.284862" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">allocates raw instance</text>
 
-  <line x1="846.25" y1="304.823151" x2="846.25" y2="329.067524" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="304.823151" x2="846.25" y2="329.067524" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Step D -->
   <rect x="715" y="329.067524" width="262.5" height="44.758842" rx="6.086198" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="846.25" y="348.649569" font-size="12.154847" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle" font-family="Courier New, monospace">Foo.__init__(self, *args)</text>
   <text x="846.25" y="364.501608" font-size="10.284862" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">init attributes</text>
 
-  <line x1="846.25" y1="373.826367" x2="846.25" y2="398.07074" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="373.826367" x2="846.25" y2="398.07074" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- Result: instance -->
   <rect x="733.75" y="398.07074" width="225" height="41.028939" rx="6.086198" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>

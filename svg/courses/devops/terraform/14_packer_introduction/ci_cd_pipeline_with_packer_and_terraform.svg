@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -97,25 +97,25 @@
   </defs>
   <rect x="40" y="40" width="1200" height="64.444526" rx="7.020966" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="77.309895" text-anchor="middle" font-size="18.304244" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">1. Code Change</text>
-  <line x1="640" y1="104.444526" x2="640" y2="121.403579" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="104.444526" x2="640" y2="121.403579" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="121.403579" width="1200" height="64.444526" rx="7.020966" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="158.713474" text-anchor="middle" font-size="18.304244" fill="var(--primary-accent)" font-weight="bold" font-family="Arial, sans-serif">2. Build Application</text>
-  <line x1="640" y1="185.848" x2="640" y2="202.807053" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="185.848" x2="640" y2="202.807053" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="202.807053" width="1200" height="78.011684" rx="7.020966" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="235.877263" text-anchor="middle" font-size="18.304244" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">3. Packer Build</text>
   <text x="640" y="262.163789" text-anchor="middle" font-size="15.253517" fill="var(--text-muted)" font-family="Arial, sans-serif">(create AMI with app)</text>
-  <line x1="640" y1="280.818737" x2="640" y2="297.777895" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="280.818737" x2="640" y2="297.777895" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="297.777895" width="1200" height="78.011684" rx="7.020966" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="330.848" text-anchor="middle" font-size="18.304244" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">4. Terraform Plan</text>
   <text x="640" y="357.134526" text-anchor="middle" font-size="15.253517" fill="var(--text-muted)" font-family="Arial, sans-serif">(reference new AMI)</text>
-  <line x1="640" y1="375.789474" x2="640" y2="392.748526" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="375.789474" x2="640" y2="392.748526" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="392.748526" width="1200" height="78.011684" rx="7.020966" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="425.818737" text-anchor="middle" font-size="18.304244" fill="var(--warn-accent)" font-weight="bold" font-family="Arial, sans-serif">5. Terraform Apply</text>
   <text x="640" y="452.105263" text-anchor="middle" font-size="15.253517" fill="var(--text-muted)" font-family="Arial, sans-serif">(deploy new instances)</text>
-  <line x1="640" y1="470.760316" x2="640" y2="487.719368" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="470.760316" x2="640" y2="487.719368" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="487.719368" width="1200" height="64.444526" rx="7.020966" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="525.029263" text-anchor="middle" font-size="18.304244" fill="var(--info-accent)" font-weight="bold" font-family="Arial, sans-serif">6. Health Check / Smoke Test</text>
-  <line x1="640" y1="552.163789" x2="640" y2="569.122842" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="552.163789" x2="640" y2="569.122842" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="569.122842" width="1200" height="50.877158" rx="7.020966" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="601.345053" text-anchor="middle" font-size="18.304244" fill="var(--ok-accent)" font-weight="bold" font-family="Arial, sans-serif">7. DNS/LB Switch to New Instances</text>
 </svg>

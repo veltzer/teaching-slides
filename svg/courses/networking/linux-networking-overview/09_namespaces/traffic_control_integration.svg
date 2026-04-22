@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -107,9 +107,9 @@
   <rect x="1059.742473" y="40" width="180.257527" height="236.865262" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="7.928855" filter="url(#shadow)"/>
   <text x="1149.356325" y="129.624758" text-anchor="middle" font-size="24.116406" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">eth0</text>
   <text x="1149.356325" y="201.324533" text-anchor="middle" font-size="19.522823" fill="var(--text-muted)" font-family="Arial, sans-serif">Shaped</text>
-  <line x1="307.811073" y1="157.792339" x2="379.914194" y2="157.792339" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="647.725378" y1="157.792339" x2="719.828388" y2="157.792339" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="987.639572" y1="157.792339" x2="1059.742473" y2="157.792339" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="307.811073" y1="157.792339" x2="379.914194" y2="157.792339" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="647.725378" y1="157.792339" x2="719.828388" y2="157.792339" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="987.639572" y1="157.792339" x2="1059.742473" y2="157.792339" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="40" y="383.134738" width="1196.909981" height="236.865262" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.928855" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
   <text x="637.424947" y="477.880875" text-anchor="middle" font-size="24.116406" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">net_prio: Set per-interface priority for cgroup processes</text>
   <text x="637.424947" y="562.384095" text-anchor="middle" font-size="18.374329" fill="var(--text-muted)" font-family="Arial, sans-serif">echo "eth0 5" &gt; /sys/fs/cgroup/net_prio/mygroup/net_prio.ifpriomap</text>

@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -103,7 +103,7 @@
   <text x="150" y="145.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-text)">Accepts pods</text>
   <text x="150" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--ok-text)">Schedulable=true</text>
 
-  <line x1="265" y1="134.807692307693" x2="310" y2="134.807692307693" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="265" y1="134.807692307693" x2="310" y2="134.807692307693" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="287" y="123.653846153846" text-anchor="middle" font-family="Courier New, monospace" font-size="11.617294799631" fill="var(--text-muted)">cordon</text>
 
   <rect x="315" y="40" width="220" height="189.615384615385" rx="8.448941672459" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -112,7 +112,7 @@
   <text x="425" y="145.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-text)">Existing pods stay</text>
   <text x="425" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--warn-text)">No new pods</text>
 
-  <line x1="540" y1="134.807692307693" x2="585" y2="134.807692307693" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="540" y1="134.807692307693" x2="585" y2="134.807692307693" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="562" y="123.653846153846" text-anchor="middle" font-family="Courier New, monospace" font-size="11.617294799631" fill="var(--text-muted)">drain</text>
 
   <rect x="590" y="40" width="220" height="189.615384615385" rx="8.448941672459" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -121,7 +121,7 @@
   <text x="700" y="145.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">Rescheduled away</text>
   <text x="700" y="173.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.729530217746" fill="var(--info-text)">DaemonSets skip</text>
 
-  <line x1="815" y1="134.807692307693" x2="860" y2="134.807692307693" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="815" y1="134.807692307693" x2="860" y2="134.807692307693" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <rect x="865" y="40" width="220" height="189.615384615385" rx="8.448941672459" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="975" y="79.038461538461" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.010118763032" font-weight="bold" fill="var(--text)">Maintenance</text>

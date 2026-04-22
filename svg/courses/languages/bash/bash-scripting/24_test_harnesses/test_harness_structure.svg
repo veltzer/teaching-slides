@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -102,7 +102,7 @@
   <text x="320" y="67.294115" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--bg)" text-anchor="middle" font-weight="bold">1. Setup</text>
   <text x="60" y="90.689071" font-size="12.835138" fill="var(--primary-accent)" font-family="Courier New, monospace">setup() { mkdir -p /tmp/t; }</text>
   <text x="60" y="108.235288" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--primary-accent)"/>
-  <line x1="320" y1="117.983186" x2="320" y2="147.226881" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="320" y1="117.983186" x2="320" y2="147.226881" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 2. Test functions -->
   <rect x="40" y="147.226881" width="560" height="126.722677" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -111,7 +111,7 @@
   <text x="60" y="218.386484" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">  r=$(my_fn "input")</text>
   <text x="60" y="237.882281" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">  assert_equals "$r" "x"</text>
   <text x="60" y="257.378077" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">}</text>
-  <line x1="320" y1="273.949558" x2="320" y2="303.193253" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="320" y1="273.949558" x2="320" y2="303.193253" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 3. Assertions -->
   <rect x="40" y="303.193253" width="560" height="126.722677" rx="6.426834" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -121,14 +121,14 @@
   <text x="60" y="393.848653" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">    echo FAIL &gt;&amp;2; return 1; }</text>
   <text x="60" y="413.344449" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">}</text>
   <text x="60" y="429.91593" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace"/>
-  <line x1="320" y1="429.91593" x2="320" y2="459.159625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="320" y1="429.91593" x2="320" y2="459.159625" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 4. Teardown -->
   <rect x="40" y="459.159625" width="560" height="77.983186" rx="6.426834" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="320" y="486.45374" font-family="Arial, sans-serif" font-size="16.78432" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">4. Teardown</text>
   <text x="60" y="509.848696" font-size="12.835138" fill="var(--text)" font-family="Courier New, monospace">teardown() { rm -rf /tmp/t; }</text>
   <text x="60" y="527.394913" font-family="Arial, sans-serif" font-size="11.847762" fill="var(--text-muted)">trap on EXIT</text>
-  <line x1="320" y1="537.142811" x2="320" y2="566.386506" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="320" y1="537.142811" x2="320" y2="566.386506" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
 
   <!-- 5. Reporting -->
   <rect x="40" y="566.386506" width="560" height="53.613494" rx="6.426834" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>

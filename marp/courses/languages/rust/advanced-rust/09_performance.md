@@ -29,7 +29,7 @@ Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization
 - `#[inline]` guidance
 
 ---
-## Part 1: Zero-Cost Abstractions
+## Zero-Cost Abstractions
 
 You don't pay for what you don't use
 
@@ -130,7 +130,7 @@ fn main() {
 ```
 
 ---
-## Part 2: LLVM Optimization Passes
+## LLVM Optimization Passes
 
 What the compiler does for you
 
@@ -191,7 +191,7 @@ cargo asm --lib my_crate::sum_squares_iterator
 ```
 
 ---
-## Part 3: Profiling
+## Profiling
 
 Finding bottlenecks
 
@@ -254,7 +254,7 @@ cargo flamegraph --flamechart  # Time-ordered view
 ```
 
 ---
-## Part 4: Benchmarking with Criterion
+## Benchmarking with Criterion
 
 Statistical benchmarking
 
@@ -414,7 +414,7 @@ criterion_main!(benches);
 ```
 
 ---
-## Part 5: Memory Allocators
+## Memory Allocators
 
 Custom allocators for performance
 
@@ -539,7 +539,7 @@ fn main() {
 ![cargo_toml](svg/courses/languages/rust/advanced-rust/09_performance/cargo_toml.svg)
 
 ---
-## Part 6: SIMD
+## SIMD
 
 Single Instruction, Multiple Data
 
@@ -653,7 +653,7 @@ fn main() {
 ```
 
 ---
-## Part 7: Cache-Friendly Data Structures
+## Cache-Friendly Data Structures
 
 AoS vs SoA
 
@@ -827,7 +827,7 @@ fn main() {
 ```
 
 ---
-## Part 8: Compile-Time Computation
+## Compile-Time Computation
 
 const fn and const generics
 
@@ -997,7 +997,7 @@ fn main() {
 ```
 
 ---
-## Part 9: Link-Time Optimization (LTO)
+## Link-Time Optimization (LTO)
 
 Cross-crate optimization
 
@@ -1027,7 +1027,7 @@ codegen-units = 1   # Single codegen unit: enables more inlining
 ![lto_trade_offs](svg/courses/languages/rust/advanced-rust/09_performance/lto_trade_offs.svg)
 
 ---
-## Part 10: Profile-Guided Optimization (PGO)
+## Profile-Guided Optimization (PGO)
 
 Optimize based on real workload data
 
@@ -1062,7 +1062,7 @@ RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-mis
 ```
 
 ---
-## Part 11: Inline Guidance
+## Inline Guidance
 
 Helping the compiler make inlining decisions
 

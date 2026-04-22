@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -112,7 +112,7 @@
   <rect x="136.428571" y="528.118811592687" width="814.285714" height="91.881188407313" rx="6.655814129013" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="543.571429" y="583.247524637075" text-anchor="middle" font-size="24.404650421249" font-weight="bold" fill="var(--warn-text)" font-family="Arial, sans-serif">Buffer[64]</text>
   <text x="972.142857" y="583.247524637075" text-anchor="start" font-size="19.96744134819" fill="var(--danger-accent)" font-family="Arial, sans-serif">&lt;- Overflow starts here</text>
-  <line x1="40" y1="74.455446057445" x2="40" y2="579.801980678855" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="40" y1="74.455446057445" x2="40" y2="579.801980678855" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <text x="40" y="614.257425657092" text-anchor="middle" font-size="15.530232275131" fill="var(--text-faint)" font-family="Arial, sans-serif">Low addr</text>
   <text x="1240" y="45.742574342908" text-anchor="end" font-size="15.530232275131" fill="var(--text-faint)" font-family="Arial, sans-serif">%rbp / %rsp</text>
   <text x="1240" y="614.257425657092" text-anchor="end" font-size="15.530232275131" fill="var(--text-faint)" font-family="Arial, sans-serif">buffer overflow writes upward</text>

@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -110,10 +110,10 @@
   <rect x="1076.768343" y="40" width="163.231657" height="221.573038" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="7.83993" filter="url(#shadow)"/>
   <text x="1157.88953" y="131.235843" text-anchor="middle" font-size="21.574832" font-weight="bold" fill="var(--info-accent)" font-family="Arial, sans-serif">Monitor</text>
   <text x="1157.88953" y="212.044949" text-anchor="middle" font-size="18.168253" fill="var(--text-muted)" font-family="Arial, sans-serif">trace_pipe</text>
-  <line x1="253.685078" y1="150.786356" x2="299.192086" y2="150.786356" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="512.877164" y1="150.786356" x2="558.384066" y2="150.786356" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="772.069144" y1="150.786356" x2="817.576152" y2="150.786356" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="1031.26123" y1="150.786356" x2="1076.768343" y2="150.786356" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="253.685078" y1="150.786356" x2="299.192086" y2="150.786356" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="512.877164" y1="150.786356" x2="558.384066" y2="150.786356" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="772.069144" y1="150.786356" x2="817.576152" y2="150.786356" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1031.26123" y1="150.786356" x2="1076.768343" y2="150.786356" stroke="var(--primary-accent)" stroke-width="5" marker-end="url(#arrow)"/>
   <rect x="136.949711" y="378.876448" width="1013.025556" height="241.123552" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.83993" stroke-dasharray="8.8889 5.3333" filter="url(#shadow)"/>
   <text x="643.46249" y="472.719176" text-anchor="middle" font-size="23.845929" fill="var(--text)" font-weight="bold" font-family="Arial, sans-serif">Key Tools: bpftool, bpftrace, libbpf, BCC toolkit</text>
   <text x="643.46249" y="566.561906" text-anchor="middle" font-size="18.168253" fill="var(--text-muted)" font-family="Arial, sans-serif">Debug: bpf_trace_printk() | cat /sys/kernel/debug/tracing/trace_pipe</text>
