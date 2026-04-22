@@ -43,7 +43,7 @@ audience:
 * Allow developers to rebuild everything, fast!
 * Reward developers who manage to redesign your code - they are the true heroes.
 * Above a certain size agile works, rewriting doesn't.
-* Keep it simple, Stupid! (your codes architecture that is).
+* Keep it simple, Stupid! (your code's architecture, that is).
 * Have good taste.
 * Lint with tons of tools. Don't allow any unlinted code in.
 
@@ -110,7 +110,7 @@ audience:
 ---
 ## Separate systems that should be separate
 * Prefer multi-process to multi-thread
-* Micro-services
+* Microservices
 * Different code repos
 * Everything in computing is about separation.
 
@@ -143,19 +143,19 @@ audience:
 ---
 ## Microservices
 * You are doing it wrong
-* The most important part of Micro-services is that they are **Independently Deployable** and *Independently Testable**.
+* The most important part of microservices is that they are **Independently Deployable** and **Independently Testable**.
 
 ---
 ## Stop using MS-Windows!
 * Why Linux is better for developers and facilitates all of the above
-* Why using windows is making your developers bad developers.
+* Why using Windows is making your developers bad developers.
 
 ---
 ## Philosophy is more important than practical knowledge
 * Don't remember all the details, you'll never remember them anyway.
 * Being able to explain why you are using every tool you are using
 * When studying tools, learn their philosophy
-* When using each tool check if you are using it according to it's philosophy
+* When using each tool check if you are using it according to its philosophy
 * Avoid abusing tools - meaning stop using them against their philosophy or not in line with it.
 
 ---
@@ -178,8 +178,11 @@ audience:
 * Always use one docker image! that's the whole point of docker!
 * Don't abuse the technology.
 
-[comment:] Not to use a lot of bookmarks
-[comment:] not to use a lot of tabs
-[comment:] not to use branches in git but work with trunk.
-[comment:] how to correctly use microservices.
-[comment:] how to simply use git.
+<!--
+TODO:
+- Not to use a lot of bookmarks
+- not to use a lot of tabs
+- not to use branches in git but work with trunk
+- how to correctly use microservices
+- how to simply use git
+-->

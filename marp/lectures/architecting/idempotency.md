@@ -24,8 +24,10 @@ audience:
 
 ## What is Idempotency?: Overview
 
-**Idempotent**: An operation that can be performed multiple times with the same result
+**Idempotent**: An operation that can be performed multiple times with the same result.
+
 > "No matter how many times you call it, the outcome is the same"
+
 Mathematical example: `f(f(x)) = f(x)`
 
 ---
