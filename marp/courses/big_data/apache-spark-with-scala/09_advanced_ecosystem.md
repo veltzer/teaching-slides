@@ -12,14 +12,12 @@ audience:
 
 ---
 # Advanced Spark Ecosystem and Best Practices
-## Mark Veltzer
-## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 
 ## Agenda
 
-![title](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/title.svg)
+![title](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/title.svg)
 
 ---
 
@@ -53,7 +51,7 @@ audience:
 
 ## Spark on Kubernetes Architecture
 
-![spark_on_kubernetes_architecture](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/spark_on_kubernetes_architecture.svg)
+![spark_on_kubernetes_architecture](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/spark_on_kubernetes_architecture.svg)
 
 ---
 
@@ -128,7 +126,7 @@ spark-submit \
 
 ## What is Delta Lake?
 
-![what_is_delta_lake](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/what_is_delta_lake.svg)
+![what_is_delta_lake](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/what_is_delta_lake.svg)
 
 ---
 
@@ -145,7 +143,7 @@ spark-submit \
 
 ## Delta Lake Architecture
 
-![delta_lake_architecture](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/delta_lake_architecture.svg)
+![delta_lake_architecture](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/delta_lake_architecture.svg)
 
 ---
 
@@ -266,7 +264,7 @@ Key metrics to track:
 
 ## Spark Web UI
 
-![spark_web_ui](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/spark_web_ui.svg)
+![spark_web_ui](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/spark_web_ui.svg)
 
 ---
 
@@ -310,7 +308,7 @@ spark.metrics.conf=/path/to/metrics.properties
 
 ## Integrating Spark with Prometheus & Grafana
 
-![bg right:30% 80%](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/grafana_logo.svg)
+![bg right:30% 80%](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/grafana_logo.svg)
 
 ---
 
@@ -497,7 +495,7 @@ spark.read
 
 ## Data Pipeline Design Patterns
 
-![data_pipeline_design_patterns](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/data_pipeline_design_patterns.svg)
+![data_pipeline_design_patterns](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/data_pipeline_design_patterns.svg)
 
 ---
 
@@ -578,7 +576,7 @@ spark.kerberos.principal=spark@EXAMPLE.COM
 
 ## Authorization with Ranger/Sentry
 
-![authorization_with_ranger_sentry](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/authorization_with_ranger_sentry.svg)
+![authorization_with_ranger_sentry](svg/courses/big_data/apache-spark-with-scala/09_advanced_ecosystem/authorization_with_ranger_sentry.svg)
 
 ---
 

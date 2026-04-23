@@ -576,6 +576,18 @@ delta_table.history().select(
 
 ---
 
+## Medallion Architecture (Bronze / Silver / Gold)
+
+Standard Delta Lake pipeline pattern:
+
+* **Bronze** — raw ingestion layer. Append-only, matches source schema.
+* **Silver** — cleaned, deduplicated, validated data. Canonical source of truth.
+* **Gold** — business-level aggregates tuned for BI and ML consumption.
+
+Each stage is itself a Delta table; downstream stages read from upstream and write forward. Lineage is auditable, backfills are re-runs, and schema evolution happens at bronze first.
+
+---
+
 ## Full Program: MLflow Model Registry Pipeline
 
 ```python

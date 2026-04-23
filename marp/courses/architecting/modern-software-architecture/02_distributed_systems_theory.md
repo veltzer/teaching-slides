@@ -334,3 +334,154 @@ audience:
 - High availability requires redundancy, failover, and automated recovery
 - Consensus algorithms enable coordination but add complexity
 - Design every component with the expectation that it will fail
+
+---
+
+## FLP Impossibility
+
+Fischer, Lynch, Paterson (1985):
+
+> No deterministic algorithm can guarantee consensus in an asynchronous system with even one faulty process.
+
+Implications:
+
+- Perfect consensus is impossible in a truly asynchronous model
+- Real systems must relax requirements (e.g., use timeouts, partial synchrony)
+- Raft and Paxos assume eventual synchrony to make progress
+
+---
+
+## Logical Clocks (Lamport)
+
+Physical clocks disagree; logical clocks give a consistent *partial order* of events:
+
+- Each process has a counter; increment before every local event
+- On send, attach counter value to the message
+- On receive, set counter to `max(local, received) + 1`
+
+Captures "happens-before" but not concurrency — two unrelated events may have equal timestamps with no causal link.
+
+---
+
+## Vector Clocks
+
+Track causality across *all* nodes. Each process holds a vector `V[i]` of counters, one per node:
+
+- On local event, increment your own slot
+- On send, include the full vector
+- On receive, element-wise max, then increment own slot
+
+Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A)` is false. Used in Dynamo, Riak, version vectors for conflict detection.
+
+---
+
+## Byzantine Fault Tolerance
+
+Crash faults: a node stops. Byzantine faults: a node lies, sends contradicting messages, or is malicious.
+
+- Classical BFT protocols (PBFT) tolerate `f` faults with `3f + 1` total nodes
+- Expensive: many message rounds, cryptographic signatures
+- Modern use cases: blockchains, financial systems, safety-critical control
+
+Most traditional distributed systems (ZooKeeper, etcd, Cassandra) assume crash-only faults — not Byzantine.
+
+---
+
+## Gossip Protocols
+
+Epidemic-style information spread:
+
+- Each node periodically picks a random peer and exchanges state
+- Information propagates exponentially until everyone converges
+- Robust to partitions and churn; no single coordinator
+
+Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT replication.
+
+---
+
+## Saga Pattern
+
+Long-running distributed transactions implemented as a series of local transactions plus compensations:
+
+1. 1. Step 1: book flight → compensation: cancel flight
+1. 1. Step 2: book hotel → compensation: cancel hotel
+1. 1. Step 3: charge card → compensation: refund
+
+If any step fails, compensations run in reverse for all completed steps. Two styles:
+
+- **Choreography** — services emit events; each service reacts
+- **Orchestration** — a central coordinator drives the saga
+
+No ACID across services — only eventual consistency with explicit compensation.
+
+---
+
+## Split-Brain Problem
+
+A network partition leaves two groups of nodes each believing it is the primary:
+
+- Both accept writes, diverging from each other
+- On heal, reconciliation is required — possibly with data loss
+
+Mitigations:
+
+- **Majority quorum** — only the partition with >50% of nodes stays active
+- **Fencing tokens** — monotonically increasing tokens; storage rejects older tokens
+- **STONITH** / dedicated arbiter nodes in clustering systems
+
+---
+
+## Circuit Breaker Pattern
+
+Prevents cascading failures when a downstream service is struggling:
+
+1. 1. **Closed** — requests pass through; count failures
+1. 1. **Open** — once failures exceed threshold, fail fast without calling the downstream service
+1. 1. **Half-Open** — after a timeout, let a trickle of requests through; if they succeed, close again
+
+Libraries: Resilience4j (Java), Polly (.NET), Hystrix (deprecated but influential). Prevents the thundering-herd retry storm that often kills already-overloaded services.
+
+---
+
+## Backpressure and Rate Limiting
+
+When producers outrun consumers, you need explicit flow control.
+
+**Backpressure** — consumer signals "slow down" upstream:
+
+- TCP's sliding window is backpressure at the transport layer
+- Reactive Streams (`Flow.Subscriber`), RxJava, akka-streams provide it in-process
+
+**Rate limiting** — cap incoming request rate to protect a service:
+
+- **Token bucket** — refills at a fixed rate, bursty up to bucket size
+- **Leaky bucket** — constant output rate, smooths bursts
+- **Sliding window / fixed window** — count requests over a time interval
+
+---
+
+## Observability: Logs, Metrics, Traces
+
+Three pillars, distinct use cases:
+
+- **Logs** — discrete events with full context (ELK, Loki). Great for forensics.
+- **Metrics** — aggregated numeric time-series (Prometheus). Great for dashboards and alerts.
+- **Traces** — request-spanning timelines across services (Jaeger, Zipkin, OpenTelemetry). Great for latency root-cause and dependency mapping.
+
+A distributed trace needs a **trace ID** and **span IDs** propagated through every inter-service call. Context propagation is usually via HTTP headers (W3C Trace Context).
+
+---
+
+## Chaos Engineering
+
+Deliberately inject failures into production (or production-like) systems to build confidence:
+
+- **Network partitions** — drop packets between services
+- **Node crashes** — kill random instances
+- **Latency injection** — add delays to dependency calls
+- **Resource exhaustion** — fill disks, saturate CPU
+- **Clock skew** — offset node clocks
+
+Tools: Chaos Monkey (Netflix), Gremlin, LitmusChaos, `tc`-based shapers.
+
+Principle: find failures in controlled chaos before they find you in uncontrolled chaos.

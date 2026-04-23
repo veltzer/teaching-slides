@@ -832,3 +832,27 @@ spark.sql("SELECT *, rand() as r FROM orders ORDER BY r LIMIT 100")
 # Good:
 spark.sql("SELECT * FROM orders TABLESAMPLE (100 ROWS)")
 ```
+
+---
+
+## Bucketing
+
+Pre-shuffle data to skip exchange on joins and aggregations:
+
+```python
+# Create a bucketed table (Hive-compatible, Parquet-backed)
+spark.sql("""
+    CREATE TABLE sales_bucketed
+    USING parquet
+    CLUSTERED BY (customer_id) INTO 8 BUCKETS
+    AS SELECT * FROM sales
+""")
+
+# Joining two tables bucketed on the same key and count avoids a shuffle:
+result = spark.sql("""
+    SELECT * FROM sales_bucketed s
+    JOIN customers_bucketed c ON s.customer_id = c.id
+""")
+```
+
+Bucket count must match on both tables for the optimizer to skip the shuffle. Bucketing requires `saveAsTable`/managed tables; it does not work for raw DataFrame writes.

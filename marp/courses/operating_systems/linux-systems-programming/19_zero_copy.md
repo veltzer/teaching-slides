@@ -896,3 +896,209 @@ int test_zero_copy_methods() {
 1. **Storage optimizations** - NVMe direct access
 1. **Container optimization** - Efficient data sharing
 1. **Network protocols** - QUIC and HTTP/3 optimizations
+
+---
+
+## MSG_ZEROCOPY: Socket Send Without Copy
+
+1. Added in Linux 4.14
+1. Avoids copying user data into kernel socket buffer
+1. Kernel pins user pages and DMA reads directly from them
+
+```c
+/* Enable zero-copy on socket */
+int val = 1;
+setsockopt(sock, SOL_SOCKET, SO_ZEROCOPY, &val, sizeof(val));
+
+/* Send with zero-copy flag */
+send(sock, buf, len, MSG_ZEROCOPY);
+
+/* Must wait for completion notification before reusing buf */
+struct msghdr msg = {};
+recvmsg(sock, &msg, MSG_ERRQUEUE);
+```
+
+---
+
+## MSG_ZEROCOPY: When to Use
+
+1. Only beneficial for **large sends** (>10 KB typically)
+1. Overhead: completion notification, page pinning
+1. For small messages, the copy is cheaper than the bookkeeping
+1. Supported protocols: TCP, UDP, raw sockets
+1. Reduces CPU usage by ~5-8% on 10/25/100 GbE links
+1. Latency may increase slightly due to notification overhead
+
+---
+
+## io_uring: Zero-Copy Send (Linux 6.0+)
+
+1. `IORING_OP_SEND_ZC` — zero-copy network send via `io_uring`
+1. Similar to `MSG_ZEROCOPY` but with `io_uring`'s completion model
+1. Avoids copy from user buffer to kernel socket buffer
+
+```c
+struct io_uring_sqe *sqe = io_uring_get_sqe(&ring);
+io_uring_prep_send_zc(sqe, sock_fd, buf, len, 0, 0);
+io_uring_submit(&ring);
+/* Completion notifies when buf can be reused */
+```
+
+1. Also `IORING_OP_SENDMSG_ZC` for `sendmsg`-style zero-copy
+1. Notification via CQE flags (`IORING_CQE_F_NOTIF`)
+
+---
+
+## copy_file_range(): In-Kernel File Copy
+
+1. Copies data between two file descriptors **entirely in kernel space**
+1. No user-space buffer involvement
+1. On COW filesystems (Btrfs, XFS): may create reflinks (no data copy at all)
+
+```c
+#include <unistd.h>
+loff_t off_in = 0, off_out = 0;
+copy_file_range(fd_in, &off_in, fd_out, &off_out, len, 0);
+```
+
+Available since Linux 4.5.
+
+---
+
+## Shared Memory: Zero-Copy Between Processes
+
+The most fundamental form of zero-copy IPC: multiple processes map the same physical memory.
+
+```c
+/* Process A: create and write */
+int shm_fd = shm_open("/my_shm", O_CREAT | O_RDWR, 0666);
+ftruncate(shm_fd, SHM_SIZE);
+void *ptr = mmap(NULL, SHM_SIZE, PROT_READ | PROT_WRITE,
+                 MAP_SHARED, shm_fd, 0);
+memcpy(ptr, data, len);
+
+/* Process B: open and read — same physical pages, no copy */
+int shm_fd = shm_open("/my_shm", O_RDONLY, 0);
+void *ptr = mmap(NULL, SHM_SIZE, PROT_READ, MAP_SHARED, shm_fd, 0);
+```
+
+---
+
+## memfd_create(): Anonymous Shared Memory
+
+1. Creates anonymous file descriptors backed by memory
+1. Can be passed to other processes via Unix domain socket `SCM_RIGHTS`
+1. Ideal for zero-copy IPC without filesystem visibility
+
+```c
+int memfd = memfd_create("shared_buf", MFD_CLOEXEC);
+ftruncate(memfd, BUF_SIZE);
+void *buf = mmap(NULL, BUF_SIZE, PROT_READ | PROT_WRITE,
+                 MAP_SHARED, memfd, 0);
+/* Send fd to another process via SCM_RIGHTS */
+send_fd_over_unix_socket(unix_sock, memfd);
+```
+
+With `MFD_ALLOW_SEALING` the creator can enforce immutability on the buffer.
+
+---
+
+## XDP: eXpress Data Path
+
+1. Programmable hook at the **lowest point** in the Linux network stack
+1. eBPF programs run before `sk_buff` allocation
+1. Can drop, redirect, or modify packets before any kernel processing
+
+```c
+SEC("xdp")
+int xdp_prog(struct xdp_md *ctx) {
+    void *data     = (void *)(long)ctx->data;
+    void *data_end = (void *)(long)ctx->data_end;
+    /* Process packet directly in DMA buffer */
+    return XDP_PASS; /* or XDP_DROP, XDP_TX, XDP_REDIRECT */
+}
+```
+
+---
+
+## AF_XDP: Zero-Copy Socket Interface
+
+1. Combines XDP with a user-space socket interface
+1. Packets delivered to user-space via shared memory ring buffers
+1. **True zero-copy mode**: NIC DMA writes directly to user-space memory (UMEM)
+1. Four shared rings: Fill, Completion, RX, TX
+1. Keeps kernel network stack available (unlike DPDK)
+1. NIC must support XDP zero-copy driver mode
+
+---
+
+## DPDK: Data Plane Development Kit
+
+1. User-space networking framework that bypasses the kernel entirely
+1. NIC memory-mapped directly to user-space via huge pages + IOMMU
+1. Polling model instead of interrupts
+1. Dedicates CPU cores to polling; no kernel stack features
+1. Requires Poll Mode Drivers (PMDs) for supported NICs
+
+---
+
+## DMA-BUF: Zero-Copy Between Devices
+
+1. Kernel framework for sharing buffers between hardware devices
+1. Originally for GPU; now used broadly (cameras, video encoders, displays)
+1. Exported via file descriptors, shareable between processes
+1. Example pipeline: Camera DMA → shared buffer → GPU process → display controller, all without copying
+1. Used by V4L2 (video), DRM/KMS (display), and GPU drivers
+
+---
+
+## RDMA: Remote Direct Memory Access
+
+1. Network transfer that bypasses both kernels and the remote CPU
+1. Source NIC reads from source memory, writes directly to destination memory
+1. True zero-copy across the network
+
+Key technologies:
+
+1. **InfiniBand** — dedicated RDMA fabric
+1. **RoCE** — RDMA over Converged Ethernet
+1. **iWARP** — RDMA over TCP/IP
+
+Programming: `libibverbs` — register memory regions, create queue pairs, post send/receive work requests, completion via completion queues.
+
+---
+
+## Summary: API Comparison
+
+| API / Subsystem        | Scope                  | True Zero-Copy? | Min Kernel |
+|------------------------|------------------------|-----------------|------------|
+| `mmap()`               | File ↔ memory          | Yes             | All        |
+| `sendfile()`           | File → socket          | Yes*            | 2.2        |
+| `splice()`/`tee()`     | fd ↔ pipe ↔ fd         | Yes             | 2.6.17     |
+| `vmsplice()`           | User mem → pipe        | Yes             | 2.6.17     |
+| `MSG_ZEROCOPY`         | Socket send            | Yes             | 4.14       |
+| `io_uring` fixed bufs  | Any I/O                | Yes             | 5.1        |
+| `io_uring` send_zc     | Socket send            | Yes             | 6.0        |
+| `copy_file_range()`    | File → file            | Depends on FS   | 4.5        |
+| Shared memory          | Process ↔ process      | Yes             | All        |
+| `memfd_create()`       | Process ↔ process      | Yes             | 3.17       |
+| XDP / AF_XDP           | Network packets        | Yes             | 4.18       |
+| DPDK                   | Network packets        | Yes             | N/A        |
+| DMA-BUF                | Device ↔ device        | Yes             | 3.3        |
+| RDMA                   | Machine ↔ machine      | Yes             | 2.6.11     |
+
+*With scatter-gather DMA support on the NIC.
+
+---
+
+## Decision Guide: Which API to Use?
+
+1. **Serving files over network** → `sendfile()` (simple) or `splice()` (flexible)
+1. **Transforming data in a pipeline** → `splice()` + `tee()`
+1. **High-throughput network send** → `MSG_ZEROCOPY` or `io_uring send_zc`
+1. **Line-rate packet processing** → AF_XDP (with kernel) or DPDK (bypass kernel)
+1. **IPC between processes** → shared memory / `memfd_create()` + ring buffer
+1. **File-to-file copy** → `copy_file_range()`
+1. **GPU / multimedia pipeline** → DMA-BUF
+1. **Cross-machine transfer** → RDMA
+1. **General async I/O with minimal copies** → `io_uring` with fixed buffers
