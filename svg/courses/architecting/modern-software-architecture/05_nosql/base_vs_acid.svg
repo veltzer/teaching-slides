@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <rect x="40" y="40" width="578.571428571429" height="580" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.436503043468" filter="url(#shadow)"/>
+  <text x="329.285714285714" y="99.074074074074" text-anchor="middle" font-size="38.619018260807" font-family="Arial, sans-serif" fill="var(--primary-text)">ACID (RDBMS)</text>
+  <text x="72.142857142857" y="163.518518518519" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--primary-text)">Atomicity</text>
+  <text x="72.142857142857" y="206.481481481481" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--primary-text)">all-or-nothing transactions</text>
+  <text x="72.142857142857" y="260.185185185185" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--primary-text)">Consistency</text>
+  <text x="72.142857142857" y="303.148148148148" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--primary-text)">constraints always hold</text>
+  <text x="72.142857142857" y="356.851851851852" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--primary-text)">Isolation</text>
+  <text x="72.142857142857" y="399.814814814815" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--primary-text)">concurrent txns don't interfere</text>
+  <text x="72.142857142857" y="453.518518518519" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--primary-text)">Durability</text>
+  <text x="72.142857142857" y="496.481481481482" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--primary-text)">committed data survives crashes</text>
+  <text x="329.285714285714" y="582.407407407407" text-anchor="middle" font-size="21.455010144893" font-family="Arial, sans-serif" fill="var(--primary-text)">strict correctness, harder to scale</text>
+
+  <rect x="661.428571428571" y="40" width="578.571428571429" height="580" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.436503043468" filter="url(#shadow)"/>
+  <text x="950.714285714286" y="99.074074074074" text-anchor="middle" font-size="38.619018260807" font-family="Arial, sans-serif" fill="var(--ok-text)">BASE (NoSQL)</text>
+  <text x="693.571428571429" y="163.518518518519" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--ok-text)">Basically Available</text>
+  <text x="693.571428571429" y="206.481481481481" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--ok-text)">system stays responsive</text>
+  <text x="693.571428571429" y="281.666666666667" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--ok-text)">Soft state</text>
+  <text x="693.571428571429" y="324.62962962963" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--ok-text)">state may change without input</text>
+  <text x="693.571428571429" y="399.814814814815" font-size="25.746012173872" font-family="Arial, sans-serif" fill="var(--ok-text)">Eventual consistency</text>
+  <text x="693.571428571429" y="442.777777777778" font-size="19.309509130404" font-family="Arial, sans-serif" fill="var(--ok-text)">all replicas converge over time</text>
+  <text x="950.714285714286" y="582.407407407407" text-anchor="middle" font-size="21.455010144893" font-family="Arial, sans-serif" fill="var(--ok-text)">scales horizontally, weaker guarantees</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

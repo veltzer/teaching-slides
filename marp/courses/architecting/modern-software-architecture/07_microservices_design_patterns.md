@@ -23,7 +23,7 @@ audience:
 ---
 ## Pattern Categories
 
-![pattern_categories](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/pattern_categories.svg)
+![pattern_categories](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/pattern_categories.svg)
 
 ---
 ## API Gateway Pattern
@@ -36,12 +36,12 @@ audience:
 ---
 ## API Gateway Architecture
 
-![api_gateway_architecture](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.svg)
+![api_gateway_architecture](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/api_gateway_architecture.svg)
 
 ---
 ## API Gateway Flow
 
-![api_gateway_pattern](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_pattern.svg)
+![api_gateway_pattern](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/api_gateway_pattern.svg)
 
 ---
 ## API Gateway Responsibilities
@@ -86,7 +86,7 @@ audience:
 ---
 ## BFF Architecture
 
-![bff_architecture](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/bff_architecture.svg)
+![bff_architecture](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/bff_architecture.svg)
 
 ---
 ## BFF vs Single API Gateway
@@ -110,7 +110,7 @@ audience:
 ---
 ## Client-Side Service Discovery
 
-![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
+![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/client_side_service_discovery.svg)
 
 ---
 ## Client-Side Discovery Details
@@ -122,7 +122,7 @@ audience:
 ---
 ## Server-Side Service Discovery
 
-![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
+![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/server_side_service_discovery.svg)
 
 ---
 ## Server-Side Discovery Details
@@ -159,7 +159,7 @@ audience:
 ---
 ## Database per Service Diagram
 
-![database_per_service_diagram](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/database_per_service_diagram.svg)
+![database_per_service_diagram](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/database_per_service_diagram.svg)
 
 ---
 ## Database per Service Pros and Cons
@@ -201,12 +201,12 @@ audience:
 ---
 ## Saga: Choreography
 
-![saga_choreography](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_choreography.svg)
+![saga_choreography](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/saga_choreography.svg)
 
 ---
 ## Saga: Orchestration
 
-![saga_orchestration](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_orchestration.svg)
+![saga_orchestration](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/saga_orchestration.svg)
 
 ---
 ## Choreography vs Orchestration
@@ -230,7 +230,7 @@ audience:
 ---
 ## Compensation Example
 
-![compensation_example](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/compensation_example.svg)
+![compensation_example](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/compensation_example.svg)
 
 ---
 ## CQRS Pattern
@@ -243,7 +243,7 @@ audience:
 ---
 ## CQRS Architecture
 
-![cqrs_architecture](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_architecture.svg)
+![cqrs_architecture](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/cqrs_architecture.svg)
 
 ---
 ## CQRS Benefits
@@ -274,7 +274,7 @@ audience:
 ---
 ## Event Sourcing Flow
 
-![event_sourcing_flow](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/event_sourcing_flow.svg)
+![event_sourcing_flow](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/event_sourcing_flow.svg)
 
 ---
 ## Event Store Example
@@ -303,7 +303,7 @@ audience:
 ---
 ## CQRS + Event Sourcing Combined
 
-![cqrs_event_sourcing_combined](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_event_sourcing_combined.svg)
+![cqrs_event_sourcing_combined](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/cqrs_event_sourcing_combined.svg)
 
 ---
 ## Strangler Fig Pattern
@@ -316,7 +316,7 @@ audience:
 ---
 ## Strangler Fig Diagram
 
-![strangler_fig_diagram](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/strangler_fig_diagram.svg)
+![strangler_fig_diagram](svg/courses/architecting/modern-software-architecture/07_microservices_design_patterns/strangler_fig_diagram.svg)
 
 ---
 ## Summary

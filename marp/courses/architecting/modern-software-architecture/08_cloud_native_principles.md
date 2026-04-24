@@ -42,7 +42,7 @@ audience:
 ---
 ## Twelve Factor App
 
-![twelve_factor_app](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/twelve_factor_app.svg)
+![twelve_factor_app](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/twelve_factor_app.svg)
 
 ---
 ## Factor 1: Codebase
@@ -93,7 +93,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Backing Services Diagram
 
-![backing_services_diagram](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/backing_services_diagram.svg)
+![backing_services_diagram](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/backing_services_diagram.svg)
 
 ---
 ## Factor 5: Build, Release, Run
@@ -106,7 +106,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Build, Release, Run Pipeline
 
-![build_release_run_pipeline](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/build_release_run_pipeline.svg)
+![build_release_run_pipeline](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/build_release_run_pipeline.svg)
 
 ---
 ## Factor 6: Processes
@@ -136,7 +136,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Concurrency Model
 
-![concurrency_model](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/concurrency_model.svg)
+![concurrency_model](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/concurrency_model.svg)
 
 ---
 ## Factor 9: Disposability
@@ -191,7 +191,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Stateless Service Architecture
 
-![stateless_service_architecture](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/stateless_service_architecture.svg)
+![stateless_service_architecture](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/stateless_service_architecture.svg)
 
 ---
 ## Benefits of Statelessness
@@ -246,7 +246,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Auto-Scaling Architecture
 
-![auto_scaling_architecture](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/auto_scaling_architecture.svg)
+![auto_scaling_architecture](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/auto_scaling_architecture.svg)
 
 ---
 ## Designing for Scalability
@@ -259,7 +259,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Horizontal vs Vertical Scaling
 
-![horizontal_vs_vertical_scaling](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/horizontal_vs_vertical_scaling.svg)
+![horizontal_vs_vertical_scaling](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/horizontal_vs_vertical_scaling.svg)
 
 ---
 ## Caching Strategies
@@ -272,7 +272,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Cache-Aside Pattern
 
-![cache_aside_pattern](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/cache_aside_pattern.svg)
+![cache_aside_pattern](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/cache_aside_pattern.svg)
 
 ---
 ## Data Partitioning

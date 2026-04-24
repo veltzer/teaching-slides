@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="640" y="40" text-anchor="middle" font-size="34.868737817784" font-family="Arial, sans-serif" fill="var(--text)">T2 reads a value that T1 writes but never commits</text>
+
+  <rect x="40" y="85.490196078431" width="463.636363636364" height="68.235294117647" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <text x="271.818181818182" y="130.980392156863" text-anchor="middle" font-size="34.868737817784" font-family="Arial, sans-serif" fill="var(--primary-text)">T1</text>
+
+  <rect x="776.363636363636" y="85.490196078431" width="463.636363636364" height="68.235294117647" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <text x="1008.181818181818" y="130.980392156863" text-anchor="middle" font-size="34.868737817784" font-family="Arial, sans-serif" fill="var(--danger-text)">T2</text>
+
+  <line x1="271.818181818182" y1="165.098039215686" x2="271.818181818182" y2="620" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="1008.181818181818" y1="165.098039215686" x2="1008.181818181818" y2="620" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <rect x="40" y="187.843137254902" width="463.636363636364" height="79.607843137255" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2" rx="7.471872389525"/>
+  <text x="271.818181818182" y="221.960784313725" text-anchor="middle" font-size="27.396865428259" font-family="Courier New, monospace" fill="var(--text)">UPDATE accounts</text>
+  <text x="271.818181818182" y="253.803921568627" text-anchor="middle" font-size="27.396865428259" font-family="Courier New, monospace" fill="var(--text)">SET bal = bal - 100</text>
+
+  <rect x="776.363636363636" y="301.56862745098" width="463.636363636364" height="79.607843137255" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2" rx="7.471872389525"/>
+  <text x="1008.181818181818" y="335.686274509804" text-anchor="middle" font-size="27.396865428259" font-family="Courier New, monospace" fill="var(--text)">SELECT bal FROM accounts</text>
+  <text x="1008.181818181818" y="367.529411764706" text-anchor="middle" font-size="27.396865428259" font-family="Arial, sans-serif" fill="var(--danger-accent)">sees uncommitted value</text>
+
+  <rect x="40" y="415.294117647059" width="463.636363636364" height="68.235294117647" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2" rx="7.471872389525"/>
+  <text x="271.818181818182" y="458.509803921569" text-anchor="middle" font-size="29.8874895581" font-family="Courier New, monospace" fill="var(--primary-accent)">ROLLBACK</text>
+
+  <rect x="40" y="517.647058823529" width="1200" height="90.980392156863" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="7.471872389525" filter="url(#shadow)"/>
+  <text x="640" y="557.450980392157" text-anchor="middle" font-size="27.396865428259" font-family="Arial, sans-serif" fill="var(--warn-text)">T2 acted on data that never existed in the database.</text>
+  <text x="640" y="591.56862745098" text-anchor="middle" font-size="27.396865428259" font-family="Arial, sans-serif" fill="var(--warn-text)">Prevented by READ COMMITTED or stricter.</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

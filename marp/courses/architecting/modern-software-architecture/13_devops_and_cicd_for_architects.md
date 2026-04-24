@@ -33,7 +33,7 @@ audience:
 ---
 ## The DevOps Lifecycle
 
-![the_devops_lifecycle](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/the_devops_lifecycle.svg)
+![the_devops_lifecycle](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/the_devops_lifecycle.svg)
 
 ---
 ## Why Architects Care About DevOps
@@ -54,12 +54,12 @@ audience:
 ---
 ## CI Pipeline
 
-![ci_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/ci_pipeline.svg)
+![ci_pipeline](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/ci_pipeline.svg)
 
 ---
 ## CI/CD Pipeline
 
-![ci_cd_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cicd_pipeline.svg)
+![ci_cd_pipeline](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/cicd_pipeline.svg)
 
 ---
 ## CI Best Practices
@@ -89,7 +89,7 @@ audience:
 ---
 ## CD vs Continuous Deployment
 
-![cd_vs_continuous_deployment](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cd_vs_continuous_deployment.svg)
+![cd_vs_continuous_deployment](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/cd_vs_continuous_deployment.svg)
 
 ---
 ## Infrastructure as Code (IaC)
@@ -111,7 +111,7 @@ audience:
 ---
 ## IaC Tool Categories
 
-![iac_tool_categories](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/iac_tool_categories.svg)
+![iac_tool_categories](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/iac_tool_categories.svg)
 
 ---
 ## Terraform Example
@@ -157,7 +157,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## GitOps Workflow
 
-![gitops_workflow](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/gitops_workflow.svg)
+![gitops_workflow](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/gitops_workflow.svg)
 
 ---
 ## GitOps Tools
@@ -170,7 +170,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Deployment Strategies Overview
 
-![deployment_strategies_overview](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/deployment_strategies_overview.svg)
+![deployment_strategies_overview](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/deployment_strategies_overview.svg)
 
 ---
 ## Recreate Deployment
@@ -191,7 +191,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Rolling Update Visualization
 
-![rolling_update_visualization](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/rolling_update_visualization.svg)
+![rolling_update_visualization](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/rolling_update_visualization.svg)
 
 ---
 ## Blue/Green Deployment
@@ -204,7 +204,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Blue/Green Architecture
 
-![blue_green_architecture](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/blue_green_architecture.svg)
+![blue_green_architecture](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/blue_green_architecture.svg)
 
 ---
 ## Blue/Green Pros and Cons
@@ -230,7 +230,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Canary Deployment Flow
 
-![canary_deployment_flow](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/canary_deployment_flow.svg)
+![canary_deployment_flow](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/canary_deployment_flow.svg)
 
 ---
 ## Canary Metrics to Watch
@@ -260,7 +260,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Feature Flag Architecture
 
-![feature_flag_architecture](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/feature_flag_architecture.svg)
+![feature_flag_architecture](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/feature_flag_architecture.svg)
 
 ---
 ## Feature Flag Tools
@@ -292,7 +292,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Pipeline Architecture for Microservices
 
-![pipeline_architecture_for_microservices](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.svg)
+![pipeline_architecture_for_microservices](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.svg)
 
 ---
 ## Environment Promotion Strategy
@@ -322,7 +322,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Expand and Contract Pattern
 
-![expand_and_contract_pattern](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
+![expand_and_contract_pattern](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
 
 ---
 ## Expand and Contract Benefits

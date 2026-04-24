@@ -31,12 +31,12 @@ audience:
 ---
 ## Failure Categories
 
-![failure_categories](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/failure_categories.svg)
+![failure_categories](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/failure_categories.svg)
 
 ---
 ## The Cascade Effect
 
-![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
+![the_cascade_effect](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/the_cascade_effect.svg)
 
 ---
 ## The Cascade Effect Explained
@@ -49,12 +49,12 @@ audience:
 
 ## The Cascade Effect Diagram
 
-![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
+![the_cascade_effect](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/the_cascade_effect.svg)
 
 ---
 ## Resiliency Patterns Overview
 
-![resiliency_patterns_overview](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_patterns_overview.svg)
+![resiliency_patterns_overview](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/resiliency_patterns_overview.svg)
 
 ---
 ## Timeouts
@@ -98,7 +98,7 @@ response = requests.get(
 ---
 ## Retry with Exponential Backoff
 
-![retry_with_exponential_backoff](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.svg)
+![retry_with_exponential_backoff](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/retry_with_exponential_backoff.svg)
 
 ---
 ## Retry Best Practices
@@ -146,12 +146,12 @@ def retry_with_backoff(func, max_retries=3):
 ---
 ## Circuit Breaker Overview
 
-![circuit_breaker_pattern](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_pattern.svg)
+![circuit_breaker_pattern](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/circuit_breaker_pattern.svg)
 
 ---
 ## Circuit Breaker States
 
-![circuit_breaker_states](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_states.svg)
+![circuit_breaker_states](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/circuit_breaker_states.svg)
 
 ---
 ## Circuit Breaker: Closed State
@@ -225,7 +225,7 @@ class CircuitBreaker:
 ---
 ## Bulkhead Architecture
 
-![bulkhead_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.svg)
+![bulkhead_architecture](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/bulkhead_architecture.svg)
 
 ---
 ## Bulkhead Benefits
@@ -260,7 +260,7 @@ class CircuitBreaker:
 ---
 ## Token Bucket Diagram
 
-![token_bucket_diagram](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/token_bucket_diagram.svg)
+![token_bucket_diagram](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/token_bucket_diagram.svg)
 
 ---
 ## Rate Limiting Response
@@ -284,7 +284,7 @@ class CircuitBreaker:
 ---
 ## Fallback Decision Tree
 
-![fallback_decision_tree](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/fallback_decision_tree.svg)
+![fallback_decision_tree](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/fallback_decision_tree.svg)
 
 ---
 ## Hedging
@@ -297,7 +297,7 @@ class CircuitBreaker:
 ---
 ## Hedging Diagram
 
-![hedging_diagram](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.svg)
+![hedging_diagram](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/hedging_diagram.svg)
 
 ---
 ## Hedging Trade-Offs
@@ -325,7 +325,7 @@ class CircuitBreaker:
 ---
 ## Chaos Engineering Process
 
-![chaos_engineering_process](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/chaos_engineering_process.svg)
+![chaos_engineering_process](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/chaos_engineering_process.svg)
 
 ---
 ## Chaos Engineering Tools
@@ -358,7 +358,7 @@ class CircuitBreaker:
 ---
 ## Resiliency Testing Pyramid
 
-![resiliency_testing_pyramid](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_testing_pyramid.svg)
+![resiliency_testing_pyramid](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/resiliency_testing_pyramid.svg)
 
 ---
 ## Service Mesh for Resiliency
@@ -371,7 +371,7 @@ class CircuitBreaker:
 ---
 ## Service Mesh Architecture
 
-![service_mesh_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/service_mesh_architecture.svg)
+![service_mesh_architecture](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/service_mesh_architecture.svg)
 
 ---
 ## Building a Resiliency Strategy

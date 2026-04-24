@@ -33,12 +33,12 @@ audience:
 ---
 ## Kubernetes Architecture
 
-![kubernetes_architecture](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/kubernetes_architecture.svg)
+![kubernetes_architecture](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/kubernetes_architecture.svg)
 
 ---
 ## K8s Architecture
 
-![k8s_architecture](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/k8s_architecture.svg)
+![k8s_architecture](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/k8s_architecture.svg)
 
 ---
 ## Control Plane Components
@@ -92,7 +92,7 @@ spec:
 ---
 ## Multi-Container Pod Patterns
 
-![multi_container_pod_patterns](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/multi_container_pod_patterns.svg)
+![multi_container_pod_patterns](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/multi_container_pod_patterns.svg)
 
 ---
 ## Sidecar Pattern
@@ -138,7 +138,7 @@ spec:
 ---
 ## Rolling Update Strategy
 
-![rolling_update_strategy](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/rolling_update_strategy.svg)
+![rolling_update_strategy](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/rolling_update_strategy.svg)
 
 ---
 ## Deployment Update Configuration
@@ -205,7 +205,7 @@ spec:
 ---
 ## Service Networking Diagram
 
-![service_networking_diagram](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/service_networking_diagram.svg)
+![service_networking_diagram](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/service_networking_diagram.svg)
 
 ---
 ## Ingress
@@ -385,7 +385,7 @@ spec:
 ---
 ## Self-Healing Mechanisms
 
-![self_healing_mechanisms](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/self_healing_mechanisms.svg)
+![self_healing_mechanisms](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/self_healing_mechanisms.svg)
 
 ---
 ## Horizontal Pod Autoscaler (HPA)

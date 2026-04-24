@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="640" y="40" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--text)">Two concurrent read-modify-write cycles; one update silently overwrites the other</text>
+
+  <rect x="184.827586206897" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <text x="360.689655172414" y="103.272727272727" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--primary-text)">T1 (clerk A)</text>
+
+  <rect x="743.448275862069" y="61.090909090909" width="351.724137931035" height="63.272727272727" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <text x="919.310344827586" y="103.272727272727" text-anchor="middle" font-size="25.06718245762" font-family="Arial, sans-serif" fill="var(--danger-text)">T2 (clerk B)</text>
+
+  <line x1="360.689655172414" y1="134.909090909091" x2="360.689655172414" y2="546.181818181818" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="919.310344827586" y1="134.909090909091" x2="919.310344827586" y2="546.181818181818" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <rect x="184.827586206897" y="150.727272727273" width="351.724137931035" height="79.090909090909" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2" rx="6.266795614405"/>
+  <text x="360.689655172414" y="182.363636363636" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">read stock = 10</text>
+  <text x="360.689655172414" y="214" text-anchor="middle" font-size="22.978250586152" font-family="Arial, sans-serif" fill="var(--primary-accent)">plans: 10 - 3 = 7</text>
+
+  <rect x="743.448275862069" y="245.636363636364" width="351.724137931035" height="79.090909090909" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2" rx="6.266795614405"/>
+  <text x="919.310344827586" y="277.272727272727" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">read stock = 10</text>
+  <text x="919.310344827586" y="308.909090909091" text-anchor="middle" font-size="22.978250586152" font-family="Arial, sans-serif" fill="var(--danger-accent)">plans: 10 - 4 = 6</text>
+
+  <rect x="184.827586206897" y="340.545454545455" width="351.724137931035" height="79.090909090909" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2" rx="6.266795614405"/>
+  <text x="360.689655172414" y="372.181818181818" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">UPDATE stock = 7</text>
+  <text x="360.689655172414" y="403.818181818182" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">COMMIT</text>
+
+  <rect x="743.448275862069" y="440.727272727273" width="351.724137931035" height="79.090909090909" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2" rx="6.266795614405"/>
+  <text x="919.310344827586" y="472.363636363636" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">UPDATE stock = 6</text>
+  <text x="919.310344827586" y="504" text-anchor="middle" font-size="22.978250586152" font-family="Courier New, monospace" fill="var(--text)">COMMIT</text>
+
+  <rect x="40" y="546.181818181818" width="1200" height="73.818181818182" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.266795614405" filter="url(#shadow)"/>
+  <text x="640" y="577.818181818182" text-anchor="middle" font-size="22.978250586152" font-family="Arial, sans-serif" fill="var(--warn-text)">Final stock = 6. Expected = 10 - 3 - 4 = 3. T1's update was lost.</text>
+  <text x="640" y="607.345454545454" text-anchor="middle" font-size="20.889318714684" font-family="Arial, sans-serif" fill="var(--warn-text)">Fix: SELECT ... FOR UPDATE, version columns, or UPDATE stock SET qty = qty - 3.</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="640" y="40" text-anchor="middle" font-size="25.562994086505" font-family="Arial, sans-serif" fill="var(--text)">How NoSQL systems split data across nodes</text>
+
+  <rect x="40" y="78.666666666667" width="400" height="541.333333333333" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="5.899152481501" filter="url(#shadow)"/>
+  <text x="240" y="117.333333333333" text-anchor="middle" font-size="25.562994086505" font-family="Arial, sans-serif" fill="var(--primary-text)">Hash Partitioning</text>
+  <text x="240" y="156" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">shard = hash(key) mod N</text>
+  <text x="240" y="204.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">+ even distribution</text>
+  <text x="240" y="233.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">+ simple to implement</text>
+  <text x="240" y="281.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">- range scans hit every node</text>
+  <text x="240" y="310.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">- rebalancing is expensive</text>
+  <text x="240" y="359" text-anchor="middle" font-size="19.663841605004" font-family="Arial, sans-serif" fill="var(--primary-text)">Used by:</text>
+  <text x="240" y="388" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">Cassandra, DynamoDB,</text>
+  <text x="240" y="417" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--primary-text)">Memcached</text>
+
+  <rect x="460" y="78.666666666667" width="400" height="541.333333333333" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="5.899152481501" filter="url(#shadow)"/>
+  <text x="660" y="117.333333333333" text-anchor="middle" font-size="25.562994086505" font-family="Arial, sans-serif" fill="var(--ok-text)">Range Partitioning</text>
+  <text x="660" y="156" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">shard by ordered key ranges</text>
+  <text x="660" y="204.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">+ efficient range scans</text>
+  <text x="660" y="233.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">+ predictable locality</text>
+  <text x="660" y="281.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">- hot spots on popular ranges</text>
+  <text x="660" y="310.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">- needs good key design</text>
+  <text x="660" y="359" text-anchor="middle" font-size="19.663841605004" font-family="Arial, sans-serif" fill="var(--ok-text)">Used by:</text>
+  <text x="660" y="388" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">HBase, Bigtable,</text>
+  <text x="660" y="417" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--ok-text)">MongoDB (range mode)</text>
+
+  <rect x="880" y="78.666666666667" width="360" height="541.333333333333" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="5.899152481501" filter="url(#shadow)"/>
+  <text x="1060" y="117.333333333333" text-anchor="middle" font-size="25.562994086505" font-family="Arial, sans-serif" fill="var(--info-text)">Geo / Tag</text>
+  <text x="1060" y="156" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">shard by region or attribute</text>
+  <text x="1060" y="204.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">+ data locality for users</text>
+  <text x="1060" y="233.333333333333" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">+ regulatory isolation</text>
+  <text x="1060" y="281.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">- uneven shard sizes</text>
+  <text x="1060" y="310.666666666667" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">- cross-region queries expensive</text>
+  <text x="1060" y="359" text-anchor="middle" font-size="19.663841605004" font-family="Arial, sans-serif" fill="var(--info-text)">Used by:</text>
+  <text x="1060" y="388" text-anchor="middle" font-size="17.697457444503" font-family="Arial, sans-serif" fill="var(--info-text)">Cosmos DB, Spanner</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

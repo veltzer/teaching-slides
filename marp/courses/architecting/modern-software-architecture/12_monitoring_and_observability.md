@@ -32,7 +32,7 @@ audience:
 ---
 ## The Observability Challenge
 
-![the_observability_challenge](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_observability_challenge.svg)
+![the_observability_challenge](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/the_observability_challenge.svg)
 
 ---
 ## The Challenge in Practice
@@ -43,12 +43,12 @@ audience:
 ---
 ## The Three Pillars of Observability
 
-![the_three_pillars_of_observability](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_three_pillars_of_observability.svg)
+![the_three_pillars_of_observability](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/the_three_pillars_of_observability.svg)
 
 ---
 ## Observability Pillars
 
-![observability_pillars](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/observability_pillars.svg)
+![observability_pillars](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/observability_pillars.svg)
 
 ---
 ## Pillar 1: Metrics
@@ -100,7 +100,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## Metrics Architecture
 
-![metrics_architecture](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/metrics_architecture.svg)
+![metrics_architecture](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/metrics_architecture.svg)
 
 ---
 ## Grafana Dashboards
@@ -161,7 +161,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## Centralized Logging Architecture
 
-![centralized_logging_architecture](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/centralized_logging_architecture.svg)
+![centralized_logging_architecture](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/centralized_logging_architecture.svg)
 
 ---
 ## Logging Stack Options
@@ -195,7 +195,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## Trace Anatomy
 
-![trace_anatomy](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_anatomy.svg)
+![trace_anatomy](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/trace_anatomy.svg)
 
 ---
 ## Traces and Spans
@@ -223,7 +223,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## Context Propagation Flow
 
-![context_propagation_flow](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/context_propagation_flow.svg)
+![context_propagation_flow](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/context_propagation_flow.svg)
 
 ---
 ## OpenTelemetry
@@ -236,7 +236,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## OpenTelemetry Architecture
 
-![opentelemetry_architecture](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/opentelemetry_architecture.svg)
+![opentelemetry_architecture](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/opentelemetry_architecture.svg)
 
 ---
 ## OpenTelemetry Collector
@@ -289,7 +289,7 @@ with tracer.start_as_current_span("process"):
 ---
 ## Trace Visualization
 
-![trace_visualization](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_visualization.svg)
+![trace_visualization](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/trace_visualization.svg)
 
 ---
 ## Health Check Strategies
@@ -345,7 +345,7 @@ def readiness():
 ---
 ## SLI/SLO Relationship
 
-![sli_slo_relationship](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/sli_slo_relationship.svg)
+![sli_slo_relationship](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/sli_slo_relationship.svg)
 
 ---
 ## Error Budgets
@@ -367,7 +367,7 @@ def readiness():
 ---
 ## Correlation Flow
 
-![correlation_flow](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/correlation_flow.svg)
+![correlation_flow](svg/courses/architecting/modern-software-architecture/12_monitoring_and_observability/correlation_flow.svg)
 
 ---
 ## Observability in Kubernetes

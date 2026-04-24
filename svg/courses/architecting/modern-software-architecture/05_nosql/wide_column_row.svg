@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="640" y="40" text-anchor="middle" font-size="26.912556814352" font-family="Arial, sans-serif" fill="var(--text)">A row keyed by user, storing time-ordered events as columns</text>
+
+  <rect x="40" y="81.428571428571" width="227.586206896552" height="538.571428571429" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.210590034081" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="122.857142857143" text-anchor="middle" font-size="24.842360136325" font-family="Arial, sans-serif" fill="var(--primary-text)">Row Key</text>
+  <text x="153.793103448276" y="381.785714285714" text-anchor="middle" font-size="28.982753492379" font-family="Courier New, monospace" fill="var(--primary-text)">user42</text>
+
+  <rect x="308.965517241379" y="81.428571428571" width="931.034482758621" height="93.214285714286" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.210590034081" filter="url(#shadow)"/>
+  <text x="774.48275862069" y="117.678571428571" text-anchor="middle" font-size="22.772163458298" font-family="Arial, sans-serif" fill="var(--info-text)">profile (column family)</text>
+  <text x="774.48275862069" y="153.928571428571" text-anchor="middle" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--info-text)">name=Alice   email=a@x.io   signup=2024-01-15</text>
+
+  <rect x="308.965517241379" y="195.357142857143" width="931.034482758621" height="424.642857142857" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.210590034081" filter="url(#shadow)"/>
+  <text x="774.48275862069" y="231.607142857143" text-anchor="middle" font-size="22.772163458298" font-family="Arial, sans-serif" fill="var(--ok-text)">events (column family)</text>
+  <text x="774.48275862069" y="273.035714285714" text-anchor="middle" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">column names = timestamps, values = event data</text>
+  <text x="334.827586206897" y="319.642857142857" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">2026-04-01T10:00:00  =  "login"</text>
+  <text x="334.827586206897" y="361.071428571429" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">2026-04-01T10:05:12  =  "view_item:42"</text>
+  <text x="334.827586206897" y="402.5" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">2026-04-01T10:07:03  =  "add_to_cart:42"</text>
+  <text x="334.827586206897" y="443.928571428571" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">2026-04-01T10:08:40  =  "checkout"</text>
+  <text x="334.827586206897" y="485.357142857143" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">2026-04-02T09:12:55  =  "login"</text>
+  <text x="334.827586206897" y="526.785714285714" font-size="20.701966780271" font-family="Courier New, monospace" fill="var(--ok-text)">...  (potentially millions of columns per row)</text>
+  <text x="774.48275862069" y="588.928571428571" text-anchor="middle" font-size="20.701966780271" font-family="Arial, sans-serif" fill="var(--ok-text)">sorted by column name — range scans are cheap</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

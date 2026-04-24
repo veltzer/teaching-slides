@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="661.428571428571" y="40" text-anchor="middle" font-size="27.512019135483" font-family="Arial, sans-serif" fill="var(--text)">Three approaches to keeping replicas in sync</text>
+
+  <text x="206.071428571429" y="92.252252252252" text-anchor="middle" font-size="23.279400806947" font-family="Arial, sans-serif" fill="var(--primary-accent)">Leader-Follower</text>
+
+  <rect x="136.428571428571" y="113.153153153153" width="139.285714285714" height="83.603603603604" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="206.071428571429" y="160.18018018018" text-anchor="middle" font-size="23.279400806947" font-family="Arial, sans-serif" fill="var(--primary-text)">Leader</text>
+
+  <rect x="40" y="249.009009009009" width="139.285714285714" height="73.153153153153" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="109.642857142857" y="296.036036036036" text-anchor="middle" font-size="21.163091642679" font-family="Arial, sans-serif" fill="var(--info-text)">Follower</text>
+  <rect x="232.857142857143" y="249.009009009009" width="139.285714285714" height="73.153153153153" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="302.5" y="296.036036036036" text-anchor="middle" font-size="21.163091642679" font-family="Arial, sans-serif" fill="var(--info-text)">Follower</text>
+
+  <line x1="190" y1="196.756756756757" x2="120.357142857143" y2="249.009009009009" stroke="var(--primary-accent)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="222.142857142857" y1="196.756756756757" x2="291.785714285714" y2="249.009009009009" stroke="var(--primary-accent)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <text x="206.071428571429" y="358.738738738739" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">writes go to leader</text>
+  <text x="206.071428571429" y="384.864864864865" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">reads from any node</text>
+  <text x="206.071428571429" y="426.666666666667" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">PostgreSQL streaming,</text>
+  <text x="206.071428571429" y="449.657657657658" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">MongoDB replica set,</text>
+  <text x="206.071428571429" y="472.648648648649" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">Redis replication</text>
+  <text x="206.071428571429" y="510.27027027027" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--danger-accent)">single write bottleneck</text>
+
+  <text x="661.428571428571" y="92.252252252252" text-anchor="middle" font-size="23.279400806947" font-family="Arial, sans-serif" fill="var(--ok-accent)">Multi-Leader</text>
+
+  <rect x="532.857142857143" y="113.153153153153" width="128.571428571429" height="83.603603603604" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="597.142857142857" y="160.18018018018" text-anchor="middle" font-size="21.163091642679" font-family="Arial, sans-serif" fill="var(--ok-text)">Leader</text>
+  <rect x="682.857142857143" y="113.153153153153" width="128.571428571429" height="83.603603603604" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="747.142857142857" y="160.18018018018" text-anchor="middle" font-size="21.163091642679" font-family="Arial, sans-serif" fill="var(--ok-text)">Leader</text>
+
+  <line x1="661.428571428571" y1="154.954954954955" x2="682.857142857143" y2="154.954954954955" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="682.857142857143" y1="165.405405405405" x2="661.428571428571" y2="165.405405405405" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+
+  <rect x="554.285714285714" y="259.459459459459" width="107.142857142857" height="62.702702702703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="607.857142857143" y="297.081081081081" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--info-text)">Follower</text>
+  <rect x="682.857142857143" y="259.459459459459" width="107.142857142857" height="62.702702702703" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="736.428571428571" y="297.081081081081" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--info-text)">Follower</text>
+
+  <line x1="597.142857142857" y1="196.756756756757" x2="597.142857142857" y2="259.459459459459" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="747.142857142857" y1="196.756756756757" x2="747.142857142857" y2="259.459459459459" stroke="var(--ok-accent)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+
+  <text x="661.428571428571" y="358.738738738739" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">writes to any leader</text>
+  <text x="661.428571428571" y="384.864864864865" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">cross-region latency wins</text>
+  <text x="661.428571428571" y="426.666666666667" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">CockroachDB,</text>
+  <text x="661.428571428571" y="449.657657657658" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">MySQL multi-source,</text>
+  <text x="661.428571428571" y="472.648648648649" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">Couchbase XDCR</text>
+  <text x="661.428571428571" y="510.27027027027" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--danger-accent)">write conflict resolution needed</text>
+
+  <text x="1116.785714285714" y="92.252252252252" text-anchor="middle" font-size="23.279400806947" font-family="Arial, sans-serif" fill="var(--warn-accent)">Leaderless</text>
+
+  <rect x="1004.285714285714" y="123.603603603604" width="107.142857142857" height="62.702702702703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="160.18018018018" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--warn-text)">Node</text>
+  <rect x="1132.857142857143" y="123.603603603604" width="107.142857142857" height="62.702702702703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="1186.428571428572" y="160.18018018018" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--warn-text)">Node</text>
+  <rect x="1068.571428571429" y="228.108108108108" width="107.142857142857" height="62.702702702703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.348927492804" filter="url(#shadow)"/>
+  <text x="1122.142857142857" y="264.684684684685" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--warn-text)">Node</text>
+
+  <line x1="1111.428571428572" y1="186.306306306306" x2="1132.857142857143" y2="186.306306306306" stroke="var(--warn-accent)" stroke-width="2"/>
+  <line x1="1057.857142857143" y1="186.306306306306" x2="1122.142857142857" y2="228.108108108108" stroke="var(--warn-accent)" stroke-width="2"/>
+  <line x1="1186.428571428572" y1="186.306306306306" x2="1122.142857142857" y2="228.108108108108" stroke="var(--warn-accent)" stroke-width="2"/>
+
+  <text x="1116.785714285714" y="358.738738738739" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">every node accepts writes</text>
+  <text x="1116.785714285714" y="384.864864864865" text-anchor="middle" font-size="19.046782478411" font-family="Arial, sans-serif" fill="var(--text)">quorum on read/write: R+W&gt;N</text>
+  <text x="1116.785714285714" y="426.666666666667" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">Cassandra, DynamoDB,</text>
+  <text x="1116.785714285714" y="449.657657657658" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--text-muted)">Riak</text>
+  <text x="1116.785714285714" y="510.27027027027" text-anchor="middle" font-size="16.930473314144" font-family="Arial, sans-serif" fill="var(--danger-accent)">clients see inconsistent reads</text>
+
+  <rect x="125.714285714286" y="557.297297297297" width="1071.428571428571" height="62.702702702703" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1" rx="6.348927492804"/>
+  <text x="661.428571428571" y="593.873873873874" text-anchor="middle" font-size="21.163091642679" font-family="Arial, sans-serif" fill="var(--text)">The replication model determines which consistency levels the database can offer.</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

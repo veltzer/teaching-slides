@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <text x="288.275862068966" y="40" text-anchor="middle" font-size="30.253169045377" font-family="Arial, sans-serif" fill="var(--primary-accent)">Relational</text>
+  <text x="288.275862068966" y="64.576271186441" text-anchor="middle" font-size="16.135023490868" font-family="Arial, sans-serif" fill="var(--text-muted)">data split across tables, joined at read time</text>
+
+  <rect x="40" y="89.152542372881" width="496.551724137931" height="137.627118644068" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.050633809075" filter="url(#shadow)"/>
+  <text x="288.275862068966" y="123.559322033898" text-anchor="middle" font-size="24.202535236301" font-family="Arial, sans-serif" fill="var(--primary-text)">users</text>
+  <text x="60.689655172414" y="162.881355932203" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--primary-text)">id | name  | email</text>
+  <text x="60.689655172414" y="197.28813559322" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--primary-text)">42 | Alice | a@x.io</text>
+
+  <rect x="40" y="256.271186440678" width="496.551724137931" height="176.949152542373" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.050633809075" filter="url(#shadow)"/>
+  <text x="288.275862068966" y="290.677966101695" text-anchor="middle" font-size="24.202535236301" font-family="Arial, sans-serif" fill="var(--info-text)">orders</text>
+  <text x="60.689655172414" y="330" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--info-text)">id | user_id | total</text>
+  <text x="60.689655172414" y="364.406779661017" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--info-text)">1  | 42      | 50.00</text>
+  <text x="60.689655172414" y="398.813559322034" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--info-text)">2  | 42      | 30.00</text>
+
+  <rect x="40" y="462.71186440678" width="496.551724137931" height="157.28813559322" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" rx="6.050633809075" filter="url(#shadow)"/>
+  <text x="288.275862068966" y="497.118644067797" text-anchor="middle" font-size="24.202535236301" font-family="Arial, sans-serif" fill="var(--warn-text)">order_items</text>
+  <text x="60.689655172414" y="536.440677966102" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--warn-text)">order_id | product | qty</text>
+  <text x="60.689655172414" y="568.881355932203" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--warn-text)">1        | book    | 1</text>
+  <text x="60.689655172414" y="600.338983050847" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--warn-text)">2        | pen     | 5</text>
+
+  <text x="950.344827586207" y="40" text-anchor="middle" font-size="30.253169045377" font-family="Arial, sans-serif" fill="var(--ok-accent)">Document</text>
+  <text x="950.344827586207" y="64.576271186441" text-anchor="middle" font-size="16.135023490868" font-family="Arial, sans-serif" fill="var(--text-muted)">one self-contained document per entity</text>
+
+  <rect x="660.689655172414" y="89.152542372881" width="579.310344827586" height="530.847457627119" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.050633809075" filter="url(#shadow)"/>
+  <text x="681.379310344828" y="128.474576271186" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">{</text>
+  <text x="702.068965517241" y="157.966101694915" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">_id: 42,</text>
+  <text x="702.068965517241" y="187.457627118644" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">name: "Alice",</text>
+  <text x="702.068965517241" y="216.949152542373" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">email: "a@x.io",</text>
+  <text x="702.068965517241" y="246.440677966102" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">orders: [</text>
+  <text x="722.758620689655" y="275.932203389831" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">{ id: 1, total: 50.00,</text>
+  <text x="722.758620689655" y="305.423728813559" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">  items: [</text>
+  <text x="743.448275862069" y="334.915254237288" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">{ product: "book",</text>
+  <text x="743.448275862069" y="364.406779661017" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">  qty: 1 } ] },</text>
+  <text x="722.758620689655" y="393.898305084746" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">{ id: 2, total: 30.00,</text>
+  <text x="722.758620689655" y="423.389830508475" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">  items: [</text>
+  <text x="743.448275862069" y="452.881355932203" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">{ product: "pen",</text>
+  <text x="743.448275862069" y="482.372881355932" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">  qty: 5 } ] }</text>
+  <text x="702.068965517241" y="511.864406779661" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">]</text>
+  <text x="681.379310344828" y="541.35593220339" font-size="20.168779363584" font-family="Courier New, monospace" fill="var(--ok-text)">}</text>
+  <text x="950.344827586207" y="595.423728813559" text-anchor="middle" font-size="18.151901427226" font-family="Arial, sans-serif" fill="var(--ok-text)">one fetch returns everything</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>
