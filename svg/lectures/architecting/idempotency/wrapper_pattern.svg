@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+
+  <!-- Client -->
+  <rect x="40" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="293.75" text-anchor="middle" font-size="31.304951684997" font-family="Arial, sans-serif" fill="var(--primary-text)">Client</text>
+  <text x="153.793103448276" y="336.041666666667" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--primary-text)">sends key</text>
+
+  <!-- Wrapper container -->
+  <rect x="371.034482758621" y="40" width="537.931034482759" height="531.666666666667" fill="var(--surface)" stroke="var(--border)" stroke-width="2" rx="6.708203932499"/>
+  <text x="640" y="88.333333333333" text-anchor="middle" font-size="29.068883707497" font-family="Arial, sans-serif" fill="var(--text)">Idempotent Wrapper</text>
+
+  <!-- Wrapper: logic box -->
+  <rect x="412.413793103448" y="136.666666666667" width="455.172413793103" height="145" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <text x="640" y="187.416666666667" text-anchor="middle" font-size="26.832815729997" font-family="Arial, sans-serif" fill="var(--ok-text)">check key / single-flight</text>
+  <text x="640" y="230.916666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--ok-text)">replay stored response</text>
+  <text x="640" y="264.75" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--ok-text)">on repeat</text>
+
+  <!-- Wrapper: key store -->
+  <rect x="412.413793103448" y="354.166666666667" width="455.172413793103" height="169.166666666667" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <text x="640" y="408.541666666667" text-anchor="middle" font-size="26.832815729997" font-family="Arial, sans-serif" fill="var(--info-text)">Key Store</text>
+  <text x="640" y="450.833333333333" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--info-text)">key → response</text>
+  <text x="640" y="487.083333333333" text-anchor="middle" font-size="22.360679774998" font-family="Arial, sans-serif" fill="var(--info-text)">(Redis, DB)</text>
+
+  <!-- wrapper logic -> store arrows -->
+  <path d="M 640 281.666666666667 L 640 354.166666666667" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Legacy service -->
+  <rect x="1012.413793103448" y="233.333333333333" width="227.586206896552" height="145" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" rx="6.708203932499" filter="url(#shadow)"/>
+  <text x="1126.206896551724" y="281.666666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Legacy</text>
+  <text x="1126.206896551724" y="317.916666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Non-Idempotent</text>
+  <text x="1126.206896551724" y="354.166666666667" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--danger-text)">Service</text>
+
+  <!-- Client -> Wrapper -->
+  <path d="M 267.586206896552 305.833333333333 L 412.413793103448 209.166666666667" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Wrapper -> Legacy -->
+  <path d="M 867.586206896552 209.166666666667 L 1012.413793103448 281.666666666667" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="940" y="221.25" text-anchor="middle" font-size="20.124611797498" font-family="Arial, sans-serif" fill="var(--text-muted)">call once</text>
+
+  <!-- Legacy -> Wrapper (response) -->
+  <path d="M 1012.413793103448 330 L 867.586206896552 426.666666666667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="940" y="402.5" text-anchor="middle" font-size="20.124611797498" font-family="Arial, sans-serif" fill="var(--text-muted)">result</text>
+
+  <!-- Caption at bottom -->
+  <text x="640" y="620" text-anchor="middle" font-size="24.596747752498" font-family="Arial, sans-serif" fill="var(--text)">wrapper owns the key; legacy stays unchanged</text>
+
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>
