@@ -49,7 +49,7 @@ Most real systems are tunable — you pick consistency level per operation, not 
 ---
 ## BASE vs ACID
 
-![base_vs_acid](svg/courses/architecting/modern-software-architecture/05_nosql/base_vs_acid.svg)
+![base_vs_acid](svg/courses/architecting/modern-software-architecture/06_nosql/base_vs_acid.svg)
 
 ---
 ## Consistency Is a Spectrum
@@ -59,7 +59,7 @@ Most real systems are tunable — you pick consistency level per operation, not 
 ---
 ## Consistency Models
 
-![consistency_models](svg/courses/architecting/modern-software-architecture/05_nosql/consistency_models.svg)
+![consistency_models](svg/courses/architecting/modern-software-architecture/06_nosql/consistency_models.svg)
 
 ---
 ## Picking a Consistency Level
@@ -75,7 +75,7 @@ Most NoSQL systems let you pick per query — the default is usually eventual.
 ---
 ## The Four Families
 
-![four_families](svg/courses/architecting/modern-software-architecture/05_nosql/four_families.svg)
+![four_families](svg/courses/architecting/modern-software-architecture/06_nosql/four_families.svg)
 
 ---
 ## Family 1: Key-Value Stores
@@ -124,7 +124,7 @@ The data model matches what most applications already serialize over the wire.
 ---
 ## Relational vs. Document
 
-![relational_vs_document](svg/courses/architecting/modern-software-architecture/05_nosql/relational_vs_document.svg)
+![relational_vs_document](svg/courses/architecting/modern-software-architecture/06_nosql/relational_vs_document.svg)
 
 ---
 ## Document Example: MongoDB
@@ -184,7 +184,7 @@ The row is the unit of locality. Queries within one row are cheap; queries acros
 ---
 ## Wide-Column Row Structure
 
-![wide_column_row](svg/courses/architecting/modern-software-architecture/05_nosql/wide_column_row.svg)
+![wide_column_row](svg/courses/architecting/modern-software-architecture/06_nosql/wide_column_row.svg)
 
 ---
 ## Wide-Column Example: Cassandra
@@ -239,7 +239,7 @@ The shape of the data *is* the query plan.
 ---
 ## Graph Model
 
-![graph_example](svg/courses/architecting/modern-software-architecture/05_nosql/graph_example.svg)
+![graph_example](svg/courses/architecting/modern-software-architecture/06_nosql/graph_example.svg)
 
 ---
 ## Graph Example: Cypher (Neo4j)
@@ -293,12 +293,12 @@ Design rule: if you haven't planned how a query is served, it probably requires 
 ---
 ## Sharding Strategies
 
-![sharding_strategies](svg/courses/architecting/modern-software-architecture/05_nosql/sharding_strategies.svg)
+![sharding_strategies](svg/courses/architecting/modern-software-architecture/06_nosql/sharding_strategies.svg)
 
 ---
 ## Replication Models
 
-![replication_models](svg/courses/architecting/modern-software-architecture/05_nosql/replication_models.svg)
+![replication_models](svg/courses/architecting/modern-software-architecture/06_nosql/replication_models.svg)
 
 ---
 ## Quorum: R + W > N
@@ -349,7 +349,7 @@ SQL-like surface syntax doesn't mean SQL semantics — CQL's `WHERE` rejects any
 ---
 ## When to Pick Each Family
 
-![when_to_pick_each](svg/courses/architecting/modern-software-architecture/05_nosql/when_to_pick_each.svg)
+![when_to_pick_each](svg/courses/architecting/modern-software-architecture/06_nosql/when_to_pick_each.svg)
 
 ---
 ## Polyglot Persistence

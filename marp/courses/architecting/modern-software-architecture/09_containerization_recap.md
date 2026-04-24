@@ -27,11 +27,6 @@ audience:
 ![containers_vs_virtual_machines](svg/courses/architecting/modern-software-architecture/09_containerization_recap/containers_vs_virtual_machines.svg)
 
 ---
-## Container vs VM
-
-![container_vs_vm](svg/courses/architecting/modern-software-architecture/09_containerization_recap/container_vs_vm.svg)
-
----
 ## Container Advantages
 
 - Start in seconds compared to minutes for VMs

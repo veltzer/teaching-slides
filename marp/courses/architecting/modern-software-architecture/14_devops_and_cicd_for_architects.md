@@ -33,7 +33,7 @@ audience:
 ---
 ## The DevOps Lifecycle
 
-![the_devops_lifecycle](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/the_devops_lifecycle.svg)
+![the_devops_lifecycle](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/the_devops_lifecycle.svg)
 
 ---
 ## Why Architects Care About DevOps
@@ -52,14 +52,9 @@ audience:
 - Provides fast feedback to developers on code quality
 
 ---
-## CI Pipeline
-
-![ci_pipeline](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/ci_pipeline.svg)
-
----
 ## CI/CD Pipeline
 
-![ci_cd_pipeline](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/cicd_pipeline.svg)
+![ci_cd_pipeline](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/cicd_pipeline.svg)
 
 ---
 ## CI Best Practices
@@ -89,7 +84,7 @@ audience:
 ---
 ## CD vs Continuous Deployment
 
-![cd_vs_continuous_deployment](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/cd_vs_continuous_deployment.svg)
+![cd_vs_continuous_deployment](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/cd_vs_continuous_deployment.svg)
 
 ---
 ## Infrastructure as Code (IaC)
@@ -111,7 +106,7 @@ audience:
 ---
 ## IaC Tool Categories
 
-![iac_tool_categories](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/iac_tool_categories.svg)
+![iac_tool_categories](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/iac_tool_categories.svg)
 
 ---
 ## Terraform Example
@@ -157,7 +152,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## GitOps Workflow
 
-![gitops_workflow](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/gitops_workflow.svg)
+![gitops_workflow](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/gitops_workflow.svg)
 
 ---
 ## GitOps Tools
@@ -166,110 +161,6 @@ resource "aws_security_group" "web_sg" {
 - `Flux` - GitOps toolkit for Kubernetes
 - Both watch a Git repository and apply changes automatically
 - Support rollback by reverting Git commits
-
----
-## Deployment Strategies Overview
-
-![deployment_strategies_overview](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/deployment_strategies_overview.svg)
-
----
-## Recreate Deployment
-
-- Shut down all old instances, then start all new instances
-- Simple but causes downtime during the transition
-- Useful for non-production environments or batch jobs
-- Not suitable for user-facing services that need availability
-
----
-## Rolling Update
-
-- Gradually replace old instances with new ones
-- At any point, both old and new versions may be running
-- Zero downtime if configured correctly
-- Default strategy in Kubernetes Deployments
-
----
-## Rolling Update Visualization
-
-![rolling_update_visualization](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/rolling_update_visualization.svg)
-
----
-## Blue/Green Deployment
-
-- Maintain two identical production environments: Blue and Green
-- Blue runs the current version; Green has the new version
-- Switch traffic from Blue to Green when ready
-- Instant rollback by switching traffic back to Blue
-
----
-## Blue/Green Architecture
-
-![blue_green_architecture](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/blue_green_architecture.svg)
-
----
-## Blue/Green Pros and Cons
-
-- Pros:
-    - Zero-downtime deployment
-    - Instant rollback by switching traffic
-    - Full testing of new version in production environment
-    - Simple to understand and implement
-- Cons:
-    - Requires double the infrastructure
-    - Database schema changes need careful coordination
-    - Higher cost due to duplicate environments
-
----
-## Canary Deployment
-
-- Roll out the new version to a small subset of users first
-- Monitor the canary for errors, latency, and business metrics
-- Gradually increase the percentage if metrics are healthy
-- Roll back immediately if problems are detected
-
----
-## Canary Deployment Flow
-
-![canary_deployment_flow](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/canary_deployment_flow.svg)
-
----
-## Canary Metrics to Watch
-
-- Error rate compared to the stable version
-- Latency percentiles (p50, p95, p99)
-- CPU and memory utilization
-- Business metrics (conversion rate, checkout success)
-- Automated analysis can compare canary vs baseline
-
----
-## Progressive Delivery
-
-- An umbrella term for advanced deployment techniques
-- Combines canary deployments with automated analysis
-- Tools gradually shift traffic based on real-time metrics
-- Examples: `Flagger`, `Argo Rollouts`, `Spinnaker`
-
----
-## Feature Flags
-
-- Decouple deployment from release
-- Deploy new code to production with the feature disabled
-- Enable the feature for specific users, regions, or percentages
-- Roll back instantly by toggling the flag, without redeploying
-
----
-## Feature Flag Architecture
-
-![feature_flag_architecture](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/feature_flag_architecture.svg)
-
----
-## Feature Flag Tools
-
-- `LaunchDarkly` - commercial feature management platform
-- `Unleash` - open-source feature toggle service
-- `Flagsmith` - open-source feature flag and remote config
-- `Split` - feature delivery with experimentation
-- Simple config-based flags for small teams
 
 ---
 ## The Architect's Role in DevOps
@@ -292,7 +183,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Pipeline Architecture for Microservices
 
-![pipeline_architecture_for_microservices](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.svg)
+![pipeline_architecture_for_microservices](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.svg)
 
 ---
 ## Environment Promotion Strategy
@@ -322,7 +213,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## Expand and Contract Pattern
 
-![expand_and_contract_pattern](svg/courses/architecting/modern-software-architecture/13_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
+![expand_and_contract_pattern](svg/courses/architecting/modern-software-architecture/14_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
 
 ---
 ## Expand and Contract Benefits
@@ -354,7 +245,6 @@ resource "aws_security_group" "web_sg" {
 - CI ensures code quality through automated builds and tests
 - CD automates the path from commit to production
 - Infrastructure as Code makes environments reproducible and auditable
-- Blue/Green, Canary, and Rolling updates each have different trade-offs
-- Feature flags decouple deployment from release
+- GitOps uses Git as the single source of truth for both app and infra state
 - Architects shape the systems and standards that make DevOps possible
 - Security, secrets management, and guardrails protect the pipeline

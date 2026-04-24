@@ -31,7 +31,7 @@ audience:
 ---
 ## Strategic vs Tactical Design
 
-![strategic_vs_tactical_design](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/strategic_vs_tactical_design.svg)
+![strategic_vs_tactical_design](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/strategic_vs_tactical_design.svg)
 
 ---
 ## The Ubiquitous Language
@@ -76,12 +76,12 @@ class Customer:
 ---
 ## Bounded Context Example
 
-![bounded_context_example](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/bounded_context_example.svg)
+![bounded_context_example](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/bounded_context_example.svg)
 
 ---
 ## Bounded Contexts
 
-![bounded_contexts](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/bounded_contexts.svg)
+![bounded_contexts](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/bounded_contexts.svg)
 
 ---
 ## Why Bounded Contexts Matter
@@ -112,7 +112,7 @@ class Customer:
 ---
 ## Context Map Diagram
 
-![context_map_diagram](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/context_map_diagram.svg)
+![context_map_diagram](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/context_map_diagram.svg)
 
 ---
 ## Anti-Corruption Layer (ACL)
@@ -125,7 +125,7 @@ class Customer:
 ---
 ## ACL Architecture
 
-![acl_architecture](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/acl_architecture.svg)
+![acl_architecture](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/acl_architecture.svg)
 
 ---
 ## Entities
@@ -203,7 +203,7 @@ class Money:
 ---
 ## Aggregate Structure
 
-![aggregate_structure](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/aggregate_structure.svg)
+![aggregate_structure](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/aggregate_structure.svg)
 
 ---
 ## Aggregate Design Rules
@@ -289,7 +289,7 @@ class PlaceOrderService:
 ---
 ## Domain Event Flow
 
-![domain_event_flow](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/domain_event_flow.svg)
+![domain_event_flow](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/domain_event_flow.svg)
 
 ---
 ## Mapping Domains to Microservices
@@ -302,7 +302,7 @@ class PlaceOrderService:
 ---
 ## Decomposition Strategy
 
-![decomposition_strategy](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/decomposition_strategy.svg)
+![decomposition_strategy](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/decomposition_strategy.svg)
 
 ---
 ## Subdomain Types
@@ -325,7 +325,7 @@ class PlaceOrderService:
 ---
 ## Event Storming Flow
 
-![event_storming_flow](svg/courses/architecting/modern-software-architecture/06_domain_driven_design/event_storming_flow.svg)
+![event_storming_flow](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/event_storming_flow.svg)
 
 ---
 ## Common DDD Pitfalls

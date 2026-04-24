@@ -34,6 +34,78 @@ audience:
 - Achieving consensus across nodes is fundamentally hard
 
 ---
+## The Fallacies of Distributed Computing
+
+- Eight assumptions that developers new to distributed systems wrongly make
+- Originally listed by Peter Deutsch and James Gosling at Sun Microsystems
+- Each fallacy leads to specific categories of bugs and outages
+- Understanding them is essential for building robust systems
+
+---
+## Fallacy 1: The Network Is Reliable
+
+- Packets get lost, connections drop, switches fail
+- Impact: need retries, timeouts, and idempotent operations
+- Design pattern: use message queues for critical communication
+- Always expect and handle network failures gracefully
+
+---
+## Fallacy 2: Latency Is Zero
+
+- Every network call adds milliseconds or more of delay
+- Impact: chatty protocols perform poorly over networks
+- Design pattern: batch requests and use coarse-grained APIs
+- Measure and account for latency in performance budgets
+
+---
+## Fallacy 3: Bandwidth Is Infinite
+
+- Network capacity is limited and shared with other traffic
+- Impact: large payloads can saturate links and cause congestion
+- Design pattern: compress data, paginate responses, use streaming
+- Monitor network utilization and plan for growth
+
+---
+## Fallacy 4: The Network Is Secure
+
+- Every network boundary is a potential attack surface
+- Impact: data in transit can be intercepted or tampered with
+- Design pattern: use `TLS`, mutual authentication, and zero-trust networking
+- Never assume internal networks are inherently safe
+
+---
+## Fallacy 5: Topology Doesn't Change
+
+- Network paths, servers, and load balancers change frequently
+- Impact: hardcoded addresses and routes will break
+- Design pattern: use service discovery and DNS-based routing
+- Build systems that adapt to topology changes automatically
+
+---
+## Fallacy 6: There Is One Administrator
+
+- Modern systems span teams, organizations, and cloud providers
+- Impact: no single person controls all the infrastructure
+- Design pattern: use well-defined APIs and contracts at boundaries
+- Assume limited control over external dependencies
+
+---
+## Fallacy 7: Transport Cost Is Zero
+
+- Serialization, deserialization, and network I/O consume resources
+- Impact: excessive remote calls waste CPU, memory, and bandwidth
+- Design pattern: cache frequently accessed data locally
+- Consider the total cost of each network interaction
+
+---
+## Fallacy 8: The Network Is Homogeneous
+
+- Systems use different protocols, formats, and versions
+- Impact: interoperability issues at service boundaries
+- Design pattern: use standard protocols like `HTTP`, `gRPC`, or `AMQP`
+- Test against multiple client and server versions
+
+---
 ## The CAP Theorem
 
 - Proposed by Eric Brewer in 2000, proven in 2002
@@ -42,11 +114,6 @@ audience:
     - `Availability` (A)
     - `Partition Tolerance` (P)
 - Network partitions are inevitable, so the real choice is C vs A
-
----
-## CAP Theorem Diagram
-
-![cap_theorem_diagram](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem_diagram.svg)
 
 ---
 ## CAP Theorem
@@ -136,76 +203,89 @@ audience:
 - Necessary when correctness depends on data freshness
 
 ---
-## The Fallacies of Distributed Computing
+## FLP Impossibility
 
-- Eight assumptions that developers new to distributed systems wrongly make
-- Originally listed by Peter Deutsch and James Gosling at Sun Microsystems
-- Each fallacy leads to specific categories of bugs and outages
-- Understanding them is essential for building robust systems
+Fischer, Lynch, Paterson (1985):
 
----
-## Fallacy 1: The Network Is Reliable
+> No deterministic algorithm can guarantee consensus in an asynchronous system with even one faulty process.
 
-- Packets get lost, connections drop, switches fail
-- Impact: need retries, timeouts, and idempotent operations
-- Design pattern: use message queues for critical communication
-- Always expect and handle network failures gracefully
+Implications:
+
+- Perfect consensus is impossible in a truly asynchronous model
+- Real systems must relax requirements (e.g., use timeouts, partial synchrony)
+- Raft and Paxos assume eventual synchrony to make progress
 
 ---
-## Fallacy 2: Latency Is Zero
+## Logical Clocks (Lamport)
 
-- Every network call adds milliseconds or more of delay
-- Impact: chatty protocols perform poorly over networks
-- Design pattern: batch requests and use coarse-grained APIs
-- Measure and account for latency in performance budgets
+Physical clocks disagree; logical clocks give a consistent *partial order* of events:
 
----
-## Fallacy 3: Bandwidth Is Infinite
+- Each process has a counter; increment before every local event
+- On send, attach counter value to the message
+- On receive, set counter to `max(local, received) + 1`
 
-- Network capacity is limited and shared with other traffic
-- Impact: large payloads can saturate links and cause congestion
-- Design pattern: compress data, paginate responses, use streaming
-- Monitor network utilization and plan for growth
+Captures "happens-before" but not concurrency — two unrelated events may have equal timestamps with no causal link.
 
 ---
-## Fallacy 4: The Network Is Secure
+## Vector Clocks
 
-- Every network boundary is a potential attack surface
-- Impact: data in transit can be intercepted or tampered with
-- Design pattern: use `TLS`, mutual authentication, and zero-trust networking
-- Never assume internal networks are inherently safe
+Track causality across *all* nodes. Each process holds a vector `V[i]` of counters, one per node:
 
----
-## Fallacy 5: Topology Doesn't Change
+- On local event, increment your own slot
+- On send, include the full vector
+- On receive, element-wise max, then increment own slot
 
-- Network paths, servers, and load balancers change frequently
-- Impact: hardcoded addresses and routes will break
-- Design pattern: use service discovery and DNS-based routing
-- Build systems that adapt to topology changes automatically
+Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A)` is false. Used in Dynamo, Riak, version vectors for conflict detection.
 
 ---
-## Fallacy 6: There Is One Administrator
+## Consensus Algorithms
 
-- Modern systems span teams, organizations, and cloud providers
-- Impact: no single person controls all the infrastructure
-- Design pattern: use well-defined APIs and contracts at boundaries
-- Assume limited control over external dependencies
-
----
-## Fallacy 7: Transport Cost Is Zero
-
-- Serialization, deserialization, and network I/O consume resources
-- Impact: excessive remote calls waste CPU, memory, and bandwidth
-- Design pattern: cache frequently accessed data locally
-- Consider the total cost of each network interaction
+- Enable multiple nodes to agree on a single value
+- Essential for leader election and distributed state machines
+- Examples: `Paxos`, `Raft`, `Zab`
+- Trade availability for correctness during partitions
 
 ---
-## Fallacy 8: The Network Is Homogeneous
+## Raft Consensus Overview
 
-- Systems use different protocols, formats, and versions
-- Impact: interoperability issues at service boundaries
-- Design pattern: use standard protocols like `HTTP`, `gRPC`, or `AMQP`
-- Test against multiple client and server versions
+![raft_consensus_overview](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
+
+---
+## Raft Consensus Details
+
+- Leader handles all writes
+- Majority acknowledgment required for commit
+- New leader elected if current leader fails
+
+---
+## Byzantine Fault Tolerance
+
+Crash faults: a node stops. Byzantine faults: a node lies, sends contradicting messages, or is malicious.
+
+- Classical BFT protocols (PBFT) tolerate `f` faults with `3f + 1` total nodes
+- Expensive: many message rounds, cryptographic signatures
+- Modern use cases: blockchains, financial systems, safety-critical control
+
+Most traditional distributed systems (ZooKeeper, etcd, Cassandra) assume crash-only faults — not Byzantine.
+
+---
+## Quorum-Based Systems
+
+- A quorum is the minimum number of nodes that must agree
+- Write quorum (W) + Read quorum (R) > Total nodes (N) ensures consistency
+- Common configuration: N=3, W=2, R=2
+- Tuning W and R trades consistency for latency
+
+---
+## Gossip Protocols
+
+Epidemic-style information spread:
+
+- Each node periodically picks a random peer and exchanges state
+- Information propagates exponentially until everyone converges
+- Robust to partitions and churn; no single coordinator
+
+Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT replication.
 
 ---
 ## High Availability Defined
@@ -282,140 +362,6 @@ audience:
 ![replication_topologies](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.svg)
 
 ---
-## Consensus Algorithms
-
-- Enable multiple nodes to agree on a single value
-- Essential for leader election and distributed state machines
-- Examples: `Paxos`, `Raft`, `Zab`
-- Trade availability for correctness during partitions
-
----
-## Raft Consensus Overview
-
-![raft_consensus_overview](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
-
----
-## Raft Consensus Details
-
-- Leader handles all writes
-- Majority acknowledgment required for commit
-- New leader elected if current leader fails
-
----
-## Quorum-Based Systems
-
-- A quorum is the minimum number of nodes that must agree
-- Write quorum (W) + Read quorum (R) > Total nodes (N) ensures consistency
-- Common configuration: N=3, W=2, R=2
-- Tuning W and R trades consistency for latency
-
----
-## Idempotency
-
-- An operation that produces the same result when applied multiple times
-- Essential for safe retries in unreliable networks
-- Assign unique IDs to requests and deduplicate on the server
-- `GET`, `PUT`, and `DELETE` are naturally idempotent; `POST` is not
-
----
-## Designing for Partial Failure
-
-- Not all components fail at once; handle degraded states gracefully
-- Use circuit breakers to stop cascading failures
-- Provide fallback responses when a dependency is unavailable
-- Communicate degraded state to users rather than failing silently
-
----
-## Summary
-
-- The `CAP` theorem forces a choice between consistency and availability during partitions
-- The `PACELC` theorem extends this to normal operation trade-offs
-- The eight fallacies of distributed computing warn against common assumptions
-- High availability requires redundancy, failover, and automated recovery
-- Consensus algorithms enable coordination but add complexity
-- Design every component with the expectation that it will fail
-
----
-
-## FLP Impossibility
-
-Fischer, Lynch, Paterson (1985):
-
-> No deterministic algorithm can guarantee consensus in an asynchronous system with even one faulty process.
-
-Implications:
-
-- Perfect consensus is impossible in a truly asynchronous model
-- Real systems must relax requirements (e.g., use timeouts, partial synchrony)
-- Raft and Paxos assume eventual synchrony to make progress
-
----
-
-## Logical Clocks (Lamport)
-
-Physical clocks disagree; logical clocks give a consistent *partial order* of events:
-
-- Each process has a counter; increment before every local event
-- On send, attach counter value to the message
-- On receive, set counter to `max(local, received) + 1`
-
-Captures "happens-before" but not concurrency — two unrelated events may have equal timestamps with no causal link.
-
----
-
-## Vector Clocks
-
-Track causality across *all* nodes. Each process holds a vector `V[i]` of counters, one per node:
-
-- On local event, increment your own slot
-- On send, include the full vector
-- On receive, element-wise max, then increment own slot
-
-Two events `A` and `B` are concurrent iff `V(A) < V(B)` is false AND `V(B) < V(A)` is false. Used in Dynamo, Riak, version vectors for conflict detection.
-
----
-
-## Byzantine Fault Tolerance
-
-Crash faults: a node stops. Byzantine faults: a node lies, sends contradicting messages, or is malicious.
-
-- Classical BFT protocols (PBFT) tolerate `f` faults with `3f + 1` total nodes
-- Expensive: many message rounds, cryptographic signatures
-- Modern use cases: blockchains, financial systems, safety-critical control
-
-Most traditional distributed systems (ZooKeeper, etcd, Cassandra) assume crash-only faults — not Byzantine.
-
----
-
-## Gossip Protocols
-
-Epidemic-style information spread:
-
-- Each node periodically picks a random peer and exchanges state
-- Information propagates exponentially until everyone converges
-- Robust to partitions and churn; no single coordinator
-
-Used for: failure detection (SWIM, Cassandra), membership (Consul, Serf), CRDT replication.
-
----
-
-## Saga Pattern
-
-Long-running distributed transactions implemented as a series of local transactions plus compensations:
-
-1. 1. Step 1: book flight → compensation: cancel flight
-1. 1. Step 2: book hotel → compensation: cancel hotel
-1. 1. Step 3: charge card → compensation: refund
-
-If any step fails, compensations run in reverse for all completed steps. Two styles:
-
-- **Choreography** — services emit events; each service reacts
-- **Orchestration** — a central coordinator drives the saga
-
-No ACID across services — only eventual consistency with explicit compensation.
-
----
-
 ## Split-Brain Problem
 
 A network partition leaves two groups of nodes each believing it is the primary:
@@ -430,58 +376,29 @@ Mitigations:
 - **STONITH** / dedicated arbiter nodes in clustering systems
 
 ---
+## Idempotency
 
-## Circuit Breaker Pattern
-
-Prevents cascading failures when a downstream service is struggling:
-
-1. 1. **Closed** — requests pass through; count failures
-1. 1. **Open** — once failures exceed threshold, fail fast without calling the downstream service
-1. 1. **Half-Open** — after a timeout, let a trickle of requests through; if they succeed, close again
-
-Libraries: Resilience4j (Java), Polly (.NET), Hystrix (deprecated but influential). Prevents the thundering-herd retry storm that often kills already-overloaded services.
+- An operation that produces the same result when applied multiple times
+- Essential for safe retries in unreliable networks
+- Assign unique IDs to requests and deduplicate on the server
+- `GET`, `PUT`, and `DELETE` are naturally idempotent; `POST` is not
 
 ---
+## Designing for Partial Failure
 
-## Backpressure and Rate Limiting
-
-When producers outrun consumers, you need explicit flow control.
-
-**Backpressure** — consumer signals "slow down" upstream:
-
-- TCP's sliding window is backpressure at the transport layer
-- Reactive Streams (`Flow.Subscriber`), RxJava, akka-streams provide it in-process
-
-**Rate limiting** — cap incoming request rate to protect a service:
-
-- **Token bucket** — refills at a fixed rate, bursty up to bucket size
-- **Leaky bucket** — constant output rate, smooths bursts
-- **Sliding window / fixed window** — count requests over a time interval
+- Not all components fail at once; handle degraded states gracefully
+- Provide fallback responses when a dependency is unavailable
+- Communicate degraded state to users rather than failing silently
+- Bound every external call with a timeout
 
 ---
+## Summary
 
-## Observability: Logs, Metrics, Traces
-
-Three pillars, distinct use cases:
-
-- **Logs** — discrete events with full context (ELK, Loki). Great for forensics.
-- **Metrics** — aggregated numeric time-series (Prometheus). Great for dashboards and alerts.
-- **Traces** — request-spanning timelines across services (Jaeger, Zipkin, OpenTelemetry). Great for latency root-cause and dependency mapping.
-
-A distributed trace needs a **trace ID** and **span IDs** propagated through every inter-service call. Context propagation is usually via HTTP headers (W3C Trace Context).
-
----
-
-## Chaos Engineering
-
-Deliberately inject failures into production (or production-like) systems to build confidence:
-
-- **Network partitions** — drop packets between services
-- **Node crashes** — kill random instances
-- **Latency injection** — add delays to dependency calls
-- **Resource exhaustion** — fill disks, saturate CPU
-- **Clock skew** — offset node clocks
-
-Tools: Chaos Monkey (Netflix), Gremlin, LitmusChaos, `tc`-based shapers.
-
-Principle: find failures in controlled chaos before they find you in uncontrolled chaos.
+- The `CAP` theorem forces a choice between consistency and availability during partitions
+- The `PACELC` theorem extends this to normal operation trade-offs
+- The eight fallacies of distributed computing warn against common assumptions
+- FLP proves perfect consensus is impossible in a purely async model
+- Logical and vector clocks give causality without synchronized physical clocks
+- High availability requires redundancy, failover, and automated recovery
+- Split-brain requires quorum or fencing to prevent data divergence
+- Design every component with the expectation that it will fail

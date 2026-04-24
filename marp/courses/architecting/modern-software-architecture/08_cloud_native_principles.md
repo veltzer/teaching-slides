@@ -45,63 +45,25 @@ audience:
 ![twelve_factor_app](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/twelve_factor_app.svg)
 
 ---
-## Factor 1: Codebase
+## Factors 1–3: Code, Dependencies, Config
 
-- One codebase tracked in version control, many deploys
-- A single repository per application
-- Different environments (dev, staging, production) deploy the same code
-- Multiple apps sharing code should extract shared libraries
+- **Codebase** — one repo per app, many deploys; same code to every environment
+- **Dependencies** — declare explicitly (`requirements.txt`, `package.json`, `go.mod`); never rely on system packages
+- **Config** — environment variables for anything that varies between deploys; never commit secrets
 
----
-## Factor 2: Dependencies
-
-- Explicitly declare and isolate dependencies
-- Use a dependency manifest (e.g., `requirements.txt`, `package.json`, `go.mod`)
-- Never rely on system-wide packages being available
-- Use tools that provide dependency isolation (virtual environments, containers)
-
----
-## Factor 3: Config
-
-- Store configuration in the environment, not in code
-- Configuration varies between deploys; code does not
-- Use environment variables for database URLs, API keys, and feature flags
-- Never commit secrets to version control
-
----
-## Config Example
-
-```bash
-# Bad: hardcoded in source
+```python
+# Bad: hardcoded
 DATABASE_URL = "postgres://prod-db:5432/myapp"
-
 # Good: read from environment
-import os
 DATABASE_URL = os.environ["DATABASE_URL"]
 ```
 
-- Environment variables are language-agnostic and deploy-agnostic
-
 ---
-## Factor 4: Backing Services
+## Factors 4–6: Backing Services, Build/Release/Run, Processes
 
-- Treat backing services as attached resources
-- Databases, caches, message queues, and SMTP servers are all backing services
-- Swap between local and third-party services by changing configuration
-- No code change needed to switch from local `PostgreSQL` to `Amazon RDS`
-
----
-## Backing Services Diagram
-
-![backing_services_diagram](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/backing_services_diagram.svg)
-
----
-## Factor 5: Build, Release, Run
-
-- Strict separation between build, release, and run stages
-- Build: converts code into an executable bundle
-- Release: combines build with configuration for a specific environment
-- Run: launches the application in the execution environment
+- **Backing services** — databases, caches, queues are attached resources swapped by config alone
+- **Build, release, run** — strict separation of the three stages; a release is a build + config
+- **Processes** — stateless; any persistent data lives in a backing service
 
 ---
 ## Build, Release, Run Pipeline
@@ -109,29 +71,11 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ![build_release_run_pipeline](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/build_release_run_pipeline.svg)
 
 ---
-## Factor 6: Processes
+## Factors 7–9: Port Binding, Concurrency, Disposability
 
-- Execute the application as one or more stateless processes
-- Any data that needs to persist must be stored in a backing service
-- Processes share nothing: no sticky sessions, no local file storage
-- Each request can be handled by any instance
-
----
-## Factor 7: Port Binding
-
-- Export services via port binding
-- The application is completely self-contained
-- It binds to a port and listens for incoming requests
-- No dependency on an external web server like `Apache` or `IIS`
-
----
-## Factor 8: Concurrency
-
-- Scale out via the process model
-- Different types of work are handled by different process types
-- Web processes handle HTTP requests
-- Worker processes handle background jobs
-- Each process type scales independently
+- **Port binding** — the app binds its own port; no external web server needed
+- **Concurrency** — scale by running more processes; different process types for different work (web, worker, scheduler)
+- **Disposability** — fast startup, graceful shutdown; any instance can be killed at any time
 
 ---
 ## Concurrency Model
@@ -139,36 +83,11 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ![concurrency_model](svg/courses/architecting/modern-software-architecture/08_cloud_native_principles/concurrency_model.svg)
 
 ---
-## Factor 9: Disposability
+## Factors 10–12: Parity, Logs, Admin Processes
 
-- Maximize robustness with fast startup and graceful shutdown
-- Processes can be started and stopped at a moment's notice
-- Fast startup enables rapid scaling and deployment
-- Graceful shutdown finishes current requests before terminating
-
----
-## Factor 10: Dev/Prod Parity
-
-- Keep development, staging, and production as similar as possible
-- Use the same backing services in all environments
-- Reduce the time gap between code commit and production deploy
-- Use containers to ensure identical environments everywhere
-
----
-## Factor 11: Logs
-
-- Treat logs as event streams
-- Applications should not manage log files or routing
-- Write log events to `stdout` and let the platform handle collection
-- Use centralized logging tools like `ELK Stack`, `Fluentd`, or `Datadog`
-
----
-## Factor 12: Admin Processes
-
-- Run admin and management tasks as one-off processes
-- Database migrations, console sessions, and cleanup scripts
-- Run in the same environment and release as the application
-- Use the same codebase and configuration
+- **Dev/prod parity** — same backing services, same code, minimal time gap between commit and deploy
+- **Logs** — write to `stdout` as an event stream; the platform handles collection and routing
+- **Admin processes** — one-off tasks (migrations, console, cleanup) run in the same environment and release
 
 ---
 ## Beyond 12 Factors

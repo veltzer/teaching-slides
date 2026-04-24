@@ -36,11 +36,6 @@ audience:
 ![kubernetes_architecture](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/kubernetes_architecture.svg)
 
 ---
-## K8s Architecture
-
-![k8s_architecture](svg/courses/architecting/modern-software-architecture/10_orchestration_with_kubernetes/k8s_architecture.svg)
-
----
 ## Control Plane Components
 
 - `API Server` - the front door to the cluster, handles all REST requests
@@ -428,6 +423,71 @@ resources:
 - `limits` - maximum resources the container can use
 - Pod is evicted if it exceeds memory limits
 - Pod is throttled if it exceeds CPU limits
+
+---
+## Custom Resource Definitions (CRDs)
+
+- Extend the Kubernetes API with your own resource types
+- Same `kubectl get/apply/delete` commands work on custom resources
+- The cluster stores CRDs in `etcd` just like built-in resources
+- Examples: `PostgresCluster`, `Certificate`, `PrometheusRule`
+
+---
+## CRD Example
+
+```yaml
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: databases.example.com
+spec:
+  group: example.com
+  versions:
+    - name: v1
+      served: true
+      storage: true
+  scope: Namespaced
+  names:
+    plural: databases
+    singular: database
+    kind: Database
+```
+
+---
+## The Operator Pattern
+
+- An operator is a controller that watches a CRD and reconciles reality to the spec
+- Encodes operational knowledge about a specific application in code
+- Handles install, upgrade, backup, failover, and scaling automatically
+- Common for stateful systems: databases, message brokers, caches
+
+---
+## Operator Reconciliation Loop
+
+- Watch — subscribe to changes on the CRD
+- Compare — current cluster state vs. the desired spec
+- Act — create, update, or delete resources to close the gap
+- Status — write back the observed state to the CR
+- Loop forever — the cluster is always converging toward the spec
+
+---
+## Popular Operators
+
+- `prometheus-operator` - manages Prometheus, Alertmanager, and rules
+- `cert-manager` - issues and rotates TLS certificates
+- `strimzi` - runs Kafka on Kubernetes
+- `postgres-operator` (Crunchy, Zalando) - PostgreSQL clusters with failover
+- `argo-cd` - GitOps controller reconciling Git state into the cluster
+- Operator SDK and Kubebuilder scaffold your own operators
+
+---
+## When to Write an Operator
+
+- You have a stateful application with complex operational requirements
+- Day-2 operations (backup, upgrade, failover) need automation
+- The same application is deployed across many clusters or tenants
+- A Helm chart or plain manifests cannot express the lifecycle
+- Otherwise: prefer existing operators or simple manifests
 
 ---
 ## Summary

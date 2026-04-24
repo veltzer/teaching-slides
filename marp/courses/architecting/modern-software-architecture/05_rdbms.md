@@ -49,32 +49,32 @@ Higher isolation → more correctness, less concurrency, more retries.
 ---
 ## Anomaly 1: Dirty Read
 
-![dirty_read](svg/courses/architecting/modern-software-architecture/04_rdbms/dirty_read.svg)
+![dirty_read](svg/courses/architecting/modern-software-architecture/05_rdbms/dirty_read.svg)
 
 ---
 ## Anomaly 2: Non-Repeatable Read
 
-![non_repeatable_read](svg/courses/architecting/modern-software-architecture/04_rdbms/non_repeatable_read.svg)
+![non_repeatable_read](svg/courses/architecting/modern-software-architecture/05_rdbms/non_repeatable_read.svg)
 
 ---
 ## Anomaly 3: Phantom Read
 
-![phantom_read](svg/courses/architecting/modern-software-architecture/04_rdbms/phantom_read.svg)
+![phantom_read](svg/courses/architecting/modern-software-architecture/05_rdbms/phantom_read.svg)
 
 ---
 ## Anomaly 4: Write Skew
 
-![write_skew](svg/courses/architecting/modern-software-architecture/04_rdbms/write_skew.svg)
+![write_skew](svg/courses/architecting/modern-software-architecture/05_rdbms/write_skew.svg)
 
 ---
 ## Related Anomaly: Lost Update
 
-![lost_update](svg/courses/architecting/modern-software-architecture/04_rdbms/lost_update.svg)
+![lost_update](svg/courses/architecting/modern-software-architecture/05_rdbms/lost_update.svg)
 
 ---
 ## ANSI Isolation Levels
 
-![isolation_levels_table](svg/courses/architecting/modern-software-architecture/04_rdbms/isolation_levels_table.svg)
+![isolation_levels_table](svg/courses/architecting/modern-software-architecture/05_rdbms/isolation_levels_table.svg)
 
 ---
 ## PostgreSQL's REPEATABLE READ Is Different

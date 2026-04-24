@@ -46,12 +46,6 @@ audience:
 - A single failure propagates through the entire call chain
 
 ---
-
-## The Cascade Effect Diagram
-
-![the_cascade_effect](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/the_cascade_effect.svg)
-
----
 ## Resiliency Patterns Overview
 
 ![resiliency_patterns_overview](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/resiliency_patterns_overview.svg)
@@ -372,6 +366,63 @@ class CircuitBreaker:
 ## Service Mesh Architecture
 
 ![service_mesh_architecture](svg/courses/architecting/modern-software-architecture/11_architecting_for_resiliency/service_mesh_architecture.svg)
+
+---
+## Sidecar vs Sidecarless Meshes
+
+- **Sidecar model** — a proxy (usually `Envoy`) runs next to every app container
+    - Pros: full feature set, per-workload policy, language-agnostic
+    - Cons: one extra pod per workload, higher memory overhead
+- **Sidecarless / ambient mode** — proxies run per-node or per-identity, not per-pod
+    - Pros: lower overhead, simpler pod spec
+    - Cons: newer, fewer features, coarser policy granularity
+- Istio ambient mesh and Cilium service mesh exemplify the sidecarless direction
+
+---
+## Mesh Capabilities
+
+- **Traffic management** — weighted routing, canary splits, fault injection
+- **Security** — automatic mTLS between workloads, identity-based authorization
+- **Observability** — L7 metrics, distributed traces, and access logs without app changes
+- **Resiliency** — retries, timeouts, circuit breakers configured as policy
+- **Policy** — quota, rate limits, and allow/deny rules at the edge of each service
+
+---
+## Mutual TLS in a Mesh
+
+- Every workload gets a SPIFFE-style cryptographic identity
+- Mesh issues short-lived certificates automatically (no app-side key management)
+- All service-to-service traffic is encrypted and authenticated by default
+- Authorization policies reference workload identity, not IPs
+- Rotates certs on a schedule so a leaked key has a small blast radius
+
+---
+## Traffic Shaping
+
+```yaml
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: checkout
+spec:
+  hosts: ["checkout"]
+  http:
+    - route:
+        - destination: { host: checkout, subset: v1 }
+          weight: 90
+        - destination: { host: checkout, subset: v2 }
+          weight: 10
+```
+
+- Shift a fraction of traffic to a new version — the canary lives in the mesh config, not in the app
+
+---
+## When NOT to Use a Mesh
+
+- Small systems (< 10 services) — the operational overhead outweighs the benefits
+- Workloads outside Kubernetes without multi-cluster mesh support
+- Teams that cannot operate the mesh itself (it is another distributed system to run)
+- Language-native libraries already provide what you need (e.g., gRPC's built-ins)
 
 ---
 ## Building a Resiliency Strategy
