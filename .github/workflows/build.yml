@@ -46,6 +46,7 @@ jobs:
     - name: install
       run: |
         pip install -r requirements.txt
+        rsconstruct tools install-deps --yes
         rsconstruct tools install --yes
     - name: build
       run: rsconstruct build
