@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.670030517863" font-weight="bold" fill="var(--text)">Stateless Processes, External State</text>
+
+  <!-- Three identical processes -->
+  <rect x="40" y="149.433962264151" width="222.222222222222" height="109.433962264151" rx="15.437708740388" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.111111111111" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.053869629125" font-weight="bold" fill="var(--primary-text)">Process A</text>
+  <text x="151.111111111111" y="223.849056603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--primary-text)">stateless</text>
+
+  <rect x="528.888888888889" y="149.433962264151" width="222.222222222222" height="109.433962264151" rx="15.437708740388" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.053869629125" font-weight="bold" fill="var(--primary-text)">Process B</text>
+  <text x="640" y="223.849056603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--primary-text)">stateless</text>
+
+  <rect x="1017.777777777778" y="149.433962264151" width="222.222222222222" height="109.433962264151" rx="15.437708740388" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.888888888889" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.053869629125" font-weight="bold" fill="var(--primary-text)">Process C</text>
+  <text x="1128.888888888889" y="223.849056603774" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--primary-text)">stateless</text>
+
+  <!-- Backing services -->
+  <rect x="151.111111111111" y="423.018867924528" width="244.444444444444" height="109.433962264151" rx="15.437708740388" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="273.333333333333" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.848482666213" font-weight="bold" fill="var(--info-text)">Database</text>
+  <text x="273.333333333333" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--info-text)">user data, orders</text>
+
+  <rect x="517.777777777778" y="423.018867924528" width="244.444444444444" height="109.433962264151" rx="15.437708740388" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.848482666213" font-weight="bold" fill="var(--info-text)">Session Store</text>
+  <text x="640" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--info-text)">Redis</text>
+
+  <rect x="884.444444444444" y="423.018867924528" width="244.444444444444" height="109.433962264151" rx="15.437708740388" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1006.666666666667" y="466.792452830189" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.848482666213" font-weight="bold" fill="var(--info-text)">Object Store</text>
+  <text x="1006.666666666667" y="494.150943396226" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.335015258931" fill="var(--info-text)">user uploads</text>
+
+  <!-- Lines from processes to stores -->
+  <path d="M 151.111111111111 258.867924528302 L 273.333333333333 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 151.111111111111 258.867924528302 L 640 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 151.111111111111 258.867924528302 L 1006.666666666667 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 640 258.867924528302 L 273.333333333333 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" opacity="0.4"/>
+  <path d="M 640 258.867924528302 L 640 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 258.867924528302 L 1006.666666666667 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" opacity="0.4"/>
+
+  <path d="M 1128.888888888889 258.867924528302 L 273.333333333333 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" opacity="0.4"/>
+  <path d="M 1128.888888888889 258.867924528302 L 640 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" opacity="0.4"/>
+  <path d="M 1128.888888888889 258.867924528302 L 1006.666666666667 423.018867924528" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.540402221844" fill="var(--text-muted)">Any process can serve any request. Killing one is harmless.</text>
+</svg>

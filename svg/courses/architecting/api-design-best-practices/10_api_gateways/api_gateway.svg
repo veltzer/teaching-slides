@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="765" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.12147994231" font-weight="bold" fill="var(--text)">API Gateway: Cross-Cutting Concerns</text>
+
+  <!-- Clients -->
+  <rect x="40" y="162.105263157895" width="200" height="73.263157894737" rx="17.296181507398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="208.505263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.237947652368" fill="var(--primary-text)">Web App</text>
+  <rect x="40" y="284.210526315789" width="200" height="73.263157894737" rx="17.296181507398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="330.61052631579" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.237947652368" fill="var(--primary-text)">Mobile App</text>
+  <rect x="40" y="406.315789473684" width="200" height="73.263157894737" rx="17.296181507398" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="452.715789473684" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.237947652368" fill="var(--primary-text)">Partner</text>
+
+  <!-- Gateway -->
+  <rect x="440" y="162.105263157895" width="350" height="341.894736842105" rx="17.296181507398" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="615" y="213.389473684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.179713797339" font-weight="bold" fill="var(--warn-text)">API Gateway</text>
+  <text x="465" y="265.894736842105" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• TLS termination</text>
+  <text x="465" y="296.421052631579" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Authentication</text>
+  <text x="465" y="326.947368421053" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Rate limiting</text>
+  <text x="465" y="357.473684210526" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Request routing</text>
+  <text x="465" y="388" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Logging / tracing</text>
+  <text x="465" y="418.526315789474" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• CORS handling</text>
+  <text x="465" y="449.052631578947" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Compression</text>
+  <text x="465" y="479.578947368421" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--warn-text)">• Header transforms</text>
+
+  <!-- Services -->
+  <rect x="990" y="137.684210526316" width="250" height="73.263157894737" rx="17.296181507398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="184.084210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.767064579883" fill="var(--ok-text)">Orders Service</text>
+  <rect x="990" y="235.368421052632" width="250" height="73.263157894737" rx="17.296181507398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="281.768421052632" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.767064579883" fill="var(--ok-text)">Users Service</text>
+  <rect x="990" y="333.052631578947" width="250" height="73.263157894737" rx="17.296181507398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="379.452631578947" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.767064579883" fill="var(--ok-text)">Payments Service</text>
+  <rect x="990" y="430.736842105263" width="250" height="73.263157894737" rx="17.296181507398" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="477.136842105263" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.767064579883" fill="var(--ok-text)">Inventory Service</text>
+
+  <!-- Arrows -->
+  <path d="M 240 198.736842105263 L 440 272" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 320.842105263158 L 440 333.052631578947" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 442.947368421053 L 440 394.105263157895" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 790 235.368421052632 L 990 174.315789473684" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 790 296.421052631579 L 990 272" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 790 369.684210526316 L 990 369.684210526316" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 790 430.736842105263 L 990 467.368421052632" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="765" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.53162304364" fill="var(--text-muted)">Backends focus on business logic; gateway handles cross-cutting concerns once</text>
+</svg>

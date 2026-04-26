@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.886806727934" font-weight="bold" fill="var(--text)">Orchestrator State Machine</text>
+
+  <!-- States -->
+  <ellipse cx="141.694915254237" cy="234.957983193277" rx="101.694915254237" ry="48.739495798319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.694915254237" y="242.756302521008" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.930342601806" font-weight="bold" fill="var(--primary-text)">Started</text>
+
+  <ellipse cx="385.762711864407" cy="234.957983193277" rx="122.033898305085" ry="48.739495798319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="385.762711864407" y="234.957983193277" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.93904977658" font-weight="bold" fill="var(--primary-text)">Reserving</text>
+  <text x="385.762711864407" y="252.504201680672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.943403363967" fill="var(--primary-text)">Inventory</text>
+
+  <ellipse cx="650.169491525424" cy="234.957983193277" rx="122.033898305085" ry="48.739495798319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.169491525424" y="234.957983193277" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.93904977658" font-weight="bold" fill="var(--primary-text)">Capturing</text>
+  <text x="650.169491525424" y="252.504201680672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.943403363967" fill="var(--primary-text)">Payment</text>
+
+  <ellipse cx="914.576271186441" cy="234.957983193277" rx="122.033898305085" ry="48.739495798319" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="914.576271186441" y="234.957983193277" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.93904977658" font-weight="bold" fill="var(--primary-text)">Scheduling</text>
+  <text x="914.576271186441" y="252.504201680672" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.943403363967" fill="var(--primary-text)">Shipment</text>
+
+  <ellipse cx="1138.305084745763" cy="234.957983193277" rx="101.694915254237" ry="48.739495798319" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1138.305084745763" y="242.756302521008" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.930342601806" font-weight="bold" fill="var(--ok-text)">Completed</text>
+
+  <!-- Compensation states -->
+  <ellipse cx="650.169491525424" cy="439.663865546218" rx="122.033898305085" ry="48.739495798319" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.169491525424" y="447.46218487395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.93904977658" font-weight="bold" fill="var(--danger-text)">Compensating</text>
+
+  <ellipse cx="650.169491525424" cy="556.638655462185" rx="101.694915254237" ry="38.991596638655" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.169491525424" y="563.46218487395" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.930342601806" font-weight="bold" fill="var(--danger-text)">Failed</text>
+
+  <!-- Forward transitions -->
+  <path d="M 243.389830508475 234.957983193277 L 263.728813559322 234.957983193277" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 507.796610169491 234.957983193277 L 528.135593220339 234.957983193277" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 772.203389830509 234.957983193277 L 792.542372881356 234.957983193277" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1036.610169491525 234.957983193277 L 1036.610169491525 234.957983193277" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="253.559322033898" y="220.336134453781" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--ok-accent)">OrderPlaced</text>
+  <text x="512.881355932203" y="220.336134453781" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--ok-accent)">Reserved</text>
+  <text x="772.203389830509" y="220.336134453781" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--ok-accent)">Captured</text>
+  <text x="1041.694915254237" y="220.336134453781" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--ok-accent)">Scheduled</text>
+
+  <!-- Compensation transitions -->
+  <path d="M 650.169491525424 283.697478991597 L 650.169491525424 390.924369747899" fill="none" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="665.423728813559" y="347.058823529412" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--danger-accent)">PaymentFailed</text>
+
+  <path d="M 914.576271186441 283.697478991597 L 772.203389830509 420.168067226891" fill="none" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="848.474576271186" y="376.302521008403" font-family="Arial, sans-serif" font-size="11.947756951354" font-style="italic" fill="var(--danger-accent)">ShipFailed</text>
+
+  <path d="M 650.169491525424 488.403361344538 L 650.169491525424 517.64705882353" fill="none" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <text x="629.830508474576" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.93904977658" font-style="italic" fill="var(--text-muted)">Each transition is a persisted state change; events drive transitions</text>
+</svg>

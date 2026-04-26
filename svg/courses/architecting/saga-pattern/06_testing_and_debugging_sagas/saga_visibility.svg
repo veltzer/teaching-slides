@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.063727755485" font-weight="bold" fill="var(--text)">Saga Visibility Stack</text>
+
+  <!-- Service layer -->
+  <rect x="40" y="130.097087378641" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="175.145631067961" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.746231177718" font-weight="bold" fill="var(--primary-text)">Services + Orchestrator</text>
+  <text x="640" y="208.932038834951" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--primary-text)">Each step emits structured logs, metrics, traces with saga_id</text>
+
+  <!-- Tracing layer -->
+  <rect x="40" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="319.310344827586" y="327.184466019417" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.587482888835" font-weight="bold" fill="var(--info-text)">Distributed Tracing</text>
+  <text x="319.310344827586" y="360.970873786408" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--info-text)">OpenTelemetry → Jaeger / Tempo</text>
+  <text x="319.310344827586" y="383.495145631068" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--info-text)">"What happened in saga X?"</text>
+
+  <!-- Metrics layer -->
+  <rect x="681.379310344828" y="287.766990291262" width="558.620689655172" height="112.621359223301" rx="15.111238022184" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960.689655172414" y="327.184466019417" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.587482888835" font-weight="bold" fill="var(--warn-text)">Metrics &amp; Alerts</text>
+  <text x="960.689655172414" y="360.970873786408" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--warn-text)">Prometheus / Datadog / Grafana</text>
+  <text x="960.689655172414" y="383.495145631068" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--warn-text)">"How is the saga fleet doing?"</text>
+
+  <!-- Saga timeline -->
+  <rect x="40" y="445.436893203883" width="1200" height="112.621359223301" rx="15.111238022184" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="484.854368932039" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.746231177718" font-weight="bold" fill="var(--ok-text)">Saga Timeline (read model)</text>
+  <text x="640" y="518.640776699029" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" fill="var(--ok-text)">aggregated by saga_id; powers admin UI and ops dashboards</text>
+  <text x="640" y="541.165048543689" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.031863877743" fill="var(--ok-text)">supports retry / skip / mark-resolved actions</text>
+
+  <!-- Arrows up -->
+  <path d="M 319.310344827586 287.766990291262 L 319.310344827586 242.718446601942" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 960.689655172414 287.766990291262 L 960.689655172414 242.718446601942" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 445.436893203883 L 640 400.388349514563" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.111238022184" font-style="italic" fill="var(--text-muted)">Three layers: tracing finds it, metrics measures it, timeline drives recovery</text>
+</svg>

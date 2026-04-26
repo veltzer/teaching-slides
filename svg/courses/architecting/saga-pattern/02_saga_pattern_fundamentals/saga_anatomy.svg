@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.340224360998" font-weight="bold" fill="var(--text)">Saga Anatomy: Steps and Compensations</text>
+
+  <!-- Saga state on left -->
+  <rect x="40" y="131.881188118812" width="248.275862068966" height="321.584158415842" rx="15.260120809768" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.137931034483" y="177.821782178218" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.980189843921" font-weight="bold" fill="var(--info-text)">Saga State</text>
+  <text x="164.137931034483" y="223.762376237624" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" fill="var(--info-text)">saga_id</text>
+  <text x="164.137931034483" y="252.475247524752" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" fill="var(--info-text)">status</text>
+  <text x="164.137931034483" y="281.188118811881" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" fill="var(--info-text)">current_step</text>
+  <text x="164.137931034483" y="309.90099009901" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" fill="var(--info-text)">retries</text>
+  <text x="164.137931034483" y="338.613861386139" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" fill="var(--info-text)">step_results</text>
+  <text x="164.137931034483" y="384.554455445544" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" font-style="italic" fill="var(--info-text)">persists across</text>
+  <text x="164.137931034483" y="409.821782178218" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" font-style="italic" fill="var(--info-text)">restarts</text>
+
+  <!-- Forward steps -->
+  <text x="784.827586206897" y="126.138613861386" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.620155326845" font-weight="bold" fill="var(--ok-accent)">Forward path</text>
+
+  <rect x="371.034482758621" y="154.851485148515" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="195.049504950495" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)">Step 1</text>
+  <text x="464.137931034483" y="223.762376237624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">Reserve</text>
+
+  <rect x="598.620689655172" y="154.851485148515" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="691.724137931035" y="195.049504950495" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)">Step 2</text>
+  <text x="691.724137931035" y="223.762376237624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">Charge</text>
+
+  <rect x="826.206896551724" y="154.851485148515" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="919.310344827586" y="195.049504950495" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)">Step 3</text>
+  <text x="919.310344827586" y="223.762376237624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">Ship</text>
+
+  <rect x="1053.793103448276" y="154.851485148515" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1146.896551724138" y="195.049504950495" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--ok-text)">Step 4</text>
+  <text x="1146.896551724138" y="223.762376237624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--ok-text)">Notify</text>
+
+  <path d="M 557.241379310345 200.792079207921 L 598.620689655172 200.792079207921" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 200.792079207921 L 826.206896551724 200.792079207921" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1012.413793103448 200.792079207921 L 1053.793103448276 200.792079207921" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Compensations -->
+  <text x="784.827586206897" y="401.782178217822" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.620155326845" font-weight="bold" fill="var(--danger-accent)">Compensation path (on failure)</text>
+
+  <rect x="371.034482758621" y="430.49504950495" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="464.137931034483" y="470.693069306931" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--danger-text)">Comp 1</text>
+  <text x="464.137931034483" y="499.405940594059" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--danger-text)">Release</text>
+
+  <rect x="598.620689655172" y="430.49504950495" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="691.724137931035" y="470.693069306931" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--danger-text)">Comp 2</text>
+  <text x="691.724137931035" y="499.405940594059" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--danger-text)">Refund</text>
+
+  <rect x="826.206896551724" y="430.49504950495" width="186.206896551724" height="91.881188118812" rx="10.900086292691" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="919.310344827586" y="470.693069306931" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" font-weight="bold" fill="var(--danger-text)">Comp 3</text>
+  <text x="919.310344827586" y="499.405940594059" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.170112180499" fill="var(--danger-text)">Cancel ship</text>
+
+  <path d="M 784.827586206897 476.435643564356 L 598.620689655172 476.435643564356" fill="none" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 598.620689655172 476.435643564356 L 557.241379310345 476.435643564356" fill="none" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Vertical pairing lines -->
+  <line x1="464.137931034483" y1="246.732673267327" x2="464.137931034483" y2="430.49504950495" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="691.724137931035" y1="246.732673267327" x2="691.724137931035" y2="430.49504950495" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="919.310344827586" y1="246.732673267327" x2="919.310344827586" y2="430.49504950495" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Caption -->
+  <text x="640" y="585.544554455445" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.440138068306" fill="var(--text)">Each step is a local transaction. Each step has a paired compensation.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.260120809768" font-style="italic" fill="var(--text-muted)">On failure, completed compensations run in reverse order</text>
+</svg>

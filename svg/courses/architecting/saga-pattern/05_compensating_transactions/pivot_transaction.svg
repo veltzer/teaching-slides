@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699676538728" font-weight="bold" fill="var(--text)">Pivot Transaction</text>
+
+  <!-- Compensatable region -->
+  <rect x="40" y="145.454545454545" width="600" height="210.909090909091" rx="14.376748905469" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
+  <text x="340" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--ok-accent)">Compensatable region</text>
+  <text x="340" y="205.563636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">Can be safely rolled back via compensations</text>
+
+  <rect x="80" y="240.363636363636" width="160" height="73.818181818182" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="160" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Reserve</text>
+  <text x="160" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">↺ release</text>
+
+  <rect x="280" y="240.363636363636" width="160" height="73.818181818182" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Capture</text>
+  <text x="360" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">↺ refund</text>
+
+  <rect x="480" y="240.363636363636" width="160" height="73.818181818182" rx="10.269106361049" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="560" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--ok-text)">Validate</text>
+  <text x="560" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--ok-text)">↺ revalidate</text>
+
+  <!-- Pivot point -->
+  <line x1="660" y1="145.454545454545" x2="660" y2="356.363636363636" stroke="var(--warn-border)" stroke-width="4"/>
+  <rect x="600" y="372.181818181818" width="120" height="42.181818181818" rx="6.16146381663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="399.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">PIVOT</text>
+
+  <!-- Forward-only region -->
+  <rect x="680" y="145.454545454545" width="560" height="210.909090909091" rx="14.376748905469" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="3" stroke-dasharray="6 4" opacity="0.4"/>
+  <text x="960" y="182.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391449889" font-weight="bold" fill="var(--warn-accent)">Forward-only region</text>
+  <text x="960" y="205.563636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838269364" fill="var(--text-muted)">No compensation; retry until success or escalate</text>
+
+  <rect x="720" y="240.363636363636" width="160" height="73.818181818182" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Pack &amp; ship</text>
+  <text x="800" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--warn-text)">forward only</text>
+
+  <rect x="920" y="240.363636363636" width="160" height="73.818181818182" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Notify carrier</text>
+  <text x="1000" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322927633259" fill="var(--warn-text)">forward only</text>
+
+  <rect x="1120" y="240.363636363636" width="100" height="73.818181818182" rx="10.269106361049" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1170" y="277.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376748905469" font-weight="bold" fill="var(--warn-text)">Confirm</text>
+
+  <!-- Caption -->
+  <rect x="60" y="451.272727272727" width="1160" height="168.727272727273" rx="14.376748905469" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538212722099" font-weight="bold" fill="var(--text)">Across the pivot, there is no going back</text>
+  <text x="100" y="533.527272727273" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Steps before the pivot: compensate normally on failure</text>
+  <text x="100" y="563.054545454545" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Steps after the pivot: retry until success; escalate to humans on permanent failure</text>
+  <text x="100" y="592.581818181818" font-family="Arial, sans-serif" font-size="16.430570177679" fill="var(--text-muted)">Place the pivot at the last step that can still be safely undone</text>
+</svg>

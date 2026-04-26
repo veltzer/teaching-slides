@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#888888"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">The Saga Pattern</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Distributed transactions without two-phase commit</text>
+
+  <!-- Forward steps -->
+  <rect x="160" y="290" width="180" height="80" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" opacity="0.9"/>
+  <text x="250" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Step A</text>
+  <text x="250" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Reserve</text>
+
+  <rect x="400" y="290" width="180" height="80" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" opacity="0.9"/>
+  <text x="490" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Step B</text>
+  <text x="490" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Charge</text>
+
+  <rect x="640" y="290" width="180" height="80" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" opacity="0.9"/>
+  <text x="730" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Step C ✗</text>
+  <text x="730" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Ship (fail)</text>
+
+  <path d="M 340 330 L 400 330" fill="none" stroke="var(--text-faint)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 580 330 L 640 330" fill="none" stroke="var(--text-faint)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Compensation arrow back -->
+  <path d="M 730 380 Q 490 470 250 380" fill="none" stroke="var(--danger-fill)" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+  <text x="490" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-style="italic" fill="var(--danger-fill)">compensate</text>
+
+  <!-- Bottom captions -->
+  <text x="250" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Local transaction</text>
+  <text x="490" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Local transaction</text>
+  <text x="730" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Failure point</text>
+  <text x="980" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Eventual consistency</text>
+</svg>

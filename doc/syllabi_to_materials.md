@@ -27,7 +27,11 @@ For each course:
 
 ## In progress
 
-_(none — pick a new course from the backlog)_
+- [~] **architecting/saga_pattern** (8h)
+- [~] **architecting/twelve_factor_app** (16h)
+- [~] **architecting/api_design_best_practices** (16h)
+- [~] **architecting/microservices_architecture** (16h)
+- [~] **architecting/domain_driven_design** (24h)
 
 ## Done
 
