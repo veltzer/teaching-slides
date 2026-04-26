@@ -27,15 +27,16 @@ For each course:
 
 ## In progress
 
-- [~] **architecting/saga_pattern** (8h)
-- [~] **architecting/twelve_factor_app** (16h)
-- [~] **architecting/api_design_best_practices** (16h)
-- [~] **architecting/microservices_architecture** (16h)
-- [~] **architecting/domain_driven_design** (24h)
+_(none — pick a new course from the backlog)_
 
 ## Done
 
 - [x] **architecting/cqrs_and_event_sourcing** — 9 chapters + title; 16h advanced course; 33 SVGs; build clean
+- [x] **architecting/saga_pattern** — 6 chapters + title; 8h advanced course; 11 SVGs; build clean
+- [x] **architecting/twelve_factor_app** — 15 chapters + title; 16h intermediate course; 2 SVGs; build clean
+- [x] **architecting/api_design_best_practices** — 12 chapters + title; 16h intermediate course; 2 SVGs; build clean
+- [x] **architecting/microservices_architecture** — 14 chapters + title; 16h intermediate course; 1 SVG; build clean
+- [x] **architecting/domain_driven_design** — 7 chapters + title; 24h advanced course; 1 SVG; build clean
 
 ## Backlog
 
@@ -58,12 +59,12 @@ The full list of 529 missing courses lives in the repo as `/tmp/missing_courses.
 
 ### architecting
 - [ ] introduction_to_architecting
-- [ ] domain_driven_design
-- [ ] microservices_architecture
+- [x] domain_driven_design
+- [x] microservices_architecture
 - [ ] event_driven_architecture
 - [x] cqrs_and_event_sourcing
-- [ ] saga_pattern
-- [ ] api_design_best_practices
+- [x] saga_pattern
+- [x] api_design_best_practices
 - [ ] api_first_development
 - [ ] api_gateway_patterns
 - [ ] clean_and_hexagonal_architecture
@@ -80,7 +81,7 @@ The full list of 529 missing courses lives in the repo as `/tmp/missing_courses.
 - [ ] site_reliability_engineering
 - [ ] sre_practices
 - [ ] system_design
-- [ ] twelve_factor_app
+- [x] twelve_factor_app
 - [ ] uml
 - [ ] web_architecture_and_scaling
 - [ ] cloud_monolith_microservices_cloudnative_servicmesh

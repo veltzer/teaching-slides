@@ -35,7 +35,7 @@ audience:
 ---
 ## A Worked Example: Order Fulfillment
 
-```
+```diagram
 Sales       → publishes  OrderPlaced
 Inventory   → reacts; reserves; publishes InventoryReserved
 Payment     → reacts; captures; publishes PaymentCaptured
@@ -76,7 +76,7 @@ Email       → reacts; sends confirmation
 ---
 ## Compensation Flow Example
 
-```
+```diagram
 Sales     → OrderPlaced
 Inventory → InventoryReserved
 Payment   → PaymentFailed (insufficient funds)

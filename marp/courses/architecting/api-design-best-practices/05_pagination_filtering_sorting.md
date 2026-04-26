@@ -68,7 +68,7 @@ audience:
 ---
 ## Keyset Example
 
-```
+```http
 GET /orders?cursor=created_at:2026-01-15T10:00:00,id:100&limit=20
 
 Response:

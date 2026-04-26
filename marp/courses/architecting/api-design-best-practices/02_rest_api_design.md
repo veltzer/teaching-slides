@@ -108,7 +108,7 @@ audience:
 ---
 ## RESTful Examples
 
-```
+```http
 GET    /orders                 # list
 POST   /orders                 # create
 GET    /orders/42              # read

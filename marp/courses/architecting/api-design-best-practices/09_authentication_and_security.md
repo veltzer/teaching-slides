@@ -71,7 +71,7 @@ audience:
 ---
 ## JWT Anatomy
 
-```
+```diagram
 eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1MSIsImV4cCI6MTczNzAwMDAwMH0.signature
 ```
 
