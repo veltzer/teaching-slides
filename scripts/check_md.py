@@ -459,7 +459,7 @@ def _check_title_count(path: Path, text: str, text_no_code: str, lines: list[str
 
 
 def _check_title_svg(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
-    """Check that every course/lecture has a corresponding svg/.../title.svg.
+    """Check that every course/lecture has a title.svg AND that the markdown references it.
 
     Courses: marp/courses/DOMAIN/COURSE/00_title.md -> svg/courses/DOMAIN/COURSE/title.svg
     Lectures: marp/lectures/DOMAIN/LECTURE.md -> svg/lectures/DOMAIN/LECTURE/title.svg
@@ -468,21 +468,33 @@ def _check_title_svg(path: Path, text: str, text_no_code: str, lines: list[str])
     if len(parts) < 3 or parts[0] != "marp":
         return []
 
+    errors: list[str] = []
+    expected_ref: str | None = None
+    svg_path: Path | None = None
+
     # Course title slides: marp/courses/DOMAIN/COURSE/00_title.md
     if parts[1] == "courses" and path.name == "00_title.md" and len(parts) >= 5:
         svg_path = _ROOT / "svg" / Path(*parts[1:-1]) / "title.svg"
-        if not svg_path.exists():
-            return [f"{path}: missing title SVG: {svg_path}"]
+        expected_ref = "svg/" + "/".join(parts[1:-1]) + "/title.svg"
 
     # Lecture slides: marp/lectures/DOMAIN/LECTURE.md (single file per lecture)
-    # Only check the first slide file we encounter per lecture
-    if parts[1] == "lectures" and path.suffix == ".md" and len(parts) == 4:
+    elif parts[1] == "lectures" and path.suffix == ".md" and len(parts) == 4:
         lecture_name = path.stem
         svg_path = _ROOT / "svg" / "lectures" / parts[2] / lecture_name / "title.svg"
-        if not svg_path.exists():
-            return [f"{path}: missing title SVG: {svg_path}"]
+        expected_ref = f"svg/lectures/{parts[2]}/{lecture_name}/title.svg"
 
-    return []
+    if svg_path is None:
+        return []
+
+    if not svg_path.exists():
+        errors.append(f"{path}: missing title SVG: {svg_path}")
+        return errors
+
+    if expected_ref not in text:
+        errors.append(f"{path}: title SVG exists but is not referenced in the markdown "
+                      f"(expected to find `{expected_ref}` in the file)")
+
+    return errors
 
 
 # ── Main ──
