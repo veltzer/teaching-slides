@@ -73,8 +73,8 @@
     </filter>
 
     <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
-      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#243b59"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
@@ -95,31 +95,38 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <rect width="1060.4804" height="499.8336" fill="var(--bg)" rx="5.9885" x="40" y="40"/>
-  <rect x="790.757" y="232.868" width="152.835" height="152.835" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1.1833" filter="url(#shadow)"/>
-  <text x="867.1748" y="301.4754" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6966" font-weight="bold" fill="var(--primary-accent)">Inform</text>
-  <text x="867.1748" y="321.0002" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Visibility &amp; Allocation</text>
-  <text x="867.1748" y="335.058" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-faint)">Understand cloud spend</text>
-  <rect x="575.347" y="467.165" width="152.835" height="152.835" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1.1833" filter="url(#shadow)"/>
-  <text x="651.7648" y="535.7726" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6966" font-weight="bold" fill="var(--ok-accent)">Optimize</text>
-  <text x="651.7648" y="555.2974" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Rates &amp; Usage</text>
-  <text x="651.7648" y="569.3551" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-faint)">Reduce waste &amp; cost</text>
-  <rect x="1006.17" y="467.165" width="152.835" height="152.835" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1.1833" filter="url(#shadow)"/>
-  <text x="1082.585" y="535.7726" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6966" font-weight="bold" fill="var(--warn-accent)">Operate</text>
-  <text x="1082.585" y="555.2974" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Governance &amp; Control</text>
-  <text x="1082.585" y="569.3551" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-faint)">Continuous process</text>
-  <path d="M 800.8948 363.9547 Q 701.4749 418.624 684.9047 469.3883" fill="none" stroke="var(--primary-border)" stroke-width="1.1833" marker-end="url(#arrow)"/>
-  <text x="718.0448" y="406.9089" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Data-driven</text>
-  <path d="M 730.4723 563.1071 Q 867.1748 613.8714 1003.8774 563.1071" fill="none" stroke="var(--ok-border)" stroke-width="1.1833" marker-end="url(#arrow)"/>
-  <text x="867.1748" y="606.0615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Implement changes</text>
-  <path d="M 1049.4449 469.3883 Q 1032.8748 418.624 933.4549 363.9547" fill="none" stroke="var(--warn-border)" stroke-width="1.1833" marker-end="url(#arrow)"/>
-  <text x="1016.3048" y="406.9089" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Feedback loop</text>
-  <text x="867.1748" y="500.6279" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" font-weight="bold" fill="var(--text)">FinOps</text>
-  <text x="867.1748" y="518.5908" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--text-muted)">Lifecycle</text>
-  <text x="494.3496" y="340.5249" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--primary-accent)">Showback / Chargeback</text>
-  <text x="494.3496" y="354.5828" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--primary-accent)">Tagging, Dashboards</text>
-  <text x="494.3496" y="598.2517" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--ok-accent)">Rightsizing, RIs</text>
-  <text x="494.3496" y="612.3093" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--ok-accent)">Savings Plans, Spot</text>
-  <text x="1240" y="598.2517" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--warn-accent)">Budgets, Alerts</text>
-  <text x="1240" y="612.3093" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.3137" fill="var(--warn-accent)">Policies, Automation</text>
+  <!-- Inform (top) -->
+  <rect x="502.5" y="40" width="275" height="193.333333333333" rx="17.205861404378" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.953742608131" font-weight="bold" fill="var(--primary-text)">Inform</text>
+  <text x="640" y="154.791666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" fill="var(--primary-text)">Visibility &amp; Allocation</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.205861404378" fill="var(--primary-text)">Understand cloud spend</text>
+  <text x="640" y="215.208333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.976871304065" font-style="italic" fill="var(--primary-text)">Showback, Tagging, Dashboards</text>
+
+  <!-- Optimize (bottom-left) -->
+  <rect x="40" y="378.333333333333" width="275" height="193.333333333333" rx="17.205861404378" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="177.5" y="450.833333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.953742608131" font-weight="bold" fill="var(--ok-text)">Optimize</text>
+  <text x="177.5" y="493.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" fill="var(--ok-text)">Rates &amp; Usage</text>
+  <text x="177.5" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.205861404378" fill="var(--ok-text)">Reduce waste &amp; cost</text>
+  <text x="177.5" y="553.541666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.976871304065" font-style="italic" fill="var(--ok-text)">Rightsizing, RIs, Savings Plans</text>
+
+  <!-- Operate (bottom-right) -->
+  <rect x="965" y="378.333333333333" width="275" height="193.333333333333" rx="17.205861404378" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1102.5" y="450.833333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.953742608131" font-weight="bold" fill="var(--warn-text)">Operate</text>
+  <text x="1102.5" y="493.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" fill="var(--warn-text)">Governance &amp; Control</text>
+  <text x="1102.5" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.205861404378" fill="var(--warn-text)">Continuous process</text>
+  <text x="1102.5" y="553.541666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.976871304065" font-style="italic" fill="var(--warn-text)">Budgets, Alerts, Policies</text>
+
+  <!-- Arrows: Inform -> Optimize -> Operate -> Inform -->
+  <path d="M 515 221.25 Q 340 305.833333333333 315 378.333333333333" fill="none" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="377.5" y="287.708333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--text)">Data-driven</text>
+
+  <path d="M 315 487.083333333333 Q 640 620 965 487.083333333333" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="601.875" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--text)">Implement changes</text>
+
+  <path d="M 965 378.333333333333 Q 940 305.833333333333 765 221.25" fill="none" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="902.5" y="287.708333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.663841605004" font-weight="bold" fill="var(--text)">Feedback loop</text>
+
+  <!-- Center label -->
+  <text x="640" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.03778220688" font-weight="bold" fill="var(--text)">FinOps</text>
+  <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.579802006254" fill="var(--text-muted)">Lifecycle</text>
 </svg>
