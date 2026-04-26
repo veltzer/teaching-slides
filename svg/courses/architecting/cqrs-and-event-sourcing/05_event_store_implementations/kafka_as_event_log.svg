@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.331573849478" font-weight="bold" fill="var(--text)">Kafka topic: orders (3 partitions)</text>
+
+  <!-- Partition 0 -->
+  <text x="80.677966101695" y="134.69387755102" font-family="Arial, sans-serif" font-size="17.554382566319" font-weight="bold" fill="var(--text)">P0</text>
+  <text x="80.677966101695" y="158.367346938775" font-family="Arial, sans-serif" font-size="13.165786924739" fill="var(--text-muted)">key=order-42</text>
+  <rect x="151.864406779661" y="111.020408163265" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.050847457627" y="152.448979591837" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--primary-text)">OrderCreated</text>
+  <rect x="304.406779661017" y="111.020408163265" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="375.593220338983" y="152.448979591837" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--primary-text)">LineAdded</text>
+  <rect x="456.949152542373" y="111.020408163265" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="528.135593220339" y="152.448979591837" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--primary-text)">OrderPlaced</text>
+
+  <!-- Partition 1 -->
+  <text x="80.677966101695" y="276.734693877551" font-family="Arial, sans-serif" font-size="17.554382566319" font-weight="bold" fill="var(--text)">P1</text>
+  <text x="80.677966101695" y="300.408163265306" font-family="Arial, sans-serif" font-size="13.165786924739" fill="var(--text-muted)">key=order-43</text>
+  <rect x="151.864406779661" y="253.061224489796" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.050847457627" y="294.489795918367" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--ok-text)">OrderCreated</text>
+  <rect x="304.406779661017" y="253.061224489796" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="375.593220338983" y="294.489795918367" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--ok-text)">OrderPlaced</text>
+
+  <!-- Partition 2 -->
+  <text x="80.677966101695" y="418.775510204082" font-family="Arial, sans-serif" font-size="17.554382566319" font-weight="bold" fill="var(--text)">P2</text>
+  <text x="80.677966101695" y="442.448979591837" font-family="Arial, sans-serif" font-size="13.165786924739" fill="var(--text-muted)">key=order-44</text>
+  <rect x="151.864406779661" y="395.102040816327" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="223.050847457627" y="436.530612244898" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--info-text)">OrderCreated</text>
+  <rect x="304.406779661017" y="395.102040816327" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="375.593220338983" y="436.530612244898" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--info-text)">LineAdded</text>
+  <rect x="456.949152542373" y="395.102040816327" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="528.135593220339" y="436.530612244898" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--info-text)">LineAdded</text>
+  <rect x="609.491525423729" y="395.102040816327" width="142.372881355932" height="71.020408163265" rx="8.777191283159" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680.677966101695" y="436.530612244898" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--info-text)">OrderPlaced</text>
+
+  <!-- Notes -->
+  <rect x="792.542372881356" y="111.020408163265" width="447.457627118644" height="378.775510204082" rx="15.360084745529" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1016.271186440678" y="158.367346938775" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.942978207898" font-weight="bold" fill="var(--text)">Properties</text>
+  <text x="812.881355932203" y="205.714285714286" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">Partition key = aggregate id</text>
+  <text x="812.881355932203" y="241.224489795918" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">Order is strict within a partition</text>
+  <text x="812.881355932203" y="276.734693877551" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">No order across partitions</text>
+  <text x="812.881355932203" y="312.244897959184" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">Topics never expire (compaction off)</text>
+  <text x="812.881355932203" y="359.591836734694" font-family="Arial, sans-serif" font-size="16.457233655924" font-weight="bold" fill="var(--warn-accent)">Caveats</text>
+  <text x="812.881355932203" y="395.102040816327" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">No native concurrency check</text>
+  <text x="812.881355932203" y="430.612244897959" font-family="Arial, sans-serif" font-size="16.457233655924" fill="var(--text-muted)">Often integration log, not source of truth</text>
+
+  <!-- Time arrow -->
+  <line x1="40" y1="584.489795918367" x2="792.542372881356" y2="584.489795918367" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="40" y="620" font-family="Arial, sans-serif" font-size="15.360084745529" fill="var(--text-muted)">offset</text>
+</svg>

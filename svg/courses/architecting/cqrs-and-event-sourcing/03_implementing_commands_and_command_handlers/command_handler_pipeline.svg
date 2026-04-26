@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.481572990269" font-weight="bold" fill="var(--text)">Command Handler Pipeline</text>
+
+  <!-- Outer: middleware -->
+  <rect x="40" y="98" width="1200" height="522" rx="15.336231610145" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="81.379310344828" y="138.6" font-family="Arial, sans-serif" font-size="19.718012070186" font-weight="bold" fill="var(--text)">Middleware (cross-cutting)</text>
+
+  <!-- Middleware layers -->
+  <rect x="81.379310344828" y="167.6" width="206.896551724138" height="69.6" rx="10.954451150103" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="211.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--warn-text)">Logging</text>
+
+  <rect x="308.965517241379" y="167.6" width="206.896551724138" height="69.6" rx="10.954451150103" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="412.413793103448" y="211.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--warn-text)">Authorization</text>
+
+  <rect x="536.551724137931" y="167.6" width="206.896551724138" height="69.6" rx="10.954451150103" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="211.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--warn-text)">Validation</text>
+
+  <rect x="764.137931034483" y="167.6" width="206.896551724138" height="69.6" rx="10.954451150103" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="867.586206896552" y="211.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--warn-text)">Tracing</text>
+
+  <rect x="991.724137931035" y="167.6" width="206.896551724138" height="69.6" rx="10.954451150103" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="211.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--warn-text)">Retry on conflict</text>
+
+  <!-- Arrows between middleware -->
+  <path d="M 288.275862068966 202.4 L 308.965517241379 202.4" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 515.862068965517 202.4 L 536.551724137931 202.4" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 743.448275862069 202.4 L 764.137931034483 202.4" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 971.034482758621 202.4 L 991.724137931035 202.4" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Inner: handler -->
+  <rect x="164.137931034483" y="295.2" width="951.724137931035" height="278.4" rx="15.336231610145" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="335.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.908902300207" font-weight="bold" fill="var(--text)">Handler (per command type)</text>
+
+  <rect x="205.51724137931" y="376.4" width="186.206896551724" height="92.8" rx="10.954451150103" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="298.620689655172" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--info-text)">Load events</text>
+  <text x="298.620689655172" y="443.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.240786495134" fill="var(--info-text)">read_stream</text>
+
+  <rect x="433.103448275862" y="376.4" width="186.206896551724" height="92.8" rx="10.954451150103" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="526.206896551724" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--primary-text)">Replay + Decide</text>
+  <text x="526.206896551724" y="443.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.240786495134" fill="var(--primary-text)">aggregate.method()</text>
+
+  <rect x="660.689655172414" y="376.4" width="186.206896551724" height="92.8" rx="10.954451150103" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="753.793103448276" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--info-text)">Append events</text>
+  <text x="753.793103448276" y="443.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.240786495134" fill="var(--info-text)">expected_version</text>
+
+  <rect x="888.275862068966" y="376.4" width="186.206896551724" height="92.8" rx="10.954451150103" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="981.379310344828" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.527121840165" font-weight="bold" fill="var(--ok-text)">Ack</text>
+  <text x="981.379310344828" y="443.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.240786495134" fill="var(--ok-text)">no return data</text>
+
+  <path d="M 391.724137931034 422.8 L 433.103448275862 422.8" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 619.310344827586 422.8 L 660.689655172414 422.8" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 846.896551724138 422.8 L 888.275862068966 422.8" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="527.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.336231610145" font-style="italic" fill="var(--text-faint)">The handler does not log, authorize, validate, trace, or retry — those are middleware concerns</text>
+</svg>

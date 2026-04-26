@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Outer hexagon (domain) -->
+  <polygon points="474.48275862069,40 764.137931034483,40 908.965517241379,280.754716981132 764.137931034483,521.509433962264 474.48275862069,521.509433962264 329.655172413793,280.754716981132" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="3" opacity="0.85"/>
+  <text x="619.310344827586" y="236.981132075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.919710595936" font-weight="bold" fill="var(--info-text)">Domain</text>
+  <text x="619.310344827586" y="280.754716981132" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" fill="var(--info-text)">Aggregates, invariants,</text>
+  <text x="619.310344827586" y="313.584905660377" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" fill="var(--info-text)">domain events</text>
+  <text x="619.310344827586" y="346.415094339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.023845651166" font-style="italic" fill="var(--info-text)">(Write side only)</text>
+
+  <!-- Command port (left side) -->
+  <rect x="40" y="193.207547169811" width="206.896551724138" height="87.547169811321" rx="14.89586494477" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="231.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--primary-text)">Command Port</text>
+  <text x="143.448275862069" y="264.339622641509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--primary-text)">PlaceOrder, ShipItem</text>
+
+  <path d="M 246.896551724138 236.981132075472 L 329.655172413793 280.754716981132" fill="none" stroke="var(--primary-border)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Event port (bottom) -->
+  <rect x="515.862068965517" y="554.339622641509" width="206.896551724138" height="65.660377358491" rx="14.89586494477" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="619.310344827586" y="592.641509433962" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--info-text)">Event Port</text>
+
+  <path d="M 619.310344827586 521.509433962264 L 619.310344827586 554.339622641509" fill="none" stroke="var(--info-border)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Read store (right) -->
+  <rect x="991.724137931035" y="105.660377358491" width="248.275862068966" height="109.433962264151" rx="14.89586494477" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.862068965517" y="149.433962264151" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.407787770353" font-weight="bold" fill="var(--ok-text)">Read Model</text>
+  <text x="1115.862068965517" y="182.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--ok-text)">Updated by projection</text>
+
+  <rect x="991.724137931035" y="302.641509433962" width="248.275862068966" height="87.547169811321" rx="14.89586494477" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.862068965517" y="340.943396226415" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.279807063957" font-weight="bold" fill="var(--ok-text)">Query Port</text>
+  <text x="1115.862068965517" y="368.301886792453" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.89586494477" fill="var(--ok-text)">GetSummary, ListRecent</text>
+
+  <!-- Projection from event port to read model -->
+  <path d="M 722.758620689655 587.169811320755 Q 1095.172413793103 587.169811320755 1115.862068965517 215.094339622642" fill="none" stroke="var(--info-border)" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+  <text x="1095.172413793103" y="554.339622641509" text-anchor="end" font-family="Arial, sans-serif" font-size="14.89586494477" font-style="italic" fill="var(--info-accent)">project events</text>
+
+  <!-- Query path -->
+  <path d="M 991.724137931035 346.415094339623 L 1115.862068965517 346.415094339623" fill="none" stroke="var(--ok-border)" stroke-width="3"/>
+  <path d="M 1115.862068965517 302.641509433962 L 1115.862068965517 215.094339622642" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Note: queries do not enter the domain -->
+  <text x="619.310344827586" y="433.962264150943" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.023845651166" font-style="italic" fill="var(--info-text)">Queries do not enter the domain hexagon</text>
+</svg>

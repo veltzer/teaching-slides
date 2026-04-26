@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Decision phase -->
+  <rect x="40" y="40" width="540" height="265.833333333333" rx="15.389390284652" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="310" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.381811916546" font-weight="bold" fill="var(--text)">Decision Phase</text>
+  <text x="310" y="124.583333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.587874611031" fill="var(--text-muted)">Triggered by a command</text>
+
+  <rect x="80" y="148.75" width="200" height="96.666666666667" rx="15.389390284652" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="191.041666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.786358937409" font-weight="bold" fill="var(--primary-text)">Command</text>
+  <text x="180" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" fill="var(--primary-text)">PlaceOrder</text>
+
+  <rect x="340" y="148.75" width="200" height="96.666666666667" rx="15.389390284652" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="191.041666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.786358937409" font-weight="bold" fill="var(--info-text)">Events</text>
+  <text x="440" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" fill="var(--info-text)">OrderPlaced</text>
+
+  <path d="M 280 197.083333333333 L 340 197.083333333333" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="310" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" font-style="italic" fill="var(--text-muted)">Invariants checked here. May reject.</text>
+
+  <!-- Application phase -->
+  <rect x="700" y="40" width="540" height="265.833333333333" rx="15.389390284652" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="970" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.381811916546" font-weight="bold" fill="var(--text)">Application Phase</text>
+  <text x="970" y="124.583333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.587874611031" fill="var(--text-muted)">apply events to update state</text>
+
+  <rect x="740" y="148.75" width="200" height="96.666666666667" rx="15.389390284652" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="191.041666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.786358937409" font-weight="bold" fill="var(--info-text)">Events</text>
+  <text x="840" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" fill="var(--info-text)">OrderPlaced</text>
+
+  <rect x="1000" y="148.75" width="200" height="96.666666666667" rx="15.389390284652" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="191.041666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.786358937409" font-weight="bold" fill="var(--ok-text)">State</text>
+  <text x="1100" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" fill="var(--ok-text)">Order(placed)</text>
+
+  <path d="M 940 197.083333333333 L 1000 197.083333333333" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="970" y="281.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389390284652" font-style="italic" fill="var(--text-muted)">Pure state mutation. No invariants.</text>
+
+  <!-- Replay -->
+  <rect x="220" y="402.5" width="840" height="217.5" rx="15.389390284652" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="450.833333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.183327590167" font-weight="bold" fill="var(--text)">Replay uses only the application phase</text>
+  <text x="640" y="505.208333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.68711677422" fill="var(--text-muted)">Past events have already passed their invariants</text>
+  <text x="640" y="541.458333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.68711677422" fill="var(--text-muted)">apply() is safe to run anywhere — including projection code</text>
+  <text x="640" y="577.708333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.68711677422" font-style="italic" fill="var(--text-faint)">Aggregate.replay(events) calls only apply, never decide</text>
+</svg>

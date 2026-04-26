@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">Strangler Fig with Events</text>
+
+  <!-- Router -->
+  <rect x="536.551724137931" y="103.853211009174" width="206.896551724138" height="85.137614678899" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="141.100917431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Router</text>
+  <text x="640" y="167.706422018349" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">decides per-command</text>
+
+  <!-- Monolith -->
+  <rect x="40" y="231.559633027523" width="372.413793103448" height="127.706422018349" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="226.206896551724" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--primary-text)">Monolith</text>
+  <text x="226.206896551724" y="306.05504587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">handles old commands</text>
+  <text x="226.206896551724" y="332.660550458716" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">emits events for shared use</text>
+
+  <!-- New service -->
+  <rect x="867.586206896552" y="231.559633027523" width="372.413793103448" height="127.706422018349" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1053.793103448276" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--ok-text)">New Service</text>
+  <text x="1053.793103448276" y="306.05504587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--ok-text)">handles extracted commands</text>
+  <text x="1053.793103448276" y="332.660550458716" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--ok-text)">consumes monolith events</text>
+
+  <!-- Event log shared -->
+  <rect x="433.103448275862" y="433.761467889908" width="413.793103448276" height="106.422018348624" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.98492250348" font-weight="bold" fill="var(--info-text)">Shared Event Log</text>
+  <text x="640" y="508.256880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--info-text)">monolith publishes; new service subscribes</text>
+
+  <!-- Arrows -->
+  <path d="M 577.931034482759 188.990825688073 L 308.965517241379 231.559633027523" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="422.758620689655" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">old commands</text>
+  <path d="M 702.068965517241 188.990825688073 L 991.724137931035 231.559633027523" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="805.51724137931" y="215.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">new commands</text>
+
+  <path d="M 226.206896551724 359.266055045872 L 557.241379310345 433.761467889908" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 722.758620689655 433.761467889908 L 1012.413793103448 359.266055045872" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <text x="640" y="593.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.787938002784" fill="var(--text-muted)">Move commands from monolith to new service. Events keep both sides in sync.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" font-style="italic" fill="var(--text-faint)">Eventually the monolith stops handling those commands; later it retires entirely</text>
+</svg>

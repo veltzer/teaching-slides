@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="650.526315789474" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.254473364035" font-weight="bold" fill="var(--text)">Aggregate Lifecycle for One Command</text>
+
+  <!-- Step 1: load events -->
+  <rect x="40" y="134.69387755102" width="252.631578947368" height="142.040816326531" rx="15.627236682017" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="166.315789473684" y="182.040816326531" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.324623831453" font-weight="bold" fill="var(--info-text)">1. Load events</text>
+  <text x="166.315789473684" y="217.551020408163" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--info-text)">read_stream(order-42)</text>
+  <text x="166.315789473684" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--info-text)">returns [e1, e2, e3]</text>
+
+  <!-- Step 2: replay -->
+  <rect x="355.789473684211" y="134.69387755102" width="252.631578947368" height="142.040816326531" rx="15.627236682017" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="482.105263157895" y="182.040816326531" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.324623831453" font-weight="bold" fill="var(--primary-text)">2. Replay</text>
+  <text x="482.105263157895" y="217.551020408163" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--primary-text)">Order.empty(),</text>
+  <text x="482.105263157895" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--primary-text)">apply each event</text>
+
+  <!-- Step 3: decide -->
+  <rect x="671.578947368421" y="134.69387755102" width="252.631578947368" height="142.040816326531" rx="15.627236682017" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="797.894736842105" y="182.040816326531" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.324623831453" font-weight="bold" fill="var(--primary-text)">3. Decide</text>
+  <text x="797.894736842105" y="217.551020408163" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--primary-text)">order.place(items)</text>
+  <text x="797.894736842105" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--primary-text)">checks invariants</text>
+
+  <!-- Step 4: append -->
+  <rect x="987.368421052632" y="134.69387755102" width="252.631578947368" height="142.040816326531" rx="15.627236682017" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1113.684210526316" y="182.040816326531" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.324623831453" font-weight="bold" fill="var(--info-text)">4. Append</text>
+  <text x="1113.684210526316" y="217.551020408163" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--info-text)">store.append(stream,</text>
+  <text x="1113.684210526316" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.627236682017" fill="var(--info-text)">expected_version, [e4])</text>
+
+  <!-- Arrows -->
+  <path d="M 292.631578947368 205.714285714286 L 355.789473684211 205.714285714286" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 608.421052631579 205.714285714286 L 671.578947368421 205.714285714286" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 924.210526315789 205.714285714286 L 987.368421052632 205.714285714286" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Notes for each phase -->
+  <rect x="40" y="359.591836734694" width="1200" height="260.408163265306" rx="15.627236682017" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="406.938775510204" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.324623831453" font-weight="bold" fill="var(--text)">Properties of each phase</text>
+  <text x="82.105263157895" y="454.285714285714" font-family="Arial, sans-serif" font-size="17.859699065163" fill="var(--text-muted)">Load:    pure I/O; the event store is the only source of truth for past state</text>
+  <text x="82.105263157895" y="489.795918367347" font-family="Arial, sans-serif" font-size="17.859699065163" fill="var(--text-muted)">Replay:  pure function; no side effects; the apply method is total over event types</text>
+  <text x="82.105263157895" y="525.30612244898" font-family="Arial, sans-serif" font-size="17.859699065163" fill="var(--text-muted)">Decide:  pure function from (state, command) to events; raises domain exceptions on rejection</text>
+  <text x="82.105263157895" y="560.816326530612" font-family="Arial, sans-serif" font-size="17.859699065163" fill="var(--text-muted)">Append:  atomic; expected_version enforces optimistic concurrency; conflict triggers retry</text>
+  <text x="640" y="602.244897959184" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.74346787359" font-style="italic" fill="var(--text-faint)">Three of the four phases are pure — only Load and Append touch the world</text>
+</svg>

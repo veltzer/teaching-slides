@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Event log on left -->
+  <rect x="40" y="190.37037037037" width="323.076923076923" height="300.740740740741" rx="15.585441376682" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="201.538461538462" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.491407877643" font-weight="bold" fill="var(--info-text)">Event Stream</text>
+  <text x="63.076923076923" y="276.296296296296" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">OrderPlaced</text>
+  <text x="63.076923076923" y="303.148148148148" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">LineItemAdded</text>
+  <text x="63.076923076923" y="330" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">PaymentCaptured</text>
+  <text x="63.076923076923" y="356.851851851852" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">ItemShipped</text>
+  <text x="63.076923076923" y="383.703703703704" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">OrderDelivered</text>
+  <text x="63.076923076923" y="410.555555555556" font-family="Courier New, monospace" font-size="15.585441376682" fill="var(--info-text)">...</text>
+  <text x="201.538461538462" y="464.259259259259" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.585441376682" font-style="italic" fill="var(--info-text)">single source of truth</text>
+
+  <!-- Projection arrows -->
+  <path d="M 363.076923076923 254.814814814815 Q 513.076923076923 147.407407407407 663.076923076923 147.407407407407" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 363.076923076923 297.777777777778 Q 513.076923076923 265.555555555556 663.076923076923 265.555555555556" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 363.076923076923 362.222222222222 Q 513.076923076923 383.703703703704 663.076923076923 383.703703703704" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 363.076923076923 426.666666666667 Q 513.076923076923 501.851851851852 663.076923076923 501.851851851852" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="507.307692307692" y="120.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.585441376682" font-style="italic" fill="var(--text-muted)">project</text>
+
+  <!-- Read models on right -->
+  <rect x="663.076923076923" y="82.962962962963" width="323.076923076923" height="128.888888888889" rx="15.585441376682" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824.615384615385" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.264916252402" font-weight="bold" fill="var(--primary-text)">Order Summary</text>
+  <text x="824.615384615385" y="158.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.585441376682" fill="var(--primary-text)">Mobile app</text>
+  <text x="824.615384615385" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--primary-text)">PostgreSQL</text>
+
+  <rect x="663.076923076923" y="233.333333333333" width="323.076923076923" height="128.888888888889" rx="15.585441376682" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824.615384615385" y="276.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.264916252402" font-weight="bold" fill="var(--ok-text)">Search Index</text>
+  <text x="824.615384615385" y="308.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.585441376682" fill="var(--ok-text)">Customer search</text>
+  <text x="824.615384615385" y="335.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--ok-text)">Elasticsearch</text>
+
+  <rect x="663.076923076923" y="383.703703703704" width="323.076923076923" height="128.888888888889" rx="15.585441376682" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824.615384615385" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.264916252402" font-weight="bold" fill="var(--warn-text)">Operations View</text>
+  <text x="824.615384615385" y="458.888888888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.585441376682" fill="var(--warn-text)">Admin dashboard</text>
+  <text x="824.615384615385" y="485.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--warn-text)">PostgreSQL + cache</text>
+
+  <rect x="663.076923076923" y="534.074074074074" width="323.076923076923" height="85.925925925926" rx="15.585441376682" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="824.615384615385" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.264916252402" font-weight="bold" fill="var(--info-text)">Reporting Cube</text>
+  <text x="824.615384615385" y="598.518518518518" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--info-text)">Analytics warehouse</text>
+
+  <!-- Consumers far right -->
+  <text x="1240" y="120.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.811933001922" fill="var(--text)">Mobile UI</text>
+  <text x="1240" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--text-muted)">single doc per query</text>
+  <path d="M 986.153846153846 147.407407407407 L 1147.692307692308 147.407407407407" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="1240" y="270.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.811933001922" fill="var(--text)">Web search</text>
+  <text x="1240" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--text-muted)">faceted, fuzzy</text>
+  <path d="M 986.153846153846 297.777777777778 L 1147.692307692308 297.777777777778" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="1240" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.811933001922" fill="var(--text)">Ops queue</text>
+  <text x="1240" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--text-muted)">pending shipments</text>
+  <path d="M 986.153846153846 448.148148148148 L 1147.692307692308 448.148148148148" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="1240" y="571.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.811933001922" fill="var(--text)">BI / Reports</text>
+  <text x="1240" y="598.518518518518" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.472195564062" fill="var(--text-muted)">aggregations</text>
+  <path d="M 986.153846153846 577.037037037037 L 1147.692307692308 577.037037037037" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="709.230769230769" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.491407877643" font-weight="bold" fill="var(--text)">One stream, many shapes — each consumer gets a tailored view</text>
+</svg>

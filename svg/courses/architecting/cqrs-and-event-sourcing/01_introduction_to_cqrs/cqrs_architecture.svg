@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- UI top center -->
+  <rect x="524.615384615385" y="40" width="230.769230769231" height="92.8" rx="16.196865793679" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="80.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--text)">UI / API</text>
+  <text x="640" y="111.92" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--text-muted)">Routes by intent</text>
+
+  <!-- Command path (left) -->
+  <rect x="40" y="225.6" width="276.923076923077" height="92.8" rx="16.196865793679" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="178.461538461538" y="266.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--primary-text)">Command Handler</text>
+  <text x="178.461538461538" y="295.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--primary-text)">Validates and applies</text>
+
+  <rect x="40" y="376.4" width="276.923076923077" height="92.8" rx="16.196865793679" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="178.461538461538" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--info-text)">Write Model</text>
+  <text x="178.461538461538" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--info-text)">Aggregates, invariants</text>
+
+  <rect x="40" y="527.2" width="276.923076923077" height="92.8" rx="16.196865793679" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="178.461538461538" y="567.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--text)">Write Store</text>
+  <text x="178.461538461538" y="596.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--text-muted)">Events or state</text>
+
+  <!-- Query path (right) -->
+  <rect x="963.076923076923" y="225.6" width="276.923076923077" height="92.8" rx="16.196865793679" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1101.538461538461" y="266.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--ok-text)">Query Handler</text>
+  <text x="1101.538461538461" y="295.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--ok-text)">Reads denormalized data</text>
+
+  <rect x="963.076923076923" y="376.4" width="276.923076923077" height="92.8" rx="16.196865793679" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1101.538461538461" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--ok-text)">Read Model</text>
+  <text x="1101.538461538461" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--ok-text)">Shaped per consumer</text>
+
+  <rect x="963.076923076923" y="527.2" width="276.923076923077" height="92.8" rx="16.196865793679" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1101.538461538461" y="567.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--text)">Read Store(s)</text>
+  <text x="1101.538461538461" y="596.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--text-muted)">SQL, search, cache</text>
+
+  <!-- Projection (center) -->
+  <rect x="478.461538461538" y="376.4" width="323.076923076923" height="92.8" rx="16.196865793679" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" opacity="0.85" filter="url(#shadow)"/>
+  <text x="640" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.452217675782" font-weight="bold" fill="var(--info-text)">Projection</text>
+  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.196865793679" fill="var(--info-text)">Events update read models</text>
+
+  <!-- Arrows from UI -->
+  <path d="M 570.769230769231 132.8 L 247.692307692308 225.6" fill="none" stroke="var(--primary-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="340" y="167.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.510703764205" font-weight="bold" fill="var(--primary-accent)">commands</text>
+
+  <path d="M 709.230769230769 132.8 L 1032.307692307692 225.6" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="940" y="167.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.510703764205" font-weight="bold" fill="var(--ok-accent)">queries</text>
+
+  <!-- Internal arrows -->
+  <path d="M 178.461538461538 318.4 L 178.461538461538 376.4" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 178.461538461538 469.2 L 178.461538461538 527.2" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 1101.538461538461 318.4 L 1101.538461538461 376.4" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 1101.538461538461 469.2 L 1101.538461538461 527.2" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Event flow: write store -> projection -> read model -->
+  <path d="M 316.923076923077 573.6 Q 640 573.6 478.461538461538 422.8" fill="none" stroke="var(--info-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 801.538461538461 422.8 Q 940 422.8 963.076923076923 422.8" fill="none" stroke="var(--info-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="515.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.510703764205" font-weight="bold" fill="var(--info-accent)">events</text>
+</svg>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Column 1: CDC -->
+  <text x="205.51724137931" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Change Data Capture</text>
+  <rect x="40" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes row</text>
+  <text x="205.51724137931" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">UPDATE orders SET ...</text>
+
+  <rect x="40" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--warn-text)">DB Write-Ahead Log</text>
+  <text x="205.51724137931" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--warn-text)">row diffs</text>
+
+  <rect x="40" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Stream of row changes</text>
+  <text x="205.51724137931" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">low-level, mechanical</text>
+
+  <path d="M 205.51724137931 183.505154639175 L 205.51724137931 231.340206185567" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 205.51724137931 327.010309278351 L 205.51724137931 374.845360824742" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="205.51724137931" y="530.309278350515" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Truth: the row.</text>
+  <text x="205.51724137931" y="560.20618556701" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Events are diffs.</text>
+  <text x="205.51724137931" y="590.103092783505" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Good for replication.</text>
+  <text x="205.51724137931" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Weak audit semantics.</text>
+
+  <!-- Column 2: Outbox -->
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Outbox Pattern</text>
+  <rect x="474.48275862069" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes row + outbox</text>
+  <text x="640" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">single transaction</text>
+
+  <rect x="474.48275862069" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--warn-text)">Outbox table</text>
+  <text x="640" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--warn-text)">domain events as rows</text>
+
+  <rect x="474.48275862069" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Publisher to broker</text>
+  <text x="640" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">domain-meaningful</text>
+
+  <path d="M 640 183.505154639175 L 640 231.340206185567" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 640 327.010309278351 L 640 374.845360824742" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="530.309278350515" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Truth: the row.</text>
+  <text x="640" y="560.20618556701" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Events are a side effect</text>
+  <text x="640" y="590.103092783505" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">for integration.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Good for "send a message".</text>
+
+  <!-- Column 3: ES -->
+  <text x="1074.48275862069" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.469631926082" font-weight="bold" fill="var(--text)">Event Sourcing</text>
+  <rect x="908.965517241379" y="87.835051546392" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="129.690721649485" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--primary-text)">App writes events</text>
+  <text x="1074.48275862069" y="159.587628865979" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--primary-text)">no row to update</text>
+
+  <rect x="908.965517241379" y="231.340206185567" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="273.19587628866" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--info-text)">Event Store</text>
+  <text x="1074.48275862069" y="303.092783505155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--info-text)">the source of truth</text>
+
+  <rect x="908.965517241379" y="374.845360824742" width="331.034482758621" height="95.670103092784" rx="15.571583952961" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="416.701030927835" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.020607939522" font-weight="bold" fill="var(--ok-text)">Read models projected</text>
+  <text x="1074.48275862069" y="446.59793814433" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--ok-text)">derived views</text>
+
+  <path d="M 1074.48275862069 183.505154639175 L 1074.48275862069 231.340206185567" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1074.48275862069 327.010309278351 L 1074.48275862069 374.845360824742" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="1074.48275862069" y="530.309278350515" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Truth: the events.</text>
+  <text x="1074.48275862069" y="560.20618556701" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Rows are derived.</text>
+  <text x="1074.48275862069" y="590.103092783505" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Strong audit semantics.</text>
+  <text x="1074.48275862069" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.571583952961" fill="var(--text-muted)">Replay is built in.</text>
+</svg>

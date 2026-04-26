@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.156114329089" font-weight="bold" fill="var(--text)">One Event Store Per Service; Broker Between</text>
+
+  <!-- Service A -->
+  <rect x="40" y="124.363636363636" width="289.655172413793" height="210.909090909091" rx="14.622523100279" fill="var(--surface)" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="184.827586206897" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--text)">Sales Service</text>
+  <rect x="81.379310344828" y="187.636363636364" width="206.896551724138" height="63.272727272727" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">Aggregates + handlers</text>
+  <rect x="81.379310344828" y="261.454545454545" width="206.896551724138" height="52.727272727273" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="293.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Sales event store</text>
+
+  <!-- Service B -->
+  <rect x="40" y="409.090909090909" width="289.655172413793" height="210.909090909091" rx="14.622523100279" fill="var(--surface)" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="184.827586206897" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--text)">Billing Service</text>
+  <rect x="81.379310344828" y="472.363636363636" width="206.896551724138" height="63.272727272727" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="509.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">Aggregates + handlers</text>
+  <rect x="81.379310344828" y="546.181818181818" width="206.896551724138" height="52.727272727273" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Billing event store</text>
+
+  <!-- Broker -->
+  <rect x="495.172413793103" y="250.909090909091" width="289.655172413793" height="210.909090909091" rx="14.622523100279" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="293.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978250586152" font-weight="bold" fill="var(--warn-text)">Integration Broker</text>
+  <text x="640" y="335.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--warn-text)">integration events only</text>
+  <text x="640" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--warn-text)">cross-service contracts</text>
+  <text x="640" y="403.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--warn-text)">Kafka / EventBridge</text>
+
+  <!-- Service C -->
+  <rect x="950.344827586207" y="124.363636363636" width="289.655172413793" height="210.909090909091" rx="14.622523100279" fill="var(--surface)" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="1095.172413793103" y="161.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--text)">Shipping Service</text>
+  <rect x="991.724137931035" y="187.636363636364" width="206.896551724138" height="63.272727272727" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="224.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">Aggregates + handlers</text>
+  <rect x="991.724137931035" y="261.454545454545" width="206.896551724138" height="52.727272727273" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="293.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Shipping event store</text>
+
+  <!-- Service D -->
+  <rect x="950.344827586207" y="409.090909090909" width="289.655172413793" height="210.909090909091" rx="14.622523100279" fill="var(--surface)" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="1095.172413793103" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.800386843215" font-weight="bold" fill="var(--text)">Inventory Service</text>
+  <rect x="991.724137931035" y="472.363636363636" width="206.896551724138" height="63.272727272727" rx="8.355727485873" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="509.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.622523100279" fill="var(--primary-text)">Aggregates + handlers</text>
+  <rect x="991.724137931035" y="546.181818181818" width="206.896551724138" height="52.727272727273" rx="8.355727485873" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="577.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.578057164544" fill="var(--info-text)">Inventory event store</text>
+
+  <!-- Arrows -->
+  <path d="M 329.655172413793 261.454545454545 L 495.172413793103 293.090909090909" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 329.655172413793 525.090909090909 L 495.172413793103 419.636363636364" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 293.090909090909 L 950.344827586207 261.454545454545" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 419.636363636364 L 950.344827586207 525.090909090909" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

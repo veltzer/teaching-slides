@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.17315613455" font-weight="bold" fill="var(--text)">A Single Projection</text>
+
+  <!-- Event store -->
+  <rect x="40" y="136.666666666667" width="244.067796610169" height="128.888888888889" rx="14.631699457065" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.033898305085" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902427795807" font-weight="bold" fill="var(--info-text)">Event Store</text>
+  <text x="162.033898305085" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">global stream</text>
+  <text x="162.033898305085" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">positions 0, 1, 2, ...</text>
+
+  <!-- Subscription -->
+  <rect x="365.423728813559" y="136.666666666667" width="244.067796610169" height="128.888888888889" rx="14.631699457065" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="487.457627118644" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902427795807" font-weight="bold" fill="var(--primary-text)">Subscription</text>
+  <text x="487.457627118644" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">resumes from</text>
+  <text x="487.457627118644" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">last_processed_position</text>
+
+  <!-- Handlers -->
+  <rect x="690.847457627119" y="136.666666666667" width="244.067796610169" height="128.888888888889" rx="14.631699457065" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="812.881355932203" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902427795807" font-weight="bold" fill="var(--primary-text)">Event Handlers</text>
+  <text x="812.881355932203" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">on(OrderPlaced)</text>
+  <text x="812.881355932203" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">on(OrderCancelled)</text>
+
+  <!-- Read store -->
+  <rect x="1016.271186440678" y="136.666666666667" width="223.728813559322" height="128.888888888889" rx="14.631699457065" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.135593220339" y="179.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902427795807" font-weight="bold" fill="var(--ok-text)">Read Store</text>
+  <text x="1128.135593220339" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">order_summary</text>
+  <text x="1128.135593220339" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">table</text>
+
+  <!-- Arrows -->
+  <path d="M 284.067796610169 201.111111111111 L 365.423728813559 201.111111111111" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 609.491525423729 201.111111111111 L 690.847457627119 201.111111111111" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 934.915254237288 201.111111111111 L 1016.271186440678 201.111111111111" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Checkpoint store below -->
+  <rect x="365.423728813559" y="372.962962962963" width="244.067796610169" height="107.407407407407" rx="14.631699457065" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="487.457627118644" y="415.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902427795807" font-weight="bold" fill="var(--warn-text)">Checkpoint Store</text>
+  <text x="487.457627118644" y="448.148148148148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">last_processed_position</text>
+
+  <path d="M 487.457627118644 265.555555555556 Q 446.779661016949 319.259259259259 446.779661016949 372.962962962963" fill="none" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 528.135593220339 372.962962962963 Q 528.135593220339 319.259259259259 487.457627118644 265.555555555556" fill="none" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="619.661016949153" y="335.37037037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" font-style="italic" fill="var(--warn-accent)">read at start, write after each batch</text>
+
+  <!-- Notes -->
+  <rect x="40" y="512.592592592593" width="1200" height="107.407407407407" rx="14.631699457065" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="80.677966101695" y="550.185185185185" font-family="Arial, sans-serif" font-size="15.676820846856" fill="var(--text)">Restart: read checkpoint → resume subscription → process events → update read store → advance checkpoint</text>
+  <text x="80.677966101695" y="579.185185185185" font-family="Arial, sans-serif" font-size="15.676820846856" fill="var(--text)">Idempotent handlers + checkpoint = at-least-once is safe; checkpoint after handler succeeds</text>
+  <text x="80.677966101695" y="603.888888888889" font-family="Arial, sans-serif" font-size="15.676820846856" fill="var(--text)">Rebuild: drop the read store and the checkpoint; resume from position 0</text>
+</svg>

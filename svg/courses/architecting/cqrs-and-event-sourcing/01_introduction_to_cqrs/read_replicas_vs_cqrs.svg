@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Header bar split -->
+  <text x="286.728971962617" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.655214983219" font-weight="bold" fill="var(--text)">Read Replicas</text>
+  <text x="286.728971962617" y="72.48" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.249363066596" fill="var(--text-muted)">Same schema, kept in sync</text>
+
+  <text x="1004.485981308411" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.655214983219" font-weight="bold" fill="var(--text)">CQRS Read Models</text>
+  <text x="1004.485981308411" y="72.48" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.249363066596" fill="var(--text-muted)">Different schema, projected from events</text>
+
+  <!-- Vertical divider -->
+  <line x1="645.607476635514" y1="109.6" x2="645.607476635514" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- LEFT: Read replicas -->
+  <rect x="197.009345794393" y="132.8" width="201.869158878505" height="81.2" rx="15.968192683272" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="297.943925233645" y="182.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.811703833245" font-weight="bold" fill="var(--primary-text)">Primary DB</text>
+
+  <rect x="40" y="330" width="201.869158878505" height="81.2" rx="15.968192683272" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="140.934579439252" y="370.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.530533449921" fill="var(--text)">Replica</text>
+  <text x="140.934579439252" y="393.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.968192683272" fill="var(--text-muted)">same schema</text>
+
+  <rect x="354.018691588785" y="330" width="201.869158878505" height="81.2" rx="15.968192683272" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="454.953271028037" y="370.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.530533449921" fill="var(--text)">Replica</text>
+  <text x="454.953271028037" y="393.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.968192683272" fill="var(--text-muted)">same schema</text>
+
+  <path d="M 253.084112149533 214 L 152.14953271028 330" fill="none" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 342.803738317757 214 L 443.738317757009 330" fill="none" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="286.728971962617" y="492.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.249363066596" font-weight="bold" fill="var(--text)">Helps with read throughput</text>
+  <text x="286.728971962617" y="521.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.108777874934" fill="var(--text-muted)">Reads still pay the join cost</text>
+  <text x="286.728971962617" y="550.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.108777874934" fill="var(--text-muted)">Read shape == write shape</text>
+
+  <!-- RIGHT: CQRS read models -->
+  <rect x="914.766355140187" y="132.8" width="201.869158878505" height="81.2" rx="15.968192683272" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015.700934579439" y="182.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.811703833245" font-weight="bold" fill="var(--primary-text)">Write Store</text>
+
+  <rect x="746.542056074766" y="330" width="224.299065420561" height="81.2" rx="15.968192683272" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="858.691588785047" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.389948258259" font-weight="bold" fill="var(--ok-text)">Search Index</text>
+  <text x="858.691588785047" y="393.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.827607491609" fill="var(--ok-text)">flat documents</text>
+
+  <rect x="1015.700934579439" y="330" width="224.299065420561" height="81.2" rx="15.968192683272" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.85046728972" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.389948258259" font-weight="bold" fill="var(--ok-text)">Reporting Cube</text>
+  <text x="1127.85046728972" y="393.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.827607491609" fill="var(--ok-text)">pre-aggregated</text>
+
+  <path d="M 959.626168224299 214 L 858.691588785047 330" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1071.775700934579 214 L 1139.065420560747 330" fill="none" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="825.046728971963" y="266.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.968192683272" font-style="italic" fill="var(--ok-accent)">project</text>
+  <text x="1161.495327102803" y="266.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.968192683272" font-style="italic" fill="var(--ok-accent)">project</text>
+
+  <text x="1004.485981308411" y="492.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.249363066596" font-weight="bold" fill="var(--text)">Helps with read shape</text>
+  <text x="1004.485981308411" y="521.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.108777874934" fill="var(--text-muted)">Each consumer gets data ready to serve</text>
+  <text x="1004.485981308411" y="550.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.108777874934" fill="var(--text-muted)">Read shape != write shape</text>
+</svg>

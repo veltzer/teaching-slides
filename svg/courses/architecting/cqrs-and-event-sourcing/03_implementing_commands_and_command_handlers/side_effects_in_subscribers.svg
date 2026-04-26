@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Command handler -->
+  <rect x="40" y="40" width="289.655172413793" height="133.846153846154" rx="15.038412354828" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="84.615384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.631790843301" font-weight="bold" fill="var(--primary-text)">Command Handler</text>
+  <text x="184.827586206897" y="118.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--primary-text)">load → decide → append</text>
+  <text x="184.827586206897" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--primary-text)">no side effects beyond the store</text>
+
+  <!-- Event store -->
+  <rect x="495.172413793103" y="40" width="289.655172413793" height="133.846153846154" rx="15.038412354828" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="84.615384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.631790843301" font-weight="bold" fill="var(--info-text)">Event Store</text>
+  <text x="640" y="118.076923076923" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">OrderPlaced</text>
+  <text x="640" y="145.961538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">PaymentCaptured</text>
+
+  <path d="M 329.655172413793 106.923076923077 L 495.172413793103 106.923076923077" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="412.413793103448" y="95.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" font-style="italic" fill="var(--text-muted)">append</text>
+
+  <!-- Subscribers fan-out -->
+  <text x="981.379310344828" y="67.884615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.483446221183" font-weight="bold" fill="var(--text)">Subscribers</text>
+
+  <rect x="888.275862068966" y="84.615384615385" width="206.896551724138" height="66.923076923077" rx="10.741723110591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.112584665887" fill="var(--ok-text)">Email confirmation</text>
+
+  <rect x="888.275862068966" y="173.846153846154" width="206.896551724138" height="66.923076923077" rx="10.741723110591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="216.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.112584665887" fill="var(--ok-text)">Charge card</text>
+
+  <rect x="888.275862068966" y="263.076923076923" width="206.896551724138" height="66.923076923077" rx="10.741723110591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="305.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.112584665887" fill="var(--ok-text)">Update read model</text>
+
+  <rect x="888.275862068966" y="352.307692307692" width="206.896551724138" height="66.923076923077" rx="10.741723110591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="394.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.112584665887" fill="var(--ok-text)">Notify warehouse</text>
+
+  <rect x="888.275862068966" y="441.538461538462" width="206.896551724138" height="66.923076923077" rx="10.741723110591" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="991.724137931035" y="483.923076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.112584665887" fill="var(--ok-text)">Push to analytics</text>
+
+  <!-- Arrows from store to subscribers -->
+  <path d="M 784.827586206897 106.923076923077 Q 836.551724137931 118.076923076923 888.275862068966 118.076923076923" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 129.230769230769 Q 836.551724137931 207.307692307692 888.275862068966 207.307692307692" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 151.538461538462 Q 836.551724137931 296.538461538462 888.275862068966 296.538461538462" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 173.846153846154 Q 836.551724137931 385.769230769231 888.275862068966 385.769230769231" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 173.846153846154 Q 836.551724137931 475 888.275862068966 475" fill="none" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <rect x="40" y="553.076923076923" width="1200" height="66.923076923077" rx="10.741723110591" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="580.961538461539" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.186756976946" font-weight="bold" fill="var(--warn-text)">Why subscribers, not handlers?</text>
+  <text x="640" y="608.846153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--warn-text)">Side effects retry independently. Failures don't roll back the event. New consumers don't change the write path.</text>
+</svg>

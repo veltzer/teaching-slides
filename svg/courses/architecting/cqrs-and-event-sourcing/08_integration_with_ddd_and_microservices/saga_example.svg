@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.424780166081" font-weight="bold" fill="var(--text)">Order Saga: Forward and Compensation</text>
+
+  <!-- Forward path (top) -->
+  <text x="81.379310344828" y="109.322709163347" font-family="Arial, sans-serif" font-size="19.678693961133" font-weight="bold" fill="var(--ok-accent)">Forward</text>
+
+  <rect x="40" y="143.98406374502" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="184.422310756972" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--ok-text)">Reserve</text>
+  <text x="143.448275862069" y="207.529880478088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--ok-text)">Inventory</text>
+
+  <rect x="288.275862068966" y="143.98406374502" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.724137931034" y="184.422310756972" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--ok-text)">Capture</text>
+  <text x="391.724137931034" y="207.529880478088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--ok-text)">Payment</text>
+
+  <rect x="536.551724137931" y="143.98406374502" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="184.422310756972" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--ok-text)">Schedule</text>
+  <text x="640" y="207.529880478088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--ok-text)">Shipping</text>
+
+  <rect x="784.827586206897" y="143.98406374502" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="184.422310756972" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--ok-text)">Notify</text>
+  <text x="888.275862068966" y="207.529880478088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--ok-text)">Customer</text>
+
+  <rect x="1033.103448275862" y="143.98406374502" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="184.422310756972" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--primary-text)">Order</text>
+  <text x="1136.551724137931" y="207.529880478088" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--primary-text)">Complete</text>
+
+  <path d="M 246.896551724138 184.422310756972 L 288.275862068966 184.422310756972" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 495.172413793103 184.422310756972 L 536.551724137931 184.422310756972" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 743.448275862069 184.422310756972 L 784.827586206897 184.422310756972" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 991.724137931035 184.422310756972 L 1033.103448275862 184.422310756972" fill="none" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Compensation path (bottom) -->
+  <text x="81.379310344828" y="386.613545816733" font-family="Arial, sans-serif" font-size="19.678693961133" font-weight="bold" fill="var(--danger-accent)">Compensation (when a step fails)</text>
+
+  <rect x="40" y="421.274900398406" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="143.448275862069" y="461.713147410359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--danger-text)">Release</text>
+  <text x="143.448275862069" y="484.820717131474" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--danger-text)">Inventory</text>
+
+  <rect x="288.275862068966" y="421.274900398406" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="391.724137931034" y="461.713147410359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--danger-text)">Refund</text>
+  <text x="391.724137931034" y="484.820717131474" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--danger-text)">Payment</text>
+
+  <rect x="536.551724137931" y="421.274900398406" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="461.713147410359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--danger-text)">Cancel</text>
+  <text x="640" y="484.820717131474" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--danger-text)">Shipping</text>
+
+  <rect x="784.827586206897" y="421.274900398406" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="461.713147410359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--danger-text)">Apologize</text>
+  <text x="888.275862068966" y="484.820717131474" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--danger-text)">to Customer</text>
+
+  <rect x="1033.103448275862" y="421.274900398406" width="206.896551724138" height="80.876494023904" rx="10.932607756185" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="461.713147410359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" font-weight="bold" fill="var(--primary-text)">Order</text>
+  <text x="1136.551724137931" y="484.820717131474" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.212390083041" fill="var(--primary-text)">Failed</text>
+
+  <!-- Compensation flows right-to-left -->
+  <path d="M 288.275862068966 461.713147410359 L 246.896551724138 461.713147410359" fill="none" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 536.551724137931 461.713147410359 L 495.172413793103 461.713147410359" fill="none" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 461.713147410359 L 743.448275862069 461.713147410359" fill="none" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 1033.103448275862 461.713147410359 L 991.724137931035 461.713147410359" fill="none" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <text x="640" y="588.804780876494" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.492172409896" fill="var(--text)">A saga is a process manager that tracks step status and emits compensating commands.</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.305650858659" font-style="italic" fill="var(--text-muted)">Each compensation must itself be idempotent and tolerate further failure.</text>
+</svg>

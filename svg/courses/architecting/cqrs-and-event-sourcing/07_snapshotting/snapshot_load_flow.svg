@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="661.428571428571" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.724791961728" font-weight="bold" fill="var(--text)">Loading With Snapshot Versioning</text>
+
+  <!-- Step 1: query snapshot -->
+  <rect x="40" y="144.269662921348" width="235.714285714286" height="130.337078651685" rx="16.544118748623" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="196.404494382022" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.634455355176" font-weight="bold" fill="var(--primary-text)">Find latest</text>
+  <text x="157.857142857143" y="228.988764044944" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.544118748623" fill="var(--primary-text)">snapshot for</text>
+  <text x="157.857142857143" y="255.056179775281" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.544118748623" fill="var(--primary-text)">stream</text>
+
+  <!-- Step 2: schema check -->
+  <rect x="318.571428571429" y="144.269662921348" width="257.142857142857" height="130.337078651685" rx="16.544118748623" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="447.142857142857" y="196.404494382022" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.634455355176" font-weight="bold" fill="var(--warn-text)">Schema match?</text>
+  <text x="447.142857142857" y="228.988764044944" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.544118748623" fill="var(--warn-text)">snapshot.schema_ver</text>
+  <text x="447.142857142857" y="255.056179775281" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.544118748623" fill="var(--warn-text)">vs current code</text>
+
+  <!-- Branch: yes -->
+  <rect x="618.571428571429" y="92.134831460674" width="257.142857142857" height="104.269662921348" rx="16.544118748623" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="747.142857142857" y="137.752808988764" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.271009819658" font-weight="bold" fill="var(--ok-text)">Use snapshot</text>
+  <text x="747.142857142857" y="170.337078651685" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.362395980864" fill="var(--ok-text)">replay events &gt; version</text>
+
+  <!-- Branch: upcast -->
+  <rect x="618.571428571429" y="222.47191011236" width="257.142857142857" height="104.269662921348" rx="16.544118748623" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="747.142857142857" y="268.089887640449" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.271009819658" font-weight="bold" fill="var(--warn-text)">Upcast snapshot</text>
+  <text x="747.142857142857" y="300.674157303371" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.362395980864" fill="var(--warn-text)">v1 → v2 → ... → vN</text>
+
+  <!-- Branch: discard -->
+  <rect x="618.571428571429" y="352.808988764045" width="257.142857142857" height="104.269662921348" rx="16.544118748623" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="747.142857142857" y="398.426966292135" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.271009819658" font-weight="bold" fill="var(--danger-text)">Discard</text>
+  <text x="747.142857142857" y="431.011235955056" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.362395980864" fill="var(--danger-text)">full replay this time</text>
+
+  <!-- No snapshot branch -->
+  <rect x="40" y="352.808988764045" width="235.714285714286" height="104.269662921348" rx="16.544118748623" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="157.857142857143" y="398.426966292135" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.271009819658" font-weight="bold" fill="var(--danger-text)">No snapshot</text>
+  <text x="157.857142857143" y="431.011235955056" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.362395980864" fill="var(--danger-text)">full replay</text>
+
+  <!-- Final state -->
+  <rect x="940" y="222.47191011236" width="300" height="104.269662921348" rx="16.544118748623" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="268.089887640449" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.634455355176" font-weight="bold" fill="var(--ok-text)">Aggregate ready</text>
+  <text x="1090" y="300.674157303371" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.362395980864" fill="var(--ok-text)">at current version</text>
+
+  <!-- Arrows -->
+  <path d="M 275.714285714286 209.438202247191 L 318.571428571429 209.438202247191" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 575.714285714286 189.887640449438 L 618.571428571429 144.269662921348" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="602.5" y="144.269662921348" font-family="Arial, sans-serif" font-size="14.180673213105" font-style="italic" fill="var(--ok-accent)">match</text>
+  <path d="M 575.714285714286 222.47191011236 L 618.571428571429 261.573033707865" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="602.5" y="255.056179775281" font-family="Arial, sans-serif" font-size="14.180673213105" font-style="italic" fill="var(--warn-accent)">old</text>
+  <path d="M 575.714285714286 261.573033707865 L 618.571428571429 391.910112359551" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="581.071428571429" y="385.393258426966" font-family="Arial, sans-serif" font-size="14.180673213105" font-style="italic" fill="var(--danger-accent)">unknown</text>
+
+  <path d="M 275.714285714286 404.943820224719 L 618.571428571429 391.910112359551" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 875.714285714286 144.269662921348 L 940 248.539325842697" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 875.714285714286 274.606741573034 L 940 274.606741573034" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 875.714285714286 404.943820224719 L 940 300.674157303371" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <text x="661.428571428571" y="587.415730337079" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.907564284141" fill="var(--text-muted)">All paths converge on a correct aggregate. Versioning lets old snapshots stay useful.</text>
+  <text x="661.428571428571" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.544118748623" font-style="italic" fill="var(--text-faint)">Discard is safe — full replay is always correct, just slower</text>
+</svg>

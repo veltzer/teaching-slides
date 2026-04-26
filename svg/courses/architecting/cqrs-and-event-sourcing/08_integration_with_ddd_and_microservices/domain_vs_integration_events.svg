@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.928480087538" font-weight="bold" fill="var(--text)">Domain Events vs Integration Events</text>
+
+  <!-- Bounded context box -->
+  <rect x="40" y="95.769230769231" width="662.068965517241" height="524.230769230769" rx="15.038412354828" fill="var(--surface)" stroke="var(--border)" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="371.034482758621" y="140.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.483446221183" font-weight="bold" fill="var(--text)">Sales Bounded Context</text>
+
+  <text x="371.034482758621" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.186756976946" font-weight="bold" fill="var(--text)">Domain events (internal)</text>
+
+  <rect x="81.379310344828" y="218.461538461538" width="248.275862068966" height="55.769230769231" rx="8.593378488473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="253.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">CartItemAdded</text>
+
+  <rect x="350.344827586207" y="218.461538461538" width="248.275862068966" height="55.769230769231" rx="8.593378488473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="474.48275862069" y="253.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">DiscountApplied</text>
+
+  <rect x="81.379310344828" y="290.961538461538" width="248.275862068966" height="55.769230769231" rx="8.593378488473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="325.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">CheckoutInitiated</text>
+
+  <rect x="350.344827586207" y="290.961538461538" width="248.275862068966" height="55.769230769231" rx="8.593378488473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="474.48275862069" y="325.538461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">PaymentRequested</text>
+
+  <rect x="215.862068965517" y="363.461538461538" width="248.275862068966" height="55.769230769231" rx="8.593378488473" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="398.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--info-text)">OrderConfirmed</text>
+
+  <text x="371.034482758621" y="469.423076923077" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Fine-grained, internal vocabulary</text>
+  <text x="371.034482758621" y="497.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Schema can change with the aggregate</text>
+  <text x="371.034482758621" y="525.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Other contexts never see these</text>
+
+  <!-- Integration events column -->
+  <rect x="784.827586206897" y="95.769230769231" width="455.172413793103" height="524.230769230769" rx="15.038412354828" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3"/>
+  <text x="1012.413793103448" y="140.384615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.483446221183" font-weight="bold" fill="var(--text)">Integration events</text>
+  <text x="1012.413793103448" y="168.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">(published to other contexts)</text>
+
+  <rect x="826.206896551724" y="207.307692307692" width="372.413793103448" height="66.923076923077" rx="8.593378488473" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1012.413793103448" y="247.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.186756976946" font-weight="bold" fill="var(--ok-text)">OrderPlaced</text>
+
+  <text x="1012.413793103448" y="307.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">summary: order_id, customer,</text>
+  <text x="1012.413793103448" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">total, items</text>
+
+  <text x="1012.413793103448" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Coarse-grained, public vocabulary</text>
+  <text x="1012.413793103448" y="419.230769230769" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Schema is an external contract</text>
+  <text x="1012.413793103448" y="447.115384615385" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Versioned, registered</text>
+  <text x="1012.413793103448" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Consumed by Billing, Shipping,</text>
+  <text x="1012.413793103448" y="502.884615384615" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.038412354828" fill="var(--text-muted)">Inventory, Reporting...</text>
+
+  <!-- Arrow from internal to public -->
+  <path d="M 702.068965517241 374.615384615385 L 784.827586206897 251.923076923077" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="748.620689655172" y="307.692307692308" font-family="Arial, sans-serif" font-size="13.964240043769" font-style="italic" fill="var(--text-muted)">publish</text>
+</svg>

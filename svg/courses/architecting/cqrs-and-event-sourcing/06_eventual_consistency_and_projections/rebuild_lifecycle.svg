@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.726960052005" font-weight="bold" fill="var(--text)">Projection Rebuild</text>
+
+  <!-- Steps -->
+  <rect x="40" y="153.725490196078" width="220" height="113.725490196078" rx="14.929901566464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--warn-text)">1. Drop</text>
+  <text x="150" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--warn-text)">read model + checkpoint</text>
+
+  <rect x="290" y="153.725490196078" width="220" height="113.725490196078" rx="14.929901566464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">2. Re-create</text>
+  <text x="400" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--primary-text)">empty schema</text>
+
+  <rect x="540" y="153.725490196078" width="220" height="113.725490196078" rx="14.929901566464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">3. Catch up</text>
+  <text x="650" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--primary-text)">project from position 0</text>
+
+  <rect x="790" y="153.725490196078" width="220" height="113.725490196078" rx="14.929901566464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--primary-text)">4. Live</text>
+  <text x="900" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--primary-text)">tail head of log</text>
+
+  <rect x="1040" y="153.725490196078" width="200" height="113.725490196078" rx="14.929901566464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="196.941176470588" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--ok-text)">5. Ready</text>
+  <text x="1140" y="227.647058823529" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.863480026003" fill="var(--ok-text)">serve queries</text>
+
+  <path d="M 260 210.588235294118 L 290 210.588235294118" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 510 210.588235294118 L 540 210.588235294118" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 760 210.588235294118 L 790 210.588235294118" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1010 210.588235294118 L 1040 210.588235294118" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Notes -->
+  <rect x="60" y="369.803921568627" width="1180" height="250.196078431373" rx="14.929901566464" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="415.294117647059" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.328430809235" font-weight="bold" fill="var(--text)">Properties of a routine rebuild</text>
+  <text x="100" y="460.78431372549" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--text-muted)">Same code. Same handlers. Just a different starting position.</text>
+  <text x="100" y="492.627450980392" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--text-muted)">Duration scales with event count, not aggregate count.</text>
+  <text x="100" y="524.470588235294" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--text-muted)">Live reads keep using the old read model until rebuild is ready (blue-green).</text>
+  <text x="100" y="556.313725490196" font-family="Arial, sans-serif" font-size="17.062744647388" fill="var(--text-muted)">Practiced regularly — don't wait for the emergency.</text>
+  <text x="640" y="599.529411764706" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.929901566464" font-style="italic" fill="var(--text-faint)">Rebuilds turn schema changes from scary into Tuesday</text>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- UI -->
+  <rect x="40" y="40" width="227.586206896552" height="151.304347826087" rx="15.989126740165" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="103.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.409931554568" font-weight="bold" fill="var(--primary-text)">UI / API</text>
+  <text x="153.793103448276" y="140.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--primary-text)">Reads and writes</text>
+  <text x="153.793103448276" y="166.086956521739" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--primary-text)">go through one path</text>
+
+  <!-- Application -->
+  <rect x="381.379310344828" y="40" width="227.586206896552" height="151.304347826087" rx="15.989126740165" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="103.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.409931554568" font-weight="bold" fill="var(--primary-text)">Application</text>
+  <text x="495.172413793103" y="140.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--primary-text)">Same services</text>
+  <text x="495.172413793103" y="166.086956521739" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--primary-text)">handle both</text>
+
+  <!-- Domain Model -->
+  <rect x="722.758620689655" y="40" width="227.586206896552" height="151.304347826087" rx="15.989126740165" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="836.551724137931" y="103.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.409931554568" font-weight="bold" fill="var(--info-text)">Domain Model</text>
+  <text x="836.551724137931" y="140.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--info-text)">Carries write</text>
+  <text x="836.551724137931" y="166.086956521739" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--info-text)">and read concerns</text>
+
+  <!-- Database -->
+  <rect x="1064.137931034483" y="40" width="175.862068965517" height="151.304347826087" rx="15.989126740165" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1152.068965517241" y="103.04347826087" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.409931554568" font-weight="bold" fill="var(--text)">Database</text>
+  <text x="1152.068965517241" y="140.869565217391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--text-muted)">One schema</text>
+  <text x="1152.068965517241" y="166.086956521739" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.273287703045" fill="var(--text-muted)">for everything</text>
+
+  <!-- Arrows -->
+  <path d="M 267.586206896552 115.652173913043 L 381.379310344828 115.652173913043" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 608.965517241379 115.652173913043 L 722.758620689655 115.652173913043" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 950.344827586207 115.652173913043 L 1064.137931034483 115.652173913043" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Caption: typical pain points -->
+  <text x="598.620689655172" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.125770591687" font-weight="bold" fill="var(--text)">A single model serves both read and write traffic</text>
+
+  <rect x="122.758620689655" y="393.04347826087" width="931.034482758621" height="226.95652173913" rx="15.989126740165" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="588.275862068966" y="443.478260869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.841609628806" font-weight="bold" fill="var(--text)">Symptoms when read and write workloads diverge</text>
+  <text x="588.275862068966" y="487.608695652174" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.415368184485" fill="var(--text-muted)">Aggregates pulling fields just for the dashboard</text>
+  <text x="588.275862068966" y="519.130434782609" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.415368184485" fill="var(--text-muted)">Joins added to satisfy reports, slowing every command</text>
+  <text x="588.275862068966" y="550.652173913043" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.415368184485" fill="var(--text-muted)">Indexes tuned for queries, hurting write throughput</text>
+  <text x="588.275862068966" y="582.173913043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.415368184485" fill="var(--text-muted)">DTOs and ViewModels leaking into the domain layer</text>
+</svg>

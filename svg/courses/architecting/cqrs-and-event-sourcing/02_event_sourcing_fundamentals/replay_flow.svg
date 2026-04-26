@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Empty state -->
+  <rect x="40" y="250.909090909091" width="196.363636363636" height="158.181818181818" rx="16.788425765075" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="138.181818181818" y="316.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.381811916546" font-weight="bold" fill="var(--primary-text)">Empty</text>
+  <text x="138.181818181818" y="356.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" fill="var(--primary-text)">Order.empty()</text>
+
+  <!-- Event stream label -->
+  <text x="694.545454545455" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.381811916546" font-weight="bold" fill="var(--text)">Event stream (in order)</text>
+
+  <!-- 5 events in a row -->
+  <rect x="301.818181818182" y="92.727272727273" width="218.181818181818" height="79.090909090909" rx="11.991732689339" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410.909090909091" y="142.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" fill="var(--info-text)">OrderCreated</text>
+
+  <rect x="541.818181818182" y="92.727272727273" width="218.181818181818" height="79.090909090909" rx="11.991732689339" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650.909090909091" y="142.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" fill="var(--info-text)">LineItemAdded</text>
+
+  <rect x="781.818181818182" y="92.727272727273" width="218.181818181818" height="79.090909090909" rx="11.991732689339" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="890.909090909091" y="142.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" fill="var(--info-text)">DiscountApplied</text>
+
+  <rect x="1021.818181818182" y="92.727272727273" width="218.181818181818" height="79.090909090909" rx="11.991732689339" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130.909090909091" y="142.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" fill="var(--info-text)">OrderPlaced</text>
+
+  <!-- Apply arrows from each event down to the bottom row of states -->
+  <path d="M 410.909090909091 171.818181818182 L 410.909090909091 250.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 650.909090909091 171.818181818182 L 650.909090909091 250.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 890.909090909091 171.818181818182 L 890.909090909091 250.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 1130.909090909091 171.818181818182 L 1130.909090909091 250.909090909091" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="694.545454545455" y="231.136363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" font-style="italic" fill="var(--text-muted)">apply each event</text>
+
+  <!-- States after each event -->
+  <rect x="301.818181818182" y="250.909090909091" width="218.181818181818" height="158.181818181818" rx="16.788425765075" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="410.909090909091" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" font-weight="bold" fill="var(--ok-text)">total=0</text>
+  <text x="410.909090909091" y="336.590909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">items=[]</text>
+  <text x="410.909090909091" y="369.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">status=draft</text>
+
+  <rect x="541.818181818182" y="250.909090909091" width="218.181818181818" height="158.181818181818" rx="16.788425765075" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="650.909090909091" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" font-weight="bold" fill="var(--ok-text)">total=50</text>
+  <text x="650.909090909091" y="336.590909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">items=[A]</text>
+  <text x="650.909090909091" y="369.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">status=draft</text>
+
+  <rect x="781.818181818182" y="250.909090909091" width="218.181818181818" height="158.181818181818" rx="16.788425765075" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="890.909090909091" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" font-weight="bold" fill="var(--ok-text)">total=45</text>
+  <text x="890.909090909091" y="336.590909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">items=[A]</text>
+  <text x="890.909090909091" y="369.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">discount=5</text>
+
+  <rect x="1021.818181818182" y="250.909090909091" width="218.181818181818" height="158.181818181818" rx="16.788425765075" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" opacity="0.85"/>
+  <text x="1130.909090909091" y="303.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.186772302942" font-weight="bold" fill="var(--ok-text)">total=45</text>
+  <text x="1130.909090909091" y="336.590909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">items=[A]</text>
+  <text x="1130.909090909091" y="369.545454545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.987599034009" fill="var(--ok-text)">status=placed</text>
+
+  <!-- Empty -> first event arrow -->
+  <path d="M 236.363636363636 330 L 301.818181818182 330" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Caption -->
+  <text x="694.545454545455" y="527.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.381811916546" font-weight="bold" fill="var(--text)">Replay = fold(events, empty, apply)</text>
+  <text x="694.545454545455" y="580.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.385945571876" fill="var(--text-muted)">Same code rebuilds state from any prefix of the stream</text>
+  <text x="694.545454545455" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.385945571876" fill="var(--text-muted)">Stop early to query historical state</text>
+</svg>

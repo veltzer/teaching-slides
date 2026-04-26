@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="750.204081632653" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.385281076904" font-weight="bold" fill="var(--text)">Test Pyramid for CQRS / ES</text>
+
+  <!-- Pyramid: stacked rectangles with decreasing width -->
+  <!-- Bottom: handler unit tests -->
+  <rect x="260.408163265306" y="452.692307692308" width="979.591836734694" height="111.538461538462" rx="7.011987940824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750.204081632653" y="497.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.710622449688" font-weight="bold" fill="var(--ok-text)">Handler unit tests (given/when/then)</text>
+  <text x="750.204081632653" y="530.769230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.361305195256" fill="var(--ok-text)">many — fast, pure, deterministic</text>
+
+  <!-- Apply tests -->
+  <rect x="358.367346938776" y="341.153846153846" width="783.673469387755" height="100.384615384615" rx="7.011987940824" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" opacity="0.9"/>
+  <text x="750.204081632653" y="380.192307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.37329313608" font-weight="bold" fill="var(--ok-text)">Apply method tests</text>
+  <text x="750.204081632653" y="413.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.361305195256" fill="var(--ok-text)">many — pure state mutation</text>
+
+  <!-- Projection tests -->
+  <rect x="456.326530612245" y="246.346153846154" width="587.755102040816" height="89.230769230769" rx="7.011987940824" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750.204081632653" y="279.807692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.37329313608" font-weight="bold" fill="var(--primary-text)">Projection tests</text>
+  <text x="750.204081632653" y="313.269230769231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.361305195256" fill="var(--primary-text)">some — in-memory DB</text>
+
+  <!-- Integration tests -->
+  <rect x="542.040816326531" y="162.692307692308" width="416.326530612245" height="78.076923076923" rx="7.011987940824" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750.204081632653" y="196.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.035963822472" font-weight="bold" fill="var(--warn-text)">Integration tests</text>
+  <text x="750.204081632653" y="224.038461538462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.192640538452" fill="var(--warn-text)">some — real services</text>
+
+  <!-- E2E -->
+  <rect x="627.755102040816" y="95.769230769231" width="244.897959183673" height="61.346153846154" rx="7.011987940824" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750.204081632653" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.698634508864" font-weight="bold" fill="var(--danger-text)">E2E</text>
+  <text x="750.204081632653" y="149.307692307692" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.023975881648" fill="var(--danger-text)">few — full journeys</text>
+
+  <!-- Side note: contracts -->
+  <rect x="40" y="263.076923076923" width="195.918367346939" height="178.461538461538" rx="16.361305195256" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="137.959183673469" y="307.692307692308" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.698634508864" font-weight="bold" fill="var(--text)">Contracts</text>
+  <text x="137.959183673469" y="341.153846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.023975881648" fill="var(--text-muted)">always-on</text>
+  <text x="137.959183673469" y="363.461538461538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.023975881648" fill="var(--text-muted)">consumer-driven</text>
+  <text x="137.959183673469" y="391.346153846154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.023975881648" fill="var(--text-muted)">on integration</text>
+  <text x="137.959183673469" y="413.653846153846" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.023975881648" fill="var(--text-muted)">events</text>
+
+  <!-- Caption at bottom -->
+  <text x="750.204081632653" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.361305195256" fill="var(--text-muted)">Bottom-heavy: most tests are fast handler/apply unit tests</text>
+</svg>

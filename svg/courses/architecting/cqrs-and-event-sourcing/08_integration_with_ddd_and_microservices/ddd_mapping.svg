@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="650.909090909091" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.167039797358" font-weight="bold" fill="var(--text)">DDD Concepts → CQRS / ES</text>
+
+  <!-- Left column: DDD -->
+  <text x="258.181818181818" y="114.042553191489" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.205415228737" font-weight="bold" fill="var(--text)">DDD Concept</text>
+
+  <rect x="40" y="151.063829787234" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="258.181818181818" y="197.957446808511" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--primary-text)">Aggregate Root</text>
+
+  <rect x="40" y="249.787234042553" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="258.181818181818" y="296.68085106383" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--primary-text)">Domain Event</text>
+
+  <rect x="40" y="348.510638297872" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="258.181818181818" y="395.404255319149" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--primary-text)">Repository</text>
+
+  <rect x="40" y="447.234042553192" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="258.181818181818" y="494.127659574468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--primary-text)">Bounded Context</text>
+
+  <rect x="40" y="545.957446808511" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="258.181818181818" y="592.851063829787" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--primary-text)">Anti-Corruption Layer</text>
+
+  <!-- Right column: CQRS -->
+  <text x="1021.818181818182" y="114.042553191489" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.205415228737" font-weight="bold" fill="var(--text)">CQRS / ES</text>
+
+  <rect x="803.636363636364" y="151.063829787234" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="197.957446808511" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--ok-text)">Write model + emits events</text>
+
+  <rect x="803.636363636364" y="249.787234042553" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="296.68085106383" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--ok-text)">Stream entry; immutable</text>
+
+  <rect x="803.636363636364" y="348.510638297872" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="395.404255319149" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--ok-text)">Event store reader / writer</text>
+
+  <rect x="803.636363636364" y="447.234042553192" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="494.127659574468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--ok-text)">Service; owns its streams</text>
+
+  <rect x="803.636363636364" y="545.957446808511" width="436.363636363636" height="74.042553191489" rx="11.602707614369" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1021.818181818182" y="592.851063829787" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.884873705863" fill="var(--ok-text)">Event translator at boundary</text>
+
+  <!-- Arrows -->
+  <path d="M 476.363636363636 188.085106382979 L 803.636363636364 188.085106382979" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 476.363636363636 286.808510638298 L 803.636363636364 286.808510638298" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 476.363636363636 385.531914893617 L 803.636363636364 385.531914893617" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 476.363636363636 484.255319148936 L 803.636363636364 484.255319148936" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 476.363636363636 582.978723404255 L 803.636363636364 582.978723404255" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
