@@ -11,8 +11,6 @@ audience:
 ---
 # Small Scale Design Patterns
 
-## Model-View-Controller (MVC) Pattern
-
 ---
 
 ## MVC Overview
