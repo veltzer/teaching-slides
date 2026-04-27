@@ -5,4 +5,4 @@
 - Currently there are {{ git_count_files(pattern="marp/**/*.md") }} marp files in this repo.
 - Currently there are {{ shell_output(command="python3 scripts/count_slides.py", depends_on=["marp/**/*.md", "scripts/count_slides.py"]) }} marp slides in this repo.
 - Currently there are {{ git_count_files(pattern="svg/**/*.svg") }} SVG diagrams in this repo.
-- Currently there are {{ shell_output(command="grep -r '^|.*---.*|' marp/ --include='*.md' | wc -l", depends_on=["marp/**/*.md"]) }} tables in this repo.
+- Currently there are {{ grep_count(pattern="^\\|.*---.*\\|", glob="marp/**/*.md") }} tables in this repo.
