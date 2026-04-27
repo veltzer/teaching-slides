@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.579135622711" font-weight="bold" fill="var(--text)">Typical On-Prem TCO Breakdown</text>
+
+  <!-- Stacked horizontal bar -->
+  <rect x="40" y="76.576576576577" width="360" height="104.504504504504" rx="6.133646682164" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--primary-text)">Hardware</text>
+  <text x="220" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" fill="var(--primary-text)">30%</text>
+
+  <rect x="400" y="76.576576576577" width="240" height="104.504504504504" rx="6.133646682164" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="520" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" font-weight="bold" fill="var(--warn-text)">Power+Cooling</text>
+  <text x="520" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" fill="var(--warn-text)">20%</text>
+
+  <rect x="640" y="76.576576576577" width="240" height="104.504504504504" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--info-text)">Personnel</text>
+  <text x="760" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" fill="var(--info-text)">20%</text>
+
+  <rect x="880" y="76.576576576577" width="180" height="104.504504504504" rx="6.133646682164" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--ok-text)">Software</text>
+  <text x="970" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" fill="var(--ok-text)">15%</text>
+
+  <rect x="1060" y="76.576576576577" width="180" height="104.504504504504" rx="6.133646682164" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1150" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--danger-text)">Facilities</text>
+  <text x="1150" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445488940547" fill="var(--danger-text)">15%</text>
+
+  <!-- Detail rows -->
+  <rect x="40" y="222.882882882883" width="240" height="292.612612612613" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Hardware</text>
+  <text x="160" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Servers, storage</text>
+  <text x="160" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Network gear</text>
+  <text x="160" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Depreciated 3-7y</text>
+  <text x="160" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Refresh cycles</text>
+
+  <rect x="290" y="222.882882882883" width="240" height="292.612612612613" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="410" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Power+Cooling</text>
+  <text x="410" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Cooling matches</text>
+  <text x="410" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">compute draw</text>
+  <text x="410" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">PUE 1.5-1.6 avg</text>
+  <text x="410" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Best: 1.1-1.2</text>
+
+  <rect x="540" y="222.882882882883" width="240" height="292.612612612613" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="660" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Personnel</text>
+  <text x="660" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Datacenter ops</text>
+  <text x="660" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Network teams</text>
+  <text x="660" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Security staff</text>
+  <text x="660" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Procurement</text>
+
+  <rect x="790" y="222.882882882883" width="240" height="292.612612612613" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="910" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Software</text>
+  <text x="910" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">OS licenses</text>
+  <text x="910" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Hypervisors</text>
+  <text x="910" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Databases</text>
+  <text x="910" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Per-core models</text>
+
+  <rect x="1040" y="222.882882882883" width="200" height="292.612612612613" rx="6.133646682164" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1140" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.400940046492" font-weight="bold" fill="var(--text)">Facilities</text>
+  <text x="1140" y="306.486486486486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Datacenter</text>
+  <text x="1140" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">space</text>
+  <text x="1140" y="379.63963963964" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Racks, cabling</text>
+  <text x="1140" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842258383" fill="var(--text-muted)">Security</text>
+
+  <!-- Bottom callout -->
+  <rect x="40" y="536.396396396396" width="1200" height="83.603603603604" rx="6.133646682164" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="572.972972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.490037834601" font-weight="bold" fill="var(--info-text)">Hardware is only ~30% of true TCO</text>
+  <text x="640" y="604.324324324324" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391152437" fill="var(--info-text)">Compare on full TCO, not sticker price</text>
+</svg>

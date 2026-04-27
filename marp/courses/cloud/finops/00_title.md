@@ -1,19 +1,20 @@
 ---
 tags:
   - infrastructure:cloud
+  - infrastructure:onprem
   - practices:finops
   - practices:cost-optimization
   - concepts:cloud-economics
 level: intermediate
 category: cloud
-duration_hours: 8
+duration_hours: 11
 audience:
   - audiences:devops
   - audiences:architects
   - audiences:managers
 
 ---
-# FinOps / Cloud Cost Optimization
+# FinOps / IT Cost Optimization
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 

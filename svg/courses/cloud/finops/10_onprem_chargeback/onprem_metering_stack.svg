@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Layer 1: Sources (bottom) -->
+  <rect x="40" y="500" width="280" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Hypervisors</text>
+  <text x="180" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">vSphere, Hyper-V</text>
+  <text x="180" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">KVM, Proxmox</text>
+  <text x="180" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">VM CPU, RAM, IO</text>
+
+  <rect x="340" y="500" width="280" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Kubernetes</text>
+  <text x="480" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">kube-state-metrics</text>
+  <text x="480" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">cAdvisor, Kubecost</text>
+  <text x="480" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Pod resource use</text>
+
+  <rect x="640" y="500" width="280" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Storage Arrays</text>
+  <text x="780" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">SNMP, vendor APIs</text>
+  <text x="780" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">NetApp, Dell EMC</text>
+  <text x="780" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Volume, IOPS</text>
+
+  <rect x="940" y="500" width="300" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Network</text>
+  <text x="1090" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">NetFlow, sFlow</text>
+  <text x="1090" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">SNMP counters</text>
+  <text x="1090" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Bandwidth per VLAN</text>
+
+  <!-- Layer 2: Collection (middle) -->
+  <rect x="240" y="320" width="800" height="100" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Collection &amp; Aggregation</text>
+  <text x="640" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Prometheus, Telegraf, Logstash → time-series database</text>
+  <text x="640" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Tag every metric with team, project, environment</text>
+
+  <!-- Layer 3: Allocation -->
+  <rect x="240" y="180" width="800" height="100" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Cost Allocation Engine</text>
+  <text x="640" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Multiply usage × unit cost (TCO ÷ capacity)</text>
+  <text x="640" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Assign cost per team, per project, per service</text>
+
+  <!-- Layer 4: Output -->
+  <rect x="240" y="40" width="800" height="100" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Reports &amp; Dashboards</text>
+  <text x="640" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Showback dashboards, chargeback invoices</text>
+  <text x="640" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Trend analysis, anomaly detection</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="500" x2="500" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="500" x2="600" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="780" y1="500" x2="700" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1090" y1="500" x2="800" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="320" x2="640" y2="280" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="180" x2="640" y2="140" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

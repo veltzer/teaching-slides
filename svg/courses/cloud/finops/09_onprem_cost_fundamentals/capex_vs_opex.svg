@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- CapEx column header -->
+  <rect x="40" y="40" width="580" height="70" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">CapEx (On-Prem)</text>
+  <text x="330" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Capital Expenditure</text>
+
+  <!-- OpEx column header -->
+  <rect x="660" y="40" width="580" height="70" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">OpEx (Cloud)</text>
+  <text x="950" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Operating Expenditure</text>
+
+  <!-- CapEx attribute rows -->
+  <rect x="40" y="130" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Payment</text>
+  <text x="60" y="178" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Large upfront purchase</text>
+
+  <rect x="40" y="200" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Accounting</text>
+  <text x="60" y="248" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Depreciated over 3-7 years</text>
+
+  <rect x="40" y="270" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Commitment</text>
+  <text x="60" y="318" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Multi-year, hard to reverse</text>
+
+  <rect x="40" y="340" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="365" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Scalability</text>
+  <text x="60" y="388" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Limited by purchased capacity</text>
+
+  <rect x="40" y="410" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="435" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Tax Treatment</text>
+  <text x="60" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Depreciation deduction over time</text>
+
+  <rect x="40" y="480" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="505" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Cash Flow Impact</text>
+  <text x="60" y="528" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Heavy at purchase, lighter later</text>
+
+  <!-- OpEx attribute rows -->
+  <rect x="660" y="130" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Payment</text>
+  <text x="680" y="178" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Pay-as-you-go monthly bill</text>
+
+  <rect x="660" y="200" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Accounting</text>
+  <text x="680" y="248" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Expensed in the same period</text>
+
+  <rect x="660" y="270" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="295" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Commitment</text>
+  <text x="680" y="318" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Per-hour or per-second usage</text>
+
+  <rect x="660" y="340" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="365" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Scalability</text>
+  <text x="680" y="388" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Elastic, near-instant provisioning</text>
+
+  <rect x="660" y="410" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="435" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Tax Treatment</text>
+  <text x="680" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Fully deductible in same year</text>
+
+  <rect x="660" y="480" width="580" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="680" y="505" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Cash Flow Impact</text>
+  <text x="680" y="528" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Smooth, scales with usage</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="40" y="555" width="1200" height="65" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Hybrid environments mix both models</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Finance treats them differently — FinOps must too</text>
+</svg>

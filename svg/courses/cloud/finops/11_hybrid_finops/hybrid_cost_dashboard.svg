@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Header strip -->
+  <rect x="40" y="40" width="1200" height="60" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Hybrid Cost Dashboard</text>
+
+  <!-- Top KPIs row -->
+  <rect x="40" y="120" width="290" height="120" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Total Spend</text>
+  <text x="185" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--info-text)">$2.8M</text>
+  <text x="185" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">monthly across both</text>
+
+  <rect x="343" y="120" width="290" height="120" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="488" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">On-Prem</text>
+  <text x="488" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-text)">$1.6M</text>
+  <text x="488" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">57% of total</text>
+
+  <rect x="646" y="120" width="290" height="120" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="791" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Cloud</text>
+  <text x="791" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">$1.2M</text>
+  <text x="791" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">43% of total</text>
+
+  <rect x="949" y="120" width="291" height="120" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Waste detected</text>
+  <text x="1095" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--danger-text)">$340k</text>
+  <text x="1095" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">12% reclaim target</text>
+
+  <!-- Middle: chart placeholder + breakdown table -->
+  <rect x="40" y="260" width="600" height="240" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="340" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text)">Spend trend (6 months)</text>
+
+  <!-- Trend bars: on-prem flat, cloud rising -->
+  <rect x="80" y="380" width="50" height="100" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="80" y="430" width="50" height="50" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="160" y="375" width="50" height="105" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="160" y="420" width="50" height="60" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="240" y="380" width="50" height="100" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="240" y="412" width="50" height="68" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="320" y="378" width="50" height="102" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="320" y="403" width="50" height="77" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="400" y="375" width="50" height="105" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="400" y="395" width="50" height="85" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="480" y="380" width="50" height="100" rx="3" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="480" y="385" width="50" height="95" rx="3" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <line x1="60" y1="480" x2="600" y2="480" stroke="var(--border)" stroke-width="1.5"/>
+
+  <text x="105" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Nov</text>
+  <text x="185" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Dec</text>
+  <text x="265" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Jan</text>
+  <text x="345" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Feb</text>
+  <text x="425" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Mar</text>
+  <text x="505" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Apr</text>
+
+  <!-- Right panel: top spenders -->
+  <rect x="660" y="260" width="580" height="240" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text)">Top Spenders by Team</text>
+
+  <text x="690" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Platform</text>
+  <text x="1190" y="335" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">$680k</text>
+  <rect x="690" y="345" width="500" height="14" rx="2" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+
+  <text x="690" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Data</text>
+  <text x="1190" y="385" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">$540k</text>
+  <rect x="690" y="395" width="397" height="14" rx="2" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+
+  <text x="690" y="435" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Web</text>
+  <text x="1190" y="435" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">$420k</text>
+  <rect x="690" y="445" width="309" height="14" rx="2" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1" filter="url(#shadow)"/>
+
+  <text x="690" y="485" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">ML</text>
+  <text x="1190" y="485" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">$310k</text>
+  <rect x="690" y="495" width="228" height="14" rx="2" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Bottom callout -->
+  <rect x="40" y="520" width="1200" height="100" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Same tags. Same units. One pane of glass.</text>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Combine cloud bills with on-prem unit costs in a shared dashboard</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Tools: Apptio, Flexera, CloudHealth (with on-prem add-ons)</text>
+</svg>
