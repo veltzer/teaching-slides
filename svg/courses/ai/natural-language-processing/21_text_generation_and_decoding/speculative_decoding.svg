@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="696.603773584906" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.803691058366" font-weight="bold" fill="var(--text)">Speculative decoding</text>
+
+  <rect x="40" y="77.943925233645" width="249.056603773585" height="108.411214953271" rx="15.509679800659" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.528301886792" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.941016886561" font-weight="bold" fill="var(--info-text)">prompt</text>
+  <text x="164.528301886792" y="153.831775700935" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" fill="var(--info-text)">"the cat sat on the"</text>
+
+  <rect x="40" y="229.719626168224" width="249.056603773585" height="108.411214953271" rx="15.509679800659" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="164.528301886792" y="273.084112149533" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.941016886561" font-weight="bold" fill="var(--warn-text)">draft model</text>
+  <text x="164.528301886792" y="305.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" fill="var(--warn-text)">small + fast</text>
+
+  <line x1="164.528301886792" y1="186.355140186916" x2="164.528301886792" y2="229.719626168224" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="368.301886792453" y="99.626168224299" width="566.037735849057" height="238.504672897196" rx="15.509679800659" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="651.320754716981" y="142.990654205607" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.156685429512" font-weight="bold" fill="var(--ok-text)">draft proposal</text>
+
+  <rect x="402.264150943396" y="164.672897196262" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="458.867924528302" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--ok-accent)">"mat"</text>
+
+  <rect x="526.792452830189" y="164.672897196262" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="583.396226415094" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--ok-accent)">"and"</text>
+
+  <rect x="651.320754716981" y="164.672897196262" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="707.924528301887" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--ok-accent)">"slept"</text>
+
+  <rect x="775.849056603774" y="164.672897196262" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="832.452830188679" y="202.616822429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--ok-accent)">"there"</text>
+
+  <text x="651.320754716981" y="283.92523364486" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" fill="var(--ok-text)">draft proposes 4 next tokens autoregressively</text>
+  <text x="651.320754716981" y="311.028037383178" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" fill="var(--ok-text)">cheap, sequential, but small model</text>
+
+  <line x1="289.056603773585" y1="283.92523364486" x2="368.301886792453" y2="208.03738317757" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="990.943396226415" y="229.719626168224" width="249.056603773585" height="108.411214953271" rx="15.509679800659" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.471698113208" y="273.084112149533" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.941016886561" font-weight="bold" fill="var(--primary-text)">main model</text>
+  <text x="1115.471698113208" y="305.607476635514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" fill="var(--primary-text)">verifies in parallel</text>
+
+  <line x1="934.339622641509" y1="283.92523364486" x2="990.943396226415" y2="283.92523364486" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="368.301886792453" y="381.495327102804" width="566.037735849057" height="238.504672897196" rx="15.509679800659" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="651.320754716981" y="424.859813084112" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.156685429512" font-weight="bold" fill="var(--primary-text)">main model verifies, single forward pass</text>
+
+  <rect x="402.264150943396" y="446.542056074766" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--ok-border)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="458.867924528302" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--info-text)">accept</text>
+
+  <rect x="526.792452830189" y="446.542056074766" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--ok-border)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="583.396226415094" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--info-text)">accept</text>
+
+  <rect x="651.320754716981" y="446.542056074766" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="var(--ok-border)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="707.924528301887" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--info-text)">accept</text>
+
+  <rect x="775.849056603774" y="446.542056074766" width="113.207547169811" height="65.046728971963" rx="8.862674171805" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="832.452830188679" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" font-weight="bold" fill="var(--danger-text)">reject</text>
+
+  <text x="651.320754716981" y="554.953271028037" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.509679800659" fill="var(--primary-text)">accept the longest matching prefix; resample at first reject</text>
+  <text x="651.320754716981" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" fill="var(--primary-text)">3 tokens accepted in this round; one main-model call delivered them</text>
+  <text x="651.320754716981" y="609.158878504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.401845529183" font-weight="bold" fill="var(--primary-text)">output is bit-identical to vanilla decoding</text>
+</svg>

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">LLM-as-judge: pitfalls to control for</text>
+
+  <rect x="40" y="77.943925233645" width="380" height="249.345794392523" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--warn-text)">Position bias</text>
+  <text x="230" y="170.093457943925" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">tends to prefer the answer</text>
+  <text x="230" y="197.196261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">presented first or last</text>
+  <text x="230" y="251.401869158878" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">fix: randomize order +</text>
+  <text x="230" y="278.504672897196" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">average over both directions</text>
+
+  <rect x="450" y="77.943925233645" width="380" height="249.345794392523" rx="14.576898892028" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--danger-text)">Length bias</text>
+  <text x="640" y="170.093457943925" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">prefers longer or more</text>
+  <text x="640" y="197.196261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">verbose answers</text>
+  <text x="640" y="251.401869158878" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">fix: control answer length</text>
+  <text x="640" y="278.504672897196" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">in the rubric</text>
+
+  <rect x="860" y="77.943925233645" width="380" height="249.345794392523" rx="14.576898892028" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--info-text)">Self-preference</text>
+  <text x="1050" y="170.093457943925" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">judge's own outputs score</text>
+  <text x="1050" y="197.196261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">higher than peers</text>
+  <text x="1050" y="251.401869158878" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">fix: blind prompts +</text>
+  <text x="1050" y="278.504672897196" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">cross-judge comparisons</text>
+
+  <rect x="40" y="359.81308411215" width="380" height="260.18691588785" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="408.598130841121" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--warn-text)">Ignoring instructions</text>
+  <text x="230" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">judge skips parts of the</text>
+  <text x="230" y="479.065420560748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">rubric or invents categories</text>
+  <text x="230" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">fix: structured output</text>
+  
+  <rect x="450" y="359.81308411215" width="380" height="260.18691588785" rx="14.576898892028" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="408.598130841121" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--danger-text)">Score compression</text>
+  <text x="640" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">judge gives 7s or 8s to</text>
+  <text x="640" y="479.065420560748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">almost everything</text>
+  <text x="640" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--danger-text)">fix: pairwise preference</text>
+  
+  <rect x="860" y="359.81308411215" width="380" height="260.18691588785" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="408.598130841121" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--primary-text)">Drift over time</text>
+  <text x="1050" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">judge updates change</text>
+  <text x="1050" y="479.065420560748" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">historical comparisons</text>
+  <text x="1050" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">fix: pin judge version</text>
+  <text x="1050" y="565.794392523364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">re-calibrate at each upgrade</text>
+</svg>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">MEMM: locally normalized</text>
+  <text x="337" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">each step softmaxes over next labels</text>
+
+  <rect x="80" y="160" width="120" height="60" rx="10" fill="var(--info-text)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="140" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">state A</text>
+  <rect x="270" y="160" width="120" height="60" rx="10" fill="var(--info-text)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">state B</text>
+  <text x="330" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">only one outgoing path</text>
+
+  <path d="M 200 190 L 270 190" fill="none" stroke="var(--info-text)" stroke-width="3" marker-end="url(#arrow-danger)"/>
+  <text x="235" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">p=1.0</text>
+
+  <rect x="80" y="290" width="120" height="60" rx="10" fill="var(--info-text)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="140" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">state C</text>
+  <rect x="270" y="290" width="120" height="60" rx="10" fill="var(--info-text)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">state D</text>
+  <rect x="460" y="290" width="120" height="60" rx="10" fill="var(--info-text)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="520" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">state E</text>
+
+  <path d="M 200 320 L 270 320" fill="none" stroke="var(--info-text)" stroke-width="3" marker-end="url(#arrow-danger)"/>
+  <path d="M 200 320 L 460 320" fill="none" stroke="var(--info-text)" stroke-width="3" marker-end="url(#arrow-danger)"/>
+  <text x="235" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">p=0.5</text>
+  <text x="380" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">p=0.5</text>
+
+  <text x="337" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--danger-text)">A funnels mass into B regardless of evidence</text>
+  <text x="337" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">states with few outgoing arcs</text>
+  <text x="337" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">are unfairly favored</text>
+    
+  <rect x="645" y="40" width="595" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="942" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">CRF: globally normalized</text>
+  <text x="942" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">whole sequence is scored together</text>
+
+  <rect x="690" y="180" width="500" height="80" rx="10" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">score(y) = sum of unary + transition potentials</text>
+  <text x="940" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">p(y | x) = exp(score(y)) / Z(x)</text>
+
+  <rect x="690" y="290" width="500" height="80" rx="10" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">Z(x) sums over all sequences</text>
+  <text x="940" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">no per-step renormalization</text>
+
+  <text x="942" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--ok-text)">Evidence anywhere in the sequence</text>
+  <text x="942" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">can shift mass between competing paths</text>
+  <text x="942" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">no label bias</text>
+  <text x="942" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">price: training computes Z by</text>
+  </svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.853840854862" font-weight="bold" fill="var(--text)">Backtranslation: bootstrap MT from monolingual data</text>
+
+  <rect x="40" y="82.181818181818" width="244.067796610169" height="105.454545454545" rx="14.498073832003" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="162.033898305085" y="119.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--text)">target monolingual</text>
+  <text x="162.033898305085" y="150.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--text-muted)">e.g. 1M Swahili sentences</text>
+  <text x="162.033898305085" y="171.818181818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--text-muted)">scraped from the web</text>
+
+  <rect x="40" y="229.818181818182" width="244.067796610169" height="105.454545454545" rx="14.498073832003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="162.033898305085" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--warn-text)">target → source MT</text>
+  <text x="162.033898305085" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--warn-text)">a weak baseline model</text>
+  <text x="162.033898305085" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--warn-text)">trained on what little exists</text>
+
+  <line x1="162.033898305085" y1="187.636363636364" x2="162.033898305085" y2="229.818181818182" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="365.423728813559" y="229.818181818182" width="244.067796610169" height="105.454545454545" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="487.457627118644" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--info-text)">synthetic source</text>
+  <text x="487.457627118644" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--info-text)">imperfect English back-</text>
+  <text x="487.457627118644" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--info-text)">translation of Swahili</text>
+
+  <line x1="284.067796610169" y1="282.545454545455" x2="365.423728813559" y2="282.545454545455" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="690.847457627119" y="229.818181818182" width="244.067796610169" height="105.454545454545" rx="14.498073832003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="812.881355932203" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--ok-text)">synthetic parallel</text>
+  <text x="812.881355932203" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--ok-text)">(synthetic English,</text>
+  <text x="812.881355932203" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--ok-text)">real Swahili) pairs</text>
+
+  <line x1="609.491525423729" y1="282.545454545455" x2="690.847457627119" y2="282.545454545455" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="1016.271186440678" y="229.818181818182" width="223.728813559322" height="105.454545454545" rx="14.498073832003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.135593220339" y="266.727272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--primary-text)">retrain forward MT</text>
+  <text x="1128.135593220339" y="298.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--primary-text)">English → Swahili</text>
+  <text x="1128.135593220339" y="319.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--primary-text)">on real + synthetic</text>
+
+  <line x1="934.915254237288" y1="282.545454545455" x2="1016.271186440678" y2="282.545454545455" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="1016.271186440678" y="377.454545454545" width="223.728813559322" height="105.454545454545" rx="14.498073832003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.135593220339" y="414.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227236575" font-weight="bold" fill="var(--warn-text)">stronger reverse MT</text>
+  <text x="1128.135593220339" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--warn-text)">retrain target → source</text>
+  <text x="1128.135593220339" y="467.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.462497129717" fill="var(--warn-text)">on improved data</text>
+
+  <line x1="1128.135593220339" y1="335.272727272727" x2="1128.135593220339" y2="377.454545454545" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <path d="M 1016.271186440678 430.181818181818 Q 589.152542372881 430.181818181818 284.067796610169 335.272727272727" fill="none" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-primary)"/>
+  <text x="629.830508474576" y="419.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" font-style="italic" fill="var(--text-muted)">iterate</text>
+
+  <rect x="40" y="514.545454545455" width="1200" height="105.454545454545" rx="14.498073832003" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="551.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.640380641147" font-weight="bold" fill="var(--info-text)">why it works</text>
+  <text x="640" y="583.090909090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">target side is real, fluent text — that is the side the model imitates during training</text>
+  <text x="640" y="609.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.498073832003" fill="var(--info-text)">noisy source is fine: the model learns to be robust to imperfect inputs</text>
+</svg>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.821872493111" font-weight="bold" fill="var(--text)">Classical task-oriented dialogue pipeline</text>
+
+  <rect x="40" y="77.247706422018" width="220" height="106.422018348624" rx="14.44254672706" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="150" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--text)">user utterance</text>
+  <text x="150" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text-muted)">"book a flight to</text>
+  <text x="150" y="165.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--text-muted)">London tomorrow"</text>
+
+  <rect x="290" y="77.247706422018" width="220" height="106.422018348624" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--info-text)">NLU</text>
+  <text x="400" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--info-text)">intent: book_flight</text>
+  <text x="400" y="165.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--info-text)">slots: dest=LON, date=tmw</text>
+
+  <rect x="540" y="77.247706422018" width="220" height="106.422018348624" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--primary-text)">DST</text>
+  <text x="650" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--primary-text)">belief state across turns</text>
+  <text x="650" y="165.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--primary-text)">{dest: LON, date: tmw, ...}</text>
+
+  <rect x="790" y="77.247706422018" width="220" height="106.422018348624" rx="14.44254672706" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--warn-text)">Policy</text>
+  <text x="900" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--warn-text)">action: request(origin)</text>
+  <text x="900" y="165.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--warn-text)">because origin is missing</text>
+
+  <rect x="1040" y="77.247706422018" width="200" height="106.422018348624" rx="14.44254672706" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.505767688068" font-weight="bold" fill="var(--ok-text)">NLG</text>
+  <text x="1140" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--ok-text)">"From which city would</text>
+  <text x="1140" y="165.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--ok-text)">you like to depart?"</text>
+
+  <line x1="260" y1="130.45871559633" x2="290" y2="130.45871559633" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="510" y1="130.45871559633" x2="540" y2="130.45871559633" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="760" y1="130.45871559633" x2="790" y2="130.45871559633" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1010" y1="130.45871559633" x2="1040" y2="130.45871559633" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="190" y="268.807339449541" width="900" height="106.422018348624" rx="14.44254672706" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="311.376146788991" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--info-text)">External backends</text>
+  <text x="640" y="343.302752293578" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">flight database, payment APIs, account systems</text>
+
+  <line x1="650" y1="183.669724770642" x2="650" y2="268.807339449541" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="900" y1="183.669724770642" x2="900" y2="268.807339449541" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="439.082568807339" width="1200" height="180.917431192661" rx="14.44254672706" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" font-weight="bold" fill="var(--text)">Why factor it this way</text>
+  <text x="640" y="513.577981651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">Each stage is auditable: errors localize cleanly to NLU, DST, policy, or NLG.</text>
+  <text x="640" y="540.183486238532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">Stages can be retrained independently as data accumulates.</text>
+  <text x="640" y="566.788990825688" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">Hand-written policy gives operators direct control over actions and confirmations.</text>
+  </svg>

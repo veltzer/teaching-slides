@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="645.128205128205" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.545274338165" font-weight="bold" fill="var(--text)">BiLSTM-CRF: stacked tagger</text>
+
+  <rect x="70.769230769231" y="83.77358490566" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="152.820512820513" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.950938054255" fill="var(--text)">Barack</text>
+  <rect x="275.897435897436" y="83.77358490566" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="357.948717948718" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.950938054255" fill="var(--text)">Obama</text>
+  <rect x="481.025641025641" y="83.77358490566" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="563.076923076923" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.950938054255" fill="var(--text)">visited</text>
+  <rect x="686.153846153846" y="83.77358490566" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="768.205128205128" y="122.075471698113" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.950938054255" fill="var(--text)">Berlin</text>
+
+  <text x="40" y="127.547169811321" font-family="Arial, sans-serif" font-size="13.772637169083" fill="var(--text-muted)">words</text>
+
+  <rect x="70.769230769231" y="193.207547169811" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152.820512820513" y="231.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--info-text)">embedding</text>
+  <rect x="275.897435897436" y="193.207547169811" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="357.948717948718" y="231.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--info-text)">embedding</text>
+  <rect x="481.025641025641" y="193.207547169811" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="563.076923076923" y="231.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--info-text)">embedding</text>
+  <rect x="686.153846153846" y="193.207547169811" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="768.205128205128" y="231.509433962264" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--info-text)">embedding</text>
+
+  <line x1="152.820512820513" y1="149.433962264151" x2="152.820512820513" y2="193.207547169811" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="357.948717948718" y1="149.433962264151" x2="357.948717948718" y2="193.207547169811" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="563.076923076923" y1="149.433962264151" x2="563.076923076923" y2="193.207547169811" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="768.205128205128" y1="149.433962264151" x2="768.205128205128" y2="193.207547169811" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="70.769230769231" y="302.641509433962" width="779.487179487179" height="87.547169811321" rx="10.59433628391" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460.51282051282" y="340.943396226415" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188672567819" font-weight="bold" fill="var(--primary-text)">Bidirectional LSTM</text>
+  <text x="460.51282051282" y="373.77358490566" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--primary-text)">forward and backward states concatenated per token</text>
+
+  <line x1="152.820512820513" y1="258.867924528302" x2="152.820512820513" y2="302.641509433962" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="357.948717948718" y1="258.867924528302" x2="357.948717948718" y2="302.641509433962" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="563.076923076923" y1="258.867924528302" x2="563.076923076923" y2="302.641509433962" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="768.205128205128" y1="258.867924528302" x2="768.205128205128" y2="302.641509433962" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="70.769230769231" y="433.962264150943" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152.820512820513" y="472.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--warn-text)">emission scores</text>
+  <rect x="275.897435897436" y="433.962264150943" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="357.948717948718" y="472.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--warn-text)">emission scores</text>
+  <rect x="481.025641025641" y="433.962264150943" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="563.076923076923" y="472.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--warn-text)">emission scores</text>
+  <rect x="686.153846153846" y="433.962264150943" width="164.102564102564" height="65.660377358491" rx="10.59433628391" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="768.205128205128" y="472.264150943396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" font-weight="bold" fill="var(--warn-text)">emission scores</text>
+
+  <line x1="152.820512820513" y1="390.188679245283" x2="152.820512820513" y2="433.962264150943" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="357.948717948718" y1="390.188679245283" x2="357.948717948718" y2="433.962264150943" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="563.076923076923" y1="390.188679245283" x2="563.076923076923" y2="433.962264150943" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="768.205128205128" y1="390.188679245283" x2="768.205128205128" y2="433.962264150943" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="70.769230769231" y="543.396226415094" width="779.487179487179" height="76.603773584906" rx="10.59433628391" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460.51282051282" y="578.415094339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188672567819" font-weight="bold" fill="var(--ok-text)">CRF layer</text>
+  <text x="460.51282051282" y="609.056603773585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--ok-text)">adds learned transition matrix; decodes with Viterbi</text>
+
+  <rect x="911.794871794872" y="83.77358490566" width="328.205128205128" height="536.22641509434" rx="14.832070797474" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1075.897435897436" y="127.547169811321" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.188672567819" font-weight="bold" fill="var(--text)">Why pair them</text>
+  <text x="1075.897435897436" y="171.320754716981" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">BiLSTM produces strong</text>
+  <text x="1075.897435897436" y="193.207547169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">contextual emissions</text>
+  <text x="1075.897435897436" y="247.924528301887" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">CRF enforces global</text>
+  <text x="1075.897435897436" y="269.811320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">label consistency</text>
+  <text x="1075.897435897436" y="324.528301886792" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">B-PER followed by I-LOC</text>
+  <text x="1075.897435897436" y="346.415094339623" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">becomes near-zero</text>
+  <text x="1075.897435897436" y="401.132075471698" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">trained jointly with</text>
+  <text x="1075.897435897436" y="423.018867924528" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">negative log-likelihood</text>
+  <text x="1075.897435897436" y="477.735849056604" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">pre-transformer SOTA on</text>
+  <text x="1075.897435897436" y="499.622641509434" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">CoNLL-2003 NER</text>
+  <text x="1075.897435897436" y="559.811320754717" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">still common when</text>
+  <text x="1075.897435897436" y="581.698113207547" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.832070797474" fill="var(--text-muted)">labels carry constraints</text>
+</svg>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">Extractive vs Abstractive summarization</text>
+
+  <rect x="40" y="77.943925233645" width="595" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--ok-text)">Extractive</text>
+  <text x="337" y="159.252336448598" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">select sentences verbatim</text>
+
+  <rect x="80" y="197.196261682243" width="510" height="173.457943925234" rx="10.412070637163" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="100" y="229.719626168224" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--text-muted)">Document</text>
+  <text x="100" y="256.822429906542" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--text-faint)">Sentence 1: filler context.</text>
+  <text x="100" y="283.92523364486" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--ok-accent)">Sentence 2: key fact A.</text>
+  <text x="100" y="311.028037383178" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--text-faint)">Sentence 3: filler context.</text>
+  <text x="100" y="338.130841121495" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--ok-accent)">Sentence 4: key fact B.</text>
+
+  <rect x="80" y="403.177570093458" width="510" height="86.728971962617" rx="10.412070637163" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="100" y="433.532710280374" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--text-muted)">Summary</text>
+  <text x="100" y="462.803738317757" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--ok-accent)">Sentence 2 + Sentence 4</text>
+
+  <text x="337" y="527.85046728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">+ guaranteed faithful to source</text>
+  <text x="337" y="554.953271028037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">+ easy to attribute and audit</text>
+  <text x="337" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">- choppy when sentences need rewriting</text>
+  
+  <rect x="645" y="77.943925233645" width="595" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="942" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--primary-text)">Abstractive</text>
+  <text x="942" y="159.252336448598" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">generate new text</text>
+
+  <rect x="685" y="197.196261682243" width="510" height="173.457943925234" rx="10.412070637163" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="705" y="229.719626168224" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--text-muted)">Document</text>
+  <text x="705" y="256.822429906542" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--text-faint)">Sentence 1: filler context.</text>
+  <text x="705" y="283.92523364486" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--primary-accent)">Sentence 2: key fact A.</text>
+  <text x="705" y="311.028037383178" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--text-faint)">Sentence 3: filler context.</text>
+  <text x="705" y="338.130841121495" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--primary-accent)">Sentence 4: key fact B.</text>
+
+  <rect x="685" y="403.177570093458" width="510" height="86.728971962617" rx="10.412070637163" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="705" y="433.532710280374" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--text-muted)">Summary</text>
+  <text x="705" y="462.803738317757" font-family="Arial, sans-serif" font-size="14.576898892028" font-weight="bold" fill="var(--primary-accent)">Combined paraphrase of A and B.</text>
+
+  <text x="942" y="527.85046728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">+ fluent, compressed output</text>
+  <text x="942" y="554.953271028037" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">+ matches what humans actually write</text>
+  <text x="942" y="582.056074766355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">- can hallucinate facts not in source</text>
+  </svg>

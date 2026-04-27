@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">CBOW</text>
+  <text x="337" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">predict center from context</text>
+
+  <rect x="80" y="180" width="100" height="60" rx="8" fill="var(--bg)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="130" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">the</text>
+  <rect x="80" y="260" width="100" height="60" rx="8" fill="var(--bg)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="130" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">cat</text>
+  <rect x="80" y="340" width="100" height="60" rx="8" fill="var(--bg)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="130" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">on</text>
+  <rect x="80" y="420" width="100" height="60" rx="8" fill="var(--bg)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="130" y="457" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">the</text>
+
+  <rect x="240" y="280" width="140" height="120" rx="10" fill="var(--primary-accent)" stroke="var(--bg)" stroke-width="2"/>
+  <text x="310" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">average</text>
+  <text x="310" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">of contexts</text>
+
+  <rect x="450" y="300" width="140" height="80" rx="10" fill="var(--bg)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="520" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">sat</text>
+  <text x="520" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">predicted</text>
+
+  <path d="M 180 210 L 240 310" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 180 290 L 240 320" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 180 370 L 240 360" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 180 450 L 240 370" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 380 340 L 450 340" fill="none" stroke="var(--bg)" stroke-width="3" marker-end="url(#arrow-white)"/>
+
+  <text x="337" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">faster training, better on frequent words</text>
+  <text x="337" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">smooths over a bag of context vectors</text>
+
+  <rect x="655" y="40" width="585" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Skip-gram</text>
+  <text x="947" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">predict context from center</text>
+
+  <rect x="850" y="300" width="140" height="80" rx="10" fill="var(--bg)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="920" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">sat</text>
+  <text x="920" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">center</text>
+
+  <rect x="1080" y="180" width="120" height="60" rx="8" fill="var(--bg)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="1140" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">the</text>
+  <rect x="1080" y="260" width="120" height="60" rx="8" fill="var(--bg)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="1140" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">cat</text>
+  <rect x="1080" y="340" width="120" height="60" rx="8" fill="var(--bg)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="1140" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">on</text>
+  <rect x="1080" y="420" width="120" height="60" rx="8" fill="var(--bg)" stroke="var(--ok-accent)" stroke-width="2"/>
+  <text x="1140" y="457" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">the</text>
+
+  <path d="M 990 320 L 1080 210" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 990 330 L 1080 290" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 990 350 L 1080 370" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+  <path d="M 990 360 L 1080 450" fill="none" stroke="var(--bg)" stroke-width="2" marker-end="url(#arrow-white)"/>
+
+  <text x="947" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">stronger on rare words and small data</text>
+  <text x="947" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">trained with negative sampling in practice</text>
+</svg>

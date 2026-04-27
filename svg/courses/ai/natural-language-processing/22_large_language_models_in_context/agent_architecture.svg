@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.842360136325" font-weight="bold" fill="var(--text)">An LLM agent loop (ReAct-style)</text>
+
+  <rect x="40" y="81.428571428571" width="227.586206896552" height="82.857142857143" rx="14.491376746189" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="153.793103448276" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--text)">user goal</text>
+  <text x="153.793103448276" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--text-muted)">"book a flight to LHR"</text>
+
+  <rect x="495.172413793103" y="81.428571428571" width="289.655172413793" height="82.857142857143" rx="14.491376746189" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.701966780271" font-weight="bold" fill="var(--primary-text)">LLM</text>
+  <text x="640" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--primary-text)">reason → act → observe → repeat</text>
+
+  <rect x="40" y="226.428571428571" width="227.586206896552" height="82.857142857143" rx="14.491376746189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--warn-text)">thought</text>
+  <text x="153.793103448276" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">"I need flight options"</text>
+
+  <rect x="329.655172413793" y="226.428571428571" width="227.586206896552" height="82.857142857143" rx="14.491376746189" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="443.448275862069" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--warn-text)">action</text>
+  <text x="443.448275862069" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--warn-text)">search_flights(...)</text>
+
+  <rect x="619.310344827586" y="226.428571428571" width="227.586206896552" height="82.857142857143" rx="14.491376746189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--ok-text)">tool</text>
+  <text x="733.103448275862" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-text)">flight API</text>
+
+  <rect x="908.965517241379" y="226.428571428571" width="227.586206896552" height="82.857142857143" rx="14.491376746189" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1022.758620689655" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.561573424217" font-weight="bold" fill="var(--ok-text)">observation</text>
+  <text x="1022.758620689655" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--ok-text)">[3 flight options]</text>
+
+  <line x1="267.586206896552" y1="267.857142857143" x2="329.655172413793" y2="267.857142857143" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="557.241379310345" y1="267.857142857143" x2="619.310344827586" y2="267.857142857143" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="846.896551724138" y1="267.857142857143" x2="908.965517241379" y2="267.857142857143" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <line x1="267.586206896552" y1="122.857142857143" x2="495.172413793103" y2="122.857142857143" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="640" y1="164.285714285714" x2="153.793103448276" y2="226.428571428571" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1022.758620689655" y1="226.428571428571" x2="640" y2="164.285714285714" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="371.428571428571" width="289.655172413793" height="103.571428571429" rx="14.491376746189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">memory</text>
+  <text x="184.827586206897" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">scratchpad, vector DB,</text>
+  <text x="184.827586206897" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">conversation summary</text>
+
+  <rect x="360.689655172414" y="371.428571428571" width="289.655172413793" height="103.571428571429" rx="14.491376746189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="505.51724137931" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">tools</text>
+  <text x="505.51724137931" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">search, calculator, code,</text>
+  <text x="505.51724137931" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">DB, internal APIs</text>
+
+  <rect x="681.379310344828" y="371.428571428571" width="289.655172413793" height="103.571428571429" rx="14.491376746189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="826.206896551724" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">budget control</text>
+  <text x="826.206896551724" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">step cap, token cap,</text>
+  <text x="826.206896551724" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">cost cap, time cap</text>
+
+  <rect x="1002.068965517241" y="371.428571428571" width="237.931034482759" height="103.571428571429" rx="14.491376746189" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1121.034482758621" y="407.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--info-text)">guardrails</text>
+  <text x="1121.034482758621" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">action allowlist,</text>
+  <text x="1121.034482758621" y="459.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.456278407176" fill="var(--info-text)">human approval gates</text>
+
+  <rect x="40" y="516.428571428572" width="1200" height="103.571428571429" rx="14.491376746189" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="552.678571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.631770102244" font-weight="bold" fill="var(--text)">Where agent loops fail</text>
+  <text x="640" y="583.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--text-muted)">drift between steps, hallucinated tool calls, runaway costs, prompt injection from tool output,</text>
+  <text x="640" y="609.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.491376746189" fill="var(--text-muted)">missing termination conditions, unsafe actions executed before review</text>
+</svg>

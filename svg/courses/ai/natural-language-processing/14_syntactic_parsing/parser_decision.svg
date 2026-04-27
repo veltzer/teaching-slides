@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">Choosing a parser</text>
+
+  <rect x="40" y="77.943925233645" width="290" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--ok-text)">Off-the-shelf UD</text>
+  <text x="185" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">spaCy, Stanza, Trankit</text>
+  <text x="185" y="229.719626168224" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">general English text</text>
+  <text x="185" y="262.242990654206" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">no annotated data of</text>
+  <text x="185" y="289.345794392523" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">your own</text>
+  <text x="185" y="354.392523364486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">strong baseline scores</text>
+  <text x="185" y="386.915887850467" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">on standard benchmarks</text>
+  <text x="185" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--ok-text)">batteries-included</text>
+      
+  <rect x="350" y="77.943925233645" width="290" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--primary-text)">Fine-tuned biaffine</text>
+  <text x="495" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">parser on your treebank</text>
+  <text x="495" y="229.719626168224" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">domain-specific text</text>
+  <text x="495" y="262.242990654206" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">legal, medical,</text>
+  <text x="495" y="289.345794392523" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">scientific, financial</text>
+  <text x="495" y="354.392523364486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">have at least 1k</text>
+  <text x="495" y="386.915887850467" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">annotated sentences</text>
+  <text x="495" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">best LAS in your</text>
+  <text x="495" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--primary-text)">target domain</text>
+    
+  <rect x="660" y="77.943925233645" width="290" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--warn-text)">Constituency parser</text>
+  <text x="805" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">Berkeley, Stanford</text>
+  <text x="805" y="229.719626168224" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">downstream needs</text>
+  <text x="805" y="262.242990654206" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">phrase brackets</text>
+  <text x="805" y="289.345794392523" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">(coreference, MT)</text>
+  <text x="805" y="354.392523364486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">working with Penn</text>
+  <text x="805" y="386.915887850467" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">Treebank conventions</text>
+  <text x="805" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">richer phrase structure</text>
+  <text x="805" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--warn-text)">than UD edges</text>
+    
+  <rect x="970" y="77.943925233645" width="270" height="542.056074766355" rx="14.576898892028" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="126.728971962617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.906555401759" font-weight="bold" fill="var(--info-text)">Skip parsing</text>
+  <text x="1105" y="175.514018691589" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">use an LLM directly</text>
+  <text x="1105" y="229.719626168224" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">downstream task is</text>
+  <text x="1105" y="262.242990654206" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">end-to-end semantic</text>
+  <text x="1105" y="289.345794392523" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">(QA, summarization)</text>
+  <text x="1105" y="354.392523364486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">no audit requirement</text>
+  <text x="1105" y="386.915887850467" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">on syntactic structure</text>
+  <text x="1105" y="451.96261682243" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">a strong transformer</text>
+  <text x="1105" y="484.485981308411" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.576898892028" fill="var(--info-text)">handles syntax</text>
+    </svg>

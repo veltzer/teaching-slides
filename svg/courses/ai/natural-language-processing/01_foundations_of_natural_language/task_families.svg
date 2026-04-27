@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="151.864406779661" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--primary-text)">Classification</text>
+  <text x="151.864406779661" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">label per text</text>
+  <text x="151.864406779661" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">sentiment</text>
+  <text x="151.864406779661" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">spam</text>
+  <text x="151.864406779661" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">topic</text>
+  <text x="151.864406779661" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--primary-text)">intent</text>
+  <text x="151.864406779661" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="41.804855591615" font-weight="bold" fill="var(--primary-text)">N to 1</text>
+  <text x="151.864406779661" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--primary-text)">simplest task family</text>
+  <text x="151.864406779661" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--primary-text)">labels are discrete</text>
+  <text x="151.864406779661" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--primary-text)">often well understood</text>
+
+  <rect x="284.067796610169" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395.932203389831" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--ok-text)">Tagging</text>
+  <text x="395.932203389831" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">label per token</text>
+  <text x="395.932203389831" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">part of speech</text>
+  <text x="395.932203389831" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">named entities</text>
+  <text x="395.932203389831" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--ok-text)">slot filling</text>
+  <text x="395.932203389831" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="41.804855591615" font-weight="bold" fill="var(--ok-text)">N to N</text>
+  <text x="395.932203389831" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--ok-text)">structured output</text>
+  <text x="395.932203389831" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--ok-text)">tags constrained</text>
+  <text x="395.932203389831" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--ok-text)">CRF or transformer</text>
+
+  <rect x="528.135593220339" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--info-text)">Parsing</text>
+  <text x="640" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">structure over text</text>
+  <text x="640" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">dependencies</text>
+  <text x="640" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">constituents</text>
+  <text x="640" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--info-text)">relations</text>
+  <text x="640" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="41.804855591615" font-weight="bold" fill="var(--info-text)">N to graph</text>
+  <text x="640" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--info-text)">richest output</text>
+  <text x="640" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--info-text)">strict constraints</text>
+  <text x="640" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--info-text)">less central today</text>
+
+  <rect x="772.203389830509" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="884.067796610169" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--warn-text)">Generation</text>
+  <text x="884.067796610169" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">produce text</text>
+  <text x="884.067796610169" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">translation</text>
+  <text x="884.067796610169" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">summarization</text>
+  <text x="884.067796610169" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--warn-text)">dialogue</text>
+  <text x="884.067796610169" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="41.804855591615" font-weight="bold" fill="var(--warn-text)">N to M</text>
+  <text x="884.067796610169" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-text)">creative outputs</text>
+  <text x="884.067796610169" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-text)">hard to evaluate</text>
+  <text x="884.067796610169" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--warn-text)">drives the LLM era</text>
+
+  <rect x="1016.271186440678" y="40" width="223.728813559322" height="580" rx="14.631699457065" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1128.135593220339" y="93.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992670575388" font-weight="bold" fill="var(--danger-text)">Retrieval</text>
+  <text x="1128.135593220339" y="147.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">find relevant text</text>
+  <text x="1128.135593220339" y="211.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">search</text>
+  <text x="1128.135593220339" y="238.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">RAG</text>
+  <text x="1128.135593220339" y="265.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.631699457065" fill="var(--danger-text)">QA over corpora</text>
+  <text x="1128.135593220339" y="383.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="37.624370032453" font-weight="bold" fill="var(--danger-text)">query</text>
+  <text x="1128.135593220339" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="37.624370032453" font-weight="bold" fill="var(--danger-text)">to docs</text>
+  <text x="1128.135593220339" y="501.851851851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--danger-text)">precision and recall</text>
+  <text x="1128.135593220339" y="528.703703703704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--danger-text)">often paired</text>
+  <text x="1128.135593220339" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.586578067275" fill="var(--danger-text)">with generation</text>
+</svg>

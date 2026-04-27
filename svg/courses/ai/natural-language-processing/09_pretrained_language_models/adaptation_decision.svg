@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="484.827586206897" y="40" width="310.344827586207" height="101.754385964912" rx="14.363696929192" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="80.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.519567041703" font-weight="bold" fill="var(--text)">How much</text>
+  <text x="640" y="111.228070175439" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.519567041703" font-weight="bold" fill="var(--text)">labeled data?</text>
+
+  <rect x="40" y="212.982456140351" width="331.034482758621" height="183.157894736842" rx="14.363696929192" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="253.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--warn-text)">Almost none</text>
+  <text x="205.51724137931" y="294.385964912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--warn-text)">prompt a large model</text>
+  <text x="205.51724137931" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--warn-text)">zero or few-shot</text>
+  <text x="205.51724137931" y="360.526315789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--warn-text)">iterate on the prompt</text>
+
+  <rect x="474.48275862069" y="212.982456140351" width="331.034482758621" height="183.157894736842" rx="14.363696929192" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="253.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--primary-text)">Hundreds to thousands</text>
+  <text x="640" y="294.385964912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--primary-text)">parameter-efficient</text>
+  <text x="640" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--primary-text)">LoRA or adapters</text>
+  <text x="640" y="360.526315789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--primary-text)">small checkpoint per task</text>
+
+  <rect x="908.965517241379" y="212.982456140351" width="331.034482758621" height="183.157894736842" rx="14.363696929192" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1074.48275862069" y="253.684210526316" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.467610337533" font-weight="bold" fill="var(--ok-text)">Tens of thousands</text>
+  <text x="1074.48275862069" y="294.385964912281" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--ok-text)">full fine-tune or PEFT</text>
+  <text x="1074.48275862069" y="319.824561403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.363696929192" fill="var(--ok-text)">on a smaller backbone</text>
+  <text x="1074.48275862069" y="360.526315789474" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.337718577107" fill="var(--ok-text)">ship for low latency</text>
+
+  <path d="M 588.275862068966 141.754385964912 L 267.586206896552 212.982456140351" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 640 141.754385964912 L 640 212.982456140351" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 691.724137931035 141.754385964912 L 1012.413793103448 212.982456140351" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="447.017543859649" width="1200" height="172.982456140351" rx="14.363696929192" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="487.719298245614" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.519567041703" font-weight="bold" fill="var(--text)">Other Constraints</text>
+  <text x="640" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389675281277" fill="var(--text-muted)">Privacy or air-gap requirements push toward fine-tuning a self-hosted model.</text>
+  <text x="640" y="553.859649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389675281277" fill="var(--text-muted)">Tight latency budgets favor distillation into a smaller model.</text>
+  <text x="640" y="594.561403508772" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.389675281277" fill="var(--info-accent)">Hybrid: prompt to bootstrap labels, then fine-tune for production.</text>
+</svg>

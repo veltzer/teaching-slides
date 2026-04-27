@@ -4,6 +4,7 @@
 - All project rules must be stored in this file (CLAUDE.md), not only in Claude memory. Memory is not shared with collaborators and can be erased.
 - Always prefer project-root-relative includes over file-relative ones (e.g., `svg/courses/...` not `../../../../svg/...`). Marp resolves these via `baseUrl` in `.marprc.mjs`.
 - Always build with `rsconstruct build --verbose -j10`.
+- **NEVER make semantic content changes with a script.** Do not write or run a script that mass-edits the *meaning* of slides, SVG text, prose, copy, diagram labels, or any human-authored content. This includes: trimming `<text>` elements to fit a word count, dropping bullets, shortening paragraphs, rewriting prose, removing "summary" blocks, deduplicating ideas, or any other content edit. Mechanical/structural changes (e.g., `svg_fix.py --fit` rescaling coordinates, `svg_fix.py --fonts` normalizing font-family) are fine because they preserve meaning. If the build complains about content (too many words, too long, etc.), edit each file by hand, one at a time, with judgment. No exceptions, no "just this once."
 
 ## Python
 - Use `#!/usr/bin/env python` in shebang lines, never `#!/usr/bin/env python3`. python3 is the default on all systems now.

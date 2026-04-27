@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <!-- PLACEHOLDERSVG — replace with real diagram -->
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="60" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Viterbi trellis: best path through label states</text>
+
+  <text x="240" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">t=1</text>
+  <text x="480" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">t=2</text>
+  <text x="720" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">t=3</text>
+  <text x="960" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">t=4</text>
+
+  <text x="100" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">B</text>
+  <text x="100" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">I</text>
+  <text x="100" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">O</text>
+
+  <rect x="208.0" y="203.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="208.0" y="333.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="208.0" y="463.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+
+  <rect x="448.0" y="203.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="448.0" y="333.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="448.0" y="463.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+
+  <rect x="688.0" y="203.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="688.0" y="333.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="688.0" y="463.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <rect x="928.0" y="203.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="928.0" y="333.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="928.0" y="463.0" width="64.0" height="64.0" rx="14.0" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+
+  <path d="M 272 235 L 448 365" fill="none" stroke="var(--primary-accent)" stroke-width="4" marker-end="url(#arrow-primary)"/>
+  <path d="M 512 365 L 688 495" fill="none" stroke="var(--primary-accent)" stroke-width="4" marker-end="url(#arrow-primary)"/>
+  <path d="M 752 495 L 928 495" fill="none" stroke="var(--primary-accent)" stroke-width="4" marker-end="url(#arrow-primary)"/>
+
+  <path d="M 272 235 L 448 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 365 L 448 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 495 L 448 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 235 L 448 495" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 365 L 448 495" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 495 L 448 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 495 L 448 495" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 272 235 L 448 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <path d="M 512 235 L 688 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 512 365 L 688 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 512 235 L 688 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 512 495 L 688 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 512 235 L 688 495" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <path d="M 752 235 L 928 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 752 365 L 928 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 752 235 L 928 365" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 752 495 L 928 235" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <path d="M 752 365 L 928 495" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <rect x="40" y="555" width="1200" height="65" rx="14" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">delta_t(j) = max_i delta_(t-1)(i) * P(j|i) * P(x|j)</text>
+  <text x="640" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">solid path is the argmax recovered via backpointers</text>
+</svg>

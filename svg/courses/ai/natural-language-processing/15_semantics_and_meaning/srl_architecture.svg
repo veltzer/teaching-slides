@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.821872493111" font-weight="bold" fill="var(--text)">Neural SRL: predicate-conditioned tagging</text>
+
+  <rect x="40" y="77.247706422018" width="1200" height="63.853211009174" rx="10.316104805043" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="117.688073394495" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" fill="var(--text)">"Mary gave John a book yesterday"</text>
+
+  <rect x="40" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--info-text)">Mary</text>
+  <rect x="240" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--warn-text)">gave (predicate)</text>
+  <rect x="440" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--info-text)">John</text>
+  <rect x="640" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--info-text)">a</text>
+  <rect x="840" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--info-text)">book</text>
+  <rect x="1040" y="173.02752293578" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130" y="207.082568807339" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--info-text)">yesterday</text>
+
+  <line x1="130" y1="141.100917431193" x2="130" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="330" y1="141.100917431193" x2="330" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="530" y1="141.100917431193" x2="530" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="730" y1="141.100917431193" x2="730" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="930" y1="141.100917431193" x2="930" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1130" y1="141.100917431193" x2="1130" y2="173.02752293578" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="268.807339449541" width="1200" height="85.137614678899" rx="10.316104805043" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="306.05504587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">Pretrained transformer encoder + predicate indicator embedding</text>
+  <text x="640" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">model knows which token is the target predicate</text>
+
+  <line x1="640" y1="226.238532110092" x2="640" y2="268.807339449541" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--ok-text)">B-Arg0</text>
+  <rect x="240" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text)">V (pred)</text>
+  <rect x="440" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--ok-text)">B-Arg2</text>
+  <rect x="640" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--ok-text)">B-Arg1</text>
+  <rect x="840" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--ok-text)">I-Arg1</text>
+  <rect x="1040" y="396.51376146789" width="180" height="53.211009174312" rx="10.316104805043" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1130" y="430.56880733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" font-weight="bold" fill="var(--warn-text)">B-AM-TMP</text>
+
+  <line x1="130" y1="353.94495412844" x2="130" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="330" y1="353.94495412844" x2="330" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="530" y1="353.94495412844" x2="530" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="730" y1="353.94495412844" x2="730" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="930" y1="353.94495412844" x2="930" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="1130" y1="353.94495412844" x2="1130" y2="396.51376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="492.293577981651" width="1200" height="127.706422018349" rx="10.316104805043" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="529.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.568988649077" font-weight="bold" fill="var(--text)">Output: predicate "give" with PropBank roles</text>
+  <text x="640" y="561.467889908257" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--text-muted)">Arg0 = Mary (giver), Arg2 = John (recipient), Arg1 = a book (theme)</text>
+  <text x="640" y="593.394495412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.474157207564" fill="var(--text-muted)">AM-TMP = yesterday (temporal modifier)</text>
+</svg>

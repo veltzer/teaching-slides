@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="595" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">LSTM</text>
+  <text x="337" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">three gates and a separate cell state</text>
+
+  <text x="337" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Gates</text>
+  <text x="337" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">forget, input, output</text>
+
+  <text x="337" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">State</text>
+  <text x="337" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">cell c_t and hidden h_t</text>
+
+  <text x="337" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Parameters</text>
+  <text x="337" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">four weight matrices</text>
+  <text x="337" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">larger memory footprint</text>
+
+  <text x="337" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">When it shines</text>
+  <text x="337" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">very long dependencies</text>
+  <text x="337" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">deeper stacks</text>
+
+  <text x="337" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">historical default for tagging,</text>
+  <text x="337" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">translation, generation</text>
+
+  <rect x="650" y="40" width="590" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="945" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">GRU</text>
+  <text x="945" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">two gates and a single hidden state</text>
+
+  <text x="945" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Gates</text>
+  <text x="945" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">reset, update</text>
+
+  <text x="945" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">State</text>
+  <text x="945" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">single hidden h_t</text>
+
+  <text x="945" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Parameters</text>
+  <text x="945" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">three weight matrices</text>
+  <text x="945" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">about 75 percent of LSTM</text>
+
+  <text x="945" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">When it shines</text>
+  <text x="945" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">tight memory budgets</text>
+  <text x="945" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">smaller datasets</text>
+
+  <text x="945" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">often within noise of LSTM</text>
+  <text x="945" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">on typical tasks</text>
+</svg>

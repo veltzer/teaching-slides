@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="390" height="580" rx="14.509256304805" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="235" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873010808237" font-weight="bold" fill="var(--primary-text)">Agglutinative</text>
+  <text x="235" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">stackable suffixes</text>
+  <text x="235" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--primary-text)">Finnish, Turkish, Hungarian</text>
+  <text x="235" y="260.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--primary-text)">taloissamme</text>
+  <text x="235" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">talo + i + ssa + mme</text>
+  <text x="235" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">house + plural + in + our</text>
+  <text x="235" y="389.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">one word, several morphemes</text>
+  <text x="235" y="453.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">vocabulary explodes</text>
+  <text x="235" y="485.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--primary-text)">subwords help a lot</text>
+  <text x="235" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--primary-text)">analyzers: HFST, Foma</text>
+
+  <rect x="445" y="40" width="390" height="580" rx="14.509256304805" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873010808237" font-weight="bold" fill="var(--info-text)">Templatic</text>
+  <text x="640" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">consonant root + pattern</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--info-text)">Arabic, Hebrew</text>
+  <text x="640" y="260.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007205491" font-weight="bold" fill="var(--info-text)">root k-t-b</text>
+  <text x="640" y="297.777777777778" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">kataba (he wrote)</text>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">kitaab (book)</text>
+  <text x="640" y="362.222222222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">maktab (office)</text>
+  <text x="640" y="421.296296296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">root is interleaved</text>
+  <text x="640" y="453.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--info-text)">surface hides structure</text>
+  <text x="640" y="523.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">analyzers: MADAMIRA</text>
+  <text x="640" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--info-text)">Farasa, CAMeL Tools</text>
+
+  <rect x="850" y="40" width="390" height="580" rx="14.509256304805" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="88.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873010808237" font-weight="bold" fill="var(--ok-text)">Compounding</text>
+  <text x="1045" y="125.925925925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">roots glued together</text>
+  <text x="1045" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.545631755148" fill="var(--ok-text)">German, Dutch, Greek</text>
+  <text x="1045" y="260.185185185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" font-weight="bold" fill="var(--ok-text)">Dampfschiff</text>
+  <text x="1045" y="292.407407407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">dampf + schiff</text>
+  <text x="1045" y="324.62962962963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">steam + ship</text>
+  <text x="1045" y="389.074074074074" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">single token, phrase meaning</text>
+  <text x="1045" y="453.518518518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">decompounding splits parts</text>
+  <text x="1045" y="485.740740740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256304805" fill="var(--ok-text)">subwords cover this too</text>
+  <text x="1045" y="555.555555555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.472880854462" fill="var(--ok-text)">retrieval still benefits</text>
+</svg>

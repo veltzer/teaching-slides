@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="395" height="580" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="237" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Naive Bayes</text>
+  <text x="237" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">probabilistic baseline</text>
+
+  <text x="237" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">how it works</text>
+  <text x="237" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">assume word independence</text>
+  <text x="237" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">sum log-probabilities</text>
+
+  <text x="237" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">good for</text>
+  <text x="237" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">tiny datasets</text>
+  <text x="237" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">spam baselines</text>
+
+  <text x="237" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">trade-offs</text>
+  <text x="237" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">ignores word order</text>
+  <text x="237" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">badly calibrated</text>
+
+  <rect x="445" y="40" width="395" height="580" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="642" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Logistic Regression</text>
+  <text x="642" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">linear, calibrated, fast</text>
+
+  <text x="642" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">how it works</text>
+  <text x="642" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">weighted sum of n-grams</text>
+  <text x="642" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">L1 or L2 regularization</text>
+
+  <text x="642" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">good for</text>
+  <text x="642" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">strong baseline</text>
+  <text x="642" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">interpretable weights</text>
+
+  <text x="642" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">trade-offs</text>
+  <text x="642" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">linear in features</text>
+  <text x="642" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">very fast inference</text>
+
+  <rect x="850" y="40" width="390" height="580" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">Linear SVM</text>
+  <text x="1045" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">maximum margin</text>
+
+  <text x="1045" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">how it works</text>
+  <text x="1045" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">find separating hyperplane</text>
+  <text x="1045" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">hinge loss objective</text>
+
+  <text x="1045" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">good for</text>
+  <text x="1045" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">sparse text features</text>
+  <text x="1045" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">historical workhorse</text>
+
+  <text x="1045" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">trade-offs</text>
+  <text x="1045" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">no probabilities</text>
+  <text x="1045" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">robust to noise</text>
+</svg>

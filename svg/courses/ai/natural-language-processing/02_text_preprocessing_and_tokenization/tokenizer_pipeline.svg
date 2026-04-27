@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="220" height="160" rx="14" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Raw Text</text>
+  <text x="150" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">"The cats are sleeping."</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">UTF-8 bytes</text>
+
+  <rect x="320" y="40" width="220" height="160" rx="14" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Normalize</text>
+  <text x="430" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">NFC, casing</text>
+  <text x="430" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">accent rules</text>
+
+  <rect x="600" y="40" width="220" height="160" rx="14" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Pre-tokenize</text>
+  <text x="710" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">split on spaces,</text>
+  <text x="710" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">punctuation</text>
+
+  <rect x="880" y="40" width="360" height="160" rx="14" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Subword Model</text>
+  <text x="1060" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">apply BPE / WordPiece /</text>
+  <text x="1060" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">SentencePiece merges</text>
+
+  <path d="M 260 120 L 320 120" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 540 120 L 600 120" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 820 120 L 880 120" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="260" width="1200" height="160" rx="14" fill="var(--code-bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--surface)">Token Stream</text>
+  <text x="640" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--surface)">[The] [cats] [are] [sleep] [##ing] [.]</text>
+  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-faint)">each token has an integer id from the vocabulary</text>
+
+  <rect x="40" y="460" width="1200" height="160" rx="14" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Reverse: Detokenize</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">glue subword pieces, restore spaces, drop special tokens, recover the original text</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-faint)">a round-trip test catches most pipeline bugs before they hit the model</text>
+</svg>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.821872493111" font-weight="bold" fill="var(--text)">Conversational QA: resolving the implicit context</text>
+
+  <rect x="40" y="77.247706422018" width="600" height="542.752293577982" rx="14.44254672706" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="340" y="114.495412844037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--text)">Dialog history</text>
+
+  <rect x="70" y="141.100917431193" width="540" height="63.853211009174" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="90" y="167.706422018349" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">Q1:</text>
+  <text x="130" y="167.706422018349" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">Who founded Apple?</text>
+  <text x="90" y="192.183486238532" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">A1:</text>
+  <text x="130" y="192.183486238532" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">Steve Jobs and Steve Wozniak.</text>
+
+  <rect x="70" y="226.238532110092" width="540" height="63.853211009174" rx="10.316104805043" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="90" y="252.844036697248" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">Q2:</text>
+  <text x="130" y="252.844036697248" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">When?</text>
+  <text x="90" y="277.321100917431" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--info-text)">A2:</text>
+  <text x="130" y="277.321100917431" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--info-text)">In 1976.</text>
+
+  <rect x="70" y="311.376146788991" width="540" height="63.853211009174" rx="10.316104805043" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="90" y="337.981651376147" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--warn-text)">Q3:</text>
+  <text x="130" y="337.981651376147" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--warn-text)">Where did they meet?</text>
+  <text x="340" y="364.587155963303" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.379325766051" fill="var(--warn-text)">"they" needs coreference resolution</text>
+
+  <text x="340" y="428.440366972477" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">Each turn refers back to entities and</text>
+  <text x="340" y="455.045871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">facts established in earlier turns.</text>
+  <text x="340" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--text-muted)">Pronouns and ellipsis hide the question.</text>
+      
+  <rect x="660" y="77.247706422018" width="580" height="255.412844036697" rx="14.44254672706" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="119.816513761468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--primary-text)">Approach 1: question rewriting</text>
+  <text x="950" y="167.706422018349" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">a smaller model rewrites Q3 to a</text>
+  <text x="950" y="194.311926605505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">self-contained form first</text>
+  <text x="950" y="242.201834862385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--primary-text)">"Where did Steve Jobs and Steve Wozniak meet?"</text>
+  <text x="950" y="284.770642201835" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">downstream pipeline becomes</text>
+  <text x="950" y="306.05504587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" fill="var(--primary-text)">standard open-domain QA</text>
+
+  <rect x="660" y="364.587155963303" width="580" height="255.412844036697" rx="14.44254672706" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="407.155963302752" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.632209610085" font-weight="bold" fill="var(--ok-text)">Approach 2: conditioning on history</text>
+  <text x="950" y="455.045871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--ok-text)">concatenate prior turns into the prompt</text>
+  <text x="950" y="481.651376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.44254672706" fill="var(--ok-text)">model resolves references implicitly</text>
+  <text x="950" y="529.54128440367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.410936246555" font-weight="bold" fill="var(--ok-text)">DEFAULT in modern LLMs</text>
+    </svg>

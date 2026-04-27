@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">Open-domain QA pipeline</text>
+
+  <rect x="40" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="130.45871559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">question</text>
+  <text x="153.793103448276" y="162.385321100917" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">"who founded Apple?"</text>
+
+  <rect x="308.965517241379" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="422.758620689655" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">query encoder</text>
+  <text x="422.758620689655" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">DPR, ColBERT</text>
+  <text x="422.758620689655" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">→ vector</text>
+
+  <rect x="577.931034482759" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="691.724137931035" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">vector index</text>
+  <text x="691.724137931035" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">FAISS, ScaNN</text>
+  <text x="691.724137931035" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">approximate kNN</text>
+
+  <rect x="846.896551724138" y="87.889908256881" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960.689655172414" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">top-k passages</text>
+  <text x="960.689655172414" y="154.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">k = 5..20</text>
+  <text x="960.689655172414" y="176.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">from Wikipedia / corpus</text>
+
+  <line x1="267.586206896552" y1="141.100917431193" x2="308.965517241379" y2="141.100917431193" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="536.551724137931" y1="141.100917431193" x2="577.931034482759" y2="141.100917431193" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="805.51724137931" y1="141.100917431193" x2="846.896551724138" y2="141.100917431193" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="40" y="258.165137614679" width="227.586206896552" height="106.422018348624" rx="14.689445752436" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="153.793103448276" y="295.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.787938002784" font-weight="bold" fill="var(--text)">passage corpus</text>
+  <text x="153.793103448276" y="327.339449541284" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--text-muted)">offline indexed once</text>
+  <text x="153.793103448276" y="348.623853211009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.590953502088" fill="var(--text-muted)">tens of millions of docs</text>
+
+  <line x1="153.793103448276" y1="258.165137614679" x2="153.793103448276" y2="194.311926605505" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="102.068965517241" y="417.798165137615" width="827.586206896552" height="127.706422018349" rx="14.689445752436" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="515.862068965517" y="465.688073394495" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.083414753828" font-weight="bold" fill="var(--primary-text)">reader (extractive or generative)</text>
+  <text x="515.862068965517" y="497.614678899083" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">conditions on (question + retrieved passages)</text>
+  <text x="515.862068965517" y="524.220183486239" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.689445752436" fill="var(--primary-text)">BERT span head, T5/BART generator, or instruction-tuned LLM</text>
+
+  <line x1="960.689655172414" y1="194.311926605505" x2="702.068965517241" y2="417.798165137615" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="153.793103448276" y1="194.311926605505" x2="153.793103448276" y2="417.798165137615" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="991.724137931035" y="439.082568807339" width="248.275862068966" height="85.137614678899" rx="14.689445752436" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115.862068965517" y="476.330275229358" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">answer + citations</text>
+  <text x="1115.862068965517" y="502.935779816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">"Steve Jobs, Steve Wozniak"</text>
+
+  <line x1="929.655172413793" y1="481.651376146789" x2="991.724137931035" y2="481.651376146789" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+
+  <rect x="102.068965517241" y="577.431192660551" width="1034.48275862069" height="42.56880733945" rx="10.49246125174" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="619.310344827586" y="607.229357798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.73869187761" fill="var(--text)">retriever and reader can be trained jointly (RAG, FiD) for higher end-to-end accuracy</text>
+</svg>

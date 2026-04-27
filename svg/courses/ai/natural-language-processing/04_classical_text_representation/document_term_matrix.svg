@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="40" width="380" height="290" rx="14.247806848775" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="86.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--primary-text)">Three Documents</text>
+  <text x="230" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">D1: the cat sat on the mat</text>
+  <text x="230" y="179.821428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">D2: the dog sat on the rug</text>
+  <text x="230" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">D3: cats and dogs play</text>
+  <text x="230" y="283.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">tokenize, lower, drop punctuation</text>
+
+  <rect x="460" y="40" width="780" height="290" rx="14.247806848775" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="850" y="81.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--text)">Document-Term Matrix</text>
+
+  <text x="540" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">doc</text>
+  <text x="640" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">the</text>
+  <text x="720" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">cat</text>
+  <text x="800" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">dog</text>
+  <text x="880" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">sat</text>
+  <text x="960" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">mat</text>
+  <text x="1040" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">rug</text>
+  <text x="1120" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">play</text>
+  <text x="1200" y="133.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" font-weight="bold" fill="var(--text-muted)">on</text>
+
+  <text x="540" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text)">D1</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">2</text>
+  <text x="720" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="800" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="880" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="960" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="1040" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1120" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+
+  <text x="540" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text)">D2</text>
+  <text x="640" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">2</text>
+  <text x="720" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="800" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="880" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="960" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1040" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="1120" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1200" y="231.607142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+
+  <text x="540" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text)">D3</text>
+  <text x="640" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="720" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="800" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="880" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="960" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1040" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+  <text x="1120" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--ok-accent)">1</text>
+  <text x="1200" y="278.214285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" fill="var(--text-faint)">0</text>
+
+  <rect x="40" y="371.428571428571" width="585" height="248.571428571429" rx="14.247806848775" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="332" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--info-text)">Each Row Is a Vector</text>
+  <text x="332" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)">documents become points</text>
+  <text x="332" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--info-text)">in vocabulary space</text>
+  <text x="332" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--info-text)">cosine similarity compares them</text>
+
+  <rect x="655" y="371.428571428571" width="585" height="248.571428571429" rx="14.247806848775" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947" y="418.035714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389410762361" font-weight="bold" fill="var(--warn-text)">Mostly Zeros</text>
+  <text x="947" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">100k vocabulary, few hits</text>
+  <text x="947" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507337973" fill="var(--warn-text)">store sparsely</text>
+  <text x="947" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--warn-text)">scipy CSR format</text>
+</svg>

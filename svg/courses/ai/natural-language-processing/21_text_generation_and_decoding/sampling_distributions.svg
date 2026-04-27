@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.071383656624" font-weight="bold" fill="var(--text)">How temperature reshapes the next-token distribution</text>
+
+  <rect x="40" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--ok-text)">T = 0.3 (sharp)</text>
+  <text x="230" y="153.831775700935" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--ok-text)">probability concentrated on top tokens</text>
+
+  <rect x="80" y="208.03738317757" width="60" height="303.551401869159" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="150" y="457.383177570093" width="60" height="54.205607476636" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="220" y="484.485981308411" width="60" height="27.102803738318" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="290" y="500.747663551402" width="60" height="10.841121495327" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="1"/>
+  <rect x="360" y="506.168224299065" width="35" height="5.420560747664" fill="var(--info-text)" stroke="var(--ok-border)" stroke-width="1"/>
+
+  <text x="110" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--ok-text)">cat</text>
+  <text x="180" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--ok-text)">dog</text>
+  <text x="250" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--ok-text)">bird</text>
+  <text x="320" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--ok-text)">fish</text>
+  <text x="380" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--ok-text)">...</text>
+
+  <text x="230" y="576.635514018692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--ok-text)">few candidates dominate</text>
+  <text x="230" y="603.738317757009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" font-weight="bold" fill="var(--ok-text)">code, structured tasks</text>
+
+  <rect x="450" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--primary-text)">T = 1.0 (faithful)</text>
+  <text x="640" y="153.831775700935" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--primary-text)">use the model's own probabilities</text>
+
+  <rect x="490" y="283.92523364486" width="60" height="227.663551401869" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="560" y="370.654205607477" width="60" height="140.934579439252" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="630" y="414.018691588785" width="60" height="97.570093457944" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="700" y="446.542056074766" width="60" height="65.046728971963" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="770" y="473.644859813084" width="35" height="37.943925233645" fill="var(--info-text)" stroke="var(--primary-border)" stroke-width="1"/>
+
+  <text x="520" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--primary-text)">cat</text>
+  <text x="590" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--primary-text)">dog</text>
+  <text x="660" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--primary-text)">bird</text>
+  <text x="730" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--primary-text)">fish</text>
+  <text x="790" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--primary-text)">...</text>
+
+  <text x="640" y="576.635514018692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--primary-text)">balanced spread of candidates</text>
+  <text x="640" y="603.738317757009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" font-weight="bold" fill="var(--primary-text)">chat, general use</text>
+
+  <rect x="860" y="77.943925233645" width="380" height="542.056074766355" rx="14.576898892028" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="121.308411214953" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.824141274326" font-weight="bold" fill="var(--warn-text)">T = 1.5 (flat)</text>
+  <text x="1050" y="153.831775700935" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--warn-text)">probability spread across many tokens</text>
+
+  <rect x="900" y="348.971962616822" width="60" height="162.616822429907" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="1"/>
+  <rect x="970" y="381.495327102804" width="60" height="130.093457943925" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="1"/>
+  <rect x="1040" y="397.757009345794" width="60" height="113.831775700935" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="1"/>
+  <rect x="1110" y="414.018691588785" width="60" height="97.570093457944" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="1"/>
+  <rect x="1180" y="430.280373831776" width="35" height="81.308411214953" fill="var(--info-text)" stroke="var(--warn-border)" stroke-width="1"/>
+
+  <text x="930" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--warn-text)">cat</text>
+  <text x="1000" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--warn-text)">dog</text>
+  <text x="1070" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--warn-text)">bird</text>
+  <text x="1140" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--warn-text)">fish</text>
+  <text x="1200" y="538.691588785047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.494484764596" fill="var(--warn-text)">...</text>
+
+  <text x="1050" y="576.635514018692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" fill="var(--warn-text)">long tail competes for mass</text>
+  <text x="1050" y="603.738317757009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.535691828312" font-weight="bold" fill="var(--warn-text)">creative, brainstorming</text>
+</svg>
