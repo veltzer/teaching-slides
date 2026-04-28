@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.793210076336" font-weight="bold" fill="var(--text)">DNS Attack Landscape and Defenses</text>
+
+  <!-- 6 attack types in a 3x2 grid with mitigations -->
+  <rect x="40" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Cache Poisoning</text>
+  <text x="60.689655172414" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">fake records injected</text>
+  <text x="60.689655172414" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">all clients affected</text>
+  <text x="60.689655172414" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: ports, DNSSEC</text>
+
+  <rect x="443.448275862069" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Amplification DDoS</text>
+  <text x="464.137931034483" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">spoofed source IP</text>
+  <text x="464.137931034483" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">50x to victim</text>
+  <text x="464.137931034483" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: rate limit, BCP38</text>
+
+  <rect x="846.896551724138" y="86.194690265487" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">DNS Tunneling</text>
+  <text x="867.586206896552" y="158.053097345133" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">malware C2 over DNS</text>
+  <text x="867.586206896552" y="183.716814159292" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">firewalls allow DNS</text>
+  <text x="867.586206896552" y="214.513274336283" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--warn-text)">def: analysis, RPZ</text>
+
+  <rect x="40" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--danger-text)">Registrar Hijacking</text>
+  <text x="60.689655172414" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">domain takeover</text>
+  <text x="60.689655172414" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--danger-text)">changes NS records</text>
+  <text x="60.689655172414" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--danger-text)">def: lock, MFA</text>
+
+  <rect x="443.448275862069" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--warn-text)">DGA Malware</text>
+  <text x="464.137931034483" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">algorithmic domains</text>
+  <text x="464.137931034483" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--warn-text)">finds active C2</text>
+  <text x="464.137931034483" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--warn-text)">def: ML, RPZ</text>
+
+  <rect x="846.896551724138" y="270.973451327434" width="393.103448275862" height="153.982300884956" rx="6.183048479155" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="306.902654867257" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--info-text)">NXDOMAIN Hijack</text>
+  <text x="867.586206896552" y="342.83185840708" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">ISP ads on typos</text>
+  <text x="867.586206896552" y="368.495575221239" font-family="Arial, sans-serif" font-size="13.396605038168" fill="var(--info-text)">breaks NX-dependent code</text>
+  <text x="867.586206896552" y="399.29203539823" font-family="Arial, sans-serif" font-size="13.396605038168" font-weight="bold" fill="var(--info-text)">def: switch resolver</text>
+
+  <!-- Bottom: defense summary -->
+  <rect x="40" y="466.017699115044" width="1200" height="153.982300884956" rx="6.183048479155" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="496.814159292035" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.549145437464" font-weight="bold" fill="var(--text)">Defense in Depth</text>
+  <text x="60.689655172414" y="532.743362831858" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- registrar lock + MFA</text>
+  <text x="60.689655172414" y="556.353982300885" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- DNSSEC where stakes warrant</text>
+  <text x="60.689655172414" y="579.964601769911" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- RPZ blocks malicious domains</text>
+  <text x="60.689655172414" y="603.575221238938" font-family="Arial, sans-serif" font-size="14.427113118027" fill="var(--text)">- monitor query patterns</text>
+</svg>

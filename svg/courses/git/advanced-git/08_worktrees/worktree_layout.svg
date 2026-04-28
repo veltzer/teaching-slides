@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.388922235541" font-weight="bold" fill="var(--text)">Worktrees: One Repo, Many Working Trees</text>
+
+  <!-- Central .git -->
+  <rect x="479.285714285714" y="221.25" width="321.428571428571" height="165.714285714286" rx="6.320520515894" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.961561547682" font-weight="bold" fill="var(--primary-text)">.git/  (one repository)</text>
+  <text x="640" y="288.571428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--primary-text)">objects/  · refs/  · reflog/</text>
+  <text x="640" y="314.464285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--primary-text)">worktrees/  · config</text>
+  <text x="640" y="345.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">all worktrees share</text>
+  <text x="640" y="366.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.69446111777" fill="var(--primary-text)">objects, refs, reflog</text>
+
+  <!-- Worktree 1 (left) -->
+  <rect x="40" y="107.321428571429" width="342.857142857143" height="165.714285714286" rx="6.320520515894" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--ok-text)">~/repo  (main worktree)</text>
+  <text x="211.428571428571" y="173.607142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--ok-text)">branch: main</text>
+  <text x="61.428571428571" y="206.75" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--ok-text)">src/  tests/  README.md</text>
+  <text x="61.428571428571" y="231.607142857143" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--ok-text)">.git -&gt; (real .git directory)</text>
+  <text x="61.428571428571" y="258.535714285714" font-family="Arial, sans-serif" font-size="11.587620945806" font-style="italic" fill="var(--ok-text)">long-running build in progress here</text>
+
+  <!-- Worktree 2 (top right) -->
+  <rect x="897.142857142857" y="107.321428571429" width="342.857142857143" height="165.714285714286" rx="6.320520515894" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">~/hotfix-tree</text>
+  <text x="1068.571428571428" y="173.607142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--warn-text)">branch: hotfix-3.2</text>
+  <text x="918.571428571429" y="206.75" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--warn-text)">src/  tests/  README.md</text>
+  <text x="918.571428571429" y="231.607142857143" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--warn-text)">.git -&gt; ../repo/.git/worktrees/...</text>
+  <text x="918.571428571429" y="258.535714285714" font-family="Arial, sans-serif" font-size="11.587620945806" font-style="italic" fill="var(--warn-text)">production fix, urgent</text>
+
+  <!-- Worktree 3 (bottom left) -->
+  <rect x="40" y="428.392857142857" width="342.857142857143" height="165.714285714286" rx="6.320520515894" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="464.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--info-text)">~/review-pr-42</text>
+  <text x="211.428571428571" y="494.678571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--info-text)">branch: origin/pr-42</text>
+  <text x="61.428571428571" y="527.821428571429" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--info-text)">src/  tests/  README.md</text>
+  <text x="61.428571428571" y="552.678571428572" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--info-text)">.git -&gt; ../repo/.git/worktrees/...</text>
+  <text x="61.428571428571" y="579.607142857143" font-family="Arial, sans-serif" font-size="11.587620945806" font-style="italic" fill="var(--info-text)">testing a colleague's PR</text>
+
+  <!-- Worktree 4 (bottom right) -->
+  <rect x="897.142857142857" y="428.392857142857" width="342.857142857143" height="165.714285714286" rx="6.320520515894" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="464.642857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.854721375717" font-weight="bold" fill="var(--warn-text)">~/feat-auth</text>
+  <text x="1068.571428571428" y="494.678571428571" text-anchor="middle" font-family="Courier New, monospace" font-size="13.69446111777" fill="var(--warn-text)">branch: feature/auth</text>
+  <text x="918.571428571429" y="527.821428571429" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--warn-text)">src/  tests/  README.md</text>
+  <text x="918.571428571429" y="552.678571428572" font-family="Courier New, monospace" font-size="12.641041031788" fill="var(--warn-text)">.git -&gt; ../repo/.git/worktrees/...</text>
+  <text x="918.571428571429" y="579.607142857143" font-family="Arial, sans-serif" font-size="11.587620945806" font-style="italic" fill="var(--warn-text)">your day-job feature work</text>
+
+  <!-- arrows from worktrees to .git -->
+  <path d="M 382.857142857143 190.178571428571 L 479.285714285714 273.035714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 897.142857142857 190.178571428571 L 800.714285714286 273.035714285714" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 382.857142857143 511.25 L 479.285714285714 355.892857142857" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M 897.142857142857 511.25 L 800.714285714286 355.892857142857" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Bottom commands strip -->
+  <text x="640" y="620" text-anchor="middle" font-family="Courier New, monospace" font-size="14.747881203753" fill="var(--text-muted)">git worktree add ../hotfix-tree hotfix-3.2  ·  git worktree list  ·  git worktree remove ../hotfix-tree</text>
+</svg>

@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">Protobuf Message Anatomy</text>
+
+  <!-- Source -->
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="6.295476751044" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="329.655172413793" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.787938002784" font-weight="bold" fill="var(--surface)">.proto source</text>
+
+  <text x="60.689655172414" y="167.706422018349" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">syntax = "proto3";</text>
+  <text x="60.689655172414" y="199.633027522936" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">package commerce;</text>
+
+  <text x="60.689655172414" y="242.201834862385" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">message Order {</text>
+  <text x="81.379310344828" y="274.128440366972" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">string id = 1;</text>
+  <text x="81.379310344828" y="300.733944954128" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">int64 created_at = 2;</text>
+  <text x="81.379310344828" y="327.339449541284" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">repeated Item items = 3;</text>
+  <text x="81.379310344828" y="353.94495412844" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">Status status = 4;</text>
+  <text x="81.379310344828" y="380.550458715596" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">map&lt;string, string&gt; tags = 5;</text>
+  <text x="60.689655172414" y="412.477064220184" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">}</text>
+
+  <text x="60.689655172414" y="455.045871559633" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">enum Status {</text>
+  <text x="81.379310344828" y="481.651376146789" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">STATUS_UNSPECIFIED = 0;</text>
+  <text x="81.379310344828" y="508.256880733945" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">STATUS_PLACED = 1;</text>
+  <text x="81.379310344828" y="534.862385321101" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">STATUS_SHIPPED = 2;</text>
+  <text x="60.689655172414" y="561.467889908257" font-family="Courier New, monospace" font-size="14.689445752436" fill="var(--surface)">}</text>
+
+  <text x="60.689655172414" y="604.036697247706" font-family="Courier New, monospace" font-size="13.640199627262" fill="var(--text-faint)">// reserved 6, 7;</text>
+
+  <!-- Annotations -->
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.787938002784" font-weight="bold" fill="var(--text)">key concepts</text>
+
+  <text x="681.379310344828" y="167.706422018349" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">field numbers (= 1, = 2)</text>
+  <text x="681.379310344828" y="188.990825688073" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">unique per message</text>
+
+  <text x="681.379310344828" y="220.917431192661" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">scalar types</text>
+  <text x="681.379310344828" y="242.201834862385" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">string, int64, bool, bytes</text>
+
+  <text x="681.379310344828" y="274.128440366972" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">repeated</text>
+  <text x="681.379310344828" y="295.412844036697" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">a list</text>
+
+  <text x="681.379310344828" y="327.339449541284" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">map&lt;K, V&gt;</text>
+  <text x="681.379310344828" y="348.623853211009" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">key-value pairs</text>
+
+  <text x="681.379310344828" y="380.550458715596" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">enum</text>
+  <text x="681.379310344828" y="401.834862385321" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">always include 0</text>
+
+  <text x="681.379310344828" y="433.761467889908" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--danger-accent)">field numbers are forever</text>
+  <text x="681.379310344828" y="455.045871559633" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">never reuse — reserve</text>
+
+  <text x="681.379310344828" y="486.97247706422" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">backward compat</text>
+  <text x="681.379310344828" y="508.256880733945" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">add optional only</text>
+
+  <text x="681.379310344828" y="540.183486238532" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">nested messages</text>
+  <text x="681.379310344828" y="561.467889908257" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">model hierarchies</text>
+
+  <text x="681.379310344828" y="604.036697247706" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--text-muted)">protoc generates code in many languages</text>
+</svg>

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.280399254524" font-weight="bold" fill="var(--text)">The Four RPC Types</text>
+
+  <!-- Unary -->
+  <rect x="40" y="87.889908256881" width="579.310344827586" height="127.706422018349" rx="6.295476751044" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="81.379310344828" y="125.137614678899" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--primary-text)">Unary</text>
+  <text x="81.379310344828" y="151.743119266055" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--primary-text)">request → response</text>
+
+  <rect x="60.689655172414" y="173.02752293578" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="81.379310344828" y="188.990825688073" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">req</text>
+  <path d="M 102.068965517241 183.669724770642 L 536.551724137931 183.669724770642" fill="none" stroke="var(--surface)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="536.551724137931" y="173.02752293578" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="557.241379310345" y="188.990825688073" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">resp</text>
+
+  <!-- Server stream -->
+  <rect x="40" y="236.880733944954" width="579.310344827586" height="127.706422018349" rx="6.295476751044" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="81.379310344828" y="274.128440366972" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--ok-text)">Server Streaming</text>
+  <text x="81.379310344828" y="298.605504587156" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--ok-text)">request → many responses</text>
+
+  <rect x="60.689655172414" y="322.018348623853" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="81.379310344828" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">req</text>
+  <path d="M 102.068965517241 332.660550458716 L 536.551724137931 332.660550458716" fill="none" stroke="var(--surface)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="422.758620689655" y="322.018348623853" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="443.448275862069" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">r1</text>
+  <rect x="474.48275862069" y="322.018348623853" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="495.172413793103" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">r2</text>
+  <rect x="526.206896551724" y="322.018348623853" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="546.896551724138" y="337.981651376147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">rN</text>
+
+  <!-- Client stream -->
+  <rect x="40" y="385.871559633028" width="579.310344827586" height="127.706422018349" rx="6.295476751044" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="81.379310344828" y="423.119266055046" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--warn-text)">Client Streaming</text>
+  <text x="81.379310344828" y="447.596330275229" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--warn-text)">many requests → response</text>
+
+  <rect x="60.689655172414" y="471.009174311927" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="81.379310344828" y="486.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">q1</text>
+  <rect x="112.413793103448" y="471.009174311927" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="133.103448275862" y="486.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">q2</text>
+  <rect x="164.137931034483" y="471.009174311927" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="184.827586206897" y="486.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">qN</text>
+  <path d="M 205.51724137931 481.651376146789 L 536.551724137931 481.651376146789" fill="none" stroke="var(--surface)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="536.551724137931" y="471.009174311927" width="41.379310344828" height="21.284403669725" rx="2.098492250348" fill="var(--surface)"/>
+  <text x="557.241379310345" y="486.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.541707376914" fill="var(--text)">resp</text>
+
+  <!-- Bidirectional -->
+  <rect x="40" y="534.862385321101" width="579.310344827586" height="85.137614678899" rx="6.295476751044" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="81.379310344828" y="568.917431192661" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--info-text)">Bidirectional Streaming</text>
+  <text x="81.379310344828" y="593.394495412844" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--info-text)">independent streams</text>
+
+  <!-- Use cases -->
+  <rect x="660.689655172414" y="87.889908256881" width="579.310344827586" height="532.110091743119" rx="6.295476751044" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.344827586207" y="125.137614678899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.886430253132" font-weight="bold" fill="var(--text)">Typical Use Cases</text>
+
+  <text x="681.379310344828" y="167.706422018349" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--primary-accent)">Unary</text>
+  <text x="681.379310344828" y="194.311926605505" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- CRUD: GetUser, CreateOrder</text>
+  <text x="681.379310344828" y="217.724770642202" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- default</text>
+
+  <text x="681.379310344828" y="258.165137614679" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--ok-accent)">Server stream</text>
+  <text x="681.379310344828" y="284.770642201835" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- live feeds, prices</text>
+  <text x="681.379310344828" y="308.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- progress updates, log tails</text>
+
+  <text x="681.379310344828" y="348.623853211009" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--warn-accent)">Client stream</text>
+  <text x="681.379310344828" y="375.229357798165" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- file upload chunks</text>
+  <text x="681.379310344828" y="398.642201834862" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- telemetry batches</text>
+
+  <text x="681.379310344828" y="439.082568807339" font-family="Arial, sans-serif" font-size="14.689445752436" font-weight="bold" fill="var(--info-accent)">Bidirectional</text>
+  <text x="681.379310344828" y="465.688073394495" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- chat applications</text>
+  <text x="681.379310344828" y="489.100917431193" font-family="Arial, sans-serif" font-size="13.640199627262" fill="var(--text)">- live collaboration, games</text>
+
+  <text x="681.379310344828" y="540.183486238532" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--danger-accent)">no streaming for simple req/resp</text>
+  <text x="681.379310344828" y="572.110091743119" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--danger-accent)">no bidi when two unary do</text>
+  <text x="681.379310344828" y="604.036697247706" font-family="Arial, sans-serif" font-size="13.640199627262" font-style="italic" fill="var(--ok-accent)">match type to data flow</text>
+</svg>

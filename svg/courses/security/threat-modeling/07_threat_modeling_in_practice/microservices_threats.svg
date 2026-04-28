@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="634.871794871795" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.917736988175" font-weight="bold" fill="var(--text)">Microservices Threat Map</text>
+
+  <!-- User -->
+  <rect x="40" y="233.333333333333" width="164.102564102564" height="83.603603603604" rx="6.21178545881" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122.051282051282" y="280.36036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--primary-text)">User</text>
+
+  <!-- Gateway -->
+  <rect x="265.641025641026" y="233.333333333333" width="184.615384615385" height="83.603603603604" rx="41.411903058731" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="357.948717948718" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--warn-text)">API Gateway</text>
+  <text x="357.948717948718" y="293.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--warn-text)">authn, rate limit</text>
+
+  <!-- Services -->
+  <rect x="532.307692307692" y="107.927927927928" width="184.615384615385" height="83.603603603604" rx="41.411903058731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="624.615384615385" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--ok-text)">Auth</text>
+
+  <rect x="532.307692307692" y="233.333333333333" width="184.615384615385" height="83.603603603604" rx="41.411903058731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="624.615384615385" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--ok-text)">Orders</text>
+
+  <rect x="532.307692307692" y="358.738738738739" width="184.615384615385" height="83.603603603604" rx="41.411903058731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="624.615384615385" y="395.315315315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--ok-text)">Payments</text>
+
+  <rect x="532.307692307692" y="484.144144144144" width="184.615384615385" height="83.603603603604" rx="41.411903058731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="624.615384615385" y="520.720720720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--ok-text)">Inventory</text>
+
+  <!-- DB -->
+  <rect x="798.974358974359" y="233.333333333333" width="184.615384615385" height="83.603603603604" rx="6.21178545881" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="891.282051282051" y="280.36036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.564761223492" font-weight="bold" fill="var(--info-text)">Order DB</text>
+
+  <!-- Lines -->
+  <path d="M 204.102564102564 275.135135135135 L 265.641025641026 275.135135135135" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 450.25641025641 275.135135135135 L 532.307692307692 149.72972972973" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 450.25641025641 275.135135135135 L 532.307692307692 275.135135135135" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 450.25641025641 275.135135135135 L 532.307692307692 400.540540540541" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 450.25641025641 275.135135135135 L 532.307692307692 525.945945945946" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 716.923076923077 275.135135135135 L 798.974358974359 275.135135135135" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 716.923076923077 400.540540540541 Q 757.948717948718 337.837837837838 798.974358974359 296.036036036036" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Trust boundary at gateway -->
+  <line x1="234.871794871795" y1="87.027027027027" x2="234.871794871795" y2="609.54954954955" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="234.871794871795" y="76.576576576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.458868494088" font-weight="bold" fill="var(--danger-accent)">trust boundary</text>
+
+  <!-- Threats annotated -->
+  <rect x="1014.358974358974" y="107.927927927928" width="225.641025641026" height="188.108108108108" rx="6.21178545881" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1127.179487179487" y="137.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.494166070556" font-weight="bold" fill="var(--text)">Service-to-service</text>
+  <text x="1034.871794871795" y="165.405405405405" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Spoofed service ID</text>
+  <text x="1034.871794871795" y="189.441441441441" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Replayed messages</text>
+  <text x="1034.871794871795" y="213.477477477477" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Confused deputy</text>
+  <text x="1034.871794871795" y="237.513513513513" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Token leakage</text>
+  <text x="1034.871794871795" y="265.72972972973" font-family="Arial, sans-serif" font-size="11.388273341151" font-style="italic" fill="var(--text-muted)">→ mTLS, signed tokens</text>
+
+  <rect x="1014.358974358974" y="316.936936936937" width="225.641025641026" height="188.108108108108" rx="6.21178545881" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1127.179487179487" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.494166070556" font-weight="bold" fill="var(--text)">Gateway-specific</text>
+  <text x="1034.871794871795" y="374.414414414414" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Bypass via internal IP</text>
+  <text x="1034.871794871795" y="398.45045045045" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Misconfig allows all</text>
+  <text x="1034.871794871795" y="422.486486486487" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- DoS at the boundary</text>
+  <text x="1034.871794871795" y="446.522522522523" font-family="Arial, sans-serif" font-size="12.423570917619" fill="var(--text)">- Schema injection</text>
+  <text x="1034.871794871795" y="474.738738738739" font-family="Arial, sans-serif" font-size="11.388273341151" font-style="italic" fill="var(--text-muted)">→ defense in depth</text>
+
+  <text x="634.871794871795" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.494166070556" font-style="italic" fill="var(--text-muted)">each network call is a trust boundary; each service must verify, not assume</text>
+</svg>

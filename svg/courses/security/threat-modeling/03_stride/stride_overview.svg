@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">STRIDE: Six Threat Categories</text>
+
+  <!-- 6 boxes in a 3x2 grid -->
+  <rect x="40" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--primary-text)">S — Spoofing</text>
+  <text x="236.551724137931" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--primary-text)">pretending to be another</text>
+  <text x="236.551724137931" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">violates: authentication</text>
+  <text x="236.551724137931" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--primary-text)">mitigate: MFA, mTLS, signed tokens</text>
+
+  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--warn-text)">T — Tampering</text>
+  <text x="640" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">modifying data</text>
+  <text x="640" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">violates: integrity</text>
+  <text x="640" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--warn-text)">mitigate: validation, signatures</text>
+
+  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--info-text)">R — Repudiation</text>
+  <text x="1043.448275862069" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--info-text)">denying an action</text>
+  <text x="1043.448275862069" y="212.432432432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">violates: non-repudiation</text>
+  <text x="1043.448275862069" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--info-text)">mitigate: audit logs, signatures</text>
+
+  <rect x="40" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--danger-text)">I — Disclosure</text>
+  <text x="236.551724137931" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">leaking data</text>
+  <text x="236.551724137931" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">violates: confidentiality</text>
+  <text x="236.551724137931" y="454.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--danger-text)">mitigate: encrypt, access control</text>
+
+  <rect x="443.448275862069" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--warn-text)">D — Denial of Service</text>
+  <text x="640" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">blocking legitimate users</text>
+  <text x="640" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">violates: availability</text>
+  <text x="640" y="454.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--warn-text)">mitigate: rate limits, scaling</text>
+
+  <rect x="846.896551724138" y="316.936936936937" width="393.103448275862" height="167.207207207207" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--danger-text)">E — Elevation</text>
+  <text x="1043.448275862069" y="390.09009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">unauthorized power</text>
+  <text x="1043.448275862069" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">violates: authorization</text>
+  <text x="1043.448275862069" y="454.882882882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--danger-text)">mitigate: least privilege</text>
+
+  <!-- Bottom: per-element table -->
+  <text x="640" y="531.171171171171" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--text-muted)">Per-element applicability</text>
+
+  <rect x="40" y="546.846846846847" width="1200" height="73.153153153153" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60.689655172414" y="576.108108108108" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">External:  S R</text>
+  <text x="340" y="576.108108108108" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">Process: all six</text>
+  <text x="702.068965517241" y="576.108108108108" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">Data store:  T I D</text>
+  <text x="960.689655172414" y="576.108108108108" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">Data flow:  T I D</text>
+  <text x="640" y="604.324324324324" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--text-muted)">walk each element, mark threats, capture specifics</text>
+</svg>

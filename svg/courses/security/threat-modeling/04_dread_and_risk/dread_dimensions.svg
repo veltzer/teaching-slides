@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">DREAD: Five Risk Dimensions</text>
+
+  <!-- Center hub -->
+  <rect x="536.551724137931" y="316.936936936937" width="206.896551724138" height="104.504504504504" rx="6.23850293892" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="356.648648648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.874510776042" font-weight="bold" fill="var(--surface)">DREAD</text>
+  <text x="640" y="384.864864864865" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text-faint)">score 0-10 each</text>
+  <text x="640" y="406.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text-faint)">average for risk</text>
+
+  <!-- D - Damage (top) -->
+  <rect x="495.172413793103" y="107.927927927928" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--danger-text)">D — Damage</text>
+  <text x="640" y="174.810810810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">how bad is exploitation?</text>
+  <text x="640" y="199.891891891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">CIA impact, regulatory</text>
+  <text x="640" y="220.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">reputation, financial</text>
+
+  <!-- R - Reproducibility (left) -->
+  <rect x="40" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">R — Reproducibility</text>
+  <text x="184.827586206897" y="300.216216216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">reliable attack?</text>
+  <text x="184.827586206897" y="325.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">10 = every time</text>
+  <text x="184.827586206897" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">0 = race condition</text>
+
+  <!-- E - Exploitability (right) -->
+  <rect x="950.344827586207" y="233.333333333333" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="269.90990990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">E — Exploitability</text>
+  <text x="1095.172413793103" y="300.216216216216" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">how hard to perform?</text>
+  <text x="1095.172413793103" y="325.297297297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">10 = browser-only</text>
+  <text x="1095.172413793103" y="346.198198198198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">0 = nation-state tools</text>
+
+  <!-- A - Affected users (bottom-left) -->
+  <rect x="40" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="184.827586206897" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--info-text)">A — Affected</text>
+  <text x="184.827586206897" y="498.774774774775" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">how many users?</text>
+  <text x="184.827586206897" y="523.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">10 = everyone</text>
+  <text x="184.827586206897" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--info-text)">5 = some scenarios</text>
+
+  <!-- D - Discoverability (bottom-right) -->
+  <rect x="950.344827586207" y="431.891891891892" width="289.655172413793" height="125.405405405405" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1095.172413793103" y="468.468468468468" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--primary-text)">D — Discoverability</text>
+  <text x="1095.172413793103" y="498.774774774775" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">how easy to find?</text>
+  <text x="1095.172413793103" y="523.855855855856" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">10 = public CVE</text>
+  <text x="1095.172413793103" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--primary-text)">controversial — often dropped</text>
+
+  <!-- bottom note -->
+  <rect x="371.034482758621" y="494.594594594595" width="537.931034482759" height="125.405405405405" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--text)">Banding (avoid false precision)</text>
+  <text x="391.724137931034" y="555.207207207207" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">0-3  →  low      4-6  →  medium</text>
+  <text x="391.724137931034" y="580.288288288288" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">7-8  →  high     9-10 →  critical</text>
+  <text x="640" y="607.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--text-muted)">use the score to bucket — then judge</text>
+</svg>

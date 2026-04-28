@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.200959516425" font-weight="bold" fill="var(--text)">DFD Elements: An Example</text>
+
+  <!-- External entity (user) -->
+  <rect x="40" y="182.156862745098" width="165.51724137931" height="90.980392156863" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122.758620689655" y="221.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.354436625492" font-weight="bold" fill="var(--primary-text)">User</text>
+  <text x="122.758620689655" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--primary-text)">external entity</text>
+
+  <!-- Process (web app) -->
+  <rect x="371.034482758621" y="182.156862745098" width="186.206896551724" height="90.980392156863" rx="43.386091563731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="464.137931034483" y="221.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.354436625492" font-weight="bold" fill="var(--ok-text)">Web App</text>
+  <text x="464.137931034483" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--ok-text)">process</text>
+
+  <!-- Process (auth service) -->
+  <rect x="702.068965517241" y="182.156862745098" width="186.206896551724" height="90.980392156863" rx="43.386091563731" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="795.172413793103" y="221.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.354436625492" font-weight="bold" fill="var(--ok-text)">Auth Service</text>
+  <text x="795.172413793103" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--ok-text)">process</text>
+
+  <!-- Data store (DB) -->
+  <rect x="1033.103448275862" y="182.156862745098" width="206.896551724138" height="90.980392156863" rx="6.50791373456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1136.551724137931" y="221.960784313725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.354436625492" font-weight="bold" fill="var(--warn-text)">User DB</text>
+  <text x="1136.551724137931" y="250.392156862745" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--warn-text)">data store</text>
+
+  <!-- Data flows -->
+  <path d="M 205.51724137931 227.647058823529 L 371.034482758621 227.647058823529" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="257.241379310345" y="214" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--text)">login req</text>
+
+  <path d="M 557.241379310345 227.647058823529 L 702.068965517241 227.647058823529" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="590.344827586207" y="214" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--text)">verify creds</text>
+
+  <path d="M 888.275862068966 227.647058823529 L 1033.103448275862 227.647058823529" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="900.689655172414" y="214" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--text)">SQL query</text>
+
+  <!-- Trust boundary (dashed) -->
+  <line x1="288.275862068966" y1="91.176470588235" x2="288.275862068966" y2="409.607843137255" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="288.275862068966" y="79.803921568627" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.185132047306" font-weight="bold" fill="var(--danger-accent)">trust boundary</text>
+  <text x="288.275862068966" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--danger-accent)">internet vs internal</text>
+
+  <line x1="960.689655172414" y1="91.176470588235" x2="960.689655172414" y2="409.607843137255" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10 6"/>
+  <text x="960.689655172414" y="79.803921568627" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.185132047306" font-weight="bold" fill="var(--danger-accent)">trust boundary</text>
+  <text x="960.689655172414" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.015827469119" fill="var(--danger-accent)">app vs database</text>
+
+  <!-- Legend -->
+  <text x="640" y="489.21568627451" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.523741203679" font-weight="bold" fill="var(--text-muted)">Five DFD Element Types</text>
+
+  <rect x="40" y="517.647058823529" width="62.068965517241" height="45.490196078431" rx="6.50791373456" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.103448275862" y="546.078431372549" font-family="Arial, sans-serif" font-size="15.185132047306" fill="var(--text)">external entity (rect)</text>
+
+  <rect x="40" y="574.509803921569" width="62.068965517241" height="45.490196078431" rx="21.693045781866" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.103448275862" y="602.941176470588" font-family="Arial, sans-serif" font-size="15.185132047306" fill="var(--text)">process (rounded)</text>
+
+  <rect x="453.793103448276" y="517.647058823529" width="62.068965517241" height="45.490196078431" rx="6.50791373456" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="536.551724137931" y="546.078431372549" font-family="Arial, sans-serif" font-size="15.185132047306" fill="var(--text)">data store (parallel)</text>
+
+  <line x1="453.793103448276" y1="591.56862745098" x2="515.862068965517" y2="591.56862745098" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="536.551724137931" y="598.392156862745" font-family="Arial, sans-serif" font-size="15.185132047306" fill="var(--text)">data flow (arrow)</text>
+
+  <line x1="867.586206896552" y1="517.647058823529" x2="867.586206896552" y2="608.627450980392" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="908.965517241379" y="568.823529411765" font-family="Arial, sans-serif" font-size="15.185132047306" fill="var(--text)">trust boundary (dashed)</text>
+</svg>

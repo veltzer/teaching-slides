@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.763275666852" font-weight="bold" fill="var(--text)">Reflog Recovery</text>
+
+  <!-- The disaster timeline -->
+  <text x="40" y="87.889908256881" font-family="Arial, sans-serif" font-size="19.22072930782" font-weight="bold" fill="var(--text-muted)">What happened</text>
+
+  <!-- Branch view top -->
+  <rect x="40" y="119.816513761468" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="82.857142857143" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">A</text>
+
+  <rect x="168.571428571429" y="119.816513761468" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">B</text>
+
+  <rect x="297.142857142857" y="119.816513761468" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="146.422018348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--ok-text)">C</text>
+  <text x="340" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.746001243668" fill="var(--ok-text)">important!</text>
+
+  <rect x="425.714285714286" y="119.816513761468" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="468.571428571428" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--ok-text)">D</text>
+
+  <rect x="554.285714285714" y="119.816513761468" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="597.142857142857" y="151.743119266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--ok-text)">E</text>
+
+  <path d="M 125.714285714286 146.422018348624 L 168.571428571429 146.422018348624" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 254.285714285714 146.422018348624 L 297.142857142857 146.422018348624" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 382.857142857143 146.422018348624 L 425.714285714286 146.422018348624" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 511.428571428571 146.422018348624 L 554.285714285714 146.422018348624" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Disaster: reset hard -->
+  <rect x="704.285714285714" y="109.174311926606" width="535.714285714286" height="74.495412844037" rx="6.406909769273" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="138.97247706422" text-anchor="middle" font-family="Courier New, monospace" font-size="14.949456128305" fill="var(--danger-text)">$ git reset --hard B</text>
+  <text x="972.142857142857" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--danger-text)">C, D, E unreferenced (not deleted)</text>
+
+  <!-- After reset -->
+  <text x="40" y="236.880733944954" font-family="Arial, sans-serif" font-size="19.22072930782" font-weight="bold" fill="var(--text-muted)">After</text>
+
+  <rect x="40" y="268.807339449541" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="82.857142857143" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">A</text>
+
+  <rect x="168.571428571429" y="268.807339449541" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="295.412844036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">B</text>
+  <text x="211.428571428571" y="313.504587155963" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.746001243668" fill="var(--primary-text)">HEAD</text>
+
+  <rect x="297.142857142857" y="268.807339449541" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+  <text x="340" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-faint)">C</text>
+
+  <rect x="425.714285714286" y="268.807339449541" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+  <text x="468.571428571428" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-faint)">D</text>
+
+  <rect x="554.285714285714" y="268.807339449541" width="85.714285714286" height="53.211009174312" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+  <text x="597.142857142857" y="300.733944954128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-faint)">E</text>
+
+  <path d="M 125.714285714286 295.412844036697 L 168.571428571429 295.412844036697" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="297.142857142857" y="353.94495412844" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-faint)">unreachable, still in object database</text>
+
+  <!-- Reflog rescue -->
+  <rect x="40" y="407.155963302752" width="685.714285714286" height="212.844036697248" rx="6.406909769273" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="61.428571428571" y="439.082568807339" font-family="Courier New, monospace" font-size="14.949456128305" fill="var(--surface)">$ git reflog</text>
+  <text x="61.428571428571" y="465.688073394495" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--text-faint)">b22f456 HEAD@{0}: reset to B</text>
+  <text x="61.428571428571" y="490.165137614679" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--surface)">e51c789 HEAD@{1}: commit E (lost!)</text>
+  <text x="61.428571428571" y="514.642201834862" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--text-faint)">d40b234 HEAD@{2}: D</text>
+  <text x="61.428571428571" y="539.119266055046" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--text-faint)">c93a567 HEAD@{3}: C</text>
+  <text x="61.428571428571" y="568.917431192661" font-family="Courier New, monospace" font-size="14.949456128305" fill="var(--surface)">$ git reset --hard HEAD@{1}</text>
+  <text x="61.428571428571" y="596.587155963303" font-family="Courier New, monospace" font-size="14.949456128305" fill="var(--ok-text)">recovered!</text>
+
+  <!-- right panel facts -->
+  <rect x="768.571428571429" y="236.880733944954" width="471.428571428571" height="383.119266055046" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1004.285714285714" y="274.128440366972" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.22072930782" font-weight="bold" fill="var(--text)">Reflog facts</text>
+
+  <text x="790" y="316.697247706422" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- Records HEAD movements</text>
+  <text x="790" y="346.495412844037" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- Per-branch reflog</text>
+  <text x="790" y="376.293577981651" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- HEAD@{N}: N entries ago</text>
+  <text x="790" y="406.091743119266" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- HEAD@{yesterday}</text>
+  <text x="790" y="435.889908256881" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- Reachable: 90 days</text>
+  <text x="790" y="465.688073394495" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- Unreachable: 30 days</text>
+  <text x="790" y="495.48623853211" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--text)">- After: gc deletes</text>
+
+  <text x="790" y="540.183486238532" font-family="Arial, sans-serif" font-size="14.949456128305" font-weight="bold" fill="var(--danger-accent)">First instinct:</text>
+  <text x="790" y="567.853211009174" font-family="Courier New, monospace" font-size="14.949456128305" fill="var(--text)">$ git reflog</text>
+  <text x="790" y="598.715596330275" font-family="Arial, sans-serif" font-size="13.881637833426" font-style="italic" fill="var(--text-muted)">Recovery is finding the SHA.</text>
+</svg>

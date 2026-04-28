@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Event-Driven Architecture</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Brokers, sagas, sourcing, and the discipline of asynchrony</text>
+
+  <!-- producer -->
+  <rect x="180" y="320" width="180" height="100" rx="40" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="270" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Producer</text>
+
+  <!-- broker -->
+  <rect x="540" y="290" width="200" height="160" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Broker</text>
+  <text x="640" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Kafka · RabbitMQ</text>
+  <text x="640" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">SNS/SQS · Pulsar</text>
+
+  <!-- consumer -->
+  <rect x="900" y="320" width="180" height="100" rx="40" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="990" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Consumer</text>
+
+  <!-- arrows -->
+  <path d="M 360 370 L 540 370" fill="none" stroke="var(--surface)" stroke-width="3"/>
+  <path d="M 740 370 L 900 370" fill="none" stroke="var(--surface)" stroke-width="3"/>
+
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--text-faint)">decoupled, scalable, eventually consistent</text>
+</svg>

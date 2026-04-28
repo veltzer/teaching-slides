@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="868.571428571429" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.626003251006" font-weight="bold" fill="var(--text)">DNSSEC Chain of Trust</text>
+
+  <!-- Root -->
+  <rect x="668.571428571429" y="86.607142857143" width="400" height="103.571428571429" rx="7.29830844254" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="868.571428571429" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.89492532762" font-weight="bold" fill="var(--primary-text)">Root zone (.)</text>
+  <text x="868.571428571429" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--primary-text)">DNSKEY</text>
+  <text x="868.571428571429" y="172.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--primary-text)">trust anchor</text>
+
+  <!-- com TLD -->
+  <rect x="668.571428571429" y="231.607142857143" width="400" height="103.571428571429" rx="7.29830844254" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="868.571428571429" y="267.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.89492532762" font-weight="bold" fill="var(--info-text)">.com zone</text>
+  <text x="868.571428571429" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--info-text)">DS for example.com</text>
+  <text x="868.571428571429" y="317.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--info-text)">hash of child KSK</text>
+
+  <!-- example.com -->
+  <rect x="668.571428571429" y="376.607142857143" width="400" height="103.571428571429" rx="7.29830844254" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="868.571428571429" y="412.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.89492532762" font-weight="bold" fill="var(--ok-text)">example.com zone</text>
+  <text x="868.571428571429" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--ok-text)">RRSIG signs records</text>
+  <text x="868.571428571429" y="462.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--ok-text)">DNSKEY: KSK + ZSK</text>
+
+  <!-- Records -->
+  <rect x="668.571428571429" y="521.607142857143" width="400" height="82.857142857143" rx="7.29830844254" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="868.571428571429" y="557.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.462155846773" font-weight="bold" fill="var(--warn-text)">www A 1.2.3.4</text>
+  <text x="868.571428571429" y="583.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--warn-text)">+ RRSIG</text>
+
+  <!-- Arrows -->
+  <path d="M 868.571428571429 190.178571428571 L 868.571428571429 231.607142857143" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="897.142857142857" y="216.071428571429" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--text)">signs DS</text>
+
+  <path d="M 868.571428571429 335.178571428571 L 868.571428571429 376.607142857143" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="897.142857142857" y="361.071428571429" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--text)">parent → child</text>
+
+  <path d="M 868.571428571429 480.178571428571 L 868.571428571429 521.607142857143" fill="none" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="897.142857142857" y="506.071428571429" font-family="Arial, sans-serif" font-size="14.59661688508" fill="var(--text)">ZSK signs records</text>
+
+  <!-- Left side: validation flow -->
+  <rect x="40" y="86.607142857143" width="542.857142857143" height="517.857142857143" rx="7.29830844254" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="311.428571428571" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.462155846773" font-weight="bold" fill="var(--text)">Resolver validation</text>
+
+  <text x="68.571428571429" y="159.107142857143" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--text)">1. Get record + RRSIG</text>
+  <text x="68.571428571429" y="185" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">A + RRSIG</text>
+
+  <text x="68.571428571429" y="226.428571428571" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--text)">2. Get ZSK</text>
+  <text x="68.571428571429" y="252.321428571429" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">DNSKEY</text>
+
+  <text x="68.571428571429" y="293.75" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--text)">3. Verify DNSKEY via KSK</text>
+  <text x="68.571428571429" y="319.642857142857" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">KSK signs DNSKEY</text>
+
+  <text x="68.571428571429" y="361.071428571429" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--text)">4. Check DS at parent</text>
+  <text x="68.571428571429" y="386.964285714286" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">.com DS hashes KSK</text>
+
+  <text x="68.571428571429" y="428.392857142857" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--text)">5. Verify .com via root</text>
+  <text x="68.571428571429" y="454.285714285714" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">root signs DS</text>
+
+  <text x="68.571428571429" y="500.892857142857" font-family="Arial, sans-serif" font-size="17.029386365926" font-weight="bold" fill="var(--ok-accent)">6. Trust anchor</text>
+  <text x="68.571428571429" y="526.785714285714" font-family="Arial, sans-serif" font-size="15.813001625503" fill="var(--text-muted)">root key known</text>
+
+  <text x="311.428571428571" y="578.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.813001625503" font-style="italic" fill="var(--ok-accent)">AD flag set if all checks pass</text>
+
+  <text x="1240" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.813001625503" font-style="italic" fill="var(--text-muted)">break any link → SERVFAIL</text>
+</svg>

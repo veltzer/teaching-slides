@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">Event Sourcing: State From Events</text>
+
+  <text x="184.827586206897" y="87.027027027027" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--text-muted)">Traditional CRUD</text>
+
+  <rect x="40" y="118.378378378378" width="331.034482758621" height="104.504504504504" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205.51724137931" y="154.954954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--primary-text)">Account: alice</text>
+  <text x="205.51724137931" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--primary-text)">balance: $250.00</text>
+  <text x="205.51724137931" y="210.342342342342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" font-style="italic" fill="var(--primary-text)">history: gone</text>
+
+  <text x="60.689655172414" y="254.234234234234" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text-muted)">- update on every transaction</text>
+  <text x="60.689655172414" y="277.225225225225" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text-muted)">- only current state visible</text>
+  <text x="60.689655172414" y="300.216216216216" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-accent)">- no audit; can't replay</text>
+
+  <line x1="640" y1="87.027027027027" x2="640" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <text x="908.965517241379" y="87.027027027027" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--text-muted)">Event Sourced</text>
+
+  <rect x="702.068965517241" y="118.378378378378" width="537.931034482759" height="292.612612612613" rx="6.23850293892" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="971.034482758621" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--surface)">stream: account-alice</text>
+
+  <rect x="722.758620689655" y="160.18018018018" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="181.081081081081" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--ok-text)">v1: AccountOpened     {balance: 0}</text>
+
+  <rect x="722.758620689655" y="199.891891891892" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="220.792792792793" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--ok-text)">v2: Deposited         {amount: 100}</text>
+
+  <rect x="722.758620689655" y="239.603603603604" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="260.504504504504" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--ok-text)">v3: Deposited         {amount: 200}</text>
+
+  <rect x="722.758620689655" y="279.315315315315" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="300.216216216216" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--warn-text)">v4: Withdrew          {amount: 50}</text>
+
+  <rect x="722.758620689655" y="319.027027027027" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="339.927927927928" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--ok-text)">v5: Deposited         {amount: 50}</text>
+
+  <rect x="722.758620689655" y="358.738738738739" width="496.551724137931" height="33.441441441441" rx="4.15900195928" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="733.103448275862" y="379.63963963964" font-family="Courier New, monospace" font-size="11.437255388021" fill="var(--warn-text)">v6: Withdrew          {amount: 50}</text>
+
+  <text x="702.068965517241" y="447.567567567568" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">balance(now)  = fold(events, 0)  = 250</text>
+  <text x="702.068965517241" y="473.693693693694" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">balance(v3)   = fold(events[0..3], 0)  = 300</text>
+
+  <text x="702.068965517241" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-accent)">+ full audit; can replay; time travel</text>
+  <text x="702.068965517241" y="538.486486486486" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-accent)">+ aligns with business semantics</text>
+  <text x="702.068965517241" y="561.477477477477" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text-muted)">- complex; needs snapshots for perf</text>
+  <text x="702.068965517241" y="584.468468468468" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text-muted)">- queries need projections (CQRS)</text>
+
+  <text x="184.827586206897" y="609.54954954955" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-style="italic" fill="var(--text-muted)">events are immutable; the past is fixed</text>
+</svg>

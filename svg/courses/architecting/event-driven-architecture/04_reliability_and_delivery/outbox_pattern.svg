@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--text)">Transactional Outbox Pattern</text>
+
+  <!-- Service -->
+  <rect x="40" y="149.72972972973" width="203.389830508475" height="104.504504504504" rx="41.236055542249" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.694915254237" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--primary-text)">Service</text>
+  <text x="141.694915254237" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--primary-text)">handles request</text>
+
+  <!-- Database with two tables -->
+  <rect x="324.745762711864" y="107.927927927928" width="386.440677966102" height="209.009009009009" rx="6.185408331337" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="517.966101694915" y="139.279279279279" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" font-weight="bold" fill="var(--warn-text)">Database (one ACID transaction)</text>
+
+  <rect x="345.084745762712" y="160.18018018018" width="162.71186440678" height="135.855855855856" rx="4.123605554225" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="426.440677966102" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" font-weight="bold" fill="var(--text)">orders</text>
+  <text x="355.254237288136" y="217.657657657658" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">id: 42</text>
+  <text x="355.254237288136" y="241.693693693694" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">status: PLACED</text>
+  <text x="355.254237288136" y="265.72972972973" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">total: $50</text>
+
+  <rect x="528.135593220339" y="160.18018018018" width="162.71186440678" height="135.855855855856" rx="4.123605554225" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="609.491525423729" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.432619439787" font-weight="bold" fill="var(--text)">outbox</text>
+  <text x="538.305084745763" y="217.657657657658" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">id: 99</text>
+  <text x="538.305084745763" y="241.693693693694" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">event: OrderPlaced</text>
+  <text x="538.305084745763" y="265.72972972973" font-family="Courier New, monospace" font-size="11.339915274119" fill="var(--text)">status: PENDING</text>
+
+  <path d="M 243.389830508475 201.981981981982 L 324.745762711864 201.981981981982" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="253.559322033898" y="191.531531531532" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--text-muted)">begin tx</text>
+
+  <!-- Worker -->
+  <rect x="792.542372881356" y="149.72972972973" width="203.389830508475" height="104.504504504504" rx="41.236055542249" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="894.237288135593" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--info-text)">Worker</text>
+  <text x="894.237288135593" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--info-text)">polls outbox</text>
+
+  <path d="M 711.186440677966 207.207207207207 L 792.542372881356 207.207207207207" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="721.35593220339" y="196.756756756757" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--text-muted)">SELECT pending</text>
+
+  <!-- Broker -->
+  <rect x="1077.28813559322" y="149.72972972973" width="162.71186440678" height="104.504504504504" rx="6.185408331337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1158.64406779661" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.556224994012" font-weight="bold" fill="var(--ok-text)">Broker</text>
+  <text x="1158.64406779661" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--ok-text)">Kafka, etc</text>
+
+  <path d="M 995.932203389831 207.207207207207 L 1077.28813559322 207.207207207207" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1006.101694915254" y="196.756756756757" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--text-muted)">publish</text>
+
+  <path d="M 894.237288135593 264.684684684685 Q 792.542372881356 348.288288288288 589.152542372881 316.936936936937" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <text x="690.847457627119" y="379.63963963964" font-family="Arial, sans-serif" font-size="12.370816662675" fill="var(--text-muted)">mark sent (or delete)</text>
+
+  <!-- Bottom explanation -->
+  <rect x="40" y="421.441441441441" width="1179.661016949153" height="198.558558558559" rx="6.185408331337" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.830508474576" y="452.792792792793" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" font-weight="bold" fill="var(--text)">Why outbox?</text>
+  <text x="60.338983050847" y="482.054054054054" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text)">- without it: write DB, then publish event — what if publish fails after DB commits?</text>
+  <text x="60.338983050847" y="507.135135135135" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text)">- result: state diverges between service and downstream consumers</text>
+  <text x="60.338983050847" y="532.216216216216" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text)">- with outbox: DB write + event row in one transaction — atomic</text>
+  <text x="60.338983050847" y="559.387387387387" font-family="Arial, sans-serif" font-size="14.432619439787" fill="var(--text)">- worker publishes from outbox; at-least-once delivery, end-to-end consistency</text>
+  <text x="60.338983050847" y="593.873873873874" font-family="Arial, sans-serif" font-size="14.432619439787" font-style="italic" fill="var(--ok-accent)">Debezium can stream outbox to Kafka automatically — no custom worker</text>
+</svg>

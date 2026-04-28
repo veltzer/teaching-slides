@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.331223544175" font-weight="bold" fill="var(--text)">Choreography: Decentralized Saga via Events</text>
+
+  <!-- Broker in middle -->
+  <rect x="495.172413793103" y="263.076923076923" width="289.655172413793" height="118.974358974359" rx="6.076436202502" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="302.735042735043" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.254787341673" font-weight="bold" fill="var(--warn-text)">Event Broker</text>
+  <text x="640" y="332.478632478632" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.178351139171" fill="var(--warn-text)">no orchestrator</text>
+  <text x="640" y="357.264957264957" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.165611772088" font-style="italic" fill="var(--warn-text)">workflow is emergent</text>
+
+  <!-- Services around the broker -->
+  <rect x="81.379310344828" y="104.444444444444" width="227.586206896552" height="99.145299145299" rx="6.076436202502" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="195.172413793103" y="139.145299145299" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.203829873339" font-weight="bold" fill="var(--ok-text)">Order Service</text>
+  <text x="195.172413793103" y="163.931623931624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--ok-text)">emits: OrderPlaced</text>
+  <text x="195.172413793103" y="183.760683760684" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--ok-text)">listens: -</text>
+
+  <rect x="971.034482758621" y="104.444444444444" width="227.586206896552" height="99.145299145299" rx="6.076436202502" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1084.827586206897" y="139.145299145299" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.203829873339" font-weight="bold" fill="var(--ok-text)">Inventory Service</text>
+  <text x="1084.827586206897" y="163.931623931624" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--ok-text)">listens: OrderPlaced</text>
+  <text x="1084.827586206897" y="183.760683760684" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--ok-text)">emits: ItemReserved</text>
+
+  <rect x="81.379310344828" y="441.538461538462" width="227.586206896552" height="99.145299145299" rx="6.076436202502" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="195.172413793103" y="476.239316239316" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.203829873339" font-weight="bold" fill="var(--info-text)">Payment Service</text>
+  <text x="195.172413793103" y="501.025641025641" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--info-text)">listens: ItemReserved</text>
+  <text x="195.172413793103" y="520.854700854701" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--info-text)">emits: PaymentReceived</text>
+
+  <rect x="971.034482758621" y="441.538461538462" width="227.586206896552" height="99.145299145299" rx="6.076436202502" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1084.827586206897" y="476.239316239316" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.203829873339" font-weight="bold" fill="var(--info-text)">Shipping Service</text>
+  <text x="1084.827586206897" y="501.025641025641" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--info-text)">listens: PaymentReceived</text>
+  <text x="1084.827586206897" y="520.854700854701" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.152872405004" fill="var(--info-text)">emits: OrderShipped</text>
+
+  <!-- Arrows in/out of broker -->
+  <path d="M 308.965517241379 183.760683760684 Q 402.068965517241 223.418803418803 495.172413793103 272.991452991453" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 272.991452991453 Q 877.931034482759 223.418803418803 971.034482758621 183.760683760684" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 495.172413793103 372.136752136752 Q 402.068965517241 421.709401709402 308.965517241379 441.538461538462" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 308.965517241379 491.111111111111 Q 402.068965517241 441.538461538462 495.172413793103 382.051282051282" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 784.827586206897 382.051282051282 Q 877.931034482759 451.452991452991 971.034482758621 481.196581196581" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bottom note -->
+  <rect x="40" y="580.34188034188" width="1200" height="39.65811965812" rx="6.076436202502" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="604.136752136752" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.178351139171" font-style="italic" fill="var(--text-muted)">no central control — each service reacts to upstream events; debug via correlation IDs</text>
+</svg>

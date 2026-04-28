@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.797299082095" font-weight="bold" fill="var(--text)">Three-Way Merge: Why Git Needs the Common Ancestor</text>
+
+  <!-- Base box (top center) -->
+  <rect x="479.285714285714" y="84.615384615385" width="321.428571428571" height="79.316239316239" rx="6.183992095868" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="114.358974358974" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--primary-text)">BASE  (common ancestor)</text>
+  <text x="640" y="139.145299145299" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--primary-text)">price = item.price</text>
+
+  <!-- Ours (left) -->
+  <rect x="40" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="211.428571428571" y="253.162393162393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--ok-text)">OURS  (HEAD branch)</text>
+  <text x="211.428571428571" y="280.923076923077" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--ok-text)">price = item.price * tax_rate</text>
+  <text x="211.428571428571" y="304.717948717949" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--ok-text)">we added tax_rate</text>
+
+  <!-- Theirs (right) -->
+  <rect x="897.142857142857" y="223.418803418803" width="342.857142857143" height="99.145299145299" rx="6.183992095868" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1068.571428571428" y="253.162393162393" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--warn-text)">THEIRS  (incoming branch)</text>
+  <text x="1068.571428571428" y="280.923076923077" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--warn-text)">price = item.price * discount</text>
+  <text x="1068.571428571428" y="304.717948717949" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--warn-text)">they added discount</text>
+
+  <!-- arrows from base -->
+  <path d="M 532.857142857143 163.931623931624 L 254.285714285714 223.418803418803" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 747.142857142857 163.931623931624 L 1025.714285714286 223.418803418803" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Conflict marker box -->
+  <rect x="168.571428571429" y="382.051282051282" width="942.857142857143" height="158.632478632479" rx="6.183992095868" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="411.794871794872" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--surface)">Conflict markers (with diff3 style)</text>
+  <text x="190" y="439.555555555556" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--ok-text)">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+  <text x="190" y="457.401709401709" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--ok-text)">    price = item.price * tax_rate</text>
+  <text x="190" y="477.230769230769" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--primary-text)">||||||| merged common ancestors</text>
+  <text x="190" y="495.076923076923" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--primary-text)">    price = item.price</text>
+  <text x="190" y="512.923076923077" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--warn-text)">=======</text>
+  <text x="190" y="530.769230769231" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--warn-text)">    price = item.price * discount</text>
+  <text x="918.571428571429" y="457.401709401709" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--text-faint)">our edit</text>
+  <text x="918.571428571429" y="495.076923076923" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--text-faint)">the base shows intent</text>
+  <text x="918.571428571429" y="530.769230769231" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--text-faint)">their edit</text>
+
+  <!-- Resolution -->
+  <rect x="382.857142857143" y="570.42735042735" width="514.285714285714" height="49.57264957265" rx="6.183992095868" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="591.247863247863" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.429314890359" font-weight="bold" fill="var(--info-text)">Resolution: combine both intentions</text>
+  <text x="640" y="610.08547008547" text-anchor="middle" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--info-text)">price = item.price * tax_rate * discount</text>
+</svg>

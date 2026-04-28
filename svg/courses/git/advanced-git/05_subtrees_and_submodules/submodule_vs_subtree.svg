@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.512019135483" font-weight="bold" fill="var(--text)">Submodule vs Subtree</text>
+
+  <!-- SUBMODULE side -->
+  <text x="297.142857142857" y="87.027027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Submodule: pointer to another repo</text>
+
+  <rect x="40" y="118.378378378378" width="514.285714285714" height="229.90990990991" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="297.142857142857" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--primary-text)">main repo</text>
+
+  <rect x="72.142857142857" y="170.630630630631" width="150" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="147.142857142857" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">src/app.py</text>
+
+  <rect x="243.571428571429" y="170.630630630631" width="150" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="318.571428571429" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">.gitmodules</text>
+
+  <rect x="415" y="170.630630630631" width="128.571428571429" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="479.285714285714" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">README.md</text>
+
+  <!-- gitlink -->
+  <rect x="136.428571428571" y="243.783783783784" width="300" height="83.603603603604" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="286.428571428571" y="273.045045045045" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--info-text)">lib/example/  → gitlink</text>
+  <text x="286.428571428571" y="298.126126126126" text-anchor="middle" font-family="Courier New, monospace" font-size="12.697854985608" fill="var(--info-text)">commit abc1234</text>
+  <text x="286.428571428571" y="316.936936936937" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" font-style="italic" fill="var(--info-text)">(no actual files here)</text>
+
+  <!-- linked repo -->
+  <rect x="40" y="379.63963963964" width="514.285714285714" height="104.504504504504" rx="6.348927492804" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="297.142857142857" y="413.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.930473314144" font-weight="bold" fill="var(--ok-text)">github.com/example/lib</text>
+  <text x="297.142857142857" y="440.252252252252" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--ok-text)">commit abc1234 · v2.1.0</text>
+  <text x="297.142857142857" y="463.243243243243" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">separately cloned, own .git and history</text>
+
+  <path d="M 286.428571428571 327.387387387387 L 286.428571428571 379.63963963964" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <text x="40" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">+ explicit version pinning</text>
+  <text x="40" y="541.621621621622" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">+ inner repo evolves independently</text>
+  <text x="40" y="567.747747747748" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- easy to forget update</text>
+  <text x="40" y="593.873873873874" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- onboarding friction</text>
+
+  <!-- divider -->
+  <line x1="640" y1="87.027027027027" x2="640" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- SUBTREE side -->
+  <text x="982.857142857143" y="87.027027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Subtree: content merged in</text>
+
+  <rect x="704.285714285714" y="118.378378378378" width="535.714285714286" height="365.765765765766" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.046782478411" font-weight="bold" fill="var(--primary-text)">main repo</text>
+
+  <rect x="736.428571428571" y="170.630630630631" width="150" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="811.428571428571" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">src/app.py</text>
+
+  <rect x="907.857142857143" y="170.630630630631" width="150" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="982.857142857143" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">README.md</text>
+
+  <rect x="1079.285714285714" y="170.630630630631" width="128.571428571429" height="41.801801801802" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1143.571428571428" y="197.801801801802" text-anchor="middle" font-family="Courier New, monospace" font-size="13.756009567742" fill="var(--text)">build.yaml</text>
+
+  <!-- subtree as actual content -->
+  <rect x="736.428571428571" y="243.783783783784" width="471.428571428571" height="209.009009009009" rx="6.348927492804" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="972.142857142857" y="275.135135135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--ok-text)">lib/example/  (real files)</text>
+
+  <rect x="768.571428571429" y="301.261261261261" width="128.571428571429" height="36.576576576577" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="832.857142857143" y="325.297297297297" text-anchor="middle" font-family="Courier New, monospace" font-size="12.697854985608" fill="var(--text)">core.py</text>
+
+  <rect x="918.571428571429" y="301.261261261261" width="128.571428571429" height="36.576576576577" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="982.857142857143" y="325.297297297297" text-anchor="middle" font-family="Courier New, monospace" font-size="12.697854985608" fill="var(--text)">utils.py</text>
+
+  <rect x="1068.571428571428" y="301.261261261261" width="107.142857142857" height="36.576576576577" rx="4.232618328536" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1122.142857142857" y="325.297297297297" text-anchor="middle" font-family="Courier New, monospace" font-size="12.697854985608" fill="var(--text)">tests/</text>
+
+  <text x="972.142857142857" y="369.189189189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">imported via: git subtree add --squash</text>
+  <text x="972.142857142857" y="392.18018018018" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--ok-text)">updated via:  git subtree pull --squash</text>
+  <text x="972.142857142857" y="421.441441441441" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.639700403474" font-style="italic" fill="var(--ok-text)">no .gitmodules, no lock</text>
+
+  <text x="704.285714285714" y="515.495495495495" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">+ "just clones": no extra setup</text>
+  <text x="704.285714285714" y="541.621621621622" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text-muted)">+ no hidden state to forget</text>
+  <text x="704.285714285714" y="567.747747747748" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- repo grows with imports</text>
+  <text x="704.285714285714" y="593.873873873874" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--danger-accent)">- upstream contrib awkward</text>
+</svg>

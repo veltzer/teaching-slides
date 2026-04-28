@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">Multi-Layer DNS Caching</text>
+
+  <!-- Browser -->
+  <rect x="40" y="191.531531531532" width="186.206896551724" height="104.504504504504" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133.103448275862" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--primary-text)">Browser</text>
+  <text x="133.103448275862" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--primary-text)">per-tab cache</text>
+
+  <!-- OS -->
+  <rect x="267.586206896552" y="191.531531531532" width="186.206896551724" height="104.504504504504" rx="6.23850293892" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360.689655172414" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--info-text)">OS Resolver</text>
+  <text x="360.689655172414" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--info-text)">stub cache</text>
+
+  <!-- Recursive -->
+  <rect x="495.172413793103" y="191.531531531532" width="227.586206896552" height="104.504504504504" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="608.965517241379" y="233.333333333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--warn-text)">Recursive Resolver</text>
+  <text x="608.965517241379" y="264.684684684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--warn-text)">main cache</text>
+
+  <!-- Auth chain -->
+  <rect x="784.827586206897" y="107.927927927928" width="206.896551724138" height="62.702702702703" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-text)">Root</text>
+
+  <rect x="784.827586206897" y="212.432432432432" width="206.896551724138" height="62.702702702703" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="249.009009009009" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-text)">.com TLD</text>
+
+  <rect x="784.827586206897" y="316.936936936937" width="206.896551724138" height="62.702702702703" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="888.275862068966" y="353.513513513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" font-weight="bold" fill="var(--ok-text)">example.com</text>
+
+  <!-- arrows -->
+  <path d="M 226.206896551724 243.783783783784 L 267.586206896552 243.783783783784" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 453.793103448276 243.783783783784 L 495.172413793103 243.783783783784" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 722.758620689655 233.333333333333 Q 764.137931034483 191.531531531532 784.827586206897 139.279279279279" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 722.758620689655 243.783783783784 L 784.827586206897 243.783783783784" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 722.758620689655 254.234234234234 Q 764.137931034483 296.036036036036 784.827586206897 348.288288288288" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Cache hit indicators -->
+  <text x="133.103448275862" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--ok-accent)">cache hit (95%+)</text>
+  <text x="360.689655172414" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--ok-accent)">cache hit</text>
+  <text x="608.965517241379" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--ok-accent)">cache hit</text>
+  <text x="888.275862068966" y="405.765765765766" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--danger-accent)">walks only on cache miss</text>
+
+  <!-- Bottom: TTL behavior -->
+  <rect x="40" y="452.792792792793" width="1200" height="167.207207207207" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="484.144144144144" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--text)">TTL governs caching at every layer</text>
+
+  <text x="60.689655172414" y="515.495495495495" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- positive cache: successful responses, per record TTL</text>
+  <text x="60.689655172414" y="541.621621621622" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- negative cache: NXDOMAIN responses, per SOA minimum</text>
+  <text x="60.689655172414" y="567.747747747748" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- short TTL = fast propagation, more queries upstream</text>
+  <text x="60.689655172414" y="593.873873873874" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- long TTL = less load, slower changes (drop TTL before migrations)</text>
+</svg>

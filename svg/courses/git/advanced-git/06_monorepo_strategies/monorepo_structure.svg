@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.763275666852" font-weight="bold" fill="var(--text)">Monorepo Structure</text>
+
+  <!-- root box -->
+  <rect x="40" y="77.247706422018" width="1200" height="106.422018348624" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="109.174311926606" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.356365897578" font-weight="bold" fill="var(--primary-text)">monorepo</text>
+  <text x="640" y="138.97247706422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.949456128305" fill="var(--primary-text)">trunk-based · CODEOWNERS</text>
+  <text x="640" y="164.51376146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--primary-text)">atomic cross-cutting changes</text>
+
+  <!-- four pillars below -->
+  <rect x="40" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="179.285714285714" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--ok-text)">services/</text>
+  <text x="61.428571428571" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">auth/</text>
+  <text x="61.428571428571" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">payments/</text>
+  <text x="61.428571428571" y="330.532110091743" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">orders/</text>
+  <text x="61.428571428571" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--ok-text)">notifications/</text>
+  <text x="61.428571428571" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--ok-text)">team-owned</text>
+
+  <rect x="350.714285714286" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--warn-text)">libs/</text>
+  <text x="372.142857142857" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">shared-types/</text>
+  <text x="372.142857142857" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">api-client/</text>
+  <text x="372.142857142857" y="330.532110091743" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">protobuf/</text>
+  <text x="372.142857142857" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--warn-text)">utils/</text>
+  <text x="372.142857142857" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--warn-text)">platform team owns</text>
+
+  <rect x="661.428571428571" y="215.596330275229" width="278.571428571429" height="191.559633027523" rx="6.406909769273" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800.714285714286" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--info-text)">infra/</text>
+  <text x="682.857142857143" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">terraform/</text>
+  <text x="682.857142857143" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">k8s/</text>
+  <text x="682.857142857143" y="330.532110091743" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">docker/</text>
+  <text x="682.857142857143" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--info-text)">ci-templates/</text>
+  <text x="682.857142857143" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--info-text)">infra owns</text>
+
+  <rect x="972.142857142857" y="215.596330275229" width="267.857142857143" height="191.559633027523" rx="6.406909769273" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1106.071428571428" y="247.522935779817" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.085092718063" font-weight="bold" fill="var(--primary-text)">tools/</text>
+  <text x="993.571428571429" y="279.449541284404" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">build/</text>
+  <text x="993.571428571429" y="304.990825688073" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">lint/</text>
+  <text x="993.571428571429" y="330.532110091743" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">codemods/</text>
+  <text x="993.571428571429" y="356.073394495413" font-family="Courier New, monospace" font-size="13.881637833426" fill="var(--primary-text)">scripts/</text>
+  <text x="993.571428571429" y="388" font-family="Arial, sans-serif" font-size="11.746001243668" font-style="italic" fill="var(--primary-text)">refactor tooling</text>
+
+  <!-- bottom: tooling row -->
+  <text x="640" y="449.724770642202" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.22072930782" font-weight="bold" fill="var(--text-muted)">Required tooling</text>
+
+  <rect x="40" y="471.009174311927" width="235.714285714286" height="148.990825688073" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="157.857142857143" y="500.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--text)">build system</text>
+  <text x="157.857142857143" y="526.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">Bazel · Buck2</text>
+  <text x="61.428571428571" y="556.146788990826" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- target caching</text>
+  <text x="61.428571428571" y="579.559633027523" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- affected queries</text>
+  <text x="61.428571428571" y="602.97247706422" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- build farm</text>
+
+  <rect x="297.142857142857" y="471.009174311927" width="235.714285714286" height="148.990825688073" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="415" y="500.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--text)">git scaling</text>
+  <text x="415" y="526.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">partial · sparse</text>
+  <text x="318.571428571429" y="556.146788990826" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- partial clone</text>
+  <text x="318.571428571429" y="579.559633027523" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- sparse checkout</text>
+  <text x="318.571428571429" y="602.97247706422" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- commit-graph file</text>
+
+  <rect x="554.285714285714" y="471.009174311927" width="235.714285714286" height="148.990825688073" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="672.142857142857" y="500.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--text)">CI per-target</text>
+  <text x="672.142857142857" y="526.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">affected · sharded</text>
+  <text x="575.714285714286" y="556.146788990826" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- affected diff</text>
+  <text x="575.714285714286" y="579.559633027523" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- sharded tests</text>
+  <text x="575.714285714286" y="602.97247706422" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- skip caching</text>
+
+  <rect x="811.428571428571" y="471.009174311927" width="235.714285714286" height="148.990825688073" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="929.285714285714" y="500.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--text)">CODEOWNERS</text>
+  <text x="929.285714285714" y="526.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">enforced by review</text>
+  <text x="832.857142857143" y="556.146788990826" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- per-path teams</text>
+  <text x="832.857142857143" y="579.559633027523" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- required reviews</text>
+  <text x="832.857142857143" y="602.97247706422" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- no orphan code</text>
+
+  <rect x="1068.571428571428" y="471.009174311927" width="171.428571428571" height="148.990825688073" rx="6.406909769273" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1154.285714285714" y="500.807339449541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.017274423184" font-weight="bold" fill="var(--text)">code search</text>
+  <text x="1154.285714285714" y="526.348623853211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.881637833426" fill="var(--text-muted)">indexed</text>
+  <text x="1090" y="556.146788990826" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- Sourcegraph</text>
+  <text x="1090" y="579.559633027523" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- Hound</text>
+  <text x="1090" y="602.97247706422" font-family="Arial, sans-serif" font-size="12.813819538547" fill="var(--text-muted)">- code-mods</text>
+</svg>

@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.636790837436" font-weight="bold" fill="var(--text)">git bisect: Binary Search Across Commits</text>
+
+  <!-- Step labels -->
+  <text x="40" y="103.272727272727" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text-muted)">Step 1</text>
+  <text x="40" y="219.272727272727" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text-muted)">Step 2</text>
+  <text x="40" y="335.272727272727" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text-muted)">Step 3</text>
+  <text x="40" y="451.272727272727" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text-muted)">Step 4</text>
+
+  <!-- Step 1: full range -->
+  <g transform="translate(160,90)">
+    <rect x="-45.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="-13.571428571429" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">good</text>
+    <rect x="40" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+    <text x="72.142857142857" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">?</text>
+    <rect x="125.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+    <text x="157.857142857143" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">?</text>
+    <rect x="211.428571428571" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="243.571428571429" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">test</text>
+    <rect x="297.142857142857" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+    <text x="329.285714285714" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">?</text>
+    <rect x="382.857142857143" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+    <text x="415" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">?</text>
+    <rect x="468.571428571428" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500.714285714286" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--danger-text)">bad</text>
+  </g>
+
+  <!-- Step 2: midpoint was good, narrow right half -->
+  <g transform="translate(160,200)">
+    <rect x="-45.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="40" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="125.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="211.428571428571" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="243.571428571429" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">good</text>
+    <rect x="297.142857142857" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+    <text x="329.285714285714" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--text-muted)">?</text>
+    <rect x="382.857142857143" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="415" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">test</text>
+    <rect x="468.571428571428" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500.714285714286" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--danger-text)">bad</text>
+  </g>
+
+  <!-- Step 3: midpoint was bad, narrow further -->
+  <g transform="translate(160,310)">
+    <rect x="-45.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="40" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="125.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="211.428571428571" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="297.142857142857" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="329.285714285714" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--warn-text)">test</text>
+    <rect x="382.857142857143" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="415" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--danger-text)">bad</text>
+    <rect x="468.571428571428" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Step 4: found it -->
+  <g transform="translate(160,420)">
+    <rect x="-45.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="40" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="125.714285714286" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="211.428571428571" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+    <rect x="297.142857142857" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="329.285714285714" y="13.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" fill="var(--ok-text)">good</text>
+    <rect x="382.857142857143" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="415" y="8.363636363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.692488431223" font-weight="bold" fill="var(--info-text)">CULPRIT</text>
+    <text x="415" y="24.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.692488431223" fill="var(--info-text)">first bad</text>
+    <rect x="468.571428571428" y="-12.727272727273" width="64.285714285714" height="42.181818181818" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Right panel commands -->
+  <rect x="790" y="82.181818181818" width="450" height="210.909090909091" rx="6.377720962485" fill="var(--code-bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="811.428571428571" y="113.818181818182" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect start</text>
+  <text x="811.428571428571" y="141.236363636364" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect bad</text>
+  <text x="811.428571428571" y="168.654545454545" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect good v2.3.0</text>
+  <text x="811.428571428571" y="196.072727272727" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect good   # fine</text>
+  <text x="811.428571428571" y="223.490909090909" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect bad    # has bug</text>
+  <text x="811.428571428571" y="250.909090909091" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--surface)">$ git bisect good</text>
+  <text x="811.428571428571" y="278.327272727273" font-family="Courier New, monospace" font-size="14.881348912466" fill="var(--ok-text)">abc1234 is the first bad commit</text>
+
+  <!-- math -->
+  <rect x="790" y="324.727272727273" width="450" height="295.272727272727" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1015" y="361.636363636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.133162887456" font-weight="bold" fill="var(--text)">Why it scales: log(N)</text>
+  <text x="811.428571428571" y="403.818181818182" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">10 — 4 tests</text>
+  <text x="811.428571428571" y="431.236363636364" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">100 — 7 tests</text>
+  <text x="811.428571428571" y="458.654545454545" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">1,000 — 10 tests</text>
+  <text x="811.428571428571" y="486.072727272727" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">1M — 20 tests</text>
+  <text x="811.428571428571" y="528.254545454545" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text)">Each test halves the range.</text>
+  <text x="811.428571428571" y="555.672727272727" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text)">Pair with a script: git bisect run</text>
+  <text x="811.428571428571" y="583.090909090909" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text)">automates regression</text>
+  <text x="811.428571428571" y="610.509090909091" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text)">finding in seconds.</text>
+</svg>

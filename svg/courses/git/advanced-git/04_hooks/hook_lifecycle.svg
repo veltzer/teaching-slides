@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.512019135483" font-weight="bold" fill="var(--text)">Git Hook Lifecycle</text>
+
+  <!-- Client side title -->
+  <text x="297.142857142857" y="87.027027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Client side (developer machine)</text>
+
+  <!-- pipeline left -->
+  <rect x="40" y="118.378378378378" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--primary-text)">git commit</text>
+  <text x="136.428571428571" y="168.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">developer action</text>
+
+  <rect x="40" y="212.432432432432" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--warn-text)">pre-commit</text>
+  <text x="136.428571428571" y="262.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">lint, format, fast tests</text>
+
+  <rect x="40" y="306.486486486487" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--warn-text)">commit-msg</text>
+  <text x="136.428571428571" y="356.648648648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">validate message format</text>
+
+  <rect x="40" y="400.540540540541" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--ok-text)">commit created</text>
+  <text x="136.428571428571" y="450.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">post-commit fires</text>
+
+  <rect x="40" y="494.594594594595" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="136.428571428571" y="520.720720720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--primary-text)">git push</text>
+  <text x="136.428571428571" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">developer action</text>
+
+  <rect x="361.428571428571" y="494.594594594595" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="457.857142857143" y="520.720720720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--warn-text)">pre-push</text>
+  <text x="457.857142857143" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--warn-text)">full tests, security scan</text>
+
+  <path d="M 136.428571428571 181.081081081081 L 136.428571428571 212.432432432432" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 136.428571428571 275.135135135135 L 136.428571428571 306.486486486487" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 136.428571428571 369.189189189189 L 136.428571428571 400.540540540541" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 232.857142857143 525.945945945946 L 361.428571428571 525.945945945946" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- divider -->
+  <line x1="640" y1="87.027027027027" x2="640" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Server side title -->
+  <text x="982.857142857143" y="87.027027027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.163091642679" font-weight="bold" fill="var(--text-muted)">Server side (remote)</text>
+
+  <rect x="725.714285714286" y="118.378378378378" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.142857142857" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--primary-text)">push received</text>
+  <text x="822.142857142857" y="168.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--primary-text)">refs proposed</text>
+
+  <rect x="725.714285714286" y="212.432432432432" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.142857142857" y="238.558558558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--info-text)">pre-receive</text>
+  <text x="822.142857142857" y="262.594594594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">repo-wide policy</text>
+
+  <rect x="725.714285714286" y="306.486486486487" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.142857142857" y="332.612612612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--info-text)">update</text>
+  <text x="822.142857142857" y="356.648648648649" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">per-ref policy</text>
+
+  <rect x="725.714285714286" y="400.540540540541" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.142857142857" y="426.666666666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--ok-text)">refs updated</text>
+  <text x="822.142857142857" y="450.702702702703" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--ok-text)">push accepted</text>
+
+  <rect x="725.714285714286" y="494.594594594595" width="192.857142857143" height="62.702702702703" rx="6.348927492804" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="822.142857142857" y="520.720720720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--info-text)">post-receive</text>
+  <text x="822.142857142857" y="544.756756756757" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--info-text)">trigger CI/CD, notify</text>
+
+  <path d="M 822.142857142857 181.081081081081 L 822.142857142857 212.432432432432" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 822.142857142857 275.135135135135 L 822.142857142857 306.486486486487" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 822.142857142857 369.189189189189 L 822.142857142857 400.540540540541" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 822.142857142857 463.243243243243 L 822.142857142857 494.594594594595" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- legend -->
+  <rect x="1004.285714285714" y="212.432432432432" width="235.714285714286" height="209.009009009009" rx="6.348927492804" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1122.142857142857" y="241.693693693694" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.87231873201" font-weight="bold" fill="var(--text)">Color key</text>
+  <rect x="1025.714285714286" y="259.459459459459" width="21.428571428571" height="20.900900900901" rx="4.232618328536" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="275.135135135135" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">action / state</text>
+  <rect x="1025.714285714286" y="290.810810810811" width="21.428571428571" height="20.900900900901" rx="4.232618328536" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="306.486486486487" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">client hook</text>
+  <rect x="1025.714285714286" y="322.162162162162" width="21.428571428571" height="20.900900900901" rx="4.232618328536" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="337.837837837838" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">server hook</text>
+  <rect x="1025.714285714286" y="353.513513513514" width="21.428571428571" height="20.900900900901" rx="4.232618328536" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1057.857142857143" y="369.189189189189" font-family="Arial, sans-serif" font-size="13.756009567742" fill="var(--text)">success</text>
+  <text x="1025.714285714286" y="400.540540540541" font-family="Arial, sans-serif" font-size="12.697854985608" fill="var(--text-muted)">non-zero exit aborts</text>
+</svg>

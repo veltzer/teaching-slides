@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.636790837436" font-weight="bold" fill="var(--text)">Cherry-Pick: Copying a Commit Across Branches</text>
+
+  <!-- main branch (top) -->
+  <text x="40" y="156" font-family="Arial, sans-serif" font-size="19.133162887456" font-weight="bold" fill="var(--text-muted)">main</text>
+
+  <rect x="40" y="187.636363636364" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="72.142857142857" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--primary-text)">A</text>
+
+  <rect x="168.571428571429" y="187.636363636364" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200.714285714286" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--primary-text)">B</text>
+
+  <rect x="297.142857142857" y="187.636363636364" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.285714285714" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" font-weight="bold" fill="var(--warn-text)">FIX</text>
+  <text x="329.285714285714" y="231.927272727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.692488431223" fill="var(--warn-text)">abc1234</text>
+
+  <rect x="425.714285714286" y="187.636363636364" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="457.857142857143" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--primary-text)">C</text>
+
+  <rect x="554.285714285714" y="187.636363636364" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="586.428571428571" y="219.272727272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--primary-text)">D</text>
+
+  <path d="M 104.285714285714 214 L 168.571428571429 214" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 232.857142857143 214 L 297.142857142857 214" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 361.428571428571 214 L 425.714285714286 214" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 490 214 L 554.285714285714 214" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- release branch (bottom) -->
+  <text x="40" y="430.181818181818" font-family="Arial, sans-serif" font-size="19.133162887456" font-weight="bold" fill="var(--text-muted)">release/v1</text>
+
+  <rect x="40" y="461.818181818182" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="72.142857142857" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--ok-text)">P</text>
+
+  <rect x="168.571428571429" y="461.818181818182" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200.714285714286" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--ok-text)">Q</text>
+
+  <rect x="297.142857142857" y="461.818181818182" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="329.285714285714" y="493.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--ok-text)">R</text>
+
+  <rect x="425.714285714286" y="461.818181818182" width="64.285714285714" height="52.727272727273" rx="6.377720962485" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" opacity="0.95"/>
+  <text x="457.857142857143" y="488.181818181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.818395418718" font-weight="bold" fill="var(--warn-text)">FIX'</text>
+  <text x="457.857142857143" y="506.109090909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.692488431223" fill="var(--warn-text)">def5678</text>
+
+  <path d="M 104.285714285714 488.181818181818 L 168.571428571429 488.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 232.857142857143 488.181818181818 L 297.142857142857 488.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 361.428571428571 488.181818181818 L 425.714285714286 488.181818181818" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- cherry-pick arrow -->
+  <path d="M 329.285714285714 240.363636363636 Q 329.285714285714 345.818181818182 457.857142857143 461.818181818182" fill="none" stroke="var(--warn-border)" stroke-width="3" stroke-dasharray="8 4" marker-end="url(#arrow-warn)"/>
+  <text x="361.428571428571" y="366.909090909091" font-family="Arial, sans-serif" font-size="17.007255899961" font-style="italic" fill="var(--warn-accent)">git cherry-pick -x abc1234</text>
+
+  <!-- explanation panel -->
+  <rect x="704.285714285714" y="166.545454545455" width="535.714285714286" height="453.454545454545" rx="6.377720962485" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="972.142857142857" y="203.454545454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.259069874951" font-weight="bold" fill="var(--text)">What cherry-pick does</text>
+
+  <text x="725.714285714286" y="250.909090909091" font-family="Arial, sans-serif" font-size="15.944302406213" fill="var(--text)">1. Reads the diff of the source commit</text>
+  <text x="725.714285714286" y="282.545454545455" font-family="Arial, sans-serif" font-size="15.944302406213" fill="var(--text)">2. Applies it on top of the current HEAD</text>
+  <text x="725.714285714286" y="314.181818181818" font-family="Arial, sans-serif" font-size="15.944302406213" fill="var(--text)">3. Creates a new commit with new SHA</text>
+  <text x="725.714285714286" y="345.818181818182" font-family="Arial, sans-serif" font-size="15.944302406213" fill="var(--text)">4. Keeps the original message and author</text>
+  <text x="725.714285714286" y="377.454545454545" font-family="Arial, sans-serif" font-size="15.944302406213" fill="var(--text)">5. With -x: appends "cherry picked from"</text>
+
+  <text x="725.714285714286" y="430.181818181818" font-family="Arial, sans-serif" font-size="17.007255899961" font-weight="bold" fill="var(--text-muted)">Use cases</text>
+  <text x="725.714285714286" y="459.709090909091" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">- Hotfix backports to release branches</text>
+  <text x="725.714285714286" y="485.018181818182" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">- Recovering specific commits</text>
+  <text x="725.714285714286" y="510.327272727273" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--text-muted)">- Selective porting between forks</text>
+
+  <text x="725.714285714286" y="563.054545454545" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--danger-accent)">Pitfall: pick commits that depend on others</text>
+  <text x="725.714285714286" y="588.363636363636" font-family="Arial, sans-serif" font-size="14.881348912466" fill="var(--danger-accent)">and forget to pick the prerequisites first.</text>
+</svg>

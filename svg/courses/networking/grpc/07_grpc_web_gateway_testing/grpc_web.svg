@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">gRPC-Web: Browsers Need a Proxy</text>
+
+  <!-- Browser -->
+  <rect x="40" y="149.72972972973" width="227.586206896552" height="125.405405405405" rx="6.23850293892" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="153.793103448276" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--primary-text)">Browser</text>
+  <text x="153.793103448276" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--primary-text)">JavaScript / TS</text>
+  <text x="153.793103448276" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--primary-text)">grpc-web library</text>
+
+  <!-- Proxy -->
+  <rect x="371.034482758621" y="107.927927927928" width="248.275862068966" height="209.009009009009" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495.172413793103" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--warn-text)">Envoy proxy</text>
+  <text x="495.172413793103" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">translates protocols</text>
+  <text x="495.172413793103" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">gRPC-Web ↔ gRPC</text>
+  <text x="495.172413793103" y="259.459459459459" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--warn-text)">handles framing,</text>
+  <text x="495.172413793103" y="280.36036036036" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--warn-text)">trailers, CORS</text>
+
+  <!-- Server -->
+  <rect x="722.758620689655" y="149.72972972973" width="227.586206896552" height="125.405405405405" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="836.551724137931" y="186.306306306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.715508816761" font-weight="bold" fill="var(--ok-text)">gRPC Server</text>
+  <text x="836.551724137931" y="217.657657657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">Go · Java · Python</text>
+  <text x="836.551724137931" y="245.873873873874" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.437255388021" fill="var(--ok-text)">native gRPC</text>
+
+  <!-- Arrows -->
+  <path d="M 267.586206896552 212.432432432432 L 371.034482758621 212.432432432432" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="277.931034482759" y="198.846846846847" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--text-muted)">HTTP/1.1 or /2</text>
+  <text x="277.931034482759" y="233.333333333333" font-family="Arial, sans-serif" font-size="11.437255388021" font-style="italic" fill="var(--text-muted)">gRPC-Web framing</text>
+
+  <path d="M 619.310344827586 212.432432432432 L 722.758620689655 212.432432432432" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="198.846846846847" font-family="Arial, sans-serif" font-size="12.477005877841" fill="var(--text-muted)">HTTP/2</text>
+  <text x="640" y="233.333333333333" font-family="Arial, sans-serif" font-size="11.437255388021" font-style="italic" fill="var(--text-muted)">native gRPC</text>
+
+  <!-- Limitations -->
+  <rect x="40" y="369.189189189189" width="579.310344827586" height="250.810810810811" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="329.655172413793" y="400.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--text)">gRPC-Web limitations</text>
+  <text x="60.689655172414" y="437.117117117117" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-accent)">+ unary works perfectly</text>
+  <text x="60.689655172414" y="463.243243243243" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-accent)">+ server streaming works</text>
+  <text x="60.689655172414" y="494.594594594595" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-accent)">- no client streaming (most impls)</text>
+  <text x="60.689655172414" y="520.720720720721" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-accent)">- no bidirectional streaming</text>
+  <text x="60.689655172414" y="552.072072072072" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- same .proto</text>
+  <text x="60.689655172414" y="578.198198198198" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- Connect alternative</text>
+
+  <!-- Gateway alt -->
+  <rect x="660.689655172414" y="369.189189189189" width="579.310344827586" height="250.810810810811" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="950.344827586207" y="400.540540540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.636007837121" font-weight="bold" fill="var(--text)">gRPC-Gateway: REST/JSON proxy</text>
+  <text x="681.379310344828" y="437.117117117117" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- annotate .proto with HTTP bindings</text>
+  <text x="681.379310344828" y="463.243243243243" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- reverse-proxy in Go</text>
+  <text x="681.379310344828" y="494.594594594595" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- one backend serves gRPC + REST</text>
+  <text x="681.379310344828" y="520.720720720721" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--text)">- OpenAPI spec</text>
+  <text x="681.379310344828" y="552.072072072072" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--ok-accent)">public APIs needing REST</text>
+  <text x="681.379310344828" y="583.423423423423" font-family="Arial, sans-serif" font-size="13.516756367661" font-style="italic" fill="var(--ok-accent)">gRPC-Web for browsers</text>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.033512735322" font-weight="bold" fill="var(--text)">Delivery Semantics: Trade-Offs</text>
+
+  <rect x="40" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="236.551724137931" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--warn-text)">At-most-once</text>
+  <text x="236.551724137931" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--warn-text)">may lose</text>
+  <text x="60.689655172414" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">+ lowest latency</text>
+  <text x="60.689655172414" y="243.783783783784" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">+ no overhead</text>
+  <text x="60.689655172414" y="273.045045045045" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">- lossy</text>
+  <text x="60.689655172414" y="299.171171171171" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--warn-text)">use: telemetry</text>
+
+  <rect x="443.448275862069" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--ok-text)">At-least-once</text>
+  <text x="640" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--ok-text)">may duplicate</text>
+  <text x="464.137931034483" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">+ broker default</text>
+  <text x="464.137931034483" y="243.783783783784" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">+ retries until ack</text>
+  <text x="464.137931034483" y="273.045045045045" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">- need dedup</text>
+  <text x="464.137931034483" y="299.171171171171" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--ok-text)">use: most production</text>
+
+  <rect x="846.896551724138" y="107.927927927928" width="393.103448275862" height="209.009009009009" rx="6.23850293892" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.448275862069" y="144.504504504504" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--danger-text)">Exactly-once</text>
+  <text x="1043.448275862069" y="181.081081081081" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--danger-text)">neither lost nor dup</text>
+  <text x="867.586206896552" y="217.657657657658" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">+ ideal in theory</text>
+  <text x="867.586206896552" y="243.783783783784" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">+ Kafka tx</text>
+  <text x="867.586206896552" y="273.045045045045" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">- fragile</text>
+  <text x="867.586206896552" y="299.171171171171" font-family="Arial, sans-serif" font-size="13.516756367661" fill="var(--danger-text)">use: rare</text>
+
+  <!-- Practical recommendation -->
+  <rect x="40" y="369.189189189189" width="1200" height="250.810810810811" rx="6.23850293892" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="405.765765765766" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.795009796401" font-weight="bold" fill="var(--text)">In practice: at-least-once + idempotent consumers</text>
+
+  <text x="60.689655172414" y="447.567567567568" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- producer retries until acked</text>
+  <text x="60.689655172414" y="478.918918918919" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- offset committed after processing</text>
+  <text x="60.689655172414" y="510.27027027027" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- consumer idempotent</text>
+  <text x="60.689655172414" y="541.621621621622" font-family="Arial, sans-serif" font-size="14.556506857481" fill="var(--text)">- result: "effectively once"</text>
+
+  <text x="60.689655172414" y="588.648648648649" font-family="Arial, sans-serif" font-size="14.556506857481" font-style="italic" fill="var(--ok-accent)">design idempotency from day one</text>
+</svg>
