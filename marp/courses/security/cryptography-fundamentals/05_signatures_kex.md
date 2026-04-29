@@ -25,14 +25,14 @@ The crypto building block behind: code signing, TLS certificates, JWTs, package 
 
 ## How signing actually works
 
-```
+```output
 sign:    sig = sign(privkey, hash(message))
 verify:  verify(pubkey, hash(message), sig)
 ```
 
 - You sign the **hash** of the message, not the message itself
-  - Asymmetric ops are slow; hashes are fast
-  - Hash of any size message fits in one signing operation
+    - Asymmetric ops are slow; hashes are fast
+    - Hash of any size message fits in one signing operation
 - The signature is bound to the exact bytes via the hash
 - Change one bit of the message → completely different hash → signature invalid
 
@@ -41,7 +41,7 @@ verify:  verify(pubkey, hash(message), sig)
 ## RSA signatures
 
 - **PKCS#1 v1.5** — old, deterministic, has known attacks; avoid in new code
-- **PSS** — Probabilistic Signature Scheme; modern, randomised, secure
+- **PSS** — Probabilistic Signature Scheme; modern, randomized, secure
 - 2048-bit RSA minimum; 3072 or 4096 for long-term
 - Slow: 1-6ms to sign, fast to verify
 
@@ -77,11 +77,9 @@ For new systems where you control both ends: Ed25519 is the right answer.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/05_signatures_kex/sign_verify.svg)
+## Sign and Verify
 
----
-
-![](svg/courses/security/cryptography-fundamentals/05_signatures_kex/sign_verify.svg)
+![sign_verify](svg/courses/security/cryptography-fundamentals/05_signatures_kex/sign_verify.svg)
 
 ---
 
@@ -114,8 +112,8 @@ If your protocol uses static RSA key exchange, every session is forever vulnerab
 - Add signatures over the DH values to prove identity
 - TLS pattern:
   1. Server signs (DHE_pub, hostname) with its cert key
-  2. Client verifies the cert chain back to a trusted root
-  3. Client + server complete DH to derive the session key
+  1. Client verifies the cert chain back to a trusted root
+  1. Client + server complete DH to derive the session key
 - Same idea in SSH, Signal, Noise framework
 
 You need both the speed of DH for key agreement and the identity of signatures for authentication.

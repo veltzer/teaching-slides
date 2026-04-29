@@ -53,11 +53,9 @@ TLS 1.2 has 200+ cipher suites including dangerous ones. TLS 1.3 has 5, all safe
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/06_tls_pki/handshake.svg)
+## TLS 1.3 Handshake
 
----
-
-![](svg/courses/security/cryptography-fundamentals/06_tls_pki/handshake.svg)
+![handshake](svg/courses/security/cryptography-fundamentals/06_tls_pki/handshake.svg)
 
 ---
 
@@ -65,7 +63,7 @@ TLS 1.2 has 200+ cipher suites including dangerous ones. TLS 1.3 has 5, all safe
 
 TLS 1.2 cipher suite name reads as: KX_AUTH_WITH_ENC_MAC
 
-```
+```output
 ECDHE_RSA_WITH_AES_256_GCM_SHA384
 └─key── └sign └─bulk encryption─ └─PRF
 ```
@@ -92,7 +90,7 @@ A cert without its chain is unverifiable. A cert without a trusted root in the c
 
 ## The trust chain
 
-```
+```output
 Root CA (in browser/OS trust store)
    └── Intermediate CA (signed by root)
           └── Leaf cert (your server)
@@ -110,12 +108,12 @@ The whole web's trust depends on those root CAs not being compromised. They have
 ## Certificate lifecycle
 
 1. **Generate** keypair on server
-2. **Create CSR** (Certificate Signing Request) with public key + identity
-3. **Submit** CSR to CA (commercial or Let's Encrypt)
-4. **CA validates** domain control (DNS, HTTP, email)
-5. **CA signs** the cert and returns it
-6. **Install** on server; configure web server to use it
-7. **Renew** before expiry (Let's Encrypt: 90 days; commercial: 1 year cap)
+1. **Create CSR** (Certificate Signing Request) with public key + identity
+1. **Submit** CSR to CA (commercial or Let's Encrypt)
+1. **CA validates** domain control (DNS, HTTP, email)
+1. **CA signs** the cert and returns it
+1. **Install** on server; configure web server to use it
+1. **Renew** before expiry (Let's Encrypt: 90 days; commercial: 1 year cap)
 
 ACME automation (certbot, lego, acme.sh) makes this hands-off.
 

@@ -17,7 +17,7 @@ audience:
 - Routing fundamentals
 - Static vs dynamic routing
 - Distance-vector and link-state algorithms
-- BGP, OSPF, EIGRP overview
+- BGP and the major Interior Gateway Protocols
 - Cloud-era routing realities
 
 ---
@@ -67,7 +67,7 @@ audience:
 - Each router knows distance + next hop per destination
 - Tells neighbors what it knows
 - Bellman-Ford algorithm
-- Examples: RIP, EIGRP
+- Examples include the older distance-vector protocols
 - Slow convergence on big topologies
 
 ---
@@ -75,27 +75,27 @@ audience:
 
 - Each router knows the full topology
 - Floods link state updates to all
-- Each computes shortest path locally (Dijkstra)
-- Examples: OSPF, IS-IS
+- Each router computes shortest path locally
+- Examples include the major link-state protocols
 - Faster convergence, more memory
 
 ---
-## OSPF
+## Open Shortest Path First
 
 - Open Shortest Path First
-- Most-used IGP (Interior Gateway Protocol)
+- Most-used Interior Gateway Protocol
 - Link-state algorithm
 - Areas for hierarchical scaling
 - Standard in enterprise
 
 ---
-## OSPF Areas
+## Areas
 
 - Area 0 (backbone)
 - Other areas connect to it
 - Reduces flooding scope
-- Stub areas, NSSA
-- Key for OSPF scalability
+- Stub areas, not-so-stubby areas
+- Key for scalability
 
 ---
 ## BGP
@@ -112,22 +112,22 @@ audience:
 ![bgp_path](svg/courses/networking/tcp-ip-deep-dive/07_routing/bgp_path.svg)
 
 ---
-## eBGP vs iBGP
+## External vs Internal BGP
 
-- eBGP: between different ASes
-- iBGP: within same AS (usually full mesh or route reflectors)
+- External BGP: between different autonomous systems
+- Internal BGP: within same AS (usually full mesh or route reflectors)
 - Different rules, different uses
-- iBGP doesn't change AS path
-- Route reflectors scale iBGP
+- Internal BGP doesn't change AS path
+- Route reflectors scale internal BGP
 
 ---
 ## BGP Path Selection
 
 - Highest local preference
 - Shortest AS path
-- Origin (IGP > EGP > Incomplete)
+- Origin (interior beats exterior beats incomplete)
 - Lowest MED
-- eBGP over iBGP
+- External over internal BGP
 - Many tie-breakers
 - Policy reigns
 
@@ -146,7 +146,7 @@ audience:
 - Don't accept anything you don't expect
 - Prefix lists, AS-path filters, route maps
 - Bogon filtering (private/reserved ranges)
-- RPKI for cryptographic validation
+- Resource Public Key Infrastructure for cryptographic validation
 - Defenses against route hijacks
 
 ---
@@ -159,7 +159,7 @@ audience:
 - Foundation of geographic load balancing
 
 ---
-## ECMP
+## Equal-Cost Multi-Path
 
 - Equal-Cost Multi-Path
 - Multiple equal routes to same destination
@@ -181,7 +181,7 @@ audience:
 
 - Centralized control plane
 - Programmable forwarding
-- OpenFlow, gRIBI, P4
+- OpenFlow, programmable RIBs, P4
 - Cloud-native routing trends this way
 - Traditional routing protocols still important
 
@@ -201,7 +201,7 @@ audience:
 - `traceroute` / `mtr` for path
 - `bird`, `frr`, `quagga` — open source routers
 - BGP looking glasses (public)
-- `bgpq3` for prefix lists from RIRs
+- `bgpq3` for prefix lists from internet registries
 
 ---
 ## Asymmetric Routing
@@ -213,7 +213,7 @@ audience:
 - Common cause of "works one way" issues
 
 ---
-## RPKI
+## Public-Key Route Authorization
 
 - Resource Public Key Infrastructure
 - Cryptographically signs prefix-AS bindings
@@ -244,6 +244,6 @@ audience:
 
 - Routing: each hop decides next hop based on prefix match
 - Static for small/predictable; dynamic for everything else
-- OSPF for IGP; BGP for inter-domain
+- Link-state inside an autonomous system; BGP for inter-domain
 - Cloud abstracts but doesn't eliminate routing
-- RPKI raises the bar against hijacks
+- Cryptographic validation raises the bar against hijacks

@@ -188,9 +188,9 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 ## Asymmetric Path Detection
 
 - Capture on both ends
-- Different RTTs in each direction
+- Different round-trip times in each direction
 - Hint at separate forward/return paths
-- Stateful middleboxes confused
+- Stateful middle-boxes confused
 - Common in multi-homed sites
 
 ---
@@ -256,7 +256,7 @@ sudo tcpdump -r trace.pcap 'host 1.2.3.4'
 - ARP and ICMP — local and diagnostic
 - TCP — reliability, flow, congestion
 - UDP, DNS, DHCP, QUIC
-- Routing — OSPF, BGP
+- Routing — link-state and BGP
 - Packet analysis — Wireshark, tcpdump
 
 ---

@@ -59,7 +59,7 @@ audience:
 - Sent on boot or address change
 - Updates neighbors' caches
 - Detects IP conflicts
-- Used by failover (VRRP, keepalived)
+- Used by failover protocols and keepalived
 
 ---
 ## ARP Spoofing
@@ -67,16 +67,16 @@ audience:
 - Attacker sends fake ARP replies
 - Poisons neighbors' caches
 - Redirects traffic through attacker
-- Foundation of MITM attacks on LANs
+- Foundation of MITM attacks on local networks
 - Defense: ARP inspection, static entries, encryption
 
 ---
 ## IPv6: NDP Replaces ARP
 
 - Neighbor Discovery Protocol
-- Uses ICMPv6
+- Uses ICMP version 6
 - More secure (Secure Neighbor Discovery)
-- Includes router discovery and address autoconfig
+- Includes router discovery and stateless address auto-configuration
 - Same purpose, modern protocol
 
 ---

@@ -117,16 +117,16 @@ audience:
 ---
 ## Storage: Mobile
 
-- iOS Keychain
-- Android Keystore + EncryptedSharedPreferences
-- Never in plain SharedPreferences/UserDefaults
-- Use AppAuth library where possible
+- iOS secure storage (key store)
+- Android secure storage (key store + encrypted preferences)
+- Never in plain shared preferences
+- Use the platform OAuth library where possible
 - Wipe on logout
 
 ---
 ## Storage: CLI Tools
 
-- OS credential store (libsecret, Keychain, Credential Manager)
+- OS credential store (Linux secret service, macOS key store, Windows credential manager)
 - File with strict permissions as a fallback
 - Token refresh in the background
 - Don't print tokens to logs
@@ -219,11 +219,11 @@ audience:
 - Bind tokens to client TLS keys
 - Theft alone insufficient — need the key too
 - Limited deployment; standardization in flux
-- Closely related: DPoP (Demonstrating Proof-of-Possession)
+- Closely related: Demonstrating-Proof-of-Possession
 - Strongest mitigation for token theft
 
 ---
-## DPoP
+## Proof-of-Possession
 
 - A way to bind a token to a holder's key
 - Client signs each request with its key

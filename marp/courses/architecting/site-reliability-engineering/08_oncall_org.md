@@ -5,10 +5,10 @@ tags:
 level: intermediate
 category: architecture
 audience:
-  - audiences:sres
+  - audiences:devops
   - audiences:managers
 ---
-# On-Call and SRE Organisation
+# On-Call and SRE Organization
 
 ---
 
@@ -29,7 +29,7 @@ If on-call is a punishment, the team will not survive long-term.
 
 - Pay for the hours, not just the pages
 - Time off in lieu after a busy shift
-- Recognise the load in performance reviews
+- Recognize the load in performance reviews
 - Provide tools (good laptop, mobile data, secondary monitor) for the role
 
 > "We expect you to be available 24/7 for free during your on-call week" → engineers leave
@@ -38,11 +38,9 @@ The math: a ruined sleep night costs more than fair on-call pay.
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/08_oncall_org/team_models.svg)
+## SRE Team Models
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/08_oncall_org/team_models.svg)
+![team_models](svg/courses/architecting/site-reliability-engineering/08_oncall_org/team_models.svg)
 
 ---
 
@@ -50,7 +48,7 @@ The math: a ruined sleep night costs more than fair on-call pay.
 
 Every alert needs a runbook:
 
-```
+```output
 Alert: High error rate on Checkout API
 Severity: SEV2
 
@@ -76,7 +74,7 @@ Runbooks are the difference between a 10-minute incident and a 2-hour incident.
 
 Define explicitly:
 
-```
+```output
 1. Primary on-call (1st page)
 2. If no ack in 5 min → secondary
 3. If no ack in 5 min → manager
@@ -105,11 +103,11 @@ Throwing a new engineer into solo on-call after one week is a known anti-pattern
 | Model | Description | When |
 |---|---|---|
 | **Embedded** | SRE inside product team | Small org, single product |
-| **Centralised** | SRE team supports many services | Many services, shared expertise |
+| **Centralized** | SRE team supports many services | Many services, shared expertise |
 | **Consulting** | SRE advises, dev teams own ops | Dev-led culture |
 | **Platform** | SRE builds tools dev teams use | Many teams, similar problems |
 
-Most large orgs use a mix. Google itself uses a centralised model with embedded engagements.
+Most large orgs use a mix. Google itself uses a centralized model with embedded engagements.
 
 ---
 
@@ -148,7 +146,7 @@ Treat SRE as a parallel track to product engineering, not a step down.
 - **One SRE per ten services** — spread too thin; nothing improves
 - **Hero culture** — one engineer carries on-call; quits, takes knowledge
 
-Each of these is a organisational failure mode that no amount of personal heroism will fix.
+Each of these is an organizational failure mode that no amount of personal heroism will fix.
 
 ---
 

@@ -100,8 +100,8 @@ audience:
 - HS256 — HMAC-SHA256, symmetric (shared secret)
 - RS256 — RSA + SHA256, asymmetric
 - ES256 — ECDSA + SHA256, asymmetric (smaller keys)
-- PS256 — RSA-PSS, modern variant
-- EdDSA — Ed25519, modern, fast
+- PS256 — RSA with probabilistic padding, modern variant
+- Ed25519 — modern, fast, small
 
 ---
 ## HS256 vs RS256
@@ -209,13 +209,13 @@ def validate(jwt, expected_iss, expected_aud):
 - Many auth servers offer both
 
 ---
-## JWE: Encrypted JWTs
+## Encrypted JWTs
 
 - JSON Web Encryption (RFC 7516)
 - Encrypts the payload, not just signs it
 - Five parts instead of three
 - Use when claims are sensitive
-- Most OAuth2 deployments use signed JWS, not encrypted JWE
+- Most OAuth2 deployments use signed JWTs, not encrypted
 
 ---
 ## When to Encrypt
@@ -224,7 +224,7 @@ def validate(jwt, expected_iss, expected_aud):
 - Tokens travel through untrusted intermediaries
 - Compliance requires encrypted-at-rest tokens
 - Otherwise, signing alone is enough
-- Clients almost never need to decrypt; auth server uses JWE for inter-server
+- Clients almost never decrypt; auth servers use encryption for inter-server
 
 ---
 ## Common JWT Pitfalls

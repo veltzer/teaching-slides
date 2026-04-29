@@ -48,7 +48,7 @@ audience:
 
 - Strict data residency requirements
 - Need full control over the auth server
-- Existing Java/JBoss familiarity
+- Existing Java enterprise familiarity
 - Cost-sensitive at high volume
 - Don't mind running infrastructure
 
@@ -86,7 +86,7 @@ audience:
 - User pools (auth) + identity pools (federation)
 - Tight integration with AWS services
 - Lower cost than Auth0/Okta
-- Less polished DX
+- Less polished developer experience
 
 ---
 ## Azure AD / Entra ID
@@ -153,7 +153,7 @@ docker run -p 8080:8080 \
 
 - Use battle-tested OAuth2/OIDC libraries
 - Don't implement from scratch
-- Examples: Authlib (Python), oidc-client (JS), Spring Security
+- Examples: Python OAuth libraries, oidc-client (JS), Spring Security
 - Update libraries regularly
 - Audit your dependency tree
 
@@ -208,7 +208,7 @@ docker run -p 8080:8080 \
 - Some operations need stronger auth
 - Re-prompt with MFA for high-value actions
 - ACR (Authentication Context Class Reference) standardizes this
-- amr (Authentication Methods References) reports what was used
+- Authentication Methods References reports what was used
 - Increasingly used in finance and admin
 
 ---

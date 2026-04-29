@@ -111,7 +111,7 @@ audience:
 ## Congestion Control
 
 - Network-side rate limiting
-- Different algorithms: Reno, Cubic, BBR
+- Different algorithms: classic, modern Cubic, modern BBR
 - Slow start, congestion avoidance, fast retransmit, fast recovery
 - Detects loss; backs off
 - Critical to internet stability
@@ -119,8 +119,8 @@ audience:
 ---
 ## Slow Start
 
-- Begins with a small congestion window (cwnd)
-- Doubles cwnd each RTT until threshold (ssthresh)
+- Begins with a small congestion window
+- Doubles the congestion window each RTT until a threshold
 - Then linear growth (congestion avoidance)
 - Quickly probes available bandwidth
 - Backs off on loss
@@ -128,22 +128,22 @@ audience:
 ---
 ## Congestion Avoidance Visualized
 
-![cwnd](svg/courses/networking/tcp-ip-deep-dive/05_tcp/cwnd.svg)
+![congestion-window](svg/courses/networking/tcp-ip-deep-dive/05_tcp/cwnd.svg)
 
 ---
 ## Fast Retransmit
 
 - Three duplicate ACKs trigger retransmission
 - Don't wait for timeout
-- Used by all modern TCPs
+- Used by all modern TCP stacks
 - Reduces recovery time
 - Built into the standard
 
 ---
-## TCP Reno
+## Classic Recovery
 
 - Classic algorithm
-- Halves cwnd on loss
+- Halves the congestion window on loss
 - Linear growth in congestion avoidance
 - Fair across many flows
 - Default for decades; still common
@@ -152,7 +152,7 @@ audience:
 ## TCP Cubic
 
 - Default in Linux (and most modern OS)
-- Cubic function for cwnd growth
+- Cubic-shaped growth of the window
 - Better in high-bandwidth scenarios
 - Less RTT-dependent
 - The most common modern algorithm
@@ -187,7 +187,7 @@ audience:
 - Catches stragglers
 - Prevents reuse with stale segments
 - Can pile up on busy servers
-- SO_REUSEADDR / SO_REUSEPORT mitigate
+- socket reuse options mitigate
 
 ---
 ## RST: Reset
@@ -267,5 +267,5 @@ audience:
 - TCP: reliable, ordered, connection-oriented byte stream
 - Three-way handshake establishes; four-way close
 - Sequence + ACK numbers handle reliability
-- Window for flow control; cwnd for congestion control
-- Modern algorithms: Cubic, BBR; Reno is the textbook
+- Window for flow control; congestion window for congestion control
+- Modern algorithms: Cubic and BBR; the classic algorithm is the textbook one

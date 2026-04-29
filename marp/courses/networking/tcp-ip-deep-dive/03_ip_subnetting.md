@@ -103,7 +103,7 @@ audience:
 
 - Global unicast (2000::/3) — internet-routable
 - Link-local (fe80::/10) — same subnet only
-- Unique local (fc00::/7) — like RFC 1918
+- Unique-local prefix — like RFC 1918
 - Multicast (ff00::/8)
 - No broadcast in IPv6 — use multicast
 
@@ -182,7 +182,7 @@ audience:
 - Clients: usually DHCP
 - Reservation: DHCP gives the same IP each time
 - Document allocations to avoid conflicts
-- Track in IPAM tools at scale
+- Track in IP-address-management tools at scale
 
 ---
 ## Routing Table

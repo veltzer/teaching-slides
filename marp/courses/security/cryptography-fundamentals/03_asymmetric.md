@@ -68,15 +68,13 @@ For new code, prefer ECC over RSA. Smaller, faster, equivalently secure.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/03_asymmetric/dh_exchange.svg)
+## DH Key Exchange
+
+![dh_exchange](svg/courses/security/cryptography-fundamentals/03_asymmetric/dh_exchange.svg)
 
 ---
 
-![](svg/courses/security/cryptography-fundamentals/03_asymmetric/dh_exchange.svg)
-
----
-
-## Diffie-Hellman key exchange
+## DH key exchange
 
 - Two parties **agree on a shared secret** over a public channel
 - Neither sends the secret — they each compute it locally
@@ -101,7 +99,7 @@ Default to Curve25519/Ed25519 unless interoperability demands otherwise.
 
 ## Hybrid encryption — the universal pattern
 
-```
+```output
 1. Generate a random symmetric key K
 2. Encrypt the data with K using AES-GCM
 3. Encrypt K with the recipient's public key

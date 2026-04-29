@@ -17,7 +17,7 @@ audience:
 - The first rule of cryptographic engineering
 - Even cryptographers don't roll their own — they collaborate, peer-review, publish, fix
 - Subtle bugs (off-by-one in counter, biased random sampling) ruin security entirely
-- Compiler optimisations can introduce timing leaks
+- Compiler optimizations can introduce timing leaks
 - Side channels are easy to introduce, hard to detect
 
 If you find yourself writing the inner loop of an encryption algorithm: stop. Use a library.
@@ -72,7 +72,7 @@ Use **constant-time comparison**: `hmac.compare_digest`, `subtle.ConstantTimeCom
 
 ---
 
-## Hardcoded secrets
+## Hard-coded secrets
 
 - Keys in source: visible to everyone with repo access, leak via git history
 - Keys in container images: visible to anyone who pulls the image
@@ -83,11 +83,9 @@ Use environment variables, secret managers, KMS, HSM. Rotate when exposed.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/08_pitfalls_libraries/library_choice.svg)
+## Picking a Library
 
----
-
-![](svg/courses/security/cryptography-fundamentals/08_pitfalls_libraries/library_choice.svg)
+![library_choice](svg/courses/security/cryptography-fundamentals/08_pitfalls_libraries/library_choice.svg)
 
 ---
 
@@ -126,7 +124,7 @@ If you don't have a strong reason to pick something else, libsodium is the answe
 
 ## OpenSSL CLI essentials
 
-```
+```output
 # generate keys
 openssl genrsa -out key.pem 4096
 openssl ec -genkey -name prime256v1 -out ec.pem
@@ -156,11 +154,11 @@ Estimated break date: 5–30 years. Long-term secrets need protection now.
 
 ---
 
-## NIST post-quantum standardisation
+## NIST post-quantum standardization
 
 - 2016 — NIST opened competition for PQ algorithms
 - 2022 — first winners: Kyber (KEM), Dilithium and Falcon (signatures), SPHINCS+ (signatures)
-- 2024 — formally standardised as ML-KEM, ML-DSA, SLH-DSA
+- 2024 — formally standardized as ML-KEM, ML-DSA, SLH-DSA
 - Hybrid mode: classical + PQ in parallel — protects against either being broken
 
 Browsers, TLS libraries, Cloudflare, Google all rolling out hybrid X25519+Kyber now.
@@ -183,12 +181,12 @@ The point of crypto-agility is to be ready when the time comes, not to predict w
 ## Final survival rules
 
 1. Use libraries; never write your own primitives
-2. AEAD for encryption (AES-GCM, ChaCha20-Poly1305)
-3. Argon2id for passwords
-4. `os.urandom` for randomness
-5. Constant-time comparison for tags
-6. TLS 1.3, mandatory; disable everything older
-7. Plan for PQ migration; deploy hybrid where you can
-8. Read the OWASP Cryptographic Storage Cheat Sheet annually
+1. AEAD for encryption (AES-GCM, ChaCha20-Poly1305)
+1. Argon2id for passwords
+1. `os.urandom` for randomness
+1. Constant-time comparison for tags
+1. TLS 1.3, mandatory; disable everything older
+1. Plan for PQ migration; deploy hybrid where you can
+1. Read the OWASP Cryptographic Storage Cheat Sheet annually
 
 The boring choices are the safe choices.

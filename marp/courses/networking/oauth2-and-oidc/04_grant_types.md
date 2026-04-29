@@ -16,7 +16,7 @@ audience:
 - The full grant-type catalog
 - Client Credentials for service-to-service
 - Device Code for limited-input devices
-- Why Implicit and ROPC are deprecated
+- Why Implicit and Resource-Owner-Password are deprecated
 - Choosing the right grant
 
 ---
@@ -151,7 +151,7 @@ grant_type=refresh_token
 - Don't add it to new projects in 2026
 
 ---
-## ROPC: Why Deprecated
+## Resource-Owner-Password: Why Deprecated
 
 - Resource Owner Password Credentials
 - App collects username/password directly
@@ -160,7 +160,7 @@ grant_type=refresh_token
 - Should not exist in modern systems
 
 ---
-## When ROPC Was Acceptable
+## When Resource-Owner-Password Was Acceptable
 
 - Migration from legacy systems
 - Trusted first-party apps (your own iOS app)
@@ -216,7 +216,7 @@ grant_type=refresh_token
 ---
 ## Anti-Patterns to Avoid
 
-- Using ROPC for "convenience"
+- Using Resource-Owner-Password for "convenience"
 - Using Implicit because "we always have"
 - Storing client secrets in mobile apps
 - Reusing one access token for both user and service contexts
@@ -225,7 +225,7 @@ grant_type=refresh_token
 ---
 ## Migration Path
 
-- Deprecate Implicit/ROPC by date
+- Deprecate Implicit/Resource-Owner-Password by date
 - Audit existing clients
 - Move to Authorization Code + PKCE
 - Communicate the timeline clearly
@@ -256,5 +256,5 @@ grant_type=refresh_token
 - Client Credentials: machine-to-machine
 - Device Authorization: limited-input devices
 - Refresh Token: renew access tokens
-- Implicit and ROPC: avoid; deprecated
+- Implicit and Resource-Owner-Password: avoid; deprecated
 - Match the grant to the context, not vice versa

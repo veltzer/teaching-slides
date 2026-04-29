@@ -173,7 +173,7 @@ audience:
 - Adoption growing fast
 
 ---
-## SCTP
+## Stream Control Transmission Protocol
 
 - Stream Control Transmission Protocol
 - Multi-streaming, multi-homing
@@ -204,7 +204,7 @@ audience:
 - NAT must guess the connection state
 - Holds state per (src, dst, ports) tuple
 - Times out faster than TCP entries
-- VoIP / WebRTC need NAT traversal: STUN, TURN
+- VoIP and real-time web traffic need NAT traversal: STUN, TURN
 - UDP hole punching for P2P
 
 ---
@@ -221,7 +221,7 @@ audience:
 
 - UDP doesn't congestion-control by default
 - Application must respect network capacity
-- WebRTC uses bandwidth estimation
+- Real-time web protocols use bandwidth estimation
 - Excessive UDP traffic hurts coexisting TCP
 - Be a good citizen on shared networks
 

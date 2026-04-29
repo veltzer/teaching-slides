@@ -22,14 +22,14 @@ Different primitives address different goals; few address them all at once.
 
 ---
 
-## Kerckhoffs' principle
+## The principle of public algorithms
 
-> "A cryptosystem should be secure even if everything about the system, except the key, is public knowledge."
+> "A cipher should be secure even if everything about the system, except the key, is public knowledge."
 
 - Security must rest on **the secrecy of the key**, not the algorithm
 - Public algorithms get peer-reviewed — that is how trust is built
 - "Security through obscurity" is not security
-- AES, RSA, SHA-256 — all public, all standardised, all trusted because of it
+- AES, RSA, SHA-256 — all public, all standardized, all trusted because of it
 
 If your security depends on no one finding out how it works, you have already lost.
 
@@ -39,7 +39,7 @@ If your security depends on no one finding out how it works, you have already lo
 
 - Cryptography rests on problems that are **easy one way, hard the other**
 - Multiplication is easy; factoring is hard (RSA)
-- Modular exponentiation is easy; discrete log is hard (DH, ECC)
+- Modular exponentiation is easy; discrete log is hard (key exchange, elliptic curves)
 - Hashing is easy; finding a collision is hard (SHA-2)
 
 Security parameters quantify the work an attacker would need:
@@ -59,38 +59,36 @@ The building blocks you will compose into systems
 | Asymmetric cipher | Key exchange, signatures | RSA, ECC |
 | Hash | Fingerprint, integrity | SHA-256 |
 | MAC | Authenticated integrity | HMAC, Poly1305 |
-| KDF | Derive keys from secrets | HKDF, Argon2 |
+| Key derivation | Derive keys from secrets | HMAC-based and Argon2 |
 
 You rarely use one alone — real protocols stack them.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/01_concepts/primitives.svg)
+## Cryptographic Primitives
 
----
-
-![](svg/courses/security/cryptography-fundamentals/01_concepts/primitives.svg)
+![primitives](svg/courses/security/cryptography-fundamentals/01_concepts/primitives.svg)
 
 ---
 
 ## Standards bodies
 
 - **NIST** — US standards body; runs competitions for AES, SHA-3, post-quantum
-- **IETF** — internet protocols; TLS, JOSE, COSE specs live in RFCs
+- Internet Engineering Task Force — TLS and JSON-signing specs live in RFCs
 - **IEEE** — academic and hardware crypto specs
 - **ISO** — international standards (often align with NIST)
 
-Trust algorithms that have been through public review and standardisation, not someone's blog post.
+Trust algorithms that have been through public review and standardization, not someone's blog post.
 
 ---
 
 ## When you need crypto, what do you reach for?
 
-- **Encrypt a file at rest** — AES-GCM with a random nonce
+- **Encrypt a file at rest** — AES with authenticated mode and a random nonce
 - **Encrypt traffic between two services** — TLS, full stop
-- **Sign a release tarball** — Ed25519 or RSA-PSS
+- **Sign a release archive** — Ed25519 or modern RSA signing
 - **Store a password** — Argon2id, never plain SHA
-- **Derive a key from a password** — PBKDF2 or Argon2
+- **Derive a key from a password** — key derivation function (e.g. Argon2)
 - **Random session token** — `os.urandom`, never `random.random()`
 
 Pattern-match the goal to the primitive. Do not invent.
@@ -101,7 +99,7 @@ Pattern-match the goal to the primitive. Do not invent.
 
 - Algorithms get broken — MD5, SHA-1, RC4, DES are all dead today
 - Build systems that can rotate algorithms without rewrites
-- Tag every ciphertext with the algorithm and version that produced it
+- Tag every encrypted message with the algorithm and version that produced it
 - Plan migration paths now — quantum is coming for RSA and ECC
 
 Crypto agility means surviving the next "this algorithm is broken" headline without an emergency.

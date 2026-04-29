@@ -15,7 +15,7 @@ audience:
 ## The shared-key model
 
 - Sender and receiver share the **same key**
-- Encrypt with key K → ciphertext; decrypt with same K → plaintext
+- Encrypt with key K → cipher-text; decrypt with same K → plaintext
 - Fast: hardware-accelerated on modern CPUs (AES-NI on x86)
 - Catch: how do you exchange the key in the first place?
 
@@ -26,7 +26,7 @@ That key-distribution problem is what asymmetric crypto exists to solve. Once a 
 ## AES — Advanced Encryption Standard
 
 - 128-bit block cipher; key sizes 128, 192, 256
-- Selected by NIST in 2001 from a public competition (Rijndael)
+- Selected by NIST in 2001 from a public competition (originally a competing design)
 - 20+ years of cryptanalysis with no practical break
 - Hardware support (AES-NI) makes it screamingly fast
 - AES-128 is fine for everything except very long-term archival
@@ -58,18 +58,16 @@ Both are excellent. Pick on hardware reality, not folklore.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/02_symmetric/aes_modes.svg)
+## Block Cipher Modes
 
----
-
-![](svg/courses/security/cryptography-fundamentals/02_symmetric/aes_modes.svg)
+![aes_modes](svg/courses/security/cryptography-fundamentals/02_symmetric/aes_modes.svg)
 
 ---
 
 ## ECB — and why never to use it
 
 - "Electronic Codebook": encrypt each block independently with the same key
-- Same plaintext block → same ciphertext block
+- Same plaintext block → same cipher-text block
 - Patterns leak through the encryption
 - The infamous "ECB penguin" image makes this visible: an encrypted bitmap still shows the silhouette
 - Useful only in textbook examples and as a what-not-to-do
@@ -80,9 +78,9 @@ If a library lets you choose ECB, choose anything else.
 
 ## CBC — Cipher Block Chaining
 
-- Each block XORed with the previous ciphertext block before encryption
-- Random IV (initialisation vector) for the first block — never reused
-- Sequential: cannot parallelise encryption
+- Each block XOR-combined with the previous cipher-text block before encryption
+- Random IV (initialization vector) for the first block — never reused
+- Sequential: cannot parallelize encryption
 - Vulnerable to padding-oracle attacks if you do not authenticate
 - "CBC + HMAC" was the standard pattern before AEAD came along
 
@@ -92,17 +90,17 @@ CBC is not broken, but it is **error-prone**. AEAD modes are the modern answer.
 
 ## CTR — Counter mode
 
-- Encrypt a counter to produce a keystream; XOR keystream with plaintext
+- Encrypt a counter to produce a key-stream; XOR key-stream with plaintext
 - Turns a block cipher into a stream cipher
-- Fully parallelisable — encrypt blocks in any order
+- Fully parallel — encrypt blocks in any order
 - No padding needed — output length = input length
-- **Nonce reuse is catastrophic** — same nonce = same keystream = XOR reveals plaintext
+- **Nonce reuse is catastrophic** — same nonce = same key-stream = XOR reveals plaintext
 
 CTR alone gives you confidentiality but not integrity. Combine with a MAC, or use GCM.
 
 ---
 
-## GCM — Galois/Counter Mode (the modern default)
+## GCM — Counter Mode with Authentication
 
 - CTR mode for encryption + GHASH for authentication, in one pass
 - Provides **AEAD**: authenticated encryption with associated data
@@ -125,7 +123,7 @@ ct = aesgcm.encrypt(nonce, plaintext, associated_data=b"header")
 - **Always** from a CSPRNG: `os.urandom`, `/dev/urandom`, `crypto.randomBytes`
 - 256 bits is the modern default; 128 bits is acceptable
 - Never derive keys from low-entropy sources (passwords, timestamps, PIDs)
-- For password-based keys: use a KDF (Argon2, PBKDF2)
+- For password-based keys: use a key-derivation function (Argon2)
 
 ```python
 import os
@@ -151,7 +149,7 @@ The key is the entire secret. Treat it like one.
 ## Padding-oracle attacks
 
 - Some servers tell the attacker "padding invalid" vs "decryption failed"
-- That single bit of info, repeated, lets you decrypt arbitrary ciphertexts
+- That single bit of info, repeated, lets you decrypt arbitrary cipher-texts
 - Famous against TLS 1.0 (BEAST, Lucky13) and ASP.NET (2010)
 - Mitigation: use AEAD modes — there is nothing to oracle
 

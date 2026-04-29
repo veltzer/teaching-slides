@@ -22,7 +22,7 @@ audience:
 ---
 ## Ethernet History
 
-- Invented at Xerox PARC, 1973
+- Invented at Xerox in 1973
 - Standardized as IEEE 802.3
 - Started at 10 Mbps; now 100+ Gbps
 - Wired and wireless variants
@@ -33,14 +33,14 @@ audience:
 
 ```output
 +----------+--------+--------+----------+----------------+--------+
-| Preamble |  Dst   |  Src   | EtherType |    Payload     |  FCS   |
+| Preamble |  Dst   |  Src   | Type-field |    Payload     |  Frame-Check   |
 | 7 bytes  | 6 bytes| 6 bytes| 2 bytes   | 46-1500 bytes  | 4 bytes|
 +----------+--------+--------+----------+----------------+--------+
 ```
 
 - Preamble for sync; not always counted
 - Header is small relative to payload
-- FCS is CRC-32 for integrity
+- The frame-check field is a CRC-32 for integrity
 
 ---
 ## Frame Visualized
@@ -48,7 +48,7 @@ audience:
 ![frame](svg/courses/networking/tcp-ip-deep-dive/02_link_layer/frame.svg)
 
 ---
-## EtherType Field
+## Type Field
 
 - 0x0800 — IPv4
 - 0x86DD — IPv6
@@ -133,9 +133,9 @@ audience:
 
 - Prevents loops in switched networks
 - Loops cause broadcast storms
-- STP elects a root, blocks redundant paths
+- Spanning Tree Protocol elects a root, blocks redundant paths
 - Failover when active path dies
-- Modern variants: RSTP, MSTP, PVST+
+- Modern variants of Spanning Tree exist for faster convergence and per-VLAN trees
 
 ---
 ## Wi-Fi as Link Layer
@@ -144,7 +144,7 @@ audience:
 - Same MAC concepts
 - Different framing details
 - Encryption at the link layer (WPA2/WPA3)
-- Bridges to Ethernet via APs
+- Bridges to Ethernet via access points
 
 ---
 ## MTU
@@ -187,7 +187,7 @@ audience:
 
 - Hardware offloads: TSO, GRO, checksum
 - Pause frames (802.3x) for flow control
-- Link aggregation (LACP) bonds links
+- Link-aggregation control protocol bonds links
 - Jumbo frames in storage networks
 - Each is a knob; defaults are sensible
 
@@ -195,7 +195,7 @@ audience:
 ## Common Pitfalls
 
 - VLAN misconfiguration cuts off subnets
-- STP loops bring down switches
+- Spanning-tree loops bring down switches
 - MAC flooding attacks (rare now)
 - Asymmetric MTU on tunnels
 - Layer 2 issues hidden behind Layer 3 symptoms
@@ -203,8 +203,8 @@ audience:
 ---
 ## Summary
 
-- Ethernet frames: src + dst MAC + EtherType + payload + FCS
+- Ethernet frames: src + dst MAC + type + payload + check
 - Switches learn and forward by MAC
 - Broadcast domains scale poorly without VLANs
-- STP prevents loops in switched topologies
-- Most issues you'll see are MTU, VLANs, and STP
+- Spanning Tree prevents loops in switched topologies
+- Most issues you'll see are MTU, VLANs, and spanning tree

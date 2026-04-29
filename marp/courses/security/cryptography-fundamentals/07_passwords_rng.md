@@ -31,12 +31,12 @@ You need a function that is **slow on purpose** and **unique per user**.
 - Stored alongside the hash — not secret, just unique
 - 16+ random bytes from a CSPRNG
 
-```
+```output
 salt = os.urandom(16)
 stored = salt + slow_hash(password, salt)
 ```
 
-A salt does not slow individual cracking attempts. It just prevents amortising work across users.
+A salt does not slow individual cracking attempts. It just prevents amortizing work across users.
 
 ---
 
@@ -88,11 +88,9 @@ For new systems: Argon2id with OWASP parameters. Done.
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/07_passwords_rng/argon2.svg)
+## Password Hashing Compared
 
----
-
-![](svg/courses/security/cryptography-fundamentals/07_passwords_rng/argon2.svg)
+![argon2](svg/courses/security/cryptography-fundamentals/07_passwords_rng/argon2.svg)
 
 ---
 

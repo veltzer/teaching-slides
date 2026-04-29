@@ -5,7 +5,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # SRE Principles
 
@@ -13,7 +13,7 @@ audience:
 
 ## What is SRE
 
-Ben Treynor's definition (Google):
+A common definition (made famous at Google):
 
 > "SRE is what happens when you ask a software engineer to design an operations team."
 
@@ -61,11 +61,9 @@ The 50% isn't aspirational — it's enforced. Without it, you have no SRE, just 
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/01_principles/sre_vs_ops.svg)
+## SRE Time Allocation
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/01_principles/sre_vs_ops.svg)
+![sre_vs_ops](svg/courses/architecting/site-reliability-engineering/01_principles/sre_vs_ops.svg)
 
 ---
 
@@ -100,7 +98,7 @@ The goal is not to be as reliable as possible. The goal is to be exactly as reli
 - Not 100% uptime — that target wastes resources and blocks shipping
 - Not a renamed ops team — without engineering culture, it is just ops
 - Not a silver bullet — culture and management support are required
-- Not free — SREs cost more than ops engineers
+- Not free — an SRE costs more than an ops engineer
 - Not for everything — small services may not need SRE
 
 A team called "SRE" that does only ops work is a team called "SRE" that does only ops work. Names are not magic.

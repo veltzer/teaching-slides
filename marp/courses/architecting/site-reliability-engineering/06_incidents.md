@@ -6,7 +6,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # Incident Management and Postmortems
 
@@ -17,12 +17,12 @@ audience:
 - An unplanned event that degrades or threatens service
 - Not every page is an incident; not every incident pages
 - Severity levels (varies by org):
-  - **SEV1** — major outage, customer impact, exec attention
-  - **SEV2** — significant degradation, contained scope
-  - **SEV3** — partial outage, workaround available
-  - **SEV4** — internal-only, low impact
+    - **severity-1** — major outage, customer impact, exec attention
+    - **severity-2** — significant degradation, contained scope
+    - **severity-3** — partial outage, workaround available
+    - **severity-4** — internal-only, low impact
 
-Declare loudly and early. It is far cheaper to downgrade a SEV2 to SEV3 than to upgrade a SEV3 mid-fire.
+Declare loudly and early. It is far cheaper to downgrade a severity-2 to severity-3 than to upgrade a severity-3 mid-fire.
 
 ---
 
@@ -36,24 +36,22 @@ Three roles, even on small teams:
 
 For small incidents one person can wear two hats. **Never** the same person doing all three — context-switching kills response time.
 
-Inspired by the Incident Command System used by fire departments and FEMA.
+Inspired by the Incident Command System used by emergency services.
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/06_incidents/incident_flow.svg)
+## Incident Lifecycle
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/06_incidents/incident_flow.svg)
+![incident_flow](svg/courses/architecting/site-reliability-engineering/06_incidents/incident_flow.svg)
 
 ---
 
 ## Communication during incidents
 
 - **Internal channel** — single Slack/Teams channel, dedicated to this incident
-- **Public status page** — updated every 15-30 minutes during SEV1
+- **Public status page** — updated every 15-30 minutes during severity-1
 - **Stakeholder updates** — written summaries, not raw chat
-- **Customer comms** — drafted by the Communications Lead, reviewed by IC
+- **Customer messaging** — drafted by the Communications Lead, reviewed by IC
 
 Bad: silent on-call engineer alone in a chat with five managers.
 Good: IC posts hourly summaries; engineers debug in a separate thread.
@@ -64,9 +62,9 @@ Good: IC posts hourly summaries; engineers debug in a separate thread.
 
 - **PagerDuty / Opsgenie / Splunk On-Call** — paging and rotation
 - **Slack/Teams** — incident channel, automation bots
-- **Status page** — Statuspage.io, Better Uptime, custom
+- **Status page** — hosted services or custom
 - **War room video bridge** — Zoom/Meet ready in seconds
-- **Document templates** — incident timeline, comms updates
+- **Document templates** — incident timeline, status updates
 
 The single most useful incident tool is a Slack bot that creates the channel + Zoom + status page entry on `/incident`.
 
@@ -74,14 +72,14 @@ The single most useful incident tool is a Slack bot that creates the channel + Z
 
 ## The blameless postmortem
 
-> "We assume that every employee meant to do the right thing." — Etsy postmortem template
+> "We assume that every employee meant to do the right thing." — common postmortem-template wording
 
 - The goal is to learn, not to assign fault
 - Humans make errors because of the system around them
 - Punishing humans for system-level failures creates fear and hiding
 - Fear creates worse incidents next time
 
-Blameless does not mean accountabilityless. It means: focus on the system that allowed the error, not the human who made it.
+Blameless does not mean no accountability. It means: focus on the system that allowed the error, not the human who made it.
 
 ---
 
@@ -89,7 +87,7 @@ Blameless does not mean accountabilityless. It means: focus on the system that a
 
 Every postmortem documents:
 
-```
+```output
 1. Summary — one-paragraph user-facing description
 2. Impact — duration, customers affected, revenue
 3. Timeline — UTC timestamps of every event
@@ -113,13 +111,13 @@ The action items are the only part with teeth. Track them like normal work.
 - The honest answer is usually "many things had to align"
 - Resist the urge to stop at human error — that is a symptom, not a cause
 
-```
+```output
 Outage → DB overloaded
   Why? → Bad query in shipping
     Why? → No load test for this query
       Why? → Load testing isn't part of the workflow
         Why? → No tooling makes it easy
-          Why? → No one prioritised building it
+          Why? → No one ranked it as urgent enough to build
 ```
 
 The fix is at the bottom, not the top.
@@ -137,7 +135,7 @@ Good action item: "Add automated check that blocks deploy if X is true"
 - Reduces likelihood OR reduces impact of recurrence
 - Tracked in the same system as feature work
 
-If your postmortem produces 30 action items, half won't get done. Prioritise 3-5 high-leverage ones.
+If your postmortem produces 30 action items, half won't get done. Rank 3-5 high-leverage ones.
 
 ---
 
@@ -154,9 +152,9 @@ The cost of an incident is paid; capture the value.
 
 ## Common incident anti-patterns
 
-- **Silent on-call** — engineer fixes alone, no IC, no comms
+- **Silent on-call** — engineer fixes alone, no IC, no status updates
 - **Heroes** — one person does everything; doesn't scale, leads to burnout
-- **Postmortem theatre** — written but never read; action items never done
+- **Postmortem as ritual** — written but never read; action items never done
 - **Blame** — incident felt like a punishment; people hide problems next time
 - **No declaration** — outage debated for hours before anyone calls it
 - **Tool soup** — incident in 5 channels, 3 docs, no single source of truth
@@ -173,6 +171,6 @@ Drill these as a team — chaos engineering, game days, on-call simulations.
 | Aware | Pages exist, but no IC structure |
 | Defined | IC role assigned; postmortems written |
 | Measured | Incident metrics tracked over time |
-| Optimised | Postmortems drive systemic improvement |
+| Optimized | Postmortems drive systemic improvement |
 
 Move up by adding one practice at a time. Skip steps and the team rejects them.

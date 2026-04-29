@@ -48,7 +48,7 @@ audience:
 - Critical for SPA and mobile
 
 ---
-## Open Redirector Abuse
+## Open-Redirect Abuse
 
 - Loose redirect URI matching = open redirect
 - Attacker registers `https://evil.com/` and redirects through
@@ -60,7 +60,7 @@ audience:
 ## Token Replay
 
 - Attacker steals a token; replays it later
-- Defense: short token TTL, mTLS or DPoP for binding
+- Defense: short token TTL; mTLS or proof-of-possession for binding
 - Detection: monitor IP/UA changes
 - Refresh token rotation also helps
 - Long tokens = bigger replay window
@@ -77,7 +77,7 @@ audience:
 ---
 ## XSS-Driven Token Theft
 
-- Attacker XSS injects script that exfiltrates tokens
+- Attacker XSS injects a script that steals tokens
 - localStorage tokens are easy targets
 - Defense: BFF pattern, httpOnly cookies, CSP
 - Memory-only tokens are safer
@@ -115,7 +115,7 @@ audience:
 
 - Server-side: secure session store
 - SPA: BFF pattern preferred; in-memory as fallback
-- Mobile: OS secure storage (Keychain, Keystore)
+- Mobile: OS secure storage (key store)
 - CLI: OS credential manager
 - Never plain text on disk
 
@@ -131,7 +131,7 @@ audience:
 ---
 ## Sender-Constrained Tokens
 
-- DPoP — proof of possession by signing each request
+- Proof-of-possession — sign each request to bind the token
 - mTLS — token bound to TLS client cert
 - Token theft alone is insufficient — need the key
 - Strongest mitigation in spec drafts
@@ -221,7 +221,7 @@ audience:
 ---
 ## Compliance and Standards
 
-- FAPI (Financial-grade API) for high-stakes
+- Financial-grade API profiles for high-stakes
 - GDPR for data minimization in claims
 - SOC 2 / ISO for operational discipline
 - HIPAA for healthcare

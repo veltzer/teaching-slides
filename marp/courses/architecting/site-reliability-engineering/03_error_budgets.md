@@ -5,7 +5,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # Error Budgets
 
@@ -15,7 +15,7 @@ audience:
 
 If your SLO says 99.9% over 28 days, you are explicitly allowing 0.1% failure.
 
-```
+```output
 Error budget = (1 − SLO) × time
 99.9% over 28 days = 43.2 minutes of downtime allowed
 ```
@@ -28,18 +28,16 @@ This is the **error budget**. It is not a target to hit; it is a budget to spend
 
 - They turn reliability from a vague concern into a quantitative resource
 - They give engineers permission to take risks (the budget covers it)
-- They give SREs leverage to slow shipping when the budget is exhausted
+- They give the SRE team leverage to slow shipping when the budget is exhausted
 - They align dev and ops on the same metric — reliability is no longer an "ops problem"
 
 Before error budgets, dev pushes for velocity, ops pushes for stability, neither side trusts the other. With them, both sides argue about the same number.
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/03_error_budgets/burn.svg)
+## Error Budget Burn
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/03_error_budgets/burn.svg)
+![burn](svg/courses/architecting/site-reliability-engineering/03_error_budgets/burn.svg)
 
 ---
 
@@ -67,7 +65,7 @@ Things that **save** budget:
 
 Document what happens when the budget is exhausted:
 
-```
+```output
 If error budget is consumed:
   - All new feature deploys to production are paused
   - Only reliability work and rollbacks ship
@@ -90,13 +88,13 @@ Burn rate = how fast you are spending the budget right now
 | 10× | will burn 28-day budget in 2.8 days | page on-call |
 | 100× | will burn 28-day budget in 7 hours | wake people up |
 
-Multi-window, multi-burn-rate alerts (Google's MWMBR pattern) catch both fast outages and slow degradation.
+Multi-window, multi-burn-rate alerts (the Google SRE Workbook pattern) catch both fast outages and slow degradation.
 
 ---
 
 ## A worked example
 
-```
+```output
 SLO: 99.9% availability over 28 days
 Total requests in 28 days: 100,000,000
 Allowed bad requests: 0.1% × 100M = 100,000
@@ -129,7 +127,7 @@ The budget is meant to be spent. A team with no incidents is over-engineering.
 - A 30-min outage on a 99.9%/28d service eats 70% of the budget
 - After exhaustion, the freeze gives ops time to fix root causes
 - Postmortems quantify "how much budget did this incident cost?"
-- Over time, you can see which incident classes hurt most and prioritise mitigations
+- Over time, you can see which incident classes hurt most and rank mitigations by impact
 
 The budget makes incident impact comparable. "Bad outage" becomes "consumed 0.6 budgets" — measurable across teams and quarters.
 

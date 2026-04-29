@@ -5,7 +5,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # SLIs, SLOs, and SLAs
 
@@ -25,10 +25,10 @@ Picking these is harder than it looks. Most teams measure too many things and ta
 
 - **User-facing** — measures user experience, not infrastructure
 - **Quantifiable** — a ratio of good events / valid events, not a vague metric
-- **Aggregatable** — meaningful across regions, hosts, time
+- **Composable** — meaningful when summed across regions, hosts, time
 - **Actionable** — when it drops, you know something user-affecting is wrong
 
-```
+```output
 availability_sli = successful_requests / valid_requests
 latency_sli = requests_under_500ms / valid_requests
 ```
@@ -51,17 +51,15 @@ Pick 2-3 SLIs per service. More SLIs means more dashboards no one reads.
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/02_slos_slis/slo_pyramid.svg)
+## SLI to SLO to SLA
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/02_slos_slis/slo_pyramid.svg)
+![slo_pyramid](svg/courses/architecting/site-reliability-engineering/02_slos_slis/slo_pyramid.svg)
 
 ---
 
 ## Setting an SLO target
 
-```
+```output
 Availability SLO: 99.9% of HTTP requests succeed over 28 days
 Latency SLO: 95% of requests complete in under 500ms
 ```
@@ -88,7 +86,7 @@ The SLO target sets the **error budget**, which is what enables velocity.
 | 99.99% | 52.6 minutes | deep investment |
 | 99.999% | 5.26 minutes | exotic; usually impossible |
 
-Each nine is roughly 10× harder than the last. Decide deliberately, not aspirationally.
+Each nine is roughly 10× harder than the last. Decide deliberately, not by ambition.
 
 ---
 
@@ -133,7 +131,7 @@ Different sources produce different numbers. Document which one is the SLO sourc
 
 Every service should have a one-page SLO document:
 
-```
+```output
 Service: Checkout API
 SLI: availability — successful HTTP responses / valid requests
 SLI: latency — requests served in <500ms p95
@@ -144,4 +142,4 @@ Owner: checkout-team@
 Last reviewed: 2026-Q1
 ```
 
-The doc is the artefact. Without it, "SLO" is hand-waving.
+The doc is the deliverable. Without it, "SLO" is hand-waving.

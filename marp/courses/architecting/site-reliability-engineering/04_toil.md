@@ -5,8 +5,8 @@ tags:
 level: intermediate
 category: architecture
 audience:
-  - audiences:sres
   - audiences:devops
+  - audiences:developers
 ---
 # Toil and Automation
 
@@ -38,11 +38,9 @@ The point of the checklist is to be honest. Not everything you dislike is toil.
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/04_toil/toil_examples.svg)
+## Toil vs Engineering
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/04_toil/toil_examples.svg)
+![toil_examples](svg/courses/architecting/site-reliability-engineering/04_toil/toil_examples.svg)
 
 ---
 
@@ -60,7 +58,7 @@ A team buried in toil cannot stop being buried in toil. Someone has to drag them
 
 ## Measuring toil
 
-```
+```output
 toil_fraction = toil_hours / total_hours
 
 Track per engineer per quarter:
@@ -71,7 +69,7 @@ Track per engineer per quarter:
 - "interrupt-driven" task hours
 ```
 
-Google's target: toil ≤ 50% of an SRE's time. If higher, push work back to dev or hire more SREs.
+Google's target: toil ≤ 50% of an SRE's time. If higher, push work back to dev or grow the team.
 
 ---
 
@@ -96,7 +94,7 @@ This is engineering work. It belongs in the 50% engineering half of an SRE's tim
 | Approving routine alerts | Auto-remediation, alert tuning |
 | Provisioning new resources | Self-service portal, IaC |
 | Rotating credentials | Secret manager with auto-rotation |
-| Triaging tickets | Better routing, runbooks for common issues |
+| Sorting tickets | Better routing, runbooks for common issues |
 | Capacity expansion | Autoscaling |
 | Rebooting flaky hosts | Health checks + auto-replacement |
 
@@ -108,7 +106,7 @@ The pattern: a person doing the same decision tree repeatedly is a script waitin
 
 1. **No automation** — humans do everything
 1. 1. **System-specific automation** — bash scripts per box
-1. 1. **Externalised automation** — config files, central scripts
+1. 1. **Externalized automation** — config files, central scripts
 1. 1. **Internal automation** — system manages itself with operator approval
 1. 1. **Autonomous automation** — system manages itself, alerts on anomalies
 1. 1. **Self-healing** — system detects and fixes problems automatically
@@ -124,7 +122,7 @@ Most teams sit at level 2-3. The ROI on moving up the ladder is huge.
 - Tasks requiring human judgment — automating bad judgment makes it bigger
 - Tasks where failure is silent and dangerous — keep a human in the loop
 
-xkcd #1205: "Is It Worth The Time?" — the calculation matters. Automating things you do once a year is its own form of toil.
+"Is it worth the time?" — the calculation matters. Automating things you do once a year is its own form of toil.
 
 ---
 

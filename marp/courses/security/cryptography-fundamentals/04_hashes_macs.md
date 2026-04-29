@@ -96,11 +96,9 @@ A hash on its own answers "is this the same data?" — not "is this from who I t
 
 ---
 
-## ![w:50](svg/courses/security/cryptography-fundamentals/04_hashes_macs/hmac.svg)
+## HMAC
 
----
-
-![](svg/courses/security/cryptography-fundamentals/04_hashes_macs/hmac.svg)
+![hmac](svg/courses/security/cryptography-fundamentals/04_hashes_macs/hmac.svg)
 
 ---
 
@@ -108,7 +106,7 @@ A hash on its own answers "is this the same data?" — not "is this from who I t
 
 - Take a hash function (SHA-256) + a shared key + the message
 - Output is a tag that only someone with the key can produce or verify
-- Standardised in RFC 2104; works with any hash
+- Standardized in RFC 2104; works with any hash
 - Resistant to length-extension attacks (which plain SHA-2 hashes are NOT)
 
 ```python
@@ -125,8 +123,8 @@ Always use `hmac.compare_digest` to check tags — constant-time comparison.
 - Encrypts **and** authenticates in one primitive
 - "Associated data" is authenticated but not encrypted (e.g., headers)
 - Two dominant constructions:
-  - **AES-GCM** — AES-CTR + GHASH MAC
-  - **ChaCha20-Poly1305** — ChaCha20 stream cipher + Poly1305 MAC
+    - **AES-GCM** — AES-CTR + GHASH MAC
+    - **ChaCha20-Poly1305** — ChaCha20 stream cipher + Poly1305 MAC
 - TLS 1.3 mandates AEAD; older modes are removed
 
 If you encrypt without authenticating, attackers can flip ciphertext bits and you will not notice. AEAD is the modern answer.

@@ -9,7 +9,7 @@ duration_hours: 24
 audience:
   - audiences:developers
   - audiences:devops
-  - audiences:sres
+  - audiences:managers
 
 ---
 # Site Reliability Engineering

@@ -6,7 +6,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # Release Engineering and Capacity Planning
 
@@ -39,11 +39,9 @@ Each wave generates SLI data. Auto-pause if errors spike. Auto-rollback if the S
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/07_release_capacity/canary.svg)
+## Progressive Rollout
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/07_release_capacity/canary.svg)
+![canary](svg/courses/architecting/site-reliability-engineering/07_release_capacity/canary.svg)
 
 ---
 
@@ -96,7 +94,7 @@ Plan for:
 - **Failure scenarios** — one region down, double the load on the rest
 - **Headroom** — buffer for surprise
 
-```
+```output
 required_capacity = peak × failure_factor × headroom
                   = 2× × 1.5× × 1.3×
                   = ~4× steady state
@@ -124,7 +122,7 @@ Load test before launches. Load test before peak season. Load test routinely so 
 - Sanity-check against business projections
 - Add buffer for unexpected growth
 
-```
+```output
 Q4 capacity = Q3 actual × (1 + growth_rate)
             + Black Friday spike factor
             + 30% buffer
@@ -134,9 +132,9 @@ The cost of over-provisioning is money. The cost of under-provisioning is an inc
 
 ---
 
-## Cost optimisation
+## Cost optimization
 
-- Right-size before you scale — overprovisioned services waste money
+- Right-size before you scale — over-provisioned services waste money
 - Reserved/committed instances for steady load (1-3 year discounts)
 - Spot/preemptible instances for batch and stateless work
 - Multi-region only where required — egress is expensive
@@ -160,7 +158,7 @@ The 2018 Accelerate book quantified this: elite teams deploy on demand, multiple
 ## Reliability sprints
 
 - When error budget is exhausted, dedicate a sprint to reliability
-- All engineers (not just SREs) work on the top reliability bug
+- All engineers (not just the SRE team) work on the top reliability bug
 - Output: action items from postmortems get done, monitoring gaps closed
 - Often the most productive sprint of the quarter
 

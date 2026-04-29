@@ -31,7 +31,7 @@ audience:
 ---
 ## Authorization Code Flow Visualized
 
-![authcode_flow](svg/courses/networking/oauth2-and-oidc/03_authcode_pkce/authcode_flow.svg)
+![flow](svg/courses/networking/oauth2-and-oidc/03_authcode_pkce/authcode_flow.svg)
 
 ---
 ## Step 1: Authorization Request
@@ -157,7 +157,7 @@ Authorization: Bearer eyJhbGciOi...
 
 - Random string, 43-128 chars
 - URL-safe characters: `[A-Z][a-z][0-9]-._~`
-- High entropy (use a CSPRNG)
+- High entropy (use a cryptographic RNG)
 - Different per authorization request
 - Forgotten after use
 
@@ -190,7 +190,7 @@ token = exchange_code(code, verifier)
 ## Storing the Verifier
 
 - Browser session: `sessionStorage`
-- Native app: secure storage (Keychain, Keystore)
+- Native app: OS-provided secure storage
 - Never in cookies (XSRF surface)
 - Discard after the token is received
 - Don't log it
@@ -243,10 +243,10 @@ token = exchange_code(code, verifier)
 ---
 ## Mobile-Specific
 
-- Use system browser, not embedded webview
+- Use system browser, not embedded web view
 - Custom URL schemes can be hijacked
 - App Links / Universal Links are safer
-- Use AppAuth library where available
+- Use the platform's recommended OAuth library
 - PKCE is mandatory
 
 ---

@@ -62,13 +62,13 @@ audience:
 - Voltage levels, photons, radio
 - Cables, connectors, hardware
 - Out of scope for software developers
-- Where errors start: bad cables, EMI
+- Where errors start: bad cables, electrical interference
 
 ---
 ## OSI Layer 2: Data Link
 
 - Frames between adjacent nodes
-- Ethernet, Wi-Fi, PPP
+- Ethernet, Wi-Fi, point-to-point links
 - MAC addresses
 - Local area network domain
 - Switches operate here

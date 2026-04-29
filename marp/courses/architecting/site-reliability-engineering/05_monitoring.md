@@ -6,7 +6,7 @@ level: intermediate
 category: architecture
 audience:
   - audiences:developers
-  - audiences:sres
+  - audiences:devops
 ---
 # Monitoring and Alerting
 
@@ -35,11 +35,9 @@ Most things are not alerts. Most things are not tickets either. Logs and dashboa
 
 ---
 
-## ![w:50](svg/courses/architecting/site-reliability-engineering/05_monitoring/golden_signals.svg)
+## Four Golden Signals
 
----
-
-![](svg/courses/architecting/site-reliability-engineering/05_monitoring/golden_signals.svg)
+![golden_signals](svg/courses/architecting/site-reliability-engineering/05_monitoring/golden_signals.svg)
 
 ---
 
@@ -64,7 +62,7 @@ For machines and components — the **USE** method:
 - **Saturation** — degree to which it has extra work queued
 - **Errors** — count of error events
 
-Brendan Gregg's framework. Apply to: CPU, memory, disk, network, GPU, file descriptors. Quick way to find the bottleneck in any system.
+A widely used systems framework. Apply to: CPU, memory, disk, network, GPU, file descriptors. Quick way to find the bottleneck in any system.
 
 ---
 
@@ -76,13 +74,13 @@ For request-driven services — the **RED** method:
 - **Errors** — failed requests per second
 - **Duration** — distribution of request times
 
-Tom Wilkie's framework. Closely related to golden signals but framed for microservices. Trivial to compute from any reverse-proxy or service mesh.
+A microservices-oriented framework. Closely related to golden signals but framed for HTTP services. Trivial to compute from any reverse-proxy or service mesh.
 
 ---
 
 ## Designing alerts
 
-```
+```output
 For each SLO:
   - One page-on-call alert: "burning fast or budget exhausted"
   - One ticket alert: "burning slowly, look this week"
@@ -103,7 +101,7 @@ Pages without runbooks are mistakes.
 
 Page when fast burn AND slow burn both fire:
 
-```
+```output
 fast burn  : 14.4× burn over 1h    → would deplete budget in 2 days
 slow burn  : 6× burn over 6h       → would deplete budget in 4 days
 ```
@@ -156,6 +154,6 @@ Track every page. After every on-call shift: which pages were valuable? Which we
 - **Datadog, New Relic, Splunk** — commercial; faster to start with
 - **OpenTelemetry** — vendor-neutral instrumentation; emit once, route anywhere
 - **Cloud-native** — CloudWatch, GCP Monitoring, Azure Monitor
-- **Honeycomb, Lightstep** — observability platforms with high-cardinality querying
+- **Honeycomb** — observability platform with high-cardinality querying
 
 The tool matters less than the discipline of SLO-driven alerting.
