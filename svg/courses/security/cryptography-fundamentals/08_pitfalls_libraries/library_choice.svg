@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460212719154" font-weight="bold" fill="var(--text)">Picking a Crypto Library</text>
+
+  <rect x="40" y="81.428571428571" width="290" height="248.571428571429" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">libsodium</text>
+  <text x="185" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">first</text>
+  <text x="60" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- high-level</text>
+  <text x="60" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- safe</text>
+  <text x="60" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- bindings</text>
+  <text x="60" y="257.5" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- foolproof</text>
+  <text x="60" y="283.392857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--ok-text)">- modern</text>
+  <text x="185" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--ok-text)">default pick</text>
+
+  <rect x="350" y="81.428571428571" width="290" height="248.571428571429" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">OpenSSL</text>
+  <text x="495" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">workhorse</text>
+  <text x="370" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- all-in-one</text>
+  <text x="370" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- CLI+lib</text>
+  <text x="370" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- TLS impl</text>
+  <text x="370" y="257.5" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- complex</text>
+  <text x="370" y="283.392857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--primary-text)">- ubiquitous</text>
+  <text x="495" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--primary-text)">use via wrapper</text>
+
+  <rect x="660" y="81.428571428571" width="290" height="248.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="805" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--warn-text)">Language stdlib</text>
+  <text x="805" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">per-language</text>
+  <text x="680" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- Go: crypto/*</text>
+  <text x="680" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- Py: cryptography</text>
+  <text x="680" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- Java: JCA</text>
+  <text x="680" y="257.5" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- Rust: rustcrypto</text>
+  <text x="680" y="283.392857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--warn-text)">- Node: crypto</text>
+  <text x="805" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--warn-text)">good enough</text>
+
+  <rect x="970" y="81.428571428571" width="270" height="248.571428571429" rx="8.141603913586" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--info-text)">Avoid</text>
+  <text x="1105" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">red flags</text>
+  <text x="990" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">- DIY crypto</text>
+  <text x="990" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">- abandoned</text>
+  <text x="990" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">- pre-1.0</text>
+  <text x="990" y="257.5" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">- no audit</text>
+  <text x="990" y="283.392857142857" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--info-text)">- ECB examples</text>
+  <text x="1105" y="314.464285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106359577" font-style="italic" fill="var(--info-text)">flags compound</text>
+
+  <rect x="40" y="361.071428571429" width="1200" height="103.571428571429" rx="8.141603913586" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="392.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--surface)">Selection criteria</text>
+  <text x="60" y="423.214285714286" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--surface)">- maintained, documented, security channel</text>
+  <text x="60" y="449.107142857143" font-family="Arial, sans-serif" font-size="13.230106359577" fill="var(--surface)">- audited, in distros, used widely</text>
+
+  <rect x="40" y="485.357142857143" width="1200" height="134.642857142857" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="516.428571428572" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--text)">Raw API rules</text>
+  <text x="60" y="547.5" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text)">- copy official examples</text>
+  <text x="60" y="573.392857142857" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text)">- read warnings</text>
+  <text x="60" y="599.285714285714" font-family="Arial, sans-serif" font-size="14.247806848775" font-style="italic" fill="var(--ok-accent)">prefer higher-level</text>
+</svg>

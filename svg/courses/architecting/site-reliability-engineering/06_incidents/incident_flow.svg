@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--text)">Incident Lifecycle</text>
+
+  <rect x="40" y="90.877192982456" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--warn-text)">Detect</text>
+  <text x="130" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--warn-text)">page</text>
+
+  <path d="M 220 131.578947368421 L 260 131.578947368421" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="90.877192982456" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="350" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--danger-text)">Declare</text>
+  <text x="350" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--danger-text)">SEV + IC</text>
+
+  <path d="M 440 131.578947368421 L 480 131.578947368421" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="480" y="90.877192982456" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="570" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--primary-text)">Mitigate</text>
+  <text x="570" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--primary-text)">stop bleeding</text>
+
+  <path d="M 660 131.578947368421 L 700 131.578947368421" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="90.877192982456" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--ok-text)">Resolve</text>
+  <text x="790" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--ok-text)">restored</text>
+
+  <path d="M 880 131.578947368421 L 920 131.578947368421" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="920" y="90.877192982456" width="180" height="81.40350877193" rx="8.069870322226" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1010" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.139740644452" font-weight="bold" fill="var(--info-text)">Postmortem</text>
+  <text x="1010" y="151.929824561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805483339" fill="var(--info-text)">learn</text>
+
+  <rect x="40" y="212.982456140351" width="380" height="183.157894736842" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="248.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--danger-text)">Incident Commander</text>
+  <text x="60" y="284.210526315789" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- coordinates</text>
+  <text x="60" y="309.649122807018" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- severity calls</text>
+  <text x="60" y="335.087719298246" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- escalates</text>
+  <text x="60" y="360.526315789474" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- doesn't debug</text>
+
+  <rect x="450" y="212.982456140351" width="380" height="183.157894736842" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="248.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--primary-text)">Operations Lead</text>
+  <text x="470" y="284.210526315789" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- diagnoses</text>
+  <text x="470" y="309.649122807018" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- applies fixes</text>
+  <text x="470" y="335.087719298246" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- shouts to IC</text>
+  <text x="470" y="360.526315789474" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- can pull in others</text>
+
+  <rect x="860" y="212.982456140351" width="380" height="183.157894736842" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="248.59649122807" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--ok-text)">Communications</text>
+  <text x="880" y="284.210526315789" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- status page</text>
+  <text x="880" y="309.649122807018" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- stakeholders</text>
+  <text x="880" y="335.087719298246" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- shields ops</text>
+  <text x="880" y="360.526315789474" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- customer comms</text>
+
+  <rect x="40" y="426.666666666667" width="1200" height="193.333333333333" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="462.280701754386" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--text)">Three roles</text>
+  <text x="60" y="497.894736842105" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- one person, two hats max</text>
+  <text x="60" y="528.421052631579" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- SEV1-2: split roles fast</text>
+  <text x="60" y="558.947368421053" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- declare early, downgrade later</text>
+  <text x="60" y="599.649122807018" font-family="Arial, sans-serif" font-size="14.122273063895" font-style="italic" fill="var(--ok-accent)">post-incident: blameless postmortem</text>
+</svg>

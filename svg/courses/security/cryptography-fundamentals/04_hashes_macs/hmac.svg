@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="634.871794871795" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.797299082095" font-weight="bold" fill="var(--text)">HMAC: Authenticated Integrity</text>
+
+  <rect x="40" y="102.142857142857" width="184.615384615385" height="82.857142857143" rx="8.245322794491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="132.307692307692" y="138.392857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--primary-text)">message</text>
+  <text x="132.307692307692" y="164.285714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--primary-text)">data to send</text>
+
+  <rect x="40" y="226.428571428571" width="184.615384615385" height="82.857142857143" rx="8.245322794491" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="132.307692307692" y="262.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--warn-text)">shared key</text>
+  <text x="132.307692307692" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--warn-text)">32+ random bytes</text>
+
+  <path d="M 224.615384615385 143.571428571429 L 368.205128205128 205.714285714286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 224.615384615385 267.857142857143 L 368.205128205128 226.428571428571" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="368.205128205128" y="164.285714285714" width="246.153846153846" height="124.285714285714" rx="8.245322794491" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="491.282051282051" y="205.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--info-text)">HMAC-SHA-256</text>
+  <text x="491.282051282051" y="236.785714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--info-text)">H(K xor opad ‖</text>
+  <text x="491.282051282051" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--info-text)">  H(K xor ipad ‖ msg))</text>
+
+  <path d="M 614.358974358974 226.428571428571 L 757.948717948718 226.428571428571" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="757.948717948718" y="185" width="225.641025641026" height="82.857142857143" rx="8.245322794491" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="870.769230769231" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--ok-text)">tag (32 bytes)</text>
+  <text x="870.769230769231" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--ok-text)">send alongside msg</text>
+
+  <rect x="1014.358974358974" y="185" width="225.641025641026" height="82.857142857143" rx="8.245322794491" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.179487179487" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--warn-text)">verify</text>
+  <text x="1127.179487179487" y="247.142857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" fill="var(--warn-text)">recompute, compare</text>
+
+  <rect x="40" y="340.357142857143" width="1200" height="103.571428571429" rx="8.245322794491" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="60.512820512821" y="371.428571428571" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--surface)">tag = hmac.new(key, message, hashlib.sha256).digest()</text>
+  <text x="60.512820512821" y="397.321428571429" font-family="Courier New, monospace" font-size="13.398649541047" fill="var(--surface)">if not hmac.compare_digest(tag, expected): reject  # constant-time</text>
+  <text x="60.512820512821" y="423.214285714286" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--text-faint)">never use == on tags — early-exit comparison leaks bytes via timing</text>
+
+  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="8.245322794491" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="634.871794871795" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.490645588981" font-weight="bold" fill="var(--text)">Why not just SHA-256(key ‖ message)?</text>
+  <text x="60.512820512821" y="526.785714285714" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- SHA-2 is vulnerable to length-extension: knowing H(secret ‖ msg) lets you compute</text>
+  <text x="60.512820512821" y="552.678571428572" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">  H(secret ‖ msg ‖ extra) without knowing the secret</text>
+  <text x="60.512820512821" y="578.571428571429" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- HMAC's nested construction defeats this; SHA-3 and BLAKE2 are immune by design</text>
+  <text x="60.512820512821" y="609.642857142857" font-family="Arial, sans-serif" font-size="14.429314890359" font-style="italic" fill="var(--ok-accent)">use HMAC, not naive concatenation — it is in every stdlib</text>
+</svg>

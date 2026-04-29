@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.565178609681" font-weight="bold" fill="var(--text)">ARP: Resolving IP to MAC</text>
+
+  <rect x="40" y="86.194690265487" width="203.389830508475" height="82.12389380531" rx="6.130425833003" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="141.694915254237" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--primary-text)">Host A</text>
+  <text x="141.694915254237" y="152.920353982301" text-anchor="middle" font-family="Courier New, monospace" font-size="11.239114027173" fill="var(--primary-text)">192.168.1.5</text>
+
+  <rect x="528.135593220339" y="86.194690265487" width="203.389830508475" height="82.12389380531" rx="6.130425833003" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="629.830508474576" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--warn-text)">switch (broadcast)</text>
+
+  <rect x="1016.271186440678" y="86.194690265487" width="203.389830508475" height="82.12389380531" rx="6.130425833003" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1117.966101694915" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--ok-text)">Host B</text>
+  <text x="1117.966101694915" y="152.920353982301" text-anchor="middle" font-family="Courier New, monospace" font-size="11.239114027173" fill="var(--ok-text)">192.168.1.10</text>
+
+  <line x1="141.694915254237" y1="168.318584070796" x2="141.694915254237" y2="599.469026548673" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="629.830508474576" y1="168.318584070796" x2="629.830508474576" y2="599.469026548673" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="1117.966101694915" y1="168.318584070796" x2="1117.966101694915" y2="599.469026548673" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <path d="M 141.694915254237 219.646017699115 L 629.830508474576 219.646017699115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="151.864406779661" y="209.380530973451" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">1. ARP request (broadcast)</text>
+  <text x="151.864406779661" y="238.12389380531" font-family="Courier New, monospace" font-size="11.239114027173" fill="var(--text-muted)">"who has 192.168.1.10? tell A"</text>
+
+  <path d="M 629.830508474576 281.238938053097 L 1117.966101694915 281.238938053097" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="270.973451327434" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">2. broadcast forwarded to all</text>
+
+  <path d="M 1117.966101694915 342.83185840708 L 141.694915254237 342.83185840708" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="151.864406779661" y="332.566371681416" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">3. ARP reply (unicast)</text>
+  <text x="151.864406779661" y="361.309734513274" font-family="Courier New, monospace" font-size="11.239114027173" fill="var(--text-muted)">"192.168.1.10 is at MAC bb:bb:bb"</text>
+
+  <path d="M 141.694915254237 404.424778761062 L 1117.966101694915 404.424778761062" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="151.864406779661" y="394.159292035398" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">4. send actual data (Ethernet to bb:bb:bb)</text>
+
+  <rect x="40" y="445.486725663717" width="1200" height="174.513274336283" rx="6.130425833003" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="629.830508474576" y="481.41592920354" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.347802221342" font-weight="bold" fill="var(--text)">ARP cache</text>
+  <text x="60.338983050847" y="512.212389380531" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">- both sides cache the IP-MAC binding for minutes</text>
+  <text x="60.338983050847" y="537.87610619469" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">- subsequent packets skip the resolution</text>
+  <text x="60.338983050847" y="563.53982300885" font-family="Arial, sans-serif" font-size="13.282589304841" fill="var(--text)">- aging timeout triggers re-ARP</text>
+  <text x="60.338983050847" y="594.336283185841" font-family="Courier New, monospace" font-size="13.282589304841" fill="var(--text-muted)">$ ip neigh show     # view the ARP cache on Linux</text>
+</svg>

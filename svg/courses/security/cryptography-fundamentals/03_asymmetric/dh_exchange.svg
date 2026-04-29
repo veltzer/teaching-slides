@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460212719154" font-weight="bold" fill="var(--text)">Diffie-Hellman: Shared Secret over Public Channel</text>
+
+  <rect x="40" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--primary-text)">Alice</text>
+  <text x="180" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--primary-text)">picks secret a</text>
+
+  <rect x="960" y="81.428571428571" width="280" height="82.857142857143" rx="8.141603913586" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.354009783964" font-weight="bold" fill="var(--ok-text)">Bob</text>
+  <text x="1100" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--ok-text)">picks secret b</text>
+
+  <line x1="180" y1="164.285714285714" x2="180" y2="599.285714285714" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="1100" y1="164.285714285714" x2="1100" y2="599.285714285714" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <path d="M 180 200.535714285714 L 1100 200.535714285714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="192.25" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--text)">A = g^a mod p</text>
+  <text x="640" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">Alice sends her public value</text>
+
+  <path d="M 1100 267.857142857143 L 180 267.857142857143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="259.571428571429" text-anchor="middle" font-family="Courier New, monospace" font-size="15.265507337973" font-weight="bold" fill="var(--text)">B = g^b mod p</text>
+  <text x="640" y="288.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212405870379" fill="var(--text-muted)">Bob sends his public value</text>
+
+  <rect x="40" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="310" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--warn-text)">Alice computes</text>
+  <text x="310" y="386.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" fill="var(--warn-text)">K = B^a mod p</text>
+  <text x="310" y="412.857142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.247806848775" fill="var(--warn-text)">= g^(ab) mod p</text>
+
+  <rect x="700" y="324.821428571429" width="540" height="103.571428571429" rx="8.141603913586" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="355.892857142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.283207827171" font-weight="bold" fill="var(--warn-text)">Bob computes</text>
+  <text x="970" y="386.964285714286" text-anchor="middle" font-family="Courier New, monospace" font-size="16.283207827171" fill="var(--warn-text)">K = A^b mod p</text>
+  <text x="970" y="412.857142857143" text-anchor="middle" font-family="Courier New, monospace" font-size="14.247806848775" fill="var(--warn-text)">= g^(ab) mod p</text>
+
+  <rect x="40" y="454.285714285714" width="1200" height="165.714285714286" rx="8.141603913586" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="490.535714285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318608805568" font-weight="bold" fill="var(--text)">Both compute K; Eve cannot</text>
+  <text x="60" y="521.607142857143" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text)">- Eve sees A, B; lacks a or b (discrete-log)</text>
+  <text x="60" y="547.5" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text)">- K is the session symmetric key</text>
+  <text x="60" y="573.392857142857" font-family="Arial, sans-serif" font-size="14.247806848775" fill="var(--text)">- ECDH: same idea, curve points, smaller keys</text>
+  <text x="60" y="604.464285714286" font-family="Arial, sans-serif" font-size="14.247806848775" font-style="italic" fill="var(--ok-accent)">DH lacks auth; pair with signatures</text>
+</svg>

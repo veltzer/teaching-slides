@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.037743528509" font-weight="bold" fill="var(--text)">TCP Three-Way Handshake</text>
+
+  <rect x="40" y="87.027027027027" width="327.272727272727" height="83.603603603604" rx="7.162556198887" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="203.636363636364" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.48766859666" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <text x="203.636363636364" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.518871764255" fill="var(--primary-text)">initiates</text>
+
+  <rect x="912.727272727273" y="87.027027027027" width="327.272727272727" height="83.603603603604" rx="7.162556198887" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1076.363636363636" y="123.603603603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.48766859666" font-weight="bold" fill="var(--ok-text)">Server</text>
+  <text x="1076.363636363636" y="149.72972972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.518871764255" fill="var(--ok-text)">listens</text>
+
+  <line x1="203.636363636364" y1="170.630630630631" x2="203.636363636364" y2="609.54954954955" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="1076.363636363636" y1="170.630630630631" x2="1076.363636363636" y2="609.54954954955" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <path d="M 203.636363636364 212.432432432432 L 1076.363636363636 233.333333333333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="217.272727272727" y="201.981981981982" font-family="Arial, sans-serif" font-size="16.712631130736" font-weight="bold" fill="var(--text)">1. SYN</text>
+  <text x="217.272727272727" y="233.333333333333" font-family="Courier New, monospace" font-size="14.325112397774" fill="var(--text-muted)">seq=100  syn=1</text>
+  <text x="217.272727272727" y="256.324324324324" font-family="Arial, sans-serif" font-size="13.131353031292" fill="var(--text-muted)">"can we connect? my seq starts at 100"</text>
+
+  <path d="M 1076.363636363636 316.936936936937 L 203.636363636364 337.837837837838" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="653.636363636364" y="306.486486486487" font-family="Arial, sans-serif" font-size="16.712631130736" font-weight="bold" fill="var(--text)">2. SYN-ACK</text>
+  <text x="585.454545454545" y="337.837837837838" font-family="Courier New, monospace" font-size="14.325112397774" fill="var(--text-muted)">seq=500  ack=101</text>
+  <text x="449.090909090909" y="360.828828828829" font-family="Arial, sans-serif" font-size="13.131353031292" fill="var(--text-muted)">"yes, my seq starts at 500; expect your byte 101 next"</text>
+
+  <path d="M 203.636363636364 410.990990990991 L 1076.363636363636 431.891891891892" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="217.272727272727" y="400.540540540541" font-family="Arial, sans-serif" font-size="16.712631130736" font-weight="bold" fill="var(--text)">3. ACK</text>
+  <text x="217.272727272727" y="431.891891891892" font-family="Courier New, monospace" font-size="14.325112397774" fill="var(--text-muted)">seq=101  ack=501</text>
+  <text x="217.272727272727" y="454.882882882883" font-family="Arial, sans-serif" font-size="13.131353031292" fill="var(--text-muted)">"acknowledging your byte 500; ready"</text>
+
+  <rect x="40" y="494.594594594595" width="1200" height="125.405405405405" rx="7.162556198887" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="525.945945945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.100149863698" font-weight="bold" fill="var(--text)">After handshake: ESTABLISHED — data can flow</text>
+  <text x="67.272727272727" y="559.387387387387" font-family="Arial, sans-serif" font-size="15.518871764255" fill="var(--text)">- one full RTT of latency before any data</text>
+  <text x="67.272727272727" y="585.513513513514" font-family="Arial, sans-serif" font-size="15.518871764255" fill="var(--text)">- TLS adds another 1-2 RTTs on top (without 0-RTT)</text>
+  <text x="67.272727272727" y="611.63963963964" font-family="Arial, sans-serif" font-size="15.518871764255" font-style="italic" fill="var(--text-muted)">connection reuse (keep-alive, HTTP/2) amortizes this cost</text>
+</svg>

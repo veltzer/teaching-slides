@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.761847000676" font-weight="bold" fill="var(--text)">DHCP DORA: Discover, Offer, Request, Ack</text>
+
+  <rect x="40" y="86.194690265487" width="327.272727272727" height="82.12389380531" rx="7.098887769387" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="203.636363636364" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.29666330816" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <text x="203.636363636364" y="147.787610619469" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.380923500338" fill="var(--primary-text)">no IP yet</text>
+
+  <rect x="912.727272727273" y="86.194690265487" width="327.272727272727" height="82.12389380531" rx="7.098887769387" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1076.363636363636" y="122.12389380531" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.29666330816" font-weight="bold" fill="var(--ok-text)">DHCP Server</text>
+
+  <line x1="203.636363636364" y1="168.318584070796" x2="203.636363636364" y2="599.469026548673" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+  <line x1="1076.363636363636" y1="168.318584070796" x2="1076.363636363636" y2="599.469026548673" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <path d="M 203.636363636364 209.380530973451 L 1076.363636363636 229.911504424779" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="217.272727272727" y="199.115044247788" font-family="Arial, sans-serif" font-size="16.564071461902" font-weight="bold" fill="var(--text)">1. DHCPDISCOVER (broadcast)</text>
+  <text x="217.272727272727" y="226.83185840708" font-family="Courier New, monospace" font-size="13.014627577209" fill="var(--text-muted)">"any DHCP server out there?"</text>
+
+  <path d="M 1076.363636363636 281.238938053097 L 203.636363636364 301.769911504425" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="503.636363636364" y="270.973451327434" font-family="Arial, sans-serif" font-size="16.564071461902" font-weight="bold" fill="var(--text)">2. DHCPOFFER</text>
+  <text x="503.636363636364" y="301.769911504425" font-family="Courier New, monospace" font-size="13.014627577209" fill="var(--text-muted)">"I have 192.168.1.42 for you"</text>
+
+  <path d="M 203.636363636364 353.097345132743 L 1076.363636363636 373.628318584071" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="217.272727272727" y="342.83185840708" font-family="Arial, sans-serif" font-size="16.564071461902" font-weight="bold" fill="var(--text)">3. DHCPREQUEST</text>
+  <text x="217.272727272727" y="371.575221238938" font-family="Courier New, monospace" font-size="13.014627577209" fill="var(--text-muted)">"yes, I'll take 192.168.1.42"</text>
+
+  <path d="M 1076.363636363636 424.955752212389 L 203.636363636364 445.486725663717" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="503.636363636364" y="414.690265486726" font-family="Arial, sans-serif" font-size="16.564071461902" font-weight="bold" fill="var(--text)">4. DHCPACK</text>
+  <text x="503.636363636364" y="445.486725663717" font-family="Courier New, monospace" font-size="13.014627577209" fill="var(--text-muted)">"confirmed; lease 24h; gateway, DNS..."</text>
+
+  <rect x="40" y="496.814159292035" width="1200" height="123.185840707965" rx="7.098887769387" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="527.610619469027" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.930367385031" font-weight="bold" fill="var(--text)">After ACK: client configured</text>
+  <text x="67.272727272727" y="556.353982300885" font-family="Arial, sans-serif" font-size="15.380923500338" fill="var(--text)">- IP, subnet mask, default gateway, DNS servers</text>
+  <text x="67.272727272727" y="580.991150442478" font-family="Arial, sans-serif" font-size="15.380923500338" fill="var(--text)">- lease for set duration; renew at half-life</text>
+  <text x="67.272727272727" y="607.681415929204" font-family="Arial, sans-serif" font-size="15.380923500338" font-style="italic" fill="var(--text-muted)">UDP ports 67 (server) and 68 (client)</text>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="634.871794871795" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.56119492838" font-weight="bold" fill="var(--text)">TLS 1.3 Handshake (1-RTT)</text>
+
+  <rect x="40" y="70.526315789474" width="328.205128205128" height="61.052631578947" rx="6.129506521934" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="204.102564102564" y="106.140350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.431688406446" font-weight="bold" fill="var(--primary-text)">Client</text>
+
+  <rect x="901.538461538461" y="70.526315789474" width="328.205128205128" height="61.052631578947" rx="6.129506521934" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1065.641025641026" y="106.140350877193" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.431688406446" font-weight="bold" fill="var(--ok-text)">Server</text>
+
+  <line x1="204.102564102564" y1="131.578947368421" x2="204.102564102564" y2="599.649122807018" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="1065.641025641026" y1="131.578947368421" x2="1065.641025641026" y2="599.649122807018" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <path d="M 204.102564102564 172.280701754386 L 1065.641025641026 172.280701754386" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="224.615384615385" y="162.105263157895" font-family="Arial, sans-serif" font-size="14.302181884512" font-weight="bold" fill="var(--text)">ClientHello + key_share (ECDHE)</text>
+  <text x="224.615384615385" y="192.631578947368" font-family="Courier New, monospace" font-size="12.259013043868" fill="var(--text-muted)">supported ciphers, ALPN, SNI</text>
+
+  <path d="M 1065.641025641026 243.508771929825 L 204.102564102564 243.508771929825" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="337.435897435897" y="233.333333333333" font-family="Arial, sans-serif" font-size="14.302181884512" font-weight="bold" fill="var(--text)">ServerHello + key_share + cert + sig + Finished</text>
+  <text x="337.435897435897" y="263.859649122807" font-family="Courier New, monospace" font-size="12.259013043868" fill="var(--text-muted)">handshake encrypted from here on</text>
+
+  <path d="M 204.102564102564 314.736842105263 L 1065.641025641026 314.736842105263" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="224.615384615385" y="304.561403508772" font-family="Arial, sans-serif" font-size="14.302181884512" font-weight="bold" fill="var(--text)">Finished</text>
+  <text x="224.615384615385" y="335.087719298246" font-family="Courier New, monospace" font-size="12.259013043868" fill="var(--text-muted)">application data follows immediately</text>
+
+  <rect x="40" y="375.789473684211" width="1200" height="81.40350877193" rx="8.172675362578" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="60.512820512821" y="406.315789473684" font-family="Arial, sans-serif" font-size="14.302181884512" font-weight="bold" fill="var(--surface)">Client verifies:</text>
+  <text x="60.512820512821" y="431.754385964912" font-family="Arial, sans-serif" font-size="13.28059746419" fill="var(--surface)">cert chain → trusted root, hostname matches SAN, in date, valid sig</text>
+
+  <rect x="40" y="472.456140350877" width="594.871794871795" height="147.543859649123" rx="8.172675362578" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="337.435897435897" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.345350725157" font-weight="bold" fill="var(--primary-text)">TLS 1.3 cipher suites (only 5)</text>
+  <text x="60.512820512821" y="533.508771929825" font-family="Courier New, monospace" font-size="13.28059746419" fill="var(--primary-text)">TLS_AES_128_GCM_SHA256</text>
+  <text x="60.512820512821" y="556.912280701754" font-family="Courier New, monospace" font-size="13.28059746419" fill="var(--primary-text)">TLS_AES_256_GCM_SHA384</text>
+  <text x="60.512820512821" y="580.315789473684" font-family="Courier New, monospace" font-size="13.28059746419" fill="var(--primary-text)">TLS_CHACHA20_POLY1305_SHA256</text>
+  <text x="60.512820512821" y="607.789473684211" font-family="Arial, sans-serif" font-size="12.259013043868" font-style="italic" fill="var(--primary-text)">all AEAD; no choice of weak modes</text>
+
+  <rect x="655.384615384615" y="472.456140350877" width="584.615384615385" height="147.543859649123" rx="8.172675362578" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947.692307692308" y="502.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.345350725157" font-weight="bold" fill="var(--ok-text)">What 1.3 dropped</text>
+  <text x="675.897435897436" y="533.508771929825" font-family="Arial, sans-serif" font-size="13.28059746419" fill="var(--ok-text)">- RSA key exchange (no forward secrecy)</text>
+  <text x="675.897435897436" y="556.912280701754" font-family="Arial, sans-serif" font-size="13.28059746419" fill="var(--ok-text)">- CBC modes, RC4, 3DES, MD5, SHA-1</text>
+  <text x="675.897435897436" y="580.315789473684" font-family="Arial, sans-serif" font-size="13.28059746419" fill="var(--ok-text)">- Compression (CRIME attack)</text>
+  <text x="675.897435897436" y="607.789473684211" font-family="Arial, sans-serif" font-size="12.259013043868" font-style="italic" fill="var(--ok-text)">simpler is more secure</text>
+</svg>

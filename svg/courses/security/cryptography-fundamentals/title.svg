@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>title</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2196f3"/><stop offset="100%" stop-color="#1565c0"/></linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4caf50"/><stop offset="100%" stop-color="#2e7d32"/></linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff9800"/><stop offset="100%" stop-color="#e65100"/></linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9c27b0"/><stop offset="100%" stop-color="#6a1b9a"/></linearGradient>
+  </defs>
+
+  <rect width="1200" height="580" fill="var(--code-bg)" rx="6" x="40" y="40"/>
+
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="39" font-weight="bold" fill="var(--surface)">Cryptography Fundamentals</text>
+  <text x="640" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="var(--text-faint)">Symmetric, asymmetric, hashes, signatures, TLS, and the post-quantum future</text>
+
+  <rect x="120" y="240" width="240" height="200" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="240" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Symmetric</text>
+  <text x="240" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">AES, ChaCha20</text>
+  <text x="240" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">GCM, AEAD</text>
+
+  <rect x="400" y="240" width="240" height="200" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="520" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Asymmetric</text>
+  <text x="520" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">RSA, ECC</text>
+  <text x="520" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">DH, ECDH</text>
+
+  <rect x="680" y="240" width="240" height="200" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="800" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Integrity</text>
+  <text x="800" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">SHA-2, SHA-3</text>
+  <text x="800" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">HMAC, signatures</text>
+
+  <rect x="960" y="240" width="200" height="200" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1060" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Protocols</text>
+  <text x="1060" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">TLS, PKI</text>
+  <text x="1060" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Argon2, PQC</text>
+
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--surface)">don't roll your own — use vetted libraries</text>
+  <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--text-faint)">libsodium, OpenSSL, Python cryptography</text>
+</svg>

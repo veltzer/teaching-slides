@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="629.830508474576" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.803436102462" font-weight="bold" fill="var(--text)">Reading a Wireshark TCP Trace</text>
+
+  <rect x="40" y="87.027027027027" width="1200" height="292.612612612613" rx="6.185408331337" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="60.338983050847" y="118.378378378378" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">No  Dir  Info</text>
+  <text x="60.338983050847" y="147.63963963964" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--ok-text)">1   c→s  SYN</text>
+  <text x="60.338983050847" y="170.630630630631" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--ok-text)">2   s→c  SYN-ACK</text>
+  <text x="60.338983050847" y="193.621621621622" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--ok-text)">3   c→s  ACK</text>
+  <text x="60.338983050847" y="216.612612612613" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">4   c→s  GET /</text>
+  <text x="60.338983050847" y="239.603603603604" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">5   s→c  ACK</text>
+  <text x="60.338983050847" y="262.594594594595" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">6   s→c  200 OK</text>
+  <text x="60.338983050847" y="285.585585585586" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--warn-text)">7   s→c  Retransmit</text>
+  <text x="60.338983050847" y="308.576576576577" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--ok-text)">8   c→s  Dup ACK</text>
+  <text x="60.338983050847" y="331.567567567568" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">9   c→s  FIN</text>
+  <text x="60.338983050847" y="354.558558558559" font-family="Courier New, monospace" font-size="13.401718051231" fill="var(--surface)">10  s→c  FIN-ACK</text>
+
+  <rect x="40" y="410.990990990991" width="386.440677966102" height="209.009009009009" rx="6.185408331337" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="233.220338983051" y="447.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" font-weight="bold" fill="var(--ok-text)">Handshake (1-3)</text>
+  <text x="60.338983050847" y="478.918918918919" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--ok-text)">- SYN/SYN-ACK/ACK</text>
+  <text x="60.338983050847" y="502.954954954955" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--ok-text)">- one RTT</text>
+  <text x="60.338983050847" y="526.990990990991" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--ok-text)">- 12ms RTT here</text>
+  <text x="60.338983050847" y="562.522522522523" font-family="Arial, sans-serif" font-size="12.370816662675" font-style="italic" fill="var(--ok-text)">healthy setup</text>
+
+  <rect x="446.779661016949" y="410.990990990991" width="386.440677966102" height="209.009009009009" rx="6.185408331337" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="447.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" font-weight="bold" fill="var(--warn-text)">Retransmission (7)</text>
+  <text x="467.118644067797" y="478.918918918919" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--warn-text)">- pkt 7 retransmit</text>
+  <text x="467.118644067797" y="502.954954954955" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--warn-text)">- pkt 8 dup ACK</text>
+  <text x="467.118644067797" y="526.990990990991" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--warn-text)">- path loss</text>
+  <text x="467.118644067797" y="562.522522522523" font-family="Arial, sans-serif" font-size="12.370816662675" font-style="italic" fill="var(--warn-text)">Wireshark auto-flags</text>
+
+  <rect x="853.559322033898" y="410.990990990991" width="386.440677966102" height="209.009009009009" rx="6.185408331337" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1046.779661016949" y="447.567567567568" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4944222169" font-weight="bold" fill="var(--danger-text)">What to look for</text>
+  <text x="873.898305084746" y="478.918918918919" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--danger-text)">- no SYN-ACK → firewall</text>
+  <text x="873.898305084746" y="502.954954954955" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--danger-text)">- retransmits → loss</text>
+  <text x="873.898305084746" y="526.990990990991" font-family="Arial, sans-serif" font-size="13.401718051231" fill="var(--danger-text)">- RST → app crash</text>
+  <text x="873.898305084746" y="562.522522522523" font-family="Arial, sans-serif" font-size="12.370816662675" font-style="italic" fill="var(--danger-text)">Stats → TCP stream graph</text>
+</svg>

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--text)">SLI → SLO → SLA</text>
+
+  <rect x="40" y="90.877192982456" width="380" height="203.508771929825" rx="8.069870322226" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--primary-text)">SLI — Indicator</text>
+  <text x="60" y="162.105263157895" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--primary-text)">what you measure</text>
+  <text x="60" y="197.719298245614" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--primary-text)">success / valid</text>
+  <text x="60" y="228.245614035088" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- availability ratio</text>
+  <text x="60" y="253.684210526316" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- latency percentiles</text>
+  <text x="60" y="279.122807017544" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--primary-text)">- freshness, durability</text>
+
+  <rect x="450" y="90.877192982456" width="380" height="203.508771929825" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--ok-text)">SLO — Objective</text>
+  <text x="470" y="162.105263157895" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">what you target</text>
+  <text x="470" y="197.719298245614" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--ok-text)">SLI ≥ 99.9% / 28d</text>
+  <text x="470" y="228.245614035088" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- internal goal</text>
+  <text x="470" y="253.684210526316" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- drives error budget</text>
+  <text x="470" y="279.122807017544" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--ok-text)">- ship/freeze decisions</text>
+
+  <rect x="860" y="90.877192982456" width="380" height="203.508771929825" rx="8.069870322226" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.192143386121" font-weight="bold" fill="var(--danger-text)">SLA — Agreement</text>
+  <text x="880" y="162.105263157895" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--danger-text)">what you promise</text>
+  <text x="880" y="197.719298245614" font-family="Courier New, monospace" font-size="12.104805483339" fill="var(--danger-text)">SLI ≥ 99.5% / month</text>
+  <text x="880" y="228.245614035088" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- contract clause</text>
+  <text x="880" y="253.684210526316" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- refund / penalty</text>
+  <text x="880" y="279.122807017544" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--danger-text)">- looser than SLO</text>
+
+  <rect x="40" y="335.087719298246" width="1200" height="284.912280701754" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--text)">Pick your nines</text>
+  <text x="60" y="406.315789473684" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">99%      → 3.65 days/yr   — basic</text>
+  <text x="60" y="433.789473684211" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">99.9%    → 8.76 hr/yr     — mainstream</text>
+  <text x="60" y="461.263157894737" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">99.95%   → 4.38 hours/yr   — careful design</text>
+  <text x="60" y="488.736842105263" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">99.99%   → 52.6 min/yr     — deep investment</text>
+  <text x="60" y="516.210526315789" font-family="Courier New, monospace" font-size="13.113539273617" fill="var(--text)">99.999%  → 5.26 min/yr     — exotic; rarely real</text>
+  <text x="60" y="564.035087719298" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- each nine ≈ 10× more effort</text>
+  <text x="60" y="599.649122807018" font-family="Arial, sans-serif" font-size="14.122273063895" font-style="italic" fill="var(--ok-accent)">SLO &gt; SLA — keep headroom</text>
+</svg>

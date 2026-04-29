@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.227078547234" font-weight="bold" fill="var(--text)">SRE Time Allocation</text>
+
+  <rect x="100" y="90.877192982456" width="500" height="203.508771929825" rx="8.069870322226" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="350" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--warn-text)">Traditional Ops</text>
+  <text x="350" y="162.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--warn-text)">90% toil, 10% eng</text>
+  <rect x="120" y="192.631578947368" width="450" height="40.701754385965" fill="var(--surface)" stroke="var(--warn-text)" stroke-width="1"/>
+  <rect x="120" y="192.631578947368" width="405" height="40.701754385965" fill="var(--code-bg)"/>
+  <text x="320" y="220.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--surface)">toil 90%</text>
+  <text x="350" y="270.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-style="italic" fill="var(--warn-text)">stuck firefighting</text>
+
+  <rect x="680" y="90.877192982456" width="500" height="203.508771929825" rx="8.069870322226" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="126.491228070175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.174675805565" font-weight="bold" fill="var(--ok-text)">SRE</text>
+  <text x="930" y="162.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--ok-text)">50% ops, 50% eng</text>
+  <rect x="700" y="192.631578947368" width="450" height="40.701754385965" fill="var(--surface)" stroke="var(--ok-text)" stroke-width="1"/>
+  <rect x="700" y="192.631578947368" width="225" height="40.701754385965" fill="var(--code-bg)"/>
+  <text x="810" y="220.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--surface)">ops 50%</text>
+  <text x="1040" y="220.105263157895" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-weight="bold" fill="var(--ok-accent)">eng 50%</text>
+  <text x="930" y="270.982456140351" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539273617" font-style="italic" fill="var(--ok-text)">build out of toil</text>
+
+  <rect x="40" y="335.087719298246" width="1200" height="284.912280701754" rx="8.069870322226" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="370.701754385965" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208225008" font-weight="bold" fill="var(--text)">The 50% rule</text>
+  <text x="60" y="408.350877192982" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- without a cap, ops always wins (urgent vs not)</text>
+  <text x="60" y="438.877192982456" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- over 50%? push work back to dev</text>
+  <text x="60" y="469.40350877193" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- engineering half: tools, automation, reliability</text>
+  <text x="60" y="499.929824561404" font-family="Arial, sans-serif" font-size="14.122273063895" fill="var(--text)">- compounding: faster every quarter</text>
+  <text x="60" y="538.59649122807" font-family="Arial, sans-serif" font-size="14.122273063895" font-weight="bold" fill="var(--text)">Failure mode: SRE-in-name-only</text>
+  <text x="60" y="569.122807017544" font-family="Arial, sans-serif" font-size="13.113539273617" fill="var(--text)">- "renamed ops to SRE" without the 50% rule is empty</text>
+  <text x="60" y="604.736842105263" font-family="Arial, sans-serif" font-size="14.122273063895" font-style="italic" fill="var(--ok-accent)">measure monthly, defend the cap</text>
+</svg>

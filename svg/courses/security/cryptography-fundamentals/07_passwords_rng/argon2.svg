@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="645.042016806723" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.571157493873" font-weight="bold" fill="var(--text)">Password Hashes</text>
+
+  <rect x="40" y="81.428571428571" width="282.352941176471" height="227.857142857143" rx="8.175740767346" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="181.176470588235" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.439351918364" font-weight="bold" fill="var(--danger-text)">SHA-256</text>
+  <text x="181.176470588235" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--danger-text)">no</text>
+  <text x="60.168067226891" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--danger-text)">- 100 ns</text>
+  <text x="60.168067226891" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--danger-text)">- GPU billions/s</text>
+  <text x="60.168067226891" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--danger-text)">- rainbow tables</text>
+  <text x="60.168067226891" y="257.5" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--danger-text)">- no salt</text>
+  <text x="181.176470588235" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" font-style="italic" fill="var(--danger-text)">too fast</text>
+
+  <rect x="342.521008403361" y="81.428571428571" width="282.352941176471" height="227.857142857143" rx="8.175740767346" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="483.697478991597" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.439351918364" font-weight="bold" fill="var(--warn-text)">bcrypt</text>
+  <text x="483.697478991597" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">legacy</text>
+  <text x="362.689075630252" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">- 100ms cost 12</text>
+  <text x="362.689075630252" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">- adaptive cost</text>
+  <text x="362.689075630252" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">- no mem-hard</text>
+  <text x="362.689075630252" y="257.5" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--warn-text)">- 72B limit</text>
+  <text x="483.697478991597" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" font-style="italic" fill="var(--warn-text)">since 1999</text>
+
+  <rect x="645.042016806723" y="81.428571428571" width="282.352941176471" height="227.857142857143" rx="8.175740767346" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="786.218487394958" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.439351918364" font-weight="bold" fill="var(--primary-text)">scrypt</text>
+  <text x="786.218487394958" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">mem-hard</text>
+  <text x="665.210084033613" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">- vs GPU/ASIC</text>
+  <text x="665.210084033613" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">- needs RAM</text>
+  <text x="665.210084033613" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">- N,r,p</text>
+  <text x="665.210084033613" y="257.5" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--primary-text)">- timing leaks</text>
+  <text x="786.218487394958" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" font-style="italic" fill="var(--primary-text)">since 2009</text>
+
+  <rect x="947.563025210084" y="81.428571428571" width="292.436974789916" height="227.857142857143" rx="8.175740767346" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1093.781512605042" y="117.678571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.439351918364" font-weight="bold" fill="var(--ok-text)">Argon2id</text>
+  <text x="1093.781512605042" y="143.571428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">pick</text>
+  <text x="967.731092436975" y="179.821428571429" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">- mem+time hard</text>
+  <text x="967.731092436975" y="205.714285714286" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">- side-ch safe</text>
+  <text x="967.731092436975" y="231.607142857143" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">- m=19,t=2</text>
+  <text x="967.731092436975" y="257.5" font-family="Arial, sans-serif" font-size="13.285578746937" fill="var(--ok-text)">- OWASP rec</text>
+  <text x="1093.781512605042" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.285578746937" font-style="italic" fill="var(--ok-text)">PHC 2015</text>
+
+  <rect x="40" y="340.357142857143" width="1200" height="103.571428571429" rx="8.175740767346" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="645.042016806723" y="371.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--surface)">Encoded hash</text>
+  <text x="60.168067226891" y="402.5" font-family="Courier New, monospace" font-size="13.285578746937" fill="var(--surface)">$argon2id$v=19$m=19456,t=2,p=1$base64salt$base64hash</text>
+  <text x="60.168067226891" y="428.392857142857" font-family="Arial, sans-serif" font-size="12.263611151019" fill="var(--text-faint)">self-describing</text>
+
+  <rect x="40" y="464.642857142857" width="1200" height="155.357142857143" rx="8.175740767346" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="645.042016806723" y="495.714285714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.351481534691" font-weight="bold" fill="var(--text)">Slow on purpose</text>
+  <text x="60.168067226891" y="526.785714285714" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text)">- 100ms = instant</text>
+  <text x="60.168067226891" y="552.678571428572" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text)">- crack: 10/s</text>
+  <text x="60.168067226891" y="578.571428571429" font-family="Arial, sans-serif" font-size="14.307546342855" fill="var(--text)">- mem-hard vs GPU</text>
+  <text x="60.168067226891" y="609.642857142857" font-family="Arial, sans-serif" font-size="14.307546342855" font-style="italic" fill="var(--ok-accent)">aim 50-500ms</text>
+</svg>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:var(--bg)">
+  <metadata>
+    <type>regular</type>
+  </metadata>
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #c4cdd6;
+        --border: #6b7280;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000044;
+        --black: #000000;
+        --primary-fill: #5a7a9c;
+        --primary-border: #3d5a7d;
+        --primary-text: #ffffff;
+        --primary-accent: #243b59;
+        --ok-fill: #7a9a6a;
+        --ok-border: #5a7a4d;
+        --ok-text: #ffffff;
+        --ok-accent: #385030;
+        --warn-fill: #c8924a;
+        --warn-border: #9c6e2e;
+        --warn-text: #ffffff;
+        --warn-accent: #5a3f12;
+        --danger-fill: #a86058;
+        --danger-border: #7d3f38;
+        --danger-text: #ffffff;
+        --danger-accent: #4a1f1a;
+        --info-fill: #7c6a8e;
+        --info-border: #574a68;
+        --info-text: #ffffff;
+        --info-accent: #2f253b;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7493b3"/>
+      <stop offset="100%" stop-color="#3d5a7d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4cdd6"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94b384"/>
+      <stop offset="100%" stop-color="#5a7a4d"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dba868"/>
+      <stop offset="100%" stop-color="#9c6e2e"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bd7d75"/>
+      <stop offset="100%" stop-color="#7d3f38"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9384a5"/>
+      <stop offset="100%" stop-color="#574a68"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000044"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#3d5a7d"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#5a7a4d"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#9c6e2e"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#7d3f38"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#574a68"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <text x="634.871794871795" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.797299082095" font-weight="bold" fill="var(--text)">Cryptographic Primitives Map</text>
+
+  <rect x="40" y="81.428571428571" width="225.641025641026" height="207.142857142857" rx="8.245322794491" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152.820512820513" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--primary-text)">Symmetric</text>
+  <text x="152.820512820513" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--primary-text)">AES-GCM</text>
+  <text x="152.820512820513" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--primary-text)">ChaCha20-Poly1305</text>
+  <text x="152.820512820513" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--primary-text)">bulk data</text>
+  <text x="152.820512820513" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--primary-text)">shared key</text>
+
+  <rect x="296.410256410256" y="81.428571428571" width="225.641025641026" height="207.142857142857" rx="8.245322794491" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="409.230769230769" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--warn-text)">Asymmetric</text>
+  <text x="409.230769230769" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--warn-text)">RSA</text>
+  <text x="409.230769230769" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--warn-text)">ECC, Ed25519</text>
+  <text x="409.230769230769" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--warn-text)">key exchange</text>
+  <text x="409.230769230769" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--warn-text)">signatures</text>
+
+  <rect x="552.820512820513" y="81.428571428571" width="225.641025641026" height="207.142857142857" rx="8.245322794491" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="665.641025641026" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--ok-text)">Hashes</text>
+  <text x="665.641025641026" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--ok-text)">SHA-256, SHA-3</text>
+  <text x="665.641025641026" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--ok-text)">BLAKE2/3</text>
+  <text x="665.641025641026" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--ok-text)">fingerprint</text>
+  <text x="665.641025641026" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--ok-text)">no key</text>
+
+  <rect x="809.230769230769" y="81.428571428571" width="225.641025641026" height="207.142857142857" rx="8.245322794491" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="922.051282051282" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--info-text)">MACs</text>
+  <text x="922.051282051282" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--info-text)">HMAC-SHA-256</text>
+  <text x="922.051282051282" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--info-text)">Poly1305</text>
+  <text x="922.051282051282" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--info-text)">integrity</text>
+  <text x="922.051282051282" y="252.321428571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--info-text)">shared key</text>
+
+  <rect x="1065.641025641026" y="81.428571428571" width="174.358974358974" height="207.142857142857" rx="8.245322794491" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1152.820512820513" y="122.857142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--danger-text)">KDFs</text>
+  <text x="1152.820512820513" y="159.107142857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--danger-text)">HKDF</text>
+  <text x="1152.820512820513" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.398649541047" fill="var(--danger-text)">Argon2</text>
+  <text x="1152.820512820513" y="226.428571428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.367984191736" font-style="italic" fill="var(--danger-text)">derive keys</text>
+
+  <rect x="40" y="330" width="1200" height="290" rx="8.245322794491" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="634.871794871795" y="366.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.551976287604" font-weight="bold" fill="var(--text)">How they compose</text>
+  <text x="60.512820512821" y="402.5" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- TLS: asymmetric agrees a key, symmetric does the bulk</text>
+  <text x="60.512820512821" y="433.571428571429" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- AEAD = symmetric cipher + MAC in one (AES-GCM, ChaCha20-Poly1305)</text>
+  <text x="60.512820512821" y="464.642857142857" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- Signatures = hash + asymmetric key</text>
+  <text x="60.512820512821" y="495.714285714286" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- Password storage = KDF (Argon2), slow on purpose</text>
+  <text x="60.512820512821" y="526.785714285714" font-family="Arial, sans-serif" font-size="14.429314890359" fill="var(--text)">- HKDF: one master secret into many keys</text>
+  <text x="60.512820512821" y="573.392857142857" font-family="Arial, sans-serif" font-size="14.429314890359" font-style="italic" fill="var(--ok-accent)">protocols stack primitives</text>
+</svg>
